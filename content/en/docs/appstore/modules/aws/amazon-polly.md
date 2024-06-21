@@ -1,10 +1,8 @@
 ---
 title: "Amazon Polly"
 url: /appstore/modules/aws/amazon-polly/
-category: "Connectors"
 description: "Describes the configuration and usage of the Amazon Polly connector, which is available in the Mendix Marketplace. Amazon Polly uses deep learning technologies to synthesize natural-sounding human speech, so you can convert articles to speech."
 weight: 20
-tags: ["marketplace", "marketplace component", "aws", "polly", "connector", "amazon"]
 aliases:
     - /appstore/connectors/amazon-polly/
     - /appstore/connectors/aws/amazon-polly/

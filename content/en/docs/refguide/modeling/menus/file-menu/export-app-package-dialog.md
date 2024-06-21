@@ -2,7 +2,6 @@
 title: "Export App Package"
 url: /refguide/export-app-package-dialog/
 weight: 30
-tags: ["studio pro", "export app", "export app package"]
 aliases:
     - /refguide/export-project-package-dialog/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -16,7 +15,7 @@ App packages can be imported again into a new app using the [Import App Package]
 
 To export the package, open the **File** menu > **Export App Package** and select the relevant options in the **Export App Package** dialog box:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package.png" alt="Export App Package Dialog Window" class="no-border"  >}}
 
 For more information on what options you can select, see the sections below. 
 
@@ -26,7 +25,7 @@ Alternatively, you can export your app as an [Adaptable Solution](/appstore/crea
 
 You can now choose to export your app as the **Solution** or **Source Package**. 
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/export-app-package-dialog/export-app-package-types.png" alt="Export App Package Dialog Window with Different Package Types" class="no-border"  >}}
 
 ### 2.1 Solution Package
 

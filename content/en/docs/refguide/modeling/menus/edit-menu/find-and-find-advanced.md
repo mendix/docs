@@ -3,14 +3,13 @@ title: "Find, Find Advanced and Find Usages"
 url: /refguide/find-and-find-advanced/
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 weight: 10
-tags: ["studio pro", "find advanced", "find usages", "find", "edit menu"]
 ---
 
 ## 1 Introduction
 
 You can search for changes or usages of different elements, documents, XPaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg" alt="Find Options" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-options.png" alt="Find Options" class="no-border" >}}
 
 ## 2 Find Option
 
@@ -36,9 +35,9 @@ You can search for microflows that have object activities in them. Do the follow
 
 1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
     The **Find Advanced** dialog box will open:
-    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" class="no-border" width="400" >}}
 2. In the **Search for** option, select **Microflow actions**:
-    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-microflow-actions.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-microflow-actions.png" class="no-border" width="400" >}}
 3. Select the entity for which you want to search for object activities, and click **Find**.
 
 You can see search results in the **Find Results** pane.
@@ -52,7 +51,7 @@ To find the unused items, do the following:
 1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
 2. In the **Find Advanced** dialog box, select **Unused items** in the **Search for** option:
 
-    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" class="no-border" width="400" >}}
 
 3. Click **Find**. 
 
@@ -87,7 +86,7 @@ To find where a certain element is used, do the following:
 
 1. Open the document which contains the element. For example, open the domain model. 
 2. Select an element (for example, an entity) and click **Edit** > **Find usages** in the top-bar or right-click an element and select **Find usages**:
-    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-usages.png" alt="Find Usages"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-usages.png" alt="Find Usages"   width="350"  class="no-border" width="300" >}}
 
 Studio Pro shows all usages of this entity in the **Find Results** pane. 
 {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/found-usages.png" alt="Find Results Pane" class="no-border" >}}

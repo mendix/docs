@@ -3,7 +3,6 @@ title: "Parse and Format Date Function Calls"
 url: /refguide/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
-tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
 ## 1 Introduction 
@@ -115,7 +114,7 @@ The examples below illustrate which value the expression returns:
     Mon Jan 01 00:00:00 CET 2007
     ```
 
-## 3 formatDateTime[UTC]
+## 3 formatDateTime[UTC]{#format-datetime-utc}
 
 Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 

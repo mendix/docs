@@ -1,10 +1,8 @@
 ---
 title: "Using the Java API"
 url: /refguide9/java-api-tutorial/
-category: "Java Programming"
 weight: 4
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
-tags: ["microflow", "logic", "java", "API"]
 ---
 
 ## 1 Introduction

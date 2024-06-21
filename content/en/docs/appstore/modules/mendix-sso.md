@@ -1,9 +1,7 @@
 ---
 title: "Mendix SSO"
 url: /appstore/modules/mendix-sso/
-category: "Modules"
 description: "Describes the configuration and usage of the Mendix SSO module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "sso", "single sign on", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #Please do not rename the anchor #supplements in this document as it is used in links from the module release notes.
 ---
@@ -39,7 +37,7 @@ The Mendix SSO module has the following features:
 
 * Simple steps for adding the module to your app, no more configuration required
 * Single sign-on with your Mendix account for any application that implements this module
-* App end-user access management that is handled in the [Mendix Developer Portal](/developerportal/)
+* App end-user access management that is handled in the [Mendix Portal](/developerportal/)
 
 {{% alert color="info" %}}
 [Mendix Admins](/control-center/company-settings/) can manage [groups](/control-center/groups/) that grant app permissions to groups of users.
@@ -211,7 +209,7 @@ The default Mendix SSO implementation is based on snippets. You can use these sn
 
 * In the **Admin** folder
     * **TokensOverviewSnippet** – an overview of all the tokens issued to end-users of the app
-    * **UserOverviewSnippet** – an overview of all the end-users who have used the app; This will not include end-users who have been given access through the developer portal but have not yet signed in
+    * **UserOverviewSnippet** – an overview of all the end-users who have used the app; This will not include end-users who have been given access through the Mendix Portal but have not yet signed in
     * **UserViewEditSnippet** – a page where details of an end-user can be seen
 * In the **Common** folder
     * **AccountDetailsNotEditableSnippet** – text explaining that details of SSO end-users come from Mendix and are not editable in the app
@@ -305,7 +303,7 @@ Validation of continuation URLs was introduced in version 4.2.0 of the Mendix SS
 
 To protect against bad actors, the Mendix SSO module validates the continuation url and ensures the end-user will only be redirected to an approved location. By default the approved locations include only the default app Url, which can be found on the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment.
 
-If your Mendix application has registered any custom domains, or if you want to redirect the end-user to a different application, the host names need to be specifically supplemented for your deployed application. This can be configured in the **Runtime** settings tab of the Developer Portal as described below.
+If your Mendix application has registered any custom domains, or if you want to redirect the end-user to a different application, the host names need to be specifically supplemented for your deployed application. This can be configured in the **Runtime** settings tab of the Mendix Portal as described below.
 
 ##### 5.4.1.1 Supplementing Allowed Continuation URLs{#supplements}
 

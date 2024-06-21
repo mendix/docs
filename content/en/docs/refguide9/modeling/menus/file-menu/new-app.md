@@ -3,7 +3,6 @@ title: "New App"
 url: /refguide9/new-app/
 weight: 10
 description: "This document describes the New App flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:
     - /refguide9/app-settings-dialog.html
     - /refguide9/app-settings-dialog
@@ -39,7 +38,7 @@ The name of your new app. This name is used as the name of the app directory and
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide9/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create an app in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide9/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create an app in [Apps](https://sprintr.home.mendix.com/) and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

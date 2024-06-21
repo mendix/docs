@@ -2,9 +2,8 @@
 title: "Shortcodes, Markdown, and HTML Examples"
 url: /community-tools/md-shortcode-examples/
 draft: true
-description: "Various test cases and examples for Markdown and shortcodes"
+description: "Various test cases and examples for Markdown and shortcodes. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 linktitle: "Shortcodes, Markdown, and HTML"
-banner: "This is a draft and will not be rendered in the production website. Use this page to see how various shortcodes, Markdown, and HTML elements render."
 ---
 <!-- markdownlint-disable-file -->
 
@@ -194,7 +193,7 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 #### YouTube Video
 
-{{% youtube 5tznw5ZUQgk %}}
+{{< youtube 5tznw5ZUQgk >}}
 
 ## Other Markdown and HTML Guidelines
 

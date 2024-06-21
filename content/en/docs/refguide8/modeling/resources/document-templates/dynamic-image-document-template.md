@@ -1,7 +1,6 @@
 ---
 title: "Dynamic Image (Document Template)"
 url: /refguide8/dynamic-image-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide8/Dynamic+Image+(document+template).html
     - /refguide8/dynamic-image-(document-template).html

@@ -2,7 +2,6 @@
 title: "Security and Shared Datasets"
 url: /refguide/security-shared-datasets/
 weight: 75
-tags: ["Catalog", "security", "entity security", "dataset security","OData service security", "OData"]
 ---
 
 ## 1 Introduction

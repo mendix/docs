@@ -3,7 +3,6 @@ title: "Microflows"
 url: /refguide/microflows/
 weight: 10
 description: "Presents an overview of all the elements that can be used in a microflow."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -92,7 +91,7 @@ An [annotation](/refguide/annotation/) is an element that can be used to put com
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/annotation.png" alt="Annotation" class="no-border" >}}
 
-### 2.6 Item Usages
+### 2.8 Item Usages
 
 Studio Pro visualizes which items are used by the selected element (or elements). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item (or items) returned by the selected element (or elements) are marked with the word 'Usage' in white text on a green background.
 

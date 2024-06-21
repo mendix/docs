@@ -2,7 +2,6 @@
 title: "List Operation"
 url: /refguide/list-operation/
 weight: 4
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -79,7 +78,7 @@ These operations takes a list and one or more members (attributes or association
 
 | Operation | Description | Result Type |
 | --- | --- | --- |
-| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. | List |
+| Sort | Allows you to sort a list based on a number of attributes. The attributes are ordered to determine their priority while sorting. You cannot use associations to sort a list. Sorting attributes from generalized entities is not allowed. For more information, see the [Sort Strategies: Nanoflows vs. Microflows](#sort) section below. | List |
 | Find | Finds the first object of which the member has the given value. | Object |
 | Filter | Finds all objects of which the member has the given value. | List |
 
@@ -109,7 +108,11 @@ This operation takes a list and filters it based on two expressions: `offset` an
 | --- | --- | --- |
 | Range | Retrieve a given number of objects (**Amount**) starting at a given index (**Offset**). The `amount` and `offset` are expressions that should result in a number. Note that the first object has an offset of 0. An amount of 0 means that all objects are retrieved. | List |
 
-### 3.2 List Name, Object Name, or Variable Name
+### 3.2 Sort Strategies: Nanoflows vs. Microflows {#sort}
+
+Microflows provide locale-sensitive string comparison for a sort operation, ensuring strings are sorted according to the rules of a specific locale. Nanoflows do not have this capability. However, from Studio Pro version 10.10, nanoflows are updated to ignore case sensitivity during sorting.
+
+### 3.3 List Name, Object Name, or Variable Name
 
 This is the name of the resulting List, Object, or Boolean variable. The result can be used by all activities that follow this activity.
 

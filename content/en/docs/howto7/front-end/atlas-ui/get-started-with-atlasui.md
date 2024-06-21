@@ -2,7 +2,6 @@
 title: "Get Started with Atlas UI"
 url: /howto7/front-end/get-started-with-atlasui/
 weight: 10
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction

@@ -1,7 +1,6 @@
 ---
 title: "ATS Best Practices"
 url: /appstore/partner-solutions/ats/bp/
-category: "ATS"
 weight: 4
 no_list: false
 description_list: true

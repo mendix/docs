@@ -1,7 +1,6 @@
 ---
 title: "Debugging Microflows Remotely"
 url: /refguide9/debug-microflows-remotely/
-tags: ["monitoring", "troubleshooting", "debug", "microflow", "remote"]
 aliases:
     - /howto9/monitoring-troubleshooting/debug-microflows-remotely
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -47,7 +46,7 @@ The debugger supports only debugging of single-instance environments. Multi-inst
 
 When your application is in Mendix Cloud, follow these steps:
 
-1. Open your app in the [Developer Portal](https://home.mendix.com).
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 
@@ -67,13 +66,13 @@ You will need to provide these credentials to Studio Pro to connect the debugger
 
 #### 3.1.2 Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
 
-If your application is on a connected Private Cloud, you can get the credentials from the Developer Portal:
+If your application is on a connected Private Cloud, you can get the credentials from the Mendix Portal:
 
 {{% alert color="warning" %}}
 You can only remotely debug apps deployed to Private Cloud for Mendix if you are using Mendix Operator version 1.6.0 or above.
 {{% /alert %}}
 
-1. Open your app in the [Developer Portal](https://home.mendix.com).
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Environments** in the navigation pane.
 

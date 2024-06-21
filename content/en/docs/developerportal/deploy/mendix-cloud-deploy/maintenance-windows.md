@@ -1,9 +1,8 @@
 ---
 title: "Maintenance Windows"
 url: /developerportal/deploy/maintenance-windows/
-weight: 33
+weight: 80
 description: "How to configure the maintenance windows for your node environment."
-tags: ["Deploy","App","Developer Portal", "maintenance"]
 aliases:
     - /mendixcloud/maintenance-windows.html
     - /mendixcloud/maintenance-windows
@@ -12,11 +11,11 @@ aliases:
 
 ## 1 Introduction
 
-In Mendix Cloud Professional and Enterprise plans, you can set a preferred maintenance window. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has environment maintenance operations planned, they are run within your preferred maintenance window.
+If you have a licensed app deployed to Mendix Cloud, you can set a preferred maintenance window for each of your app's environments. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has environment maintenance operations planned, they run within your preferred maintenance window.
 
 ### 1.1 Preferred Maintenance Window
 
-The preferred maintenance window is a time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
+The preferred maintenance window is a three-hour time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
 
 {{% alert color="info" %}}The preferred maintenance window is always shown in Coordinated Universal Time (UTC); don't forget to convert it to your local time zone.{{% /alert %}}
 
@@ -46,23 +45,21 @@ Maintenance windows and planned maintenance are defined in Coordinated Universal
 
 Follow the instructions below to configure a maintenance window.
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 
-2. Go to the **Environments** page for your app.
-
-3. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
+1. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the environment that you want to configure.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/environment-details.png" alt="" class="no-border" >}}
 
-4. Go to the **Maintenance** tab.
+1. Go to the **Maintenance** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/maintenance-windows/maintenance.png" alt="" class="no-border" >}}
-    
-5. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-6. Choose one of the maintenance windows from the drop-down menu.
+1. Click **Change** to modify the preferred maintenance window of your environment. To modify the window, you must have [transport rights](/developerportal/deploy/node-permissions/#transport-rights) for the environment.
 
-7. Click **Save** to confirm your new preferred maintenance window.
+1. Choose one of the maintenance windows from the drop-down menu.
+
+1. Click **Save** to confirm your new preferred maintenance window.
 
 ### 3.1 Configuring Maintenance Window in a Week with Planned Maintenance
 

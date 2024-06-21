@@ -3,7 +3,6 @@ title: "Create a Test Suite"
 url: /appstore/partner-solutions/ats/ht-one-create-a-test-suite/
 weight: 4
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

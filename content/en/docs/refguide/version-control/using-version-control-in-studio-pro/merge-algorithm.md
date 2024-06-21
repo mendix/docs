@@ -2,10 +2,8 @@
 title: "Combining Changes and Conflict Resolution"
 linktitle: "Combining Changes and Conflict Resolution"
 url: /refguide/merge-algorithm/
-category: "Version Control"
 weight: 10
 description: "Describes combining changes with conflict resolution flow."
-tags: ["rebase", "mine", "theirs", "merge", "conflict"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 aliases:
     - /refguide/new-merge-algorithm
@@ -81,7 +79,7 @@ The current situation could be represent as shown below.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/Steps/Rebase_Starting_state.png" alt="Team Server with three commits (1, 2, and 4), while in Studio Pro there are also three commits (1, 3, and 5)" width="525" class="no-border" >}} 
 
-## 3 Combining Changes
+## 3 Combining Changes {#combine-changes}
 
 This section goes through the [example scenario](#scenario) with the two different approaches: [Rebase](#rebase) and [Merge commit](#merge). 
 
@@ -146,7 +144,7 @@ As this was the last local commit to reapply, the rebasing can now be completed.
 #### 3.1.4 Test Changes 
 
 Once the rebase process is completed, the original commits (`#3` and `#5`) that were put aside are now removed. The final state of the branch has the commits `#1`, `#2`, `#4`, `#3'`, and `#5'`, while the server still only has commits `#1`, `#2`, and `#4`.
- 
+
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/merge-algorithm/Steps/Rebase_Step_4.png" width="525" class="no-border" >}}
 
 Your work is still on your local machine and you should test whether the combined state works as expected.

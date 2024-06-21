@@ -1,7 +1,6 @@
 ---
 title: "APD Reference Guides"
 url: /appstore/partner-solutions/apd/rg-apd/
-category: "APD"
 weight: 30
 no_list: false
 description_list: true

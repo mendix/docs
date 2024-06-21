@@ -1,7 +1,7 @@
 ---
 title: "OQL Select Clause"
 url: /refguide/oql-select-clause/
-tags: ["studio pro"]
+weight: 10
 ---
 
 ## 1 Description
@@ -12,7 +12,7 @@ The `SELECT` clause specifies which entity attributes or other specified data mu
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 SELECT [ DISTINCT ]
 	{
 			*

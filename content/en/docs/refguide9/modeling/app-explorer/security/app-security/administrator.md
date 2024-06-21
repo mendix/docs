@@ -2,7 +2,6 @@
 title: "Administrator"
 url: /refguide9/administrator/
 weight: 20
-tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
@@ -38,7 +37,7 @@ Default: *1*
 {{% alert color="info" %}}
 Since the value of the password is general knowledge, it is safer to change this to a custom password.
 
-This password is only used when Mendix is running locally. Changing the password in your model will not update the password in your Cloud environments. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details/) in the Developer Portal.
+This password is only used when Mendix is running locally. Changing the password in your model will not update the password in your Cloud environments. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details/) in **Apps**
 {{% /alert %}}
 
 #### 2.2.1 Free Apps

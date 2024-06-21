@@ -2,17 +2,15 @@
 title: "SAP Business Technology Platform"
 linktitle: "SAP BTP"
 url: /developerportal/deploy/sap-cloud-platform/
-category: "Deployment"
 weight: 10
 description: "Describes how to deploy to SAP Business Technology Platform."
-tags: ["SAP", "Deployment", "Environment", "SAP BTP", "SAP Business Technology Platform", "Dynatrace"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## 1 Introduction
 
-As an SAP developer, you want to deploy your Mendix app on the SAP Business Technology Platform (SAP BTP). This document explains how you can create environments, deploy to the SAP BTP, and manage these deployments using the Mendix Developer Portal.
+As an SAP developer, you want to deploy your Mendix app on the SAP Business Technology Platform (SAP BTP). This document explains how you can create environments, deploy to the SAP BTP, and manage these deployments using the Mendix Portal.
 
 This document describes two ways of managing the SAP BTP:
 
@@ -25,7 +23,7 @@ Mendix applications can be deployed to Cloud Foundry regions on SAP Business Tec
 
 ## 2 Setting Up SAP BTP for the First Time {#FirstTime}
 
-Before you can manage your SAP BTP using the Developer Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP BTP for the first time.
+Before you can manage your SAP BTP using the Mendix Portal, you will need to set it up. There are two circumstances under which you will have to set up the SAP BTP for the first time.
 
 1. You have an existing app which has never been deployed on SAP BTP and you want to change the cloud settings. See [Change Cloud Settings](#ChangeCloudSettings).
 
@@ -33,7 +31,7 @@ Before you can manage your SAP BTP using the Developer Portal, you will need to 
 
 ### 2.1 Changing the Cloud Settings {#ChangeCloudSettings}
 
-In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, go to **Settings** in the Developer Portal's navigation pane and switch to the **Cloud Settings** tab.
+In this scenario, you have an existing app which is running in another environment: for instance, on Mendix Cloud. To change this, open your app in [Apps](https://sprintr.home.mendix.com/), go to **Settings**, and then switch to the **Cloud Settings** tab.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/cloud-settings.png" class="no-border" >}}
 
@@ -89,7 +87,7 @@ If you have already logged on to SAP and your SAP session has not expired, you w
 You may be asked to provide your credentials in one of two ways:
 
 * You will be taken to the SAP authentication page to enter your credentials – in this case, your SAP user name (email address) must be the same as your Mendix user name
-* The Developer Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Developer Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
+* The Mendix Portal will ask for your credentials, which it will then use to obtain an access token from SAP – the Mendix Portal will then use the access token, but it will not store your credentials (⚠ please note this method is being deprecated)
 
 {{% alert color="info" %}}
 If you have issues using SAP authentication, please refer to the reference [SAP Single Sign-On](/developerportal/deploy/sap-cloud-platform/sap-single-sign-on/).
@@ -111,7 +109,7 @@ After the environment has been created successfully, you will see a confirmation
 
 You can create several environments for your app. For example, you may have created a development environment, but you may want environments for test, acceptance, production, and so forth. Additionally, when you switch from another cloud you need to create at least one environment for your Mendix application.
 
-This is done from the **Environments** page of the Developer Portal.
+You can do this in the **Environments** page after opening your app in [Apps](https://sprintr.home.mendix.com/).
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 
@@ -167,7 +165,7 @@ To create a new environment, perform the following steps:
 
 10. Set a **Subscription Secret** (required). This secret is associated with your Mendix production license. By entering the subscription secret, your application will run in this environment as production. If the subscription secret is invalid, your app will still run, but will restart every 2-4 hours and have a limitation of six concurrent users.
 
-    {{% alert color="info" %}}If you do not have a subscription secret, create a ticket with Mendix Support and they will send you one.{{% /alert %}}
+    {{% alert color="info" %}}If you do not have a subscription secret, refer to our documentation on [Obtaining a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#get-license) in *Licensing Apps* for details on submitting a request to Mendix Support.{{% /alert %}}
 
 11. If you want the user to be redirected to a custom URL after they have logged in using XSUAA then, optionally, add **Redirect URLs**. 
 
@@ -201,28 +199,29 @@ If you click **Run** or **Publish** in Studio Pro, this will automatically do th
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-You will still have to deploy your app in the Developer Portal the very first time to ensure that all the services are bound correctly.
+You will still have to deploy your app in [Apps](https://sprintr.home.mendix.com/) the very first time to ensure that all the services are bound correctly.
 {{% /alert %}}
 
-1. Go to the **Environments** page of the Developer Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
+2.  Go to the **Environments** page.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 
-2. Click **Create package from Team Server** to start the wizard.
+3. Click **Create package from Team Server** to start the wizard.
 
-3. Select the branch on the Team server which you want to use.
+4. Select the branch on the Team server which you want to use.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/03-sap-select-branch.png" class="no-border" >}}
 
-4. Select the revision of the branch you want to build.
+5. Select the revision of the branch you want to build.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/04-sap-select-revision.png" class="no-border" >}}
 
-5. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
+6. Add a version number and Tag description as required. The revision number will be added to the version number automatically.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/05-sap-define-tag.png" class="no-border" >}}
 
-6. Click **Build this revision** to build the package.
+7. Click **Build this revision** to build the package.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/06-sap-build-revision.png" class="no-border" >}}
 
@@ -243,7 +242,7 @@ Alternatively, you can upload an MDA which has already been created from the app
 The package will be added to the list of packages in the **Deployment Package Repository**. To deploy your package, follow the instructions in the [Deploy Package](#DeployPackage) section, below.
 
 {{% alert color="info" %}}
-There is a limit of 200 MB on the size of the MDA file you can upload to the Developer Portal for SAP BTP deployment.
+There is a limit of 200 MB on the size of the MDA file you can upload to the Mendix Portal for SAP BTP deployment.
 {{% /alert %}}
 
 ## 5 Deploying a Package {#DeployPackage}
@@ -346,7 +345,7 @@ Open the environment details by clicking **Details** on an environment on the En
 
 {{% alert color="info" %}}If you make changes to your app which you want be applied next time the app is deployed you must make them here.
 
-Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Developer Portal next time the app is deployed.{{% /alert %}}
+Changes made to the app in the SAP BTP cockpit are only temporary and can be overwritten by the values in the Mendix Portal next time the app is deployed.{{% /alert %}}
 
 ### 7.1 General Tab {#general-tab}
 
@@ -460,7 +459,7 @@ There are a number of services which your Mendix app requires. If you unbind any
 * Database (PostgreSQL, Hyperscaler Option or SAP HANA schema)
 * Connectivity
 
-Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will not be reflected in the Mendix Developer Portal.
+Services should be selected, bound, and unbound through this **Services** page. Changes made in the SAP BTP cockpit will not be reflected in the Mendix Portal.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -542,7 +541,7 @@ If you no longer require a service, you can unbind it or remove it from your app
 
 #### 7.3.3 Add Binding Configuration
 
-When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Developer Portal.
+When a service is in the **Services To Be Bound** section, you can add a new binding configuration, if this is supported by the service and the Mendix Portal.
 
 If you want to change the configuration of a service which is already bound, you will need to unbind the service first, as described above.
 
@@ -558,7 +557,7 @@ If you want to change the configuration of a service which is already bound, you
 
 #### 7.3.4 Service Names
 
-The services which are created by the Mendix Developer Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
+The services which are created by the Mendix Portal will be named automatically. You will see these names in the SAP BTP cockpit. The name of the service will normally be **App name** + **_** + **Environment Name** + **_** + **a random 6-character suffix**. All spaces will be removed from the app and environment names. For example, `MyApp_Development_c7sd9q`.
 
 However, the maximum length for the service name is 50 characters. If this limit would be exceeded by the name created above, an alternative service name will be used. The format of this is **Environment Name** + **_** + **a random 6-character suffix**. If the Environment name is longer than 43 characters, only the first 43 characters are used.
 
@@ -649,7 +648,7 @@ To run a Mendix application on SAP BTP using SAP HANA as the database, there are
 * Provision the SAP HANA DB Service and make it available in your application space.
 * Provision SAP HANA Cloud and make this service available to your application space.
 
-Once one of these services is available, you can use the SAP Cloud deployment functions of the Mendix SAP Developer Portal to deploy your app and use the **HANA_SCHEMA** service to bind your application to the provisioned service. The HANA_SCHEMA will create a separate schema on the SAP HANA Database which isolates your application's data from other applications. In this way the SAP HANA DB/Cloud Service will be shared across applications.
+Once one of these services is available, you can use the SAP Cloud deployment functions of the Mendix SAP Mendix Portal to deploy your app and use the **HANA_SCHEMA** service to bind your application to the provisioned service. The HANA_SCHEMA will create a separate schema on the SAP HANA Database which isolates your application's data from other applications. In this way the SAP HANA DB/Cloud Service will be shared across applications.
 
 {{% alert color="warning" %}}
 Please bear the following in mind when using SAP HANA as your Mendix database:
@@ -659,7 +658,7 @@ Please bear the following in mind when using SAP HANA as your Mendix database:
 * Do not use the **Services** tab or the SAP BTP Marketplace to add both a PostgreSQL, Hyperscaler Option database and an SAP HANA schema to your app. If you do this it is not possible to predict which database your Mendix app will choose to bind.
 {{% /alert %}}
 
-If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Developer Portal does not have information on the status or configuration of the SAP HANA service.
+If you have issues with your app running on SAP HANA, you will need to use the SAP BTP cockpit to investigate. The Mendix Portal does not have information on the status or configuration of the SAP HANA service.
 
 #### 8.2.2 SAP HANA Configuration for Trial Accounts
 
@@ -708,7 +707,7 @@ The additional parameters that you added to the url in the `MXRUNTIME_DatabaseJd
 
 ## 9 Deleting an App
 
-If you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Developer Portal**, and then click **Leave app**.
+If you are the last person to leave a Mendix app you can delete the app. However, this will not delete the app or resources on SAP BTP. To leave the app, find it on the [My Apps](https://sprintr.home.mendix.com/link/myapps) page in the **Mendix Portal**, and then click **Leave app**.
 
 If you are the last member of the app development team, you will be asked if you want to delete the app.
 
@@ -717,7 +716,7 @@ If you are the last member of the app development team, you will be asked if you
 {{% alert color="info" %}}
 This will not stop the app and delete the deployment of the app in SAP BTP.
 
-If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Developer Portal.
+If you want to delete your app and all its resources, delete the environment and resources first before you leave the app via the Mendix Portal.
 {{% /alert %}}
 
 You can still delete the app and its resources from the SAP BTP cockpit, but you will then have to remove all the resources individually.
@@ -766,11 +765,11 @@ This indicates that SAP Cloud Portal is not able to bind the service, even thoug
 
 If you remove the service from the app, the app should restart successfully.
 
-If you are trying to bind more than one new service, it is not possible to identify within the Developer Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
+If you are trying to bind more than one new service, it is not possible to identify within the Mendix Portal which service is causing the issue. If the culprit is not obvious, you will have to remove all the services or go to SAP Cloud Portal where you can use the service name in the error message to find which service is causing the error.
 
 ### 10.3 An Error Occurs While Deploying App From Studio Pro
 
-If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button before it has been started from the Developer Portal, the deployment will fail. 
+If an app is deployed to SAP using the Studio Pro **Run** or **Publish** button before it has been started from the Mendix Portal, the deployment will fail. 
 
 #### 10.3.1 Cause
 
@@ -780,11 +779,11 @@ The deployment fails because the marketplace services have not been bound.
 
 #### 10.3.1 Solution
 
-If you use the Developer Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
+If you use the Mendix Portal to look at the details of the environment to which you are deploying, you will see that the services are still waiting to be bound.
 
 {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/error-not-bound.png" class="no-border" >}}
 
-Start the app from the Developer Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
+Start the app from the Mendix Portal to bind the services. Once they are bound, you can deploy your app from Studio Pro, as usual.
 
 ### 10.4 Error: Unable to Initialize Metrics Client: Unsupported Metric Type
 
@@ -806,7 +805,7 @@ Starting from Mendix version 9.7, the support for the `statsd` is removed.
 
 ## 11 Status of SAP BTP Deployment
 
-The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP BTP via the Developer Portal, you can check the Mendix status page to see if SAP BTP deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
+The Mendix status page ([https://status.mendix.com/](https://status.mendix.com/)) shows the current status of Mendix services. If you have issues with deploying to SAP BTP via the Mendix Portal, you can check the Mendix status page to see if SAP BTP deployment is operational (under **Mendix Services**) or if there are other Mendix issues which may be affecting your deployment.
 
 ## 12 Read More
 

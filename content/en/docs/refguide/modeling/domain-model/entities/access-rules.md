@@ -2,7 +2,6 @@
 title: "Access Rules"
 url: /refguide/access-rules/
 weight: 70
-tags: ["domain model", "entity", "access rule", "xpath constraint", "module role", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -84,7 +83,7 @@ All module roles are listed, and those to which this access rule applies are che
 
 You can easily select, or deselect, all module roles using this checkbox.
 
-### 2.3 Access Rights Tab {#access-rights}
+### 2.3 Access Rights {#access-rights}
 
 The **Access rights** tab allows you to assign rights to end-users with the selected module roles.
 
@@ -124,9 +123,11 @@ For example, a customer is allowed to view the discount, but is not allowed to e
 
 See [Attribute Changes and Security Constraints](#attribute-changes), below, for important considerations about giving access to attributes.
 
-### 2.4 XPath Constraint Tab {#xpath-constraint}
+#### 2.3.3 XPath Constraint {#xpath-constraint}
 
 An [XPath constraint](/refguide/xpath-constraints/) can be used to constrain the set of objects to which the access rule applies. If the constraint rule is true, the rule applies to that object. If the XPath constraint is empty, the rule applies to all objects of the entity.
+
+Click **Edit…** to edit the XPath constraint.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/access-rules/access-rule-xpath-tab.png" width="450px" class="no-border" >}}
 
@@ -136,7 +137,7 @@ XPath constraints can only be applied to persistable entities as they are applie
 
 There are two constraints that can be appended easily with a single button click. 
 
-#### 2.4.1 Owner
+##### 2.3.3.1 Owner
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current end-user.
 
@@ -146,7 +147,7 @@ The **Owner** button adds an XPath constraint so the access rule is only applied
 
 This constraint is only valid when the [Store 'owner'](/refguide/entities/#store-owner) checkbox in the **System members** section of the entity properties is checked.
 
-#### 2.4.2 Path to User
+##### 2.3.3.2 Path to User
 
 The **Path to user...** button adds an XPath constraint so the access rule is only applied when a User object which is associated (directly or indirectly) with the current object is the current end-user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 

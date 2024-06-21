@@ -3,12 +3,11 @@ title: "App Commands"
 url: /refguide/mx-command-line-tool/app
 weight: 10
 description: "Describes the app-related commands for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project", "show-version", "convert"]
 ---
 
 ## 1 Introduction
 
-The commands in this group are related to Mendix app creation, checking, versioning and conversion.
+The commands in this group are related to Mendix app creation, checking, versioning, and conversion.
 
 Typically, these commands require a path to the *.mpr* file as a parameter.
 
@@ -28,7 +27,7 @@ These are the `OPTIONS`:
 | `--help` | | Shows help for the `mx create-project` command and exits.|
 | `--language-code` | en_US | The default language of the app. | 
 | `--output-dir` | Current directory | The directory in which to create the app. |
-| `--sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [Developer Portal app](/developerportal/#my-apps). The value is a GUID. When accessing the app in the Developer Portal, this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
+| `--sprintr-app-id` | Optional | Associates the app [feedback features](/developerportal/app-insights/feedback/) with the provided [app](/developerportal/#my-apps) in **Apps**. The value is a GUID. When accessing the app in [Apps](https://sprintr.home.mendix.com/), this ID can be found in the browser's URL (for example, `1a428ea7-b00e-4166-9b23-20b7be88a40e`). |
 
 `TEMPLATE-MPK-FILE` is an optional path to a Mendix app package *.mpk* file. If this argument is omitted, the app is created with a default empty project template.
 
@@ -174,7 +173,7 @@ Errors in the *.mpr* are always reported.
 
 For `INPUT`, enter a single *.mpr* file.
 
-You can optionally specify the path to an exported suppress-warnings  (JSON) file. This means that `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior (which is to read from the *project-settings.user.json* file in the app directory).
+You can optionally specify the path to an exported suppress-warnings (JSON) file. This means `mx check -w` will use the list of suppressed warnings in the JSON file, instead of the default behavior (which is to read from the *project-settings.user.json* file in the app directory).
 
 ### 5.2 Examples
 

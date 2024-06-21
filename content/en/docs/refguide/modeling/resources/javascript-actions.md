@@ -3,7 +3,6 @@ title: "JavaScript Actions"
 url: /refguide/javascript-actions/
 weight: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
-tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -80,9 +79,17 @@ Use categories to keep parameters apart in a [JavaScript Action Call](/refguide/
 
 For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-### 2.3 Return Type
+### 2.3 Return
+
+Your JavaScript action can return different data types to your app.
+
+#### 2.3.1 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
+
+#### 2.3.2 Variable Name
+
+This setting allows you to give a name to the Javascript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
 
 ### 2.4 Platform {#platform}
 

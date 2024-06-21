@@ -1,10 +1,9 @@
 ---
 title: "Migrate to a Different Cloud Node"
-linktitle: "Migrate to Other Node"
+linktitle: "Migrate Between Nodes"
 url: /developerportal/deploy/migrating-on-public-cloud/
-weight: 10
+weight: 80
 description: "How to migrate your app from one cloud node to another."
-tags: ["App","Migrate","Developer Portal","public cloud","Node", "region", "data center"]
 aliases:
     - /developerportal/howto/migrating-to-v4.html
     - /developerportal/howto/migrating-to-v4
@@ -17,7 +16,7 @@ aliases:
 This document explains how to migrate your licensed app from one cloud node to another. There are a couple of reasons you may wish to move your app to a different node:
 
 * You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a node in the region of your choosing and then migrate your app to this target node.
-* You want to switch from Mendix Public Cloud to Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
+* You want to switch from the public Mendix Cloud to Mendix Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
 
 ## 2 Migration Considerations
 
@@ -50,7 +49,7 @@ To manually migrate your app to a new node, follow the steps in the sections bel
 
 First, link one of the new temporary apps to the target node.
 
-1. In the [Developer Portal](https://sprintr.home.mendix.com), open one of your temporary apps.
+1. In [Apps](https://sprintr.home.mendix.com), open one of your temporary apps.
 
 2. From the navigation pane, go to the **Environments** page.
 
@@ -118,13 +117,13 @@ Before starting your app in the target node, make sure it has the same configura
 
 Now that the target node contains your data and is configured, deploy the deployment package to an environment and start your app.
 
-To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/#deploy-the-app-to-an-environment).
+To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
 ### 4.3 Unlinking the App from the Source Node
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
-1. In the [Developer Portal](https://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
+1. In [Apps](https://sprintr.home.mendix.com), open the second blank app you created (not the one you have linked to the target node).
 
 2. Go to the app's **Environments** page.
 
@@ -142,7 +141,7 @@ Follow these steps to link the app you detached from the source node, above, to 
 Make sure you have downloaded the latest backup and deployment package before linking your app to the target node.
 {{% /alert %}}
 
-1. In the [Developer Portal](https://sprintr.home.mendix.com), open the app that you detached from the source node.
+1. In [Apps](https://sprintr.home.mendix.com), open the app that you detached from the source node.
 
 2. Go to the app's **Environments** page.
 

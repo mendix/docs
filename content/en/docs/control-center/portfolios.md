@@ -2,7 +2,6 @@
 title: "Portfolios"
 url: /control-center/portfolios/
 description: "Describes the Portfolios page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "portfolios"]
 weight: 65
 no_list: true
 ---
@@ -69,7 +68,7 @@ In the list, you can see the following items:
   
   {{% alert color="info" %}}A Mendix Admin can activate or deactivate a user on the [Members](/control-center/members/#active-deactive-members) page in Control Center.{{% /alert %}}
   
-* **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see the [Access Management](/developerportal/portfolio-management/#access-management) section in *Portfolio Management*.
+* **Role** – This shows the portfolio access role of the user. For more information about different roles and permissions, see [Access Management](/developerportal/portfolio-management/access-management/).
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking the button opens a menu with the following items:
     * **Edit Role** – Selecting this allows you to change the role of the user.
     * **Remove** – Selecting this allows you to remove the user from the portfolio.

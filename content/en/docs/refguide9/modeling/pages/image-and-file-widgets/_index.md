@@ -2,7 +2,6 @@
 title: "Images, Videos and Files"
 url: /refguide9/image-and-file-widgets/
 weight: 35
-tags: ["studio pro", "file widgets", "widget"]
 ---
 
 ## 1 Introduction

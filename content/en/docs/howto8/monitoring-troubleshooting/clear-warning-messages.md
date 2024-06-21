@@ -1,9 +1,7 @@
 ---
 title: "Clear Warning Messages"
 url: /howto8/monitoring-troubleshooting/clear-warning-messages/
-category: "Monitoring and Troubleshooting"
 weight: 1
-tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
 ## 1 Introduction

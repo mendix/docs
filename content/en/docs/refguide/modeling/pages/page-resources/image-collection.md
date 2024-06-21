@@ -3,7 +3,6 @@ title: "Image Collection"
 url: /refguide/image-collection/
 weight: 1
 description: "Why and how to create an image collection"
-tags: ["Studio Pro", "Images", "Image Collection"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ linktitle: "Free App to Basic Package"
 url: /developerportal/deploy/migrate-free-app-to-basic/
 weight: 40
 description: "Moving an existing Mendix app deployed as a Free App to a Basic Package node"
-tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -24,7 +23,6 @@ Before starting this how-to, make sure that the following prerequisites are met:
 
 * You have received confirmation that your Basic node is ready
 * You are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
-* [Two-factor authentication](/developerportal/deploy/two-factor-authentication/) is set up on your account
 
 ## 3 Migrating to Mendix Basic
 
@@ -32,8 +30,8 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 ### 3.1 Open your Free App
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com). Sign in if necessary.
-2. Click the app that you want to migrate to a Basic Node.
+1. Go to [Apps](https://sprintr.home.mendix.com). Sign in if prompted.
+1. Click the app that you want to migrate to a Basic Node.
 
 ### 3.2 Download a Backup{#download-backup}
 
@@ -62,7 +60,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/confirm-unlink.png" alt="" width=75% class="no-border" >}}
 
-    {{% alert color="info" %}}Before your environment is deleted, you may be asked to authenticate with two-factor authentication.{{% /alert %}}
+    {{% alert color="info" %}}Before your environment is deleted, you may be prompted to authenticate with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).{{% /alert %}}
 
 ### 3.4 Link Your App to the New Node{#link-app-to-node}
 
@@ -74,14 +72,14 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 ### 3.5 Configure Your Environment
 
-Before your app can be deployed live, you may need to configure your environment details. This is only required if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app uses scheduled events or application constants, you can configure them at this stage. For more information about configuring your environment, see [Environment Details](/developerportal/deploy/environments-details/).
+Before your app can be deployed, you may need to configure your environment details. This is only required if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app uses scheduled events or application constants, you can configure them at this stage. For more information about configuring your environment, see [Environment Details](/developerportal/deploy/environments-details/).
 
 ### 3.6 Deploy Your App
 
-Now you need to deploy your app! To do so, you need a deployment package.
+Now you need to deploy and start your app!
 
-1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/#package-from-team-server).
-2. On the deployment package you just created, click **Deploy** ({{% icon name="deploy" %}}) to publish your app to the production environment.
+1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#package-from-team-server).
+1. On the deployment package you just created, click **Deploy** ({{% icon name="deploy" %}}) and follow the steps in the resulting wizard, as described in [Deploying the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-the-app-to-an-environment). This publishes your app to the production environment and then starts it.
 
 ### 3.7 Upload and Restore the Backup
 
@@ -89,14 +87,18 @@ The final step is restoring your data. You must do this after you've deployed yo
 
 1. Go to the **Backups** page.
 
-2. Click **Upload Backup**.
+1. Click **Upload Backup**.
 
-3. Select the backup file you downloaded earlier in [Download a Backup](#download-backup), then click **Upload Archive**. The file will be uploaded. Once the upload completes, a backup file is uploaded to your app using the data from your old Free App environment.
+1. Select the backup file you downloaded earlier in [Download a Backup](#download-backup), then click **Upload Archive**. The file will be uploaded. Once the upload completes, a backup file is uploaded to your app using the data from your old Free App environment.
 
-4. On the backup you just uploaded, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore**.
+1. On the backup you just uploaded, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Restore**.
 
-5. Confirm the restore by clicking **Restore Backup**.
+1. Confirm the restore by clicking **Restore Backup**.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" alt="" width=75% class="no-border" >}}
+    {{% alert color="info" %}}If your app is running, you will be prompted to stop the application before continuing the restoration process. If prompted, stop your application by clicking **Stop application**. Then click **Restore Backup** again.{{% /alert %}}
 
-6. Go to the **Environments** page and start your app. Now it is ready for use.
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/migrate-free-app-to-basic/restore-backup.png" alt="" width=75% >}}
+
+1. You will see a dialog stating that your backup restore has been scheduled and will be completed shortly. Click **Okay**.
+
+1. Go to the **Environments** page, click **Environment Details** ({{% icon name="notes-paper-edit" %}}) on the production environment, and start your application. Now it is ready for use.

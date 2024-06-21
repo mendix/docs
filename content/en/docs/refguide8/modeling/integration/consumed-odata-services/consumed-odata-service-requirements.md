@@ -3,7 +3,6 @@ title: "Consumed OData Service Requirements"
 url: /refguide8/consumed-odata-service-requirements/
 weight: 20
 description: "Requirements on OData services consumed in Mendix."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

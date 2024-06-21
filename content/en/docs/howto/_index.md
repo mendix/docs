@@ -2,12 +2,10 @@
 title: "Studio Pro 10 How-tos"
 url: /howto/
 description: "Step-by-step guides on various Mendix topics that teach you how to build and customize apps."
-tags: ["studio pro"]
 weight: 15
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 10"
     - content_type: "Studio Pro 10"
     - mendix_version: 10
     - sitemap:

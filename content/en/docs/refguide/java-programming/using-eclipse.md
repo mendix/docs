@@ -2,9 +2,9 @@
 title: "Using Eclipse"
 url: /refguide/using-eclipse/
 weight: 20
-category: "Java Programming"
 description: "Describes how to set up Eclipse, and how to add a Mendix application to Eclipse and launch it."
-tags: ["studio pro", "Java", "IDE"]
+#If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the Evaluation Guide. See Mapping to Products for more details.
+# Linked from https://www.mendix.com/evaluation-guide/enterprise-capabilities/extensibility/
 ---
 
 ## 1 Introduction

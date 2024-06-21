@@ -2,7 +2,6 @@
 title: "Install ATS Helper and ATS Recorder"
 url: /appstore/partner-solutions/ats/ht-two-install-ats-helper-recorder/
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

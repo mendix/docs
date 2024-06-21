@@ -2,10 +2,8 @@
 title: "Building, Testing, and Distributing Apps"
 linktitle: "Build, Test, Distribute Apps"
 url: /refguide/mobile/distributing-mobile-apps/
-category: Mobile
 weight: 50
 description: "Distribute native mobile apps."
-tags: ["distribution", "native", "app stores", "ios", "android"]
 aliases:
     - /howto/mobile/distribution/
 ---
@@ -19,8 +17,4 @@ Guides in this section will help you build, test and distribute mobile apps. Whi
 * [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/) – Native apps are normally updated by building and distributing the updated version. In some situations (mainly for smaller changes) these steps can be skipped with an over-the-air update.
 * [Debugging Native Apps](/refguide/mobile/distributing-mobile-apps/native-debug/) – Web applications can be debugged directly in the web browser. For native apps, this is also possible but requires a few extra steps to set up.
 * [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/) – To test native apps, third-party software is required. This guide explains how to use Appium to test native apps.
-
-{{% todo %}} 
-Add this link and description after doc goes live: Use MIN With Older Studio Pro Versions – Refer to our README documentation for detailed instructions on how to build the Make it Native app, ensuring compatibility with your specific version of Mendix Studio Pro.
-{{% /todo %}} 
-
+* [Use MIN With Older Studio Pro Versions](/refguide/mobile/distributing-mobile-apps/use-min-older-sp/) – Detailed instructions on how to build a version of the Make it Native app compatible with your specific version of Mendix Studio Pro.

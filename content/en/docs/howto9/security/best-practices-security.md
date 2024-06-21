@@ -2,10 +2,8 @@
 title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto9/security/best-practices-security/
-category: "Security"
 weight: 20
 description: "Describes the common aspects you should consider when delivering an application within the Mendix Cloud."
-tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications.html
     - /howtogeneral/bestpractices/best-practices-security-and-improvements-for-mendix-applications
@@ -56,7 +54,7 @@ These are the common cases and best practices:
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-Access restrictions can be configured within the Developer Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
 {{< figure src="/attachments/howto9/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 
@@ -64,7 +62,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 You can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Developer Portal completely by applying a **deny all access** preset on them
+* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -222,7 +220,7 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For the Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe. For the Mendix Cloud, this can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within **Apps**. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
 If you are running your Mendix app on Mendix for Private Cloud, you can configure the HTTP headers as part of advanced operator configuration. See the [Endpoint (network) Configuration](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings) section of *Creating a Private Cloud Cluster*.
 

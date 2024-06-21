@@ -2,7 +2,6 @@
 title: "Rollback Object"
 url: /refguide9/rollback-object/
 weight: 70
-tags: ["studio pro", "rollback object", "activity"]
 ---
 
 {{% alert color="warning" %}}

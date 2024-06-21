@@ -1,9 +1,7 @@
 ---
 title: "Unit Testing"
 url: /appstore/modules/unit-testing/
-category: "Modules"
 description: "Describes the configuration and usage of the Unit Testing module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "unit testing", "unit test", "test suite", "testing", "qa", "quality", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

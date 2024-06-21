@@ -1,11 +1,10 @@
 ---
 title: "Security"
 url: /control-center/security/
-category: "Control Center"
 description: "Describes the Security page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "security"]
 weight: 40
-no_list: true
+no_list: false
+description_list: true
 ---
 
 {{% alert color="info" %}}
@@ -41,3 +40,5 @@ On the **Single Sign-On** tab, you can set up an identity federation between the
 On the **Security History** tab, you can click **Show Security History** to open a page (in a new browser tab) that presents an audit trail of security-related changes in **App History** and **Member History**. You can search through and view details on these changes as well as export the audit trail to a CSV file.
 
 {{< figure src="/attachments/control-center/security/security.jpg" class="no-border" >}}
+
+## 5 Documents in This Category

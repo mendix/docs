@@ -3,14 +3,13 @@ title: "File Menu"
 url: /refguide/file-menu/
 description: "Describes the File Menu in Studio Pro."
 weight: 5
-tags: ["Studio Pro", "file menu", "file"]
 ---
 
 ## 1 Introduction
 
 The **File** menu allows you to manage documents and apps, for example, to create a new app or save changes:
 
-{{< figure src="/attachments/refguide/modeling/menus/file-menu/file-menu.png" alt="File Menu" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/file-menu/file-menu.png" alt="File Menu" class="no-border" width="300" >}}
 
 ## 2 Menu Items Overview {#overview}
 

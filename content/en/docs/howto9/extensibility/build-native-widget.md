@@ -1,10 +1,8 @@
 ---
 title: "Build a Pluggable Native Widget"
 url: /howto9/extensibility/build-native-widget/
-category: "Extensibility"
 description: "Describes how to build a native widget, configure it, and style it in a Mendix app."
 weight: 10
-tags: ["native","widget","pluggable","react native","extensibility"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

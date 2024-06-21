@@ -1,9 +1,7 @@
 ---
 title: "Solve Load and Import Errors"
 url: /howto8/monitoring-troubleshooting/solving-load-and-import-errors/
-category: "Monitoring and Troubleshooting"
 weight: 11
-tags: ["monitoring", "troubleshooting", "load", "import", "error"]
 aliases:
     - /howto8/solving-load-and-import-errors.html
     - /howto8/solving-load-and-import-errors
@@ -38,7 +36,7 @@ Before trying to solve the problems, it's useful to discover the origin of the p
 
 ### 3.1 Is This a Team Server Project?
 
-If your project is a [Team Server](/developerportal/general/team-server/) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/general/team-server/) menu item in the [Developer Portal](https://sprintr.home.mendix.com).
+If your project is a [Team Server](/developerportal/general/team-server/) project, and you just did a [download or update](/refguide8/using-version-control-in-studio-pro/) from the server, the problem may have been added in a revision that was recently committed to the Team Server. You can check who made the most recent commit via the [Team Server](/developerportal/general/team-server/) menu item in [Apps](https://sprintr.home.mendix.com/).home.mendix.com).
 
 If the latest change on your branch line was committed by someone other than yourself, please inform the person about the problem.
 

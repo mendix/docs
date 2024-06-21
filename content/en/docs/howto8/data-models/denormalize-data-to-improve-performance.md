@@ -1,9 +1,7 @@
 ---
 title: "Denormalize Data to Improve Performance"
 url: /howto8/data-models/denormalize-data-to-improve-performance/
-category: "Data Models"
 weight: 6
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -1,9 +1,8 @@
 ---
 title: "Machine Learning Kit"
 url: /refguide/machine-learning-kit/
-category: Integration
 weight: 26
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
+description: "Introduces the Machine Learning (ML) Kit, used to deploy a machine learning model built using common ML framework."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

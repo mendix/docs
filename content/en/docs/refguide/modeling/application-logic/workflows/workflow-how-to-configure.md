@@ -4,7 +4,6 @@ linktitle: "Workflow for Employee Onboarding"
 url: /refguide/workflow-how-to-configure/
 description: "Describes how to configure a workflow in Mendix Studio Pro."
 weight: 70
-tags: ["studio pro", "workflow", "task", "onboarding"]
 aliases:
     - /howto/logic-business-rules/workflow-how-to-configure/
 ---
@@ -238,7 +237,7 @@ The manager of a new employee will get a task to specify devices for the new hir
 
 5. Now configure the user task to be assigned to the Manager role, as only managers should specify devices for the new employee. Make sure **Target users using** is set to **XPath** and click the ellipsis icon in the **XPath constraint** property.
 
-6. In the **Edit XPath constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
+6. In the **Edit XPath Constraint** dialog box, type in the expression: `[System.UserRoles = '[%UserRole_Manager%]']` and click **OK**.
 
 7. To create a page where the manager specifies details for the new employee, click the ellipsis icon in the **Page** property.
 

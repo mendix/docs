@@ -3,7 +3,6 @@ title: "Get Started with WebXR"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/get-started-with-web-xr/
 weight: 10
 description: "Tutorials for setting up and using XR in Mendix Studio Pro."
-tags: ["AR", "VR", "XR", "WebXR"]
 ---
 
 ## 1 Introduction
@@ -77,8 +76,8 @@ Container (XR) has the following properties that can be set in Studio Pro:
 * **Camera distance** – The distance in meters from the 3D model. This can be altered to make sure the entire scene is in view.
 * **Starting position** – This is the position which is at the center of the preview. Changing this will change the point the camera is focused on. **X** is the left to right axis, **Y** is the up and down axis, and **Z** is the depth axis.
 * **Realistic lighting**  
-  * **Background color** – Sets the color of the background of the scene. 
-  * **Add realistic lighting** – When set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When set to **No** and **Realistic lighting** is still used on objects, then they will appear black (since the object has nothing to reflect).
+    * **Background color** – Sets the color of the background of the scene. 
+    * **Add realistic lighting** – When set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When set to **No** and **Realistic lighting** is still used on objects, then they will appear black (since the object has nothing to reflect).
 
 ### 3.2 Node (XR)
 
@@ -115,33 +114,33 @@ These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**
 #### 4.1.2 Material Tab
 
 * **Type**
-  * **Object** – Only available for **3D Object (XR)**. Selecting this will make the object use the material as present on the 3D Object.
-  * **Texture** – Sets a static or dynamic image for this object. This image will then be mapped onto the 3D object.
-  * **Color** – Sets a solid color on an object. This should be provided in the #rrggbb format.
+    * **Object** – Only available for **3D Object (XR)**. Selecting this will make the object use the material as present on the 3D Object.
+    * **Texture** – Sets a static or dynamic image for this object. This image will then be mapped onto the 3D object.
+    * **Color** – Sets a solid color on an object. This should be provided in the #rrggbb format.
 * **Opacity** – The transparency of the object. 0 is transparent, while 1 is opaque. We recommend incrementing by .1 when testing to see gradual yet meaningful changes.
 
 * **Lighting**
-  * **Type** – The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
-    * **Roughness** – Takes a value from 0-1, where with 0 the object is smooth as glass, with higher values making it more matte.
-    * **Metalness** – Takes a value from 0-1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
+    * **Type** – The kind of lighting that should be used on this object. **Simple** lighting is more basic looking, but easier to render, leading to better framerates. **Realistic** lighting shows more complex reflections and adds options for the type of material this object is supposed to have:
+        * **Roughness** – Takes a value from 0-1, where with 0 the object is smooth as glass, with higher values making it more matte.
+        * **Metalness** – Takes a value from 0-1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
 
 #### 4.1.3 Interaction Tab
 
 All interactions are done through a mesh-like interface around the object. The different types of interaction (scaling, rotating, and position) are all done using this one interface. The different options can be enabled or disabled independently.
 
 * **Dragging**
-  * **Dragging** – Determines if the dragging interface is enabled.
-  * **Enable dragging** – Controls if the dragging interface should be active at this moment. For example, this could be switched on and off when the user clicks a specific 3D object.
-  * **Type** – Sets whether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should "stick" to the world (**Fixed to world**).
-  * **On drag** – An event called when the object is dragged.
+    * **Dragging** – Determines if the dragging interface is enabled.
+    * **Enable dragging** – Controls if the dragging interface should be active at this moment. For example, this could be switched on and off when the user clicks a specific 3D object.
+    * **Type** – Sets whether the dragging should be at a fixed distance in front of the user (**Fixed distance**), or if the object should "stick" to the world (**Fixed to world**).
+    * **On drag** – An event called when the object is dragged.
 
 * **Pinching**
-  * **Scaling interaction** – Determines if the pinching interface is enabled.
-  * **Enable scaling interface** – Controls if this interface should be enabled at this moment. This can be connected to a clicking event. For example when a user clicks on an object the interface, then could appear allowing a user to make changes to it.
-  * **Enable rotation interface** – Works the same as the scaling interface, but for rotation instead.
-  * **Scaling interface color** – The color of that interface. Should be provided in the #rrggbb format.
-  * **Scaling interface size** – The size of the object in the interface (in meters).
-  * **On scale** – An event called when the object is scaled.
+    * **Scaling interaction** – Determines if the pinching interface is enabled.
+    * **Enable scaling interface** – Controls if this interface should be enabled at this moment. This can be connected to a clicking event. For example when a user clicks on an object the interface, then could appear allowing a user to make changes to it.
+    * **Enable rotation interface** – Works the same as the scaling interface, but for rotation instead.
+    * **Scaling interface color** – The color of that interface. Should be provided in the #rrggbb format.
+    * **Scaling interface size** – The size of the object in the interface (in meters).
+    * **On scale** – An event called when the object is scaled.
 
 #### 4.1.4 Events Tab
 

@@ -1,9 +1,7 @@
 ---
 title: "Configure String Concatenation"
 url: /howto7/logic-business-rules/string-concatenation/
-category: "Logic and Business Rules"
 weight: 11
-tags: ["microflow", "logic", "string", "concatenation"]
 ---
 
 In every project, you will need to concatenate some text together. Common cases are when you want to assemble the full name of a person based on the first and last name.

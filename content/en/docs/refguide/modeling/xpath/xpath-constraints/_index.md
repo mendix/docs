@@ -2,7 +2,6 @@
 title: "XPath Constraints"
 url: /refguide/xpath-constraints/
 weight: 2
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -17,17 +16,17 @@ All the Studio Pro examples below assume that an entity `Sales.Customer` is sele
 
 ## 2 Constraints in Studio Pro
 
-### 2.1 Using Visual Builder
+### 2.1 Using Visual Builder for XPath Constraints
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints.
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
 
 {{% alert color="warning" %}}
-Visual Builder for database constraints is beta in Mendix version 10.5 and has limitations which are listed in [Visual Builder Limitations](#limitations).
+Visual Builder for XPath constraints is beta in Mendix version 10.5 and above and has limitations which are listed in [Builder Limitations](#limitations).
 {{% /alert %}}
 
-You can use the Visual Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
+You can use the Builder in all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget. Select **(From) Database** and click **Edit…** next to **XPath constraint** to open a dialog box where you can build your constraint.
 
-Ensure the **Builder (beta)** option is selected to use the Builder. You can switch between the Builder and the XPath expression to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#new-features).
+Ensure the **Builder (beta)** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
 #### 2.1.1 Constructing an XPath Constraint
 
@@ -37,7 +36,7 @@ You then see a clause beginning **Where** where you can enter one or more condit
 
 1. Entity, attribute, or association.
 
-    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by Visual Builder for database constraints.
+    Click the down arrow (▼) and select from the list of options. You will only be shown options that fit the current context and are supported by visual Builder for XPath constraints.
 
 2. Relational [operator](/refguide/xpath-operators/) or function.
 
@@ -59,9 +58,9 @@ You can create groups of rules which should be applied in combination. Click **A
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
-#### 2.1.2 Visual Builder Limitations {#limitations}
+#### 2.1.2 Builder Limitations {#limitations}
 
-Visual Builder for database constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
+Visual Builder for XPath constraints is still in beta and you cannot use it to make arbitrarily complex XPath expressions. Builder has the following limitations:
 
 * It does not support all functions. It does support the following relational operators and functions:
 
@@ -78,7 +77,7 @@ Visual Builder for database constraints is still in beta and you cannot use it t
 
 If you try to use an unsupported feature you will be warned and can choose to edit your XPath expression in the expression editor.
 
-{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" >}}
 
 ### 2.2 Writing XPath Expressions
 

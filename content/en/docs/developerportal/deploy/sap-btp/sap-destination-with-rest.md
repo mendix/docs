@@ -2,10 +2,8 @@
 title: "Use SAP Connectivity Service with REST and SOAP"
 linktitle: "Use SAP Connectivity Service with REST and SOAP"
 url: /developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/
-category: "SAP"
 weight: 25
 description: "How to configure Mendix native REST and SOAP calls to use the SAP Destination Service and the SAP Connectivity Service to reach on-premises services."
-tags: ["SAP", "Cloud Connector", "Connectivity Service", "Destination Service", "REST", "SOAP"]
 aliases:
     - /partners/sap/sap-destination-with-rest/
 ---

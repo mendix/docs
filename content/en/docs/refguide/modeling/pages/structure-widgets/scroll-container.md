@@ -2,7 +2,6 @@
 title: "Scroll Container"
 url: /refguide/scroll-container/
 weight: 50
-tags: ["studio pro", "scroll container", "container widget", "widget"]
 aliases:
     - /refguide/horizontal-split-pane.html
     - /refguide/vertical-split-pane.html

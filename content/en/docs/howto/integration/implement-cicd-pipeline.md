@@ -2,9 +2,7 @@
 title: "Implement a Simple CI/CD Pipeline with Mendix APIs"
 linktitle: "CI/CD Pipeline for Mendix Cloud"
 url: /howto/integration/implement-cicd-pipeline/
-category: "Integration"
 description: "Describes how you can use the available Mendix APIs with any mainline orchestrators to build a simple CI/CD pipeline."
-tags: ["cicd", "continuous", "integration", "delivery", "deployment", "automation", "testing"]
 ---
 
 ## 1 Introduction
@@ -36,7 +34,7 @@ For access to Mendix Cloud environments, an authorized user is needed when execu
 
 To be able to use the Mendix APIs to access your environment, the user who is going to access the APIs needs API rights.
 
-To grant API rights, open your app in the Developer Portal, then go to the **Permissions** tab of the app's **Environments** page and select the **API Rights** option for the user for whom you created an API key in the [User API Key](#user-API-key) step, above. For more details on how to configure permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
+To grant API rights, open your app in [Apps](https://sprintr.home.mendix.com/), then go to the **Permissions** tab of the app's **Environments** page and select the **API Rights** option for the user for whom you created an API key in the [User API Key](#user-API-key) step, above. For more details on how to configure permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 ### 3.2 Building the Deployment Package
 

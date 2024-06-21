@@ -1,9 +1,7 @@
 ---
 title: "Cloud"
 url: /control-center/cloud/
-category: "Control Center"
 description: "Describes the Cloud page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "cloud"]
 weight: 45
 no_list: true
 ---
@@ -16,7 +14,7 @@ This feature is not yet publicly available. Please talk to your Customer Success
 
 The **Cloud** page shows you an overview of the paid and free environments of your company
 
-## 2 Paid Environments
+## 2 Paid Environments {#paid-environments}
 
 The **Paid Environments** tab presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 

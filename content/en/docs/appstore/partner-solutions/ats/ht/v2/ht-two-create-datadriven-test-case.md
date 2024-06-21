@@ -2,7 +2,6 @@
 title: "Create a Data-Driven Test Case"
 url: /appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/
 description: "Describes how to create data and connect this to a test case."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

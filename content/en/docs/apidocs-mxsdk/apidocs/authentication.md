@@ -1,10 +1,8 @@
 ---
 title: "Authentication"
 url: /apidocs-mxsdk/apidocs/authentication/
-category: "API Documentation"
 description: "Describes the two methods of Mendix API authentication: using API keys and using personal access tokens."
-weight: 10
-tags: ["API", "API Key", "Authentication", "personal access token"]
+weight: 5
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -37,9 +35,8 @@ The benefit of a PAT compared to API keys is that the platform user can restrict
 
 ### 3.1 Generating a PAT
 
-To generate a PAT, follow the instructions in the [Personal Access Tokens](http://localhost:1313/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. Make sure that you select the correct scopes for the PAT that you generate. You can find the correct scopes in the specific API document.
+To generate a PAT, follow the instructions in the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*. Make sure that you select the correct scopes for the PAT that you generate. You can find the correct scopes in the specific API document.
 
 ### 3.2  Using the PAT
 
 Include an `Authorization` header with the value `MxToken {GENERATED_PAT}` to authenticate an API call. For an example, see the [Using the PAT](/apidocs-mxsdk/apidocs/webhooks-api/#use-pat) section of the *Webhooks API*.
-

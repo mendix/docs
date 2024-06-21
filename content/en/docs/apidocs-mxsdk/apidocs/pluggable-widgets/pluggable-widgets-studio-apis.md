@@ -3,7 +3,6 @@ title: "Preview Appearance APIs"
 linktitle: "Preview Appearance APIs"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/
 description: A guide for understanding the APIs which influence pluggable widget preview appearances in Mx10.
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React", "Preview"]
 weight: 30
 aliases:
 - /apidocs-mxsdk/apidocs/studio-apis-for-pluggable-widgets
@@ -170,6 +169,9 @@ It is possible to require the following modules:
 The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
 * `readOnly` (`boolean`): `true` if the widget is read-only (for example, if it is configured to be so due to the `Editability` system property, or if it is inside a read-only data view)
+* `renderMode` (`string`): a string providing information on which mode the rendering editor is in
+    * `design`: the current editor is in design mode
+    * `xray`: the current editor is in x-ray mode
 * `class` (`string`): the classes from the system, which will include manually configured classes through the `class` property in Studio Pro, and the classes resulting from configured design properties
 * `style` (`string`): a string representation of the styles as entered in the `style` property in Studio Pro
 

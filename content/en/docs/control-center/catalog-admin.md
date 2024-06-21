@@ -1,10 +1,8 @@
 ---
 title: "Catalog"
 url: /control-center/catalog-admin/
-category: "Control Center"
 weight: 60
 description: "Describes the catalog administration in the Mendix Control Center."
-tags: ["data hub", "Mendix Admin", "curator", "custom owner", "administration"]
 aliases:
     - /control-center/data-hub-admin/
     - /developerportal/control-center/catalog-admin/

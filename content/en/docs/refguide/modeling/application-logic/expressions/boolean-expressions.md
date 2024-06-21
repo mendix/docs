@@ -2,7 +2,6 @@
 title: "Boolean Expressions"
 url: /refguide/boolean-expressions/
 weight: 50
-tags: ["studio pro", "expression", "expressions", "Boolean"]
 ---
 
 ## 1 Introduction

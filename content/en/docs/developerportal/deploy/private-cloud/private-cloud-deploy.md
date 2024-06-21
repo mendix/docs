@@ -4,16 +4,15 @@ linktitle: "Deploy Mendix App"
 url: /developerportal/deploy/private-cloud-deploy/
 description: "Describes the processes for deploying a Mendix app in the Private Cloud"
 weight: 20
-tags: ["Deploy", "Private Cloud", "Environment"]
 ---
 
 ## 1 Introduction
 
-To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Developer Portal. This creates a link between the Mendix Developer Portal and the cluster. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for instructions on how to do this.
+To deploy apps to your private cloud cluster (for example to Red Hat OpenShift or AWS-EKS), the cluster needs to be registered in the Mendix Portal. This creates a link between the Mendix Portal and the cluster. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) for instructions on how to do this.
 
 Once the cluster has been registered, and a namespace created, team members with *Deploy App* rights can create environments and deploy an app.
 
-This document explains how to use the Mendix Developer Portal to deploy your **connected** app.
+This document explains how to use the Mendix Portal to deploy your **connected** app.
 
 To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 
@@ -42,13 +41,13 @@ To deploy an app to your private cloud platform, you need the following:
 
 When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
 
-1. Open the **Settings** page for your app in the Developer Portal.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image2.png" class="no-border" >}}
 
-2. Click **Cloud Settings**.
-
-3. In the **Mendix for Private Cloud** section, click **Set up**.
+2. Open the **Settings** page.
+3. Click **Cloud Settings**.
+4. In the **Mendix for Private Cloud** section, click **Set up**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/SetupButton.png" class="no-border" >}}
 
@@ -56,27 +55,28 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
-1. On the **Environments** page for your app in the Developer Portal, click **Create Deployment Package**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Environments** page and click **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
 
-2. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
+3. Select the branch which contains the commit for which you want to create a deployment package and click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image10.png" class="no-border" >}}
 
-3. Select the revision/commit for which you want to create a deployment package and click **Next**.
+4. Select the revision/commit for which you want to create a deployment package and click **Next**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image11.png" class="no-border" >}}
 
-4. Enter a **New version** and **Tag description** according to your own deployment procedure.
-5. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
-6. Click **Build this revision.**
+5. Enter a **New version** and **Tag description** according to your own deployment procedure.
+6. Select an environment in **Autodeploy** if you want to deploy and start your package immediately. You need to make sure that the environment is ready using the techniques described in the [Deploying the Deployment Package](#deploy-package) section below, where you can also see how to deploy a deployment package manually.
+7. Click **Build this revision.**
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image12.png" class="no-border" >}}
 
-7. Confirm the information message and you will be returned to the **Environments** page.
+8. Confirm the information message and you will be returned to the **Environments** page.
 
-8. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again.
+9. Once the deployment package is created, an **Unlock** icon is displayed by the **Details** button. This indicates that the created deployment package is not deployed in any environment yet. If you want to save a deployment package for future use, you can lock the deployment package by clicking the **Lock** button. This ensures that the locked deployment packages cannot be deleted until unlocked again.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/lock.png" class="no-border" >}}
 
@@ -86,7 +86,7 @@ Alternatively, you can upload an existing MDA by clicking **Upload**.
 
 ### 3.3 Creating an Environment{#create-environment}
 
-When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in the Developer Portal will show you the current status.
+When deploying your app for the first time, there will be no environments available. Before creating an environment, make sure that you have created/uploaded deployment package. The **Environments** page for your app in [Apps](https://sprintr.home.mendix.com/) will show you the current status.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image5.png" class="no-border" >}}
 
@@ -205,7 +205,7 @@ You will be taken to the Environment Details page for the selected environment. 
 
 ## 4 Environments Page
 
-The **Environments** page of the Developer Portal contains three sections:
+After opening your app in [Apps](https://sprintr.home.mendix.com/), you can find the **Environments** page, which contains three sections:
 
 * Deployment Package Repository
 * Environments
@@ -436,11 +436,11 @@ If an application is in the Stopped state, the scaling does not come into effect
 
 ##### 5.1.3.4 Clear Admin Password
 
-This allows you to clear the password for the local admin user set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
+This allows you to clear the password for the [Mendix administration account](/refguide/administrator/) set in the Private Cloud environment. This means that there will be no password pushed to your environment when your app is deployed - any password currently set in the environment will be retained.
 
 ##### 5.1.3.5 Change Admin Password
 
-This allows you to change the password for the local admin user in your app. The password you set here will be pushed to your app environment every time the app is deployed. However, if the MxAdmin password is configured in both the Developer Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
+This allows you to change the password for the [Mendix administration account](/refguide/administrator/) in your app. The password you set here will be pushed to your app environment every time the app is deployed. However, if the Mendix administration account password is configured in both the Mendix Portal (or MendixApp CR) and CSI Secrets Storage, then the secret storage will have a higher priority and will override the value specified elsewhere.
 
 Please make sure that the password set in the portal fulfills the password requirements set in Studio Pro. For security purpose, the password must have at least eight characters, including at least one special character, one capital letter, and one number.
 
@@ -452,9 +452,9 @@ By default, there will be no admin password set for your environment. This means
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Developer Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
-If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Developer Portal.
+If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Mendix Portal.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/delete-environment.png" class="no-border" >}}
 
@@ -477,7 +477,7 @@ Images are not deleted from the container registry. You should delete those imag
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If any of these garbage collection steps fail, you will no longer see the environment in the Developer Portal, and will have to [delete the storage instances](#delete-storage) manually.
+If any of these garbage collection steps fail, you will no longer see the environment in the Mendix Portal, and will have to [delete the storage instances](#delete-storage) manually.
 {{% /alert %}}
 
 ##### 5.1.3.7 License Mendix{#license-mendix}
@@ -489,6 +489,16 @@ Subscription secrets are obtained from [Mendix support](https://support.mendix.c
 We have also released an alternate way of licensing your apps in the Private Cloud by using PCLM. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
 For users of the Private Cloud License Manager who wish to set the product type for the Runtime license in a particular environment, it can be done by editing the Product type. This ensures that the associated environment obtains the license from the license bundle with the specified Product type. By default, the value is set to the one defined in the Namespace configuration page.
+
+When the namespace in which the environment is deployed is configured with PCLM and the Operator version is 2.16.0 or higher, the license information related to PCLM is displayed under this section. If the environment is not configured with PCLM, this section will be empty. Below is a brief explanation of the fields under this section:
+
+* **Subscription Secret** - When configured with PCLM, this field shows the message *configured using Private Cloud License Manager*.
+* **Runtime License Id** - If the Runtime license is successfully applied in the environment, the license ID is displayed in this section. If the Runtime license is not applied, this field shows the message *unknown*.
+* **Product Type for PCLM** - The product type of the Runtime license requested for this environment. This field can also be configured to use another Product type.
+* **Runtime Product Type** - The product type currently provisioned for Runtime license.
+* **License Provision Error** - If the licenses are not provisioned successfully for Runtime, then the error message would be displayed under this section. Example: When there are not enough Runtime license in the bundle or requested product type is not available in License bundle.
+
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/LicensePCLM.png" class="no-border" >}}
 
 #### 5.1.4 Security
 
@@ -509,7 +519,7 @@ To toggle any scheduled events, select the scheduled event you want to enable or
 To change any constants, select the constant you want to edit and then click **Edit**. You also have the option to export the app constants to an Excel file by selecting **Export Scheduled Events to Excel**.
 
 {{% alert color="info" %}}
-If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+If the MxApp constants are configured in both the CSI Secrets Storage and another location (such as the Mendix Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -533,7 +543,7 @@ When you use some settings on the Runtime tab for Mendix for Private Cloud they 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+If the custom runtime settings are configured in both the CSI Secrets Storage and another location (such as the Mendix Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 ### 5.5 Log Levels Tab
@@ -560,7 +570,7 @@ For more information, see the [Log Levels Tab](/developerportal/deploy/environme
 
 ### 5.6 TLS
 
-If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Developer Portal.
+If you are using Mendix Operator version 1.5.0 or above, you can configure TLS for your environment from the Mendix Portal.
 
 In the TLS pane, you can choose whether to **Apply Default Configuration** or a **Custom TLS Configuration**. If you apply the default configuration, then the configuration made when you ran the configuration script for the namespace will be used.
 
@@ -597,7 +607,7 @@ On the Debugger tab you can set up and view the credentials you need to debug yo
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/debuggerTab.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-If the Debugger password is configured in both the CSI Secrets Storage and another location (such as the Developer Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
+If the Debugger password is configured in both the CSI Secrets Storage and another location (such as the Mendix Portal or MendixApp CR), the secret storage configuration has a higher priority and overrides the value specified elsewhere.
 {{% /alert %}}
 
 ## 6 Current Limitations{#limitations}
@@ -610,7 +620,7 @@ All names beginning **openshift-** are reserved for use by OpenShift if you are 
 
 ### 6.2 Deleting Your App
 
-Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Developer Portal.
+Delete all environments before you delete an app. If you delete an app which has existing private cloud environments, you will not be able to reach the environments through the Mendix Portal.
 
 ### 6.3 Deployment Package Size
 
@@ -699,8 +709,8 @@ If you change **App URL** in the **General** tab, you should update the `Applica
 ### 7.5 Collecting Diagnostic Data for a Support Ticket
 
 {{% alert color="info" %}}
-For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Developer Portal.
-Only generic status or error messages are sent back to the Developer Portal and these messages don't contain enough details about the environment to understand the root cause of any problems.
+For security reasons, Mendix for Private Cloud doesn't send any detailed logs from the cluster to the Mendix Portal.
+Only generic status or error messages are sent back to the Mendix Portal and these messages don't contain enough details about the environment to understand the root cause of any problems.
 {{% /alert %}}
 
 In version 2.10.0 and above of the `mxpc-cli` administration and configuration tool there is a command to collect and save diagnostic logs and a few configuration details to a file.
@@ -817,9 +827,13 @@ To fix this issue, you can raise memory requests to match the memory limit by pe
     kubectl -n {namespace} edit mendixapp {environmentInternalId}
     ```
 
+### 7.8 Unexpected App Restart
+
+If your application keeps restarting unexpectedly, check your application log for hints on what could be causing this. If there are any *CRITICAL* lines in the log, immediately start working on resolving them. 
+
 ## 8 How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Developer Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
+The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/mx4pc-operator-deploy.png" class="no-border" >}}
 

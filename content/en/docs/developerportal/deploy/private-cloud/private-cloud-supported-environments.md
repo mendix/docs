@@ -3,7 +3,6 @@ title: "Supported Providers"
 url: /developerportal/deploy/private-cloud-supported-environments/
 description: "Describes which providers are supported by Mendix for Private Cloud"
 weight: 100
-tags: ["Private Cloud", "Cluster", "Operator", "Deploy", "Provider", "Registry", "Database"]
 ---
 
 ## 1 Introduction
@@ -37,8 +36,8 @@ If deploying to Red Hat OpenShift, you need to specify that specifically when cr
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
-* Kubernetes versions 1.19 through 1.28
-* OpenShift 4.6 through 4.13
+* Kubernetes versions 1.19 through 1.30
+* OpenShift 4.6 through 4.15
 
 {{% alert color="warning" %}}
 Kubernetes 1.22 is a [new release](https://kubernetes.io/blog/2021/08/04/kubernetes-1-22-release-announcement/) which removes support for several deprecated APIs and features.
@@ -122,7 +121,6 @@ Externally hosted [OCI compliant](https://github.com/opencontainers/distribution
 
 * [Docker Hub](https://hub.docker.com/)
 * [quay.io](https://quay.io/)
-* [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) (ACR)
 * [JFROG Artifactory](https://jfrog.com/artifactory/)
 * [Sonatype Nexus](https://www.sonatype.com/products/nexus-repository)
 * [Harbor](https://goharbor.io)
@@ -155,6 +153,12 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 [Google Cloud Platform](https://cloud.google.com/) provides the [artifact registry](https://cloud.google.com/artifact-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
+
+### 3.6 Azure Container Registry
+
+[Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
+
+When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's kubernetes service account.
 
 ## 4 Databases{#databases}
 
@@ -215,6 +219,11 @@ Azure PostgreSQL databases require additional firewall configuration to allow co
 
 Some managed PostgreSQL databases might have restrictions or require additional configuration.
 
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with:
+
+* AWS RDS databases using IAM roles
+* Azure Database for PostgreSQL (Flexible Server) databases using managed identities
+
 {{% alert color="info" %}}
 To use a PostgreSQL database, the Mendix Operator requires a Superuser account with root privileges and permissions to create new users and databases.
 
@@ -254,11 +263,12 @@ Amazon and Azure SQL servers require additional firewall configuration to allow 
 
 Some managed SQL Server databases might have restrictions or require additional configuration.
 
+As an alternative to static password authentication, Mendix Operator can use its Kubernetes Service Account to authenticate with Azure SQL databases. The Kubernetes Service Account is linked with a Managed Identity, and the Managed Identity replaces a static username/password. This feature requires Mendix Operator version 2.17 (or later) and Mendix 10.10 (or later).
+
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
 For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
-
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -319,9 +329,13 @@ configuration details.
 
 ### 5.4 Azure Blob Storage
 
-An existing [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) container can be attached to Mendix app environments.
+[Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
 
-Unlike MinIO and S3, Mendix for Private Cloud doesn't manage Azure Blob Storage containers or accounts.
+Mendix Operator can perform the following tasks:
+* Provide a static access key and other credentials to environments (a static config).
+* Handle the lifecycle of a storage container by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 (or later versions).
+
+A complete list of supported Azure Blob Storage modes and their required role assignments (permissions) for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
 
 ### 5.5 Google Cloud Storage
 

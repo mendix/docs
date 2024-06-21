@@ -1,14 +1,13 @@
 ---
 title: "Deploy to the Cloud"
 url: /refguide/deploy-to-the-cloud-dialog/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
 
 This menu option dialog creates a versioned deployment package and deploys it to your environment in Mendix Cloud.
 
-{{< figure src="/attachments/refguide/modeling/menus/app-menu/deploy-to-the-cloud-dialog/deploy-to-the-cloud.png" alt="Deploy to the Cloud dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/app-menu/deploy-to-the-cloud-dialog/deploy-to-the-cloud.png" alt="Deploy to the Cloud dialog" width="500" >}}
 
 ## 2 Development Line
 
@@ -28,7 +27,7 @@ Studio Pro displays the latest version that you created a package for (if any). 
 
 ## 5 Description
 
-You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Developer Portal displays this description along with the version number.
+You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Mendix Portal displays this description along with the version number.
 
 ## 6 App
 

@@ -1,9 +1,7 @@
 ---
 title: "Data Widgets"
 url: /appstore/modules/data-widgets/
-category: "Modules"
 description: "Describes the configuration and usage of the Data Widgets module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "data grid", "gallery", "tree node", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -1,14 +1,12 @@
 ---
 title: "Mendix Mini Surveys"
 url: /appstore/modules/mendix-mini-surveys/
-category: "Modules"
 description: "Describes the configuration and usage of the Mendix Mini Surveys module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "app insights", "mini survey", "mini survey"]
 ---
 
 ## 1 Introduction
 
-After you have created a [mini survey](/developerportal/app-insights/mini-surveys/) in the Developer Portal, use the [Mendix Mini Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini survey in Studio Pro.
+After you have created a [mini survey](/developerportal/app-insights/mini-surveys/) in the Mendix Portal, use the [Mendix Mini Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini survey in Studio Pro.
 
 ## 2 Installation
 
@@ -16,7 +14,7 @@ To import this module into your app, follow the instructions in [Using Marketpla
 
 ## 3 Configuration {#configuration}
 
-{{% alert color="info" %}}Before you configure this module in Studio Pro, make sure you have [created your mini survey](/developerportal/app-insights/mini-surveys/#create-survey) in the Developer Portal. {{% /alert %}}
+{{% alert color="info" %}}Before you configure this module in Studio Pro, make sure you have [created your mini survey](/developerportal/app-insights/mini-surveys/#create-survey) in the Mendix Portal. {{% /alert %}}
 
 1. Open your app in Studio Pro.
 2. In **App Explorer**, go to **Marketplace modules** > **AppInsights_MiniSurvey** > **\_SETUP**.
@@ -30,7 +28,7 @@ To import this module into your app, follow the instructions in [Using Marketpla
     * For the on-action option:
 
         1. Open the **Show Survey** folder, then copy the **ShowSurvey_OnAction** nanoflow to your own module.
-        2. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/app-insights/mini-surveys/#survey-details-settings) tab or [Implementation](/developerportal/app-insights/mini-surveys/#survey-details-implementation) tab of the survey details page in **Mini Surveys** in the Developer Portal.
+        2. In the nanoflow, double-click **Create String variable**, fill in the **Survey ID** of the mini survey, and then save the changes. You can find the survey ID on the [Settings](/developerportal/app-insights/mini-surveys/#survey-details-settings) tab or [Implementation](/developerportal/app-insights/mini-surveys/#survey-details-implementation) tab of the survey details page in **Mini Surveys** in the Mendix Portal.
         3. (Optional) Double-click **CHANGE ME**, add your microflow or nanoflow action, then save the changes.
         4. Create a button that calls the **ShowSurvey_OnAction** nanoflow on the page where **Template_SurveyWidget** is placed. Mendix recommends renaming the flow to something that describes the original action.
 
@@ -58,7 +56,7 @@ You can achieve this using the data view and nanoflow solution we provide in the
 
 ### 4.2 What Happens if a User Does Not Finish Answering a Survey? {#unfinished-survey}
 
-If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Developer Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Mendix Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
 ### 4.3 Does `TEST_MODE` Constant Affect Unfinished Surveys?
 

@@ -1,18 +1,20 @@
 ---
-title: "Community Tools Guide"
+title: "Community"
 url: /community-tools/
 description: "Describes the main tools that Mendix maintains to support the awesome Mendix community."
-weight: 46
+weight: 38
 no_list: false 
 description_list: true
 cascade:
-    - space: "Community Tools Guide"
     - content_type: "Community Tools Guide"
     - mendix_version: 10
-tags: ["community", "documentation", "profile", "partner", "forum", "mvp", "support"]
 aliases:
     - /developerportal/community-tools/
 ---
+
+{{% alert color="info" %}}
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), Community, [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -22,4 +24,4 @@ Visit the [Mendix Community](https://community.mendix.com) for all the informati
 
 ## 2 Guide Categories
 
-The *Community Tools Guide* is divided into the following categories:
+The documentation of **Community** is divided into the following categories:

@@ -3,7 +3,6 @@ title: "Expressions"
 url: /refguide/expressions/
 weight: 30
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
-tags: ["studio pro", "expressions", "microflow expressions"]
 aliases:
     - /refguide/microflow-expressions.html
     - /refguide/microflow-expressions
@@ -33,7 +32,7 @@ Arithmetic functions (subtraction, dividing, and multiplying) are being combined
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
 ```java
-if $package/weight < 1.00 then 0.00 else 5.00`
+if $package/weight < 1.00 then 0.00 else 5.00
 ```
 
 {{% alert color="warning" %}}

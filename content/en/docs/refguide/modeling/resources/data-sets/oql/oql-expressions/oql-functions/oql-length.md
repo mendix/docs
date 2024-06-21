@@ -1,7 +1,6 @@
 ---
 title: "OQL LENGTH"
 url: /refguide/oql-length/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `LENGTH` function returns the length of a string value.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 LENGTH ( expression )
 ```
 

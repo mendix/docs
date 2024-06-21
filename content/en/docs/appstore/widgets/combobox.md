@@ -1,9 +1,7 @@
 ---
 title: "Combo Box"
 url: /appstore/widgets/combobox/
-category: "Widgets"
 description: "Describes the configuration and usage of the combo box widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "widget", "combo box", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -51,6 +49,7 @@ The following sections will describe the different available widget properties a
 #### 2.1.1 Data Source Tab
 
 The **Source** option (required) is used is used to configure the datasource type for the widget. It supports the following data types via these properties:
+
 * [Context](#context)
 * [Database](#database)
 * [Static](#static)
@@ -58,6 +57,7 @@ The **Source** option (required) is used is used to configure the datasource typ
 ##### 2.1.1.1 Context {#context}
 
 When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
+
 * [Association](/refguide/association-source/)
 * [Enumeration](/refguide/enumerations/)
 * [Boolean](/refguide/boolean-expressions/)

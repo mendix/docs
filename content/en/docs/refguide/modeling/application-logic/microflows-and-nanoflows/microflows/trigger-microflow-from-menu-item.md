@@ -3,7 +3,6 @@ title: "Triggering a Microflow From a Menu Item"
 url: /refguide/triggering-microflow-from-menu-item/
 weight: 2
 description: "Describes how to create a simple microflow that will define the logic of your application."
-tags: ["Studio Pro", "microflow", "create microflow", "menu item"]
 ---
 
 ## 1 Introduction

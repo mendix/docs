@@ -5,7 +5,6 @@ weight: 70
 description: "Presents a list of how-tos about integrating Mendix applications with other systems and services."
 no_list: false
 description_list: true
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

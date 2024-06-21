@@ -3,7 +3,6 @@ title: "Retrieve Environment-Sensitive Data from a Secret Store"
 url: /developerportal/deploy/secret-store-credentials/
 description: "Describes the process for using external secret stores for Kubernetes secrets"
 weight: 20
-tags: ["Deploy", "Private Cloud", "Secrets", "Secret Stores", "Vault", "Kubernetes", "AWS"]
 ---
 
 ## 1 Introduction
@@ -54,15 +53,17 @@ The following table lists the properties used as keys for database and storage-r
 | Database Host | `database-host` | `pg.example.com:5432` | ✓ |
 | Database Name | `database-name` | `my-app-1` | ✓ |
 | Database Username | `database-username` | `my-app-user-1` | ✓ |
-| Database Password | `database-password` | `Welc0me!` |  |
+| Database Password | `database-password` | `Welc0me!` | ✓ (only for password authentication) |
 | Storage service name | `storage-service-name` | `com.mendix.storage.s3` | ✓ |
 | S3 Storage endpoint | `storage-endpoint` | `https://my-app-bucket.s3.eu-west-1.amazonaws.com` | ✓ (only for S3) |
 | S3 Storage access key id | `storage-access-key-id` | `AKIA################` |  |
 | S3 Storage secret access key | `storage-secret-access-key` | `A#######################################` |  |
 | S3 subdirectory (or bucket name for S3-like storage systems) | `storage-bucket-name` | `subdirectory` | ✓ (only for S3) |
-| Azure storage account | `storage-azure-account-name` | `example` | ✓ (only for Azure Blob Storage) |
-| Azure storage account key | `storage-azure-account-key` | `aw==` | ✓ (only for Azure Blob Storage) |
+| Azure storage account | `storage-azure-account-name` | `example` | ✓ (only for Azure Blob Storage with static authentication) |
+| Azure storage account key | `storage-azure-account-key` | `aw==` | ✓ (only for Azure Blob Storage with static authentication) |
 | Azure storage container name | `storage-azure-container` | `examplecontainer` | ✓ (only for Azure Blob Storage) |
+| Azure storage blob endpoint | `storage-azure-blob-endpoint` | `https://example.blob.core.windows.net/` | ✓ (only for Azure Blob Storage with managed identity auth) |
+| Use managed identity auth for Azure blob storage | `storage-azure-use-default-azure-credential` | `true` | ✓ (only for Azure Blob Storage with managed identity auth) |
 | Use HTTP for Azure | `storage-azure-use-https` | `true` |  |
 | Use configured CA trust for file storage | `storage-use-ca-certificates` | `true` |  |
 | Delete files from storage when deleted in the app | `storage-perform-delete` | `true` |  |
@@ -84,6 +85,16 @@ For more information and a complete walkthrough example, see [Configuring a Secr
 {{% alert color="info" %}}
 If your app is created in Mendix 9.22 or above, and its Kubernetes service account is linked to an AWS IAM Role, you do not need to specify a `database-password` to access a Postgres RDS database. Instead, you can use the same AWS IAM role for RDS authentication.
 For more information and a complete walkthrough example, see the [AWS RDS IAM authentication example](#configure-using-rds-iam).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If your app is created in Mendix 9.22 or above, and its Kubernetes service account is linked to an Azure Managed Identity, you do not need to specify a `database-password` to access an Azure Postgres database. Instead, you can use the same managed identity for database authentication.
+For more information and a complete walkthrough example, see the [Azure Postgres Managed Identity authentication example](#configure-using-azwi-postgres).
+{{% /alert %}}
+
+{{% alert color="info" %}}
+If your app is created in Mendix 10.10 or above, and its Kubernetes service account is linked to an Azure Managed Identity, you do not need to specify a `database-password` to access an Azure SQL database. Instead, you can use the same managed identity for database authentication.
+For more information and a complete walkthrough example, see the [Azure SQL Managed Identity authentication example](#configure-using-azwi-sql).
 {{% /alert %}}
 
 To set a Mendix app constant, use the `mx-const-{name}` format (replace `{name}` with the name of the app constant).
@@ -486,14 +497,20 @@ To use this feature, you need to:
 After completing the prerequisites, follow these steps to switch from password-based authentication to IAM authentication:
 
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated AWS Secret.
-2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) for the `database-username` role by using the `psql` commandline to run the following commands (replacing `<database-username>` with the username specified in `database-username`):
+2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
    ```sql {linenos=false}
+   kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
+   export PGDATABASE=postgres
+   export PGUSER=<database-username>
+   export PGHOST=<database-host>
+   export PGPASSWORD=<database-password>
+   psql
+
    GRANT rds_iam TO <database-username>;
    ALTER ROLE <database-username> WITH PASSWORD NULL;
    ```
 
-   {{% alert color="info" %}}This step is not necessary if the RDS instance was created with only IAM authentication enabled, and if `database-username` is the default (primary) user.{{% /alert %}}
 3. Attach the following inline IAM policy to the environment's IAM role (created when [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager)):
 
    ```json
@@ -541,7 +558,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
     You can leave the **Access configuration** as default (**Azure RBAC** and no additional **Resource access**).
 
-{{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
+    {{% alert color="info" %}}This walkthrough uses the default network settings (allow all access). Your organization might have additional instructions or policies that can be used to restrict public access to Key vaults.{{% /alert %}}
 
 4. Write down the name of the new Key vault and its **Directory ID** (Azure Tenant ID).
 
@@ -688,6 +705,94 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
 For more information, see the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example in the Azure Key Vault documentation.
 
+#### 3.3.1 Using Managed Identity Authentication for Postgres Databases {#configure-using-azwi-postgres}
+
+[Azure Postgres (Flexible Server)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/service-overview) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) instead of regular passwords.
+
+{{% alert color="warning" %}}Azure has a legacy Postgres (Single Server) database. The Mendix Operator does not support [managed identity authentication for Single Server databases](https://learn.microsoft.com/en-us/azure/postgresql/single-server/how-to-configure-sign-in-azure-ad-authentication), only the new Flexible Server is supported. This section only applies to Flexible Server databases.{{% /alert %}}
+
+To use this feature, you need to:
+
+* Use an Azure Postgres (Flexible Server) database
+* Use Mendix Operator version 2.17.0 and above.
+* Use Mendix 9.22 and above.
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
+
+1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
+2. Enable [Microsoft Entra authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-configure-sign-in-azure-ad-authentication) and add yourself as an Entra Admin user in the Postgres database.
+3. Open Azure Cloud Shell (or a Bash-compatible terminal) and run `az login` to authenticate with Entra ID.
+4. Run the following command to connect to the Azure Postgres database, replacing `<hostname>` with the Postgres server hostname (e.g. `example.postgres.database.azure.com`), and `<user-email>` with your Entra ID login email (e.g. `user@tenant.onmicrosoft.com`):
+
+   ```shell {linenos=false}
+   psql "host=<hostname> port=5432 dbname=postgres user=<user-email> password=$(az account get-access-token --resource-type oss-rdbms --output tsv --query accessToken) sslmode=require"
+   ```
+
+5. In the Postgres client, run the following commands (replace `<database-user>` with the environment's current `database-user` name, and `<managed-identity-uuid>` with the **Object (principal) ID** of the environment's **Managed Identity**:
+
+   ```sql {linenos=false}
+   SECURITY LABEL for "pgaadauth" on role "<database-user>" is 'aadauth,oid=<managed-identity-uuid>,type=service';
+   ALTER ROLE <database-user> WITH PASSWORD NULL;
+   \q
+   ```
+
+6. Restart the Mendix app environment.
+
+When using managed identity authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached Managed Identity role to request a new Postgres password a few minutes before it expires using the [identity API](https://learn.microsoft.com/en-us/azure/service-connector/tutorial-passwordless?tabs=user%2Cgo%2Csql-me-id-dotnet%2Cappservice&pivots=postgresql#connect-to-a-database-with-microsoft-entra-authentication). These password have an expiration time between a few minutes and a few hours.
+Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
+
+#### 3.3.2 Using Managed Identity Authentication for Azure SQL Databases {#configure-using-azwi-sql}
+
+[Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview) instead of regular passwords.
+
+To use this feature, you need to:
+
+* Use an Azure SQL database.
+* Use Mendix Operator version 2.17.0 and above.
+* Use Mendix 10.10 and above.
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
+
+1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated Key vault Secret.
+2. Write down the value of `database-username` - this username will need to be removed on step 5.
+3. Edit the `database-jdbc-url` and add a `authentication=ActiveDirectoryManagedIdentity` parameter to the JDBC URL value: the URL should look like `jdbc:sqlserver://example.database.windows.net:1433;encrypt=true;trustServerCertificate=false;authentication=ActiveDirectoryMSI;`.
+4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
+   Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
+5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
+   (replace `<managed-identity-name>` with  the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
+
+   ```sql {linenos=false}
+   DROP USER [<static-database-username>];
+   CREATE USER [<managed-identity-name>] FROM EXTERNAL PROVIDER;
+   ALTER ROLE db_owner ADD MEMBER [<managed-identity-name>];
+   ```
+
+6. Restart the Mendix app environment.
+
+Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
+
+#### 3.3.3 Using Managed Identity Authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
+
+[Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
+
+To use this feature, you need to:
+
+* Use an Azure Blob Storage account.
+* Use Mendix Operator version 2.17.0 and above.
+* Use Mendix 10.10 and above.
+* Complete the steps described in [Configuring a Secret Store with AWS Secrets Manager](#configure-using-aws-secrets-manager).
+
+After completing the prerequisites, follow these steps to switch from password-based authentication to managed identity authentication:
+
+1. Remove or comment out `storage-azure-account-key` and `storage-azure-account-name` from the `SecretProviderClass` and the associated Key vault Secret.
+2. Add the following keys to the `SecretProviderClass` and Azure Key vault:
+    * `storage-azure-blob-endpoint` - specify the storage account's [Primary endpoint](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints);
+    * `storage-azure-use-default-azure-credential` - set to `true` to enable managed identity authentication.
+3. Open the envionment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
+4. Restart the Mendix app environment.
+
 ## 4 Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
@@ -699,4 +804,4 @@ When implementing a secret store, keep in mind the following considerations:
     * In Mendix 9.22 or above, database password rotation is processed without restarting the app.
 * Dynamic secrets in HashiCorp Vault are supported - from the app environment, they are identical to regular secrets.
 * The internal name of the environment must match an existing `ServiceAccount` and `SecretProviderClass`.
-* CSI Secrets Storage can override app settings — if a parameter is configured in the Developer Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.
+* CSI Secrets Storage can override app settings — if a parameter is configured in the Mendix Portal or `MendixApp` CR, the value from CSI Secrets Storage will have a higher priority and will override the value specified elsewhere. For example, CSI Secrets Storage can override the `MxAdmin` password, app constants, and runtime custom settings.

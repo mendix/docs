@@ -2,7 +2,6 @@
 title: "Published OData Services"
 url: /refguide/published-odata-services/
 weight: 10
-tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 The standard used for OData in Mendix is [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="warning" %}}
-he option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which return data in Atom XML format, is deprecated and will be removed in a future version.
+The option to publish [OData v3](https://www.odata.org/documentation/odata-version-3-0) services, which returns data in Atom XML format, is deprecated and will be removed in a future version.
 {{% /alert %}}
 
 Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
@@ -101,7 +100,7 @@ You can select how you want to represent associations. For more information, see
 
 #### 3.1.3 Include metadata in response by default
 
-This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedences over this setting.
+This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedence over this setting.
 
 {{% alert color="info" %}}
 Disabling this setting could break integrations with this service, specifically integrations with Microsoft Excel and PowerBI. This setting must enabled to use these features.
@@ -121,7 +120,9 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 #### 3.2.3 OpenAPI {#openapi}
 
-The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format.
+The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format. This is a machine-readable file according to the OpenAPI Specification format. Most API tools support this format.
+
+When the app is running, you can also download this file from the [API documentation page](#api-documentation), under `/odata-doc/{location}/openapi.json`, where `{location}` is the location of the OData service (for instance, `odata/myservice/v1)`.
 
 ### 3.3 Security {#security}
 
@@ -205,19 +206,23 @@ Web service users cannot access OData services.
 
 ## 4 Public Documentation
 
-In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
+In the **Public documentation** tab, you can write a summary and a description intended for people using the service. This documentation is used in the service's OpenAPI documentation.
 
-## 5 Properties
+## 5 OpenAPI Documentation
+
+In the **OpenAPI Documentation** pane, you can see a preview of the API documentation for the published OData service. It lists the available operations and schemas that will become available when you run the app. This is similar to the [Swagger UI page](#api-documentation) that is available after publishing your app, with the exception that the preview is not interactive. 
+
+## 6 Properties
 
 In the Properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
-### 5.1 Documentation
+### 6.1 Documentation
 
 Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
 
-### 5.2 Replace Illegal XML Characters
+### 6.2 Replace Illegal XML Characters
 
 Some special characters cannot be used in XML. If your data contains these characters, the client will get an error. If you set this setting to **Yes**, the illegal characters are replaced by the DEL character, and the client will not get an error. However, the data the client receives will not be exactly what is stored in your database because these characters have been replaced.
 
@@ -225,9 +230,9 @@ The **Replace Illegal XML Characters** option is not available when the OData ve
 
 Default value: **No**
 
-## 6 Runtime Considerations
+## 7 Runtime Considerations
 
-### 6.1 General
+### 7.1 API Documentation {#api-documentation}
 
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/` (for example, `http://localhost:8080/odata-doc/`). For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
@@ -241,13 +246,13 @@ For details on how Mendix attributes are represented in OData, refer to [OData R
 
 When publishing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion to avoid out-of-memory errors in the Mendix Runtime.
 
-### 6.2 On-Premises Deployments
+### 7.2 On-Premises Deployments
 
 Some on-premises servers (in particular, those using Microsoft IIS) will strip the host header from requests. This means your OData service and documentation will be published on an unexpected URL.
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
 
-## 7 Runtime Status Codes {#status-codes}
+## 8 Runtime Status Codes {#status-codes}
 
 The Mendix runtime returns status codes for OData payloads. The possible status codes are the following:
 
@@ -255,10 +260,10 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
 * `500` – Mendix default when something goes wrong and it has not been modeled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
-## 8 Publishing OData Services
+## 9 Publishing OData Services
 
 To publish an entity with full CRUD (Create, Read, Update, or Delete functionality; or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
-## 9 Limitations
+## 10 Limitations
 
 Studio Pro currently does not support publishing media entities with OData services. To learn about consuming media entities with OData, see the [Binary Attributes](/refguide/consumed-odata-service-requirements/#binary-attributes) section of *Consumed OData Service Requirements*. You can also [Publish and Retrieve Images and Files with REST](/refguide/send-receive-files-rest/).

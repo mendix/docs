@@ -3,7 +3,6 @@ title: "Export Package Commands"
 url: /refguide/mx-command-line-tool/export
 weight: 40
 description: "Describes the commands related to package export for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "create-project-package", "create-module-package", "create-solution-package"]
 ---
 
 ## 1 Introduction
@@ -28,7 +27,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 ### 2.2 Examples
 
@@ -66,7 +65,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the module package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 For `MODULE-NAME`, specify the name of the module you want to export.
 
@@ -106,7 +105,7 @@ These are the `OPTIONS`:
 | `-d, --package-dir` | Exports the package to the directory. |
 | `--help` | Displays the help screen. |
 
-For `TARGET-FILE`, specify the *.mpr*  the app you want to export.
+For `TARGET-FILE`, specify the *.mpr* app you want to export.
 
 ### 4.2 Examples
 

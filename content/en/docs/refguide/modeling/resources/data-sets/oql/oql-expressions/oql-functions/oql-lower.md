@@ -1,7 +1,6 @@
 ---
 title: "OQL LOWER"
 url: /refguide/oql-lower/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `LOWER` function converts all uppercase characters in a given string to lowe
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 LOWER ( expression )
 ```
 

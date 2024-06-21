@@ -3,15 +3,14 @@ title: "Environment Details"
 url: /developerportal/deploy/environments-details/
 weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
-tags: ["Deploy","App","Environment","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
-#The anchor #connection-safelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
-#The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #connection-safelist below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
+#The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
 ## 1 Introduction
 
-To open the **Environment Details** page, go to the [Developer Portal](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
+To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/environment-details.png" alt="The Details icon is on the right side of the row" >}}
 
@@ -24,9 +23,10 @@ The **Environment Details** page shows information about the selected environmen
 In the **General** tab, you can find the following information about your environment:
 
 * **Status**
-    * {{% icon name="checkmark-circle-filled" color="green" %}} – the application in this environment is running
-    * {{% icon name="subtract-circle-filled" color="gray" %}} – no application has been started yet in this environment, or it has been turned off
-    * {{% icon name="remove-circle-filled" color="red" %}} – the application in this environment is unstable and probably not usable anymore
+    * {{% icon name="checkmark-circle-filled" color="green" %}} – The application in this environment is running.
+    * {{% icon name="subtract-circle-filled" color="gray" %}} – No application has been started yet in this environment, or it has been turned off.
+    * {{% icon name="alert-circle-filled" color="yellow" %}} – The application in this environment is experiencing some difficulties; check the alerts page or logs for more information.
+    * {{% icon name="remove-circle-filled" color="red" %}} – The application in this environment is unstable and probably not usable anymore.
 * **Running since** – the date the app was started, if it is running
 * **Name** – the type of environment (Acceptance, Production, Test, or the name of a [flexible environment](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments)); for more information, see the [Naming of Environments](#naming) section below
 * **Url** – the URL of the app
@@ -38,8 +38,8 @@ In the **General** tab, you can find the following information about your enviro
 * **Plan** – the type of plan covered by your license (for more information, see the [Overviews](/developerportal/deploy/environments-details/#overviews) section below)
 * **Instances** – a summary of the number and memory allocation of instances of the environment (for more information, see the [Scaling](#scaling) section below)
 * **Database Version** – the PostgreSQL version supporting the database
-* **Region** – the region where the app is hosted
-* **Secondary Backup Location** – the region where the backup is stored
+* **Region** – the region of the data center where the app is hosted (for the full list of Mendix Cloud regions, see [Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing))
+* **Secondary Backup Location** – the region where the backup is stored (for more information, see [Data Location](/developerportal/operate/backups/#data-location) in the *Backups* documentation)
 * **Mendix Cloud Version** – the version of Mendix Cloud where the app is hosted
 
 At the bottom of the page, there are three overview grids showing the deployment package details, plan details, and license. These are described in detail below in the [Overviews](#overviews) section.
@@ -190,7 +190,7 @@ To fill in a new value, select the constant and click **Edit** to bring up the *
 
 In the **Edit Constant** dialog box, you can change the constant value using the **New value** field.
 
-You can also set **Mask** to **Yes**. This changes the display settings for **Current value** and **New value**; if masking is enabled, all screens in the Developer Portal (and in Excel if you export the constants) conceal these values and display a string of asterisks in their place. This lets you keep your constants secret from users who do not have edit rights.
+You can also set **Mask** to **Yes**. This changes the display settings for **Current value** and **New value**; if masking is enabled, all screens in the Mendix Portal (and in Excel if you export the constants) conceal these values and display a string of asterisks in their place. This lets you keep your constants secret from users who do not have edit rights.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/edit-constant.png" alt="Edit Constants Pop-up window"   width="60%"  class="no-border" >}}
 
@@ -232,7 +232,7 @@ The **HTTP Headers** section lets you set the values of selected HTTP response h
 Earlier versions of Mendix Cloud had a setting that let you prevent embedding your app in an iframe. This setting is now replaced with support for HTTP headers, which offer more flexible options.
 {{% /alert %}}
 
-Mendix Cloud supports the following HTTP headers in the Developer Portal:
+Mendix Cloud supports the following HTTP headers in the Mendix Portal:
 
 | Header                        | Description |
 | ----------------------------- | ----------- |
@@ -410,7 +410,7 @@ When using the **Log Levels** tab, bear in mind the following considerations:
 * If you change the log level, the startup logs (the logs that are created while starting the runtime, including the logs that the after-startup microflow generates) are not affected. It is not possible to change the log level of the startup logs for apps hosted on Mendix Cloud. 
 * For an application running a single instance, any changes are applied immediately to the application.
 * For an application running more than one instance, the changes can only be applied after a restart of the app. This is because it is not possible to instruct the load balancer to set the log level for a specific running instance. 
-* Log levels may not persist across restarts if you change them outside the Developer Portal (for example, using an app module).
+* Log levels may not persist across restarts if you change them outside the Mendix Portal (for example, using an app module).
 
 The log level types are as follows:
 
@@ -511,7 +511,7 @@ When a maintenance operation is planned, it appears under **Planned Maintenance*
 
 ## 8 The Tags Tab{#tags}
 
-You can set tags on your environment. Tags are arbitrary strings that are not interpreted by the Developer Portal.
+You can set tags on your environment. Tags are arbitrary strings that are not interpreted by the Mendix Portal.
 
 {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" class="no-border" >}}
 

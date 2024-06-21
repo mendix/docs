@@ -1,10 +1,8 @@
 ---
 title: "Install Mendix Studio Pro"
 url: /howto8/general/install/
-category: "General Info"
 weight: 10
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
-tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
 ## 1 Introduction
@@ -68,8 +66,8 @@ The prerequisites are the following:
 
 * [Microsoft .NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
 * Java JDK
-  * For Mendix Studio Pro 8.18.29 and above [Eclipse Temurin JDK 17](https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.10%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi)
-  * For Mendix Studio Pro 8.18.28 and below [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
+    * For Mendix Studio Pro 8.18.29 and above [Eclipse Temurin JDK 17](https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.10%2B7/OpenJDK17U-jdk_x64_windows_hotspot_17.0.10_7.msi)
+    * For Mendix Studio Pro 8.18.28 and below [AdoptOpenJDK 11](https://cdn.mendix.com/installer/AdoptOpenJDK/OpenJDK11U-jdk_x64_windows_hotspot_11.0.3_7.msi)
 * [Microsoft Visual C++ 2010 SP1 Redistributable Package](https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe)
 * [Microsoft Visual C++ 2015 Redistributable Package](https://download.microsoft.com/download/6/A/A/6AA4EDFF-645B-48C5-81CC-ED5963AEAD48/vc_redist.x64.exe)
 * [Mendix Native Mobile Builder one-click Installer](https://artifacts.rnd.mendix.com/native-builders/latest.exe)

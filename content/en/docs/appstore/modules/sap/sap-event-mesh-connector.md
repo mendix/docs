@@ -3,7 +3,6 @@ title: "SAP Event Mesh Connector"
 url: /appstore/modules/sap/sap-event-mesh-connector/
 description: "Describes the configuration and usage of the SAP Event Mesh connector from the Mendix Marketplace. The SAP Event Mesh service is allows applications to communicate through asynchronous events."
 weight: 20
-tags: ["marketplace", "marketplace component", "SAP", "SAP Event Mesh", "connector"]
 aliases:
     - /appstore/connectors/sap/sap-event-mesh-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -49,7 +48,7 @@ The SAP Enterprise Messaging service (Event Mesh) instance must be created with 
 
 The **Event Mesh Configurator** provides a user friendly interface to create the JSON required to configure the required Enterprise Messaging service instance with the desired configuration. To bind and configure the service, perform the following steps:
 
-1. Ensure that the **enterprise-messaging** service is in the status **Available Services** in Developer Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
+1. Ensure that the **enterprise-messaging** service is in the status **Available Services** in Mendix Portal. See the [Services Tab](/developerportal/deploy/sap-cloud-platform/#binding-services) section of *SAP Business Technology Platform* for more information.
 2. Click **Available Services** > **⚙️ Configurator** to open the configurator.
 3. Provide the required information. For more information about the parameter syntax, see [Syntax for Service Descriptor](https://help.sap.com/docs/event-mesh/event-mesh/syntax-for-service-descriptor?locale=en-US).
     * **EM Name** - Enter a display name for the service.

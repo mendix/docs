@@ -1,12 +1,10 @@
 ---
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
-category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs in Mx10."
 no_list: false
 description_list: true
 weight: 90
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
@@ -52,7 +50,7 @@ A prop value is often not just a primitive value, but an object whose structure 
 
 The above interface could be used this way: a component uses a `canExecute` flag to decide whether it should be enabled, uses an `isExecuting`  flag to show an inline progress indicator, and triggers `execute()` method in a reaction to user click. Normally, after `execute()` has been triggered, the component will be re-rendered with a new value that has the `isExecuting` flag set, and when an action, for example a microflow, completes, the component is re-rendered again without `isExecuting`.
 
-## 3 Widget Package
+## 3 Widget Package {#widget-package}
 
 A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your app's `widgets` directory. Mendix Studio Pro discovers all widgets in your app when you open your app, add a widget through the Marketplace, or  click **App** > **Synchronize App Directory**.
 
@@ -97,8 +95,9 @@ A simple widget XML file might look like this:
 
 ```xml
     <?xml version="1.0" encoding="utf-8" ?>
-    <widget [attibutes]>
+    <widget [attributes]>
         <name>{User friendly widget name}</name>
+        <description>{User friendly short description}</description>
         <properties>
             [properties]
         </properties>
@@ -130,21 +129,46 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-After widget attributes, you will see a description of a widget that will be presented in Studio Pro. This description includes a widget name and its icon encoded as a base64 image:
+The presentation of the widget in Studio pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
+
+* `name` — The display name of the widget.
+* `description` — A short written description of the widget.
+* `studioProCategory` — See [Toolbox Category](#toolbox-category).
+* `helpUrl` — See [Help Page](#help).
+* `icon` — See [Icon](#icon).
 
 ```xml
-	<name>My Progress Card</name>
+    <name>My Progress Card</name>
+    <description>Displays my progress.</description>
 ```
 
 In Mendix Studio Pro, the widget described above would look like this:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card" class="no-border" >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
 
-#### 4.2.1 Help Page {#help}
+#### 4.2.1 Toolbox Category {#toolbox-category}
 
-You can provide additional help information to widget users by using a help page. If you do so, a widget configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
+To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
+
+When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 
+
+A category can be provided through the `studioProCategory` tag:
+
+```xml
+   <studioProCategory>Open Street Maps</studioProCategory>
+```
+
+In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI.
+
+{{% alert color="info" %}}
+When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+{{% /alert %}}
+
+#### 4.2.2 Help Page {#help}
+
+You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 
@@ -160,27 +184,16 @@ For more complex help pages you can link to a markdown page. For security reason
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
 
-#### 4.2.2 Toolbox Category {#toolbox-category}
+#### 4.2.3 Icon {#icon}
 
-To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
-
-When an existing category is specified, then your widget is placed in it next to existing built-in widgets. When a new category is specified, then your widget placed in that new category. 
-
-A category can be provided through `studioCategory` and `studioProCategory` tags:
+The `<icon>` element accepts a base64 encoded image that is displayed as the widget icon in Studio Pro. The element is optional and can be omitted. When no icon is provided, Studio Pro will display a fallback icon.
 
 ```xml
-   <studioProCategory>Open Street Maps</studioProCategory>
-   <studioCategory>Maps</studioCategory>
+<icon>PHN2Zy...9zdmc+</icon>
 ```
 
-In the example above, a widget would be placed under **Open Street Maps widgets** in Studio Pro. Note that **widgets** is added automatically in the Studio Pro UI.
-
 {{% alert color="info" %}}
-The `studioCategory` and `studioProCategory` tags should be placed right after the `description` tag.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
+Bundling the icon in the [widget package](#widget-package) is our recommended approach. The files are easier to work with and allow for more customization.
 {{% /alert %}}
 
 ### 4.3 Widget Properties Definition {#properties-definition}

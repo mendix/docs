@@ -1,7 +1,6 @@
 ---
 title: "OQL REPLACE"
 url: /refguide/oql-replace/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `REPLACE` function replaces all occurrences of a specified string value with
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 REPLACE ( expression, pattern, replacement )
 ```
 

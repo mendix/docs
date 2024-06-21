@@ -2,10 +2,8 @@
 title: "Configuring a Form and Show Items Related to It"
 linktitle: "Configure Form and Show Form Items"
 url: /refguide/configure-form/
-category: "Pages"
 description: "Describes how to configure a form in Mendix Studio Pro."
 weight: 50
-tags: ["studio pro", "pages", "form", "how to"]
 ---
 
 ## 1 Introduction 

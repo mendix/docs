@@ -2,7 +2,6 @@
 title: "Branch Line Manager"
 url: /refguide/branch-line-manager-dialog/
 weight: 80
-tags: ["studio pro", "manage branch lines", "branch line manager"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ The **Branch Line Manager** is used to manage the [branch lines](/refguide/versi
 
 To view the **Branch Line Manager** dialog box, open **Version Control** > **Manage Branch Lines**.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/branch-line-manager-dialog/branch-line-manager.png" alt="Team Server Branch Line Manager" class="no-border" width="550" >}}
 
 A branch line allows independent development from other development lines. There are two main reasons for creating a branch line:
 

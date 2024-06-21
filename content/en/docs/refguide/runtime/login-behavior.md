@@ -1,9 +1,7 @@
 ---
 title: "Login Behavior"
 url: /refguide/login-behavior/
-category: "Mendix Runtime"
 description: "Describes default and customized login behavior in the Mendix Runtime."
-tags: ["Runtime", "login", "studio pro"]
 ---
 
 ## 1 Default Login Behavior

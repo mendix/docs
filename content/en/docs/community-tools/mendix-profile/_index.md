@@ -1,10 +1,8 @@
 ---
 title: "Mendix Profile"
 url: /community-tools/mendix-profile/
-category: "Community Tools"
 weight: 2
-description: "Describes the personal profile page of the Mendix Developer Portal."
-tags: ["profile", "Developer Portal", "settings", "badge", "point", "connection", "invite", "leaderboard", "edit", "daily digest"]
+description: "Describes the personal profile page of the Mendix Portal."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 aliases:
     - /developerportal/community-tools/mendix-profile/
@@ -15,7 +13,7 @@ aliases:
 
 Your Mendix Profile is your main point of contact with members of the Mendix community. It displays your activities on the Mendix Platform and details about your background. To get more involved in the Mendix community, your profile is the best place to start. 
 
-You can access your Mendix profile by clicking your picture in the upper-right corner of the Developer Portal and then selecting **See Your Profile**. 
+You can access your Mendix profile by clicking your picture in the upper-right corner of any page in the Mendix Portal (for example, [Apps](https://sprintr.home.mendix.com/), the [Mendix Marketplace](https://marketplace.mendix.com/),[Control Center](https://controlcenter.mendix.com/)) and then selecting **See Your Profile**. 
 
 {{% alert color="info" %}}
 By default, any newly created Mendix account comes with its own Mendix Profile.

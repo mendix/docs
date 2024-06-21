@@ -1,7 +1,6 @@
 ---
 title: "Data View (Document Template)"
 url: /refguide/data-view-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/Data+View+(document+template).html
     - /refguide/data-view-(document-template).html

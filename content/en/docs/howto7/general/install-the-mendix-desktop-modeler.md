@@ -1,7 +1,6 @@
 ---
 title: "Install the Mendix Desktop Modeler"
 url: /howto7/general/install-the-mendix-desktop-modeler/
-category: "General"
 weight: 1
 description: "Follow this how-to to learn how to install the Mendix Desktop Modeler."
 ---

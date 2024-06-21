@@ -4,7 +4,6 @@ linktitle: "Git On-Premises Version Control Server"
 url: /refguide/on-premises-git/
 weight: 60
 description: "Introduces how to work with Git on-premises version control server."
-tags: ["on-premises", "git", "version control"]
 aliases:
     - /howto/collaboration-requirements-management/on-premises-git-howto/
 ---
@@ -20,9 +19,9 @@ This document does not describe how to set up a Git server from scratch; typical
 {{% /alert %}}
 
 {{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
-
-* Deployment using the Developer Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* Publishing and deploying to Mendix Cloud directly from Studio Pro
+* Building deployment packages on the Mendix Portal directly from the Team Server
+* Using integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/){{% /alert %}}
 
 ## 2 Prerequisites

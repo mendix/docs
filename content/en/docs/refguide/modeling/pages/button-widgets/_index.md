@@ -2,7 +2,6 @@
 title: "Buttons"
 url: /refguide/button-widgets/
 weight: 40
-tags: ["studio pro", "button widgets", "buttons", "widget"]
 aliases:
     - /refguide/action-button.html
     - /refguide/drop-down-button.html

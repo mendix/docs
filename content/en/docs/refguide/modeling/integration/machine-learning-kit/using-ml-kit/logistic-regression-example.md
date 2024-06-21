@@ -1,9 +1,7 @@
 ---
 title: "Logistic Regression Example"
 url: /refguide/machine-learning-kit/using-ml-kit/logistic-regression/
-category: Using ML Kit
 weight: 20
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration", "example", "logistic regression"]
 ---
 
 ## 1 Introduction

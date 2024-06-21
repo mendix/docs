@@ -3,7 +3,6 @@ title: "App Settings"
 url: /refguide/app-settings/
 weight: 10
 description: "Settings which apply to the app as a whole."
-tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 aliases:
     - /refguide/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -79,7 +78,7 @@ For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
 
 {{% /alert %}}
 
-For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
+For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 
@@ -101,7 +100,7 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in the [Mendix Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 
@@ -220,6 +219,19 @@ To force a query to the runtime, use microflows. For example, create a microflow
 {{% /alert %}}
 
 Default: *Yes*
+
+### 3.15 Foreign Key Constraints {#database-fkc}
+
+If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
+
+{{% alert color="info" %}}
+This option was added in Mendix version 10.10.
+{{% /alert %}}
+
+Default: *depends on the version of Mendix used to create the app:*
+
+* *Yes* for apps created with Mendix versions 10.6.0 and above
+* *No* for apps created with Mendix versions below 10.6
 
 ## 4 Languages Tab {#languages-tab}
 

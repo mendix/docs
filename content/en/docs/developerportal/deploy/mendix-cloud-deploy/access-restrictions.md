@@ -2,15 +2,14 @@
 title: "Restrict Access for Incoming Requests"
 linktitle: "Restrict Incoming Access"
 url: /developerportal/deploy/access-restrictions/
-weight: 36
+weight: 80
 description: "How to limit access to your app using IP addresses and certificates"
-tags: ["incoming requests", "IP Range", "security", "paths", "URL", "certificate"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Your app is accessible over the internet – but you may not want everyone to be able to access it. For fine-grained control over external access to your application, configure the access restrictions.
+Your app is accessible over the internet—but you may not want everyone to be able to access it. For fine-grained control over external access to your application, configure the access restrictions.
 
 You can apply restrictions to the top level of the application URL (`/`). You can also apply restrictions to more specific paths (such as `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
@@ -76,7 +75,7 @@ For each IP range, you can specify a **Name** for the range and a range of addre
 
 To apply a restriction to a specific application environment, follow these steps:
 
-1. From the Developer Portal, open the **Environments** page for your app.
+1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Click **Details** ({{% icon name="notes-paper-edit" %}}) on the desired environment.
 3. Go to the **Network** tab.
 4. The **Path Based Access Restrictions** section allows for applying access restrictions to a single environment.
@@ -107,7 +106,7 @@ Consider this example scenario in which a basic IP range restriction could be us
 
 To restrict access to the app to an IP range, follow these steps:
 
-1. From the [Developer Portal](https://sprintr.home.mendix.com), go to your app's **Environments** page.
+1. From [Apps](https://sprintr.home.mendix.com), go to the app's **Environments** page.
 2. Switch to the **Access Restriction Profiles** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/access-restrictions/app-restriction.png" alt="The Access Restriction Profiles tab" class="no-border" >}}

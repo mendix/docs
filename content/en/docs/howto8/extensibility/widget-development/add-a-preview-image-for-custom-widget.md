@@ -2,7 +2,6 @@
 title: "Build a Preview Image for a Custom Widget"
 linktitle: "Preview Image for Custom Widget"
 url: /howto8/extensibility/add-a-preview-image-for-custom-widget/
-tags: ["image", "preview", "widget", "custom"]
 ---
 
 ## 1 Introduction

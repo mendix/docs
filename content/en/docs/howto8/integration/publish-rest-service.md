@@ -1,10 +1,8 @@
 ---
 title: "Publish a REST Service"
 url: /howto8/integration/publish-rest-service/
-category: "Integration"
 weight: 10
 description: "Describes how to publish REST web services natively from ."
-tags: ["rest", "rest service", "web service", "integration"]
 ---
 
 ## 1 Introduction
@@ -207,7 +205,7 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}
 
 ## 7 Read More
 

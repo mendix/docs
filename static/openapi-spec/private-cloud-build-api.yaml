@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Build API
-  version: 4.1.0
+  version: 4.3.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -27,6 +27,12 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-job
       description: Retrieve the status of an asynchronous job which has been initiated by an API call. Each API call which successfully starts a job will return the ID of the job which can be used in this API call.
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: log
+          description: Set the value to `true` to request the build log for the deployment package. The default value is `false`.
     parameters:
       - name: jobId
         in: path
@@ -197,7 +203,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     error:
       type: object
       properties:
@@ -255,6 +261,8 @@ components:
           description: Only present if the JobRequest was for building or uploading a deployment package.
         error:
           $ref: '#/components/schemas/error-body'
+        log:
+          $ref: '#/components/schemas/log'
       required:
         - id
         - status
@@ -310,6 +318,10 @@ components:
               type: string
               description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the `log` query parameter is set to `true`.
               example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type... '
+            expiryDate:
+              type: string
+              format: date-time
+              description: The date when the package is supposed to expire.
             url:
               type: object
               format: uri
@@ -376,6 +388,10 @@ components:
                 description: The size of the deployment package file in bytes.
                 minimum: 0
                 example: 2924125
+              expiryDate:
+                type: string
+                format: date-time
+                description: The date when the package is supposed to expire.
             required:
               - id
               - appId
@@ -413,6 +429,17 @@ components:
         - offset
         - limit
         - size
+    log:
+      title: log
+      x-stoplight:
+        id: b6zu9z3560bo0
+      type: object
+      description: Model for log.
+      properties:
+        build:
+          type: string
+          example: 'Pipeline created at 2023-02-17T15:01:19Z [teamserver-discovery] 2023-02-17T15:01:24.551071428Z Project: a335e635-e0aa-4514-9437-c95aafa1fc12 [teamserver-discovery] 2023-02-17T15:01:24.551130910Z Determining repository type...'
+          description: The build log for the deployment package. Can be used to debug potential issues encountered when creating the deployment package. Visibile only when the log query parameter is set to true.
   parameters:
     offset:
       name: offset
@@ -441,7 +468,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     packageId:
       name: packageId
       in: path
@@ -583,7 +610,7 @@ components:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies: {}
 tags:
   - name: packages

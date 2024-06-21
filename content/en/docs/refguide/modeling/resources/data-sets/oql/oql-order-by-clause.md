@@ -1,7 +1,7 @@
 ---
 title: "OQL Order by Clause"
 url: /refguide/oql-order-by-clause/
-tags: ["studio pro"]
+weight: 50
 ---
 
 ## 1 Description
@@ -14,7 +14,7 @@ This clause can include items that do not appear in the `SELECT` clause, except 
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 ORDER BY
 	{
 		order_by_expression [ ASC | DESC ]
@@ -41,14 +41,14 @@ For details on the default ordering behavior of NULL values, see the [NULL Value
 
 This query retrieves all customers and returns the first names sorted on the last name, ascending:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 ```
 
 This query retrieves all customers and returns the first and last name sorted on the last name, descending:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName + ' ' + LastName FROM Sales.Customer
 ORDER BY LastName DESC
 ```

@@ -2,7 +2,6 @@
 title: "Advanced Audit Trail"
 url: /appstore/modules/advanced-audit-trail/
 description: "Describes the configuration and usage of the Advanced Audit Trail solution, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "audit trail"]
 aliases:
     - /appstore/app-services/advanced-audit-trail/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -165,7 +164,7 @@ Update the **AuditSnapshots_ResponsiveLayout** to update the layouts without cha
 
 You can deploy Advanced Audit Trail locally or in a Mendix Free App for free. However, to deploy Advanced Audit Trail in the Mendix Cloud, you need to start a subscription to [obtain a license key](#obtain-license-key) and then configure it.
 
-Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Developer Portal.
+Before you deploy your app, configure the app **Constants** in the [deployment package](/developerportal/deploy/environments-details/) in the Mendix Portal.
 
 If you have already deployed your app, change the existing **Licensekey** constant value on the **Model Options** tab and restart the app.
 

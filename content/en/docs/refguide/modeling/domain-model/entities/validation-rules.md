@@ -2,10 +2,8 @@
 title: "Validation Rules"
 url: /refguide/validation-rules/
 weight: 40
-tags: ["domain model", "entity", "validation rule"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
-
 ## 1 Introduction
 
 Validation rules are conditions that should be satisfied before an object is committed. If a condition defined by a validation rule is not satisfied when the object is committed, the runtime server generates a validation error.
@@ -55,7 +53,7 @@ The rule defines which condition an attribute should satisfy.
 
 | Option | Description |
 | --- | --- |
-| Required *(default)*  | The attribute needs to have a value. It cannot be empty. |
+| Required *(default)*  | The attribute needs to have a value. It cannot be empty. Note that a string of whitespaces is considered empty. |
 | Unique | The value of this attribute must be different from the values of this attribute in all other objects of the same entity. See [Uniqueness Constraint](#uniqueness), below for more information. |
 | Equals | The attribute value needs to be equal to a specified value or equal to the value of another attribute of the same object. |
 | Range | The attribute value needs to be greater than or equal to, less than or equal to, or between two values. The values are either specified fixed values or values of other attributes of the same object. |

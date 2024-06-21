@@ -1,10 +1,8 @@
 ---
 title: "3D Viewer"
 url: /partners/siemens/3d-viewer/
-category: "Siemens"
 weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
-tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 aliases:
   - /appstore/app-services/3d-viewer/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -316,7 +314,7 @@ You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to d
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in the Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 

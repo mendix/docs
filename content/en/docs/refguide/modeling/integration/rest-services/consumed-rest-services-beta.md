@@ -1,9 +1,7 @@
 ---
 title: "Consumed REST Services (Beta)"
 url: /refguide/consumed-rest-services-beta/
-category: "Integration"
 description: "Describes the configuration and usage of the new Consumed REST service document."
-tags: ["Consumed REST service", "mendix 10", "studio pro 10", "GET", "POST", "new"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 

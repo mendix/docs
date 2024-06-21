@@ -4,7 +4,6 @@ linktitle: "Webhooks"
 url: /developerportal/deploy/webhooks/
 weight: 75
 description: "Creating a webhook to trigger actions from Mendix Cloud and Mendix for Private Cloud."
-tags: ["Mendix Cloud", "Mendix for Private Cloud", "Webhooks", "CI/CD", "Pipeline"]
 ---
 
 ## 1 Introduction
@@ -13,9 +12,9 @@ Webhooks allow you to send information about your licensed Mendix app deployed t
 
 Mendix provides webhooks to send project information when the following events happen to your app:
 
-* Package upload – when a deployment package is available in the Developer Portal, including when a package is created from the Team Server
+* Package upload – when a deployment package is available in the Mendix Portal, including when a package is created from the Team Server
 * Team Server push – when a new commit is pushed to the Team Server (this will only be triggered if your app is stored in a Git repository)
-* Alerts - when an alert is triggered for your Mendix app
+* Alerts – when an alert is triggered for your Mendix app
 
 The webhooks contain a retry mechanism if an error response is received from the endpoint. This helps ensure that the trigger reaches the endpoint.
 
@@ -29,7 +28,7 @@ Webhooks are only available for licensed Mendix apps that are deployed to Mendix
 
 To set up a webhook, do the following:
 
-1. Open your app in the Developer Portal.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 1. From the navigation pane, open the **Webhooks** page. On this page, you can see any current webhooks. You can also see whether each webhook is active or inactive. An inactive webhook does not send any payloads to the endpoint.
 1. Click **New Webhook**.
 1. Enter the following information:
@@ -46,13 +45,19 @@ You can edit or delete an existing webhook by clicking **More Options** ({{% ico
 If you select **Edit Webhook** from **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the **Action** column for a webhook you want to change, the following actions are available:
 
 * Update **Webhook Name**, **URL**, or **Validation Secret**, and click **Save** to save the changes.
-* Add or delete **Custom Headers**, and click **Save** to save the changes.
+* Add or delete custom headers, and click **Save** to save the changes.
 
-    {{% alert color="info" %}}You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.{{% /alert %}}
+  {{% alert color="info" %}}
+  You cannot change the value of an existing custom header. If you want to change the value, delete the existing header and add a new one with the same key.
+  {{% /alert %}}
+
+  {{% alert color="info" %}}
+  If your webhook has a custom header with the key "Authorization", this is considered sensitive and thus does not display in the **Custom Headers** section on the **Webhooks** page. However, it can be seen in the webhook response if you test that webhook.
+  {{% /alert %}}
 
 * Click **Test Webhook** to send a test payload to the endpoint specified under **URL**.
 * Click **(De)activate Webhook** to deactivate an active webhook or activate an inactive webhook.
-* Click **Delete Webhook*** to completely remove the webhook.
+* Click **Delete Webhook** to completely remove the webhook.
 
 ### 3 Outgoing IP Addresses for Webhooks {#webhook-ip-addresses}
 
@@ -65,7 +70,7 @@ Mendix webhooks use the following static IP addresses:
 * 52.59.169.126
 
 {{% alert color="info" %}}
-Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
+Mendix maintains the current outgoing IP addresses as much as possible. However, these addresses may occasionally change for operational reasons. At least 48 hours before any changes, Technical Contacts will be emailed and a notification will be listed on [Mendix Platform Status](https://status.mendix.com).
 {{% /alert %}}
 
 ## 4 Webhook Headers
@@ -82,7 +87,7 @@ Every `POST` payload contains the following delivery information as part of the 
 * **accept** – `*/*`
 * **host** – the host part of the endpoint URL (for example, `gitlab.com`)
 
-You can also add your own custom headers. For more information, see [Setting Up a Webhook](#setting-up).
+You can also add your own custom headers. For more information, see [Configuring a Webhook](#setting-up).
 
 {{% alert color="info" %}}
 The order of these headers is not guaranteed.
@@ -104,7 +109,7 @@ To verify the signature, you need to reconstruct it and then compare it with the
     WEBHOOK_ID= #from the header
     WEBHOOK_TIMESTAMP= #from the header
     PAYLOAD= #payload of the message
-    VALIDATION_SECRET= #set when creating the webhook in the Developer Portal
+    VALIDATION_SECRET= #set when creating the webhook in the Mendix Portal
 
     # To generate the signature:
     printf '%s.%s.%s' "$WEBHOOK_ID" "$WEBHOOK_TIMESTAMP" "$PAYLOAD" | openssl dgst -sha256 -binary -hmac "$VALIDATION_SECRET" | openssl base64
@@ -132,9 +137,9 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 
 {{< figure src="/attachments/developerportal/deploy/webhooks/validation-microflow.png" alt="Completed validation microflow" class="no-border" >}}
 
-## 5 Package Upload to the Developer Portal
+## 5 Package Upload to the Mendix Portal
 
-When you [upload a package to the Developer Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
+When you [upload a package to the Mendix Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
 ```json {linenos=false}
 {
@@ -212,6 +217,6 @@ For details on receiving alerts, see [Receive Environment Status Alerts](/develo
 
 ## 8 Logging
 
-You can see [log messages](/developerportal/operate/logs/) in the Developer Portal indicating when your webhooks were created or updated.
+You can see [log messages](/developerportal/operate/logs/) in the Mendix Portal indicating when your webhooks were created or updated.
 
 Mendix Cloud does not create a log message when a webhook is triggered.

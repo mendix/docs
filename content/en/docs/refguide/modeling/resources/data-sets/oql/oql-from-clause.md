@@ -1,7 +1,7 @@
 ---
 title: "OQL From Clause"
 url: /refguide/oql-from-clause/
-tags: ["studio pro"]
+weight: 20
 ---
 
 ## 1 Description
@@ -12,7 +12,7 @@ The `FROM` clause specifies the entities or other source from which the data mus
 
 This is an example of the full syntax:
 
-```sql
+```sql {linenos=false}
 FROM
 	{
 		entity_name | ( sub_oql_query )
@@ -21,7 +21,7 @@ FROM
 
 	{
 		{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
-		entity_path [ [ AS ] from_alias ]
+		entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
 		[ ON <constraint> ]
 	} [ ,...n ]
 ```
@@ -32,7 +32,7 @@ FROM
 
 ### 2.2 ( sub_oql_query )
 
-`( sub_oql_query )` specifies another OQL query from which data must be retrieved. This will be the source for the current query. The subquery must be placed within parentheses.
+`( sub_oql_query )` specifies another OQL query from which data must be retrieved. This will be the source for the current query. The subquery must be placed within parentheses. See [OQL Subqueries](/refguide/oql-subqueries/) for more details.
 
 ### 2.3 JOIN
 
@@ -45,39 +45,45 @@ There are four different `JOIN` types supported:
 
 The syntax is as follows:
 
-```sql
-{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
-		entity_path [ [ AS ] from_alias ]
-		[ ON <constraint> ]
+```sql {linenos=false}
+	{ INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
+	entity_path | entity_name | ( sub_oql_query ) [ [ AS ] from_alias ]
+	[ ON <constraint> ]
 ```
 
 #### 2.3.1 entity_path
 
-`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity.
+`entity_path` specifies the entity to join and the path from an earlier defined entity in the `FROM` clause to this entity. With `entity-path` the `ON` condition is optional.
 
 The example path `Crm.Customer/Crm.Customer_Address/Crm.Address` defines a path from the entity **Crm.Customer** to a new entity **Crm.Address**.
 
 Similar to `entity_name`, double quotes can be used.
 
-#### 2.3.2 \[ ON \<constraint\> \]
+#### 2.3.2 entity_name | ( sub_oql_query )
+
+`entity_name` or `( sub_oql_query )` can be used in a `JOIN` statement in the same way they can be used directly in `FROM`. In contrast to `entity_path`, an `ON` condition is required.
+
+#### 2.3.3 \[ ON \<constraint\> \]
 
 `[ ON <constraint> ]` constrains the specified entity in the `JOIN` part of the `FROM` clause. The constraint syntax is similar to that of the `WHERE` clause. Only the entities and `FROM` aliases from the current and preceding `JOIN` elements can be used in the constraint.
 
-Using constraints is optional – the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
+In the case of `entity_path`, using constraints is optional – the system will generate the appropriate `JOIN` condition based on the specified `entity_path`.
 
-#### 2.3.3 JOIN Types
+In cases when an entity name or a subquery is used, the `JOIN` condition (i.e. `ON` constraint) is mandatory.
 
-##### 2.3.3.1 INNER JOIN
+#### 2.3.4 JOIN Types
+
+##### 2.3.4.1 INNER JOIN
 
 An `INNER JOIN` is the most common join operation between entities and represents the default join type. The query compares each row of entity A with each row of entity B to find all the pairs of rows that have an association and satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 [ INNER ] JOIN entity_path [ ON <constraint> ]
 ```
 
-##### 2.3.3.2 LEFT OUTER JOIN
+##### 2.3.4.2 LEFT OUTER JOIN
 
 A `LEFT OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the `JOIN` predicate is satisfied, column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -85,11 +91,11 @@ However, in contrast to the `INNER JOIN` construction, the query will also retur
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 LEFT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
-##### 2.3.3.3 RIGHT OUTER JOIN
+##### 2.3.4.3 RIGHT OUTER JOIN
 
 A `RIGHT OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. If the association exists and the `JOIN` predicate is satisfied, the column values for each matched pair of rows of A and B are combined into a resulting row.
 
@@ -97,11 +103,11 @@ However, in contrast to the `INNER JOIN` construction, rows from entity B that d
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 RIGHT [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
-##### 2.3.3.4 FULL OUTER JOIN
+##### 2.3.4.4 FULL OUTER JOIN
 
 A `FULL OUTER JOIN` query compares each row of entity A with each row of entity B to find all pairs of rows which have an association and thus satisfy the `JOIN` predicate. When the association exists and the `JOIN` predicate is satisfied, column values for each matched pair of rows from A and B are combined into a result row.
 
@@ -109,17 +115,17 @@ However, in contrast to the `INNER JOIN` construction, data from entities that d
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 FULL [ OUTER ] JOIN entity_path [ ON <constraint> ]
 ```
 
-#### 2.3.4 Example
+#### 2.3.5 Example
 
 In this scenario, you are using a `LEFT OUTER JOIN` to get the records in table A that have no association in table B.
 
 For example, you have the entities **Customer** and **Order**, where a customer can have an association to multiple orders. You want to retrieve all the customers that have no orders at all.
 
-```sql
+```sql {linenos=false}
 SELECT 
   Customer/Name as Name,
   Customer/<anyotherattribute> as <anyotherattribute>

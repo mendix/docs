@@ -2,10 +2,8 @@
 title: "Minimizing the Number of In-Use Objects in Your Session"
 linktitle: "Minimizing Objects in Session"
 url: /refguide/minimize-number/
-category: "Mendix Runtime"
 weight: 60
 description: "Describes various ways to reduce the number of in-use objects."
-tags: ["object", "session", "architecture", "stateless", "runtime", "client", "state"]
 ---
 
 ## 1 Introduction

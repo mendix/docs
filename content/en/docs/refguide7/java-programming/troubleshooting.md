@@ -1,7 +1,6 @@
 ---
 title: "Troubleshooting"
 url: /refguide7/troubleshooting/
-category: "Java Programming"
 ---
 
 

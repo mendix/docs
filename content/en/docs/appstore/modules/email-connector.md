@@ -1,9 +1,7 @@
 ---
 title: "Email"
 url: /appstore/modules/email-connector/
-category: "Connectors"
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platform support", "encryption", "templates"]
 aliases:
     - /appstore/connectors/email-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -11,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-The [Email](https://marketplace.mendix.com/link/component/120739) connector allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
+The [Email Connector](https://marketplace.mendix.com/link/component/120739) allows you to send and receive emails on your own email server. It includes features such as sending emails using a template, or sending signed and encrypted emails.
 
 ### 1.1 Features
 
@@ -184,6 +182,20 @@ When modeling your app in Studio Pro, use the **SendEmailWithTemplate** Java act
 
 Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To**, **CC**, or **BCC** during runtime, change the **EmailTemplate** object and set the desired values for the attributes, then pass the same **EmailTemplate** object as a parameter to the Java action.
 
+#### 4.3.4 Exporting Email Template
+
+Email connector now supports the export and import of email templates. This feature reduces the manual work required to recreate templates in various development, acceptance, and/or production environments.
+
+Select the email template that you want to export and click **Export**. The exported XML file is named with the email template name and a datetime stamp and is downloaded directly to your default download folder. The image below shows the downloaded XML file after the email template export.
+
+{{< figure src="/attachments/appstore/modules/email-connector/export-email-template.png" class="no-border" >}}
+
+#### 4.3.5 Importing Email Template
+
+You can import the exported email template into the same or a different deployment environment. Click **Import** to start importing the email template. A pop-up window will appear, allowing you to browse for the template file (.xml) to import. Click **Import Template** to complete the email template import process. After successfully importing the email template, you will receive a status message notification.
+
+{{< figure src="/attachments/appstore/modules/email-connector/import-email-template.png" class="no-border" >}}
+
 ### 4.4 Signed and Encrypted Emails
 
 You can choose to configure a digital signature and email encryption when the module is running. Digital signatures help the receiver verify that you are the sender. Encryption scrambles the message and can only be deciphered with the correct key.  
@@ -352,6 +364,14 @@ If the **Email connector** page styling is affected as you select and view email
 
 Some email clients (for example, Gmail) break down the name of attached files if it is longer than a specific value, and add the file name in the **Content Type** for an attachment. This can cause an error while fetching or importing emails with long attachment names. For example: *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in version 5.3.0 of the Email Connector.
 
-## 6 Known Errors
+## 6 Known Issues
 
-If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.
+### 6.1 Widgets
+
+If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets cannot be read" error when trying to run locally.
+
+### 6.2 Consistency Error
+
+You may get a consistency error when importing the Email Connector module in Mendix 10.1 or above that states *"No argument has been selected for parameter "Token" and no default is available"*. This can be resolved by double-clicking the error, which takes you to the snippet **SNIP_EmailTemplate_NewEdit**. Double-click the **Edit [default]** button, then in the **Events** field under **Page settings**, click **Edit**. Once the **Page Settings** dialog box opens, click **OK**, as shown in the image below. The error should resolve. 
+
+{{< figure src="/attachments/appstore/modules/email-connector/consistency-error-token.png" class="no-border" >}}

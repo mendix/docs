@@ -1,7 +1,6 @@
 ---
 title: "XPath Keywords and System Variables"
 url: /refguide9/xpath-keywords-and-system-variables/
-tags: ["studio pro", "BeginOfCurrent", "system variables"]
 ---
 
 ## 1 Overview

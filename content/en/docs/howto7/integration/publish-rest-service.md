@@ -1,10 +1,8 @@
 ---
 title: "Publish a REST Service"
 url: /howto7/integration/publish-rest-service/
-category: "Integration"
 weight: 10
 description: "Describes how to publish REST web services natively from the Desktop Modeler."
-tags: ["rest", "rest service", "web service", "integration"]
 ---
 
 ## 1 Introduction

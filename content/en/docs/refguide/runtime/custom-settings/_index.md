@@ -1,9 +1,7 @@
 ---
 title: "Runtime Customization"
 url: /refguide/custom-settings/
-category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
-tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Metrics", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
@@ -18,7 +16,7 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
 * the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
@@ -216,6 +214,11 @@ First, you need to create an Azure SQL database (for information on how to do th
 | <a id="AzureDatabaseUserName" href="#AzureDatabaseUserName">DatabaseUserName</a> | `your-username` |   |
 | <a id="AzureDatabasePassword" href="#AzureDatabasePassword">DatabasePassword</a> | `your-password` |   |
 
+{{% alert color="info" %}}
+An alternative to using `DatabaseUserName` and `DatabasePassword` is appending `Authentication=ActiveDirectoryDefault` to the [`DatabaseJdbcUrl`](#DatabaseJdbcUrl) setting.
+This will use the credential information present in the running environment to connect to the database. See [Connect using ActiveDirectoryDefault authentication mode](https://learn.microsoft.com/en-us/sql/connect/jdbc/connecting-using-azure-active-directory-authentication?view=sql-server-ver16#connect-using-activedirectorydefault-authentication-mode) and [DefaultAzureCredential Class](https://learn.microsoft.com/en-us/java/api/com.azure.identity.defaultazurecredential?view=azure-java-stable) in the Microsoft documentation for more information.
+{{% /alert %}}
+
 ## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
@@ -230,7 +233,8 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorageazureAccountName" href="#commendixstorageazureAccountName">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountName</a> | Account name to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureAccountKey" href="#commendixstorageazureAccountKey">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>AccountKey</a> | Account key to authenticate with the Azure blob storage service. |   |
 | <a id="commendixstorageazureSharedAccessSignature" href="#commendixstorageazureSharedAccessSignature">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>SharedAccessSignature</a> | Provides delegated access to resources in your storage account. For more information, see [Shared Access Signature on docs.microsoft.com](https://docs.microsoft.com/en-us/azure/storage/common/storage-dotnet-shared-access-signature-part-1). |   |
-| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a>¹ | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` is used. |   |
+| <a id="commendixstorageazureUseDefaultAzureCredential" href="#commendixstorageazureUseDefaultAzureCredential">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>UseDefaultAzureCredential</a> | Enables the use of the credential information present in the running environment. For more information, see [DefaultAzureCredential](https://learn.microsoft.com/en-us/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential) on Microsoft Learn. |   |
+| <a id="commendixstorageazureBlobEndpoint" href="#commendixstorageazureBlobEndpoint">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>BlobEndpoint</a>¹ | Set the blob endpoint. This setting is required when authentication by `SharedAccessSignature` or `UseDefaultAzureCredential` is used. |   |
 | <a id="commendixstorageazureContainer" href="#commendixstorageazureContainer">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>Container</a> | Name of the container containing the blob. |   |
 | <a id="commendixstorageazureCreateContainerIfNotExists" href="#commendixstorageazureCreateContainerIfNotExists">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>CreateContainerIfNotExists</a> | Indicates whether to check if the container exists, and creates it if it does not exist. | `true` |
 | <a id="commendixstorageazureParallelismFactor" href="#commendixstorageazureParallelismFactor">com.<wbr>mendix.<wbr>storage.<wbr>azure.<wbr>ParallelismFactor</a> | Maximum number of parallel multi-part file uploads/downloads. We advise not changing this setting unless you experience slow file transfers for large files. Choosing larger values will lead to higher memory usage. | 5 |

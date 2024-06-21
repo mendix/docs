@@ -4,7 +4,6 @@ linktitle: "SSO on Hybrid App with SAML"
 url: /howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
 weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction
@@ -130,7 +129,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/). In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" class="no-border" >}}

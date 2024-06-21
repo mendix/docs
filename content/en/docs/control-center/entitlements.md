@@ -1,10 +1,9 @@
 ---
 title: "Entitlements"
 url: /control-center/entitlements/
-category: "Control Center"
 description: "Describes the Entitlements page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "entitlements"]
 weight: 50
+beta: true
 no_list: true 
 
 ---

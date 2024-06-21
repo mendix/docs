@@ -1,10 +1,8 @@
 ---
 title: "Clear Warning Messages"
 url: /howto9/monitoring-troubleshooting/clear-warning-messages/
-category: "Monitoring and Troubleshooting"
 weight: 1
 description: "Describes how to eliminate design-time warnings by viewing and clearing warning messages."
-tags: ["monitoring", "troubleshooting", "warning", "error", "warning message"]
 ---
 
 ## 1 Introduction

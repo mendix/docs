@@ -1,9 +1,7 @@
 ---
 title: "External Database Connector"
 url: /appstore/modules/external-database-connector/
-category: "Connectors"
 description: "Describes the configuration and usage of the new Database connector, which incorporates your external data directly in your Mendix app."
-tags: ["marketplace",  "marketplace component", "database connector", "mendix 10", "studio pro 10", "query", "mssql", "mysql", "postgresql", "oracle", "new"]
 aliases:
     - /appstore/connectors/external-database-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -11,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, and Oracle databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
 The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
@@ -31,6 +29,7 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgreSQL
 * Oracle
+* Snowflake - Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
 
 If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 

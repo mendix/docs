@@ -2,10 +2,8 @@
 title: "Execute an SQL Statement on an External Database"
 linktitle: "Execute SQL on External Database"
 url: /howto9/integration/execute-an-sql-statement-on-an-external-database/
-category: "Integration"
 weight: 17
 description: "Describes how to execute an SQL statement on relational external databases using Database Connector."
-tags: ["database connector", SQL", "database", "external database", "integration"]
 ---
 
 ## 1 Introduction

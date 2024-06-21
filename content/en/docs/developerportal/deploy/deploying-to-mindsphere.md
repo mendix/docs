@@ -1,20 +1,14 @@
 ---
 title: "Siemens Insights Hub"
 url: /developerportal/deploy/deploying-to-mindsphere/
-category: "Deployment"
 weight: 42
 description: "Describes how to deploy to Siemens Insights Hub by registering it with the Insights Hub Gateway and integrating it into the Insights Hub Launchpad."
-tags: ["Insights Hub", "MindSphere", "deploy", "cloud foundry", "launchpad", "scopes", "roles", "sso", "XSRF", "limitations", "Gateway"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #launchpad below is mapped from the Insights Hub themepack in the Marketplace, so it should not be removed or changed.
 ---
 
 ## 1 Introduction
-
-{{% alert color="warning" %}}
-This information is for deploying apps to the Insights Hub platform. It does not apply to Insights Hub IIoT for Makers.
-{{% /alert %}}
 
 Insights Hub is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
@@ -104,7 +98,7 @@ The following items in the SiemensInsightsHubSingleSignOn module need to be conf
 
 #### 4.1.1 CockpitApplicationName
 
-Enter the name of your app as registered in the Insights Hub developer portal as the value of *CockpitApplicationName*.
+Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
 
 These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 

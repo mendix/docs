@@ -3,7 +3,6 @@ title: "Upgrading Private Cloud"
 url: /developerportal/deploy/private-cloud-upgrade-guide/
 description: "Describes how to upgrade the Mendix Operator"
 weight: 90
-tags: ["Upgrade", "Private Cloud", "Cluster", "Operator", "Deploy"]
 ---
 
 ## 1 Introduction

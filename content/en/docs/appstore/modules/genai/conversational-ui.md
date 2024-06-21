@@ -164,8 +164,8 @@ Drag the following snippets on your other pages to quickly build your own versio
 Chat interface snippets contain the whole chat history as a listview and below that a text area for user's to enter the user prompt. There are some UI components that show an error message, when a call has failed, or that show progressing loading-bots when waiting for the response. When the send button is clicked, the [action microflow](#action-microflow) will be executed.
 
 The following versions are available and interchangeable:
-* Snippet_ChatContext_ConversationalUI shows both messages (user's and assistant's) on the left side of the container while
-* Snippet_ChatContext_ConversationalUI_Bubbles shows the user's message on the right side and the responses on the left side (similar to commonly known chat apps). The content is placed inside colored cards (bubbles).
+* `Snippet_ChatContext_ConversationalUI` shows both messages (user's and assistant's) on the left side of the container while
+* `Snippet_ChatContext_ConversationalUI_Bubbles` shows the user's message on the right side and the responses on the left side (similar to commonly known chat apps). The content is placed inside colored cards (bubbles).
 
 If the snippet does not exactly fit into your use case, you can [inline the snippet](/refguide/snippet-call/#inline-snippet) to customize to your needs.
 

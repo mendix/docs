@@ -263,6 +263,7 @@ When the Mendix client is running, it sets a number of technical cookies to reco
 | **XASSESSIONID**<sup><small>2</small></sup> | Runtime | Holds the ID of the user's session | `/` | 1 year for offline sessions<sup><small>1</small></sup>, otherwise based on the session timeout |  `true` | 
 | **useAuthToken** | Runtime | Lets the runtime know whether to generate an authtoken or not—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the end-user closes their browser (session cookie) |  `true` | 
 | **authtoken** | Runtime | Used to hold the authentication token—*introduced for apps created in Mendix version 10.9.0 and above* | `/` | until the authentication token expires |  `true` | 
+| **clear_cache** | Runtime | Used to instructs the client to clear the cached session data whenever a new user login to an offline application—*introduced for apps created in Mendix version 10.13.0 and above* | `/` | until client starts or user closes their browser | `false` | 
 
 <sup><small>1</small></sup>*Offline sessions* are sessions created for users using an offline or native mobile [navigation profile](/refguide/navigation/#profiles).
 

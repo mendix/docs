@@ -183,6 +183,8 @@ The following versions are available and interchangeable:
 * `Snippet_ChatContext_SelectActiveProviderConfig` the user's can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 * `Snippet_ChatContext_HistorySideBar` can be used in a listview of historic conversations.
 
+See the [AI Bot Starter App]() or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+
 ### 4.6 Additional Operations {#operations}
 
 The following microflows can be found in the `USE_ME` folder:

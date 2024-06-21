@@ -50,14 +50,14 @@ Mendix connectors and showcase apps offer direct support for the following model
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
 | Azure / OpenAI | ChatGPT-3.5 | Chat completions | text | text | Function calling |
-| | ChatGPT-4<br />ChatGPT-4o | Chat completions | text, image | text | Function calling |
-| | DALL·E 2<br />DALL·E 3 | Image generation | text | image | |
-| | text-embedding-ada-002<br />text-embedding-3-small<br />text-embedding-3-large	 | Embeddings | text | embeddings| |
-| AWS Bedrock | Amazon Titan Text G1 - Express <br /> Amazon Titan Text G1 - Lite <br /> Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
+| | ChatGPT-4, ChatGPT-4o | Chat completions | text, image | text | Function calling |
+| | DALL·E 2, DALL·E 3 | Image generation | text | image | |
+| | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large	 | Embeddings | text | embeddings| |
+| AWS Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
-| | Amazon Titan Embeddings G1 - Text <br /> Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
-| | Anthropic Claude v2.0 <br /> Anthropic Claude v2.1| Chat Completions | text | text |  |
-| | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3.5 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
+| | Amazon Titan Embeddings G1 - Text, Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
+| | Anthropic Claude v2.0, Anthropic Claude v2.1| Chat Completions | text | text |  |
+| | Anthropic Claude v3 Sonnet, Anthropic Claude v3.5 Sonnet, Anthropic Claude v3 Haiku, Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
 | | Cohere Embed | Embeddings | text | embeddings | |
 
 #### 2.2.1 Connect to Other Models

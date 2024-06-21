@@ -51,7 +51,7 @@ In order to use the Conversational UI module, you are advised to use a connector
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-All of the above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
+All modules above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
 <!---
 [comment]: <> TODO: Insert links to MP
 -->
@@ -65,7 +65,7 @@ All of the above are aleady part of the [Blank GenAI App]() and the [AI Bot Star
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-All of the above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
+All modules above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Conversational UI into your existing app.
 <!---
 [comment]: <> TODO: Insert links to MP
@@ -85,7 +85,7 @@ Make sure that the module role `User` is part of the the user roles, that are in
 | User             | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data).                                                                                          |
 | _addOn_ReadAll   | Role can be granted additionally. Users with both roles can read all data. |
 
-#### 3.2 ChatContext {#chat-context}
+### 3.2 ChatContext {#chat-context}
 
 The `ChatContext` is the central entity in the UI and microflows. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions), for example via the `Snippet_ChatContext_HistorySideBar` snippet. The object needs to be created for every new chat interaction and comprises the `messages` that are sent to and received from the LLM. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
 
@@ -103,7 +103,10 @@ If you need additional attributes or associations on the `ChatContext`, we advis
 Can be added via `ChatContext: Add Suggested User Prompt` to the new `ChatContext`. They appear as button for new chats. When clicked, the content of the button will be sent as user prompt to the LLM (via the [action microflow](#action-microflow)).
 
 
-#### 3.3 ProviderConfig {#provider-config}
+#### 3.2.3 AdvancedSettings {#advanced-settings}
+`AdvancedSettings` can be used to allow users to configure parameters which can influence the model's behavior (see [Configuration Snippets](#snippet-configuration)). Currently, only temperature is exposed to users in the module by the slider input element. The object needs to be created when the chat context is shown to the page, for example in a navigation flow. Ranges can be set to control the values a user can select.
+
+### 3.3 ProviderConfig {#provider-config}
 The `ProviderConfig` refers to the action microflow that will be executed when the send button is clicked. When you create the object, use `ProviderConfig: Set Action Microflow` to associate to the action microflow. You could store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessarry fields.
 
 #### 3.3.1 Action Microflow {#action-microflow}
@@ -150,7 +153,7 @@ The following versions are available and interchangeable:
 
 #### 4.2.3 Configuration Snippets {#snippet-configuration}
 
-The `Snippet_ChatContext_AdvancedSettings` can be placed on pages to let user's configure specific parameters. Currently, only temperature is exposed in the module to users as the slider input element. Via `Snippet_ChatContext_SelectActiveProviderConfig` the user's can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
+The `Snippet_ChatContext_AdvancedSettings` can be placed on pages to let user's configure specific parameters. Currently, only temperature is exposed to users in the module by the slider input element. Via `Snippet_ChatContext_SelectActiveProviderConfig` the user's can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 
 ### 4.3 Operations {#operations}
 
@@ -175,7 +178,7 @@ The Java-Action `ProviderConfig: Set Action Microflow` can be used to select an 
 
 The microflow `Request_CreateFromChatContext` creates a [Request](/appstore/modules/genai/genai-commons/#request) object that is typically used as input parameter in [With-History operations](/appstore/modules/genai/genai-commons/#chat-completions-interface). The operation requires a `ChatContext` and will create the necessary message structure to make the LLM call. It is recommended to use this operation in the [action microflow](#action-microflow).
 
-#### 4.3.4 Other operations {#other-operations}
+#### 4.3.4 Other Operations {#other-operations}
 
 The following operations can be used to increase the chat experience for your users:
 * `SuggestedUserPrompt_Create` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
@@ -200,7 +203,7 @@ The following operations can be used to increase the chat experience for your us
 
 
 <!---
-[comment]: <> ##4 Technical Reference (Not in scope)
+[comment]: <> ##5 Technical Reference (Not in scope)
 
 -->
 

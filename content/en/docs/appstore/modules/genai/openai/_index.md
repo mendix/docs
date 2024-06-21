@@ -88,11 +88,10 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
  The following modules from the marketplace need to be installed:
 
 {{% todo %}}
- * [GenAI Commons](LINK) module
+* [GenAI Commons](LINK) module
 {{% /todo %}}
- * [Encryption](https://marketplace.mendix.com/link/component/1011) module
- * [Community Commons](https://marketplace.mendix.com/link/component/170) module
-
+* [Encryption](https://marketplace.mendix.com/link/component/1011) module
+* [Community Commons](https://marketplace.mendix.com/link/component/170) module
 
 Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app.
 
@@ -131,7 +130,7 @@ The following inputs are required for the Azure OpenAI configuration:
 | -------------- | ------------------------------------------------------------ |
 | DisplayName    | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
 | API type       | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/).<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
+| Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version    | This is the API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
 | API key        | This is the access token to authorize your API call.         |
@@ -301,6 +300,7 @@ This microflow can be used to add a new `FileDocument` or URL to an existing `Fi
 This mircoflow can be used to create a data batch (wrapper entity) to group the [DataChunks](#create-datachunk). This object needs to be passed into the [Embeddings (list input)](#embeddings-list) operation.
 
 #### 3.5.6 `Embeddings: Create DataChunk` {#create-datachunk}
+
 This microflow can be used to add a data chunk for the given content that needs te be converted into an embedding vector. The pattern uses the DataBatch to group the inputs, [see DataChunks](#create-databatch). The order of the chunks is not relevant.
 
 ## 4 Technical Reference {#technical-reference}
@@ -731,7 +731,7 @@ Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embe
 
 ##### 4.3.3.2 Embeddings (list input) {#embeddings-list-technical}
 
-Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for the information of what encoding formats are supported. The encoding format can be left empty; if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) isassumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). For details on which encoding formats are supported, see [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). The encoding format can be left empty; if no value is specified, the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) isassumed by the API. The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 **Input parameters**
 

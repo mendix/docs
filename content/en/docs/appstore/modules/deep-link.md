@@ -189,8 +189,6 @@ To solve this problem, you can use one of the following solutions:
 
 ## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
 
-{{% alert color="warning" %}}Both the page URLs and microflow URLs are not able to support continuations, for instance, for SSO modules like OIDC. As a result, the SSO cannot be configured correctly. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024. Stay tuned.{{% /alert %}}
-
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 
 * **Page URLs** – For links to pages that have either no parameters or only parameters that are persistable entities, you should use [page URLs](/refguide/page-properties/#url). Using page URLs instead of microflow URLs increases performance speed because no microflow has to be executed. Furthermore, the URL will always be used for the page (even when opening it from a different source then the deep link). To keep the same URL as before, put the `name` of the deep link in the URL field, followed by the name of the attribute that was configured in the deep link. For example, use `product/{PageParameterName/AttributeName}` for a deep link with `name` `product` and `attribute` `AttributeName`.

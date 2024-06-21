@@ -26,7 +26,7 @@ When the input text is directly coming from the user, the instructions should al
 
 ### 2.2 Context & additional information
 
-After explaining the model what to do, you can include additional context. You kan think about:
+After explaining the model what to do, you can include additional context. You can think about:
 * Information about the user in your application (e.g. language, role, department, specific database records),
 * Context information (e.g. a dump of all relevent data of the object the user is looking at),
 * Knowledge coming from RAG.
@@ -62,7 +62,7 @@ There is a difference between how models behave. For example newer models might 
 
 ### 4.1 Specifity
 
-Specifity and clarity are important. Just like humans, LLMs won't read your mind and need specific instructions. There is a difference between:
+Specifity and clarity are important. Similar to humans, LLMs require specific instructions and cannot intuitively understand your thoughts. There is a difference between:
 
 ```
 Write a story about Mendix

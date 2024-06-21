@@ -2,14 +2,13 @@
 title: "Security"
 url: /refguide/security/
 weight: 49
-tags: ["studio pro", "security", "app security"]
 ---
 
 ## 1 Introduction
 
 Security in Mendix has several aspects which are all covered on this page.
 
-Firstly, you may be working as a team to create the app. You will want to control who is on the team and what each member can do. This is managed in the Developer Portal. For more information, see [Building an App as a Team](#team) section below. 
+Firstly, you may be working as a team to create the app. You will want to control who is on the team and what each member can do. This is managed in [Apps](https://sprintr.home.mendix.com/). For more information, see [Building an App as a Team](#team) section below. 
 
 Secondly, you will want to control who can access your app once it is running. You will want to prevent unauthorized access to your running application. You may also want different end-users to see different parts of the app , so access to individual pages, data, and microflows can be limited to specific end-users. This is managed from within Studio Pro. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
 
@@ -82,4 +81,4 @@ Mendix applications that are deployed to SAP BTP can have SSO with SAP's IdP. Me
 
 ## 4 Building an App as a Team {#team}
 
-If you want to invite your colleagues to build your app, you can manage the **Team** in the Developer Portal. Only team members who are invited to your app can access it (as a project to collaborate on). You can assign app roles to them. These team member roles define what they can access and change in the app in the backend while developing the app and are different from end-user roles which define what users can access in a running app. For more information, see [Team](/developerportal/general/team/) in the *Developer Portal Guide*.
+If you want to invite your colleagues to build your app, you can manage the **Team** in [Apps](https://sprintr.home.mendix.com/). Only team members who are invited to your app can access it (as a project to collaborate on). You can assign app roles to them. These team member roles define what they can access and change in the app in the backend while developing the app and are different from end-user roles which define what users can access in a running app. For more information, see [Team](/developerportal/general/team/) in the documentation of **Apps**.

@@ -1,7 +1,7 @@
 ---
 title: "Alerts"
 url: /developerportal/operate/monitoring-application-health/
-weight: 20
+weight: 14
 description: "Describes how to monitor the health and status of your app."
 aliases:
     - /mendixcloud/monitoring-application-health.html
@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Developer Portal, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Mendix Portal, you can inspect your application's health in Mendix Cloud. 
 
 {{% alert color="info" %}}This page describes alerts for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit.{{% /alert %}}
 
@@ -30,14 +30,14 @@ This document explains how to access the application status page, what the infor
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
-1. From the [Developer Portal](https://home.mendix.com), open the app that you want to monitor.
-2. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
+1. From [Apps](https://sprintr.home.mendix.com), open the app that you want to monitor.
+1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/application-status.png" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/monitoring-application-health/application-status.png" class="no-border" >}}
 
-3. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
+1. To view more details about a specific alert, click it. Detailed information about that alert will appear below the alert status table.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alert-details.png" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/monitoring-application-health/alert-details.png" class="no-border" >}}
 
 You may be able to use this information to resolve the issue yourself; otherwise, include this information when submitting a support request to [Mendix Support](https://support.mendix.com). You can download a log of the alerts on the [Logs](/developerportal/operate/logs/) page.
 
@@ -159,7 +159,7 @@ To access the history of the alerts from your app, follow these steps:
 2. Select the environment that you wish to see alert history for.
 3. You will see an overview of all alerts that have been sent for this application.
 
-    {{< figure src="/attachments/developerportal/operate/monitoring-application-health/alerts-history.png" class="no-border" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/monitoring-application-health/alerts-history.png" class="no-border" >}}
 
     The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 

@@ -75,13 +75,13 @@ Tools you can use to identify your slow microflow and the specific slow activiti
 
 ### 4.1 Server Monitoring
 
-The Mendix Server and [Developer Portal](/developerportal/operate/) offer a number of performance graphs and logs.
+The Mendix Server and [Apps](/developerportal/) offer a number of performance graphs and logs.
 
 ### 4.2 Microflow Debugger
 
 Once you have identified a slow page, it is easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows (such as data sources), and also at sub-microflows, on-change event handlers, and domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a breakpoint and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### 4.3 Microflow Time Stamps
 

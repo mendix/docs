@@ -21,7 +21,7 @@ For information about configuring and using Kibana, see the [Kibana User Guide](
 
 The **Logs** page in your Mendix app shows all the environments for this app. Click the **Logs** button to open the log in Kibana.
 
-{{< figure src="/attachments/developerportal/operate/logs/log-sap.png" alt="Logs Page SAP" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/logs/log-sap.png" alt="Logs Page SAP" class="no-border" >}}
 
 You may be asked to provide your SAP credentials before you can see the log in Kibana.
 

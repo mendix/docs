@@ -223,7 +223,7 @@ Use these fields to transform the payload back into a Mendix entity. If the subj
 
 ## 5 Mendix Event Broker {#mendix-event-broker}
 
-Within Mendix Public Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
+Within Mendix Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
 
 ### 5.1 Topics and Channels {#topics-channels}
 

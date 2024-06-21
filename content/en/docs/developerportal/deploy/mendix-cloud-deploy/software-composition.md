@@ -2,7 +2,6 @@
 title: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
-tags: ["apps", "deployment", "software composition"]
 weight: 9
 beta: true
 ---

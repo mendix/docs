@@ -10,7 +10,7 @@ description: "Describes how to restore physical disk space by creating and resto
 
 Usually, the database of a Mendix application in Mendix Cloud grows over time. Here is a typical example:
 
-{{< figure src="/attachments/developerportal/operate/backups/database-size-reduction/Untitled.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/backups/database-size-reduction/Untitled.png" class="no-border" >}}
 
 The data grows in a steady fashion. If entities are removed in a major release, you may see a temporary decrease in the size of the database—but on average, the database size tends to increase over time.
 
@@ -24,8 +24,8 @@ You can recover physical disk space by creating a database backup and then resto
 
 A database restore does a full physical rewrite of the database. It compresses the database to contain just the current records. It also fully optimizes the physical placement of files on the actual hard disk to maximize the performance of disk read operations.
 
-In the Developer Portal, you can create and restore a backup on your app's **Backups** page. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
+In the Mendix Portal, you can create and restore a backup on your app's **Backups** page. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
 
 ## 3 Summary
 
-To physically reclaim unused space that was created by deleting records from the database, you can use the Developer Portal to back up and restore your database. However, keep in mind that this action might have limited benefits unless the database is not expected to grow back to its previous size.
+To physically reclaim unused space that was created by deleting records from the database, you can use the Mendix Portal to back up and restore your database. However, keep in mind that this action might have limited benefits unless the database is not expected to grow back to its previous size.

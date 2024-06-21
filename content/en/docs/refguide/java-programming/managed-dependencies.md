@@ -71,11 +71,15 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example, to resolve dependencies from a directory `lib`, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
 
 ```groovy {linenos=false}
-flatDir {
-    dirs 'lib'
+maven {
+    url '{url to your custom remote repository}'
+       credentials {
+        username 'user'
+        password 'password'
+    }
 }
 ```
 
@@ -85,6 +89,13 @@ By default the repositories are configured as:
 gradlePluginPortal()
 mavenCentral()
 ```
+
+{{% alert color="info" %}}
+Custom Repositories like Nexus or JFrog may not be configured to point to central remote repositories by default. In this case, you (or someone with the appropriate rights) will need to configure your custom remote repository with the following sources:
+
+1. Maven Repository - https://repo1.maven.org/maven2/
+2. Gradle Plugins Repository - https://plugins.gradle.org/m2/
+{{% /alert %}}
 
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 

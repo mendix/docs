@@ -97,16 +97,16 @@ The domain model in Mendix is a data model that describes the information in you
 
 The `Connection` entitiy is a required input parameter for all operations based on the GenAI commons module.
 
-| Attribute           | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| Model | The name of the model to be used for an operation. |
+| Attribute | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| `Model`   | The name of the model to be used for an operation.           |
 
 ##### 4.1.2 `Request` {#request} 
 
 `Request` is an input object for the chat completions operations defined in the platform-supported GenAI-connectors and contains all content-related input needed for an LLM to generate a response for the given chat conversation. 
 
-| Attribute           | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
+| Attribute           | Description                                                                   |
+| ------------------- | ----------------------------------------------------------------------------- |
 | `SystemPrompt`      | A SystemPrompt provides the model with a context, instructions or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
 | `Temperature` | Temperature controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
@@ -296,9 +296,9 @@ This microflow can be used to create a request. This is the request object that 
 
 **Return value**
 
-| Name          | Type               | Description                         |
-|-------------- |------------------- |------------------------------------ |
-| Request       |[Request](#request) | This is the created request object. |
+| Name            | Type               | Description                         |
+|---------------- |------------------- |------------------------------------ |
+| `Request`       |[Request](#request) | This is the created request object. |
 
 ##### 4.3.1.2 Chat: Add Message to Request {#chat-add-message-to-request}
 
@@ -306,12 +306,12 @@ This microflow can be used to add a new [Message]{#message} to the [Request](#re
 
 **Input parameters**
 
-| Name             | Type                                  | Mandatory | Description                        |
-|----------------- |---------------------------------------|-----------|------------------------------------|
-| Request          | [Request](#request)                   | Yes       | This is the request object that contains the functional input for the model to generate a response. |
-| ENUM_MessageRole | [ENUM_MessageRole](#enum-messagerole) | Yes       | The role of the message author.    |
-| FileCollection   | [FileCollection](#filecollection)     | No        | This is an optional collection of files that are part of the message. |
-| ContentString    | String                                | Yes       | This is the textual content of the message.  |
+| Name               | Type                                  | Mandatory | Description                        |
+|------------------- |---------------------------------------|-----------|------------------------------------|
+| `Request`          | [Request](#request)                   | Yes       | This is the request object that contains the functional input for the model to generate a response. |
+| `ENUM_MessageRole` | [ENUM_MessageRole](#enum-messagerole) | Yes       | The role of the message author.    |
+| `FileCollection`   | [FileCollection](#filecollection)     | No        | This is an optional collection of files that are part of the message. |
+| `ContentString`    | String                                | Yes       | This is the textual content of the message.  |
 
 **Return value**
 
@@ -323,10 +323,10 @@ This microflow can be used to add an optional [StopSequence](#stopsequence) to t
 
 **Input parameters**
 
-| Name          | Type                  | Mandatory | Description     |
-|---------------|-----------------------|-----------|-----------------|
-| Request       | [Request](#request)   | Yes       | This is the request object that contains the functional input for the model to generate a response. |
-| StopSequence  | String                | Yes       | This is the stop sequence string, which is used to make the model stop generating tokens at a desired point. |
+| Name            | Type                  | Mandatory | Description     |
+|-----------------|-----------------------|-----------|-----------------|
+| `Request`       | [Request](#request)   | Yes       | This is the request object that contains the functional input for the model to generate a response. |
+| `StopSequence`  | String                | Yes       | This is the stop sequence string, which is used to make the model stop generating tokens at a desired point. |
 
 **Return value**
 
@@ -338,18 +338,18 @@ Microflow can be used to create a File Collection and add the first File to it i
 
 **Input parameters**
 
-| Name           | Type                            | Mandatory                               | Description    |
-|----------------|---------------------------------|-----------------------------------------|----------------|
-| URL            | String                          | Either URL or FileDocument is required. | This is the URL of the file. |
-| FileDocument   | `System.FileDocument`           | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
-| ENUM_FileType  | [ENUM_FileType](#enum-filetype) | Yes                                     | This is the type of the file. |
-| TextContent    |  String                         | No                                      | An optional text content describing the file content or giving it a specific name. |
+| Name             | Type                            | Mandatory                               | Description    |
+|------------------|---------------------------------|-----------------------------------------|----------------|
+| `URL`            | String                          | Either URL or FileDocument is required. | This is the URL of the file. |
+| `FileDocument`   | `System.FileDocument`           | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
+| `ENUM_FileType`  | [ENUM_FileType](#enum-filetype) | Yes                                     | This is the type of the file. |
+| `TextContent`    |  String                         | No                                      | An optional text content describing the file content or giving it a specific name. |
 
 **Return value**
 
-| Name           | Type                              | Description                                                             |
-|--------------- |-----------------------------------|-------------------------------------------------------------------------|
-| FileCollection | [FileCollection](#filecollection) | This is the created file collection with the new file associated to it. |
+| Name             | Type                              | Description                                                             |
+|----------------- |-----------------------------------|-------------------------------------------------------------------------|
+| `FileCollection` | [FileCollection](#filecollection) | This is the created file collection with the new file associated to it. |
 
 ##### 4.3.1.5 Files: Add File to Collection {#add-file-to-collection}
 
@@ -357,13 +357,13 @@ Microflow can be used to add a File to an existing [FileCollection](#filecollect
 
 **Input parameters**
 
-| Name           | Type                              | Mandatory                               | Description         |
-|----------------|-----------------------------------|-----------------------------------------|---------------------|
-| FileCollection | [FileCollection](#filecollection) | Yes       | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
-| URL            | String                            | Either URL or FileDocument is required. | This is the URL of the file. Either provide a System.FileDocument object or a file URL String. |
-| FileDocument   | `System.FileDocument`             | Either URL or FileDocument is required. | The file for which the contents need to be sent with a message. Either provide a System.FileDocument object or an Image URL String. |
-| ENUM_FileType  | [ENUM_FileType](#enum-filetype)   | Yes                                     | This is the type of the file.  |
-| TextContent    | String                            | Yes                                     | An optional text content describing the file content or giving it a specific name. |
+| Name             | Type                              | Mandatory                               | Description         |
+|------------------|-----------------------------------|-----------------------------------------|---------------------|
+| `FileCollection` | [FileCollection](#filecollection) | Yes       | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
+| `URL`            | String                            | Either URL or FileDocument is required. | This is the URL of the file. Either provide a System.FileDocument object or a file URL String. |
+| `FileDocument`   | `System.FileDocument`             | Either URL or FileDocument is required. | The file for which the contents need to be sent with a message. Either provide a System.FileDocument object or an Image URL String. |
+| `ENUM_FileType`  | [ENUM_FileType](#enum-filetype)   | Yes                                     | This is the type of the file.  |
+| `TextContent`    | String                            | Yes                                     | An optional text content describing the file content or giving it a specific name. |
 
 **Return value**
 
@@ -375,12 +375,12 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 
 **Input parameters**
 
- Name               | Type                | Mandatory | Description                         |
-|-------------------|---------------------|-----------|-------------------------------------|
-| Request           | [Request](#request) | Yes       | The request to add the function to. |
-| ToolName          | String              | Yes       | The name of the tool to use/call.   |
-| ToolDescription   | String              | No        | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| FunctionMicroflow | Microflow           | Yes       | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
+ Name                 | Type                | Mandatory | Description                         |
+|---------------------|---------------------|-----------|-------------------------------------|
+| `Request`           | [Request](#request) | Yes       | The request to add the function to. |
+| `ToolName`          | String              | Yes       | The name of the tool to use/call.   |
+| `ToolDescription`   | String              | No        | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
+| `FunctionMicroflow` | Microflow           | Yes       | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
 
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.
@@ -388,22 +388,22 @@ Since this microflow runs in the context of the user, you can make sure that it 
 
 **Return value**
 
-| Name          | Type     | Description            |
-|---------------|----------|---------|
-| Function      | [Function](#function) |  This is the function object that was added to the request. This object can be used optionally as input for controlling the tool choice of the [Request](#request), see [Set Tool Choice](#settoolchoice). |
+| Name            | Type                  | Description            |
+|-----------------|-----------------------|------------------------|
+| `Function`      | [Function](#function) |  This is the function object that was added [ToolCollection](#toolcollection) which is part of the request. This object can be used optionally as input for controlling the tool choice of the [Request](#request), see [Tools: Set Tool Choice](#set-toolchoice). |
 
 ##### 4.3.1.7 Tools: Set Tool Choice {#set-toolchoice}
 
-Use this microflow to set the ToolChoice. This controls which (if any) function is called by the model.
-If the ENUM_ToolChoice equals `tool`, the Tool input is required which will become the tool choice of the ToolCollection. This will force the model to call that particular tool. 
+Use this microflow to set the ToolChoice within a [Request](#request). This controls which (if any) function is called by the model.
+If the ENUM_ToolChoice equals `tool`, the `Tool` input is required which will become the tool choice. This will force the model to call that particular tool. 
 
 **Input parameters**
 
-| Name           | Type     | Mandatory | Description  |
-|----------------|----------|-----------|----------------------------|
-| Request        | [Request](#request)          | Yes       | The request for which to set a tool choice.  |
-| Tool           | [Tool](#tool)       | Yes       | Specifies the tool to be used. Required if the ENUM_ToolChoice equals tool.    |
-| ENUM_ToolChoice| [ENUM_ToolChoice](#enum-toolchoice)         | Yes       | Determines the tool choice. <br /> For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values.  |
+| Name              | Type                                | Mandatory                                    | Description                |
+|-------------------|-------------------------------------|----------------------------------------------|----------------------------|
+| `Request`         | [Request](#request)                 | Yes                                          | The request for which to set a tool choice. |
+| `Tool`            | [Tool](#tool)                       | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumaration values. |
+| `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes                                          | Determines the tool choice. <br /> For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values.  |
 
 **Return value**
 
@@ -417,30 +417,31 @@ This microflow can be used to get the content from the latest assistant message 
 
 **Input parameters**
 
-| Name      | Type     | Mandatory | Description                               |
-|-----------|----------|-----------|-------------------------------------------|
-| Response  | [Response](#response)         | Yes       | The response object. |
+| Name        | Type                  | Mandatory | Description          |
+|-------------|-----------------------|-----------|----------------------|
+| `Response`  | [Response](#response) | Yes       | The response object. |
 
 **Return value**
 
-| Name          | Type   | Description            |
-|---------------|--------|---------|
-| ResponseText  | String | This is the string content on the message with role `assistant` that was generated by the model as a response to a user message. |
+| Name            | Type   | Description |
+|-----------------|--------|-------------|
+| `ResponseText`  | String | This is the string `Content` of message with role `assistant` that was generated by the model as a response to a user message. |
 
 #### 4.3.2.2 Chat: Get References {#chat-get-references}
-This microflow can be used to retrieve the references for a given model response. These indicate what the model response was based on, according to the model logic.
+
+This microflow can be used to retrieve the references for a given model response. These indicate what the model response was based on, according to the model logic. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI commons domain model.
 
 **Input parameters**
 
-| Name     | Type     | Mandatory | Description                                 |
-|----------|----------|-----------|---------------------------------------------|
-| Response |   [Response](#response)       | Yes       | The response object. |
+| Name       | Type                  | Mandatory | Description          |
+|------------|-----------------------|-----------|----------------------|
+| `Response` | [Response](#response) | Yes       | The response object. |
 
 **Return value**
 
-| Name          | Type     | Description            |
-|---------------|----------|---------|
-| ReferenceList      | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
+| Name            | Type                            | Description                                                                      |
+|-----------------|---------------------------------|----------------------------------------------------------------------------------|
+| `ReferenceList` | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
 
 ### 4.3.3 Main operations (interface only)
 

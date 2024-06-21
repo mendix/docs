@@ -176,11 +176,11 @@ The following microflows can be found in the `USE_ME` folder:
 
 #### 4.3.2 Provider Config Operations {#provider-config-operations}
 
-The Java-Action `ProviderConfig: Set Action Microflow` can be used to select an [action microflow](#action-microflow) in Studio Pro and set it to the provider config. This can be used when the provider config is being created. Note that this action does not commit the provider config.
+The tool-box operation `ProviderConfig: Set Action Microflow` can be used to select an [action microflow](#action-microflow) in Studio Pro and set it to the provider config. This can be used when the provider config is being created. Note that this action does not commit the provider config.
 
 #### 4.3.3 Request Operations {#request-operations}
 
-The microflow `Request_CreateFromChatContext` creates a [Request](/appstore/modules/genai/genai-commons/#request) object that is typically used as input parameter in [With-History operations](/appstore/modules/genai/genai-commons/#chat-completions-interface). The operation requires a `ChatContext` and will create the necessary message structure to make the LLM call. It is recommended to use this operation in the [action microflow](#action-microflow).
+The operation `Request: Create from ChatContext` creates a [Request](/appstore/modules/genai/genai-commons/#request) object that is typically used as input parameter in [With-History operations](/appstore/modules/genai/genai-commons/#chat-completions-interface). The operation requires a `ChatContext` and will create the necessary message structure to make the LLM call. It is recommended to use this operation in the [action microflow](#action-microflow).
 
 #### 4.3.4 Other Operations {#other-operations}
 

@@ -1,7 +1,7 @@
 ---
 title: "Deployment Location"
 url: /developerportal/deploy/deployment-location/
-weight: 45
+weight: 50
 description: "URL considerations for deploying Mendix"
 ---
 

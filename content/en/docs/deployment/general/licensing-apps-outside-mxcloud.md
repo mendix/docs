@@ -1,7 +1,7 @@
 ---
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
-weight: 5
+weight: 50
 description: "How to apply licenses to apps which are outside Mendix Cloud"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.

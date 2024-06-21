@@ -1,7 +1,7 @@
 ---
 title: "Iframes and Running Apps"
 url: /developerportal/deploy/running-in-iframe/
-weight: 40
+weight: 50
 description: "Issues to take into consideration when running apps in an iframe"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

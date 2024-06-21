@@ -12,7 +12,7 @@ aliases:
 Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
-If using Studio Pro 10.12, please make sure to use latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862)
+If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -33,7 +33,7 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgreSQL
 * Oracle
-* Snowflake - GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
+* Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
 
 If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 
@@ -82,7 +82,9 @@ After [installing](#installation) the connector, get started by doing the follow
 
 4. Click **Save** to open the external database document for this database.
 
-{{% alert color="info" %}}Connection details are stored as constants, their values are stored in the Active configuration of the user, password is stored as a private value.{{% /alert %}}
+{{% alert color="info" %}}
+Connection details are stored as constants, their values are stored in the Active configuration of the user, the password is stored as a private value.
+{{% /alert %}}
 
 Now you can start [querying the database](#query-database) to select data to use in your app.
 

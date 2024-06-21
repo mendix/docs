@@ -159,16 +159,20 @@ The `Snippet_ChatContext_AdvancedSettings` can be placed on pages to let user's 
 
 #### 4.3.1 Chat Context Operations {#chat-context-operations}
 
-There are many microflows to be used for processing the [ChatContext](#chat-context):
+The following operations can be found in the tool box for processing the [ChatContext](#chat-context):
+* `ChatContext: Add ProviderConfig List` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of ProviderConfigs can be added to the ChatContext (non-active, but selectable in the UI).
+* `ChatContext: Create` creates and returns a new chat context.
+* `ChatContext: Create & Set ProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
+* `ChatContext: Update Assistant Response` needs to be used in the [action microflow](#action-microflow) to process the response of the LLM.
+* `ChatContext: Add Suggested User Prompt` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
+
+
+The following microflows can be found in the `USE_ME` folder:
 * `ChatContext_AddProviderConfig_SetActive` adds a `ProviderConfig` to the chat context and sets it to active.
-* `ChatContext_AddProviderConfigList` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of ProviderConfigs can be added to the ChatContext (non-active, but selectable in the UI).
-* `ChatContext_Create` creates and returns a new chat context.
-* `ChatContext_Create_SetProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
 * `ChatContext_Delete` deletes a chat context.
 * `ChatContext_GetCurrentUserPrompt` gets the current user prompt. Can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `ChatContext_SetSessionId` sets the `SessionID` of the chat context.
 * `ChatContext_SetTopic` sets the `Topic`of the chat context. Will be used in the history-sidebar to make historical chats recognizable for users.
-* `ChatContext_UpdateAssistantResponse` needs to be used in the [action microflow](#action-microflow) to process the response of the LLM.
 
 #### 4.3.2 Provider Config Operations {#provider-config-operations}
 
@@ -180,8 +184,7 @@ The microflow `Request_CreateFromChatContext` creates a [Request](/appstore/modu
 
 #### 4.3.4 Other Operations {#other-operations}
 
-The following operations can be used to increase the chat experience for your users:
-* `SuggestedUserPrompt_Create` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
+The following operation can be used to increase the chat experience for users:
 * `AdvancedSettings_GetAndUpdate` can be used after the chat context was created to set the boundaries and default value for advanced settings in the UI (see [Configuration Snippets](#snippet-configuration)).
 
 

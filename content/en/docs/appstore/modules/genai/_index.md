@@ -9,32 +9,43 @@ description: "Describes the general properties and common concepts of Generative
 
 With the Mendix GenAI capabilities you can create engaging, intelligent experiences with a variety of AI models and your own data.
 
-You can:
-1. Create engaging experiences by creating conversational UIs for AI powered chatbots & integrate those in your Mendix applications.
-2. Connect any model through our GenAI connectors, or by integrating your own connector into our GenAI commons interface.
-3. Connect your own data to ground GenAI systems with data from inside your application and the rest of your IT landscape.
+### 1.1 Typical Use Cases
 
-## 2 Architecture & Components
+Mendix supports a variety of Generative AI tasks by integrating with tools such as Amazon Bedrock or Azure OpenAI. Typical use cases include the following:
 
-### 2.1 The Mendix Components
+* Create conversational UIs for AI powered chatbots and integrate those UIs into your Mendix applications.
+* Connect any model through our GenAI connectors, or by integrating your own connector into our GenAI commons interface.
+* Connect your own data to ground GenAI systems with data from inside your application and the rest of your IT landscape.
 
-TODO: insert diagram
+### 1.2 Getting Started
+
+To start using the GenAI capabilities of Mendix, complete the following tasks:
+
+1. Familiarize yourself with [concepts](/appstore/modules/genai/concepts/) such as Prompt engineering, Retrieval Augmented Generation (RAG) and Function calling (ReAct).
+2. Select the right architecture to support your use case. For a full list of possibilities, see [Architecture and Components](#architecture).
+3. Obtain the required credentials for your selected architecture.
+
+## 2 Architecture and Components
+
+To help you get started, the following sections list the available GenAI components and models.
+
+### 2.1 Mendix Components
 
 | Asset | Description | Studio Pro Version |
 |----------------------|------------------------------------|----------------|
-| AI Bot Starter App | Template to kick-start development of enterprise grade AI chatbot experiences | 10.12 |
-| Blank GenAI App | Start from scratch to create a new application with GenAI capabilities | 10.12 |
-| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with Generative AI. Understand how to implement the OpenAI & Bedrock connectors and how to integrate with the Conversational UI module  | 9.24 |
-| [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Deepdive in how to use Bedrock capabilities | 9.24 |
-| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI | 9.24 |
-| [OpenAI Connector](/appstore/modules/openai-connector/) | Connect with (Azure) OpenAI | 9.24 |
-| [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to with AWS Bedrock<br />Use Retrieve & Generate or Bedrock Agents | 9.24 |
-| [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) | Manage & interact with a PostgreSQL pgvector Knowledge Base | 9.24 |
-| [GenAI Commons](/appstore/modules/genai-commons/) | Common capabilities for every GenAI app, like the `System` module. | 9.24 |
+| AI Bot Starter App | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | 10.12 |
+| Blank GenAI App | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | 10.12 |
+| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with Generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24 |
+| [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Discover how to use Amazon Bedrock capabilities. | 9.24 |
+| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | 9.24 |
+| [OpenAI Connector](/appstore/modules/openai-connector/) | Connect to Azure OpenAI. | 9.24 |
+| [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to Amazon Bedrock. Use Retrieve & Generate or Bedrock agents. | 9.24 |
+| [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | 9.24 |
+| [GenAI Commons](/appstore/modules/genai-commons/) | Common capabilities such as a **System** module for every new or existing GenAI app. | 9.24 |
 
-### 2.2 Available models {#models}
+### 2.2 Available Models {#models}
 
-The main models that we support through our connectors and showcases are:
+Mendix connectors and showcase apps offer direct support for the following models:
 
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
@@ -47,30 +58,14 @@ The main models that we support through our connectors and showcases are:
 | | Amazon Titan Embeddings G1 - Text <br /> Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude v2.0 <br /> Anthropic Claude v2.1| Chat Completions | text | text |  |
 | | Anthropic Claude v3 Sonnet <br /> Anthropic Claude v3.5 Sonnet <br /> Anthropic Claude v3 Haiku  <br /> Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
-| | Cohere Embed | Embeddings | text | embeddings| |
+| | Cohere Embed | Embeddings | text | embeddings | |
 
-#### 2.2.1 Connect to other models
-* It is possible to connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) through the AWS Bedrock Connector and implement them in your application.
-* Through the [Snowflake connectors](/appstore/snowflake-modules/) you can also connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions.
-* Based on our standard GenAI Commons interface, implement your own connector which is automatically compatible with the other components. 
+#### 2.2.1 Connect to Other Models
 
-## 3 How to get started?
+In addition to the models listed above, you can also connect to other models by implementing one of the following options:
 
-### 3.1 Getting your feet wet
+* To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
+* To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, use the [Snowflake connectors](/appstore/snowflake-modules/).
+* To implement your own connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai-commons/) interface. 
 
-First select an architecture by choosing between AWS Bedrock or (Azure) OpenAI. Also make sure you have credentials.
-
-Do you want to...
-* learn more about creating a Conversational UI with Bedrock or OpenAI? Use the [OpenAI Showcase app](https://marketplace.mendix.com/link/component/220475).
-* learn more about the specific capabilties of Bedrock? use the [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535).
-* be inspired of what you can do with Generative AI in general? Review the [OpenAI Showcase app](https://marketplace.mendix.com/link/component/220475).
-
-* create your own private enterprise-ready ChatGPT-like app, get started with the AI Bot Starter App.
-* create a new application with GenAI use cases, use the Blank GenAI app so you don't have to worry about dependencies.
-* integrate individual Generative AI capabilities in your existing app? Download a connector and the Conversational UI and GenAI Common modules to get started.
-
-<!-- TODO: insert links -->
-
-### 3.2 Learn about more about the concepts
-
-Learn more about [concepts](/appstore/modules/genai/concepts/) such as Prompt engineering, Retrieval Augmented Generation (RAG) and Function calling (ReAct).
+## 3 Documents in This Category

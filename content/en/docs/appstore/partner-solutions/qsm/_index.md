@@ -24,7 +24,7 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 ## 2 Implemented Checks for Best Practices
 
-As mentioned above, QSM checks whether your Mendix application adheres to the ISO 25010 standard for writing maintainable software. The model that is used for this partially overlaps with the [Mendix Development Best Practices]([https://docs.mendix.com/refguide/dev-best-practices/](https://docs.mendix.com/refguide/dev-best-practices/#microflow-dev-best-practices), specifically with regards to microflow development best practices. Information on the exact model used is available in the [QSM Model Documentation](https://www.softwareimprovementgroup.com/wp-content/uploads/SIG-TUViT-Evaluation-Criteria-Trusted-Product-Maintainability.pdf). Broader documentation on QSM as a platform and all of its features is publically available in the [QSM Documentation](https://docs.sigrid-says.com/). Note that Sigrid is the technology agnostic name for QSM, where QSM is specific to Mendix. 
+As mentioned above, QSM checks whether your Mendix application adheres to the ISO 25010 standard for writing maintainable software. The model that is used for this partially overlaps with the [Mendix Development Best Practices](/refguide/dev-best-practices/), specifically with regard to microflow development best practices. For more Information on the exact model used, see [QSM Model Documentation](https://www.softwareimprovementgroup.com/wp-content/uploads/SIG-TUViT-Evaluation-Criteria-Trusted-Product-Maintainability.pdf). For broader documentation on QSM as a platform and all of its features, see [QSM Documentation](https://docs.sigrid-says.com/). Note that Sigrid is the technology agnostic name for QSM, where QSM is specific to Mendix.
 
 ## 3 Additional Information
 
@@ -39,11 +39,13 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
 * Mendix QSM dashboard reports are generated every night based on the latest version in your Project Team Server
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server
     * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci))
- 
+
 
 ## 4 Release Notes
 
-QSM is continuously improved and expanded. An overview of recently released major features is available in the [QSM documentation](https://docs.sigrid-says.com/reference/release-notes.html). 
+{{% alert color="info" %}}
+QSM is continuously improved and expanded. For an overview of recently released major features, see [QSM documentation](https://docs.sigrid-says.com/reference/release-notes.html). 
+{{% /alert %}}
 
 ### 2.0.0
 

@@ -60,7 +60,7 @@ Mendix connectors and showcase apps offer direct support for the following model
 | | Anthropic Claude v3 Sonnet, Anthropic Claude v3.5 Sonnet, Anthropic Claude v3 Haiku, Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
 | | Cohere Embed | Embeddings | text | embeddings | |
 
-#### 2.2.1 Connect to Other Models
+#### 2.2.1 Connecting to Other Models
 
 In addition to the models listed above, you can also connect to other models by implementing one of the following options:
 

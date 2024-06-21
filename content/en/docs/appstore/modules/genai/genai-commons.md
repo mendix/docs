@@ -20,7 +20,7 @@ The current scope of the connector is only focused on text generation use cases.
 
 ### 1.2 Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher
+* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
 * [Community commons](/appstore/modules/community-commons-function-library/)
 
 ## 2 Installation {#installation}

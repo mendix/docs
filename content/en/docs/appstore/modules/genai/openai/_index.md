@@ -78,7 +78,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
 ### 1.5 Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher
+* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
 * [GenAI Commons](/appstore/modules/genai/genai-commons/)
 * [Encryption](/appstore/modules/encryption/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)

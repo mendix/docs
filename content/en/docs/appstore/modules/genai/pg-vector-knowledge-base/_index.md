@@ -37,7 +37,7 @@ You should have access to your own (remote) postgreSQL database server with the 
 
 ### 1.4 Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.0](/releasenotes/studio-pro/9.24/#9240) or higher 
+* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 * [Database Connector](https://marketplace.mendix.com/link/component/2888) module

@@ -132,20 +132,14 @@ Every end-user that is known in Admin module also needs to be known in the OIDC 
 
 The rest of the configuration can be performed through the app.
 
-1. Deploy and run the app.
-1. Login as an administrator.
-1. Use the **Accounts** navigation item.
-1. Click **New** and create the user account (or accounts) you need in your IAM Broker — for example, a new active account with the **User role** set to **User**.
-1. Use the **OpenID Connect** navigation item.
-1. Open the **Server Keys** tab.
-1. Click **New Key**.
-1. Open the **Scopes** tab.
-1. Create **New** scopes with the **Scope type** set to **Standard**.
+1. Deploy your application and log in with the application Admin account. 
+1. Click **New** in the **Accounts** navigation item to create the user account (or accounts) you need in your IAM Broker. For example, a new active account with the **User role** set to **User**.
+1. Click **New Key** on **Server Keys** tab of the **OpenID Connect** navigation item.
+1. Open the **Scopes** tab and create **New** scopes with the **Scope type** set to **Standard**.
 
     This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on what scopes you should set.
 
-1. Open the **Clients** tab.
-1. Click **New Client Registration**.
+1. Open the **Clients** tab and click **New Client Registration**.
 
     You can register a new client (an app using the OIDC SSO module for sign in which identifies this app as its IdP) in one of two ways. Follow one of the sets of instructions below:
 

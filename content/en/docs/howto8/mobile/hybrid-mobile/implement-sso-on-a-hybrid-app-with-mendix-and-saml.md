@@ -77,7 +77,7 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 ```javascript
 MxApp.onConfigReady(function(config) {
     var samlLogin = function() {
-        var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
+        var samlWindow = cordova.InAppBrowser.open(config.unmodifiedRemoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
 
         var exitFn = function() {
             navigator.app.exitApp();
@@ -89,7 +89,7 @@ MxApp.onConfigReady(function(config) {
             samlWindow.executeScript({
                 code: "window.location.href;"
             }, function(href) {
-                if (href[0].toLowerCase().indexOf(window.mx.remoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
+                if (href[0].toLowerCase().indexOf(config.unmodifiedRemoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {

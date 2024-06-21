@@ -7,7 +7,8 @@ description: "Describes the Conversational UI marketplace module that assists de
 ---
 
 ## 1 Introduction {#introduction}
-The Conversational UI module helps developers to create an AI based Chat UI with snippets, building blocks and page templates. Integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat.
+With the Conversational UI module you can create an AI based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
+<!-- TODO: include links when they become available -->
 
 <!---
 [comment]: <> TODO: 
@@ -23,25 +24,28 @@ The Conversational UI module helps developers to create an AI based Chat UI with
 
 ### 1.1 Typical Use Cases {#use-cases}
 
-* Chat-interface for users to chat with Large Language Models (LLM). 
-* Possibility to include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
+* Create a chat interface for users to chat with Large Language Models (LLM). 
+* Allow users to switch between different implementations by switching "providers". 
+* Include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
 * Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern (see [Using Generative AI](/appstore/modules/genai/concepts/)).
 
 ### 1.2 Features {#features}
 
-* UI components to easily drag and drop construct your pages such as
+* UI components to easily drag and drop construct your pages such as:
     * Layouts to have a sidebar or floating popup chat
+    * Pages that you can use in your navigation for chat
     * Snippets to be used directly on your pages, for example to display messages or history sidebar
-    * Pages that you can use in your navigation to enable a basic chat
+    * A floating button that for opening a chat
+* Operations to setup your context, interact with the model and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
-* Operations to construct the request to the model and the data to display in the UI
+* Integration with any model that is compatible with GenAI Commons
 
 ### 1.3 Limitations {#limitations}
-This module is intended to enable chat interactions between a user and a model. Conversations between two human users is not in scope.
+This module is intended to enable chat interactions between a user and an AI model. It is not designed for conversations between two human users.
 
 ### 1.4 Prerequisites {#prerequisites}
 
-In order to use the Conversational UI module, you are advised to use a connector that is compatible with GenAI Commons. Mendix supports out of the box integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
+In order to use the Conversational UI module, you are advised to use a connector that is compatible with GenAI Commons. Mendix supports out of the box integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making it compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
 
 ### 1.5 Dependencies {#dependencies}
 

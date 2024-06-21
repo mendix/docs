@@ -629,14 +629,14 @@ Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple c
 | ---------------- | ----------------------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
 | `UserPrompt`     | String                                                                       | mandatory           | A user message is the input from a user.                     |
 | `Connection`     | [Connection](/appstore/modules/genai/genai-commons/#connection)              | mandatory           | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | optional            | This is an optional object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to `Request` to configure additional OpenAI specific attributes. If no Request is passed, one will be created.        |
-| `FileCollection` | [FileCollection](/appstore/modules/genai/genai-commons/#filecollection)      | optional            | This is an optional collection of files to be sent along with the `UserPrompt` to use vision. |
+| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | optional            | This is an optional object that contains optional attributes and an optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to `Request` to configure additional OpenAI specific attributes. If no Request is passed, one will be created.        |
+| `FileCollection` | [FileCollection](/appstore/modules/genai/genai-commons/#filecollection)      | optional            | This is an optional collection of files to be sent along with the request to use vision. |
 
 **Return value**
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
+| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.|
 
 To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
 
@@ -648,14 +648,14 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 
 | Name                     | Type                                                                 | Mandatory               | Description                                                                                                        |
 | ------------------------ | ------------------------------- | ---------------------------------- |--------------------------------------------------------------------------------------------------------------------------- |
-| `Connection`     | [Connection](/appstore/modules/genai/genai-commons/#connection)              | mandatory      | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | mandatory      | This is an object that contains historical messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
+| `Connection`     | [Connection](/appstore/modules/genai/genai-commons/#connection)              | Yes     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | Yes     | This is an object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
 
 **Return value**
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
+| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
 
 To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
 

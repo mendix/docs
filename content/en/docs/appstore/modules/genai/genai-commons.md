@@ -10,7 +10,7 @@ description: "Describes the purpose, configuration and usage of the GenAI Common
 
 The GenAI Commons module combines common GenAI patterns found in a variety of generative AI models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/conversational-ui/) module.
 
-If two different connectors both adhere to the GenAI Commons module, they can be rather easily swapped which reduces dependency to the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag and drop experience, so that developers can quickly get started. The module exposes useful operations to build a request to a large language model (LLM) and to process the response.
+If two different connectors both adhere to the GenAI Commons module, they can be rather easily swapped which reduces dependency to the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag and drop experience, so that developers can quickly get started. The module exposes useful operations to build a request to a large language model (LLM) and to handle the response.
 
 Developers, who want to connect to another LLM provider or their own service, are advised to use the GenAI Commons module as well. This speeds up the development and ensures that common principles are taken into account. Lastly, other developers or consumers of the connector can adapt more quickly to it.
 
@@ -45,7 +45,7 @@ All exposed microflows are intended to be used when the required information for
 
 #### 3.1.1 Build request {#build-request}
 
-A number of generic GenAI Commons microflows have been made available for developers to aid in constructing the input request structures for the operations defined in GenAI Commons. These flows are all meant to be used in microflows before the operation is executed.
+A number of generic GenAI Commons microflows have been made available for developers to aid in constructing the input request structures for the operations defined in GenAI Commons.
 
 ##### 3.1.1.1 Chat: Create Request {#create-request}
 
@@ -95,7 +95,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 ##### 4.1.1 `Connection` {#connection}
 
-The `Connection` entitiy is a required input parameter for all operations based on the GenAI commons module.
+The `Connection` entity contains specifications to interact with an AI provider.
 
 | Attribute | Description                                                  |
 | --------- | ------------------------------------------------------------ |
@@ -443,33 +443,47 @@ This microflow can be used to retrieve the references for a given model response
 |-----------------|---------------------------------|----------------------------------------------------------------------------------|
 | `ReferenceList` | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
 
-### 4.3.3 Main operations (interface only)
+### 4.3.3 Chat completions interface {#chat-completions-interface}
 
-The following operations are defined currently by the GenAI Commons module for the category Chat Completions: 
-- `Chat Completions (without history)`
-- `Chat Completions (with history)`
+The [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completions operations implemented that share the same interface meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
-{{% alert color="info" %}}Note that these operations are not implemented in this module; it merely describes the interface (microflow input parameters, return value, and expected behavior). It is up to connectors that adhere to the principles of GenAI Commons to provide an implementation See for example the respective sections in the [OpenAI Connector] or the [Bedrock Connector].{{% /alert %}}
+Mendix recommends to adapt to the same interface when developing custom chat completions operations i.e. to integrate with different AI providers.
+The generic interfaces are described below. For more detailed information please refer to the platform-supported GenAI-connector documentations since they might expect specializations of the generic GenAI common entities as an input.
+
+{{% alert color="info" %}}Note that these operations are not implemented in this module; it merely describes the interface (microflow input parameters, return value, and expected behavior). It is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. See for example the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/_index/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/) or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented so that it can be decided at runtime whether call the LLM through OpenAI or AWS Bedrock .{{% /alert %}}
 
 #### 4.3.3.1 `Chat Completions (without history)`
 
+The operation interface `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request.
+
 **Input parameters**
 
-| Name     | Type     | Mandatory | Description                                 |
-|----------|----------|-----------|---------------------------------------------|
-| Connection |   [Connection](#connection)       | Yes       | This is the connfiguration object that contains the details for the API call to the system of the language model. Connectors must implement their specific connection details on a connector-specific specialization of this entity. |
-| UserPrompt |  String | Yes | This is the user input for the model to process.
-| Request | [Request](#request) | No | This is the root object that contains all content-related input needed for a model to generate a response. | 
-| FileCollection | [FileCollection](#filecollection) | No | An optional collection of files to be sent along with the UserPrompt for the models that support file and/or image analysis. |
-
-Note about the `Connection`: implementing operations are required to have the generalization [Connection](#connection) entity as input parameter. However, the actual object passed into the operation by customer implementaitons must be of the correct specialization that belongs to the connector that is targeted. If the generalization or a different specialization is passed, implementation microflows should not perform the interaction to the language model and instead log an error message. 
-
-Note about the `Request`: implementing operations are required to have the [Request](#request) entity as optional input parameter: if a Request is not passed, the imlementing microflow should create one based on the UserPrompt input string; all other values are expected to assume default values as stated in the documentation of the connector.<br />If for a connector implementation, specific additional parameters need to be exposed for certain vendors/models, Mendix recommends connector developers to create a specific Request_Extension entity for each case in the connector domain model (see the [OpenAI Connector] or the [Bedrock Connector] for an example). In customer implementations this extension object can optionally be instantiated with the required additional parameters for the call, attached to the Request and passed into the connector operation. If the extension object is not passed, the connector microflow is expected to proceed to do the interaction to the language model and assume default values as documented.
+| Name             | Type                                   | Mandatory    | Description          |
+| ---------------- | -------------------------------------- | -------------| -------------------- |
+| `UserPrompt`     | String                                 | mandatory    | A user message is the input from a user. |
+| `Connection`     | [Connection](#connection)              | mandatory    | This is an object that contains specifications to interact with an AI provider. |
+| `Request`        | [Request](#request)                    | optional     | This is an optional object that contains optional attributes and an optional [ToolCollection](#toolcollection). If no Request is passed, one will be created. |
+| `FileCollection` | [FileCollection](#filecollection)      | optional     | This is an optional collection of files to be sent along with the request to use vision. |
 
 **Return value**
 
-| Name          | Type     | Description            |
-|---------------|----------|---------|
-| Response      | [Response](#response) | The response object from the operation that contains the data generated by the model as well as usage metrics. |
+| Name        | Type                  | Description                                                  |
+| ----------- | --------------------- | ------------------------------------------------------------ |
+| `Response`  | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#get-response-text) operation.|
 
-Note about the `Response`: implementing operations are required to have the [Response](#response) entity as return parameter, but have to return `empty` if and only if a unhappy scenario occurs. From the error log it should be clear what went wrong at all times.
+#### 4.3.3.2 `Chat Completions (with history)`
+
+The operation interface `Chat Completions (with history)` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the LLM.
+
+**Input parameters**
+
+| Name          | Type                      | Mandatory | Description            |
+| ------------- | ------------------------- | --------- |----------------------- |
+| `Connection`  | [Connection](#connection) | Yes       | This is an object that contains specifications to interact with an AI provider. |
+| `Request`     | [Request](#request)       | Yes       | This is an object that contains messages, optional attributes and an optional [ToolCollection](#toolcollection). |
+
+**Return value**
+
+| Name        | Type                                                        | Description                                                  |
+| ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| `Response`  | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#get-response-text) operation. |

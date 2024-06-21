@@ -12,7 +12,7 @@ cascade:
 
 ## 1 Introduction
 
-The **Deployment** category in the **Apps** navigation pane provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
+The **Deployment** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
 
 {{% alert color="info" %}}
 The interface and functionality of these pages vary depending on where your app is deployed. For details about the various deployment options, see the [Deployment](/deployment/) section.

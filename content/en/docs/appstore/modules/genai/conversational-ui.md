@@ -25,7 +25,7 @@ The Conversational UI module helps developers to create an AI based Chat UI with
 
 * Chat-interface for users to chat with Large Language Models (LLM). 
 * Possibility to include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern (see [GenAI Concepts](/appstore/modules/genai/concepts/)).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern (see [Using Generative AI](/appstore/modules/genai/concepts/)).
 
 ### 1.2 Features {#features}
 

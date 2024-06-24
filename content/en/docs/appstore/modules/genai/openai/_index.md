@@ -17,11 +17,13 @@ Mendix provides dual-platform support for OpenAI and Azure OpenAI.
 
 ### 1.1 Typical Use Cases {#use-cases}
 
+The OpenAI Connector is commonly used for text generation, image generation, and embeddings, as described below.
+
 #### 1.1.1 Text Generation {#use-cases-text}
 
 * Develop interactive AI chatbots and virtual assistants that can carry out conversations in a natural and engaging manner. 
-* Use OpenAI’s large language models for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
-* Fine-tune the OpenAI models on a specific task or domain, by training it on custom data, to improve its performance. 
+* Use OpenAI’s large language models (LLMs) for text comprehension and analysis use cases such as summarization, synthesis, and answering questions about large amounts of text.
+* Fine-tune the OpenAI models on a specific task or domain by training them on custom data to improve their performance. 
 * Integrate more easily with OpenAI’s platform, which, by providing text generation models, allows you to build applications with the following features:
     * Draft documents 
     * Write computer code 
@@ -33,7 +35,7 @@ Mendix provides dual-platform support for OpenAI and Azure OpenAI.
     * Simulate characters for games
     * Image to text
 
-OpenAI provides market-leading large language model capabilities with GPT-4: 
+OpenAI provides market-leading LLM capabilities with GPT-4:
 
 * Advanced reasoning – Follow complex instructions in natural language and solve difficult problems with accuracy. 
 * Creativity – Generate, edit, and iterate with end-users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning an end-user’s writing style.
@@ -85,7 +87,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
 ## 2 Installation {#installation}
 
- The following modules from the marketplace need to be installed:
+ The following modules from the Marketplace need to be installed:
 
 {{% todo %}}
 * [GenAI Commons](LINK) module
@@ -93,7 +95,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app.
+To import the OpenAI Connector into your app, follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/).
 
 ## 3 Configuration {#configuration}
 
@@ -119,7 +121,7 @@ The following inputs are required for the OpenAI configuration:
 | API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
 {{% alert color="info" %}}
-If you have signed up for an OpenAI account and are using free trial credits, note that these are only valid for three months after the account has been created (not after the API key has been created). To continue using the OpenAI API with an account that is older than three months, you will need to top up your account balance with credit and create a new API key. For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
+If you have signed up for an OpenAI account and are using free trial credits, note that the credits are only valid for three months after the account is created (not after the API key is created). To continue using the OpenAI API with an account that is more than three months old, you must top up your account balance with credit and create a new API key. For more details, see the [OpenAI API reference](https://platform.openai.com/docs/api-reference/authentication).
 {{% /alert %}}
 
 #### 3.1.2 Azure OpenAI Configuration {#azure-openai-configuration} 
@@ -128,7 +130,7 @@ The following inputs are required for the Azure OpenAI configuration:
 
 | Parameter      | Value                                                        |
 | -------------- | ------------------------------------------------------------ |
-| DisplayName    | This is the name identifier of a configuration, e.g. *MyConfiguration*. |
+| DisplayName    | This is the name identifier of a configuration (for example, *MyConfiguration*). |
 | API type       | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
 | Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
@@ -173,25 +175,25 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### 3.2.1 `Chat Completions (without history)` {#chatcompletions-without-history}
 
-The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection) and a UserPrompt as string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/genai-commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI specific optional attributes.
+The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection) and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/genai-commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
-Optionally, you can also make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [technical reference](#chat-completions-without-history-technical) section.
 
-#### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-withory}
+#### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-with-history}
 
-The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the large language model. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection) and a [Request](/appstore/modules/genai/genai-commons/#request) object containing messages, optional attributes, an optional `ToolCollection` and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI specific optional attributes.
+The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection), a [Request](/appstore/modules/genai/genai-commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
-Optionally, you can make use of [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request or [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 Function Calling {#chatcompletions-functioncalling}
 
-Function calling enables LLMs (Large Language Models) to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
+Function calling enables LLMs to connect with external tools to gather information, execute actions, convert natural language into structured data, and much more. Function calling thus enables the model to intelligently decide when to let the Mendix app call one or more predefined function microflows to gather additional information to include in the assistant's response.
 
 OpenAI does not call the function. The model returns a tool called JSON structure that is used to build the input of the function (or functions) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response.
 
@@ -200,7 +202,7 @@ Function microflows take a single input parameter of type string and must return
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but should be used with caution. Note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the current end-user in the assistant's response.
 
-Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, for example sending an email, posting online, or making a purchase.
+Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, such as sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
 You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation.
@@ -211,9 +213,9 @@ For more information, see [Function Calling](/appstore/modules/genai/concepts/fu
 
 Vision enables models like GPT-4o and GPT-4 Turbo to interpret and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [FileCollection](/appstore/modules/genai/genai-commons/#filecollection) containing one or multiple images must be sent along with a single message.
 
-For `Chat Completions without History` the `FileCollection` is an optional input parameter, while for `Chat Completions with History` it can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
+For `Chat Completions without History`, `FileCollection` is an optional input parameter. For `Chat Completions with History`, `FileCollection` can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
 
-Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector; however, they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
+Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision, it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector; however, they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
 
 {{% alert color="info" %}}
 OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities. In other words, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input.
@@ -273,11 +275,11 @@ The microflow activity `Embeddings (advanced)` can be used in cases where the ab
 
 The construction of the request and handling of the response must be implemented in a custom way.
 
-For technical details, see the [Technical reference](#embeddings-advanced-technical) section.
+For technical details, see the [Technical Reference](#embeddings-advanced-technical) section.
 
-### 3.5 Exposed microflows {#exposed-microflows}
+### 3.5 Exposed Microflows {#exposed-microflows}
 
-The following OpenAI-specific exposed microflows assist developers to construct their requests in a drag-and-drop experience and can be found in the toolbox in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai/genai-commons/#exposed-microflows).
+The following OpenAI-specific exposed microflows assist developers in constructing their requests in a drag-and-drop experience. These microflows can be found in the toolbox in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai/genai-commons/#exposed-microflows).
 
 #### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
 
@@ -297,11 +299,11 @@ This microflow can be used to add a new `FileDocument` or URL to an existing `Fi
 
 #### 3.5.5 `Embeddings: Create DataBatch` {#create-databatch}
 
-This mircoflow can be used to create a data batch (wrapper entity) to group the [DataChunks](#create-datachunk). This object needs to be passed into the [Embeddings (list input)](#embeddings-list) operation.
+This microflow can be used to create a data batch (wrapper entity) to group the [DataChunks](#create-datachunk). This object needs to be passed into the [Embeddings (list input)](#embeddings-list) operation.
 
 #### 3.5.6 `Embeddings: Create DataChunk` {#create-datachunk}
 
-This microflow can be used to add a data chunk for the given content that needs to be converted into an embedding vector. The pattern uses the DataBatch to group the inputs, see [DataChunks](#create-databatch). The order of the chunks is not relevant.
+This microflow can be used to add a data chunk for the given content that needs to be converted into an embedding vector. The pattern uses the DataBatch to group the inputs (see [DataChunks](#create-databatch)). The order of the chunks is not relevant.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -313,7 +315,7 @@ This document describes the OpenAIConnector from version 3 and higher. Older ver
 
 ### 4.1 Domain Model {#domain-model} 
 
-The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain Model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
+The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain Model](/refguide/domain-model/). For more details about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
@@ -363,7 +365,7 @@ For chat completions operations, the connector is based on entities from the [Ge
 
 ##### 4.1.2.1 `OpenAIRequest_Extension` {#openairequest-extension} 
 
-`OpenAIRequest_Extension` is an entity that can be used to extend the [GenAI Commons Request](/appstore/modules/genai/genai-commons/#request) object with optional and OpenAI specific parameters. Before the request is sent to OpenAI, the parameters from this extension are mapped into the request body if the object is associated to the `Request`.
+`OpenAIRequest_Extension` is an entity that can be used to extend the [GenAI Commons Request](/appstore/modules/genai/genai-commons/#request) object with optional and OpenAI-specific parameters. Before the request is sent to OpenAI, the parameters from this extension are mapped into the request body if the object is associated to the `Request`.
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
@@ -381,7 +383,7 @@ For chat completions operations, the connector is based on entities from the [Ge
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-The connector does not provide specific entities for chat completions because they are part of the [GenAI Commons](/appstore/modules/genai/genai-commons/) module which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/genai-commons/#domain-model).
+The connector does not provide specific entities for chat completions because they are part of the [GenAI Commons](/appstore/modules/genai/genai-commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/genai-commons/#domain-model).
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
@@ -389,7 +391,7 @@ The connector does not provide specific entities for chat completions because th
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
-The `ImageGenerationsRequest` object is an image generations request that creates a model response including generated image (or images) for the given prompt. 
+The `ImageGenerationsRequest` object is an image generations request that creates a model response including a generated image (or images) for the given prompt. 
 
 | Attribute        | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
@@ -402,7 +404,7 @@ The `ImageGenerationsRequest` object is an image generations request that create
 | `Style`          | This is the style of the generated images. This attribute is optional. Its default value is `vivid`.<br />For more information, see the [ENUM_Style](#enum-style) section. |
 | `User`           | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 
-{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as close as possible.{{% /alert %}}
+{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as closely as possible.{{% /alert %}}
 
 ##### 4.1.4.2 `ImageGenerationsResponse` {#imagegenerationsresponse} 
 
@@ -491,7 +493,7 @@ The `ImageGenerationsRequest` object is an image generations request that create
 
 ##### 4.1.5.6 `EmbeddingValue` {#embeddingvalue}
 
-`EmbeddingValue` represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model as listed in the [documentation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
+`EmbeddingValue` represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model, as listed in the [documentation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
 
 | Attribute | Description                                |
 | --------- | ------------------------------------------ |
@@ -776,28 +778,28 @@ The following flows may be used to construct and handle the required inputs: `Em
 For more inspiration or guidance on how to use those microflows in your logic, Mendix highly recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace that demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval augmented generation (RAG)](/appstore/modules/genai/concepts/rag-example-implementation/)
+For more information on how to set up a vector database, see [Retrieval augmented generation (RAG)](/appstore/modules/openai-connector/rag-example-implementation/)
 {{% /alert %}}
 
 ## 6 Troubleshooting {#troubleshooting}
 
 ### 6.1 Outdated JDK Version Causing Errors while Calling the Embeddings API {#outdated-jdk-version}
 
-The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more information, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the right JDK version is installed during the installation of Studio Pro, but in some cases it may be outdated, which can cause exceptions when calling the Embeddings API or other REST-based services with large data volumes.
+The Java Development Kit (JDK) is a framework needed by Mendix Studio Pro to deploy and run applications. For more information, see [Studio Pro System Requirements](/refguide/system-requirements/). Usually, the correct JDK version is installed during the installation of Studio Pro, but in some cases, it may be outdated. An outdated version can cause exceptions when calling the Embeddings API or other REST-based services with large data volumes.
 
-We have seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
+Mendix has seen the following two exceptions when using JDK version `jdk-11.0.3.7-hotspot`:
 `java.net.SocketException - Connection reset` or
 `javax.net.ssl.SSLException - Received fatal alert: record_overflow`.
 
-Follow these steps to check your JDK version and update it if necessary:
+To check your JDK version and update it if necessary, follow these steps:
 
-1. Check your JDK version: In Studio Pro Go to **Edit** -> **Preferences** -> **Deployment**-> **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
+1. Check your JDK version: In Studio Pro, go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. If the path points to `jdk-11.0.3.7-hotspot`, you need to update the JDK by following the next steps.
 2. Go to [Eclipse Temurin JDK 11](https://adoptium.net/en-GB/temurin/releases/?variant=openjdk11&os=windows&package=jdk) and download the `.msi` file of the latest release of **JDK 11**.
 3. Open the downloaded file and follow the installation steps. Remember the installation path. Usually, this should be something like `C:/Program Files/Eclipse Adoptium/jdk-11.0.22.7-hotspot`.
 4. After the installation has finished, restart your computer if prompted.
-5. Open Studio Pro and go to **Edit** -> **Preferences** -> **Deployment** -> **JDK directory**. Click on **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
-6. Run the project and execute the action that threw the above mentioned exception earlier.
-    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. Verify that you have selected the right JDK directory containing the updated JDK version. You may also need to update Gradle. For this, go to **Edit** -> **Preferences** -> **Deployment** -> **Gradle directory**. Click **Browse** and select a newer Gradle version from the Mendix folder. In this case, we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
+5. Open Studio Pro and go to **Edit** > **Preferences** > **Deployment** > **JDK directory**. Click **Browse** and select the folder with the new JDK version you just installed. This should be the folder containing the *bin* folder. Save your settings by clicking **OK**.
+6. Run the project and execute the action that threw the above-mentioned exception earlier.
+    1. You might get an error saying `FAILURE: Build failed with an exception. The supplied javaHome seems to be invalid. I cannot find the java executable.`. In this case, verify that you have selected the correct JDK directory containing the updated JDK version. You may also need to update Gradle. To do this, go to **Edit** > **Preferences** > **Deployment** > **Gradle directory**. Click **Browse** and select a newer Gradle version from the Mendix folder. In this case, we replaced `grade-7.6` with `gradle-7.6.3`. Save your settings by clicking **OK**.
     2. Rerun the project.
 
 ### 6.2 Chat Completions with Vision and JSON mode (Azure OpenAI)
@@ -806,7 +808,7 @@ Azure OpenAI does not support the use of JSON mode and function calling in combi
 
 ### 6.3 Chat Completions with Vision Response is Cut Off (Azure OpenAI)
 
-When you use Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response is not cut off. See [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis) for more details.
+When you use Azure OpenAI, it is recommended to set the optional `MaxTokens` input parameter so that the response is not cut off. For more details, see the [Azure OpenAI Documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/how-to/gpt-with-vision?tabs=rest%2Csystem-assigned%2Cresource#call-the-chat-completion-apis).
 
 ## 7 Read More {#read-more}
 

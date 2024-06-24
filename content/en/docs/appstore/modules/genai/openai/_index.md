@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction {#introduction}
 
-The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app and is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
+The [OpenAI Connector](https://marketplace.mendix.com/link/component/220472) allows you to integrate generative AI into your Mendix app. It is compatible with [OpenAI's platform](https://platform.openai.com/) as well as [Azure's OpenAI service](https://oai.azure.com/). 
 
 The current scope covers text generation use cases based on the [OpenAI Chat Completions API](https://platform.openai.com/docs/api-reference/chat), image generation use cases based on the [Image Generations API](https://platform.openai.com/docs/api-reference/images), and embeddings use cases based on the [Embeddings API](https://platform.openai.com/docs/api-reference/embeddings).
 
@@ -76,7 +76,7 @@ The current scope of the connector focuses on text and image generation use case
 
 ### 1.4 Prerequisites {#prerequisites}
 
-You should have [signed up](https://platform.openai.com/) for an OpenAI account, or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
+To use this connector, you need to either sign up for an [OpenAI account](https://platform.openai.com/) or have access to deployments at [Azure OpenAI](https://oai.azure.com/).
 
 ### 1.5 Dependencies {#dependencies}
 
@@ -89,9 +89,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
  The following modules from the Marketplace need to be installed:
 
-{{% todo %}}
-* [GenAI Commons](LINK) module
-{{% /todo %}}
+* [GenAI Commons](https://marketplace.mendix.com/link/component/227933) module
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 
@@ -99,15 +97,13 @@ To import the OpenAI Connector into your app, follow the instructions in [Using 
 
 ## 3 Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace Modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. You can implement each activity by using it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace Modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. To implement an activity, use it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### 3.1 General Configuration {#general-configuration}
 
 1. Add the module role **OpenAIConnector.Administrator** to your Administrator user role in the security settings of your app. 
 2. Add the **Configuration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_Configurations** to a page that is already part of your navigation. 
-3. Continue to set up your OpenAI configuration at runtime. Based on the type of your configuration, continue with one of the following sections:
-   * [OpenAI Configuration](#openai-configuration)
-   * [Azure OpenAI Configuration](#azure-openai-configuration)
+3. Continue setting up your OpenAI configuration at runtime. Follow the instructions in either [OpenAI Configuration](#openai-configuration) or [Azure OpenAI Configuration](#azure-openai-configuration), depending on the platform you are using.
 
 #### 3.1.1 OpenAI Configuration {#openai-configuration} 
 
@@ -132,31 +128,31 @@ The following inputs are required for the Azure OpenAI configuration:
 | -------------- | ------------------------------------------------------------ |
 | DisplayName    | This is the name identifier of a configuration (for example, *MyConfiguration*). |
 | API type       | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
-| Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For more information about how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
-| DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models, or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
-| API version    | This is the API version to use for this operation. This follows the `yyyy-MM-dd` format. See [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference) for supported versions. The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
+| Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For details on how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
+| DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
+| API version    | This is the API version to use for this operation. It follows the `yyyy-MM-dd` format. For supported versions, see [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference). The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
 | API key        | This is the access token to authorize your API call.         |
-| Key type       | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: `Microsoft Entra token` and `API key`. <br />For more information about how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure **api-key** authentication mechanism. For more information about how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
+| Key type       | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: `Microsoft Entra token` and `API key`. <br />For details on how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure **api-key** authentication mechanism. For details on how to obtain an `API key`, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
 
 {{% alert color="info" %}}
-For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects, one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
+For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects—one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
 {{% /alert %}}
 
-##### 3.1.2.1 Obtaining Azure OpenAI Resource Name {#azure-resource-name}
+##### 3.1.2.1 Obtaining the Azure OpenAI Resource Name {#azure-resource-name}
 
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
-2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
+2. In the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
 5. Use the value of the **Name** field as your resource name in the endpoint URL.
 
-##### 3.1.2.2 Obtaining Azure OpenAI API keys {#azure-api-keys}
+##### 3.1.2.2 Obtaining the Azure OpenAI API keys {#azure-api-keys}
 
 1. Go to the [Azure OpenAI portal](https://oai.azure.com/) and sign in.
-2. On the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
+2. In the upper-right corner, click **Settings** ({{% icon name="cog" %}}). 
 3. Go to the **Resource** tab.
 4. Go to **Current resource** and click **JSON view**.
-5. Use the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be available depending on your organization's security settings. 
+5. Use the value of the **key1** or **key2** field as your API key while setting up the configuration. Note that these keys might not be available, depending on your organization's security settings. 
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
@@ -189,7 +185,7 @@ The microflow activity `Chat completions (with history)` supports more complex u
 
 Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
-For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
+For technical details, see the [Technical Reference](#chat-completions-with-history-technical) section.
 
 #### 3.2.3 Function Calling {#chatcompletions-functioncalling}
 
@@ -200,9 +196,9 @@ OpenAI does not call the function. The model returns a tool called JSON structur
 Function microflows take a single input parameter of type string and must return a string.
 
 {{% alert color="warning" %}}
-Function calling is a very powerful capability, but should be used with caution. Note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the current end-user in the assistant's response.
+Function calling is a very powerful capability and should be used with caution. Function microflows run in the context of the current user, without enforcing entity access. You can use `$currentUser` in XPath queries to ensure that you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the current end-user in the assistant's response.
 
-Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, such as sending an email, posting online, or making a purchase.
+Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
 You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function) operation.

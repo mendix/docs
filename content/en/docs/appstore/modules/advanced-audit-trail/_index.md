@@ -85,8 +85,8 @@ To install the component, follow the instructions in the [Importing Content from
 
 ### 3.1 Configuring Module Roles {#module-roles}
 
-* **Admin**: The admin can query the entire database for the current application and can access the debug pages.
-* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, allowing them to change the environment in search queries, manage OAuth authentication, and set the visibility constraints. It provides secure application access without sharing direct credentials and backend settings manage the scope of accessible data and features.
+* **Admin**: The admin can query the entire database for the current application, access the debug pages, and manage OAuth authentication.
+* **_AddOn_CanChangeEnvironmentInQuery**: This is an additional role for the Admin, allowing them to change the environment in search queries and set the visibility constraints. It provides secure application access without sharing direct credentials and backend settings manage the scope of accessible data and features.
 * **DisplayOnly**: The display-only user can view queries prepared in microflows but they cannot change any of them. This restriction ensures that users see only the information they are allowed to see. The role is tested against cross site scripting (XSS).
 
     {{% alert color="info" %}}Access from and to the long-term data storage is based on service accounts. This means that once a user can access the **Snippet_Settings**, they can access all data in the long-term storage, even if it belongs to other applications in the same environment. Any user-based authentication needs to be implemented in the runtime, for example, by using the **DisplayOnly** module role and the **Query Snapshots for object** setup.{{% /alert %}}

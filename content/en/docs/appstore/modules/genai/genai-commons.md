@@ -33,11 +33,11 @@ If you start from a blank app, or have an existing project where you want to inc
 
 GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
 
-Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented and supported by the LLM. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used.
+Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
-The module is protected, which means it can't be changed and the logic of the microflows is not visible (for more details see [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)). This document or the documentation inside the app will explain what each exposed operation does.
+The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, refer to the following sections, or to the documentation inside the module.
 
-### 3.1 Exposed microflows {#exposed-microflows}
+### 3.1 Exposed Microflows {#exposed-microflows}
 
 All exposed microflows are intended to be used when the required information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
 

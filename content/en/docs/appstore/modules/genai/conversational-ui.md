@@ -97,16 +97,16 @@ If you need additional attributes or associations on the `ChatContext`, we advis
 #### 4.2.1 Chat Context Operations {#chat-context-operations}
 
 The following operations can be found in the tool box for processing the [ChatContext](#chat-context):
-* `ChatContext: Create & Set ProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
-* `ChatContext: Create` creates and returns a new chat context.
-* `ChatContext: Add ProviderConfig List` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of ProviderConfigs can be added to the chat context (non-active, but selectable in the UI).
+* `Create ChatContext & Set ProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
+* `Create ChatContext` creates and returns a new chat context.
+* `Add ProviderConfig List to ChatContext` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of ProviderConfigs can be added to the chat context (non-active, but selectable in the UI).
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Request: Create from ChatContext` will create [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a "Chat with History" operation (see also [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/)) as part of the [action microflow](#action-microflow). 
-* `ChatContext: Update Assistant Response` will process the response of the model and add the new message and (if present) sources to the UI.
-* `ChatContext: Get Current User Prompt` gets the current user prompt. Can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
-* `ChatContext: Set Topic` sets the `Topic`of the chat context. Will be used in the history-sidebar to make historical chats recognizable for users.
+* `Create Request from ChatContext` will create [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a "Chat with History" operation (see also [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/)) as part of the [action microflow](#action-microflow). 
+* `Update Assistant Response` will process the response of the model and add the new message and (if present) sources to the UI.
+* `Get Current User Prompt` gets the current user prompt. Can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
+* `Set ChatContext Topic` sets the `Topic`of the chat context. Will be used in the history-sidebar to make historical chats recognizable for users.
 
 
 #### 4.2.3 Message {#message}
@@ -121,7 +121,7 @@ The model can return `Sources` that can be added to a message and be displayed i
 
 It is possible to add suggested user prompts to a `ChatContext`. They appear as button for new chats. When clicked, the content of the button will be sent as user prompt to the model (via the [action microflow](#action-microflow)).
 
-* `ChatContext: Add Suggested User Prompt` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
+* `Add Suggested User Prompt to ChatContext` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
 
 
 #### 4.2.5 AdvancedSettings {#advanced-settings}
@@ -138,13 +138,13 @@ The `ProviderConfig` contains the selection of the model provider for the AI Bot
 #### 4.3.1 Creating and setting an Action Microflow {#action-microflow}
 The `Action Microflow` is executed via the send button and handles the interaction with the LLM's connectors and the Conversational UI entities. An example for each [OpenAI](/appstore/modules/genai/openai/) and [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/) are provided in the `USE_ME` folder that can be seen as inspiration (copy and modify) or directly for test-purposes.
 
-Set the action microflow through the  `ProviderConfig: Set Action Microflow` toolbox action. Note that it does not commit the object.
+Set the action microflow through the  `Set ActionMicroflow` toolbox action. Note that it does not commit the object.
 
 Note the following when developing your own custom action microflow:
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
-* When creating the `ProviderConfig`, use [ProviderConfig: Set Action Microflow](#provider-config-operations) to set the microflow.
+* When creating the `ProviderConfig`, use [Set ActionMicroflow](#provider-config-operations) to set the microflow.
 
 ### 4.4 Pages & Layouts {#pages-and-layouts}
 
@@ -190,7 +190,7 @@ See the [AI Bot Starter App]() or the [OpenAI Showcase App](https://marketplace.
 The following microflows can be found in the `USE_ME` folder:
 * `ChatContext_AddProviderConfig_SetActive` adds a `ProviderConfig` to the chat context and sets it to active.
 * `ChatContext_Delete` deletes a chat context.
-* `ChatContext_SetSessionId` sets the `SessionID` of the chat context.
+* `ChatContext_SetConversationID` sets the `ConversationID` of the chat context.
 * `AdvancedSettings_GetAndUpdate` can be used after the chat context was created to set the boundaries and default value for advanced settings in the UI (see [Configuration Snippets](#snippet-configuration)).
 
 

@@ -86,7 +86,7 @@ When using cut/copy/paste, note the following:
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
-* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#2-performing-basic-functions))
+* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#basic-functions))
 * WorkflowContext
 * Start activity
 * End activity (the final **End activity** which is at the end of the workflow)

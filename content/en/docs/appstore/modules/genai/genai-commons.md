@@ -7,36 +7,35 @@ description: "Describes the purpose, configuration and usage of the GenAI Common
 
 ## 1 Introduction {#introduction}
 
-The GenAI Commons module combines common GenAI patterns found in a variety of generative AI models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/conversational-ui/) module.
+The [GenAI Commons](https://marketplace.mendix.com/link/component/227933) module combines common GenAI patterns found in a variety of generative AI models on the market. Platform-supported GenAI-connectors use the underlying data structures and their operations. This makes it easier to develop vendor agnostic AI-enhanced apps with Mendix, for example by using one of the connectors or the [Conversational UI](/appstore/modules/genai/conversational-ui/) module.
 
-If two different connectors both adhere to the GenAI Commons module, they can be rather easily swapped which reduces dependency to the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag and drop experience, so that developers can quickly get started. The module exposes useful operations to build a request to a large language model (LLM) and to handle the response.
+If two different connectors both adhere to the GenAI Commons module, they can be easily swapped, which reduces dependency on the model providers. In addition, the initial implementation of AI capabilities using the connectors becomes a drag and drop experience, so that developers can quickly get started. The module exposes useful operations which developers can use to build a request to a large language model (LLM), and to handle the response.
 
-Developers, who want to connect to another LLM provider or their own service, are advised to use the GenAI Commons module as well. This speeds up the development and ensures that common principles are taken into account. Lastly, other developers or consumers of the connector can adapt more quickly to it.
+Developers who want to connect to another LLM provider or their own service are advised to use the GenAI Commons module as well. This speeds up the development and ensures that common principles are taken into account. Lastly, other developers or consumers of the connector can adapt to it more quickly.
 
 ### 1.1 Limitations {#limitations}
 
-The current scope of the connector is only focused on text generation use cases.
+The current scope of the module is focused only on text generation use cases.
 
 ### 1.2 Dependencies {#dependencies}
 
-* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
-* [Community commons](/appstore/modules/community-commons-function-library/)
+The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
+
+You must also install and configure the [Community commons](/appstore/modules/community-commons-function-library/) module.
 
 ## 2 Installation {#installation}
 
-To use connectors that adhere to the GenAI principles in your Mendix application, you must make sure the GenAI Commons module is available in your project. The module is protected, which means it can't be changed and the logic of the microflows is not visible (for more details see [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)). This document or the documentation inside the app will explain what each exposed operation does.
+If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be installed manually..
 
-If the starting point for the project is the Blank GenAI app, or the AI Bot Starter App (insert link), the GenAI Commons module is included already by default.
-<!---
-[comment]: <> TODO: insert link
--->
-If you start from a blank app, or have an existing project, and want include a connector for which the GenAI Commons module is a required module, you have to download it from marketplace. Follow the instructions in [using Marketplace content](/appstore/overview/use-content/) to import the GenAI Commons module into your app. Make sure to include the [Community commons](/appstore/modules/community-commons-function-library/) module, if it is not already part of your app.
+If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is a required module, you must install GenAI Commons manually. First install the [Community commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [using Marketplace content](/appstore/overview/use-content/) to import the  GenAI Commons module into your app.
 
 ## 3 Implementation {#implementation}
 
-GenAI Commons is the foundation of chat completions implementations within the [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
+GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
 
-Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented and supported by the LLM. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used. 
+Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice whether these are actually implemented and supported by the LLM. Please check the documentation for any specific connector module that you are using to learn about the supported additional capabilities and for which models these can be used.
+
+The module is protected, which means it can't be changed and the logic of the microflows is not visible (for more details see [Consuming Add-on Modules and Solutions](/refguide/consume-add-on-modules-and-solutions/)). This document or the documentation inside the app will explain what each exposed operation does.
 
 ### 3.1 Exposed microflows {#exposed-microflows}
 

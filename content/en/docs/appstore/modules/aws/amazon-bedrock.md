@@ -128,7 +128,7 @@ To invoke a specific model, perform the following steps:
 
     {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
-### 3.5 Invoking an Agent with the InvokeAgent Operation
+### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
 Agents in Amazon Bedrock can perform certain automated tasks such as API calls and data source interactions. For more information, see [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html).
 

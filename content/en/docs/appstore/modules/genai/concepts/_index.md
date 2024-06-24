@@ -69,24 +69,26 @@ For use cases where the LLM needs to be aware of domain-specific or private ente
 2. **Augment** the prompt with the retrieved data.
 3. **Generate** the response from the LLM.
 
-### 4.1 Bedrock Retrieval Augmented Generation {rag-bedrock}
+This allows you to use your own knowledge base to do things like:
 
-Amazon Bedrock provides capabilities for the RAG pattern out of the box with the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. 
+* ask questions about a large piece of text
+* use a multi-lingual database of historical support tickets and resolutions to propose resolutions to end-users based on previous support tickets
 
-After setting up the knowledge base, use the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation that is available in the Amazon Bedrock Connector, which provides an end-to-end flow, that includes extracting relevant information from the knowledge base, augmenting the user prompt and generating a response based on the retrieved information.
+There are two approaches to including RAG in your generative AI-powered app.
 
- See the [Amazon Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) for more details on how to setup a knowledge base and implement this. In the [AI Bot Starter App]() a configuration is provided to create an AI Chatbot that includes the knowledge base without any additional development.
+### 4.1 Fully-Integrated RAG
 
-<!-- TODO Update AI BOT STARTER APP link -->
+Some architectures provide the capabilities for the RAG pattern out of the box, which shields you from having to retrieve and augment your prompt yourself. All you need to do is ensure that your knowledge base is available to the model.
 
-### 4.2 PgVector Knowledge Base with OpenAI or Bedrock {pgvectorknowledgebase}
+For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
 
-You can also use the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) in combination with an OpenAI or Bedrock embeddings model, to maintain and use a knowledge base. Index and store your own knowledge in a more dynamic way, since you can use it for storing chunks of texts, or contents of Mendix objects.
+### 4.2 PgVector Knowledge Base {#pgvectorknowledgebase}
 
-You can read further on [how to implement this here](/appstore/modules/openai-connector/rag-example-implementation/). The [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) also contains examples on:
+If your chosen architecture doesn't have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
-* How to ask questions on a large piece of text.
-* How to use a multi-lingual database of historical tickets and resolutions to propose resolutions to the users based on historical input.
+In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) in combination with an embeddings model, to maintain and use your knowledge base. 
+
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).
 
 ## 5 The ReAct Pattern (Function Calling) {#react}
 
@@ -98,10 +100,8 @@ See [Function Calling](/appstore/modules/openai-connector/function-calling/) for
 
 This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
 
-## 6 Agents {#agents}
+## 6 Agents and Assistants {#agents}
 
-### 6.1 Connect to a Bedrock Agent
+Some vendors of generative AI solutions have the concept of an "Agent" or "Assistant" which can combine prompts, RAG, and ReAct in a single call. You can also specify multiple steps which the agent should follow, and ask the agent to create the prompts or API calls needed for those steps.
 
-Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A [Bedrock Agent](https://aws.amazon.com/bedrock/agents/) can orchestrate interactions between LLM's, various data sources and user conversations. In addition, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
-
-Connecting to an agent from a Mendix application can easily be done via the Amazon Bedrock Connector. For detailed instructions please refer to the [Connector documentation](/appstore/modules/aws/amazon-bedrock).
+For example, [Agents for Amazon Bedrock](https://aws.amazon.com/bedrock/agents/) provides this functionality for Amazon Bedrock. You can find out how to use this in your Mendix application in [Invoking an Agent with the InvokeAgent Operation](/appstore/modules/aws/amazon-bedrock/#invokeagent) section of the *Amazon Bedrock* module documentation.

@@ -107,7 +107,7 @@ The `Connection` entity contains specifications to interact with an AI provider.
 | ------------------- | ----------------------------------------------------------------------------- |
 | `SystemPrompt`      | A `SystemPrompt` provides the model with a context, instructions or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
-| `Temperature` | `Temperature` controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
+| `Temperature` | `Temperature` controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. We recommend that you only steer temperature or `TopP`, but not both. |
 | `TopP` | `TopP` is an alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response. We recommend that you only steer temperature or `TopP`, but not both. |
 | `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 
@@ -181,7 +181,7 @@ The response returned by model contains usage metrics as well as a response mess
 | `RequestTokens`     | Number of tokens in the request.                             | 
 | `ResponseTokens`    | Number of tokens in the generated response.                  |
 | `TotalTokens`       | Total number of tokens (request + response).                 |
-| `StopReason`        | The reason why the model stopped to generate further content. <br /> See AI provider documentation for possible values. | 
+| `StopReason`        | The reason why the model stopped to generate further content. See AI provider documentation for possible values. | 
 
 #### 4.1.11 `ToolCall` {#toolcall}
 
@@ -203,7 +203,7 @@ An optional reference for a response message.
 | `Title`             | The title of the reference.                                                                  | 
 | `Content`           | The content of the reference.                                                                |
 | `Source`            | The source of the reference, e.g. a URL.                                                     | 
-| `SourceType`        | The type of the source. <br />For more information, see [ENUM_SourceType](#enum-sourcetype). |
+| `SourceType`        | The type of the source. For more information, see [ENUM_SourceType](#enum-sourcetype). |
 
 #### 4.1.13 `Citation` {#citation}
 
@@ -403,25 +403,27 @@ Use this microflow to control how the model should determine which function to l
 |-------------------|-------------------------------------|----------------------------------------------|----------------------------|
 | `Request`         | [Request](#request)                 | Yes                                          | The request for which to set a tool choice. |
 | `Tool`            | [Tool](#tool)                       | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumaration values. |
-| `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes                                          | Determines the tool choice. <br /> For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values.  |
+| `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes                                          | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values.  |
 
 ###### 4.3.1.7.2 Return Value
 
 This microflow does not have a return value.
 
-#### 4.3.2 Handle response {#handle-response}
+#### 4.3.2 Handle Response {#handle-response}
 
-#### 4.3.2.1 Chat: Get Model Response Text {#chat-get-model-response-text}
+The following microflows handle the response processing.
 
-This microflow can be used to get the content from the latest assistant message over association `Response_Message`.
+##### 4.3.2.1 Chat: Get Model Response Text {#chat-get-model-response-text}
 
-**Input parameters**
+This microflow can be used to get the content from the latest assistant message over association `Response_Message`. Use this microflow to get the response text from the latest assistant response message. In many cases this is the main value needed for further logic after the operation or is displayed to the end user.
+
+###### 4.3.2.1.1 Input Parameters
 
 | Name        | Type                  | Mandatory | Description          |
 |-------------|-----------------------|-----------|----------------------|
 | `Response`  | [Response](#response) | Yes       | The response object. |
 
-**Return value**
+###### 4.3.2.1.2 Return Value
 
 | Name            | Type   | Description |
 |-----------------|--------|-------------|
@@ -429,28 +431,29 @@ This microflow can be used to get the content from the latest assistant message 
 
 #### 4.3.2.2 Chat: Get References {#chat-get-references}
 
-This microflow can be used to retrieve the references for a given model response. These indicate what the model response was based on, according to the model logic. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI commons domain model.
+Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
 
-**Input parameters**
+###### 4.3.2.2.1 Input Parameters
 
 | Name       | Type                  | Mandatory | Description          |
 |------------|-----------------------|-----------|----------------------|
 | `Response` | [Response](#response) | Yes       | The response object. |
 
-**Return value**
+###### 4.3.2.2.2 Return Value
 
 | Name            | Type                            | Description                                                                      |
 |-----------------|---------------------------------|----------------------------------------------------------------------------------|
 | `ReferenceList` | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
 
-### 4.3.3 Chat completions interface {#chat-completions-interface}
+### 4.3.3 Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completions operations implemented that share the same interface meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
-Mendix recommends to adapt to the same interface when developing custom chat completions operations i.e. to integrate with different AI providers.
-The generic interfaces are described below. For more detailed information please refer to the platform-supported GenAI-connector documentations since they might expect specializations of the generic GenAI common entities as an input.
+We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
-{{% alert color="info" %}}Note that these operations are not implemented in this module; it merely describes the interface (microflow input parameters, return value, and expected behavior). It is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. See for example the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/_index/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/) or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented so that it can be decided at runtime whether call the LLM through OpenAI or AWS Bedrock .{{% /alert %}}
+{{% alert color="info" %}}
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior) and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/_index/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether call the LLM through OpenAI or Amazon Bedrock.
+{{% /alert %}}
 
 #### 4.3.3.1 `Chat Completions (without history)`
 

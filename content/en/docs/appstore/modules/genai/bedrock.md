@@ -1,23 +1,19 @@
 ---
-title: "AWS Bedrock"
+title: "Amazon Bedrock"
 url: /appstore/modules/genai/bedrock
-linktitle: "AWS Bedrock"
 weight: 5
-description: "Describes the configuration and usage of the Bedrock Connector from the Mendix Marketplace that allows you to integrate generative AI into your Mendix app."
+description: "Describes the Amazon Bedrock GenAI service."
 
 ---
 
 ## 1 Introduction
 
-Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various foundation models to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started and easily experiment with all kinds of generative AI functionality such as leading large language models, knowledges bases or agents. Available model families include
+[Amazon Bedrock](https://aws.amazon.com/bedrock/) is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API. You can choose from various foundation models to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started and easily experiment with all kinds of generative AI functionality such as leading large language models, knowledges bases or agents. 
 
-* AI21Labs Jurassic
-* Amazon Titan
-* Anthropic Claude
-* Cohere Command and Embed
-* Meta Llama
-* Mistral AI
-* Stability AI Stable Diffusion XL
+## 2 Available Model Families
 
+For more information about the model families that Amazon Bedrock supports, refer to the list of Model Providers on the [Amazon Bedrock](https://aws.amazon.com/bedrock/) webpage.
 
-See also [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/).
+## 3 Integrating Your Mendix App with Amazon Bedrock
+
+To allow your Mendix app to use Amazon Bedrock functionalities, install and configure the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).

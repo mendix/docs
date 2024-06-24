@@ -33,8 +33,8 @@ To help you get started, the following sections list the available GenAI compone
 
 | Asset | Description | Studio Pro Version |
 |----------------------|------------------------------------|----------------|
-| AI Bot Starter App | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | 10.12 |
-| Blank GenAI App | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | 10.12 |
+| [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | 10.12 |
+| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | 10.12 |
 | [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with Generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24.2 |
 | [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Discover how to use Amazon Bedrock capabilities. | 9.24.2 |
 | [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | 9.24.2 |

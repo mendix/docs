@@ -61,7 +61,7 @@ Embeddings are commonly used for the following:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/concepts/rag-example-implementation/). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
+For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/openai-connector/rag-example-implementation/). Also, check out our [showcase app](https://marketplace.mendix.com/link/component/220475) for an example implementation.
 {{% /alert %}}
 
 ### 1.2 Features {#features}
@@ -81,7 +81,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 ### 1.5 Dependencies {#dependencies}
 
 * Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
-* [GenAI Commons](/appstore/modules/genai/genai-commons/)
+* [GenAI Commons](/appstore/modules/genai-commons/)
 * [Encryption](/appstore/modules/encryption/)
 * [Community Commons](/appstore/modules/community-commons-function-library/)
 
@@ -167,7 +167,7 @@ These microflows expect an [OpenAIConnection](#openaiconnection) object that ref
 * For the OpenAI API configuration, the desired model must be specified for every call in the Model attribute of the [OpenAIConnection](#openaiconnection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal) that was set on the referenced [Configuration](#configuration-entity). Any model explicitly specified will be ignored and hence can be left empty. 
 
-In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. Different exposed microflow activities may require different prompts and logic for how the prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole in GenAI Commons](/appstore/modules/genai/genai-commons/#enum-messagerole) section.
+In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. Different exposed microflow activities may require different prompts and logic for how the prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole in GenAI Commons](/appstore/modules/genai-commons/#enum-messagerole) section.
 
 All chat completions operations within the OpenAI connector support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling), and [vision](#chatcompletions-vision).
 
@@ -175,19 +175,19 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### 3.2.1 `Chat Completions (without history)` {#chatcompletions-without-history}
 
-The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection) and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/genai-commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection) and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai-commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
-Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [technical reference](#chat-completions-without-history-technical) section.
 
 #### 3.2.2 `Chat Completions (with history)` {#chatcompletions-with-with-history}
 
-The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection), a [Request](/appstore/modules/genai/genai-commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection), a [Request](/appstore/modules/genai-commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
-Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [Technical reference](#chat-completions-with-history-technical) section.
 
@@ -205,15 +205,15 @@ Function calling is a very powerful capability, but should be used with caution.
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user, such as sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation.
+You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function) operation.
 
 For more information, see [Function Calling](/appstore/modules/genai/concepts/function-calling/).
 
 #### 3.2.4 Vision {#chatcompletions-vision}
 
-Vision enables models like GPT-4o and GPT-4 Turbo to interpret and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [FileCollection](/appstore/modules/genai/genai-commons/#filecollection) containing one or multiple images must be sent along with a single message.
+Vision enables models like GPT-4o and GPT-4 Turbo to interpret and analyze images, allowing them to answer questions and perform tasks related to visual content. This integration of computer vision and language processing enhances the model's comprehension and makes it valuable for tasks involving visual information. To make use of vision inside the OpenAI connector, an optional [FileCollection](/appstore/modules/genai-commons/#filecollection) containing one or multiple images must be sent along with a single message.
 
-For `Chat Completions without History`, `FileCollection` is an optional input parameter. For `Chat Completions with History`, `FileCollection` can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai/genai-commons/#add-message).
+For `Chat Completions without History`, `FileCollection` is an optional input parameter. For `Chat Completions with History`, `FileCollection` can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai-commons/#add-message).
 
 Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision, it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector; however, they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
 
@@ -279,7 +279,7 @@ For technical details, see the [Technical Reference](#embeddings-advanced-techni
 
 ### 3.5 Exposed Microflows {#exposed-microflows}
 
-The following OpenAI-specific exposed microflows assist developers in constructing their requests in a drag-and-drop experience. These microflows can be found in the toolbox in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai/genai-commons/#exposed-microflows).
+The following OpenAI-specific exposed microflows assist developers in constructing their requests in a drag-and-drop experience. These microflows can be found in the toolbox in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai-commons/#exposed-microflows).
 
 #### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
 
@@ -345,7 +345,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 ##### 4.1.1.3 `OpenAIConnection` {#openaiconnection}
 
-`OpenAIConnection` is a specialization of [GenAICommons.Connection](/appstore/modules/genai/genai-commons/#connection), which is associated to the `Configuration`. To make the operations more compatible and interchangeable with operations from other GenAI connectors based on the GenAI commons module, the chat completions operations technically accept `Connection` objects. Internally, however, they require the specialization `OpenAIConnection`, which should be created beforehand and is associated to a [Configuration](#configuration-entity) object.
+`OpenAIConnection` is a specialization of [GenAICommons.Connection](/appstore/modules/genai-commons/#connection), which is associated to the `Configuration`. To make the operations more compatible and interchangeable with operations from other GenAI connectors based on the GenAI commons module, the chat completions operations technically accept `Connection` objects. Internally, however, they require the specialization `OpenAIConnection`, which should be created beforehand and is associated to a [Configuration](#configuration-entity) object.
 
 ##### 4.1.1.4 `ConfigurationTest` {#configurationtest}
 
@@ -359,23 +359,23 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.2 GenAI Commons {#genaicommons-domain-model}
 
-For chat completions operations, the connector is based on entities from the [GenAI Commons](/appstore/modules/genai/genai-commons/) module. OpenAI-specific parameters are available in either extension entities or specializations.
+For chat completions operations, the connector is based on entities from the [GenAI Commons](/appstore/modules/genai-commons/) module. OpenAI-specific parameters are available in either extension entities or specializations.
 
 {{< figure src="/attachments/appstore/modules/openai-connector/domain-model-openai-request_extension.png" >}}
 
 ##### 4.1.2.1 `OpenAIRequest_Extension` {#openairequest-extension} 
 
-`OpenAIRequest_Extension` is an entity that can be used to extend the [GenAI Commons Request](/appstore/modules/genai/genai-commons/#request) object with optional and OpenAI-specific parameters. Before the request is sent to OpenAI, the parameters from this extension are mapped into the request body if the object is associated to the `Request`.
+`OpenAIRequest_Extension` is an entity that can be used to extend the [GenAI Commons Request](/appstore/modules/genai-commons/#request) object with optional and OpenAI-specific parameters. Before the request is sent to OpenAI, the parameters from this extension are mapped into the request body if the object is associated to the `Request`.
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `ResponseFormat`        | This describes the format that the chat completions model must output. <br />For more information, see the [ENUM_ResponseFormat_Chat](#enum-responseformat-chat) section. |
 | `Frequency_penalty`     | The value should be a decimal between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood of repeating the same line verbatim. This attribute is optional. The default value is 0.0. |
-| `_Model`                | The model to be used for an operation. This attribute should not be set directly because it will be overwritten by [GenAICommons.Connection.Model](/appstore/modules/genai/genai-commons/#connection). |
+| `_Model`                | The model to be used for an operation. This attribute should not be set directly because it will be overwritten by [GenAICommons.Connection.Model](/appstore/modules/genai-commons/#connection). |
 
 ##### 4.1.2.2 `OpenAIFileContent` {#openaifile-content} 
 
-`OpenAIFileContent` is an entity that can be passed along the request, for example when using vision. Besides the attributes from its GenAI Commons generalization [FileContent](/appstore/modules/genai/genai-commons/#filecontent), `Detail` can be used to describe the detail level of an image. The chat completions operations can be used with `OpenAIFileContent` as well as with GenAI commons `FileContent` objects interchangeably.
+`OpenAIFileContent` is an entity that can be passed along the request, for example when using vision. Besides the attributes from its GenAI Commons generalization [FileContent](/appstore/modules/genai-commons/#filecontent), `Detail` can be used to describe the detail level of an image. The chat completions operations can be used with `OpenAIFileContent` as well as with GenAI commons `FileContent` objects interchangeably.
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
@@ -383,7 +383,7 @@ For chat completions operations, the connector is based on entities from the [Ge
 
 #### 4.1.3 Chat Completions {#chatcompletions-domain-model}
 
-The connector does not provide specific entities for chat completions because they are part of the [GenAI Commons](/appstore/modules/genai/genai-commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/genai-commons/#domain-model).
+The connector does not provide specific entities for chat completions because they are part of the [GenAI Commons](/appstore/modules/genai-commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai-commons/#domain-model).
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
@@ -515,7 +515,7 @@ The `ImageGenerationsRequest` object is an image generations request that create
 
 ### 4.2 Enumerations {#enumerations} 
 
-An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). The connector uses many enumerations of the GenAI Commons module (see [GenAI Commons Enumerations](/appstore/modules/genai/genai-commons/#enumerations) for details)
+An enumeration is a predefined list of values that can be used as an attribute type. For more information about enumerations in general, see [Enumerations](/refguide/enumerations/). The connector uses many enumerations of the GenAI Commons module (see [GenAI Commons Enumerations](/appstore/modules/genai-commons/#enumerations) for details)
 
 #### 4.2.1 General {#general-enumerations}
 
@@ -623,43 +623,43 @@ The chat completions API from OpenAI accepts a complex JSON structure that consi
 
 ##### 4.3.1.1 Chat Completions (without history) {#chat-completions-without-history-technical} 
 
-Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and [Response](/appstore/modules/genai/genai-commons/#response) output not considering a previous conversation. The `Connection` object contains the relevant information to execute the API call. Optionally, a `Request` object can be passed to configure additional parameters, such as a system prompt (see [ENUM_MessageRole in GenAI Commons](/appstore/modules/genai/genai-commons/#enum-messagerole) for the difference between `UserPrompt` and `SystemPrompt`). Configure [Request](/appstore/modules/genai/genai-commons/#request) for common parameters and [OpenAIRequest_Extension](#openairequest-extension) to use OpenAI specific parameters. If no parameters are configured, the default values specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
+Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple chat completions API call with string input and [Response](/appstore/modules/genai-commons/#response) output not considering a previous conversation. The `Connection` object contains the relevant information to execute the API call. Optionally, a `Request` object can be passed to configure additional parameters, such as a system prompt (see [ENUM_MessageRole in GenAI Commons](/appstore/modules/genai-commons/#enum-messagerole) for the difference between `UserPrompt` and `SystemPrompt`). Configure [Request](/appstore/modules/genai-commons/#request) for common parameters and [OpenAIRequest_Extension](#openairequest-extension) to use OpenAI specific parameters. If no parameters are configured, the default values specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
 
 **Input parameters**
 
 | Name             | Type                                                                         | Mandatory           | Description                                                  |
 | ---------------- | ----------------------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
 | `UserPrompt`     | String                                                                       | mandatory           | A user message is the input from a user.                     |
-| `Connection`     | [Connection](/appstore/modules/genai/genai-commons/#connection)              | mandatory           | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | optional            | This is an optional object that contains optional attributes and an optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to `Request` to configure additional OpenAI specific attributes. If no Request is passed, one will be created.        |
-| `FileCollection` | [FileCollection](/appstore/modules/genai/genai-commons/#filecollection)      | optional            | This is an optional collection of files to be sent along with the request to use vision. |
+| `Connection`     | [Connection](/appstore/modules/genai-commons/#connection)              | mandatory           | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Request`        | [Request](/appstore/modules/genai-commons/#request)                    | optional            | This is an optional object that contains optional attributes and an optional [ToolCollection](/appstore/modules/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to `Request` to configure additional OpenAI specific attributes. If no Request is passed, one will be created.        |
+| `FileCollection` | [FileCollection](/appstore/modules/genai-commons/#filecollection)      | optional            | This is an optional collection of files to be sent along with the request to use vision. |
 
 **Return value**
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.|
+| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#get-response-text) operation.|
 
-To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#exposed-microflows).
 
 ##### 4.3.1.2 Chat Completions (with history) {#chat-completions-with-history-technical}
 
-Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [Request](/appstore/modules/genai/genai-commons/#request) input and a [Response](/appstore/modules/genai/genai-commons/#response) output containing the assistant's response. The historical messages are associated to the `Request` object. The `Connection` object contains the relevant information to execute the API call. Configure [Request](/appstore/modules/genai/genai-commons/#request) for common parameters and [OpenAIRequest_Extension](#openairequest-extension) to use OpenAI-specific parameters. If no parameters are configured, the default values specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
+Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat completions API call with a [Request](/appstore/modules/genai-commons/#request) input and a [Response](/appstore/modules/genai-commons/#response) output containing the assistant's response. The historical messages are associated to the `Request` object. The `Connection` object contains the relevant information to execute the API call. Configure [Request](/appstore/modules/genai-commons/#request) for common parameters and [OpenAIRequest_Extension](#openairequest-extension) to use OpenAI-specific parameters. If no parameters are configured, the default values specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create) will be assumed by the API.
 
 **Input parameters**
 
 | Name                     | Type                                                                 | Mandatory               | Description                                                                                                        |
 | ------------------------ | ------------------------------- | ---------------------------------- |--------------------------------------------------------------------------------------------------------------------------- |
-| `Connection`     | [Connection](/appstore/modules/genai/genai-commons/#connection)              | Yes     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `Request`        | [Request](/appstore/modules/genai/genai-commons/#request)                    | Yes     | This is an object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
+| `Connection`     | [Connection](/appstore/modules/genai-commons/#connection)              | Yes     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Request`        | [Request](/appstore/modules/genai-commons/#request)                    | Yes     | This is an object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai-commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
 
 **Return value**
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/genai-commons/#get-response-text) operation.        |
+| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#get-response-text) operation.        |
 
-To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/genai-commons/#exposed-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#exposed-microflows).
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 

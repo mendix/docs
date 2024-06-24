@@ -103,7 +103,7 @@ The following operations can be found in the tool box for processing the [ChatCo
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Request: Create from ChatContext` will create [Request](/appstore/modules/genai/genai-commons/#request) object that is used as input parameter in a "Chat with History" operation (see also [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/)) as part of the [action microflow](#action-microflow). 
+* `Request: Create from ChatContext` will create [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a "Chat with History" operation (see also [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/)) as part of the [action microflow](#action-microflow). 
 * `ChatContext: Update Assistant Response` will process the response of the model and add the new message and (if present) sources to the UI.
 * `ChatContext: Get Current User Prompt` gets the current user prompt. Can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `ChatContext: Set Topic` sets the `Topic`of the chat context. Will be used in the history-sidebar to make historical chats recognizable for users.

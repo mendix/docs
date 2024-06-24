@@ -33,7 +33,7 @@ Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat
 
 While LLMs are powerful, they are not without limitations. Remember they are:
 
-* **not conscious:** LLMs do not possess self-awareness or understanding. They generate text based on patterns in the data they were trained on.
+* **Not Conscious:** LLMs do not possess self-awareness or semantic knowledge (understanding). They generate text based on patterns in the data they were trained on.
 * **not perfect:** These models can sometimes produce incorrect or nonsensical outputs (so-called hallucinations), especially if the input is ambiguous or if they were not trained on the relevant data.
 * **not a replacement for human judgment:** LLMs should be seen as tools to augment human capabilities, not replace human expertise or critical thinking.
 * **not trained for specific use cases**: LLMs are trained on a broad variety of use cases, for some specific (e.g. statistical) use cases you need to use traditional machine learning (ML) models. For more details on how to deploy such a model see [Machine Learning Kit](/refguide/machine-learning-kit).

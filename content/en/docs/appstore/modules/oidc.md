@@ -44,28 +44,28 @@ The OIDC SSO module supports the following features:
 
 1. IdP Integration Capabilities:
 
-* Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
-* Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
-* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
-    * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
-* Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
-* Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
-* Supports responsive web applications, also known as browser based applications.
-* Works with the Mendix DeepLink module.
-* Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
+    * Supports SSO login with one or multiple OIDC/OAuth-compatible IdPs, such as AWS Cognito, Google, Salesforce, Apple, Okta, Ping, Microsoft's Entra ID (formerly known as Azure AD), and SAP Cloud Identity Services.
+    * Comes with helper microflows (DELETE, GET, PATCH, POST, and PUT) which call an API with a valid token (and automate the token refresh process).
+    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP.
+        * For example, PKCE will be used automatically if it is detected.
+    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
+    * Supports multiple OIDC IdPs by allowing configuration of user provisioning and access token parsing microflows per IdP.
+    * Supports Authentication Context Class Reference (ACR) to allow your app to suggest the desired method or level of authentication for user login to the Identity Provider (IdP) (version 2.3.0 and above).
+    * Supports responsive web applications, also known as browser based applications.
+    * Works with the Mendix DeepLink module.
+    * Supports user provisioning to custom user entities; you can map claims onto attributes of an entity which is a specialization of the `System.User` entity.
 
 2. Configuration Experince Features:
 
-* Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
-    * For example, PKCE will be used automatically if it is detected.
-* Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
-* Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
-* User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
+    * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as decsribed in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
+        * For example, PKCE will be used automatically if it is detected.
+    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
+    * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
+    * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
 
 3. Developer Experience Features:
 
-* Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
+    * Built primarily in standard Mendix components (minimal Java) to allow for easy customization and ongoing development.
 
 #### 1.2.2 OIDC Protocol Adherence
 
@@ -287,15 +287,15 @@ In this case, the OIDC client is the app you are making.
     * Add other scopes as needed.
 10. Select your user parsing. By default, this module will use standard OpenID claims to provision end-users in your app. Also included is a flow that uses the standard UserInfo endpoint in OIDC, which is useful in the case that your IdP uses thin tokens. You can set up user provisioning by setting the following standard flows:
 
-| Default Microflow | Use |
-| --- | --- |
-| OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
-| OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
-| OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
+    | Default Microflow | Use |
+    | --- | --- |
+    | OIDC_CustomUserParsing_Standard | It implements some standard OpenID claims to find/provision a user. |
+    | OIDC_CustomUserParsing_UserInfo | It is similar as standard OIDC user parsing flow, except it works with identity providers that use `opaque` tokens. |
+    | OIDC_CustomUserParsing_Salesforce | It offers an `id` endpoint that retrieves information about user. You can use OpenID token (`id_token`) to map user attributes. |
 
-In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
+    In version below 3.0.0 of the OIDC SSO module, you can configure the timezone and language using the `OIDC_CustomUserParsing_Standard` and `OIDC_CustomUserParsing_UserInfo` microflow. However, in version 3.0.0 and above of the OIDC SSO module, you can set the timezone and language using any standard microflow.
 
-You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
+    You can also use your own custom user entity to manage users of the app. See the section on [Custom User Provisioning](#custom-provisioning) for more information on what you can do to implement provisioning logic which fits your business needs. The module includes a Salesforce-specific example.
 
 11. Optionally, you can select the `CustomAccessTokenParsing` microflow if you want to use additional information from the OIDC IdP. This can be used, for example, to assign end-user roles based on information from the IdP – see [Access Token Parsing](#access-token-parsing) for more information.
 
@@ -327,7 +327,7 @@ To enable the use of app constants to configure the OIDC SSO module, configure y
 Use the following security best-practices when setting up your constants:
 
 * Set the [Export level](/refguide/configure-add-on-and-solution-modules/#export-level) for these constants to `Hidden` for security reasons.
-* Mask your client_secret so the value is not visible in the developer portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
+* Mask your client_secret so the value is not visible in the Mendix Portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
 
 The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
 
@@ -344,22 +344,16 @@ The following error messages will be displayed when you try to edit/delete.
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
 
-The following constants are mandatory when creating an OIDC SSO configuration and user provisioning:
+The following constants are mandatory when creating an OIDC SSO IdP configuration:
 
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
-For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
+For more information on creating user provisioning with constants, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section below.
 
 The following constants are optional:
-
-* **CustomUserEntity** (*default: Administration.Account*) – a custom user entity 
-
-* **PrincipalEntityAttribute** (*default: Name*) – the attribute holding the unique identifier of an authenticated user
-
-* **PrincipalIdPAttribute** (*default: sub*) – the IdP claim which is the unique identifier of an authenticated user
 
 * **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
 
@@ -393,6 +387,22 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
+* **AllowcreateUsers** – allow to create users in the application
+
+    Example: `True`
+
+* **Userrole** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
+
+    Example: `User`
+
+* **UserType** – assign usertype to the created users
+
+    Example: `Internal`
+
+* **CustomUserProvisioning** – a custom microflow for user provisioning
+
+    Example: `Mymodule.CustomUserProvisioningEntra`
+
 ## 6 User Provisioning
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Custom User Provisioning at Runtime](#custom-provisioning-rt).
@@ -403,7 +413,7 @@ By default, end-users are provisioned using the `Account` object in the Administ
 
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
 
-| ID-token Provided by your IdP | Attribute of `CustomUserEntity` Object |
+| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
 | ----------------------------- | ----------------------------- |
 | sub                           | Name                          |
 | name                          | Fullname                      |
@@ -446,7 +456,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
-| Userrole | the role which will be assigned to newly created users | *optional* | `User` |
+| Userrole | the role which will be assigned to newly created users | *optional* <br> - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 
@@ -467,7 +477,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
     * **Allow the module to create users** – this enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
         * By default, the value is set to ***Yes***.
-    * **User role** – the role which will be assigned to newly created users.
+    * **User role** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
     * **User Type** – this allows you to configure end-users of your application as internal or external.
         * By default, the value is set to ***Internal***.
 

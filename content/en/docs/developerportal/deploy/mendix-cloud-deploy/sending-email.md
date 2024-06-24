@@ -1,7 +1,7 @@
 ---
 title: "Sending Email"
 url: /developerportal/deploy/sending-email/
-weight: 40
+weight: 90
 description: "How to use external email providers in Mendix"
 aliases:
     - /deployment/mendixcloud/sending-email.html

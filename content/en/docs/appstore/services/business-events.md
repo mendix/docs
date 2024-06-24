@@ -11,7 +11,7 @@ aliases:
 
 Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or web services, is that there is no direct communication between the different apps.
 
-With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens and can independently subscribe to these events if they want to be informed. 
+With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens and can independently subscribe to these events if they want to be informed.
 
 To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
 
@@ -91,11 +91,11 @@ To define what information is included in your events, as well as what the servi
 {{< figure src="/attachments/appstore/services/business-events/add-event-definition.png" class="no-border" >}}
 
 1. Define what information is included in this event
-    
+
     In the **General** section, provide the **Event name** and **Description** to let others know what the service is about.
-    
+
     In the **Attributes** section, click **Add** to define attributes. Changes you make here later might lead to breaking changes if the entity the attribute belongs to is consumed, though related entities will be updated automatically.
-    
+
     {{< figure src="/attachments/appstore/services/business-events/wizard-step-1.png" class="no-border" >}}
 
 2. Decide what other apps can do and what service this will implement
@@ -223,7 +223,7 @@ Use these fields to transform the payload back into a Mendix entity. If the subj
 
 ## 5 Mendix Event Broker {#mendix-event-broker}
 
-Within Mendix Public Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
+Within Mendix Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
 
 ### 5.1 Topics and Channels {#topics-channels}
 
@@ -303,6 +303,7 @@ All the constants are part of the Mendix Business Events service.
 * `BusinessEvents.Username` and `BusinessEvents.Password` – The service supports Kafka’s SASL/SCRAM SHA-512 authentication mechanism, and the Kafka cluster should be set up to authenticate clients with this. See [Configuring Kafka Brokers](https://kafka.apache.org/documentation/#security_sasl_scram_brokerconfig) in the Apache Kafka documentation for further instructions.
 * `BusinessEvents.EventBrokerSpace` – This setting helps you group events into Kafka [topics](#topics-channels). With this setting, each business event will be put in its own topic. Set the `EventBrokerSpace` value to your environment names (or Kubernetes namespaces) like `test` or `production`. Doing so ensures that when each business event that is defined in an app is deployed to a specific environment, it will have its own topic. For example, an `OrdersReceived` business event defined in an app when deployed to two different environments will have two topics. A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 * `TruststoreLocation` and `TruststorePassword` - [OPTIONAL] The service supports adding a Truststore and password in order to allow for SSL verification of the server.
+* `ConsumerStartupDelaySeconds` - [OPTIONAL] Business Event consumers are started automatically as part of the after startup microflow. Delaying their startup is possible by setting this constant. The startup happens in a separate thread, which means the after startup microflow can finish even though the Business Event consumers are still waiting to be started. Only values above 1 will have any effect.
 
 {{% alert color="warning" %}} Special characters are not allowed in the `BusinessEvents.EventBrokerSpace` constant. {{% /alert %}}
 

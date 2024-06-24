@@ -792,10 +792,12 @@ For [specific models](https://platform.openai.com/docs/guides/text-generation/js
 Four accompanying microflows are available to construct the input for the microflow:
 
 Function calling:
+
 * `FunctionCollection_CreateAndAddFunction` can be used to initialize a new `FunctionCollection` and add a new `Function` to it in order to enable [function calling](#chatcompletions-functioncalling).
 * `FunctionCollection_AddFunction` can be used to add a new `Function` to an existing `FunctionCollection`.
 
 Vision:
+
 * `ImageCollection_CreateAndAddImage` can be used to initialize a new `ImageCollection` and add a new `ChatCompletionImage` to it in order to enable [vision](#chatcompletions-vision).
 * `ImageCollection_AddImage` can be used to add a new `ChatCompletionImage` to an existing `ImageCollection`.
 

@@ -4,7 +4,7 @@ url: /refguide/mobile/building-efficient-mobile-apps/enable-hermes/
 weight: 15
 description: "Improve native app performance by enable the Hermes engine."
 aliases:
-    - /refguide/mobile/building-efficient-mobile-apps/hermes/
+    - /refguide/mobile/hermes
 ---
 
 ## 1 Introduction
@@ -48,7 +48,7 @@ While Hermes offers numerous benefits, there are some potential challenges to be
 * **Compatibility Issues** — Some third-party libraries or native modules might not be fully compatible with Hermes. Test your application thoroughly to identify and resolve any issues.
 * **Initial Setup** — Transitioning to Hermes might require initial setup and configuration efforts, especially if your application relies on specific JavaScript features or libraries.
 
-  ## 6 Read More
+## 6 Read More
   
-  * [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/)
-  * [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/)
+* [Optimizing Native Startup](/refguide/mobile/building-efficient-mobile-apps/native-startup/)
+* [Testing Native Apps](/refguide/mobile/distributing-mobile-apps/testing-mobile-apps/)

@@ -10,9 +10,9 @@ weight: 30
 
 Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
-This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Developer Portal.
+This document explains how to provide the CRs through the console or command line for a standalone cluster. This enables you to automate your deployment processes and perform deployments from behind a firewall which would prevent access to the Mendix Portal.
 
-Alternatively, you can create a connected cluster and use the Mendix Developer Portal to deploy the app, as described in [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/).
+Alternatively, you can create a connected cluster and use the Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/).
 
 ## 2 Prerequisites for Deploying a Mendix App
 
@@ -36,7 +36,7 @@ Create a deployment package (.mda) file from your app. It is this which is picke
 You can obtain the deployment package in a number of ways:
 
 * within Studio Pro, by choosing the menu option **Project > Create Deployment Package…** – see [Create Deployment Package](/refguide/create-deployment-package-dialog/) for more information
-* from the **Environments** page of your app in the Developer Portal
+* from the **Environments** page of your app in [Apps](https://sprintr.home.mendix.com/)
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-operator/environments-create-mda.png" class="no-border" >}}
 * through a CI/CD process, such as Jenkins.
 

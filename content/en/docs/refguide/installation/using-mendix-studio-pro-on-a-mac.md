@@ -69,7 +69,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 8. If you plan to use the native Mac version for Studio Pro (Studio Pro on Mac) in combination with Parallels, skip this step. Setting up port forwarding will not allow you to sign in when you switch to the native Mac version. 
 
-	Click the **+** button and add three ports: one for 8080, one for 8083, and one for 8100 (enables sign in using Parallels). Forward each port to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps).
+    Click the **+** button and add three ports: one for 8080, one for 8083, and one for 8100 (enables sign in using Parallels). Forward each port to your Windows virtual machine (the 8083 port is only necessary for developing native mobile apps).
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/port-setup.png" alt="plus button"   width="450"  class="no-border" >}}
 

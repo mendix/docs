@@ -314,7 +314,7 @@ You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to d
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in the Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 

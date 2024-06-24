@@ -11,6 +11,32 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### June 13th, 2024
+
+#### Mendix Operator v2.17.1 {#2.17.1}
+
+* We have fixed a known issue from a previous release - memory usage when building an MDA is now back to normal.
+
+### June 7th, 2024
+
+#### Mendix Operator v2.17.0 {#2.17.0}
+
+* We have added support for Azure Managed Identity authentication for environments using Key vault. Instead of a static password, a Mendix app can use its Managed Identity to authenticate with a Postgres (Flexible Server) database, Azure SQL database, and Azure Blob storage.
+* We have added support for Azure Managed Identity authentication to the SQL Server and Postgres provisioners. With this mode, all authentication is handled through Managed Identities, and no static passwords are used.
+* We have added an Azure Managed Identity authentication mode to the Azure Blob Storage provisioner. This provisioner isolates environments from each other - every environment can only access its own container, and use its Managed Identity to authenticate with Azure Blob Storage. With this mode, all authentication is handled through Managed Identities, and no static passwords are used.
+* For Kubernetes liveness checks, the status of the `ping` calls will be ignored, and instead the app status will be checked with a [check_health](/refguide/monitoring-mendix-runtime/#check-health) command. If an app has a health check microflow, its status will be propagated back to Kubernetes. For apps without a health check microflow, Kubernetes will only receive the result of the [runtime_status](/refguide/monitoring-mendix-runtime/#runtime-status) call.
+* If a storage provisioner fails to authenticate with a Postgres or SQL Server database, it will no longer assume it is a network communication issue, and avoid retrying incorrect credentials.
+* We have fixed an issue where invalid images were built if the cluster used a custom registry air-gapped with the [Registry Migration](/developerportal/deploy/private-cloud-migrating/) tool.
+* We have fixed an issue where running the `mxpc-cli` installation and configuration tool in a pod (container) would fail to authenticate.
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* Upgrading to Mendix Operator v2.17.0 from a previous version will restart environments managed by that version of the Operator.
+
+#### Known Issue
+
+This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
+
+* Building an MDA file larger than 100 MB fails with an `OOMKilled` pod status. The image builder has a regression where the entire MDA is loaded into memory, instead of reading it in blocks from a temporary file.
+
 ### May 30th, 2024
 
 #### Portal Enhancements
@@ -20,7 +46,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * A new field, License Provision Error, has been added to the Environment details page for cases where license provisioning fails.
 * A problem preventing users with developer permissions from accessing the Model Option from the Environment Overview page has been fixed (Ticket [215150](https://mendixsupport.zendesk.com/agent/tickets/215150)).
 * The error message that appears when a user tries to delete the environment after the namespace is deleted directly from the cluster has been corrected.
-
 
 ### May 9th, 2024
 

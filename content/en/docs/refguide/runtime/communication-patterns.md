@@ -20,7 +20,7 @@ The goals of this document are to present information for:
 The Mendix Platform consists of the following components:
 
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-* Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+* Mendix Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
 * Mendix Studio Pro – the modeling studio of the Mendix platform
 * Team Server – a central repository for managing application model versions
@@ -160,6 +160,7 @@ For our retrieve operation, it looks as follows:
 ```
 
 As seen above, the following constants are stored for the "Retrieve" operation: 
+
 * UsedAttributed - lists all the attributes retrieved from the entity.
 * XPath - specifies the XPath Constraint used for retrieving the data, in this instance targeting all "Employee" entities.
 * UsedAssociations - enumerates all associations of the entity, which are nonexistent in this case.

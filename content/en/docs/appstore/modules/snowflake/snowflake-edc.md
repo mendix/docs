@@ -18,9 +18,9 @@ To configure connect your Mendix application to Snowflake with the External Data
 
 1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation).
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
-2. Provide a name for the database connection document.
-2. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
-3. Click **Test Connection** to verify the connection details, and then click **Save**.
+3. Provide a name for the database connection document.
+4. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
+5. Click **Test Connection** to verify the connection details, and then click **Save**.
 
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
 
@@ -38,58 +38,56 @@ To execute and test the query in Studio Pro, follow these steps:
 2. In the **Name** field, enter a name for your query, for example, *ClimateForecastNext10DaysQuery*.
 3. Enter the following **SQL Query**:
 
-```sql
-select POSTAL_CODE                                                   as "PostalCode"
-    , COUNTRY                                                        as "Country"
-    , doy_std                                                        as "DayOfYearClimate"
-    , dayofyear(CURRENT_DATE)                                        as "DayOfYearToday"
-    , current_date + doy_std - dayofyear(CURRENT_DATE)               as "ClimateDate"
-    , round((AVG_OF__DAILY_AVG_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgAvgTempCelsius"
-    , round((AVG_OF__DAILY_MIN_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMinTempCelsius"
-    , round((AVG_OF__DAILY_MAX_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMaxTempCelsius"
-from  CLIMATOLOGY_DAY
-where postal_code = {postal_code} 
-and   ((doy_std + 365) - dayofyear (current_date)) % 365 <=10
-order by doy_std asc
-limit 10
-```
+    ```sql
+    select POSTAL_CODE                                                   as "PostalCode"
+        , COUNTRY                                                        as "Country"
+        , doy_std                                                        as "DayOfYearClimate"
+        , dayofyear(CURRENT_DATE)                                        as "DayOfYearToday"
+        , current_date + doy_std - dayofyear(CURRENT_DATE)               as "ClimateDate"
+        , round((AVG_OF__DAILY_AVG_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgAvgTempCelsius"
+        , round((AVG_OF__DAILY_MIN_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMinTempCelsius"
+        , round((AVG_OF__DAILY_MAX_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMaxTempCelsius"
+    from  CLIMATOLOGY_DAY
+    where postal_code = {postal_code} 
+    and   ((doy_std + 365) - dayofyear (current_date)) % 365 <=10
+    order by doy_std asc
+    limit 10
+    ```
 
 4. Click **Run Query**.
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-basic.png" >}}
 
-{{% alert color="info" %}}
-As shown in the above example, if your input parameters do no exactly match what the database needs, or if the output of the query does not match what you need in Mendix, you can cast or transform your data in your query. You can also use column aliases to help generate entities with the required names.
-{{% /alert %}}
+    {{% alert color="info" %}}As shown in the above example, if your input parameters do no exactly match what the database needs, or if the output of the query does not match what you need in Mendix, you can cast or transform your data in your query. You can also use column aliases to help generate entities with the required names.{{% /alert %}}
 
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
-5. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
+6. Create a page with a gallery widget to show the results. Above the gallery widget you need form to allow the user to specify a postalcode. For this you need to create an NPE, e.g. name Filter, with one field, postalcode. The gallery widget will get its data from the Microflow in the next step. You can refresh this widget by using a nanoflow to trigger refresh of the entity shown in the Gallery widget.
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
+    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-gallery-page.png" >}}
 
-6. Create a microflow that will run the query by doing the following steps:
+7. Create a microflow that will run the query by doing the following steps:
     1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     2. Enter a name for your microflow, for example, *ACT_RetrieveWeatherData*, and then click **OK**.
-    2. Set the Filter NPE as input parameter for your microflow.
-    3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
-    4. Position the **Query External Database** activity between the start and end event of your microflow.
-    5. Double-click the **Query External Database** microflow activity to configure the required parameters.
-    6. In the **Database** section, select your Snowflake database.
-    7. In the **Query** list, select the query name that you entered in step 2.
-    8. In the **Parameters** section, add the following parameter:
+    3. Set the Filter NPE as input parameter for your microflow.
+    4. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
+    5. Position the **Query External Database** activity between the start and end event of your microflow.
+    6. Double-click the **Query External Database** microflow activity to configure the required parameters.
+    7. In the **Database** section, select your Snowflake database.
+    8. In the **Query** list, select the query name that you entered in step 2.
+    9. In the **Parameters** section, add the following parameter:
         * **Name** - *postal_code*
         * **Type** - **String**
         * **Value** - *$Filter/PostalCode*
-    9. In the **Output** section, provide the following values:
+    10. In the **Output** section, provide the following values:
         * **Return type** - **List of *{your module name}*.CLIMATOLOGY_FORECAST**
         * **Use return value** - set to **Yes**
         * **List name** - enter *CLIMATOLOGY_DAY*
-    10. Click **OK**.
+    11. Click **OK**.
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-basic-flow.png" >}}
 
-7. Specify the microflow as the datasource for the gallery widget.
-8. Run the page, provide a valid postalcode, and validate the result of the page.
+8. Specify the microflow as the datasource for the gallery widget.
+9. Run the page, provide a valid postalcode, and validate the result of the page.
 
 ## 4 Configuring a Filtered Query
 
@@ -101,24 +99,24 @@ To execute and test the query in Studio Pro, follow these steps:
 2. In the **Name** field, enter a name for your query, for example, *QueryHistoryDay*.
 3. Enter the following **SQL Query**:
 
-```sql
-select *
-from   STANDARD_TILE.HISTORY_DAY
-where  ({filterPostalCode1} IS NULL 
-            or (postal_code like '%' ||{filterPostalCode2}|| '%'))
-    and ({filterCountry1} IS NULL 
-            or (country like '%' ||{filterCountry2}|| '%')) 
-limit 1000
-```
+    ```sql
+    select *
+    from   STANDARD_TILE.HISTORY_DAY
+    where  ({filterPostalCode1} IS NULL 
+                or (postal_code like '%' ||{filterPostalCode2}|| '%'))
+        and ({filterCountry1} IS NULL 
+                or (country like '%' ||{filterCountry2}|| '%')) 
+    limit 1000
+    ```
 
 4. Click **Run Query**.
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
 6. [Add a **Data grid 2** widget](/refguide/page/#add-elements) to the page where you want to display the query results.
-6. Similar to the previous example, add a dataview with filter fields, and a filter NPE to collect the user's filter values.
-7. Double-click the data grid widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
-8. Next to the microflow field, click the **Select** button, and then click **New**.
-9. Configure the microflow that will run the query by doing the following steps:
-    1. Enter a name for your microflow, for example, *ACT_RetrievFilteredResults*, and then click **OK**.
+7. Similar to the previous example, add a dataview with filter fields, and a filter NPE to collect the user's filter values.
+8. Double-click the data grid widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
+9. Next to the microflow field, click the **Select** button, and then click **New**.
+10. Configure the microflow that will run the query by doing the following steps:
+    1. Enter a name for your microflow, for example, *ACT_RetrieveFilteredResults*, and then click **OK**.
     2. Specify the Filter NPE as input parameter for your microflow.
     3. In your **Toolbox**, find the **Query External Database** activity and drag it onto the work area of your microflow.
     4. Position the **Query External Database** activity between the start and end event of your microflow.
@@ -139,7 +137,7 @@ limit 1000
         * **Use return value** - set to **Yes**
         * **List name** - enter *HISTORY_DAY*
     10. Click **OK**.
-10. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
+11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
 ## 5 Configuring a Query to Display Data as a Chart
 
@@ -153,18 +151,18 @@ To define, test and execute the query in Studio Pro, follow these steps:
 2. In the **Name** field, enter a name for your query, for example, *QueryHistoryDay*.
 3. Enter the following **SQL Query**:
 
-```sql
-select date_valid_std
-,      avg(avg_temperature_air_2m_f) as avg_temp_f
-,      round(avg((avg_temperature_air_2m_f - 21) * (5/9)),1) as avg_temp_c
-,      min(avg_temperature_air_2m_f) as min_temp_f
-,      round(min((avg_temperature_air_2m_f - 21) * (5/9)),1) as min_temp_c
-,      max(avg_temperature_air_2m_f) as max_temp_f
-,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
-from   STANDARD_TILE.HISTORY_DAY
-group  by date_valid_std
-order by DATE_VALID_STD asc
-```
+    ```sql
+    select date_valid_std
+    ,      avg(avg_temperature_air_2m_f) as avg_temp_f
+    ,      round(avg((avg_temperature_air_2m_f - 21) * (5/9)),1) as avg_temp_c
+    ,      min(avg_temperature_air_2m_f) as min_temp_f
+    ,      round(min((avg_temperature_air_2m_f - 21) * (5/9)),1) as min_temp_c
+    ,      max(avg_temperature_air_2m_f) as max_temp_f
+    ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
+    from   STANDARD_TILE.HISTORY_DAY
+    group  by date_valid_std
+    order by DATE_VALID_STD asc
+    ```
 
 4. Click **Run Query**.
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
@@ -224,7 +222,7 @@ order by 1,2
 
 The **group by** property is used to select the column that indicates the series. This results in a single query send to Snowflake, which is usually faster than executing three separate queries.
 
-    {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
+{{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
 
 ## 6 Implementing Data Replication
 
@@ -281,7 +279,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
         {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-map.png" >}}
 
-5.  Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
+5. Execute the query in a microflow, take the resulting JSON string, and import it by using an **Import from JSON** microflow activity, as shown in the following figure:
 
     {{< figure src="/attachments/appstore/modules/external-database-connector/sample-snowflake-query-replication-flow.png" >}}
 
@@ -310,9 +308,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
 5. Verify that the results are correct, and then generate the required entity to collect the data in your Mendix application. For more information, see [External Database Connector: Creating an Entity from the Response](/appstore/modules/external-database-connector/#create-entity).
 
-{{% alert color="info" %}}
-Mendix expects a table when generating the entity. As a workaround, you can use a dummy dual table.
-{{% /alert %}}
+    {{% alert color="info" %}}Mendix expects a table when generating the entity. As a workaround, you can use a dummy dual table.{{% /alert %}}
 
 6. Create a microflow that will run the query by doing the following steps:
     1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.

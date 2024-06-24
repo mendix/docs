@@ -35,7 +35,7 @@ Pop-ups can be very useful when asking for input in certain contexts. For exampl
 
 Native layouts have helpful properties that enable the most common patterns used in native apps.
 
-### 3.1 Header
+### 3.1 Header{#header}
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 
@@ -71,7 +71,7 @@ Then, decide which screen in your project will have a **Sidebar** and apply the 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
 
-After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](/refguide/mobile/designing-mobile-user-interfaces/navigation/#header)):
+After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](#header)):
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
 

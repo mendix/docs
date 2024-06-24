@@ -23,17 +23,21 @@ A prompt typically contains four components.
 
 ### 2.1 Instructions
 
-Explain what the model should do. You have a specific task in mind, make sure to break it down into clear steps and create instructions that can be followed. When you explain what persona or role the model should fulfill, this will help the model to follow the instructions more easily.
+Explain what the model should do. The model follows the instructions more easily if you:
 
-When the input text is directly coming from the user, the instructions should also include what not to do.
+* have a specific task in mind
+* break it down into clear steps and create instructions that can be followed
+* explain what persona or role the model should fulfill, this will help
+
+When the input text is coming directly from the end-user, also include what not to do.
 
 ### 2.2 Context and Additional Information
 
-After explaining the model what to do, you can include additional context. You can think about:
+After telling the model what to do, you can include additional context. This can include:
 
-* Information about the user in your application (e.g. language, role, department, specific database records).
-* Context information (e.g. a dump of all relevent data of the object the user is looking at).
-* Knowledge coming from RAG.
+* information about the end-user of your application – for example their language, role, department, specific database records
+* context information (for example, all data related to an object the end-user is looking at)
+* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/concepts/#rag)
 
 Tip: you can use export to JSON or XML to provide this information in a structured way.
 
@@ -43,67 +47,79 @@ The actual input, usually from an end-user.
 
 ### 2.4 Output Style
 
-You can instruct the model to output in a specific way. Examples of this are:
+You can instruct the model to format the output in a specific way. For example:
 
-* The model can output it's reasoning steps, or skip those.
-* Generate a JSON structure based on an example, if you want to import the response for generating data or getting information about the reasoning.
-* Use a specific tone of voice, target audience or content length.
-* Use (or not use) Markdown formatting.
-* Skip or include a pre-amble.
+* tell the model to specify its reasoning steps, or just give the answer
+* give examples of the output style you want, for example a JSON structure, if you want to import the response to  generate data or get information about the reasoning
+* request that responses are in a particular tone of voice, target a specific audience, or have a specified content length
+* request the use (or not) of Markdown formatting
+* ask the model to skip or include a pre-amble
 
 ## 3 An iterative approach
 
-It's recommended to test your system prompt against different scenarios. Writing a prompt is therefore similar to modelling a microflow.
+Mendix recommends that you test your prompt against different scenarios. Writing a prompt is therefore similar to modelling a microflow.
 
-1. You should start with a goal: what should the system do?
-2. Think about your test and edge cases: what should the system do in what situation?
+You should do the following:
+
+1. Start with a goal: what should the model do?
+2. Think about your test and edge cases: what should the model do in a particular situation?
 3. Write a first version of the prompt.
 4. Test your prompt against your test cases.
 5. Refine the prompt, by tweaking your variables and writing defensive statements against undesired behavior.
 
-There is a difference between how models behave. For example newer models might interpret instructions slightly differently, or are more elaborate. It's therefore recommended to test your prompt when you switch models (e.g. after upgrading from ChatGPT-3.5 to ChatGPT-4o).
+There is a difference between how models behave. For example newer models might interpret instructions slightly differently, or are more elaborate. You should therefore retest your prompt when you switch models (for example, after upgrading from ChatGPT-3.5 to ChatGPT-4o).
 
-## 4 Some tips for better prompting
+## 4 Tips for Better Prompting
 
-### 4.1 Specifity
+There are some techniques which have been found to produce better responses from Gen AI models.
 
-Specifity and clarity are important. Similar to humans, LLMs require specific instructions and cannot intuitively understand your thoughts. There is a difference between:
+### 4.1 Be Specific
 
-```
+Specificity and clarity are important. Like humans, large language models (LLMs) require specific instructions and cannot guess what you want. There is a difference between:
+
+```text  {linenos=false}
 Write a story about Mendix
 ```
 
 and
 
-```
+```text  {linenos=false}
 Write a story about Mendix.
 It should be 1000 words long.
-It should be focussed on the business impact low code can make on a company.
+It should be focused on the business impact low code can make to a company.
 Make it exciting and focused on developers.
 ```
 
-Tip: if you're unsure about whether a prompt is clear enough, ask a co-worker to interpret the prompt and see if they would follow the prompt and reach your desired outcome.
+Tip: if you are unsure about whether a prompt is clear enough, ask a co-worker to interpret the prompt and see if they would follow the prompt and reach your desired outcome.
 
-### 4.2 Explicitly allow the model to think
+### 4.2 Explicitly Teach the Model to Solve the Problem
 
-When you provide the model with instructions to reason about a problem and identify the steps needed to solve the problem, it will actually follow those instructions. Instead of relying on the model to come up with the best strategy to solve the problem, it helps to break the larger problem down into smaller steps. As an end result the quality of the output will be higher compared to asking the LLM to come up with the answer right away. 
+Instead of relying on the model to come up with the best strategy to solve a problem, break the larger problem down into smaller steps.
 
-### 4.3 Allow the model to say "I don't know"
+Provide the model with instructions on the steps to take to solve the problem. This encourages the model to follow those instructions. As an end result the quality of the output will be higher compared to asking the LLM to come up with the answer right away. 
 
-A model will always try to follow the instructions and can therefore come up with a response that might not be what you expect, or worse: made up. In jargon we call this a hallucination. When you include in your system prompt that the LLM can ask for more info, or can respond that it does not know something this will make it more effective. Example components are:
+### 4.3 Allow the Model to Say "I don't know"
 
-```
+A model will always try to follow the instructions and can therefore come up with a response that might not be what you expect, or worse: made up. This is known as hallucination.
+
+If you include in your system prompt instructions which allow the LLM to ask for more info, or respond that it does not know something, this will make it more effective.
+
+Example instructions are:
+
+```text  {linenos=false}
 If you are unsure how to respond, say “Sorry, I didn’t get that. Could you rephrase the question or provide more details?”
 ```
 
-```
-You're a barista that only talks about coffee.
+```text  {linenos=false}
+You are a barista that only talks about coffee.
 If a user asks something about other topics, say:
     “Sorry, as a barista I cannot help you with that. Would you like some recommendations on how to brew coffee?”
 ```
 
-```(In an RAG setup):
-'You are a helpful assistant that tries to answer user questions based on chunks of topic-specific data.
+Or, when using RAG:
+
+```text  {linenos=false}
+You are a helpful assistant that tries to answer user questions based on chunks of topic-specific data.
 If you cannot answer a question based on the provided information alone, you respond that you do not know.
 For the current question, please base the answer on the following pieces of information:
 <information>
@@ -111,55 +127,59 @@ For the current question, please base the answer on the following pieces of info
 </information>
 ```
 
-### 4.4 Define the role the model fulfills
+### 4.4 Define the Role the Model Fulfills
 
-You can prime the model by explaining what it does. This will create a bias of the model towards specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
+You can prime the model by explaining what it does. This will create a bias in the model towards specific reasoning and increase the quality of their answer based on what you expect from the (stereotypical) persona.
 
 Examples are:
 
-```
+```text  {linenos=false}
 You are a helpdesk assistant
 ```
 
-```
-You are a writer that is specialized in marketing context
+```text  {linenos=false}
+You are a writer that is specialized in marketing content
 ```
 
-### 4.5 Explain the model what to do with provided tools
+### 4.5 Tell the Model How to Use Provided Tools
 
-When using topics like Function Calling make sure that Functions have a descriptive name. Also instruct the model what the Functions can do and how they should be used. This will ensure that the LLM will call the functions at the right moment and use the response in the correct way. E.g. when using a tool like: `GetTicketInformationForIdentifier`:
+When using features like [function calling](/appstore/modules/openai-connector/function-calling/), give functions a descriptive name. Also, instruct the model what the functions can do and how they should be used. This will guide the LLM to call the functions at the right moment and use the response in the correct way.
 
-```
+For example, say you have a tool called `GetTicketInformationForIdentifier` which retrieves information from a specific support ticket in a database, you could add the following to the prompt:
+
+```text  {linenos=false}
 Do not make assumptions about the Ticket Identifier.
 Ask for clarification if you do not know this.
 Only use the ticket information from the GetTicketInformationForIdentifier function for answering questions on ticket information.
 ```
 
-### 4.6 Provide structure
+### 4.6 Provide Structure
 
-When the prompt becomes longer it an help to use XML-like tags to give more structure to the prompt. This will help the model interpret the different sections and their role in the prompt better. You can use something like:
+When the prompt becomes longer it can help to use XML-like tags to give more structure to the prompt. This will help the model interpret the different sections and their role in the prompt better.
 
-```xml
+For example, you could use something like:
+
+```xml {linenos=false}
 <instructions>
-Answer the question of the user.
-Base it on the articles provided.
+Answer the question from the user.
+Base the answer on the articles provided.
 Provide a reference to the articles where relevant.
 </instructions>
-<article>article 1</article>
-<article>article 2</article>
+<article>{article 1}</article>
+<article>{article 2}</article>
 <input>{user input}</input>
 <output_formatting>
 Write in a lively tone of voice.
 Do not exceed 200 words.
-Skip the preambule.
-<output_formatting>
+Skip the preamble.
+</output_formatting>
 ```
 
-## 5 Learn more
+## 5 Learn More
 
 ### 5.1 Showcases
 
-Check out the [OpenAI](https://marketplace.mendix.com/link/component/220475) and [Bedrock](https://marketplace.mendix.com/link/component/223535) Showcase Apps on the Marketplace to see how you can apply prompt engineering in practice to let a model perform specific tasks.
+Check out the [OpenAI](https://marketplace.mendix.com/link/component/220475) and [Bedrock](https://marketplace.mendix.com/link/component/223535) showcase apps in the Marketplace to see how you can apply prompt engineering in practice to let a model perform specific tasks.
 
 ### 5.2 Bedrock and Anthropic Claude
 

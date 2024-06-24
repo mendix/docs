@@ -41,7 +41,7 @@ The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-sol
 
 All exposed microflows are intended to be used when the required information for GenAI operations needs to be mapped from your custom app implementation to the GenAI model and vice versa.
 
-#### 3.1.1 Build request {#build-request}
+#### 3.1.1 Build Request {#build-request}
 
 A number of generic GenAI Commons microflows have been made available for developers to aid in constructing the input request structures for the operations defined in GenAI Commons.
 

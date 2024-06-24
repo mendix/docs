@@ -37,16 +37,18 @@ To set a parameter as the [return value](/refguide/end-event/#return-value) of y
 
 ## 5 Passing Arguments from a Page
 
-When calling a microflow or nanoflow as a source or action from a page in Mendix, you can pass arguments in two primary ways, depending on the data type of the argument.
+When calling a microflow or nanoflow as a source or action from a page, you can pass arguments in two primary ways, depending on the data type of the argument.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-grid.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-grid.png" width="500px" >}}
 
-### 5.1 Variable Arguments (Objects/Object lists)
-These arguments are used to pass objects or lists of objects from the page to the microflow or nanoflow.
+### 5.1 Variable Arguments (Objects/Object Lists)
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-variable.png" width="500px" class="no-border" >}}
+Variable arguments are used to pass objects or lists of objects from the page to the microflow or nanoflow.
 
-### 5.2 Expression-Based Arguments (All data types)
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-variable.png" width="500px" >}}
+
+### 5.2 Expression-Based Arguments (All Data Types)
+
 Primitive values, such as strings, booleans, and enumerations, can be passed as expressions. This method allows users to use functions and follow associations within the expression to set the argument values. Using expressions for arguments provides flexibility in setting values and improves the functionality of microflows and nanoflows.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-expression.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/parameter/parameter-expression.png" width="500px" >}}

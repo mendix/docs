@@ -9,14 +9,14 @@ description: "Describes the features in MendixChat."
 ## 1 Introduction 
 
 {{% alert color="info" %}}
-MendixChat is powered by Generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
+MendixChat is powered by generative AI and is currently a beta feature, introduced in Studio Pro 10.6. Surprises and mistakes are possible. For more information on beta features, see [Beta and Experimental Releases](/releasenotes/beta-features/). We would like to hear you experience with MendixChat. Please share feedback to help us improve.
 {{% /alert %}}
 
 {{% alert color="info" %}}
 MendixChat does not use any project, customer, or company information. It only uses the data that you have entered in MendixChat. Please do not enter any personal or sensitive data in the chat!
 {{% /alert %}}
 
-MendixChat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
+MendixChat is a built-in chat interface powered by generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. 
 
 MendixChat is built based on large language models (LLMs), using data from [Mendix Docs](https://docs.mendix.com/), [Mendix Community](https://community.mendix.com/), and [Mendix Academy](https://academy.mendix.com/).
 

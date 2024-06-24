@@ -2,7 +2,7 @@
 title: "Enrich Your Mendix App with GenAI Capabilities"
 url: /appstore/modules/genai/
 linktitle: "GenAI Capabilites of Mendix"
-description: "Describes the general properties and common concepts of Generative AI in the context of developing Mendix applications and illustrates the preferred way of leveraging platform-supported connectors in applications following the GenAI Commons patterns."
+description: "Describes the general properties and common concepts of generative AI in the context of developing Mendix applications and illustrates the preferred way of leveraging platform-supported connectors in applications following the GenAI Commons patterns."
 ---
 
 ## 1 Introduction {#introduction}
@@ -11,7 +11,7 @@ With the Mendix GenAI capabilities you can create engaging, intelligent experien
 
 ### 1.1 Typical Use Cases
 
-Mendix supports a variety of Generative AI tasks by integrating with tools such as Amazon Bedrock or Azure OpenAI. Typical use cases include the following:
+Mendix supports a variety of generative AI tasks by integrating with tools such as Amazon Bedrock or Azure OpenAI. Typical use cases include the following:
 
 * Create conversational UIs for AI powered chatbots and integrate those UIs into your Mendix applications.
 * Connect any model through our GenAI connectors, or by integrating your own connector into our GenAI commons interface.
@@ -35,7 +35,7 @@ To help you get started, the following sections list the available GenAI compone
 |----------------------|------------------------------------|----------------|
 | [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | 10.12 |
 | [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | 10.12 |
-| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with Generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24.2 |
+| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24.2 |
 | [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Discover how to use Amazon Bedrock capabilities. | 9.24.2 |
 | [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | 9.24.2 |
 | [OpenAI Connector](/appstore/modules/openai-connector/) | Connect to Azure OpenAI. | 9.24.2 |

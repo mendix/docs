@@ -35,53 +35,7 @@ GenAI Commons is the foundation of chat completion implementations within the [O
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
-The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, refer to the following sections, or to the documentation inside the module.
-
-### 3.1 Exposed Microflows {#exposed-microflows}
-
-Use the exposed microflows to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa.
-
-#### 3.1.1 Build Request {#build-request}
-
-You can use the following generic GenAI Commons microflows to help you construct the input request structures for the operations defined in GenAI Commons.
-
-##### 3.1.1.1 Chat: Create Request {#create-request}
-
-Use this microflow to create a request for a chat completion operation. It contains the top-level functional input for the language model so that it can generate text.
-
-##### 3.1.1.2 Chat: Add Message to Request {#add-message}
-
-Use this microflow to add messages to the request. A message represents the conversation text content and optionally has a collection of files attached that need to be taken into account when generating the response (such as images for vision).
-
-##### 3.1.1.3 Chat: Add Stop Sequence {#add-stopsequence}
-
-Use this microflow to add stop sequences to the request. It can be used after the request has been created. If available for the connector and model of choice, stop sequences let models know when to stop generating text.
-
-##### 3.1.1.4 Files: Initialize Collection with File {#initialize-filecollection}
-
-In order to include files within a message, you must provide them in the form of a file collection. This helper microflow creates the file collection and adds the first file.
-
-##### 3.1.1.5 Files: Add File To Collection {#add-file}
-
-Use this microflow to add subsequent files to an existing file collection.
-
-##### 3.1.1.6 Tools: Add Function To Request {#add-function}
-
-Use this microflow when you have microflows in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these microflows, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
-
-##### 3.1.1.7 Tools: Set Tool Choice {#set-toolchoice}
-
-Use this microflow to control how the model should determine which function to leverage (typically to gather additional information).
-
-#### 3.1.2 Handle Response {#handle-response}
-
-##### 3.1.2.1 Chat: Get Model Response Text {#get-response-text}
-
-Use this microflow to get the response text from the latest assistant response message. In many cases this is the main value needed for further logic after the operation or is displayed to the end user.
-
-##### 3.1.2.2 Chat: Get References {#get-reference}
-
-Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
+The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, see [Microflows](#microflows), or refer to the documentation inside the module.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -455,11 +409,11 @@ We recommend that you adapt to the same interface when developing custom chat co
 These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior) and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/_index/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether call the LLM through OpenAI or Amazon Bedrock.
 {{% /alert %}}
 
-#### 4.3.3.1 `Chat Completions (without history)`
+#### 4.3.3.1 Chat Completions (Without History)
 
-The operation interface `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request.
+The `Chat Completions (without history)` operation interface supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request.
 
-**Input parameters**
+##### 4.3.3.1.1 Input Parameters
 
 | Name             | Type                                   | Mandatory    | Description          |
 | ---------------- | -------------------------------------- | -------------| -------------------- |
@@ -468,24 +422,24 @@ The operation interface `Chat Completions (without history)` supports scenarios 
 | `Request`        | [Request](#request)                    | optional     | This is an optional object that contains optional attributes and an optional [ToolCollection](#toolcollection). If no Request is passed, one will be created. |
 | `FileCollection` | [FileCollection](#filecollection)      | optional     | This is an optional collection of files to be sent along with the request to use vision. |
 
-**Return value**
+##### 4.3.3.1.2 Return Value
 
 | Name        | Type                  | Description                                                  |
 | ----------- | --------------------- | ------------------------------------------------------------ |
 | `Response`  | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#get-response-text) operation.|
 
-#### 4.3.3.2 `Chat Completions (with history)`
+#### 4.3.3.2 Chat Completions (With History)
 
-The operation interface `Chat Completions (with history)` supports more complex use cases where a list of (historical) messages (e.g. comprising the conversation or context so far) is sent as part of the request to the LLM.
+The `Chat Completions (with history)` operation interface supports more complex use cases where a list of (historical) messages (for example, comprising the conversation or context so far) is sent as part of the request to the LLM.
 
-**Input parameters**
+##### 4.3.3.2.1 Input Parameters
 
 | Name          | Type                      | Mandatory | Description            |
 | ------------- | ------------------------- | --------- |----------------------- |
 | `Connection`  | [Connection](#connection) | Yes       | This is an object that contains specifications to interact with an AI provider. |
 | `Request`     | [Request](#request)       | Yes       | This is an object that contains messages, optional attributes and an optional [ToolCollection](#toolcollection). |
 
-**Return value**
+##### 4.3.3.2.2 Return Value
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |

@@ -105,11 +105,11 @@ The `Connection` entity contains specifications to interact with an AI provider.
 
 | Attribute           | Description                                                                   |
 | ------------------- | ----------------------------------------------------------------------------- |
-| `SystemPrompt`      | A SystemPrompt provides the model with a context, instructions or guidelines. |
+| `SystemPrompt`      | A `SystemPrompt` provides the model with a context, instructions or guidelines. |
 | `MaxTokens` | Maximum number of tokens per request. |
-| `Temperature` | Temperature controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
-| `TopP` | TopP is an alternative to temperature for controlling the randomness of the model response. TopP defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response.<br />Mendix recommends to only steer temperature or TopP, but not both. |
-| `ToolChoice` | Controls which (if any) tool is called by the model. <br/>For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
+| `Temperature` | `Temperature` controls the randomness of the model response. Low values generate a more predictable output, while higher values allow more creativity and diversity. <br />Mendix recommendeds to only steer temperature or TopP, but not both. |
+| `TopP` | `TopP` is an alternative to temperature for controlling the randomness of the model response. `TopP` defines a probability threshold so that only the words with probabilities greater than or equal to the threshold will be included in the response. We recommend that you only steer temperature or `TopP`, but not both. |
+| `ToolChoice` | Controls which (if any) tool is called by the model. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section containing a description of the possible values. |
 
 #### 4.1.3 `Message` {#message}
 
@@ -117,26 +117,26 @@ A message that is part of the request or the response. Each instance contains da
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| `Role`              | The role of the message's author. <br/>For more information, see the [ENUM_Role](#enum-messagerole) section. |
+| `Role`              | The role of the message's author. For more information, see the [ENUM_Role](#enum-messagerole) section. |
 | `Content`           | The text content of the message. |
-| `MessageType`       | The type of the message can be either text or file, where file means that the associated FileCollection should be taken into account. <br />For more information, see the [ENUM_MessageType](#enum-messagetype) section.|
-| `ToolCallId`        | The id of the tool call proposed by the model that this message is responding to. <br/>This attribute is only applicable for messages with role `tool`. |
+| `MessageType`       | The type of the message can be either text or file, where file means that the associated FileCollection should be taken into account. For more information, see the [ENUM_MessageType](#enum-messagetype) section.|
+| `ToolCallId`        | The id of the tool call proposed by the model that this message is responding to. This attribute is only applicable for messages with role `tool`. |
 
 #### 4.1.4 `FileCollection` {#filecollection}
 
-This is an optional collection of files that is part of a Message. It is used for patterns like "vision" where image files are sent along with the user message for the model to process. It functions as a wrapper entity for files and has no attributes.
+This is an optional collection of files that is part of a Message. It is used for patterns like *vision*, where image files are sent along with the user message for the model to process. It functions as a wrapper entity for files and has no attributes.
 
 #### 4.1.5 `FileContent` {#filecontent}
 
-This is a file in the collection of files that belongs to a message. Each instance represents a single file. Currently only files of type image are supported.
+This is a file in a collection of files that belongs to a message. Each instance represents a single file. Currently only files of the type *image* are supported.
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `FileContent`       | Depending on the `ContentType`, this is either a URL or the base64-encoded file data. |
-| `ContentType`       | This describes the type of file data. Supported content types are either URL or base64-encoded file data. <br/>For more information, see the [ENUM_FileContentType](#enum-filecontenttype) section.
-| `FileType`          | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. <br />For more information, see the [ENUM_FileType](#enum-filetype) section.
+| `ContentType`       | This describes the type of file data. Supported content types are either URL or base64-encoded file data. For more information, see the [ENUM_FileContentType](#enum-filecontenttype) section.
+| `FileType`          | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype) section.
 | `TextContent`       | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
-| `MediaType`         | This is a combination of FileType and the extension of the file, e.g. *image/png*. | 
+| `MediaType`         | This is a combination of FileType and the extension of the file, for example, *image/png*. | 
 
 #### 4.1.6 `ToolCollection` {#toolcollection}
 
@@ -144,17 +144,17 @@ This is an optional collection of tools to be sent along with the `Request`. Usi
 
 #### 4.1.7 `Tool` {#tool}
 
-A tool in the tool collection. This is sent along with the request in order to expose a list of available tools. In the response, the model can suggest to call a certain tool (or multiple in parallel) in order to retrieve additional data or perform certain actions.
+A tool in the tool collection. This is sent along with the request in order to expose a list of available tools. In the response, the model can suggest to call a certain tool (or multiple tools in parallel) in order to retrieve additional data or perform certain actions.
 
 | Attribute           | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
 | `Name`              | The name of the tool to call. This is used by the model in the response to identify which function needs to be called. |
 | `Description`       | An optional description of the tool, used by the model in addition to the name attribute to choose when and how to call the tool. | 
-| `ToolType`          | The type of the tool. View AI provider documentation for supported types. |
+| `ToolType`          | The type of the tool. Refer to the documentation supplied by your AI provider for information about the supported types. |
 
 #### 4.1.8 `Function` {#function}
 
-A tool of type function. This is a specialization of [Tool](#tool) and represents a microflow in the same Mendix application. The return value of this microflow when executed as function is sent to the model in a next iteration and hence must be of type String.
+A tool of the type *function*. This is a specialization of [Tool](#tool), and represents a microflow in the same Mendix application. The return value of this microflow when executed as function is sent to the model in a next iteration and hence must be of type String.
 
 | Attribute           | Description                                                         |
 | ------------------- | ------------------------------------------------------------------- |
@@ -166,7 +166,7 @@ Since this microflow runs in the context of the user, you can make sure that it 
 
 #### 4.1.9 `StopSequence` {#stopsequence}
 
-For many models, StopSequences can be used to pass a list of character sequences (for example a word) along with the request. The model will stop generating content when a word of that list would occur next.
+For many models, `StopSequence` can be used to pass a list of character sequences (for example a word) along with the request. The model will stop generating content when a word of that list would occur next.
 
 | Attribute           | Description                                                                             |
 | ------------------- | --------------------------------------------------------------------------------------- |
@@ -227,7 +227,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 | `user`         | **User**                  | A user message is the input from an end-user. |
 | `assistant`    | **Assistant**             | An assistant message was generated by the model as a response to a user message. |
 | `system`       | **System**                | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. | 
-| `tool`         | **Tool**                  | A tool message contains the return value of a tool call as it's content. Additionally, a tool message has a ToolCallId that is used to map it to the corresponding previous assistant response which provided the tool call input. | 
+| `tool`         | **Tool**                  | A tool message contains the return value of a tool call as its content. Additionally, a tool message has a `ToolCallId` that is used to map it to the corresponding previous assistant response which provided the tool call input. | 
 
 #### 4.2.2 `ENUM_MessageType` {#enum-messagetype}
 
@@ -249,7 +249,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### 4.2.4 `ENUM_FileType` {#enum-filetype}
 
-`ENUM_FileType` provides a list of file types. Currently only image is a supported file type. Not all file types might be supported by all AI providers or models.
+`ENUM_FileType` provides a list of file types. Currently only *image* is a supported file type. Not all file types might be supported by all AI providers or models.
 
 | Name     | Caption   | Description |
 | -------- | --------- | ----------- |
@@ -262,9 +262,9 @@ An optional citation. This entity can be used to visualize the link between a pa
 | Name   | Caption  | Description |
 | ------ | -------- | ----------- |
 | `auto` | **Auto** | The model can pick between generating a message or calling a function. |
-| `none` | **None** | The model will not call a function and instead generates a message. |
+| `none` | **None** | The model does not call a function and instead generates a message. |
 | `any`  | **Any**  | Any function will be called. Not available for all providers and might be changed to auto. |
-| `tool` | **Tool** | A particular tool needs to be called, which is the one specified over association ToolCollection_ToolChoice. |
+| `tool` | **Tool** | A particular tool needs to be called, which is the one specified over association `ToolCollection_ToolChoice`. |
 
 #### 4.2.6 `ENUM_SourceType` {#enum-sourcetype}
 
@@ -274,25 +274,28 @@ An optional citation. This entity can be used to visualize the link between a pa
 | ------ | ------- | ----------- |
 | `Url`  | **Url** | The `Source` attribute contains the URL to the source on the internet. |
 
+### 4.3 Microflows {#microflows}
 
-### 4.3 Activities {#activities} 
+Use the exposed microflows to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa.
 
 #### 4.3.1 Build request {#build-request}
 
+The following microflows help you construct the input request structures for the operations defined in GenAI Commons.
+
 ##### 4.3.1.1 Chat: Create Request {#chat-create-request}
 
-This microflow can be used to create a request. This is the request object that contains the functional input for the model to generate a response.
+This microflow can be used to create a request for a chat completion operation. This is the request object that contains the top-level functional input for the language model to generate a response.
 
-**Input parameters**
+###### 4.3.1.1.1 Input Parameters
 
 | Name            | Type          | Mandatory | Description            |
 |---------------- |-------------- |---------- |----------------------- |
 | `SystemPrompt`  | String        | No        | A system message can be used to specify the assistant persona or give the model more guidance, context or instructions. This attribute is optional. |
 | `Temperature`   | Decimal       | No        | This is the sampling temperature. Higher values will make the output more random, while lower values make it more focused and deterministic. This attribute is optional. |
-| `MaxTokens`     | Integer/Long  | Depends on AI provider / model | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the models context length. This attribute is optional. |
+| `MaxTokens`     | Integer/Long  | Depends on AI provider or model | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the models context length. This attribute is optional. |
 | `TopP`          | Decimal       | No        | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with Top_p probability mass. Mendix generally recommends altering Top_p or Temperature but not both. This attribute is optional.  |
 
-**Return value**
+###### 4.3.1.1.2 Return Value
 
 | Name            | Type               | Description                         |
 |---------------- |------------------- |------------------------------------ |
@@ -300,9 +303,9 @@ This microflow can be used to create a request. This is the request object that 
 
 ##### 4.3.1.2 Chat: Add Message to Request {#chat-add-message-to-request}
 
-This microflow can be used to add a new [Message]{#message} to the [Request](#request) object. Make sure to add messages chronologically so that the most recent message is added last.
+This microflow can be used to add a new [Message]{#message} to the [Request](#request) object. A message represents the conversation text content and optionally has a collection of files attached that need to be taken into account when generating the response (such as images for vision). Make sure to add messages chronologically so that the most recent message is added last.
 
-**Input parameters**
+###### 4.3.1.2.1 Input Parameters
 
 | Name               | Type                                  | Mandatory | Description                        |
 |------------------- |---------------------------------------|-----------|------------------------------------|
@@ -311,30 +314,30 @@ This microflow can be used to add a new [Message]{#message} to the [Request](#re
 | `FileCollection`   | [FileCollection](#filecollection)     | No        | This is an optional collection of files that are part of the message. |
 | `ContentString`    | String                                | Yes       | This is the textual content of the message.  |
 
-**Return value**
+###### 4.3.1.2.2 Return Value
 
 This microflow does not have a return value.
 
 ##### 4.3.1.3 Chat: Add Stop Sequence {#chat-add-stop-sequence}
 
-This microflow can be used to add an optional [StopSequence](#stopsequence) to the request.
+This microflow can be used to add an optional [StopSequence](#stopsequence) to the request. It can be used after the request has been created. If available for the connector and model of choice, stop sequences let models know when to stop generating text.
 
-**Input parameters**
+###### 4.3.1.3.1 Input Parameters
 
 | Name            | Type                  | Mandatory | Description     |
 |-----------------|-----------------------|-----------|-----------------|
 | `Request`       | [Request](#request)   | Yes       | This is the request object that contains the functional input for the model to generate a response. |
 | `StopSequence`  | String                | Yes       | This is the stop sequence string, which is used to make the model stop generating tokens at a desired point. |
 
-**Return value**
+###### 4.3.1.3.2 Return Value
 
 This microflow does not have a return value.
 
 ##### 4.3.1.4 Files: Initialize Collection with File {#initialize-filecollection}
 
-Microflow can be used to create a File Collection and add the first File to it immediately. The File Collection is an optional part of a [Message](#message) object.
+In order to include files within a message, you must provide them in the form of a file collection. This helper microflow creates the file collection and adds the first file. The File Collection is an optional part of a [Message](#message) object.
 
-**Input parameters**
+###### 4.3.1.4.1 Input Parameters
 
 | Name             | Type                            | Mandatory                               | Description    |
 |------------------|---------------------------------|-----------------------------------------|----------------|
@@ -343,7 +346,7 @@ Microflow can be used to create a File Collection and add the first File to it i
 | `ENUM_FileType`  | [ENUM_FileType](#enum-filetype) | Yes                                     | This is the type of the file. |
 | `TextContent`    |  String                         | No                                      | An optional text content describing the file content or giving it a specific name. |
 
-**Return value**
+###### 4.3.1.4.2 Return Value
 
 | Name             | Type                              | Description                                                             |
 |----------------- |-----------------------------------|-------------------------------------------------------------------------|
@@ -351,9 +354,9 @@ Microflow can be used to create a File Collection and add the first File to it i
 
 ##### 4.3.1.5 Files: Add File to Collection {#add-file-to-collection}
 
-Microflow can be used to add a File to an existing [FileCollection](#filecollection). The File Collection is an optional part of a [Message](#message).
+Use this microflow to add a file to an existing [FileCollection](#filecollection). The File Collection is an optional part of a [Message](#message).
 
-**Input parameters**
+###### 4.3.1.5.1 Input Parameters
 
 | Name             | Type                              | Mandatory                               | Description         |
 |------------------|-----------------------------------|-----------------------------------------|---------------------|
@@ -363,15 +366,15 @@ Microflow can be used to add a File to an existing [FileCollection](#filecollect
 | `ENUM_FileType`  | [ENUM_FileType](#enum-filetype)   | Yes                                     | This is the type of the file.  |
 | `TextContent`    | String                            | Yes                                     | An optional text content describing the file content or giving it a specific name. |
 
-**Return value**
+###### 4.3.1.5.2 Return Value
 
 This microflow does not have a return value.
 
 ##### 4.3.1.6 Tools: Add Function to Request {#add-function-to-request}
 
-Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request.
+Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have microflows in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these microflows, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
 
-**Input parameters**
+###### 4.3.1.6.1 Input Parameters
 
  Name                 | Type                | Mandatory | Description                         |
 |---------------------|---------------------|-----------|-------------------------------------|
@@ -384,7 +387,7 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.
 {{% /alert %}}
 
-**Return value**
+###### 4.3.1.6.2 Return Value
 
 | Name            | Type                  | Description            |
 |-----------------|-----------------------|------------------------|
@@ -392,10 +395,9 @@ Since this microflow runs in the context of the user, you can make sure that it 
 
 ##### 4.3.1.7 Tools: Set Tool Choice {#set-toolchoice}
 
-Use this microflow to set the ToolChoice within a [Request](#request). This controls which (if any) function is called by the model.
-If the ENUM_ToolChoice equals `tool`, the `Tool` input is required which will become the tool choice. This will force the model to call that particular tool. 
+Use this microflow to control how the model should determine which function to leverage (typically to gather additional information). The microflow sets the ToolChoice within a [Request](#request). This controls which (if any) function is called by the model. If the ENUM_ToolChoice equals `tool`, the `Tool` input is required which will become the tool choice. This will force the model to call that particular tool. 
 
-**Input parameters**
+###### 4.3.1.7.1 Input Parameters
 
 | Name              | Type                                | Mandatory                                    | Description                |
 |-------------------|-------------------------------------|----------------------------------------------|----------------------------|
@@ -403,7 +405,7 @@ If the ENUM_ToolChoice equals `tool`, the `Tool` input is required which will be
 | `Tool`            | [Tool](#tool)                       | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumaration values. |
 | `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes                                          | Determines the tool choice. <br /> For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values.  |
 
-**Return value**
+###### 4.3.1.7.2 Return Value
 
 This microflow does not have a return value.
 

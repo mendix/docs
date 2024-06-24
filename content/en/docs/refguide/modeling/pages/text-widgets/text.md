@@ -36,20 +36,23 @@ Styling:
 
 ### 3.1 General Section {#general}
 
-#### 3.1.1 Caption {#caption}
 
-**Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
+#### 3.1 Caption {#caption}
 
-For more information on using parameters, see the [Parameters](#parameters) section below. 
+**Caption** defines the text that will be shown. It supports dynamic text using templating. The final text is determined by the given [**Template**](#caption-template), [**Parameters**](#caption-parameters), and [**Fallback Text**](#caption-fallback), which can be found in the 'Edit Caption' dialog box. The dialog box can be opened in two ways:
 
-#### 3.1.2 Parameters {#parameters}
+* From the properties sidebar: double-click the property (for example, "Caption") or click the "more" ellipsis (...)
+* From the widget properties dialog box: click the **Edit ...** button next to the property's textbox
 
-Parameters are attributes or expressions whose values will be displayed as part of the text defined in the **Caption** setting. To view **Parameters**, do one of the following:
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters" width="450" >}}
 
-* Double-click the **Caption** setting in properties
-* Double-click the text widget on the page and click **Edit** in the **General** section > **Caption**:
+##### 3.1.1 Template {#caption-template}
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/caption-edit-button.png" alt="Opening Parameters"   width="450" class="no-border" >}} 
+The **Caption** can be made dynamic by placing placeholders in the **Template**. Placeholders must follow the format `{i}`, where _i_ is the **Index** of a specific parameter from the list of [parameters](#caption-parameters). Parameters can be referenced multiple times, and can be referenced out of order.
+
+##### 3.1.2 Parameters {#caption-parameters}
+
+Parameters define what data is inserted into the template and how it is formatted. Parameters can refer to object attributes or expressions. Editing parameters is done in the 'Edit Caption' dialog box.
 
 Parameters have the following settings:
 
@@ -57,41 +60,55 @@ Parameters have the following settings:
 * **Value** – an attribute or an expression value to be displayed
 * **Format** – a format in which the value will be displayed (only for attributes)
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings"   width="450" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-settings.png" alt="Parameter Settings" width="450" >}}
 
 {{% alert color="info" %}}
 You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide/expressions/#expressions-formatter-functions).
 {{% /alert %}}
 
-##### 3.1.1.1 Adding New Parameters
+###### 3.1.2.1 Adding New Parameters
 
-To use parameters, do the following:
+To be able to use parameters, the Text widget must be in the context of an entity such as a [Data widget](/refguide/data-view), [Snippet parameter](http://localhost:1313/refguide/snippet/#parameters), or [Page parameter](/refguide/page-properties/#parameters). To use parameters, do the following:
 
-1. Place the **Text** widget in a context of an entity, as in, inside a [data container](/refguide/data-widgets/).
-2. Double-click the **Caption** setting in the text widget properties.
-3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
+1. Open the properties for the Text widget.
+1. Click the **Edit ...** button of the PROPERTY_NAME to open its dialog box.
+1. In the **Parameters** section, click **New**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter"   width="450" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/adding-parameter.png" alt="Adding New Parameter"  width="450" >}}
 
-4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
-5. In the **Caption** setting, write the text you would like to display and type the **Index** of the parameter you would like to include within braces. In the example below, to include the title of the book, amount of pages it has and the year it was published, you need to use indexes {1} for the *Title* attribute, {2} for the *NrOfPages* attribute and {3} for the *DatePublished* attribute:  
+1. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute, and confirm your choice.
+1. Edit the template and add a placeholder that matches the index of your parameter (for example `{1}`).
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"   width="450" class="no-border" >}}
+In the example below, the placeholder `{1}` corresponds to the **Title** attribute, `{2}` to **NrOfPages**, and `{3}` to **DatePublished**:
 
-6. In the **Fallback text** setting, write the text you would like to display when no context object is available from the surrounding data widget:
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameters-example.png" alt="Parameter Example"  width="450" >}}
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/fallback-text-example.png" alt="Fallback Text Example"   width="450" class="no-border" >}}
 
-##### 3.1.1.2 Performing Other Actions on Parameters
+###### 3.1.2.2 Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
-* **Delete** – to delete a parameter click Delete or press <kbd>Delete</kbd> on your keyboard
-* **Edit** – double-click a parameter to edit it or click Edit
+* **Delete** – to delete a parameter click **Delete** or press <kbd>Delete</kbd> on your keyboard
+* **Edit** – double-click a parameter to edit it or click **Edit**
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-    {{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions"   width="450" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions" width="450" >}}
+
+
+##### 3.1.3 Fallback Text {#caption-fallback}
+
+The fallback text is shown when the datasource of the **Parameters** is empty or unavailable. 
+
+Empty attributes used as parameters do not cause the fallback text to be shown. Instead the template is rendered as normal and the placeholders for the empty parameters are substituted by empty strings. 
+
+For example: The template `Hello, {1}!` with the fallback text _"Nobody to greet."_ would get rendered as follows:
+
+| Scenario         | Rendered text      |
+| ---------------- | ------------------ |
+| Filled attribute | "Hello, World!"    |
+| Empty attribute  | "Hello, !"         |
+| Missing object   | "Nobody to greet." |
 
 #### 3.1.3 Render Mode
 

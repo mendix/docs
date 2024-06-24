@@ -16,16 +16,16 @@ By understanding both the capabilities and limitations of LLMs, you can more eff
 
 ### 2.1 What is an LLM?
 
-One of the most important components for generative AI is the Large Language Model (LLM). It is an advanced neural network trained on large amounts of text data. This allows the model to understand textual input, and generate output. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike.
+One of the most important components for generative AI is the Large Language Model (LLM). It is an advanced neural network trained on large amounts of textual data. This allows the model to understand textual input, and generate output. LLMs are designed to handle a variety of natural language processing tasks, making them versatile tools for developers and businesses alike.
 
 For example, you can use an LLM to do:
 
 * **Text Generation:** Creating coherent and contextually relevant text from a prompt.
 * **Content Creation:** Assisting in writing articles, stories, and marketing copy.
-* **Translation:** Translating text from one language to another with high accuracy.
+* **Translation:** Translating text from one language to another.
 * **Summarization:** Condensing long documents into concise summaries.
-* **Conversational Agents:** Powering chatbots and virtual assistants to interact naturally with users.
-* **Data Generation:** Generating Mendix objects by combining JSON generation & [Import mappings](/refguide/import-mapping-action/).
+* **Conversational Interaction:** Powering chatbots and virtual assistants to interact naturally with users.
+* **Data Generation:** Generating Mendix objects by combining JSON generation and [Import mappings](/refguide/import-mapping-action/).
 
 Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/openai-connector/#chatcompletions-vision), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
 
@@ -36,7 +36,7 @@ While LLMs are powerful, they are not without limitations. Remember they are:
 * **not conscious:** LLMs do not possess self-awareness or understanding. They generate text based on patterns in the data they were trained on.
 * **not perfect:** These models can sometimes produce incorrect or nonsensical outputs (so-called hallucinations), especially if the input is ambiguous or if they were not trained on the relevant data.
 * **not a replacement for human judgment:** LLMs should be seen as tools to augment human capabilities, not replace human expertise or critical thinking.
-* **not machine learning (ML) models trained for specific use cases**: LLMs are trained on a broad variety of use cases, for some specific (e.g. statistical) use cases you need to use traditional machine learning. For more details on how to deploy such a model see [Machine Learning Kit](/refguide/machine-learning-kit).
+* **not trained for specific use cases**: LLMs are trained on a broad variety of use cases, for some specific (e.g. statistical) use cases you need to use traditional machine learning (ML) models. For more details on how to deploy such a model see [Machine Learning Kit](/refguide/machine-learning-kit).
 
 ### 2.3 Making an LLM more specific
 
@@ -52,16 +52,18 @@ Often, you can use prompt engineering, RAG, and ReAct to build your use case and
 
 Prompt engineering is the activity of designing the input text that will be send to the LLM. This typically contains input from the end-user, enriched with instructions from the developer / administrator. A prompt typically contains:
 
-* instructions on what the model should do,
-* context & information that the model needs to follow the instructions,
-* the relevant input data (from the end-user or passed from a microflow),
-* the requested output structure (e.g. tone of voice or a JSON format).
+* instructions on what the model should do
+* context and information that the model needs to follow the instructions
+* the relevant input data (from the end-user or passed from a microflow)
+* the requested output structure (for example, tone of voice or a JSON format)
 
-With prompt engineering you can guide the model to generate accurate, applicable and coherent responses. The quality of your prompts direct influences the quality of the response. See [Prompt Engineering](/appstore/modules/genai/concepts/prompt-engineering/) to learn more about prompt engineering.
+With prompt engineering you can guide the model to generate accurate, applicable, and coherent responses. The quality of your prompts directly influences the quality of the response. See [Prompt Engineering](/appstore/modules/genai/concepts/prompt-engineering/) to learn more about prompt engineering.
 
 ## 4 Retrieval Augmented Generation (RAG) {#rag}
 
-The knowledge of LLMs is limited to the data they have been trained on. This is generally-available information, for example from Wikipedia and other internet sources. For use cases where the LLM needs to be aware of relevant private enterprise data, you can use the RAG pattern. This allows you to provide the LLM with large amounts of additional context to a request without making the prompts extremely lengthy. To implement RAG, you need to setup a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
+The knowledge of LLMs is limited to the data they have been trained on. This is generally-available information, for example from Wikipedia and other internet sources.
+
+For use cases where the LLM needs to be aware of domain-specific or private enterprise data, you can use the RAG pattern. This allows you to add large amounts of additional context to a request without making the prompts extremely lengthy. To implement RAG, you need to set up a knowledge base that contains the data. When evaluating the actual user prompt, the basic pattern of RAG consists of three phases:
 
 1. Use the user input to **retrieve** relevant data from the knowledge base.
 2. **Augment** the prompt with the retrieved data.
@@ -84,7 +86,7 @@ You can also use the [PgVector Knowledge Base module](/appstore/modules/pgvector
 You can read further on [how to implement this here](/appstore/modules/openai-connector/rag-example-implementation/). The [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) also contains examples on:
 
 * How to ask questions on a large piece of text.
-* How to use a multi-lingual database of historical tickets & resolutions to propose resolutions to the users based on historical input.
+* How to use a multi-lingual database of historical tickets and resolutions to propose resolutions to the users based on historical input.
 
 ## 5 The ReAct Pattern (Function Calling) {#react}
 
@@ -92,7 +94,7 @@ Another way to provide the LLM with additional information and capabilities is t
 
 This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
 
-See [Function Calling](/appstore/modules/openai-connector/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTIecketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
+See [Function Calling](/appstore/modules/openai-connector/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
 This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
 
@@ -100,6 +102,6 @@ This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guid
 
 ### 6.1 Connect to a Bedrock Agent
 
-Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A [Bedrock Agent](https://aws.amazon.com/bedrock/agents/) can orchestrate interactions between LLM's, various data sources and user conversations. In addtion, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
+Agents for Amazon Bedrock provides the ability to integrate autonomous agents into your application. A [Bedrock Agent](https://aws.amazon.com/bedrock/agents/) can orchestrate interactions between LLM's, various data sources and user conversations. In addition, agents can be connected to a knowledge base to perform RAG and autonomously take actions by calling APIs that it has been equipped with.
 
 Connecting to an agent from a Mendix application can easily be done via the Amazon Bedrock Connector. For detailed instructions please refer to the [Connector documentation](/appstore/modules/aws/amazon-bedrock).

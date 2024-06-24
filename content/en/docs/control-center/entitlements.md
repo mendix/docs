@@ -1,7 +1,6 @@
 ---
 title: "Entitlements"
 url: /control-center/entitlements/
-
 description: "Describes the Entitlements page in the Mendix Control Center."
 weight: 50
 beta: true

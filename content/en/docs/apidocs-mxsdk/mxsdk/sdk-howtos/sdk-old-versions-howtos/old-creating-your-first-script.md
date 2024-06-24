@@ -142,6 +142,6 @@ The steps for app creation (line 3) and committing to the Team Server (line 10) 
 
 ## 5 Opening the App in Studio Pro
 
-1. In the [My Apps](/developerportal/#my-apps) page of the Developer Portal, verify the app you just created is visible at the top of the list.
+1. In [Apps](/developerportal/#my-apps), verify the app you just created is visible at the top of the list.
 2. Open the new app, and on the right side, click **Edit**.
 3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.

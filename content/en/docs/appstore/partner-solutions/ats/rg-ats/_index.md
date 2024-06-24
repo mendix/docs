@@ -1,7 +1,6 @@
 ---
 title: "ATS Reference Guides"
 url: /appstore/partner-solutions/ats/rg-ats/
-
 weight: 2
 no_list: false
 description_list: true 

@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Client State"
 url: /refguide/monitoring-client-state/
-
 description: "Describes the supported client state monitoring actions."
 ---
 

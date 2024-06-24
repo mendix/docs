@@ -1,7 +1,6 @@
 ---
 title: "UI Resources Package"
 url: /refguide7/ui-resources-package/
-
 ---
 
 ## 1 Introduction

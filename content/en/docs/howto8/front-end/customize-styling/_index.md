@@ -1,7 +1,6 @@
 ---
 title: "Customize Your Styling"
 url: /howto8/front-end/customize-styling/
-
 weight: 9
 description: "These how-to's will guide you in styling your Mendix apps."
 ---

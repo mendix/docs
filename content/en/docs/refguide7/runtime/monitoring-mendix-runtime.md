@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Mendix Runtime"
 url: /refguide7/monitoring-mendix-runtime/
-
 description: "Describes the supported Mendix Runtime monitoring actions."
 ---
 

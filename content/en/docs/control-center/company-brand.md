@@ -1,7 +1,6 @@
 ---
 title: "Company Brand"
 url: /control-center/company-brand/
-
 description: "Describes the Company Brand page in the Mendix Control Center."
 weight: 35
 no_list: list

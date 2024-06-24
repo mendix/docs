@@ -2,7 +2,6 @@
 title: "Deep Link"
 deprecated: true
 url: /appstore/modules/deep-link/
-
 description: "Describes the configuration and usage of the Deep Link module, which is available in the Mendix Marketplace."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -189,8 +188,6 @@ To solve this problem, you can use one of the following solutions:
      ```
 
 ## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
-
-{{% alert color="warning" %}}Both the page URLs and microflow URLs are not able to support continuations, for instance, for SSO modules like OIDC. As a result, the SSO cannot be configured correctly. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024. Stay tuned.{{% /alert %}}
 
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 

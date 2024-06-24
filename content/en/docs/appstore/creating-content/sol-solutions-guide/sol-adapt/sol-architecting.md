@@ -24,7 +24,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 
 ### 3.1 Summary
 
-| Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
+| Options | Dedicated App | Cloud Node per Customer | Customer Access to Mendix Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
 | ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/app-insights/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
@@ -63,7 +63,7 @@ For design-time adaptations, Mendix recommends referencing [How to Set Up a Solu
 
 * Full control of who can access the individual customer’s model instance via [app roles](/developerportal/general/app-roles/) 
 * Preventing access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
-* Using all [Developer Portal collaboration features](/developerportal/general/)
+* Using all [Mendix Portal collaboration features](/developerportal/general/)
 * Data isolation per customer tenant by having dedicated environments (at least acceptance and production)
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.

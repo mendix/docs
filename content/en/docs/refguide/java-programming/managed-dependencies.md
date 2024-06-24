@@ -1,7 +1,6 @@
 ---
 title: "Managed Dependencies"
 url: /refguide/managed-dependencies/
-
 weight: 50
 description: "Describes how to use the managed dependencies feature in Studio Pro"
 ---
@@ -44,7 +43,7 @@ After finding the package of your choice, locate the Snippets part, containing t
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" class="no-border" >}}
 
-## 3 Dependency Synchronization
+## 3 Dependency Synchronization {#dependency-synchronization}
 
 When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
 
@@ -72,11 +71,15 @@ Platform-supported Marketplace modules created by Mendix have been updated with 
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example, to resolve dependencies from a directory `lib`, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
 
 ```groovy {linenos=false}
-flatDir {
-    dirs 'lib'
+maven {
+    url '{url to your custom remote repository}'
+       credentials {
+        username 'user'
+        password 'password'
+    }
 }
 ```
 
@@ -86,6 +89,13 @@ By default the repositories are configured as:
 gradlePluginPortal()
 mavenCentral()
 ```
+
+{{% alert color="info" %}}
+Custom Repositories like Nexus or JFrog may not be configured to point to central remote repositories by default. In this case, you (or someone with the appropriate rights) will need to configure your custom remote repository with the following sources:
+
+1. Maven Repository - https://repo1.maven.org/maven2/
+2. Gradle Plugins Repository - https://plugins.gradle.org/m2/
+{{% /alert %}}
 
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 
@@ -106,7 +116,7 @@ Below are the few options you can try to configure Gradle with custom proxy sett
 ### 7.1 Gradle Proxy Settings
 
 You can create a `gradle.properties` file in the [Gradle User Home](https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home) directory and configure the proxy settings there. Just replace the values in the sample file below with your values.
-See the official [Networking with Gradle](https://docs.gradle.org/current/userguide/networking.html) guide for further details.
+See the official [Networking with Gradle](https://docs.gradle.org/current/userguide/networking.html) guide for further details. 
 
 Sample `gradle.properties` file:
 
@@ -120,6 +130,10 @@ systemProp.https.proxyPort=proxy-port
 systemProp.https.proxyUser=userid
 systemProp.https.proxyPassword=password 
 ```
+
+{{% alert color="info" %}}
+When entering the `proxy-host-ip`, do not add the URL scheme/protocol (for example, `http://`). 
+{{% /alert %}}
 
 If Gradle still fails to download dependencies with the correct proxy settings configured, you can configure the HTTPS/SSL certificate store that Gradle uses.
 
@@ -153,6 +167,10 @@ http.proxyPort=your.proxy.port
 https.proxyHost=your.proxy.ip.address
 https.proxyPort=your.proxy.port
 ```
+
+{{% alert color="info" %}}
+When entering `your.proxy.ip.address`, do not add the URL scheme/protocol (for example, `http://`). 
+{{% /alert %}}
 
 If the above options don't work for you, please reach out to [Mendix Support](https://support.mendix.com/) for further assistance.
 

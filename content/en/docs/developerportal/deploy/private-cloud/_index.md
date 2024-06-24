@@ -1,7 +1,6 @@
 ---
 title: "Private Cloud"
 url: /developerportal/deploy/private-cloud/
-
 description: "Describes how to deploy to a Private Cloud."
 weight: 48
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -13,7 +12,7 @@ weight: 48
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix for Private Cloud allows you to do this while keeping the familiar components of Docker and Kubernetes.
 
-You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Developer Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
+You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
 
 Please see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for a list of platforms supported by Mendix for Private Cloud.
 
@@ -25,7 +24,7 @@ Mendix for Private Cloud is a premium offering from Mendix, and there are additi
 
 ### 1.1 Registering Your Cluster and Namespace
 
-The first step is to register your private cloud cluster in the Developer Portal. For more information see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/).
+The first step is to register your private cloud cluster in the Mendix Portal. For more information see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/).
 
 This activity needs to be done by a systems administrator who has administration rights to the platform where the cluster is being created.
 
@@ -33,14 +32,14 @@ This activity needs to be done by a systems administrator who has administration
 
 To deploy your app, you have two options:
 
-1. You can deploy the app from within the Developer Portal. For more information see [Deploying a Mendix App to a Private Cloud Cluster from Developer Portal](/developerportal/deploy/private-cloud-deploy/).
+1. You can deploy the app from within the Mendix Portal. For more information see [Deploying a Mendix App to a Private Cloud Cluster from Mendix Portal](/developerportal/deploy/private-cloud-deploy/).
 2. You can create a CI/CD pipeline and deploy your app from within the cluster. For more information see [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 
-When you deploy through the Developer Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
+When you deploy through the Mendix Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
 
 ## 2 Connected and Standalone Clusters{#connected-standalone}
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
 If you have chosen a *connected* cluster, the **Mendix Gateway Agent** will also be deployed.
 Once the Mendix Operator is deployed to your cluster, you can use it to configure the resources which will be used by your apps.
 
@@ -67,12 +66,12 @@ The table below shows the differences between the capabilities for apps deployed
 | Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
-| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Developer Portal | Mendix Developer Portal | Custom Resources via Mendix Operator |
-| Mendix app/deployment package deployment | Mendix Developer Portal and Studio Pro | Mendix Developer Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
-| Backup and restore | Mendix Developer Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
-| Monitoring | Mendix Developer Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
-| App logs | Mendix Developer Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
-| Remote debugging | Mendix Developer Portal + Studio Pro | Mendix Developer Portal + Studio Pro | Not supported |
+| Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal | Custom Resources via Mendix Operator |
+| Mendix app/deployment package deployment | Mendix Portal and Studio Pro | Mendix Portal and Studio Pro | Custom Resources via Mendix Operator<br/>*normally combined in a CI/CD pipeline* |
+| Backup and restore | Mendix Portal | Services supplied by the database server and file storage used¹ | Services supplied by the database server and file storage used¹ |
+| Monitoring | Mendix Portal | App metrics sent to a Prometheus-compatible monitoring tool | App metrics sent to a Prometheus-compatible monitoring tool |
+| App logs | Mendix Portal | Prints app logs to `stdout` | Prints app logs to `stdout` |
+| Remote debugging | Mendix Portal + Studio Pro | Mendix Portal + Studio Pro | Not supported |
 
 {{% alert color="info" %}}
 ¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.
@@ -176,7 +175,7 @@ You can also request for both the Operator and Runtime license within the same r
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
-If your app is **Connected** to the Developer Portal, you can enter the subscription secret [in the Developer Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
+If your app is **Connected** to the Mendix Portal, you can enter the subscription secret [in the Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
 #### 5.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
 

@@ -1,7 +1,6 @@
 ---
 title: "Pages"
 url: /refguide9/pages/
-
 weight: 30
 description: "Presents an overview of the features of pages and relevant page resources in Studio Pro."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

@@ -1,7 +1,6 @@
 ---
 title: "Create Automated Tests with TestNG"
 url: /howto8/testing/create-automated-tests-with-testng/
-
 weight: 50
 ---
 

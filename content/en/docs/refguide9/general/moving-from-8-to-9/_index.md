@@ -1,7 +1,6 @@
 ---
 title: "Moving from Mendix Studio Pro 8 to 9"
 url: /refguide9/moving-from-8-to-9/
-
 weight: 20
 description: "Provides details on updating your app from Studio Pro 8 to Studio Pro 9, including sections on converting your app and deprecated features."
 ---

@@ -1,7 +1,6 @@
 ---
 title: "Menus"
 url: /refguide8/menus/
-
 description: "Describes Studio Pro menus."
 weight: 12
 ---

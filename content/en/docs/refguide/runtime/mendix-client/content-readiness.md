@@ -1,7 +1,6 @@
 ---
 title: "Marketplace Component React Status"
 url: /refguide/mendix-client/marketplace-react-status/
-
 description: "Describes Mendix's React client."
 weight: 20
 ---

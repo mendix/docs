@@ -1,7 +1,6 @@
 ---
 title: "Documents"
 url: /developerportal/general/documents/
-
 weight: 10
 description: "Describes how to manage the documents in your app."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -9,7 +8,7 @@ description: "Describes how to manage the documents in your app."
 
 ## 1 Introduction
 
-On the **Documents** page, you can upload files to your app and replace existing files with newer versions.
+On the **Documents** page of the [navigation pane](/developerportal/#navigation-pane) of **Apps**, you can upload files to your app and replace existing files with newer versions.
 
 {{< figure src="/attachments/developerportal/general/documents/documents.png" class="no-border" >}}
 

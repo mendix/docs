@@ -58,6 +58,24 @@ The following modules need to be imported into your app:
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69) – see [Mx Model Reflection](/appstore/modules/model-reflection/) documentation
 
+### 1.4 Protocol Adherence
+
+This section provides clarity on the extent to which the OIDC Provider module supports the OIDC protocol. It is targeted at readers who are familiar with the OAuth and the OIDC protocol.
+
+The OIDC Provider module supports the following Grant Types:
+
+* supports [Authorization grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-1.3) to represent the resource owner's authorization 
+* supports [Client credentials grant type](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4) to request an access token
+
+The OIDC Provider module supports the following Endpoints:
+
+* [`userInfo_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#UserInfo)
+* [`introspection_endpoint`](https://datatracker.ietf.org/doc/html/rfc7662)
+* [`authorization_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthorizationEndpoint)
+* [`token_endpoint`](https://openid.net/specs/openid-connect-core-1_0.html#ImplicitAuthorizationEndpoint)
+* [`issuer`](https://openid.net/specs/openid-connect-core-1_0.html#IssuerIdentifier)
+* [`jwks_uri`](https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys)
+
 ## 2 Installation
 
 To install the OIDC Provider service in your IAM broker app, you need to import the following into your app:
@@ -141,40 +159,59 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     * a **POST** command to the **Registration URI** with the endpoint `/oidc/register`, for example, for a locally-deployed app, `http://localhost:8080/oidc/register`
     * an HTTP header with **Key** = "Authorization" and **Value** = **Bearer Registration Access token**
     * an HTTP request body with the following format (for a Client `ClientID` which is running on host and port `localhost:8081`):
+1. For the `grant_types`: `authorization_code`
+    
+    ```json {linenos=false}
+    {
+        "client_id" : "ClientID",
+        "client_name" : "ClientName",
+        "client_secret" : "ClientSecret",
+        "redirect_uris" : [ "http://localhost:8081/oauth/v2/callback" ],
+        "post_logout_redirect_uris" : ["http://localhost:8081/logout"],
+        "grant_types": [ "authorization_code" ],
+        "scope": "User"
+    }
+    ```
 
-        ```json {linenos=false}
-        {
-            "client_id" : "ClientID",
-            "client_name" : "ClientName",
-            "client_secret" : "ClientSecret",
-            "redirect_uris" : [ "http://localhost:8081/oauth/v2/callback" ],
-            "backchannel_logout_uri" : "http://localhost:8081/logout",
-            "post_logout_redirect_uris" : ["http://localhost:8081/logout"],
-            "grant_types": [ "authorization_code" ],
-            "scope": "User"
-        }
-        ```
-
-1. Send the command. If it is working, you should get a response which has a body which resembles the example below:
+    Send the command. If it is working, you should get a response which has a body which resembles the example below:
 
     ```json {linenos=false}
     {
-    "post_logout_redirect_uris": [
-    "http://localhost:8081/logout"
-    ],
-    "grant_types": [
-    "authorization_code",
-    ],
-    "client_secret_expires_at": 0,
-    "scope": "User",
-    "client_secret": "ClientSecret",
-    "redirect_uris": [
-    "http://localhost:8081/oauth/v2/callback"
-    ],
-    "client_id_issued_at": 1675940602,
-    "backchannel_logout_uri": "http://localhost:8081/logout",
-    "client_name": "ClientName",
-    "client_id": "ClientID"
+        "post_logout_redirect_uris": [ "http://localhost:8081/logout" ],
+        "grant_types": [ "authorization_code" ],
+        "client_secret_expires_at": 0,
+        "scope": "User",
+        "client_secret": "ClientSecret",
+        "redirect_uris": [ "http://localhost:8081/oauth/v2/callback" ],
+        "client_id_issued_at": 1675940602,
+        "client_name": "ClientName",
+        "client_id": "ClientID"
+    }
+    ```
+
+1. For the `grant_types`: `client_credentials`
+
+    ```json {linenos=false}
+    {
+        "client_id" : "DemoClient",
+        "client_name" : "DemoClient",
+        "client_secret" : "c46591bd-8fae-4f90-9efb-b5973bea04df",
+        "grant_types": [ "client_credentials" ],
+        "scope": "openid" 
+    }
+    ```
+
+    Send the command. If it is working, you should get a response which has a body which resembles the example below:
+
+    ```json {linenos=false}
+    {
+        "grant_types": [ "client_credentials" ],
+        "client_secret_expires_at": 0,
+        "scope": "openid",
+        "client_secret": "c46591bd-8fae-4f90-9efb-b5973bea04df",
+        "client_id_issued_at": 1716198475,
+        "client_name": "DemoClient",
+        "client_id": "DemoClient"
     }
     ```
 
@@ -182,12 +219,20 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
 If you cannot use automatic registration, you can register the client manually.
 
-1. Select **Manual Registration**.
-1. Add the following information:
+1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
+
+    * Allow Client-Credentials grant type
+    * Allow Authorization-Code grant type
+
+2. Select any option and add the following information: 
+
     * **Client Name** – a name for this client so that it is easy to identify
     * **Client ID** – a unique string which identifies this client
     * **Alias** – usually the same as *Client Name* but can be different
     * **Client Secret** – the client password to allow the client to authenticate to the OIDC Provider service
+
+    Additionally, you need to add below information if you select **Allow Authorization-Code grant type**
+
     * **Post Logout redirect URI** – the fully qualified logout url, `<appurl>/logout` — for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/logout`
     * **Redirect URI** – for example, for testing a local OIDC SSO app on port `8081`, `http://localhost:8081/oauth/v2/callback`
     * **Back channel logout session support**
@@ -195,7 +240,7 @@ If you cannot use automatic registration, you can register the client manually.
 
 #### 3.3.3 Configuring Centralized Authorization{#configuring-authorization}
 
-There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
+This section applies only when your client is using the authorization code grant. There are two alternatives for [centralized authorization](#centralized-auth). You can use scopes, or a custom user claim.
 
 Choose one of the two options, below.
 
@@ -314,6 +359,8 @@ Some examples of existing claims are:
 
 ### 3.4 Configure Authentication with Login Location Constant
 
+This section applies only when your client is using the authorization code grant. 
+
 Consider a scenario, where you build an app using the [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service. You can call this app an OIDC Provider app or Provider app. Other apps using the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module redirect end-users to your Provider app for authentication. You can choose how your Provider app handles the authentication process.
 The **LoginLocation** is a constant in the OIDC Provider service that controls where end-users are authenticated. The default value is a local sign in using a username and password as shown below:
 
@@ -367,7 +414,7 @@ The format of non-custom claims in the access token is as follows:
 ```json {linenos=false}
 {
     "aud": "DemoClient",
-    "sub": "3",
+    "sub": "T6hOS9jBEBMqk3Dk",
     "nbf": 1681969726,
     "scope": "",
     "iss": "http://localhost:8080/",
@@ -384,7 +431,7 @@ The format of non-custom claims in the ID-token is as follows:
 ```json {linenos=false}
 {
     "com.mendix.user.language": "en_US",
-    "sub": "3",
+    "sub": "T6hOS9jBEBMqk3Dk",
     "iss": "http://localhost:8080/",
     "com.mendix.user.entity": "Administration.Account",
     "nonce": "k5CDLkTE7Q61Q0cUTSgy",
@@ -412,6 +459,8 @@ In versions of OIDC Provider below 1.1.0, the following values are not included 
 * "email"
 * "name"
 * "username"
+
+In versions of the OIDC Provider above 2.0.0, the sub value was changed from an Autonumber to a UUID.
 
 ## 6 Troubleshooting
 

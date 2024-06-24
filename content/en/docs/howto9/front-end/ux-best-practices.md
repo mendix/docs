@@ -1,7 +1,6 @@
 ---
 title: "Implement Best Practices for UX Design"
 url: /howto9/front-end/ux-best-practices/
-
 weight: 10
 description: "Describes best practices written by a UX Designer for contributing to the app development process."
 aliases:

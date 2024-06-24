@@ -1,7 +1,6 @@
 ---
 title: "Set Up Error Handling"
 url: /howto7/logic-business-rules/set-up-error-handling/
-
 weight: 8
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---

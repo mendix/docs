@@ -2,7 +2,6 @@
 title: "Profiling"
 url: /refguide/profiling/
 description: "Describes how to run a performance profiler session on the local machine from within Studio-Pro."
-tags: ["monitoring", "troubleshooting", "performance", "profiling"]
 ---
 
 ## 1 Introduction
@@ -28,4 +27,3 @@ When you are done, click **Profiling** > **Stop profiling**. Zip all the files y
 {{% alert color="info" %}}
 Profiling can be started at any time (when you start to see perofrmance issues) and does not need to start immediately after running Studio Pro.
 {{% /alert %}}
-

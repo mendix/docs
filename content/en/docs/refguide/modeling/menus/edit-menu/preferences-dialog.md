@@ -228,7 +228,7 @@ The expression editor is modernized since Studio Pro 10.6. This setting is enabl
 
 ### 9.3 Maia
 
-In Studio Pro 10.12, Translation Generator was introduced as an experimental feature. Enbale this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator).
+In Studio Pro 10.12, Translation Generator was introduced as an experimental feature. Enbale this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ### 9.4 Mapping Editor
 

@@ -29,4 +29,4 @@ Recommenders:
 
 Generators:
 
-* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool for **Batch translate** in Mendix Studio Pro. It helps you to translate your model to different languages for which you may not have a translation. It gives contextualized translations for the languages that you have seleted, using parameters in the way that works specifically for the selcted languages. For more information, see [Translation Generator](/refguide/translation-generator).
+* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool for **Batch translate** in Mendix Studio Pro. It helps you to translate your model to different languages for which you may not have a translation. It gives contextualized translations for the languages that you have seleted, using parameters in the way that works specifically for the selcted languages. For more information, see [Translation Generator](/refguide/translation-generator/).

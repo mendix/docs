@@ -99,4 +99,4 @@ The formats of the Excel files for batch translate and batch replace are similar
 ## 4 Read More
 
 * [Translation Generator](/refguide/translation-generator/)
-* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance)
+* [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

@@ -1,7 +1,7 @@
 ---
-title: "Strategic Partners Guide"
+title: "Strategic Partners"
 url: /partners/
-description: "Documentation for AWS, SAP, and Siemens widgets written and maintained by Mendix"
+description: "Documentation for AWS, SAP, Siemens, and Snowflake widgets written and maintained by Mendix"
 weight: 50
 no_list: false
 description_list: true
@@ -13,7 +13,7 @@ cascade:
 
 ## 1 Introduction
 
-The *Mendix Strategic Partners Guide* provides documentation on widgets written and maintained by Mendix which support integration with AWS, SAP, and Siemens cloud platforms and services.
+The *Mendix Strategic Partners Guide* provides documentation on widgets written and maintained by Mendix which support integration with AWS, SAP, Siemens, and Snowflake cloud platforms and services.
 
 ## 2 Guide Categories
 

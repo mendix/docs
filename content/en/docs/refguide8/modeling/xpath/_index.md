@@ -1,7 +1,6 @@
 ---
 title: "XPath"
 url: /refguide8/xpath/
-
 weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 ---
@@ -79,4 +78,4 @@ The following XPath functions are available:
 
 **How to find the right path to XPath**
 
-{{% youtube sdabUY-w4ZU %}}
+{{< youtube sdabUY-w4ZU >}}

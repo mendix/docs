@@ -62,7 +62,6 @@ However, authentication will only be successful if the correct credentials are p
 
     `https://demo.piam.eu1.mindsphere.io/oauth/token?grant_type=client_credentials`
 
-
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleConfiguration.png" alt="Authentication" >}}
 
 Add the **Siemens Insights Hub API Authenticator** module role **User** to all your apps user roles to ensure that the localized session expired message / title can be loaded during app startup.

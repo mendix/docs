@@ -85,9 +85,17 @@ If a parameter is set to **Required**, a value must be selected for that paramet
 
 If no argument is provided for an optional parameter, it defaults to `undefined` in the JavaScript action. You can handle an optional parameter within the JavaScript action by checking if it is `undefined`, allowing you to assign a default value or implement custom logic as needed. 
 
-### 2.3 Return Type
+### 2.3 Return
+
+Your JavaScript action can return different data types to your app.
+
+#### 2.3.1 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
+
+#### 2.3.2 Variable Name
+
+This setting allows you to give a name to the Javascript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
 
 ### 2.4 Platform {#platform}
 

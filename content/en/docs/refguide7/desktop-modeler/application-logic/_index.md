@@ -1,7 +1,6 @@
 ---
 title: "Application Logic"
 url: /refguide7/application-logic/
-
 description: "Presents an overview of documentation on microflows and nanoflows."
 ---
 

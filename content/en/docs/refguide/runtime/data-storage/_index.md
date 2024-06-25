@@ -1,7 +1,6 @@
 ---
 title: "Data Storage"
 url: /refguide/data-storage/
-
 description: "Introduces data storage, which is the data foundation of the Mendix Runtime."
 ---
 

@@ -1,13 +1,12 @@
 ---
 title: "Teamcenter Extension"
 url: /appstore/modules/teamcenter-extension/
-
 description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
 ---
 
 ## 1 Introduction {#introduction}
 
-The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the full capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Extension is layered atop the Teamcenter Connector.It provides a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
+The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Extension is layered atop the Teamcenter Connector.It provides a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
 
 ### 1.1 Typical Use Cases {#usecases}
 

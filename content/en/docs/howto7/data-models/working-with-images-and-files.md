@@ -1,7 +1,6 @@
 ---
 title: "Work with Images and Files"
 url: /howto7/data-models/working-with-images-and-files/
-
 weight: 4
 ---
 

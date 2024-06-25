@@ -10,6 +10,7 @@ aliases:
 
 {{% alert color="info" %}}
 Due to web browsers changing what they support, offline-first progressive web apps are only supported in the following versions of Mendix:
+
 * Mendix 9.24.18 and higher patch versions
 * Mendix 10.6.6 and higher patch versions
 * Mendix 10.9.0 and above
@@ -96,6 +97,10 @@ When opening the app on a device or browser, Mendix automatically determines the
 Google Chrome and Microsoft Edge (Chromium edition) fully support running offline-first apps.
 
 ### 4.1 Example of Profile Selection
+
+{{% alert color="info" %}} 
+An offline profile represents the entry point for an offline-first app. The term is not related to the connectivity of the user's device. Offline profiles will also be used when the user's device is online.
+{{% /alert %}}
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 

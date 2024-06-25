@@ -1,7 +1,6 @@
 ---
 title: "Share the Development Database"
 url: /howto8/collaboration-requirements-management/sharing-the-development-database/
-
 weight: 40
 ---
 

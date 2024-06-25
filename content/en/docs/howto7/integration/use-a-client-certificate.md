@@ -1,7 +1,6 @@
 ---
 title: "Use a Client Certificate"
 url: /howto7/integration/use-a-client-certificate/
-
 ---
 
 ## 1 Introduction

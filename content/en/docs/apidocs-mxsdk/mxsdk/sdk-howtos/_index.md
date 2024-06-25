@@ -1,7 +1,6 @@
 ---
 title: "SDK How-tos"
 url: /apidocs-mxsdk/mxsdk/sdk-howtos/
-
 weight: 4
 ---
 

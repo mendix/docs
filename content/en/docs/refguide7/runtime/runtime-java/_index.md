@@ -1,7 +1,6 @@
 ---
 title: "Mendix Runtime and Java"
 url: /refguide7/runtime-java/
-
 ---
 
 ## 1 Introduction

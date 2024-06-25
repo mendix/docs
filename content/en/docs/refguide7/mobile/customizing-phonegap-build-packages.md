@@ -1,7 +1,6 @@
 ---
 title: "Customizing Local Build Packages"
 url: /refguide7/customizing-phonegap-build-packages/
-
 ---
 
 ## 1 Introduction

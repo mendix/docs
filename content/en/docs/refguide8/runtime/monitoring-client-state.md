@@ -1,7 +1,6 @@
 ---
 title: "Monitoring Client State"
 url: /refguide8/monitoring-client-state/
-
 ---
 
 ## 1 Introduction

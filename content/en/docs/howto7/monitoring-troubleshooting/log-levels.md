@@ -1,7 +1,6 @@
 ---
 title: "Set Log Levels"
 url: /howto7/monitoring-troubleshooting/log-levels/
-
 weight: 9
 ---
 

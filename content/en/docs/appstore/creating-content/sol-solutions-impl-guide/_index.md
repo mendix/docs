@@ -2,7 +2,6 @@
 title: "Implement a Solution"
 url: /appstore/creating-content/sol-solutions-impl/
 linktitle: "Implement Solutions"
-
 weight: 4
 description: "Provides information and guidance on how to implement Mendix solutions."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

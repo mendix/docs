@@ -1,7 +1,6 @@
 ---
 title: "SDK Introduction"
 url: /apidocs-mxsdk/mxsdk/sdk-intro/
-
 weight: 1
 #When content is updated here, it should also be updated on https://developers.mendix.com/sdk/, contact Ben.
 ---

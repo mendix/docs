@@ -1,13 +1,13 @@
 ---
 title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
+description: "Describes the processes for creating a Private Cloud cluster in the Mendix Portal"
 weight: 10
 ---
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" class="no-border" >}}
 
@@ -54,7 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
 
 4. Open the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
-5. Select **Mendix for Private Cloud** from the top menu bar in the Developer Portal.
+5. Select **Mendix for Private Cloud** from the top menu bar in the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -73,7 +73,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
-### 3.2 Adding a Namespace {#add-namespace}
+### 3.2.1 Adding a Namespace for Connected Cluster {#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -91,13 +91,41 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/add-namespace.png" class="no-border" >}}
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
+
+### 3.2.2 Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
+
+If you would like to add a namespace to be added in the Standalone cluster, do the following:
+
+1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/empty-cluster.png" class="no-border" >}}
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/ClusterDetails.png" class="no-border" >}}
+
+2. Click **Add Namespace**.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
+
+3. Enter the following details:
+
+    * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
+    * **Installation type** – Choose **Standalone**.
+
+4. Click **Next**.
+5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
+
+    For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
+
+    In above page, once you do a json format, you will get the links for mxpc-cli for different available versions.
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -127,7 +155,7 @@ Before updating the Operator with the advanced configurations, make sure to go t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-For Global Operator scenarios, if the Operator configuration in the managed namespace differa from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
+For Global Operator scenarios, if the Operator configuration in the managed namespace differs from the configuration in the Global Operator namespace, the configuration from the managed namespace will always take precedence.
 {{% /alert %}}
 
 Some advanced configuration options of the Mendix Operator are not yet available in the **Configuration Tool**.
@@ -488,6 +516,19 @@ The liveness probe will begin returning valid responses just a few seconds after
 Starting from Mendix Operator 2.15.0, startup probes are no longer used, and changing their settings will have no effect.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Starting from Mendix Operator 2.17.0, the liveness probe health check depends on the [runtime_status](/refguide/monitoring-mendix-runtime/#runtime-status) command to check if an app is running (starting or started) and in a healthy state.
+
+If a [check_health](/refguide/monitoring-mendix-runtime/#check-health) microflow is configured, its status will also be validated.
+
+An app will return a successful health check status if all of these conditions are true:
+
+1. The Runtime replies to `ping` calls (any reply is accepted).
+    Mendix Operator versions 2.15 and 2.16 assumed an invalid `ping` reply to be an error, and failed the liveness probe. The Mendix Runtime will return a fail reply to `ping` calls if at any point a message was logged with a **critical** log level (which is [reserved for errors that require immediate attention](/refguide/logging/#21-critical), and that caused some apps to restart when running in Operator 2.15 or 2.16. Mendix Operator 2.17 ignores the `ping` reply and will no longer restart apps that have logged a **critical** log message.
+2. The Runtime's status is `created`, `starting`, `running` or `stopping`.
+3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there is no `check_health` microflow configured, or the Runtime's state is not `running`, this condition is ignored.
+{{% /alert %}}
+
 #### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
@@ -669,7 +710,7 @@ You can set the following metrics configuration values:
 * `mxAgentInstrumentationConfig`: instrumentation configuration for the [Java instrumentation agent](https://github.com/mendix/mx-agent); collects additional metrics such as microflow execution times; can be left empty to use the default instrumentation config. This attribute is only applicable when `mode` is `native`, and `mxAgentConfig` is not empty.
 
 {{% alert color="warning" %}}
-MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/11/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
+MxAgent is a [Java instrumentation agent](https://docs.oracle.com/en/java/javase/21/docs/api/java.instrument/java/lang/instrument/Instrumentation.html) and is unrelated to the Mendix for Private Cloud Gateway Agent.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -869,11 +910,11 @@ Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory 
 
 ## 7 Cluster and Namespace Management
 
-Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
+Once it is configured, you can manage your cluster and namespaces through the Mendix Portal.
 
 ### 7.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -898,7 +939,7 @@ Here you can perform the following actions on the entire cluster:
 
 If you prefer the individual to join as a cluster manager automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/AutoAcceptClusterManager.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
@@ -914,7 +955,7 @@ The only limitations are that:
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
+When you delete a cluster, this removes the cluster from the Mendix Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
 ### 7.2 Namespace Management
@@ -942,7 +983,7 @@ You can also delete your namespace from the cluster manager by clicking **Delete
 
 If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
-When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
+When you delete a namespace, this removes the namespace from the cluster in the Mendix Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" class="no-border" >}}
 
@@ -1156,9 +1197,7 @@ You can invite additional members to the namespace, and configure their role dep
 3. Enter the **Email** of the person you want to invite.
 4. If you prefer the individual to join as a namespace member automatically, without requiring them to manually accept the invitation, you can enable the **Automatically accept invites** option.
 
-{{% alert color="info" %}}
-The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.
-{{% /alert %}}
+    {{% alert color="info" %}}The **Automatically accept invites** option is applicable only when the invited users have the same email domain as yours.{{% /alert %}}
 
 5. Give them the rights they need. This can be:
 
@@ -1189,7 +1228,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### 7.2.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Apps](https://sprintr.home.mendix.com/).
 The following pages can be configured:
 
 * Metrics
@@ -1392,6 +1431,14 @@ Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 When running the installation tool over SSH, make sure that the SSH client supports terminal emulation and has mouse support enabled.
 
 `ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
+
+### 8.4 Configuration Tool - Known Issues
+
+When restoring a previously saved session, some UI elements (such as dropdowns and checkboxes) will not use the saved session and will revert to their default values.
+
+For example, the **Authentication** dropdown for Postgres will always switch to `static` authentication.
+
+Selecting the correct value from those dropdowns will restore the state of the form and any fields which might not be visible.
 
 ## 9 Troubleshooting
 

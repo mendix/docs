@@ -21,7 +21,7 @@ Mendix supports a variety of generative AI tasks by integrating with tools such 
 
 To start using the GenAI capabilities of Mendix, complete the following tasks:
 
-1. Familiarize yourself with [concepts](/appstore/modules/genai/concepts/) such as Prompt engineering, Retrieval Augmented Generation (RAG) and Function calling (ReAct).
+1. Familiarize yourself with [concepts](/appstore/modules/genai/concepts/) such as prompt engineering, Retrieval Augmented Generation (RAG) and function calling (ReAct).
 2. Select the right architecture to support your use case. For a full list of possibilities, see [Architecture and Components](#architecture).
 3. Obtain the required credentials for your selected architecture.
 

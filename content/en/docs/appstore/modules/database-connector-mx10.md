@@ -33,7 +33,7 @@ This connector supports connections to the following database types:
 * MySQL
 * PostgreSQL
 * Oracle
-* Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
+* Snowflake – GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). For more information, see [Configure the External Database Connector for Snowflake](/appstore/modules/snowflake/external-database-connector/)
 
 If you are looking for another database type, follow the prompt to request support your database when you open the database connection wizard.
 

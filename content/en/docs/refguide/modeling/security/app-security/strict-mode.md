@@ -16,7 +16,8 @@ Empploying strict mode can be a major differentiator for app safety. Strict mode
 Please note, strict mode is exclusively available for the React client.
 {{% /alert %}}
 
-## 1.1 Enabling Strict Mode
+### 1.1 Enabling Strict Mode
+
 Strict mode can be enabled in [App Security](/refguide/app-security/#strict-mode) when the React client is enabled and the security level is set to **Production**.
 
 ## 2 Restricted Client APIs

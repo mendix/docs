@@ -64,6 +64,8 @@ This property determines if the returned value from the called nanoflow should b
 
 The name of the variable, list, or object returned by the activity.
 
+If you specify a name for the returned value in the called nanoflow's end event, this field will utilise that name while ensuring it remains unique within the current scope.
+
 ## 4 Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

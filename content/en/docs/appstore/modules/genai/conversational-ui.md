@@ -142,7 +142,7 @@ You can include the following pages in your navigation, or copy them to your mod
 * **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
 
-All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for exampleor in the [action microflow](action-microflow) that is stored in the active [ProviderConfig](#provider-config).
+All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for exampleor in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
 ### 4.5 Snippets {#snippets}
 

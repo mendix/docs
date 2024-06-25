@@ -1,6 +1,6 @@
 ---
 title: "Amazon Bedrock"
-url: /appstore/modules/genai/bedrock
+url: /appstore/modules/genai/bedrock/
 weight: 5
 description: "Describes the Amazon Bedrock GenAI service."
 

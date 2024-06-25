@@ -426,7 +426,7 @@ The `Chat Completions (without history)` operation interface supports scenarios 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#get-response-text) operation.|
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation.|
 
 #### 4.3.3.2 Chat Completions (With History)
 
@@ -443,4 +443,4 @@ The `Chat Completions (with history)` operation interface supports more complex 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#get-response-text) operation. |
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation. |

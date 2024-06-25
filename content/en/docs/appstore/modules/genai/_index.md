@@ -25,7 +25,7 @@ To start using the GenAI capabilities of Mendix, complete the following tasks:
 2. Select the right architecture to support your use case. For a full list of possibilities, see [Architecture and Components](#architecture).
 3. Obtain the required credentials for your selected architecture.
 
-## 2 Architecture and Components
+## 2 Architecture and Components {#architecture}
 
 To help you get started, the following sections list the available GenAI components and models.
 

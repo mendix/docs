@@ -810,9 +810,9 @@ For Anthropic Claude, the request must be associated to an AnthropicClaudeReques
 
 Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
 
-* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function) operation. For more information about function calling, see [Function Calling Documentation](/appstore/modules/genai/concepts/function-calling).
+* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/openai-connector/function-calling/).
 
-* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file) operation.
+* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file-to-collection) operation.
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -899,7 +899,7 @@ The input and output for this service are shown in the table below:
 
 ##### 4.2.3.3 ListKnowledgeBases {#list-knowledge-bases}
 
-The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials` and `ListKnowledgeBasesRequest` as input parameters.
+The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials`, and `ListKnowledgeBasesRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 
@@ -911,7 +911,7 @@ The input and output for this service are shown in the table below:
 
 ##### 4.2.3.4 Retrieve {#retrieve}
 
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials` and `RetrieveRequest` as input parameters.
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials`, and `RetrieveRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
 

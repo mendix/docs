@@ -66,6 +66,4 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, use the [Snowflake connectors](/appstore/snowflake-modules/).
-* To implement your own connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface. 
-
-## 3 Documents in This Category
+* To implement your own connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface.

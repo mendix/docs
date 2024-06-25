@@ -175,7 +175,7 @@ The microflow activity `Chat Completions (without history)` supports scenarios w
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
-Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [Technical Reference](#chat-completions-without-history-technical) section.
 
@@ -183,7 +183,7 @@ For technical details, see the [Technical Reference](#chat-completions-without-h
 
 The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai-commons/#connection) of type [OpenAIConnection](#openaiconnection), a [Request](/appstore/modules/genai-commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
-Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
+Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai-commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
 For technical details, see the [Technical Reference](#chat-completions-with-history-technical) section.
 
@@ -201,9 +201,9 @@ Function calling is a very powerful capability and should be used with caution. 
 Mendix also strongly advises that you build user confirmation logic into function microflows that have a potential impact on the world on behalf of the end-user. Some examples of such microflows include sending an email, posting online, or making a purchase.
 {{% /alert %}}
 
-You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function) operation.
+You can use function calling in all chat completions operations by adding a `ToolCollection` with a `Function` via the [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function-to-request) operation.
 
-For more information, see [Function Calling](/appstore/modules/genai/concepts/function-calling/).
+For more information, see [Function Calling](/appstore/modules/openai-connector/function-calling/).
 
 #### 3.2.4 Vision {#chatcompletions-vision}
 
@@ -275,7 +275,7 @@ For technical details, see the [Technical Reference](#embeddings-advanced-techni
 
 ### 3.5 Exposed Microflows {#exposed-microflows}
 
-You can use the following OpenAI-specific exposed microflows to construct requests via drag-and-drop. These microflows can be found in the **Toolbox** in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai-commons/#exposed-microflows).
+You can use the following OpenAI-specific exposed microflows to construct requests via drag-and-drop. These microflows can be found in the **Toolbox** in the **OpenAI (Build Request)** section. Generic exposed microflows are described in [GenAI Commons](/appstore/modules/genai-commons/#microflows).
 
 #### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
 
@@ -634,9 +634,9 @@ Use the microflow `ChatCompletions_Execute_WithoutHistory` to execute a simple c
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#get-response-text) operation.|
+| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#chat-get-model-response-text) operation.|
 
-To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#exposed-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#microflows).
 
 ##### 4.3.1.2 Chat Completions (with History) {#chat-completions-with-history-technical}
 
@@ -653,9 +653,9 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#get-response-text) operation.        |
+| `Response`  | [Response](/appstore/modules/genai-commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai-commons/#chat-get-model-response-text) operation.        |
 
-To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#exposed-microflows).
+To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai-commons/#microflows).
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
@@ -687,13 +687,13 @@ Use the microflow `ImageGenerations_Execute` to execute a single image generatio
 
 ##### 4.3.2.2 Image Generations (Advanced) {#image-generations-advanced-technical} 
 
-For developers who want to configure the [ImageGenerationsRequest](#chatcompletionsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ImageGenerations_CallAPI` microflow. The inputs and output are shown in the table below: 
+For developers who want to configure the [ImageGenerationsRequest](#imagegenerationsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `ImageGenerations_CallAPI` microflow. The inputs and output are shown in the table below: 
 
 **Input parameters**
 
 | Name                      | Type                                               | Mandatory | Description                                               |
 | ------------------------- | -------------------------------------------------- | --------- | --------------------------------------------------------- |
-| `ImageGenerationsRequest` | [ImageGenerationsRequest](#chatcompletionsrequest) | mandatory | This is the request object for the Image Generations API. |
+| `ImageGenerationsRequest` | [ImageGenerationsRequest](#imagegenerationsrequest) | mandatory | This is the request object for the Image Generations API. |
 | `Configuration`           | [Configuration](#configuration-entity)             | mandatory | This is an object that contains endpoint and API key.     |
 
 **Return value**

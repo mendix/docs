@@ -31,7 +31,7 @@ For more general information on this topic, see [OpenAI: Function Calling](https
 
 ## 3 Function Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
-Both the [OpenAI Connector](/appstore/modules/genai/openai/_index) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai-commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
+Both the [OpenAI Connector](/appstore/modules/openai-connector/) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai-commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
 
 Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflow(s) until the LLM returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
 
@@ -39,7 +39,7 @@ To enable function calling, a `ToolCollection` object must be added to the reque
 
 A helper operation is available in GenAI Commons to construct the `ToolCollection` with a list of `Functions`:
 
-* [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
+* [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function-to-request) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
 
 Depending on the user prompt and the available functions, the model can suggest one or multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
 A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the [Request](/appstore/modules/genai-commons/#request) entity controls which (if any) function is called by the model.

@@ -101,5 +101,3 @@ weight: 88
 
 #### MultiInputCompletion (Element)
 * We deleted this element. Info: "not used anymore since now we have SingleUserTask and MultiUserTask classes"
-
-This page has been generated automatically.

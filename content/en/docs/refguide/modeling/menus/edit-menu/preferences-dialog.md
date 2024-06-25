@@ -115,7 +115,7 @@ This setting defines the default response to the question whether to automatical
 
 ## 6 Version Control Tab {#version-control}
 
-### 6.1 File Comparison
+### 6.1 General
 
 #### 6.1.1 Executable
 
@@ -134,41 +134,29 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+### 6.1.3 Solution Warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+
 ### 6.2 Git{#git}
 
-#### 6.2.1 Name
+#### 6.2.1 Enable Private Version Control with Git {#enable-with-Git}
+
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name](#name) and [email](#email) that will be used to identify your commits with Git.
+
+#### 6.2.2 Name {#name}
 
 Specify your name for Git to use it in commit messages and make them more informative.
 
-#### 6.2.2 Email
+#### 6.2.3 Email {#email}
 
 Specify your email for Git to use it in commit messages and make them more informative.
 
-#### 6.2.3 Enable Automatic Repository Optimization {#optimization}
+#### 6.2.4 Clone {#clone}
 
-Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+Select a  [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
-#### 6.2.4 Number of Commits
-
-This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
-
-#### 6.2.5 Enable Private Version Control with Git {#enable-with-Git}
-
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
-
-#### 6.2.6 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
-
-{{% alert color="info" %}}
-This setting was introduced in Mendix version 10.2.
-{{% /alert %}}
-
-Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
-
-#### 6.2.7 Fetch Interval, Minutes
-
-The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
-
-#### 6.2.8 Combine Local and Remote Changes
+#### 6.2.5 Combine Local and Remote Changes
 
 {{% alert color="info" %}}
 This setting was introduced in Mendix version 10.5.
@@ -176,13 +164,27 @@ This setting was introduced in Mendix version 10.5.
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
 
-### 6.3 Changes 
+#### 6.2.6 Git Version Warning
 
-Enable this setting to truncate long lines.
+Select **Do not show warning about Git version** to suppress a warning shown when Studio Pro starts.
 
-### 6.4 Solution Warning
+### 6.3 Background Tasks
 
-Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+#### 6.3.1 Enable Automatic Fetching from a Remote Repository {#enable-auto-fetch}
+
+Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+
+#### 6.3.2 Fetch Interval, Minutes
+
+The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+#### 6.3.3 Enable Automatic Repository Optimization {#optimization}
+
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+
+#### 6.3.4 Number of Commits
+
+This option is available when the [Enable automatic repository optimization](#optimization) setting is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of commits needed to start the background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
 ## 7 Work Environment Tab
 

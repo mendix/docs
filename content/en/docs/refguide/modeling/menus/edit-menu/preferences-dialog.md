@@ -86,26 +86,22 @@ Enabling this option allows you to specify which repositories should be used by 
 
 Here you can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains: `mavenCentral()`.
 
-## 4 Mendix Assist Tab
+## 4 Maia Tab
 
-### 4.1 Logic Bot {#logic-bot}
+### 4.1 In-Editor Recommender
 
-{{% alert color="info" %}}
-These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
-{{% /alert %}}
+The **In-Editor Recommender** section contains the following settings:
 
-The **Logic Bot** tab contains the following settings:
+* **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. 
+* **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor.
 
-* **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
+### 4.2 Best Practice Recommender
 
-### 4.2 Best Practice Bot
+The **Best Practice Recommender** section contains the following settings:
 
-The **Best Practice Bot** tab contains the following settings:
+* **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors.
 
-* **Show recommendation in editors** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain anti-patterns in visual editors.
-
-* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
+* **Automatically run an inspection after opening an app** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 5 Model Tab
 
@@ -232,17 +228,23 @@ For more information, see [Defining Access Rules Using the New Editor](/refguide
 
 The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
-### 9.3 Page Editor
+### 9.3 Maia
 
-In Studio Pro version 10.9, X-ray mode was introduced to the page editor in Beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
+In Studio Pro 10.12, Translation Generator was introduced as an experimental feature. Enbale this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
+
+### 9.4 Mapping Editor
+
+This setting allows you to set the beta version as the default editor.
+
+### 9.4 Page Editor
+
+In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
 
 For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 
-### 9.4 Micro- And Nanoflow Editor
+### 9.5 Toolbox
 
-In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
-
-In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
+Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
 
 ## 10 Read More
 

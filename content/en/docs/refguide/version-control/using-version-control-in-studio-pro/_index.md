@@ -250,9 +250,9 @@ Select **Version Control** > **Merge Changes Here**, after that you can select *
 
 #### 7.1.3 Reverting a Commit
 
-[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse merging** in Studio Pro.
+[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse commit** in Studio Pro.
 
-Choose the **Version Control** menu > **Reverse Merge Changes...** to revert a commit.
+Choose the **Version Control** menu > **Revert a Commit...** to revert a commit.
 
 Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, only one by one.
 

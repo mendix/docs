@@ -24,10 +24,10 @@ Typical use cases include the following:
 The Conversational UI module provides the following functionalities:
 
 * UI components that you can drag and drop onto your pages, for example:
-    * Layouts to have a sidebar or floating popup chat
-    * Pages that you can use in your navigation for chat
-    * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
-    * A floating button that for opening a chat
+ * Layouts to have a sidebar or floating popup chat
+ * Pages that you can use in your navigation for chat
+ * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
+ * A floating button that for opening a chat
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
 * Integration with any model that is compatible with [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
@@ -72,10 +72,10 @@ To help you work with the Conversational UI module, the following sections of th
 
 Make sure that the module role `User` is part of the the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
 
-| Module role      | Description                                                                |
-| ---------------- | -------------------------------------------------------------------------- |
-| User             | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data).                                                                                          |
-| _addOn_ReadAll   | Role can be granted additionally. Users with both roles can read all data. |
+| Module role | Description |
+| --- | --- |
+| `User` | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data). |
+| `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all data. |
 
 ### 4.2 ChatContext {#chat-context}
 
@@ -130,7 +130,7 @@ The `ProviderConfig` contains the selection of the model provider for the AI Bot
 #### 4.3.1 Creating and setting an Action Microflow {#action-microflow}
 The `Action Microflow` is executed via the send button and handles the interaction with the LLM's connectors and the Conversational UI entities. An example for each [OpenAI](/appstore/modules/genai/openai/) and [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/) are provided in the `USE_ME` folder that can be seen as inspiration (copy and modify) or directly for test-purposes.
 
-Set the action microflow through the  `Set ActionMicroflow` toolbox action. Note that it does not commit the object.
+Set the action microflow through the `Set ActionMicroflow` toolbox action. Note that it does not commit the object.
 
 Note the following when developing your own custom action microflow:
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
@@ -190,6 +190,6 @@ The following microflows can be found in the `USE_ME` folder:
 <!---
 [comment]: <> TODO as part of a separate PR:
 -General styling tips (apart from using the example pages either directly or for insipration)
--  ##5 Technical Reference (Not in scope, will be separate PR)
+- ##5 Technical Reference (Not in scope, will be separate PR)
 
 -->

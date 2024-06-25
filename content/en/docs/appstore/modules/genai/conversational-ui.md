@@ -17,7 +17,7 @@ Typical use cases include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/using-gen-ai/).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/concepts/).
 
 ### 1.2 Features {#features}
 
@@ -47,7 +47,7 @@ You must also ensure that you have the prerequisite modules that Conversational 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai/commons/#request) and [Response](/appstore/modules/genai/commons/#response).
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
 
 ## 2 Installation {#installation}
 
@@ -92,7 +92,7 @@ The following operations can be found in the tool box for processing the [ChatCo
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI.
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Set ChatContext Topic` sets the `Topic`of the chat context. It can be used in the **History** sidebar to make historical chats visible to users.
@@ -117,70 +117,70 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked. You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
-#### 4.3.1 Creating and setting an Action Microflow {#action-microflow}
+#### 4.3.1 Creating and Using an Action Microflow {#action-microflow}
 
 The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. An example for each  are provided in The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
-Set the action microflow through the `Set ActionMicroflow` toolbox action. Note that it does not commit the object.
+##### 4.3.1.1 Adding the Action Microflow to your App
 
-Note the following when developing your own custom action microflow:
+Add the action microflow by using the **Set ActionMicroflow** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
+
+##### 4.3.1.2 Creating a Custom Action Microflow
+
+If you want to create your own custom action microflow, keep the following considerations in in mind:
+
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
 * When creating the `ProviderConfig`, use [Set ActionMicroflow](#provider-config-operations) to set the microflow.
 
-### 4.4 Pages & Layouts {#pages-and-layouts}
+### 4.4 Pages and Layouts {#pages-and-layouts}
 
-There are three pages that can be included in your navigation directly or which you can copy to your module to modify it. 
-* `ConversationalUI_FullScreenChat` displays a centered chat interface on a full screen responsive page. 
-* `ConversationalUI_PopUp` is a floating pop-up in the bottom-right corner. Can be opened directly via the `Snippet_FloatingChatButton` that floats in the bottom-right corner as well. Alternatively, there you could use the building block `Floating Button OpenChat` from the toolbox to create your custom opening logic.
-* ConversationalUI_Sidebar displays the chat interface on the right side with full height.
+You can include the following pages in your navigation, or copy them to your module and modify them to suit your use case:
+
+* **ConversationalUI_FullScreenChat** - This page displays a centered chat interface on a full screen responsive page. 
+* **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
+* **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
 
 All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for exampleor in the [action microflow](action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
 ### 4.5 Snippets {#snippets}
 
-Drag the following snippets on your other pages to quickly build your own version of the chat interface.
+Drag the following snippets onto your other pages to quickly build your own version of the chat interface.
 
 #### 4.5.1 Chat Interface Snippets {#snippet-chat-interface}
 
-Chat interface snippets contain the whole chat history as a listview and below that a text area for user's to enter the user prompt. There are some UI components that show an error message, when a call has failed, or that show progressing loading-bots when waiting for the response. When the send button is clicked, the [action microflow](#action-microflow) will be executed.
+Chat interface snippets contain the whole chat history as a list view, and below that a text area for users to enter the user prompt. There are some UI components that show an error message, when a call has failed, or that show progressing loading bots when waiting for the response. When a user clicks the **Send** button, the [action microflow](#action-microflow) is executed.
 
-The following versions are available and interchangeable:
-* `Snippet_ChatContext_ConversationalUI` shows both messages (user's and assistant's) on the left side of the container while
-* `Snippet_ChatContext_ConversationalUI_Bubbles` shows the user's message on the right side and the responses on the left side (similar to commonly known chat apps). The content is placed inside colored cards (bubbles).
+The following versions are available and can be swapped as needed:
 
-If the snippet does not exactly fit into your use case, you can [inline the snippet](/refguide/snippet-call/#inline-snippet) to customize to your needs.
+* **Snippet_ChatContext_ConversationalUI** - This snippet shows both the user messages and the responses on the left side of the container.
+* **Snippet_ChatContext_ConversationalUI_Bubbles** - This snippet shows the user messages on the right side and the responses on the left side, similarly to common chat apps. The content is placed inside colored cards (bubbles).
+
+If the snippet does not fit your use case, you can [inline the snippet](/refguide/snippet-call/#inline-snippet) to customize it to your needs.
 
 #### 4.5.2 Message Snippets {#snippet-messages}
 
-The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup. They contain the content of the messages listview.
+The messages snippets are already part of the [Chat Interface Snippets](#snippet-chat-interface), but can be used individually in your custom setup. They contain the content of the messages list view.
 
-The following versions are available and interchangeable:
-* `Snippet_Message` shows both messages (user's and assistant's) on the left side in the list while
-* `Snippet_Message_Bubble` shows the user's message on the right side and the responses on the left side (similar to commonly known chat apps). The content is placed inside colored cards (bubbles).
+The following versions are available and can be swapped as needed:
+
+* **Snippet_Message** - This snippet shows both the user messages and the responses on the left side of the list.
+* **Snippet_Message_Bubble** - This snippet shows the user messages on the right side and the responses on the left side, similarly to common chat apps. The content is placed inside colored cards (bubbles).
 
 #### 4.5.3 Configuration Snippets {#snippet-configuration}
 
-* `Snippet_ChatContext_AdvancedSettings` can be placed on pages to let user's configure specific parameters. Currently, only temperature is exposed to users in the module by the slider input element. 
-* `Snippet_ChatContext_SelectActiveProviderConfig` the user's can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
-* `Snippet_ChatContext_HistorySideBar` can be used in a listview of historic conversations.
+* **Snippet_ChatContext_AdvancedSettings** - This snippet can be placed on pages to let users configure specific parameters (currently **temperature**).
+* **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
+* **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
-See the [AI Bot Starter App]() or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
 
 ### 4.6 Additional Operations {#operations}
 
-The following microflows can be found in the `USE_ME` folder:
-* `ChatContext_AddProviderConfig_SetActive` adds a `ProviderConfig` to the chat context and sets it to active.
-* `ChatContext_Delete` deletes a chat context.
-* `ChatContext_SetConversationID` sets the `ConversationID` of the chat context.
-* `AdvancedSettings_GetAndUpdate` can be used after the chat context was created to set the boundaries and default value for advanced settings in the UI (see [Configuration Snippets](#snippet-configuration)).
+The following additional microflows can be found in the **USE_ME** folder:
 
-
-
-<!---
-[comment]: <> TODO as part of a separate PR:
--General styling tips (apart from using the example pages either directly or for insipration)
-- ##5 Technical Reference (Not in scope, will be separate PR)
-
--->
+* **ChatContext_AddProviderConfig_SetActive** - This microflow adds a `ProviderConfig` to the chat context and sets it to active.
+* **ChatContext_Delete** - This microflow deletes a chat context.
+* **ChatContext_SetConversationID** - This microflow sets the `ConversationID` of the chat context.
+* **AdvancedSettings_GetAndUpdate** - This microflow can be used after chat context creation to set the boundaries and default value for advanced settings in the UI. For more information, see [Configuration Snippets](#snippet-configuration).

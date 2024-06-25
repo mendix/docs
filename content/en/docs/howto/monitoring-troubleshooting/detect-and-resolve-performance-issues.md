@@ -75,7 +75,7 @@ Tools you can use to identify your slow microflow and the specific slow activiti
 
 ### 4.1 Server Monitoring
 
-The Mendix Server and [Mendix Portal](/developerportal/) offer a number of performance graphs and logs.
+The Mendix Server and [Apps](/developerportal/) offer a number of performance graphs and logs.
 
 ### 4.2 Microflow Debugger
 
@@ -167,11 +167,11 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at the retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## 6 Using MxAssist Best Practice Bot
+## 6 Using Best Practice Recommender
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
+[Best Practice Recommender](/refguide/best-practice-recommender/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Recommender**.
 
-For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from Best Practice Recommender](/refguide/performance-best-practices/).
 
 ## 7 Read More
 

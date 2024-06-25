@@ -22,7 +22,7 @@ A license for the Mendix Event Broker is available for any Mendix region, but on
 
 ### 2.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
-Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Developer Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
+Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Mendix Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
 
 1. On the app level under **Environments** > [Services](/developerportal/deploy/environments/#services)
 2. On the [Environment Details](/developerportal/deploy/environments-details/#services) page for each environment
@@ -93,7 +93,7 @@ From here, you can manage the default access settings:
 This feature is currently in [Private Beta](/releasenotes/beta-features/). Contact your Customer Success Manager or Account Manager for further assistance.
 {{% /alert %}}
 
-Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3, or Google Pub/Sub, to send and receive events between your Mendix Public Cloud landscape and technologies outside of your Mendix Public Cloud landscape.
+Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3, or Google Pub/Sub, to send and receive events between your Mendix Cloud landscape and technologies outside of your Mendix Cloud landscape.
 
 {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" class="no-border" >}}
 

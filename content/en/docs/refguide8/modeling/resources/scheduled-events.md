@@ -28,7 +28,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and run with all rights (see [Microflow](/refguide8/microflow/)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools (Developer Portal, Windows Service Console, etc.). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the appropriate tools ([Apps](https://sprintr.home.mendix.com/), Windows Service Console, etc.). |
 
 ## 4 Timing Properties
 

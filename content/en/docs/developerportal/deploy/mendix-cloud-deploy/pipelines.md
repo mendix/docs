@@ -2,7 +2,7 @@
 title: "Pipelines"
 url: /developerportal/deploy/pipelines/
 weight: 8
-description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
+description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Mendix Portal"
 beta: true
 ---
 
@@ -14,7 +14,7 @@ Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is curren
 
 From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
-To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
+To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
 The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
 
@@ -230,7 +230,7 @@ To change your API key and PAT, click **Delete** and then **Setup** to relaunch 
 
 ### 4.2 Notifications
 
-If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
+If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Mendix Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
 
 {{% alert color="warning" %}}
 Pipeline failure notifications only send if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.

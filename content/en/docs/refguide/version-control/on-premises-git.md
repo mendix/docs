@@ -20,7 +20,7 @@ This document does not describe how to set up a Git server from scratch; typical
 
 {{% alert color="info" %}}When you use a third-party Git version control repository, the following products and capabilities are not available:
 * Publishing and deploying to Mendix Cloud directly from Studio Pro
-* Building deployment packages on the Developer Portal directly from the Team Server
+* Building deployment packages on the Mendix Portal directly from the Team Server
 * Using integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/){{% /alert %}}
 
@@ -146,7 +146,7 @@ For the previous local disk method do the following:
 Once you have an unversioned app, you can upload it to your private team server. 
 
 {{% alert color="warning" %}}
-The repository has to be completely empty (including README.md and. gitignore files), or the upload will fail.
+The repository has to be completely empty (this includes the `README.md` and `.gitignore` files) and have no commmits in the history, or the upload will fail.
 {{% /alert %}}
 
 To upload your app, do the following:

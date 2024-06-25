@@ -42,7 +42,7 @@ In Studio Pro 10.6 and above, use the new and modernized microflow, nanoflow, an
 
 The new editors contain several huge improvements, with some major improvements in:
 
-* [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/)
+* [Logic Recommender](/refguide/logic-recommender/)
 * [Keyboard navigation](/refguide/microflows/#keyboard-improved) 
 * [Canvas interaction](/refguide/microflows/#canvas-interaction)
 

@@ -20,7 +20,7 @@ To start a new app with version control, do the following:
 1. Open Studio Pro.
 2. In the **Select App** dialog box, click **Create New App**. 
 3. Select the starting point – an app template.
-4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a remote (Team Server) repository and an app in the Developer Portal.
+4. In the **App Settings** dialog box, make sure that **Enable online services** is set to *Yes*. This option creates a remote (Team Server) repository and an app in [Apps](https://sprintr.home.mendix.com/) of the Mendix Portal.
 5. Optionally, change the default **App directory** set by Studio Pro.
 6. Click **Create app**.
 
@@ -104,7 +104,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message – this should be a summary of the changes you made.
-* A list of Developer Portal stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
+* A list of stories that relate to the commit; for more information, see [Stories Pane](/refguide/stories-pane/).
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/commit-dialog.png" >}}
 
@@ -169,7 +169,7 @@ The history of the app is a list of all revisions that have been committed. To v
 
 For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits. The history dialog shows you revision number, date, time, author, and message of each revision.
 
-Select a revision to see additional details, such as related Developer Portal stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
+Select a revision to see additional details, such as related stories, changed documents, Studio Pro version, and changes on disk. Icons summarize the kinds of changes that happened in the app.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/history-of-dialog.png" class="no-border" >}}
 
@@ -213,7 +213,7 @@ The most common examples on using branch lines are [patching a deployed applicat
 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
-1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive, for example, `"ModelVersion": "1.0.0.16"`.
+1. Determine the version of the deployed application. This information is in the Mendix Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive, for example, `"ModelVersion": "1.0.0.16"`.
 2. Choose **Version Control > Manage Branch Lines...** and create a branch based on the tag with the version number as its name.
 
     {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/create-from-tag.png" class="no-border" >}}
@@ -250,9 +250,9 @@ Select **Version Control** > **Merge Changes Here**, after that you can select *
 
 #### 7.1.3 Reverting a Commit
 
-[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse merging** in Studio Pro.
+[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse commit** in Studio Pro.
 
-Choose the **Version Control** menu > **Reverse Merge Changes...** to revert a commit.
+Choose the **Version Control** menu > **Revert a Commit...** to revert a commit.
 
 Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, only one by one.
 

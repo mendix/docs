@@ -47,7 +47,7 @@ You must also ensure that you have the prerequisite modules that Conversational 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai/commons/#request) and [Response](/appstore/modules/genai/commons/#response).
 
 ## 2 Installation {#installation}
 
@@ -92,7 +92,7 @@ The following operations can be found in the tool box for processing the [ChatCo
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI.
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Set ChatContext Topic` sets the `Topic`of the chat context. It can be used in the **History** sidebar to make historical chats visible to users.
@@ -117,11 +117,11 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 
 The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked. You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
-#### 4.3.1 Creating and Using an Action Microflow {#action-microflow}
+#### 4.3.1 Action Microflow {#action-microflow}
 
 The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. An example for each  are provided in The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
-##### 4.3.1.1 Adding the Action Microflow to your App
+##### 4.3.1.1 Using the Action Microflow {#set-action-microflow}
 
 Add the action microflow by using the **Set ActionMicroflow** toolbox action. Note that the action does not commit the object, so you must also add a step to commit it after.
 
@@ -132,7 +132,7 @@ If you want to create your own custom action microflow, keep the following consi
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
-* When creating the `ProviderConfig`, use [Set ActionMicroflow](#provider-config-operations) to set the microflow.
+* When creating the `ProviderConfig`, use [Set ActionMicroflow](#set-action-microflow) to set the microflow.
 
 ### 4.4 Pages and Layouts {#pages-and-layouts}
 

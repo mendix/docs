@@ -26,7 +26,7 @@ The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-You must also install the [GenAI Commons](/appstore/modules/genai-commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
+You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
 
 ### 1.3 Licensing and Cost
 
@@ -810,9 +810,9 @@ For Anthropic Claude, the request must be associated to an AnthropicClaudeReques
 
 Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
 
-* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/openai-connector/function-calling/).
+* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/genai-commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
 
-* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai-commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file-to-collection) operation.
+* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/genai-commons/#add-file-to-collection) operation.
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 

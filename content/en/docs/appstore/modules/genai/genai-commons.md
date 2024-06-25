@@ -1,8 +1,10 @@
 ---
 title: "GenAI Commons"
-url: /appstore/modules/genai-commons/
+url: /appstore/modules/genai/commons/
 linktitle: "GenAI Commons"
 description: "Describes the purpose, configuration and usage of the GenAI Commons module from the Mendix Marketplace that allows developers to integrate GenAI common principles and patterns into their Mendix app."
+aliases:
+   - /appstore/modules/genai-commons/
 ---
 
 ## 1 Introduction {#introduction}
@@ -31,7 +33,7 @@ If you start from a blank app, or have an existing project where you want to inc
 
 ## 3 Implementation {#implementation}
 
-GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/openai-connector/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
+GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
@@ -401,12 +403,12 @@ Use this microflow to get the list of references that may be included in the mod
 
 ### 4.3.3 Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/openai-connector/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
 We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 {{% alert color="info" %}}
-These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/openai-connector/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
 {{% /alert %}}
 
 #### 4.3.3.1 Chat Completions (Without History)

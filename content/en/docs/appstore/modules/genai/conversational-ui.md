@@ -17,7 +17,7 @@ Typical use cases include the following:
 * Create a chat interface for users to chat with Large Language Models (LLM). 
 * Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/concepts/).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/using-gen-ai/).
 
 ### 1.2 Features {#features}
 
@@ -47,7 +47,7 @@ You must also ensure that you have the prerequisite modules that Conversational 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai/commons/#request) and [Response](/appstore/modules/genai/commons/#response).
 
 ## 2 Installation {#installation}
 
@@ -92,7 +92,7 @@ The following operations can be found in the tool box for processing the [ChatCo
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI.
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Set ChatContext Topic` sets the `Topic`of the chat context. It can be used in the **History** sidebar to make historical chats visible to users.

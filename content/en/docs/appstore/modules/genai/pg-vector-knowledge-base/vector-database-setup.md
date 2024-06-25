@@ -1,6 +1,6 @@
 ---
 title: "Setting up a Vector Database"
-url: /appstore/modules/pgvector-knowledge-base/vector-database-setup/
+url: /appstore/modules/genai/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"
@@ -76,7 +76,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 ## 4 Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
-1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/).
+1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
 
 2. Include the page **DatabaseConfiguration_Overview** in the navigation or use the snippet **Snippet_DatabaseConfigurations** on an existing page.
 

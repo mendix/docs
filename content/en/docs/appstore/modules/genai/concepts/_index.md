@@ -27,7 +27,7 @@ For example, you can use an LLM to do:
 * **Conversational Interaction:** Powering chatbots and virtual assistants to interact naturally with users.
 * **Data Generation:** Generating Mendix objects by combining JSON generation and [Import mappings](/refguide/import-mapping-action/).
 
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/openai-connector/#chatcompletions-vision), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/genai/openai/#chatcompletions-vision), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
 
 ### 2.2 What is an LLM Not?
 
@@ -57,7 +57,7 @@ Prompt engineering is the activity of designing the input text that will be send
 * the relevant input data (from the end-user or passed from a microflow)
 * the requested output structure (for example, tone of voice or a JSON format)
 
-With prompt engineering you can guide the model to generate accurate, applicable, and coherent responses. The quality of your prompts directly influences the quality of the response. See [Prompt Engineering](/appstore/modules/genai/concepts/prompt-engineering/) to learn more about prompt engineering.
+With prompt engineering you can guide the model to generate accurate, applicable, and coherent responses. The quality of your prompts directly influences the quality of the response. See [Prompt Engineering](/appstore/modules/genai/prompt-engineering/) to learn more about prompt engineering.
 
 ## 4 Retrieval Augmented Generation (RAG) {#rag}
 
@@ -86,9 +86,9 @@ For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedro
 
 If your chosen architecture doesn't have fully-integrated RAG capabilities, or if you want tighter control of the RAG process, you can create and use your own knowledge base.
 
-In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/pgvector-knowledge-base/) in combination with an embeddings model, to maintain and use your knowledge base. 
+In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
-An example of how this can be done with OpenAI is described in [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/).
 
 ## 5 The ReAct Pattern (Function Calling) {#react}
 
@@ -96,7 +96,7 @@ Another way to provide the LLM with additional information and capabilities is t
 
 This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
 
-See [Function Calling](/appstore/modules/openai-connector/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
+See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
 This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
 

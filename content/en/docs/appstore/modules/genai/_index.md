@@ -21,7 +21,7 @@ Mendix supports a variety of generative AI tasks by integrating with tools such 
 
 To start using the GenAI capabilities of Mendix, complete the following tasks:
 
-1. Familiarize yourself with [concepts](/appstore/modules/genai/concepts/) such as prompt engineering, Retrieval Augmented Generation (RAG) and function calling (ReAct).
+1. Familiarize yourself with [concepts](/appstore/modules/genai/using-gen-ai/) such as prompt engineering, Retrieval Augmented Generation (RAG) and function calling (ReAct).
 2. Select the right architecture to support your use case. For a full list of possibilities, see [Architecture and Components](#architecture).
 3. Obtain the required credentials for your selected architecture.
 
@@ -38,10 +38,10 @@ To help you get started, the following sections list the available GenAI compone
 | [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24.2 |
 | [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Discover how to use Amazon Bedrock capabilities. | 9.24.2 |
 | [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | 9.24.2 |
-| [OpenAI Connector](/appstore/modules/openai-connector/) | Connect to Azure OpenAI. | 9.24.2 |
+| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to Azure OpenAI. | 9.24.2 |
 | [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to Amazon Bedrock. Use Retrieve & Generate or Bedrock agents. | 9.24.2 |
-| [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | 9.24.2 |
-| [GenAI Commons](/appstore/modules/genai-commons/) | Common capabilities such as a **System** module for every new or existing GenAI app. | 9.24.2 |
+| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | 9.24.2 |
+| [GenAI Commons](/appstore/modules/genai/commons/) | Common capabilities such as a **System** module for every new or existing GenAI app. | 9.24.2 |
 
 ### 2.2 Available Models {#models}
 
@@ -66,6 +66,6 @@ In addition to the models listed above, you can also connect to other models by 
 
 * To connect to other [foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/models-features.html) and implement them in your app, use the [Amazon Bedrock connector](/appstore/modules/aws/amazon-bedrock/).
 * To connect to [Snowflake Cortex LLM](https://docs.snowflake.com/en/sql-reference/functions/complete-snowflake-cortex) functions, use the [Snowflake connectors](/appstore/snowflake-modules/).
-* To implement your own connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai-commons/) interface. 
+* To implement your own connector compatible with the other components, use the [GenAI Commons](/appstore/modules/genai/commons/) interface. 
 
 ## 3 Documents in This Category

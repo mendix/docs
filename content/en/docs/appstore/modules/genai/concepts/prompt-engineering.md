@@ -1,6 +1,6 @@
 ---
 title: "Prompt Engineering"
-url: /appstore/modules/genai/concepts/prompt-engineering/
+url: /appstore/modules/genai/prompt-engineering/
 linktitle: "Prompt Engineering"
 weight: 2
 description: "Describes Prompt Engineering as used with generative AI in Mendix"
@@ -37,7 +37,7 @@ After telling the model what to do, you can include additional context. This can
 
 * information about the end-user of your application – for example their language, role, department, specific database records
 * context information – for example, all data related to an object the end-user is looking at
-* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/concepts/#rag)
+* knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/using-gen-ai/#rag)
 
 Tip: you can provide information in a JSON or XML structure to ensure the information is presented in a consistent way. From Mendix apps, you can use [Export Mappings](/refguide/export-mappings/) to create JSON structures and [Export XML Documents](/howto/integration/export-xml-documents/) to create XML structures.
 
@@ -143,7 +143,7 @@ You are a writer that is specialized in marketing content
 
 ### 4.5 Tell the Model How to Use Provided Tools
 
-When using features like [function calling](/appstore/modules/openai-connector/function-calling/), give the functions a descriptive name. Also, instruct the model what the functions can do and how they should be used. This will guide the LLM to call the functions at the right moment and use the response in the correct way.
+When using features like [function calling](/appstore/modules/genai/function-calling/), give the functions a descriptive name. Also, instruct the model what the functions can do and how they should be used. This will guide the LLM to call the functions at the right moment and use the response in the correct way.
 
 For example, say you have a tool called `GetTicketInformationForIdentifier` which retrieves information from a specific support ticket in a database; you could add the following to the prompt:
 

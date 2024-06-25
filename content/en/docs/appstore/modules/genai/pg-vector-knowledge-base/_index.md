@@ -1,8 +1,10 @@
 ---
 title: "PgVector Knowledge Base"
-url: /appstore/modules/pgvector-knowledge-base/
+url: /appstore/modules/genai/pgvector/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace. This module allows developers to integrate PostgreSQL databases with pgvector installed as knowledge bases into their Mendix app."
+aliases:
+   - /appstore/modules/pgvector-knowledge-base/
 ---
 
 ## 1 Introduction {#introduction}
@@ -33,7 +35,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### 1.3 Prerequisites {#prerequisites}
 
-You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/pgvector-knowledge-base/vector-database-setup/).
+You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/).
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -56,7 +58,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk), and [Label](#label).
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
-3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/pgvector-knowledge-base/vector-database-setup/#configure-database-connection) section in *Setting up a Vector Database*.
+3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
@@ -498,7 +500,7 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/openai-connector/rag-example-implementation/).
+For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/).
 {{% /alert %}}
 
 ## 6 Read More {#read-more}

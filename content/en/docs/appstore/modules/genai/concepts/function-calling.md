@@ -1,6 +1,6 @@
 ---
 title: "Function Calling"
-url: /appstore/modules/openai-connector/function-calling/
+url: /appstore/modules/genai/function-calling/
 linktitle: "Function Calling"
 weight: 5
 description: "Describes function calling with OpenAI"
@@ -31,7 +31,7 @@ For more general information on this topic, see [OpenAI: Function Calling](https
 
 ## 3 Function Calling with the GenAI Commons Module and the LLM Connectors {#llm-connector}
 
-Both the [OpenAI Connector](/appstore/modules/openai-connector/) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai-commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
+Both the [OpenAI Connector](/appstore/modules/genai/openai/) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
 
 Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflow(s) until the LLM returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
 
@@ -39,14 +39,14 @@ To enable function calling, a `ToolCollection` object must be added to the reque
 
 A helper operation is available in GenAI Commons to construct the `ToolCollection` with a list of `Functions`:
 
-* [Tools: Add Function to Request](/appstore/modules/genai-commons/#add-function-to-request) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
+* [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
 
 Depending on the user prompt and the available functions, the model can suggest one or multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
-A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the [Request](/appstore/modules/genai-commons/#request) entity controls which (if any) function is called by the model.
+A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the [Request](/appstore/modules/genai/commons/#request) entity controls which (if any) function is called by the model.
 
 A helper operation is available in GenAI Commons to define the Tool Choice: 
 
-* [Tools: Set Tool Choice](/appstore/modules/genai-commons/#set-toolchoice) can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
+* [Tools: Set Tool Choice](/appstore/modules/genai/commons/#set-toolchoice) can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but may be used with caution. Please note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise confidential information may become visible to the current end-user in the assistant's response.
@@ -83,9 +83,9 @@ The [GenAI Showcase Application](https://marketplace.mendix.com/link/component/2
 
 The first diagram shows a simple process where the user is interested in the status of a certain ticket. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the API returns the final assistant's response as visualized by the blue box.
 
-{{< figure src="/attachments/appstore/modules/openai-connector/function-calling/function-calling.png" >}}
+{{< figure src="/attachments/appstore/modules/genai/function-calling/function-calling.png" >}}
 
 In the second diagram, the user did not provide the required input for the function. The model was instructed in the system prompt to not assume parameters and ask for clarification if needed: `Don't make assumptions about what values to plug into functions. Ask for clarification if a user request is ambiguous. If a tool call was not successful, give this information to the user and ask for clarification.`
 The second user prompt contains the identifier and the whole message history is sent as part of the request. With this information, the model is now able to answer the initial question of the user.
 
-{{< figure src="/attachments/appstore/modules/openai-connector/function-calling/function-calling-with-clarification.png" >}}
+{{< figure src="/attachments/appstore/modules/genai/function-calling/function-calling-with-clarification.png" >}}

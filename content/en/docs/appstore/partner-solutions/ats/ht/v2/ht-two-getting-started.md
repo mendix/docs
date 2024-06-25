@@ -2,7 +2,6 @@
 title: "Get Started"
 url: /appstore/partner-solutions/ats/ht-two-getting-started/
 description: "Describes the initial steps for automatically testing your apps using ATS."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction
@@ -49,7 +48,7 @@ You are now on the **Settings** page. Here you add environments and selenium hub
 
 {{% alert color="info" %}}
 
-Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Developer Portal.
+Only the App admin and Scrum Master have the rights to edit the settings. You set the roles in the Mendix Portal.
 
 {{% /alert %}}
 

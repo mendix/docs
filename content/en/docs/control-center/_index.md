@@ -1,8 +1,7 @@
 ---
-title: "Control Center Guide"
+title: "Control Center"
 url: /control-center/
 description: "Describes the Mendix Control Center, used for the governance of company members, apps, security, and cloud resources."
-tags: ["control center", "mendix admin", "role", "permissions", "fallback", "resource pack", "node", "offboard"]
 weight: 35
 no_list: false 
 description_list: true
@@ -12,6 +11,10 @@ cascade:
 aliases:
     - /developerportal/control-center
 ---
+
+{{% alert color="info" %}}
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), Control Center, [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -29,4 +32,4 @@ If you are a Mendix Admin, you will immediately see the [Dashboard](/control-cen
 
 ## 2 Guide Categories
 
-The *Control Center Guide* is divided into the following categories:
+The documentation of **Control Center** is divided into the following categories:

@@ -1,7 +1,6 @@
 ---
 title: "Cast Object"
 url: /refguide7/cast-object/
-tags: ["cast objects"]
 ---
 
 {{% alert color="info" %}}

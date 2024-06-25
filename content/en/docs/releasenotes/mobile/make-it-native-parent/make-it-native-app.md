@@ -3,7 +3,6 @@ title: "Make It Native 8 App"
 url: /releasenotes/mobile/make-it-native-app/
 weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
-tags: ["Native", "Android", "iOS", "Apple", "mendix 8"]
 ---
 
 For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).

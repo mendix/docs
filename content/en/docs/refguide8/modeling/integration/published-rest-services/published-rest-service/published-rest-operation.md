@@ -3,7 +3,6 @@ title: "Published REST Operation"
 url: /refguide8/published-rest-operation/
 weight: 10
 description: "Options to configure a published REST operation."
-tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
@@ -166,4 +165,4 @@ Enter a complete overview of what the operation does. You can use [GitHub-flavor
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}

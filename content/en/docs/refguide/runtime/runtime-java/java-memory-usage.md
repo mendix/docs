@@ -2,7 +2,6 @@
 title: "Java Memory Usage"
 url: /refguide/java-memory-usage/
 weight: 2
-tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
 ## 1 Introduction

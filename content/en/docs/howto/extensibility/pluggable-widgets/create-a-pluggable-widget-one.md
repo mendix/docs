@@ -4,7 +4,6 @@ linktitle: "1. Build Pluggable Web Widget"
 url: /howto/extensibility/create-a-pluggable-widget-one/
 weight: 10
 description: "This how-to teaches you how to create a pluggable web widget."
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
@@ -156,7 +155,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     When done generating the types can be found in `typings/TextBoxProps.d.ts`
 
-    {{% alert color="info" %}}The console will display an error along the lines of _"HelloWorldSample.tsx could not be found"_. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
+    {{% alert color="info" %}}The console will display an error along the lines of `HelloWorldSample.tsx could not be found`. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
 
 4. Create a new file, `src/components/TextInput.tsx`. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
 
@@ -217,8 +216,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
 
-8.  Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
-
+8. Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
 
 9. **Run** the app locally to see the results, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. Select the first text box and enter some text, unfocus the text box and the pluggable widget will now display the same data.
 
@@ -276,7 +274,6 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
 
-
 ### 3.6 Labeling the Input{#label-input}
 
 Comparing our widget to the Mendix text input widget we are still missing a label. Luckily, it is very straightforward for any widget to add a label. [System properties](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#system-properties) are a special class of property types that allow for a unified approach to common problems. The properties `class`, `style`, and `tabIndex` from the previous section are other examples of system properties.
@@ -288,12 +285,12 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
         <systemProperty key="Label" />
     </propertyGroup>
     ```
+
 1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBox.d.ts*.
 
     ```tsx
     return <TextInput value={value} tabIndex={props.tabIndex} />;
     ```
-
 
 1. **Synchronize** your project and **update** all widgets. Now open the widget **Properties** and open the **Label** tab.
 
@@ -305,9 +302,7 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
 
-
 {{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#411-form-orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
-
 
 ### 3.6 Handling Updates
 

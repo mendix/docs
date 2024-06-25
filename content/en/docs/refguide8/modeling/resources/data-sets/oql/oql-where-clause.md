@@ -1,7 +1,6 @@
 ---
 title: "OQL Where Clause"
 url: /refguide8/oql-where-clause/
-tags: ["studio pro", "queries", "where"]
 ---
 
 The WHERE clause specifies how the data being retrieved must be constrained.

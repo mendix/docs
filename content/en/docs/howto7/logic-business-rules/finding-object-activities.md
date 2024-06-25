@@ -1,9 +1,7 @@
 ---
 title: "Find Object Activities"
 url: /howto7/logic-business-rules/finding-object-activities/
-
 weight: 14
-tags: ["object", "microflow", "desktop modeller"]
 ---
 
 ## 1 Introduction

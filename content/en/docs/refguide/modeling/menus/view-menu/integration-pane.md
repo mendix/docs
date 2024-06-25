@@ -3,7 +3,6 @@ title: "Integration Pane"
 url: /refguide/integration-pane/
 weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
-tags: ["data hub", "studio Pro", "Integration Pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
 ---
@@ -87,7 +86,7 @@ The search results and **User in your App** section show the following informati
     * **View in Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" class="no-border" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/integration-pane-menu.png" alt="info on a Service" class="no-border" >}}
 
 * **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Catalog. Click to update the service that is consumed in the app to the contract that is now available:
@@ -100,7 +99,7 @@ The search results and **User in your App** section show the following informati
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Catalog:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/integration-pane-info.png" alt="Integration pane Information" class="no-border" >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 

@@ -3,7 +3,6 @@ title: "Use the External Database Connector"
 url: /howto/integration/use-the-external-database-connector
 weight: 21
 description: "Overview of the External Database Connector in Studio Pro"
-
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

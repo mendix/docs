@@ -3,7 +3,6 @@ title: "Configuring CI/CD on Azure"
 url: /private-mendix-platform/configure-azure/
 description: "Documents the initial configuration for the Private Mendix Platform."
 weight: 30
-tags: ["private mendix platform",  "private platform", "private marketplace", "azure"]
 aliases:
     - /private-mendix-platform-configure-azure/
 ---

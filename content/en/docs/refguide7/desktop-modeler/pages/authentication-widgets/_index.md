@@ -1,7 +1,6 @@
 ---
 title: "Authentication Widgets"
 url: /refguide7/authentication-widgets/
-tags: ["authentication", "widgets"]
 ---
 
 

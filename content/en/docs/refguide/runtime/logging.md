@@ -1,9 +1,7 @@
 ---
 title: "Logging"
 url: /refguide/logging/
-
 description: "Describes what the various log levels of the runtime will show as output."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "MxAssist Logic Bot"
 url: /refguide9/mx-assist-logic-bot/
 weight: 10
 description: "Describes MxAssist Logic Bot in Mendix Studio Pro."
-tags: ["studio pro", "logic bot", "mendix assist", "AI", "assist", "mx assist"]
 ---
 
 ## 1 Introduction 

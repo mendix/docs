@@ -2,7 +2,6 @@
 title: "Use the 3D Viewer API"
 url: /partners/siemens/3d-viewer-api/
 description: "Describes how to use the 3D Viewer API"
-tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support"]
 ---
 
 ## 1 Introduction

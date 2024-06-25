@@ -6,7 +6,6 @@ notoc: true
 weight: 10
 no_list: false 
 description_list: true
-tags: ["siemens", "MindSphere", "Insights Hub"]
 #layout: wide
 ---
 

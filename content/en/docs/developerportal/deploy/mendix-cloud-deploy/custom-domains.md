@@ -1,9 +1,8 @@
 ---
 title: "Custom Domains"
 url: /developerportal/deploy/custom-domains/
-weight: 30
+weight: 80
 description: "How to configure custom domains as well as generate, upload, and renew certificates in Mendix."
-tags: ["Custom Domain","Mendix Cloud","Developer Portal", "certificates"]
 aliases:
     - /mendixcloud/custom-domains.html
     - /howtogeneral/mendixcloud/custom-domains.html
@@ -11,7 +10,7 @@ aliases:
     - /howtogeneral/mendixcloud/custom-domains
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#Linked from Developer Portal > Environments > Custom Domains
+#Linked from Mendix Portal > Environments > Custom Domains
 ---
 
 ## 1 Introduction
@@ -73,11 +72,8 @@ You can choose which certificate to use when you configure a custom domain for a
 
 To manage custom domains, follow these steps:
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
-
-2. Open the **Environments** page for your app.
-
-3. Switch to the **Custom Domains** tab.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
+1. Switch to the **Custom Domains** tab.
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/custom-domains/custom-domains-tab.png" class="no-border" >}}
 

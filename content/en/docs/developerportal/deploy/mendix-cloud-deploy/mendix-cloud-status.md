@@ -1,9 +1,8 @@
 ---
 title: "Mendix Cloud Status"
 url: /developerportal/deploy/mendix-cloud-status/
-weight: 21
+weight: 80
 description: "Describes where to find the current status of Mendix Cloud."
-tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
 aliases:
     - /developerportal/operate/mendix-cloud-status.html
     - /developerportal/operate/mendix-cloud-status

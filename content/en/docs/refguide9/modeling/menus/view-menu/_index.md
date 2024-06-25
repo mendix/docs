@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide9/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
 ---
 
 ## 1 Introduction

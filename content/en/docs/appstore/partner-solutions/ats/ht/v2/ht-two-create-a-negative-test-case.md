@@ -2,7 +2,6 @@
 title: "Create a Negative Test Case"
 url: /appstore/partner-solutions/ats/ht-two-create-a-negative-test-case/
 description: "Describes the steps for performing negative tests with ATS."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

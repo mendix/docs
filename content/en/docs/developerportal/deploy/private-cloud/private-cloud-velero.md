@@ -4,7 +4,6 @@ linktitle: "Use Velero to Back Up Namespaces"
 url: /developerportal/deploy/private-cloud-velero/
 description: "Describes the process for using Velero to create and restore backups of your Mendix app namespaces in private cloud"
 weight: 25
-tags: ["Deploy", "Private Cloud", "Backup", "Velero", "Kubernetes"]
 ---
 
 ## 1 Introduction

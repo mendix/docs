@@ -2,7 +2,6 @@
 title: "(Un)Mask Your Data"
 url: /appstore/partner-solutions/ats/ht-two-mask-your-password/
 description: "Describes the steps for unmasking your password in ATS."
-tags: ["ATS", "testing"]
 ---
 
 ## 1 Introduction

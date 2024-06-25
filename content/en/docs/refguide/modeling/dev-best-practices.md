@@ -2,10 +2,8 @@
 title: "Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /refguide/dev-best-practices/
-
 weight: 12
 description: "Describes Mendix best practices for developing Mendix applications."
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
 #Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy

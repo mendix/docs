@@ -2,13 +2,12 @@
 title: "Global Navigation"
 url: /developerportal/global-navigation/
 description: "Describes the global navigation and top bar that is available throughout the online Mendix Platform."
-tags: ["mendix", "developer portal", "global navigation", "search", "support menu", "notifications", "account"]
 weight: 1
 ---
 
 ## 1 Introduction
 
-The global navigation top bar and menu work the same in the Developer Portal as they do in other browser-based parts of the Mendix Platform (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
+The global navigation top bar and menu work the same in **Apps** as they do in other browser-based parts of the Mendix Portal (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
 
 The global navigation is always accessible throughout the online Mendix Platform.
 
@@ -47,7 +46,7 @@ To configure what types of notifications you receive, click **Settings** ({{% ic
 {{< figure src="/attachments/developerportal/global-nav/notifications.png" width="300" class="no-border" >}}
 
 {{% alert color="info" %}}
-To stop receiving notifications when new feedback is submitted for a specific app, go to the [General Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
+To stop receiving notifications when new feedback is submitted for a specific app, go to the [Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
 {{% /alert %}}
 
 ## 6 Profile Menu

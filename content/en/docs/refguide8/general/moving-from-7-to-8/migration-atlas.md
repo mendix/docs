@@ -3,7 +3,6 @@ title: "Troubleshooting Atlas UI Changes"
 url: /refguide8/migration-atlas/
 weight: 20
 description: "This document explains how to fix your styling when migrating a project from Mendix 7 to Mendix 8."
-tags: [ "Widgets", "Themes", "Classes", "Atlas", "Atlas UI", "Styling", "SASS", "CSS"]
 ---
 
 ## 1 Introduction

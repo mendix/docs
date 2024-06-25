@@ -2,10 +2,8 @@
 title: "Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /refguide9/dev-best-practices/
-
 weight: 12
 description: "Describes Mendix best practices for developing Mendix applications."
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto9/general/dev-best-practices/
 #Academy are SMEs for verification, they discuss and link to this doc in training

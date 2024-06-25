@@ -3,7 +3,6 @@ title: "PgVector Knowledge Base"
 url: /appstore/modules/pgvector-knowledge-base/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace that allows developers to integrate postgreSQL databases with pgvector installed as knowledge bases in into their Mendix app."
-tags: ["pgvector", "postgreSQL", "similarity search", "cosine similarity", "cosine distance", "AI", "connector", "marketplace", "chatgpt", "vector", "genAI", "embeddings", "RAG", "Azure OpenAI", "vector database", "Retrieval augmented generation", "similarity search"]
 ---
 
 ## 1 Introduction {#introduction}
@@ -312,7 +311,6 @@ Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-tec
 | Name                 | Type                                      | Description                                                  |
 | -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
 | `IsSuccess` | Boolean | This Boolean indicates if the addition of data to the knowledge base was successful. This can be used for custom error-handling. |
-
 
 ##### 4.3.2.4 Replace {#replace-technical}
 

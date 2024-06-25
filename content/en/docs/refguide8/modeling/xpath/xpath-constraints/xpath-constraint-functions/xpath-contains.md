@@ -1,7 +1,6 @@
 ---
 title: "XPath Contains"
 url: /refguide8/xpath-contains/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

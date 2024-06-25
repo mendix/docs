@@ -5,7 +5,6 @@ weight: 40
 description: "Gives an overview of the Mendix Runtime."
 no_list: false
 description_list: true
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction

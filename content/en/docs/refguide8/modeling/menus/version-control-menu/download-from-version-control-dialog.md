@@ -2,7 +2,6 @@
 title: "Download from Version Control Server"
 url: /refguide8/download-from-version-control-dialog/
 weight: 60
-tags: ["studio pro"]
 aliases:
     - /refguide8/download-from-team-server-dialog.html
     - /refguide8/download-from-team-server-dialog

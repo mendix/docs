@@ -3,7 +3,6 @@ title: "Setting Up Data Validation"
 url: /refguide/setting-up-data-validation/
 weight: 70
 description: "Describes how to set up both required and advanced data validation with Studio Pro."
-tags: ["studio pro", "data validation"]
 aliases:
     - /howto/data-models/setting-up-data-validation/
 ---
@@ -61,7 +60,7 @@ An example of checking the input for the **Name** attribute of a **Customer** en
 
 For more information on input widget validation, see the [Validation](/refguide/common-widget-properties/#validation) section in *Properties Common in the Page Editor*. 
 
-## 4 Advanced Data Validation with the Before Commit Event
+## 4 Advanced Data Validation with the Before Commit Event {#validation-before-commit-event}
 
 Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The **Before Commit** and **After Commit** events are triggered when an object is committed to the database. The **After Commit** is most commonly used to calculate values of denormalized data. With the **Before Commit** event, you can run a microflow that must return a Boolean value. If the microflow returns `false`, the entire commit is aborted, otherwise the object is stored in the database. This mechanism is great for data validation. 
 

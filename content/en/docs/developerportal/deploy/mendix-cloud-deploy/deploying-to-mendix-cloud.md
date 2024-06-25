@@ -1,10 +1,9 @@
 ---
 title: "Deploying an App to Mendix Cloud"
+linktitle: "Deploying an App"
 url: /developerportal/deploy/mendix-cloud-deploy/deploying-an-app/
-
 weight: 3
 description: "Describes how to deploy to Mendix Cloud."
-tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed"]
 aliases:
     - /developerportal/howto/deploying-to-the-cloud.html
     - /mendixcloud/deploying-to-the-cloud.html
@@ -20,8 +19,8 @@ This page describes how to deploy an app to Mendix Cloud.
 The method for deploying an app to Mendix Cloud differs depending on whether you have a licensed app or a Free App:
 
 * For a licensed app, there are several deployment options:
-    * Manual deployment – Create a deployment package via Studio Pro or the Developer Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix.
-    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/pipelines/) in the Developer Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
+    * Manual deployment – Create a deployment package via Studio Pro or the Mendix Portal, and then deploy the package to a node environment where you can run it. For details on how to do this, see [Deploying a Licensed App](#deploy-licensed-app), below. This is the simplest deployment method, especially if you are just getting started with Mendix.
+    * Pipelines built with low code – If you want to automate your build and deployment process, you can use [Pipelines](/developerportal/deploy/pipelines/) in the Mendix Portal to design and activate a pipeline with a set of configurable, low-code steps. The Pipelines feature makes it quick and easy for teams to automate their CI/CD process, without requiring any third-party tools or DevOps expertise.
     * Pipelines built with APIs – If you use Jenkins, GitLab, or another CI/CD tool, you can use Mendix APIs to automate your build and deployment process. For details, see [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/). This method is highly customizable but does require CI/CD tooling and DevOps expertise to set up.
 * For a Free App, you deploy the app directly from Studio Pro. For details on how to do this, see [Deploying a Free App](#deploy-free-app), below.
 
@@ -56,7 +55,7 @@ Before starting the process of deploying a licensed app, make sure to complete t
 
 ### 2.2 Creating a Deployment Package for a Licensed App
 
-There are two methods for creating a deployment package on Mendix Cloud. You can create it directly via Studio Pro, or through the Developer Portal, using a model committed to the Team Server.
+There are two methods for creating a deployment package on Mendix Cloud. You can create it directly via Studio Pro, or through the Mendix Portal, using a model committed to the Team Server.
 
 #### 2.2.1 Creating a Deployment Package via Studio Pro {#create-deployment-package}
 
@@ -65,12 +64,11 @@ To create a deployment package via Studio Pro, follow these steps:
 1. Open the licensed app in [Studio Pro](https://marketplace.mendix.com/link/studiopro/).
 1. In the top menu bar, click **App** > **Create Deployment Package**.
 
-#### 2.2.2 Creating a Deployment Package via the Developer Portal {#package-from-team-server}
+#### 2.2.2 Creating a Deployment Package via the Mendix Portal {#package-from-team-server}
 
-You can also create a deployment package through the Developer Portal, using a model committed to the Team Server. To do this, follow these steps:
+You can also create a deployment package through the Mendix Portal, using a model committed to the Team Server. To do this, follow these steps:
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
-1. Open your app's **Environments** page.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 1. Click **Create Deployment Package**.
 1. Select your desired branch and revision and click **Next**.
 1. Give the build a version number and click **Build this revision**.
@@ -79,8 +77,7 @@ You can also create a deployment package through the Developer Portal, using a m
 
 The previous steps explained how to deploy a deployment package to Mendix Cloud, but the app based on the deployment package is not running yet. To deploy a deployment package to a node environment where you can run the app, follow these steps:
 
-1. Go to the [Developer Portal](https://sprintr.home.mendix.com).
-1. Open your app's **Environments** page.
+1. From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of your app.
 1. In the **Deployment Package Repository**, choose your preferred deployment package and click **Deploy** ({{% icon name="deploy" %}}).
 
     {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/deploy-package.png" alt="" >}}

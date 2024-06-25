@@ -2,7 +2,6 @@
 title: "Use ATS in Combination with CI/CD"
 url: /appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
-tags: ["ATS", "testing", "CI/CD"]
 ---
 
 ## 1 Introduction
@@ -133,7 +132,7 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
 * Know how to configure CI/CD in ATS:
     * Configure a CI/CD Template in ATS
     * Create the CI/CD API key in ATS
-    * Find your AppID in the Mendix Developer Portal
+    * Find your AppID in the Mendix Portal
 
 ### 5.2 Adding an Extra Step in Jenkins on a Linux Server
 

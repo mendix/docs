@@ -2,7 +2,6 @@
 title: "Data Containers"
 url: /refguide9/data-widgets/
 weight: 15
-tags: ["studio pro", "data widgets", "data containers", "data view", "list view", "data grid", "snippet"]
 ---
 
 ## 1 Introduction

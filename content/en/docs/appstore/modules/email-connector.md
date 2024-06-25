@@ -1,9 +1,7 @@
 ---
 title: "Email"
 url: /appstore/modules/email-connector/
-
 description: "Describes the configuration and usage of the Email Connector module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "imap", "pop3", "email", "platform support", "encryption", "templates"]
 aliases:
     - /appstore/connectors/email-connector/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -366,6 +364,14 @@ If the **Email connector** page styling is affected as you select and view email
 
 Some email clients (for example, Gmail) break down the name of attached files if it is longer than a specific value, and add the file name in the **Content Type** for an attachment. This can cause an error while fetching or importing emails with long attachment names. For example: *"ERROR - Email_Connector: Attribute 'Email_Connector.Attachment.attachmentContentType' has a maximum length of 200, tried setting a value of length xxx."*. This issue is resolved in version 5.3.0 of the Email Connector.
 
-## 6 Known Errors
+## 6 Known Issues
 
-If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets can not be read" error when trying to run locally.
+### 6.1 Widgets
+
+If you already have the [included widgets](#included-widgets) in your app and they are not up to date, you may get a "Some widgets cannot be read" error when trying to run locally.
+
+### 6.2 Consistency Error
+
+You may get a consistency error when importing the Email Connector module in Mendix 10.1 or above that states *"No argument has been selected for parameter "Token" and no default is available"*. This can be resolved by double-clicking the error, which takes you to the snippet **SNIP_EmailTemplate_NewEdit**. Double-click the **Edit [default]** button, then in the **Events** field under **Page settings**, click **Edit**. Once the **Page Settings** dialog box opens, click **OK**, as shown in the image below. The error should resolve. 
+
+{{< figure src="/attachments/appstore/modules/email-connector/consistency-error-token.png" class="no-border" >}}

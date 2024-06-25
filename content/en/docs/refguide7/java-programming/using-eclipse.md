@@ -1,7 +1,6 @@
 ---
 title: "Using Eclipse"
 url: /refguide7/using-eclipse/
-
 ---
 
 ## 1 Introduction

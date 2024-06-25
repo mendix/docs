@@ -1,9 +1,7 @@
 ---
 title: "Video Player"
 url: /appstore/widgets/video-player/
-
 description: "Describes the configuration and usage of the Video Player widget, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "platform support", "widget", "video player"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -42,7 +40,7 @@ Configure the following properties:
 
 ### 2.1 Cordova Configuration
 
-If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in the Developer Portal > **Mobile App** > [Custom Cordova Configuration](/developerportal/deploy/mobileapp/#custom):
+If your are building a hybrid mobile app, you need to add the following lines to enable access to YouTube, Vimeo, and Dailymotion videos as well as MP4 extensions through your Sprint in **Apps** > **Mobile App** > [Custom Cordova Configuration](/developerportal/deploy/mobileapp/#custom):
 
 ```xml
 <allow-navigation href="*://*youtube.com/*" />

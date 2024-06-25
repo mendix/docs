@@ -1,10 +1,8 @@
 ---
 title: "SAP Single Sign-On"
 url: /developerportal/deploy/sap-cloud-platform/sap-single-sign-on/
-
 weight: 50
 description: "Reference information on SAP Single Sign-On"
-tags: ["SAP", "SSO", "Single Sign-On"]
 aliases:
     - /partners/sap/sap-single-sign-on/
 ---
@@ -65,7 +63,7 @@ Enter the correct credentials and click **SIGN IN** to continue the creation of 
 
 {{< figure src="/attachments/developerportal/deploy/sap-single-sign-on/go-back.png" class="no-border" >}}
 
-This error occurs when you work with SAP environments from within the Mendix Developer Portal. As described on the error page, it occurs when you use different email addresses for signing in to Mendix platform and SAP region which you are working on.
+This error occurs when you work with SAP environments from within the Mendix Portal. As described on the error page, it occurs when you use different email addresses for signing in to Mendix platform and SAP region which you are working on.
 
 Click **Go back to where you originally came from**, and you will see another error message. Click **OK** to clear it.
 

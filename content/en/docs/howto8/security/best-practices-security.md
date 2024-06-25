@@ -2,10 +2,8 @@
 title: "Implement Best Practices for App Security"
 linktitle: "Best Practices for App Security"
 url: /howto8/security/best-practices-security/
-
 weight: 20
 description: "A set of security aspects and checks to use when developing your Mendix application."
-tags: ["security", "best practices", "access rules", "authentication", "encryption", "password", "ssl", "identity provider", "mendix cloud"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
@@ -52,7 +50,7 @@ These are the common cases and best practices:
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-Access restrictions can be configured within the Developer Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
 {{< figure src="/attachments/howto8/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 
@@ -60,7 +58,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 You can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Developer Portal completely by applying a **deny all access** preset on them
+* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -146,7 +144,7 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within **Apps**. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
 ## 12 Maintaining a High Level of Project Hygiene
 

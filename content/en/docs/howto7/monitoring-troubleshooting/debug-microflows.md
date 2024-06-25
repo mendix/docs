@@ -1,9 +1,7 @@
 ---
 title: "Debug Microflows"
 url: /howto7/monitoring-troubleshooting/debug-microflows/
-
 weight: 2
-tags: ["monitoring", "troubleshooting", "debug", "microflow"]
 ---
 
 ## 1 Introduction

@@ -3,7 +3,6 @@ title: "App Permissions"
 url: /refguide/mobile/using-mobile-capabilities/generic-permission-action/
 weight: 85
 description: "This guide teaches you how to use request generic permission actions for native mobile apps."
-tags: ["permissions", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
@@ -94,6 +93,7 @@ The following permissions can be tested using the Android Make It Native app:
 * CAMERA
 * READ_EXTERNAL_STORAGE
 * WRITE_EXTERNAL_STORAGE
+* SCHEDULE_EXACT_ALARM
 
 To test the remaining permissions you can build a [native app](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and [update the native app](#update-android-native-permissions) with the required permissions.
 
@@ -207,6 +207,7 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
   <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
   <uses-permission android:name="android.permission.WRITE_CONTACTS" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
   <!-- … -->
 

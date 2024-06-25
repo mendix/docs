@@ -3,7 +3,6 @@ title: "Prepare Your App for Support"
 url: /support/prepare-your-app/
 weight: 10
 description: "Describes how to configure app authorization to select the affected app (or apps) in the Mendix Support Portal."
-tags: ["on-premises", "support"]
 aliases:
     - /developerportal/support/change-affected-apps.html
     - /developerportal/support/change-affected-apps
@@ -29,30 +28,32 @@ There are two ways to give team members access to submit tickets: by assigning t
 
 To add users to an app's team and give them access to submit tickets for a specific app, follow these steps:
 
-1. Go to the [Team](/developerportal/general/team/) page of your app in the Mendix Developer Portal.
-2. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
-3. Assign one of the following roles to users you want to give access to creating tickets for the app:
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the [Team](/developerportal/general/team/) page. 
+3. Click **Invite Member** to invite the users who should be able to submit/view Support tickets concerning this app.
+4. Assign one of the following roles to users you want to give access to creating tickets for the app:
     * **Business Engineer**
     * **Product Owner**
     * **Scrum Master**
 
     These roles have an **Edit** permission set for **Deploy** or **Capture**, thus they can submit/view Support tickets for the app. For more details on setting permissions, see the [Managing the Team](/developerportal/general/team/#managing) section of **Team**.
 
-4. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](/developerportal/settings/general-settings/) page for the app).
+5. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](/developerportal/settings/general-settings/) page for the app).
 
 ### 2.2 Giving Existing Team Members Access
 
 To give existing app members access to submit tickets, follow these steps:
 
-1. Go to the **Security** page of your app in the Mendix Developer Portal.
-2. Change the **ROLE** for the user who needs access to one of the following:
+1. Open your app in [Apps](https://sprintr.home.mendix.com/).
+2. Go to the **Security** page.
+3. Change the **ROLE** for the user who needs access to one of the following:
     * **Business Engineer**
     * **Product Owner**
     * **Scrum Master**
 
     You can also click **Role settings** to create your own roles and customize the permissions for existing roles. For more information, see the [Team Roles](/developerportal/general/app-roles/#team-roles) section of **App Roles**.
 
-3. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID**.
+4. To finalize the setup, email [support@mendix.com](mailto:support@mendix.com) with the **App name** and **App ID**.
 
 ## 3 Read More
 

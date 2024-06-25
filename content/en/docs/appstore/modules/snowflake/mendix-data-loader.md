@@ -3,7 +3,6 @@ title: "Mendix Data Loader"
 url: /appstore/modules/snowflake/mendix-data-loader/
 description: "Describes the configuration and usage of the Mendix Data Loader application from the Snowflake Marketplace."
 weight: 20
-tags: ["snowflake marketplace", "snowflake marketplace component", "snowflake", "data loader"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -46,7 +45,15 @@ Upon installation, configure the Mendix Data Loader as follows:
     * **Target Schema Name** - The name of the target schema into which all the data will be ingested. Every time an ingestion is performed, all data already present in the target schema will be removed or replaced.
     * **Generate and Execute SQL Script** - Required only once, when configuring the data ingestion endpoint for the first time. Click the **Generate Script** button to produce and execute the required SQL scripts with necessary privileges.
 
-4. Click **Ingest Data** to start the data transfer. All data exposed by the Odata service will be ingested and all ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+4. Select whether you want to ingest data manually, or schedule the ingestion job:
+
+    * To ingest data manually, click **Ingest Data now**. The data transfer starts immediately and all data exposed by the OData service is ingested. All ingested data is stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+    * To schedule ingestion jobs, navigate to the **Schedule Task** tab. In this tab, additional scheduling configurations are displayed.
+        * **When should the ingestion task run?** - A required parameter that specifies the interval of the task execution. Select one of the preconfigured options or select the **Custom CRON expression** option to provide a custom CRON expression.
+        * **Custom CRON expression** - A required parameter if the `When should the ingestion task run?` parameter is set to `Custom CRON expression`. For more information about custom CRON expression, refer to the [CREATE TASK Snowflake Documentation](https://docs.snowflake.com/en/sql-reference/sql/create-task#optional-parameters).
+        * **Time out** - An optional parameter that specifies the time limit on a single execution of the task before it times out (in milliseconds). The default value for this parameter is 1 hour (3600000).
+        * **Number of retry attempts** - An optional parameter that specifies the number of automatic task retry attempts. The default value for this parameter is 0 retry attempts.
+        * **Suspend task after number of failures** - An optional parameter that specifies the number of consecutive failed task runs after which the current task is suspended automatically. The default value for this parameter is 10 failures.
 5. To view the results, check the job ID and verify the data in the specified target database.
 
 ## 4 Technical Reference
@@ -56,7 +63,6 @@ Upon installation, configure the Mendix Data Loader as follows:
 * At present, the Mendix Data Loader supports username and password authentication. Make sure to use username and password authentication when setting up your Odata service.
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
-* At the moment the Mendix Data Loader does not support the scheduling of ingestion jobs. However, you can still achieve this by using a Snowflake worksheet. The ability to schedule ingestion jobs in your Mendix application will be added in a future release.
 * The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
 
 ### 4.2 Troubleshooting
@@ -77,9 +83,17 @@ The amount of data being ingested is so large that the JSON file has become too 
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-{{% alert color="info" %}}
-Pagination of exposed entities through OData is not availabl in Mendix version 10.10.0. This is a known issue that will be resolved in a future release.
-{{% /alert %}}
+#### 4.2.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
+
+In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
+
+##### 4.2.2.1 Cause
+
+A bug in the published OData service resource in Mendix Studio Pro 10.10 where the application root url is set incorrectly causes no data to be returned.
+
+##### 4.2.1.2 Solution
+
+This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](https://docs.mendix.com/developerportal/deploy/custom-domains/#use-custom-url).
 
 ### 4.3 Contact Information
 

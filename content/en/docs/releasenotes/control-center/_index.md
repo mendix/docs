@@ -2,7 +2,6 @@
 title: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
-tags: ["control center", "release notes"]
 weight: 30
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -12,6 +11,12 @@ These release notes cover changes to the app management functionality and other 
 To see the current status of the Mendix Control Center, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
+
+### June 14, 2024
+
+#### New Features
+
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
 
 ### May 16, 2024
 

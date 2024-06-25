@@ -2,7 +2,6 @@
 title: "Call ML Model"
 url: /refguide/call-ml-model/
 weight: 45
-tags: ["ml kit", "call model", "ML microflow", "machine learning", "models"]
 ---
 
 {{% alert color="info" %}}

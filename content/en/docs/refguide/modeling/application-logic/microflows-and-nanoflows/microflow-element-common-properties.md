@@ -2,7 +2,6 @@
 title: "Common Properties"
 url: /refguide/microflow-element-common-properties/
 weight: 110
-tags: ["studio pro", "common properties", "microflow", "nanoflow"]
 ---
 
 ## 1 Introduction

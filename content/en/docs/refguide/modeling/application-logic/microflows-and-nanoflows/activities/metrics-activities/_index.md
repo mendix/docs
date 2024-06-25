@@ -1,7 +1,6 @@
 ---
 title: "Metrics Activities"
 url: /refguide/metrics-activities/
-tags: ["studio pro", "microflow", "metrics", "micrometer"]
 weight: 81
 ---
 

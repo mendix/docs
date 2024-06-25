@@ -1,11 +1,9 @@
 ---
 title: "Setting up a Vector Database"
 url: /appstore/modules/pgvector-knowledge-base/vector-database-setup/
-
 linktitle: "Vector Database Setup"
 weight: 5
 description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"
-tags: ["OpenAI", "generative AI", "AI", "connector", "marketplace", "chatgpt", "genAI", "embeddings", "Retrieval augmented generation", "RAG", "Azure OpenAI", "vector embeddings", "vector database", "knowledge base", "pgvector"]
 ---
 
 ## 1 Introduction {#introduction}

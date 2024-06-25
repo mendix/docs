@@ -5,7 +5,6 @@ weight: 100
 description: "Presents test-related how-tos and blogs written by Mendix professionals."
 no_list: false
 description_list: true
-tags: ["test", "testing"]
 ---
 
 ## 1 Introduction

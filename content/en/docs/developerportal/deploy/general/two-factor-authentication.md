@@ -2,8 +2,7 @@
 title: "Two-Factor Authentication"
 url: /developerportal/deploy/two-factor-authentication/
 weight: 20
-description: "Describes the purpose and functionality of 2FA in the Developer Portal."
-tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "Microsoft", "2FA", "SMS"]
+description: "Describes the purpose and functionality of 2FA in the Mendix Portal."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -11,11 +10,11 @@ tags: ["Authenticator","Developer Portal","Cloud","Permissions", "Google", "Micr
 
 Mendix Cloud provides two-factor authentication (2FA) to help secure your account. 2FA requires you to identify yourself using your password as well as a second authentication mechanism.
 
-This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in the [Developer Portal](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
+This extra layer of authentication is required when you perform sensitive activities on Mendix Cloud nodes, such as deploying packages and handling production data. Actions that require 2FA are indicated by a padlock ({{% icon name="lock" %}}) in [Apps](https://sprintr.home.mendix.com). For example, switching to the production environment requires 2FA.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/production.png" max-width=30% alt="" class="no-border" >}}
 
-To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Developer Portal.
+To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Portal.
 
 ## 2 Setting Up and Using 2FA
 
@@ -27,7 +26,7 @@ Then, choose one of the two authentication methods:
 
 You can set up either [authentication via SMS](#sms-authentication) or [authentication via an authenticator app](#app-authentication). Instructions for both authentication methods are provided below.
 
-Once 2FA is set up, whenever you perform an action that requires 2FA, you will receive an authentication code via the authentication method you have configured. You can then provide this code in the Developer Portal to authenticate yourself.
+Once 2FA is set up, whenever you perform an action that requires 2FA, you will receive an authentication code via the authentication method you have configured. You can then provide this code in the Mendix Portal to authenticate yourself.
 
 Whenever you authenticate yourself using 2FA, your browser session will be authorized to complete sensitive operations for the next eight hours.
 
@@ -50,7 +49,7 @@ To set up 2FA with SMS, follow this process:
 
 #### 2.1.2 SMS Authentication
 
-Once you have 2FA configured to use SMS, you can use it to complete sensitive operations in the Developer Portal. When you perform an operation that requires 2FA, you can send an authentication code to your mobile phone.
+Once you have 2FA configured to use SMS, you can use it to complete sensitive operations in the Mendix Portal. When you perform an operation that requires 2FA, you can send an authentication code to your mobile phone.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/authentication-sms.png" max-width=70%  alt="" class="no-border" >}}
 
@@ -80,7 +79,7 @@ Your account is now secured with 2FA and ready to use.
 
 #### 2.2.2 Authenticator App Authentication
 
-Once you have 2FA configured to use an authenticator app, you can use it to complete sensitive operations in the Developer Portal. When you perform operations that require 2FA, you can use your authenticator app to get a six-digit code that is valid for 60 seconds. You will need to enter that code in the Developer Portal to authenticate yourself.
+Once you have 2FA configured to use an authenticator app, you can use it to complete sensitive operations in the Mendix Portal. When you perform operations that require 2FA, you can use your authenticator app to get a six-digit code that is valid for 60 seconds. You will need to enter that code in the Mendix Portal to authenticate yourself.
 
 {{< figure src="/attachments/developerportal/deploy/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" alt="" >}}
 

@@ -3,7 +3,6 @@ title: "Iframes and Running Apps"
 url: /developerportal/deploy/running-in-iframe/
 weight: 40
 description: "Issues to take into consideration when running apps in an iframe"
-tags: ["iframe", "samesite", "cookies", "x-frame-options"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -11,7 +10,7 @@ tags: ["iframe", "samesite", "cookies", "x-frame-options"]
 
 By default, a Mendix app is blocked from running inside an iframe. This is to protect the end-user from attacks using *clickjacking*. There is more information on this in the [Adding HTTP Headers](/howto/security/best-practices-security/#adding-http-header) section of *How To Implement Best Practices for App Security*.
 
-You can enable your app to run inside an iframe by setting the `frame-ancestors` directive of the `Content-Security-Policy` HTTP header for your node’s environment. For Mendix Cloud, this can be done within the Mendix Developer Portal, as described in the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section of *Environment Details*.
+You can enable your app to run inside an iframe by setting the `frame-ancestors` directive of the `Content-Security-Policy` HTTP header for your node’s environment. For Mendix Cloud, this can be done within the Mendix Portal, as described in the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section of *Environment Details*.
 
 There is more information about iframes on Mendix Cloud in the [Running Your App in an Iframe](/developerportal/deploy/environments-details/#iframe) section of *Environment Details*.
 

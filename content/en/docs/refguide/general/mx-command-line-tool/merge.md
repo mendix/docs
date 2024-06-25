@@ -3,7 +3,6 @@ title: "Merging and Diffing commands"
 url: /refguide/mx-command-line-tool/merge
 weight: 50
 description: "Describes the commands related to merging and diffing apps for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "diff", "merge"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ The commands in this group enable comparing two apps and merging them.
 
 ## 2 mx diff Command {#diff}
 
-The `mx diff` command performs a diff of two *.mpr* files and outputs the differences to a file in the JSON format.
+The `mx diff` command performs a diff of two *.mpr* files and outputs the differences to a file in JSON format.
 
 ### 2.1 Usage
 
@@ -27,7 +26,7 @@ These are the `OPTIONS`:
 | `--help` | | Shows help for the `mx diff` command and exits. |
 | `--loose-version-check` | `-l` | Makes the version check loose (meaning, it auto-converts if possible before diffing). |
 
-`BASE` is the first  *.mpr* file, which is used as a base in comparison. 
+`BASE` is the first *.mpr* file, which is used as a base in comparison. 
 
 `MINE` is the second *.mpr* file, which is used as the changed version in comparison. The output will contain the changes that are in this file against the base. 
 
@@ -96,16 +95,16 @@ This command works differently than the normal version-controlled merges you can
 
 ### 3.2 Conflicts
 
-If there are conflicts during the merge, resolve those by opening the app in Studio Pro and selecting **Version Control** > [Merge Changes Here](/refguide/version-control-menu/#merge-changes-here). 
+If there are conflicts during the merge, resolve them by opening the app in Studio Pro and selecting **Version Control** > [Merge Changes Here](/refguide/version-control-menu/#merge-changes-here). 
 
 The reason for this is that conflict resolution is a complex process that has two requirements:
 
 * The app has to be version-controlled
-* Your Git repository has to be in the "merge state" (Studio Pro does this when you click **Merge Changes Here**)
+* Your Git repository has to be in the merge state (Studio Pro does this when you click **Merge Changes Here**)
 
 This merge state is needed for Studio Pro to know what your current branch is and which branch you are trying to merge into it. This way, when you are trying to resolve the conflict using the `THEIRS` document, Studio Pro can download the document from the branch and put it into your current app. 
 
-So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](#merge-git-driver) for the *.mpr* files and trigger the merge from the Git command line (so that the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
+So, if you run this command from the command line specifying the three *.mpr* files but the result has conflicts, you will not be able to resolve the conflicts in the `MINE` app using the `THEIRS` documents by just opening the app in Studio Pro. Instead, you need to configure Git to use `mx merge` as a [merge driver](#merge-git-driver) for the *.mpr* files and trigger the merge from the Git command line (so the repository is put in the merge state for Studio Pro to be able to pick it up after the command is complete).
 
 ### 3.3 Examples
 
@@ -123,19 +122,19 @@ This table shows the return codes and their description:
 | `1` | The command is invalid for the input parameters. |
 | `2` | Conflicts are detected. Open *MINE.mpr* in Studio Pro to resolve them. |
 | `3` | There is an exception, as an error occurred during the merge. Error details are printed to the command line output. |
-| `4` | The version is unsupported |
+| `4` | The version is unsupported. |
 
 ## 4 mx merge as Git Merge Driver {#merge-git-driver}
 
 This section describes the configuration you need to do in order to enable using the [mx merge](#merge) command as a merge driver in Git. With this configuration, you can merge one branch into another using third-party version control tools and the Git command line.
 
-Normally, when you are merging branches with Git, it compares the changes in files in both branches. If a certain file has been changed in both branches, this is called a conflict. If the files in conflict are text files, then Git attempts to resolve it automatically (and very often succeeds). 
+Normally, when you are merging branches with Git, it compares the changes in files in both branches. If a certain file has been changed in both branches, this is called a conflict. If the files in conflict are text files, Git attempts to resolve it automatically (and very often succeeds). 
 
 However, if the files in conflict are Mendix apps the conflict is in two *.mpr* files, both the files and the conflict are more complex, which is why we need Studio Pro to resolve the conflicts. For such cases, Git has an option to delegate conflict resolution for a certain file type to an external tool. The `mx merge` command is compatible with this mechanism and allows Git to try to merge the *.mpr* files as if Studio Pro did it. Then, if there are still conflicts, you can open Studio Pro and resolve those manually.
 
 ### 4.1 config File
 
-Add the lines below to the *config* file located in the **.git** folder of your app on disk.
+Add the lines below to the *config* file located in the *.git* folder of your app on disk.
 
 At the end of the file, add a `[merge "custom"]` block like this:
 
@@ -154,12 +153,12 @@ Under the `[core]` section, add the following:
 ```
 
 {{% alert color="info" %}}
-The **.git** folder is a hidden folder in a computer file management system. You can view it when hidden items are visible.
+The *.git* folder is a hidden folder in a computer file management system. You can view it when hidden items are visible.
 {{% /alert %}}
 
 ### 4.2 .gitattributes File
 
-Create `.gitattributes` file in .git folder of your App on disk. Add the following line there to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging *.mpr files.
+Create `.gitattributes` file in .git folder of your app on disk. Add the following line to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging **.mpr* files.
 
 ```ini {linenos=false}
 *.mpr merge=custom
@@ -197,7 +196,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Now, if you open you app on the **Main** branch, you should see the following:
 
-* Both the **branch** and **main** microflows ( this is a non-conflicting change, so `mx merge` sorted this out automatically, just like Studio Pro would do)
+* Both the **branch** and **main** microflows (this is a non-conflicting change, so `mx merge` sorted this out automatically, just like Studio Pro would do)
 * A conflict on the **Home_Web** page concerning the renaming of home page caption (this is a conflicting change, as you changed the same caption to different values on both branches, so you can resolve this manually)
 
 {{% alert color="info" %}}

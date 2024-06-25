@@ -1,13 +1,11 @@
 ---
 title: "Mendix Cloud"
 url: /developerportal/deploy/mendix-cloud-deploy/
-
 weight: 8
 description: "Describes what Mendix Cloud is."
-tags: ["Deploy","Mendix Cloud","Developer Portal", "Free App", "licensed", "limitations", "Mendix Cloud Dedicated"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-#The anchor #plans, below, is mapped from Control Center within the Developer Portal.
+#The anchor #plans, below, is mapped from Control Center within the Mendix Portal.
 ---
 
 ## 1 Introduction
@@ -30,16 +28,16 @@ Free Apps make it possible to start creating and deploying apps with Mendix for 
 | Sleep mode | Goes into sleep mode after about an hour of inactivity and automatically resumes when a user accesses it; all your data is retained while the app is in sleep mode | Does not have a sleep mode |
 | Disk storage | 0.5 GiB Database and 1 GiB Files | Depends on your pricing plan |
 | App vCPUs | 0.5 | Depends on your pricing plan |
-| Scheduled events | Are not run | Are run and can be configured from the Developer Portal |
+| Scheduled events | Are not run | Are run and can be configured from the Mendix Portal |
 | Environments | Single environment in Mendix Cloud | A node in the cloud that has one or more environments, for example, production, acceptance, and test |
-| Deployment | Can only be deployed to the cloud from Mendix Studio Pro | Can be deployed from Mendix Studio Pro, from the Developer Portal, or through an API |
-| Custom domains | Not available | Can be configured from the Developer Portal |
-| Access restriction profiles | Not available | Can be configured from the Developer Portal |
-| Client certificates | Not available | Can be configured from the Developer Portal |
-| Starting and stopping your app manually | Not available | Available in the Developer Portal |
-| Constants | Defined in Studio Pro | Configurable through environment variables in the Developer Portal |
-| Runtime settings | Not available | Configurable through runtime and settings in the Developer Portal |
-| Scalability | Only one instance and a fixed amount (1 GiB) of memory | Configurable in the Developer Portal |
+| Deployment | Can only be deployed to the cloud from Mendix Studio Pro | Can be deployed from Mendix Studio Pro, from the Mendix Portal, or through an API |
+| Custom domains | Not available | Can be configured from the Mendix Portal |
+| Access restriction profiles | Not available | Can be configured from the Mendix Portal |
+| Client certificates | Not available | Can be configured from the Mendix Portal |
+| Starting and stopping your app manually | Not available | Available in the Mendix Portal |
+| Constants | Defined in Studio Pro | Configurable through environment variables in the Mendix Portal |
+| Runtime settings | Not available | Configurable through runtime and settings in the Mendix Portal |
+| Scalability | Only one instance and a fixed amount (1 GiB) of memory | Configurable in the Mendix Portal |
 | Metrics, alerts, and log levels | Not available | Available |
 | Historic app logs | Not available; only live logs are available | Available |
 | Backups | Performed daily and cannot be triggered manually; stored for up to two weeks | Performed daily and can also be created manually; kept for up to one year, depending on your plan |

@@ -39,7 +39,7 @@ After telling the model what to do, you can include additional context. This can
 * context information – for example, all data related to an object the end-user is looking at
 * knowledge coming from [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/concepts/#rag)
 
-Tip: you can export to JSON or XML to provide this information in a structured way.
+Tip: you can provide information in a JSON or XML structure to ensure the information is presented in a consistent way. From Mendix apps, you can use [Export Mappings](/refguide/export-mappings/) to create JSON structures and [Export XML Documents](/howto/integration/export-xml-documents/) to create XML structures.
 
 ### 2.3 Input Data
 
@@ -50,7 +50,7 @@ The actual input, usually from an end-user.
 You can instruct the model to format the output in a specific way. For example:
 
 * tell the model to specify its reasoning steps, or just give the answer
-* give examples of the output style you want, for example a JSON structure, if you want to import the response to  generate data or get information about the reasoning
+* give examples of the output style you want, for example a JSON structure, if you want to use a structured response to generate data or get structured information about intermediate steps taken, or decisions made, in coming up with a final response to a prompt.
 * request that responses are in a particular tone of voice, target a specific audience, or have a specified content length
 * request the use (or not) of Markdown formatting
 * ask the model to skip or include a preamble

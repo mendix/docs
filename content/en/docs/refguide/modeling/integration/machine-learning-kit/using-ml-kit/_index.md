@@ -387,7 +387,7 @@ The table below presents the compatibility list for your models per Studio Pro v
 | LTS | 1.14.0 |
 | Latest | 1.17.3 |
 
- For more information on the required IR/ML opset versions, see [ONNX Runtime compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
+ For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
 
 ## 8 Read More {#readmore}
 

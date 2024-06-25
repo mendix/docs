@@ -81,54 +81,45 @@ Make sure that the module role `User` is part of the the user roles that are int
 
 The `ChatContext` is the central entity in the UI and microflows. It can only be viewed by the owner (see [Module Roles](#module-roles) for exceptions). The object needs to be created for every new chat interaction and comprises the `messages` that are sent to and received from the model. A `ProviderConfig` should be associated via `ChatContext_ProviderConfig_Active` in order to execute the correct [action microflow](#action-microflow).
 
-If you need additional attributes or associations on the `ChatContext`, we advise to use an extension entity that refers to the object which can then be retrieved and altered when needed (for example in the action microflow). This pattern was implemented in the [AI Bot Starter App]().
-<!---
-[comment]: <> TODO: Insert links to MP
--->
+If you need additional attributes or associations on the `ChatContext`, use an extension entity that refers to the object which can then be retrieved and altered when needed (for example in the action microflow). The [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) shows an example of this approach.
 
 #### 4.2.1 Chat Context Operations {#chat-context-operations}
 
 The following operations can be found in the tool box for processing the [ChatContext](#chat-context):
 * `Create ChatContext & Set ProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
 * `Create ChatContext` creates and returns a new chat context.
-* `Add ProviderConfig List to ChatContext` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of ProviderConfigs can be added to the chat context (non-active, but selectable in the UI).
+* `Add ProviderConfig List to ChatContext` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of `ProviderConfigs` can be added to the chat context (inactive, but selectable in the UI).
 
 #### 4.2.2 Request Operations {#request-operations}
 
-* `Create Request from ChatContext` will create [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a "Chat with History" operation (see also [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/)) as part of the [action microflow](#action-microflow). 
-* `Update Assistant Response` will process the response of the model and add the new message and (if present) sources to the UI.
-* `Get Current User Prompt` gets the current user prompt. Can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
-* `Set ChatContext Topic` sets the `Topic`of the chat context. Will be used in the history-sidebar to make historical chats recognizable for users.
-
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai-commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI.
+* `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
+* `Set ChatContext Topic` sets the `Topic`of the chat context. It can be used in the **History** sidebar to make historical chats visible to users.
 
 #### 4.2.3 Message {#message}
 
-A `Message` contains the content of both user and assistant messages, distinguishable by the `Role` attribute (e.g. User and Assistant).
+A `Message` contains the content of both user and assistant messages, distinguishable by the `Role` attribute (such as User or Assistant).
 
 ##### 4.2.3.1 Source {#source}
 
-The model can return `Sources` that can be added to a message and be displayed in the UI for the user. This might increase the understanding of the reasoning process, why a model came to the response. The content of the sources can come from a knowledge base or the model (depends on the specific implementation).
+The model can return `Sources` which can be added to a message and displayed in the UI for the user. This can increase the understanding of the reasoning process, for example, why a model came up with a specific response. The content of the sources can come from a knowledge base or the model, depending on the implementation.
 
 #### 4.2.4 SuggestedUserPrompt {#suggested-user-prompt}
 
-It is possible to add suggested user prompts to a `ChatContext`. They appear as button for new chats. When clicked, the content of the button will be sent as user prompt to the model (via the [action microflow](#action-microflow)).
-
-* `Add Suggested User Prompt to ChatContext` creates a [SuggestedUserPrompt](#suggested-user-prompt) that can start a predefined chat in the interface when clicked.
-
+It is possible to add suggested user prompts to a `ChatContext`. They appear as a button for new chats. When a user clicks the **Add Suggested User Prompt to ChatContext** button, the [action microflow](#action-microflow) sends the content of the button to the model and starts a predefined chat in the interface.
 
 #### 4.2.5 AdvancedSettings {#advanced-settings}
+
 `AdvancedSettings` can be used to allow users to configure parameters which can influence the model's behavior (see [Configuration Snippets](#snippet-configuration)). Currently, only temperature is exposed to users in the module by the slider input element. The object needs to be created when the chat context is shown to the page, for example in a navigation flow. Ranges can be set to control the values a user can select.
 
-
 ### 4.3 ProviderConfig {#provider-config}
-The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an "action microflow" that will be executed when the send button is clicked. You could store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessarry fields. This pattern was implemented in the [AI Bot Starter App]().
 
-<!---
-[comment]: <> TODO: Insert links to MP
--->
+The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked. You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
 
 #### 4.3.1 Creating and setting an Action Microflow {#action-microflow}
-The `Action Microflow` is executed via the send button and handles the interaction with the LLM's connectors and the Conversational UI entities. An example for each [OpenAI](/appstore/modules/genai/openai/) and [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/) are provided in the `USE_ME` folder that can be seen as inspiration (copy and modify) or directly for test-purposes.
+
+The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. An example for each  are provided in The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
 Set the action microflow through the `Set ActionMicroflow` toolbox action. Note that it does not commit the object.
 

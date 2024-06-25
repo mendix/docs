@@ -7,7 +7,8 @@ description: "Describes the Conversational UI marketplace module that assists de
 ---
 
 ## 1 Introduction {#introduction}
-With the Conversational UI module you can create an AI based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and the is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
+
+With the Conversational UI module you can create an AI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and the is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
 <!-- TODO: include links when they become available -->
 
 ### 1.1 Typical Use Cases {#use-cases}

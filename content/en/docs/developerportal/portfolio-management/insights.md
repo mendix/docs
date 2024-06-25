@@ -27,7 +27,7 @@ The bar chart displays the active initiative counts in this portfolio for each s
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/number-initiatives-apps-epics.png" >}}
 
-This section shows the number of the active initiatives in this portfolio and the number of unique apps/epics that are linked to the active initiatives.
+This section shows the number of the active initiatives in this portfolio and the number of unique apps and epics that are linked to these initiatives.
 
 ## 5 Status of Active Initiatives
 

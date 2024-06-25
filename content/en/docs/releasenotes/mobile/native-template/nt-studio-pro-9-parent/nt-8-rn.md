@@ -69,6 +69,32 @@ description: "Native Template 8 release notes."
 * We have upgraded security-crypto dependency on Android to version 1.1.0-alpha06.
 * We have upgraded `@mendix/react-native-sqlite-storag`e to version 7.1.0 and `@mendix/native` to the latest compatible version.
 
+* ## 8.0.10 {#809}
+
+**Release date: June 24, 2024**
+
+- We have fixed synchronization issue between encrypting-decrypting files.
+- We have upgraded the @mendix/native dependency to the latest compatible version.
+
+## 8.0.8 {#808}
+
+**Release date: May 28, 2024**
+
+- We have fixed issue on scheduling local notifications on Android 14
+
+## 8.0.7 {#807}
+
+**Release date: May 15, 2024**
+
+- We have resolved a build error related to Flipper on Xcode 15.3.
+- We've added the support of scheduling local notifications on Android 14
+
+## 8.0.6 {#806}
+
+**Release date: May 10, 2024**
+
+- We have fixed issue on scheduling local notifications on Android 14
+
 ## 8.0.5 {#805}
 
 **Release date: April 04, 2024**

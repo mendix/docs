@@ -7,7 +7,7 @@ description: "Describes the Insights page in the Mendix Portfolio Management app
 
 ## 1 Introduction
 
-The **Insights** page in the Portfolio Management app offers important data and visualizations to help you gain valuable insights into your portfolio.
+The **Insights** page in the Portfolio Management app is a dashboard that offers important data and visualizations to help you gain valuable insights into your portfolio.
 
 ## 2 Active Initiatives per Selection
 
@@ -15,7 +15,7 @@ The **Insights** page in the Portfolio Management app offers important data and 
 
 The bar chart visualizes the distribution of your active initiatives according to the selected view. You can choose to group the initiatives per: **App**, **Department**, **Location**, **Owner**, or **Use Case**.
 
-The page displays up to twenty active initiatives at a time. If there are more than twenty initiatives, click **>** in the upper-right corner to view the additional initiatives on the next page.
+The page displays up to twenty items(Department/App/Owner etc.) at a time. If there are more than twenty items, click **>** in the upper-right corner to view the additional items on the next page.
 
 ## 3 Active Initiatives per Stage
 
@@ -27,7 +27,7 @@ The bar chart displays the active initiative counts in this portfolio for each s
 
 {{< figure src="/attachments/developerportal/portfolio-management/insights/number-initiatives-apps-epics.png" >}}
 
-This section shows the number of the active initiatives in this portfolio alongside the number of their associated apps and epics.
+This section shows the number of the active initiatives in this portfolio and the number of unique apps/epics that are linked to the active initiatives.
 
 ## 5 Status of Active Initiatives
 

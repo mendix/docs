@@ -21,17 +21,17 @@ The current scope of the module is focused only on text generation use cases.
 
 The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
 
-You must also install and configure the [Community commons](/appstore/modules/community-commons-function-library/) module.
+You must also install and configure the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## 2 Installation {#installation}
 
-If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be installed manually..
+If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be installed manually.
 
-If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is a required module, you must install GenAI Commons manually. First install the [Community commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [using Marketplace content](/appstore/overview/use-content/) to import the GenAI Commons module into your app.
+If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is a required module, you must install GenAI Commons manually. First, install the [Community commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [using Marketplace content](/appstore/overview/use-content/) to import the GenAI Commons module into your app.
 
 ## 3 Implementation {#implementation}
 
-GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
+GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/openai-connector/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
@@ -39,11 +39,11 @@ The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-sol
 
 ## 4 Technical Reference {#technical-reference}
 
-The technical purpose of GenAI Commons module is to define a common domain model for generative AI use cases in Mendix applications. To help you work with the **GenAI Commons** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [activities](#activities) that you can use in your application. 
+The technical purpose of GenAI Commons module is to define a common domain model for generative AI use cases in Mendix applications. To help you work with the **GenAI Commons** module, the following sections list the available [entities](#domain-model), [enumerations](#enumerations), and [microflows](#microflows) that you can use in your application. 
 
 ### 4.1 Domain Model {#domain-model} 
 
-The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [domain model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [activities](#activities) section below.
+The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
 ##### 4.1.1 `Connection` {#connection}
 
@@ -128,7 +128,7 @@ For many models, `StopSequence` can be used to pass a list of character sequence
 
 #### 4.1.10 `Response` {#response}
 
-The response returned by model contains usage metrics as well as a response message.
+The response returned by the model contains usage metrics as well as a response message.
 
 | Attribute | Description |
 | --- | --- |
@@ -144,7 +144,7 @@ A tool call object may be generated by the model in certain scenarios, such as a
 | Attribute | Description |
 | --- | --- |
 | `Name` | The name of the tool to call. This refers to the `Name` attribute of one of the [Tools](#tool) in the Request. |
-| `Arguments` | The arguments with which the tool is to be called, as generated by the model in JSON format. Note that the model does not always generate valid JSON and may halucinate parameters that are not defined by your tool's schema. Mendix recommends to validate the arguments in the code before calling the tool.
+| `Arguments` | The arguments with which the tool is to be called, as generated by the model in JSON format. Note that the model does not always generate valid JSON and may hallucinate parameters that are not defined by your tool's schema. Mendix recommends to validate the arguments in the code before calling the tool.
 | `ToolType` | The type of the tool. View AI provider documentation for supported types. |
 | `ToolCallId` | This is a model generated id of the proposed tool call. It is used by the model to map an assistant message containing a tool call with the output of the tool call (tool message). |
 
@@ -222,7 +222,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### 4.2.6 `ENUM_SourceType` {#enum-sourcetype}
 
-`ENUM_SourceType` provides a list of source types, which describe how the pointer to the `Source` attribute on the [Reference](#reference) object should be interpreted to get the source location. Currenlty only `Url` is supported.
+`ENUM_SourceType` provides a list of source types, which describe how the pointer to the `Source` attribute on the [Reference](#reference) object should be interpreted to get the source location. Currently, only `Url` is supported.
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -369,7 +369,7 @@ The following microflows handle the response processing.
 
 ##### 4.3.2.1 Chat: Get Model Response Text {#chat-get-model-response-text}
 
-This microflow can be used to get the content from the latest assistant message over association `Response_Message`. Use this microflow to get the response text from the latest assistant response message. In many cases this is the main value needed for further logic after the operation or is displayed to the end user.
+This microflow can be used to get the content from the latest assistant message over association `Response_Message`. Use this microflow to get the response text from the latest assistant response message. In many cases, this is the main value needed for further logic after the operation or is displayed to the end user.
 
 ###### 4.3.2.1.1 Input Parameters
 
@@ -385,7 +385,7 @@ This microflow can be used to get the content from the latest assistant message 
 
 #### 4.3.2.2 Chat: Get References {#chat-get-references}
 
-Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
+Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content, and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
 
 ###### 4.3.2.2.1 Input Parameters
 
@@ -401,12 +401,12 @@ Use this microflow to get the list of references that may be included in the mod
 
 ### 4.3.3 Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/_index/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/openai-connector/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
 We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 {{% alert color="info" %}}
-These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior) and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/_index/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether call the LLM through OpenAI or Amazon Bedrock.
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/openai-connector/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
 {{% /alert %}}
 
 #### 4.3.3.1 Chat Completions (Without History)

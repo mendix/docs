@@ -8,83 +8,74 @@ description: "Describes the Conversational UI marketplace module that assists de
 
 ## 1 Introduction {#introduction}
 
-With the Conversational UI module you can create an AI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and the is the basis of our [AI Bot Starter App]() and included in the [Blank GenAI App]().
-<!-- TODO: include links when they become available -->
+With the [Conversational UI module](https://marketplace.mendix.com/link/component/227931), you can create an AI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
 
 ### 1.1 Typical Use Cases {#use-cases}
 
+Typical use cases include the following:
+
 * Create a chat interface for users to chat with Large Language Models (LLM). 
-* Allow users to switch between different implementations by switching "providers". 
+* Allow users to switch between different implementations by switching providers. 
 * Include advanced capabilities to control the model's behavior, for example by setting the temperature parameter.
-* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern (see [Using Generative AI](/appstore/modules/genai/concepts/)).
+* Easily extend the chat interface with advanced concepts, such as RAG or the ReAct pattern. For more information, see [Using Generative AI](/appstore/modules/genai/concepts/).
 
 ### 1.2 Features {#features}
 
-* UI components to easily drag and drop construct your pages such as:
+The Conversational UI module provides the following functionalities:
+
+* UI components that you can drag and drop onto your pages, for example:
     * Layouts to have a sidebar or floating popup chat
     * Pages that you can use in your navigation for chat
-    * Snippets to be used directly on your pages, for example to display messages or history sidebar
+    * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
     * A floating button that for opening a chat
-* Operations to setup your context, interact with the model and add the data to be displayed in the UI
+* Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
-* Integration with any model that is compatible with GenAI Commons
+* Integration with any model that is compatible with [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
 
 ### 1.3 Limitations {#limitations}
+
 This module is intended to enable chat interactions between a user and an AI model. It is not designed for conversations between two human users.
 
 ### 1.4 Prerequisites {#prerequisites}
 
-In order to use the Conversational UI module, you are advised to use a connector that is compatible with GenAI Commons. Mendix supports out of the box integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [AWS Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making it compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
+To use the Conversational UI module, your Mendix Studio Pro version must be [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher.
 
-### 1.5 Dependencies {#dependencies}
+You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) and the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), otherwise you must install them yourself:
 
-* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
-* [GenAI Commons]()
+* [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-All modules above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
-<!---
-[comment]: <> TODO: Insert links to MP
--->
-
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai-commons/#request) and [Response](/appstore/modules/genai-commons/#response).
 
 ## 2 Installation {#installation}
 
-* Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or higher
-* [Atlas Core](https://marketplace.mendix.com/link/component/117187)
-* [GenAI Commons]()
-* [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
-* [Web Actions](https://marketplace.mendix.com/link/component/114337)
-
-All modules above are aleady part of the [Blank GenAI App]() and the [AI Bot Starter App]().
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Conversational UI into your existing app.
-<!---
-[comment]: <> TODO: Insert links to MP
--->
-
+Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Conversational UI into your app.
 
 ## 3 Configuration {#configuration}
 
-In order to get started:
-1. Configure the relevant user roles,
-2. Create a Chat Context,
-3. Associate a provider and set an action microflow,
-4. Use the pages and snippets to create your UI.
+To use Conversational UI in your app, you must perform the following tasks:
 
-## 4 Components {#components}
+1. Configure the relevant [user roles](#module-roles).
+2. Create a [chat context](#chat-context).
+3. Associate a [provider](#provider-config) and create an [action microflow](#action-microflow).
+4. Use the [pages](#pages-and-layouts) and [snippets](#snippets) to create your UI.
+
+## 4 Technical Reference {#technical-reference}
+
+To help you work with the Conversational UI module, the following sections of this document list the available entities and activities that you can use in your application.
 
 {{< figure src="/attachments/appstore/modules/genai/conversational-ui/domain-model.png" alt="" width="50%">}}
 
 ### 4.1 Module Roles {#module-roles}
-Make sure that the module role `User` is part of the the user roles, that are intended to chat with the model. Optionally, the role `_addOn_ReadAll` can additionally be granted to admin roles, so that users with that role can read all messages.
+
+Make sure that the module role `User` is part of the the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
 
 | Module role      | Description                                                                |
 | ---------------- | -------------------------------------------------------------------------- |
 | User             | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data).                                                                                          |
 | _addOn_ReadAll   | Role can be granted additionally. Users with both roles can read all data. |
-
 
 ### 4.2 ChatContext {#chat-context}
 

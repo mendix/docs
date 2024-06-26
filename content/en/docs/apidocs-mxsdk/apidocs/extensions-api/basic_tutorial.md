@@ -14,7 +14,7 @@ You can download a copy of this tutorial [here](https://github.com/mendix/Extens
 
 - Create a new project in Visual Studio based on `C# Class Library` template.
 - Choose a name for the project. We recommend using a format like `MyCompany.MyProject.MendixExtension`, but it is not a hard requirement.
-- Choose `.NET 6.0` Framework.
+- Choose `.NET 8.0` Framework.
 - Add `Mendix.StudioPro.ExtensionsAPI` nuget package to the project references. Pick the version that does not exceed the Studio Pro version you've installed. To do so:
 - Include a reference to the Extensions API [nuget package](https://www.nuget.org/packages/Mendix.StudioPro.ExtensionsAPI): 
 - Add new file named `manifest.json` to your project. Put the following content into it:

@@ -37,9 +37,9 @@ After selecting class library you will have to pick a location where you would l
 
 ---
 
-Next we set the framework version to .NET 6.0 (Long Term Support)
+Next we set the framework version to .NET 8.0 (Long Term Support)
 
-<img src="images/Todo_Step_3_SetFrameworkVersion.png" alt="Set the framework version to .NET 6.0 (Long Term Support)" style="width: 900px"/>
+<img src="images/Todo_Step_3_SetFrameworkVersion.png" alt="Set the framework version to .NET 8.0 (Long Term Support)" style="width: 900px"/>
 
 ---
 

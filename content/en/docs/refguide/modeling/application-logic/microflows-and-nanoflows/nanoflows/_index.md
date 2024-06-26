@@ -153,9 +153,9 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | Key | Effect |
 | --- | --- |
 | <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
-| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Bot dialog box. |
-| <kbd>Enter</kbd> - on a Logic Bot suggestion list item | The selected item is added on the flow arrow. The Logic Bot dialog box is shown again for the next action to be added. |
-| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Bot suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
+| <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Recommender dialog box. |
+| <kbd>Enter</kbd> - on a Logic Recommender suggestion list item | The selected item is added on the flow arrow. The Logic Recommender dialog box is shown again for the next action to be added. |
+| <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click) - on a Logic Recommender suggestion list item| The selected item is added on the flow arrow. The element’s property dialog box is opened. |
 | <kbd>F2</kbd> | Rename the variable returned by the selected element. |
 | <kbd>Shift</kbd> + <kbd>F2</kbd> | Edit the caption of the selected element. |
 | Context-menu key | Open the context-menu for the currently selected element. |

@@ -74,7 +74,7 @@ To register the service endpoint (or endpoints), you will need:
 * A [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat)
 * The `application_UUID`
 * The `environment_UUID`
-* The Service `Path`, `Name`, and `ContractType`
+* The Service `Path`, `Name`, and `Type`
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 

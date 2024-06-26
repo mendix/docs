@@ -14,9 +14,9 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### New Features
 
-* We released two AI-powered features in the [Mendix Community](/community-tools/mendix-community/): a summarize assist and a rewrite assist, as part of the Mendix AI Assistance (Maia).
-  * The summarize assists condenses lengthy discussions for a question into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread.
-  * The rewrite assist is an assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered.
+* We released two AI-powered features in the [Mendix Community](/community-tools/mendix-community/): Maia Summarize and Maia Rewrite, as part of the Mendix AI Assistance (Maia).
+  * Maia Summarize condenses lengthy discussions for a question into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread.
+  * Maia Rewrite is an assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered.
 
 ### February 8, 2024
 

@@ -1,6 +1,6 @@
 ---
-title: "Getting Started Guide"
-linktitle: "Get Started with the Extensibility API"
+title: "Get Started with the Extensibility API"
+linktitle: "Getting Started Guide"
 url: /apidocs-mxsdk/apidocs/exsensibility-api/getting-started/
 weight: 2
 ---

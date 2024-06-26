@@ -1117,7 +1117,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/my-marketplace/#content-groups) in the Marketplace.
+- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/#content-groups) in the Marketplace.
 
 ## 2020
 

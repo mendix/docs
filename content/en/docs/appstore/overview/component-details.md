@@ -22,7 +22,7 @@ The header for a component presents the following details:
 
 * The number of times the component has been downloaded
 
-* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](/appstore/overview/my-marketplace/) list
+* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](/appstore/overview/) list
 
 * Depending on the content type:
 
@@ -36,7 +36,7 @@ The header for a component presents the following details:
   {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  class="no-border" >}}
 
   * These components have a **Contact Us** button for setting up your subscription with the partner
-  * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/my-marketplace/#company-subscriptions) page
+  * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/#company-subscriptions) page
 
 <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -64,6 +64,6 @@ The component details page also presents the following tabs:
   * You can select the **Only show my reviews** checkbox to check your own reviews.
   * You can click **Write Review** to open a section where you can add text, rate the component, and submit the review.
     * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right. You can now rate a component four or five stars without leaving a review. For three-, two-, and one-star ratings, a review is mandatory.
-    * You can find all your reviews on your [My Reviews](/appstore/overview/my-marketplace/#my-reviews) page in **My Marketplace**.
+    * You can find all your reviews on your [My Reviews](/appstore/overview/#my-reviews) page in **My Marketplace**.
   * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).

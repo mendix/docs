@@ -43,7 +43,7 @@ On the right side of the page, you can see the filters such as **Content Types**
 * **Category** – for specific domains in which components or services share characteristics, functions, or purposes
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
-* **Rating** – how the components have been rated in [reviews](/appstore/overview/my-marketplace/#my-reviews) by users
+* **Rating** – how the components have been rated in [reviews](/appstore/overview/#my-reviews) by users
 
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
 

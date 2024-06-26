@@ -20,7 +20,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### New features
 
-* We have added a new endpoint to our public [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This will enable you to automate changing individual team memberships
+* We have added a new endpoint to our public [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This will enable you to automate changing existing team member's role assignment or update your pinned Apps overview
 
 ### June 14, 2024
 

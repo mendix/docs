@@ -37,9 +37,9 @@ On the left side of the page, you can see the following categories:
 
 On the right side of the page, you can see the filters such as **Content Types** to use to filter the Marketplace components. The following filter options are available:
 
-* **Support** – for details, see the [Marketplace Content Support](/appstore/marketplace-content-support/)
+* **Support** – the support categories (for details, see the [Marketplace Content Support](/appstore/marketplace-content-support/))
 * **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
-* **Content Types** – for details, see the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*.
+* **Content Types** – the types of content (for details, see the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*)
 * **Category** – for specific domains in which components or services share characteristics, functions, or purposes
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions

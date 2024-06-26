@@ -1,12 +1,12 @@
 ---
-title: "Basic Tutorial"
-url: /extensibility-api/basic_tutorial/
+title: "Create a Menu Extension"
+url: /extensibility-api/create-menu-extension/
 weight: 4
 ---
 
 ## 1 Introduction
 
-This how-to describes the process of creating an extension that adds an item to Studio Pro menu from scratch.
+This how-to describes the procedure of creating an extension that adds an item to Studio Pro menu from scratch.
 
 You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples).
 
@@ -22,7 +22,7 @@ You can download a copy of this tutorial [here](https://github.com/mendix/Extens
     ```json
     { "mx_extensions": [ "<name_of_your_project>.dll" ] }
     ```
-    3. Right-click in **Solution Explorer** > **Properties** of the `manifest.json` file, and change the **Copy to Output Directory** property to **Copy always**.
+    3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
 ## 3 Creating a Test Mendix App
 
@@ -59,11 +59,11 @@ public class MyMenuExtension(IMessageBoxService messageBoxService) : MenuExtensi
 }
 ```
 
-Build your extension and press <kbd>F4</kbd> in Studio Pro. Extension menu items are placed under a corresponding menu with the extensions name. If your extension is named "My Extension" then your menu items will be located under the "Extensions" > "My Company" submenu. For more information about creating menus, please see the menu tutorial [here](/extensions-api/menu_tutorial/)
+Build your extension and press <kbd>F4</kbd> in Studio Pro. Extension menu items are placed under a corresponding menu with the extensions name. If your extension is named "My Extension", then your menu items will be located under the **Extensions** > **My Company** sub-menu.
 
-You might also have noticed the usage of the `IMessageBoxService` by the menu action. The Extensibility API will provide you with several services you can use and they will be injected into your extension classes by using the `ImportingConstructor` attribute.
+The Extensibility API provides you with several services you can use and they are injected into your extension classes by using the `ImportingConstructor` attribute.
 
-It is also possible to be notified when your extension has been successfully loaded into Studio Pro and also just before it gets unloaded. It is as simple as subscribing to the `ExtensionLoaded` and `ExtensionUnloading` events.
+It is also possible to get notified when your extension has been successfully loaded into Studio Pro and also just before it gets unloaded. It is as simple as subscribing to the `ExtensionLoaded` and `ExtensionUnloading` events.
 
 ```csharp
 using Mendix.StudioPro.ExtensionsAPI.UI.Events;
@@ -82,22 +82,24 @@ public class MyMenuExtension() : MenuExtension
 }
 ```
 
-### Debug your extension
+### 5 Debugging Your Extension
 
-- Make sure that the current version of the extension code is loaded in Studio Pro.
-- Attach to Studio Pro process in Visual Studio debugger. To do that:
-  - open "Attach to Process" dialog through Debug menu (or `Ctrl+Alt+P` shortcut);
-  - search for `studiopro.exe` among the processes;
-  - select the only found process (or the one with correct title if you have many) and click Attach.
-- Add a Breakpoint inside `Action` delegate in `MyMenuExtension.GetMenus()`. It will be hit when you click `Extensions > MyCompany > Say hello` menu item.
+1. Make sure that the current version of the extension code is loaded in Studio Pro.
+2. Attach to Studio Pro process in Visual Studio debugger as follows:
+   1. Open **Attach to Process** dialog box on the **Debug** menu (or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>).
+   2. Search for `studiopro.exe` among the processes.
+   3. Select the only found process (or the one with correct title, if you have many) and select **Attach**.
 
-### Add NuGet dependency
+3. Add a Breakpoint inside `Action` delegate in `MyMenuExtension.GetMenus()`. It will be hit when you click **Extensions** > **MyCompany** > **Say hello** menu item.
 
-You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. Except that one-time
-additional setup is required:
-- Open your extension project `.csproj` file (e.g. with right click in Solution Explorer > Edit Project File).
-- Add the following line into the first `<PropertyGroup>`:
-```xml
-    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-```
-- Then you can add a NuGet dependency e.g. using Manage NuGet Packages menu.
+### 6 Adding NuGet dependency
+
+You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. The following one-time additional setup is required:
+1. Open your extension project `.csproj` file by right-clicking **Solution Explorer** > **Edit Project File**.
+2. Add the following line into the first `<PropertyGroup>`:
+
+    ```xml
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    ```
+
+Then you can add a NuGet dependency, for example, using the **Manage NuGet Packages** menu.

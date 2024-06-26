@@ -1,68 +1,69 @@
 ---
-title: "Getting Started Guide"
-url: /extensions-api/getting_started/
+title: "Getting Started with the Extensibility API"
+linktitle: "Getting Started Guide"
+url: /extensibility-api/getting_started/
 weight: 2
 ---
 
-# Getting Started with Studio Pro Extensibility API
+## 1 Introduction
 
-Hi this page will help you set up a basic development environment for building extensions. Additionally, you can find links here to additional tutorials that will help familiarize you to the extension Api topics.
+This document helps you set up a basic development environment for building extensions. Additionally, you can find links here to additional tutorials that help familiarize you to the extensibility API topics.
 
-## Intended Audience
+## 2 Intended Audience
 
-The api is intended for closed partner beta within Mendix partner network. At a later stage we would like to make this available to third party developers.
+The extensibility API is intended for closed Partner Beta within Mendix partner network. At a later stage, we would like to make this available to third-party developers.
 
-## Development setup
+## 3 Development Setup
 
-The recommended development environment is [Visual Studio 2022](https://visualstudio.microsoft.com/) running on Windows. Using other IDEs and other .NET
-compatible programming languages (like [F#](https://fsharp.org/)) is possible, but the documentation is centered on the above setup.
+The recommended development environment is [Visual Studio 2022](https://visualstudio.microsoft.com/) running on Windows. You can also use other IDEs and other .NET compatible programming languages (like [F#](https://fsharp.org/)). This documentation is centered on the above setup.
 
 Install the latest Studio Pro version from [Marketplace](https://marketplace.mendix.com/link/studiopro/).
-> [!WARNING]
-> Make sure to keep this Studio Pro installation up-to-date to benefit from new features and fixes.
 
-> [!NOTE]
-> Extensions can be built on any OS as the underlying framework is cross-platform.
+{{% alert color="info" %}}
+Make sure to keep this Studio Pro installation up-to-date to benefit from new features and fixes.
+{{% /alert %}}
 
-### Use Extensions API via a hosted NuGet package
+{{% alert color="info" %}}
+Extensions can be built on any operating system as the underlying framework is cross-platform.
+{{% /alert %}}
 
-You can start extension development by simply including the Mendix.StudioPro.ExtensionsAPI NuGet package to your project by searching for "Mendix.Studio.ExtensionsAPI" in Nuget.
+## 4 Using Extensions API via a Hosted NuGet Package
 
-Depending on your local environment setup you might need to manually add a NuGet package to your solution. You can add a package source to visual studio via the menu:
+You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *`Mendix.Studio.ExtensionsAPI* in NuGet.
 
-    Tools -> Options -> NuGet Package Manager -> Package Sources
+Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
-### Importing Extensions API via a NuGet package hosted on a local repository
+## 5 Importing Extensions API via a NuGet package Hosted on a Local Repository
 
-Another option to start extension development is to import a locally hosted Mendix.StudioPro.ExtensionsAPI NuGet package into your project.  
+Another option to start extension development is to import a locally hosted `Mendix.StudioPro.ExtensionsAPI` NuGet package into your project.  
 
-To create a local NuGet repository that will let you host and use NuGet packages shared with you, please follow the guide below:
+To create a local NuGet repository that will let you host and use NuGet packages shared with you, follow the procedure below:
 
-    1) Go to Tools -> Options -> NuGet Package Manager -> Package Sources.
-    2) Press the green plus sign and specify a local folder, instead of a network location.
-    3) Drop the package into that folder.
-    4) Refresh the NuGet manager to see the package alongside the other packages.
+1. Go to **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**.
+2. Press the green plus sign and specify a local folder, instead of a network location.
+3. Drop the package into that folder.
+4. Refresh the NuGet manager to see the package alongside the other packages.
 
->[!NOTE]
->To make the search process easier, you can specifically select a certain package source inside the NuGet manager window.
+{{% alert color="info" %}}
+To make the search process easier, you can specifically select a certain package source inside the NuGet manager window.
+{{% /alert %}}
 
->[!NOTE]
->If you'd like to learn more on the topic of local nuget repos, please read the official **[documentation on local feeds](https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds)** by Microsoft. 
+{{% alert color="info" %}}
+For more information on local NuGet repositories, see the official [Local Feeds](https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds) in *Microsoft Documentation*.
+{{% /alert %}}
 
-### Extensions Development Setup
+## 6 Extensions Development Setup
 
-Extensions load from within your mendix application and will only be loaded while the App is open. 
+Extensions load from within your mendix application and will only be loaded while the app is open. 
 
-If you specify the `--enable-extension-development` flag you can debug your extension by placing it into a new subfolder within your project directory. The format of the folder must be (Mendix App folder)\extensions\(Your extension Name) where all extensions that you which to load must exist inside the (Mendix App folder)\extensions subfolder.
+If you specify the `--enable-extension-development` flag you can debug your extension by placing it into a new subfolder within your app directory. The format of the folder must be `[Mendix app folder]\extensions\[your extension name]` where all extensions that you want to load must exist inside the `[Mendix app folder]\extensions` sub-folder.
 
-Studio Pro will only load your extension if it complies with the following rules:
+Studio Pro will load your extension, only if it complies with the following rules:
  - Your extension needs to provide a manifest.json file. 
- - This manifest file must contain a list of entry points for your extension.
+ - This manifest file must contain a list of entry points for your extension. For example:
 
-manifest.json example:
-
-```
-{
-    "mx_extensions": [ "MyExtension.dll" ]
-}
-```
+    ```
+    {
+        "mx_extensions": [ "MyExtension.dll" ]
+    }
+    ```

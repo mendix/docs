@@ -231,7 +231,7 @@ If you want to automatically synchronize the IdP metadata, make sure the **SE_Sy
 
 If you need to change your identity provider metadata you can find more information in the [Response Protocol Binding](#saml-binding) section.
 
-#### 3.2.4 User Provisioning 
+#### 3.2.4 User Provisioning {#user-provisioning}
 
 The following settings control user provisioning:
 

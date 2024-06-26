@@ -107,7 +107,7 @@ If you want to customize the login page, make sure to add the **App events** wid
 
 ### 4.4 Configuring Client Information {#client-info}
 
-Follow the [General OIDC Providers](/appstore/modules/oidc/#511-general-oidc-providers) section of the ***OIDC SSO*** documentation for configuring client information.
+Follow the [General OIDC Providers](/appstore/modules/oidc/#general-providers) section of the ***OIDC SSO*** documentation for configuring client information.
 
 The following subsections show how to set up IdP for mobile or web and mobile platforms:
 

@@ -134,7 +134,7 @@ To view all the available deep link configurations and example URLs, add the **D
 ### 3.6 Configuring Constants
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
-* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#2-anonymous-users-properties).
+* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#properties).
 
     For the **LoginLocation** constant, it is IMPORTANT to note the following:
 

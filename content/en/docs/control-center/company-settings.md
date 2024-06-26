@@ -50,7 +50,7 @@ Click **Delete** to delete the existing Security Contact. This is the first step
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
-## 3 Mendix Admins
+## 3 Mendix Admins{#mendix-admins}
 
 The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 
 

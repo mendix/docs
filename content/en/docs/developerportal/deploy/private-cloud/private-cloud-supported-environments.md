@@ -32,7 +32,7 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}
 
-#### 2.1.1 Supported Versions
+#### 2.1.1 Supported Versions{#supported-versions}
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
@@ -95,7 +95,7 @@ It is not possible to use Mendix for Private Cloud in [OpenShift Online](https:/
 
 Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported.
 
-## 3 Container Registries
+## 3 Container Registries{#container-registries}
 
 Mendix for Private Cloud builds container images for every app and pushes them to the registry. It needs credentials to access the registry and permissions to push images into the registry.
 
@@ -293,7 +293,7 @@ This allows you to use an existing database (schema) [database configuration par
 A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
-## 5 File storage
+## 5 File storage{#file-storage}
 
 ### 5.1 Ephemeral File Storage
 

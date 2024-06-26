@@ -89,7 +89,7 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Private Cloud (Connected)
+## 3 Private Cloud (Connected) {#pc-connected}
 
 The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
 

@@ -21,7 +21,7 @@ This release focuses on improving the Marketplace Reviews feature and making it 
 * We have improved the **Review** tab to give you tips when writing your review. This feature is available both on the Marketplace site and within Studio Pro.
 * We have decoupled ratings and reviews. You can now rate a component 4 or 5 stars without leaving a review. For 3, 2, and 1 star ratings, a review is mandatory.
 * You can now see additional information, such as reviews, on the Marketplace site without needing to sign in.
-* We have removed the "Company Reviews" page from **My Marketplace**.
+* We have removed the "Company Reviews" page from **Marketplace Home Page**.
 * You can now to filter reviews based on specific criteria.
 * We have improved the **Review** tab to give you tips when replying to a review of your Marketplace component.
 
@@ -111,7 +111,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/#my-drafts) section of *My Marketplace*.
+* We have added the **My Drafts** page, where you can access component drafts. We have also extended the actions you can perform on drafts. For more information, see the [My Drafts](/appstore/overview/#my-drafts) section of *Marketplace Home Page*.
 
 ### August 11, 2022
 
@@ -190,7 +190,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* We have implemented a UX refresh of **My Marketplace** to be in line with other Marketplace pages.
+* We have implemented a UX refresh of **Marketplace Home Page** to be in line with other Marketplace pages.
 
 ### June 3, 2021
 
@@ -246,7 +246,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### Improvements
 
-* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of the notifications in **My Marketplace**.
+* We added email notifications for several actions in the Marketplace. You can now receive emails if one of your components has changed, when a published component has received a review, and when you receive a reply to one of your reviews. You can unsubscribe from any of the notifications in **Marketplace Home Page**.
 * Developers can now reply to reviews of their components.
 
 ### February 9, 2021

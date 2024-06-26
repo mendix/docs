@@ -33,13 +33,13 @@ On the left side of the page, you can see the following categories:
 * [Explore](#explore)
 * [Personal](#personal)
 * [Company](#company)
-* [Data](data)
+* [Data](#data)
 
 On the right side of the page, you can see the filters such as **Content Types** to use to filter the Marketplace components. The following filter options are available:
 
 * **Support** – for details, see the [Marketplace Content Support](/appstore/marketplace-content-support/)
 * **Visibility** – for [Public](/appstore/sharing-content/#public) or [Private](/appstore/sharing-content/#private) content
-* **Content Types** – for details, see the [Content Types](/appstore/marketplace/#content-types) section in *Marketplace*.
+* **Content Types** – for details, see the [Types of Marketplace Components](/appstore/#components-type) section in *Marketplace*.
 * **Category** – for specific domains in which components or services share characteristics, functions, or purposes
 * **Industry** – for specific sectors or business domains in which components or services are used
 * **Compatibility** – for Studio Pro major versions
@@ -130,7 +130,7 @@ This page contains private content shared with you by other companies who have m
 
 ### 3.5 Saved Content {#saved-components}
 
-This page presents the Marketplace content you have [saved](/appstore/overview/#saved). 
+This page presents the Marketplace content you have [saved](/appstore/component-details/#saved). 
 
 Click the name of the component to go its [component details page](/appstore/component-details/).
 

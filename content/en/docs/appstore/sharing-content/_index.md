@@ -297,7 +297,7 @@ Mendix expects the following updates for components in the Platform, Community, 
 
 To update content that has already been published, follow these steps:
 
-1. Find the component by clicking **My Marketplace** and selecting one of the following:
+1. Find the component by going to the Marketplace home page and selecting one of the following:
     * **My Content**
     * **Company Content**
     * **Content Groups** (note that if an existing Marketplace component is assigned to a [content group](/appstore/overview/#content-groups) as specific content group [content](/appstore/overview/#group-content), you can only update the component if you are a member of that group)

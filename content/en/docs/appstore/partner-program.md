@@ -21,7 +21,7 @@ In return, you will gain the following benefits:
 * Win new income streams
 * Develop brand awareness with target audiences
 * Drive demand for your services
-* Present a [partner icon](/appstore/overview/#partner-icon) on the components you support
+* Present a [partner icon](/appstore/component-details/#partner-icon) on the components you support
 
 ## 2 Joining the Marketplace Program
 

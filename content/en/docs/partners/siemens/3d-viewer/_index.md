@@ -585,7 +585,7 @@ The sections below describe these tools.
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace**.
+2. Go to the Marketplace home page.
 3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 4. Find **3D Viewer** in the list.
 5. Click **Usage Dashboard** to show the usage details.

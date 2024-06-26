@@ -22,7 +22,7 @@ The header for a component presents the following details:
 
 * The number of times the component has been downloaded
 
-* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [My Marketplace](/appstore/overview/) list
+* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [Saved Content](/appstore/overview/#personal) list
 
 * Depending on the content type:
 
@@ -64,6 +64,6 @@ The component details page also presents the following tabs:
   * You can select the **Only show my reviews** checkbox to check your own reviews.
   * You can click **Write Review** to open a section where you can add text, rate the component, and submit the review.
     * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right. You can now rate a component four or five stars without leaving a review. For three-, two-, and one-star ratings, a review is mandatory.
-    * You can find all your reviews on your [My Reviews](/appstore/overview/#my-reviews) page in **My Marketplace**.
+    * You can find all your reviews on your [My Reviews](/appstore/overview/#my-reviews) page in the Marketplace home page.
   * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).

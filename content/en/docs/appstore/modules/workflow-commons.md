@@ -125,7 +125,7 @@ The audit trail feature was introduced in [Mendix 10.12.0](https://marketplace.m
 
 Workflow Audit Trail uses [Workflow Events](https://docs.mendix.com/refguide/workflow-events/#2-configuration) to store data of a single or all workflows in your app. You can configure the audit trail to keep track of a specific set of events which you can configure in the **Event handlers** setting in [App Settings](https://docs.mendix.com/refguide/app-settings/#event-handlers) or in [Workflow properties](https://docs.mendix.com/refguide/workflow-properties/#event-handlers). To know more about Event handlers in Workflows see [Event Handlers](https://docs.mendix.com/refguide/workflow-properties/#event-handlers).
 
-{{% alert color="info" %}}The event handlers added in workflow properties override the app-wide event handlers in App Settings. {{% /alert %}}
+{{% alert color="info" %}}The event handlers added in workflow properties override the app-wide event handlers in App Settings. When adding event handlers at workflow level while the event handlers that are defined at app level are still applicable, then they should be added at workflow level as well. {{% /alert %}}
 
 To enable audit trail for all workflows in your app, follow the steps below:
 1. Go to **App Settings** > **Workflows** tab.
@@ -141,7 +141,7 @@ The image below represents an example of how to configure audit trail event hand
 
 To enable audit trail for a specific workflow in your app, go to the **Events** tab in the Workflow properties. Follow steps 2 to 6 to configure the event handler. 
 
-{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time and could contain many non-human activities. In this case we advice to only select a limited set of activities to be stored in the audit table depending on your need and to regularly delete old audit records. {{% /alert %}}
+{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time and could contain many non-human activities. In this case we advice to only select a limited set of events depending on your need and to regularly delete old audit records. {{% /alert %}}
 
 ### 5.3 Viewing the audit trail
 

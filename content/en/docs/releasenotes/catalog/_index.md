@@ -12,6 +12,16 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### June 27, 2024
+
+#### Fixes 
+
+* We addressed some aesthetics bugs and made some aesthetic improvements on the **Home**, **Search**, and registration pages. 
+
+#### Improvement
+
+* We have aligned our top-menu navigation to rest of the platform, and thus also adjusted some navigation across the Catalog app.
+
 ### June 20, 2024
 
 #### Fixes 

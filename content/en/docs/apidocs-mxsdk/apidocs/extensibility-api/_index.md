@@ -1,13 +1,10 @@
 ---
 title: "Extensibility API"
 url: /exsensibility-api/
-description: "Studio Pro Extensions API documentation."
-weight: 55
+description: "Describes the Studio Pro Extensibility API."
+weight: 57
 no_list: false
 description_list: true
-cascade:
-    - content_type: "APIs and SDK"
-    - mendix_version: 10
 ---
 
 ## 1 Introduction
@@ -27,3 +24,5 @@ If you need to add your own custom UI to Studio Pro, you can achieve this using 
 For detailed explanation on how to get started with extensions you can check out the [getting started guide](getting_started/).
 
 You can also check out our samples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
+
+## 4 Documentation in This Category

@@ -1,6 +1,6 @@
 ---
-title: "Getting Started with the Extensibility API"
-linktitle: "Getting Started Guide"
+title: "Getting Started Guide"
+linktitle: "Get Started with the Extensibility API"
 url: /extensibility-api/getting_started/
 weight: 2
 ---
@@ -41,7 +41,7 @@ To create a local NuGet repository that will let you host and use NuGet packages
 
 1. Go to **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**.
 2. Press the green plus sign and specify a local folder, instead of a network location.
-3. Drop the package into that folder.
+3. Drop the package into the local folder.
 4. Refresh the NuGet manager to see the package alongside the other packages.
 
 {{% alert color="info" %}}

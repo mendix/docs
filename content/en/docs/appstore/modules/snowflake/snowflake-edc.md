@@ -20,8 +20,12 @@ To configure connect your Mendix application to Snowflake with the External Data
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
 3. Provide a name for the database connection document.
 4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
-5. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
-6. Click **Test Connection** to verify the connection details, and then click **Save**.
+5. If you decide to use the connection details, copy the Account URL from the Snowflake console and use it as the Host parameter for the **Connection details**.
+
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
+
+6. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
+7. Click **Test Connection** to verify the connection details, and then click **Save**.
 
 {{% alert color="info" %}}
 When using the private key for authentication, format the key as a single line by removing any line breaks. The format should start with "-----BEGIN [ENCRYPTED PRIVATE KEY]-----" and end with "-----END [ENCRYPTED PRIVATE KEY]-----". Note that the text [ENCRYPTED PRIVATE KEY] will vary depending on the type of the key file.

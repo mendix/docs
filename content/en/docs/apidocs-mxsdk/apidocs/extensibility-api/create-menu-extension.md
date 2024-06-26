@@ -38,7 +38,7 @@ It is handy to have a single App where the extension is used for the testing pur
 
 Now if you build your extension project, (usually you can do this by pressing  <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> ) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd> ), the latest version of your extension will be loaded.
 
-### 4 Creating Your First Extension
+## 4 Creating Your First Extension
 
 To introduce a simple extension that adds a menu item to Studio Pro, add the following class:
 ```csharp
@@ -82,7 +82,7 @@ public class MyMenuExtension() : MenuExtension
 }
 ```
 
-### 5 Debugging Your Extension
+## 5 Debugging Your Extension
 
 1. Make sure that the current version of the extension code is loaded in Studio Pro.
 2. Attach to Studio Pro process in Visual Studio debugger as follows:
@@ -92,7 +92,7 @@ public class MyMenuExtension() : MenuExtension
 
 3. Add a Breakpoint inside `Action` delegate in `MyMenuExtension.GetMenus()`. It will be hit when you click **Extensions** > **MyCompany** > **Say hello** menu item.
 
-### 6 Adding NuGet dependency
+## 6 Adding NuGet dependency
 
 You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. The following one-time additional setup is required:
 1. Open your extension project `.csproj` file by right-clicking **Solution Explorer** > **Edit Project File**.

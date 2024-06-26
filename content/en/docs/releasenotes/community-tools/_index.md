@@ -10,7 +10,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 ## 2024
 
-### June 25, 2024
+### June 27, 2024
 
 #### New Features
 

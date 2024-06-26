@@ -65,6 +65,8 @@ The **Personal** category contains the following items:
 * Saved Content
 * My Reviews
 
+These items are described in the sections below.
+
 ### 3.1 My Drafts {#my-drafts}
 
 On this page, you can see and manage the drafts for all the Marketplace content you have started.
@@ -75,17 +77,17 @@ This page presents details on how many total drafts you have, which drafts are r
 
 These are the possible **Status** entries for each item:
 
-* **Incomplete draft** – the draft is incomplete and requires additional information before you can submit it
-* **Ready to publish**  – the draft of the new version of the component is ready to be published to the Mendix Marketplace
-* **Waiting for approval** – the component is being [reviewed by Mendix](/appstore/sharing-content/governance-process/) 
-* **Declined** – the draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page
+* **Incomplete draft** – The draft is incomplete and requires additional information before you can submit it
+* **Ready to publish**  – The draft of the new version of the component is ready to be published to the Mendix Marketplace
+* **Waiting for approval** – The component is being [reviewed by Mendix](/appstore/sharing-content/governance-process/) 
+* **Declined** – The draft was declined after review by Mendix; you can find specific feedback in the email notification and on the draft edit page
 
 On this page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a component to access the following options:
 
-* **Edit Draft** – click this to go to the component's draft page, where you can continue editing the component details
-* **Submit Draft** – if your component is ready to be submitted and has no errors, you can proceed with the submission for review
-* **Withdraw Draft** – click this to withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
-* **Delete** – click this to delete the draft
+* **Edit Draft** – Click this to go to the component's draft page, where you can continue editing the component details
+* **Submit Draft** – If your component is ready to be submitted and has no errors, you can proceed with the submission for review
+* **Withdraw Draft** – Click this to withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
+* **Delete** – Click this to delete the draft
 
 ### 3.2 My Content {#my-content}
 
@@ -97,13 +99,13 @@ Click the context menu to access various options for managing your content:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  class="no-border" >}}
 
-* **Manage Drafts** – click this to manage the drafts of the component
+* **Manage Drafts** – Click this to manage the drafts of the component
   * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
   * If there is a draft version in progress, you will see options to **Edit Draft** or **Delete Draft**
   * If there is a draft version in progress assigned to another user, you will see an option to **Reassign Draft** to yourself 
   * For more information on creating a draft version, see the [Updating Existing Marketplace Content](/appstore/sharing-content/#updating) section of *How to Share Marketplace Content*
-* **Edit a Version** – click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *How to Share Marketplace Content*)
-* **Unpublish a Version** – click this to remove one version or all versions of the component
+* **Edit a Version** – Click this to edit the component (for details on editing, see the [Adding New Marketplace Content](/appstore/sharing-content/#adding) section of *How to Share Marketplace Content*)
+* **Unpublish a Version** – Click this to remove one version or all versions of the component
   * If the component is [protected content](#group-content) from a [content group](#content-groups), a [group member](#members) can unpublish any version
   * If the component is not the protected content of a content group, you can only unpublish a version that you have published yourself
   * Select **Unpublish All My Versions** to remove all your versions of the component
@@ -150,7 +152,8 @@ The **Company** category contains the following items:
 * Company Content
 * Company Subscriptions
 * Content Group
-* Catalog
+
+These items are described in the sections below.
 
 ### 4.1 Company Content {#company-content}
 

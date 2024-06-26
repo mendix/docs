@@ -21,7 +21,7 @@ In order to use extensions you will need at least a basic understanding of the M
 Extensions are developed using [C#](https://docs.microsoft.com/en-us/dotnet/), and compiled into a `.dll` assembly file.
 
 If you need to add your own custom UI to Studio Pro, you can achieve this using web technology.
-Your web-based UI will be rendered in Studio Pro using a [hosted web view](/extensions-api/webview_intro/), the API provides communication functionality between your web UI and the C# extension logic.
+Your web-based UI will be rendered in Studio Pro using a web view, the API provides communication functionality between your web UI and the C# extension logic.
 
 ## Getting Started:
 

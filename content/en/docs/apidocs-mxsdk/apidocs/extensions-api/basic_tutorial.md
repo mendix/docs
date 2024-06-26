@@ -1,5 +1,5 @@
 ﻿---
-title: "Basic Tutorial"
+title: "Create a Menu Extension"
 url: /extensions-api/basic_tutorial/
 weight: 4
 ---

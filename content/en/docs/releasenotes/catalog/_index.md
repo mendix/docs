@@ -20,7 +20,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Improvement
 
-* We have aligned our top-menu navigation to rest of the platform, and thus also adjusted some navigation across the Catalog app.
+* We have aligned our top-menu navigation to the rest of the platform, which has adjusted some navigation across the Catalog app.
 
 ### June 20, 2024
 

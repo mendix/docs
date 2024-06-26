@@ -20,7 +20,7 @@ To configure connect your Mendix application to Snowflake with the External Data
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
 3. Provide a name for the database connection document.
 4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
-5. If you decide to use the connection details, copy the Account URL from the Snowflake console and use it as the Host parameter for the **Connection details**.
+5. If you decide to use the connection details, copy the **Account URL** from the Snowflake console and use it as the **Host parameter** for the **Connection details**.
 
     {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
 

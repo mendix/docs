@@ -1,7 +1,7 @@
 ---
 title: "Getting Started Guide"
 linktitle: "Get Started with the Extensibility API"
-url: /extensibility-api/getting_started/
+url: /apidocs-mxsdk/apidocs/exsensibility-api/getting-started/
 weight: 2
 ---
 
@@ -9,15 +9,11 @@ weight: 2
 
 This document helps you set up a basic development environment for building extensions. Additionally, you can find links here to additional tutorials that help familiarize you to the extensibility API topics.
 
-## 2 Intended Audience
+## 2 Development Setup
 
-The extensibility API is intended for closed Partner Beta within Mendix partner network. At a later stage, we would like to make this available to third-party developers.
+The recommended development environment is [Visual Studio 2022](https://visualstudio.microsoft.com/) running on Windows. This documentation is centered on this setup. (You can also use other IDEs and other .NET compatible programming languages like [F#](https://fsharp.org/)).
 
-## 3 Development Setup
-
-The recommended development environment is [Visual Studio 2022](https://visualstudio.microsoft.com/) running on Windows. You can also use other IDEs and other .NET compatible programming languages (like [F#](https://fsharp.org/)). This documentation is centered on the above setup.
-
-Install the latest Studio Pro version from [Marketplace](https://marketplace.mendix.com/link/studiopro/).
+Install the latest Studio Pro version from the Mendix [Marketplace](https://marketplace.mendix.com/link/studiopro/).
 
 {{% alert color="info" %}}
 Make sure to keep this Studio Pro installation up-to-date to benefit from new features and fixes.
@@ -27,13 +23,13 @@ Make sure to keep this Studio Pro installation up-to-date to benefit from new fe
 Extensions can be built on any operating system as the underlying framework is cross-platform.
 {{% /alert %}}
 
-## 4 Using Extensions API via a Hosted NuGet Package
+## 3 Using Extensions API via a Hosted NuGet Package
 
-You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *`Mendix.Studio.ExtensionsAPI* in NuGet.
+You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *Mendix.Studio.ExtensionsAPI* in NuGet.
 
 Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
-## 5 Importing Extensions API via a NuGet Package Hosted on a Local Repository
+## 4 Importing Extensions API via a NuGet Package Hosted on a Local Repository
 
 Another option to start extension development is to import a locally hosted `Mendix.StudioPro.ExtensionsAPI` NuGet package into your project.  
 
@@ -52,11 +48,11 @@ To make the search process easier, you can specifically select a certain package
 For more information on local NuGet repositories, see the official [Local Feeds](https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds) in *Microsoft Documentation*.
 {{% /alert %}}
 
-## 6 Extensions Development Setup
+## 5 Extensions Development Setup
 
 Extensions load from within your mendix application and will only be loaded while the app is open. 
 
-If you specify the `--enable-extension-development` flag you can debug your extension by placing it into a new subfolder within your app directory. The format of the folder must be `[Mendix app folder]\extensions\[your extension name]` where all extensions that you want to load must exist inside the `[Mendix app folder]\extensions` sub-folder.
+If you specify the `--enable-extension-development` flag you can debug your extension by placing it into a new subfolder within your app directory. The format of the folder must be `<Mendix app folder>\extensions\<your extension name>` where all extensions that you want to load must exist inside the <`Mendix app folder>\extensions` subfolder.
 
 Studio Pro will load your extension, only if it complies with the following rules:
  - Your extension needs to provide a manifest.json file. 

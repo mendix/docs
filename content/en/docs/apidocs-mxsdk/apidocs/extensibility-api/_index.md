@@ -1,6 +1,6 @@
 ---
 title: "Extensibility API"
-url: /exsensibility-api/
+url: /apidocs-mxsdk/apidocs/exsensibility-api/
 description: "Describes the Studio Pro Extensibility API."
 weight: 57
 no_list: false
@@ -21,7 +21,7 @@ If you need to add your own custom UI to Studio Pro, you can achieve this using 
 
 ## 3 Getting Started
 
-For detailed explanation on how to get started with extensions you can check out the [Getting Started Guide](getting_started/).
+For detailed explanation on how to get started with extensions you can check out the [Getting Started Guide](/apidocs-mxsdk/apidocs/exsensibility-api/getting-started/).
 
 You can also check out our samples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 

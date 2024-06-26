@@ -31,8 +31,8 @@ It is handy to have a single App where the extension is used for the testing pur
 1. Create new Mendix App to use for extension testing, based on a starter app of your choice. You can also use an existing app.
 2. Open App in Windows Explorer by selecting **App** > **Show App Directory in Explorer**.
 3. Create a new folder `extensions` inside the app directory.
-4. Create a sub-folder named after your extension, for example,  `MyCompany`, inside the `extensions` folder.
-5. Copy the full path of the sub-folder by pressing <kbd>Shift</kbd> and right-clicking at the same time, and then selecting **Copy as path**.
+4. Create a subfolder named after your extension, for example,  `MyCompany`, inside the `extensions` folder.
+5. Copy the full path of the subfolder by pressing <kbd>Shift</kbd> and right-clicking at the same time, and then selecting **Copy as path**.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`
 
@@ -59,7 +59,7 @@ public class MyMenuExtension(IMessageBoxService messageBoxService) : MenuExtensi
 }
 ```
 
-Build your extension and press <kbd>F4</kbd> in Studio Pro. Extension menu items are placed under a corresponding menu with the extensions name. If your extension is named "My Extension", then your menu items will be located under the **Extensions** > **My Company** sub-menu.
+Build your extension and press <kbd>F4</kbd> in Studio Pro. Extension menu items are placed under a corresponding menu with the extensions name. If your extension is named "My Extension", then your menu items will be located under the **Extensions** > **My Company** submenu.
 
 The Extensibility API provides you with several services you can use and they are injected into your extension classes by using the `ImportingConstructor` attribute.
 

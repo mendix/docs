@@ -86,7 +86,7 @@ public class MyMenuExtension() : MenuExtension
 
 1. Make sure that the current version of the extension code is loaded in Studio Pro.
 2. Attach to Studio Pro process in Visual Studio debugger as follows:
-   1. Open **Attach to Process** dialog box on the **Debug** menu (or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>).
+   1. On the **Debug** menu, open the **Attach to Process** dialog box  (or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>).
    2. Search for `studiopro.exe` among the processes.
    3. Select the only found process (or the one with correct title, if you have many) and select **Attach**.
 

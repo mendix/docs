@@ -33,7 +33,7 @@ You can start extension development by simply including the `Mendix.StudioPro.Ex
 
 Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
-## 5 Importing Extensions API via a NuGet package Hosted on a Local Repository
+## 5 Importing Extensions API via a NuGet Package Hosted on a Local Repository
 
 Another option to start extension development is to import a locally hosted `Mendix.StudioPro.ExtensionsAPI` NuGet package into your project.  
 

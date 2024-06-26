@@ -80,7 +80,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 {{< figure src="/attachments/refguide/studio-pro-overview/pane-example.png" alt="Properties Pane Example" width="300" class="no-border" >}}
 
-For example, you can view [list of errors](/refguide/errors-pane/), run [MxAssist Best Practice bot](/refguide/mx-assist-performance-bot/), configure properties of a specific document or an element, or view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
+For example, you can view [list of errors](/refguide/errors-pane/), run [Best Practice Recommender](/refguide/best-practice-recommender/), configure properties of a specific document or an element, or view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
 ## 6 Status Bar {#status-bar}
 

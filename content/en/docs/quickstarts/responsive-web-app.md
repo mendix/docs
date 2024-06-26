@@ -109,7 +109,7 @@ Here you will find some separate default dockable panes:
 * [Changes](/refguide/changes-pane/) – displays a list of all changes in the app since the last commit to the Team Server
 * [Errors](/refguide/errors-pane/) – displays any errors found within your app 
 
-For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+For more information on available panes, see the [Best Practice Recommender](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
 ### 4.4 Right Dockable Panes
 

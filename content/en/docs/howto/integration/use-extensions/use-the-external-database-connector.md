@@ -10,13 +10,17 @@ description: "Overview of the External Database Connector in Studio Pro"
 
 Use the [External Database Connector](https://marketplace.mendix.com/link/component/219862) to connect, retrieve, and insert data into your Mendix app.
 
+{{% alert color="info" %}}
+If you are using Studio Pro 10.12, please make sure to use the  latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+{{% /alert %}}
+
 The External Database Connector supports connections to the following databases:
 
 * MSSQL
 * MySQL
 * PostgreSQL
 * Oracle
-* Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
+* Snowflake (GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) – Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
 This how-to teaches you how to do the following:
 
@@ -54,6 +58,8 @@ Click **Save** to save the connection details, which are stored in 3 constants:
 * `\<Document Name\>_DBPassword`
 
 For example: `*Database*_DBsource.`
+
+{{% alert color="info" %}}Values for these constants are stored in the Active configuration of the user, the password is stored as a private value.{{% /alert %}}
 
 ### 3.2 Explore Schemas of a Connected Database
 

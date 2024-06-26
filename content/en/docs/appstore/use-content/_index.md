@@ -51,7 +51,7 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
 4. You can explore Marketplace content in the following ways:
     * Use **Search in the Marketplace** to find the component that you want to download
         * You can paste the content ID here if you copied it via the [Use in Studio Pro button](/appstore/component-details/) in the web Marketplace
-    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/#home)
+    * Filter via the **Categories** and **Subcategories** drop-down menus, which correspond to the [Marketplace content types](/appstore/overview/)
     * Filter for **All Content**, **My Company Content**, or **Platform-Supported Content**
 
 5. Select a component from the pane to see its details:

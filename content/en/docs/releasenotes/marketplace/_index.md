@@ -77,7 +77,7 @@ In the past, downloading a component directly from the web Marketplace could lea
 #### Improvements
 
 * The **Compatibility** filter now only allows for major Mendix versions.
-* The **Support** section of the [component details page](/appstore/component-details/) now includes a link to [Marketplace Content Support](/appstore/overview/#support).
+* The **Support** section of the [component details page](/appstore/component-details/) now includes a link to [Marketplace Content Support](/appstore/marketplace-content-support/).
 
 ### March 23, 2023
 
@@ -176,7 +176,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 #### New Features
 
-* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/overview/#types), and Studio Pro **Compatibility**. 
+* Marketplace filtering has been revamped. You can now find content faster by filtering by **Industry**, [Content Type](/appstore/#components-type), and Studio Pro **Compatibility**. 
 * We have made 15+ fully developed solutions and 10+ solution templates available to help you realize value even more quickly.
 * We have listed 10+ **Premium** app services, and we now support a self-service [subscription](/appstore/overview/#company-subscriptions) experience using credit card for two app services in supported regions.
 
@@ -273,7 +273,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 #### Improvements
 
 * The Mendix "App Store" has been renamed to the "Marketplace" as part of the continued investment in new capabilities that is underway. This rename (and URL change) is only for the pages rebuilt so far listed above. Further implementation of this renaming is to follow in future releases.
-* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/#home), [catalog](/appstore/overview/), [component details](/appstore/component-details/), and Studio Pro download pages.
+* We have implemented a UX Refresh to provide a fresh new look and feel for the [Marketplace home](/appstore/overview/), [catalog](/appstore/overview/), [component details](/appstore/component-details/), and Studio Pro download pages.
 * We have enabled an enhanced navigation and undertaken some curation of published components to help you discover the components you require more easily.
 * We have enabled a more structured wizard-based flow that makes it a lot easier for you to [share new content](/appstore/sharing-content/) to the Marketplace.
 
@@ -321,7 +321,7 @@ If you are using Studio Pro on a Mac with Parallels, see [this update](https://k
 
 We are invested in maintaining Mendix Marketplace content to make it easier for you to find and use the widgets and modules that you need. To that end, we have cleaned up old App Store content where Mendix support is no longer possible and changed the support level from **Platform support** to **Community support**.
 
-For more information on these support levels, see the [Marketplace Content Support](/appstore/overview/#support) section of *Marketplace Overview*.
+For more information on these support levels, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section of *Marketplace Overview*.
 
 ### November 6, 2019
 
@@ -343,7 +343,7 @@ Content that was marked as **Protected** as well as content marked as **Shared w
 
 #### Improvements
 
-* We now display the UUID of an App Store component in the [Usage](/appstore/overview/#usage) section of its details page.
+* We now display the UUID of an App Store component in the **Usage** section of its details page.
 
 ### September 11, 2019
 

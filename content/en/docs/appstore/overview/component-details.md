@@ -46,7 +46,7 @@ The header for a component presents the following details:
 
 The **Publisher** section presents the name of the company who created the component as well as the **Date** when the component was first published.
 
-The **Support** section presents the category of support Mendix offers for the component (for more details, see the [Marketplace Content Support](#support) section below).
+The **Support** section presents the category of support Mendix offers for the component (for more details, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section below).
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
@@ -56,7 +56,7 @@ The component details page also presents the following tabs:
 
 * **Overview** – This tab contains a description and screenshots of the component.
 * **Documentation** – This tab includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots.
-  * [Platform-supported components](/appstore/overview/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
+  * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
   * Each version can be downloaded by clicking **Download.**
 * **Reviews** – This tab shows user reviews of the component.

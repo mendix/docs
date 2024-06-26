@@ -29,7 +29,7 @@ The process is simple:
 
 1. Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/)/.
 2. Design and build your content.
-3. Edit your listing and submit it to the Marketplace for the [Partner](/appstore/overview/#category) support category.
+3. Edit your listing and submit it to the Marketplace for the [Partner](/appstore/marketplace-content-support/#category) support category.
 
 As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 

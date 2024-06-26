@@ -60,7 +60,7 @@ The level of support for the community-supported content totally depends on the 
 
 ### 3.4 Partner Category
 
-Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](#details) contains a reference to the partner's support portal or the partner's support contact email.
+Partner-supported content is created and maintained by partners as part of the [Mendix Component Partner program](/appstore/partner-program/). Partners in the program commit to providing support to paying customers under an SLA (meaning, under terms specified by the partner). Customers can rely on this SLA for support from the partner if something goes wrong. A partner-supported Marketplace [component details page](/appstore/component-details/) contains a reference to the partner's support portal or the partner's support contact email.
 
 ## 4 Feedback Process Summary
 

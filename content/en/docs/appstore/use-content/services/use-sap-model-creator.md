@@ -326,6 +326,6 @@ For more information on how to use the imported data model together with the ODa
 
 ## 6 Read More
 
-* [Using Marketplace Content](/appstore/overview/use-content/)
+* [Using Marketplace Content](/appstore/use-content/)
 * [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)
 * [Model Creator for SAP Integrations (SAP)](https://sapmodelcreator.mendixcloud.com/link/odata)

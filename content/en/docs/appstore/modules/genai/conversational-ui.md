@@ -51,7 +51,7 @@ Finally, you must also install and configure a connector that is compatible with
 
 ## 2 Installation {#installation}
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Conversational UI into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI into your app.
 
 ## 3 Configuration {#configuration}
 

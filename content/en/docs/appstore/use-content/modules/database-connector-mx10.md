@@ -62,7 +62,7 @@ This connector supports the following statements:
 
 ## 2 Installation {#installation}
 
-Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) and [add it to your app](/appstore/overview/use-content/).
+Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) and [add it to your app](/appstore/use-content/).
 
 ## 3 Configuration in Design Time {#configuration}
 

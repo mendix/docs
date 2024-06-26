@@ -40,7 +40,7 @@ This extension currently has the following limitations:
 
 ### 1.5 Installation
 
-Download the [Data Importer](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/overview/use-content/).
+Download the [Data Importer](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/use-content/).
 
 ## 2 Data Importer Document
 

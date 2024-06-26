@@ -83,7 +83,7 @@ You should have [signed up](https://platform.openai.com/) for an OpenAI account,
 
 ## 2 Installation {#installation}
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OpenAI Connector into your app. 
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the OpenAI Connector into your app. 
 
 ## 3 Configuration {#configuration}
 

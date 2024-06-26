@@ -59,7 +59,7 @@ Advanced Audit Trail is a premium Mendix product that comes with a subscription 
 
 ### 2.2 Installing the Components in Your App
 
-To install the component, follow the instructions in the [Importing Content from Studio Pro’s App Explorer](/appstore/overview/use-content/#import) section of *Using Marketplace Content* to import the [Advanced Audit Trail - Core](https://marketplace.mendix.com/link/component/120237) module and the [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) module into your app.
+To install the component, follow the instructions in the [Importing Content from Studio Pro’s App Explorer](/appstore/use-content/#import) section of *Using Marketplace Content* to import the [Advanced Audit Trail - Core](https://marketplace.mendix.com/link/component/120237) module and the [Advanced Audit Trail UI](https://marketplace.mendix.com/link/component/120204) module into your app.
 
 {{% alert color="info" %}}If you update the Advanced Audit Trail - Core module, make sure that you update the Advanced Audit Trail UI module to the same version.{{% /alert %}}
 

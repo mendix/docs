@@ -32,7 +32,7 @@ The SAP Horizon Native UI Resources module requires the following modules:
 
 ## 3 Installation
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the SAP Horizon Native UI Resources module into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the SAP Horizon Native UI Resources module into your app.
 
 ## 4 Configuration
 

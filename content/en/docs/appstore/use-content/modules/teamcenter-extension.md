@@ -43,7 +43,7 @@ To see Teamcenter Extension in action, download and play with the Teamcenter Ext
 
 ## 2 Installation
 
-Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the Teamcenter Extension into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Teamcenter Extension into your app.
 
 ## 3 Usage
 

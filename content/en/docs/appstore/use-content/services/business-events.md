@@ -41,7 +41,7 @@ The Mendix Business Events service itself does not require a license, but it dep
 
 ## 3 Configuration
 
-To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service into your app. See the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Using Marketplace Content*.
+To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service into your app. See the [Installing Marketplace Content](/appstore/use-content/#install) section in *Using Marketplace Content*.
 
 ### 3.1 Configuring Local Deployments {#config-local-deployment}
 

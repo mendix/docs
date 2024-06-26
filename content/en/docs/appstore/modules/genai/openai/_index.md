@@ -93,7 +93,7 @@ To use this connector, you need to either sign up for an [OpenAI account](https:
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 
-To import the OpenAI Connector into your app, follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/).
+To import the OpenAI Connector into your app, follow the instructions in [Using Marketplace Content](/appstore/use-content/).
 
 ## 3 Configuration {#configuration}
 

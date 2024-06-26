@@ -136,7 +136,7 @@ These are the nanoflow actions in the native network category:
 These methods only check if the device is connected, not if Internet access is provided. If you want to check if the device is connected to the Internet, please use the **IsConnectedToServer** JS action from the [Nanoflow Commons Module](https://marketplace.mendix.com/link/component/109515)
 {{% /alert %}}
 
-### 3.7 Native Mobile Category
+### 3.7 Native Mobile Category{#native-mobile-category}
 
 These are the nanoflow actions in the native mobile category:
 

@@ -15,7 +15,7 @@ The **Insights** page in the Portfolio Management app is a dashboard that offers
 
 The bar chart visualizes the distribution of your active initiatives according to the selected view. You can choose to display the number of initiatives per: **App**, **Department**, **Location**, **Owner**, or **Use Case**.
 
-The page displays up to twenty items(Department/App/Owner etc.) at a time. If there are more than twenty items, use the pagination buttons (< and >) in the upper-right corner to view the additional data.
+The page displays up to twenty items at a time. If there are more than twenty items, use the pagination buttons (**<** and **>**) in the upper-right corner to view items on a different page.
 
 ## 3 Active Initiatives per Stage
 

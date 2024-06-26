@@ -1,13 +1,13 @@
 ---
 title: "Creating a Private Cloud Cluster"
 url: /developerportal/deploy/private-cloud-cluster/
-description: "Describes the processes for creating a Private Cloud cluster in the Mendix Developer Portal"
+description: "Describes the processes for creating a Private Cloud cluster in the Mendix Portal"
 weight: 10
 ---
 
 ## 1 Introduction
 
-To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Developer Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
+To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/mx4pc-architecture.png" class="no-border" >}}
 
@@ -54,7 +54,7 @@ Should you consider using a connected environment, the following URLs should be 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image4.png" class="no-border" >}}
 
 4. Open the [Global Navigation menu](/developerportal/global-navigation/) and select **Deployment**.
-5. Select **Mendix for Private Cloud** from the top menu bar in the Developer Portal.
+5. Select **Mendix for Private Cloud** from the top menu bar in the Mendix Portal.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -91,7 +91,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Developer Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -910,11 +910,11 @@ Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory 
 
 ## 7 Cluster and Namespace Management
 
-Once it is configured, you can manage your cluster and namespaces through the Developer Portal.
+Once it is configured, you can manage your cluster and namespaces through the Mendix Portal.
 
 ### 7.1 Cluster Overview {#overview}
 
-Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -955,7 +955,7 @@ The only limitations are that:
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When you delete a cluster, this removes the cluster from the Developer Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
+When you delete a cluster, this removes the cluster from the Mendix Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
 ### 7.2 Namespace Management
@@ -983,7 +983,7 @@ You can also delete your namespace from the cluster manager by clicking **Delete
 
 If there are any environments associated with the namespace, you cannot delete the namespace until the environments associated with it are deleted.
 
-When you delete a namespace, this removes the namespace from the cluster in the Developer Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
+When you delete a namespace, this removes the namespace from the cluster in the Mendix Portal. However, it will not remove the namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 
 {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/image26.png" class="no-border" >}}
 
@@ -1228,7 +1228,7 @@ You can change the access rights for, or completely remove, existing members.
 
 #### 7.2.3 Operate {#operate}
 
-The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in the Developer Portal.
+The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Apps](https://sprintr.home.mendix.com/).
 The following pages can be configured:
 
 * Metrics

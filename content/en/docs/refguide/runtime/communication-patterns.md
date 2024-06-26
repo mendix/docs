@@ -20,7 +20,7 @@ The goals of this document are to present information for:
 The Mendix Platform consists of the following components:
 
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-* Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+* Mendix Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
 * Mendix Studio Pro – the modeling studio of the Mendix platform
 * Team Server – a central repository for managing application model versions

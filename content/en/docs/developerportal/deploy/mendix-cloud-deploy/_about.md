@@ -1,7 +1,7 @@
 ---
 title: "About Mendix Cloud"
 url: /developerportal/deploy/mxcloudv4/
-weight: 1
+weight: 90
 description: "Frequently asked questions about Mendix Cloud"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
@@ -10,7 +10,7 @@ description: "Frequently asked questions about Mendix Cloud"
 
 Mendix Cloud is where licensed Mendix apps are deployed to a scalable, enterprise-grade cloud platform.
 
-Apps deployed to Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Developer Portal or via [Mendix APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in many regions of the world.
+Apps deployed to Mendix Cloud run in Cloud Foundry clusters that are deployed on highly available Amazon Web Services (AWS) regions. They can be deployed from Studio Pro and the Mendix Portal or via [Mendix APIs](/apidocs-mxsdk/apidocs/deploy-api/). Apps can run in many regions of the world.
 
 ## 2 Where Is Data Hosted?{#cloud-data-regions}
 

@@ -15,19 +15,19 @@ Mendix Studio Pro allows you to manage your Java dependencies. By specifying Jav
 
 In versions of Mendix below 10.3.0, Java dependencies were put into the `userlib` folder manually. This process has been simplified using managed dependencies, although the `userlib` folder can still be used for custom `.jar`s. For more information see [Unmanaged Dependencies](#unmanaged), below.
 
-## 2 Adding or Updating Managed Dependencies
+## 2 Adding or Updating Managed Dependencies{#add-dependency}
 
 You can specify Java dependencies through the module settings of each module. For each module, you can configure your dependencies on the **Java Dependencies** tab of [Module settings](/refguide/module-settings/).
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/module-settings.png" class="no-border" >}}
 
-The tab shows a list of currently specified Java dependencies for this module. You can add **New** dependencies and **Edit** or **Delete** existing dependencies. Dependencies are identified through their Maven [Naming Convention](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
+The tab shows a list of currently specified Java dependencies for this module. You can add **New** dependencies and **Edit** or **Delete** existing dependencies. Dependencies are identified through their [Maven naming convention](https://maven.apache.org/guides/mini/guide-naming-conventions.html).
 
 To enter a dependency, do the following:
 
 1. Enter the **Group ID**, **Artifact ID**, and **Version**. For example, `org.apache.poi`, `poi`, and `5.2.3`.
 
-    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-java-dependencies.png" >}}
 
 1. Click **OK** to confirm your changes.
 
@@ -43,7 +43,26 @@ After finding the package of your choice, locate the Snippets part, containing t
 
 {{< figure src="/attachments/refguide/java-programming/managed-dependencies/junit-notation-example.png" class="no-border" >}}
 
-## 3 Dependency Synchronization
+## 3 Adding or Updating Exclusions
+
+{{% alert color="info" %}}
+Exclusions are available in Studio Pro version 10.12.0 and above.
+{{% /alert %}}
+
+Transitive (or indirect) dependencies of different configured Java dependencies might conflict. For example, if two Java dependencies have the same package name and classes but a different group or artifact then they may both be included in your app, possibly causing conflicts.
+
+To fix this, transitive dependencies can be excluded when configuring dependencies.
+The exclusions configured here will be exported with the module, meaning they are also excluded when the module is imported into another app.
+
+When [editing a Java dependency](#add-dependency) a list shows the currently specified exclusions for the dependency. You can add **New** exclusions and **Edit** or **Delete** existing exclusions. 
+
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/exclusions.png" >}}
+
+Exclusions are identified through their [Maven naming convention](https://maven.apache.org/guides/mini/guide-naming-conventions.html), you do not need to specify a version number.
+
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/edit-exclusion.png" >}}
+
+## 4 Dependency Synchronization {#dependency-synchronization}
 
 When a change is made to a specified dependency, for example, the dependency is removed or the module is updated from the Marketplace, dependency synchronization will automatically run in the background.
 
@@ -57,25 +76,29 @@ Once Gradle has resolved and downloaded all dependencies successfully, it places
 
 Within the `vendorlib` directory, we also generate the `vendorlib-sbom.json` file. This is the Software Bill of Materials of the `vendorlib` directory.
 
-## 4 Unmanaged Dependencies{#unmanaged}
+## 5 Unmanaged Dependencies{#unmanaged}
 
 Most dependencies can be managed using the managed dependencies feature. However, you may have a custom jar which you are experimenting on, or which is simply not available in any remote repositories. In this case, you can still place these unmanaged `.jar` files in the `userlib` folder to make it a dependency of your Mendix app.
 
-## 5 Migrating from Unmanaged to Managed Dependencies
+## 6 Migrating from Unmanaged to Managed Dependencies
 
 When you have created a module that contains `.jar` files in the `userlib` folder, the best practice is to port these to managed dependencies if the `.jar`s are available in a Maven repository. Add the specified dependency to your module and simply remove the old `.jar` file from the `userlib` folder to prevent a conflict.
 
 Platform-supported Marketplace modules created by Mendix have been updated with a custom mechanism to automatically migrate to managed dependencies.
 
-## 6 Custom Repositories{#custom-repos}
+## 7 Custom Repositories{#custom-repos}
 
 By default, dependencies are downloaded from the [Maven Central](https://central.sonatype.com/) repository. In some scenarios, you may want to specify a custom location. For example, if your organization has its own repository to cache downloads or as an alternative if internet access is restricted in an air-gapped setup.
 
-Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example, to resolve dependencies from a directory `lib`, enter the following:
+Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
 
 ```groovy {linenos=false}
-flatDir {
-    dirs 'lib'
+maven {
+    url '{url to your custom remote repository}'
+       credentials {
+        username 'user'
+        password 'password'
+    }
 }
 ```
 
@@ -86,23 +109,30 @@ gradlePluginPortal()
 mavenCentral()
 ```
 
+{{% alert color="info" %}}
+Custom Repositories like Nexus or JFrog may not be configured to point to central remote repositories by default. In this case, you (or someone with the appropriate rights) will need to configure your custom remote repository with the following sources:
+
+1. Maven Repository - https://repo1.maven.org/maven2/
+2. Gradle Plugins Repository - https://plugins.gradle.org/m2/
+{{% /alert %}}
+
 For more details, refer to the Gradle documentation on [Declaring repositories](https://docs.gradle.org/current/userguide/declaring_repositories.html).
 
-{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/java-programming/managed-dependencies/custom-repository.png" >}}
 
-### 6.1 Required Dependencies{#custom-repos-required-dependencies}
+### 7.1 Required Dependencies{#custom-repos-required-dependencies}
 
 There are some dependencies that are required by Mendix. These need to be added to your configured repository. Below is a list of these dependencies:
 
 * The Gradle plugin [cyclonedx-gradle-plugin](https://github.com/CycloneDX/cyclonedx-gradle-plugin), which generates a Software Bill of Materials (SBoM) required in certain contexts
 
-## 7 Proxy Settings{#proxy-settings}
+## 8 Proxy Settings{#proxy-settings}
 
 Your local setup might be configured to work with a proxy or it could be behind a firewall. This means your system will have restricted access to the internet. In such cases, Gradle cannot access external repositories to download the required dependencies to build the project. You will have to configure Gradle/JVM with the proxy settings on your system for it to be able to build and run the project on your local setup.
 
 Below are the few options you can try to configure Gradle with custom proxy settings:
 
-### 7.1 Gradle Proxy Settings
+### 8.1 Gradle Proxy Settings
 
 You can create a `gradle.properties` file in the [Gradle User Home](https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home) directory and configure the proxy settings there. Just replace the values in the sample file below with your values.
 See the official [Networking with Gradle](https://docs.gradle.org/current/userguide/networking.html) guide for further details. 
@@ -133,7 +163,7 @@ systemProp.javax.net.ssl.trustStore=\\path\\to\\win_ini_file
 systemProp.javax.net.ssl.trustStoreType=Windows-ROOT 
 ```
 
-### 7.2 VPN Setup
+### 8.2 VPN Setup
 
 You may have a VPN or firewall that blocks/restricts access to certain websites. In this case, you need to ask your network/system administrators to allow access to the following sites:
 
@@ -142,7 +172,7 @@ You may have a VPN or firewall that blocks/restricts access to certain websites.
 * plugins.gradle.org
 * repo.maven.apache.org
 
-### 7.3 Java Proxy Settings
+### 8.3 Java Proxy Settings
 
 If the above options do not work, you can try adding your proxy settings to the JDK proxy settings file. After you reboot your system to apply the settings, Gradle will pick up these settings and will attempt to connect to external repositories through the proxy.
 
@@ -163,13 +193,13 @@ When entering `your.proxy.ip.address`, do not add the URL scheme/protocol (for e
 
 If the above options don't work for you, please reach out to [Mendix Support](https://support.mendix.com/) for further assistance.
 
-## 8 Marketplace Modules
+## 9 Marketplace Modules
 
 Dependency information is included per module and included in Marketplace Modules. The actual artifacts (`.jar` files) are not part of the module. They are downloaded to the `vendorlib` folder automatically when synchronization is run when the module is imported.
 
 If you have an issue with the managed dependencies of a Marketplace module, you can revert to an earlier version by removing the new version and downloading an earlier version from the Marketplace.
 
-## 9 Troubleshooting
+## 10 Troubleshooting
 
 There can be multiple reasons the dependencies cannot be resolved. See the following for some common failure causes with steps on how to fix the issue.
 

@@ -49,6 +49,7 @@ Clicking **Preferences** opens a dialog box with a subset of the preferences you
 * Studio Pro Theme
 * Default Page Editor
 * Rendering
+* [Clone type](/refguide/preferences-dialog/#clone)
 
 ## 3 Read More
 

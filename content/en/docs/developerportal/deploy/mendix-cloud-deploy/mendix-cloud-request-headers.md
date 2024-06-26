@@ -2,7 +2,7 @@
 title: "Mendix Cloud HTTP Request Headers"
 linktitle: "HTTP Request Headers"
 url: /developerportal/deploy/mendix-cloud-request-headers/
-weight: 36
+weight: 80
 description: "Describes which HTTP request headers are available in Mendix Cloud."
 ---
 

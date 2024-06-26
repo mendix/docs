@@ -98,7 +98,7 @@ The following items in the SiemensInsightsHubSingleSignOn module need to be conf
 
 #### 4.1.1 CockpitApplicationName
 
-Enter the name of your app as registered in the Insights Hub developer portal as the value of *CockpitApplicationName*.
+Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
 
 These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 

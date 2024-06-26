@@ -1,20 +1,30 @@
 ---
-title: "Developer Portal"
+title: "Apps"
 url: /releasenotes/developer-portal/
-description: "Release notes for all project management parts of the Mendix Developer Portal"
+description: "Release notes for app management and other parts of Apps"
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app management functionality and other features of the [Mendix Developer Portal](/developerportal/).
+These release notes cover changes to the app management functionality and other features of the [Apps](/developerportal/).
 
 {{% alert color="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](/releasenotes/developer-portal/deployment/).
 {{% /alert %}}
 
-To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
+
+### June 14, 2024
+
+#### New Features
+
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
+
+### Improvements
+
+* To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 

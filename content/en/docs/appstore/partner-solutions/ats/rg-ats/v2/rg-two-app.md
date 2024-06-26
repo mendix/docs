@@ -63,7 +63,7 @@ The **Tester** role is assigned to a user when they have at least one Team Serve
 
 ### 2.2 App Admin
 
-The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Developer Portal. The app settings permission is by default part of the Scrum Master role in the Developer Portal. An App Admin also has access to the app settings page described in the next section.
+The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Mendix Portal. The app settings permission is by default part of the Scrum Master role in the Mendix Portal. An App Admin also has access to the app settings page described in the next section.
 
 ## 3 Settings
 
@@ -116,7 +116,7 @@ Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 
 Under **App Team**, you can specify which app members have what type of access rights for an app.
 
-By default, app members with the Scrum Master role in the Developer Portal will have administrative rights. All other members of the app will get **No access** for that app. Please keep in mind that users still need to be a member of an app in the Developer Portal for them to be eligible to be app administrators for the corresponding app in ATS.
+By default, app members with the Scrum Master role in the Mendix Portal will have administrative rights. All other members of the app will get **No access** for that app. Please keep in mind that users still need to be a member of an app in [Apps](https://sprintr.home.mendix.com/) for them to be eligible to be app administrators for the corresponding app in ATS.
 
 App members that have a **No access** role will not see the app in their **My apps** page and will not be able to open or edit or run any test cases for this app.
 
@@ -124,12 +124,12 @@ App members that have a **No access** role will not see the app in their **My ap
 For on-premises instances of ATS, all accounts created manually by the tenant administrator will be members of each project.
 {{% /alert %}}
 
-In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the app role for a user in the Developer Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Developer Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
+In order to make sure that the administration rights granted to users are not overwritten, administration rights are not automatically revoked when the app role for a user in the Mendix Portal changes from administrator to non-administrator. Instead, revoking administration rights can be done manually from the **App Settings** page. Other existing users' access will be updated when they log in to ATS or when an administrator refreshes the app access rights by clicking on the corresponding button. New members of a project in the Mendix Portal have to log in to ATS and accept the terms and conditions before they can become members of an app in ATS.
 
-Finally, note that a user who has an administrative app role in the Developer Portal will always have administrative rights in ATS.
+Finally, note that a user who has an administrative app role in the Mendix Portal will always have administrative rights in ATS.
 
 {{% alert color="info" %}}
-If an app lacks a Mendix app ID, the app roles will not be synced with the Developer Portal.
+If an app lacks a Mendix app ID, the app roles will not be synced with the Mendix Portal.
 {{% /alert %}}
 
 ### 3.4 Execution Log Cleanup
@@ -138,7 +138,7 @@ ATS automatically deletes execution logs that are older than 90 days. Here you c
 
 ### 3.5 Mendix API Key
 
-The Mendix API Key is used to synchronize stories between the Developer Portal and ATS.
+The Mendix API Key is used to synchronize stories between the Mendix Portal and ATS.
 
 You must set this key, otherwise you cannot use your user stories in ATS. Be aware that after you have set the Mendix API key, you won't be able to see it again. You can only set a new API key.
 

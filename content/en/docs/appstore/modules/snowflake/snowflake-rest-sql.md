@@ -76,7 +76,7 @@ To configure the authentication, perform the following steps:
 3. Run the application and go to the page where you added the snippet.
 4. Click **New**. 
 5. On the **Connection details** page, fill out all fields with the details of your Snowflake account. For more information, see [ConnectionDetails](#connection-details).
-6. Copy the **Account URL** from the Snowflake console. This will be used as the **Account URL** parameter for **Connection details**.
+6. In the Snowflake console, click **Copy the account URL** from the Snowflake console. This will be used as the **Account URL** parameter for **Connection details**.
 
     {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
 

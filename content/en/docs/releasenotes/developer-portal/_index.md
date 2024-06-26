@@ -20,7 +20,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 
 #### New Feature
 
-* We added the [Insights](/developerportal/portfolio-management/insights/) page in the Portfolio Management app, which provides critical data and visualizations to help you gain insights into the portfolio. 
+* We added the [Insights](/developerportal/portfolio-management/insights/) page in the Portfolio Management app, it is a dashboard which provides critical data and visualizations to help you gain insights into the portfolio. 
 
 ### June 14, 2024
 

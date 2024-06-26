@@ -15,7 +15,7 @@ paths:
     get:
       tags:
         - Projects
-      summary: 'Get a list of company owned projects'
+      summary: 'Get a list of company-owned projects'
       description: 'Returns a list of app projects owned by the company of the requesting user. Inactive app projects are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-projects
       parameters:
@@ -146,7 +146,7 @@ paths:
       tags:
         - Projects
       summary: 'Update a project team member'
-      description: 'Changes the way the team member interacts with the project. Mendix and Project administrators are allowed to change the team member''s project role assignment, regardless of whether the project or the user is active or not. Team member''s can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member's project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
       operationId: patch-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -165,7 +165,7 @@ paths:
                     properties:
                       key:
                         type: string
-                        description: 'Name of the attribute to be changed. Possible values are `roleId`, `isPinned` or `isWatching`. All other values will be ignored.'
+                        description: 'Name of the attribute to be changed. Possible values are `roleId`, `isPinned`, or `isWatching`. All other values will be ignored.'
                         maxLength: 100
                       value:
                         type: string

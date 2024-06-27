@@ -114,7 +114,7 @@ You can find the following microflows in Workflow Commons:
 
 Workflow Audit Trail is a detailed, chronological record that tracks all changes and actions taken within a workflow process. It documents who performed each action, when it was done, and what specific changes were made. This helps ensure transparency, accountability, and traceability, allowing for easy identification of errors, monitoring of compliance with regulations, and verification of proper procedure adherence.
 
-The audit trail feature was introduced in [Mendix 10.12.0](https://marketplace.mendix.com/link/studiopro). It leverages the use of [Workflow events](https://docs.mendix.com/refguide/workflow-events/#3-event-mechanism) to track all events and actions that were taken on the workflows in your app. 
+The audit trail feature was introduced in [Workflow Commons 3.6.0](https://marketplace.mendix.com/link/component/117066). It leverages the use of [Workflow events](https://docs.mendix.com/refguide/workflow-events/#3-event-mechanism) to track all events and actions that were taken on the workflows in your app. 
 
 ### 5.1 Features
 

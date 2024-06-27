@@ -133,7 +133,7 @@ To enable audit trail for all workflows in your app, follow the steps below:
 
 1. Go to **App Settings** > **Workflows** tab.
 2. In the event handlers section, click the **New** button.
-3. In the **Add event handler** dialog box, give the new event handler a name in the **Name** propertym (for example: *AuditTrail*).
+3. In the **Add event handler** dialog box, give the new event handler a name in the **Name** property (for example: *AuditTrail*).
 4. In the **When** section, select the events you want to subscribe to from the list. 
 5. In the **What** section, select the **WFEH_WorkflowEvent_AuditTrail** microflow from the list. You can find it in the module (**UseMe** > **Event handlers**).
 6. To view the audit trail, a user needs to be assigned the **Administrator** module role.

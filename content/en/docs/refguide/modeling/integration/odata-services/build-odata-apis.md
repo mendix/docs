@@ -53,7 +53,7 @@ For every published entity, you can define what functionality is available:
 
 You can also define other capabilities, such as if you can count results (using a `$count` query), skip results (using a `$skip` query), or limit the number of results returned (using a `$top` query).
 
-### 2.2 OpenAPI 3 Contract and Test Page
+### 2.2 OpenAPI 3 Contract and Test Page {#contract-and-test}
 
 When you start your app, you see the Swagger UI documentation and test page:
 

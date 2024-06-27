@@ -54,7 +54,7 @@ In a licensed node, you have everything you need to stage and deploy your app. Y
 
 ## 3 Prerequisites
 
-### 3.1 Obtaining a Licensed Node
+### 3.1 Obtaining a Licensed Node {#obtaining-licensed-node}
 
 To license an app, you must have a licensed cloud node available:
 

@@ -97,7 +97,7 @@ So why do you need an admin? Your developers are able to create new apps, invite
 
 Do you already have at least one admin? If that’s the case, you can see them on the list when you open [Control Center](https://controlcenter.mendix.com/index.html), and you can skip the rest of this section.
 
-A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#3-mendix-admins). 
+A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
 
 ### 2.2 Get Familiar With Mendix
 
@@ -1134,7 +1134,7 @@ Note that Mendix also offers [other deployment options](/releasenotes/developer-
 
 You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
-If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
+If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#obtaining-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
 **Link your application to your licensed node**

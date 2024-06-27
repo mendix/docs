@@ -8,7 +8,7 @@ weight: 40
 
 You can use anonymous users to allow end-users access your application without having to sign in. You can restrict the data that anonymous users can view and access by assigning a specific user role to them. 
 
-## 2 Anonymous Users Properties
+## 2 Anonymous Users Properties {#properties}
 
 Open **App Security** > the **Anonymous users** tab to access the properties:
 

@@ -51,7 +51,7 @@ Review the prerequisites below that your application must fulfill before it can 
 
 ### 2.1 Mendix Version{#mendix-version}
 
-The React client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It is planned to be released for general availability in Mendix 10.12.0.
+The React client was introduced in Mendix 10.7.0 as a [beta feature](/releasenotes/beta-features/). It is planned to be released for general availability in Mendix 10.18 as an opt-in feature.
 
 ### 2.2 Widgets{#widgets}
 

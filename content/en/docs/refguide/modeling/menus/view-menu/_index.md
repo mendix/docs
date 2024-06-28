@@ -104,7 +104,7 @@ The **Maia** pane displays the Maia Chat interface where you can ask questions a
 
 ### 3.12 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/use-content/).
 
 ### 3.13 Page Explorer
 

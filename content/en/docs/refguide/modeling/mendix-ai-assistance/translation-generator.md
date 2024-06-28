@@ -17,15 +17,15 @@ Translation Generator is currently an experimental feature introduced in Studio 
 
 To enable Translation Generator, go to **Preferences** > the **New Features** tab > the **Maia** section.
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/translation-generator/enable-translation-generator.png" max-width=100% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/enable-translation-generator.png" max-width=100% >}}
 
 Once enabled, you will find the **Generate Translations...** option in **Language** > **Batch translate**. 
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/translation-generator/translation-generator.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/translation-generator.png" max-width=80% >}}
 
 After clicking **Generate Translations...**, you will be asked to confirm your choice and be advised to review the generated translations.
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/translation-generator/confirmation.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/confirmation.png" max-width=80% >}}
 
 Once translations are generated, you need to Click **Translate** to save the changes. You can then go to the next language to translate further.
 

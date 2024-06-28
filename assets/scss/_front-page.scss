@@ -72,6 +72,14 @@ div.my-column{
         max-width: 46%;
     }
 }
+.resources{
+    background: $gray-100;
+    border: 1px solid $gray-200;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-left:2rem;
+    margin-right:2rem;
+}
 div.w-50{
     background: $gray-100;
     border: 1px solid $gray-200;

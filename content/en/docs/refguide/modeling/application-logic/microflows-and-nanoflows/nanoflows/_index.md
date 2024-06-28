@@ -134,6 +134,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | <kbd>Home</kbd> | Select the start event. |
 | <kbd>End</kbd> | Select the first end event. |
 | <kbd>Ctrl</kbd> + <kbd>a</kbd> | Select all elements. |
+| <kbd>Ctrl</kbd> (Studio Pro 10.12 and above) | When pressing the <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element or selecting it with a selection rectangle while holding <kbd>Ctrl</kbd> will deselect it. |
 | <kbd>Tab</kbd> | If a loop is selected, the first element inside the loop will be selected. |
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 
@@ -175,8 +176,8 @@ The nanoflow editor offers keyboard support for navigating and manipulating nano
 | <kbd>Shift</kbd> + <kbd>Tab</kbd> | If an element inside a loop is selected, the loop itself will be selected. |
 | <kbd>Home</kbd> | Select the start event. |
 | <kbd>End</kbd> | Cycle through the end events. |
-| <kbd>Shift</kbd>  | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
-| <kbd>Ctrl</kbd>  | When pressing the <kbd>Ctrl</kbd>, you can select additional activities. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
+| <kbd>Shift</kbd> | By holding <kbd>Shift</kbd> when resizing an activity, it will stay centered at its current position and expand equally in all directions. |
+| <kbd>Ctrl</kbd> | When pressing the <kbd>Ctrl</kbd>, you can select additional elements. Clicking a selected element while holding <kbd>Ctrl</kbd> will deselect it. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
 ## 5 Security {#security}

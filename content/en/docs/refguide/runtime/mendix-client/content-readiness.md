@@ -1,15 +1,13 @@
 ---
 title: "Marketplace Component React Status"
 url: /refguide/mendix-client/marketplace-react-status/
-category: "Mendix Runtime"
 description: "Describes Mendix's React client."
 weight: 20
-tags: ["runtime", "mendix client", "react client"]
 ---
 
 ## 1 Introduction
 
-The Mendix Marketplace has several reusable widgets and modules created by Mendix, as well other made by our partners and community. Not all content found in the Mendix Marketplace is ready for the [React version of the Mendix Client](/releasenotes/studio-pro/10.7/#react-client) yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular widgets and modules are ready for the React client and which are not.
+The Mendix Marketplace has several reusable widgets and modules created by Mendix, as well other made by our partners and community. Not all content found in the Mendix Marketplace is ready for the [React version of the Mendix Client](/releasenotes/studio-pro/10.7/#react-client) yet, including platform-supported content provided by Mendix. This guide will help you understand which of the popular widgets and modules are ready for the [React client](/refguide/mendix-client/react/) and which are not.
 
 If the Marketplace component you are interested in is not included on this list, add it to your application with the React client enabled, see if consistency errors arise, and troubleshoot them.
 

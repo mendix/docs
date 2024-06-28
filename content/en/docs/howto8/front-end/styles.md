@@ -1,10 +1,8 @@
 ---
 title: "Implement Classes"
 url: /howto8/front-end/styles/
-category: "Front End"
 description: "Presents details on using class names for text colors, buttons, and other style elements."
 weight: 45
-tags: ["style", "class name", "user interface", "front end"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Report Parameter"
 url: /refguide8/report-parameter/
 weight: 20
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,7 +13,7 @@ For example, a report may show order data for a customer and the report paramete
 
 The report parameter is displayed in **Structure mode** with the data set parameter name (and the attribute to be displayed if the parameter is an object) shown between square brackets and colored blue.
 
-{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter.png" alt="Report parameter in structure mode" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter.png" alt="Report parameter in structure mode" class="no-border" >}}
 
 {{% alert color="info" %}}
 A **Report parameter** cannot be used for data set parameters of type **Date and time**. Date and time parameters must be filtered by a [Report Date Parameter](/refguide8/report-date-parameter/) widget.
@@ -26,7 +25,7 @@ If you add a report parameter widget on the page, you must also add a [Report Bu
 
 An example of report parameter properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter-properties.png" alt="Report parameter in structure mode"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/report-widgets/report-parameter/report-parameter-properties.png" alt="Report parameter in structure mode"   width="300"  class="no-border" >}}
 
 Report parameter properties consist of the following sections:
 

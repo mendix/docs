@@ -2,7 +2,6 @@
 title: "Data View"
 url: /refguide/data-view/
 weight: 10
-tags: ["page", "data view", "widget", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,11 +9,11 @@ tags: ["page", "data view", "widget", "studio pro"]
 
 The data view is a starting point for showing the contents of exactly one object. For example, if you want to show the details of a single program item, you can use a data view to do this:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png"    width="350"   >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-example-structure-mode.png"    width="350"   class="no-border" >}}
 
 In a more complex example, a data view can contain customer information and [tab containers](/refguide/tab-container/) per specific topic (for example, addresses and payment information) with nested data grids for related objects:
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png"    width="350"   >}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-view/data-view-complex-example.png"    width="350"   class="no-border" >}}
 
 ## 2 Data View Footer
 
@@ -41,7 +40,7 @@ Styling:
 
 ### 4.1 General Section {#general}
 
-#### 4.1.1 Form Orientation
+#### 4.1.1 Form Orientation {#orientation}
 
 With this property, you can specify the position of the input widget labels inside the data view. If the orientation is horizontal, the labels will be placed next to the input elements. If the orientation is vertical, the labels will be placed above the input elements.
 
@@ -51,7 +50,7 @@ Default: *Horizontal*
 
 #### 4.1.2 Label Width (Weight)
 
-If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](http://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide/layout-grid/).
+If the form orientation is set to horizontal, this property can be used to specify the width of the input widget labels inside the data view. The width is specified using column weights from the [Bootstrap grid system](https://getbootstrap.com/css/#grid). For more details, see [Layout Grid](/refguide/layout-grid/).
 
 Default: *3*
 

@@ -1,9 +1,8 @@
 ---
 title: "Mendix Single Sign-On"
 url: /developerportal/deploy/mendix-sso/
-weight: 70
+weight: 90
 description: "Use the Mendix SSO module to add Single Sign-on to your app using the user's Mendix credentials"
-tags: ["SSO", "Single Sign-on", "Mendix credentials", "Mendix SSO"]
 #draft: true
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #Ownership claimed by Identity Services Team.
@@ -39,22 +38,22 @@ Mendix Single Sign-On is only activated when your app is deployed to Mendix Clou
 
 As an end-user, you will see the Mendix SSO screen when you open an app if this is your first time visiting the app environment or if you have not opened the app recently. From this screen, you can choose to sign in with local user credentials, or you can click **Mendix Account** to use your Mendix account with Mendix SSO.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/sso-sign-on.png" alt="Mendix SSO sign-on screen" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/sso-sign-on.png" alt="Mendix SSO sign-on screen" class="no-border" >}}
 
 Apps implementing Mendix SSO require access to some of your profile information, such as your account identifier and your display name.
 
 So, the first time you sign in to an environment (for example, myapp running in acceptance) as an end-user using Mendix SSO, the app will ask you to authorize access. Authorizing access allows the app to access certain information from your Mendix profile, as specified on the authorization page.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/authorize-access.png" alt="Authorization screen" width=50% >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/authorize-access.png" alt="Authorization screen" width=50% class="no-border" >}}
 
 Click **Authorize** to continue using Mendix SSO with the app. Authorizing the app automatically signs you in to the app.
 
 ### 2.2 Assigning End-User Roles
 
-To give end-users access to your app, use the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the **Settings** page in the Developer Portal.
+To give end-users access to your app, use the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the **Settings** page after opening your app in **Apps**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" class="no-border" >}}
 
 {{% alert color="warning" %}}
-Do not attempt to add or delete Mendix SSO users using administration functions within the app. User access to your app can only be changed through the Developer Portal.
+Do not attempt to add or delete Mendix SSO users using administration functions within the app. User access to your app can only be changed through the Mendix Portal.
 {{% /alert %}}

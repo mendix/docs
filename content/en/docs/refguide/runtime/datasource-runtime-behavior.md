@@ -1,7 +1,6 @@
 ---
 title: "Data Sources Retrieval"
 url: /refguide/datasource-runtime/
-tags: ["studio pro", "data source"]
 weight: 60
 ---
 
@@ -23,7 +22,7 @@ For a [Database source](/refguide/database-source/), these operations are applie
 
 As these operations are applied by the Runtime Server, and only the requested objects are returned to the Mendix Client, this improves performance as the amount of data transferred over the network is minimal. When the user interacts with the widget and moves to a different page or changes the filter, Mendix Client issues a new request to the Runtime Server.
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-server-paged.png" class="no-border" >}}
 
 ### 2.2 Microflow or Nanoflow Source
 
@@ -35,7 +34,7 @@ This means that, even if a limited set of objects is requested by paging or a fi
 
 An [Association source](/refguide/association-source/) works in the same way as a Microflow or Nanoflow source, but now the list of objects contains those which are linked by the specified association.
 
-{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" >}}
+{{< figure src="/attachments/refguide/runtime/mendix-client/data-source-client-paged.png" class="no-border" >}}
 
 ## 3 Network Optimization Modes
 
@@ -55,7 +54,7 @@ Because the object is cached, data shown in widgets on the page will be updated 
 
 In some scenarios the Mendix Client must have all the attributes of the object available. In this case **Network Round Trips** will be the default mode and cannot be changed.
 
-### 3.2 Optimize for Network Load
+### 3.2 Optimize for Network Load {#optimize-for-network-load}
 
 In the **Optimize for Network Load** optimization mode, the Runtime Server returns only the attributes used by the grid for the requested objects of the `OrderLine` entity. This limits the amount of data transferred over the network.
 

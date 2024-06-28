@@ -2,7 +2,6 @@
 title: "Published OData Services"
 url: /refguide9/published-odata-services/
 weight: 10
-tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,8 +13,8 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 
 The standards used for OData in Mendix are:
 
-* [OData v3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
-* [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
+* [OData v3](https://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
+* [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="info" %}}
 The OData v4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).

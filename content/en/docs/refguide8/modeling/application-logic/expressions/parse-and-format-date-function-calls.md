@@ -3,14 +3,13 @@ title: "Parse and Format Date Function Calls"
 url: /refguide8/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
-tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
 ## 1 Introduction 
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
-For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/SimpleDateFormat.html). 
+For details on all pattern possibilities, see [Class SimpleDateFormat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/text/SimpleDateFormat.html). 
 
 ## 2 parseDateTime[UTC] {#parsedatetime-utc}
 
@@ -64,7 +63,7 @@ The examples below illustrate which value the expression returns:
 
 ## 3 formatDateTime[UTC]
 
-Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the Java version and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
+Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
 ### 3.1 Input Parameters
 
@@ -139,7 +138,7 @@ the output is:
 
 ## 5 formatDate[UTC]
 
-Converts the date part of Date and time value to a string in a standard format, which depends on the Java version and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
+Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
 ### 5.1 Input Parameters
 

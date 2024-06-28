@@ -2,7 +2,6 @@
 title: "Project Security"
 url: /refguide8/project-security/
 weight: 10
-tags: ["studio pro", "security", "project security"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor password-policy below is mapped, so it should not be removed or changed
 ---
@@ -13,7 +12,7 @@ In the **Project Security**, you can switch security on or off for the whole pro
 
 To configure the project security, open **Project Explorer** > **Project** > **Security**, and the dialog box will open:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/project-security-dialog.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/project-security-dialog.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 For more general information on security, see [Security](/refguide8/security/).

@@ -1,10 +1,8 @@
 ---
 title: "Third-Party Licenses"
 url: /refguide/third-party-licenses/
-category: "General Info"
 weight: 50
 description: "Describes where to find the available third-party licenses in Mendix."
-tags: ["studio pro", "license", "library"]
 ---
 
 ## 1 Introduction
@@ -13,6 +11,6 @@ Mendix uses various third-party libraries that have their own licenses. All the 
 
 | Libraries and Licenses   | Location                                                     |
 | ------------------------ | ------------------------------------------------------------ |
-| Runtime Server libraries | **runtime\bundles**                                          |
-| Studio Pro libraries     | **modeler\Licenses**                                         |
-| Client licenses          | Client licenses can be found in the following locations: <ul><li>**modeler\tools\node\licenses.csv**</li><li>For the Dojo and all other client dependencies licenses: **runtime\mxclientsystem\licenses.txt**</li></ul>|
+| Runtime Server libraries | `runtime\bundles`                                         |
+| Studio Pro libraries     | `modeler\Licenses`                                         |
+| Client licenses          | Client licenses can be found in the following locations: <ul><li>`modeler\tools\node\licenses.csv<`/li><li>For the Dojo and all other client dependencies licenses: `runtime\mxclientsystem\licenses.txt`</li></ul>|

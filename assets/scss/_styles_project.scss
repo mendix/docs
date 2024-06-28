@@ -3,15 +3,70 @@
 // _front-page.scss is only custom styling page not from Docsy/Bootstrap
 @import "front-page";
 
-@font-face { // MvM - Added for MxDock by request in #docs 2023-12-08
+@font-face { // LZ - Added for MxDock by request 2024-01-30
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: "noto-sans";
+    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+  }
+  
+  /* Medium */
+  @font-face {
     font-family: "Patron";
     font-style: normal;
-    font-weight: normal;
+    font-weight: 500;
     font-display: swap;
-    src: local("Patron"), url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2"),
-      url("/fonts/patron/PatronWEB-Medium.woff") format("woff");
-    unicode-range: U+000-5FF; /* Latin glyphs */
-}
+    src: local("Patron Medium"), local("Patron-Medium"),
+      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
+  }
+  
+  /* Light */
+  @font-face {
+    font-family: "Patron";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Patron Light"), local("Patron-Light"),
+      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
+  }
+  
+  /* The main font is Noto Sans */
+  body {
+    font-family: "noto-sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
+  }
+  
+  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
+  .page-title {
+    font-family: "Patron", "noto-sans", sans-serif;
+    font-weight: 500;
+  }  
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
@@ -43,6 +98,19 @@
 
 .alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks
     padding-bottom: 0px;
+}
+
+// Anchor icon styling for anchor.js
+
+.anchor-icon {
+    display: none;
+    padding: 0rem .3rem .1rem .3rem;
+    margin: -.5rem 0rem -.5rem .3rem;
+    border-radius: 4px;
+}
+
+.anchor-icon:hover {
+    background: $gray-light;
 }
 
 // _code.scss -  Code formatting
@@ -86,6 +154,7 @@
         padding: 0.5rem; // NK - changed
         line-height: 1.25; // NK - added to match code text
         font-size: $font-size-base; // NK - added to match code text
+        border:none;
 
         > code {
             background-color: inherit !important;
@@ -119,14 +188,18 @@
     }
 
     > h1 {
+        font-family: "Patron"; //LZ - to set the font for the page titles of the docs to Patron according to PDS
         font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
         margin-bottom: 1rem;
         font-size: 2rem; // NK - custom edit
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2 {
         margin-bottom: 1rem;
         font-size: 1.7rem; // NK - custom edit
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     > h2:not(:first-child) {
@@ -140,6 +213,8 @@
     > h3, > h4, > h5, > h6 {
         margin-bottom: 1rem;
         margin-top: 1.5rem; // NK - decrease space between sections
+        font-weight: 600; // LZ - Semi-bold font weight according to PDS
+        line-height: 1.2; // LZ - line height 1.2 (Compact) according to PDS
     }
 
     /* ordered lists inside ordered lists will be displayed using letters */
@@ -150,6 +225,27 @@
     ul ol, ul ul, ol ul {
         padding-left: 2rem; // NK - decrease indent
     }
+}
+
+// Style visited links but exclude buttons and left sidebar
+a:not(.btn):not(.td-sidebar-link):visited {
+    color: $purple;
+}
+
+// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-left: .2rem;
+    vertical-align: sub;
+    content: url("/mx-icons/external.svg");
+    filter: invert(14%) sepia(99%) saturate(4690%) hue-rotate(225deg) brightness(93%) contrast(95%); // Matches to $link-color (blue-8 from PDS). Keep updated with _variables_project.scss.
+}
+
+// Change external link icon color upon hover
+main a[href*="https://"]:hover:not(.btn):not(.td-breadcrumbs a)::after {
+    filter: invert(15%) sepia(65%) saturate(5388%) hue-rotate(231deg) brightness(79%) contrast(121%); // Matches to $link-hover-color (blue-9 from PDS). Keep updated with _variables_project.scss.
 }
 
 .btn {
@@ -199,14 +295,12 @@ html {
 }
 
 .td-main main {
+    padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
-            padding-top: 3.75rem;  // NK - made smaller
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
             border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
         }
-
-
-        padding-bottom: 2rem;
+    padding-bottom: 0rem;
     }
     // NK - custom addition
     main.lp{
@@ -285,11 +379,17 @@ div.date-format{
   }
 
 // Images
-// DB – custom edit, class for adding borders around images
-.image-border {
+
+// DB – custom edit, add borders around images
+main img {
     border-color: #d7d7d7;
     border-width: 1px;
     border-style: solid;
+}
+
+// DB – custom edit, optional class for preventing borders around images
+.no-border{
+    border-style: none;
 }
 
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
@@ -346,7 +446,7 @@ nav.foldable-nav {
     }
 
     .ul-1 .with-child > input:checked ~ label:before { 
-        color: $primary;
+        color: $link-color;
         transform: rotate(90deg);
         transition: transform 0s; // NK - disables animation transition time, now switch is instant
     }
@@ -357,13 +457,13 @@ nav.foldable-nav {
     nav.foldable-nav {
 
         .ul-1 .with-child > label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(30deg);
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
 
         .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $primary;
+            color: $link-color;
             transform: rotate(60deg) !important;
             transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
@@ -399,6 +499,11 @@ nav.foldable-nav {
     vertical-align: top;
 
 }
+
+.toc-title { // DB – added class for ToC title styling 
+    color: $gray-800 !important;
+}
+
 .td-toc {
 
     height: calc(100vh - 180px); // NK - added to allow scrolling
@@ -426,15 +531,18 @@ nav.foldable-nav {
             padding-top: .25rem;
 
             &:hover {
-                color: $blue;
-                text-decoration: none;
+                color: $link-hover-color;
+                text-decoration: underline;
             }
         }
-        // NK - styling for ToC highlighting
+
+        // Styling for ToC highlighting
         .activeToc {
+            border-left-color: $link-color;
+        }
+
+        .activeToc > a {
             font-weight: $font-weight-bold;
-            color: $blue;
-            border-left-color: $blue;
         }
     }
 }
@@ -475,7 +583,10 @@ nav.foldable-nav {
         // NK - overrides special styling for pages with no children
         &__page {
             color: inherit;//$gray-700;
-            font-weight: inherit;//$font-weight-light;
+            font-weight: inherit;//$font-weight-light;`
+        }
+        .link-title:hover {
+            text-decoration: underline;
         }
     }
     
@@ -513,7 +624,6 @@ nav.foldable-nav {
 // _tables.scss - from https://github.com/twbs/bootstrap/blob/v4.6.2/scss/_tables.scss
 
 .table {
-    width: 90%; // NK - adjusted width to match rest of content
     margin-bottom: $spacer;
     color: $table-color;
     background-color: $table-bg; // Reset for nesting within parents with `background-color`.
@@ -534,14 +644,14 @@ nav.foldable-nav {
   
     thead th {
       vertical-align: bottom;
-      border-bottom: (2 * $table-border-width) solid $table-border-color;  // NK - added borders to tables
+      border-bottom: calc(#{$table-border-width} * 2) solid $table-border-color;  // NK - added borders to tables
       border-top: $table-border-width solid $table-border-color;
       border-left: $table-border-width solid $table-border-color;
       border-right: $table-border-width solid $table-border-color;
     }
   
     tbody + tbody {
-      border: (2 * $table-border-width) solid $table-border-color; // NK - added borders to tables
+      border: calc(#{$table-border-width} * 2) solid $table-border-color; // NK - added borders to tables
     }
   }
 
@@ -603,11 +713,11 @@ nav.foldable-nav {
          justify-content: center;
          gap: 0.5rem;
          flex-wrap: wrap;
-         background-color: #f7f7f7;
+         background-color: $gray-100;
          color: rgba(10, 19, 36, 0.7);
          font-size: 0.75rem;
          text-align: center;
-         border-top: 1px solid #e7e7e9;
+         border-top: 1px solid $gray-300;
          padding: 1rem;
          font-family: 'noto-sans', 'Noto Sans', sans-serif;
    }
@@ -635,13 +745,13 @@ nav.foldable-nav {
     
          > li::before {
                content: '';
-               border-left: 1px solid #e7e7e9;
+               border-left: 1px solid $gray-300;
                margin-right: 0.5rem;
          }
    }
     
    .mx-footer__link:hover {
-         color: #0123c6;
+         color: $link-hover-color;
          text-decoration: underline;
    }
     
@@ -650,7 +760,7 @@ nav.foldable-nav {
    }
     
    .mx-footer__link:focus-visible {
-         outline: 2px solid #298efb;
+         outline: 2px solid $info-6;
          outline-offset: 2px;
     }
 
@@ -661,23 +771,46 @@ nav.foldable-nav {
 
 //_badge.scss
 
-.badge-warning {
-    color: #fff;
-    background-color: #C97800;
+.badge-pill {
+    border-radius: 4px;
+    padding: 4px 4px 3px 4px;
+    margin-left: 2px;
+}
+
+.badge-draft {
+    background-color: $warning-9;
   }
 
-.badge-pill {
-    padding-right: 0.6em;
-    padding-left: 0.6em;
-    border-radius: 10rem;
-  }
+.badge-beta {
+    color: $gray-900;
+    background-color: $gray-500;
+}
+
+.badge-lts {
+    background-color: $success-9;
+}
+
+.badge-mts {
+    background-color: $info-8;
+}
+
+.badge-deprecated {
+    background-color: $gray-100;
+    border: solid 1px $gray-500;
+    color: $gray-900;
+}
+
+.badge-recommended {
+    border: solid 1px $success-9;
+    color: $success-9;
+}
 
 // Swagger styling
 
 .swagger-ui .info .title,
 .swagger-ui .model-title {
     font-family: $font-family !important;
-    color: var(--bs-body-color);
+    color: $secondary;
 }
 
 .swagger-ui .info a {

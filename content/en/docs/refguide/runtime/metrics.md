@@ -1,9 +1,7 @@
 ---
 title: "Metrics"
 url: /refguide/metrics/
-category: "Mendix Runtime"
 description: "Describes how to configure and report metrics in Mendix."
-tags: ["studio pro", "metrics", "micrometer"]
 ---
 
 ## 1 Introduction
@@ -452,7 +450,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `jvm.gc.concurrent.phase.time` | timer | `action`, `cause` | The time spent in the concurrent GC phase. |
 | `jvm.gc.overhead` | gauge | | An approximation of the percent of CPU time used by GC activities over the last lookback period or since monitoring began, whichever is shorter (in the range [0…1]). |
 
-Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
+Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
 
 #### 7.2.3 Jetty HTTP Server Metrics
 

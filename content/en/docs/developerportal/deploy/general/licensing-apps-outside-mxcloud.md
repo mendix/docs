@@ -3,7 +3,6 @@ title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 5
 description: "How to apply licenses to apps which are outside Mendix Cloud"
-tags: ["App", "Developer Portal", "License", "Subscription Secret", "Upgrade", "SAP", "MindSphere", "Insights Hub"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -22,7 +21,7 @@ Unlicensed apps, running outside Mendix Cloud, have some restrictions. These res
 | **Time limitation** | Runtime stops after 2-4 hours (randomly chosen) regardless of user activity.³ | Does not have a time limitation. |
 | **Number of Named Users** | No limit | Depends on your pricing plan.¹ |
 
-¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](http://www.mendix.com/pricing).
+¹ More information on the capabilities of different license options is available on [Mendix Platform Pricing](https://www.mendix.com/pricing).
 
 ² End-users of your app are classified as either internal or external. You will need to report this for licensing purposes using either the [`USAGE_METRICS_EMAIL_FIELDS` custom variable](/developerportal/deploy/environments-details/#custom-environment-variables) (if you are using email domain to distinguish between them) or by [populating the user type](/howto/monitoring-troubleshooting/populate-user-type/) for each end-user of your app. Only end-users whose Mendix accounts are marked as **Active** are counted towards the number of end-users of the app.
 
@@ -32,7 +31,7 @@ For each environment for which you want to remove the restrictions placed on an 
 
 The app checks for a license each time it is started. If the license expires while the app is running, it will continue to run until the next time it is started, when the license will be checked again.
 
-## 2 Obtaining a Mendix License
+## 2 Obtaining a Mendix License{#get-license}
 
 You can obtain a Mendix license from Mendix support. 
 

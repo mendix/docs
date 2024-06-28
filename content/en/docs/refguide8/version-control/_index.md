@@ -5,7 +5,6 @@ description: "This document gives definitions and explains the version control  
 weight: 30
 no_list: false
 description_list: true 
-tags: ["Version Control", "Application Lifecycle Management", "Commit", "Collaborate"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
@@ -17,7 +16,7 @@ Version Control allows you to manage your app development in two ways:
 * Firstly, it allows you to store ([commit](#commit)) the current revision of your model and all its resources. You give it an identifier so that you can get that revision again and share it with other team members.
 * Secondly, it allows work to take place on multiple [development lines](#development-line) so that several different features can be worked on at once. These development lines can then be [merged](#merge) back together so that your [main line](#main-line) contains all the completed features that have been worked on separately.
 
-Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro and the Developer Portal.
+Version control in Mendix is built on top of [Apache Subversion](https://subversion.apache.org/) and the concepts will be familiar to Subversion users. Mendix simplifies Subversion commands by building them into Studio Pro and the Mendix Portal.
 
 ## 2 Concepts {#concepts}
 
@@ -103,7 +102,7 @@ This is done using [Branch Lines](#branch-line).
 
 All apps are developed along the main line (also referred to as **trunk**). Here you have all development happening along a single line, with all changes built upon the previous revision:
 
-{{< figure src="/attachments/refguide8/version-control/image7.png" >}}
+{{< figure src="/attachments/refguide8/version-control/image7.png" class="no-border" >}}
 
 ### 3.2 Branch Line
 
@@ -111,7 +110,7 @@ When you add a branch line, you take a copy of an existing [revision](#revision)
 
 In Mendix each revision within a [repository](#repository) is given a unique version number. This means that version numbers given to revisions along any chosen branch line may not be consecutive.
 
-{{< figure src="/attachments/refguide8/version-control/image8.png" >}}
+{{< figure src="/attachments/refguide8/version-control/image8.png" class="no-border" >}}
 
 ### 3.3 Merging Branches {#merging-branches}
 
@@ -124,7 +123,7 @@ On the other hand, you may want to add the features from one branch line into an
 
 You can merge a specific revision of a branch line into your current [working copy](#working-copy). If, for example, you were working on the main line updated to revision 6, you can [merge](#merge) revision 5 from another branch line into your working copy. Then you can commit the result to create revision 7. If you want to merge several different committed changes from a branch, you will need to select a range of revisions which includes all the changes.
 
-{{< figure src="/attachments/refguide8/version-control/image9.png" >}}
+{{< figure src="/attachments/refguide8/version-control/image9.png" class="no-border" >}}
 
 There may be conflicts during the merge, and these will have to be resolved before you can commit the changes to your app.
 

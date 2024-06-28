@@ -2,7 +2,6 @@
 title: "XPath quarter-from-dateTime"
 url: /refguide/xpath-quarter-from-datetime/
 weight: 12
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

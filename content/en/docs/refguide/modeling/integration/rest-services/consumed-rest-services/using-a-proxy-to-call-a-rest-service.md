@@ -2,7 +2,6 @@
 title: "Using a Proxy to Call a REST Service"
 url: /refguide/using-a-proxy-to-call-a-rest-service/
 weight: 1
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -12,6 +11,7 @@ In some cases, you will be stuck behind a firewall and unable to call a REST ser
 ## 2 Proxy Host and Proxy Port
 
 There are two parameters that specify which proxy server to use when making REST calls: 
+
 * `http.proxyHost`
 * `http.proxyPort`
 

@@ -1,7 +1,6 @@
 ---
 title: "Native Template"
 url: /releasenotes/mobile/native-template/
-category: "Mobile"
 weight: 12
 description: "Native Template release notes."
 ---

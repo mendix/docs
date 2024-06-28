@@ -38,11 +38,11 @@ With this property you can choose the type of the report chart. The following ty
 
 | Name | Layout |
 | --- | --- |
-| VerticalBars | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688226.png" >}} |
-| VerticalBars3D | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688227.png" >}} |
-| HorizontalBars | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688228.png" >}} |
-| Lines | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688229.png" >}} |
-| Area | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688223.png" >}} |
+| VerticalBars | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688226.png" class="no-border" >}} |
+| VerticalBars3D | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688227.png" class="no-border" >}} |
+| HorizontalBars | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688228.png" class="no-border" >}} |
+| Lines | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688229.png" class="no-border" >}} |
+| Area | {{< figure src="/attachments/refguide7/desktop-modeler/pages/report-widgets/report-chart/688223.png" class="no-border" >}} |
 
 ### Horizontal Axis Properties
 

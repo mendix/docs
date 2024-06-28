@@ -2,7 +2,6 @@
 title: "Decision"
 url: /refguide9/decision/
 weight: 1
-tags: ["studio pro", "decision", "exclusive split"]
 aliases:
     - /refguide9/exclusive-split.html
     - /refguide9/exclusive-split
@@ -17,7 +16,7 @@ A decision is an element that makes a choice based on a condition and follows on
 
 An example of decision properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-properties.png"   width="50%"  >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-properties.png"   width="50%"  class="no-border" >}}
 
 The decision properties pane consists of the following sections:
 
@@ -54,7 +53,7 @@ The expression should result in a Boolean or an [enumeration](/refguide9/enumera
 
 For an expression resulting in a Boolean, two flows are possible: **true** and **false**. For example, you can use an expression resulting in a Boolean to decide if a customer can get a discount by checking their membership status. The expression in this example is `$Customer/Membership`.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-boolean.png" width="500" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-boolean.png" width="500" class="no-border" >}}
 
 ### 4.2 Enumeration Result
 
@@ -64,7 +63,7 @@ For example, if you want to assign a different meeting URL based on the working 
     
 In the example below, the microflow parameter is *MeetingRegistration*. Depending on where the employee works, a different meeting URL is assigned. If an employee did not select a working location when registering for the meeting, the flow labelled **(empty)** is followed and an error message is shown to the end-user (the employee in this case).
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-enumeration.png" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/decision-enumeration.png" width="600" class="no-border" >}}
 
 Since you want to go in a different direction for each value of the enumeration, you only need to use the attribute containing the enumeration. So the expression in this example is `$MeetingRegistration/WorkingLocation`. 
     
@@ -80,4 +79,4 @@ The properties of the **Rule** decision type are the following ones:
 
 * **Parameter** – for each parameter of the rule an argument needs to be specified using [expressions](/refguide9/expressions/). For example, a rule that determines whether a customer deserves a certain status will have a customer object as a parameter.
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/decisions/decision/rule-properties.png"   width="350"  class="no-border" >}}

@@ -1,11 +1,25 @@
-<!-- MODIFICATION FOR MENDIX DOCS
-    Check if the page has a banner: "string" set
-    If yes, display a banner. -->
-  {{ with .Params.banner}}
-  <div class="pageinfo pageinfo-warning">
-      <p>{{ . }}</p>
-  </div>
-{{end}}
+<!-- MODIFICATION FOR MENDIX DOCS-->
+
+    <!-- If the page has banner_7: true set, display the following text as a banner. -->
+    {{ with .Params.banner_7 }}
+    <div class="pageinfo pageinfo-warning">
+        <p>Mendix 7 is no longer supported unless you have <a href="/support/#extended-support">Extended Support</a>. Mendix 7 documentation will remain available until July 2024.</p>
+        <p>To upgrade to a supported version, see <a href="/refguide8/moving-from-7-to-8/">Moving from Desktop Modeler Version 7 to Studio Pro 8</a>.</p>
+    </div>
+    {{ end }}
+    <!-- If the page has banner_8: true set, display the following text as a banner. -->
+    {{ with .Params.banner_8 }}
+    <div class="pageinfo pageinfo-info">
+        <p>If you would like to upgrade to a newer <a href="/releasenotes/studio-pro/lts-mts/#lts">long-term support version</a> of Studio Pro, see <a href="/refguide9/moving-from-8-to-9/">Moving from Mendix Studio Pro 8 to 9</a>.</p>
+    </div>
+    {{ end }}
+    <!-- If the page has draft: true set, display the following text as a banner. -->
+    {{ with .Params.draft }}
+    <div class="pageinfo pageinfo-warning">
+      <p>This page is a draft, so it will not render on the production Docs site.</p>
+    </div>
+    {{ end }}
+    
 <!-- END OF CUSTOMIZATION -->
 
 <!-- Check the variable that indicates whether this is an archived doc set.

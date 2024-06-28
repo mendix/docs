@@ -4,9 +4,7 @@ linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 40
-tags: ["CI/CD", "Tekton", "Private Cloud", "Environment", "Standalone"]
 ---
-
 {{% alert color="info" %}}
 The Tekton pipelines for Mendix are available to all customers using licensed Operators in Mendix for Private Cloud.
 
@@ -37,7 +35,7 @@ All commands used in this document should be executed in a Bash (or bash-compati
 To follow these instructions you will need:
 
 * Administrator access to a Kubernetes/OpenShift cluster
-* The standalone [cluster registered in the Mendix Developer Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
+* The standalone [cluster registered in the Mendix Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager
@@ -75,7 +73,7 @@ Each Mendix pipeline can be run independently. However, the **create-app-pipelin
 
 The Mendix pipelines work together as shown in the diagram below to create the app environment, build and push an app to the environment, and, finally, configure the app.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/build-pipeline.png" class="no-border" >}}
 
 #### 3.3.1 Mendix Pipelines
 
@@ -103,7 +101,7 @@ You can read the official installation procedure on the [Tekton Dashboard](https
 
 Below is and example of the recommended architecture setup.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/tekton-architecture-example.png" class="no-border" >}}
 
 The example shows the following namespaces:
 
@@ -195,7 +193,7 @@ More details on how to activate a trigger using any HTTP client are [here](#auth
 #### 7.2.1 GitLab Configuration
 
 To set the GitLab Token in GitLab you specify it as the **Secret Token** when creating the webhook:
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 #### 7.2.2 Other HTTP Clients {#auth-other-clients}
 
@@ -591,7 +589,7 @@ You can set up a [GitLab Webhook Trigger](#gitlab-webhook) to generate the build
 
 Within GitLab, set up a webhook. Use the trigger URL of the trigger you installed in the [Installing Triggers](#installing-triggers) section, and choose which push events you want to trigger the build.
 
-{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" >}}
+{{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-tekton/gitlab-webhook.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 To fill in the **Secret token** see the [Authentication](#authentication) section.

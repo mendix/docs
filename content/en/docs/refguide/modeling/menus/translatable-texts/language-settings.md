@@ -2,14 +2,13 @@
 title: "Language Settings"
 url: /refguide/language-settings/
 weight: 50
-tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
 
 ## 1 Introduction
 
 Mendix is designed to be used by users in multiple languages. The **Languages** tab of the **App Settings** allows you to select which languages your app will support.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px">}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/app-settings.png" width="550px" class="no-border" >}}
 
 You can reach this tab in two ways:
 
@@ -31,7 +30,7 @@ The initial default language is *English, United States*.
 
 You can add as many languages as you like from the list of supported languages by clicking **Add**, selecting the desired language, and clicking **OK**.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px">}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/add-language.png" width="500px" class="no-border" >}}
 
 Most languages will be added with an empty dictionary, although some translations have already been set up in the Dutch dictionary. 
 
@@ -39,7 +38,7 @@ Most languages will be added with an empty dictionary, although some translation
 
 You can set each language in your app to have additional settings.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/edit-language.png" width="550px" alt="Edit Language" class="no-border" >}}
 
 ### 4.1 Check Completeness
 
@@ -59,7 +58,7 @@ Type a format string in the relevant box and you will see an example of how a da
 
 Click **Edit…** to open a dialog box which will provide a full reference for the format string:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/language-settings/date-format.png" width="550px" alt="Date edit dialog" class="no-border" >}}
 
 ## 5 List of Supported Languages {#supported-languages}
 
@@ -96,6 +95,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Arabic | United Arab Emirates | ar_AE | 9.0.5 |
 | Arabic | Yemen | ar_YE | 9.0.5 |
 | Armenian | Armenia | hy_AM | 9.2.0 |
+| Azerbaijani | Azerbaijan | az_AZ | 10.10.0 |
 | Belarusian | Belarus | be_BY | 9.0.5 |
 | Bengali | Bangladesh | bn_BD | 9.3.0 |
 | Bengali | India | bn_IN | 9.3.0 |
@@ -147,6 +147,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Italian | Switzerland | it_CH | 9.0.5 |
 | Japanese (Gregorian calendar) | Japan | ja_JP | 9.0.5 |
 | Japanese (Imperial calendar) | Japan | ja_JP_JP | 9.0.5 |
+| Kannada | India | kn_IN | 10.12.0 |
 | Kazakh | Kazakhstan | kk_KZ | 9.10.0 |
 | Khmer | Cambodia | km_KH | 9.0.5 |
 | Kinyarwanda | Rwanda | rw_RW | 9.3.0 |
@@ -156,12 +157,15 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Lithuanian | Lithuania | lt_LT | 9.0.5 |
 | Macedonian | Macedonia | mk_MK | 9.0.5 |
 | Malay | Malaysia | ms_MY | 9.0.5 |
+| Malayalam | India | ml_IN | 10.12.0 |
 | Maltese | Malta | mt_MT | 9.0.5 |
+| Marathi | India | mr_IN | 10.10.0 |
 | Mongolian | Mongolia | mn_MN | 9.2.0 |
 | Myanmar (Burmese) | Myanmar | my_MM | 9.0.5 |
 | Nepali | Nepal | ne_NP | 9.2.0 |
 | Norwegian (Bokmål) | Norway | no_NO | 9.0.5 |
 | Norwegian (Nynorsk) | Norway | no_NO_NY | 9.0.5 |
+| Odia | India | or_IN | 10.12.0 |
 | Pashto | Afghanistan | ps_AF | 9.2.0 |
 | Persian (Farsi) | Iran | fa_IR | 9.2.0 |
 | Persian (Farsi) | Tajikistan | fa_TJ | 9.2.0 |
@@ -215,6 +219,7 @@ The list below is provided to enable you to quickly evaluate if Mendix supports 
 | Tamil | India | ta_IN | 9.3.0 |
 | Tamil | Sri Lanka | ta_LK | 9.3.0 |
 | Tamil | Singapore | ta_SG | 9.3.0 |
+| Telugu | India | te_IN | 10.12.0 |
 | Thai (Western digits) | Thailand | th_TH | 9.0.5 |
 | Thai (Thai digits) | Thailand | th_TH_TH | 9.0.5 |
 | Tigrinya | Eritrea | ti_ER | 9.23.0 |

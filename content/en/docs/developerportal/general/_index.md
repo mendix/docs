@@ -1,11 +1,10 @@
 ---
 title: "General"
 url: /developerportal/general/
-description: "Describes the tools and settings available in the General category in the Mendix Developer Portal's navigation pane."
+description: "Describes the tools and settings available in the General category in Apps navigation pane."
 weight: 5
 no_list: false
 description_list: true
-tags: ["developer portal", "documents", "team server", "buzz", "team", "app"]
 aliases:
     - /developerportal/develop/
     - /developerportal/settings/
@@ -14,6 +13,6 @@ aliases:
 
 ## 1 Introduction
 
-The **General** category in the Developer Portal's [navigation pane](/developerportal/#navigation-pane) offers general tools and settings for your app.
+The **General** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) offers general tools and settings for your app.
 
 ## 2 Documents in This Category

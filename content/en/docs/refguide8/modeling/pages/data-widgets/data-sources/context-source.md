@@ -1,7 +1,6 @@
 ---
 title: "Context Source"
 url: /refguide8/context-source/
-tags: ["studio pro", "context", "data source"]
 weight: 30
 ---
 
@@ -20,7 +19,7 @@ The **Entity (path)** property specifies the entity that will be shown in the da
 
 If you have a nested data view, you can select an entity that has associations with the entity of a surrounding data container, and the entity of the surrounding data container should be a parent of this association. For more information on associations, see [Associations](/refguide8/associations/). 
 
-{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/data-widgets/data-sources/context-source/context-source-example.png" alt="Context Source"   width="400"  class="no-border" >}}
 
 ## 3 Read More
 

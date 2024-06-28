@@ -1,23 +1,39 @@
 ---
-title: "Mendix Assist"
-url: /refguide/mx-assist-studio-pro/
-category: "App Modeling"
+title: "Mendix AI Assistance (Maia)"
+url: /refguide/mendix-ai-assistance/
 weight: 45
-description: "Describes Mendix Assist in Studio Pro."
-tags: ["studio pro", "mendix assist", "AI", "assistant"]
+description: "Describes Mendix AI Assistance (Maia) in Studio Pro."
+aliases:
+    - /refguide/mx-assist-studio-pro/
 ---
 
 ## 1 Introduction 
 
-Mendix Assist refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development (via AI-assisted development (AIAD)). The purpose of Mendix Assist is to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
+Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development (via AI-assisted development (AIAD)). Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
-Mendix Assist consists of different capabilities that act as a virtual co-developer bot, each specialized in a certain domain or stage of the application lifecycle development. Currently, Mendix Assist consists of the following virtual co-developer bots: 
+Mendix developers can use Maia to get guidance by asking questions, get recommendation and assistance for certain development tasks, and even generate part of their app. 
 
-* **MxAssist Logic Bot** – helps you model and configure your application logic in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity based on the activities and parameters that are already configured in your application. It is built using machine learning analysis of over twelve million anonymized application logics built with Mendix. It uses deep learning to detect and learn the best practice patterns in Mendix. For more information, see [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/).
-* **MxAssist Best Practice Bot** – helps you inspect your app against Mendix development best practice detecting and pinpointing development anti-patterns and, in some cases, automatically fixing them. The bot is built using statistical analysis of thousands of anonymized Mendix apps to learn common anti-patterns as well as Mendix Expert Services best practices in the development of microflows, domain models, pages, security, etc. For more information, see [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/).
-* **Validation Assist** – helps you build validation microflows in a more automated way using pre-built expressions. For more information, see [Validation Assist](/refguide/validation-assist/).
-* **MendixChat** (released in Studio Pro 10.6 as a beta feature) - a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [MendixChat](/refguide/mendix-chat/).
+## 2 Maia in Mendix Studio Pro 
 
-## 2 Read More
+In Mendix Studio Pro, Maia consists of the following capabilities: 
 
-* [Preferences](/refguide/preferences-dialog/)
+Guidance:
+
+* **Maia Chat** (released in GA in Studio Pro 10.12.0) – a built-in chat interface powered by Generative AI in Studio Pro. It answers questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. For more information, see [Maia Chat](/refguide/maia-chat/).
+
+Recommenders:
+
+* **Logic Recommender** – helps you model and configure microflows, nanoflows, and rules in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity based on the activities and parameters that are already configured in your application. For more information, see [Logic Recommender](/refguide/logic-recommender/).
+* **Workflow Recommender** (available in Studio Pro 10.12 and above) – helps you model and configure workflows in Mendix Studio Pro. It gives you contextualized recommendations on the next best activity in your workflow based on context-related information. For more information, see [Workflow Recommender](/refguide/workflow-recommender/).
+* **Best Practice Recommender** – helps you inspect your app against Mendix development best practice detecting and pinpointing development anti-patterns and, in some cases, automatically fixing them. For more information, see [Best Practice Recommender](/refguide/best-practice-recommender/).
+
+Generators:
+
+* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool for **Batch translate** in Mendix Studio Pro. It helps you to translate your model to different languages for which you may not have a translation. It gives contextualized translations for the languages that you have seleted, using parameters in the way that works specifically for the selcted languages. For more information, see [Translation Generator](/refguide/translation-generator/).
+
+## 3 Maia in Mendix Portal
+
+Below are the Maia capabilities that are available in Mendix Portal:
+
+* **Maia Summarize** - an AI-assisted summarizing aid which condenses lengthy discussions for a question posted on Mendix Community into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread. For more information on how to use it, see the [Question Details](/community-tools/mendix-community/#question-details) section in *Mendix Community*.
+* **Maia Rewrite** - an AI-assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered. For more information on how to use it, see the [Asking Your Question](/community-tools/mendix-community/#asking-question) section in *Mendix Community*.

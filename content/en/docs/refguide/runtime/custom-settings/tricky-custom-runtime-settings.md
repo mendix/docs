@@ -3,7 +3,6 @@ title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
 url: /refguide/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
-tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
@@ -29,7 +28,7 @@ The following custom settings can be configured:
 | Name | Description | Default value |
 | --- | --- | --- |
 | `SessionTimeout` | Defines after how much time the session becomes invalid (in milliseconds). After that timeout, a session becomes applicable for removal. The session won't be destroyed until the next time the cluster manager evaluates the active sessions. | 600000 (10 minutes) |
-| `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. | 604800000 (7 days) |
+| `LongLivedSessionTimeout` | This setting is the same as `SessionTimeout`, but specific to offline-first progressive web apps. *This setting was removed for apps created in Mendix version 10.9.0 and above*. | 604800000 (7 days) |
 | `com.mendix.offline.DeleteAutoCommittedObjectsAfterSync` | Defines if auto-committed created during offline synchronization will be deleted from the database immediately. | true |
 | `ClusterManagerActionInterval` | The interval (in milliseconds) used for performing all cluster manager actions. These actions include unblocking users and removing invalid sessions. If nothing is specified, the interval is half the `SessionTimeout`. | 300000 (5 minutes) |
 | `SessionKeepAliveUpdatesInterval` | Defines after how much time expired sessions can be removed from the database. | one sixth of the value configured for the `SessionTimeout` setting; if the `SessionTimeout` is not set, this value defaults to 100000 (100 seconds) |
@@ -55,7 +54,7 @@ So, make sure to keep in mind all of the above when changing these values. Also,
 
 | Name | Description | Default value |
 | --- | --- | --- |
-| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show more information about the page or the microflow that leads to this query. | 10000  |
+| `LogMinDurationQuery` | Defines whether database queries are logged via the `ConnectionBus_Queries` log node if they finished after the amount of milliseconds specified here. By default, only the concerning SQL query will be logged. Set the log level of the `ConnectionBus_Queries` log node to TRACE to show the SQL queries that precede this query. | 10000  |
 
 `LogMinDurationQuery` can be a very helpful tool in detecting queries that are taking longer than expected. This is especially useful for queries that only take longer than expected after the data used in and by the app grows larger, because this might mean the queries will only become slower after a few months of usage and might not have turned up in pre-release performance tests. Determining that a query is slow depends on the type of app you are running. But in general, any query that directly affects a user using the app (meaning, not a background process) will have a lower threshold for determining it as slow than a query running in the background. For example, a drop-down menu that takes 5 seconds to load before anything can be selected is many times worse than a PDF generated in the background taking 8 instead of 4 seconds because of a “slow” query that takes 5 seconds instead of 1 second.
 
@@ -69,7 +68,7 @@ You can find these log entries by looking for the following phrase in your appli
 
 ### 4.1 The Number of Database Connections{#num-connections}
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/).
+The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/commons-pool/).
 
 | Name | Value | Default value |
 | --- | --- | --- |

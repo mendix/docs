@@ -1,7 +1,6 @@
 ---
 title: "OQL Case Expression"
 url: /refguide/oql-case-expression/
-tags: ["studio pro"]
 ---
 
 ## 1 Description
@@ -12,7 +11,7 @@ The `CASE` expression is a conditional expression, similar to if/else statements
 
 The `CASE` expression can be used in two ways – simple:
 
-```sql
+```sql {linenos=false}
 	CASE input_expression
 	WHEN when_expression THEN result_expression [ ...n ]
 	ELSE else_result_expression
@@ -21,7 +20,7 @@ The `CASE` expression can be used in two ways – simple:
 
 or extended:
 
-```sql
+```sql {linenos=false}
 	CASE
 	WHEN boolean_expression THEN result_expression [ ...n ] 
 	ELSE else_result_expression

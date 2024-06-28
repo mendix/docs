@@ -2,8 +2,6 @@
 title: "Atlas 3 Change Summary"
 url: /refguide9/atlas3-change-summary/
 weight: 7
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
-
 ---
 
 ## 1 Introduction
@@ -98,11 +96,11 @@ If you are using building blocks or page templates, please make sure you downloa
 
 For the web platform, download the [Atlas Web Content](https://marketplace.mendix.com/link/component/117183) module:
 
-{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" >}}
+{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-web-content-marketplace.png" alt="Atlas web content" class="no-border" >}}
 
 For the native platform, download the [Atlas Native Mobile Content](https://marketplace.mendix.com/link/component/117175) module:
 
-{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" >}}
+{{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-change-summary/atlas-native-content-marketplace.png" alt="Atlas native content" class="no-border" >}}
 
 ## 4 Design Properties for Web
 

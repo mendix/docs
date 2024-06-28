@@ -1,7 +1,7 @@
 ---
 title: "Third-Party Licenses"
 url: /refguide7/third-party-licenses/
-category: "General"
+canonical_url: "https://docs.mendix.com/refguide/third-party-licenses/"
 weight: 70
 ---
 

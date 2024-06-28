@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-upgrade
 linktitle: "Upgrade a Solution"
 weight: 8
 description: "Describes how to upgrade a properly set up solution with a new version provided by the ISV."
-tags: ["solutions", "upgrade solution", "startup", "adaptable solutions", "prescriptive solutions"]
 ---
 
 ## 1 Introduction
@@ -32,7 +31,7 @@ To upgrade a solution, follow these steps:
 
 1. Open Studio Pro and click **File** > **Upgrade Solution** (via the feature flag).
 
-    {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-upgrade.png" alt="Upgrade Solution" >}}
+    {{< figure src="/attachments/appstore/creating-content/sol-solutions-impl-guide/solution-upgrade.png" alt="Upgrade Solution" class="no-border" >}}
 
 2. Select the solution package file (*.mxsolution*) provided by the ISV and click **OK**.
 3. Once solution upgrade is completed, a new commit to the **solution-releases** branch line is created. This commit contains the unchanged new version of the solution (as provided by the ISV). You cannot make any changes in this branch, as that would render the solution incompatible with upgrades or lead to unpredictable errors during upgrades.

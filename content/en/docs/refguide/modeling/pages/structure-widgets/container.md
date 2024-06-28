@@ -2,7 +2,6 @@
 title: "Container"
 url: /refguide/container/
 weight: 20
-tags: ["studio pro", "container", "structure", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro", "container", "structure", "widget"]
 
 A container is a layout element that can be used to simultaneously style, hide, drag, or delete a group of widgets placed in it:
 
-{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/container/container.png" alt="Container Example" >}}
+{{< figure src="/attachments/refguide/modeling/pages/structure-widgets/container/container.png" alt="Container Example" class="no-border" >}}
 
 In a browser, it is rendered as a simple `div` element by default. It is also possible to render a container as one of HTML5 semantic elements (for example, `section`, `main`, `article`, `nav`).
 

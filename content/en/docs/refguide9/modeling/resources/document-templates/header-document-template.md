@@ -1,7 +1,6 @@
 ---
 title: "Header (Document Template)"
 url: /refguide9/header-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/header-(document-template).html
     - /refguide9/Header+(document+template).html
@@ -16,7 +15,7 @@ When enabled, the header will be inserted at the top of every page. Other widget
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide9/modeling/resources/document-templates/header-document-template/918236.png" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/document-templates/header-document-template/918236.png" class="no-border" >}}
 
 A header.
 

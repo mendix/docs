@@ -1,8 +1,6 @@
 ---
 title: "Use a Client Certificate"
 url: /howto7/integration/use-a-client-certificate/
-category: "Integration"
-tags: ["integration", "web service", "client certficate"]
 ---
 
 ## 1 Introduction
@@ -49,7 +47,7 @@ This is an example:
 
 A complete configuration may look like this:
 
-{{< figure src="/attachments/howto7/integration/use-a-client-certificate/example-custom-settings.png" >}}
+{{< figure src="/attachments/howto7/integration/use-a-client-certificate/example-custom-settings.png" class="no-border" >}}
 
 You can use an empty path for `ClientCertficateUsages` to specify that you do not want to use a client certificate, even when the server accepts one. To do this, you need to add the **Value** `{"<endpoint>":""}` (replace `<endpoint>` with the actual endpoint).
 

@@ -2,10 +2,8 @@
 title: "Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /refguide/dev-best-practices/
-category: "General Info"
 weight: 12
 description: "Describes Mendix best practices for developing Mendix applications."
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 aliases:
     - /howto/general/dev-best-practices/
 #Academy are SMEs for verification, they use/link to this doc in training; microflow prefix naming convention from ES and Academy
@@ -51,9 +49,11 @@ Each user role should correspond to only one module role per module. In other wo
 
 ### 2.5 Passwords and Other Secrets
 
-Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt and store and to retrieve and decrypt the information.
+Always store secret information in a safe place. A safe place is the database. Use the [Encryption](https://marketplace.mendix.com/link/component/1011) module to encrypt, store, retrieve, and decrypt the information.
 
-Using either the default value of a constant or the project's configuration setting is unsafe. Both these places are readable by others and visible in the version management copies. 
+In Mendix version 10.9.0 and above, you can also store [private constants](/refguide/configuration/#constants) in configurations. These are encrypted and stored on your local machine so will not be shared with others. In versions of Mendix below 10.9.0, all configuration values are shared.
+
+Using either the default value of a constant or the project's shared configuration settings is unsafe. Both these places are readable by others and visible in the version management copies. 
 
 ## 3 Naming Conventions {#naming-conventions}
 
@@ -188,7 +188,7 @@ For the microflow that you use in your [scheduled events](/refguide/scheduled-ev
 |-----------------|----------------------|
 | Scheduled Event | SCE\_                 |
 
-#### 3.4.7 App Microflows
+#### 3.4.7 App Microflows {#app-microflows}
 
 Your [app settings](/refguide/app-settings/) provide three events that can trigger a microflow. In these cases we advise writing out the purpose as a microflow name. These microflows are defined only once per app and should preferably call sub-microflows to do the actual processing. These sub-microflows should have a prefix indicated below:
 
@@ -198,7 +198,15 @@ Your [app settings](/refguide/app-settings/) provide three events that can trigg
 | Before shutdown | BeforeShutDown | BSD\_                 |
 | Health check    | HealthCheck    | HCH\_                 |
 
-#### 3.4.8 Unit Test Microflows
+#### 3.4.8 Sub-Microflows
+
+To clearly identify a [sub-microflow](/refguide/extracting-and-using-sub-microflows/), use the prefix **SUB_**. Exceptions can happen if there are other sub-microflow prefixes that are generally accepted too, for instance, the sub-microflow prefixes mentioned in the [App Microflows](#app-microflows) section above.
+
+| Event Type      | Prefix                     |
+|-----------------|----------------------------|
+| Sub-microflow   | SUB_{MicroflowDescription} |
+
+#### 3.4.9 Unit Test Microflows
 
 Microflows containing unit tests should have the prefix **TEST_** or **UT_** (case-insensitive). For more information about the Unit Testing module, see [Unit Testing](/appstore/modules/unit-testing/).
 
@@ -206,7 +214,7 @@ Microflows containing unit tests should have the prefix **TEST_** or **UT_** (ca
 |-----------------|----------------------|
 | Unit Test       | TEST\_ or UT_ |
 
-#### 3.4.9 Integration Microflows
+#### 3.4.10 Integration Microflows
 
 For integrations, you have the following types of microflow:
 
@@ -281,6 +289,12 @@ Documents used to support integration should have the prefixes listed below.
 | JSON structure                            | JSON\_ |
 | Deeplink                                  | DL\_   |
 
+{{% alert color="warning" %}}
+The [Deep Link](/appstore/modules/deep-link/) module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section in *Deep Link*.
+
+We will continue to actively support this module for Mendix 9.
+{{% /alert %}}
+
 ### 3.6 Home Pages
 
 You can define the [home pages](/refguide/show-home-page/) per device and role in your navigation. The recommended page names are listed below:
@@ -344,11 +358,11 @@ Nested `IF` statements in a single microflow expression are not recommended. If 
 
 The example below shows a low-code approach that Mendix recommends, because it presents a clear picture of what is happening in the microflow:
 
-{{< figure src="/attachments/refguide/modeling/dev-best-practices/recommended-microflow.png" width="700px">}}
+{{< figure src="/attachments/refguide/modeling/dev-best-practices/recommended-microflow.png" width="700px" class="no-border" >}}
 
 The example below shows an approach that we do not recommend. You can rewrite the microflow expression in this example as `if ($currentDeviceType = System.DeviceType.Phone and $Parameter = true) then true else false` using the `AND` operator. However, it is still not clear enough and the low-code approach shown in the above example is preferable.
 
-{{< figure src="/attachments/refguide/modeling/dev-best-practices/not-recommended-microflow.png" width="450px">}}
+{{< figure src="/attachments/refguide/modeling/dev-best-practices/not-recommended-microflow.png" width="450px" class="no-border" >}}
 
 Event triggers on input fields must be kept as simple as possible, since they are potentially executed very often, depending on user behavior. Complex operations here will reduce performance.
 

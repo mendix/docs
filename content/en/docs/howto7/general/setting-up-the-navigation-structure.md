@@ -1,9 +1,7 @@
 ---
 title: "Set Up the Navigation Structure"
 url: /howto7/general/setting-up-the-navigation-structure/
-category: "General"
 weight: 30
-tags: []
 ---
 Once you've created some pages you want to give users the ability to access them. The easiest way to do this is by using a navigation menu. The navigation editor of the Desktop Modeler allows you define navigation menus for desktop, tablet and phone interfaces. It also allows you to define which page is shown as a default home page depending on the user role.
 
@@ -20,15 +18,15 @@ This section will explain how to set the default home page. Please note that thi
 
 1. Open the **Navigation** editor.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581313.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581313.png" class="no-border" >}}
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581311.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581311.png" class="no-border" >}}
 
 2. Select either **Responsive**, **Tablet browser**, or **Phone browser** navigation, depending on the device interface you're working on.
 3. Next to **Home pages** > **Default home page**, click **Select**.
 4. Select the page you want to use as default home page. In this case, *Homepage* is used.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581309.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581309.png" class="no-border" >}}
 
 5. Click **Select**.
 
@@ -46,16 +44,16 @@ In many cases you want users with different roles to see different home pages. T
 4. In the **Role-based home pages** wizard, click **New**.
 5. Select a user role to create a new setting. In this case, we select **Administrator**.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581306.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581306.png" class="no-border" >}}
 
 6. Click **Select**.
 7. Select the role and click **Select target**.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581305.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581305.png" class="no-border" >}}
 
 8. Select the page **Account_Overview** and click **Select**.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581304.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581304.png" class="no-border" >}}
 
     Now every time a user with the **Administrator** user role signs in to the application, the corresponding page 'Account_Overview' is shown. Users with different roles will be redirected to the default home page.
 
@@ -70,7 +68,7 @@ This section will explain how to create menu items.
 5. Enter a **caption**. In this case, enter *Customer Overview*.
 6. Select a page or microflow as target. In this case, we select the page _CustomerOverview.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581302.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581302.png" class="no-border" >}}
 
 7. Save the menu item by clicking **OK**.
 
@@ -83,11 +81,11 @@ Now that you've created a menu structure it's time to start using it on pages.
 1. Open a page in the **Page Editor**.
 2. Click **Add widget** and select **Menu bar**:
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581316.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581316.png" class="no-border" >}}
 
 3. Click once in an empty place holder on the page to insert the widget.
 
-    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png" >}}
+    {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png" class="no-border" >}}
 
 4. Double click the widget to open its properties.
 5. Select **Project navigation** as menu source. This is the navigation structure defined in the navigation editor. You can also add additional menu structures by use of menu documents and use them instead.

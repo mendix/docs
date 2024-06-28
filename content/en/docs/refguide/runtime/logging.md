@@ -1,9 +1,7 @@
 ---
 title: "Logging"
 url: /refguide/logging/
-category: "Mendix Runtime"
 description: "Describes what the various log levels of the runtime will show as output."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -15,7 +13,7 @@ You can also set log levels to provide more or less information when testing loc
 
 ## 2 Log Levels {#log-levels}
 
-### 2.1 Critical
+### 2.1 Critical{#critical}
 
 Critical is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. The 3.0 cloud treats these messages as alerts and will notify you on the cloud dashboard.
 
@@ -57,7 +55,7 @@ This list is currently incomplete and is being updated.
 | Configuration | Logging related to the configuration of the Mendix app that is read in at startup. |
 | ConnectionBus | General logging related to database startup, synchronization and connections management for Mendix. |
 | ConnectionBus_Mapping | Information relating to the translations of XPath Queries and OQL text queries to OQL Queries. |
-| ConnectionBus_Queries | ⚠ Deprecated: This is a legacy node. |
+| ConnectionBus_Queries | If `LogMinDurationQuery` has been set, queries that take longer than `LogMinDurationQuery` milliseconds will be logged here. |
 | ConnectionBus_Retrieve | All information related to the retrieval of data, such as: Incoming requests from the application, the executed statement. Also logs issues encountered during the processing of the received data. |
 | ConnectionBus_Security | Information regarding access rights needed to access the database. |
 | ConnectionBus_Synchronize | ⚠ Deprecated: This is a legacy node. |

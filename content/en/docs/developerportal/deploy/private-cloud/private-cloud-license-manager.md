@@ -4,7 +4,6 @@ linktitle: "PCLM – License Manager"
 url: /developerportal/deploy/private-cloud/private-cloud-license-manager/
 description: "Describes setting up a license server and applying licenses to your Mendix app namespaces in private cloud"
 weight: 47
-tags: ["Deploy", "Private Cloud", "Licensing", "PCLM", "License Server", "License Bundle"]
 ---
 
 {{% alert color="warning" %}}
@@ -21,7 +20,7 @@ Rather than having to apply and update licenses for each environment individuall
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## 2 Prerequisites
+## 2 Prerequisites{#prerequisites}
 
 To install and use the PCLM, you need the following prerequisites:
 
@@ -43,6 +42,10 @@ The PCLM server will not create the database for the licenses, you need to creat
 {{% /alert %}}
 
 ## 3 Installing the PCLM server
+
+{{% alert color="info" %}}
+To prevent unexpected issues, as a best practice, install the PCLM server in a separate namespace.
+{{% /alert %}}
 
 You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
@@ -76,7 +79,7 @@ Where you need to supply the following parameters
 * `<tls-boolean>` – whether the database uses strict TLS, `true` or `false` *(default)*
 * `<ssl-root-certificate>` – the location of the SSL Root certificate file, if `<tls-boolean>` is `true`
 * `<docker-repo>` – location of the image repo, default: `private-cloud.registry.mendix.com/privatecloud-license-manager`
-* `<docker-tag>` – the docker image tag, default: `0.3.0`
+* `<docker-tag>` – the docker image tag, default: `0.4.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
 ### 3.2 Applying the Manifest
@@ -226,8 +229,8 @@ Where:
 
 ## 6 Installing Licenses
 
-Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and Mendix Operator licenses.
-Runtime licenses are required for each Mendix runtime environment, and Operator licenses are required for each namespace where the Operator runs.
+Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
+Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 

@@ -2,7 +2,6 @@
 title: "Enumerations"
 url: /refguide9/enumerations/
 weight: 40
-tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]
 aliases:
     - /refguide9/enumeration-values.html
     - /refguide9/enumeration-values
@@ -26,7 +25,7 @@ To create a new enumeration, do the following:
 
     1. Fill out **Name** and **Caption** for an enumeration value. You can set **Image** for it if necessary. For more information on enumeration properties, see the [Enumeration Properties](#enum-properties) section. <br />
 
-        {{< figure src="/attachments/refguide9/modeling/resources/enumerations/add-enum-value.png" >}}
+        {{< figure src="/attachments/refguide9/modeling/resources/enumerations/add-enum-value.png" class="no-border" >}}
 
     1. Click **OK** to save the enumeration value.
 
@@ -51,7 +50,7 @@ An enumeration has the following properties:
 
 * **Enumeration values** – an enumeration has one or more enumeration values. Each value represents one of the options. For more information on enumeration values and their properties, see the [Enumeration Value Properties](#enum-value-properties) section.
 
-    {{< figure src="/attachments/refguide9/modeling/resources/enumerations/enumeration-properties.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/resources/enumerations/enumeration-properties.png" class="no-border" >}}
 
 ### 3.1 Enumeration Value Properties {#enum-value-properties}
 
@@ -65,7 +64,7 @@ The caption can be changed and can contain any character. For example, *In Progr
 
 This is a translatable text. For more information, see [Language Menu](/refguide9/translatable-texts/). 
 
-#### 3.1.2 Name
+#### 3.1.2 Name{#name}
 
 This is the name of an enumeration value. It is a technical name of the value which is used to refer to the enumeration value in your app.
 

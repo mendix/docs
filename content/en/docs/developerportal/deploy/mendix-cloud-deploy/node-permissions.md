@@ -1,9 +1,8 @@
 ---
 title: "Node Permissions"
 url: /developerportal/deploy/node-permissions/
-weight: 18
+weight: 80
 description: "The permission settings for your node."
-tags: ["Node","Permission","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -21,7 +20,7 @@ To find a list of all Mendix Cloud licensed nodes that you have access to, open 
 
 You will see a list of all your licensed nodes:
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/nodes-list.png" alt="Licensed Mendix Cloud nodes" class="no-border" >}}
 
 To go to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node, click **Environments** on that node.
 
@@ -52,11 +51,11 @@ To access the node permissions, do the following:
 1. Click **Environments** for your app.
 2. Switch to the **Permissions** tab.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/permissions-tab.png" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/permissions-tab.png" class="no-border" >}}
 
 3. From the drop-down list in the upper-right corner, select the environment for which you want to change permissions.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/change-environments.png" alt="" width=25% >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/change-environments.png" alt="" width=25% class="no-border" >}}
 
 4. If prompted, complete two-factor authentication.
 
@@ -64,7 +63,7 @@ To access the node permissions, do the following:
 
 The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" class="no-border" >}}
 
 #### 3.3.1 Manage Permissions
 
@@ -109,7 +108,7 @@ Other permissions are needed in addition to **API Rights**. For example, to acce
 
 #### 3.3.6 Access to Monitoring
 
-Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in the [Developer Portal](http://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
+Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in [Apps](https://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics/), [Logs](/developerportal/operate/logs/), and [Alerts](/developerportal/operate/monitoring-application-health/).
 

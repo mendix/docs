@@ -2,14 +2,13 @@
 title: "Administrator"
 url: /refguide9/administrator/
 weight: 20
-tags: ["studio pro", "administrator", "app security", "security"]
 ---
 
 ## 1 Introduction
 
 In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" class="no-border" >}}
 
 ## 2 Administrator Properties {#administrator-properties}
 
@@ -38,7 +37,7 @@ Default: *1*
 {{% alert color="info" %}}
 Since the value of the password is general knowledge, it is safer to change this to a custom password.
 
-This password is only used when Mendix is running locally. Changing the password in your model will not update the password in your Cloud environments. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details/) in the Developer Portal.
+This password is only used when Mendix is running locally. Changing the password in your model will not update the password in your Cloud environments. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details/) in **Apps**
 {{% /alert %}}
 
 #### 2.2.1 Free Apps

@@ -2,7 +2,6 @@
 title: "Documentation Writing Guidelines"
 url: /community-tools/documentation-guidelines/
 description: "Describes some guidelines to follow when contributing to the Mendix documentation."
-tags: ["documentation", "community"]
 aliases:
     - /developerportal/community-tools/documentation-guidelines/
 ---
@@ -25,7 +24,7 @@ When contributing to the Mendix documentation, please consider these style guide
 * Avoid adverbs such as “simply,” “possibly,” “might,” “could,” “actually,” and “potentially,” as these words add uncertainty and cloud the true meaning of sentences
 * Be inclusive with your language (for example, do not use just "he," use "the user" or "they" instead) 
 
-Need an extra hand with spelling and grammar? Load your article into [Hemingway](http://www.hemingwayapp.com/) to spot any potential errors.
+Need an extra hand with spelling and grammar? Load your article into [Hemingway](https://www.hemingwayapp.com/) to spot any potential errors.
 
 ## 3 Guidelines for the Mendix Studio Pro How-tos
 
@@ -64,11 +63,11 @@ You can tell end-users that they need to have installed certain software require
 
 Add images that clearly show the specific functionality of the related step (so the reader can check that the image matches what they see on their screen). For example, the arrows and flow on this screenshot are too busy and not clear enough for the user:
 
-{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples.png"   width="500"  >}}
+{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples.png"   width="500"  class="no-border" >}}
 
 Add boxes, indicators, arrows, and other information to an image only if it makes the image more understandable:
 
-{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples2.png"   width="400"  >}}
+{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/documentation-guidelines/image_examples2.png"   width="400"  class="no-border" >}}
 
 Keep the images as simple as possible, because having too many arrows on an image can make it confusing!
 

@@ -2,7 +2,6 @@
 title: "Create Object"
 url: /refguide9/create-object/
 weight: 40
-tags: ["studio pro", "create object", "activity"]
 ---
 
 {{% alert color="warning" %}}
@@ -17,7 +16,7 @@ The **Create object** activity can be used to create an object.
 
 An example of create object properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/create-properties.png" alt="create object properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -100,7 +99,7 @@ Wherever an object is initialized, all the events are always executed. The defau
     * The object has the **Instantiated** state
     * This influences the behavior in the other object actions
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/create-object/during-creates.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.

@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.7.0
+  version: 4.8.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -213,7 +213,9 @@ paths:
           $ref: '#/components/responses/error403'
         '404':
           $ref: '#/components/responses/error404'
-      description: Updates a specific namespace.
+      description: |-
+        Updates a specific namespace.<br/>
+        ***Please be aware that this endpoint cannot be used for the `Main` namespace of a Global Operator installation.***
       tags:
         - namespaces
       requestBody:
@@ -222,6 +224,42 @@ paths:
             schema:
               $ref: '#/components/schemas/updateNamespaceManifest'
         description: Manifest of a namespace.
+  /apps:
+    get:
+      summary: Get Manifests of Multiple Applications
+      tags:
+        - apps
+      responses:
+        '200':
+          $ref: '#/components/responses/appsManifests'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-apps-manifests
+      description: Retrieves the manifests of all the applications for which the user has access.
+  '/apps/{appId}':
+    parameters:
+      - $ref: '#/components/parameters/appId'
+    get:
+      summary: Get App Manifest
+      tags:
+        - apps
+      responses:
+        '200':
+          $ref: '#/components/responses/appManifest'
+        '400':
+          $ref: '#/components/responses/error400'
+        '401':
+          $ref: '#/components/responses/error401'
+        '403':
+          $ref: '#/components/responses/error403'
+        '404':
+          $ref: '#/components/responses/error404'
+      operationId: get-app-manifest
+      description: Retrieves the manifest of an application.
   '/apps/{appId}/environments':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -354,7 +392,7 @@ paths:
           type: string
           format: uuid
           example: c533ee0b-f7db-4e62-868b-1192d392ccec
-        description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+        description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       - name: namespaceId
         in: path
         required: true
@@ -493,12 +531,34 @@ paths:
         - cli
 components:
   schemas:
+    appManifest:
+      type: object
+      x-examples:
+        Example 1:
+          manifestVersion: 2.0.0
+          app:
+            appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
+            appName: my-app
+      description: Model for the app manifest.
+      properties:
+        manifestVersion:
+          type: string
+          example: 2.0.0
+        app:
+          type: object
+          properties:
+            appId:
+              $ref: '#/components/schemas/appId'
+            appName:
+              type: string
+              description: The name of a Mendix application.
+              example: my-app
     appId:
       type: string
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of the Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       x-examples:
         example-appid: c533ee0b-f7db-4e62-868b-1192d392ccec
     error:
@@ -736,6 +796,7 @@ components:
                 namespace:
                   type: string
                   example: my-namespace
+                  description: Be aware that you cannot deploy environments to `Main` namespaces of Global Operator Installations.
                 namespaceId:
                   $ref: '#/components/schemas/namespaceId'
             annotations:
@@ -964,6 +1025,8 @@ components:
               example: new-cluster
             clusterType:
               $ref: '#/components/schemas/clusterType'
+            operatorType:
+              $ref: '#/components/schemas/operatorType'
             description:
               type: string
               example: This cluster is for testing purposes.
@@ -1012,6 +1075,8 @@ components:
             name:
               type: string
               example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
             installationType:
               $ref: '#/components/schemas/installationType'
             secret:
@@ -1085,6 +1150,8 @@ components:
             name:
               type: string
               example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
             installationType:
               $ref: '#/components/schemas/installationType'
             secret:
@@ -1338,6 +1405,36 @@ components:
       x-examples:
         example-ondemand: OnDemand
         example-dedicated: Dedicated
+    operatorType:
+      title: Operator Installation Type
+      x-stoplight:
+        id: 5dr1xnpfnmet8
+      type: string
+      description: '*This value cannot be changed after it has been set.*'
+      enum:
+        - global_operator
+        - standard_operator
+      x-examples:
+        Example Global Installation: global_operator
+        Example Namespace Instalaltion: standard_operator
+      default: standard_operator
+    namespaceType:
+      title: Type of Namespace
+      x-stoplight:
+        id: acy4l42nog506
+      type: string
+      enum:
+        - standard
+        - main
+        - managed
+      x-examples:
+        Example Standard Namespace: standard
+        Example Main Namespace: main
+        Example Managed Namespace: managed
+      description: |-
+        *This value cannot be changed after it has been set.*
+        The namespace type is influenced by the type of operator installation.
+      default: standard
   parameters:
     appId:
       name: appId
@@ -1347,7 +1444,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     jobId:
       name: jobId
       in: path
@@ -1724,6 +1821,7 @@ components:
                   clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                   name: new-cluster
                   clusterType: os
+                  operatorType: standard_operator
                   description: This cluster is for testing purposes.
                   totalNamespaces: 0
                   totalEnvironments: 0
@@ -1752,6 +1850,7 @@ components:
                       clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
                       name: new-cluster
                       clusterType: k8s
+                      operatorType: global_operator
                       description: This cluster is for testing purposes.
                       totalNamespaces: 0
                       totalEnvironments: 0
@@ -1773,6 +1872,7 @@ components:
                 namespace:
                   namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
                   name: my-namespace
+                  namespaceType: standard
                   installationType: Connected
                   secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                   productTypePCLM: standard
@@ -1851,6 +1951,7 @@ components:
                     namespace:
                       namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
                       name: my-namespace
+                      namespaceType: standard
                       installationType: Connected
                       secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                       productTypePCLM: standard
@@ -1993,12 +2094,29 @@ components:
                     cliVersion: 1.0.0
                     availableOperatingSystems: 'windows, linux, macos'
                     availableArchitectures: x86
+    appManifest:
+      description: The app manifest response returned by a get-app-manifest request.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/appManifest'
+    appsManifests:
+      description: The apps manifests response returned by a get-apps-manifests request.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              apps:
+                type: array
+                items:
+                  $ref: '#/components/schemas/appManifest'
   securitySchemes:
     PersonalAccessToken:
       name: Authorization
       type: apiKey
       in: header
-      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
   requestBodies:
     environmentManifest:
       content:
@@ -2120,6 +2238,7 @@ components:
           clusterId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
           name: new-cluster
           clusterType: os
+          operatorType: standard_operator
           description: This cluster is for testing purposes.
     NamespaceManifest:
       value:
@@ -2129,6 +2248,7 @@ components:
           name: my-namespace
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+          namespaceType: standard
     UpdateClusterManifest:
       value:
         manifestVersion: 2.0.0
@@ -2151,6 +2271,7 @@ components:
         namespace:
           namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
           name: my-namespace
+          namespaceType: standard
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
           productTypePCLM: standard
@@ -2195,7 +2316,14 @@ components:
             alertsUrl: 'https://www.exampleurl.com'
             logsUrl: 'https://www.exampleurl.com'
             backupsUrl: 'https://www.exampleurl.com'
+    AppManifest:
+      value:
+        manifestVersion: 2.0.0
+        app:
+          appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
+          appName: my-app
 tags:
+  - name: apps
   - name: cli
   - name: clusters
   - name: environments

@@ -2,10 +2,8 @@
 title: "Moving from Desktop Modeler Version 7 to Studio Pro 8"
 linktitle: "Desktop Modeler 7 to Studio Pro 8"
 url: /refguide8/moving-from-7-to-8/
-category: "General Info"
 weight: 20
 description: "Provides details on updating your project from Desktop Modeler version 7 to Studio Pro 8 , including sections on converting your project and deprecated features."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -123,15 +121,15 @@ It is possible to fix most of the deprecation errors in one single action. To ac
 
 1. In Studio Pro 8, find the error message which relates to the support of Currency and Float data types.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png" alt="Error message: currency and float no longer supported" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-error.png" alt="Error message: currency and float no longer supported" class="no-border" >}}
 
 2. Right-click the error message.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png" alt="Change manually or automatically?" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/currency-float-change-options.png" alt="Change manually or automatically?" class="no-border" >}}
 
 3. Click **Convert all to Decimal** to convert all the attributes automatically.
 
-    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png" alt="Warning when converting all Float and Currency to Decimal" >}}
+    {{< figure src="/attachments/refguide8/general/moving-from-7-to-8/convert-to-decimal-warning.png" alt="Warning when converting all Float and Currency to Decimal" class="no-border" >}}
 
 4. Click **Convert all to Decimal** to perform the conversion.
 
@@ -214,13 +212,13 @@ This code behaves as expected and works out of the box. However, if you previous
 
 Very rarely, you may receive a message similar to the one below when opening a project in Mendix Studio Pro 8 which needs to be upgraded from a previous version of Mendix.
 
-{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png" alt="Layouts Error Message" >}}
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-import-message.png" alt="Layouts Error Message" class="no-border" >}}
 
 This happens when a layout has an invalid value for the **Layout type**. This will still cause an error, *even if the invalid layout has been excluded* from the project.
 
 See the image below for an indication of where you might find the error in your project.
 
-{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png" alt="Location of Layouts Error" >}}
+{{< figure src="/attachments/refguide8/general/moving-from-7-to-8/layout-error-location.png" alt="Location of Layouts Error" class="no-border" >}}
 
 To resolve this issue, use the previous version of Mendix to change the invalid **Layout type** (in the example above, `Legacy`) to a valid value.
 

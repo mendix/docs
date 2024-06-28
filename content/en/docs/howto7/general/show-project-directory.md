@@ -1,9 +1,7 @@
 ---
 title: "Show the Project Directory in Explorer"
 url: /howto7/general/show-project-directory/
-category: "General"
 weight: 2
-tags: ["project directory", "directory", "explorer", "local", "windows"]
 ---
 
 ## 1 Introduction
@@ -16,11 +14,11 @@ The quickest way to open the project directory is in the Mendix Modeler via the 
 
 1. Click **Project** and select **Show Project Directory in Explorer**:
 
-    {{< figure src="/attachments/howto7/general/show-project-directory/18581613.png" >}}
+    {{< figure src="/attachments/howto7/general/show-project-directory/18581613.png" class="no-border" >}}
 
 2. The following window will appear with the project directory shown in it:
 
-    {{< figure src="/attachments/howto7/general/show-project-directory/18581612.png" >}}
+    {{< figure src="/attachments/howto7/general/show-project-directory/18581612.png" class="no-border" >}}
 
 By default, the directory is located in the **MyDocuments** section.
 

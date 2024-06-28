@@ -2,7 +2,6 @@
 title: "Getting the Make It Native App"
 url: /refguide8/getting-the-make-it-native-app/
 weight: 10
-tags: ["Android", "iOS", "native", "debug"]
 ---
 
 ## 1 Introduction

@@ -1,9 +1,7 @@
 ---
 title: "Atlas UI"
 url: /howto8/front-end/atlas-ui/
-category: "Front End"
 weight: 5
-tags: ["Atlas", "UI", "UX", "user experience"]
 aliases:
     - /howto8/front-end/create-a-custom-theme-with-the-mendix-ui-framework.html
     - /howto8/ux/create-a-custom-theme-with-the-mendix-ui-framework.html
@@ -33,13 +31,13 @@ Create familiarity and consistency throughout your apps landscape, regardless of
 
 Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
-{{< figure src="/attachments/howto8/front-end/atlas-ui/atlas_ui_preview.png" >}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/atlas_ui_preview.png" class="no-border" >}}
 
 ## 2 Design Elements
 
 Our UI library is fully integrated. After choosing a navigation layout, you can find page templates, building blocks, and widgets directly in your **Toolbox**. These UI elements form the foundation of your app.
 
-{{< figure src="/attachments/howto8/front-end/atlas-ui/designelements.png" >}}
+{{< figure src="/attachments/howto8/front-end/atlas-ui/designelements.png" class="no-border" >}}
 
 **1** **Navigation Layouts**
 

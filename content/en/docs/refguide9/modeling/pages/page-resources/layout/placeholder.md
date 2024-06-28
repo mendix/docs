@@ -16,13 +16,13 @@ Each placeholder is colored blue with its name displayed in the middle of it. Th
 
 For example, the image below shows two placeholders, **Main** and **Other** positioned within a layout grid. 
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'"   width="400"  class="no-border" >}}
 
 ## 2 Properties
 
 An example of placeholder properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" >}}
+{{< figure src="/attachments/refguide9/modeling/pages/page-resources/layout/placeholder/placeholder-properties.png" alt="Properties pane for a placeholder" class="no-border" >}}
 
 A placeholder has a single section, **Misc** and a single property, **Name**.
 

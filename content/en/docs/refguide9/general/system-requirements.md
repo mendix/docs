@@ -1,10 +1,8 @@
 ---
 title: "System Requirements"
 url: /refguide9/system-requirements/
-category: "General Info"
 weight: 10
 description: "Presents the system requirements for using the Mendix Platform."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -25,10 +23,11 @@ The following frameworks are required. They will be installed automatically by t
 * Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
 * Microsoft Visual C++ 2015 Redistributable Package (x64)
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 - the flavor which will be installed, if Java 11 is not already installed on your machine, depends on which version of Studio Pro you are installing
+* A Java Developer Kit (JDK) version 11, 17, or 21 - the flavor which will be installed if the correct version of Java is not already installed on your machine—this depends on which version of Studio Pro you are installing
     * AdoptOpenJDK 11 (x64) – for Mendix 9.13 and below
     * Adoptium Temurin JDK 11 (x64) – for Mendix 9.14 to 9.17
-    * Eclipse Temurin JDK 11 (x64)– for Mendix 9.18 and above
+    * Eclipse Temurin JDK 11 (x64)– for Mendix between 9.18.1 and 9.18.15
+    * Eclipse Temurin JDK 17 (x64)– for Mendix 9.18.16 and above
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -171,9 +170,6 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 * Microsoft Windows Server 2008 SP2 and above
 * The following Unix-like operating systems:
     * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
-    * Red Hat Enterprise Linux 6 and later
-    * CentOS 7
-    * CentOS Stream 8 and later
 
 ### 6.2 Web Server
 
@@ -183,10 +179,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17 or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-As Java 11 approaches the end of support in October, 2024, compatibility with Java 17 is planned for Q1 2024, and compatibility with Java 21 is planned for Q2 2024. Switching to a Studio Pro version compatible with Java 17 can be considered optional. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 is available from Studio Pro version 9.24.19. Compatibility with Java 21 is available from Studio Pro version 9.24.22. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
 {{% alert color="info" %}}

@@ -1,15 +1,13 @@
 ---
 title: "Runtime Deployment"
 url: /refguide/runtime-deployment/
-category: "Mendix Runtime"
 description: "Describes how the Mendix Runtime is deployed."
 weight: 30
-tags: ["runtime", "deploy", "mxbuild", "runtime server", "m2ee"]
 ---
 
 ## 1 Introduction
 
-To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your app, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see the [Deployment](/developerportal/deploy/) section of the Developer Portal documentation.
+To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your app, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see [Deployment](/developerportal/deploy/).
 
 This description of deployment is based on an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
@@ -19,7 +17,7 @@ When you have created a Mendix app with no structural errors, you need run it by
 
 Below is a chart showing the processes involved in deploying your app. Each of the processes and components is described below the chart.
 
-{{< figure src="/attachments/refguide/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-deployment/runtime-deployment.png" alt="How Mendix Runtime is deployed" class="no-border" >}}
 
 ### 2.1 Deployer
 

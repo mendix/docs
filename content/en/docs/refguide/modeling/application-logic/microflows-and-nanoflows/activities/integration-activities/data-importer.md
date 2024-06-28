@@ -1,7 +1,6 @@
 ---
 title: "Import Data from File"
 url: /refguide/import-data-from-file/
-tags: ["studio pro", "import excel", "import data", "integration activity"]
 weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -24,7 +23,7 @@ The **Import data from file** activity can be used in a microflow to integrate d
 
 Drag the **Import data from file** activity into your microflow and double-click it to view its properties:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-data-from-file/custom-activity-params.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/integration-activities/import-data-from-file/custom-activity-params.png" class="no-border" >}}
 
 The following are the properties in the **Input** section:
 

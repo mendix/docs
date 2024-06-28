@@ -2,7 +2,6 @@
 title: Apply Jump-To Option
 url: /refguide9/apply-jump-to-option/
 weight: 5
-tags: ["studio pro", "workflow", "jump-to option", "apply jump-to option"]
 ---
 
 {{% alert color="warning" %}}
@@ -16,7 +15,7 @@ This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.1
 
 The **Apply jump-to option** activity allows the workflow to jump to a selected activity. This activity should be used after the [Generate jump-to options](/refguide9/generate-jump-to-options/) activity that generates the list of possible workflow activities the workflow can jump to. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue.
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option.jpg" class="no-border" >}}
 
 For more information on configuring the jumping to other activities, see [Jumping to Different Activities in a Workflow](/refguide9/jump-to/).
 
@@ -30,7 +29,7 @@ This functionality is different from the [Jump activity](/refguide9/jump-activit
 
 An example of **Apply jump-to option** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option-properties.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/apply-jump-to-option/apply-jump-to-option-properties.jpg" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -2,7 +2,6 @@
 title: "Clear from Device"
 url: /refguide/clear-from-device/
 weight: 70
-tags: ["studio pro", "clear from device", "offline", "client activity"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -28,7 +27,7 @@ Objects with unsynchronized changes are also removed without synchronizing them.
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/clear-from-device/clear-from-device-properties.png" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/clear-from-device/clear-from-device-properties.png" class="no-border" >}}
 
 The **Clear from device** properties pane consists of the following sections:
 

@@ -1,7 +1,6 @@
 ---
 title: "Configurations"
 url: /refguide/configuration/
-tags: ["studio pro", "configurations", "configuration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -56,6 +55,15 @@ The **Server** tab has the following settings:
 ### 2.3 Constants {#constants}
 
 Constants have a default value that you can override per configuration. You only need to add a constant here if you want a different value than the default value. An example is specifying different web service locations for different configurations.
+
+The choice between a **Shared** value or a **Private** value determines where Studio Pro stores the value:
+
+* Choose **Shared** to store the value as part of the app. That means that when you commit/push your changes, you share the value with everyone that has access to the app's repository.
+* Choose **Private** to store the value on your local machine. The value will be encrypted so that only your user account can read it. Other users will have to specify their own value for this constant.
+
+{{% alert color="info" %}}
+Private configuration values are available in Studio Pro 10.9.0 and above. In versions below 10.9.0, all configuration values are shared.
+{{% /alert %}}
 
 ### 2.4 Custom {#custom}
 

@@ -2,7 +2,6 @@
 title: "Close Page"
 url: /refguide8/close-page/
 weight: 10
-tags: ["studio pro", "close page", "client activity"]
 aliases:
     - /refguide8/Close+Form.html
     - /refguide8/close-form.html
@@ -23,7 +22,7 @@ This action is ignored and does not work when a microflow is called from an offl
 
 The **Close page** activity closes the currently open page. For example, it can be used to close a pop-up page:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/close-page/close-page.png"   width="200"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/close-page/close-page.png"   width="200"  class="no-border" >}}
 
 ## 2 Properties
 
@@ -33,7 +32,7 @@ The **Close page** activity properties consists of the following sections:
 
 * [Common](#common)  
 
-    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties"   width="300"  >}}
+    {{< figure src="/attachments/refguide8/modeling/application-logic/activities/client-activities/close-page/close-page-properties.png" alt="Close Page Properties"   width="300"  class="no-border" >}}
 
 ## 3 Action Section {#action}
 

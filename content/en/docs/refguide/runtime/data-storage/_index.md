@@ -1,9 +1,7 @@
 ---
 title: "Data Storage"
 url: /refguide/data-storage/
-category: "Mendix Runtime"
 description: "Introduces data storage, which is the data foundation of the Mendix Runtime."
-tags: ["studio pro", "Databases"]
 ---
 
 ## 1 Introduction
@@ -102,3 +100,11 @@ Foreign Key Constraints are enabled for new projects in version 10.6.0 and above
 Apps created before 10.6 are not affected. This means that if your app is created in a version of Studio Pro below 10.6.0 and then upgraded to version 10.6.0 or above, FKCs do not get enabled for it.
 
 When a new app is created from a Starter App or an app package, it may already contain a data snapshot. Before FKC is enabled during synchronization, any dangling references are deleted from the database. This cleanup is performed only once and is not repeated on consequent runs for the same database.
+
+### 5.3 Setting Foreign Key Constraints On and Off
+
+In Mendix version 10.10.0 and above, it is possible to set Foreign Key Constraints for existing projects on or off regardless of which version the project was originally created in by toggling the option in the app's [runtime settings](/refguide/app-settings/#database-fkc).
+
+{{% alert color="info" %}}
+Deploying an existing application after enabling or disabling FKC will cause a synchronization step to be executed.
+{{% /alert %}}

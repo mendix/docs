@@ -2,7 +2,6 @@
 title: "Git Storage Optimization"
 url: /refguide/git-storage-optimization-dialog/
 weight: 30
-tags: ["git", "optimization", "git storage", "git optimization"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

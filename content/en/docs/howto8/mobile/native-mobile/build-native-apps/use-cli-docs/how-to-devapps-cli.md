@@ -4,7 +4,6 @@ linktitle: "Custom Developer App with Native Builder CLI"
 url: /howto8/mobile/how-to-devapps-cli/
 weight: 30
 description: A tutorial for creating custom developer apps.
-tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
 ## 1 Introduction
@@ -92,11 +91,11 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
    
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on Github" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-branch-switching.png" alt="Switch branch on GitHub" class="no-border" >}}
    
 3. Click **Clone or Download** and then click **Download ZIP**:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-download-branch.png" alt="Download repository" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/github-download-branch.png" alt="Download repository" class="no-border" >}}
 
 4. Unzip the downloaded archive.
 5. Open a terminal and change directory into the folder.
@@ -109,11 +108,11 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
     This will install the node module dependencies and the iOS Dependencies
 7. In the **ios** folder, open the **NativeTemplate.xcworkspace** file:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" class="no-border" >}}
 
 8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" class="no-border" >}}
 
 9. Click **Run** ({{% icon name="controls-play" %}}).
 

@@ -2,10 +2,8 @@
 title: "Troubleshoot Network Issues for Connecting to Team Server"
 linktitle: "Team Server Network Issues"
 url: /howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/
-category: "Collaboration"
 weight: 14
 description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
-tags: ["Team Server", "network", "troubleshoot", "firewall"]
 ---
 
 ## 1 Introduction
@@ -28,7 +26,7 @@ Team Server is implemented using Subversion and Mendix Studio Pro uses the HTTPS
 
 Mendix Studio Pro connects to `https://teamserver.sprintr.com/` and with the domains shown in the diagram below over HTTPS on port 443. These domains should be added to the firewall white list:
 
-{{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/networkaccessmendixplatform.jpg" alt="Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network" >}}
+{{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-network-issues-for-team-server/networkaccessmendixplatform.jpg" alt="Domains home.mendix.com, cloud.mendix.com, and teamserver.sprintr.com need to be accessible on port 443 from your network" class="no-border" >}}
 
 You can look up the IP address of `https://teamserver.sprintr.com/`.
 

@@ -2,13 +2,11 @@
 title: "Scaffold a Widget with the Yeoman Widget Generator"
 linktitle: "Scaffold Widget with Yeoman"
 url: /howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/
-category: "Widget Development"
-tags: ["widget", "develop widget", "scaffold", "yeoman"]
 ---
 
 ## 1 Introduction
 
-This how-to teaches you how to use the widget generator, which is a [Yeoman](http://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
+This how-to teaches you how to use the widget generator, which is a [Yeoman](https://yeoman.io/) generator that lets you quickly scaffold a new widget. The generator integrates Grunt, which is a task runner, to speed up your widget development.
 
 This how-to teaches you how to do the following:
 
@@ -28,7 +26,7 @@ Yeoman and Grunt both run on Node.JS, so you need to install this by following t
 3. Open the command line and press **Windows**+**R**.
 4. Type "cmd" and press **Enter**:
 
-    {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398836.png" >}}
+    {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398836.png" class="no-border" >}}
 
 5. Check if Node.JS is properly installed by entering `node -v` and press **enter**. If Node.JS is properly installed, it will show you the version that is installed.
 
@@ -36,7 +34,7 @@ Yeoman and Grunt both run on Node.JS, so you need to install this by following t
 
 In the same window, install these dependencies by typing `npm install yo grunt-cli generator-mendix -g`:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398837.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398837.png" class="no-border" >}}
 
 This will usually take a minute or two. Warnings can be ignored. Node Package Manager (NPM) will tell you if it is having problems installing them by marking errors in red. If you have problems, see [Troubleshooting](#Troubleshooting).
 
@@ -46,15 +44,15 @@ Now the dependecies are installed globally, which means you can use them from an
 
 In your terminal, move to the folder where you want your widget to be created. In this how-to, we will move to the folder `C:\Projects` and create a **MyNewWidget** folder, where we will use the generator:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398838.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398838.png" class="no-border" >}}
 
 Now you can run the generator by entering `yo mendix`. The system will ask you for a few things, like the name of the widget. The default values will be shown (just press enter to use the default value). Choose Grunt instead of Gulp. Choose 'AppStoreWidgetBoilerPlate':
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398839.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398839.png" class="no-border" >}}
 
 After you have entered the options, the system will install all the dependencies, copy the AppStoreWidgetBoilerPlate, and edit the files according to the options you have set. Your folder should contain the following items:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398840.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398840.png" class="no-border" >}}
 
 ## 4 Use Grunt
 
@@ -64,7 +62,7 @@ Grunt is a powerfull task-runner that will speed up your widget development. In 
 
 You can start the Modeler from Grunt with `grunt start-mendix` or `grunt start-modeler`:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398841.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398841.png" class="no-border" >}}
 
 This will open your test app with the Mendix version selector. Your test app is created in version 5.19.
 
@@ -72,7 +70,7 @@ This will open your test app with the Mendix version selector. Your test app is 
 
 You can watch for any changes in your *src* folder by using the default watch task in Grunt. Run `grunt` or `grunt watch`:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398842.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398842.png" class="no-border" >}}
 
 Now, everytime you make changes in your *src* folder, it will automatically build a new *.mpk* file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
 
@@ -87,7 +85,7 @@ The watch task has the advantage that you do not have to restart your test app e
 
 To update the widget, press **F4** in the Modeler or select **Project** > **Synchronize Project Directory**:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398843.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398843.png" class="no-border" >}}
 
 ### 4.3 Build
 
@@ -105,11 +103,11 @@ The Grunt task will try to find the Mendix version selector and run the test app
 
 If it has trouble finding the version selector, you can provide a path to the program in *Gruntfile.js*. Change the **MODELER_PATH**:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398844.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398844.png" class="no-border" >}}
 
 from **null** to `<path to VersionSelector.exe>` – make sure you use double backslashes when providing the path, as in this example:
 
-{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398845.png" >}}
+{{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398845.png" class="no-border" >}}
 
 ### 5.3 Errors in the Test project 'Could not find the widget type "WidgetName.widget.WidgetName" in the "widgets" directory.'
 

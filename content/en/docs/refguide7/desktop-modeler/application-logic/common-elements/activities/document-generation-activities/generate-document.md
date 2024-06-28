@@ -2,7 +2,6 @@
 title: "Generate Document"
 url: /refguide7/generate-document/
 description: "Describes generating documents from a microflow. "
-tags: ["PDF", "document", "document template", "HTML", "Microsoft Word", "ODT"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -16,7 +15,7 @@ The generate-document microflow action can be used to create a document based on
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/document-generation-activities/generate-document/918200.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/document-generation-activities/generate-document/918200.png" class="no-border" >}}
 Generate document
 
 {{% /alert %}}{{% alert color="info" %}}

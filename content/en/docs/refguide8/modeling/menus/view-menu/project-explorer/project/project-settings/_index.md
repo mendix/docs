@@ -3,7 +3,6 @@ title: "Project Settings"
 url: /refguide8/project-settings/
 weight: 10
 description: "Settings which apply to the project app as a whole."
-tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ tags: ["project", "app", "configuration", "runtime", "Studio Pro", "languages", 
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project/project-settings/project-settings-configuration.png" class="no-border" >}}
 
 The categories described below are available.
 
@@ -55,7 +54,7 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in [Apps](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide8/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 
@@ -237,7 +236,7 @@ Certificates can be installed in the Windows Certificate Store using the **Insta
 {{% /alert %}}
 {{% alert color="info" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](https://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
@@ -247,7 +246,7 @@ Be warned that this does make the client-server communication vulnerable to an e
 
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
-For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
+For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](https://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
 
 {{% /alert %}}
 

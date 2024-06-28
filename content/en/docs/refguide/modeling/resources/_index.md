@@ -1,10 +1,8 @@
 ---
 title: "Resources"
 url: /refguide/resources/
-category: "App Modeling"
 weight: 50
 description: "Introduces the helping documents (resources) that can be used in Studio Pro."
-tags: ["studio pro", "resources"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
@@ -20,7 +18,7 @@ To add a resource document, do the following:
 
 1. In the [App Explorer](/refguide/app-explorer/), right-click the module or a folder you want to add a resource to and select **Add other**:
 
-    {{< figure src="/attachments/refguide/modeling/resources/app-explorer-resources.png" >}}
+    {{< figure src="/attachments/refguide/modeling/resources/app-explorer-resources.png" class="no-border" >}}
 
 2. In the **Resources** category, select the document you would like to add to your app.
 

@@ -20,12 +20,16 @@ paths:
       description: '> Returns a list of feedback items based on the query parameters. Using storyId or legacyId will always return a list containing a single item.'
       operationId: get-feedback-items
       parameters:
-        - $ref: '#/components/parameters/Authorization'
+        - name: Authorization
+          in: header
+          schema:
+            type: string
         - $ref: '#/components/parameters/projectId'
         - $ref: '#/components/parameters/storyId'
         - $ref: '#/components/parameters/legacyId'
         - $ref: '#/components/parameters/status'
         - $ref: '#/components/parameters/priority'
+        - $ref: '#/components/parameters/email'
         - $ref: '#/components/parameters/limit'
         - $ref: '#/components/parameters/offset'
       responses:
@@ -40,15 +44,16 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
     post:
       tags:
         - Feedback Items
       summary: Create a feedback item
       description: This call adds a new feedback item to a specified app and returns the legacyId and UUID  of the new feedback item.
       operationId: post-feedback-item
-      parameters:
-        - $ref: '#/components/parameters/Authorization'
       requestBody:
         $ref: '#/components/requestBodies/feedback'
       responses:
@@ -63,15 +68,16 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
     patch:
       tags:
         - Feedback Items
       summary: Change Feedback Item Status
       description: Changes the status of a feedback item.
       operationId: patch-feedback-item
-      parameters:
-        - $ref: '#/components/parameters/Authorization'
       requestBody:
         $ref: '#/components/requestBodies/status'
       responses:
@@ -86,7 +92,10 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
   '/feedback-items/{feedback-item-uuid}':
     get:
       tags:
@@ -95,7 +104,6 @@ paths:
       description: This call retrieves a single feedback item by the UUID of the feedback item.
       operationId: get-feedback-item
       parameters:
-        - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/feedback-item-uuid'
       responses:
         '200':
@@ -109,7 +117,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -120,7 +128,6 @@ paths:
       description: Deletes a feedback item.
       operationId: delete-feedback-item
       parameters:
-        - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/feedback-item-uuid'
       responses:
         '204':
@@ -134,11 +141,11 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
-  '/feedback-items/{feedback-item-uuid}screenshot':
+  '/feedback-items/{feedback-item-uuid}/screenshot':
     get:
       tags:
         - Feedback Items
@@ -146,13 +153,6 @@ paths:
       description: Returns a screenshot for a specified feedback item. The image result is in the binary format.
       operationId: get-feedback-item-screenshot
       parameters:
-        - name: Authorization
-          in: header
-          description: Authentication for the Feedback API uses a personal access token (PAT).
-          required: false
-          schema:
-            type: string
-            example: MxToken <PAT>
         - name: feedback-item-uuid
           in: path
           description: The unique ID of the feedback item
@@ -176,7 +176,10 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
+      servers:
+        - url: 'https://feedback-api.mendix.com/v2'
+          description: Base URL
   '/feedback-items/{feedback-item-uuid}/attachments/{file-id}':
     get:
       tags:
@@ -185,7 +188,6 @@ paths:
       description: Returns a specific attachment for a specified feedback item.
       operationId: get-feedback-item-attachment
       parameters:
-        - $ref: '#/components/parameters/Authorization'
         - $ref: '#/components/parameters/feedback-item-uuid'
         - $ref: '#/components/parameters/file-id'
       responses:
@@ -204,7 +206,7 @@ paths:
         '500':
           $ref: '#/components/responses/500-Something-went-wrong'
       security:
-        - Authorization: []
+        - Personal Access Token: []
       servers:
         - url: 'https://feedback-api.mendix.com/v2'
           description: Base URL
@@ -267,6 +269,13 @@ components:
       schema:
         type: string
         example: '22'
+    email:
+      name: email
+      in: query
+      description: The email address of the reporter
+      required: false
+      schema:
+        type: string
     feedback-item-uuid:
       name: feedback-item-uuid
       in: path
@@ -282,14 +291,6 @@ components:
       required: true
       schema:
         type: integer
-    Authorization:
-      name: Authorization
-      in: header
-      description: Authentication for the Feedback API uses a personal access token (PAT).
-      required: false
-      schema:
-        type: string
-        example: MxToken <PAT>
   requestBodies:
     feedback:
       description: Feedback item request body.
@@ -337,7 +338,7 @@ components:
                 submitterEmail: john.doe@email.com
                 submitterUUID: 00000000-0000-0000-0000-000000000000
                 subject: Unable to export feedback
-                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                 screenshot: Base64 string
                 screenshotName: FeedbackExportBug1.png
                 priority: Urgent
@@ -358,10 +359,10 @@ components:
               value:
                 status: Inbox
   securitySchemes:
-    Authorization:
+    Personal Access Token:
       type: apiKey
       description: 'For more information about requesting and using a token see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
-      name: MxToken 7LJE…vk
+      name: Authorization
       in: header
   responses:
     404-Not-Found:
@@ -443,7 +444,7 @@ components:
                       type: string
                     pageName:
                       type: string
-                    environmentUrl:
+                    environmentURL:
                       type: string
                     screenSize:
                       type: string
@@ -481,6 +482,13 @@ components:
                       properties:
                         label:
                           type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
+                    type: string
           examples:
             Response example:
               value:
@@ -488,12 +496,12 @@ components:
                   - legacyId: 0
                     uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                     subject: Unable to export feedback
-                    description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                    description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                     displayId: 102
                     summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                     activeUserRoles: User
                     pageName: FeedbackManagement/Overview.page.xml
-                    environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                    environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                     screenSize: 1920 x 1080
                     browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                     submissionDate: '2023-05-21T09:22:41.321Z'
@@ -533,7 +541,7 @@ components:
                 type: string
               pageName:
                 type: string
-              environmentUrl:
+              environmentURL:
                 type: string
               screenSize:
                 type: string
@@ -571,18 +579,25 @@ components:
                 properties:
                   label:
                     type: string
+              tags:
+                type: object
+                properties:
+                  label:
+                    type: string
+                  color:
+                    type: string
           examples:
             Response example:
               value:
                 legacyId: 0
                 uuid: 82fb475a-e4dd-4a9e-acb7-e3b8a6fc8869
                 subject: Unable to export feedback
-                description: When I click the 'Export' button on the feedback overview, I get an error telling me to contact the system administrator.
+                description: 'When I click the ''Export'' button on the feedback overview, I get an error telling me to contact the system administrator.'
                 displayId: 102
                 summary: I have looked into the logic and I believe this error is related to the export template not being configured correctly
                 activeUserRoles: User
                 pageName: FeedbackManagement/Overview.page.xml
-                environmentUrl: 'https://purchaserequest.company.com/link/feedback/overview'
+                environmentURL: 'https://purchaserequest.company.com/link/feedback/overview'
                 screenSize: 1920 x 1080
                 browser: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)'
                 submissionDate: '2023-05-21T09:22:41.321Z'
@@ -938,3 +953,5 @@ components:
                   message: The status does not exist
                   code: 400
                   instance: 'urn:uuid:b2d4afb0-6262-4b9e-8e22-8863cadb91de'
+security:
+  - Personal Access Token: []

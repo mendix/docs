@@ -1,10 +1,8 @@
 ---
 title: "Mendix Client"
 url: /refguide9/mendix-client/
-category: "Mendix Runtime"
 description: "Describes the Mendix Client part of the Mendix Runtime and how it functions."
 weight: 20
-tags: ["runtime", "mendix client", "offline-first", "browser", "javascript", "nanoflows", "widgets", "launch"]
 ---
 
 ## 1 Introduction
@@ -33,7 +31,7 @@ A **Hybrid application**, for most purposes, can be treated as an app running in
 
 Below is a chart showing the components of the Mendix Client. Each of the components is described below the chart.
 
-{{< figure src="/attachments/refguide9/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" >}}
+{{< figure src="/attachments/refguide9/runtime/mendix-client/mendix-client.png" alt="The makeup of the Mendix Client" class="no-border" >}}
 
 ### 2.1 Client Core
 
@@ -58,7 +56,7 @@ The UI layer performs navigation, resource loading, and platform integration. It
 
 ### 2.5 HTTPS Server
 
-The HTTPS server serves pages, widgets, and javascript actions, held in the model, to the end-user of the app.
+The HTTPS server serves pages, widgets, and JavaScript actions, held in the model, to the end-user of the app.
 
 ### 2.6 Logic
 
@@ -208,7 +206,7 @@ When the end-user launches an app in the browser, it triggers the following flow
 
 #### 4.1.2 Location of Mendix Client Resources
 
-When the app is deployed, the static resources are placed in a structure referred to as the CDN. This includes the following:
+When the app is deployed, the static resources are placed in a separate structure. This includes the following:
 
 * index.html – the initial HTML page which is loaded when the end-user starts the Mendix Client — this contains the client configuration and other static non-Mendix content (for example if Google analytics is added to the app)
 * mxui.js – the main Mendix Client code

@@ -2,8 +2,7 @@
 title: "Indentation and Spacing Test"
 url: /developerportal/community-tools/indentation-spacing-test/
 draft: true
-description: "Various test cases for rendering of indents and spaces"
-banner: "This is a draft and will not be rendered in the production website. Use this page to test how spacing and indents will render with various elements and shortcodes. Linting has been disabled for this file."
+description: "Various test cases for rendering of indents and spaces. Use this page to test how spacing and indents will render with various elements and shortcodes. Linting has been disabled for this file."
 ---
 <!-- markdownlint-disable-file -->
 ## Heading 2
@@ -24,7 +23,7 @@ Paragraph text here.
 
 Another paragraph here.
 
-## 1 Indents and Spacing
+## 1 Indents and Spacing 123456 12345678
 
 See [Section Spacing Tests](#spacing) for multiple examples of spacing. 
 
@@ -162,7 +161,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 1. First list item
 2. Second list item
 
-    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" class="no-border" >}}
     * Indenting with **4 spaces** and a line break works, keeping the image in line with list item 2. The line break causes the parent element, list item 2 to be wrapped in `<p>`, making a gap between 1 and 2.
 3. Third item
 
@@ -170,7 +169,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item
-    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px">}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" width="250px" class="no-border" >}}
     * Image indentation works with **4 spaces**.
     * Images don't need a line break to work.
 
@@ -178,7 +177,7 @@ Do not add a double-space between the number (or bullet point) and first letter 
 
 1. First list item
 2. Second list item  
-    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" >}}
+    {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/set-hybrid-nav.png" class="no-border" >}}
     * Adding trailing spaces (`<br>`) doesn't change example.
 
 ### 1.11 Indent for Alerts in Lists
@@ -405,3 +404,14 @@ A new list
 
 {{% button color="outline-dark" href="https://getbootstrap.com/docs/4.6/components/buttons/" text="Dark" title="What do you think of this button?" %}}
 
+## Test Links{#test-links}
+
+### [This is a link](/developerportal/community-tools/indentation-spacing-test/)
+
+[Internal Link](/developerportal/community-tools/indentation-spacing-test/)
+
+[Internal Anchor](/developerportal/community-tools/indentation-spacing-test/#test-links)
+
+[External com Link](https://bbc.com)
+
+[External other top level domain Link](https://news.bbc.co.uk)

@@ -1,10 +1,8 @@
 ---
 title: "Team Server"
 url: /developerportal/general/team-server/
-category: "Collaboration"
 weight: 12
 description: "Describes the overview of Team Server revisions and commits."
-tags: ["Studio Pro", "Team Server", "Developer Portal", "commit", "branch"]
 aliases:
     - /refguide/team-server.html
     - /developerportal/develop/team-server.html
@@ -19,7 +17,7 @@ Team Server is where all the committed versions of Mendix apps are stored. Mendi
 
 When you commit your app model changes to the Team Server in Studio Pro, you can select user stories that you have been working on. Team Server automatically creates links between user stories and the model changes, allowing you to navigate from commits to the associated requirements. 
 
-On the **Team Server** screen of the Developer Portal, you can see a URL to access you app, revision history, and revision details.
+After opening your app in [Apps](https://sprintr.home.mendix.com/), on the **Team Server** page, you can see a URL to access you app, revision history, and revision details.
 
 ## 2 Versioning with Git
 
@@ -54,6 +52,8 @@ For SVN, the command has the form `svn checkout --revision "{REVISION}" --userna
 
 ## 4 Revision History {#revision-history}
 
+{{% alert color="info" %}}For Git-based applications, revisions are sorted according to the commit history, which sometimes does not reflect the chronological order due to Git's decentralized nature and local commits.{{% /alert %}}
+
 For each revision, you can see the following information:
 
 * The message in the revision commit
@@ -71,7 +71,7 @@ When you click **Details** for a revision, you can see the stories related to th
 
 Related stories will only appear if you select them in the **Commit** dialog box of Mendix Studio Pro when committing:
 
-{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" >}}
+{{< figure src="/attachments/developerportal/general/team-server/commit-story.png" class="no-border" >}}
 
 ## 6 Read More
 

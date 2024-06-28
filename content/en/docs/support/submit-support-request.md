@@ -3,7 +3,6 @@ title: "Submit a Support Request"
 url: /support/submit-support-request/
 weight: 20
 description: "Describes the details necessary for Mendix Support to process your request."
-tags: ["support", "incident", "standard change", "URL", "change URL", "license", "change" ]
 aliases:
     - /developerportal/support/submit-support-request/
     - /community-tools/support/submit-support-request/
@@ -45,7 +44,7 @@ To submit a request with Mendix Support, follow these steps:
 1. Click **Submit a request** in the upper-right corner of the portal.
 2. Select an issue from the drop-down menu:
 
-    {{< figure src="/attachments/support/submit-support-request/issue.png" >}}
+    {{< figure src="/attachments/support/submit-support-request/issue.png" class="no-border" >}}
 
     You can select from the following issues:
 
@@ -80,10 +79,10 @@ To submit a request with Mendix Support, follow these steps:
     * **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
         * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
         * **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
-        * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
+        * **Developer Platform - Sprintr** – issues/questions regarding [Apps](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
         * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Community](https://community.mendix.com/) (for example, when you cannot create a new question or add an answer)
-        * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
+        * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Mendix Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
         * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
         * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
@@ -121,7 +120,7 @@ You can set the priority to the following levels:
 
 The [ticket priority](/support/ticket-priority/) that Mendix Support validates is based on this matrix:
 
-{{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" >}}
+{{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" class="no-border" >}}
 
 ## 5 Providing Attachments and Additional Information
 
@@ -181,7 +180,7 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 * Reproducible steps
 
 {{% alert color="info" %}}
-Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 {{% /alert %}}
 
 ### 5.7 Mobile Problems
@@ -197,11 +196,11 @@ Not all Marketplace content is compatible with every version of Studio Pro, and 
 
 By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
-{{< figure src="/attachments/support/submit-support-request/activities.png" >}}
+{{< figure src="/attachments/support/submit-support-request/activities.png" class="no-border" >}}
 
 On the **All requests** tab, you can click **Follow** for an app to be informed of all the changes on requests on that specific app:
 
-{{< figure src="/attachments/support/submit-support-request/follow.png" >}}
+{{< figure src="/attachments/support/submit-support-request/follow.png" class="no-border" >}}
 
 ## 7 Viewing and Updating Tickets
 
@@ -220,7 +219,7 @@ The ticket can have the following statuses:
     * You can close the ticket yourself by checking the box **Please consider this request solved**
     * The ticket will be closed for comments automatically after a set number of days, after which you can create a follow-up ticket
 
-{{< figure src="/attachments/support/submit-support-request/request.png" >}}
+{{< figure src="/attachments/support/submit-support-request/request.png" class="no-border" >}}
 
 ## 8 Submitting a Feature Request
 

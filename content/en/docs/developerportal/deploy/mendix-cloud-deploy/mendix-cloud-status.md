@@ -1,9 +1,8 @@
 ---
 title: "Mendix Cloud Status"
 url: /developerportal/deploy/mendix-cloud-status/
-weight: 21
+weight: 80
 description: "Describes where to find the current status of Mendix Cloud."
-tags: ["Status","Mendix Cloud","Developer Portal", "Issue", "Maintenance", "Subscribe"]
 aliases:
     - /developerportal/operate/mendix-cloud-status.html
     - /developerportal/operate/mendix-cloud-status
@@ -41,7 +40,7 @@ You can elect to receive emails or subscribe to the RSS or Atom feeds.
 
 ## 6 Read More
 
-* [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)
-* [Operate](/developerportal/operate/)
+* [Maintenance Windows](/developerportal/deploy/maintenance-windows/)
+* [Alerts](/developerportal/operate/monitoring-application-health/)
 * [How to Receive Environment Status Alerts](/developerportal/operate/receive-alerts/)
-* [Mendix Cloud Region](/developerportal/deploy/cloud-version-region/)
+* [Environment Details](/developerportal/deploy/environments-details/)

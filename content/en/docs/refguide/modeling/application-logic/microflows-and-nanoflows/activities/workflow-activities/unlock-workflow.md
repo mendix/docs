@@ -2,7 +2,6 @@
 title: "Unlock Workflow"
 url: /refguide/unlock-workflow/
 weight: 80
-tags: ["studio pro", "unlock workflow", "workflow unlock"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -27,7 +26,7 @@ For information on locking the workflow, see the [Lock Workflow](/refguide/lock-
 
 An example of Unlock workflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow-properties.jpg" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/unlock-workflow/unlock-workflow-properties.jpg" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

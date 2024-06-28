@@ -2,7 +2,6 @@
 title: "Tab Container"
 url: /refguide8/tab-container/
 weight: 40
-tags: ["studio pro", "tab container", "tab page", "container widget", "widget"]
 aliases:
     - /refguide8/tab-page.html
     - /refguide8/tab-page
@@ -14,13 +13,13 @@ aliases:
 
 Tab containers are used to show information categorized into tabs. This can be very useful if the amount of information that has to be displayed is larger than the amount of space on the screen.
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container.png" alt="Tab Container" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container.png" alt="Tab Container" class="no-border" >}}
 
 ## 2 Properties
 
 An example of tab container properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/tab-container/tab-container-properties.png" alt="Tab Container Properties"   width="250"  class="no-border" >}}
 
 Tab container properties consist of the following sections:
 

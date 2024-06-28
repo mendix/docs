@@ -2,7 +2,6 @@
 title: "Complete User Task"
 url: /refguide/complete-user-task/
 weight: 30
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task", "complete user task"]
 aliases:
     - /refguide/complete-task/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -20,7 +19,7 @@ The **Complete user task** activity can be used to define which outcome the [use
 
 An example of complete user task properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task-properties.jpg" alt="Complete Task Properties" max-width=100% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/complete-task/complete-task-properties.jpg" alt="Complete Task Properties" max-width=100% >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -2,14 +2,13 @@
 title: "Preferences"
 url: /refguide/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
 ## 1 Introduction
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
@@ -55,52 +54,54 @@ This is the directory where new apps are stored. It is used in the [App Settings
 
 ## 3 Deployment Tab {#deployment}
 
-### 3.1 Deployment
+### 3.1 JDK {#jdk}
 
-#### 3.1.1 JDK directory {#jdk-directory}
+Here the directories of the Java Development Kit (JDK) for each supported Java version can be selected.
+These JDKs are used when you locally deploy an application.
+Usually, the correct directories are located automatically.
 
-This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+A JDK is necessary to run Mendix applications, because the Mendix Runtime runs on the Java Virtual Machine (JVM).
 
-The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
+### 3.2 Deployment
 
-#### 3.1.2 Enable Run Optimizations
+#### 3.2.2 Enable Run Optimizations
 
-Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. When only pages, layouts or snippets have been changed, an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
+Enable this setting to increase the speed at which a running application is updated after changes have been made in Studio Pro. If only pages, layouts, or snippets have been changed, then an entire restart of the application is skipped to decrease deployment time. Also, no Java compilation is performed when no relevant files have changed.
 
-### 3.2 Build
+#### 3.2.3 Optimize Bundle {#bundle}
 
-#### 3.2.1 Gradle Directory
+This setting is visible and effective when the React client is enabled. By default, it is already enabled to reduce the size of the generated app bundle and speeds up the bundling process by disabling source maps generation. Source maps are used for debugging the bundled code during development. If you want to generate source maps for debugging pluggable widgets, you can disable this setting.
+
+### 3.3 Build
+
+#### 3.3.1 Gradle Directory
 
 A directory where Gradle is located on the computer that you use to deploy the application. The correct directory is usually located automatically.
 
-#### 3.2.2 Use Custom Repositories
+#### 3.3.2 Use Custom Repositories
 
 Enabling this option allows you to specify which repositories should be used by Gradle. For more information, see the [Custom Repositories](/refguide/managed-dependencies/#custom-repos) section in *Managed Dependencies*.
 
-#### 3.2.3 Repositories
+#### 3.3.3 Repositories
 
 Here you can specify which repositories to use for Gradle. The content of this field should be specified using Groovy syntax and is what is inside the `repositories { }` section in a Gradle build file. By default, this field contains: `mavenCentral()`.
 
-## 4 Mendix Assist Tab
+## 4 Maia Tab
 
-### 4.1 Logic Bot {#logic-bot}
+### 4.1 In-Editor Recommender
 
-{{% alert color="info" %}}
-These settings only apply to the **Classic** editor in Studio Pro 10.5 and below.
-{{% /alert %}}
+The **In-Editor Recommender** section contains the following settings:
 
-The **Logic Bot** tab contains the following settings:
+* **Enable for microflow, nanoflow, and rule editors** – this allows you to enable and disable [Logic Recommender](/refguide/logic-recommender/) in the microflow, nanoflow, and rule editors. 
+* **Enable for workflow editor** – this allows you to enable and disable [Workflow Recommender](/refguide/workflow-recommender/) in the workflow editor.
 
-* **Enable MxAssist Logic Bot (Classic editor only)** – when enabled, [MxAssist Logic Bot](/refguide/mx-assist-logic-bot/) is activated and can give you suggestions for microflow activities. You can also switch MxAssist Logic Bot on and off in the top right corner of the microflow editor.
-* **Show suggestions for system variables (Classic editor only)** – when enabled, MxAssist Logic Bot will include system objects in its suggestions.
+### 4.2 Best Practice Recommender
 
-### 4.2 Best Practice Bot
+The **Best Practice Recommender** section contains the following settings:
 
-The **Best Practice Bot** tab contains the following settings:
+* **Show recommendation in editors** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) highlights elements that contain anti-patterns in visual editors.
 
-* **Show recommendation in editors** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) highlights elements that contain anti-patterns in visual editors.
-
-* **Automatically run an inspection after opening an app** – when enabled, [MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
+* **Automatically run an inspection after opening an app** – when enabled, [Best Practice Recommender](/refguide/best-practice-recommender/) automatically runs an inspection when an app is opened. If the app contains errors, the inspection will not run.
 
 ## 5 Model Tab
 
@@ -110,7 +111,7 @@ This setting defines the default response to the question whether to automatical
 
 ## 6 Version Control Tab {#version-control}
 
-### 6.1 File Comparison
+### 6.1 General
 
 #### 6.1.1 Executable
 
@@ -129,47 +130,57 @@ This is the pattern from which the arguments are derived that are passed to the 
 * `{0}` – this is replaced with the name of the original file before the arguments are passed to the file comparison program
 * `{1}` – this is replaced with the name of the changed file before the arguments are passed to the file comparison program
 
+### 6.1.3 Solution Warning
+
+Select **Show warning on updating marketplace modules** to display a warning message when updating a Marketplace module. 
+
 ### 6.2 Git{#git}
 
-#### 6.2.1 Name
+#### 6.2.1 Enable Private Version Control with Git {#enable-with-Git}
+
+Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server, which you have access to. This allows you to specify the location of the app on the Git server when opening, downloading, or uploading the app. With this setting you also need to specify [name](#name) and [email](#email) that will be used to identify your commits with Git.
+
+#### 6.2.2 Name {#name}
 
 Specify your name for Git to use it in commit messages and make them more informative.
 
-#### 6.2.2 Email
+#### 6.2.3 Email {#email}
 
 Specify your email for Git to use it in commit messages and make them more informative.
 
-#### 6.2.3 Enable Automatic Repository Optimization {#optimization}
+#### 6.2.4 Clone {#clone}
 
-Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+Select a  [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
-#### 6.2.4 Number of Commits
-
-This option is available when [Enable automatic repository optimization](#optimization) is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of them to tell when to start background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
-
-#### 6.2.5 Enable Private Version Control with Git {#enable-with-Git}
-
-Select this option when you want to work on an app that is not stored in [Mendix Team Server](/developerportal/general/team-server/), but in a private Git server to which you have access. This will allow you to specify the location of the app on the Git server when opening, downloading, or uploading the app. In this section, you also need to specify name and email values that will be used to identify your commits with Git.
-
-#### 6.2.6 Enable Automatic Fetching from a Remote Repository{#enable-auto-fetch}
-
-{{% alert color="info" %}}
-This setting was introduced in Mendix version 10.2.
-{{% /alert %}}
-
-Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
-
-#### 6.2.7 Fetch Interval, Minutes
-
-The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
-
-#### 6.2.8 Combine Local and Remote Changes
+#### 6.2.5 Combine Local and Remote Changes
 
 {{% alert color="info" %}}
 This setting was introduced in Mendix version 10.5.
 {{% /alert %}}
 
 When [combining changes](/refguide/merge-algorithm/), for example when doing a Git pull, the user can choose between **Rebase** and **Merge** as the default action. This preference can be overridden for each merge which contains conflicts.
+
+#### 6.2.6 Git Version Warning
+
+Select **Do not show warning about Git version** to suppress a warning shown when Studio Pro starts.
+
+### 6.3 Background Tasks
+
+#### 6.3.1 Enable Automatic Fetching from a Remote Repository {#enable-auto-fetch}
+
+Select **Enable automatic fetching from a remote repository** to enable the [Automatic fetch mechanism](/refguide/auto-fetch/).
+
+#### 6.3.2 Fetch Interval, Minutes
+
+The number of minutes to wait after a fetch has started before performing another fetch. This must be between 1 and 120 minutes.
+
+#### 6.3.3 Enable Automatic Repository Optimization {#optimization}
+
+Select **Enable automatic repository optimization** to run Git repository optimization automatically on a regular basis. This helps you maintain the storage structure providing benefits from both performance and repository size perspectives. 
+
+#### 6.3.4 Number of Commits
+
+This option is available when the [Enable automatic repository optimization](#optimization) setting is on. Studio Pro keeps track of the number of commits made in the local repository. You can manually specify the minimum number of commits needed to start the background optimization. For more information, see [Git Storage Optimization](/refguide/git-storage-optimization-dialog/).
 
 ## 7 Work Environment Tab
 
@@ -195,6 +206,16 @@ Sometimes the computer running Studio Pro cannot access the internet directly, b
 
 When the **Send Studio Pro usage data to Mendix** setting is enabled, Studio Pro sends usage data to Mendix that allows Mendix to identify issues and improve the user experience. The usage data does not contain sensitive information. It is possible to disable this feature, but it may affect the behavior of some features, prevent Mendix from identifying issues reported by the user, or affect tracking issues that are not reported yet. This setting is machine-specific and changing this feature does not affect any existing installed version.
 
+### 8.3 Visual Builder for XPath Constraints{#visual-builder}
+
+In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder).
+
+From Mendix version 10.10, Builder is the default way to construct XPath constraints, but you can change the default by clearing **Enable the XPath Builder as the default XPath constraint editor**.
+
+{{% alert color="info" %}}
+For Mendix versions 10.5.0 through 10.9.0, this option is on the **New Features** tab.
+{{% /alert %}}
+
 ## 9 New Features Tab {#new-features}
 
 ### 9.1 Access Rules Editor
@@ -203,19 +224,27 @@ In Studio Pro version 10.6 a new access rule editor was introduced in Beta. Enab
 
 For more information, see [Defining Access Rules Using the New Editor](/refguide/access-rules/#new-editor) section of *Access Rules*.
 
-### 9.2 Use the Modernized Expression Editor
+### 9.2 Expression Editor
 
-The expression editor is modernized since Studio Pro 10.6. This setting is enbaled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
+The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
-### 9.3 Micro- And Nanoflow Editor
+### 9.3 Maia
 
-In Studio Pro 10.4 and 10.5, only the **Use the Beta version as the default editor** setting is shown. When this setting is enabled, the modern logic editors (as a beta feature) will become the default editors for all your microflows, nanoflows, and rules. 
+In Studio Pro 10.12, Translation Generator was introduced as an experimental feature. Enbale this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
-In Studio Pro 10.6, only the **Enable switching to the Classic version of the editor** setting is shown. When this setting is enabled, you will be able to see the toggle to switch between the **Classic** and **Modern** version in your logic editors.
+### 9.4 Mapping Editor
 
-### 9.4 Visual Builder
+This setting allows you to set the beta version as the default editor.
 
-In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called Visual Builder for database constraints. The default way to construct XPath constraints is to write XPath expressions, but you can change the default by checking **Enable the XPath Builder as the default XPath constraint editor**.
+### 9.4 Page Editor
+
+In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
+
+For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
+
+### 9.5 Toolbox
+
+Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
 
 ## 10 Read More
 

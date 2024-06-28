@@ -2,7 +2,6 @@
 title: "Table"
 url: /refguide8/table/
 weight: 60
-tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +14,7 @@ Tables can be used to give structure to a page. They contain [rows](/refguide8/t
 
 For example, you can create a table with text widgets, a logo, and a data view information as a customer report:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/table.png" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/table.png" class="no-border" >}}
 
 ## 2 Components
 
@@ -92,13 +91,13 @@ You can perform the following actions:
 
 To merge cells to the right, left, up, or down, you can also click the corresponding icon:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/merge-icons.png" alt="Merge Icons" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/merge-icons.png" alt="Merge Icons" class="no-border" >}}
 
 ## 3 Properties
 
 An example of table properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/table-properties.png" alt="Table Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/table-properties.png" alt="Table Properties"   width="250"  class="no-border" >}}
 
 Table properties consist of the following sections:
 
@@ -130,7 +129,7 @@ The **Width Unit** defines whether the [Column widths](#column-widths) property 
 
 The **Column widths** property defines the widths of each column as a list of numbers separated by semi-colons. The **Width unit** (described above) determines if these numbers mean percentages or pixels. 
 
-{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/container-widgets/table/width-unit-and-column-widths.png" alt="Width Unit and Column Widths" class="no-border" >}}
 
 When **Width unit** is set to *Pixels*, you can set column width to the following:
 

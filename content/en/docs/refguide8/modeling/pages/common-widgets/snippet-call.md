@@ -2,7 +2,6 @@
 title: "Snippet Call"
 url: /refguide8/snippet-call/
 weight: 40
-tags: ["studio pro", snippet call", "common widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,13 +9,13 @@ tags: ["studio pro", snippet call", "common widget"]
 
 The **Snippet call** widget allows you to use a [snippet](/refguide8/snippet/) on a [page](/refguide8/page/), a [layout](/refguide8/layout/), or another snippet:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/snippet-call/snippet-call-example.png" alt="Snippet Call Example" class="no-border" >}}
 
 ## 2 Properties
 
 An example of snippet call properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/pages/common-widgets/snippet-call/snippet-call-properties.png" alt="Snippet Call Properties"   width="300"  class="no-border" >}}
 
 Snippet call properties consist of the following sections:
 

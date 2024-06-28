@@ -2,14 +2,14 @@
 title: "Studio Pro 9 Guide"
 url: /refguide9/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
-tags: ["studio pro"]
 weight: 60
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 9 Guide"
+    - content_type: "Studio Pro 9"
     - mendix_version: 9
     - old_content: true
+    - notsitemap: true
     - sitemap:
         priority: 0.4
 ---

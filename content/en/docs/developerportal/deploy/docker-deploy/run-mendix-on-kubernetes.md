@@ -3,14 +3,13 @@ title: "Use Docker with Minikube"
 linktitle: "Run with Minikube"
 url: /developerportal/deploy/run-mendix-on-kubernetes/
 weight: 20
-tags: ["Minikube", "Docker", "deployment"]
 ---
 
 ## 1 Introduction
 
 This how-to takes you through the process of deploying a Docker image of your Mendix app to [Minikube](https://kubernetes.io/docs/getting-started-guides/minikube/), a local version of [Kubernetes](https://kubernetes.io/docs/home/) which runs in a Windows container or virtual machine. Many of the operations you perform on Minikube are the same as those on a hosted environment and it provides a low-level entry to Kubernetes. For more information, see [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) on the Kubernetes documentation site.
 
-Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, Mendix suggests you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Developer Portal and takes away much of the heavy lifting. 
+Kubernetes is a standard container orchestration platform supported by Mendix. For details on supported version of Kubernetes see [Mendix System Requirements](/refguide/system-requirements/). When publishing to your cloud infrastructure, Mendix suggests you use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) to deploy Mendix apps to Kubernetes as this provides you with integration with the Mendix Portal and takes away much of the heavy lifting. 
 
 This how-to teaches you how to do the following:
 
@@ -46,7 +45,7 @@ If the application makes use of persistable FileDocument or FileImage entities, 
 
 This architecture overview shows all the components in the deployment:
 
-{{< figure src="/attachments/developerportal/deploy/docker-deploy/run-mendix-on-kubernetes/kubernetes.png" >}}
+{{< figure src="/attachments/developerportal/deploy/docker-deploy/run-mendix-on-kubernetes/kubernetes.png" class="no-border" >}}
 
 The deployment of your Mendix app needs the following Kubernetes components:
 

@@ -1,10 +1,9 @@
 ---
-title: "Pipelines (Beta)"
+title: "Pipelines"
 url: /developerportal/deploy/pipelines/
-weight: 33
-description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Developer Portal"
-tags: ["Deploy","App","Developer Portal", "CI/CD"]
-status: "Public Beta"
+weight: 8
+description: "Describes how to design, implement, and review pipelines using the Pipelines feature in the Mendix Portal"
+beta: true
 ---
 
 {{% alert color="warning" %}}
@@ -15,7 +14,7 @@ Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is curren
 
 From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
-To access the **Pipelines** page, open your app in the Developer Portal. Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
+To access the **Pipelines** page, open your app in [Apps](https://sprintr.home.mendix.com/). Then select **Pipelines** in the navigation pane. (To view this page, you must have a [role](/developerportal/general/team/) with cloud access.)
 
 The **Pipelines** page has three tabs: **Runs**, **Designs**, and **Settings**. You can see all three tabs as soon as your app has its first pipeline saved.
 
@@ -27,18 +26,21 @@ If you need to configure your user settings so that you can run a pipeline for t
 
 ## 2 The Runs Tab{#runs-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" class="image-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
 
 For each run, you can view the following information:
 
 * Status
 * Run ID
+* Pipeline ID
 * Branch
 * Pipeline Name
 * Triggered by
 * Last Run
 * Duration
 * Trigger
+
+Use the Column Selector ({{% icon name="view" %}}) at the top of the **Runs** table to customize which of these columns appear in the table.
 
 The search and filter options allow you to review specific run types. You can do the following:
 
@@ -50,7 +52,7 @@ The search and filter options allow you to review specific run types. You can do
 
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" class="image-border" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/run-details.png" alt="" >}}
 
 From this page, you can view an overview of the run. You can also expand each executed step to see more information about it; this is especially useful for debugging when a pipeline run fails. When you expand a step, you can also see a **View Parameters** button, which you can use to view the input and output parameters as well as the values of the step.
 
@@ -72,7 +74,7 @@ If a system-level error occurs, the card in the upper-left corner of the **Resul
  
 ## 3 The Designs Tab{#designs-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" class="image-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" >}}
 
 On the **Designs** tab, you can see all existing pipeline designs.
 
@@ -107,13 +109,13 @@ If you start from the template, you can still add, remove, and configure its ste
 1. Deploy
 {{% /alert %}}
 
-Give your pipeline a name, and click **Next** to go to your new pipeline design's **Details** page.
+Give your pipeline a name. You can use up to 40 alphanumeric characters in the name. Then click **Next** to go to your new pipeline design's **Details** page.
 
 ### 3.2 Editing a Pipeline Design{#edit-pipeline}
 
 From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" class="image-border" alt="" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/pipeline-design.png" alt="" >}}
 
 {{% alert color="info" %}}
 Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
@@ -125,10 +127,10 @@ To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step**
 
 Your pipeline can include the following steps:
 
-* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start; you can set the pipeline to run in response to either of the following triggers:
+* Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start. You can set the pipeline to run in response to either the **Teamserver push** trigger or the **Recurring schedule** trigger:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
     * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. This works for both Git and SVN repositories. Times are set in UTC.
-* Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out; you will be able to select either the main branch or one of your most recently used branches.
+* Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
 * Stop Environment – Stop a selected environment.
@@ -194,7 +196,7 @@ The pipeline design's status (**Active** or **Inactive**) is displayed in the ov
 
 ## 4 The Settings Tab{#settings-tab}
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" class="image-border" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
 
 The **Settings** tab lets you configure user settings. You must add your API key and personal access token (PAT) before you can activate or run your first pipeline. If you still need to configure these user settings, the **Settings** tab is marked with an alert icon ({{% icon name="alert-circle-filled" color="red" %}}).
 
@@ -217,7 +219,7 @@ Your pipeline runs will fail if these user settings are not configured. All team
 Your PAT should have the following scope:
 
 * Deployment Mendix Cloud – `mx:deployment:write`
-* Model Repository – `mx:modelrepository:read` and `mx:modelrepository:write`
+* Model Repository – `mx:modelrepository:repo:read` and `mx:modelrepository:write`
 * Webhook Portal – `mx:webhook:read` and `mx:webhook:write`
 
 If your PAT scope does not include all five of these, your pipeline runs may fail.
@@ -228,7 +230,7 @@ To change your API key and PAT, click **Delete** and then **Setup** to relaunch 
 
 ### 4.2 Notifications
 
-If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Developer Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
+If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Mendix Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
 
 {{% alert color="warning" %}}
 Pipeline failure notifications only send if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
@@ -248,4 +250,5 @@ It is not currently possible to add the same pipeline step more than once in a p
 
 ## 6 Read More
 
+* [Learning Path: Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach) – This learning path provides a structured, hands-on introduction to Pipelines, as well as a couple of other methods for building and deploying Mendix apps.
 * [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/) – This document describes how to use Mendix APIs to set up your CI/CD process; this is possible if you use Jenkins, GitLab, or another CI/CD tool.

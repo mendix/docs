@@ -2,7 +2,6 @@
 title: "Retrieve Workflow Activity Records"
 url: /refguide/retrieve-workflow-activity-records/
 weight: 40
-tags: ["studio pro", "workflow", "retrieve", "retrieve workflow activity record", "activity records"]
 ---
 
 {{% alert color="info" %}}
@@ -19,13 +18,13 @@ The most common use case for the retrieved list of **System.WorkflowActivityReco
 
 The image below shows an example of how an activity timeline can look like using the data returned from the **Retrieve workflow activity records** activity:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/example-activity-timeline.png" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/example-activity-timeline.png" max-width=80% >}}
 
 ## 2 Properties
 
 An example of retrieve workflow context properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/properties.png" alt="Retrieve Workflow Activity Records properties" max-width=100% class="image-border">}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-activity-records/properties.png" alt="Retrieve Workflow Activity Records properties" max-width=100% >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

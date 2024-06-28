@@ -3,7 +3,6 @@ title: "Mendix Basic Package"
 url: /developerportal/deploy/basic-package/
 weight: 20
 description: "Obtaining a Mendix Basic Package Node"
-tags: ["App", "Node", "Developer Portal", "Licensed", "Free App", "Upgrade", "Basic Package", "Basic license"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
@@ -16,7 +15,7 @@ After you order the Mendix Basic package, it may take up to 48 hours before your
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](https://docs.mendix.com/developerportal/deploy/mendix-cloud-deploy).
+Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
 ## 2 Features of the Basic Package
@@ -37,11 +36,11 @@ The Basic Package has the following features:
 
 ## 3 Purchasing a Basic Package
 
-From the [Developer Portal](https://sprintr.home.mendix.com/link/myapps), go to the **Environments** page of the Free App you want to license.
+From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of the Free App you want to license.
 
 When you view your Free App environment, you will see a banner showing that you are using a Free App.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/free-app-message.png" alt="Free App banner" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/free-app-message.png" alt="Free App banner" class="no-border" >}}
 
 To order your Mendix Basic package, do the following:
 
@@ -56,7 +55,7 @@ To order your Mendix Basic package, do the following:
     * **Deployment Region** – Choose your preferred region. Mendix recommends selecting the region where you expect to receive the most visitors. The available regions correspond to AWS regions.
     * **Number of Users** – The cost of your Basic package depends on the number of users.
 
-    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png" alt="Configuration screen" >}}
+    {{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/configure-basic-package.png" alt="Configuration screen" class="no-border" >}}
 
     You can see a summary of your Basic package on the right side of the screen.
 
@@ -76,7 +75,7 @@ To order your Mendix Basic package, do the following:
 
 9. Click **Purchase** to complete your order.
 
-10. Read the confirmation details and click **Done** to return to the Developer Portal. You will also receive a confirmation email at the email address entered in your order.
+10. Read the confirmation details and click **Done** to return to the Mendix Portal. You will also receive a confirmation email at the email address entered in your order.
 
 ## 4 Linking Your App to your Mendix Basic Node
 
@@ -99,7 +98,7 @@ Your plan automatically renews 12 months from the date of provision. You can opt
 
 Before renewing the licenses for your company, Mendix checks if your company's payment method is still valid. If it is expired, you will receive an email that asks you to update your company's payment method on the **Billing Accounts** page.
 
-{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" >}}
+{{< figure src="/attachments/developerportal/deploy/mendix-cloud-deploy/licensing-apps/basic-package/billing-accounts-page.png" alt="billing accounts page" class="no-border" >}}
 
 The **Billing Accounts** page shows the details of your company's existing billing accounts. These accounts are on the company level. If your company has multiple billing accounts, you can select a billing account from the drop-down list on the page.
 

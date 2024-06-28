@@ -2,7 +2,6 @@
 title: "Page Editor Consistency Errors"
 url: /refguide7/consistency-errors-pages/
 description: "Describes consistency errors in the Mendix Desktop Modeler and the way to fix them."
-tags: ["desktop modeler", "consistency errors", "checks", "errors", "pages"]
 ---
 
 ## 1 Introduction 
@@ -15,7 +14,7 @@ If you do not configure a [data source](/refguide7/data-sources/) for a [list vi
 
 The scheme below shows that the data source of the list view has been set to **Database**, but the specific entity that needs to be retrieved from the database has not been set. This results in a consistency error. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-list-view-error.png" alt="Data Source Consistency Error Scheme" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-list-view-error.png" alt="Data Source Consistency Error Scheme" class="no-border" >}}
 
 The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
 
@@ -30,7 +29,7 @@ The table below describes the most common errors you can come across when config
 
 Not configuring a [data source](/refguide7/data-sources/) for a [data view](/refguide7/data-view/) in a proper way results in consistency errors. For example, you have selected **Listen to widget** as a data source, but you have not selected the specific **List widget** you are pointing to.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-no-list-widget.png" alt="Data View With no List Widget Configured" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-no-list-widget.png" alt="Data View With no List Widget Configured" class="no-border" >}}
 
 The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
 
@@ -56,15 +55,15 @@ When a page expects a context that is not passed to it from a calling page or a 
 
 Let us study an example: the **Customers** page contains a list view with a list of all customer names (**Customer** is set as **Entity** in the **Data Source** properties), and a **Details** button outside of the list view (placed in a [container](/refguide7/container/) only). The **Details** button opens a **Customer Details** page when a user clicks it (the **On Click Action** for the button is set to **Page**). 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-customers-page.png" alt="Button Properties on the Customers Page" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-customers-page.png" alt="Button Properties on the Customers Page" class="no-border" >}}
 
 However, the **Customer Details** page has a data view that expects an object *Customer* to be passed to it. In other words, this page needs to get data first to be able to display it. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-customer.png" alt="Data View Expects the Customer Object" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-customer.png" alt="Data View Expects the Customer Object" class="no-border" >}}
 
 As this object is not passed to it from the **Customers** page, you get a consistency error.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-object-error.png" alt="Example of Error When Context is Unavailable" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-object-error.png" alt="Example of Error When Context is Unavailable" class="no-border" >}}
 
 As the **Details** button to the **Customers** page is outside a data container, it does not know which Customer (object) to pass. The way of fixing this error depends on the following:
 
@@ -79,7 +78,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 2. Drag the **Details** button inside the list view.
 
-    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-details-button-inside-the-list-view.png" alt="The Details Button Example" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-details-button-inside-the-list-view.png" alt="The Details Button Example" class="no-border" >}}
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
@@ -95,7 +94,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 4. Set **Customer Details** as **Page**.
 
-    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-button-create-object.png" alt="On Click Event Example" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-button-create-object.png" alt="On Click Event Example" class="no-border" >}}
 
 5. Change the button's caption from **Details** to **Add**, as this button will now create a new customer instead of showing the details of an existing customer.
 
@@ -107,7 +106,7 @@ If a widget opens a page and this widget is inside a data container of entity X,
 
 Let us study an example: you have a **Details** button on the **Engineers** page that opens the **Tasks** page. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-engineers-page.png" alt="A Button on Engineers Page" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-engineers-page.png" alt="A Button on Engineers Page" class="no-border" >}}
 
 The button is placed inside a list view; the list view's data source is set to entity *Engineer* in **Properties** > **Data Source**.
 
@@ -115,7 +114,7 @@ The Tasks page has a data view on it, but the data view's data source is set to 
 
 This means that data view expects the object of type *SmartTask* passed to it, but the **Engineers** page is passing the object of type *Engineer*.
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-tasks-page-list-view.png" alt="Data Source Example" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-tasks-page-list-view.png" alt="Data Source Example" class="no-border" >}}
 
 To fix this error you can do one of the following:
 
@@ -141,7 +140,7 @@ A reference selector is a widget that is used to display and edit one-to-many as
 
 For example, you have several employees who are associated with one city where they work. This is a one-to-many association: multiple *Employees* objects are associated with one *City* object.  Associations that refer to a single object in this manner are *references*, as opposed to *reference sets*, in which multiple objects can refer to multiple other objects. In a reference, the "single object" side of the association is always the association's owner. For more information on associations and their types, see [Associations](/refguide7/associations/).
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-many-to-one-association.png" alt="One-to-many Association" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-many-to-one-association.png" alt="One-to-many Association" class="no-border" >}}
 
 If you have a wrong type of association, you will get a consistency error: *Association {Name} must be a reference (not a reference set)*.
 
@@ -151,7 +150,7 @@ To fix this error, do one the following:
 
 2. In **Properties of Association** dialog window, change **Multiplicity** to one-to-many (in our example, multiple 'Employee' objects are associated with one 'City' objects).
 
-    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-one-to-many-multiplicity.png" alt="Multiplicity for One-to-many Association" class="no-border" >}}
 
 3. Click **OK** to save changes.
 
@@ -163,7 +162,7 @@ Reference set selector and input set selector are widgets that are used to displ
 
 For example, you have several employees who can visit customers in different cities during the week. Thus, many employees are associated with many cities, this is a many-to-many association between an *Employee* entity and a *City* entity (multiple employees are associated with multiple cities). Associations that refer to multiple objects in this manner are *reference set*. For more information on associations and their types, see [Associations](/refguide7/associations/). 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-many-to-many-association.png" alt="Many-to-many Association" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-many-to-many-association.png" alt="Many-to-many Association" class="no-border" >}}
 
 If you have a wrong type of association, you will get a consistency error: *Association {Name} must be a reference set (not a reference)*.
 
@@ -173,7 +172,7 @@ To fix the error, do one of the following:
 
 2. In **Properties of Association** dialog window, change **Multiplicity** to many-to-many (in our example, multiple 'Employee' objects are associated with multiple 'City' objects).
 
-    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-changing-multiplicity.png" alt="Multiplicity for Many-to-many Association" class="no-border" >}}
 
 3. Click **OK** to save changes.
 
@@ -189,11 +188,11 @@ Let us study an example when you have two entities in your domain model: **Citie
 
 The arrow is always pointing away from the context towards the widget. If you want employees to choose the cities, the owner of the association should be an *Employee* entity. Mind that a data container (for example, a data view) where you place a reference set selector or an input reference set selector, should have its data source set to **Context** >**Employee**.  
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-employee-context.png" alt="Data View Properties: Employee Entity" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-employee-context.png" alt="Data View Properties: Employee Entity" class="no-border" >}}
 
 If you want to view employees that belong to each city, the *City* entity should be the owner. A data container (for example, a data view) where you place a reference set selector or an input reference set selector, should have its data source set to **Context** >**City**. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-city-context.png" alt="Data View Properties: City Entity" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-city-context.png" alt="Data View Properties: City Entity" class="no-border" >}}
 
 If you want to combine both, the ownership should be set to *Both*. Then you can place the reference set selector or the input reference set selector to data containers with data source set to either *City* or *Employee* entities. 
 
@@ -205,7 +204,7 @@ To change the ownership, do the following:
 
 3. In the entity properties > the **Associations** tab, change the **Owner** to **Default** or **Both** depending on your use-case.
 
-    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-selecting-the-owner.png" alt="Owner Property" >}}
+    {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-selecting-the-owner.png" alt="Owner Property" class="no-border" >}}
 
 You have changed the owner of the association.
 
@@ -234,7 +233,7 @@ The most common consistency errors are connected with not configuring the on cli
 
 To fix the consistency errors, finish configuring the on click event (for example, for an on click event **Show a page**, select a particular page that should open), or change the on click action. 
 
-{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-on-click-event.png" alt="On Click Event Example" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-on-click-event.png" alt="On Click Event Example" class="no-border" >}}
 
 ## 9 Read More
 

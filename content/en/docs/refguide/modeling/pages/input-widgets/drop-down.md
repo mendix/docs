@@ -2,12 +2,17 @@
 title: "Drop-Down"
 url: /refguide/drop-down/
 weight: 30
-tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide/drop-down-widget.html
     - /refguide/drop-down-widget
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}
+The drop-down widget is not compatible with the modern version of the Mendix React Client. Depending on your app version, you may wish to convert the widget to a combo box widget using the context menu in Studio Pro. 
+
+For more information on converting a drop-down widget into its more modern combo box counterpart, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).
+{{% /alert %}}
 
 ## 1 Introduction
 
@@ -21,7 +26,7 @@ A drop-down should not be confused with a [reference selector](/refguide/referen
 
 For example, the following drop-down allows the end-user to see, and set, the **Region** to which a customer is allocated. The possible values for **Region** are held in an enumeration.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/drop-down.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/drop-down.png" class="no-border" >}}
 
 ## 2 Properties Pane
 
@@ -56,7 +61,7 @@ Adding a caption for the empty option improves the user experience of your appli
 
 For example, the drop-down that allows the end-user to select the region allocated to a customer, where the possible values for **Region** are held in an enumeration, could have the caption `Select a region`.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/select-a-region.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/drop-down/select-a-region.png" class="no-border" >}}
 
 ### 3.2 Data Source Section{#data-source}
 

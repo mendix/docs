@@ -4,7 +4,6 @@ linktitle: "Best Practices for App Performance"
 url: /refguide/community-best-practices-for-app-performance/
 weight: 15
 description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
-tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
@@ -81,7 +80,7 @@ Indexes is a topic with a long history of best practices from the database world
     * If loops contain decisions, consider if the decision logic can be a query before the loop to minimize iterations.
 * Prevent unnecessary retrieves if objects or lists can be passed as parameters.
 * Know and use the retrieve + aggregate optimization. If you retrieve a list and count the list, Mendix will optimize this to one query. If you need the list later in the microflow, after some decisions, it is wise to retrieve the list again so that you only retrieve the data when needed. This also works in batches where you can retrieve the total count optimized and retrieve chunks in a separate query.
-* Use the retrieve over association if possible. This uses caching, it is more readable, and it uses an index. If business logic requires the database value (because the value over association might be changed), then of course a database retrieve is needed.
+* Use retrieve over association if possible. This ensures that you have the latest version of your objects, including any changes which are not yet committed which the runtime will [take from memory](/refguide/mendix-client/#object-cache). If business logic requires the database value (because you want to ignore changes to the value over association), then you will need to make a database retrieve.
 * Commit as late as possible. A commit locks that record (or list of records). This means that any other user/logic that wants to commit the same object has to wait until the first transaction is finished.
 * To prevent locking, do scheduled events that commit data in small chunks. This is so the data does not get locked over a longer period of time.
 
@@ -110,8 +109,8 @@ For OQL, many of the same best practices apply as for XPath.
 * Get better infrastructure (for example, more App Engines in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)).
 * When on premises, make sure a proxying web server is placed in front of Mendix to serve static content and compress data.
 
-## 11 MxAssist Best Practice Bot
+## 11 Best Practice Recommender
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
+[Best Practice Recommender](/refguide/best-practice-recommender/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Recommender**.
 
-For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from Best Practice Recommender](/refguide/performance-best-practices/).

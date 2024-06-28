@@ -27,7 +27,7 @@ Studio Pro displays the latest version that you created a package for (if any). 
 
 ## 5 Description
 
-You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Developer Portal displays this description along with the version number.
+You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Mendix Portal displays this description along with the version number.
 
 ## 6 App
 

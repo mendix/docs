@@ -225,7 +225,7 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 ### 5.1 OIDC Provider Configuration
 
-#### 5.1.1 General OIDC Providers
+#### 5.1.1 General OIDC Providers {#general-providers}
 
 1. In your IdP, provision a new OpenID client application. You will receive a ClientID and Client Secret.
 2. You will also need the OIDC configuration endpoint (for example: [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration))
@@ -327,7 +327,7 @@ To enable the use of app constants to configure the OIDC SSO module, configure y
 Use the following security best-practices when setting up your constants:
 
 * Set the [Export level](/refguide/configure-add-on-and-solution-modules/#export-level) for these constants to `Hidden` for security reasons.
-* Mask your client_secret so the value is not visible in the developer portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
+* Mask your client_secret so the value is not visible in the Mendix Portal – [constants](/developerportal/deploy/environments-details/#constants) in the *Environment Details* documentation for more information.
 
 The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
 
@@ -344,22 +344,16 @@ The following error messages will be displayed when you try to edit/delete.
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
 
-The following constants are mandatory when creating an OIDC SSO configuration and user provisioning:
+The following constants are mandatory when creating an OIDC SSO IdP configuration:
 
 * **ClientID** – the client id
 * **ClientAlias** – the client alias
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
-For more information, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section.
+For more information on creating user provisioning with constants, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section below.
 
 The following constants are optional:
-
-* **CustomUserEntity** (*default: Administration.Account*) – a custom user entity 
-
-* **PrincipalEntityAttribute** (*default: Name*) – the attribute holding the unique identifier of an authenticated user
-
-* **PrincipalIdPAttribute** (*default: sub*) – the IdP claim which is the unique identifier of an authenticated user
 
 * **ClientAuthenticationMethod** (*default: client_secret_basic*) – the client authentication method — the caption of OIDC.ENU_ClientAuthenticationMethod
 
@@ -393,6 +387,22 @@ The following constants are optional:
 
     Example: `acr1 acr2`
 
+* **AllowcreateUsers** – allow to create users in the application
+
+    Example: `True`
+
+* **Userrole** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
+
+    Example: `User`
+
+* **UserType** – assign usertype to the created users
+
+    Example: `Internal`
+
+* **CustomUserProvisioning** – a custom microflow for user provisioning
+
+    Example: `Mymodule.CustomUserProvisioningEntra`
+
 ## 6 User Provisioning
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Custom User Provisioning at Runtime](#custom-provisioning-rt).
@@ -403,7 +413,7 @@ By default, end-users are provisioned using the `Account` object in the Administ
 
 By default, the `CUSTOM_UserProvisioning` microflow in the **USE_ME** > **1. Configuration** folder of the OIDC module uses the `OIDC_CustomUserParsing_Standard` microflow. This applies the following mapping:
 
-| ID-token Provided by your IdP | Attribute of `CustomUserEntity` Object |
+| ID-token Provided by your IdP | Attribute of `Administration.Account` Object |
 | ----------------------------- | ----------------------------- |
 | sub                           | Name                          |
 | name                          | Fullname                      |
@@ -446,7 +456,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
-| Userrole | the role which will be assigned to newly created users | *optional* | `User` |
+| Userrole | the role which will be assigned to newly created users | *optional* <br> - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 
@@ -467,7 +477,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
     * **Allow the module to create users** – this enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
         * By default, the value is set to ***Yes***.
-    * **User role** – the role which will be assigned to newly created users.
+    * **User role** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.
     * **User Type** – this allows you to configure end-users of your application as internal or external.
         * By default, the value is set to ***Internal***.
 

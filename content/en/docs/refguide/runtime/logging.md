@@ -13,7 +13,7 @@ You can also set log levels to provide more or less information when testing loc
 
 ## 2 Log Levels {#log-levels}
 
-### 2.1 Critical
+### 2.1 Critical{#critical}
 
 Critical is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. The 3.0 cloud treats these messages as alerts and will notify you on the cloud dashboard.
 

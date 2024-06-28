@@ -378,6 +378,17 @@ Mendix recommends turning the logs to trace level, as the ML Engine provides a g
     
 The model you can run is limited to the maximum memory and storage space available in your environment.
 
+### 7.6 Supported Onnx Versions per Studio Pro Version
+
+The table below presents the compatibility list for your models per Studio Pro version. Each model you create should be compatible with the version you use. Otherwise, you will not be able to import it.
+
+| Studio Pro Version | ONNX Version |
+| --- | --- |
+| LTS | 1.14.0 |
+| Latest | 1.17.3 |
+
+ For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
+
 ## 8 Read More {#readmore}
 
 * Learn about machine learning [Design Patterns](/refguide/machine-learning-kit/design-patterns/), including [Advanced Inference Design Patterns](/refguide/machine-learning-kit/design-patterns/advanced-inference/) and [Pre- and Post-Processor Design Patterns](/refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/)

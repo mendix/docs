@@ -16,15 +16,24 @@ This how-to describes the steps required to enable your app to use the External 
 
 To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
 
-1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation).
+1. [Install the External Database connector](/appstore/modules/external-database-connector/#installation). If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 2. Run the [Connect to Database wizard](/appstore/modules/external-database-connector/#configuration) and select **Snowflake** as the database type.
 3. Provide a name for the database connection document.
-4. Provide connection details and user name and password that can be used to access Snowflake. You can either provide a connection string, or enter the connection details. If you select connection details, a constant with the connection string will be created based on your connection details.
-5. Click **Test Connection** to verify the connection details, and then click **Save**.
+4. Provide connection details that can be used to access Snowflake. You can either provide a connection string, or enter connection details. If you enter connection details, a constant with a connection string will be created based on your connection details.
+5. If you decide to use the connection details, copy the **Account URL** from the Snowflake console and use it as the **Host parameter** for the **Connection details**.
+
+    {{< figure src="/attachments/appstore/modules/snowflake-rest-sql/snowsight-account-url.png" >}}
+
+6. Provide a user name and a password or a private key (also a passphrase if the private key is encrypted).
+7. Click **Test Connection** to verify the connection details, and then click **Save**.
+
+{{% alert color="info" %}}
+When using the private key for authentication, format the key as a single line by removing any line breaks. The format should start with "-----BEGIN [ENCRYPTED PRIVATE KEY]-----" and end with "-----END [ENCRYPTED PRIVATE KEY]-----". Note that the text [ENCRYPTED PRIVATE KEY] will vary depending on the type of the key file.
+{{% /alert %}}
 
 Your Mendix app now connects to Snowflake with the provided connection details. When the connection is successful, you can see your Snowflake schemas and objects in your Mendix app.
 
-You can use the connection constants to point your application to a different Snowflake database if you're deploying in a different environment.
+You can use the connection constants to point your application to a different Snowflake database if you are deploying in a different environment.
 
 You can now configure the queries that you need to run on your Snowflake database. The following sections of this document provide examples of some common queries, using data from the *Global Weather & Climate Data for BI* demo dataset available in Snowflake. For general information about creating queries, see [External Database Connector: Querying a Database](/appstore/modules/external-database-connector/#query-database) and [External Database Connector: Using Query Response](/appstore/modules/external-database-connector/#use-query-response).
 

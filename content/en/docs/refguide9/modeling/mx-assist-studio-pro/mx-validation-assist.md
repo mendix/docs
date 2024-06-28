@@ -64,7 +64,7 @@ The dialog box consists of two sections:
     * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
-## 3 Using Validation Assist to Build Data Validations
+## 3 Using Validation Assist to Build Data Validations{#build-validation-with-validation-assist}
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 

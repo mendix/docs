@@ -1,8 +1,7 @@
 ---
 title: "Licensing Mendix Cloud Apps"
 url: /developerportal/deploy/licensing-apps/
-#New document which replaces four others
-weight: 15
+weight: 20
 description: "Licensing apps for production by linking them to a licensed cloud node."
 aliases:
     - /developerportal/howto/how-to-link-a-different-app-to-a-node.html
@@ -51,11 +50,11 @@ In a node in Mendix Cloud, you may have one or more of these environments.
 
 For a Free App, your app has a single environment where you can test your app. However, it comes with restrictions on how long it will run. In addition, you cannot scale the app, and the operational capabilities are limited. For details on the restrictions of a Free App, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app).
 
-In a licensed node, you have everything you need to stage and deploy your app. You can have several different environments to support development; for example, you can have test, acceptance, and production environments. With [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) in Mendix Cloud, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Developer Portal.
+In a licensed node, you have everything you need to stage and deploy your app. You can have several different environments to support development; for example, you can have test, acceptance, and production environments. With [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) in Mendix Cloud, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Mendix Portal.
 
 ## 3 Prerequisites
 
-### 3.1 Obtaining a Licensed Node
+### 3.1 Obtaining a Licensed Node {#obtaining-licensed-node}
 
 To license an app, you must have a licensed cloud node available:
 
@@ -98,13 +97,13 @@ For more details on downloading a backup, see [Download a Backup](/developerport
 
 ### 4.2 Unlinking From Current Environment{#unlink}
 
-Before you can link an app to a new environment, you need to unlink it from its current environment. By default, all apps are created as Free Apps the first time they are deployed. So, in most cases you must unlink them.
+Before you can link an app to a new environment, you need to unlink it from its current environment. By default, all apps are created as Free Apps the first time they are deployed. So, in most cases, you must unlink them.
 
 #### 4.2.1 Unlinking a Free App{#unlink-free}
 
 To unlink a Free App, do the following:
 
-1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
+1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
 1. If the page shows the following message, then your app is not currently linked to a node. In that case, you can go straight to the [Connecting Your App to a Licensed Node](#connect-app) section.
 
@@ -146,7 +145,7 @@ Apart from the app, the rest of the environment (or environments) in the target 
 
 To connect your app to a licensed node, do the following:
 
-1. From the [Developer Portal](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
+1. From [Apps](https://sprintr.home.mendix.com), go to the [Environments](/developerportal/deploy/environments/) page of the app you want to unlink.
 
 1. Click **Select a node**.
 

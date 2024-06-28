@@ -65,7 +65,7 @@ On the **Apps** tab, you can see all the apps that exist on this ATS instance. H
 
 {{< figure src="/attachments/appstore/partner-solutions/ats/rg-ats/v2/rg-two-administration/app_new_edit.png" alt="App Create/Edit" class="no-border" >}}
 
-You can enter/edit the name and the Mendix app ID. The name is used in the **My apps** page. The Mendix app ID is used to retrieve information from the Mendix Developer Portal (for example, user stories), which are needed for certain ATS features. You can leave the Mendix app ID empty if you do not plan to use these features.
+You can enter/edit the name and the Mendix app ID. The name is used in the **My apps** page. The Mendix app ID is used to retrieve information from the Mendix Portal (for example, user stories), which are needed for certain ATS features. You can leave the Mendix app ID empty if you do not plan to use these features.
 
 {{% alert color="info" %}}
 When creating a new app, you will be assigned as an administrator for this app. All other users will have no access to the app. Go to the newly created app's **App settings** to manage access to it.

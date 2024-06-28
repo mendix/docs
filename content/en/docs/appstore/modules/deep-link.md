@@ -11,7 +11,7 @@ This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-However, both the page URLs and microflow URLs are not yet able to support continuations, for instance, for SSO modules like OIDC. As a result, you cannot configure the SSO correctly using page URLs and microflow URLs. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024.
+However, both the page URLs and microflow URLs are not yet able to support continuations, for instance, for certain SSO modules. As a result, you cannot configure the SSO correctly using page URLs and microflow URLs. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024.
 {{% /alert %}}
 
 ## 1 Introduction
@@ -134,7 +134,7 @@ To view all the available deep link configurations and example URLs, add the **D
 ### 3.6 Configuring Constants
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
-* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#2-anonymous-users-properties).
+* **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#properties).
 
     For the **LoginLocation** constant, it is IMPORTANT to note the following:
 
@@ -188,8 +188,6 @@ To solve this problem, you can use one of the following solutions:
      ```
 
 ## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
-
-{{% alert color="warning" %}}Both the page URLs and microflow URLs are not able to support continuations, for instance, for SSO modules like OIDC. As a result, the SSO cannot be configured correctly. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024. Stay tuned.{{% /alert %}}
 
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 

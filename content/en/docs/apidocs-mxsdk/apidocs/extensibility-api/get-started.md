@@ -27,6 +27,9 @@ Extensions can be built on any operating system as the underlying framework is c
 
 You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *Mendix.Studio.ExtensionsAPI* in NuGet.
 
+{{% alert color="warning" %}}The initial released package version compatible with Mendix 10.12.0 was 10.12.38909. This has been updated to 10.12.0+38909 to match the Studio Pro version.
+{{% /alert %}}
+
 Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
 ## 4 Importing Extensions API via a NuGet Package Hosted on a Local Repository

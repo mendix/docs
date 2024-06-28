@@ -62,7 +62,7 @@ You can also use the search to call microflows or nanoflows with a concrete docu
 
 {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mx-assist-logic-bot/search-sub-flows.png" max-width=80% >}}
 
-Choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Recommender will open on the next flow so that you can continue adding activities.
+Choose a suggestion and click it to accept it. You can also choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and the Recommender will open on the next flow so that you can continue adding activities.
 
 To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click). After closing the properties dialog box, the Recommender will open on the next flow.
 

@@ -4,7 +4,7 @@ linktitle: "Docs"
 url: /
 type: landingpage
 layout: landingpage
-description: Learn how to develop, deploy, extend, and manage Mendix apps.
+description: Learn how to create, deploy, and manage your app landscape.
 aliases:
     - /docs/index.html
     - /docs/Overview.html

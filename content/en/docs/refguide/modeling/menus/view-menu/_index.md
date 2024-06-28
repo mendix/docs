@@ -90,7 +90,11 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 The [Integration pane](/refguide/integration-pane/) enables you to browse the [Catalog](/catalog/) and use registered data sources that are available for your organization in your app development. You can add [external entities](/refguide/external-entities/) and [external actions](/refguide/call-external-action/) to your app via this pane and see entities and data sources already consumed in your app. 
 
-### 3.10 OpenAPI Documentation
+### 3.10 Marketplace
+
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/use-content/).
+
+### 3.11 OpenAPI Documentation
 
 The **OpenAPI Documentation** pane displays the auto-generated OpenAPI documentation for the currently opened [Published OData service](/refguide/published-odata-services/). This allows you to preview the REST operations that will be available once your app is published.
 
@@ -100,7 +104,7 @@ The **Maia** pane displays the Maia Chat interface where you can ask questions a
 
 ### 3.12 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/use-content/).
 
 ### 3.13 Page Explorer
 

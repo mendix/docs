@@ -34,7 +34,7 @@ Please follow the steps described in the Insights Hub documentation [Technical U
 
 To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/226260).
 
-Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/overview/use-content/#downloading) in *Using Marketplace Content*.
+Download the **Siemens Insights Hub API Authenticator** by following the instructions [Downloading Content from the Marketplace](/appstore/use-content/#downloading) in *Using Marketplace Content*.
 
 Calls to Insights Hub are made through REST calls which can be made using the standard Mendix [Call REST Service](/refguide/call-rest-action/) functionality. See [How To Consume a REST Service](/howto/integration/consume-a-rest-service/) for a full walkthrough on doing this. For calls to Insights Hub, these calls need to be authenticated.
 

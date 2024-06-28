@@ -148,11 +148,11 @@ This allows you to run the event every minute, or number of minutes.
 
 If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made on how to handle this. This is set in the **On overlap** property of the scheduled event.
 
-* **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has been completed. The next event will start at the next available scheduled time.
+* **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 
     This is the default and will ensure that events are always executed at a scheduled time, subject to queue resources being available (see [Running Concurrently](#concurrently), below).
 
-* **Delay next** – If an event takes longer than its interval, the next event is delayed until it has been completed. The next event will start immediately after the previous one has been completed and will likely not be executed at a scheduled time.
+* **Delay next** – If an event takes longer than its interval, the next event is delayed until it has completed. The next event will start immediately after the previous one has completed and will likely not be executed at a scheduled time.
 
     If multiple successive events are longer than their interval, the intended scheduled time will be further and further away from the actual start time. This situation should be avoided by choosing an interval that is generally sufficient to execute the event.
 

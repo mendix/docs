@@ -29,15 +29,15 @@ It can be disabled via Studio Pro preferences: go to **Edit** > **Preferences** 
 
 Workflow Recommender is displayed as a small blue plus sign in the flow. When you want to view recommendations on a particular flow, you can hover the mouse over that flow and click on the blue plus icon, or navigate to it with the keyboard and press <kbd>Enter</kbd>.
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/workflow-recommender/blue-plus.png" max-width=20% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/workflow-recommender/blue-plus.png" max-width=20% >}}
 
 Workflow Recommender dialog box is shown with recommendations of workflow activities to insert. This list initially contains toolbox activities that can be added at that location in the flow. You can select an element directly from the recommendation list:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/workflow-recommender/initial-recommendations.png" max-width=50% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/workflow-recommender/initial-recommendations.png" max-width=50% >}}
 
 You can also type in the search box to search for the elements that you want to add to the flow. Workflow Recommender works with fuzzy search, which means that it finds direct matches first and then any matches in the recommendations. For instance, you can use `us` to search for the recommendations that contain **User task**. The search is based on your workflow parameter, domain model entities, or user roles in your app. You can search for generic activities or elements from the toolbox:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/workflow-recommender/search-toolbox.png" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/workflow-recommender/search-toolbox.png" max-width=80% >}}
 
 Choose a suggestion and click it to accept it. You can also choose a suggestion with the arrow keys and press the <kbd>Enter</kbd> key to accept it. The suggested element will be added to the flow and Workflow Recommender will open on the next flow so that you can continue adding activities.
 

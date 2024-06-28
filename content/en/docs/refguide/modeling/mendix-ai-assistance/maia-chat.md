@@ -34,7 +34,7 @@ There are two ways to access Maia Chat:
 
 The Chat interface appears at the right side of Studio Pro under the **Maia** tab:
 
-{{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/maia-chat-interface.png" width="300px">}}
+{{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-interface.png" width="300px">}}
 
 ### 2.1 An Example of Interacting with Maia Chat
 
@@ -49,7 +49,7 @@ The following steps present an example of how you can interact with Maia Chat by
     * Feedback icons
     * Top relevant references from various resources like Mendix documentation, Mendix Community, and Academy learning paths
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/maia-chat-example.png" width="350px" >}}
+        {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-example.png" width="350px" >}}
 
         {{% alert color="info" %}}In Studio Pro 10.7.0 and above, you can also see the Mendix version of the references, the level required if the reference comes from Mendix Academy, and the date and answer status if the reference comes from the Mendix Community{{% /alert %}}
 
@@ -60,7 +60,7 @@ The following steps present an example of how you can interact with Maia Chat by
     * You can rate the **correctness**, **completeness**, and **readability** of the provided answer.
     * You can add additional explanation text in the **Additional feedback** text box if you want to. 
 
-        {{< figure src="/attachments/refguide/modeling/mx-assist-studio-pro/mendix-chat/feedback-section.png" width="250px" >}} 
+        {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/feedback-section.png" width="250px" >}} 
 
 5. Click the **Submit feedback** button to send your feedback. Afterwards, you will be brought back to the main chat interface where you can continue asking new questions.
 

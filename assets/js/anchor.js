@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Select all headings in the article
     const headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
     headings.forEach((heading) => {
+        if (heading.id == 'title') {
+            return;
+        }
         if (heading.id) {
             const a = document.createElement('a');
             a.setAttribute('aria-hidden', 'true');

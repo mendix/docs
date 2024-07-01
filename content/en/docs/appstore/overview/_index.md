@@ -173,9 +173,9 @@ You can see all the content shared within your organization on this page, which 
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 
-The table presents the **Names** of the products your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of the products your company has subscribed to.
 
-The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company. The Technical Owner can create binding keys on the [service management dashboard](#service-management-dashboard) and do other tasks.
+The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company.
 
 Finally, the table presents the plan's **Status**, the subscription **Plan**, and the **Expires On** date for the plan.
 

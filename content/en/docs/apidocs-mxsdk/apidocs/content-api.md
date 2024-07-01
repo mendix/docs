@@ -14,7 +14,7 @@ If you have Marketplace content, this API can help you get the following informa
 
 * The latest version of the content used, allowing you to keep track of outdated content on your side and check for newly added versions including release notes
 * The latest version that is compatible with your Mendix Studio Pro version
-* [Component details](/appstore/overview/#details) such as content type, category, and license
+* [Component details](/appstore/component-details/) such as content type, category, and license
 
 ## 2 Authentication {#authentication}
 

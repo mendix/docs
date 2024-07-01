@@ -23,7 +23,7 @@ You can also create clusters and namespaces using the [Mendix for Private Cloud 
 
 To create a cluster in your OpenShift context, you need the following:
 
-* A supported Kubernetes platform; for more information, see [Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#211-supported-versions)
+* A supported Kubernetes platform; for more information, see [Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions)
 * An administration account for your OpenShift or Kubernetes platform
 * **OpenShift CLI** installed (see [Getting started with the CLI](https://docs.openshift.com/container-platform/4.1/cli_reference/getting-started-cli.html) on the Red Hat OpenShift website for more information) if you are creating clusters on OpenShift
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
@@ -524,7 +524,7 @@ If a [check_health](/refguide/monitoring-mendix-runtime/#check-health) microflow
 An app will return a successful health check status if all of these conditions are true:
 
 1. The Runtime replies to `ping` calls (any reply is accepted).
-    Mendix Operator versions 2.15 and 2.16 assumed an invalid `ping` reply to be an error, and failed the liveness probe. The Mendix Runtime will return a fail reply to `ping` calls if at any point a message was logged with a **critical** log level (which is [reserved for errors that require immediate attention](/refguide/logging/#21-critical), and that caused some apps to restart when running in Operator 2.15 or 2.16. Mendix Operator 2.17 ignores the `ping` reply and will no longer restart apps that have logged a **critical** log message.
+    Mendix Operator versions 2.15 and 2.16 assumed an invalid `ping` reply to be an error, and failed the liveness probe. The Mendix Runtime will return a fail reply to `ping` calls if at any point a message was logged with a **critical** log level (which is [reserved for errors that require immediate attention](/refguide/logging/#critical), and that caused some apps to restart when running in Operator 2.15 or 2.16. Mendix Operator 2.17 ignores the `ping` reply and will no longer restart apps that have logged a **critical** log message.
 2. The Runtime's status is `created`, `starting`, `running` or `stopping`.
 3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there is no `check_health` microflow configured, or the Runtime's state is not `running`, this condition is ignored.
 {{% /alert %}}
@@ -876,7 +876,7 @@ In GKE Autopilot, one of the key features is its ability to automatically adjust
 
 As a result, there can be a continuous back-and-forth interaction between Mx4PC and GKE Autopilot, where both entities engage in a loop, attempting to counteract each other's modifications to deployments and pods.
 
-To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Private Cloud Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](/developerportal/deploy/private-cloud-cluster/#725-custom-core-resource-plan).
+To address this issue, you can configure the Mendix Operator to align with GKE's requirements. This involves setting the resources (specifically, the CPU, memory, and ephemeral storage) to be equal to the limits defined in the `OperatorConfiguration` for both the `sidecar` and `metrics-sidecar` containers. Along with this, you must ensure that the resource limits for the CPU, memory, and ephemeral storage are equal to the resource requests in the Private Cloud Portal. For more information on setting the core resources on the Portal, see [Custom Core Resource Plan](#custom-core-resource-plan).
 
 You must also create a patch file for configuring the core resources in the `OperatorConfiguration`, as in the following example:
 
@@ -1279,7 +1279,7 @@ kubectl -n {namespace} delete storageplan {StoragePlanName}
 
 {{% /alert %}}
 
-#### 7.2.5 Custom Core Resource Plan
+#### 7.2.5 Custom Core Resource Plan {#custom-core-resource-plan}
 
 Here, you can create customized plan for your core resources.
 

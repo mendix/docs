@@ -250,9 +250,9 @@ Select **Version Control** > **Merge Changes Here**, after that you can select *
 
 #### 7.1.3 Reverting a Commit
 
-[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse merging** in Studio Pro.
+[Reverting changes](#revert-changes) works for changes that have not been committed yet. Changes that have been committed and pushed to the server can never be deleted from the history. However, you can make another commit to revert the changes. This feature is called **Reverse commit** in Studio Pro.
 
-Choose the **Version Control** menu > **Reverse Merge Changes...** to revert a commit.
+Choose the **Version Control** menu > **Revert a Commit...** to revert a commit.
 
 Reverting changes is done with one commit at a time. If you want to revert multiple commits, you can do that by reverting the latest commit, then the previous one, only one by one.
 
@@ -357,7 +357,7 @@ If you are doing more advanced changes to files, like adding Java actions or res
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
-### 9.2 Authenticating to Team Server
+### 9.2 Authenticating to Team Server {#authenticating}
 
 When using external tools, you might be asked to authenticate separately to Team Server.
 

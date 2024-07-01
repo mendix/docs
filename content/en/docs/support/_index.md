@@ -273,7 +273,7 @@ Mendix Support needs application logs to analyze this component. Because Mendix 
 
 Platform-supported Marketplace content refers to all Marketplace content marked as platform-supported in the Mendix Marketplace. Community-supported Marketplace content includes all Marketplace content not marked as platform-supported in the Mendix Marketplace
 
-For details about the levels of Support for Marketplace components, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
+For details about the levels of Support for Marketplace components, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 
 Mendix Support needs application logs to analyze these components. Because Mendix has no control over the context in which the Marketplace content is run outside of Mendix Cloud and Mendix Cloud Dedicated, you will have to demonstrate that the bug is in the supported component by showing the behavior independently from the context in which you are using it.
 

@@ -196,7 +196,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 
-## 6 Microsoft Azure SQL
+## 6 Microsoft Azure SQL {#azure-sql}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 

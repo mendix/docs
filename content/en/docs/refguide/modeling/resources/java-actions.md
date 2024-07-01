@@ -34,7 +34,7 @@ See [Data Types](/refguide/data-types/) for the possible standard parameter type
 
 The other types supported by Java actions are described below.
 
-#### 2.2.1 Entity Type
+#### 2.2.1 Entity Type {#entity-type}
 
 The **Entity** parameter type is a placeholder for an entity that will be filled in with the name of the entity when it is called in a microflow. Additionally, the entity type can be used to fill in a type parameter. In the generated Java action template code, this type is represented as a string.
 

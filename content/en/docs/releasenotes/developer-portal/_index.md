@@ -20,7 +20,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### New features
 
-* We have added a new endpoint to our public [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This will enable you to automate changing existing team member's role assignment or update your pinned Apps overview
+* We have added a new endpoint to our public [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This enables you to automate changing existing team member's role assignment or update your pinned apps overview.
+
+### June 27, 2024
+
+#### New Feature
+
+* We added the [Insights](/developerportal/portfolio-management/insights/) page in the Portfolio Management app. It is a dashboard that provides critical data and visualizations to help you gain insights into the portfolio.
 
 ### June 14, 2024
 
@@ -1123,7 +1129,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/my-marketplace/#content-groups) in the Marketplace.
+- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/#content-groups) in the Marketplace.
 
 ## 2020
 

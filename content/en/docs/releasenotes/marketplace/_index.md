@@ -12,6 +12,12 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ## 2024
 
+### June 27, 2024
+
+#### Improvements
+
+* We improved the navigation menus of the [Marketplace home page](/appstore/overview/) to enhance user experience.
+
 ### March 7, 2024
 
 #### New Features

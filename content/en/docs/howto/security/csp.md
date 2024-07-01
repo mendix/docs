@@ -102,7 +102,7 @@ Lastly, ensure you are not using any external fonts by checking your theme's sty
 
 There are two ways to configure the `Content-Security-Policy` header.
 
-If you are using Mendix version 10.13 or above, the `Content-Security-Policy` header can be configured as the [`CSPHeaderTemplate` custom runtime setting](/refguide/runtime/custom-settings/#CSPHeaderTemplate). It will then be returned as a header for all HTML files. Mendix recommends that you use this method if it is available as it provides more flexibility and ensures the header is the same in your local and cloud environment.
+If you are using Mendix version 10.13 or above, the `Content-Security-Policy` header can be configured as the [`CSPHeaderTemplate` custom runtime setting](/refguide/custom-settings/#CSPHeaderTemplate). It will then be returned as a header for all HTML files. Mendix recommends that you use this method if it is available as it provides more flexibility and ensures the header is the same in your local and cloud environment.
 
 You can also configure a `Content-Security-Policy` header on the [Environment Details page of the Mendix Portal](/developerportal/deploy/environments-details/#csp).
 

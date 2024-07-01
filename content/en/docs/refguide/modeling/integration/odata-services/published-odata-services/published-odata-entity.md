@@ -92,7 +92,7 @@ Selecting a key is required when the **Readable** capability is enabled.
 Selecting more than one attribute as the key is only available for published OData services that use OData v4.
 {{% /alert %}}
 
-It is not recommended to use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
+Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
 
 ## 6 Capabilities {#capabilities}
 

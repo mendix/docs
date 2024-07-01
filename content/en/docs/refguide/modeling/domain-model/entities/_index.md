@@ -132,7 +132,6 @@ This property defines whether the entity contains the system attribute 'changedD
 | True | Entity contains the system attribute 'changedDate'. |
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
 
-
 {{% alert color="info" %}}
 Data grids do not directly display this date.
 {{% /alert %}}

@@ -24,10 +24,10 @@ Typical use cases include the following:
 The Conversational UI module provides the following functionalities:
 
 * UI components that you can drag and drop onto your pages, for example:
- * Layouts to have a sidebar or floating popup chat
- * Pages that you can use in your navigation for chat
- * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
- * A floating button that for opening a chat
+* Layouts to have a sidebar or floating popup chat
+* Pages that you can use in your navigation for chat
+* Snippets that you can use directly on your pages, for example to display messages or a history sidebar
+* A floating button that for opening a chat
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
 * Integration with any model that is compatible with [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
@@ -86,6 +86,7 @@ If you need additional attributes or associations on the `ChatContext`, use an e
 #### 4.2.1 Chat Context Operations {#chat-context-operations}
 
 The following operations can be found in the tool box for processing the [ChatContext](#chat-context):
+
 * `Create ChatContext & Set ProviderConfig` creates a new chat context and sets a given `ProviderConfig` to active.
 * `Create ChatContext` creates and returns a new chat context.
 * `Add ProviderConfig List to ChatContext` adds `ProviderConfig` to the chat context and sets it to active. In addition, a list of `ProviderConfigs` can be added to the chat context (inactive, but selectable in the UI).

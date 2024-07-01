@@ -203,7 +203,7 @@ You will still have to deploy your app in [Apps](https://sprintr.home.mendix.com
 {{% /alert %}}
 
 1. Open the app in [Apps](https://sprintr.home.mendix.com/).
-2.  Go to the **Environments** page.
+2. Go to the **Environments** page.
 
     {{< figure src="/attachments/developerportal/deploy/sap-cloud-platform/environments-page.png" class="no-border" >}}
 

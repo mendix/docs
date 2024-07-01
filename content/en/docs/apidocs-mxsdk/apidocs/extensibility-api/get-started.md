@@ -58,8 +58,9 @@ Extensions load from within your mendix application and will only be loaded whil
 If you specify the `--enable-extension-development` flag you can debug your extension by placing it into a new subfolder within your app directory. The format of the folder must be `<Mendix app folder>\extensions\<your extension name>` where all extensions that you want to load must exist inside the <`Mendix app folder>\extensions` subfolder.
 
 Studio Pro will load your extension, only if it complies with the following rules:
- - Your extension needs to provide a manifest.json file. 
- - This manifest file must contain a list of entry points for your extension. For example:
+
+* Your extension needs to provide a manifest.json file. 
+* This manifest file must contain a list of entry points for your extension. For example:
 
     ```
     {

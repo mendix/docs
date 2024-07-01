@@ -77,7 +77,7 @@ Fore more information on React and APIs in Mendix, see our [Mendix 10 React Clie
 
 To enable the React client for your Mendix project, make sure it fulfills the prerequisites above. Then, enable the React client in [App Settings](/refguide/app-settings/#react-client).
 
-The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
+The migration mode will show deprecation warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
 
 ## 3 Migration Guide{#migration-guide}
 

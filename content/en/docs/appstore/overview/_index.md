@@ -120,7 +120,7 @@ You can see all the Marketplace content you have trials for on this page:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
 
-The table presents the **Names** of products you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of products you have trials for.
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. 
 

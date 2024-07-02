@@ -63,7 +63,7 @@ The features in the navigation pane can also be accessed via APIs, enabling thir
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view or edit the app.
+There are also details on the app's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
 

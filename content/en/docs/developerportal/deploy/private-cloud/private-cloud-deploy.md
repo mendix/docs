@@ -55,6 +55,10 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
+{{% alert color="warning" %}}
+Deployment package creation for Mendix versions 7 and below is no longer supported. Upgrade to version 8 or above in order to build and deploy.
+{{% /alert %}}
+
 1. On the **Environments** page for your app in the Developer Portal, click **Create Deployment Package**.
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/image9.png" class="no-border" >}}
@@ -98,6 +102,7 @@ All environments are defined as production environments, which means that [secur
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-deploy/selectDeploymentpackage.png" class="no-border" >}}
 
 2. Select the deployment package from the list of deployment packages and click **Next**.
+
 
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 

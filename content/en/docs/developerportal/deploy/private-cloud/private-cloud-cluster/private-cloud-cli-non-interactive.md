@@ -44,12 +44,18 @@ The namespace-id and namespace-secret are only required when using Mendix for Pr
 
 For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
+For Global Operator Main namespace, use the follow command for Base Installation:
+
+```shell {linenos=false}
+./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type> --global
+```
+
 ## 3 Apply Configuration
 
 To [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
 ```shell {linenos=false}
-./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
+./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file> --global
 ```
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
@@ -87,6 +93,12 @@ registry:
 
 To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace and not Global Operator namespace. For more information, check Global Operator documentation.
 
+Following command needs to be applied for managed namespace configuration:
+
+```shell {linenos=false}
+./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
+```
+
 Apply below config file, for the managed namespace configuration.
 
 ```yaml
@@ -113,7 +125,7 @@ ingress:
 registry:
   type: openshift4
 global_operator:
-  operator_namespace: globalOperatorNamespace
+  operator_namespace: <globalOperatorMainNamespace>
 ```
 
 ## 4 Upgrade Mendix Operator and Mendix Gateway Agent

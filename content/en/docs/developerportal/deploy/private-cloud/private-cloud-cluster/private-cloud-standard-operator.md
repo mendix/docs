@@ -21,7 +21,7 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Developer Portal.
+1. Go to the Cluster Manager page by opening [Global Navigation Menu](https://docs.mendix.com/developerportal/global-navigation/) and select **Deployment** and then and select **Private Cloud** option
 
     {{< figure src="/attachments/developerportal/deploy/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 

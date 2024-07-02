@@ -96,6 +96,7 @@ To install and configure the Global Operator, perform the following steps:
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 
+
 ### 2.1 Results
 
 After you configure the managed namespace, the Agent and Operator pod are restarted automatically, so that the Global Operator namespace can process the newly added managed namespace. The managed namespace is added to the Operator configuration for the Global Operator namespace, and the required storage plans are created in the managed namespace.
@@ -110,9 +111,6 @@ Once the managed namespace is configured, you can find the list with all the nam
 If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace.
 {{% /alert %}}
 
-### 2.2 Next Steps
-
-After everything is configured, you can deploy the application. For more information, see [Deploy Application](/developerportal/deploy/private-cloud-deploy/).
 
 ## 3 Licensing
 

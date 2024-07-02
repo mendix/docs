@@ -14,8 +14,13 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### June 27, 2024
 
+### New Features
+
+* We released of a new tag specifically for React Ready widgets in the Marketplace. This enhancement is designed to help developers and users easily identify and access a wide range of widgets that are optimized for React Client applications. You can find a **React-Client** tag next to a version of the product when navigating to the **Release** tab of a product details page.
+
 #### Improvements
 
+* We made significant improvements to the [Studio Pro download](https://marketplace.mendix.com/link/studiopro) page. The updated interface now provides a more intuitive and user-friendly experience, making it easier to find and download the latest or previous versions of Studio Pro. Each version of Studio Pro now has its own dedicated page, containing important links such as release notes, release blogs, and all relevant installers.
 * We improved the navigation menus of the [Marketplace home page](/appstore/overview/) to enhance user experience.
 
 ### March 7, 2024

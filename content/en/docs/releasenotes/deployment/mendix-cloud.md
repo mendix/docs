@@ -20,10 +20,10 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Pipelines Improvements
 
-* We added support for two new pipeline steps:
-    * Use the Start Environment step to start a selected environment.
-    * Use the Promote Package step to move a deployment package from a specified source environment to a specified target environment.
-* It is now possible to trigger pipelines manually. To use this new trigger in your pipeline, select **Manual** as the **Trigger** in the Start Pipeline step of your pipeline design.
+* We added two new pipeline steps:
+    * You can use the Start Environment step to start a selected environment.
+    * You can use the Promote Package step to move a deployment package from a specified source environment to a specified target environment.
+* It is now possible to trigger pipelines manually. To use this new trigger type in your pipeline, select **Manual** as the **Trigger** in the Start Pipeline step of your pipeline design.
 * We will be launching a mini survey for Pipelines soon, asking you some questions about what you like and dislike.
 
 ### May 14, 2024

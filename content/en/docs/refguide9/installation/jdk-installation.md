@@ -1,10 +1,8 @@
 ---
 title: "JDK Installation"
 url: /refguide9/jdk-installation/
-category: "Installation"
 weight: 45
 description: "Describes how to install the JDK for Studio Pro."
-tags: ["runtime", "java", "studio pro", "install", "download"]
 ---
 
 ## 1 Introduction

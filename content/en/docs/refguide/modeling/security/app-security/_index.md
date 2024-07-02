@@ -38,17 +38,18 @@ For all licensed Mendix Cloud nodes, you need to use the **Production** security
 
 For different security levels different settings are available. Find the list of all security settings and their availability per security level in the table below: 
 
-| Setting Name                        | Security Off | Prototype/Demo Security                                      | Production Security                                          |
-| ----------------------------------- | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Check security](#check-security)   | N/A          | N/A                                                          | Available, see the [Check Security](#check-security) section. |
-| [Strict page URL checking](#strict-page-url-checking) | N/A | N/A | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
-| [App status](#app-status)   | N/A          | Available, see the [App Status](#app-status) section. | Available, see the [App Status](#app-status) section. |
-| [Module status](#module-status)     | N/A          | Available, see the [Module Status](#module-status) section.  | Available, see the [Module Status](#module-status) section.  |
-| [User roles](#user-roles)           | N/A          | Available, see the [User roles](#user-roles) section.        | Available, see the [User roles](#user-roles) section.        |
-| [Administrator](#administrator)     | N/A          | Available, see the [Administrator](#administrator) section.  | Available, see the [Administrator](#administrator) section.  |
-| [Demo users](#demo-users)           | N/A          | Available, see the [Demo users](#demo-users) section.        | Available, see the [Demo users](#demo-users) section.        |
-| [Anonymous users](#anonymous-users) | N/A          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section. |
-| [Password policy](#password-policy) | N/A          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section. |
+| Setting Name                                          | Security Off | Prototype/Demo Security                                         | Production Security                                                               |
+|-------------------------------------------------------|--------------|-----------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| [Check security](#check-security)                     | N/A          | N/A                                                             | Available, see the [Check Security](#check-security) section.                     |
+| [Strict page URL checking](#strict-page-url-checking) | N/A          | N/A                                                             | Available, see the [Strict Page URL Checking](#strict-page-url-checking) section. |
+| [Strict mode](#strict-mode)                           | N/A          | N/A                                                             | Available for the React client, see the [Strict Mode](#strict-mode) section.          |
+| [App status](#app-status)                             | N/A          | Available, see the [App Status](#app-status) section.           | Available, see the [App Status](#app-status) section.                             |
+| [Module status](#module-status)                       | N/A          | Available, see the [Module Status](#module-status) section.     | Available, see the [Module Status](#module-status) section.                       |
+| [User roles](#user-roles)                             | N/A          | Available, see the [User roles](#user-roles) section.           | Available, see the [User roles](#user-roles) section.                             |
+| [Administrator](#administrator)                       | N/A          | Available, see the [Administrator](#administrator) section.     | Available, see the [Administrator](#administrator) section.                       |
+| [Demo users](#demo-users)                             | N/A          | Available, see the [Demo users](#demo-users) section.           | Available, see the [Demo users](#demo-users) section.                             |
+| [Anonymous users](#anonymous-users)                   | N/A          | Available, see the [Anonymous users](#anonymous-users) section. | Available, see the [Anonymous users](#anonymous-users) section.                   |
+| [Password policy](#password-policy)                   | N/A          | Available, see the [Password policy](#password-policy) section. | Available, see the [Password policy](#password-policy) section.                   |
 
 ### 2.2 Check Security {#check-security}
 
@@ -64,7 +65,11 @@ When **Strict page URL checking** is enabled, pages that are only accessible thr
 
 Enabling **Strict page URL checking** works for pages with custom URLs, but it cannot be applied to [deep links](/appstore/modules/deep-link/). Studio Pro cannot determine which types of pages are used based on their deep links, as those are configured in the Mendix Runtime.
 
-### 2.4 App Status {#app-status}
+### 2.4 Strict Mode {#strict-mode}
+
+In the React client, **strict mode** will make your app more secure when the access rules are not set up correctly. For more information, see [Strict Mode](/refguide/strict-mode/).
+
+### 2.5 App Status {#app-status}
 
 The app status indicates the security status for the current app security level.
 

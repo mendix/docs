@@ -10,6 +10,14 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 ## 2024
 
+### June 28, 2024
+
+#### New Features
+
+* We released two AI-powered features in the [Mendix Community](/community-tools/mendix-community/): Maia (Mendix AI Assistance) Summarize and Maia Rewrite:
+  * Maia Summarize condenses lengthy discussions for a question into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread.
+  * Maia Rewrite is an assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered.
+
 ### February 8, 2024
 
 #### New Features

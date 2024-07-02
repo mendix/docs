@@ -146,7 +146,7 @@ This allows you to run the event every minute, or number of minutes.
 
 ### 4.7 Long-running Events {#long-events}
 
-If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made how to handle this. This is set in the **On overlap** property of the scheduled event.
+If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made on how to handle this. This is set in the **On overlap** property of the scheduled event.
 
 * **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 

@@ -851,6 +851,22 @@ The `RetrieveAndGenerate` operation only allows a single user message to be part
 
 The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
 
+##### 4.2.1.4 Image Generation {#image-generation}
+
+The `Image Generation` operation can be used to generate one or multiple images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently 'Amazon Titan Image Generator G1' is the only supported model for image generation of the AmazonBedrockConnector. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `UserPrompt (String)`, `AmazonBedrockConnection`, `GenAICommons.ImageOptions (optional)`| `GenAICommons.Response`|
+
+`GenAICommons.ImageOptions` is a optional parameter that can be ommitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
+
+`GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons. 
+
+For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image specific values (currently only *NegativeText*). 
+
 #### 4.2.2 GenAI Commons Helper Operations
 
 ##### 4.2.2.1 Create Amazon Bedrock Connection {#create-amazon-bedrock-connection}

@@ -233,7 +233,7 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 
 ##### 4.1.1.8 TitanImageOptions_Extension {#titan-image-options-extension}
 
-This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed `Image Generation: Add Titan Image Extension` operation can be used.
+This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed [Image Generation: Add Titan Image Extension](#add-titan-image-extension) operation can be used.
 
 | Attribute | Description |
 | --- | --- |

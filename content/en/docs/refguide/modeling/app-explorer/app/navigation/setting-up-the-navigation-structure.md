@@ -68,9 +68,11 @@ Follow the steps below:
 
 Now every time a user with the **Administrator** user signs in to the application, the **Account_Overview** page is shown. Users with other roles will be redirected to the default home page.
 
-## 4 Setting a Fallback Home Page
+## 4 Setting a Fallback Page
 
-The Fallback Home Page is a page or microflow can be used to customise the applications behaviour when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the popup with the "The page you requested was not found. You are redirected to the home page" message will no longer be shown and instead the fallback microflow or page will be used. If a microflow is used, it can have a parameter 'Path' of type String which will contain the URL that could not be found.
+The Fallback page is a page or microflow that can be used to customise the application's behaviour when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the default pop-up window stating "The page you requested was not found. You are redirected to the home page" will be replaced by the fallback microflow or the page. 
+
+If a microflow is used as a fallback, it can have only one String parameter named 'Path', which will contain the URL that could not be found.
 
 The Fallback Home Page will only be used for URLs that start with the [URL Prefix](/refguide/app-settings/#url-prefix).
 

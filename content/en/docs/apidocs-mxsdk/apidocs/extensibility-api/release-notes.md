@@ -1,12 +1,10 @@
 ---
 title: "Release Notes"
-url: /extensions-api/release_notes/
-weight: 1
+url: /apidocs-mxsdk/apidocs/extensibility-api/release-notes/
+weight: 5
 ---
 
-# Extensions API Internal Release Notes
-
-This document is intended for the internal mendix developer audience. Within this document we track the latest release notes for the Extensibility API
+This document is intended for the internal Mendix developer audience. Within this document we track the latest release notes for the Extensibility API.
 
 
 ## Version 10.6.0

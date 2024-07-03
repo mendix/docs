@@ -1,12 +1,14 @@
 ---
 title: "Microflow Service Tutorial"
-url: /extensions-api/microflow_service_tutorial/
+url: /apidocs-mxsdk/apidocs/extensibility-api/microflow_service_tutorial/
 weight: 14
 ---
 
+## 1 Introduction
+
 The `IMicroflowService` is the service used to perform actions related to microflows. It can create them, query them and several other actions. Let's look at all of them, with sample codes and usage examples.
 
-### Initialize
+## 2 Initialize
 This is a method which initializes a microflow that was previously created. It is part of a series of steps required for adding a microflow to the model.
 * As always, first we must start a transaction (`IModel.StartTransaction`), and then we can create a microflow and add it to the module (`IModel.Create<IMicroflow>`).
 * Only after adding the microflow to the module, we can call `IMicroflowService.Initialize`. Internally, this method:

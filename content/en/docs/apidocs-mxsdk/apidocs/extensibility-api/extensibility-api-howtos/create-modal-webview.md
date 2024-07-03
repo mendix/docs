@@ -1,18 +1,18 @@
 ---
-title: "Using Modal Views Tutorial"
-url: /extensions-api/modal_view_tutorial/
+title: "Create a Web View Hosted Inside a Modal Dialog"
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/
 weight: 7
 ---
 
-# Create a simple webview hosted inside a modal dialog
+# Create a simple web view hosted inside a modal dialog
 
-In this tutorial we will be creating a new webview hosted inside a modal dialog. We will then open the modal from a new menu item.
+In this tutorial we will be creating a new web view hosted inside a modal dialog. We will then open the modal from a new menu item.
 
 You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples)
 
 ### Add a view model for your new modal
 
-It would take care of the messages and the overall lifecycle of the modal webview.
+It would take care of the messages and the overall lifecycle of the modal web view.
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -51,7 +51,7 @@ class MyModalWebViewViewModel(
 ### Add a controller class
 
 We're creating a controller that we can delegate a part of work to, so that we don't have to pollute the menu item with unrelated business logic.  
-For instance conducting the basic setup and showing our webview. Although, it's just a recommendation, not a rule.
+For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
 
 >[#NOTE] Please specify both Height and Width properties as otherwise they will default to 0,0
 

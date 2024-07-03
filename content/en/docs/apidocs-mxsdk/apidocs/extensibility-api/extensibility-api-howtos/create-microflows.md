@@ -1,14 +1,18 @@
 ---
-title: "Microflows Tutorial"
-url: /extensions-api/microflow_tutorial/
+title: "Create Microflows"
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-microflows/
 weight: 8
 ---
 
-# Creating microflows
+## 1 Introduction
 In this how-to tutorial we will create microflows which perform some calculations and return the result.
 
-## Create an extension class which creates microflows
-Open the project that you previously created in the [basic tutorial](/extensions-api/basic_tutorial/). Add a new folder "MicroflowTutorial" to your solution and create a `MenuExtension` class. You can now add a new class to the project. Call it `CreateMicroflowsMenu.cs`. You can now replace the code within the file with the code below. As you can see, the `GetMenus` method is overridden in order to add our own menus to Studio Pro. The class `CalculationsMicroflowCreator` (which we'll add shortly) will be called from the action of our menu. You can see that this class has been injected in the constructor of our menu extension.
+## 2 Creating an Extension Class that Creates Microflows
+1. Open the project that you previously created in [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
+2. Add a new folder *MicroflowTutorial* to your solution.
+3. Create a `MenuExtension` class.
+4. Add a new class to the project and call it `CreateMicroflowsMenu.cs`.
+5. Replace the code within the file with the code below. As you can see, the `GetMenus` method is overridden in order to add our own menus to Studio Pro. The class `CalculationsMicroflowCreator` (which you will add shortly) will be called from the action of our menu. You can see that this class has been injected in the constructor of our menu extension.
 
 ```csharp
 using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
@@ -34,8 +38,8 @@ class CreateMicroflowsMenu(CalculationsMicroflowCreator microflowCreator) : Menu
 }
 ```
 
-### The microflow creator
-Now we'll add the class `CalculationsMicroflowCreator.cs` which will be injected on our menu extension so that it can be called from our menu action. It is important to add the `Export` attribute to the class or it will not get injected into our menu extension. Just as important is the `ImportingConstructor` attribute on the constructor or the class won't be able to get any services injected into it.
+## 3. Microflow Creator
+Now you will add the class `CalculationsMicroflowCreator.cs` that will be injected on our menu extension so that it can be called from your menu action. It is important to add the `Export` attribute to the class or it will not get injected into your menu extension. Just as important is the `ImportingConstructor` attribute on the constructor or the class will not be able to get any services injected into it.
 
 ```csharp
 using Mendix.StudioPro.ExtensionsAPI.Model;
@@ -55,7 +59,7 @@ class CalculationsMicroflowCreator(IMicroflowService microflowService, IMicroflo
 }
 ```
 
-This class contains one public method, which is the one called by our menu. The method `CreateMicroflows` which requires the current app as the parameter. The `CreateMicroflowsMenu` extension has access to the `CurrentApp` property so it will pass it to the method when calling it from the menu action. The `CurrentApp` property is the `IModel` for the app that is currently open in Studio Pro. Every extension that inherits type `UIExtensionBase` (such as a `MenuBarExtension`) has access to the `CurrentApp` property and can then interact and modify the model. Let's add the method now, shown below.
+This class contains one public method, which is the one called by your menu. The method `CreateMicroflows` which requires the current app as the parameter. The `CreateMicroflowsMenu` extension has access to the `CurrentApp` property, so it will pass it to the method when calling it from the menu action. The `CurrentApp` property is the `IModel` for the app that is currently open in Studio Pro. Every extension that inherits type `UIExtensionBase` (such as a `MenuBarExtension`) has access to the `CurrentApp` property and can then interact and modify the model. Add the method shown below:
 
 ```csharp
 public void CreateMicroflows(IModel currentApp)

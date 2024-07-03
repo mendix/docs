@@ -1,22 +1,22 @@
----
-title: "Context Menu Tutorial"
-url: /extensions-api/context_menu_tutorial/
+title: "Create a Context Menu"
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/
 weight: 6
----
 
-# Context menus
+## 1 Introduction
 
 It is also possible to add a context menu to an `IEntity` in Studio Pro or to a `IDocument`, such as microflows and pages, etc. They will be placed under a menu named after the extension that contains them (e.g. `MyExtension`) and the can modify those items they relate to. It is done simply by specifying the type when creating the extension.
 
-## Add a context menu to an entity
+## 2 Adding a Context Menu to an Entity
 
-In this how-to tutorial we will be adding a context menu to an entity. This tutorial builds upon the [basic tutorial](/extensions-api/basic_tutorial/) it is best if you start there first.
+This how-to describes how to add a context menu to an entity. Before you start this how-to, it is recommended to finish [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
-You can download a copy of this tutorial [here](samples/ExtensibilityAPI_tutorial_contextMenus.zip)
+You can download the example in this how-to [here](samples/ExtensibilityAPI_tutorial_contextMenus.zip).
 
-#### Create an entity context menu extension class
+## 3 Creating an Entity Context Menu Extension Class
 
-Open the project that you previously created in the [basic tutorial](/extensions-api/basic_tutorial/). You can now add a new class to the project. Call it `MyEntityContextMenuExtension.cs`. You can now replace the code within the file with the following code:
+1. Open the project that you previously created in [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
+2. Add a new class to the project and name it `MyEntityContextMenuExtension.cs`.
+3. Replace the code within the file with the following code:
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -90,11 +90,13 @@ class MyEntityContextMenuExtension(IMessageBoxService messageBoxService) : Mendi
 ```
 
 This will create a series of context menu items for any entity. It is important to note the type `IEntity` is passed in so that the context menu will only apply to entities.
-It adds menus using the same logic as `MenuExtension.cs` You can see more examples of that in the [basic tutorial](/extensions-api/basic_tutorial/).
-In this sample code you can see a few context menus that can perform changes on the entity they belong to. In the sample above, the entity's location on the canvas can be changed, it can be renamed, and some info about it is shown in a message box.
+It adds menus using the same logic as `MenuExtension.cs` You can see more examples of that in [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
+
+In this sample code, you can see a few context menus that can perform changes on the entity they belong to. In the sample above, the entity's location on the canvas can be changed, it can be renamed, and some info about it is shown in a message box. 
+
 It is also possible to add menus that are disabled until some action is performed.
 
-### Add a context menu to a document
+## 4 Adding a Context Menu to a Document
 
 It is also possible to add a context menu to a document. All you have to do is specify the type `IDocument` in the context menu extension.
 

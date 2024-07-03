@@ -1,6 +1,6 @@
 ---
 title: "Create a Menu Extension"
-url: /extensibility-api/create-menu-extension/
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/
 weight: 4
 ---
 

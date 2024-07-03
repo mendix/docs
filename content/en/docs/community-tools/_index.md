@@ -6,7 +6,7 @@ weight: 38
 no_list: false 
 description_list: true
 cascade:
-    - content_type: "Community Tools Guide"
+    - content_type: "Community"
     - mendix_version: 10
 aliases:
     - /developerportal/community-tools/

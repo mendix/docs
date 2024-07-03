@@ -5,9 +5,6 @@ description: "Describes the Deployment section of the Apps navigation pane."
 weight: 10
 no_list: false 
 description_list: true
-cascade:
-  - content_type: "Deployment"
-  - mendix_version: 10
 ---
 
 ## 1 Introduction

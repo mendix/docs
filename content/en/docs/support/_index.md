@@ -6,7 +6,7 @@ weight: 47
 no_list: false 
 description_list: true
 cascade:
-    - content_type: "Mendix Support Guide"
+    - content_type: "Mendix Support"
     - mendix_version: 10
 aliases:
     - /howtogeneral/support/index.html

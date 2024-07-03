@@ -863,7 +863,9 @@ The input and output for this service are shown in the table below:
 
 `GenAICommons.ImageOptions` is an optional parameter that can be ommitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
 
-`GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons. 
+`GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons.
+
+To retrieve actual image objects from the response, the `Image: Get Generated Image (Single)` or `Image: Get Generated Images (List)` helper operations from GenAICommons can be used. 
 
 For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image specific values (currently only *NegativeText*). 
 

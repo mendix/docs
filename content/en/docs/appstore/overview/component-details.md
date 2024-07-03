@@ -10,33 +10,29 @@ description: "Presents information on the component dtails page."
 
 Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component brings you to its details page with the sections described below.
 
-{{< figure src="/attachments/appstore/overview/overview/component-details.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/component-details/component-details.png" >}}
 
 ## 2 Header
 
 The header for a component presents the following details:
 
+* Labels (if there is any)
+  * **Partner**: If the header contains this label, it means that the component is partner-supported.
+    * These components can have a **Contact Us** button for setting up your subscription with the partner.
+    * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/#company-subscriptions) page.
+  * **Mendix**: If the header contains this label, it means that the component is platform-supported.
+  * **Siemens**: If the header contains this label, it means that the component is Siemens-supported.
+  * **Recommended**: If the header contains this label, it means that the component meets your company's policies and guidelines, and therefore is recommended by your Mendix Admins.
 * The name of the component
-
 * The review average (in stars) and the number of reviews
-
 * The number of times the component has been downloaded
-
-* <a id="saved"></a>**Save and Get Notified** – click this to add the component to your [Saved Content](/appstore/overview/#personal) list
-
+* <a id="saved"></a>**Save** – Click this to add the component to your [Saved Content](/appstore/overview/#personal) list.
 * Depending on the content type:
 
-  * **Use in Studio Pro** for modules and widgets – click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/use-content/#current-sp)
-  * **Start with Template** for starter templates – click this to use the template
-  * **Download** for other content types – click this to download the component
-  * **Contact Us** – click this to contact Mendix or the community supplier
-
-* <a id="partner-icon"></a>The partner icon is applied to components that are supported by a partner:
-
-  {{< figure src="/attachments/appstore/overview/overview/partner.png"  width="25"  class="no-border" >}}
-
-  * These components have a **Contact Us** button for setting up your subscription with the partner
-  * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/#company-subscriptions) page
+  * **Use in Studio Pro** for modules and widgets – Click this to copy the content ID so that you can [search for and use the component in Studio Pro](/appstore/use-content/#current-sp).
+  * **Start with Template** for starter templates – Click this to use the template.
+  * **Download** for other content types – Click this to download the component.
+  * **Contact Us** – Click this to contact Mendix or the community supplier.
 
 <a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
 
@@ -59,6 +55,7 @@ The component details page also presents the following tabs:
   * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
   * Each version can be downloaded by clicking **Download.**
+  * If any version has the label **React-Ready** next to it, it means this version is optimized for React Client applications.
 * **Reviews** – This tab shows user reviews of the component.
   * You can browse,  sort by review date, and filter by ratings for insights on the component.
   * You can select the **Only show my reviews** checkbox to check your own reviews.
@@ -68,9 +65,3 @@ The component details page also presents the following tabs:
   * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).
 
-## 4 Labels {#labels}
-
-On the component details page, sometimes you can see the following labels:
-
-* **Recommended**: This indicates that this component meets your company's policies and guidelines, and therefore is recommended to use by your Mendix Admin.
-* **React-Ready**: This indicates this version of the component is optimized for React Client applications.

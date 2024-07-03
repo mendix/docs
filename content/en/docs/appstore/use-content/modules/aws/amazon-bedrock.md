@@ -919,6 +919,28 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 | --- | --- |
 | `GenAICommons.ImageOptions (object)`, `NegativeText (string, optional)` | `TitanImageOptions_Extension (object)` |
 
+##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
+
+Use this microflow to set the *Height* and *Width* attributes of your GenAICommons.ImageOptions object conviniently to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
+
+This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
+
+##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
+
+Use this microflow to set the *Seed* and *CfgScale* attributes of your GenAICommons.ImageOptions object conviniently. These attributes can be used to influence the randomness of the image generation.
+
+For more information, please refer to the specific model documentation, e.g. [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
+
+This operation corresponds to the **ImageOptions_SetRandomness** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `Seed (integer, optional)`, `CfgScale (decimal, optional)` | `none` |
+
 #### 4.2.3 Other Operations
 
 ##### 4.2.3.1 ListFoundationModels {#list-foundation-models}

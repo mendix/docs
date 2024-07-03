@@ -231,6 +231,14 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
+##### 4.1.1.8 TitanImageOptions_Extension {#titan-image-options-extension}
+
+This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed `Image Generation: Add Titan Image Extension` operation can be used.
+
+| Attribute | Description |
+| --- | --- |
+| `NegativeText` | The NegativeText attribute describes a text prompt to define what not to include in the image. |
+
 #### 4.1.2 No GenAICommons dependency
 
 ##### 4.1.2.1 ListFoundationModelsRequest {#list-foundation-models-request}

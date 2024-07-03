@@ -150,7 +150,7 @@ This is the type of authentication which you need to implement if you previously
 
 By providing the OData Connector for SAP solutions actions (*Get list* for example) with a destination of this type, you can gain access to your on-premises systems which are configured through the SAP Connectivity Service.
 
-The attributes in the **Destination** entity which are used for *Principal Propogation* are:
+The attributes in the **Destination** entity which are used for *Principal Propagation* are:
 
 * Url –  the *Location* of the service
 * ProxyHost – the *Host* of the service

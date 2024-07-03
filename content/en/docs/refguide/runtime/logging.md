@@ -72,7 +72,7 @@ This list is currently incomplete and is being updated.
 | Integration API | Logs messages related to the documentation of integration APIs. |
 | JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
 | JSON Export | Logs messages related to export mappings to JSON. |
-| JSON Import | Logs messages related to improt mappings from JSON. |
+| JSON Import | Logs messages related to import mappings from JSON. |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |

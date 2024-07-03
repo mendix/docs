@@ -790,7 +790,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 2. Add the following keys to the `SecretProviderClass` and Azure Key vault:
     * `storage-azure-blob-endpoint` - specify the storage account's [Primary endpoint](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview#standard-endpoints);
     * `storage-azure-use-default-azure-credential` - set to `true` to enable managed identity authentication.
-3. Open the envionment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
+3. Open the environment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
 4. Restart the Mendix app environment.
 
 ## 4 Additional Considerations {#additional-considerations}

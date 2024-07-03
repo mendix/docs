@@ -1434,11 +1434,11 @@ When running the installation tool over SSH, make sure that the SSH client suppo
 
 ### 8.4 Configuration Tool - Known Issues
 
-When restoring a previously saved session, some UI elements (such as dropdowns and checkboxes) will not use the saved session and will revert to their default values.
+When restoring a previously saved session, some UI elements (such as drop-downs and checkboxes) will not use the saved session and will revert to their default values.
 
 For example, the **Authentication** dropdown for Postgres will always switch to `static` authentication.
 
-Selecting the correct value from those dropdowns will restore the state of the form and any fields which might not be visible.
+Selecting the correct value from those drop-downs will restore the state of the form and any fields which might not be visible.
 
 ## 9 Troubleshooting
 

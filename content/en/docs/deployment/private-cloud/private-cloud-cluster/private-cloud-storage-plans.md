@@ -606,7 +606,7 @@ To connect to an Azure SQL Server, the Kubernetes cluster must be added to the l
 SQL server databases are automated, on-demand databases. The **SQL Server** plan offers a good balance between automation, ease of use, and security when using Microsoft SQL Server or Azure SQL. If you would like to have more control over database configuration, consider using the [JDBC plan](#database-jdbc) instead.
 
 {{% alert color="info" %}}
-This section provides technical details on how managed identity authentication works with Azure SQL. If you just need instructions to get started, the [Azure managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Azure SQL. If you just need instructions to get started, the [Azure managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authentication.
 {{% /alert %}}
 
 ##### 2.5.2.1 Prerequisites

@@ -73,7 +73,7 @@ You can also sort the order of the apps here by **Updated Date**, **Last Created
 The **Pending Invites** tab is only visible if you have any pending invites.
 {{% /alert %}}
 
-The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or deline the invite.
+The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or decline the invite.
 
 {{% alert color="info" %}}
 You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.

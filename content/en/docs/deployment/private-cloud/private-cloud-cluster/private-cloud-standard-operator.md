@@ -21,7 +21,7 @@ Before you can use the Mendix Operator in your namespace you need to install it 
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by opening [Global Navigation Menu](https://docs.mendix.com/developerportal/global-navigation/) and select **Deployment** and then and select **Private Cloud** option.
+1. Go to the Cluster Manager page by opening the [Global Navigation Menu](https://docs.mendix.com/developerportal/global-navigation/), and then clicking **Deployment** > **Private Cloud**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -31,28 +31,28 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 3. Select **Installation** from the navigation bar to the left of the page.
 
-Now you can download the Configuration Tool by doing the following:
+4. Download the Configuration Tool by doing the following steps:
 
-1. Choose the **Operating System** for your local computer.
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/choose-operating-system.png" class="no-border" >}}
+    1. Choose the **Operating System** for your local computer.
 
-2. Click **Download Executable**.
+       {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/choose-operating-system.png" class="no-border" >}}
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/download-executable.png" class="no-border" >}}
+    2. Click **Download Executable**.
 
-3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
+        {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/download-executable.png" class="no-border" >}}
 
-    {{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
+    3. Choose the **Mendix Operator Version** that you would like to install. If you have already installed the Mendix Operator, your currently installed version will be highlighted.
+    4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
 
-    {{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow *configuration* of previously installed Mendix Operator versions.{{% /alert %}}
+{{% alert color="info" %}}Mendix Operator version 2.\*.\* supports Kubernetes versions 1.19 and later. Mendix Operator version 1.12.\* supports Kubernetes versions 1.12 through 1.21. Choose the latest version that is supported by your Kubernetes cluster.{{% /alert %}}
 
-    {{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
+{{% alert color="info" %}}Versions earlier than 1.9.0 are only available to allow *configuration* of previously installed Mendix Operator versions.{{% /alert %}}
 
-    {{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the configuration tool that is compatible with the Mendix Operator you have installed. Both the ARM and AMD versions of the mxpc-cli tool are available to download.{{% /alert %}}
+{{% alert color="warning" %}}Once you've installed a certain version of the Mendix Operator into any namespace in the cluster, you should not install older versions of the Mendix Operator into the same cluster, including other namespaces.{{% /alert %}}
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/download-operator-version.png" class="no-border" >}}
+{{% alert color="info" %}}The installation and configuration tool only supports a limited range of Mendix Operator versions. If the Mendix Operator version in your namespace is too new or too old, the configuration tool will not be able to configure it. Download a version of the configuration tool that is compatible with the Mendix Operator you have installed. Both the ARM and AMD versions of the mxpc-cli tool are available to download.{{% /alert %}}
 
-4. Click the **Download** icon to download the installation and configuration tool. Make sure that it is stored somewhere on your path.
+{{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/download-operator-version.png" class="no-border" >}}
 
 ## 3 Signing in to the Platform {#openshift-signin}
 

@@ -247,6 +247,10 @@ This entity extends the GenAICommons.Response entity with values specific to Tit
 | --- | --- |
 | `Error` | The Error attribute describes the error message if the request violates the content moderation policy. |
 
+##### 4.1.1.9 TitanImageMappingHelper {#titan-image-mapping-helper}
+
+This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+
 #### 4.1.2 No GenAICommons dependency
 
 ##### 4.1.2.1 ListFoundationModelsRequest {#list-foundation-models-request}

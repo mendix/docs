@@ -239,6 +239,14 @@ This entity extends the GenAICommons.ImageOptions entity with values specific to
 | --- | --- |
 | `NegativeText` | The NegativeText attribute describes a text prompt to define what not to include in the image. |
 
+##### 4.1.1.9 TitanImageResponse {#titan-image-response}
+
+This entity extends the GenAICommons.Response entity with values specific to Titan Image models.
+
+| Attribute | Description |
+| --- | --- |
+| `Error` | The Error attribute describes the error message if the request violates the content moderation policy. |
+
 #### 4.1.2 No GenAICommons dependency
 
 ##### 4.1.2.1 ListFoundationModelsRequest {#list-foundation-models-request}

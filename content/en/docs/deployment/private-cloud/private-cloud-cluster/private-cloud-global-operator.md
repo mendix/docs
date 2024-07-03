@@ -96,7 +96,6 @@ To install and configure the Global Operator, perform the following steps:
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 
-
 ### 2.1 Results
 
 After you configure the managed namespace, the Agent and Operator pod are restarted automatically, so that the Global Operator namespace can process the newly added managed namespace. The managed namespace is added to the Operator configuration for the Global Operator namespace, and the required storage plans are created in the managed namespace.

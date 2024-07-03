@@ -104,7 +104,6 @@ All environments are defined as production environments, which means that [secur
 
 2. Select the deployment package from the list of deployment packages and click **Next**.
 
-
 3. An **Internal Name** (UUID) will be generated for you. This will be used when creating your environment to ensure that all the environment names in your namespace are unique.
 
     {{% alert color="info" %}}You can change the internal name if you wish, but do not reuse one which has already been used in this namespace, even if the environment it was used for has been deleted.{{% /alert %}}

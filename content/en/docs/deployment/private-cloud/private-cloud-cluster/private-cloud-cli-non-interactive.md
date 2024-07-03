@@ -44,7 +44,7 @@ The namespace-id and namespace-secret are only required when using Mendix for Pr
 
 For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
-For Global Operator Main namespace, use the follow command for Base Installation:
+For the Global Operator main namespace, use the following command for the base installation:
 
 ```shell {linenos=false}
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type> --global

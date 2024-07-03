@@ -9,7 +9,7 @@ description: "Describes the configuration and usage of the Star Rating widget, w
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
 
-{{< figure src="/attachments/appstore/use-contents/widgets/rating/example.gif" alt="Example" class="no-border" >}}
+{{< figure src="/attachments/appstore/widgets/rating/example.gif" alt="Example" class="no-border" >}}
 
 ## 2 Usage
 

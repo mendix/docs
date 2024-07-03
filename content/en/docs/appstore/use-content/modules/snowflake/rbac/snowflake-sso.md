@@ -24,21 +24,21 @@ Firstly, create a resource application in Azure Entra ID. The resource applicati
 2. Create an enterprise application. For more information, see [Configure Microsoft Azure AD for External OAuth](https://docs.snowflake.com/en/user-guide/oauth-azure) in Snowflake documentation.
 3. In Azure Entra ID, create a new resource application by clicking **App registration** > **New registration**.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/app-registration.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/app-registration.png" >}}
 
 4. Enter a descriptive name for the app, for example, *Snowflake OAUTH Resource*.
 5. Select the one tenant application, and then click **Register**.
 6. Click **Add an Application ID URI**, and then click **Add**.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/app-id-uri.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/app-id-uri.png" >}}
 
 7. On the **Expose an API** page, in the **Scopes defined by this API** section, click **Add a scope**.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/app-add-scope.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/app-add-scope.png" >}}
 
 8. In the **Scope name** field, enter *session:scope:AnyRole*.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/azure-entra-id-scope.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/azure-entra-id-scope.png" >}}
 
 9. Fill out the other mandatory fields, and then click **Add scope**.
 
@@ -50,21 +50,21 @@ After creating the resource application, create a client application. The client
 2. In the **API Permissions** page, add a new permission.
 3. In the **APIs my organization uses** tab, double-click the resource app that you created in the previous section.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/api-permissions.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/api-permissions.png" >}}
 
 4. Select **Delegated permissions**, and then click **Permission options** > **Add permission**.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/request-api-permissions.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/request-api-permissions.png" >}}
 
 5. Click **Grant admin consent**.
 6. In the left navigation menu, click **Certificates & secrets**.
 7. Add a new client secret.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/add-secret.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/add-secret.png" >}}
 
     Make sure that you copy the value of the secret and store it safely. The value is only shown after you first create the secret.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/secret-value.png" >}}    
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/secret-value.png" >}}    
 
 8. Register the callback URI for your Mendix app by performing the following steps:
 
@@ -74,22 +74,22 @@ After creating the resource application, create a client application. The client
     4. Select **Access tokens** and **ID tokens** as the tokens that you would like to issue.
     5. Select **Accounts in this organization directory only** to give access only for the account of the organization.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/callback-urls.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/callback-urls.png" >}}
 
 9. Add the user to the app by performing the following steps:
 
     1. In the left navigation menu, click **Enterprise applications**.
     2. Select your client app, and then click **Assign users and groups**.
 
-        {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/assign-user-group.png" >}}
+        {{< figure src="/attachments/appstore/modules/snowflake-sso/assign-user-group.png" >}}
 
     3. Click **Add user/group**.
 
-        {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/add-user-group.png" >}}
+        {{< figure src="/attachments/appstore/modules/snowflake-sso/add-user-group.png" >}}
 
     4.  Add the user that you previously created.
 
-        {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/add-user.png" >}}   
+        {{< figure src="/attachments/appstore/modules/snowflake-sso/add-user.png" >}}   
 
 ## 4 Configuring Snowflake Security Integration
 
@@ -125,25 +125,25 @@ To configure your Mendix application, perform the following steps:
 3. To add a new OpenID provider for Azure, access the OpenID setup page, add a new client configuration, and give it an **Alias** so you can identify it if you have more than one client configuration.
 4. Add the **Client ID**. You can find it in Azure as the **Application (Client) ID**:
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/azure-client-id.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/azure-client-id.png" >}}
 
 5. Select the **Client_secret_basic** as the **Client authentication method** and add the secret value.
 6. Enter `https://login.microsoftonline.com/<yourTenantID>/v2.0/.well-known/openid-configuration` as the **Automatic Configuration URL**.
 7. Click **Import configuration**.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/import-config.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/import-config.png" >}}
 
 8. Save the configuration.
 9. For the **scope**, select **openid**, **profile**, **email**, **offline_access**, and scope that you defined in Azure Entra ID.  
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/scope.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/scope.png" >}}
 
 10. For **UserParsing**, select the default method.
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/parsing.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/parsing.png" >}}
 
 11. Configure the **UserProvisioning** tab as shown in the following figure:
 
-    {{< figure src="/attachments/appstore/use-contents/modules/snowflake-sso/provisioning.png" >}}
+    {{< figure src="/attachments/appstore/modules/snowflake-sso/provisioning.png" >}}
 
 12. Run the application and log in with the user that you use in Snowflake and Azure.

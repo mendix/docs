@@ -30,15 +30,15 @@ If you need to configure your user settings so that you can run a pipeline for t
 
 For each run, you can view the following information:
 
-* Status
-* Run ID
-* Pipeline ID
-* Branch
-* Pipeline Name
-* Triggered by
-* Last Run
-* Duration
-* Trigger
+* Status – Whether the run succeeded, failed, or is in progress
+* Run ID – The unique identifier of the run
+* Pipeline ID – The unique identifier of the pipeline design used for the run (column hidden by default)
+* Branch – The branch, if **Teamserver push (Git)** was used as the pipeline's trigger
+* Pipeline Name – The name of the pipeline design used for the run
+* Triggered by – The user who triggered the pipeline run
+* Last Run – The number of days since the pipeline run
+* Duration – The time the pipeline took to complete the run
+* Trigger – The trigger type for the run
 
 Use the Column Selector ({{% icon name="view" %}}) at the top of the **Runs** table to customize which of these columns appear in the table.
 

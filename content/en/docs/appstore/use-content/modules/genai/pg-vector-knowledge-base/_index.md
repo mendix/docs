@@ -164,7 +164,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-database-configuration.png" >}}
+{{< figure src="/attachments/appstore/use-contents/modules/pgvector-knowledge-base/domain-model-database-configuration.png" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
 
@@ -187,7 +187,7 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 
 #### 4.1.2 Knowledge Base Interaction {#knowledgebase-domain-model}
 
-{{< figure src="/attachments/appstore/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" >}}
+{{< figure src="/attachments/appstore/use-contents/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" >}}
 
 ##### 4.1.2.1 `Chunk` {#chunk}
 

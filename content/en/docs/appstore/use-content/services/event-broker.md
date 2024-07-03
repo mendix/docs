@@ -37,13 +37,13 @@ Technical Contacts with a license to the Mendix Event Broker can manage its feat
 
 Users within the company's email domain that have a Mendix login can participate in the administration of the Mendix Event Broker as either a View or Admin user. They can also be blocked from participation.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal_user.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_internal_user.png">}}
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_internal_user_2.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_internal_user_2.png">}}
 
 Users that are not part of the customer organization (not within the email domain of the customer) can be invited within the same levels of access. Such users still require a standard Mendix login.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_external_user.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_external_user.png">}}
 
 #### 2.2.2 Environments and Spaces
 
@@ -68,19 +68,19 @@ The overview page contains a list of applications by environment within the orga
 * **Implemented but no access** - an application has implemented an event that it is not allowed to access, guaranteeing a failure to subscribe to and/or publish the event
 * **Has access but not implemented** - an application has been provided with more access than is required and thus can be secured more accurately
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_access_control_overview.png">}}
 
 Selecting the specific application provides an overview of the application's implemented events with their associated access.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview_2.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_access_control_overview_2.png">}}
 
 From this view, access to the individual events can be configured. Changes take effect immediately upon application.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_overview_3.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_access_control_overview_3.png">}}
 
 From the main overview page, an administrator can assign the default behavior of applications when they deploy to an environment for the first time by changing the configuration in the **Manage Default Access** dialog box.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_access_control_defaults.png">}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_access_control_defaults.png">}}
 
 From here, you can manage the default access settings:
 
@@ -95,7 +95,7 @@ This feature is currently in [Private Beta](/releasenotes/beta-features/). Conta
 
 Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker with other technologies, such as AWS SQS, AWS S3, or Google Pub/Sub, to send and receive events between your Mendix Cloud landscape and technologies outside of your Mendix Cloud landscape.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges.png" class="no-border" >}}
 
 ### 3.1 Standard Message Format
 
@@ -112,7 +112,7 @@ See [CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md#requir
 
 Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_1.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_1.png" class="no-border" >}}
 
 The creation process contains three steps on the Mendix side and policies that need to be implemented on the AWS side.
 
@@ -120,13 +120,13 @@ The creation process contains three steps on the Mendix side and policies that n
 
 Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges can transport events between the Mendix Event Broker and AWS SQS.  Other options in the list are currently not available for use.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_2.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_2.png" class="no-border" >}}
 
 ### 3.4 Configuration Details
 
 The next step of configuration is to select a [Space](#manage-mx-broker), Name, and Region for the bridge to operate in.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_3.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_3.png" class="no-border" >}}
 
 ### 3.5 Choose the Business Events to Integrate
 
@@ -135,25 +135,25 @@ The user must select events from the Event Broker landscape of events to send to
 1. Select ***Add Business Events** and search for the appropriate events. 
 2. Select the checkbox for the event you want to add, then click **Select**.
 
-    {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_4.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_4.png" class="no-border" >}}
 
 3. Configure each event with its own SQS URL for each direction that the event will be integrated.
 
-    {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_5.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_5.png" class="no-border" >}}
 
 4. Confirm the configuration with the AWS Access Policy.
 
-    {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_6.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_6.png" class="no-border" >}}
 
 5. After all events have been configured, click **Start** to start the Mendix Event Broker Bridge. This process will take several minutes to complete.
 
-    {{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_create_7.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_create_7.png" class="no-border" >}}
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_management.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_management.png" class="no-border" >}}
 
 Once the Mendix Event Broker Bridge has been successfully deployed, its configuration and status can be viewed on the **Overview** page.
 
-{{< figure src="/attachments/appstore/services/event-broker/event_broker_bridges_overview.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-contents/services/event-broker/event_broker_bridges_overview.png" class="no-border" >}}
 
 ### 3.6 Configure AWS Acesss Policy for Sending Messages to Mendix
 

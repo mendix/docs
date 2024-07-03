@@ -390,7 +390,7 @@ In case you encounter a `DocGenWaitForContentException` exception with error cod
 
 ##### 6.2.1.2 Navigation Exception
 
-In case you encounter a `DocGenNavigationException` exception wıth error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
+In case you encounter a `DocGenNavigationException` exception with error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
 | Error message                                                | Potential reasons                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |

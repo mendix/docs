@@ -67,3 +67,10 @@ The component details page also presents the following tabs:
     * You can find all your reviews on your [My Reviews](/appstore/overview/#my-reviews) page in the Marketplace home page.
   * If you are a developer of the component, you can **Reply** to a review.
 * **Developers** – This tab shows the names of the developers who most recently updated the component, with links to their [Mendix Profile](/community-tools/mendix-profile/).
+
+## 4 Labels {#labels}
+
+On the component details page, sometimes you can see the following labels:
+
+* **Recommended**: This indicates that this component meets your company's policies and guidelines, and therefore is recommended to use by your Mendix Admin.
+* **React-Ready**: This indicates this version of the component is optimized for React Client applications.

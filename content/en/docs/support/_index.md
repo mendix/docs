@@ -6,7 +6,7 @@ weight: 47
 no_list: false 
 description_list: true
 cascade:
-    - content_type: "Mendix Support"
+    - content_type: "Mendix Support Guide"
     - mendix_version: 10
 aliases:
     - /howtogeneral/support/index.html
@@ -257,7 +257,8 @@ Mendix Support can analyze these components if your app is running on Mendix Clo
 
 ### 10.7 Deployment Pipeline
 
-The deployment pipeline takes care of creating and deploying deployment packages. Read more about deployment options in [Deployment](/deployment/).
+The deployment pipeline takes care of creating and deploying deployment packages
+Please read all about the Deployment options in [Deployment](/developerportal/deploy/).
 
 Mendix Support can analyze this component if your app is running on Mendix Cloud, Mendix Cloud Dedicated, Private Cloud Connected, or SAP BTP through the Mendix Portal.
 

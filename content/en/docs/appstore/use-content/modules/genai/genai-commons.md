@@ -358,7 +358,7 @@ Use this microflow to control how the model should determine which function to l
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `Request` | [Request](#request) | Yes | The request for which to set a tool choice. |
-| `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumeration values. |
+| `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumaration values. |
 | `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values. |
 
 ###### 4.3.1.7.2 Return Value
@@ -399,11 +399,11 @@ Use this microflow to get the list of references that may be included in the mod
 
 | Name | Type | Description |
 |---|---|---|
-| `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
+| `ReferenceList` | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
 
 ### 4.3.3 Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
 We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 

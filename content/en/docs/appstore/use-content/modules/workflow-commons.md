@@ -125,7 +125,7 @@ Workflow Audit Trail is a detailed, chronological record that tracks all changes
 
 ### 5.2 Configuration {#configuration}
 
-Workflow Audit Trail uses [workflow events](/refguide/workflow-events/#configuration) to store data of a single or all workflows in your app. You can configure the audit trail to keep track of a specific set of events which you can configure in the **Event handlers** setting in [App Settings](/refguide/app-settings/#event-handlers) or through [workflow properties](/refguide/workflow-properties/#event-handlers). For more information about event handlers in workflows, see the [Event Handlers](/refguide/workflow-properties/#event-handlers) section in *Workflow Properties*.
+Workflow Audit Trail uses [workflow events](/refguide/workflow-events/#configuration) to store data of a single or all workflows in your app. You can configure the audit trail to keep track of a specific set of events which you can configure in the **Event handlers** setting in [App Settings](/refguide/app-settings/#event-handlers) or through [workflow properties](/refguide/workflow-properties/#event-handlers). For more information about event handlers in workflows, see the [Event Handlers](/refguide/workflow-properties/#event-handlers) secion in *Workflow Properties*.
 
 {{% alert color="info" %}}The event handlers added in workflow properties override the app-wide event handlers in **App Settings**. When adding event handlers at workflow level while the event handlers defined at app level are still applicable, then they should be added at workflow level as well. {{% /alert %}}
 

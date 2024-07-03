@@ -86,4 +86,4 @@ For more information on using this option, see [Deploy to the Cloud](/refguide8/
 ## 9 Read More
 
 * [Studio Pro Overview](/refguide8/studio-pro-overview/)
-* [Deployment](/deployment/)
+* [Deployment](/developerportal/deploy/)

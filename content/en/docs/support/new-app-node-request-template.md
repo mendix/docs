@@ -63,5 +63,5 @@ When your app is offboarded, only the deployed app is removed. You still retain 
 
 ## 5 Read More
 
-* [Deployment](/deployment/)
+* [Deployment Options](/developerportal/deploy/)
 * [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/)

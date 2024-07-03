@@ -322,7 +322,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Added settings 'Uploaded files path' and 'Temporary files path' to the Common Configuration panel.
 * Now the system log file m2ee_log.txt is closed immediately when the process cannot start.
 * Connecting to an already running server will be done asynchronously while starting the Service Console, so the form will be shown more quickly.
-* Now all configured paths will be validated when the server or the service starts.
+* Now all configurated paths will be validated when the server or the service starts.
 * Windows service exceptions will now be shown in the Service Console (so you don't have to go to Administrative Tools -> Event Viewer anymore).
 * Default folder of project path changed to 'Project' (was 'Application').
 * Default folders will be created if they do not exist when they are needed.

@@ -10,6 +10,10 @@ description: "Describes the configuration and usage of the Deep Link module, whi
 This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.<br>We will continue to actively support this module for Mendix 9.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+However, both the page URLs and microflow URLs are not yet able to support continuations, for instance, for certain SSO modules. As a result, you cannot configure the SSO correctly using page URLs and microflow URLs. If this affects your app, then you should not stop using the Deep Link module yet. We aim to add these features in Q2 2024.
+{{% /alert %}}
+
 ## 1 Introduction
 
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.

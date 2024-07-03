@@ -8,7 +8,7 @@ no_list: list
 
 ## 1 Introduction
 
-The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreover, you can view and add Mendix Admins of your company.
+The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreoever, you can view and add Mendix Admins of your company.
 
 ## 2 General Settings
 

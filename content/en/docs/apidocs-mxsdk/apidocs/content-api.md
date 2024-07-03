@@ -26,7 +26,7 @@ For details on how to generate a PAT, see the [Creating a PAT](/community-tools/
 
 Select the following : 
 
-Select **mx:marketplace-content:read** as the **Marketplace** scope in order to perform `GET` operations.
+Select **mx:marketplace-content:read** as the **Marketplace** scope in orde to perform `GET` operations.
 
 Copy and store the generated value (`{GENERATED_PAT}`) somewhere safe so you can use it to authorize your API calls.
 

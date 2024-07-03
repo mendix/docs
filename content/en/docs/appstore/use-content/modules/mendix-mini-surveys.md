@@ -96,7 +96,7 @@ If this occurs, try the following:
 
 * In the app, open the settings of the Mini Survey widget. Make sure that you have entered the correct survey ID.
 
-* In the app, enable the **TEST_MODE** constant. If the survey loads, then the survey has triggered an [op-out rule](#survey-rules) and will not show. In this case, clear the survey opt-out rules by clearing your browser cache or using incognito mode.
+* In the app, enable the **TEST_MODE** constant. If the survey loads, then the survey has triggered an [op-out rule](#survey-rules) and will not show. In this case, clear the survey opt-out rules by clearing your browser cache or using igcognito mode.
 
 ### 5.2 Surveys Do not Work Locally When Running Multiple Applications
 

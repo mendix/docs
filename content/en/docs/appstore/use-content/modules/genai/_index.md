@@ -1,7 +1,7 @@
 ---
 title: "Enrich Your Mendix App with GenAI Capabilities"
 url: /appstore/modules/genai/
-linktitle: "GenAI Capabilities of Mendix"
+linktitle: "GenAI Capabilites of Mendix"
 description: "Describes the general properties and common concepts of generative AI in the context of developing Mendix applications and illustrates the preferred way of leveraging platform-supported connectors in applications following the GenAI Commons patterns."
 ---
 

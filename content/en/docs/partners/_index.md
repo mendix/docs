@@ -6,7 +6,7 @@ weight: 50
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Strategic Partners"
+    - content_type: "Strategic Partners Guide"
     - mendix_version: 10
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---

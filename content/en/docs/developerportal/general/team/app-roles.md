@@ -48,7 +48,7 @@ Every deployed app has a Technical Contact. When you view the [Settings](/develo
 Provide the Technical Contact with the Scrum Master role. Because the Technical Contact is the contact for regular users, they need to be able to perform app operations on behalf of all Scrum Masters.
 {{% /alert %}}
 
-The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) or various [deployment](/deployment/) platforms. A Mendix application is always set up and delivered with a Technical Contact assigned to it. The Technical Contact for a Free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
+The Technical Contact manages the technical deployment settings of the app. The Technical Contact can be responsible for [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) or various [deployment](/developerportal/deploy/) platforms. A Mendix application is always set up and delivered with a Technical Contact assigned to it. The Technical Contact for a Free App is assigned when the app is deployed for the first time. The Technical Contact needs an MxID before Mendix can activate a license for an application.
 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in Mendix Cloud or on premises.
 

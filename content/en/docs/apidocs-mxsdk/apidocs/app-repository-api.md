@@ -278,7 +278,7 @@ An object with the following key-value pairs:
 |`latestCommit.author.name`|String|The full name of the commit author. {{% alert color="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
 |`latestCommit.author.email`|String|The email address of the commit author.|
 |`latestCommit.date`|String|The commit date and time in RFC 3339 format.|
-|`latestCommit.message`|String|The commit message.|
+|`latestCommit.message`|String|The comit message.|
 |`latestCommit.relatedStories`|Array|An array of related user story IDs, if available.|
 |`latestCommit.mendixVersion`|String, optional|The Mendix version used to make this commit, if available.|
 

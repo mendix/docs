@@ -57,7 +57,7 @@ You can instruct the model to format the output in a specific way. For example:
 
 ## 3 Use an Iterative Approach
 
-Mendix recommends that you test your prompt against different scenarios. Writing a prompt is therefore similar to modeling a microflow.
+Mendix recommends that you test your prompt against different scenarios. Writing a prompt is therefore similar to modelling a microflow.
 
 You should do the following:
 

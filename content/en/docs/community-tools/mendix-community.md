@@ -63,7 +63,7 @@ Each question has the following details:
 7. The number of answers to the question
 8. The number of emojis received 
 9. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
-10. The avatars of the Mendix community members who have answered and commented
+10. The avatars of the Mendix comminity members who have answered and commented
 
 {{% alert color="info" %}}
 Hover over the Mendix user name to see the profile card with their Mendix points. Click the Mendix user name on the card to go to their Mendix Profile.
@@ -265,7 +265,7 @@ Each idea has the following details:
 
 11. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
 
-12. The avatars of the Mendix community members who have commented
+12. The avatars of the Mendix comminity members who have commented
 
 #### 3.3.1 Searching and Filtering Ideas
 

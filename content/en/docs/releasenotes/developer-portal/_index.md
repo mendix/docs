@@ -203,7 +203,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 - We display a warning sign on the [Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
 - We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/collaborate/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
 - If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first.
-- We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/deployment/#mendix-cloud).
+- We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/developerportal/deploy/#mendix-cloud).
 
 #### Fixes
 
@@ -1456,7 +1456,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Web Modeler Improvements
 
-The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your [deployment](/deployment/) environment.
+The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your [deployment](/developerportal/deploy/) environment.
 
 #### Fixes
 

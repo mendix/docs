@@ -6,7 +6,7 @@ weight: 41
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Catalog"
+    - content_type: "Catalog Guide"
     - mendix_version: 10
 aliases:
     - /data-hub/data-catalog/index.html

@@ -3,7 +3,7 @@ title: "User Identifiers API"
 linktitle: "User Identifiers API"
 url: /apidocs-mxsdk/apidocs/user-identifiers-api/
 type: swagger
-description: "User Identifiers API allows Mendix Admins to perform operations related to user identifiers belonging to their company."
+description: "User Identifiers API allows Mendix Admins to perform operations related to user identifiers beloging to their company."
 weight: 112
 ---
 
@@ -49,7 +49,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 The following steps lead to retrieval of user's UUIDs of the email addresses provided in {emailAddresses}.
 
 1. Set up your authentication PAT. You must be a Mendix Admin.
-1. Create a request body containing the email addresses under `emailAddresses`. For example, to get user UUIDs of `jane.doe@domain.tld` and `john.doe@domain.tld`, provide a body like this:
+1. Create a request body containing the email adresses under `emailAddresses`. For example, to get user UUIDs of `jane.doe@domain.tld` and `john.doe@domain.tld`, provide a body like this:
 
     ```json {linenos=false}
     {

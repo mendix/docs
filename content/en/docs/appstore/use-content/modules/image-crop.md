@@ -71,7 +71,7 @@ These are the **Cropper** widget properties:
 * **newWidth** and **newHeight** – make sure these match the **Aspect ratio** used in the [Cropper Widget](#cropper) to make sure the image does not get transformed inconsistently
     * If either **newWidth** or **newHeight** are set to *0*, the image will be scaled based on the entered value while keeping the aspect ratio
     * If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
-* **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the thumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
+* **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the tumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
 
 ## 5 Developing This Marketplace Component
 

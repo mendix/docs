@@ -110,7 +110,6 @@ Once the managed namespace is configured, you can find the list with all the nam
 If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace.
 {{% /alert %}}
 
-
 ## 3 Licensing
 
 ### 3.1 Installing Private Cloud License Manager

@@ -15,12 +15,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### Portal Enhancements
 
-* We have renamed **Mendix for Private Cloud** to **Deployment** in upper navigation
-* We have removed the unreliable uptime field from Namespace overview page.
+* We have renamed **Mendix for Private Cloud** to **Deployment** in the upper navigation bar.
+* We have removed the **Uptime** field from the **Namespace overview** page.
 
 #### Deploy API
 
-* We have fixed the api specification for deploy API where limit and offset were not specified when trying to retrieve all applications deployed in Private cloud
+* We have fixed the API specification for the Deploy API where the limit and offset were not specified when trying to retrieve all applications deployed in Private Cloud.
 
 ### June 13th, 2024
 

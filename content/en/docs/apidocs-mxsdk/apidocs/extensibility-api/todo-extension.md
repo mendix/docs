@@ -19,25 +19,25 @@ In order to use this guide you will need the following tools installed on your l
 - Microsoft Visual Studio 2022 or another equivalent development environment such as visual studio code or Jetbrains Rider. This sample will assume that you are using Microsoft Visual Studio 2022.
 - Mendix Studio Pro 10.6 or higher
 
-## 2 Creating the Project and configuring it as an extension
+## 2 Creating the Project and Configuring It as an Extension
 
 ### 2.1 Creating the Project
 
 In order for your extension to be loaded correctly as an extension in Studio Pro you will first need to create a project. From within Visual Studio create a new project. Select the Class library project template.
 
-<img src="images/Todo_Step_1_Create_Project.png" alt="Select class library project template" style="width: 900px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-one.png" max-width=80% >}}
 
 ---
 
 After selecting class library you will have to pick a location where you would like to store your extension. Name the project Mendix.ToDoExtension
 
-<img src="images/Todo_Step_2_SaveToLocation.png" alt="Save the project to a location of your choice" style="width: 900px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-twi" max-width=80% >}}
 
 ---
 
 Next we set the framework version to .NET 8.0 (Long Term Support)
 
-<img src="images/Todo_Step_3_SetFrameworkVersion.png" alt="Set the framework version to .NET 8.0 (Long Term Support)" style="width: 900px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-three.png" max-width=80% >}}
 
 ---
 
@@ -51,19 +51,19 @@ To be usable as an extension your project needs to add the following:
 
 To reference the nuget package you will need to open the nuget package manager
 
-<img src="images/Todo_Step_4_Open_nuget_package_manager.png" alt="Open NuGet package manager from Tools > NuGet Package Manager > Manage NuGet Packages for Solution..." style="width: 900px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-four.png" max-width=80% >}}
 
 ---
 
 From the browse tab search for Mendix ExtensionsAPI.
 
-<img src="images/Todo_Step_5_add_extensions_api_to_project.png" alt="Find the NuGet package" style="width: 900px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-five.png" max-width=80% >}}
 
 ---
 
 Select the nuget package and click install.
 
-<img src="images/Todo_Step_6_add_extensions_api_to_project_p2.png" alt="Install the package" style="width: 300px"/>
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-six.png" max-width=80% >}}
 
 ---
 

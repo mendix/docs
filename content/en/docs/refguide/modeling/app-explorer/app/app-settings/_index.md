@@ -100,7 +100,7 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in the [Mendix Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 
@@ -392,9 +392,25 @@ A microflow selected for this setting will start every time a workflow changes i
 
 A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
-## 8 Deployment Tab {#deployment}
+## 8 Dependencies Tab {#deployment}
 
-This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
+{{% alert color="info" %}}
+The Deployment tab was renamed to **Dependencies** in Studio Pro 10.12.0.
+{{% /alert %}}
+
+This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory. It contains three tabbed sections.
+
+### 8.1 Overview
+
+This shows all the direct managed dependencies in your app listed by group and artifact. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
+
+### 8.2 Managed Dependency Exclusions
+
+This shows all the managed dependencies in your app listed by package name. This overview includes both direct and transitive dependencies. If you have conflicts between different dependencies, you can uncheck here any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
+
+### 8.3 Userlib Exclusions
+
+This shows the libraries from the userlib directory and allows you to exclude them from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your 'userlib' folder.
 
 ## 9 Solution Tab {#solution}
 

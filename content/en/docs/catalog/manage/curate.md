@@ -195,7 +195,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
 Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
 
-For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register OData Resources in the Catalog*.
+For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register Resources in the Catalog*.
 
 ## 6 Discoverable and Validated {#discoverability}
 

@@ -13,7 +13,7 @@ You can also set log levels to provide more or less information when testing loc
 
 ## 2 Log Levels {#log-levels}
 
-### 2.1 Critical
+### 2.1 Critical{#critical}
 
 Critical is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. The 3.0 cloud treats these messages as alerts and will notify you on the cloud dashboard.
 
@@ -72,7 +72,7 @@ This list is currently incomplete and is being updated.
 | Integration API | Logs messages related to the documentation of integration APIs. |
 | JSON | JSON messages from the Mendix Client to the Runtime Server. See [JSON](#json), below, for more information |
 | JSON Export | Logs messages related to export mappings to JSON. |
-| JSON Import | Logs messages related to improt mappings from JSON. |
+| JSON Import | Logs messages related to import mappings from JSON. |
 | Jetty | Logs messages from the internal Jetty webserver that handles HTTP requests between the runtime and the outside world. |
 | LocalFileSystemStore | Logs messages related to file handling if you are using local file system as your file store. |
 | Logging | Logs messages related to the logging framework used by Mendix. |

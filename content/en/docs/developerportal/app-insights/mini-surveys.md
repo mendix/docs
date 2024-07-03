@@ -13,11 +13,11 @@ The Mini Surveys feature consists of two parts:
 
 * A pop-up survey in your app for users to fill in
 
-* A back-end dashboard in the Developer Portal for you to create surveys and aggregate your survey results.
+* A back-end dashboard in the [navigation pane](/developerportal/#navigation-pane) of **Apps** for you to create surveys and aggregate your survey results.
 
-You begin by creating a mini survey in the Developer Portal, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Developer Portal and export the responses to an XLSX file.
+You begin by creating a mini survey from the **Mini Survey** page in the navigation pane of **Apps**, and then you implement the mini survey by configuring the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module in Studio Pro. After the mini survey is running, you can view responses that have been collected in Mini Surveys in the Mendix Portal and export the responses to an XLSX file.
 
-This document first describes all the pages in Mini Surveys in the Developer Portal, and then it describes the procedure for running a mini survey.
+This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
 
 ## 2 Mendix Mini Survey Configuration 
 
@@ -137,7 +137,7 @@ You can collect test data using two methods:
 
 To create a mini survey, follow these steps:
 
-1. Open the app in the Developer Portal and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
+1. Open the app in [Apps](https://sprintr.home.mendix.com/) and click **Mini Surveys** in the sidebar. What you see depends on whether there are existing mini surveys for the app:
 
    * If there are existing mini surveys for the app, [Survey Overview](#survey-overview) opens, which lists all the existing mini surveys and shows the **Create New Survey** button
    * If there are no existing mini surveys for this app, you only see the **Create New Survey** button
@@ -168,7 +168,7 @@ Now you can [implement the mini survey](#implement-survey).
 
 To edit a mini survey, perform the following steps:
 
-1. Open the app in the Developer Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 3. On the **Active** tab, click the mini survey that you want to edit. The [survey details](#survey-details) page opens.
 4. Go to the **Settings** tab.
@@ -200,7 +200,7 @@ To obtain an API key for the implementation, follow these steps:
 To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
 1. Open your app in Studio Pro.
-2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the module into your app.
+2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
 ### 3.4 Viewing/Exporting Responses {#view-export-responses}
@@ -209,7 +209,7 @@ When the start time that you set for the mini survey is reached, the survey will
 
 To check the responses that have been collected, follow these steps::
 
-1. Open the app in the Developer Portal.
+1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 
 2. Click **Mini Surveys** in the sidebar. The [Survey Overview](#survey-overview) page opens.
 
@@ -236,7 +236,7 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 ### 3.6 Unfinished Surveys
 
-If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Developer Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
+If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in **Apps**. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
 ## 4 Troubleshooting & FAQ
 

@@ -404,7 +404,7 @@ paths:
           type: string
           format: uuid
           example: c533ee0b-f7db-4e62-868b-1192d392ccec
-        description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+        description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       - name: namespaceId
         in: path
         required: true
@@ -569,7 +569,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of the Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       x-examples:
         example-appid: c533ee0b-f7db-4e62-868b-1192d392ccec
     error:
@@ -1455,7 +1455,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     jobId:
       name: jobId
       in: path

@@ -12,11 +12,17 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### June 14, 2024
+
+#### New Features
+
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
+
 ### May 16, 2024
 
 #### New Features
 
-* We have added a new tab to the **Apps** page: the [Private Cloud](/control-center/apps/#3-private-cloud-connected) tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
+* We have added a new tab to the **Apps** page: the [Private Cloud](/control-center/apps/#pc-connected) tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
 
 ### April 4, 2024
 

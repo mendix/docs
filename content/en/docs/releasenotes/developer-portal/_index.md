@@ -1,20 +1,42 @@
 ---
-title: "Developer Portal"
+title: "Apps"
 url: /releasenotes/developer-portal/
-description: "Release notes for all project management parts of the Mendix Developer Portal"
+description: "Release notes for app management and other parts of Apps"
 weight: 20
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the app management functionality and other features of the [Mendix Developer Portal](/developerportal/).
+These release notes cover changes to the app management functionality and other features of the [Apps](/developerportal/).
 
 {{% alert color="info" %}}
 For release notes on Mendix Cloud and deployment options, see [Deployment](/releasenotes/developer-portal/deployment/).
 {{% /alert %}}
 
-To see the current status of the Mendix Developer Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
+To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
+
+### June 30, 2024
+
+#### New features
+
+* We have added a new endpoint to our public [Projects API](/apidocs-mxsdk/apidocs/projects-api/). This enables you to automate changing existing team member's role assignment or update your pinned apps overview.
+
+### June 27, 2024
+
+#### New Feature
+
+* We added the [Insights](/developerportal/portfolio-management/insights/) page in the Portfolio Management app. It is a dashboard that provides critical data and visualizations to help you gain insights into the portfolio.
+
+### June 14, 2024
+
+#### New Features
+
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
+
+### Improvements
+
+* To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 
@@ -181,7 +203,7 @@ To see the current status of the Mendix Developer Portal, see [Mendix Status](ht
 - We display a warning sign on the [Settings](/developerportal/collaborate/general-settings/) page in the Developer Portal if an app has no Scrum Master or if a licensed app has no Technical Contact. This can happen if a person with those roles submits a "forget me" request with us.
 - We merged the **History** tab on the [Teams](/developerportal/general/team/) page and the [History](/developerportal/collaborate/general-settings/#history) tab on the **Settings** page into one and we made sure you can download the history log. This is to prepare for the implementation of an audit trail retention policy sometime soon.
 - If you have [connected your project to a Jira](/developerportal/project-management/jira-connector/) board, you can now alter the settings without having to deactivate the connection first.
-- We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/developerportal/deploy/#mendix-cloud).
+- We have stopped support for IBM as a cloud target. All projects currently deployed to the IBM cloud have been enabled for the [Mendix Cloud](/deployment/#mendix-cloud).
 
 #### Fixes
 
@@ -1107,7 +1129,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Fixes
 
-- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/my-marketplace/#content-groups) in the Marketplace.
+- We fixed an issue where newly-added Company Admins did not get access to edit [user groups](/appstore/overview/#content-groups) in the Marketplace.
 
 ## 2020
 
@@ -1434,7 +1456,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Web Modeler Improvements
 
-The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your [deployment](/developerportal/deploy/) environment.
+The Web Modeler can now be enabled for all types of apps. You can do this on the **Settings** > **General** page of your app. If you have a licensed app, you will also need to choose your [deployment](/deployment/) environment.
 
 #### Fixes
 

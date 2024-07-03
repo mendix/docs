@@ -25,7 +25,7 @@ Before you begin, make sure you have the following:
 
 A file called *dependencies.json* lists all published and consumed services in your app. This file contains information you will need to make the API calls in the next steps.
 
-Create an `.mda` package that includes *dependencies.json*. Go to the **Environments** page in the Developer Portal and click **Create Package** From Team server, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/) for information on how to build a Mendix Deployment Package).
+Create an `.mda` package that includes *dependencies.json*. Open your app in [Apps](https://sprintr.home.mendix.com/), go to the **Environments** page and then click **Create Package** From Team server, or run `mxbuild` (see [MxBuild](/refguide/mxbuild/) for information on how to build a Mendix Deployment Package).
 
 You can also find *dependencies.json* in **Deployment** > **Model** folder of your Mendix application. 
 
@@ -74,7 +74,7 @@ To register the service endpoint (or endpoints), you will need:
 * A [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat)
 * The `application_UUID`
 * The `environment_UUID`
-* The Service `Path`, `Name`, and `ContractType`
+* The Service `Path`, `Name`, and `Type`
 * Service `Version` and `Security Scheme`
 * Service `Contract` with `Type` and `Value`
 

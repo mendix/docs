@@ -16,7 +16,7 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
 * the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
@@ -196,7 +196,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 
-## 6 Microsoft Azure SQL
+## 6 Microsoft Azure SQL {#azure-sql}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 

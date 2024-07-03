@@ -859,9 +859,9 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `UserPrompt (String)`, `AmazonBedrockConnection`, `GenAICommons.ImageOptions (optional)`| `GenAICommons.Response`|
+| `UserPrompt (String)`, `AmazonBedrockConnection (object)`, `GenAICommons.ImageOptions (object, optional)`| `GenAICommons.Response (object)`|
 
-`GenAICommons.ImageOptions` is a optional parameter that can be ommitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
+`GenAICommons.ImageOptions` is an optional parameter that can be ommitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
 
 `GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons. 
 
@@ -908,6 +908,16 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 | Input | Output |
 | --- | --- |
 | `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+
+##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
+
+Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the *NegativeText* attribute.
+
+This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `NegativeText (string, optional)` | `TitanImageOptions_Extension (object)` |
 
 #### 4.2.3 Other Operations
 

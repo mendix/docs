@@ -93,13 +93,13 @@ registry:
 
 To configure a managed namespace inside a Global Operator, the namespace configuration should only be applied on managed namespace and not Global Operator namespace. For more information, check Global Operator documentation.
 
-Following command needs to be applied for managed namespace configuration:
+For managed namespace configuration, apply the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
-Apply below config file, for the managed namespace configuration.
+Below you can find an example config file for the managed namespace configuration.
 
 ```yaml
 namespace: managedNamespace

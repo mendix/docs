@@ -456,9 +456,9 @@ In the Postgres plan configuration, enter the following details:
 {{% alert color="warning" %}}
 Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     
-    * `mendix-operator`
-    * `mendix-agent`
-    * `mendix-storage-provisioner`
+* `mendix-operator`
+* `mendix-agent`
+* `mendix-storage-provisioner`
 
 {{% /alert %}}
 
@@ -476,11 +476,11 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 3. Fill in the following details:
 
-* **Federated credential scenario** - Kubernetes accessing Azure resources
-* **Cluster Issuer URL** - the Cluster OIDC URL from step 1
-* **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
-* **Service Account** - the **K8s Service Account** specified in the Postgres plan configuration
-* **Name** - any value
+    * **Federated credential scenario** - Kubernetes accessing Azure resources
+    * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+    * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+    * **Service Account** - the **K8s Service Account** specified in the Postgres plan configuration
+    * **Name** - any value
 
 4. Assign this *Postgres Admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
@@ -673,9 +673,9 @@ In the SQL Server plan configuration, enter the following details:
 {{% alert color="warning" %}}
 Do not use the name of an existing Service Account (environment name), or one of the reserved Kubernetes Service Account names:
     
-    * `mendix-operator`
-    * `mendix-agent`
-    * `mendix-storage-provisioner`
+* `mendix-operator`
+* `mendix-agent`
+* `mendix-storage-provisioner`
 
 {{% /alert %}}
 
@@ -711,11 +711,11 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 3. Fill in the following details:
 
-* **Federated credential scenario** - Kubernetes accessing Azure resources
-* **Cluster Issuer URL** - the Cluster OIDC URL from step 1
-* **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
-* **Service Account** - the **K8s Service Account** specified in the SQL Server plan configuration
-* **Name** - any value
+    * **Federated credential scenario** - Kubernetes accessing Azure resources
+    * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+    * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+    * **Service Account** - the **K8s Service Account** specified in the SQL Server plan configuration
+    * **Name** - any value
 
 4. Assign this *SQL Admin* Managed Identity a [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
@@ -1703,17 +1703,17 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 3. Fill in the following details:
 
-* **Federated credential scenario** - Kubernetes accessing Azure resources
-* **Cluster Issuer URL** - the Cluster OIDC URL from step 1
-* **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
-* **Service Account** - the **K8s Service Account** specified in the Blob Storage plan configuration
-* **Name** - any value
+    * **Federated credential scenario** - Kubernetes accessing Azure resources
+    * **Cluster Issuer URL** - the Cluster OIDC URL from step 1
+    * **Namespace** - the Kubernetes namespace where the Operator is installed; for Global Operator installations, you must specify the managed namespace in the **Namespace** field.
+    * **Service Account** - the **K8s Service Account** specified in the Blob Storage plan configuration
+    * **Name** - any value
 
 4. Grant the *Blob Storage Admin* Managed Identity the following permissions:
 
-* A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
-* A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
-* A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
+    * A [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role scoped to the blob storage account.
+    * A [Role Based Access Control Administrator](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#role-based-access-control-administrator) role scoped to the blob storage account, and constrained to only have permissions to add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to Service principals.
+    * A [Managed Identity Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#managed-identity-contributor) role in its resource group.
 
 #### 3.4.2 Azure Blob Storage (static credentials){#blob-azure-static}
 

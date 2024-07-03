@@ -108,7 +108,7 @@ If you are using the Mendix platform to manage credentials then your password ha
 
     You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-* Passwords on the Mendix platform must fulfil the following criteria:
+* Passwords on the Mendix platform must fulfill the following criteria:
 
     * The password must contain 
         * at least one special character from `` `~!@#$%^&*()-_+=[]{};:'"\|,.<>/? ``

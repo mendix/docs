@@ -259,7 +259,7 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
     * **New**: opens the **Form title** dialog box that contains the following items:
         * **Column number**: the number of the column, same as **Column index**
         * **Automatic resize**
-            * If selected, the column width is automatically adjusted and **Column width** is unavailble
+            * If selected, the column width is automatically adjusted and **Column width** is unavailable
             * If unselected, the **Column width** property becomes available
                 * **Column width (pixels)**: the fixed width of the column in pixels
     * **Edit**: opens the **Form title** dialog box where you can make changes to the selected column settings

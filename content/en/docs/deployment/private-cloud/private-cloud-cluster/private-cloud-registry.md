@@ -44,7 +44,7 @@ In all other cases, Mendix for Private Cloud will use HTTPS to access the regist
 
 ### 1.3 Push and Pull URLs
 
-Mendix for Private Cloud builds images from inside the cluster. After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resouce;
+Mendix for Private Cloud builds images from inside the cluster. After an image is built, the Mendix Operator sets (updates) image URLs of the app's Kubernetes Deployment resource;
 to start a copy of the app, Kubernetes will pull the image directly from the registry.
 
 If the registry is hosted externally (outside the cluster), there is no difference between connecting to the registry from a pod in the cluster, or from the cluster node. However, if the registry is hosted in the cluster, there are the following differences:
@@ -143,7 +143,7 @@ Use the following configuration options:
 * **Pull URL** - specify the registry IP address returned by `oc get svc` earlier
 * **Registry name** - specify the repository name you created on step 1, for example: `mendixapps/mynamespace`
 * **Region** - specify the ECR region, for example `eu-west-1`
-* **Authentication** - choose the authentication mode, *Kubernetes Service Account* (recommended) or *AWS Static Credentials* (not recommented by AWS)
+* **Authentication** - choose the authentication mode, *Kubernetes Service Account* (recommended) or *AWS Static Credentials* (not recommended by AWS)
     * **IAM Role ARN** - the role ARN you created on step 3
     * **K8s Service Account** - the Kubernetes service account that the Mendix Operator should use for authentication; it should match the service account name specified on step 4; the account will be created automatically when you apply the changes
     * **Access Key ID** - the IAM access key to use for static authentication (only when using the *AWS Static Credentials* mode)
@@ -174,7 +174,7 @@ To use ACR with the Mendix Operator, you will need to:
 
     Write down the `USER_ASSIGNED_CLIENT_ID`, it will be needed later.
 
-3. Open the ACR Access Control (IAM) tab, and add an `AcrPush` role assigment to the Managed Identity created on step 2.
+3. Open the ACR Access Control (IAM) tab, and add an `AcrPush` role assignment to the Managed Identity created on step 2.
 
 Use the following configuration options:
 
@@ -230,7 +230,7 @@ Use the following configuration options:
 * **Registry name** - the repository name, for example: `mendixapps/mynamespace`.
     * For some registries, the repository might need to be created first.
     * Registries could also have security or technical limitations on what can be specified as the repository name.
-* **With authentication** - allows to specify the username and password used to access the registry. This is required for almost all registries, the only exception is self-hosted registries in test envrionments such as MicroK8s, k3s or Minikube.
+* **With authentication** - allows to specify the username and password used to access the registry. This is required for almost all registries, the only exception is self-hosted registries in test environments such as MicroK8s, k3s or Minikube.
 * **Add credentials to pull secrets in default service account** - if your cluster is not using built-in authentication, checking this option will automatically image pull credentials to the `default` Kubernetes ServiceAccount. This would enable authentication when pulling app images.
 
 #### 2.6.1 Example Configurations
@@ -277,7 +277,7 @@ To access quay.io, you will need to create a robot account, and give this accoun
 | Password            | Token (password) for a user or account with push and pull permissions |
 
 Check your image registry documentation to see if repositories can be created automatically (on push) or need to be pre-created.
-Some registries impose limitations on repository names, for example the repositiry path cannot have more than three parts.
+Some registries impose limitations on repository names, for example the repository path cannot have more than three parts.
 
 ### 2.8 Existing Docker Registry Secret
 

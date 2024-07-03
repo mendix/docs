@@ -75,7 +75,7 @@ The description of the items that you can select are as follows:
 
 * **DB RAM**:  the size the RAM allocation for database operations
 
-* **DB Storage**: the size of the dabase storage
+* **DB Storage**: the size of the database storage
 
 * **DB Storage Extra**: the extra storage of the database
 
@@ -127,7 +127,7 @@ The description of the items that you can select are as follows:
 
 * **NamespaceID**: the ID of the namespace
 
-*  **Namespace**: the Kubernets namespace
+*  **Namespace**: the Kubernetes namespace
 
     {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 
@@ -267,7 +267,7 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
-You can delete or deactivate a single app, or deactive (or activate) mutilple apps in one go.
+You can delete or deactivate a single app, or deactivate (or activate) multiple apps in one go.
 
 The consequences of deactivating and deleting an app are as below:
 

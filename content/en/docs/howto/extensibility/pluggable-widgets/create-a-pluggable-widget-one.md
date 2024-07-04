@@ -274,7 +274,7 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
     </propertyGroup>
     ```
 
-1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBox.d.ts*.
+1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBoxProps.d.ts*.
 
     ```tsx
     return <TextInput value={value} tabIndex={props.tabIndex} />;

@@ -35,7 +35,7 @@ When comparing a conventional Mendix web application with the same application u
 | Largest Contentful Paint | 2.0s | 1.8s | -10% |
 | Speed Index | 1.6s | 1.3s | -19% |
 
-Mendix believes the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. By this metric, the new React client performs 10% faster than the previous client – a significant change that requires no optimization work at all on the application model.
+Mendix believes the most important metric for most web applications is largest Contentful paint, because it represents when the majority of the application has been loaded successfully. By this metric, the new React client performs 10% faster than the previous client – a significant change that requires no optimization work at all on the application model.
 
 ### 1.2 Incremental Page Loading{#incremental-page-loading}
 

@@ -332,6 +332,7 @@ configuration details.
 [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
 
 Mendix Operator can perform the following tasks:
+
 * Provide a static access key and other credentials to environments (a static config).
 * Handle the lifecycle of a storage container by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 (or later versions).
 

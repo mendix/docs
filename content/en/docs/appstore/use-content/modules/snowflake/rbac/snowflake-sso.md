@@ -87,7 +87,7 @@ After creating the resource application, create a client application. The client
 
         {{< figure src="/attachments/appstore/modules/snowflake-sso/add-user-group.png" >}}
 
-    4.  Add the user that you previously created.
+    4. Add the user that you previously created.
 
         {{< figure src="/attachments/appstore/modules/snowflake-sso/add-user.png" >}}   
 

@@ -19,6 +19,7 @@ This module allows Mendix developers with little or no experience in building wo
 * Page templates to generate task pages, task admin, an inbox, and different dashboards
 * Attachments layer on top of workflows
 * Comments section to use with workflows
+* Audit trail for tracking workflows
 
 {{% alert color="info" %}}For Workflow Commons version 2.4.0 and above, attachments are (an optional) part of comments. This means that the WorkflowAttachment entity is associated with the WorkflowComment entity. Security settings for the WorkflowAttachment entity are based on the workflows in which a user is involved, since the context of a specific workflow is not known in advance in Workflow Commons. If you would like to set custom security for attachments, you need to configure the attachment entity in your domain model and associate it with the workflow context entity of the workflow. {{% /alert %}}
 
@@ -109,11 +110,68 @@ You can find the following microflows in Workflow Commons:
     1. Set **Workflow state change** to *OCh_Workflow_State*
     2. Set **User task state change** to *OCh_WorkflowUserTask_State*
 
-## 5 Usage
+## 5 Workflow Audit Trail
+
+{{% alert color="info" %}}
+The audit trail feature was introduced in [Workflow Commons 3.6.0](https://marketplace.mendix.com/link/component/117066). It leverages the use of [workflow events](/refguide/workflow-events/#event-mechanism) to track all events and actions that have taken place in the workflows in your application.
+{{% /alert %}}
+
+Workflow Audit Trail is a detailed, chronological record that tracks all changes and actions taken within a workflow process. It documents who performed each action, when it was done, and what specific changes were made. This helps ensure transparency, accountability, and traceability, allowing for easy identification of errors, monitoring of compliance with regulations, and verification of proper procedure adherence.
+
+### 5.1 Features
+
+* Logs all events that took place on a specific workflow or all workflows in your application
+* Provides an export workflow audit trail to Excel
+
+### 5.2 Configuration {#configuration}
+
+Workflow Audit Trail uses [workflow events](/refguide/workflow-events/#configuration) to store data of a single or all workflows in your app. You can configure the audit trail to keep track of a specific set of events which you can configure in the **Event handlers** setting in [App Settings](/refguide/app-settings/#event-handlers) or through [workflow properties](/refguide/workflow-properties/#event-handlers). For more information about event handlers in workflows, see the [Event Handlers](/refguide/workflow-properties/#event-handlers) section in *Workflow Properties*.
+
+{{% alert color="info" %}}The event handlers added in workflow properties override the app-wide event handlers in **App Settings**. When adding event handlers at workflow level while the event handlers defined at app level are still applicable, then they should be added at workflow level as well. {{% /alert %}}
+
+To enable audit trail for all workflows in your app, follow the steps below:
+
+1. Go to **App Settings** > **Workflows** tab.
+2. In the event handlers section, click the **New** button.
+3. In the **Add event handler** dialog box, give the new event handler a name in the **Name** property (for example: *AuditTrail*).
+4. In the **When** section, select the events you want to subscribe to from the list. 
+5. In the **What** section, select the **WFEH_WorkflowEvent_AuditTrail** microflow from the list. You can find it in the module (**UseMe** > **Event handlers**).
+6. To view the audit trail, a user needs to be assigned the **Administrator** module role.
+
+To enable audit trail for a specific workflow in your app, go to the **Events** tab in the workflow properties dialog box. Follow the steps 2 to 6 above to configure the event handler. 
+
+The image below represents an example of how to configure audit trail event handler in **App Settings** or on a specific workflow level in the **Properties** of the workflow:
+
+{{< figure src="/attachments/appstore/modules/workflow-commons/configuration.png" alt="configuration" max-width=90% >}}
+
+{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time and could contain many non-human activities. In this case, we advice to only select a limited set of events depending on your need and to regularly delete old audit records. {{% /alert %}}
+
+### 5.3 Viewing the Audit Trail
+
+After completing the steps in the [Configuration](#configuration) section above, you now have the audit trail setup and will start logging your workflow events data to the audit trail. 
+
+{{% alert color="info" %}}Any workflow activities executed before the audit trail event handler was added will NOT be included in the audit trail. {{% /alert %}}
+
+You can view audit trail on three levels:
+
+1. **All workflows**: Here you can find all audit trail logs for all workflows in your app. You can find this page by navigating to **Workflow Admin Center** page and then clicking **Workflow audit trail**.
+
+    {{< figure src="/attachments/appstore/modules/workflow-commons/admin-center.png" alt="admin-center" >}}
+
+2. **A workflow definition**: Here you can see all audit trail logs for all instances of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > **Audit trail** tab.
+3. **A specific workflow instance**: Here you can see all audit trail logs for a specific instance of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > in the **Workflow** tab, select a workflow > **Audit trail** tab.
+
+### 5.4 Q&A
+
+* Should I always select all events to be audited?
+
+    Answer: No, in general, this depends on the purpose of the workflow and how relevant it is to keep a record of certain activities that have been executed. In many situations, it can be sufficient to just record the outcomes of user tasks. Therefore, only select those events in the workflow event handler that are relevant to be recorded. This can differ from workflow definition to workflow definition. No changes to the events handler workflow are required. Only select those events that are needed. Keep in mind that the audit table can grow rapidly, depending on selected events.
+
+## 6 Usage
 
 For more information on how to use Workflow Commons in an app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/) in the *Studio Pro Guide*.
 
-## 6 Read More
+## 7 Read More
 
 * [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/)
 * [Data Widgets](/appstore/modules/data-widgets/)

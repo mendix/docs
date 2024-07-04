@@ -120,7 +120,7 @@ You can see all the Marketplace content you have trials for on this page:
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
 
-The table presents the **Names** of products you have trials for. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of products you have trials for.
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. 
 
@@ -173,53 +173,11 @@ You can see all the content shared within your organization on this page, which 
 
 {{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
 
-The table presents the **Names** of the products your company has subscribed to. Clicking a product name takes you to the [service management dashboard](#service-management-dashboard) for the component. 
+The table presents the **Names** of the products your company has subscribed to.
 
-The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company. The Technical Owner can create binding keys on the [service management dashboard](#service-management-dashboard) and do other tasks.
+The table also presents the **Technical Owner** of the company subscription. When subscribing for a paid component, you can assign the **Technical Owner** role to a user in your company.
 
 Finally, the table presents the plan's **Status**, the subscription **Plan**, and the **Expires On** date for the plan.
-
-#### 4.2.1 Service Management Dashboard {#service-management-dashboard}
-
-This dashboard presents an overview of your service instances and binding keys. A service instance is what Mendix creates when you subscribe to a commercial Marketplace product. After the service instance has been created, you need binding keys to use the commercial Marketplace product in your app.
-
-{{% alert color="info" %}}
-Only a Technical Owner for the subscription can create binding keys. When a user from your company wants to request a free trial (and there is already a Technical Owner), they will not have separate unique binding keys. The Technical Owner has to provide the binding keys to the user.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Only a Technical Owner for the subscription can edit the instance name and manage the instance’s settings on external platforms. 
-{{% /alert %}}
-
-This page presents the **Binding Key Names** that have been created as well as details on the user who created the binding keys (**Created By**) and when the binding keys were created (**Created At**). Click **Delete** to delete that group of binding keys.
-
-{{< figure src="/attachments/appstore/overview/my-marketplace/binding-keys.jpg" class="no-border" >}}
-
-You can also select a group of binding keys and click **Manage Instance** to go to the component provider's configuration page, where you can do further configuration.
-
-{{% alert color="info" %}}
-This additional management option is only available for specific commercial Marketplace products where necessary.
-{{% /alert %}}
-
-##### 4.2.1.1 Creating Binding Keys {#creating-binding-keys}
-
-To create binding keys for a specific [subscription](#company-subscriptions), click **Create Binding Keys**. In the dialog box, enter a name for the keys that includes the name of the app where you intend to use the component you have subscribed to (so that it is clear to other users where the keys are used).
-
-After you click **Create Keys**, a page appears with your binding keys. Click **Copy** for each key and manually save the keys somewhere safe.
-
-{{% alert color="warning" %}}
-Once you close this page, you will not be able to retrieve the keys again.
-{{% /alert %}}
-
-For more information, see the [Using the Binding Keys](#using) section below.
-
-Click **Return to the overview** to go to the main page of the dashboard. 
-
-##### 4.2.2.2 Using the Binding Keys {#using}
-
-When you are developing your app, set the commercial Marketplace product's binding keys as [constants](/refguide/configuration/#constants) in the [App Settings](/refguide/app-settings/).
-
-Refer to the documentation on specific commercial Marketplace products for how to use the binding keys (for example, see the [Configuring the License Token](/partners/siemens/3d-viewer/#configure-license-token) section of *3D Viewer*).
 
 ### 4.3 Content Groups {#content-groups}
 

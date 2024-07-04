@@ -35,7 +35,7 @@ When comparing a conventional Mendix web application with the same application u
 | Largest Contentful Paint | 2.0s | 1.8s | -10% |
 | Speed Index | 1.6s | 1.3s | -19% |
 
-Mendix believes the most important metric for most web applications is largest contentful paint, because it represents when the majority of the application has been loaded successfully. By this metric, the new React client performs 10% faster than the previous client – a significant change that requires no optimization work at all on the application model.
+Mendix believes the most important metric for most web applications is largest Contentful paint, because it represents when the majority of the application has been loaded successfully. By this metric, the new React client performs 10% faster than the previous client – a significant change that requires no optimization work at all on the application model.
 
 ### 1.2 Incremental Page Loading{#incremental-page-loading}
 
@@ -77,7 +77,7 @@ Fore more information on React and APIs in Mendix, see our [Mendix 10 React Clie
 
 To enable the React client for your Mendix project, make sure it fulfills the prerequisites above. Then, enable the React client in [App Settings](/refguide/app-settings/#react-client).
 
-The migration mode will show warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
+The migration mode will show deprecation warnings instead of errors for all incompatible widgets found in your project. This can help you explore and test the React client without being blocked by errors. When deploying an app leveraging the React client, we recommend setting **React Client** to **Yes** and resolving all errors before deploying.
 
 ## 3 Migration Guide{#migration-guide}
 

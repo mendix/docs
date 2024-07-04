@@ -290,6 +290,11 @@ You can picture the authentication as shown below:
 
 {{< figure src="/attachments/appstore/modules/sap-xsuaa-connector/xsuaa-diagram-config-via-group.png" class="no-border" >}}
 
-## 5 Upgrading the XSUAA Connector
+## 5 User Management
 
-Version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses a new user administration module called **SapAuthentication**. If you are upgrading from version 2.0.0 or below, you will need to migrate your existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.
+Starting from version 2.1.1, the XSUAA Connector for SAP Business Technology Platform uses a user management entity named `SapAuthentication.SapUser`. 
+
+If you want to use any custom entity for user management, you can update the **UserEntity** constant with the custom user entity name. Its default value is set to **SapAuthentication.SapUser**. The custom entity must fulfill the following criteria:
+
+* It must be a generalization of the `System.User` entity.
+* It must have attributes with the names `DisplayName` and `EmailAddress`, both of type String.

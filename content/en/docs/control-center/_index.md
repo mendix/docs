@@ -6,7 +6,7 @@ weight: 35
 no_list: false 
 description_list: true
 cascade:
-    - content_type: "Control Center Guide"
+    - content_type: "Control Center"
     - mendix_version: 10
 aliases:
     - /developerportal/control-center

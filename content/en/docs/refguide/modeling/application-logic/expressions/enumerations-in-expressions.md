@@ -25,7 +25,7 @@ else
   OrderProcessing.Status.started
 ```
 
-You can also use conditional statements to check whether two emuneration values are the same:
+You can also use conditional statements to check whether two enumeration values are the same:
 
 ```java
 if $Order/Status = OrderProcessing.Status.completed then 

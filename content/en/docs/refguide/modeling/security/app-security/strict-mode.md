@@ -10,7 +10,7 @@ Configuring [access rules](/refguide/access-rules/) is essential for the securit
 
 Strict mode will help ensure that entities are accessible only in the ways defined within your model – through microflows, nanoflows, widgets, or pages – by restricting certain client APIs. 
 
-Empploying strict mode can be a major differentiator for app safety. Strict mode is set up in keeping with the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
+Employing strict mode can be a major differentiator for app safety. Strict mode is set up in keeping with the guidelines outlined in the *OWASP Low-Code/No-Code Top 10*, addressing [LCNC-SEC-05: Security Misconfiguration](https://owasp.org/www-project-top-10-low-code-no-code-security-risks/content/2022/en/LCNC-SEC-05-Security-Misconfiguration).
 
 {{% alert color="info" %}}
 Please note, strict mode is exclusively available for the React client.

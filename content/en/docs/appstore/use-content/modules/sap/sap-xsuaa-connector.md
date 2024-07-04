@@ -292,8 +292,9 @@ You can picture the authentication as shown below:
 
 ## 5 User Management
 
-From version 2.1.1 of the XSUAA Connector for SAP Business Technology Platform uses user management entity called **SapAuthentication.SapUser**. 
-If you want to use any custom entity for user management, you can update **UserEntity** constant with the custom user entity name. Its default value is set to **SapAuthentication.SapUser**. The custom entity needs to pass below criteria.
+Starting from version 2.1.1, the XSUAA Connector for SAP Business Technology Platform uses a user management entity named `SapAuthentication.SapUser`. 
 
-1. Should be a generalization of `System.User` entity.
-2. Should have attributes with name `DisplayName` & `EmailAddress`, both of type String.
+If you want to use any custom entity for user management, you can update the **UserEntity** constant with the custom user entity name. Its default value is set to **SapAuthentication.SapUser**. The custom entity must fulfill the following criteria:
+
+* It must be a generalization of the `System.User` entity.
+* It must have attributes with the names `DisplayName` and `EmailAddress`, both of type String.

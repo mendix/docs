@@ -28,7 +28,7 @@ Depending on the Mendix version used to build your app, you have to use a differ
 * **8.18.x** – Make It Native 8 LTS ([iOS](https://apps.apple.com/app/make-it-native-8/id1334081181))
 * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
 
-For information on which mobile operating systems are supported by the Mendix Native Mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
+For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
 ### 2.1 Direct Download Links {#direct-links}
 
@@ -48,9 +48,11 @@ Download the MTS version of Make it Native 10 using these QR codes:
 
 ### 2.2 Using the Latest Version of Make It Native
 
-The latest version of Make It Native receives monthly updates and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to maintain regular updates for your application.
+The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the latest version of Make It Native, you must join our official Beta testing programs on the Google PlayStore and the Apple AppStore. To do so, open the provided links above and follow the instructions. Note that installing both the Latest and MTS versions on the same device is not possible.
+To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relavant links above](#get-min-app) and follow the instructions. 
+
+Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
 
 ### 2.3 Recommendations
 

@@ -4,7 +4,7 @@ url: /appstore/component-details/
 weight: 2
 no_list: false
 description_list: true
-description: "Presents information on the component dtails page."
+description: "Presents information on the component details page."
 ---
 ## 1 Introduction
 

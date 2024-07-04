@@ -146,7 +146,7 @@ paths:
       tags:
         - Projects
       summary: 'Update a project team member'
-      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member's project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member''s project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
       operationId: patch-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'

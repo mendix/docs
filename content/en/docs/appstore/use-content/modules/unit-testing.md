@@ -63,7 +63,7 @@ The Unit Testing module publishes a **reportStep** microflow that can be used in
 
 ### 4.2 Creating a Java Unit Tests (with JUNit)
 
-The Java unit test runner is driven by [JUnit](https://junit.org/junit5/) and requires a general understanding of JUnit version 4. A JUnit test method is run if it exists somewhere in the module name space (that is, it is stored as a Java class that lives somewhere in the *javasource/yourmodulename* folder). A Java function is recognized as a test if it is public, non-static, parameter-less, and annotated with the `org.junit.Test` annotation. Multiple tests can exists in a single class, but JUnit does not guarantuee the execution order of the tests.
+The Java unit test runner is driven by [JUnit](https://junit.org/junit5/) and requires a general understanding of JUnit version 4. A JUnit test method is run if it exists somewhere in the module name space (that is, it is stored as a Java class that lives somewhere in the *javasource/yourmodulename* folder). A Java function is recognized as a test if it is public, non-static, parameter-less, and annotated with the `org.junit.Test` annotation. Multiple tests can exists in a single class, but JUnit does not guarantee the execution order of the tests.
 
 For some example JUnit unit tests, see the *src/javasource/unittesting/UnittestingUnitTest1.java* and *src/javasource/unittesting/UnittestingUnitTest2.java* files.
 

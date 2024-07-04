@@ -180,3 +180,7 @@ Hour- and minute-based intervals can only be integer divisors of 24 or 60, respe
 ### 5.4 Cleaning Up Completed Runs of Scheduled Events
 
 Every time a scheduled event is run it produces an entry in the `System.ProcessedQueueTask` table in the database. Over time these accumulate and the table can grow large. Refer to the documentation on [Cleaning Up Old Processed Tasks](/refguide/task-queue/#cleanup) in *Task Queue* to learn how to remove processed entries.
+
+### 5.5 One Session for All Scheduled Events
+
+Each runtime node has one specific session in memory which is used for all scheduled events. Changes to this session are visible for all scheduled events on that node. Things like changing the time zone via a Java action in one scheduled event can lead to unexpected behavior in other scheduled events. You are therefore strongly discouraged from changing the session object for scheduled events.

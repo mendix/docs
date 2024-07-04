@@ -78,7 +78,7 @@ In the **Parameters** section, click **Add Parameter** to enter the following in
 * **Data Type** — select the type of data for your parameter
 * **Test Value** — enter or select the value of the parameter
 
-Click **Execute Query** to view a preview of the reponse.
+Click **Execute Query** to view a preview of the response.
 
 ### 3.2 Tables & Columns {#tables-columns}
 

@@ -55,4 +55,4 @@ All element types have both an interface and a full form. In the JavaScriptDoc y
 
 After the server has sent all unit interfaces, the Model SDK client reconstructs the app tree from the available information. However, before you can manipulate an (existing) unit/element or access information on it that's not available in its interface, you have to obtain the full unit/element. 
 
-## 5 Documents in This Cateogery
+## 5 Documents in This Category

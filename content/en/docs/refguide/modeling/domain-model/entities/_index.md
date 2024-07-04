@@ -28,11 +28,11 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 The entity type defines how the data is handled and there are three types:
 
-* [Persistable entity](#persistable-entity)
+* Persistable entity
     * When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model.
-* [Non-persistable entity](#non-persistable-entity)
+* Non-persistable entity
     * Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model.
-* [External entity](#external-entity)
+* External entity
     * External entities represent the link to datasets that are made available through shared data sources registered in Mendix Catalog. These type of entities are colored *purple* in the domain model. 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" class="no-border" >}}

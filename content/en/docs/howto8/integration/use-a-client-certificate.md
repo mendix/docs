@@ -67,14 +67,14 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 
-1.Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:<br>
     1. After the files have been uploaded, they appear in the list. Double-click an item in the list.<br>
     1. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:<br>
-        *For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)<br>
+        * For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)<br>
         * For REST services, enter the host name of the endpoint (for example, *example.com*)<br>
     1. Close the **Details** screen.<br>
 

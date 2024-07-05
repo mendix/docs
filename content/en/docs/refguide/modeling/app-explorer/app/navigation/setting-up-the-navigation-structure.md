@@ -70,7 +70,7 @@ Now every time a user with the **Administrator** user signs in to the applicatio
 
 ## 4 Setting a Fallback Page
 
-The Fallback page is a page or microflow that can be used to customise the application's behaviour when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the default pop-up window stating "The page you requested was not found. You are redirected to the home page" will be replaced by the fallback microflow or the page. 
+The Fallback page is a page or microflow that can be used to customise the application's behaviour when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the default pop-up window stating "The page you requested was not found. You are redirected to the home page" will be replaced by the fallback microflow or the page. Fallback pages are not available for offline profiles.
 
 If a microflow is used as a fallback, it can have only one String parameter named 'Path', which will contain the URL that could not be found.
 

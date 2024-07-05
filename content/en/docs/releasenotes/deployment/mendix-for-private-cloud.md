@@ -11,6 +11,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 10th, 2024
+
+#### Mendix Operator v2.18.0 {#2.18.0}
+
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* We have resolved the issue where the Operator attempted to reload the Runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
+* We have fixed an issue where the Operator would throw an error when no licenses were installed on the PCLM server.
+
+
 ### July 4th, 2024
 
 #### Portal Enhancements

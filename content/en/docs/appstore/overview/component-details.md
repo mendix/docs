@@ -12,7 +12,7 @@ Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component 
 
 {{< figure src="/attachments/appstore/overview/component-details/component-details.png" >}}
 
-## 2 Header
+## 2 Header {#header}
 
 The header for a component presents the following details:
 

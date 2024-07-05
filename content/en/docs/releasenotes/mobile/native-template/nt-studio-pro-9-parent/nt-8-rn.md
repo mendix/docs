@@ -5,7 +5,15 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
-## 8.2.3 {#811}
+## 8.2.5 {#814}
+
+**Release date: July 5, 2024**
+
+### Fixes
+
+* We updated the `@mendix/native` dependency to fix an encryption issue.
+
+## 8.2.3 {#812}
 
 **Release date: June 7, 2024**
 
@@ -69,7 +77,15 @@ description: "Native Template 8 release notes."
 * We upgraded security-crypto dependency on Android to version 1.1.0-alpha06.
 * We upgraded `@mendix/react-native-sqlite-storage` to version 7.1.0 and `@mendix/native` to the latest compatible version.
 
-* ## 8.0.10 {#809}
+## 8.0.13 {#813}
+
+**Release date: July 4, 2024**
+
+### Fixes
+
+* We updated the `@mendix/native` dependency to fix an encryption issue.
+
+## 8.0.10 {#809}
 
 **Release date: June 24, 2024**
 

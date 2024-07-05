@@ -124,7 +124,7 @@ For Private Mendix Platform, the Marketplace is also private and hosted entirely
 
 In this tab, you can configure whether contents that users publish to the private Marketplace requires administrator approval before publishing.
 
-### 4.2 Content Import
+### 4.2 Content Import {#import}
 
 You can populate your private Marketplace with contents by importing a zip file that contains the content packages along with a *package.json* file. To enable content import from the import bundle, you must unpack it and point Private Mendix Platform to the location of the json file by following these steps:
 

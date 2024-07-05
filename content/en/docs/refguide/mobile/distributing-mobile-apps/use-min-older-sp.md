@@ -9,6 +9,8 @@ description: "This guide will help you build a MIN app compatible with a non-LTS
 
 The Make It Native (MIN) app allows you to test native apps in development with ease. We have also made it open source, allowing you to change it depending on your needs. You can continue to use the [Make It Native App](/releasenotes/mobile/make-it-native-parent/) we provide via the AppStore and PlayStore or build your own Make It Native app.
 
+A common reason to build your own Make It Native app is to support one or more development teams that work on a specific version of Mendix and require additional native dependencies. Building your own Make It Native App can be considered an alternative to the [creating a Custom Developer App](/howto/mobile/how-to-devapps/) that adds more convenience for your developers and gives you more control over the native app.
+
 This guide explains how to build your own Make It Native app.
 
 ### 1.1 Getting Started

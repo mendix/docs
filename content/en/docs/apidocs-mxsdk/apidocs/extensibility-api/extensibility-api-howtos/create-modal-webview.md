@@ -4,13 +4,13 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/
 weight: 7
 ---
 
-# Create a simple web view hosted inside a modal dialog
+## 1 Introduction
 
-In this tutorial we will be creating a new web view hosted inside a modal dialog. We will then open the modal from a new menu item.
+This how-to describes how you can create a new web view hosted inside a modal dialog. You will then open the modal from a new menu item.
 
 You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples)
 
-### Add a view model for your new modal
+## 2 Adding a View Model for Your New Modal
 
 It would take care of the messages and the overall lifecycle of the modal web view.
 
@@ -48,10 +48,9 @@ class MyModalWebViewViewModel(
 }
 ```
 
-### Add a controller class
+## 3 Adding a Controller Class
 
-We're creating a controller that we can delegate a part of work to, so that we don't have to pollute the menu item with unrelated business logic.  
-For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
+We're creating a controller that you can delegate a part of work to, so that you do not have to pollute the menu item with unrelated business logic. For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
 
 >[#NOTE] Please specify both Height and Width properties as otherwise they will default to 0,0
 
@@ -74,9 +73,10 @@ class MyModalWebViewController(IDialogService dialogService, IMessageBoxService 
 }
 ```
 
-### Add a content server
-To open static pages we need to source them from either a file system path or via the WebServerExtension route. 
-In this tutorial we will cover the latter as this is the preferred way to provide static web content to an extension. 
+## 4 Adding a Content Server
+To open static pages you need to source them from either a file system path or via the WebServerExtension route. 
+
+This how-to covers the latter as this is the preferred way to provide static web content to an extension. 
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -142,8 +142,8 @@ class ContentServer : WebServerExtension
 }
 ```
 
-### Add a menu item that would open the modal dialog
-Finally, we need to add a menu item to open the dialog. Replace the contents of `MyMenuExtension.cs` with the code below:
+## 5 Adding a Menu Item That Opens the Modal Dialog
+Finally, you need to add a menu item to open the dialog. Replace the contents of `MyMenuExtension.cs` with the code below:
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -158,4 +158,4 @@ class MyMenuExtension(MyModalWebViewController myModalWebViewController) : MenuE
     }
 }
 ```
-These changes inject your new controller class into the `MyMenuExtension` class. We then add a new menu item called `Create Entity From Dialog` and then call the controller's `ShowDialog` method. Notice in this example, the parameter `currentApp`, which, if the dialog needs to interact with the model, will be necessary. `WebServerBaseUrl` is just as important though, as without the base path you will never be able to navigate to the route you defined in the web server extension.
+These changes inject your new controller class into the `MyMenuExtension` class. You then add a new menu item called `Create Entity From Dialog` and then call the controller's `ShowDialog` method. Notice in this example, the parameter `currentApp`, which, if the dialog needs to interact with the model, will be necessary. `WebServerBaseUrl` is just as important though, as without the base path you will never be able to navigate to the route you defined in the web server extension.

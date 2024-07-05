@@ -5,7 +5,7 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/
 weight: 9
 ---
 
-# 1 Introduction
+## 1 Introduction
 
 Extension points allow you to hook functionality into various areas of the Studio Pro IDE. Extension point is a base class that you as an extension developer can inherit from. Your functionality will then be loaded by Studio Pro. These classes all have the `*Extension` suffix, inherit from [`ExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI/ExtensionBase.md) base class, and contain a few virtual or abstract members.
 

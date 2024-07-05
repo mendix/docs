@@ -6,7 +6,7 @@ weight: 5
 
 ## 1 Introduction
 
-This how-to describes how to add a custom dockable web pane window to Studio Pro. Before you start this how-to, it is recommended to finish [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
+This how-to describes how you can add a custom dockable web pane window to Studio Pro. Before you start this how-to, it is recommended to finish [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
 You can download the example in this how-to on this [Github repository](https://github.com/mendix/ExtensionAPI-Samples).
 

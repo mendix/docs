@@ -6,7 +6,7 @@ weight: 4
 
 ## 1 Introduction
 
-This how-to describes the procedure of creating an extension that adds an item to Studio Pro menu from scratch.
+This how-to describes how you can create an extension that adds an item to Studio Pro menu from scratch.
 
 You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples).
 

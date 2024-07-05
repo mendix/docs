@@ -83,7 +83,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We updated the `@mendix/native` dependency to fix the encryption issue.
+* We updated the `@mendix/native` dependency to fix an encryption issue.
 
 ## 8.0.10 {#809}
 

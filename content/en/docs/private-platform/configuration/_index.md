@@ -133,7 +133,7 @@ You can populate your private Marketplace with contents by importing a zip file 
 To manually upload a content bundle from your own computer, perform the following steps:
 
 1. Download the Marketplace Bundle with contents available in a zip file. If you do not have access to the bundle, contact your Mendix point of contact.
-2. In the **Content Import** > **Upload Markeplace Bundle** tab, drag and drop the file that you want to upload. The file must be in *zip* format, and must not be larger than 2048 MB.
+2. In the **Content Import** > **Upload Markeplace Bundle** tab, drag and drop the file that you want to upload. The file must be in *zip* format, and must not be larger than 2048 MB. You should also have at least 40 GB available disk space to account for temporary files.
 3. Click **Import Marketplace Bundle components**.
 
     {{< figure src="/attachments/private-platform/pmp-config1.png" class="no-border" >}}
@@ -141,6 +141,17 @@ To manually upload a content bundle from your own computer, perform the followin
 4. To view the progress of your upload, click **Open Task Queue**.
 
     {{< figure src="/attachments/private-platform/pmp-config2.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+If you are experiencing high latency during manual uploads, you can increase the timeouts. For example, for nginx, you can perform the following commands:
+
+```text
+nginx.ingress.kubernetes.io/client-header-timeout: "300"
+nginx.ingress.kubernetes.io/proxy-connect-timeout: "300"
+nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+```
+{{% /alert %}}
 
 #### 4.2.2 Importing Marketplace Content from a CDN
 

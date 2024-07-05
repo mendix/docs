@@ -16,11 +16,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 #### Mendix Operator v2.18.0 {#2.18.0}
 
 * We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
-* We have resolved the issue where the Operator attempted to reload the Runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
+* We have resolved an issue where the Operator attempted to reload the runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
 * We have fixed an issue where the Operator would throw an error when no licenses were installed on the PCLM server.
-* We’ve updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
-* We’ve addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
-
+* We have updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
+* We have addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
 
 ### July 4th, 2024
 

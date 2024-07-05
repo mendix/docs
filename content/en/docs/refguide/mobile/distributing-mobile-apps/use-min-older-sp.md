@@ -7,75 +7,50 @@ description: "This guide will help you build a MIN app compatible with a non-LTS
 
 ## 1 Introduction 
 
-The Make It Native (MIN) app allows you to test native apps in development with ease. We have also made it open source, allowing you to change it depending on your needs. Depending on your Mendix version, you can use the MIN app in one of two ways:
+The Make It Native (MIN) app allows you to test native apps in development with ease. We have also made it open source, allowing you to change it depending on your needs. You can continue to use the [Make It Native App](/releasenotes/mobile/make-it-native-parent/) we provide via the AppStore and PlayStore or build your own Make It Native app.
 
-* **Long Term Support (LTS) Studio Pro Version** — If you want to use the Make It Native app to test your native apps, you must choose a [MIN version](/releasenotes/mobile/make-it-native-parent/) compatible with your LTS version of Studio Pro. 
-* **Non-LTS Studio Pro Version** — If you choose use a non-LTS version of Studio Pro and still wish to use the MIN app, then you will have to manually build a version of the MIN that is compatible with your version of Studio Pro.
-
-This guide explains how to complete the second bullet's task: build a MIN app compatible with a non-LTS Studio Pro version.
+This guide explains how to build your own Make It Native app.
 
 ### 1.1 Getting Started
 
-First things first, make sure you clone your repo and install necessary software:
+First things first, make sure you clone your repo:
 
-1. Clone the repository:
+```bash
+git clone https://github.com/mendix/make-it-native.git
+cd make-it-native
+```
 
-   ```bash
-   git clone https://github.com/mendix/make-it-native.git
-   ```
+#### 1.1.1 Select Mendix Version
 
-1. Navigate to the project directory:
+Next, select the Mendix version you want to build your Make It Native App for:
 
-   ```bash
-   cd make-it-native
-   ```
+```bash
+git checkout <BRANCH_NAME>>
+```
+
+For example, if you want to build Make It Native for Mendix 10.0.0, do the following:
+
+```bash
+git checkout mx/10.0
+```
+
+You can find a complete list of supported Mendix versions and their branch names in the [GitHub Repository](https://github.com/mendix/make-it-native/branches/active).
+
+#### 1.1.2 Install Dependencies
+
+Make It Native, just like any other native apps, relies on third party dependencies that must be installed. Run the following commands to do so:
 
 1. Install dependencies:
 
    ```bash
    npm install
    ```
-
-1. Install pods:
-
+1. Install pods (only for iOS):
    ```bash
-   cd ios && pod install
+   cd ios && pod install && cd ..
    ```
 
-### 1.2 Switching to the Compatible Mendix Studio Pro Branch
-
-To ensure that you can build and run the Make it Native (MiN) application successfully, you need to use a version of the application that is compatible with your Mendix Studio Pro version. Our repository includes multiple branches, each compatible with different versions of Mendix Studio Pro. Follow these steps to switch to the appropriate branch and build the application.
-
-#### 1.2.1 Identify Your Mendix Studio Pro Version
-
-First, confirm the version of Mendix Studio Pro you are currently using. You can find this information in the Mendix Studio Pro application under **Help** > **About Mendix Studio Pro**.
-
-#### 1.2.2 Switch to the Compatible Branch
-
-Based on your Mendix Studio Pro version, switch to the corresponding branch in our repository. 
-
-Here are the branches available for different versions:
-
-| Studio Pro Version         | Branch        |
-| -------------------------- | ------------- |
-| Mendix Studio Pro 10.10.0  | `mx/10.10.0`  |
-| Mendix Studio Pro 10.9.0   | `mx/10.9.0`   |
-| Mendix Studio Pro 10.8.0   | `mx/10.8.0`   |
-| Mendix Studio Pro 10.7.0   | `mx/10.7.0`   |
-| Mendix Studio Pro 10.6.0   | `mx/10.6.0`   |
-| Mendix Studio Pro 10.5.0   | `mx/10.5.0`   |
-| Mendix Studio Pro 10.4.1   | `mx/10.4.1`   |
-| Mendix Studio Pro 10.3.1   | `mx/10.3.1`   |
-| Mendix Studio Pro LTS/9.24 | `mx/lts/9.24` |
-| Mendix Studio Pro MTS/9.24 | `mx/mts/10.6` |
-
-Use the following Git command to switch branches:
-
-```bash
-git checkout <branch-name>
-```
-
-Replace `<branch-name>` with the branch corresponding to your version of Mendix Studio Pro.
+If either command fails, make sure you have [NodeJS](https://nodejs.org/en) and [CocoaPods](https://cocoapods.org) installed. To build Make It Native for Apple devices, you need an Apple computer.
 
 ### 1.3 Additional Setup Requirements
 

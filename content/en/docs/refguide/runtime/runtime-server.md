@@ -110,6 +110,6 @@ This decodes HTTPS requests from Mendix Clients or other services, and passes th
 
 This is the web browser (for example, Google Chrome) or mobile device (for example, an iPhone) which allows the user to interact with the app. It typically has a screen, pointer device, and input device to allow users to use the app.
 
-The Runtime Server communicates with the Mendix Client by using a private API called xas.
+The Runtime Server communicates with the Mendix Client using a number of [request handlers](/refguide/request-handlers/) called over a private API. One of these, for example, is called xas.
 
 For a description of the Mendix Client, see [Mendix Client](/refguide/mendix-client/).

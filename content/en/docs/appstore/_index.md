@@ -6,7 +6,7 @@ weight: 40
 no_list: false 
 description_list: true 
 cascade:
-    - content_type: "Marketplace Guide"
+    - content_type: "Marketplace"
     - mendix_version: 10
 ---
 
@@ -42,7 +42,7 @@ The Marketplace offers the following content types:
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following connectors and modules are part of the Mendix Connect ecosystem:
 
-* [Database](/appstore/modules/database-connector/) connnector
+* [Database](/appstore/modules/database-connector/) connector
 * [Excel Importer](/appstore/modules/excel-importer/) module
 * [Excel Exporter](/appstore/modules/excel-exporter/) module
 * [Email](/appstore/modules/email-connector/) connector

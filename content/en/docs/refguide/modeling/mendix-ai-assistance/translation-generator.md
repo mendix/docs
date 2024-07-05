@@ -11,7 +11,7 @@ description: "Describes the features in Translation Generator."
 Translation Generator is currently an experimental feature introduced in Studio Pro 10.12.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
- Maia Translation Generator is an AI-powered translation tool that you can use for [Batch translate](/refguide/batch-translate/). It helps you to translate your model to different languages for which you may not have a translation. It gives contextualized translations for the languages that you have seleted, using parameters in the way that works specifically for the selcted languages.
+Translation Generator is an AI-powered translation tool that you can use for [Batch translate](/refguide/batch-translate/). It helps you to translate your model to different languages for which you may not have a translation. It gives translations for the languages that you have selected, using parameters in the way that works specifically for the selected languages.
 
 ## 2 Modeling Using Translation Generator
 

@@ -176,3 +176,7 @@ This limit cannot be overridden.
 ### 5.3 Unsupported Intervals
 
 Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+
+### 5.4 One Session for All Scheduled Events
+
+Each runtime node has one specific session in memory which is used for all scheduled events. Changes to this session are visible for all scheduled events on that node. Things like changing the time zone via a Java action in one scheduled event can lead to unexpected behavior in other scheduled events. You are therefore strongly discouraged from changing the session object for scheduled events.

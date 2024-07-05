@@ -6,7 +6,7 @@ weight: 40
 no_list: false 
 description_list: true 
 cascade:
-    - content_type: "Marketplace Guide"
+    - content_type: "Marketplace"
     - mendix_version: 10
 ---
 

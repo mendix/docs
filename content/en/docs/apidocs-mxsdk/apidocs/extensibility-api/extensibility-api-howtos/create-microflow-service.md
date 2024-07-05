@@ -6,7 +6,9 @@ weight: 14
 
 ## 1 Introduction
 
-The `IMicroflowService` is the service used to perform actions related to microflows. It can create them, query them and several other actions. Let's look at all of them, with sample codes and usage examples.
+## 1 Introduction
+
+The `IMicroflowService` is the service used to perform actions related to microflows. In this tutorial we will be creating a new Microflow and adding some activities to it. At the end of this tutorial you should know how to create a microflow and to add activities to it.
 
 ## 2 Initialize
 This is a method which initializes a microflow that was previously created. It is part of a series of steps required for adding a microflow to the model.

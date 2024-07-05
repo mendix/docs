@@ -245,4 +245,4 @@ To delete a content group, a Group Admin or Mendix Admin can click **Delete Grou
 
 The **Data** category contains the following items:
 
-* Catalog – This opens [Mendix Catalog](https://catalog.mendix.com/).
+* Catalog – Clicking it opens [Mendix Catalog](https://catalog.mendix.com/).

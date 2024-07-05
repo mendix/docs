@@ -7,22 +7,19 @@ weight: 10
 
 ## 1 Introduction
 
-A Studio Pro service is an interface that exposes some core Studio Pro functionality to extensions. These interfaces are named `I*Service` and can be found in `Mendix.StudioPro.ExtensionsAPI.Services` or `Mendix.StudioPro.ExtensionsAPI.UI.Services` namespaces. It can be injected using MEF like in the second example
-above (the example uses constructor injection, but [other methods](https://docs.microsoft.com/en-us/dotnet/framework/mef/attributed-programming-model-overview-mef#import-and-export-basics)
-are supported as well).
+A Studio Pro service is an interface that exposes some core Studio Pro functionality to extensions. These interfaces are named `I*Service` and can be found in `Mendix.StudioPro.ExtensionsAPI.Services` or `Mendix.StudioPro.ExtensionsAPI.UI.Services` namespaces. It can be injected using the Microsoft Extensions Framework also refered to as MEF. For more information about MEF and how to use it please refer to the official [Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/framework/mef/)
 
 {{% alert color="info" %}}You should not implement these interfaces in your production code, although it is possible to make sense to do so for unit testing purposes.{{% /alert %}}
 
 ## 2 List of Available Services
 - Helpers to operate on the app model or parts of it:
-  - [`IMicroflowService`](xref:Mendix.StudioPro.ExtensionsAPI.Services.IMicroflowService)
-  - [`IMicroflowExpressionService`](xref:Mendix.StudioPro.ExtensionsAPI.Services.IMicroflowExpressionService)
+  - [`IMicroflowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowService.md)
+  - [`IMicroflowExpressionService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowExpressionService.md)
 - Services giving access to interactive operations:
-  - [`IAppService`](xref:Mendix.StudioPro.ExtensionsAPI.UI.Services.IAppService)
-  - [`ISelectorDialogService`](xref:Mendix.StudioPro.ExtensionsAPI.UI.Services.ISelectorDialogService)
-  <!--TODO move to internal docs  - [`IUserAuthenticationService`](xref:Mendix.StudioPro.ExtensionsAPI.Internal.UI.Services.IUserAuthenticationService) -->
-  - [`IDockingWindowService`](xref:Mendix.StudioPro.ExtensionsAPI.UI.Services.IDockingWindowService) (not stable)
+  - [`IAppService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IAppService.md)
+  - [`ISelectorDialogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/ISelectorDialogService.md)
+  - [`IDockingWindowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IDockingWindowService.md)
 - Utility services:
-  - [`IConfigurationService`](xref:Mendix.StudioPro.ExtensionsAPI.Services.IConfigurationService)
-  - [`ILogService`](xref:Mendix.StudioPro.ExtensionsAPI.Services.ILogService)
-  - [`IExtensionFileService`](xref:Mendix.StudioPro.ExtensionsAPI.Services.IExtensionFileService)
+  - [`IConfigurationService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IConfigurationService.md)
+  - [`ILogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/ILogService.md)
+  - [`IExtensionFileService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IExtensionFileService.md)

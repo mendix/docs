@@ -16,7 +16,7 @@ These release notes cover changes made to the [Mendix Marketplace](/appstore/).
 
 ### New Features
 
-* We released of a new label specifically for React Ready widgets in the Marketplace. This enhancement is designed to help developers and users easily identify and access a wide range of widgets that are optimized for React Client applications. You can find a **React-Client** label next to a version of the product when navigating to the **Release** tab of a product details page. For more information, see the [Labels](/appstore/component-details/#labels) section in *Component Details Page*.
+* We released of a new label specifically for React Ready widgets in the Marketplace. This enhancement is designed to help developers and users easily identify and access a wide range of widgets that are optimized for React Client applications. You can find a **React-Client** label next to a version of the product when navigating to the **Release** tab of a product details page.
 
 #### Improvements
 

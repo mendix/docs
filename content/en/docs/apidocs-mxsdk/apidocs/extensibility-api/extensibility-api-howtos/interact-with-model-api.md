@@ -1,12 +1,12 @@
 ---
-title: "Interact with the Model SDK"
-url: /apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-sdk/
+title: "Interact with the Model API"
+url: /apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/
 weight: 11
 ---
 
 ## 1 Introduction
 
-After you created some basic extensions, you want to interact with the Studio Pro model in order to make changes to your app. The [Mendix Model SDK](/apidocs-mxsdk/mxsdk/sdk-intro/#12-mendix-model-sdk) allows you to do just that. The Model representation is exposed via the [`Mendix.StudioPro.ExtensionsAPI.Model`](xref:Mendix.StudioPro.ExtensionsAPI.Model) namespace.
+After you created some basic extensions, you want to interact with the Studio Pro model in order to make changes to your app. The Model API allows you to do just that. The Model representation is exposed via the [`Mendix.StudioPro.ExtensionsAPI.Model`](xref:Mendix.StudioPro.ExtensionsAPI.Model) namespace.
 
 ## 2 Gaining Access to the Mendix Model SDK
 

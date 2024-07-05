@@ -33,34 +33,60 @@ Follow instructions in [Install an app from a listing](https://other-docs.snowfl
 
 ## 3 Configuration
 
-Upon installation, configure the Mendix Data Loader as follows:
+Once the Mendix Data Loader is deployed, follow these steps to configure and use it:
 
-1. Open the application by accessing the Mendix Data Loader from the **MENDIX_DATA_LOADER** tab inside your Snowflake environment.
-2. Ensure that the application has the `CREATE DATABASE` privilege in Snowflake. On first initialization, you will be prompted to grant the application this privilege.
-3. Configure each data ingestion job by providing the following information:
+1. **Access the README**: Upon starting, the application will display the README file included in the application package.
 
-    * **Endpoint** - The URL to the OData service of your Mendix application.
-    * **Authentication** - The username and password for accessing the OData service.
-    * **Target Database Name** - The Snowflake database target for the data ingestion.
-    * **Target Schema Name** - The name of the target schema into which all the data will be ingested. Every time an ingestion is performed, all data already present in the target schema will be removed or replaced.
-    * **Generate and Execute SQL Script** - Required only once, when configuring the data ingestion endpoint for the first time. Click the **Generate Script** button to produce and execute the required SQL scripts with necessary privileges.
+2. **Open the Application**: Click the `MENDIX_DATA_LOADER` tab in the header to open the application interface.
 
-4. Select whether you want to ingest data manually, or schedule the ingestion job:
+3. **Grant USAGE Privilege**: Grant the application the USAGE privilege on a warehouse. This step is required if you wish to schedule ingestions.
 
-    * To ingest data manually, click **Ingest Data now**. The data transfer starts immediately and all data exposed by the OData service is ingested. All ingested data is stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
-    * To schedule ingestion jobs, navigate to the **Schedule Task** tab. In this tab, additional scheduling configurations are displayed.
-        * **When should the ingestion task run?** - A required parameter that specifies the interval of the task execution. Select one of the preconfigured options or select the **Custom CRON expression** option to provide a custom CRON expression.
-        * **Custom CRON expression** - A required parameter if the `When should the ingestion task run?` parameter is set to `Custom CRON expression`. For more information about custom CRON expression, refer to the [CREATE TASK Snowflake Documentation](https://docs.snowflake.com/en/sql-reference/sql/create-task#optional-parameters).
-        * **Time out** - An optional parameter that specifies the time limit on a single execution of the task before it times out (in milliseconds). The default value for this parameter is 1 hour (3600000).
-        * **Number of retry attempts** - An optional parameter that specifies the number of automatic task retry attempts. The default value for this parameter is 0 retry attempts.
-        * **Suspend task after number of failures** - An optional parameter that specifies the number of consecutive failed task runs after which the current task is suspended automatically. The default value for this parameter is 10 failures.
-5. To view the results, check the job ID and verify the data in the specified target database.
+4. **Grant Additional Privileges**: Grant the application the CREATE DATABASE and EXECUTE TASK privileges. This step is required for the application to create the staging database for data ingestion and to execute tasks.
+
+5. **Configure the Mendix Data Loader**:
+   - Select an authentication type: Choose either `Basic` or `OAuth` and hit the `Submit` button.
+   
+   - For Basic authentication, provide the following information:
+     * API endpoint: The base endpoint for the OData resource in your Mendix application, e.g., https://yourmendixapp.mendixcloud.com/odata/snowflakedata/v1/
+     * Username: The username for the basic authentication into the OData resource in your Mendix application
+     * Password: The password for the basic authentication into the OData resource in your Mendix application
+     * Target database name: The name of the database where you would like to ingest data to
+     * Target schema name: Specify the target schema name where all the data will be ingested into
+     * Then hit the `Submit` button
+
+   - For OAuth authentication, provide the following information:
+     * API endpoint: The base endpoint for the OData resource in your Mendix application
+     * Client ID: Provide the client ID from your OAuth provider
+     * Client secret: Provide the secret associated with the client from your OAuth provider
+     * Token endpoint: Provide the endpoint at which the token will be validated from your OAuth provider
+     * Allowed scopes: Provide the allowed and custom scopes configured on the client from your OAuth provider
+     * Access token validity: The amount of time (in seconds) the access token is valid
+     * Target database name: The name of the database where you would like to ingest data to
+     * Target schema name: Specify the target schema name where all the data will be ingested into
+     * Then hit the `Submit` button
+
+6. **Generate and Execute the Access Script**:
+   - Hit the `Generate access script` button
+   - Copy the script, navigate to a SQL worksheet and execute the entire script
+
+7. **Ingest Data**: 
+   - If you want to do a one-time ingestion from a Mendix app into Snowflake, navigate to the main tab and use the `Ingest Data` button to start the data transfer. All ingested data will be stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).
+   - If you want to create a schedule for data ingestion, navigate to the `Schedule Task` tab and fill in the configuration options:
+     1. **When should the ingestion task run?**: Provide the schedule using the CRON format. In this drop-down, you can choose between providing a custom CRON expression, Every day at 00:00 AM UTC, Every Monday at 00:00 AM UTC, or Every first day of the month at 00:00 AM UTC.
+     2. **Custom CRON expression**: This field should only be used when the user chooses to provide a custom CRON expression.
+     3. **Time out**: This is an optional setting that can be used to change after how much time a timeout exception should happen. 
+     4. **Number of retry attempts**: This setting sets how many retries should be performed if an ingestion job fails.
+     5. **Suspend task after number of failures**: This setting sets the number of times a task is allowed to consecutively fail before suspending the task.
+   - After configuring, press the `Schedule Ingestion Task` button. You can view details of the created task on the `Task Management` tab where you can also view its performed ingestion jobs, suspend/enable the task, and drop the task. At present, we allow one task to exist at a time.
+
+8. **View Ingested Data**: The ingested data will be available in the schema that was specified inside the specified target database.
+
+Note: The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area, and as such, the user should copy the tables of the target schema into a database and schema they want to use to store the ingested data. This should be done after every ingestion.
 
 ## 4 Technical Reference
 
 ### 4.1 Current Limitations
 
-* At present, the Mendix Data Loader supports username and password authentication. Make sure to use username and password authentication when setting up your Odata service.
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
 * The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 

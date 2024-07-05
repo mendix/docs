@@ -4,7 +4,7 @@ url: /appstore/component-details/
 weight: 2
 no_list: false
 description_list: true
-description: "Presents information on the component dtails page."
+description: "Presents information on the component details page."
 ---
 ## 1 Introduction
 
@@ -52,7 +52,7 @@ The component details page also presents the following tabs:
 
 * **Overview** – This tab contains a description and screenshots of the component.
 * **Documentation** – This tab includes details on typical use cases, features and limitations, dependencies, installation and configuration, frequently asked questions, and screenshots.
-  * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
+    * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
   * Each version can be downloaded by clicking **Download.**
   * If any version has the label **React-Ready** next to it, it means this version is optimized for React Client applications.

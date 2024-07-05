@@ -35,7 +35,7 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 ## 5 View Menu {#view}
 
-The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
 
 ## 6 App Menu {#app}
 

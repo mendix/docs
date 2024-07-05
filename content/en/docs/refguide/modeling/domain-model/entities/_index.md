@@ -28,21 +28,18 @@ The rows in the table are CDs. The type of the two rows is *CD* and this is the 
 
 The entity type defines how the data is handled and there are three types:
 
-* [Persistable entity](#persistable-entity) 
-* [Non-persistable entity](#non-persistable-entity)
-* [External entity](/refguide/external-entities/)
+* Persistable entity
+    * When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model.
+* Non-persistable entity
+    * Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model.
+* External entity
+    * External entities represent the link to datasets that are made available through shared data sources registered in Mendix Catalog. These type of entities are colored *purple* in the domain model. 
 
 {{< figure src="/attachments/refguide/modeling/domain-model/entities/type-of-entities.jpg" class="no-border" >}}
 
-The structure of Persistable and Non-persistable entities are defined within your app. The structure of an External entity is defined in the source system where the underlying data (objects) is stored.
+The structure of Persistable and Non-persistable entities are defined within your app. This page describes how to add and update Persistable and Non-persistable entities. For more information on persistable entities, see [Persistability](/refguide/persistability/).
 
-### 2.1 Persistable Entity {#persistable-entity}
-
-When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](/refguide/persistability/).
-
-### 2.2 Non-Persistable Entity {#non-persistable-entity}
-
-Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model. For more information on persistable entities, see [Persistability](/refguide/persistability/).
+The structure of an External entity is defined in the source system where the underlying data (objects) is stored. For more information on external entities and how to add them to your app, see [External Entities](/refguide/external-entities/).
 
 ## 3 Properties {#properties}
 
@@ -131,7 +128,6 @@ This property defines whether the entity contains the system attribute 'changedD
 | --- | --- |
 | True | Entity contains the system attribute 'changedDate'. |
 | False *(default)* | Entity does not contain the system attribute 'changedDate'. |
-
 
 {{% alert color="info" %}}
 Data grids do not directly display this date.

@@ -390,7 +390,6 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-
 ##### 4.1.2.20 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.

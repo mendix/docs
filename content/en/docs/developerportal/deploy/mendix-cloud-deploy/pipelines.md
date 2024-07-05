@@ -30,22 +30,22 @@ If you need to configure your user settings so that you can run a pipeline for t
 
 For each run, you can view the following information:
 
-* Status
-* Run ID
-* Pipeline ID
-* Branch
-* Pipeline Name
-* Triggered by
-* Last Run
-* Duration
-* Trigger
+* Status – Whether the run succeeded, failed, or is in progress
+* Run ID – The unique identifier of the run
+* Pipeline ID – The unique identifier of the pipeline design used for the run (column hidden by default)
+* Branch – The branch, if **Teamserver push (Git)** was used as the pipeline's trigger
+* Pipeline Name – The name of the pipeline design used for the run
+* Triggered by – The user who triggered the pipeline run
+* Last Run – The number of days since the pipeline run
+* Duration – The time the pipeline took to complete the run
+* Trigger – The trigger type for the run
 
 Use the Column Selector ({{% icon name="view" %}}) at the top of the **Runs** table to customize which of these columns appear in the table.
 
 The search and filter options allow you to review specific run types. You can do the following:
 
 * Search by keywords, such as run ID, branch, or pipeline name
-* Filter by trigger: All triggers, scheduled, or Teamserver push (Git)
+* Filter by trigger: All triggers, recurring schedule, Teamserver push (Git), or manual
 * Filter by status: All statuses, pending, succeeded, in progress, or failed
 
 ### 2.1 Run Results
@@ -130,12 +130,15 @@ Your pipeline can include the following steps:
 * Start Pipeline – This is a mandatory step for each pipeline; you cannot delete this step. This step defines the conditions that will automatically trigger the pipeline to run. To configure this step, define the conditions on which the pipeline should start. You can set the pipeline to run in response to either the **Teamserver push** trigger or the **Recurring schedule** trigger:
     * Teamserver push (Git) – The pipeline runs when a new push is made to Teamserver (Git) for the specified branch. For details on specifying the branch in the **Branch Expression** field, see [Branch Expression](#branch-expression), below.
     * Recurring schedule – The pipeline runs on a recurring weekly schedule, on the days and times you specify. This works for both Git and SVN repositories. Times are set in UTC.
+    * Manual – The pipeline runs when you click **Run Manual Pipeline** from either the **Runs** or **Designs** tabs of the Pipelines page. 
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
 * Publish – Publish the newly built deployment package to a repository.
+* Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.
 * Create Backup – Create and store a backup of an existing environment before deploying a new deployment package.
 * Deploy – Deploy to a selected environment. In this step's configuration, there is a **Use defaults for new constants** toggle that you can use to fetch the default values of new constants and scheduled events from Studio Pro and apply them to the environment. (To adjust an environment-specific configuration, see the [Environments](/developerportal/deploy/environments/) page.)
+* Promote Package – Promote a deployment package from a source environment to a target environment. To configure this step, specify a source environment and a target environment.
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 

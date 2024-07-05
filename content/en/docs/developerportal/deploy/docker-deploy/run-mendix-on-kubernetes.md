@@ -117,7 +117,7 @@ spec:
           name: mendix-pgdata
 ```
 
-To create the PostgreSQL database, Mendix uses the provided [postgres](https://hub.docker.com/_/postgres/) image. The environment variables provided in `env` are needed to configure the default database. Instead of setting the password in the *yaml* file directly, you can choose to use [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
+To create the PostgreSQL database, Mendix uses the provided [Postgres](https://hub.docker.com/_/postgres/) image. The environment variables provided in `env` are needed to configure the default database. Instead of setting the password in the *yaml* file directly, you can choose to use [secrets](https://kubernetes.io/docs/concepts/configuration/secret/).
 
 And finally, it is necessary to expose the database as a service and make it available to the application. This is the definition of such a service:
 

@@ -126,7 +126,7 @@ To invoke a specific model, perform the following steps:
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
 ### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
@@ -389,7 +389,6 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
-
 
 ##### 4.1.2.20 SessionConfiguration {#session-configuration}
 

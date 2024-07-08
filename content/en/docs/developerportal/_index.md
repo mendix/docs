@@ -48,10 +48,10 @@ You can open an app in [Apps](https://sprintr.home.mendix.com/) by clicking the 
 
 The navigation pane is divided into four main categories:
 
-- [General](/developerportal/general/)
-- [Project Management](/developerportal/project-management/)
-- [App Insights](/developerportal/app-insights/)
-- [Deployment](/developerportal/deploy/general/)
+* [General](/developerportal/general/)
+* [Project Management](/developerportal/project-management/)
+* [App Insights](/developerportal/app-insights/)
+* [Deployment](/developerportal/deploy/general/)
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 

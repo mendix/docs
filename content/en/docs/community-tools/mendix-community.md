@@ -99,19 +99,19 @@ On the right side of the question details page, you can see the following:
 
 * Question details:
 
-  * When the question was **Submitted**
+    * When the question was **Submitted**
 
-  * The **Last activity** date and time for when the question was updated
+    * The **Last activity** date and time for when the question was updated
 
-  * How many times the question has been **Viewed**
+    * How many times the question has been **Viewed**
 
-  * The **Space** of the question
-    * Clicking a tag opens an overview page that lists all the posts in the same space.
+    * The **Space** of the question
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
   
-  * The **Tags** applied to the question
-    * Clicking a tag opens an overview page that lists all the questions with the same tag.
+    * The **Tags** applied to the question
+        * Clicking a tag opens an overview page that lists all the questions with the same tag.
   
-  * The **Version** set by the person when asking the question
+    * The **Version** set by the person when asking the question
 
 Below the question details are the answers to the question. You can click the thumbs-up icon ({{% icon name="thumbs-up" %}}) or thumbs-down icon ({{% icon name="thumbs-down" %}}) to give your feedback on the answer based on how it addresses the question. By clicking **Comment**, you can comment on an answer.
 
@@ -190,19 +190,18 @@ On the right side of the exchange details page, you can see the following:
 
 * Exchange details:
 
-  * When the exchange was **Shared**
+    * When the exchange was **Shared**
 
-  * The **Last activity** date and time for when the exchange was updated
+    * The **Last activity** date and time for when the exchange was updated
 
-  * How many times the exchange has been **Viewed**
+    * How many times the exchange has been **Viewed**
 
-  * The **Space** of the exchange
-    * Clicking a tag opens an overview page that lists all the posts in the same space.
+    * The **Space** of the exchange
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
   
-  * The **Tags** applied to the exchange
-    * Clicking a tag opens an overview page that lists all the exchanges with the same tag.
+    * The **Tags** applied to the exchange
+        * Clicking a tag opens an overview page that lists all the exchanges with the same tag.
   
-
 Below the exchange details are comments on the exchange. 
 
 In the **Your Comment** section, you can contribute to the Mendix Community by writing your comment in the editor and then clicking **Submit Comment**.
@@ -294,21 +293,20 @@ On the right side of the idea details page, you can see the following:
 
 * Idea details:
 
-  * The review **Status** of the idea
+    * The review **Status** of the idea
 
-  * When the idea was **Shared**
+    * When the idea was **Shared**
 
-  * The **Last activity** date and time for when the idea was updated
+    * The **Last activity** date and time for when the idea was updated
 
-  * How many times the idea has been **Viewed**
+    * How many times the idea has been **Viewed**
 
-  * The **Space** of the idea
-    * Clicking a tag opens an overview page that lists all the posts in the same space.
+    * The **Space** of the idea
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
   
-  * The **Tags** applied to the idea
-    * Clicking a tag opens an overview page that lists all the ideas with the same tag.
+    * The **Tags** applied to the idea
+        * Clicking a tag opens an overview page that lists all the ideas with the same tag.
   
-
 Under the title, you can click **Vote** to upvote the idea based on its usefulness. By upvoting ideas, you can show the Mendix Product Managers and Mendix community what you would like to see added to the Mendix Platform The upvotes are used as input for the Mendix Product Managers and Mendix community MVPs to decide which features are nominated for implementation. The level of impact also plays a role.
 
 If the review status of the idea has been **Planned**, a comment from the Mendix Product Manager about the planned implementation can appear here

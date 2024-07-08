@@ -10,13 +10,13 @@
             {{ partial "navbar.html" . }}
         </header>
         */}}
-        <div class="container-fluid td-outer">
+        <div class="container-fluid td-outer" style="padding: 1rem;">
             <main role="main" class="d-flex justify-content-center">
-                <div class="col-12 mx-auto text-center" style="max-width: 700px; padding-top: 6rem;">
-                    <img src="/images/404.png" alt="Not found" width="55%" class="no-border" style="padding: 16px; min-width: 375px;">
-                    <p style="font-size: 1.5rem; font-family: Patron; margin-bottom: .2rem;">Another Page Washed Away Mysteriously (404)</p>
-                    <p style="font-size: 1rem;">This page doesn't exist. Try using the search bar at the top of the page to find the documentation that you are looking for.</p>
-                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding: .5rem; margin-top:.5rem">Go Back Home</a>
+                <div class="col-12 mx-auto text-center" style="max-width: 35rem; padding-top: 6rem; ">
+                    <img src="/images/404.png" alt="Not found" width="55%" class="no-border" style="min-width: 350px; margin-bottom:1rem;">
+                    <p class="page-title" style="font-size: 1.5rem; margin-bottom:.5rem">Another Page Washed Away Mysteriously (404)</p>
+                    <p class="body" style="font-size: 1rem;">This page doesn't exist. Try using the search bar at the top of the page to find the documentation that you are looking for.</p>
+                    <a href="{{ "/" | relURL }}" class="btn btn-outline-secondary" style="padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem;">Go Back Home</a>
                 </div>
             </main>
             <script type="text/javascript">

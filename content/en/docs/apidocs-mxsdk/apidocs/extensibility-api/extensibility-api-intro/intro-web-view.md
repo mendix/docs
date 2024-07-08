@@ -1,7 +1,7 @@
 ---
 title: "Introduction to Web Views"
 linktitle: "Web Views"
-url: /apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views
+url: /apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/
 weight: 12
 ---
 

@@ -37,4 +37,4 @@ In this method, you can tell the web view to navigate to the (local) URL that co
 In addition, the view model class can be used to house the logic for communicating with the web view.
 
 ## 3 Serving Content to the Web View
-For serving content to the web view and communicating both ways with it, see the comprehensive tutorial with a sample [todo app](/extensions-api/todo-list-extension/).
+For serving content to the web view and communicating both ways with it, see the document with a sample [todo app](/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/).

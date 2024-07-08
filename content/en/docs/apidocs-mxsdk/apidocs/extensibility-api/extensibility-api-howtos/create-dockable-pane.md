@@ -46,7 +46,7 @@ public class MyDockablePaneExtensionWebViewModel(string homePage) : WebViewDocka
 }
 ```
 
-This will create a new web enabled tabview, but you still need a way to show the new dockable pane. In order to do that, you need to modify the menu extension you added in the [basic tutorial](/extensions-api/basic_tutorial/)
+This will create a new web enabled tabview, but you still need a way to show the new dockable pane. In order to do that, you need to modify the menu extension you added when you [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
 
 Simply replace the existing content of `MyMenuExtension.cs` with the following code:
 

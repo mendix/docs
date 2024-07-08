@@ -42,7 +42,7 @@ You can delve into some in depth topics by following any of the links below:
 - What are [extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
 - What are the Extensibility API [services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
 - How to access the Studio Pro from extensions [model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
-- How to host Web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views)
+- How to host Web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
 - Todo Extension full sample app [todo extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
 - Also, please check out our API reference documentation from the Top Menu
 

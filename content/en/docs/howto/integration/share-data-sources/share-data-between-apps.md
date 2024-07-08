@@ -115,12 +115,11 @@ Do the following:
 1. Go to the [Catalog](https://catalog.mendix.com/).
 
 2. Click **Browse** and enter the search term *{yourname}*. All services and datasets that satisfy this search string are displayed in the search results pane.
-3. In the panel on the left, click **Filter** to see the **Filters** dialog box.
-4. Your app was deployed to the **Mendix Free App** or **Sandbox** environment. Check **Sandbox** to include it in the search results, then click **Apply**:
+3. In this scenario, your app was deployed to the **Sandbox** environment. To search within this environment, click **Filter** > Check **Sandbox** > **Apply**.
 
     {{< figure src="/attachments/catalog/share-data/filter-box.png" alt="Catalog screen" class="no-border" >}}
 
-5. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
+4. From the new search results list on the left, select the *{yourname}CustomerODataService* service. Full details from the OData contract for the service are displayed on the right.
 
 You have permissions edit the metadata for this service in the Catalog and are a **Technical Owner**. To edit the metadata, click the edit icon in the top-right corner of the Data Source field. 
 

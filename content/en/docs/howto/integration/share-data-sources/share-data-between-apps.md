@@ -81,7 +81,7 @@ Do the following:
     {{< figure src="/attachments/catalog/share-data/select-published-odata-service.png" class="no-border" >}}
 
 4. Name the published OData service *{yourname}CustomerODataService* and click **OK**. The new **{yourname}CustomerODataService** is added to the module.
-5. In the **Choose key** dialog box, move the attributes you want to add to form the entity from **Available attributes** to **Key attributes**.
+5. In the **Choose key** dialog box, move the attributes you want to be the key from **Available attributes** to **Key attributes**.
 
     {{< figure src="/attachments/catalog/share-data/choose-key.png" class="no-border" >}}
 6. Click **OK** to see the **Edit published entity** dialog. 

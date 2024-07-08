@@ -2,8 +2,7 @@
 title: "Marketplace Home Page"
 url: /appstore/overview/
 weight: 1
-no_list: false
-description_list: true
+no_list: true
 description: "Presents overview information on the Mendix Marketplace."
 aliases:
     - /appstore/general/

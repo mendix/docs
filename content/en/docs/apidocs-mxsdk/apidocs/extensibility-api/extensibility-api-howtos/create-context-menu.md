@@ -10,7 +10,7 @@ It is also possible to add a context menu to an `IEntity` in Studio Pro or to a 
 
 This how-to describes how you can add a context menu to an entity. Before you start this how-to, it is recommended to finish [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
-You can download the example in this how-to [here](samples/ExtensibilityAPI_tutorial_contextMenus.zip).
+You can download the example in this how-to on [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 2 Creating an Entity Context Menu Extension Class
 

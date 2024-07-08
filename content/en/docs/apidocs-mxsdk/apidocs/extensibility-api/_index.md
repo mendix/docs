@@ -32,18 +32,18 @@ Here is a list of how-tos for Extensibility API:
 - How to [create a menu extension](/extensions-api/create-menu-extension/)
 - How to [create a dockable pane](/extensions-api/create-a-dockable-pane/)
 - How to [add a context menu](/extensions-api/add-context-menus/) to an entity
-- How to host some web content inside a modal dialog using [a modal web view](http://localhost:1313/extensions-api/modal_webview_tutorial/)
+- How to host some web content inside a modal dialog using [a modal web view](/extensions-api/modal_webview_tutorial/)
 - How to [create a microflow](/extensions-api/create-microflows/)
 
 ## 5 Learn More
 
 You can delve into some in depth topics by following any of the links below:
 
-- What are [extension points](http://localhost:1313/extensions-api/extensionpoints_intro/)
-- What is the Extensibility API [services](http://localhost:1313/extensions-api/services_intro/)
-- How to Access the Studio Pro from extensions [model API](http://localhost:1313/extensions-api/modelapi_intro/)
-- How to host Web content via [web view wrapper](http://localhost:1313/extensions-api/webview_intro/)
-- Todo Extension full sample app [todo extension](http://localhost:1313/extensions-api/todo_extension/)
+- What are [extension points](/extensions-api/extensionpoints_intro/)
+- What is the Extensibility API [services](/extensions-api/services_intro/)
+- How to Access the Studio Pro from extensions [model API](/extensions-api/modelapi_intro/)
+- How to host Web content via [web view wrapper](/extensions-api/webview_intro/)
+- Todo Extension full sample app [todo extension](/extensions-api/todo_extension/)
 - Also, please check out our API reference documentation from the Top Menu
 
 ## Documentation in This Category

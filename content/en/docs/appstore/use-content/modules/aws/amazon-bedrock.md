@@ -19,6 +19,7 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Chatting with an AI assistant, including a chat history.
 * Building an AI agent to answer questions about proprietary data.
 * Generating images based on text prompts and displaying them in the Mendix app.
+* Generating embedding vectors for text inputs.
 
 ### 1.2 Prerequisites {#prerequisites}
 
@@ -230,6 +231,39 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | Attribute | Description |
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
+
+
+##### 4.1.1.8 CohereEmbedOptions_Extension (#cohere-embed-options-extension)
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | Prepends special tokens to differentiate each type from one another. It expects a value of the `ENUM_InputType_CohereEmbed` enumeration. |
+| `EmbeddingTypes` | Specifies the types of embeddings you want to have returned. Optional and default is `None`, which returns the Embed Floats response type. It expects a value of the `ENUM_EmbeddingsTypes_CohereEmbed` enumeration. |
+| `Truncate` | Specifies how the API handles inputs longer than the maximum token length. It expects a value of the `ENUM_Truncate_CohereEmbed` enumeration. |
+
+
+##### 4.1.1.9 CohereEmbedResponse {#cohere-embed-response}
+
+This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
+
+| Attribute | Description |
+| --- | --- |
+| `Response_Type` | This value is always 'embedding_floats'. |
+| `_Id` | An identifier for the response. |
+
+
+##### 4.1.1.10 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
+
+This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | See `InputType` of the `CohereEmbedOptions_Extension` entity. |
+| `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
+| `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
+
 
 #### 4.1.2 No GenAICommons dependency
 
@@ -831,6 +865,35 @@ The `RetrieveAndGenerate` operation only allows a single user message to be part
 
 The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
 
+##### 4.2.1.4 Embeddings (single string) {#embeddings-single-string}
+
+The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `InputText`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For Cohere Embed, the request can be associated to an CohereEmbedOptions_Extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (single string) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family only.
+
+
+##### 4.2.1.5 Embeddings (chunk collection) {#embeddings-chunk-collection}
+
+The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For Cohere Embed, the request can be associated to an CohereEmbedOptions_Extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family only.
+
 #### 4.2.2 GenAI Commons Helper Operations
 
 ##### 4.2.2.1 Create Amazon Bedrock Connection {#create-amazon-bedrock-connection}
@@ -872,6 +935,18 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 | Input | Output |
 | --- | --- |
 | `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+
+
+##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
+
+Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. This is useful to include parameters that are unique to Cohere Embed models.
+
+This operation corresponds to the **CohereEmbedOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
+
 
 #### 4.2.3 Other Operations
 

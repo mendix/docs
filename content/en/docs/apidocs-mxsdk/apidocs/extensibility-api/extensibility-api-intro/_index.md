@@ -1,6 +1,6 @@
 ---
-title: "Introduction"
-url: /apidocs-mxsdk/apidocs/extensibility-api/introduction/
+title: "Introductions"
+url: /apidocs-mxsdk/apidocs/extensibility-api/introductions/
 weight: 2
 no_list: false
 description_list: true
@@ -8,4 +8,4 @@ description_list: true
 
 ## 1 Introduction
 
-The how-to category contains the following documents:
+The **Introductions** category contains the following documents:

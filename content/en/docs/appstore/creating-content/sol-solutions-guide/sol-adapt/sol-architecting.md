@@ -128,7 +128,7 @@ IP protection can be used to make parts of the application model and the common 
 
 The [solution upgrade](/appstore/creating-content/sol-upgrade/) mechanism requires the application model to be of the same Mendix Platform version as the version of the solution upgrade package. Therefore, Mendix recommends the following:
 
-* You should preferrably publish a solution with the latest [MTS](/releasenotes/studio-pro/lts-mts/#mts) patch version to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
+* You should preferably publish a solution with the latest [MTS](/releasenotes/studio-pro/lts-mts/#mts) patch version to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
 * Never upgrade a solution implementation to a higher minor or major version on its own (for example, 9.18 to 9.20, or 9 to 10, respectively) when the solution is not upgraded.
 
 This is the process for upgrading a solution to a higher minor or major version:

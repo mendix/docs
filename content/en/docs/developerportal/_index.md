@@ -48,10 +48,10 @@ You can open an app in [Apps](https://sprintr.home.mendix.com/) by clicking the 
 
 The navigation pane is divided into four main categories:
 
-- [General](/developerportal/general/)
-- [Project Management](/developerportal/project-management/)
-- [App Insights](/developerportal/app-insights/)
-- [Deployment](/developerportal/deploy/general/)
+* [General](/developerportal/general/)
+* [Project Management](/developerportal/project-management/)
+* [App Insights](/developerportal/app-insights/)
+* [Deployment](/developerportal/deploy/general/)
 
 {{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
 
@@ -63,7 +63,7 @@ The features in the navigation pane can also be accessed via APIs, enabling thir
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
-There are also details on the app's [Target Cloud](/developerportal/deploy/), and the [Total Members](/control-center/members/) who can view or edit the app.
+There are also details on the app's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
 
@@ -73,7 +73,7 @@ You can also sort the order of the apps here by **Updated Date**, **Last Created
 The **Pending Invites** tab is only visible if you have any pending invites.
 {{% /alert %}}
 
-The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or deline the invite.
+The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or decline the invite.
 
 {{% alert color="info" %}}
 You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.

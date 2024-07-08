@@ -14,7 +14,7 @@ aliases:
 ---
 
 {{% alert color="info" %}}
-For more information about content support, see [Marketplace Content Support](/appstore/marketplace-content-support/)
+For more information about content support, see [Marketplace Content Support](/appstore/marketplace-content-support/).
 {{% /alert %}}
 
 ## 1 Introduction

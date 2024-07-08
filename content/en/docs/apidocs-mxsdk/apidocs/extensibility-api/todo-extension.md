@@ -25,47 +25,37 @@ In order to use this guide you will need the following tools installed on your l
 
 In order for your extension to be loaded correctly as an extension in Studio Pro you will first need to create a project. From within Visual Studio create a new project. Select the Class library project template.
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-one.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-one.png" max-width=80% >}}
 
----
 
 After selecting class library you will have to pick a location where you would like to store your extension. Name the project Mendix.ToDoExtension
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-twi" max-width=80% >}}
-
----
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-twi" max-width=80% >}}
 
 Next we set the framework version to .NET 8.0 (Long Term Support)
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-three.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-three.png" max-width=80% >}}
 
----
 
 ### 2.2 Installing Extensions API NuGet package
 
 You should now have an empty project. We now need to configure the project so that it can be used as an extension in Studio Pro.
 To be usable as an extension your project needs to add the following:
 
-- reference the extensions API nuget package
-- add a manifest.json file to the solution.
+* reference the extensions API nuget package
+* add a manifest.json file to the solution.
 
 To reference the nuget package you will need to open the nuget package manager
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-four.png" max-width=80% >}}
-
----
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-four.png" max-width=80% >}}
 
 From the browse tab search for Mendix ExtensionsAPI.
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-five.png" max-width=80% >}}
-
----
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-five.png" max-width=80% >}}
 
 Select the nuget package and click install.
 
- {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-six.png" max-width=80% >}}
-
----
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-six.png" max-width=80% >}}
 
 ### 2.3 Adding a manifest.json file
 
@@ -568,7 +558,7 @@ public class ToDoListMenuBarExtension : MenuBarExtension
 
 Up to now we have been adding all the logic that will allow your extension to run inside Studio Pro. Within the next step we need to add a user interface for our extension. In Studio Pro you need to load your user interface elements as web content. This web content is then rendered from within an isolated webview in studio pro.
 
-![Add Web Content to the solution](images/Todo-add-web-items.png)
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/add-web-items.png"  >}}
 
 First we need to add a new folder to the solution. We need to call it ```wwwroot```
 Within the folder we will add two files:

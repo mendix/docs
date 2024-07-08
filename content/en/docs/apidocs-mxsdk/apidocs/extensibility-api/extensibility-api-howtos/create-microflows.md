@@ -74,9 +74,9 @@ public void CreateMicroflows(IModel currentApp)
 }
 ```
 
-As you can see, the `CreateMicroflows` method starts a new transaction, by calling `currentApp.StartTransaction`, which is the only way an extension can modify the model of the app. If our class tried to create microflows outside of a transaction, an error will be thrown (for more information, see the document about the [model api](/extensions-api/modelapi_intro/).).
+As you can see, the `CreateMicroflows` method starts a new transaction, by calling `currentApp.StartTransaction`, which is the only way an extension can modify the model of the app. If our class tried to create microflows outside of a transaction, an error will be thrown. For more information, see [How to Interact with the Model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/).
 
-The `IMicroflowService` allows to create microflows (see more detail [here](/extensions-api/icroflow_service_tutorial/)). It requires the current model (`IModel`), the containing module or folder inside a module (`IFolderBase`), a name, and an optional `MicroflowReturnValue`. The return value is actually used in our example, so we will see how to create one as well.
+The `IMicroflowService` allows to create microflows. For details, see [Create a Microflow and Add Activities](/apidocs-mxsdk/apidocs/extensibility-api/create-microflow-add-activities/). It requires the current model (`IModel`), the containing module or folder inside a module (`IFolderBase`), a name, and an optional `MicroflowReturnValue`. The return value is actually used in our example, so we will see how to create one as well.
 
 The way a microflow returns a value is with a `IMicroflowExpression`. This can be achieved by using our `IMicroflowExpressionService`, which returns an expression from a string input, and set that expression as the microflow's return value.
 A very simple `MicroflowReturnValue` can be created as follows:
@@ -129,7 +129,7 @@ void CreateMultiplicationMicroflow(IModel currentApp, IFolderBase folder, IMicro
         (multiplication2Param, "100"));
 }
 ```
-![alt text](images/multiplication_microflow.png)
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/multiplication-microflow.png" >}}
 
 To create a microflow that performs an addition between two decimal values, this code below can be used. Just like the multiplication microflow example above, you can see that the strings "addition1" and "addition2" match the parameters used in the expression for the return value. You can also see that they are of `DataType` decimal.
 ```csharp
@@ -152,7 +152,7 @@ void CreateAdditionMicroflow(IModel currentApp, IFolderBase folder, IMicroflow c
         (addition2Param, "2.2"));
 }
 ```
-![alt text](images/addition_microflow.png)
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/addition-microflow.png" >}}
 
 Once a microflow is created, in order to make this microflow able to be called by other microflows, we need to add a call activity (`IActionActivity`). In our example, we have a method called `CreatMicroflowCallActivity` which can be used by both our multiplication and addition microflows.
 
@@ -227,7 +227,7 @@ CreateMicroflowCallActivity(currentApp, callingMicroflow, additionMicroflow,
 ```
 
 The calling microflow will look like shown below.
-![alt text](images/main_microflow.png)
+ {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/main-microflow.png" >}}
 
 ### Java Actions
 Outside of this calculation examples, you might want to create a microflow activity that calls a java action file. See below for how to add an activity, and action and a call to the microflow to achieve that. As previous examples, you have to do this inside a transaction (`IModel.StartTransaction`).

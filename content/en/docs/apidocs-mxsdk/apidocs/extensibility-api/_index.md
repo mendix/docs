@@ -46,4 +46,4 @@ You can delve into some in depth topics by following any of the links below:
 - Todo Extension full sample app [todo extension](/extensions-api/todo_extension/)
 - Also, please check out our API reference documentation from the Top Menu
 
-## Documentation in This Category
+## 6 Documentation in This Category

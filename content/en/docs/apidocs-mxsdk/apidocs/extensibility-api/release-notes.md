@@ -1,7 +1,7 @@
 ---
 title: "Release Notes"
 url: /apidocs-mxsdk/apidocs/extensibility-api/release-notes/
-weight: 5
+weight: 6
 ---
 
 # Release Notes

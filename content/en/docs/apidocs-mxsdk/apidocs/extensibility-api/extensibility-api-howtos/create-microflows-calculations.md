@@ -1,6 +1,6 @@
 ---
-title: "Create Microflows"
-url: /apidocs-mxsdk/apidocs/extensibility-api/create-microflows/
+title: "Create Microflows for Calculations"
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/
 weight: 8
 ---
 

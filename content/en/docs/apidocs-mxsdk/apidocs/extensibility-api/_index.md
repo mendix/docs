@@ -25,25 +25,25 @@ For detailed explanation on how to get started with extensions you can check out
 
 You can also check out our samples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 4 How-toss
+## 4 How-tos
 
 Here is a list of how-tos for Extensibility API:
 
-- How to [create a menu extension](/extensions-api/create-menu-extension/)
-- How to [create a dockable pane](/extensions-api/create-a-dockable-pane/)
-- How to [add a context menu](/extensions-api/add-context-menus/) to an entity
-- How to host some web content inside a modal dialog using [a modal web view](/extensions-api/modal_webview_tutorial/)
-- How to [create a microflow](/extensions-api/create-microflows/)
+* How to [create a menu extension](/extensions-api/create-menu-extension/)
+* How to [create a dockable pane](/extensions-api/create-a-dockable-pane/)
+* How to [add a context menu](/extensions-api/add-context-menus/) to an entity
+* How to host some web content inside a modal dialog using [a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
+* How to [create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
 
 ## 5 Learn More
 
 You can delve into some in depth topics by following any of the links below:
 
-- What are [extension points](/extensions-api/extensionpoints_intro/)
-- What is the Extensibility API [services](/extensions-api/services_intro/)
-- How to Access the Studio Pro from extensions [model API](/extensions-api/modelapi_intro/)
-- How to host Web content via [web view wrapper](/extensions-api/webview_intro/)
-- Todo Extension full sample app [todo extension](/extensions-api/todo_extension/)
+- What are [extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
+- What are the Extensibility API [services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
+- How to access the Studio Pro from extensions [model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
+- How to host Web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views)
+- Todo Extension full sample app [todo extension](/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/)
 - Also, please check out our API reference documentation from the Top Menu
 
 ## 6 Documentation in This Category

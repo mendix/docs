@@ -8,4 +8,4 @@ description_list: true
 
 ## 1 Introduction
 
-The how-to category contains the following documents:
+The **How-tos** category contains the following documents:

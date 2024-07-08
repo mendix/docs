@@ -1,16 +1,18 @@
 ---
-title: "Todo Extension Sample"
-url: /apidocs-mxsdk/apidocs/extensibility-api/todo-extension/
-weight: 13
+title: "Todo List Extension Sample"
+url: /apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/
+weight: 4
 ---
 
 ## 1 Introduction
 
-This sample extension adds a simple todo list extension to Studio Pro. You should be able to add new todo items to a list. The extension will be added to the Studio Pro main menu and we will be adding a user interface for the extension by using a dockable pane and some web content. During this guide you will cover the following topics:
+This sample extension adds a simple todo list extension to Studio Pro. You should be able to add new todo items to a list. The extension will be added to the Studio Pro main menu and you will add a user interface for the extension by using a dockable pane and some web content. 
+
+This document covers the following topics:
 
 - How to create an extension project and configure it for use as an extension in Studio Pro
 - How to create a web based user interface for studio pro
-- How to store information in a local storage json file
+- How to store information in a local storage JSON file
 - How to interact with the Mendix metamodel
 - How to host your user interface within the Studio Pro IDE
 
@@ -25,21 +27,21 @@ In order to use this guide you will need the following tools installed on your l
 
 In order for your extension to be loaded correctly as an extension in Studio Pro you will first need to create a project. From within Visual Studio create a new project. Select the Class library project template.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-one.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-one.png" max-width=80% >}}
 
 
 After selecting class library you will have to pick a location where you would like to store your extension. Name the project Mendix.ToDoExtension
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-twi" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-two.png" max-width=80% >}}
 
-Next we set the framework version to .NET 8.0 (Long Term Support)
+Next you set the framework version to .NET 8.0 (Long Term Support)
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-three.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-three.png" max-width=80% >}}
 
 
 ### 2.2 Installing Extensions API NuGet package
 
-You should now have an empty project. We now need to configure the project so that it can be used as an extension in Studio Pro.
+You should now have an empty project. You now need to configure the project so that it can be used as an extension in Studio Pro.
 To be usable as an extension your project needs to add the following:
 
 * reference the extensions API nuget package
@@ -47,17 +49,17 @@ To be usable as an extension your project needs to add the following:
 
 To reference the nuget package you will need to open the nuget package manager
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-four.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-four.png" max-width=80% >}}
 
 From the browse tab search for Mendix ExtensionsAPI.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-five.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-five.png" max-width=80% >}}
 
 Select the nuget package and click install.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/step-six.png" max-width=80% >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/step-six.png" max-width=80% >}}
 
-### 2.3 Adding a manifest.json file
+### 2.3 Adding a manifest.json File
 
 You should now have a class library that can be loaded as an extension by Studio Pro.
 However Studio Pro still needs some help in determining how to load the assemblies of your class library.
@@ -78,9 +80,9 @@ This will instruct Studio Pro to load Mendix.ToDoExtension.dll whenever it loads
 
 As a last step you can remove the Class1.cs file as you will not be needing this file.
 
-## 3 Adding a Dockable Pane to host our user interface
+## 3 Adding a Dockable Pane to Host Your User Interface
 
-The next step in our Guide is to host a Dockable Pane within Studio Pro. This will provide us with a window wherein we can render the User Interface of our extension.
+The next step in this Guide is to host a Dockable Pane within Studio Pro. This will provide us with a window wherein you can render the User Interface of the extension.
 Add a new file to the solution called ```ToDoListDockablePaneExtension.cs```
 
 Replace the contents of the file with the following code:
@@ -115,7 +117,7 @@ public class ToDoListDockablePaneExtension : DockablePaneExtension
 
 Note that you are expected to get an error at this point around the ToDoListDockablePaneViewModel.
 
-### What is going on?
+### 3.1 Explanation
 
 There are a few notable features of this class that you might have noticed. The first is that the top of the class is decorated with an ```Export``` attribute:
 
@@ -123,7 +125,7 @@ There are a few notable features of this class that you might have noticed. The 
 [Export(typeof(DockablePaneExtension))]
 ```
 
-Studio Pro uses this attribute to identify which extension type to inject this class into. If you do not specify this attribute Studio Pro will not load your extension type. Additionally, our extension descends from ```DockablePaneExtension``` Studio Pro uses abstract classes to enforce behavior for your extensions.
+Studio Pro uses this attribute to identify which extension type to inject this class into. If you do not specify this attribute Studio Pro will not load your extension type. Additionally,the extension descends from ```DockablePaneExtension``` Studio Pro uses abstract classes to enforce behavior for your extensions.
 
 ```csharp
 public class ToDoListDockablePaneExtension : DockablePaneExtension
@@ -142,7 +144,7 @@ If you wish to inject your own custom types they will also need to be decorated 
     }
 ```
 
-In this constructor you will note that we request an instance of the ILogService and then save the instance in a private field.
+In this constructor you will note that you request an instance of the ILogService and then save the instance in a private field.
 
 ```csharp
     public override string Id => PaneId;
@@ -153,9 +155,9 @@ In this constructor you will note that we request an instance of the ILogService
     }
 ```
 
-In the final portion of the class we provide some necessary information to Studio Pro. The first is that we override the Id property. This property provides Studio Pro with a way to uniquely identify your dockable pane extension. Next we override the Open method. Within this method we need to return a valid implementation of DockablePaneViewModelBase which studio Pro will use to render your pane's contents.
+In the final portion of the class you provide some necessary information to Studio Pro. The first is that you override the Id property. This property provides Studio Pro with a way to uniquely identify your dockable pane extension. Next you override the Open method. Within this method you need to return a valid implementation of DockablePaneViewModelBase which studio Pro will use to render your pane's contents.
 
-In closing, in this section we performed the following:
+In closing, in this section you performed the following:
 
 - Create a new class that descends from DockablePaneExtension
 - Decorate your class with the Export Attribute
@@ -163,9 +165,9 @@ In closing, in this section we performed the following:
 - Inject the ILogService
 - Return a valid view model from the open method.
 
-## 4 Creating a view model that we will use to host our view data
+## 4 Creating a View Model to Host Your View Data
 
-After adding our dockable pane extension, the next step will be adding a view model where we will be storing our view data.
+After adding our dockable pane extension, the next step will be adding a view model where you will be storing our view data.
 Add a new file to the solution named ```ToDoListDockablePaneViewModel.cs```
 
 Replace the contents of the file with the following code: 
@@ -254,9 +256,9 @@ namespace Mendix.ToDoExtension;
 }
 ```
 
-### What is going on?
+### 4.1 Explanation
 
-The first important thing to note about this viewmodel class is that we do not decorate this class with the export attribute. This means that our extension will be responsible for instantiating this type within our extension. This also means that we can specify any type we like within the constructor. We already setup the instantiation of this class in the previous section of the guide. the important bit here is that we pass in our baseUri, getCurrentApp lambda expression and an instance of the logging class.
+The first important thing to note about this viewmodel class is that you do not decorate this class with the export attribute. This means that the extension will be responsible for instantiating this type within the extension. This also means that you can specify any type you like within the constructor. You already setup the instantiation of this class in the previous section of the guide. the important bit here is that you pass in the baseUri, getCurrentApp lambda expression and an instance of the logging class.
 
 ```csharp
     public ToDoListDockablePaneViewModel(Uri baseUri, Func<IModel?> getCurrentApp, ILogService logService)
@@ -267,7 +269,7 @@ The first important thing to note about this viewmodel class is that we do not d
     }
 ```
 
-In order to host a web interface inside Studio Pro, your viewmodel must implement InitWebView. Within this method you are passed an instance of IWebView. This is your application's isolated webview. We now need to provide the webview some information so that it will render its data correctly.
+In order to host a web interface inside Studio Pro, your viewmodel must implement InitWebView. Within this method you are passed an instance of IWebView. This is your application's isolated webview. You now need to provide the webview some information so that it will render its data correctly.
 
 ```csharp
     public override void InitWebView(IWebView webView)
@@ -304,11 +306,11 @@ In order to host a web interface inside Studio Pro, your viewmodel must implemen
     }
 ```
 
-Firstly we set the default address to ```new Uri(_baseUri, "index");``` we will delve a bit deeper into where this index comes from later in the guide. If you want to skip ahead, check out the heading 'Setting up communication between our user interface and extension'
+Firstly you set the default address to ```new Uri(_baseUri, "index");``` you will delve a bit deeper into where this index comes from later in the guide. If you want to skip ahead, check out the heading 'Setting up communication between the user interface and extension'
 
-Secondly we add an event handler for the ```MessageReceived``` event. We will be using this method send and respond to messages from the webview. Within Studio Pro we use a two-way message bus as the primary communication method between your web based user interface and your extension logic.
+Secondly you add an event handler for the ```MessageReceived``` event. You will be using this method send and respond to messages from the webview. Within Studio Pro you use a two-way message bus as the primary communication method between your web based user interface and your extension logic.
 
-Inside our message received event handler we add some code to handle the tasks we need to perform
+Inside the message received event handler you add some code to handle the tasks you need to perform
 - AddToDo will add a Todo Item to the list.
 - ChangeToDoStatus will change the status of a Todo item.
 - ClearDone will remove all items flagged as done.
@@ -372,10 +374,10 @@ Let's also create the methods responsible for performing the logic
     }
 ```
 
-## 5 Creating a model to store our todo information
+## 5 Creating a Model to Store the Todo Information
 
-In order to store our information to disk we will have to add some model classes that will be able to store our To do information.
-First lets add a new class that will host the To do information itself. We will call the file ```ToDoModel.cs```
+In order to store the information to disk you will have to add some model classes that will be able to store the To do information.
+First lets add a new class that will host the To do information itself. You will call the file ```ToDoModel.cs```
 
 Now replace the contents of the file with the following code:
 
@@ -405,7 +407,7 @@ public record ToDoModel
 }
 ```
 
-We will also need a model class that will store a list of all the todos that we have available. Let's add another class and this time name it ```ToDoListModel.cs```
+You will also need a model class that will store a list of all the todos that you have available. Let's add another class and this time name it ```ToDoListModel.cs```
 Now replace the contents of this file with the following code:
 
 ```csharp
@@ -425,9 +427,9 @@ public record ToDoListModel
 }
 ```
 
-## 6 Creating a storage handler to store our todo information
+## 6 Creating a Storage Handler to Store the Todo Information
 
-With our models created we can now create a storage handler that will manage storing these models to disk. As before we will add a new class file. This time we will call it ```ToDoStorage.cs```
+With the models created you can now create a storage handler that will manage storing these models to disk. As before you will add a new class file. This time you will call it ```ToDoStorage.cs```
 
 Now replace the contents of the file with the following code: 
 
@@ -479,9 +481,9 @@ public class ToDoStorage
 }
 ```
 
-### What is going on?
+### 6.1 Explanation
 
-The ToDoStorage class will be responsible for storing our todo information to disk. In order to store our file in the correct path we need to request the path from the CurrentApp instance. 
+The ToDoStorage class will be responsible for storing the todo information to disk. In order to store the file in the correct path you need to request the path from the CurrentApp instance. 
 
 ```csharp
     public ToDoStorage(IModel currentApp, ILogService logService)
@@ -491,7 +493,7 @@ The ToDoStorage class will be responsible for storing our todo information to di
     }
 ```
 
-We also need to handle loading and saving of our todo data.
+You also need to handle loading and saving of the todo data.
 
 ```csharp
     public ToDoListModel LoadToDoList()
@@ -522,9 +524,9 @@ We also need to handle loading and saving of our todo data.
     }
 ```
 
-## 7 Adding a Menu item so that we can open our extension from the main menu
+## 7 Adding a Menu Item to Open the Extension from the Main Menu
 
-Next we will add a menu item to the toolbar that will allow us to select the ToDo list from a menu item. In order to do this we will be creating a MenuBarExtension. Let's add another class and call it ```ToDoListMenuBarExtension.cs```
+Next you will add a menu item to the toolbar that will allow us to select the ToDo list from a menu item. In order to do this you will be creating a MenuBarExtension. Let's add another class and call it ```ToDoListMenuBarExtension.cs```
 
 Now within the file lets replace the contents of the file with the following code:
 
@@ -554,17 +556,17 @@ public class ToDoListMenuBarExtension : MenuBarExtension
 }
 ```
 
-## 8 Adding a Web based user interface
+## 8 Adding a Web-based User Interface
 
-Up to now we have been adding all the logic that will allow your extension to run inside Studio Pro. Within the next step we need to add a user interface for our extension. In Studio Pro you need to load your user interface elements as web content. This web content is then rendered from within an isolated webview in studio pro.
+Up to now you have been adding all the logic that will allow your extension to run inside Studio Pro. Within the next step you need to add a user interface for the extension. In Studio Pro you need to load your user interface elements as web content. This web content is then rendered from within an isolated webview in studio pro.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-extension/add-web-items.png"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/todo-list-extension/add-web-items.png"  >}}
 
-First we need to add a new folder to the solution. We need to call it ```wwwroot```
-Within the folder we will add two files:
+First you need to add a new folder to the solution. You need to call it ```wwwroot```
+Within the folder you will add two files:
 
--The First is a html page that will contain the layout of our user interface. Let's call it ```index.html```
--Next we need to add a js file that will contain the client side logic for our user interface. Let's call it ```main.js```
+-The First is a html page that will contain the layout of the user interface. Let's call it ```index.html```
+-Next you need to add a js file that will contain the client side logic for the user interface. Let's call it ```main.js```
 
 Okay now let's add some code. Let's start with ```index.html``` open the file and replace its contents with the following:
 
@@ -612,7 +614,7 @@ Okay now let's add some code. Let's start with ```index.html``` open the file an
 </html>
 ```
 
-Now we need to add our js logic. Let's open ```main.js```.
+Now you need to add the js logic. Let's open ```main.js```.
 Now replace the contents of the file with the following:
 
 ```js
@@ -685,12 +687,12 @@ document.getElementById("clearDoneButton").addEventListener("click", () => {
 await refreshToDos();
 ```
 
-### What is going on?
+### 8.1 Explanation
 
-Our html page is pretty self-explanatory as we are providing a very simple interface with some added css styling provided by Tailwind css.
-Within our Js file we need to add some logic so that our webview will be able to communicate with your extension logic correctly.
+This html page is pretty self-explanatory as you are providing a very simple interface with some added css styling provided by Tailwind css.
+Within the Js file you need to add some logic so that the webview will be able to communicate with your extension logic correctly.
 
-We add a small helper function to simplify our call to the browser api:
+You add a small helper function to simplify the call to the browser api:
 
 ```javascript
 function postMessage(message, data) {
@@ -698,7 +700,7 @@ function postMessage(message, data) {
 }
 ```
 
-We also need to perform some initialization to ensure that we can respond to messages send to javascript and 
+You also need to perform some initialization to ensure that you can respond to messages send to javascript and 
 
 ```javascript
 // Register message handler.
@@ -714,13 +716,13 @@ async function handleMessage(event) {
 }
 ```
 
-It is important to set these two `index.html` and `main.js` files to "Copy always" or "Copy if newer" in their "Copy to Output Directory" property or they will not be present in the build output folder when we are ready to start using our extension.
+It is important to set these two `index.html` and `main.js` files to "Copy always" or "Copy if newer" in their "Copy to Output Directory" property or they will not be present in the build output folder when you are ready to start using the extension.
 
-## 9 Setting up communication between our user interface and extension
+## 9 Setting up Communication Between the User Interface and Extension
 
-So far we have configured our extension to be usable in studio pro. We added support for storing our to do items. We also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web based javascript logic.
+So far you have configured the extension to be usable in studio pro. You added support for storing the to do items. You also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web based javascript logic.
 
-Let's start with adding a utility class to help simplify the way we interact with web responses. Let's call the file ```HttpListenerResponseUtils.cs```.
+Let's start with adding a utility class to help simplify the way you interact with web responses. Let's call the file ```HttpListenerResponseUtils.cs```.
 Now let's replace the contents of the file with the following:
 
 ```csharp
@@ -775,21 +777,21 @@ public static class HttpListenerResponseUtils
 }
 ```
 
-### What is going on?
+### 9.1 Explanation
 
-Your web based user interface is hosted inside studio pro in an isolated web container. As such to communicate with it we are adding some utility functionality to help us improve our code.
+Your web based user interface is hosted inside studio pro in an isolated web container. As such to communicate with it you are adding some utility functionality to help us improve the code.
 
-The first method we add is SendFileAndClose. This function will allow us to send the contents of a file located on your hard drive to the webpage where your user interface is hosted.
+The first method you add is SendFileAndClose. This function will allow us to send the contents of a file located on your hard drive to the webpage where your user interface is hosted.
 
-Next we add SendJsonAndClose. This method functions similarly to SendFileAndClose but will accept a json stream instead of a file path.
+Next you add SendJsonAndClose. This method functions similarly to SendFileAndClose but will accept a json stream instead of a file path.
 
-After that we add SendNoBodyAndClose. This sends an empty response with just a status code to the webpage.
+After that you add SendNoBodyAndClose. This sends an empty response with just a status code to the webpage.
 
-The final method AddDefaultHeaders is a utility method that adds some default http headers to our requests.
+The final method AddDefaultHeaders is a utility method that adds some default http headers to the requests.
 
-### Next Steps
+### 9.2 Next Steps
 
-Now we will add a web server extension. This extension type allows you to serve web content easily within extensions.
+Now you will add a web server extension. This extension type allows you to serve web content easily within extensions.
 Let's add a new file called: ```ToDoListWebServerExtension.cs```.
 
 Now replace the contents of the file with the following: 
@@ -852,18 +854,16 @@ public class ToDoListWebServerExtension : WebServerExtension
 }
 ```
 
-### What is going on?
+This class is the web container that allows Studio Pro to interact with your user interface. Within this class you will serve the web content to your extension logic.
 
-This class is the web container that allows Studio Pro to interact with your user interface. Within this class we will serve our web content to your extension logic.
+Please note that you inherit from WebServerExtension. a WebServerExtension does exactly what is says: it serves web content to Studio Pro.
 
-Please note that we inherit from WebServerExtension. a WebServerExtension does exactly what is says: it serves web content to Studio Pro.
+Additionally, you override the InitializeWebServer method. Studio Pro will call this method during startup, and you should place all your initialization logic in here. This implementation adds three web routes. These web routes are the locations where your user interface can be accessed from.
 
-Additionally, we override the InitializeWebServer method. Studio Pro will call this method during startup, and you should place all your initialization logic in here. Our implementation adds three web routes. These web routes are the locations where your user interface can be accessed from.
-
-ServeIndex, ServeMainJs, ServeToDos serves the contents of our 3 routes to your extension logic.
+ServeIndex, ServeMainJs, ServeToDos serves the contents of the 3 routes to your extension logic.
 
 
-## 10 Hosting the extension in Studio Pro
+## 10 Hosting the Extension in Studio Pro
 
 All the code you need should now be complete. The last step in the process is building your solution and adding your binary output as an extension inside your app.
 

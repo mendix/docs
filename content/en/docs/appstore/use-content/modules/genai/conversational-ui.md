@@ -85,18 +85,18 @@ If you need additional attributes or associations on the `ChatContext`, use an e
 
 #### 4.2.1 Chat Context Operations {#chat-context-operations}
 
-The following operations can be found in the tool box for processing the [ChatContext](#chat-context):
-* `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally the action microflow of the new `ProviderConfig` is set.
+The following operations can be found in the toolbox for processing the [ChatContext](#chat-context):
+* `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
 * `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `Create ChatContext & Set ProviderConfig (List)` create a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
-* `Set ConversationID` sets the ConversationID of the `ChatContext`. Storing the ConversationID is needed [chat with history within Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate-with-history).
-* `Set ChatContext Topic` sets the `Topic`of the `ChatContext`. It can be used in the **History** sidebar to make historical chats visible to users.
+* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for [chat with history within Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate-with-history).
+* `Set Topic` sets the `Topic`of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
 #### 4.2.2 Request Operations {#request-operations}
 
 * `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
-* `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI.
+* `Update Assistant Response` processes the response of the model and add the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
 #### 4.2.3 Message {#message}
 
@@ -117,7 +117,8 @@ It is possible to add suggested user prompts to a `ChatContext`. They appear as 
 ### 4.3 ProviderConfig {#provider-config}
 
 The `ProviderConfig` contains the selection of the model provider for the AI Bot to chat with. This contains an action microflow that is executed when the **Send** button is clicked. You can store additional information, such as connection details, on the `ProviderConfig` by using a specialization and adding the necessary fields. For an example implementation, see the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926).
-The **Create ProviderConfig for ChatContext** toolbox action adds a new `ProviderConfig` (or a specialization of such depending on the input) to a `ChatContext`. The `ProviderConfig` can optionally also be set to active if IsActive is set to true. Additionally the action microflow of the new `ProviderConfig` is set.
+
+The **Create ProviderConfig for ChatContext** toolbox action adds a new `ProviderConfig` (or a specialization of such depending on the input) to a `ChatContext`. The `ProviderConfig` can optionally also be set to active if IsActive is set to true. Additionally, the action microflow of the new `ProviderConfig` is set.
 
 #### 4.3.1 Action Microflow {#action-microflow}
 

@@ -315,7 +315,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/modules/genai/openai/domain-model-configuration.png" alt="" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-configuration.png" alt="" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -357,7 +357,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 For chat completions operations, the connector is based on entities from the [GenAI Commons](/appstore/modules/genai/commons/) module. OpenAI-specific parameters are available in either extension entities or specializations.
 
-{{< figure src="/attachments/appstore/modules/genai/openai/domain-model-openai-request_extension.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-openai-request_extension.png" >}}
 
 ##### 4.1.2.1 `OpenAIRequest_Extension` {#openairequest-extension} 
 
@@ -383,7 +383,7 @@ The connector does not provide specific entities for chat completions because th
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-{{< figure src="/attachments/appstore/modules/genai/openai/domain-model-images.png" alt="" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-images.png" alt="" >}}
 
 ##### 4.1.4.1 `ImageGenerationsRequest` {#imagegenerationsrequest} 
 
@@ -438,7 +438,7 @@ The `ImageGenerationsRequest` object is an image generations request that create
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/modules/genai/openai/domain-model-embeddings-with-data-batch.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-embeddings-with-data-batch.png" >}}
 
 ##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
 

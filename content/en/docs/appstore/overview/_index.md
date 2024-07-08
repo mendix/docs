@@ -2,8 +2,7 @@
 title: "Marketplace Home Page"
 url: /appstore/overview/
 weight: 1
-no_list: false
-description_list: true
+no_list: true
 description: "Presents overview information on the Mendix Marketplace."
 aliases:
     - /appstore/general/
@@ -73,7 +72,7 @@ On this page, you can see and manage the drafts for all the Marketplace content 
 
 This page presents details on how many total drafts you have, which drafts are ready to publish or are awaiting approval, and which drafts have been declined.
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-drafts.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/my-drafts.png" class="no-border" >}}
 
 These are the possible **Status** entries for each item:
 
@@ -97,7 +96,7 @@ Click the name of the component to go its [component details page](/appstore/com
 
 Click the context menu to access various options for managing your content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-content.png"  width="400"  class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/my-content.png"  width="400"  class="no-border" >}}
 
 * **Manage Drafts** – Click this to manage the drafts of the component
     * Only one draft version of a component can exist at a time, so when one draft version is in progress, another draft cannot be initiated
@@ -118,7 +117,7 @@ In addition, you may see a label on a component name for the [content group](#co
 
 You can see all the Marketplace content you have trials for on this page:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/my-subscriptions.jpg" class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/my-subscriptions.jpg" class="no-border" >}}
 
 The table presents the **Names** of products you have trials for.
 
@@ -136,7 +135,7 @@ Click the name of the component to go its [component details page](/appstore/com
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/saved.png"  width="400"  class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/saved.png"  width="400"  class="no-border" >}}
 
 * **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
@@ -163,7 +162,7 @@ Click the name of the component to go its [component details page](/appstore/com
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-content.png"  width="400"  class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/company-content.png"  width="400"  class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
@@ -171,7 +170,7 @@ The options in this menu are the same as described for the context menu for the 
 
 You can see all the content shared within your organization on this page, which includes previously purchased products, trial subscriptions, paid subscriptions, or company-level services:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/company-subscriptions.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/company-subscriptions.png" class="no-border" >}}
 
 The table presents the **Names** of the products your company has subscribed to.
 
@@ -199,7 +198,7 @@ This table breaks down the roles and permissions for content groups:
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content.png"  width="400"  class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/group-content.png"  width="400"  class="no-border" >}}
 
 {{% alert color="info" %}}
 A component can only be assigned to one content group at a time. If a component is already assigned to another content group, it will not appear in this dialog box.
@@ -207,7 +206,7 @@ A component can only be assigned to one content group at a time. If a component 
 
 Click the context menu to access various options for managing this content:
 
-{{< figure src="/attachments/appstore/overview/my-marketplace/group-content-context.png" width="400" class="no-border" >}}
+{{< figure src="/attachments/appstore/overview/group-content-context.png" width="400" class="no-border" >}}
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 
@@ -245,4 +244,4 @@ To delete a content group, a Group Admin or Mendix Admin can click **Delete Grou
 
 The **Data** category contains the following items:
 
-* Catalog
+* Catalog – Clicking it opens [Mendix Catalog](https://catalog.mendix.com/).

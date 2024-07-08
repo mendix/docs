@@ -502,7 +502,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 
 7. Click **Save** to save the configuration.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/user commons.png" max-width=80% class="image-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/user commons.png" max-width=80% >}}
 
 ### 6.3 Evaluating Multiple User Matches
 
@@ -633,7 +633,7 @@ To parse of SAM access tokens you need to do the following when performing [OIDC
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/enable-sam.png" class="image-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/enable-sam.png" >}}
 
 2. Add the scopes `sam_account`, `samauth.role`, `samauth.tier`, and `samauth.ten` to the **Selected Scopes** in the OIDC Client Configuration.
 3. Configure the user roles in your app to match the roles returned by SAM. End-users will be given the matching role when they sign into the app. If the role in the SAM token is not found in the Mendix app the end-user will be given the role `User`.
@@ -655,7 +655,7 @@ To parse the OIDC Provider access tokens you need to do the following when perfo
 
 1. Select `OIDC.Default_OIDCProvider_TokenProcessing_CustomATP` as the **custom AccessToken processing microflow**.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/oidc-provider-parsing.png" class="image-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/oidc-provider-parsing.png" >}}
 
 2. Add the scopes `openid` and the ModelGUID or Name to the **Selected Scopes** in the OIDC Client Configuration. The ModelGUID will look something like `53f5d6fa-6da9-4a71-b011-454ec052cce8`.
 

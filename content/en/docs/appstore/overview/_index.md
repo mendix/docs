@@ -7,15 +7,15 @@ description: "Presents overview information on the Mendix Marketplace."
 aliases:
     - /appstore/general/
     - /appstore/general/app-store-overview/
-    - /appstore/general/use-content-support/
-    - /appstore/general/app-store-content-support/
     - /community/app-store/
     - /community/app-store/app-store-overview/
     - /developerportal/app-store/app-store-overview/
-    - /community/use-content-support/
-    - /developerportal/app-store/use-content-support/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="info" %}}
+For more information about content support, see [Marketplace Content Support](/appstore/marketplace-content-support/).
+{{% /alert %}}
 
 ## 1 Introduction
 

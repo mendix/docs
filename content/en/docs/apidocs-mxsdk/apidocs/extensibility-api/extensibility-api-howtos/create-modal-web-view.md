@@ -12,7 +12,7 @@ You can download the sample in this how-to in [this Github repository](https://g
 
 ## 2 Adding a View Model for Your New Modal
 
-The view model takes care of the messages and the overall lifecycle of the modal web view.
+Add a view model for your new model. The view model takes care of the messages and the overall lifecycle of the modal web view.
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -50,9 +50,11 @@ class MyModalWebViewViewModel(
 
 ## 3 Adding a Controller Class
 
-You are creating a controller that you can delegate a part of work to, so that you do not have to pollute the menu item with unrelated business logic. For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
+You are creating a controller to delegate specific tasks, allowing you to keep the menu item free of unrelated business logic, for instance, conducting basic setup and displaying the web view. This approach is recommended, but not mandatory.
 
->[#NOTE] Please specify both Height and Width properties as otherwise they will default to 0,0
+{{% alert color="info" %}}
+Specify both `Height` and `Width` properties; otherwise, they will default to 0,0.
+{{% /alert %}}
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -74,9 +76,7 @@ class MyModalWebViewController(IDialogService dialogService, IMessageBoxService 
 ```
 
 ## 4 Adding a Content Server
-To open static pages you need to source them from either a file system path or via the WebServerExtension route. 
-
-This how-to covers the latter as this is the preferred way to provide static web content to an extension. 
+To open static pages, you need to source them from either a file system path or via the `WebServerExtension` route.  This document covers the latter, as this is the preferred way to provide static web content to an extension. 
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -158,4 +158,6 @@ class MyMenuExtension(MyModalWebViewController myModalWebViewController) : MenuE
     }
 }
 ```
-These changes inject your new controller class into the `MyMenuExtension` class. You then add a new menu item called `Create Entity From Dialog` and then call the controller's `ShowDialog` method. Notice in this example, the parameter `currentApp`, which, if the dialog needs to interact with the model, will be necessary. `WebServerBaseUrl` is just as important though, as without the base path you will never be able to navigate to the route you defined in the web server extension.
+These changes inject your new controller class into the `MyMenuExtension` class. Then you add a new menu item called `Create Entity From Dialog` and call the controller's `ShowDialog` method.
+
+Note that in this example, the parameter `currentApp` will be necessary, if the dialog needs to interact with the model. Additionally, `WebServerBaseUrl` is crucial, because, without the base path, navigating to the route you defined in the web server extension would not be possible.

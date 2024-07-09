@@ -29,6 +29,10 @@ After clicking **Generate Translations...**, you will be asked to confirm your c
 
 Once translations are generated, you need to Click **Translate** to save the changes. You can then go to the next language to translate further.
 
+{{% alert color="warning" %}}
+Currently, if you encounter an error after clicking **Generate Translations...**, try to sign out and sign in to Studio Pro again.
+{{% /alert %}}
+
 ## 3 Read More
 
 * [Batch Translate](/refguide/batch-translate/)

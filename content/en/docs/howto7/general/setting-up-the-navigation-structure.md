@@ -87,7 +87,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
     {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png" class="no-border" >}}
 
-4. Double click the widget to open its properties.
+4. Double-click the widget to open its properties.
 5. Select **Project navigation** as menu source. This is the navigation structure defined in the navigation editor. You can also add additional menu structures by use of menu documents and use them instead.
 6. Select **Desktop**, **Tablet**, or **Phone** as menu, depending on the device interface you're working on.
 7. Click **OK** to save the properties. The menu widget is now showing the navigation items created in the navigation editor.

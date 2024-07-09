@@ -531,9 +531,9 @@ The setting for action triggers is related to the selection method and can somet
 | Selection method | Action trigger          | Selection trigger                                | Supported |
 | ---------------- | ----------------------- | ------------------------------------------------ | --------- |
 | Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
-| Checkbox         | Double click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Double-click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
 | Row              | Single click on the row |                                                  | No        |
-| Row              | Double click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+| Row              | Double-click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 

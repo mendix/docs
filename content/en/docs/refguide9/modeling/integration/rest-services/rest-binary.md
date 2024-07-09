@@ -189,6 +189,6 @@ To retrieve files using a microflow, do the following:
   
 4. For images: 
    Drag a **Change object** action into the microflow after the **Call REST service** action, so that the image viewer will display the retrieved image. 
-    * Double click the newly created action to open the properties.
+    * Double-click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.

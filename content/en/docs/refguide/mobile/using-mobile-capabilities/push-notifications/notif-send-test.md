@@ -20,7 +20,7 @@ To send your first test notification, do the following:
 1. Go to the push notification administration page you added earlier to your navigation.
 1. Go to the **Devices** tab.
 1. Select the your test device.
-1. Click **New Message** (or double click your test device).
+1. Click **New Message** (or double-click your test device).
 1. Fill in any **Title**/**Body** that you want for your notification.
 1. Set the **Action name** to *Example*.
 1. Leave the remaining fields to the defaults.

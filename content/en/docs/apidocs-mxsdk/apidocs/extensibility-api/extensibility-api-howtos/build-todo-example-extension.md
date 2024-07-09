@@ -1,12 +1,12 @@
 ---
-title: "Build a Todo Sample Extension"
-url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/
+title: "Build a Todo Example Extension"
+url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/
 weight: 20
 ---
 
 ## 1 Introduction
 
-This document describes how to build a sample extension that adds a simple todo list extension to Studio Pro. With this sample extension, you can add new todo items to a list. The sample extension will be added to the main menu of Studio Pro and you will add a user interface for the sample extension by using a dockable pane and some web content. 
+This document describes how to build an example extension that adds a simple todo list extension to Studio Pro. With this example extension, you can add new todo items to a list. The example extension will be added to the main menu of Studio Pro and you will add a user interface for the example extension by using a dockable pane and some web content. 
 
 This document covers the following topics:
 
@@ -20,7 +20,7 @@ This document covers the following topics:
 
 Before you start the procedure, make sure that you have installed the following tools on your local development environment:
 
-* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or Jetbrains Rider. This sample will assume that you are using Microsoft Visual Studio 2022.
+* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or Jetbrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
 * Studio Pro version 10.6 or higher
 
 ## 3 Creating the Project and Configuring It as an Extension
@@ -32,16 +32,16 @@ In order for your extension to be loaded correctly as an extension in Studio Pro
 1. In Visual Studio, create a new project.
 2. Select the *Class Library* project template and click **Next**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-one.png" >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-one.png" >}}
 
 3. Name the project *Mendix.ToDoExtension*.
 4.  Choose a location to store your extension, and click **Next**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-two.png" >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-two.png" >}}
 
 5.  Set **Framework** to *.NET 8.0 (Long Term Support)* and click **Create**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-three.png" max-width=80%  >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-three.png" max-width=80%  >}}
 
 Now you have an empty project.
 
@@ -58,15 +58,15 @@ The details of each step are described below.
 
 1.  In Visual Studio, go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-four.png" >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-four.png" >}}
 
 2.  On the **Browse** tab, search for **Mendix ExtensionsAPI**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-five.png" max-width=50% >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-five.png" max-width=50% >}}
 
 3.  Select the NuGet package and click **Install**.
 
-    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/step-six.png"  max-width=50%  >}}
+    {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-six.png"  max-width=50%  >}}
 
 #### 3.2.2 Adding a `manifest.json` File
 
@@ -585,7 +585,7 @@ In this section, you will add a menu item to the toolbar that will allow you to 
 
 Up to now you have been adding all the logic that will allow your extension to run inside Studio Pro. In this section, you will add a user interface for the extension. In Studio Pro, you need to load your user interface elements as web content. This web content is then rendered from within an isolated web view in Studio Pro.
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-sample-extension/add-web-items.png"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/add-web-items.png"  >}}
 
 1. Add a new folder to the solution and call it `wwwroot`.
 2. In the folder, add two files:

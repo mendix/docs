@@ -7,7 +7,7 @@ weight: 8
 ## 1 Introduction
 This how-to describes how you can create microflows which perform some calculations and return the result.
 
-You can download the sample in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
+You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 2 Creating an Extension Class that Creates Microflows
 1. Open the project that you previously created when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).

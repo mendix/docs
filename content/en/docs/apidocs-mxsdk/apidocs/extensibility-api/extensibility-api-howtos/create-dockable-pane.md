@@ -8,7 +8,7 @@ weight: 5
 
 This how-to describes how you can add a custom dockable web pane window to Studio Pro. Before you start this how-to, it is recommended to [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
-You can download the sample in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples).
+You can download the example in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 2 Creating a Dockable Pane Extension Class
 
@@ -37,7 +37,7 @@ The dockable pane will have content, and this content comes in the form of a vie
 
 You need to override the `InitWebView` method in which you can set up the content of your web view inside the dockable pane. In this example, it will contain the home page of `http://mendix.com`.
 
-Below is a small sample code of the view model:
+Below is a small example code of the view model:
 
 ```csharp
 using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;

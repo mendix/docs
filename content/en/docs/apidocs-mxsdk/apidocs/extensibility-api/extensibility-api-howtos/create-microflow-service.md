@@ -104,7 +104,7 @@ IReadOnlyList<IActivity> activities = _microflowService.GetAllMicroflowActivitie
 ```
 
 ## 7 IsVariableNameInUse
-This method can check if the microflow already contains a variable with the name provided. This can be called before adding a new activity to the flow whose output variable name could overlap with existing variables. Small sample below:
+This method can check if the microflow already contains a variable with the name provided. This can be called before adding a new activity to the flow whose output variable name could overlap with existing variables. A sample example is as follows:
 ```csharp
 public void AddNewActivity(IModel currentApp, IMicroflow microflow, string activityName)
 {

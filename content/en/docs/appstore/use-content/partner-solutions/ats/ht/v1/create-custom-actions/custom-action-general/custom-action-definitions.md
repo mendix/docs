@@ -63,7 +63,7 @@ When you encounter a widget that you cannot interact with using the standard act
 
 An unsupported widget action uses core actions to interact with a widget. It is comparable to a standard Mendix action, but it is created by the user.
 
-Follow the guidelines bekiw for building a custom action to create an unsupported widget action.
+Follow the guidelines below for building a custom action to create an unsupported widget action.
 
 ### 3.2 Example
 

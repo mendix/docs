@@ -34,7 +34,7 @@ This how-to teaches you how to do the following:
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/)
-* Know your Selenium setup (a provider like Browsertack, local server, etc.)
+* Know your Selenium setup (a provider like Browserstack, local server, etc.)
 
 ## 3 Uploading a File
 

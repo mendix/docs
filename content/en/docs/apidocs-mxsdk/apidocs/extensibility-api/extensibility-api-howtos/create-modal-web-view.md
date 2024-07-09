@@ -8,11 +8,11 @@ weight: 7
 
 This how-to describes how you can create a new web view hosted inside a modal dialog. You will then open the modal from a new menu item.
 
-You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples)
+You can download the sample in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples)
 
 ## 2 Adding a View Model for Your New Modal
 
-It would take care of the messages and the overall lifecycle of the modal web view.
+The view model takes care of the messages and the overall lifecycle of the modal web view.
 
 ```csharp
 namespace MyCompany.MyProject.MendixExtension;
@@ -50,7 +50,7 @@ class MyModalWebViewViewModel(
 
 ## 3 Adding a Controller Class
 
-We're creating a controller that you can delegate a part of work to, so that you do not have to pollute the menu item with unrelated business logic. For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
+You are creating a controller that you can delegate a part of work to, so that you do not have to pollute the menu item with unrelated business logic. For instance conducting the basic setup and showing our web view. Although, it's just a recommendation, not a rule.
 
 >[#NOTE] Please specify both Height and Width properties as otherwise they will default to 0,0
 

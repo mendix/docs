@@ -23,17 +23,17 @@ If you need to add your own custom UI to Studio Pro, you can achieve this using 
 
 For detailed explanation on how to get started with extensions you can check out the [Getting Started Guide](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/).
 
-You can also check out our samples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
+You can also check out our examples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 4 How-tos
 
-Here is a list of how-tos for Extensibility API:
+Here is a list of how-tos for you to begin with:
 
-* How to [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
-* How to [create a dockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
-* How to [add a context menu](/apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/) to an entity
-* How to host some web content inside a modal dialog using [a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
-* How to [create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
+* [How to create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
+* [How to create a dockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
+* [How to add a context menu to an entity](/apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/)
+* [How to host some web content inside a modal dialog using a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
+* [How to create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
 
 ## 5 Learn More
 
@@ -42,8 +42,7 @@ You can delve into some in depth topics by following any of the links below:
 - What are [extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
 - What are the Extensibility API [services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
 - How to access the Studio Pro from extensions [model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
-- How to host Web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
-- Todo Extension full sample app [todo extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
-- Also, please check out our API reference documentation from the Top Menu
+- How to host web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
+- [Todo example extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
 
 ## 6 Documentation in This Category

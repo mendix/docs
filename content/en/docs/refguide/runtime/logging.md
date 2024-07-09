@@ -88,12 +88,12 @@ This list is currently incomplete and is being updated.
 | Queue | All actions related to Task Queues |
 | REST Consume | Logs messages related to the Call REST service activity. |
 | REST Publish | Logs messages related to published REST services. |
-| RequestStatistics | Logs if thresholds related to state defined in [Client Runtime Settings](custom-settings/#web-client-settings) have exceeded the defined threshold. |
-| Services | Logs messages related to [Web Services](/integration/web-services/) |
+| RequestStatistics | Logs if thresholds related to state defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold. |
+| Services | Logs messages related to [Web Services](/refguide/integration/web-services/) |
 | StorageAzure | Logs messages related to file handling if you are using Azure system as your file store. |
 | StorageS3 | Logs messages related to file handling if you are using Amazon S3 system as your file store. |
 | WebServices | Traces SOAP call request and response contents. |
-| WebUI | Logs if thresholds related to feedback size defined in [Client Runtime Settings](custom-settings/#web-client-settings) have exceeded the defined threshold, or creating a valid session has failed. |
+| WebUI | Logs if thresholds related to feedback size defined in [Client Runtime Settings](/refguide/custom-settings/#web-client-settings) have exceeded the defined threshold, or creating a valid session has failed. |
 | Workflow Engine | Logs messages related to workflow executions, for example, lifecycle events, such as a start or an end of a workflow, execution of workflow actions, and errors that occur during the execution. |
 | XML Export | Logs messages related to export mappings to XML. |
 | XML Import | Logs messages related to import mappings from XML. |

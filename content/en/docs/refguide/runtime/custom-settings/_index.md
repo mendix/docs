@@ -92,11 +92,11 @@ When setting up either routing variant, most content is correctly served automat
 
 For the first case, domain-based routing is generally more stable, although path-based routing is possible with Mendix version 10.3.0 or above.
 
-Examples of the second case are OData contracts, sending mails to your organization, and any place you want to render a static URL in your application. For this case it is possible to specify the ApplicationRootURL.
+Examples of the second case are OData contracts, sending mails to your organization, and any place you want to render a static URL in your application. For this case it is possible to specify the ApplicationRootUrl.
 
 #### 2.1.1 Multiple External Domains
 
-Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootURL` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
+Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
 
 ## 3 Log File Settings
 

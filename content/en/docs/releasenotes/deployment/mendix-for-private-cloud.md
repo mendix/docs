@@ -11,6 +11,17 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 4th, 2024
+
+#### Portal Enhancements
+
+* We have renamed **Mendix for Private Cloud** to **Deployment** in the upper navigation bar.
+* We have removed the **Uptime** field from the **Namespace overview** page.
+
+#### Deploy API
+
+* We have fixed the API specification for the Deploy API where the limit and offset were not specified when trying to retrieve all applications deployed in Private Cloud.
+
 ### June 13th, 2024
 
 #### Mendix Operator v2.17.1 {#2.17.1}

@@ -56,7 +56,7 @@ For every data-related Client action, there is a corresponding Runtime Operation
 
 The above operations are requested by the Client and are executed by the Runtime.
 
-During building, Studio Pro analyses your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
+During building, Studio Pro analyzes your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
 
 A registration of the Runtime Operation has the following properties:
 

@@ -23,6 +23,27 @@ If you need to add your own custom UI to Studio Pro, you can achieve this using 
 
 For detailed explanation on how to get started with extensions you can check out the [Getting Started Guide](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/).
 
-You can also check out our samples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
+You can also check out our examples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 4 Documentation in This Category
+## 4 How-tos
+
+Here is a list of how-tos for you to begin with:
+
+* [How to reate a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
+* [How to create a ockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
+* [How to add a context menu to an entity](/apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/)
+* [How to host some web content inside a modal dialog using a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
+* [How to create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
+
+## 5 Learn More
+
+You can dive into the following topics in depth:
+
+* [What are the extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
+* [What are the Extensibility API services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
+* [How to access the Studio Pro from the Model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
+* [How to host web content via a web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
+* [How to build a Todo example extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
+* [What are extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
+
+## 6 Documentation in This Category

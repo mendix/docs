@@ -16,4 +16,4 @@ Pass the URL of the application you want to open. You can also use the global co
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
-Applicaton URL | String | yes | The URL of the application you want to open
+Application URL | String | yes | The URL of the application you want to open

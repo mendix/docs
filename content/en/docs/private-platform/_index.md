@@ -6,7 +6,7 @@ weight: 42
 no_list: false 
 description_list: true 
 cascade:
-    - content_type: "Private Mendix Platform Guide"
+    - content_type: "Private Mendix Platform"
     - mendix_version: 10
 ---
 

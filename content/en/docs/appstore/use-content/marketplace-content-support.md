@@ -5,11 +5,20 @@ weight: 10
 no_list: false
 description_list: true
 description: "Presents information on the Marketplace content support."
+aliases:
+    - /appstore/general/use-content-support/
+    - /appstore/general/app-store-content-support/
+    - /community/use-content-support/
+    - /developerportal/app-store/use-content-support/
 ---
 
 ## 1 Introduction
 
 Support for Marketplace content is determined by the content support category and the service level agreement (SLA) the user possesses.
+
+The content support category for a component is indicated by the label on the [header](/appstore/component-details/#header) in its component details page. The label can be **Mendix**, **Platform**, or **Siemens**. If there is no label indicating the content support category, then the component is community-supported.
+
+{{< figure src="/attachments/appstore/use-content/marketplace-content-support/content-support-label.png" >}}
 
 ## 2 Content Support Categories {#category}
 

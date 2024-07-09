@@ -37,7 +37,7 @@ Here is a list of how-tos for you to begin with:
 
 ## 5 Learn More
 
-You can delve into the topics in depth below:
+You can dive into the following topics in depth:
 
 * [What are the extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
 * [What are the Extensibility API services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)

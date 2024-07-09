@@ -14,24 +14,25 @@ You can download the sample in this how-to in [this Github repository](https://g
 
 1. Open the project that you previously created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new class to the project and name it `MyDockablePaneExtension.cs`.
-3. Replace the code in the file with the following code:
+3.  Replace the code in the file with the following code:
 
-```csharp
-using System.ComponentModel.Composition;
-using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
+    ```csharp
+    using System.ComponentModel.Composition;
+    using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
 
-namespace MyCompany.MyProject.MendixExtension;
+    namespace MyCompany.MyProject.MendixExtension;
 
-[Export(typeof(DockablePaneExtension))]
-public class MyDockablePaneExtension : DockablePaneExtension
-{
-    public const string ID = "my-dockable-pane";
-    public override string Id => ID;
+    [Export(typeof(DockablePaneExtension))]
+    public class MyDockablePaneExtension : DockablePaneExtension
+    {
+        public const string ID = "my-dockable-pane";
+        public override string Id => ID;
 
-    public override DockablePaneViewModelBase Open() => new MyDockablePaneExtensionWebViewModel("http://mendix.com");
-}
-```
+        public override DockablePaneViewModelBase Open() => new MyDockablePaneExtensionWebViewModel("http://mendix.com");
+    }
+    ```
 ## 3 The View Model for the Extension Tab
+
 The dockable pane will have content, and this content comes in the form of a view model. The view model is an implementation of `WebViewDockablePaneViewModel`. 
 
 You need to override the `InitWebView` method in which you can set up the content of your web view inside the dockable pane. In this example, it will contain the home page of `http://mendix.com`.

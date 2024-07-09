@@ -95,7 +95,7 @@ The return parameter type determines the type of data a JavaScript action return
 
 #### 2.3.2 Variable Name
 
-This setting allows you to give a name to the Javascript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
+This setting allows you to give a name to the JavaScript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
 
 ### 2.4 Platform {#platform}
 

@@ -252,7 +252,7 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 1. Use the [Clean Deployment Directory](/refguide/app-menu/#clean-deployment-directory) in Studio Pro.
 1. Run the application and test the functionality.
 
-### 5.3 Migration FAQ’s
+### 5.3 Migration FAQs
 
 #### 5.3.1 What Happens If the Email Templates Don't Have the Right Names?
 

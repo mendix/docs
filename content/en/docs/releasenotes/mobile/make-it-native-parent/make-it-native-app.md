@@ -9,7 +9,7 @@ description: "These release notes showcase each release of the iOS and Android M
 Make It Native 8 should only be used with the LTS version of Mendix 8.
 {{% /alert %}}
 
-Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
+For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
 
 ## Android 2.2.2 / iOS 2.2.2
 

@@ -233,6 +233,10 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 
 ##### 4.1.1.8 TitanImageOptions_Extension {#titan-image-options-extension}
 
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
 This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed [Image Generation: Add Titan Image Extension](#add-titan-image-extension) operation can be used.
 
 | Attribute | Description |
@@ -241,6 +245,10 @@ This entity extends the GenAICommons.ImageOptions entity with values specific to
 
 ##### 4.1.1.9 TitanImageResponse {#titan-image-response}
 
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
 This entity extends the GenAICommons.Response entity with values specific to Titan Image models.
 
 | Attribute | Description |
@@ -248,6 +256,10 @@ This entity extends the GenAICommons.Response entity with values specific to Tit
 | `Error` | The Error attribute describes the error message if the request violates the content moderation policy. |
 
 ##### 4.1.1.10 TitanImageMappingHelper {#titan-image-mapping-helper}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
 
 This helper entity solely serves the purpose of creating a flat entity to produce the correct export mapping.
 
@@ -853,6 +865,10 @@ The history can be enabled using the `SessionId` parameter on the [RetrieveAndGe
 
 ##### 4.2.1.4 Image Generation {#image-generation}
 
+{{% alert color="info" %}}
+This activity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
 The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently 'Amazon Titan Image Generator G1' is the only supported model for image generation of the Amazon Bedrock Connector. 
 
 The input and output for this service are shown in the table below:
@@ -913,6 +929,10 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 ##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
 Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the *NegativeText* attribute.
 
 This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
@@ -923,6 +943,10 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 
 ##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
 Use this microflow to set the *Height* and *Width* attributes of your GenAICommons.ImageOptions object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
 
 This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
@@ -932,6 +956,10 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 | `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
 
 ##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
 
 Use this microflow to set the *Seed* and *CfgScale* attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
 

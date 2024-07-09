@@ -15,4 +15,4 @@ We currently provide 3 different versions of the Make It Native App. You can fin
 
 1. [Make It Native 10](/releasenotes/mobile/make-it-native-10/)
 1. [Make It Native 9](/releasenotes/mobile/make-it-native-9/)
-1. [Make It Native 8](/releasenotes/mobile/make-it-native-8/)
+1. [Make It Native 8](/releasenotes/mobile/make-it-native-app/)

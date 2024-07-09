@@ -247,9 +247,9 @@ This entity extends the GenAICommons.Response entity with values specific to Tit
 | --- | --- |
 | `Error` | The Error attribute describes the error message if the request violates the content moderation policy. |
 
-##### 4.1.1.9 TitanImageMappingHelper {#titan-image-mapping-helper}
+##### 4.1.1.10 TitanImageMappingHelper {#titan-image-mapping-helper}
 
-This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+This helper entity solely serves the purpose of creating a flat entity to produce the correct export mapping.
 
 #### 4.1.2 No GenAICommons dependency
 
@@ -853,21 +853,21 @@ The history can be enabled using the `SessionId` parameter on the [RetrieveAndGe
 
 ##### 4.2.1.4 Image Generation {#image-generation}
 
-The `Image Generation` operation can be used to generate one or multiple images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently 'Amazon Titan Image Generator G1' is the only supported model for image generation of the AmazonBedrockConnector. 
+The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently 'Amazon Titan Image Generator G1' is the only supported model for image generation of the Amazon Bedrock Connector. 
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `UserPrompt (String)`, `AmazonBedrockConnection (object)`, `GenAICommons.ImageOptions (object, optional)`| `GenAICommons.Response (object)`|
+| `UserPrompt (String)`,<br/>`AmazonBedrockConnection (object)`,<br/>`GenAICommons.ImageOptions (object, optional)`| `GenAICommons.Response (object)`|
 
-`GenAICommons.ImageOptions` is an optional parameter that can be ommitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
+`GenAICommons.ImageOptions` is an optional parameter that can be omitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
 
 `GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons.
 
 To retrieve actual image objects from the response, the `Image: Get Generated Image (Single)` or `Image: Get Generated Images (List)` helper operations from GenAICommons can be used. 
 
-For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image specific values (currently only *NegativeText*). 
+For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image-specific values (currently only *NegativeText*). 
 
 #### 4.2.2 GenAI Commons Helper Operations
 
@@ -923,7 +923,7 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 
 ##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
-Use this microflow to set the *Height* and *Width* attributes of your GenAICommons.ImageOptions object conviniently to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
+Use this microflow to set the *Height* and *Width* attributes of your GenAICommons.ImageOptions object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
 
 This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
 
@@ -933,9 +933,9 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 
 ##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
 
-Use this microflow to set the *Seed* and *CfgScale* attributes of your GenAICommons.ImageOptions object conviniently. These attributes can be used to influence the randomness of the image generation.
+Use this microflow to set the *Seed* and *CfgScale* attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
 
-For more information, please refer to the specific model documentation, e.g. [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
+For more information, please refer to the specific model documentation such as [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
 
 This operation corresponds to the **ImageOptions_SetRandomness** microflow.
 

@@ -5,9 +5,11 @@ weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
+{{% alert color="info" %}}
+Make It Native 8 should only be used with the LTS version of Mendix 8.
+{{% /alert %}}
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
 ## Android 2.2.2 / iOS 2.2.2
 

@@ -13,7 +13,7 @@ This how-to explains how you can set up data validation with Mendix. Before you 
 This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
 
 1. Open a **domain model** in Studio Pro.
-2. Double click a persistable entity to open its **properties.**
+2. Double-click a persistable entity to open its **properties.**
 3. Open the **Validation Rules** tab page.
 
     {{< figure src="/attachments/howto8/data-models/setting-up-data-validation/18582149.png" class="no-border" >}}
@@ -113,7 +113,7 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 1. Create a Boolean variable set to `true`. Be sure to mark this variable as the **Return value**.
 2. Create your validations as described above.
 3. Configure the sub-microflow to change the Boolean variable to `false` after the validation feedback or error message. Connect this flow back to the main sequence flow using a merge, and continue with the next validation.
-4. At the end of the sub-microflow, the variable should be `true` if it succesfully passed all validations, and `false` when one or more validations have failed. 
+4. At the end of the sub-microflow, the variable should be `true` if it successfully passed all validations, and `false` when one or more validations have failed. 
 5. Add a [decision](/refguide8/decision/) that checks the return value and only allows the microflow to continue to the **Commit** event if all validations are passed. This way, you can keep the logic while performing all necessary validations at once.
 
 ## 7 Read More

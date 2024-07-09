@@ -165,7 +165,7 @@ To convert the Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 
     {{< figure src="/attachments/appstore/use-content/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" class="no-border" >}}
 
-1. Double click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
+1. Double-click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
     {{< figure src="/attachments/appstore/use-content/modules/forgot-password/change-layout.png" class="no-border" >}}
 

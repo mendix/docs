@@ -297,7 +297,7 @@ This is a specialization of the `AbstractMessageAttributeUsage` entity.
 
 #### 4.1.34 ReceiveMessageSystemAttribute {#receivemessagesystemattribute}
 
-This is a specialization of the `AbstractReceiveMessageSystemAttribute` enitity.
+This is a specialization of the `AbstractReceiveMessageSystemAttribute` entity.
 
 | Attribute | Description |
 | --- | --- |

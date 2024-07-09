@@ -160,7 +160,7 @@ When you click **Add** to add the events from the document into your service, St
 
 Currently, Mendix does not support multiple subscribers to the same business event within the same app.
 
-### 4.3 Modelling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
+### 4.3 Modeling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
 Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you can start modeling with them in your app.
 
@@ -335,11 +335,11 @@ Start your docker cluster using the command `docker-compose up`. This will downl
 
 ### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
 
-You can configure the app running in Studio Pro to use the postgres database created using Docker. Remember to use a different database name for every app.
+You can configure the app running in Studio Pro to use the Postgres database created using Docker. Remember to use a different database name for every app.
 
 {{< figure src="/attachments/appstore/use-content/services/business-events/postgres.png" class="no-border" >}}
 
-Here is an example of postgres service that you can add to your `docker-compose.yml` file.
+Here is an example of a Postgres service that you can add to your `docker-compose.yml` file.
 
 ``` yml
   postgres:

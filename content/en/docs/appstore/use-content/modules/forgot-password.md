@@ -165,7 +165,7 @@ To convert the Mendix 8.18.x to Mendix 9.12.5 or above, follow the steps below:
 
     {{< figure src="/attachments/appstore/use-content/modules/forgot-password/upgrade-errors.png" alt="Four CE1613 errors in the errors pane" class="no-border" >}}
 
-1. Double click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
+1. Double-click one of the errors to open the error page and change the (primary) layout to **Atlas_TopBar(Atlas_UI_Resources)**.
 
     {{< figure src="/attachments/appstore/use-content/modules/forgot-password/change-layout.png" class="no-border" >}}
 
@@ -252,7 +252,7 @@ Follow the [Migration Steps](https://github.com/mendixlabs/EmailConnectorMigrati
 1. Use the [Clean Deployment Directory](/refguide/app-menu/#clean-deployment-directory) in Studio Pro.
 1. Run the application and test the functionality.
 
-### 5.3 Migration FAQ’s
+### 5.3 Migration FAQs
 
 #### 5.3.1 What Happens If the Email Templates Don't Have the Right Names?
 

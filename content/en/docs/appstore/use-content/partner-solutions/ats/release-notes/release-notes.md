@@ -977,7 +977,7 @@ The same holds for the function parameters.
 * We removed the "View" button for pre-conditions where the condition is related to a function. Since function can not be viewed this button is not needed.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
-* We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double clicking on the select button.
+* We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double-clicking the select button.
 * When running a job on Browserstack or Saucelabs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
 
 ### Fixes

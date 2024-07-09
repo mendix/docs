@@ -6,7 +6,7 @@ description: "Explains the different types of custom actions."
 
 ## 1 Introduction
 
-A custom action is an action created by the user. The how-to's for creating custom actions are divided by type. This document describes the different custom action types and how you can identify them.
+A custom action is an action created by the user. The how-tos for creating custom actions are divided by type. This document describes the different custom action types and how you can identify them.
 
 ## 2 Prerequisites
 

@@ -23,7 +23,7 @@ For more information on how changes can be quickly previewed, see the [Preview a
 
 ### 2.2 Using the Styling Editor {#styling-editor}
 
-The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double click a styling file, it will be opened in the styling editor:
+The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double-click a styling file, it will be opened in the styling editor:
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/styling-editor.png" alt="styling editor" class="no-border" >}}
 

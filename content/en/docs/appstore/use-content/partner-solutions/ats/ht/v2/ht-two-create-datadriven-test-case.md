@@ -265,4 +265,4 @@ You now know how to do the following:
 
 ## 10 Next Up
 
-You now learned how to create a dataset and how to use that data in your test case. The next how-to is [How to Use Precondition in Test Cases](/appstore/partner-solutions/ats/ht-two-use-precondition-in-test-cases/). You find an overview of all the how-tos and the structure on the [ATS 2 How-To's](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.
+You now learned how to create a dataset and how to use that data in your test case. The next how-to is [How to Use Precondition in Test Cases](/appstore/partner-solutions/ats/ht-two-use-precondition-in-test-cases/). You find an overview of all the how-tos and the structure on the [ATS 2 How-Tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

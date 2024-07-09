@@ -1,5 +1,5 @@
 ---
-title: "Execute Javascript WebElement"
+title: "Execute JavaScript WebElement"
 url: /appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/
 ---
 

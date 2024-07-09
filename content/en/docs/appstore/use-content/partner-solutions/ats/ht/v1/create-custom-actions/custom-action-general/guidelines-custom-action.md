@@ -157,10 +157,10 @@ These are the different data types in ATS:
 
 The JavaScript actions have three different versions, based on the data types:
 
-* [Execute Javascript Integer](/appstore/partner-solutions/ats/rg-one-execute-javascript-integer/)
-* [Execute Javascript String](/appstore/partner-solutions/ats/rg-one-execute-javascript-string/)
-* [Execute Javascript WebElement](/appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/)
+* [Execute JavaScript Integer](/appstore/partner-solutions/ats/rg-one-execute-javascript-integer/)
+* [Execute JavaScript String](/appstore/partner-solutions/ats/rg-one-execute-javascript-string/)
+* [Execute JavaScript WebElement](/appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/)
 
-They all produce outputs based on their data type. This means that you cannot return a string inside the Execute Javascript web element action.
+They all produce outputs based on their data type. This means that you cannot return a string inside the Execute JavaScript web element action.
 
 Good luck building custom actions! Please post any questions about customer actions in the [Mendix Community](https://community.mendix.com/p/questions) under the category **Testing**.

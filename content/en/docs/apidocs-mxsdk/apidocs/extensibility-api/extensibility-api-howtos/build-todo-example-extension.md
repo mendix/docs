@@ -652,7 +652,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     
     // Register message handler.
     window.chrome.webview.addEventListener("message", handleMessage);
-    // Indicate that we're ready to receive messages.
+    // Indicate that you are ready to receive messages.
     postMessage("MessageListenerRegistered");
     
     async function handleMessage(event) {
@@ -734,7 +734,7 @@ You also need to perform some initialization to ensure that you can respond to m
 ```javascript
 // Register message handler.
 window.chrome.webview.addEventListener("message", handleMessage);
-// Indicate that we're ready to receive messages.
+// Indicate that you are ready to receive messages.
 postMessage("MessageListenerRegistered");
 
 async function handleMessage(event) {

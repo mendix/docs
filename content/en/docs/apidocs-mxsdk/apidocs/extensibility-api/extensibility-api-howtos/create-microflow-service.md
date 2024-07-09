@@ -13,7 +13,7 @@ This is a method which initializes a microflow that was previously created. It i
 * As always, first you must start a transaction (`IModel.StartTransaction`), and then you can create a microflow and add it to the module (`IModel.Create<IMicroflow>`).
 * Only after adding the microflow to the module, you can call `IMicroflowService.Initialize`. Internally, this method:
 ** Sets up the start and end flows
-** Adds any parameters that might be passed in (in the example below, we're passing a single parameter `boolParameter` of `DataType.Boolean`).
+** Adds any parameters that might be passed in (in the example below, you are passing a single parameter `boolParameter` of `DataType.Boolean`).
 In the example below you are also adding activities to the microflow, with `IMicroflowService.TryInsertAfterStart` (adding an activity as the first) or `IMicroflowService.TryInsertBeforeActivity` (adding an activity before another).
 
 ```csharp
@@ -65,7 +65,7 @@ public void CreateMicroflow(IModel currentApp)
 ```
 
 ### 3.2 Creating Microflow with Return Type and Parameters
-In this more advanced example, we'll introduce the `IMicroflowExpressionService.CreateFromString` method which allows you to create expressions which can be then used as the `MicroflowReturnValue` of the microflow. In here, the expression is a simple addition of two values, and the return type is of `DataType.Integer`.
+In this more advanced example, you will see the `IMicroflowExpressionService.CreateFromString` method which allows you to create expressions which can be then used as the `MicroflowReturnValue` of the microflow. In here, the expression is a simple addition of two values, and the return type is of `DataType.Integer`.
 
 ```csharp
  void CreateMicroflow(IModel currentApp)

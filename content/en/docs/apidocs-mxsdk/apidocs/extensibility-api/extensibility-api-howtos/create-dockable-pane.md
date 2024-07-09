@@ -8,11 +8,11 @@ weight: 5
 
 This how-to describes how you can add a custom dockable web pane window to Studio Pro. Before you start this how-to, it is recommended to [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
-You can download the example in this how-to on [this Github repository](https://github.com/mendix/ExtensionAPI-Samples).
+You can download the sample in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 2 Creating a Dockable Pane Extension Class
 
-1. Open the project that you previously created when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
+1. Open the project that you previously created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new class to the project and name it `MyDockablePaneExtension.cs`.
 3. Replace the code in the file with the following code:
 
@@ -50,7 +50,7 @@ public class MyDockablePaneExtensionWebViewModel(string homePage) : WebViewDocka
 }
 ```
 
-This code creates a new web-enabled tab view. You still need a way to show the new dockable pane. To do so, you need to modify the menu extension you added when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/). Simple replace the existing content of `MyMenuExtension.cs` with the following code:
+The code above creates a new web-enabled tab view. You still need a way to show the new dockable pane. To do so, you need to modify the menu extension you added when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/). Simple replace the existing content of `MyMenuExtension.cs` with the following code:
 
 ```csharp
 using System.ComponentModel.Composition;
@@ -70,13 +70,13 @@ public class MyMenuExtension(IDockingWindowService dockingWindowService, IMessag
 }
 ```
 
-The change introduces a few new concepts.
+The code above introduces a few new concepts.
 
 Firstly, you inject the `IDockingWindowService` so that you can open a new dockable pane.
 
 Secondly, you add a new menu item with the caption **Open My Dockable Pane** that you will use to open your new dockable pane using the `IDockingWindow` service that you have injected.
 
-In order for the changes to reflect, you need to build your project. If you have opted to not automatically copy the output to the destination folder, then you will also need to manually copy the bin output from your project to your extension folder you created when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
+In order for the changes to reflect, you need to build your project. If you have opted to not automatically copy the output to the destination folder, then you will also need to manually copy the bin output from your project to your extension folder you created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 
 ## 3 Showing a Dockable Pane Without Adding a Custom Menu
 

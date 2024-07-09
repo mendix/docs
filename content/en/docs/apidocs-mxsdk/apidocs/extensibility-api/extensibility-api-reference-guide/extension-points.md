@@ -1,6 +1,5 @@
 ---
-title: "Introduction to Extension Points"
-linktitle: "Extension Points"
+title: "Extension Points"
 url: /apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/
 weight: 9
 ---

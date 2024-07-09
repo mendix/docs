@@ -1,6 +1,5 @@
 ---
-title: "Introduction to Studio Pro Services"
-linktitle: "Studio Pro Services"
+title: "Studio Pro Services"
 url: /apidocs-mxsdk/apidocs/extensibility-api/introductions/services/
 weight: 10
 ---

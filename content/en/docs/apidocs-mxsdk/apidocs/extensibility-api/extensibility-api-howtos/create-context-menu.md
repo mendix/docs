@@ -8,7 +8,7 @@ weight: 6
 
 It is also possible to add a context menu to an `IEntity` in Studio Pro or to a `IDocument`, such as microflows and pages, etc. They will be placed under a menu named after the extension that contains them (e.g. `MyExtension`) and the can modify those items they relate to. It is done simply by specifying the type when creating the extension.
 
-This how-to describes how you can add a context menu to an entity. Before you start this how-to, it is recommended to finish [Create a Menu Extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
+This how-to describes how you can add a context menu to an entity. Before you start this how-to, it is recommended to [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
 You can download the example in this how-to on [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 

@@ -11,6 +11,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 10th, 2024
+
+#### Portal Enhancements
+
+* Its now possible to [convert](/developerportal/deploy/global-operator/#convert-standard-operator-to-global-operator) a Standard namespace to a Global Operator managed namespace using the **Convert Namespace** button available in Cluster details page. This feature is available from Operator v2.18 onwards.
+
 ### July 4th, 2024
 
 #### Portal Enhancements

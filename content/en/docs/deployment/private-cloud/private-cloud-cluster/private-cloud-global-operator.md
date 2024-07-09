@@ -110,9 +110,38 @@ Once the managed namespace is configured, you can find the list with all the nam
 If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace.
 {{% /alert %}}
 
-## 3 Licensing
+### 2.2 Next Steps
 
-### 3.1 Installing Private Cloud License Manager
+After everything is configured, you can deploy the application. For more information, see [Deploy Application](/developerportal/deploy/private-cloud-deploy/).
+
+## 3 Convert existing Standard operator namespace to Global Operator managed namespace {#convert-standard-operator-to-global-operator}
+
+
+1. On the Cluster Overview page, click **Convert Namespace**.
+
+   {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/convert-namespace.png" class="no-border" >}}
+
+2. Choose the namespace you want to convert to a managed namespace. The displayed namespaces match the Cluster type of the Global Operator Cluster. If your namespace is not listed, click the **here** button at the bottom to expand the list.
+ 
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/choose-standard-namespace.png" class="no-border" >}}
+
+3. After selecting the namespace, click **Next**. You will be redirected to a page with the command needed to convert the namespace to a managed namespace. 
+
+    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/convert-namespace-command.png" class="no-border" >}}
+
+Once the command runs successfully, your namespace will be converted to the Global Operator installation on the cluster side.
+
+If the conversion command is not run and the **Next** button is clicked directly, an error message will be displayed because the presence of the standard namespace could not be verified in the list of managed namespaces.
+
+{{% alert color="info" %}}
+The namespace to be converted must be in the same cluster as the main namespace. Additionally, ensure that both namespaces have the same operator version; otherwise, the conversion will not be performed.
+{{% /alert %}}
+
+4. Once the conversion command runs successfully, click **Next** to be redirected to the Conversion Summary pop-up page, which will confirm the successful conversion.
+
+## 4 Licensing
+
+### 4.1 Installing Private Cloud License Manager
 
 Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
@@ -128,10 +157,10 @@ Licenses imported in the PCLM Server appear in the PCLM Statistics section of th
 
 Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
 
-### 3.2 Licensing application via Subscription Secret and manual operator license
+### 4.2 Licensing application via Subscription Secret and manual operator license
 
 If you wish to apply a Runtime license using a subscription secret, it must be applied manually for each managed namespace. The same process must be performed when applying an Operator license to all managed namespaces.
 
-## 4 Upgrading Managed Namespaces
+## 5 Upgrading Managed Namespaces
 
 Currently, the upgrade procedure is not available for managed namespaces.

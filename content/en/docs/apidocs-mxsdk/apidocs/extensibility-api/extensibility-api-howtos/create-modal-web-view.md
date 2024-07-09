@@ -76,6 +76,7 @@ class MyModalWebViewController(IDialogService dialogService, IMessageBoxService 
 ```
 
 ## 4 Adding a Content Server
+
 To open static pages, you need to source them from either a file system path or via the `WebServerExtension` route.  This document covers the latter, as this is the preferred way to provide static web content to an extension. 
 
 ```csharp
@@ -143,6 +144,7 @@ class ContentServer : WebServerExtension
 ```
 
 ## 5 Adding a Menu Item That Opens the Modal Dialog
+
 Finally, you need to add a menu item to open the dialog. Replace the contents of `MyMenuExtension.cs` with the code below:
 
 ```csharp

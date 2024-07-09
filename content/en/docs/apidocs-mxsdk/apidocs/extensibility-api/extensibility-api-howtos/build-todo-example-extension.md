@@ -76,7 +76,7 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
 2. Right-click in the Solution Explorer and add a new file called *manifest.json*.
 3. Right-click in the Solution Explorer and select **Properties**.
 4. Ensure that you set the **Copy to Output Directory** property to **Copy always** to ensure that this file is included in your extensions output files.
-5. Replace the contents of your manifest.json file with the following code:
+5.  Replace the contents of your manifest.json file with the following code:
 
     ```json
     {
@@ -84,6 +84,7 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
       "mx_build_extensions": [ ]
     }
     ```
+
     Within the *manifest.json* file, you specify which assemblies Studio Pro needs to load for the different execution contexts your extension needs to provide. If your extension only needs access to design time features and requires a user interface, then you can add it to the `mx_extensions` option. However, if your extension needs access to runtime information or perhaps needs to translate design time concepts into runtime concepts, then you will add it to `mx_build_extensions`.
 
     {{% alert color="warning" %}}Build extensions specified in `mx_build_extensions` will not have access to any user interfaces and attempting to link to user interface libraries will fail. Similarly, extensions loaded from `mx_extensions` cannot access any runtime features and are strictly design time only.{{% /alert %}}
@@ -94,10 +95,10 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
 
 ## 4 Adding a Dockable Pane to Host Your User Interface
 
-In this section, you will host a Dockable Pane within Studio Pro. This will provide you with a window wherein you can render the User Interface of the extension.
+In this section, you will host a dockable pane within Studio Pro. This will provide you with a window where you can render the User Interface of the extension.
 
 1. Add a new file to the solution called `ToDoListDockablePaneExtension.cs`.
-2. Replace the contents of the file with the following code:
+2.  Replace the contents of the file with the following code:
 
     ```csharp
     using System.ComponentModel.Composition;
@@ -134,7 +135,6 @@ You are expected to get an error at this point around the `ToDoListDockablePaneV
 ### 4.1 Explanation
 
 There are a few notable features of the class in the code above:
-
 First, the top of the class is decorated with an `Export` attribute:
 
 ```csharp
@@ -188,7 +188,7 @@ In summary, in this section you performed the following:
 
 In this section, you will add a view model to store our view data:
 
-1. Add a new file to the solution named `ToDoListDockablePaneViewModel.cs`
+1. Add a new file to the solution and name it `ToDoListDockablePaneViewModel.cs`.
 2. Replace the contents of the file with the following code: 
 
     ```csharp
@@ -594,7 +594,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     * A Javascript file that contains the client side logic for the user interface. Call it `main.js`
 
 3. Open `index.html`.
-4. Replace its contents with the following:
+4.  Replace its contents with the following:
 
     ```html
     <html lang="en">
@@ -640,10 +640,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     </html>
     ```
 
-5.  Add the Javascript logic as follows:
-
-    1. Open `main.js`.
-    2. Replace the contents of the file with the following:
+5.  Open `main.js` and add the Javascript logic by replacing the contents of the file with the following:
 
     ```js
     function postMessage(message, data) {
@@ -891,7 +888,6 @@ Additionally, you override the `InitializeWebServer` method. Studio Pro will cal
 
 `ServeIndex`, `ServeMainJs`, and `ServeToDos` serve the contents of the 3 routes to your extension logic.
 
-
 ## 12 Hosting the Extension in Studio Pro
 
 All the code you need should now be complete. The last step in the process is building your solution and adding your binary output as an extension inside your app.
@@ -900,9 +896,10 @@ To do this you will need to do the following:
 
 1. Build your solution in Visual Studio by selecting the **Build** > **Build Solution**.
 2. Navigate to the Mendix app where your extension will be hosted. 
-3. Create a new folder called `extensions` also add a subfolder called `TodoExtension`. You now have a folder with a path similar to this `[Mendix App]/extensions/MyTodoExtension`/.
-3. Copy the files from your Visual Studio extension projects `bin/debug` subfolder into your mendix app extension folder: [`Mendix App]/extensions/MyTodoExtension`.
-4. Run Studio Pro. 
+3. Create a new folder and name it `extensions`.
+4. Add a subfolder and name it `TodoExtension`. You now have a folder with a path similar to this `[Mendix App]/extensions/MyTodoExtension`/.
+5. Copy the files from your Visual Studio extension projects `bin/debug` subfolder into your mendix app extension folder: [`Mendix App]/extensions/MyTodoExtension`.
+6. Run Studio Pro. 
 
 While developing extensions,  also use command line flag to enable extensions as follows:
 

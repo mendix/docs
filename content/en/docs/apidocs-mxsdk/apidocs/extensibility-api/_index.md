@@ -29,20 +29,21 @@ You can also check out our examples and [API reference documentation](https://gi
 
 Here is a list of how-tos for you to begin with:
 
-* [How to create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
-* [How to create a dockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
+* [How to reate a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
+* [How to create a ockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
 * [How to add a context menu to an entity](/apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/)
 * [How to host some web content inside a modal dialog using a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
 * [How to create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
 
 ## 5 Learn More
 
-You can delve into some in depth topics by following any of the links below:
+You can delve into the topics in depth below:
 
-- What are [extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
-- What are the Extensibility API [services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
-- How to access the Studio Pro from extensions [model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
-- How to host web content via a [web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
-- [Todo example extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
+* [What are the extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
+* [What are the Extensibility API services](/apidocs-mxsdk/apidocs/extensibility-api/introductions/services/)
+* [How to access the Studio Pro from the Model API](/apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/)
+* [How to host web content via a web view wrapper](/apidocs-mxsdk/apidocs/extensibility-api/introductions/web-views/)
+* [How to build a Todo example extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/)
+* [What are extension points](/apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/)
 
 ## 6 Documentation in This Category

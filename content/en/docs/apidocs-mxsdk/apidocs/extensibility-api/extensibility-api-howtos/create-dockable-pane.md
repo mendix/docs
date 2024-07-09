@@ -19,18 +19,19 @@ You can download the example in this how-to in [this Github repository](https://
     ```csharp
     using System.ComponentModel.Composition;
     using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
-
+    
     namespace MyCompany.MyProject.MendixExtension;
-
+    
     [Export(typeof(DockablePaneExtension))]
     public class MyDockablePaneExtension : DockablePaneExtension
     {
         public const string ID = "my-dockable-pane";
         public override string Id => ID;
-
+    
         public override DockablePaneViewModelBase Open() => new MyDockablePaneExtensionWebViewModel("http://mendix.com");
     }
     ```
+
 ## 3 The View Model for the Extension Tab
 
 The dockable pane will have content, and this content comes in the form of a view model. The view model is an implementation of `WebViewDockablePaneViewModel`. 
@@ -79,7 +80,7 @@ Secondly, you add a new menu item with the caption **Open My Dockable Pane** tha
 
 In order for the changes to reflect, you need to build your project. If you have opted to not automatically copy the output to the destination folder, then you will also need to manually copy the bin output from your project to your extension folder you created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 
-## 3 Showing a Dockable Pane Without Adding a Custom Menu
+## 4 Showing a Dockable Pane Without Adding a Custom Menu
 
 Instead of adding a separate menu to open the docking pane, you can override the `ViewMenuCaption` property in the implementation of the `DockablePaneExtension`. This means that the menu that opens will be placed under the `View` top-level menu in Studio Pro and will have the caption provided. There is no need for a separate `MenuExtension` in this case.
 

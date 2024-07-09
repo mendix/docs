@@ -57,5 +57,5 @@ using (var transaction = model.StartTransaction("add entity"))
 
 ## 5 Read More
 
-- [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/)
+* [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/)
 

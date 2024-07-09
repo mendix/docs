@@ -98,7 +98,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 ### 3.4 Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAIComons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model.   
 
@@ -168,7 +168,7 @@ This entity holds the necessary information to perform Bedrock operations such a
 | Attribute | Description |
 | --- | --- |
 | `Region` | The region where the AWS data centers are located that shall be used for execution. This value is of type AWSAuthentication.ENUM_Region enumeration. |
-| `UseStaticCredentials` | This boolean specifies whether static or non-static credentials (temporary) shall be used. |
+| `UseStaticCredentials` | This Boolean specifies whether static or non-static credentials (temporary) shall be used. |
 | `ModelFamily` | This enumeration specifies the model family of the large language model to use. |
 
 ##### 4.1.1.2 AnthropicClaudeRequest_Extension {#anthropic-claude-request-extension}
@@ -182,7 +182,7 @@ This entity extends the GenAICommons.Request with attributes specific to Anthrop
 
 ##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
 
-This entity is a specialiazion of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
+This entity is a specialization of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
 
 | Attribute | Description |
 | --- | --- |
@@ -196,7 +196,7 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | Attribute | Description |
 | --- | --- |
 | `Version` | See `Version` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopK` | See `Top_K` of the `AnthropicClaudeRequest_Extension` entity |
+| `TopK` | See `Top_k` of the `AnthropicClaudeRequest_Extension` entity |
 | `TopP` | See `TopP` of the `GenAICommons.Request` entity |
 | `Temperature` | See `Temperature` of the `GenAICommons.Request` entity |
 | `MaxTokens` | See `MaxTokens` of the `GenAICommons.Request` entity |
@@ -210,7 +210,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 | Attribute | Description |
 | --- | --- |
 | `SessionId` | The SessionId attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
-| `KmsKeyARN` | The KMSKeyArn attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The KMSKeyARN attribute describes the ARN of the AWS KMS key encrypting the session. |
 | `RetrieveAndGenerateType` | The RetrieveAndGenerateType describes the type of resource that is queried by the request. The only supported value currently is "KNOWLEDGE_BASE"  |
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
@@ -290,7 +290,7 @@ The `FoundationModelSummary` entity stores the details (per model) needed to inv
 | `ModelID` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
 | `ModelName` | The name of the foundational model (string)|
 | `ProviderName` | The provider name of the foundational model (string)|
-| `ResponseStreamingSupported` | Indicates whether the model supports streaming (boolean)|
+| `ResponseStreamingSupported` | Indicates whether the model supports streaming (Boolean)|
 
 ##### 4.1.2.4 FoundationModelLifecycle {#foundation-model-lifecycle}
 
@@ -429,7 +429,7 @@ The `SessionConfiguration` entity holds information about details of the session
 
 | Attribute | Description |
 | --- | --- |
-| `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The `KmsKeyARN` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
 ##### 4.1.2.21 Citation {#citation}
 
@@ -590,7 +590,7 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 
 ##### 4.1.2.40 InvokeAgentAttribute {#invoke-agent-attribute}
 
-The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
+The `InvokeAgentAttribute` holds all attributes needed to create a request to invoke an agent.
 
 | Attribute | Description |
 | --- | --- |
@@ -820,7 +820,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -895,7 +895,7 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `UseStaticCredenitals (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
 ##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 
@@ -925,7 +925,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+| `GenAICommons.Request (object)`, `KmsKeyARN (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
 
 ##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 

@@ -7,7 +7,7 @@ description: "Describes the initial steps for automatically testing your apps us
 
 ## 1 Introduction
 
-This how-to describes the initial steps for automatically testing your applications using the Application Test Suite (ATS). Links to other how-to's and the ATS reference guide are included for more detailed information on steps and functions.
+This how-to describes the initial steps for automatically testing your applications using the Application Test Suite (ATS). Links to other how-tos and the ATS reference guide are included for more detailed information on steps and functions.
 
 This how-to teaches you how to do the following:
 
@@ -271,7 +271,7 @@ When you click **Run**, the **Monitoring / Results** page will open.
 
 Once your test case is run, the result is shown here. For more information on results, see [Monitoring](/appstore/partner-solutions/ats/rg-one-monitoring/).
 
-You have now finished the getting started guide for ATS. Please check the [how-to's](/appstore/partner-solutions/ats/ht-one/) and [best practices](/appstore/partner-solutions/ats/bp-one/) for more information.
+You have now finished the getting started guide for ATS. Please check the [how-tos](/appstore/partner-solutions/ats/ht-one/) and [best practices](/appstore/partner-solutions/ats/bp-one/) for more information.
 
 Good luck testing your Mendix app with ATS!
 
@@ -279,4 +279,4 @@ Good luck testing your Mendix app with ATS!
 
 You have now learned a few basics of working with ATS, so the next how-to is [How to Install the ATS Helper and ATS Recorder](/appstore/partner-solutions/ats/ht-one-install-ats-helper-recorder/).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/appstore/partner-solutions/ats/ht-one/). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/appstore/partner-solutions/ats/ht-one/). We advise following the how-tos in the order listed there.

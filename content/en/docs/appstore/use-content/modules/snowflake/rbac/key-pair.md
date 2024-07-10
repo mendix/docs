@@ -7,7 +7,7 @@ weight: 20
 ---
 
 ## 1 Introduction
-You can use key-pair authentication to enable your Mendix app to use role-based access control (RBAC)
+You can use key-pair authentication to enable your Mendix app to use role-based access control (RBAC).
 Key pair authentication is a method of authenticating with a system using a pair of keys that comply with specific security requirements. 
 The following diagram is a graphic representation of how key-pair authentication can work between Snowflake and a Mendix application. 
 

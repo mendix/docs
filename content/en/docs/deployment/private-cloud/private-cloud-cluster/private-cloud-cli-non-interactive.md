@@ -52,7 +52,13 @@ For the Global Operator main namespace, use the following command for the base i
 
 ## 3 Apply Configuration
 
-To [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
+For standard namespace, to [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
+
+```shell {linenos=false}
+./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
+```
+
+For global operator managaed namespace, apply the below command for managed namespace and not the main namespace:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file> --global

@@ -4,7 +4,6 @@ linktitle: "1. Build Pluggable Web Widget"
 url: /howto8/extensibility/create-a-pluggable-widget-one/
 weight: 10
 description: "This how-to teaches you how to create a pluggable web widget."
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
@@ -60,7 +59,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
     7. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
     8. Add a new **Create object** action on your microflow.
 
-3. Open the new **Create object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+3. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
 4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:

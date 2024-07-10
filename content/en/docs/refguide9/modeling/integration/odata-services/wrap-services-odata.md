@@ -3,7 +3,6 @@ title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide9/wrap-services-odata/
 linktitle: "Wrap with OData"
 weight: 80
-tags: ["connectors", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Pre/Post-Processor Design Patterns"
 url: /refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -349,7 +348,7 @@ ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 
 {{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." class="no-border" >}}
 
-Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Pyhton API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
+Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
 
 ```
 

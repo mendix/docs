@@ -45,6 +45,9 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-clusters-manifests
       description: Retrieves all the clusters for which the user is a Cluster Manager.
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
     post:
       summary: Create Cluster
       operationId: create-cluster
@@ -142,6 +145,9 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-namespaces-manifests
       description: Retrieves the manifests of all namespaces of a cluster.
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
     post:
       summary: Create Namespace
       operationId: create-namespace
@@ -240,6 +246,9 @@ paths:
           $ref: '#/components/responses/error404'
       operationId: get-apps-manifests
       description: Retrieves the manifests of all the applications for which the user has access.
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit100'
   '/apps/{appId}':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -278,6 +287,9 @@ paths:
       description: Retrieves the manifests of all environments of an application.
       tags:
         - environments
+      parameters:
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/limit'
     post:
       summary: Create Environment
       operationId: create-environment
@@ -392,13 +404,12 @@ paths:
           type: string
           format: uuid
           example: c533ee0b-f7db-4e62-868b-1192d392ccec
-        description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+        description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       - name: namespaceId
         in: path
         required: true
         schema:
           type: string
-          maxLength: 8
           example: d43aee0b-f7db-4e62-868b-1192d392cfed
         description: The ID of a namespace.
       - schema:
@@ -558,7 +569,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of the Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
       x-examples:
         example-appid: c533ee0b-f7db-4e62-868b-1192d392ccec
     error:
@@ -1444,7 +1455,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
     jobId:
       name: jobId
       in: path
@@ -1513,6 +1524,27 @@ components:
           - arm
         example: x86
       description: Available architectures.
+    offset:
+      name: offset
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: Used with paging and defines the offset. The default value is 0.
+    limit:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: Used with paging and defines the maximum amount of objects to return. The default value is 20.
+    limit100:
+      name: limit
+      in: query
+      required: false
+      schema:
+        type: integer
+      description: Used with paging and defines the maximum amount of objects to return. The default value is 100.
   responses:
     error400:
       description: |-

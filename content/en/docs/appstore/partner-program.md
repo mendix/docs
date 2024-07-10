@@ -3,7 +3,6 @@ title: "Mendix Component Partner Program"
 url: /appstore/partner-program/
 weight: 2
 description: "Describes how to join the Mendix Component Partner Program to promote your content in the Mendix Marketplace."
-tags: ["marketplace", "partner", "partner program", "component partner program", "component"]
 aliases:
     - /appstore/creating-content/partner-program/
 ---
@@ -22,7 +21,7 @@ In return, you will gain the following benefits:
 * Win new income streams
 * Develop brand awareness with target audiences
 * Drive demand for your services
-* Present a [partner icon](/appstore/overview/#partner-icon) on the components you support
+* Present a [partner icon](/appstore/component-details/#header) on the components you support
 
 ## 2 Joining the Marketplace Program
 
@@ -30,7 +29,7 @@ The process is simple:
 
 1. Sign up as a [Mendix Component Partner](https://www.mendix.com/partners/become-a-partner/component-partner/)/.
 2. Design and build your content.
-3. Edit your listing and submit it to the Marketplace for the [Partner](/appstore/overview/#category) support category.
+3. Edit your listing and submit it to the Marketplace for the [Partner](/appstore/marketplace-content-support/#category) support category.
 
 As a partner in the Mendix Marketplace, you can offer your components to customers all over the world who are looking for innovative ways to address their business challenges. You will be part of a powerful ecosystem that provides a wealth of resources and support to help you succeed. 
 

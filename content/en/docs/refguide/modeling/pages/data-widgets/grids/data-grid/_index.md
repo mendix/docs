@@ -2,7 +2,6 @@
 title: "Data Grid"
 url: /refguide/data-grid/
 weight: 10
-tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -128,12 +127,12 @@ Default: *False*
 
 #### 3.4.7 Default Button Trigger {#default-button-trigger}
 
-The default button can be triggered by a single or a double click a row.
+The default button can be triggered by a single or a double-click  on a row.
 
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click  *(default)* | A double click triggers the default button. |
+| Double click  *(default)* | A double-click triggers the default button. |
 
 #### 3.4.8 Refresh Time (in Seconds) {#refresh-time}
 

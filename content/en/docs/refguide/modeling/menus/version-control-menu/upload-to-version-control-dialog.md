@@ -2,7 +2,6 @@
 title: "Upload to Version Control Server"
 url: /refguide/upload-to-version-control-dialog/
 weight: 70
-tags: ["studio pro"]
 aliases:
     - /refguide/upload-to-team-server-dialog.html
     - /refguide/upload-to-team-server-dialog
@@ -13,7 +12,7 @@ aliases:
 
 Use this dialog box to upload an app that is not yet stored in a version control server.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/upload-to-version-control-server.png" alt="Upload to Version Control Server menu option" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/upload-to-version-control-server.png" alt="Upload to Version Control Server menu option" class="no-border" width="250" >}}
 
 ## 2 Location
 
@@ -26,7 +25,7 @@ You can create a new app on [Mendix Team Server](/developerportal/general/team-s
 * Select **New Mendix Team Server**
 * Enter the name for the new Team Server app and repository in the **App name** field
 
-    {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/new-team-server-app.png" alt="Enter App name for New Mendix Team Server" class="no-border" width="600" >}}
 
 ### 2.2 Existing Mendix Team Server
 
@@ -37,17 +36,17 @@ You can only upload to an existing repository if the repository is currently emp
 * Select **Existing Mendix Team Server**
 * Select the **Team Server App** from the list
 
-    {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/existing-team-server-app.png" alt="Select existing mendix Team Server" class="no-border" width="600" >}}
 
 ### 2.3 Private Server
 
 This option is only available when support for other servers is enabled in **Edit** > **Preferences** > **Advanced** > [Enable private version control](/refguide/preferences-dialog/#enable-with-Git)).
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/enable-private-version-control.png" alt="Enable private version control in advanced preferences" class="no-border" width="600" >}}
 
 If you select **Private server**, enter the address of the repository to which you want to upload your app in the **App repository address** field.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/upload-to-version-control-dialog/private-server-app.png" alt="Enable private version control in advanced preferences" class="no-border" width="600" >}}
 
 ## 3 Read More
 

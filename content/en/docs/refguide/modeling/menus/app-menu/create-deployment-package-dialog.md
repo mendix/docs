@@ -1,7 +1,6 @@
 ---
 title: "Create Deployment Package"
 url: /refguide/create-deployment-package-dialog/
-tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction
@@ -54,7 +53,7 @@ Studio Pro displays the latest version that you created a package for (if any). 
 
 ### 3.4 Description
 
-You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Developer Portal displays this description along with the version number.
+You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Mendix Portal displays this description along with the version number.
 
 ## 4 File Name
 

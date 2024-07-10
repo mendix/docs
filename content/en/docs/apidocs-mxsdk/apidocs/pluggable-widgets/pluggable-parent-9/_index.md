@@ -3,7 +3,6 @@ title: "Mendix 9"
 url: /apidocs-mxsdk/apidocs/pluggable-parent-9/
 weight: 50
 description: Information on the Pluggable Widget API in Mx9.
-tags: ["API", "pluggable","widget"]
 ---
 
 The following Mendix 9 pluggable widget API documents are available here:

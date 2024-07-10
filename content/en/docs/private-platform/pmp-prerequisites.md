@@ -3,7 +3,6 @@ title: "Private Mendix Platform Prerequisites"
 url: /private-mendix-platform/prerequisites/
 description: "Documents the requirements for the Private Mendix Platform."
 weight: 10
-tags: ["private mendix platform",  "private platform", "private marketplace", "prerequisites", "requirements", "hardware requirements", "network requirements", "software resource requirements", "infrastructure requirements"]
 aliases:
     - /private-mendix-platform-prerequisites/
 ---
@@ -62,7 +61,7 @@ Your Mendix app will be deployed with and run by the Mendix for Private Cloud Op
 | OS | Linux distribution | Any capable of supporting Kubernetes | |
 | Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | |
 | Container registry | Any supported registry | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) | |
-| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by Mendix 9.18](/developerportal/deploy/private-cloud-supported-environments/#databases) | |
+| Database | PostgreSQL | 12 | |
 | Object storage | S3-type Bucket | S3 API compatible | |
 | Application management | Mendix for Private Cloud Operator | 2.12 or above | Will be installed by Private Mendix Platform installer |
 | Runtime | Mendix | 9.18.3.58938 | Will be installed by Private Mendix Platform installer |
@@ -92,7 +91,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Type | Tool | Version |
 | --- | --- | --- |
 | Container orchestration | Kubernetes | See [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) |
-| Database | [Any supported database](/developerportal/deploy/private-cloud-supported-environments/#databases) | [Any version supported by your version of Mendix](/developerportal/deploy/private-cloud-supported-environments/#databases) |
+| Database | PostgreSQL | 12 |
 | Object storage | S3-type Bucket | S3 API compatible |
 | Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |

@@ -2,7 +2,6 @@
 title: "Demo Users"
 url: /refguide9/demo-users/
 weight: 30
-tags: ["studio pro", "demo users", "demo-users", "app security"]
 ---
 
 ## 1 Introduction
@@ -30,7 +29,7 @@ After they are created automatically, demo users do not differ in any way from o
 
 ## 3 Demo User Properties
 
-Double click the demo user to open its properties:
+Double-click the demo user to open its properties:
 
 {{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/demo-users/demo-user-properties.png" class="no-border" >}}
 

@@ -2,7 +2,6 @@
 title: "History"
 url: /refguide8/history-dialog/
 weight: 50
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

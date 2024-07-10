@@ -2,11 +2,9 @@
 title: "Siemens"
 url: /partners/siemens/
 description: " Presents reference content for Siemens integrations."
-notoc: true
 weight: 10
 no_list: false 
 description_list: true
-tags: ["siemens", "MindSphere", "Insights Hub"]
 #layout: wide
 ---
 

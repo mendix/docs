@@ -1,7 +1,6 @@
 ---
 title: "XPath Constraint Functions"
 url: /refguide/xpath-constraint-functions/
-tags: ["studio pro"]
 ---
 
 The following pages describe the functions that can be executed within constraints:

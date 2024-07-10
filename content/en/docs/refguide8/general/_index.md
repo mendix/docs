@@ -4,7 +4,6 @@ url: /refguide8/general/
 weight: 10
 no_list: false
 description_list: true 
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -4,7 +4,6 @@ linktitle: "Custom Developer App with Native Builder CLI"
 url: /howto8/mobile/how-to-devapps-cli/
 weight: 30
 description: A tutorial for creating custom developer apps.
-tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
 ## 1 Introduction
@@ -33,7 +32,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
     ```
 
     This command does the following: <br />
-    1. Creates a branch named `developer` based on the commited changes to your `main`. <br />
+    1. Creates a branch named `developer` based on the committed changes to your `main`. <br />
     1. Starts a build using the developer app flavors for your project.
 4. Wait until the Native Builder completes your builds.
 
@@ -61,9 +60,9 @@ There are various ways install an app on a device. Installing using a USB is det
 
 1. Connect your device to your machine via USB.
 2. Enable file transfer on your device (differs per device).
-3. Open **This PC** in File Exploer; your device should be listed as an external device.
+3. Open **This PC** in File Explorer; your device should be listed as an external device.
 4. Drag your *APK* onto your device.
-5. Wait for it to finish transfering.
+5. Wait for it to finish transferring.
 6. Open your device's file manager.
 7. Navigate to the root of the file system.
 8. Tap the *APK* to install.

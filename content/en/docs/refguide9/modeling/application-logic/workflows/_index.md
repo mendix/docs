@@ -2,7 +2,6 @@
 title: "Workflows"
 url: /refguide9/workflows/
 weight: 20
-tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -87,7 +86,7 @@ When using cut/copy/paste, note the following:
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
-* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#2-performing-basic-functions))
+* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#basic-functions))
 * WorkflowContext
 * Start activity
 * End activity (the final **End activity** which is at the end of the workflow)
@@ -181,7 +180,7 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 ## 8 Workflow Commons Module
 
-The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in the Developer Portal. These templates already contain the **Workflows Commons** module.
+The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Apps](https://sprintr.home.mendix.com/). These templates already contain the **Workflows Commons** module.
 
 For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/).
 

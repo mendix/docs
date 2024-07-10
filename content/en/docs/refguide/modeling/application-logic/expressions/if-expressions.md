@@ -2,7 +2,6 @@
 title: "If Expressions"
 url: /refguide/if-expressions/
 weight: 60
-tags: ["studio pro", "if expression", "expression", "if statement", "expressions"]
 ---
 
 ## 1 Introduction

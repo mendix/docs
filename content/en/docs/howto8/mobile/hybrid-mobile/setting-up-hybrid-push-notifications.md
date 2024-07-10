@@ -3,7 +3,6 @@ title: "Set Up Hybrid Push Notifications"
 url: /howto8/mobile/setting-up-hybrid-push-notifications/
 weight: 9
 description: "Learn how to set up hybrid push notifications with PhoneGap Build."
-tags: ["mobile", "push notification", "remote", "push", "notification"]
 ---
 
 ## 1 Introduction
@@ -24,11 +23,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
-As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the PhoneGap Build flow in the Mendix Developer Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to PhoneGap Build manually.
+As a result of this, Mendix hybrid apps that employ push notifications can no longer be built directly using the PhoneGap Build flow in the Mendix Portal. Instead, you will need to prepare the hybrid app package locally. You can use the generated hybrid app package to build your Android and iOS apps locally, or upload them to PhoneGap Build manually.
 
 To build the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane on the left, click **Mobile App**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/). In the navigation pane on the left, click **Mobile App**.
 2. Make sure the **Push Notifications** permission is selected under **Permissions**.
 3. Click **Publish for Mobile App Stores**:
 

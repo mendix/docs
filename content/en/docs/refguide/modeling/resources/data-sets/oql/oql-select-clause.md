@@ -2,7 +2,6 @@
 title: "OQL Select Clause"
 url: /refguide/oql-select-clause/
 weight: 10
-tags: ["oql", "studio pro"]
 ---
 
 ## 1 Description
@@ -58,12 +57,12 @@ For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
 ### 2.5 column_alias
 
-`column_alias` is an alternative name to replace the column name in the result. When the name attribute is retrieved, the result column is "Name". With an alias, you can specify another result column name, like "Customer Name". An alias can contain spaces.
+`column_alias` is an alternative name to replace the column name in the result. When the name attribute is retrieved, the result column is "Name". With an alias, you can specify another result column name, like "Customer_Name". An alias cannot contain spaces.
 
 ```sql {linenos=false}
 SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer
 ```
 
 ```sql {linenos=false}
-SELECT Sales.Customer.Name AS 'Customer Name' FROM Sales.Customer
+SELECT Sales.Customer.Name AS "Customer_Name" FROM Sales.Customer
 ```

@@ -4,7 +4,6 @@ linktitle: "Best Practices for App Performance"
 url: /refguide/community-best-practices-for-app-performance/
 weight: 15
 description: "Describes some best practices to apply during development to get a better performing app. This document is created by and for the Mendix community."
-tags: ["best practice", "performance", "community"]
 aliases:
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7.html
     - /howtogeneral/bestpractices/best-practices-for-app-performance-in-mendix-7
@@ -15,7 +14,7 @@ aliases:
 
 {{% alert color="info" %}}
 
-This document is created by and for the Mendix community. It collects performance best practices in the form of do's and don'ts.
+This document is created by and for the Mendix community. It collects performance best practices in the form of dos and don'ts.
 
 {{% /alert %}}
 
@@ -110,8 +109,8 @@ For OQL, many of the same best practices apply as for XPath.
 * Get better infrastructure (for example, more App Engines in the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)).
 * When on premises, make sure a proxying web server is placed in front of Mendix to serve static content and compress data.
 
-## 11 MxAssist Best Practice Bot
+## 11 Best Practice Recommender
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
+[Best Practice Recommender](/refguide/best-practice-recommender/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Recommender**.
 
-For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from Best Practice Recommender](/refguide/performance-best-practices/).

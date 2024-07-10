@@ -24,6 +24,7 @@ ul.landing-list{
 }
 ul.contributing-list{
     padding-left: 1rem;
+    padding-bottom: 2rem;
     margin-left: 0.75rem;
 }
 
@@ -184,14 +185,8 @@ div.my-container{
 }
 
 a.doc-link{
-    border-radius: 0.5rem;
     padding: 0.375rem 0.375rem;
     position: absolute; // NK - fixed position of button
     bottom: 1rem; // NK - fixed position of button
     right: 1rem; // NK - fixed position of button
-}
-// 404 page
-a.home-btn{
-    border-radius: 0.5rem;
-    padding: 0.375rem 0.375rem;
 }

@@ -3,7 +3,6 @@ title: "Navigation"
 url: /refguide/mobile/designing-mobile-user-interfaces/navigation/
 weight: 20
 description: "General information for native navigation in Mendix."
-tags: ["navigation", "profiles"]
 aliases:
     - /refguide/native-navigation/
 ---
@@ -36,7 +35,7 @@ Pop-ups can be very useful when asking for input in certain contexts. For exampl
 
 Native layouts have helpful properties that enable the most common patterns used in native apps.
 
-### 3.1 Header
+### 3.1 Header{#header}
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 
@@ -59,6 +58,22 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 {{% /alert %}}
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/bottombar.png" alt="An example of the default bottom bar on iOS."   width="250"  class="no-border" >}}
+
+### 3.3 Sidebar
+
+You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep  useful links and application settings there.
+
+There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/includesidebar.png" alt="Include a sidebar" >}}
+
+Then, decide which screen in your project will have a **Sidebar** and apply the appropriate layout — **NativePhone_SideMenu** in our case:
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
+
+After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](#header)):
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
 
 ## 4 How does Mendix Native Navigation Work?
 
@@ -114,7 +129,25 @@ The **All** option can be used to close all pages in the current stack.
 
 In addition, you can configure the Open page action to **Clear history** when navigating to a page. This effectively resets the entire navigation system, not just the current stack, and the user will not be able to navigate back from the target page.
 
-### 4.3 Updating Data
+### 4.3 Navigation Transitions
+
+In order to add more flexibility and customization to mobile apps, Mendix offers different options for how an app's opening screen or popup animation can look.
+
+You can find and customize these options in [Navigation Profile](/refguide/navigation/):
+
+{{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
+
+By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
+
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both sperating systems.
+
+For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. Once you select this option, any popups options will be disabled and dismissed.
+
+{{% alert color="info" %}}
+Please remember; whenever you make changes in this section, a new build of the native mobile app has to be created and distributed. 
+{{% /alert %}}
+
+### 4.4 Updating Data
 
 It is important to remember that any changes you make to your data will be immediately reflected on all active screens. However, this does not mean that these changes are also committed to the database; that remains an explicit action. Another consequence of this is that your app is responsible for keeping track of (and possibly reverting) changes to data when the user decides to navigate back (for example by pressing the back button) without saving their changes. 
 

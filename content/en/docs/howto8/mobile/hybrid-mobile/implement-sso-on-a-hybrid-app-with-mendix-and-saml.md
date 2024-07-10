@@ -4,7 +4,6 @@ linktitle: "SSO on Hybrid App with SAML"
 url: /howto8/mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/
 weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
-tags: ["SAML", "SSO", "mobile", "hybrid app", "phonegap", "authentication"]
 ---
 
 ## 1 Introduction
@@ -78,7 +77,7 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 ```javascript
 MxApp.onConfigReady(function(config) {
     var samlLogin = function() {
-        var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
+        var samlWindow = cordova.InAppBrowser.open(config.unmodifiedRemoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
 
         var exitFn = function() {
             navigator.app.exitApp();
@@ -90,7 +89,7 @@ MxApp.onConfigReady(function(config) {
             samlWindow.executeScript({
                 code: "window.location.href;"
             }, function(href) {
-                if (href[0].toLowerCase().indexOf(window.mx.remoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
+                if (href[0].toLowerCase().indexOf(config.unmodifiedRemoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {
@@ -130,7 +129,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/). In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" class="no-border" >}}

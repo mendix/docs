@@ -3,7 +3,6 @@ title: "Part 1: Local Notifications"
 url: /howto8/mobile/native-local-notifications/
 weight: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
-tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ## 1 Introduction
@@ -23,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 
 {{% alert color="info" %}}
-To use push notifications with apps created with the Native Builder, make sure you have completed [How To Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/) and the how-to's described in [Use Notifications](/howto8/mobile/notifications/)
+To use push notifications with apps created with the Native Builder, make sure you have completed [How To Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/) and the how-tos described in [Use Notifications](/howto8/mobile/notifications/)
 {{% /alert %}}
 
 ## 3 Creating a Project and Configuring Notifications

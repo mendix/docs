@@ -2,7 +2,6 @@
 title: "3D Viewer for Teamcenter"
 url: /partners/siemens/3d-viewer-for-teamcenter/
 description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualize it using existing 3D Viewer widgets."
-tags: ["3d visualization", "3d viewer", "cad", "app store", "marketplace", "component", "platform support", "teamcenter"]
 ---
 
 ## 1 Introduction
@@ -47,7 +46,7 @@ Make sure you have the following prerequisites in place:
 
 ## 3 Installation
 
-To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) as necessary):
+To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [Using Marketplace Content](/appstore/use-content/) as necessary):
 
 * [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608)
 * [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service（v.2.0.0 or above). 

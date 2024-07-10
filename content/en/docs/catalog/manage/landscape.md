@@ -2,7 +2,6 @@
 title: "Landscape View"
 url: /catalog/manage/landscape/
 description: "Describes the Catalog Landscape to explore the connections with registered assets."
-tags: ["data hub", "Catalog", "external entities", "landscape", "published odata service"]
 weight: 40
 aliases:
     - /data-hub/data-hub-landscape/

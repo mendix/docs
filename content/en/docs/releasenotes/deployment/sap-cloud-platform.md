@@ -1,10 +1,8 @@
 ---
 title: "SAP BTP"
 url: /releasenotes/developer-portal/sap-cloud-platform/
-
 weight: 30
 description: "Release notes for deployment to SAP Business Technology Platform"
-tags: ["release notes", "deployment", "cloud environment", "SAP", "SAP Cloud"]
 ---
 
 These release notes cover changes to deployment to [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) (SAP BTP).
@@ -74,7 +72,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 * We released version 2.1.1 of the [XSUAA Connector for SAP Business Technology Platform](/appstore/modules/sap/sap-xsuaa-connector/).
 
-    {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the [User Migration](/appstore/modules/user-migration-module/) Marketplace module.{{% /alert %}}
+    {{% alert color="info" %}}This version uses a new user administration module called **SapAuthentication** and customers using *XSUAA Connector for SAP Business Technology Platform* version 2.0.0 or below will need to migrate their existing users from **Administration.Account** to **SapAuthentication.SapUser** using the community supported [User Migration](https://marketplace.mendix.com/link/component/118015) Marketplace module.{{% /alert %}}
 
 ### July 14, 2021
 

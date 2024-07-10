@@ -2,7 +2,6 @@
 title: "Share Company Atlas UI Resources"
 url: /howto8/front-end/share-company-atlas-ui-resources/
 weight: 40
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
@@ -47,7 +46,7 @@ This section describes how Mendix developers in your company can benefit from th
 
 A UI Resources module is a great way to keep all the UI resources centralized in your application. It would be a lot of work to download the UI Resources module every time a Mendix developer starts a new Mendix app. An easier way to share the UI Resources for new Mendix apps is to create a blank company app template with the UI Resources module already included. This blank app can also be extended with logic and data, depending on what your Mendix developers need to quickly create Mendix applications.
 
-Let’s start with creating a new Mendix application in the Mendix Developer Portal or directly in Mendix Studio Pro:
+Let’s start with creating a new Mendix application in the Mendix Portal or directly in Mendix Studio Pro:
 
 1. Select the **Blank App** and open the new app in Studio Pro:
 

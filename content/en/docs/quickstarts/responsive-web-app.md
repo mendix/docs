@@ -3,7 +3,6 @@ title: "Building a Responsive Web App"
 url: /quickstarts/responsive-web-app/
 weight: 10
 description: "Learn the basics of making an app in a responsive web profile."
-tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
     - /quickstarts/part1/
     - /refguide/quickstart-part1/
@@ -106,11 +105,11 @@ Look at the bottom dockable pane of Studio Pro:
 
 Here you will find some separate default dockable panes:
 
-* [Stories](/refguide/stories-pane/) – displays the active user stories added on your app’s **Stories** page in the Developer Portal 
+* [Stories](/refguide/stories-pane/) – displays the active user stories added in your [project management tool](/developerportal/project-management/)
 * [Changes](/refguide/changes-pane/) – displays a list of all changes in the app since the last commit to the Team Server
 * [Errors](/refguide/errors-pane/) – displays any errors found within your app 
 
-For more information on available panes, see the [MxAssist Best Practice Bot](/refguide/view-menu/#mx-bot) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
+For more information on available panes, see the [Best Practice Recommender](/refguide/view-menu/#best-practice-recommender) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
 ### 4.4 Right Dockable Panes
 
@@ -241,7 +240,7 @@ To start, replace the static image with the image the app end-user uploads to th
 
 7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
-## 7 Defining Logic Using Microflows
+## 7 Defining Logic Using Microflows {#microflow-use-case}
 
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 

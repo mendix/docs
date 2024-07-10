@@ -193,7 +193,7 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 #### YouTube Video
 
-{{% youtube 5tznw5ZUQgk %}}
+{{< youtube 5tznw5ZUQgk >}}
 
 ## Other Markdown and HTML Guidelines
 

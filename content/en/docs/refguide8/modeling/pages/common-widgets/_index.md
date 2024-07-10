@@ -2,7 +2,6 @@
 title: "Common Widgets"
 url: /refguide8/common-widgets/
 weight: 20
-tags: ["studio pro", "common widgets", "widget"]
 ---
 
 ## 1 Introduction

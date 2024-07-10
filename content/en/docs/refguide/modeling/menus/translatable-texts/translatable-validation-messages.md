@@ -3,7 +3,6 @@ title: "Using Translatable Validation Messages"
 url: /refguide/translatable-validation-messages/
 weight: 140
 description: "Describes how to use translatable validation messages."
-tags: ["validation", "microflow", "translate"]
 aliases:
     - /howto/logic-business-rules/translatable-validation-messages/
 ---
@@ -38,18 +37,18 @@ Prepare a validation entity in the domain model:
 
 Create an enumeration containing all validation messages:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/validation-enumeration.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/validation-enumeration.png" class="no-border" width="500" >}}
 
 Reference the model below for messages you should store in the entity:
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model1.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model1.jpg" class="no-border" width="800" >}}
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model2.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model2.jpg" class="no-border" width="800" >}}
 
 The GetI18NText microflow validates and acquires the text like this. This is done to prevent any nullpointers in case of incorrect modeling.
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model3.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model3.jpg" class="no-border" width="500" >}}
 
 The text is replaced by this microflow. The input includes the translated text, the variable (parameter) text you want to add to the text, and the token number to indicate the position (as in, {1}, {2}, {3}).
 
-{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model4.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translatable-validation-messages/model4.jpg" class="no-border" width="800" >}}

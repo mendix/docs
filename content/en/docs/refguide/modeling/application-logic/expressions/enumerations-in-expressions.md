@@ -2,7 +2,6 @@
 title: "Enumerations in Expressions"
 url: /refguide/enumerations-in-expressions/
 weight: 170
-tags: ["studio pro", "expression", "enumeration", "expressions"]
 ---
 
 ## 1 Introduction
@@ -26,7 +25,7 @@ else
   OrderProcessing.Status.started
 ```
 
-You can also use conditional statements to check whether two emuneration values are the same:
+You can also use conditional statements to check whether two enumeration values are the same:
 
 ```java
 if $Order/Status = OrderProcessing.Status.completed then 

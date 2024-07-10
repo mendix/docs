@@ -3,7 +3,6 @@ title: "Configuring Add-on and Solution Modules for Publishing"
 linktitle: "Publish Add-on and Solution Modules"
 url: /refguide9/configure-add-on-and-solution-modules/
 weight: 20
-tags: ["studio pro", "add-on", "solution", "module", "modules"]
 ---
 
 {{% alert color="warning" %}}
@@ -106,5 +105,5 @@ If, for some reason, you switch the add-on and solution module to an app module,
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Using Marketplace Content](/appstore/overview/use-content/)
+* [Using Marketplace Content](/appstore/use-content/)
 * [Import and Export Apps, Modules, Widgets, and Documents](/refguide9/import-and-export/)

@@ -2,7 +2,6 @@
 title: "Workflow Activities"
 url: /refguide9/workflow-activities/
 weight: 90
-tags: ["studio pro", "microflow", "workflow", "workflow activities"]
 ---
 
 ## 1 Introduction

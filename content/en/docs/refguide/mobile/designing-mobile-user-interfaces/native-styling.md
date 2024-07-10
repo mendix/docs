@@ -3,7 +3,6 @@ title: "Native Styling"
 url: /refguide/mobile/designing-mobile-user-interfaces/native-styling/
 weight: 40
 description: "General information for native styling in Mendix."
-tags: ["native", "styling"]
 aliases:
     - /howto/mobile/native-styling/
     - /howto/mobile/how-to-use-native-styling/
@@ -59,7 +58,7 @@ You have the capacity to alter design properties with Mendix Studio Pro. Further
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Create a Mendix app based on the Blank Native Mobile App template by following the [Creating a New App Based on the Quickstarter App](/refguide/mobile/getting-started-with-mobile/#quickstartapp) section of *Get Started with Native Mobile*
-* Download the Make It Native 9 app on your mobile device via either the [Google Play](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9) store or the [Apple App Store](https://apps.apple.com/us/app/make-it-native-9/id1542182000) so you can text your app and see your styling changes
+* Download the Make It Native App on your mobile device. Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
 ### 5.2 Customizing the Quickstarter App
 

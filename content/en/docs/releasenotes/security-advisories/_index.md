@@ -1,9 +1,7 @@
 ---
 title: "Security Advisories"
 url: /releasenotes/security-advisories/
-tags: ["security", "security advisories", "cve", "cvss", "ssa", "siemens security advisory"]
 weight: 50
-#notoc: true
 #layout: wide
 ---
 
@@ -21,6 +19,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
+|  <a id="33500"></a>CVE-2024-33500 | 5.9 | [Improper Privilege Management Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-540640.html)  | See the SSA description for remediation details. |
 |  CVE-2023-4863  | 7.5 | [Code Execution Vulnerability (libwebp CVE-2023-4863) in Mendix Studio Pro](https://cert-portal.siemens.com/productcert/html/ssa-268517.html)  | See the SSA description for remediation details. |
 | CVE-2023-45794  | 6.8 | [Privilege Escalation Vulnerability in Mendix Runtime](https://cert-portal.siemens.com/productcert/html/ssa-084182.html)  | See the SSA description for remediation details. |
 | CVE-2023-43623 | 5.3 | [User Enumeration Vulnerability in Mendix Forgot Password Module](https://cert-portal.siemens.com/productcert/html/ssa-295483.html) | See the SSA description for remediation details. |

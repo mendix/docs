@@ -2,7 +2,6 @@
 title: "Drop-Down"
 url: /refguide9/drop-down/
 weight: 30
-tags: ["Drop-down", "input", "page", "widget", "enumeration", "studio pro"]
 aliases:
     - /refguide9/drop-down-widget.html
     - /refguide9/drop-down-widget

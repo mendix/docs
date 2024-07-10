@@ -3,7 +3,6 @@ title: "Test the Push Notifications Implementation"
 linktitle: "Test Push Notifications"
 url: /howto8/mobile/testing-the-implementation/
 weight: 60
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction
@@ -14,7 +13,7 @@ Once you finish implementing the steps described in [How to Implement Push Notif
 
 To begin testing your push notifications, you will need to build new versions of your mobile application:
 
-1. Navigate to the [Developer Portal](https://sprintr.home.mendix.com/index.html), then click your app.
+1. Navigate to [Apps](https://sprintr.home.mendix.com/), then click your app.
 2. Click **Deploy** > **Mobile App**.
 3. Make sure the checkbox **Permissions** > **Push Notifications** is selected.
 4. Click **Publish for Mobile App Stores**.

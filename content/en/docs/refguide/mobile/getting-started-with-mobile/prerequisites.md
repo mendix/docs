@@ -20,25 +20,50 @@ While developing Mendix apps, you will need to test and iterate to make the best
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
-Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. Please note that you can use the Make It Native 9 app until 10.5.x. We updated the app's React Native in 10.6, resulting in a changed MIN app version.
+Depending on the Mendix version used to build your app, you have to use a different version of Make It Native. The following list explains which version to use:
 
-The following list explains which version to use:
-
-* **10.6.0 and higher** – Make It Native 10 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/us/app/make-it-native-10/id6450037464))
-* **9.24.0 to 10.5.x** – Make It Native 9 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9&hl=gsw&gl=US), [iOS](https://apps.apple.com/us/app/make-it-native-9/id1542182000))
-* **8.18.x** – Make It Native 8 ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp&hl=en_US), [iOS](https://apps.apple.com/nl/app/make-it-native-8/id1334081181))
+* **Latest Mendix Version** - Latest version of Make It Native 10 ([Android](https://play.google.com/apps/testing/com.mendix.developerapp.mx10), [iOS](https://testflight.apple.com/join/bQfLf27w))
+    * Please note that the latest version of Make It Native 10 is offered in online stores' beta version programs. Simply follow the instructions on those sites to download and install the latest version of MIN 10.
+* **10.6.0 to 10.10.x** – Make It Native 10 MTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
+* **9.24.0 to 10.5.x** – Make It Native 9 LTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9), [iOS](https://apps.apple.com/app/make-it-native-9/id1542182000))
+* **8.18.x** – Make It Native 8 LTS ([iOS](https://apps.apple.com/app/make-it-native-8/id1334081181))
 * **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
 
-For information on which mobile operating systems are supported by the Make It Native app, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
+For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
 ### 2.1 Direct Download Links {#direct-links}
 
-For Make it Native 10 apps, download the following Android or iOS Make It Native apps directly using these QR codes:
+Download the latest version of Make It Native 10 using these QR codes:
 
 |                                  Android                                  |                                iOS                                |
 | :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
-|   [Link](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [Link](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
+|   [Latest Version](https://play.google.com/apps/testing/com.mendix.developerapp.mx10)    |        [Latest Version](https://testflight.apple.com/join/bQfLf27w)         |
+
+Download the MTS version of Make it Native 10 using these QR codes:
+
+|                                  Android                                  |                                iOS                                |
+| :-----------------------------------------------------------------------: | :---------------------------------------------------------------: |
+| {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
+|   [MTS Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [MTS Version](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
+
+### 2.2 Using the Latest Version of Make It Native
+
+The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
+
+To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relavant links above](#get-min-app) and follow the instructions. 
+
+Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
+
+### 2.3 Recommendations
+
+When working with applications on a Long-Term Support (LTS) version of Mendix, use the corresponding LTS version of Make It Native. All patch versions of the Mendix LTS version can be used.
+
+When working with applications on a Mid-Term Support (MTS) version, it is important to anticipate updating your application every 6 months. The MTS version of Make It Native exclusively supports the most recent MTS version of Mendix and receives updates one month after a new Mendix MTS version is released. We recommend performing the update during this month and using the latest version of Make It Native during the update process.
+
+Only use the latest version of Mendix if you are prepared to update your application every month. The latest version of Make It Native only supports the latest version of Mendix and is updated monthly.
+
+If you want to use a custom version of Mendix you can always [create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [build your own Make It Native App](https://github.com/mendix/make-it-native) for that version of Mendix.
 
 ## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
 

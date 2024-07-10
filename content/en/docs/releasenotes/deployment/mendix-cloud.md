@@ -1,10 +1,9 @@
 ---
-title: "Mendix Cloud"
+title: "Mendix Cloud Release Notes"
+linktitle: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
-
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
-tags: ["release notes", "deployment", "cloud environment", "Mendix Cloud", "free app"]
 ---
 
 These release notes cover changes to deployment to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
@@ -17,13 +16,28 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### July 4, 2024
+
+#### Pipelines New Features
+
+* We added two new pipeline steps:
+    * You can use the Start Environment step to start a selected environment.
+    * You can use the Promote Package step to move a deployment package from a specified source environment to a specified target environment.
+* It is now possible to trigger pipelines manually. To use this new trigger type in your pipeline, select **Manual** as the **Trigger** in the Start Pipeline step of your pipeline design.
+* We will be launching a mini survey for Pipelines soon, asking you some questions about what you like and dislike.
+
+#### Pipelines Improvements
+
+* Pipeline names are no longer editable while a pipeline is active. If you want to edit a pipeline name, deactivate the pipeline first.
+* We implemented deep links for all three tabs on the Pipelines page. This facilitates easy sharing of record-specific details on the **Runs**, **Designs**, and **Settings** tabs; you can simply copy and paste the URL.
+
 ### May 14, 2024
 
 #### New Features
 
 * We now use Arm-based AWS Graviton 2 processors for databases of new environments on all plans in Mendix Public Cloud for best performance. Graviton 2 processors can provide significant performance improvements over previous generation instances. For database operations, this means faster processing of queries and better handling of concurrent requests.
 
-    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared or downsized.
+    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared, downsized, or resized.
 
 ### May 9, 2024
 
@@ -31,6 +45,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 * We added a Feedback Widget to the Pipelines pages so that customers can directly provide feedback, enhancement requests, and other ideas.
 * We improved the performance of the **Runs** page's search and filtering.
+* We added a column selector to the table on the **Runs** page, so it is now possible to customize which columns appear in the table. We also added a new column: Pipeline ID.
 
 ### April 25, 2024
 

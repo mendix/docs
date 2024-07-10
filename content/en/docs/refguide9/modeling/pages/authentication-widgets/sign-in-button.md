@@ -1,7 +1,6 @@
 ---
 title: "Sign-In Button"
 url: /refguide9/sign-in-button/
-tags: ["studio pro", "sign-in button", "sign in", "authentication widget", "authentication" ]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

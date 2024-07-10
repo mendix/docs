@@ -1,7 +1,6 @@
 ---
 title: "OQL Aggregation"
 url: /refguide8/oql-aggregation/
-tags: ["studio pro"]
 ---
 
 Aggregations perform specific calculations on the values of the retrieved column(s). The following aggregate functions are possible:

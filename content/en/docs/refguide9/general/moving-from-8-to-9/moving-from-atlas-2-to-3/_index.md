@@ -2,7 +2,6 @@
 title: "Migrate From Atlas 2 To Atlas 3"
 url: /refguide9/moving-from-atlas-2-to-3/
 weight: 6
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
 aliases:
     - /refguide/moving-from-atlas-2-to-3/
 ---
@@ -19,7 +18,7 @@ To upgrade from Atlas 2 to Atlas 3, you must complete the [Upgrading from Atlas 
 * [Migrating Your Native Styling](#upgrade-native-styling)
 * [Migrating Custom Defined Design Properties](#upgrade-design-properties)
 
-The sections after the upgrade instructions reference known issues and some troublehsooting issues that may occur when upgrading to Atlas 3. You will probably only need to consult them if you introduced custom styling into your Atlas: 
+The sections after the upgrade instructions reference known issues and some troubleshooting issues that may occur when upgrading to Atlas 3. You will probably only need to consult them if you introduced custom styling into your Atlas: 
 
 * [Expected Issues After Upgrading to Atlas 3](#expected-issues)
 * [Edge Case Issues After Upgrading to Atlas 3](#edge-cases)
@@ -53,7 +52,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
 #### 2.2.1 Upgrading Atlas UI Resources to Atlas Core
 
-1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** (for example building blocks, page templates, or layouts) it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modifed any of Atlas UI's content.
+1. If you have modified any of the Atlas UI content found in **Atlas UI Resources** (for example building blocks, page templates, or layouts) it is recommended to move the UI content you have modified to another user defined module within your app. *Skip this step* if you have not modified any of Atlas UI's content.
 1. Rename the **Atlas_UI_Resources** module to **Atlas_Core** in Studio Pro by right-clicking the module then clicking **Rename**:
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/2-rename.png" class="no-border" >}}
@@ -95,7 +94,7 @@ If you have made any of the modifications above, please follow the steps below. 
 
 * [Web Custom Variables](#web-custom-variables)
 * [Web Custom Styling](#web-custom-styling)
-* [Web Additonal Custom Styling](#web-additional-custom-styling)
+* [Web Additional Custom Styling](#web-additional-custom-styling)
 * [Web Design Properties](#web-design-properties)
 * [Web Resources](#web-resources)
 
@@ -266,7 +265,7 @@ theme/native/main.js
 themesource/your-module/native/main.js
 ```
 
-#### 2.4.3 Native Additonal Custom Styling {#native-additional-custom-styling}
+#### 2.4.3 Native Additional Custom Styling {#native-additional-custom-styling}
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
@@ -357,7 +356,7 @@ You have extended the **container widget** with a design property **border** to 
 }
 ```
 
-In the example above we have two design properties: **align content** and **border**. Align content is an Atlas 3 defined design property, while border is a custom-defined design property. To avoid conflicts with the Atlas 3 defined design properties, its recommended to export only your custom-defined design properties to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similiar to the below example. 
+In the example above we have two design properties: **align content** and **border**. Align content is an Atlas 3 defined design property, while border is a custom-defined design property. To avoid conflicts with the Atlas 3 defined design properties, its recommended to export only your custom-defined design properties to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similar to the below example. 
 
 ```json
 {
@@ -404,7 +403,7 @@ You have added a design property `“Opacity”` for MyCustomWidget, in **Atlas 
 }
 ```
 
-As this is a custom-defined design property, this needs to be added to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similiar to the below example.
+As this is a custom-defined design property, this needs to be added to the web's **design-property** json file of a module you have created in the **themesource** directory. Resulting in something similar to the below example.
 
 ```json
 {

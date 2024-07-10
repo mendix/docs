@@ -5,7 +5,6 @@ weight: 4
 no_list: false
 description_list: true
 description: "Describes how to create and share Mendix Marketplace content."
-tags: ["marketplace", "public marketplace", "private marketplace", widget", "module"]
 aliases:
     - /appstore/overview/share-content/
     - /appstore/general/share-app-store-content/
@@ -26,7 +25,7 @@ This how-to teaches you how to do the following:
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
-* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [Using Marketplace Content](/appstore/overview/use-content/)
+* Familiarize yourself with the [Marketplace Overview](/appstore/overview/) and [Using Marketplace Content](/appstore/use-content/)
 
 ## 3 Marketplace Content Development Guidelines {#guidelines}
 
@@ -127,7 +126,7 @@ To get started, click **Add Content** in the top bar of the Marketplace home scr
 {{% alert color="info" %}}
 <a id="draft"></a>On each page of the upload flow, click one of the following buttons:
 
-* **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/overview/my-marketplace/#my-drafts) link in the top bar)
+* **Save Draft** to save the details you have entered so far to the draft (which you can access via the [My Drafts](/appstore/overview/#my-drafts) link in the top bar)
 * **Save & Continue** to go to the next page of the upload flow
 {{% /alert %}}
 
@@ -147,8 +146,8 @@ Follow these steps to describe your content:
 
     * <a id="public"></a>**Public Marketplace (all Mendix users)** – your component will be available to the Mendix community
         * This content will have to be reviewed and approved by Mendix before it is available)
-    * <a id="private"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/overview/my-marketplace/#company-content) page
-        * Selected private content of a content group can also be made available to [content group guests](/appstore/overview/my-marketplace/#guests) for download
+    * <a id="private"></a>**Private Marketplace (your company only)** – your content will receive the **Private** label and be available only via your [Company Content](/appstore/overview/#company-content) page
+        * Selected private content of a content group can also be made available to [content group guests](/appstore/overview/#guests) for download
         * This content will not be reviewed by Mendix
 
     {{% alert color="warning" %}}You can only set the location in the initial version of your content. You cannot change this setting by updating the Marketplace component later.{{% /alert %}}
@@ -188,7 +187,7 @@ This license can be created for a new **Public Marketplace (all Mendix users)** 
 Follow these steps to configure a proprietary license for a new public component:
 
 1. Click **Request New License**.
-2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/overview/#details).
+2. Add a **License Name**, which is the name that will be displayed on the [component details page](/appstore/component-details/).
 3. Add a **License URL**, which should lead the user to a web page that lists the terms and conditions for using the component. Users can navigate to this web page by clicking the license name on the component details page.
 4. Add a **Reason** for the new license. This is for the purpose of the Mendix review only, and it will not be displayed on the component details page.
 
@@ -289,7 +288,7 @@ For details on the approval process, see [Governance Process](/appstore/sharing-
 
 After you publish a component in the Mendix Marketplace, it is your responsibility to make sure that components are updated on a regular cadence. This is important so that components work with the latest versions of dependencies (especially Mendix Studio Pro), and it is required so Mendix can ensure the quality of components in the Marketplace. This means you need to monitor, maintain, and evolve the component so that the Marketplace listing is more noticeable, you can build user loyalty, and you can maintain the good reputation of your company. If the component is not updated regularly, the Marketplace listing will be analyzed for removal from public visibility.
 
-Mendix expects the following updates for components in the Platform, Community, and Premium [support categories](/appstore/overview/#category):
+Mendix expects the following updates for components in the Platform, Community, and Premium [support categories](/appstore/marketplace-content-support/#category):
 
 * Bug fixes
 * New features
@@ -298,10 +297,10 @@ Mendix expects the following updates for components in the Platform, Community, 
 
 To update content that has already been published, follow these steps:
 
-1. Find the component by clicking **My Marketplace** and selecting one of the following:
+1. Find the component by going to the Marketplace home page and selecting one of the following:
     * **My Content**
     * **Company Content**
-    * **Content Groups** (note that if an existing Marketplace component is assigned to a [content group](/appstore/overview/my-marketplace/#content-groups) as specific content group [content](/appstore/overview/my-marketplace/#group-content), you can only update the component if you are a member of that group)
+    * **Content Groups** (note that if an existing Marketplace component is assigned to a [content group](/appstore/overview/#content-groups) as specific content group [content](/appstore/overview/#group-content), you can only update the component if you are a member of that group)
 
 2. Click the menu item next to the component you want to update and select **Manage Draft**.
 

@@ -3,12 +3,11 @@ title: "Stories Pane"
 url: /refguide8/stories-pane/
 weight: 50
 description: "Describes the Stories pane in Mendix Studio Pro."
-tags: ["Studio Pro", "stories", "stories pane"]
 ---
 
 ## 1 Introduction 
 
-For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprint are created and managed in the Developer Portal. For more information on stories, see Stories. 
+For version control enabled projects (projects with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprint are created and managed in **Apps**. For more information on stories, see Stories. 
 
 In the **Stories** pane, you can view the stories and tasks of the current Sprint, show or hide done stories, open their details, change the status of the stories and tasks, and open documents connected to stories. 
 
@@ -34,7 +33,7 @@ You can perform the following actions in the **Stories** pane:
 
 ### 2.1 Refreshing the Stories Pane {#refresh}
 
-The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in the Developer Portal or Studio Pro. 
+The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in **Apps** or Studio Pro. 
 
 If two team members change the same story, the changes done last will take effect. For example, you set the story status to *Running*, but your colleague sets it to *Done* two minutes later. The story's status will be set to *Done* when you click **Refresh**, as your colleague was the last one to implement changes. 
 

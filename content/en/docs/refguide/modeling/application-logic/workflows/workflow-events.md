@@ -2,14 +2,13 @@
 title: "Workflow Events"
 url: /refguide/workflow-events/
 weight: 55
-tags: ["workflow", "workflows", "workflow-events", "workflow event"]
 ---
 
 ## 1 Introduction
 
 The [Workflow Engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc. For example, you can define an event handler that only collects data from user task events.
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 There are two ways in which you can configure workflow-related event handlers:
 
@@ -26,7 +25,7 @@ The image below presents an example of how you can configure an event handler ei
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% >}}
 
-## 3 Event Mechanism
+## 3 Event Mechanism {#event-mechanism}
 
 When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [Workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent workflow entities: **WorkflowEvent**, **WorkflowRecord**, and **WorkflowActivityRecord**.
 

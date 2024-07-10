@@ -2,7 +2,6 @@
 title: "Using ML Kit"
 url: /refguide/machine-learning-kit/using-ml-kit/
 weight: 15
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -378,6 +377,17 @@ Mendix recommends turning the logs to trace level, as the ML Engine provides a g
 ### 7.5 My Model Runs Locally but Not in Production
     
 The model you can run is limited to the maximum memory and storage space available in your environment.
+
+### 7.6 Supported Onnx Versions per Studio Pro Version
+
+The table below presents the compatibility list for your models per Studio Pro version. Each model you create should be compatible with the version you use. Otherwise, you will not be able to import it.
+
+| Studio Pro Version | ONNX Version |
+| --- | --- |
+| LTS | 1.14.0 |
+| Latest | 1.17.3 |
+
+ For more information on the required IR/ML opset versions, see [ONNX Runtime Compatibility](https://onnxruntime.ai/docs/reference/compatibility.html).
 
 ## 8 Read More {#readmore}
 

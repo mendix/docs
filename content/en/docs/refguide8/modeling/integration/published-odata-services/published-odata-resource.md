@@ -1,7 +1,6 @@
 ---
 title: "Published OData Resource"
 url: /refguide8/published-odata-resource/
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}

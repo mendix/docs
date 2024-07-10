@@ -3,7 +3,6 @@ title: "New Project"
 url: /refguide8/new-project/
 weight: 10
 description: "This document describes the New Project (New App) flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "new project", "creating new app"]
 aliases:
     - /refguide8/app-settings-dialog.html
     - /refguide8/app-settings-dialog
@@ -38,7 +37,7 @@ The name of your new app. This name is used as the name of the project directory
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide8/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create a project in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide8/version-control/) and [cloud deployment](/deployment/). When enabled, this will create a project in the Mendix Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

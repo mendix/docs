@@ -3,7 +3,6 @@ title: "GitHub-Flavored Markdown"
 url: /refguide8/gfm-syntax/
 weight: 70
 description: "Link to GitHub Guide to Mastering Markdown"
-tags: ["published REST", "GitHub", "Markdown", "studio pro"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

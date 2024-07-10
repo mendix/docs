@@ -1,7 +1,6 @@
 ---
 title: "Synchronize to Device"
 url: /refguide9/synchronize-to-device/
-tags: ["studio pro", "synchronize to device", "client activities"]
 weight: 60
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -52,7 +51,7 @@ When adding **Synchronize to device** to a microflow consider the following:
 they will not be synchronized to a device. If the offline database already contains the same object, it will be removed.
 * If the object to synchronize to a device is deleted in the same microflow,
 **Synchronize to device** activity will remove it from the offline database, if found.
-* Autocommited and new objects get skipped.
+* Autocommitted and new objects get skipped.
 * It will only synchronize objects in a microflow that are called from a nanoflow, not from an event microflow.
 
 ## 6 Remarks
@@ -66,6 +65,6 @@ Any existing data is kept and only objects that are sent to the client are affec
 * When synchronizing an already existing dirty object, dirty values are overridden and dirty status is cleaned.
 But uncommitted changes are still available in the app until you rollback the object.
 * **Synchronize to device** always overrides the existing data when the same object has been found in the database.
-That means if **Synchronize to device** is used for offline objects that were changed and commited in offline,
+That means if **Synchronize to device** is used for offline objects that were changed and committed in offline,
 all those changes will be lost and attributes of the affected objects will be reset to their runtime values.
 * Uncommitted changes in a microflow for synchronized objects are sent to the client, but the objects rollback to their offline versions.

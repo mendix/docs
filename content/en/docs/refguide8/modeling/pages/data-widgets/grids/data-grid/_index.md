@@ -2,7 +2,6 @@
 title: "Data Grid"
 url: /refguide8/data-grid/
 weight: 10
-tags: ["studio pro", "data grid", "grid", "data widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

@@ -2,7 +2,6 @@
 title: "Container Widgets"
 url: /refguide8/container-widgets/
 weight: 25
-tags: ["studio pro", "container widget", "widget"]
 ---
 
 ## 1 Introduction

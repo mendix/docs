@@ -4,7 +4,6 @@ linktitle: "Retrieving Current User with a Microflow"
 url: /refguide/retrieving-current-user-with-a-microflow/
 weight: 6
 description: "Describes how to retrieve the current user of your application in Studio Pro with a microflow."
-tags: ["microflow", "current user", "retrieve"]
 ---
 
 ## 1 Introduction

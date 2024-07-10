@@ -3,7 +3,6 @@ title: "Private Mendix Platform User Guide"
 url: /private-mendix-platform/user-guide/
 description: "Documents the business-as-usual administrator tasks for the Private Mendix Platform."
 weight: 50
-tags: ["private mendix platform",  "private platform", "user guide", "create app", "marketplace"]
 aliases:
     - /private-mendix-platform-user-guide/
 ---
@@ -147,7 +146,7 @@ To share the connector that you built, perform the following steps:
 6. Select the type of **License** you want applied to your app.
 7. Select the **Cover Image** that will be displayed for your connector.
 8. Click **Continue**.
-9. On the **Package** page, in the **Upload MPK** field, click **Browse** and select the [.mpk file](/appstore/creating-content/connector-guide-build/#331-exporting-as-an-mpk-file) that you created for your component.
+9. On the **Package** page, in the **Upload MPK** field, click **Browse** and select the [.mpk file](/appstore/creating-content/connector-guide-build/#export-as-mpk) that you created for your component.
 10. Click **Upload**.
 11. Specify the **Version** of your component.
 12. Provide a **Release Note** to describe the contents of the version you are uploading.

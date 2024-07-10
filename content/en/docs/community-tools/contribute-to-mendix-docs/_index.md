@@ -3,7 +3,6 @@ title: "Contribute to Mendix Docs"
 url: /community-tools/contribute-to-mendix-docs/
 weight: 10
 description: "Describes how to add and edit Mendix documentation as a community member."
-tags: ["documentation", "community"]
 aliases:
     - /developerportal/community-tools/contribute-to-mendix-docs/
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
@@ -51,19 +50,47 @@ You can create and edit files online within GitHub. If you want to work outside 
 
 To edit existing documentation, follow these steps:
 
-1. Click **Edit** in the upper-right corner of the specific Mendix documentation page that you want to work on.
-2. Make your changes in GitHub (make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)).
-3. Create a pull request that specifies our **development** branch as the base. For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork and Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
+1. Click **View on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 
-{{% alert color="warning" %}}
-If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately. 
-{{% /alert %}}
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/view-on-github.png">}}
+
+    The file of this doc opens on GitHub.
+
+2. Click the **Edit this file** icon in the upper-right corner.
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/edit-file.png">}}
+
+3. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
+4. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
+5. Enter a commit message, select **Create a new branch for this commit and start a pull request**, enter the name for your branch, and then click **Propose changes**.
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" max-width=50% >}}
+
+    The **Open a pull request** page opens. 
+    
+6. Make sure the pull request uses our **development** branch as the base.
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/base-development.png">}}
+
+     For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork and Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
+
+7. Add a title for the pull request.
+
+    {{% alert color="warning" %}}If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately.{{% /alert %}}
+
+8. Click **Create pull request**.
+
+The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and  you will be able to see the changes on the Mendix Docs site!
 
 ## 4 Leaving Feedback on the Documentation
 
 If you find an issue with the documentation—whether it is a typo, a missing step, or a specific technical problem—we want to know about it so we can improve!
 
-When you click the **Feedback** button on the right side of the screen, you will be brought to our GitHub repo's [Issues](https://github.com/mendix/docs/issues) page. Please include the following details in your feedback:
+Click the **Leave Feedback** button in the upper-right corner of the screen.
+
+{{< figure src="/attachments/community-tools/contribute-to-mendix-docs/leave-feedback.png">}}
+
+Then you will be brought to our GitHub repo's [Issues](https://github.com/mendix/docs/issues) page. Please include the following details in your feedback:
 
 * The document you are working with
 * A detailed description of what is wrong

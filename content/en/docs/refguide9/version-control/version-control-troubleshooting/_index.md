@@ -4,7 +4,6 @@ url: /refguide9/troubleshoot-version-control-issues/
 linktitle: "Troubleshoot Version Control"
 weight: 20
 description: "Presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "Studio Pro", "Subversion", "TortoiseSVN"]
 aliases:
     - /howto9/collaboration-requirements-management/troubleshoot-version-control-issues/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -171,7 +170,7 @@ You have resolved the conflict and can commit from Studio Pro.
 
 If you get this error, try the following options:
 
-* In the [Developer Portal](/developerportal/general/team/), check whether the user has access to the app:
+* in [Apps](/developerportal/general/team/), check whether the user has access to the app:
     * If they do not have access, invite them to the app
     * If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](https://en.wikipedia.org/wiki/WebDAV) is not blocked within your network. This protocol is [required](/refguide9/system-requirements/) by Studio Pro for [version control](/refguide9/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall.

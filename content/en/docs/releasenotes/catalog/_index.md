@@ -17,7 +17,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 #### Fixes
 * We addressed a potential security vulnerability.
 * We fixed a bug that allowed users to add tags from other companies to their endpoints.
-* We made some minor aesthetics changes to the **Control Centre** and **Service Edit** pages in order to align with the overall aesthetic standards defined for the app. 
+* We made some minor aesthetics changes to the Control Center and **Service Edit** pages to align with the overall aesthetic standards defined for the app. 
 
 ### June 27, 2024
 

@@ -215,6 +215,12 @@ The entities in the table below describe all generalizations. These are reused b
 | `DestinationKey` | Describes the target `Key` of the object |
 | `SourceKey` | Describes the source `Key` of the object |
 
+#### 4.1.17 HeadBucketRequest {#headbucketrequest}
+
+| Attribute | Description | 
+| --- | --- |
+| `BucketName` | Describes the name of the bucket | 
+
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
@@ -240,7 +246,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.3.1 CreateBucket {#createbucket}
 
-The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `CreateBucketRequest` object. It returns a `CreateBucketResponse` object. The input and output for this service are shown in the table below: 
+The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `CreateBucketRequest` object. It returns a `CreateBucketResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -248,7 +254,7 @@ The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It req
 
 #### 4.3.2 PutObject {#putobject}
 
-The `PutObject` Amazon S3 actions allows you put an object into a specified S3 bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `PutObjectRequest` object and a `FileDocument` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `PutObject` Amazon S3 action allows you to put an object into a specified S3 bucket. It requires a valid `AWS_Region` parameter, `Credentials`, a `PutObjectRequest` object and a `FileDocument` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -256,7 +262,7 @@ The `PutObject` Amazon S3 actions allows you put an object into a specified S3 b
 
 #### 4.3.3 DeleteObject {#deleteobject}
 
-The `DeleteObject` Amazon S3 actions allows you delete an object from a specified S3 bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `DeleteObjectRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `DeleteObject` Amazon S3 action allows you to delete an object from a specified S3 bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `DeleteObjectRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -264,7 +270,7 @@ The `DeleteObject` Amazon S3 actions allows you delete an object from a specifie
 
 #### 4.3.4 ListBuckets {#listbuckets}
 
-The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`. It returns a`ListBucketsResponse` object. The input and output for this service are shown in the table below: 
+The `ListBuckets` Amazon S3 action allows you to retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` parameter and `Credentials`. It returns a `ListBucketsResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -272,7 +278,7 @@ The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in
 
 #### 4.3.5 ListObjects {#listobjects}
 
-The `ListObjects` Amazon S3 actions allows you retrieve a list of the metadata of the objects for a specified bucket in one's Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`, as well as a `ListObjectsRequest` object. It returns a `ListObjectsResponse` object. The input and output for this service are shown in the table below: 
+The `ListObjects` Amazon S3 action allows you to retrieve a list of the metadata of the objects for a specified bucket in one's Amazon S3 environment. It requires a valid `AWS_Region` parameter, `Credentials`, and a `ListObjectsRequest` object. It returns a `ListObjectsResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -280,7 +286,7 @@ The `ListObjects` Amazon S3 actions allows you retrieve a list of the metadata o
 
 #### 4.3.6 DeleteBucket {#deletebucket}
 
-The `DeleteBucket` Amazon S3 actions allows you delete a bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `DeleteBucketRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `DeleteBucket` Amazon S3 action allows you to delete a bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `DeleteBucketRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -288,7 +294,7 @@ The `DeleteBucket` Amazon S3 actions allows you delete a bucket. It requires a v
 
 #### 4.3.7 GetObject {#getObject}
 
-The `GetObject` Amazon S3 actions allows you to get an object from the s3 simple storage service. It requires a valid `AWS_Region` and `Credentials`, as well as a `GetObjectRequest` object. It returns a `GetObjectResponse` object which is a `FileDocument` generalization object. The input and output for this service are shown in the table below: 
+The `GetObject` Amazon S3 action allows you to get an object from the s3 simple storage service. It requires a valid `AWS_Region` parameter, `Credentials`, and a `GetObjectRequest` object. It returns a `GetObjectResponse` object which is a `FileDocument` generalization object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -296,7 +302,7 @@ The `GetObject` Amazon S3 actions allows you to get an object from the s3 simple
 
 #### 4.3.8 CopyObject {#copyobject}
 
-The `CopyObject` Amazon S3 actions allows you copy an s3 object placed within a bucket or prefix to an other bucket or prefix. It requires a valid `AWS_Region` parameter and `Credentials`, as well as a `CopyObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
+The `CopyObject` Amazon S3 action allows you to copy an s3 object placed within a bucket or prefix to an other bucket or prefix. It requires a valid `AWS_Region` parameter and `Credentials`, and a `CopyObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -304,8 +310,16 @@ The `CopyObject` Amazon S3 actions allows you copy an s3 object placed within a 
 
 #### 4.3.9 MoveObject {#moveobject}
 
-The `MoveObject` Amazon S3 actions allows you move an s3 object between buckets or prefixes. It requires a valid `AWS_Region` parameter and `Credentials`, as well as a `MoveObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
+The `MoveObject` Amazon S3 action allows you to move an s3 object between buckets or prefixes. It requires a valid `AWS_Region` parameter, `Credentials`, and a `MoveObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
 | `MoveObjectRequest`, `AWS_Region`, `Credentials` | `Boolean` |
+
+#### 4.3.10 HeadBucket {#headbucket}
+
+The `HeadBucket` Amazon S3 action allows you to retrieve the `AWS_Region` where a bucket is located. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object. It returns an `AWS_Region`. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `HeadBucketRequest`, `AWS_Region`, `Credentials` | `AWS_Region` |

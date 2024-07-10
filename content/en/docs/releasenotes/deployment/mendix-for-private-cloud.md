@@ -13,6 +13,14 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### July 10th, 2024
 
+#### Mendix Operator v2.18.0 {#2.18.0}
+
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* We have resolved an issue where the Operator attempted to reload the runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
+* We have fixed an issue where the Operator would throw an error when no licenses were installed on the PCLM server.
+* We have updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
+* We have addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
+
 #### Portal Enhancements
 
 * You can now [convert](/developerportal/deploy/global-operator/#convert-standard-operator-to-global-operator) a Standard namespace to a Global Operator managed namespace using the **Convert Namespace** button available in Cluster details page. This feature is available from Operator v2.18.

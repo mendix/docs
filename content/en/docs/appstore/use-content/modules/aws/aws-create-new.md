@@ -52,7 +52,7 @@ To start creating your connector, do the following steps:
     This connector is required to authenticate with Amazon Web Services (AWS). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 3. In your connector module, create a folder structure similar to the following figure:
 
-    {{< figure src="/attachments/appstore/modules/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector" class="no-border" >}}
 
 ### 3.2 Retrieving a Sample API Response
 
@@ -99,7 +99,7 @@ After you have obtained an API response, you can use it to model the service in 
 
     Mendix Studio Pro now creates the entities into which the AWS service response will be mapped, as in the following example:
 
-    {{< figure src="/attachments/appstore/modules/aws-create-new/sampleentities.png" alt="The domain model for the platform-supported Amazon Polly connector" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/aws-create-new/sampleentities.png" alt="The domain model for the platform-supported Amazon Polly connector" class="no-border" >}}
 
 11. Rename the entities according to the [best-practice naming conventions](#naming).
 
@@ -147,7 +147,7 @@ The following sections of this document contain additional suggestions and best 
 When building the domain model for your connector, keep the following considerations in mind:
 
 * Always create a request entity that inherits from the AWSAuthentication.AbstractRequest even if there is no payload.
-* Create a response entity if the action returns anything other than a Boolean attribute, such as `IsSuccesful` or `IsCompleted`.
+* Create a response entity if the action returns anything other than a Boolean attribute, such as `IsSuccessful` or `IsCompleted`.
 * Implement timeout settings by adding and associating a BasicClientConfig object to the request and setting the timeout value in there.
 * Make sure that the entity metadata is as human-readable as possible, and includes information such as:
     * Generalization label

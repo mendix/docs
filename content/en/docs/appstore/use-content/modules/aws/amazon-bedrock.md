@@ -126,7 +126,7 @@ To invoke a specific model, perform the following steps:
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
 ### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
@@ -421,7 +421,6 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
-
 
 ##### 4.1.2.20 SessionConfiguration {#session-configuration}
 
@@ -859,7 +858,7 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History
+###### Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
@@ -895,8 +894,6 @@ Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-c
 
 This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
-| Input | Output |
-| --- | --- |
 | `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
 ##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}

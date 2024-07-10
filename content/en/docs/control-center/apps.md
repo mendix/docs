@@ -59,13 +59,13 @@ The description of the items that you can select are as follows:
 
 * **Created Date**: the date the app was created
 
-*  **Env Owner**: the company that owns the environments of this app
+* **Env Owner**: the company that owns the environments of this app
 
     {{% alert color="info" %}}If the owner fo the environments is not your company, you have limited control over the deployment of your app. For information on how to resolve this, see [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/).{{% /alert %}}
 
 * **Env Owner Id**: the ID of the company that owns the environments of this app 
 
-*  **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
+* **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
 
     {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
 
@@ -81,7 +81,7 @@ The description of the items that you can select are as follows:
 
 * **File Storage**: the size of the storage allocated for storing files
 
-*  **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
+* **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
 
     {{% alert color="info" %}}For more information, see the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud*.{{% /alert %}}
 
@@ -105,7 +105,7 @@ The description of the items that you can select are as follows:
 
   {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
   
-*  **Technical Contact**: the technical contact of the app
+* **Technical Contact**: the technical contact of the app
 
     {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
   
@@ -147,11 +147,11 @@ The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
 
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 
-*  **Technical Contact**: the technical contact of the app. 
+* **Technical Contact**: the technical contact of the app. 
 
     {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
 
@@ -190,7 +190,7 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Last Commit**: the date of the last commit in the main line
@@ -215,7 +215,7 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Created Date**: the date the app was created

@@ -64,7 +64,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
     2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
-        {{< figure src="/attachments/appstore/modules/aws-s3-connector/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
+        {{< figure src="/attachments/appstore/use-content/modules/aws-s3-connector/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
     
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
 7. Drag the one you would like to use onto the microflow you are working on, and position it between the microflow start event and the **CreateBucket** activity.
@@ -86,7 +86,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
     1. Click **Edit parameter value**.
     2. Edit the **CreateBucketRequest** parameter and let it auto-fill.
 
- {{< figure src="/attachments/appstore/modules/aws-s3-connector/microflow.png" alt="Configured microflow" class="no-border" >}}
+ {{< figure src="/attachments/appstore/use-content/modules/aws-s3-connector/microflow.png" alt="Configured microflow" class="no-border" >}}
 
 ## 4 Technical Reference
 

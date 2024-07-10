@@ -75,7 +75,7 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 ## 7 User Interactions
 
 * Dragging entities. Drag an entity from the Connector Window and drop it on an entity placeholder (dashed box) to relate it to an XML element. 
-* Double clicking on a mapping element (on either the entity side or the XML side). Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
+* Double-clicking on a mapping element (on either the entity side or the XML side). Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
 * Right mouse click, "Select Entity". Change the entity that is coupled to an XML element.
 * Right mouse click, "Go to Entity". Open the Domain Model that contains the entity and jumps to the entity.
 * Right mouse click, "Collapse All". Hides all the children of the mapping element, so you can keep overview in large mappings.

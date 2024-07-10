@@ -32,7 +32,7 @@ To get the environment ID, do as follows:
 
 ## 3 Creating a Deep Link in Apps
 
-If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), you can use the following links, with the specific app ID or environment ID added, as instructed:
+If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), use the following links, with the specific app ID or environment ID added, as instructed:
 
 * Overview of your apps: `https://sprintr.home.mendix.com/link/myapps`
 

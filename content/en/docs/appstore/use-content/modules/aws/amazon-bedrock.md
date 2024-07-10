@@ -241,7 +241,7 @@ This entity extends the GenAICommons.ImageOptions entity with values specific to
 
 | Attribute | Description |
 | --- | --- |
-| `NegativeText` | The NegativeText attribute describes a text prompt to define what not to include in the image. |
+| `NegativeText` | The NegativeText attribute is a string containing a prompt describing what not to include in the image. |
 
 ##### 4.1.1.9 TitanImageResponse {#titan-image-response}
 
@@ -253,7 +253,7 @@ This entity extends the GenAICommons.Response entity with values specific to Tit
 
 | Attribute | Description |
 | --- | --- |
-| `Error` | The Error attribute describes the error message if the request violates the content moderation policy. |
+| `Error` | The Error attribute contains the error message if the request violates the content moderation policy. |
 
 ##### 4.1.1.10 TitanImageMappingHelper {#titan-image-mapping-helper}
 
@@ -879,7 +879,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `UserPrompt (String)`,<br/>`AmazonBedrockConnection (object)`,<br/>`GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
 
-`GenAICommons.ImageOptions` is an optional parameter that can be omitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
+`GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation. 
 
 `GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons.
 

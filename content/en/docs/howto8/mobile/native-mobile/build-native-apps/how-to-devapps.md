@@ -57,7 +57,7 @@ There are various ways install an app on a device. Installing using a USB is det
 2. Enable file transfer on your device (differs per device).
 3. Open **This PC** in File Explorer; your device should be listed as an external device.
 4. Drag your *APK* onto your device.
-5. Wait for it to finish transfering.
+5. Wait for it to finish transferring.
 6. Open your device's file manager.
 7. Navigate to the root of the file system.
 8. Tap the *APK* to install.

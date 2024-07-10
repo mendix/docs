@@ -57,7 +57,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
     7. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
     8. Add a new **Create object** action on your microflow.
 
-3. Open the new **Create object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+3. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
 4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
@@ -240,7 +240,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     }
     ```
 
-    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in Javascript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
+    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in JavaScript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
 
 2. Until we update the type of our TextInputProps, Typescript will display errors in *TextBox.tsx*. In *src/components/TextInput.tsx*, add the missing properties to the interface and pass them to the `input` component:
 

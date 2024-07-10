@@ -1,22 +1,22 @@
 ---
 title: "Structure for How-tos"
 url: /appstore/partner-solutions/ats/ht-one-custom-action-howto-structure/
-description: "Explains the general structure of the how-to's for creating custom actions."
+description: "Explains the general structure of the how-tos for creating custom actions."
 ---
 
 ## 1 Introduction
 
-This document explains the general structure of the how-to's for creating custom actions.
+This document explains the general structure of the how-tos for creating custom actions.
 
 ## 2 How-to Introduction
 
 In the introduction of each how-to, you find a description of what the how-to will explain and in which situation it applies. It also states that you must create a new action. You use this action during the how-to. You must perform all the steps inside this action during the how-to unless stated otherwise.
 
-The introduction also tells you what type of action the how-to explains. The how-to's are written based on the [guidelines for building a custom action](/appstore/partner-solutions/ats/ht-one-guidelines-custom-action/).
+The introduction also tells you what type of action the how-to explains. The how-tos are written based on the [guidelines for building a custom action](/appstore/partner-solutions/ats/ht-one-guidelines-custom-action/).
 
 ## 3 How-to Prerequisites
 
-All of the how-to's have the prerequisite that you must read and if necessary complete the [General](/appstore/partner-solutions/ats/ht-one-custom-action-general/) section.
+All of the how-tos have the prerequisite that you must read and if necessary complete the [General](/appstore/partner-solutions/ats/ht-one-custom-action-general/) section.
 
 ## 4 User Approach
 
@@ -52,4 +52,4 @@ Perform a final check to pick up on mistakes before using the action.
 
 ## 8 Add Logic
 
-Some how-to's have an additional section that explains how to add logic to your action ("logic" in this scenario means adding conditional checks to ensure that the action works in a certain situation). This depends on the situation.
+Some how-tos have an additional section that explains how to add logic to your action ("logic" in this scenario means adding conditional checks to ensure that the action works in a certain situation). This depends on the situation.

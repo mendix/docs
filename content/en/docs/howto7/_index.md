@@ -17,6 +17,6 @@ cascade:
         priority: 0.1
 ---
 
-Browse the Mendix how-to's to find step-by-step guides that teach you how to build and customize apps with Mendix.
+Browse the Mendix how-tos to find step-by-step guides that teach you how to build and customize apps with Mendix.
 
 The *Mendix How-tos* are divided into the following categories:

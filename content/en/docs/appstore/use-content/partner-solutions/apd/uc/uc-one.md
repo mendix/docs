@@ -24,7 +24,7 @@ The measurements tool is used to detect high memory usage or high CPU to find ou
 
 During the development the performance tool is used when a function is seen as slow. Also it can be used to verify the expected flow/path is followed.
 
-Instead of debugging with breakpoint you can just record everything and analyse afterwards. This is especially helpful in complex modules with web service interfaces and scheduled events were you cannot simply follow a flow.
+Instead of debugging with breakpoint you can just record everything and analyze afterwards. This is especially helpful in complex modules with web service interfaces and scheduled events were you cannot simply follow a flow.
 
 The trap tool is saving time because logging from an error is immediately stored and you can even run the microflow logging through the performance tool. In development the trap tool records a longer period of time, so trap memory can be used to send to the performance tool and see what is happening.
 
@@ -48,12 +48,12 @@ The trap tool is used to have all needed logging immediately available when some
 
 The statistics tool is running to collect frequent, for example daily or hourly statistics.  If the system is slow the statistics tool can be used to see what is running now.
 
-Also a brief run of the performance tool can be done if some issue cannot be reproduced on other environments or the other environments so a different behaviour. This can be done with good protection parameters so the performance tool does not claim too much memory or resources.
+Also a brief run of the performance tool can be done if some issue cannot be reproduced on other environments or the other environments so a different behavior. This can be done with good protection parameters so the performance tool does not claim too much memory or resources.
 
 The measurements tool can be used to collect application specific metrics and build triggers for when they exceed thresholds. The measurements tool can also be used to detect new deployments and send an email to inform people about this.
 
 ## 6 In a Load Test
 
-In a lab a large load is generated and the statistics tool and performance tool with thresholds are used to analyse what is happening. With some filtering  the performance tool does not fill up the entire memory and still captures the longest running microflows in full detail. Extra protection is built in to stop recording when the amount of data is exceeding a threshold.
+In a lab a large load is generated and the statistics tool and performance tool with thresholds are used to analyze what is happening. With some filtering  the performance tool does not fill up the entire memory and still captures the longest running microflows in full detail. Extra protection is built in to stop recording when the amount of data is exceeding a threshold.
 
 Several tests can be compared to each other by using the marker to mark microflows as belonging to a certain lab setup.

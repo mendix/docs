@@ -73,7 +73,7 @@ To use the REST Data source end point in your chart, follow these steps:
 
 1. Create a page in your app containing an **Area chart** widget.
 
-1. Double click the **Area chart** widget.
+1. Double-click the **Area chart** widget.
 
 1. In the tab **Chart properties**, add a new chart **Series** property.
 

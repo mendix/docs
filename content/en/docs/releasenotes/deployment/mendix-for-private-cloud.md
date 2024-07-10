@@ -21,6 +21,10 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
 * We have addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
 
+#### Portal Enhancements
+
+* You can now [convert](/developerportal/deploy/global-operator/#convert-standard-operator-to-global-operator) a Standard namespace to a Global Operator managed namespace using the **Convert Namespace** button available in Cluster details page. This feature is available from Operator v2.18.
+
 ### July 4th, 2024
 
 #### Portal Enhancements

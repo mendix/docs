@@ -32,35 +32,36 @@ To get the environment ID, do as follows:
 
 ## 3 Creating a Deep Link in Apps
 
-If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), follow these steps:
-
-1. Paste the basic URL in your browser's address bar: `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
-2. Paste the desired app ID or environment ID fter the final slash.
-
-The following deep links can be used:
+If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), you can use the following links, with the specific app ID or environment ID added, as instructed:
 
 * Overview of your apps: `https://sprintr.home.mendix.com/link/myapps`
+
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
+
 * App settings: `https://sprintr.home.mendix.com/link/settings/<appID>`
+
 * App Buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
+
 * App team: `https://sprintr.home.mendix.com/link/team/<appID>`
-* Stories overview for app: `https://sprintr.home.mendix.com/link/stories/<appID>`
-
-    {{% alert color="info" %}}To get the link to a specific story item, [open the story item](/developerportal/project-management/epics/board/#story-details) in your project management tool, and click the **Copy Link** icon ({{% icon name="hyperlink" %}}).{{% /alert %}}
-
-    Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
 
 *  Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
 
     {{% alert color="info" %}}To get the link to a specific feedback item, [open the feedback item](/developerportal/app-insights/feedback/#feedback-details) in Feedback, and click the **Copy Link** icon ({{% icon name="hyperlink" %}}).{{% /alert %}}
 
 * Sprint status of an app: `https://sprintr.home.mendix.com/link/sprint-status/<appID>`
+
 * App specific API keys: `https://sprintr.home.mendix.com/link/apikeys/<appID>`
+
 * App user management: `https://sprintr.home.mendix.com/link/appusermanagement/<appID>`
+
 * Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
+
 * Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
+
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
+
 * Alerts for environment: `https://cloud.home.mendix.com/link/monitor/<appID>/<envID>`
+
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
 ## 4 Read More

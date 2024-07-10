@@ -15,9 +15,21 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments.
 
-The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used. The page has separate tabs for **Mendix Cloud Apps**, **Free Apps**, and **Apps with License Keys**.
+The **Deployed Apps Overview** page shows a list of all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used. The page has the following tabs: **Mendix Cloud**, **Free Apps**, and **Apps with License Keys**.
 
 {{< figure src="/attachments/control-center/deployed-apps/apps-overview.png"   alt="Deployed Apps - apps overview" >}}
+
+## 2 Mendix Cloud
+
+The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud.
+
+The list shows the following information:
+
+* **App Name**: This is the name of the app. Click the name of an app goes to the [app details](#mendix-cloud-app-details) page
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address.
+* **Status**
+* **Env Count**
+* **Credits Used**
 
 You can click the name of an app to see a list of environments available for the app.
 
@@ -57,3 +69,39 @@ To quickly change the [Technical Contact](/developerportal/general/app-roles/#te
 {{% alert color="info" %}}
 You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 {{% /alert %}}
+
+## Apps with License Keys
+
+The **Apps with License Keys** tab gives you an overview of all the apps that use license keys. License keys are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key.
+
+{{% alert color="info" %}}When contracts are created or renewed, new license keys are automatically generated, which must be applied to the environments of the app the contract was changed for.{{% /alert %}}
+
+The list shows the following information:
+
+* App Name: This is the name of the app. Note that the app names shown are the names that were initially given to these apps when license keys needed to be generated. Your current app names may differ. You can click on the app name to go to the [details of that app](https://mendix.atlassian.net/wiki/spaces/LM/pages/2892726366/Draft+Deployed+Apps+view+is+enhanced+for+apps+with+License+Keys#app_environments_screen).
+* Technical Contact: This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address.
+* Created Date: This is the date on which the app was originally created.
+* Actions
+  * Email icon –  Clicking the email button will email the license keys of the corresponding app to the registered Technical Contact. 
+  * Download button – Clicking the download button downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
+
+## App Environment Page
+
+After clicking an app name in the list, the page with environments that belong to that app are shown, together with the license start and end dates. This page allows you to verify the validity of your license keys and download or email them to the Technical Contact of that app.
+
+At the left top of the page, you see the name of the app, the email address of the Technical Contact, and the date that will be used as the license end date when new keys are generated.
+
+On the right side above the list, you can see two buttons:
+
+* Email Keys – 
+
+* Download Keys –
+
+The list below show the details of the environments with the following columns:
+
+* Environment: This shows the names of the environments that belong to the app that you selected.
+* ServerID: This shows the server ids that have been used to generate the license keys for each environment.
+
+* LicenseID: This is the id of the license that has been emailed to the Technical Contact when the license keys were generated. It is a unique identifier for the license that you might have stored for reference and you can match your license administration with the licenses for your environments.
+* Start Date and End Date: These two columns show the dates between which your license keys are valid. Apps need active contracts with a contract end date in the future to keep working.
+

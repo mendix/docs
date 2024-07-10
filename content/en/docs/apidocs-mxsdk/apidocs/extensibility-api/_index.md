@@ -31,8 +31,8 @@ You can also check out our examples and [API reference documentation](https://gi
 
 Here is a list of how-tos for you to begin with:
 
-* [How to reate a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
-* [How to create a ockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
+* [How to create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/)
+* [How to create a dockable pane](/apidocs-mxsdk/apidocs/extensibility-api/create-dockable-pane-extension/)
 * [How to add a context menu to an entity](/apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/)
 * [How to host some web content inside a modal dialog using a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
 * [How to create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)

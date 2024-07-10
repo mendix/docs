@@ -11,7 +11,7 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.6.0
 
-* The Extensbility API is released. 
+* The Extensibility API is released for beta usage. 
 
 * We fixed a bug when dealing with model elements detached from a container.
 

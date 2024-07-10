@@ -786,13 +786,13 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 | `MaxResults` | The maximum number of results to return in the response.  |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.27 ListAgentsResponse {#list-agents-response}
+##### 4.1.2.67 ListAgentsResponse {#list-agents-response}
 
 | Attribute | Description |
 | --- | --- |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.28 AgentSummary {#agent-summary}
+##### 4.1.2.68 AgentSummary {#agent-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -803,6 +803,49 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 | `LatestAgentVersion` | The latest version of the agent.  |
 | `UpdatedAt` | The time at which the agent was last updated.  |
 
+##### 4.1.2.69 GetAgentRequest {#get-agent-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentID` | The unique identifier of the agent.  |
+
+##### 4.1.2.70 GetAgentResponse {#get-agent-response}
+
+| Attribute | Description |
+| --- | --- |
+| `N/A` | - |
+
+##### 4.1.2.71 Agent {#agent}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentARN` | The Amazon Resource Name (ARN) of the agent. |
+| `AgentID` | The unique identifier of the agent.  |
+| `AgentName` | The name of the agent.  |
+| `AgentResourceRoleARN` | The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.  |
+| `AgentStatus` | The status of the agent.  |
+| `AgentVersion` | The version of the agent.  |
+| `CreatedAt` | The time at which the agent was created.  |
+| `IdleSessionTTLInSeconds` | The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.  |
+| `UpdatedAt` | The time at which the agent was last updated.  |
+| `ClientToken` | A unique, case-sensitive identifier to ensure that the API request completes no more than one time.   |
+| `CustomerEncryptionKeyArn` | The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.  |
+| `Description` | The description of the agent.  |
+| `FoundationModel` | The foundation model used for orchestration by the agent. |
+| `Instruction` | Instructions that tell the agent what it should do and how it should interact with users. |
+| `PreparedAt` | The time at which the agent was last prepared.  |
+
+##### 4.1.2.72 AgentFailureReason {#agent-failure-reason}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Reason the agent-related API that you invoked failed. |
+
+##### 4.1.2.73 RecommendedAction {#recommended-action}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Contains a recommended action to take for the agent-related API that you invoked to succeed. |
 
 ### 4.2 Activities {#activities}
 
@@ -1020,6 +1063,18 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListAgentsRequest (object)` | `ListAgentsResponse (object)` |
+
+##### 4.2.3.9 GetAgent {#get-agent}
+
+The `GetAgent` activity allows you to retrieve information about an agent. It requires `ENUM_Region`, `Credentials`, and `GetAgentRequest` as input parameters.
+
+To use this activity, you must set up an agent in your Amazon Bedrock Environment. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `GetAgentRequest (object)` | `GetAgentResponse (object)` |
 
 ## 5 Troubleshooting
 

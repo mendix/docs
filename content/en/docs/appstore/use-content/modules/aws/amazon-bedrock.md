@@ -826,7 +826,9 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request`, `FileCollection`| `GenAICommons.Response`|
+
+`GenAICommons.Request` and `FileCollection` can be empty, in which case they are not sent to the Bedrock API.
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
@@ -875,7 +877,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `UserPrompt (String)`,<br/>`AmazonBedrockConnection (object)`,<br/>`GenAICommons.ImageOptions (object, optional)`| `GenAICommons.Response (object)`|
+| `UserPrompt (String)`,<br/>`AmazonBedrockConnection (object)`,<br/>`GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
 
 `GenAICommons.ImageOptions` is an optional parameter that can be omitted by passing *empty* instead. If provided, it allows to set additional options for Image Generation. 
 
@@ -907,6 +909,8 @@ This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** mi
 | --- | --- |
 | `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
 
+`Version` and `Top_K` can be empty, in which case they are not sent to the Bedrock API
+
 ##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
@@ -925,7 +929,9 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `KmsKeyARN (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+| `GenAICommons.Request (object)`, `KmsKeyARN (string)`, `SessionId (string)`, `Enum_RetrieveAndGenerateType (enumeration)` | `RetrieveAndGenerateRequest_Extension (object)` |
+
+`KmsKeyARN`, `SessionId`, and `Enum_RetrieveAndGenerateType` can be empty, in which case they are not sent to the Bedrock API.
 
 ##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 
@@ -939,7 +945,7 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.ImageOptions (object)`, `NegativeText (string, optional)` | `TitanImageOptions_Extension (object)` |
+| `GenAICommons.ImageOptions (object)`, `NegativeText (string)` | `TitanImageOptions_Extension (object)` |
 
 ##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
@@ -969,7 +975,9 @@ This operation corresponds to the **ImageOptions_SetRandomness** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.ImageOptions (object)`, `Seed (integer, optional)`, `CfgScale (decimal, optional)` | `none` |
+| `GenAICommons.ImageOptions (object)`, `Seed (integer)`, `CfgScale (decimal)` | `none` |
+
+`Seed` and `GfgScale` can be empty, in which case they are not sent to the Bedrock API.
 
 #### 4.2.3 Other Operations
 

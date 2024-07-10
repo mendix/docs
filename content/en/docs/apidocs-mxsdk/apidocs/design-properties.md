@@ -575,7 +575,7 @@ Example of a property and options that were renamed:
 }
 ```
 
-The design property above was renamed from **my Dropdown Property** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
+The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
 ### 7.1 Renaming a Dropdown Option to a Toggle Property
 

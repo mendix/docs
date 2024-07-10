@@ -27,11 +27,11 @@ To install and configure the Global Operator, perform the following steps:
 
 1. In the Private Cloud Portal, create a cluster and select **Global Installation** as the **Installation Type**.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator1.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator1.png" >}}
 
 2. Provide the **Cluster Name**, **Cluster Type** and **Description**.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator2.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator2.png" >}}
 
 3. Click **Create**.
 
@@ -73,7 +73,7 @@ To install and configure the Global Operator, perform the following steps:
 
 10. Click **Namespaces** to go to the **Namespaces Overview** page.
 
-    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/global-operator8.png" >}}
 
 11. Install the managed namespace under the Global Operator namespace by clicking **Add Managed Namespace**.
 
@@ -114,30 +114,31 @@ If the managed namespaces are deleted from the portal, the namespaces will not b
 
 After everything is configured, you can deploy the application. For more information, see [Deploy Application](/developerportal/deploy/private-cloud-deploy/).
 
-## 3 Convert existing Standard operator namespace to Global Operator managed namespace {#convert-standard-operator-to-global-operator}
+## 3 Convert Namespace from Standard to Global Operator {#convert-standard-operator-to-global-operator}
 
+You can convert a namespace which currently uses the standard operator to be a Global Operator managed namespace by completing the following steps.
 
 1. On the Cluster Overview page, click **Convert Namespace**.
 
-   {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/convert-namespace.png" class="no-border" >}}
+   {{< figure src="/attachments/deployment/private-cloud/global-operator/convert-namespace.png" >}}
 
-2. Choose the namespace you want to convert to a managed namespace. The displayed namespaces match the Cluster type of the Global Operator Cluster. If your namespace is not listed, click the **here** button at the bottom to expand the list.
+2. Choose the namespace you want to convert to a managed namespace. The displayed namespaces match the Cluster type of the Global Operator Cluster. If your namespace is not listed, click **here** at the bottom of the page to expand the list.
  
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/choose-standard-namespace.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/choose-standard-namespace.png" >}}
 
-3. After selecting the namespace, click **Next**. You will be redirected to a page with the command needed to convert the namespace to a managed namespace. 
+3. After selecting the namespace, click **Next**. You will be redirected to a page with the command needed to convert the namespace to a managed namespace, managed by the global operator. 
 
-    {{< figure src="/attachments/developerportal/deploy/private-cloud/global-operator/convert-namespace-command.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/global-operator/convert-namespace-command.png" >}}
 
-Once the command runs successfully, your namespace will be converted to the Global Operator installation on the cluster side.
+4. Run the command.
 
-If the conversion command is not run and the **Next** button is clicked directly, an error message will be displayed because the presence of the standard namespace could not be verified in the list of managed namespaces.
+    Once the command has been run successfully, your namespace will be converted to the Global Operator installation on the cluster side.
 
-{{% alert color="info" %}}
-The namespace to be converted must be in the same cluster as the main namespace. Additionally, ensure that both namespaces have the same operator version; otherwise, the conversion will not be performed.
-{{% /alert %}}
+    If the conversion command is not run and the **Next** button is clicked directly, an error message will be displayed because the presence of the standard namespace could not be verified in the list of managed namespaces.
 
-4. Once the conversion command runs successfully, click **Next** to be redirected to the Conversion Summary pop-up page, which will confirm the successful conversion.
+    {{% alert color="info" %}}The namespace to be converted must be in the same cluster as the main namespace. Additionally, ensure that both namespaces have the same operator version; otherwise, the conversion will not be performed.{{% /alert %}}
+
+5. Once the conversion command runs successfully, click **Next** to be redirected to the Conversion Summary pop-up page, which will confirm the successful conversion.
 
 ## 4 Licensing
 

@@ -40,7 +40,7 @@ To perform the [base installation](/developerportal/deploy/standard-operator/#ba
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
-### Global Operator Namespace - Base installation
+### 2.1 Global Operator Namespace - Base installation
 
 For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
@@ -52,13 +52,13 @@ For the Global Operator main namespace, use the following command for the base i
 
 ## 3 Apply Configuration
 
-For standard namespace, to [configure the namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
+To [configure a standard namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
-For global operator managaed namespace, apply the below command for managed namespace and not the main namespace:
+For namespaces managed by a global operator, apply the following command for the managed namespace – the command is not needed in the main namespace:
 
 ```shell {linenos=false}
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file> --global

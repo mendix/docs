@@ -33,7 +33,7 @@ To create a deep link, you need the app ID, story ID, or feedback item number or
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" width="500px" alt="Feedback item number on Feedback page" >}}
 
-## 3 Creating a Mendix Portal Deep Link
+## 3 Creating a Deep Link in Apps
 
 If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), follow these steps:
 

@@ -45,6 +45,10 @@ The Forgot Password module has the following dependencies:
 * Supports email aliases, in other words, the from address in email templates can be different from the SMTP account used to send the email
 * Supports multi-language email templates for sending password reset emails
 
+### 1.3 Limitation
+
+The Forgot Password module does not support multiple instances if any are present in the node.
+
 ## 2 Installing the Forgot Password Module{#installing}
 
 {{% alert color="info" %}}

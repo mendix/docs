@@ -35,7 +35,7 @@ The [External Database connector](https://marketplace.mendix.com/link/component/
 
 The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user or it also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
 
-The External Database connector has GA support for Snowflake from [Studio Pro 10.12](https://docs.mendix.com/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](https://docs.mendix.com/releasenotes/studio-pro/10.10/)). Some Cortex functionalities are currently limited when using the External Database connector, but they are on the roadmap.
+The External Database connector has GA support for Snowflake from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). Some Cortex functionalities are currently limited when using the External Database connector, but they are on the roadmap.
 
 #### 2.1.2 REST SQL Connector
 

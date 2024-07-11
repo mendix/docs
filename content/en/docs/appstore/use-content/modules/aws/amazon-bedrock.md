@@ -261,7 +261,7 @@ This entity extends the GenAICommons.Response entity with values specific to Tit
 This entity was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-This helper entity solely serves the purpose of creating a flat entity to produce the correct export mapping.
+This helper entity summarizes data from several associated entities into a single entity where it can be formatted to produce the correct export mapping.
 
 #### 4.1.2 No GenAICommons dependency
 

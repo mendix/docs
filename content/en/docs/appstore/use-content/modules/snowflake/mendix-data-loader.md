@@ -87,7 +87,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 
 9. To view the ingested data, access the schema that was specified inside the specified target database.
 
-The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. Because of that, yoiu should copy the tables of the target schema into a database and schema that you want to use to store the ingested data. This should be done after every ingestion.
+The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. Because of that, you should copy the tables of the target schema into a database and schema that you want to use to store the ingested data. This should be done after every ingestion.
 
 ## 4 Verifying the Access Token
 

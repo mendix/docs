@@ -18,7 +18,7 @@ In that window you can choose which type of item you want to create.
 Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
 When you have entered all needed informations, click **Create**.
 
-Now open the newly created action by doubleclicking its name in the repository.
+Now open the newly created action by double-clicking its name in the repository.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/editaction.png" alt="Edit Action page" class="no-border" >}}
 

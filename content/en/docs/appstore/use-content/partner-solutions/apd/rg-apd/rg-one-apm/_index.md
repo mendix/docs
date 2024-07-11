@@ -6,7 +6,7 @@ weight: 2
 
 ## 1 Introduction
 
-The Application Performance Monitor (APM) is a solution that helps to analyze performance issues as well as support users in analyzing runtime behaviour.
+The Application Performance Monitor (APM) is a solution that helps to analyze performance issues as well as support users in analyzing runtime behavior.
 
 This is the reference guide for the CLEVR APM for Mendix. It has the following chapters:
 

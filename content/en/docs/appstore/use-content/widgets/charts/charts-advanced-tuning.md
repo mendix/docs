@@ -42,7 +42,7 @@ To create a custom layout, follow these steps:
     {{< figure src="/attachments/appstore/use-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-properties-advanced.png" alt="chart properties" class="no-border" >}}
 6. Run the app.
 7. In your browser, open the page with the chart.
-8. Click on the button **Toggle Editor**.
+8. Click the button **Toggle Editor**.
 9. In the **Layout** section add the following **Custom setting**:
 
     ```json

@@ -522,6 +522,8 @@ Tags serve two purposes:
 
 For example, you may wish to use tags when logging with Datadog. For more information, see Datadog's [Getting Started with Tags](https://docs.datadoghq.com/tagging/).
 
+If you want to add, edit, or delete a tag, make the change on the **Tags** tab and then restart your environment to update the tags.
+
 ## 9 The Services Tab {#services}
 
 You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).

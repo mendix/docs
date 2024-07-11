@@ -182,7 +182,7 @@ This entity extends the GenAICommons.Request with attributes specific to Anthrop
 
 ##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
 
-This entity is a specialiazion of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
+This entity is a specialization of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
 
 | Attribute | Description |
 | --- | --- |
@@ -855,7 +855,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -892,7 +892,7 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History
+###### Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
@@ -908,7 +908,7 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `UseStaticCredenitals (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
 ##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 

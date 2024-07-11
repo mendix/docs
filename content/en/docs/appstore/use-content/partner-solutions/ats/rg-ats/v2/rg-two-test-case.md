@@ -17,7 +17,7 @@ A dialog box opens where you give your test case a name and an optional descript
 
 {{% alert color="info" %}}
 
-Please note that there is an additional switch for **paralell**/**sequential**. This switch is only available for [data driven test cases](/appstore/partner-solutions/ats/rg-two-data-driven-testing/).
+Please note that there is an additional switch for **parallel**/**sequential**. This switch is only available for [data driven test cases](/appstore/partner-solutions/ats/rg-two-data-driven-testing/).
 
 {{% /alert %}}
 

@@ -2,7 +2,6 @@
 title: "Security Advisories"
 url: /releasenotes/security-advisories/
 weight: 50
-#notoc: true
 #layout: wide
 ---
 

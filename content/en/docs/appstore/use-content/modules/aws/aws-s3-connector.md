@@ -124,7 +124,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `BucketName` | Describes the name of the bucket to put the object in|
+| `BucketName` | Describes the name of the bucket to put the object in |
 | `Key`| Describes the unique identifier for the object that needs to be put |
 
 #### 4.1.5 GetObjectRequest {#getobjectrequest}
@@ -183,7 +183,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| N/A | Is a generalization of the S3 object|
+| N/A | Is a generalization of the S3 object |
 
 #### 4.1.13 CommonPrefix {#commonprefix}
 
@@ -195,7 +195,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `SourceBucketName` | Describes the name of the source bucket| 
+| `SourceBucketName` | Describes the name of the source bucket | 
 | `SourceKey` | Describes the source Key of the object |
 | `DestinationBucketName` | Describes the name of the target bucket |
 | `DestinationKey` | Describes the target Key of the object |
@@ -210,7 +210,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `SourceBucketName` | Describes the name of the source bucket| 
+| `SourceBucketName` | Describes the name of the source bucket | 
 | `DestinationBucketName` | Describes the name of the target bucket |
 | `DestinationKey` | Describes the target `Key` of the object |
 | `SourceKey` | Describes the source `Key` of the object |
@@ -220,6 +220,13 @@ The entities in the table below describe all generalizations. These are reused b
 | Attribute | Description | 
 | --- | --- |
 | `BucketName` | Describes the name of the bucket | 
+
+#### 4.1.18 HeadBucketResponse {#headbucketresponse}
+
+| Attribute | Description | 
+| --- | --- |
+| `Region` | Describes the AWS location of the given bucket |
+| `AccessPointAlias` | Describes wether the bucket was requested through an Access Point Alias |
 
 ### 4.2 Enumerations
 
@@ -318,8 +325,8 @@ The `MoveObject` Amazon S3 action allows you to move an s3 object between bucket
 
 #### 4.3.10 HeadBucket {#headbucket}
 
-The `HeadBucket` Amazon S3 action allows you to retrieve the `AWS_Region` where a bucket is located. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object. It returns an `AWS_Region`. The input and output for this service are shown in the table below: 
+The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
-| `HeadBucketRequest`, `AWS_Region`, `Credentials` | `AWS_Region` |
+| `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |

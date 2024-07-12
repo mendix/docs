@@ -98,7 +98,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 ### 3.4 Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAIComons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model.   
 

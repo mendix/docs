@@ -21,6 +21,12 @@ description: "Native Template 8 release notes."
 
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
 
+Known issue: In this version we addressed a cookie encryption security issue which turned out to be in compatible with the existing mechanism.
+This leads to the following exception when loading the app:
+`java.security.InvalidAlgorithmParameterException
+Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+We fixed this in Native Template 8.2.5. Users which still have problems after the app is updated to this version, should clear the app's cache and load the app again.
+
 ## 8.2.2 {#811}
 
 **Release date: May 29, 2024**
@@ -91,6 +97,12 @@ description: "Native Template 8 release notes."
 
 * We fixed a synchronization issue that affected encrypting-decrypting files.
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
+
+Known issue: In this version we addressed a cookie encryption security issue which turned out to be in compatible with the existing mechanism.
+This leads to the following exception when loading the app:
+`java.security.InvalidAlgorithmParameterException
+Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+We fixed this in Native Template 8.0.13. Users which still have problems after the app is updated to this version, should clear the app's cache and load the app again.
 
 ## 8.0.8 {#808}
 

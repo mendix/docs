@@ -5,7 +5,14 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
-## 7.0.13 {#714}
+## 7.0.14 {#714}
+
+**Release date: June 28, 2024**
+
+### Fixes
+We have fixed an issue with cookies encryption. In case the app still does not load correctly after updating to this version into a problem, please clear the app cache and reload the app.
+
+## 7.0.13 {#713}
 
 **Release date: June 5, 2024**
 
@@ -13,7 +20,13 @@ description: "Native Template 7 release notes."
 
 * We enhanced encrypted file sync on Android.
 
-## 7.0.12 {#711}
+Known issue: In this version we addressed a cookie encryption security issue which turned out to be in compatible with the existing mechanism.
+This leads to the following exception when loading the app:
+`java.security.InvalidAlgorithmParameterException
+Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+We fixed this in Native Template 7.0.14. Users which still have problems after the app is updated to this version, should clear the app's cache and load the app again.
+
+## 7.0.12 {#712}
 
 **Release date: May 27, 2024**
 
@@ -21,7 +34,7 @@ description: "Native Template 7 release notes."
 
 * We added support for scheduling [local notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) on Android 14.
 
-## 7.0.11 {#710}
+## 7.0.11 {#711}
 
 **Release date: May 13, 2024**
 
@@ -29,7 +42,7 @@ description: "Native Template 7 release notes."
 
 * We switched to Xcode 15.1 for cloud builds (App Center) in response to the updated minimum iOS SDK requirements.
 
-## 7.0.10 {#709}
+## 7.0.10 {#710}
 
 **Release date: March 15, 2024**
 

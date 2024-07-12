@@ -898,7 +898,7 @@ The input and output for this service are shown in the table below:
 
 ##### 4.2.3.3 ListKnowledgeBases {#list-knowledge-bases}
 
-The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials`, and `ListKnowledgeBasesRequest` as input parameters.
+The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them. It requires `ENUM_Region`, `Credentials`, and `ListKnowledgeBasesRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 

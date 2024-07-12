@@ -52,7 +52,7 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
-**Prerequsites:**
+**Prerequisites:**
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
@@ -67,7 +67,7 @@ This process is shorter than using XCode but might require more work to understa
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" class="no-border" >}}
 
-1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
+1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documentation.
 
 #### 2.2.2 Building iOS using XCode
 

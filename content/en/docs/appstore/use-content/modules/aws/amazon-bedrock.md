@@ -250,8 +250,9 @@ This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` enti
 
 | Attribute | Description |
 | --- | --- |
-| `Response_Type` | This value is always 'embedding_floats'. |
+| `Response_Type` | This value is either 'embedding_floats' or 'embedding_by_type' if `CohereEmbedOptions_Extension.EmbeddingTypes` has been specified. |
 | `_Id` | An identifier for the response. |
+
 
 
 ##### 4.1.1.10 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
@@ -263,6 +264,32 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | `InputType` | See `InputType` of the `CohereEmbedOptions_Extension` entity. |
 | `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
 | `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
+
+
+
+
+##### 4.1.1.11 TitanEmbeddingsOptions_Extension (#titan-embeddings-options-extension)
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
+
+| Attribute | Description |
+| --- | --- |
+| `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
+
+
+
+
+##### 4.1.1.12 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
+
+This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, solely to simplify the export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputText` | See `InputText` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
+
+
 
 
 #### 4.1.2 No GenAICommons dependency
@@ -867,7 +894,7 @@ The history can be enabled using the `SessionId` parameter on the [RetrieveAndGe
 
 ##### 4.2.1.4 Embeddings (single string) {#embeddings-single-string}
 
-The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
+The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -875,14 +902,14 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `InputText`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
 
-For Cohere Embed, the request can be associated to an CohereEmbedOptions_Extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (single string) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+For Cohere Embed and Titan Embeddings, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (single string) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
-Currently, embeddings are available for the Cohere Embed family only.
+Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
 
 
 ##### 4.2.1.5 Embeddings (chunk collection) {#embeddings-chunk-collection}
 
-The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
+The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -890,9 +917,9 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
 
-For Cohere Embed, the request can be associated to an CohereEmbedOptions_Extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
-Currently, embeddings are available for the Cohere Embed family only.
+Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
 
 #### 4.2.2 GenAI Commons Helper Operations
 
@@ -946,6 +973,17 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | Input | Output |
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
+
+
+##### 4.2.2.5 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+
+Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. This is useful to include parameters that are unique to Titan Embeddings models.
+
+This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
 
 
 #### 4.2.3 Other Operations

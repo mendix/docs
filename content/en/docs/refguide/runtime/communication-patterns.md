@@ -44,7 +44,7 @@ Communication between these components operates as follows:
 
 ## 3 Runtime Operations {#RO}
 
-Data-related communication between the Mendix Client and the Runtime Server is controlled by Runtime Operations over a REST-like protocol. 
+Data-related communication between the Mendix Client and the Runtime Server is controlled by Runtime Operations over a REST-like protocol. This uses the `/xas` [request handler](/refguide/request-handlers/) of the app's runtime server.
 
 For every data-related Client action, there is a corresponding Runtime Operation type:
 

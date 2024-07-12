@@ -178,9 +178,9 @@ Default: {Entity name}s
 
 ### 7.2 Alternative Name (in URL)
 
-This value is optional. You can choose to specify an alternative to the exposed set name. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the entity will be available on two different URL's (one that uses the exposed set name, and one that uses the alternative name).
+You can choose to specify an alternative to the exposed set name. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the entity will be available on two different URLs: one that uses the exposed set name, and one that uses the alternative name. This value is optional. 
 
-Use an alternative name when you require the published entity to be available on a URL that would be invalid in OData, but valid in OpenAPI, such as `my-entities`.
+Use an alternative name when you require the published entity to be available on a URL that would be invalid in OData but valid in OpenAPI, such as `my-entities`.
 
 ### 7.3 Use Paging {#paging}
 

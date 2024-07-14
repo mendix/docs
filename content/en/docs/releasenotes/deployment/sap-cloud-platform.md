@@ -10,6 +10,20 @@ These release notes cover changes to deployment to [SAP Business Technology Plat
 SAP Business Technology Platform deployments are also dependent on the latest version of the [Mendix Cloud Foundry Buildpack](https://github.com/mendix/cf-mendix-buildpack). The [Mendix Cloud Foundry Buildpack release notes](https://github.com/mendix/cf-mendix-buildpack/releases) are published separately as other deployment targets are also dependent on the buildpack.
 
 For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
+## 2024
+
+### July 14, 2024
+
+#### Portal Improvements
+
+* We have upgraded the CF APIs to version 3, resulting in a faster and more streamlined process. The changes in action include:
+   * Deployment of the package in the environment
+   * Starting and stopping the environment
+   * Changing the application URL
+* Renamed the Portal to 'Deployment'
+
+#### Bug Fixes
+* Fixed the MxDock 'login' issue
 
 ## 2022
 

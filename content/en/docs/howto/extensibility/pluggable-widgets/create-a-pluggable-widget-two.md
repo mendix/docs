@@ -314,108 +314,98 @@ Until now the components did not keep any state. Each keystroke passed through t
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
-        private readonly onLeaveHandle = this.onLeave.bind(this);
-        componentDidMount(): void {
-            this.props.textAttribute.setValidator(this.validator.bind(this));
-        }
-        render(): ReactNode {
-            const value = this.props.textAttribute.value || "";
-            const validationFeedback = this.props.textAttribute.validation;
-            return <Fragment>
-                <TextInput
-                    value={value}
-                    tabIndex={this.props.tabIndex}
-                    disabled={this.isReadOnly()}
-                    onLeave={this.onLeaveHandle}
-                />
-                <Alert>{validationFeedback}</Alert>
-            </Fragment>;
-        }
-        private isReadOnly(): boolean {
-        return this.props.textAttribute.readOnly;
-        }
-        private onLeave(value: string, isChanged: boolean): void {
+    import { createElement, Fragment, ReactElement, useEffect } from "react";
+    import { TextBoxContainerProps } from "../typings/TextBoxProps";
+    import { TextInput } from "./components/TextInput";
+    
+    import "./ui/TextBox.css";
+    import { Alert } from "./components/Alert";
+    
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        function onLeave(value: string, isChanged: boolean): void {
             if (!isChanged) {
                 return;
             }
-            this.props.textAttribute.setValue(value);
+            props.textAttribute.setValue(value);
         }
-        private validator(value: string | undefined): string | undefined {
-            const { requiredMessage } = this.props;
-            if (requiredMessage && requiredMessage.value && !value) {
-                return requiredMessage.value;
-            }
-            return;
-        }
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onLeave={onLeave}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                ></TextInput>
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
 3. In *components/TextInput.tsx*, introduce a state for input changes and use the `onBlur` function to call the `onLeave` function by replacing the `onUpdate` function:
 
     ```tsx
-    import { CSSProperties, Component, ReactNode, createElement, ChangeEvent } from "react";
-    import classNames from "classnames";
-    
-    export interface InputProps {
+    import { createElement, CSSProperties, ReactElement, useEffect, useState } from "react";
+
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
-        id?: string;
-        disabled?: boolean;
         onLeave?: (value: string, changed: boolean) => void;
+        disabled?: boolean;
     }
-    interface InputState {
+    
+    interface TextInputState {
         editedValue?: string;
     }
-    export class TextInput extends Component<InputProps, InputState> {
-        private readonly onChangeHandle = this.onChange.bind(this);
-        private readonly onBlurHandle = this.onBlur.bind(this);
-        readonly state: InputState = { editedValue: undefined };
-        componentDidUpdate(prevProps: InputProps): void {
-            if (this.props.value !== prevProps.value) {
-                this.setState({ editedValue: undefined });
-            }
+    
+    export function TextInput({ value, onLeave, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        const [state, setState] = useState<TextInputState>({ editedValue: undefined });
+        useEffect(() => setState({ editedValue: undefined }), [value]);
+        
+        function getCurrentValue(): string {
+            return state.editedValue !== undefined ? state.editedValue : value;
         }
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
+        
+        function onBlur(): void {
+            onLeave?.(getCurrentValue(), getCurrentValue() !== value);
+            setState({ editedValue: undefined });
+        }
+        
+        return (
+            <input
                 type="text"
-                className={className}
-                style={this.props.style}
-                value={this.getCurrentValue()}
-                tabIndex={this.props.tabIndex}
-                onChange={this.onChangeHandle}
-                disabled={this.props.disabled}
-                onBlur={this.onBlurHandle}
-            />;
-        }
-        private getCurrentValue(): string {
-            return this.state.editedValue !== undefined
-                ? this.state.editedValue
-                : this.props.value;
-        }
-        private onChange(event: ChangeEvent<HTMLInputElement>): void {
-            this.setState({ editedValue: event.target.value });
-        }
-        private onBlur(): void {
-            const inputValue = this.props.value;
-            const currentValue = this.getCurrentValue();
-            if (this.props.onLeave) {
-                this.props.onLeave(currentValue, currentValue !== inputValue);
-            }
-            this.setState({ editedValue: undefined });
-        }
+                value={getCurrentValue()}
+                onChange={event => setState({ editedValue: event.target.value })}
+                onBlur={onBlur}
+                className={"form-control " + className}
+                disabled={disabled}
+                style={style}
+                tabIndex={tabIndex}
+            />
+        );
     }
+
     ```
 
     Explaining the code:
 
-    * The `componentDidUpdate` function is a React lifecycle function that is called before rendering, directly after an update of the properties
-    * The state `editedValue` will be empty until the input value is changed by the user 
-    * The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
+    * The `useEffect` is a React hook that allows running code whenever its dependencies are changed
+    * The `useState` is another React hook that provides a read-only object for accessing the widget's state and a function that can be used to update it (and hence trigger a component update)
+    * The state `editedValue` will be empty until the input value is changed by the user
     * The `onBlur` function will set the new value in the attribute through the container component — the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
     * The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 

@@ -146,20 +146,22 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 3. To render the message, create a new component *components/Alert.tsx*:
 
     ```tsx
-    import { FunctionComponent, createElement } from "react";
-    import classNames from "classnames";
+    import { FunctionComponent, createElement, ReactNode } from "react";
+
     export interface AlertProps {
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
+        children?: ReactNode;
     }
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children }) =>
-        children ? (
-            <div className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+    
+    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle = "danger", className, children }) =>
+        children
+            ? <div className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}
-            </div>
-        ) : null;
+              </div>
+            : null;
+    
     Alert.displayName = "Alert";
-    Alert.defaultProps = { alertStyle: "danger" };
     ```
 
     Explaining the code:
@@ -168,28 +170,31 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     * The component has a `displayName` for debugging and error messages
     * A `function` component can also have default properties which are set directly on the prototype
 
-4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the `render` function with the following code:
+4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the component with the following code:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        const validationFeedback = this.props.textAttribute.validation;
-        return <Fragment>
-            <TextInput
-                value={value}
-                tabIndex={this.props.tabIndex}
-                onUpdate={this.onUpdateHandle}
-                disabled={this.props.textAttribute.readOnly}
-            />
-            <Alert>{validationFeedback}</Alert>
-        </Fragment>;
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onChange={props.textAttribute.setValue}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                ></TextInput>
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
 5. Add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
     ```tsx
-    import { Component, ReactNode, Fragment, createElement } from "react";
+    import { createElement, ReactElement, Fragment } from "react";
     import { Alert } from "./components/Alert";
     ```
 

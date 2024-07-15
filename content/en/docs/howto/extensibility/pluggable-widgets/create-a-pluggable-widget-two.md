@@ -233,19 +233,32 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
     * `textTemplate` strings are translatable strings which can also have attributes and data values
     * Default values can be added to the XML and are language specific
 
-2. In *TextBox.tsx*, add a validation handler to the attribute after the `onUpdate` function:
+2. In *TextBox.tsx*, add a validation handler to the attribute after the `onChange` function:
 
     ```ts
-    componentDidMount(): void {
-        this.props.textAttribute.setValidator(this.validator.bind(this));
-    }
-
-    private validator(value: string | undefined): string | undefined {
-        const { requiredMessage } = this.props;
-        if (requiredMessage && requiredMessage.value && !value) {
-            return requiredMessage.value;
-        }
-        return;
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onChange={props.textAttribute.setValue}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                ></TextInput>
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
@@ -256,7 +269,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
     Explaining the code:
 
-    * The `componentDidMount` is a lifecycle method of the React component, and is only called once
+    * The `useEffect` is a hook used in a React component, and is only called once
     * The custom validator is registered to the attribute, and is called after each `setValue` call — the new value is only accepted when the validator returns no string
     * When the validator returns an error message, it will passed to the attribute, and a re-render is triggered — the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 

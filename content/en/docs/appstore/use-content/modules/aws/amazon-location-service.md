@@ -64,11 +64,11 @@ After you configure the authentication profile for Amazon Location Service, you 
     For the `CalculateRoute` activity, you must provide a credentials object and specify the AWS Region. You must then add your `CalculateRouteRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
 
     * `CalculatorName` - The name of the route calculator resource that you want to use to calculate the route.
-    * `DeparturePosition` - The start position for the route. This entity specifies the logitude and lattitude of the start position of the route and are both required.
+    * `DeparturePosition` - The start position for the route. This entity specifies the longitude and lattitude of the start position of the route and are both required.
     * `DestinationPosition` - The position of the destination for the route. This entity specifies the logitude and lattitude of the destination position of the route and are both required.
 
     The following parameters are optional:
-    * `WaypointPosition` - This entity is used to add additional locations you want to visit along the route. This entity specifies the logitude and lattitude of the
+    * `WaypointPosition` - This entity is used to add additional locations you want to visit along the route. This entity specifies the longitude and latitude of the
     * `DepartNow` - Sets the time of departure as the current time. Uses the current time to calculate a route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
     * `DepartureTime` - Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
     * `DistanceUnit` - Set the unit system to specify the distance. 
@@ -389,8 +389,8 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| Kilograms | Kilograms | Specifies that the weigth of the vehicle is expressed in kilograms.|
-| Pounds | Pounds | Specifies that the weigth of the vehicle is expressed in pounds.|
+| Kilograms | Kilograms | Specifies that the weight of the vehicle is expressed in kilograms.|
+| Pounds | Pounds | Specifies that the weight of the vehicle is expressed in pounds.|
 
 ### 4.3 Activities {#activities}
 

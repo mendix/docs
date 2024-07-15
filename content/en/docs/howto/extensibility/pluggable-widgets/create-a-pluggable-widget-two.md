@@ -52,16 +52,16 @@ To add these restrictions, follow the instructions below:
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  class="no-border" >}}
 
-3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
+3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the React component with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
         return <TextInput
             value={value}
-            tabIndex={this.props.tabIndex}
-            onUpdate={this.onUpdateHandle}
-            disabled={this.props.textAttribute.readOnly}
+            onChange={props.textAttribute.setValue}
+            tabIndex={props.tabIndex}
+            disabled={props.textAttribute.readOnly}
         />;
     }
     ```
@@ -73,39 +73,34 @@ To add these restrictions, follow the instructions below:
         * If the containing data view is set to `Editable: No`
         * If the system property `Editability` is set with a true condition
 
-4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
+4. In *components/TextInput.tsx*, add the `disabled` property to the `TextInputProps` interface and set the HTML input attribute to `disabled`:
 
     ```tsx
-    import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
-    import classNames from "classnames";
-    export interface InputProps {
+    import { createElement, CSSProperties, ReactElement } from "react";
+    
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
-        onUpdate?: (value: string) => void;
+        onChange?: (value: string) => void;
         disabled?: boolean;
     }
-    export class TextInput extends Component<InputProps> {
-        private readonly handleChange = this.onChange.bind(this);
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
+    
+    export function TextInput({ value, onChange, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        return (
+            <input
                 type="text"
-                className={className}
-                style={this.props.style}
-                value={this.props.value}
-                tabIndex={this.props.tabIndex}
-                onChange={this.handleChange}
-                disabled={this.props.disabled}
-            />;
-        }
-        private onChange(event: ChangeEvent<HTMLInputElement>) {
-            if (this.props.onUpdate) {
-                this.props.onUpdate(event.target.value);
-            }
-        }
+                value={value}
+                onChange={event => {
+                onChange?.(event.target.value);
+                }}
+                className={"form-control " + className}
+                style={style}
+                tabIndex={tabIndex}
+                disabled={disabled}
+            />
+        );
     }
     ```
 

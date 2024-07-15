@@ -226,7 +226,7 @@ The entities in the table below describe all generalizations. These are reused b
 | Attribute | Description | 
 | --- | --- |
 | `Region` | Describes the AWS location of the given bucket |
-| `AccessPointAlias` | Describes wether the bucket was requested through an Access Point Alias |
+| `AccessPointAlias` | Describes whether the bucket was requested through an Access Point Alias |
 
 ### 4.2 Enumerations
 

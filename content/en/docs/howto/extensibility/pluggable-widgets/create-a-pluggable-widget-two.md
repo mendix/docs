@@ -413,56 +413,75 @@ Until now the components did not keep any state. Each keystroke passed through t
 
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
 
-1. In *TextBox.tsx*, replace the `render` function with `id`, `required`, and `hasError` properties:
+1. In *TextBox.tsx*, replace the return statement with `id`, `required`, and `hasError` properties:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        const validationFeedback = this.props.textAttribute.validation;
-        const required = !!(this.props.requiredMessage && this.props.requiredMessage.value);
-        return <Fragment>
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+    const value = props.textAttribute.value || "";
+    const validationFeedback = props.textAttribute.validation;
+    const required = !!(props.requiredMessage && props.requiredMessage.value);
+
+    useEffect(() => {
+        props.textAttribute.setValidator((value?: string): string | undefined => {
+            if (!value) {
+                return props.requiredMessage?.value ?? "";
+            }
+        });
+    }, []);
+
+    function onLeave(value: string, isChanged: boolean): void {
+        if (!isChanged) {
+            return;
+        }
+        props.textAttribute.setValue(value);
+    }
+
+    return (
+        <Fragment>
             <TextInput
-                id={this.props.id}
+                id={props.id}
                 value={value}
-                tabIndex={this.props.tabIndex}
-                disabled={this.isReadOnly()}
-                onLeave={this.onLeaveHandle}
+                onLeave={onLeave}
+                tabIndex={props.tabIndex}
+                disabled={props.textAttribute.readOnly}
                 required={required}
                 hasError={!!validationFeedback}
-            />
-            <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
-        </Fragment>;
+            ></TextInput>
+            <Alert>{validationFeedback}</Alert>
+        </Fragment>
+    );
     }
     ```
 
 2. In *components/Alert.tsx*, add the `id` and `alert`properties:
 
     ```tsx
-    import { FunctionComponent, PropsWithChildren, createElement } from "react";
-    import classNames from "classnames";
+    import { FunctionComponent, createElement, ReactNode } from "react";
+
     export interface AlertProps {
         id?: string;
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
+        children?: ReactNode;
     }
-    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
+    
+    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle = "danger", className, children, id }) =>
         children ? (
-            <div id={id} className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+            <div id={id} className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}
             </div>
         ) : null;
+    
     Alert.displayName = "Alert";
-    Alert.defaultProps = { alertStyle: "danger" };
     ```
 
 3. In *components/TextInput.tsx*, add the `id` property to the `InputProps` and pass it from the `TextBox` component to the `TextInput` component:
 
     ```tsx
-    export interface InputProps {
+    export interface TextInputProps {
         id?: string;
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
         hasError?: boolean;
@@ -475,25 +494,22 @@ To make the input widget more accessible for people using screen readers, you wi
     Then add the `id` and `aria` attributes to be rendered:
 
     ```tsx
-    render(): ReactNode {
-        const className = classNames("form-control", this.props.className);
-        const labelledby = `${this.props.id}-label` 
-            + (this.props.hasError ? ` ${this.props.id}-error` : "");
-        return <input
-            id={this.props.id}
+    return (
+        <input
+            id={id}
             type="text"
-            className={className}
-            style={this.props.style}
-            value={this.getCurrentValue()}
-            tabIndex={this.props.tabIndex}
-            onChange={this.onChangeHandle}
-            disabled={this.props.disabled}
-            onBlur={this.onBlurHandle}
+            value={getCurrentValue()}
+            onChange={event => setState({ editedValue: event.target.value })}
+            onBlur={onBlur}
+            className={"form-control " + className}
+            disabled={disabled}
+            style={style}
+            tabIndex={tabIndex}
             aria-labelledby={labelledby}
-            aria-invalid={this.props.hasError}
-            aria-required={this.props.required}
-        />;
-    }
+            aria-invalid={hasError}
+            aria-required={required}
+        />
+    );
     ```
 
     After altering this code, do the following to see your changes:
@@ -514,24 +530,21 @@ To easily view changes to your widget while in Mendix Studio Pro's **Design mode
 
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
-```tsx
-import { Component, createElement, ReactNode } from "react";
-import { TextBoxPreviewProps } from "../typings/TextBoxProps";
-import { TextInput } from "./components/TextInput";
-
-declare function require(name: string): string;
-
-export class preview extends Component<TextBoxPreviewProps> {
-    render(): ReactNode {
-        const value = `[${this.props.textAttribute}]`;
-        return <TextInput value={value} />;
-    }
-}
-
-export function getPreviewCss(): string {
-    return require("./ui/TextBox.css");
-}
-```
+   ```tsx
+   import { createElement, ReactNode } from "react";
+   import { TextBoxPreviewProps } from "../typings/TextBoxProps";
+   import { TextInput } from "./components/TextInput";
+   
+   declare function require(name: string): string;
+   
+   export function preview(props: TextBoxPreviewProps): ReactNode {
+      return <TextInput value={`[${props.textAttribute}]`} />;
+   }
+   
+   export function getPreviewCss(): string {
+      return require("./ui/TextBox.css");
+   }
+   ```
 
 Explaining the code:
 

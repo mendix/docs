@@ -13,15 +13,17 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## 1 Introduction
 
-The **Deployed Apps Overview** page is a self-service tool that enables you to provision and offboard environments. The page shows all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used. 
+The **Deployed Apps Overview** page shows all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used if applicable. It also offers you a self-service tool to provision and offboard environments for apps on Mendix Cloud.
 
 The **Deployed Apps Overview** page has the following tabs: [Mendix Cloud](#mendix-cloud), [Free Apps](#free-apps), and [Apps with License Keys](#apps-license-keys).
 
-{{< figure src="/attachments/control-center/deployed-apps/apps-overview.png"   alt="Deployed Apps - apps overview" >}}
-
 ## 2 Mendix Cloud {#mendix-cloud}
 
-The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud.
+The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud and allows you to manage your cloud resources using the self-service tool.
+
+{{% alert color="info" %}}
+This feature is in beta. To see if this capability can be activated for your company, contact your Customer Success Manager.
+{{% /alert %}}
 
 {{% todo %}}Check what the following text refers to{{% /todo %}}
 
@@ -85,20 +87,28 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 ## 3 Free Apps {#free-apps}
 
+The **Free Apps** tab shows all the apps deployed to Mendix Free Cloud.
+
+{{% todo %}}Add info here.{{% /todo %}}
+
 ## 4 Apps with License Keys {#apps-license-keys}
 
-The **Apps with License Keys** tab gives you an overview of all the apps that use license keys. License keys are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key.
+The **Apps with License Keys** tab gives you an overview of all the apps for which you have been provided with a license key. This includes your apps deployed on Mendix for Private Cloud Standalone or any form of server-based deployments.
+
+License keys are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key.
 
 {{% alert color="info" %}}When contracts are created or renewed, new license keys are automatically generated, which must be applied to the environments of the app the contract was changed for.{{% /alert %}}
+
+To download all the license keys, click {{% icon name="download-bottom" %}} **Download all keys** on the right side above the list.
 
 The list shows the following information:
 
 * **App Name**: This is the name of the app. Note that the app names shown are the names that were initially given to these apps when license keys needed to be generated. Your current app names may differ. You can click on the app name to go to the [app environment details](#apps-license-keys-app-environment).
 * **Technical Contact**: This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 * **Created Date**: This is the date on which the app was originally created.
-* **Actions**
-  * Email icon –  Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
-  * Download button – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
+* **Actions**: You can carry out actions with the following icons:
+  * **Email** icon ({{% icon name="email" %}})–  Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
+  * **Download** button ({{% icon name="download-bottom" %}})– Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
 
 ### 4.1 App Environment Details {#apps-license-keys-app-environment}
 
@@ -110,9 +120,9 @@ To quickly change the Technical Contact for your app, click **Edit** by the name
 
 On the right side above the list, you can see two buttons:
 
-* **Email Keys** – Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
+*  {{% icon name="email" %}} **Email Keys** – Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
 
-* **Download Keys** – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created.
+* {{% icon name="download-bottom" %}} **Download Keys** – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created.
 
 The list below show the details of the environments with the following columns:
 

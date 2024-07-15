@@ -213,21 +213,32 @@ This entity can be used to add an additional model-specific request paramter wit
 
 | Attribute | Description |
 | --- | --- |
-| `Value` | The Value attribute describes the value of the additional model-specific request parameter. |
+| `Value` | The FieldName attribute describes the name of the additional response field that should be returned.  |
 
 It can be added to the GenAICommons Request using the [Request: Add Additional Request Parameter](TODO) operation.
 
 ##### 4.1.1.7 ResponseFieldRequest {#response-field-request}
 
-This entity can be used to add an additional model-specific request paramter with a string value to the request. 
+This entity can be used to request an additional model-specific response field to be returned. 
 
 | Attribute | Description |
 | --- | --- |
-| `Value` | The Value attribute describes the value of the additional model-specific request parameter. |
+| `FieldName` | The FieldName attribute describes the name of the additional response field that should be returned. |
 
 It can be added to the GenAICommons Request using the [Request: Add Additional Request Parameter](TODO) operation.
 
-##### 4.1.1.5 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
+##### 4.1.1.8 ChatCompletionsResponse_Extension {#chatcompletions-response-extension}
+
+This entity extends the GenAICommons.Response entity. It contains the requested model-specific response fields, if they were requested. 
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
+| `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
+
+All returned ChatCompletionsResponse_Extension objects can be retrieved using the [Response: Get Requested Response Fields](TODO) operation.
+
+##### 4.1.1.9 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
 This helper entity extends the GenAICommons.Request entity with attributes specific to the 'RetrieveAndGenerate' operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
@@ -239,7 +250,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
 
-##### 4.1.1.6 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+##### 4.1.1.10 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This entity extends the GenAICommons.Response entity with attributes specific to `RetrieveAndGenerate`.
 
@@ -247,7 +258,7 @@ This entity extends the GenAICommons.Response entity with attributes specific to
 | --- | --- |
 | `SessionId` | See `RetrieveAndGenerateRequest_Extension.SessionId`. |
 
-##### 4.1.1.7 KnowledgeBaseTool {#knowledge-base-tool}
+##### 4.1.1.11 KnowledgeBaseTool {#knowledge-base-tool}
 
 This entity extends the GenAICommons.Tool entity and holds information about the specified knowledge base. A KnowledgeBaseTool object must be used to specify the knowledge base to use for the Retrieve And Generate operation. 
 

@@ -4,7 +4,6 @@ url: /refguide/attach-images/
 linktitle: "Enable End-Users to Attach Images"
 description: "Describes how to configure image uploader in Mendix Studio Pro."
 weight: 60
-tags: ["studio pro", "pages", "image", "image uploader", "attachment", "attach image"]
 ---
 
 ## 1 Introduction 

@@ -1,9 +1,7 @@
 ---
 title: "Import XML Documents"
 url: /howto8/integration/importing-xml-documents/
-
 weight: 3
-tags: ["import", "xml", "integration"]
 ---
 
 ## 1 Introduction

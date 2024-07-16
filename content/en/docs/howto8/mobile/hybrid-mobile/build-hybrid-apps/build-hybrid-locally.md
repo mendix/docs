@@ -2,11 +2,10 @@
 title: "Build a Mendix Hybrid App Locally"
 url: /howto8/mobile/build-hybrid-locally/
 weight: 9
-tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 
 {{% alert color="warning" %}}
-Hybrid mobile packages require Node.js v12 with npm v6. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
+Hybrid mobile packages require Node.js v18. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
 
 To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
 {{% /alert %}}
@@ -20,7 +19,7 @@ This document describes how to build your hybrid apps locally.
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
+* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp/#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
@@ -53,7 +52,7 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
-**Prerequsites:**
+**Prerequisites:**
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
@@ -68,7 +67,7 @@ This process is shorter than using XCode but might require more work to understa
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" class="no-border" >}}
 
-1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
+1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documentation.
 
 #### 2.2.2 Building iOS using XCode
 
@@ -114,7 +113,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 **Prerequisites:**
 
 * Install [AndroidStudio](https://developer.android.com/studio)
-* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
+* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Install JDK 1.8
 * Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys/#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages/#download-local-package) from Cloud Portal and unzip it in a known location
@@ -206,7 +205,7 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 
 ## 4 Read More
 
-* [Deploy and Manage Guide](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Offline Reference Guide](/refguide8/offline-first/)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

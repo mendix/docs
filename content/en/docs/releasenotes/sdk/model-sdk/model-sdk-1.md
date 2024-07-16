@@ -50,7 +50,7 @@ Please run `npm update mendixmodelsdk --save`.
 
 | Story # | Impact | Description |
 | --- | --- | --- |
-| 561960 | High | All constructors to create new model elements are removed, instead factory methods should be used. The migration is straight forward: `var entity = new domainmodels.Entity()` becomes: `var entity = domainmodels.Entity.create(model)`. See the next paragraph for more details. |
+| 561960 | High | All constructors to create new model elements are removed, instead factory methods should be used. The migration is straightforward: `var entity = new domainmodels.Entity()` becomes: `var entity = domainmodels.Entity.create(model)`. See the next paragraph for more details. |
 | 562069 | Medium | Versioning has been added explicitly, so usage of elements and properties is checked against the product (and hence meta model) version. As part of this, `new ModelSdkClient(..)` is no longer valid and has to be replaced with `Model.createSdkClient(..)` everywhere. |
 | 569299 | Low | Introduction / deprecation / deletion messages for structures / elements / properties are shown in the typescript documentation. |
 | 581572 | Low | Improved error-message when trying to use an unloaded element or property. |

@@ -2,7 +2,6 @@
 title: "XPath Aggregate Functions"
 url: /refguide/xpath-aggregate-functions/
 weight: 1
-tags: ["studio pro", "XPath", "aggregate", "aggregate function", "aggregate functions", "avg", "count", "max", "min", "sum"]
 ---
 
 ## 1 Introduction

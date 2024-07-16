@@ -3,7 +3,6 @@ title: "Testing Microflows with the Unit Testing Module"
 linktitle: "Testing Microflows with Unit Test Module"
 url: /refguide9/testing-microflows-with-unit-testing-module/
 weight: 3
-tags: ["test", "testing", "microflow", "unit testing"]
 ---
 
 ## 1 Introduction
@@ -37,7 +36,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 1. Create a [new app](/refguide9/new-app/).
 2. Download and install the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
-    For more information, see [Using Marketplace Content](/appstore/overview/use-content/).
+    For more information, see [Using Marketplace Content](/appstore/use-content/).
 
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
 4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.

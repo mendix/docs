@@ -1,9 +1,7 @@
 ---
 title: "Set Up Data Validation"
 url: /howto8/data-models/setting-up-data-validation/
-
 weight: 2
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -15,7 +13,7 @@ This how-to explains how you can set up data validation with Mendix. Before you 
 This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
 
 1. Open a **domain model** in Studio Pro.
-2. Double click a persistable entity to open its **properties.**
+2. Double-click a persistable entity to open its **properties.**
 3. Open the **Validation Rules** tab page.
 
     {{< figure src="/attachments/howto8/data-models/setting-up-data-validation/18582149.png" class="no-border" >}}
@@ -33,7 +31,7 @@ This section will explain how you can add validation rules to the domain model o
 
 The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](/howto8/front-end/create-your-first-two-overview-and-detail-pages/) how-to.
 
-1. Open a **detail page** and double click an input to open its properties.
+1. Open a **detail page** and double-click an input to open its properties.
 2. Enter a message for **Placeholder text**. This message is shown below the input if a user clicks the save button without filling in a value.
 
 {{< figure src="/attachments/howto8/data-models/setting-up-data-validation/18582144.png" class="no-border" >}}
@@ -45,7 +43,7 @@ Please note that a *required* validation rule on entity level overrules this pro
 Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalized data. With the 'Before Commit' event you can execute a microflow that must return a Boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
 1. Open a **domain model** in Studio Pro.
-2. Double click an entity to open its **properties**.
+2. Double-click an entity to open its **properties**.
 3. Open the **Event handlers** tab page.
 4. Click **New** to start configuring a new event handler for this entity.
 5. Select **Before** as moment and **Commit** as event. This forces the event to trigger every time an object of this entity is committed.
@@ -85,7 +83,7 @@ Validating user input can also be achieved by overriding the default save button
 
     You can now extend the Microflow to validate user input.
 6. After the start event insert a **decision**.
-7. Double click the decision to open the **properties editor** and type in an expression that returns true or false. For example: *$Customer/Name != 'John'*.
+7. Double-click the decision to open the **properties editor** and type in an expression that returns true or false. For example: *$Customer/Name != 'John'*.
 
     As you can see you can use the **Customer** input parameter in the expression to validate its values.
 8. Save the properties by clicking **OK.**
@@ -115,7 +113,7 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 1. Create a Boolean variable set to `true`. Be sure to mark this variable as the **Return value**.
 2. Create your validations as described above.
 3. Configure the sub-microflow to change the Boolean variable to `false` after the validation feedback or error message. Connect this flow back to the main sequence flow using a merge, and continue with the next validation.
-4. At the end of the sub-microflow, the variable should be `true` if it succesfully passed all validations, and `false` when one or more validations have failed. 
+4. At the end of the sub-microflow, the variable should be `true` if it successfully passed all validations, and `false` when one or more validations have failed. 
 5. Add a [decision](/refguide8/decision/) that checks the return value and only allows the microflow to continue to the **Commit** event if all validations are passed. This way, you can keep the logic while performing all necessary validations at once.
 
 ## 7 Read More

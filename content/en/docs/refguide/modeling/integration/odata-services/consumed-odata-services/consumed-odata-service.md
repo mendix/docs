@@ -2,14 +2,15 @@
 title: "Consumed OData Service"
 url: /refguide/consumed-odata-service/
 weight: 10
-tags: ["data hub", "studio pro", "odata service", "consumed odata service"]
 aliases:
     - /refguide/consumed-odata-service-properties
 ---
 
 ## 1 Introduction
 
-When an external entity or action is used in an app module through the [Integration pane](/refguide/integration-pane/), a consumed OData service document is added specifying the details of the consumed service. This is the API to the publishing app and the data associated with the entity.
+A consumed OData service contains the connection information for OData external entities and actions.
+
+You can create a consumed OData service and specify its metadata in a file or a URL. Alternatively, you can search using the [Integration pane](/refguide/integration-pane/) and drag an entity to the domain model to have Studio Pro create a consumed OData service for you.
 
 ## 2 Consumed OData Service screen
 
@@ -28,22 +29,53 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert color="info" %}}In the [Integration pane](/refguide/integration-pane/), consumed services display an **Update** icon (a blue arrow) if there is an update available.{{% /alert %}}
 
-### 2.1 Service URL {#service-url}
+### 2.1 Configuration
 
-The **Service URL** displays the URL of the service endpoint:
+There are three ways to specify the service URL, headers, and proxy settings: **Constants only**, **Configuration microflow**, and **Headers microflow**.
+
+* **Constants only** – specify the service URL, proxy settings, and headers using constants
+* **Configuration microflow** – specify the service URL, proxy settings, and headers using a microflow that returns a **System.ConsumedODataConfiguration** (this option was introduced in Studio Pro 10.12.0)
+* **Headers microflow** – specify headers using a microflow that returns a list of **System.HttpHeader** and specify the service URL and proxy settings using constants
+
+### 2.2 Configuration/headers microflow
+
+Choose a microflow that returns one of the following options:
+
+* A **System.ConsumedODataConfiguration** object with associated **System.HttpHeader** objects (when using **Configuration microflow**)
+* A list of **System.HttpHeader** objects (when using **Headers microflow**)
+
+This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the service responds with `401 Unauthorized`, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
+
+{{% alert color="info" %}}
+Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in *Security and Shared Datasets*.
+{{% /alert %}}
+
+#### 2.2.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
+
+Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
+
+Consumers of an OData service that is set up with Mendix SSO authentication can use the **CreateAccessTokenAuthorizationHeaderList**.
+
+To learn more about how to publish an OData service with authentication (Mendix SSO, or other methods), see the [Authentication Methods](/refguide/published-odata-services/#authentication-methods) section of *Published OData Services*. 
+
+To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of *External Entities*.
+
+### 2.3 Service URL {#service-url}
+
+The **Service URL** displays constant that specifies the URL of the service endpoint:
 
 * Click **Select** to choose another [constant](/refguide/constants/) for the service
 * Click **Show** to open the **Constant** dialog box displaying the service URL or endpoint:
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/service-url.png" class="no-border" >}}
 
-### 2.2 Timeout
+### 2.4 Timeout
 
 **Timeout** is the response time for fetching data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
 
 Default value: 300 seconds
 
-### 2.3 Proxy Configuration
+### 2.5 Proxy Configuration
 
 **Proxy configuration** allows you to configure a proxy for the request:
 
@@ -55,7 +87,7 @@ Default value: 300 seconds
 In most cases, this setting can be ignored and the default **Use app settings** can be used.
 {{% /alert %}}
 
-### 2.4 Authentication {#authentication}
+### 2.6 Authentication {#authentication}
 
 The **Use HTTP authentication** checkbox specifies if basic authentication should be used. If selected, specify the following details:
 
@@ -66,31 +98,13 @@ Input these as a string with single quotes.
 
 In addition to basic authentication, you can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
-### 2.5 HTTP Headers {#http-headers}
+### 2.7 HTTP Headers {#http-headers}
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value.
 
-Using **Headers from a Microflow**, you can specify a microflow for creating a key and value pair (or pairs) for dynamic values. The microflow must return a list of **System.HttpHeader** objects.
+If the service uses a configuration microflow or a headers microflow that specifies a different value for the header, then that value overrides the value specified in this list.
 
-{{% alert color="info" %}}
-For more flexible HTTP request headers, you can select a microflow that returns a list of **System.HttpHeader**. This microflow may take a parameter of type **System.HttpResponse**. The microflow is called every time a request is made. Initially, the HTTP response parameter will be empty. If the response is **401 Unauthorized**, the microflow is called with that HTTP response and another call is made with the new HTTP headers.
-{{% /alert %}}
-
-{{% alert color="info" %}}
-Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For further information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in the *Security and Shared Datasets* document in the Studio Pro 10 guide.
-{{% /alert %}}
-
-#### 2.5.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
-
-Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
-
-Consumers of an OData service that is set up with Mendix SSO authentication can use the **CreateAccessTokenAuthorizationHeaderList**.
-
-To learn more about how to publish an OData service with authentication (Mendix SSO, or other methods), see the [Authentication Methods](/refguide/published-odata-services/#authentication-methods) section of *Published OData Services*. 
-
-To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of *External Entities*.
-
-### 2.6 Error Handling Microflow
+### 2.8 Error Handling Microflow
 
 When a call to the OData service fails, users see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
 
@@ -102,7 +116,7 @@ The microflow must return a `String` containing the error message. If it returns
 
 Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
-### 2.7 Metadata
+### 2.9 Metadata
 
 When you create a consumed OData service, the metadata editor allows you to open an OData contract from a file or URL. If you have already consumed a contract, you can click **Update** to update the existing contract with a new version from a file or URL.
 
@@ -126,7 +140,7 @@ This information is not stored, so if you download the metadata from the same se
 
 When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration pane](/refguide/integration-pane/).
 
-### 2.8 Properties
+### 2.10 Properties
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
@@ -141,7 +155,7 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Metadata** – the contents of the metadata file defining the service
 * **OData version** – the OData version (can be v3 or v4)
 
-#### 2.8.1 Using QuerySegment
+#### 2.10.1 Using QuerySegment
 
 When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. 
 

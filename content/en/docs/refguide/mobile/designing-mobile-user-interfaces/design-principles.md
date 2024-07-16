@@ -3,7 +3,6 @@ title: "Design Principles"
 url: /refguide/mobile/designing-mobile-user-interfaces/design-principles/
 weight: 10
 description: "This document teaches you how to build a native mobile app's UI."
-tags: ["design", "styling"]
 aliases:
     - /howto/mobile/ui-best-practices/
 ---
@@ -50,7 +49,7 @@ To learn about building a Mendix native mobile app's UI, consult the sections be
 
 By designing a set of reusable components including variations, a UI designer can create a UI kit that can be used to design pages. This includes settings like the brand colors, typography, spacing settings, and the UI components (for example buttons and inputs) including variations. Designers frequently use the [Figma](https://www.figma.com/) tool to complete these tasks with satisfying results.
 
-This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs..
+This UI kit will be the input for creating the Mendix theme and related components. Therefore it helps to have Mendix and front-end knowledge to align what is available already in Mendix and what is needed for the designs.
 
 ### 3.2 Translating the UI Kit to Mendix Theme and Components
 

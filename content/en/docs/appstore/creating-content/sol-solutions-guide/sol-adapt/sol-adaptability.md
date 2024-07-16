@@ -4,7 +4,6 @@ url: /appstore/creating-content/sol-adaptability-best-practices/
 linktitle: "Best Practices for Adaptability"
 weight: 3
 description: "Best practices for creating a solution for adaptation"
-tags: ["solutions", "adaptable solutions", "best practices", "adaptability"]
 ---
 
 ## 1 Domain Model
@@ -13,7 +12,7 @@ The sections below describe best practices for your solution's domain model.
 
 ### 1.1 Solution Module Defining the Data Model Core
 
-Mendix recommends having the majority of your data model defined within solution modules in order to ensure stability. This als helps to maintain a clear separation between which entities, attributes, and associations come from the publisher and what is added during implementation. Finally, this also enables doing internal refactoring without having to take all customer instances into account.
+Mendix recommends having the majority of your data model defined within solution modules in order to ensure stability. This also helps to maintain a clear separation between which entities, attributes, and associations come from the publisher and what is added during implementation. Finally, this also enables doing internal refactoring without having to take all customer instances into account.
 
 ### 1.2 Extension Through Extension Entities (Composition Pattern or Specializations)
 
@@ -26,7 +25,7 @@ Alternatively, it is possible to use specializations. Mendix recommends consider
 | **Easy to apply without data changes** | Yes, new extension objects can be created and linked to already existing core objects. | No, objects need to be re-created in order to change the entity/specialization type. |
 | **Flexibility on security** | Core and extension have their own security rules. Core rules cannot be overridden. | Specialization allows for redefining security rules, even for entities that are defined inside solution modules. |
 | **Multiple extension versions** (for example, `Vehicle` becomes both `Car` and `Train`). | Setup can be complex. | More suitable. |
-| **Offline syncronization** | Fully supported. | Restrictions apply (for details, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance)). |
+| **Offline synchronization** | Fully supported. | Restrictions apply (for details, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance)). |
 
 ### 1.3 Example
 
@@ -75,7 +74,7 @@ The app title, favicon, and login pages are always adaptable, since they live at
 
 ### 3.1 Cascading Theming Modules
 
-For solution development, Mendix recommends using a layered approach to your theme modules to make them as adaptable as possible (for more inforamtion, see the [Brand Your Adaptable Solution](https://academy.mendix.com/link/paths/130/Brand-your-Adaptive-Solution) learning path, which includes details on how to structure your SASS files).
+For solution development, Mendix recommends using a layered approach to your theme modules to make them as adaptable as possible (for more information, see the [Brand Your Adaptable Solution](https://academy.mendix.com/link/paths/130/Brand-your-Adaptive-Solution) learning path, which includes details on how to structure your SASS files).
 
 An ISV that maintains multiple adaptable solutions can structure their theme modules in the following way:
 

@@ -2,7 +2,6 @@
 title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
-tags: ["data hub", "Catalog", "data hub Landscape"]
 weight: 36
 aliases:
     - /releasenotes/data-hub/
@@ -12,6 +11,36 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### July 11, 2024
+
+#### Fixes
+
+* We fixed a bug that allowed users to add tags from other companies to their endpoints.
+* We made some minor aesthetics changes to the Control Center and **Service Edit** pages to align with the overall aesthetic standards defined for the app. 
+
+### June 27, 2024
+
+#### Fixes 
+
+* We addressed some aesthetics bugs and made some aesthetic improvements on the **Home**, **Search**, and registration pages. 
+
+#### Improvement
+
+* We have aligned our top-menu navigation to the rest of the platform, which has adjusted some navigation across the Catalog app.
+
+### June 20, 2024
+
+#### Fixes 
+
+* We fixed a bug where the **Share** button would sometimes copy the wrong link to the clipboard.
+* We improved notification messages to include more details.
+
+### June 6, 2024
+
+#### Fixes
+
+* We fixed some minor aesthetics bugs that were present on the **Home**, **Curate**, and registration pages. 
 
 ### May 23, 2024
 
@@ -680,7 +709,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the Curation Bar for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 
@@ -797,7 +826,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
+* We fixed an issue where the [Business Owner](/catalog/manage/search/#business-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
 
 ### October 14, 2021

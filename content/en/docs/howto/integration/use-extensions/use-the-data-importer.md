@@ -18,7 +18,7 @@ This how-to teaches you to do the following:
 
 ## 2 Prerequisites
 
-Download the [Data Importer extension](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/overview/use-content/#install). This module also requires:
+Download the [Data Importer extension](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/use-content/#install). This module also requires:
 
 * Studio Pro [10.4](/releasenotes/studio-pro/10.4/) or above
 * A file document (for more information, see [File Manager](/refguide/file-manager/))

@@ -2,7 +2,6 @@
 title: "User Task"
 url: /refguide/user-task/
 weight: 30
-tags: ["workflow", "workflows", "user task", "task", "Studio Pro"]
 ---
 
 ## 1 Introduction

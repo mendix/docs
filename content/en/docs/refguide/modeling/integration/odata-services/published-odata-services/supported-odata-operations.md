@@ -3,7 +3,6 @@ title: "Supported OData Operations"
 url: /refguide/supported-odata-operations/
 description: "Lists the supported operations for published OData services."
 weight: 20
-tags: ["OData", "filter", "count", "sort", "select", "page", "insert", "create", "update", "delete", "actions"]
 aliases:
   - /refguide/odata-query-options/ 
 ---
@@ -18,7 +17,7 @@ Mendix currently supports only the operations described here.
 
 A published OData service is automatically documented. Studio Pro allows you to [export the OpenAPI specification](/refguide/published-odata-services/#openapi), which is a machine-readable file that is supported by most API tools, like Swagger UI and Postman.
 
-When running your app, you can [use Swagger UI](/refguide/build-odata-apis/#22-openapi-3-contract-and-test-page) to read this documentation and test your service. 
+When running your app, you can [use Swagger UI](/refguide/build-odata-apis/#contract-and-test) to read this documentation and test your service. 
 
 Below is a more descriptive explanation of the operations that a published OData service supports.
 

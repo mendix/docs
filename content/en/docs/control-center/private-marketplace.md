@@ -2,7 +2,6 @@
 title: "Private Marketplace"
 url: /control-center/private-marketplace/
 description: "Describes the Private Marketplace page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "private marketplace", "marketplace"]
 weight: 70
 no_list: true
 ---
@@ -15,7 +14,7 @@ The **Private Marketplace** page gives you the governance capabilities to approv
 * Company guidelines assurance: It enables you to meet regulatory requirements and internal policies by thoroughly reviewing components.
 * Efficient management: It offers a centralized approval process to save time and resources, preventing additional communication outside of the platform. 
 
-{{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/overview/my-marketplace/#company-content) in [My Marketplace](https://marketplace.mendix.com/link/mymarketplace), click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
+{{% alert color="info" %}}As a Mendix Admin, you can always unpublish content from the private Marketplace of your organization. This can help your organization keep its private Marketplace neat, with only relevant company content. To do so, go to [Company Content](/appstore/overview/#company-content) in the Marketplace home page, click the {{% icon name="three-dots-menu-horizontal" %}} icon on the component card, and then select **Unpublish all versions**. {{% /alert %}}
 
 The **Private Marketplace** page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
 

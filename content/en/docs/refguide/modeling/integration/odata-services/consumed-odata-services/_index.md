@@ -3,7 +3,6 @@ title: "Consumed OData Services"
 url: /refguide/consumed-odata-services/
 weight: 5
 description: "Overview of consumed OData services for Mendix Studio Pro"
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

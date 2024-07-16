@@ -1,9 +1,7 @@
 ---
 title: "Data Storage"
 url: /refguide/data-storage/
-
 description: "Introduces data storage, which is the data foundation of the Mendix Runtime."
-tags: ["studio pro", "Databases"]
 ---
 
 ## 1 Introduction
@@ -23,7 +21,7 @@ See [Databases and Apps](#databases), below, for an overview of this.
 
 ## 2 Supported Databases
 
-For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model (or models).
+For apps deployed to Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model (or models).
 
 If you are deploying to a different infrastructure, you will need to provide your own database.
 See [System Requirements](/refguide/system-requirements/#databases) for the list of supported databases.

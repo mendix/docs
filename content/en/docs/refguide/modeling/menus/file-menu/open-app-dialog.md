@@ -3,7 +3,6 @@ title: "Open App"
 url: /refguide/open-app-dialog/
 weight: 20
 description: "Describes the Open App flow and the Open App dialog box"
-tags: ["studio pro", "open app"]
 aliases:
     - /refguide/open-project-dialog.html
     - /refguide/open-project-dialog
@@ -50,6 +49,7 @@ Clicking **Preferences** opens a dialog box with a subset of the preferences you
 * Studio Pro Theme
 * Default Page Editor
 * Rendering
+* [Clone type](/refguide/preferences-dialog/#clone)
 
 ## 3 Read More
 

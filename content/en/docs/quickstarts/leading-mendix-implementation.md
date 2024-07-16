@@ -4,7 +4,6 @@ linktitle: "Bringing Mendix into Your Organization"
 url: /quickstarts/leading-mendix-implementation-in-your-organization/
 weight: 30
 description: "Unlock the full potential of the Mendix platform and accelerate your application development journey in your organization."
-tags: ["Mendix Implementation"]
 ---
 
 ## 1 Introduction
@@ -98,7 +97,7 @@ So why do you need an admin? Your developers are able to create new apps, invite
 
 Do you already have at least one admin? If that’s the case, you can see them on the list when you open [Control Center](https://controlcenter.mendix.com/index.html), and you can skip the rest of this section.
 
-A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#3-mendix-admins). 
+A **Mendix Admin** will normally be someone in the IT department of your company, and they will have full access to Control Center, which will give them visibility and essential controls to make sure the apps deliver business value at acceptable cost and risk.  You can assign your first Mendix Admin through [Mendix Support](https://support.mendix.com/hc/en-us/requests/new), just choose "Standard Change: Assign Mendix Admin" from the dropdown. This first admin can then [add other admins](/control-center/company-settings/#mendix-admins). 
 
 ### 2.2 Get Familiar With Mendix
 
@@ -111,7 +110,7 @@ Mendix is the platform that helps you turn ideas into outcomes. It contains all 
 **Here are some resources to help familiarize yourself with the Mendix platform:**
 
 * The [“Mendix Ecosystem”](https://academy.mendix.com/link/modules/78/lectures/504/1.3-Mendix-Ecosystem) lecture in our Rapid Developer course offers a short description of each of the elements of the platform relevant for developers together with useful links. 
-* The [Developer Portal Guide](/developerportal/) will help you explore the Developer Portal: the central location to collaborate, deploy, and manage your Mendix apps.
+* [Apps](/developerportal/) will help you explore apps: the central location to collaborate, deploy, and manage your Mendix apps.
 
 **Also, don’t forget to bookmark your “Favorites”!**
 
@@ -618,7 +617,7 @@ Mendix applications can be deployed in different ways, mainly:
 
 3. On-premise
 
-**Mendix Public Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multi-tenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
+**Mendix Cloud** is the default deployment option and has the advantage of being a fully integrated solution, with easy setting up and administrating. When developing your first application and if there are no specific (private) cloud constraints, it makes sense to choose the user friendly Mendix Cloud option. Within Mendix Cloud, there are options for multi-tenant cloud environments and single-tenant cloud environments. Deploying to Mendix Cloud gives you the shortest time-to-value.
 
 Mendix can also be deployed to any cloud platform which supports a version of Cloud Foundry. With **Mendix for Private Cloud**, you can choose the cloud provider of your preference, e.g. your own Azure or AWS infrastructures. If there already is access to an on-premise hosting environment, Mendix can also be deployed on-premise.
 
@@ -626,11 +625,11 @@ When setting up your deployment strategy, it is important to look at the feature
 
 If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
-For a list of all the deployment options that are available, see [Deployment](/developerportal/deploy/). 
+For a list of all the deployment options that are available, see [Deployment](/deployment/). 
 
 Some highlights to consider:
 
-**Mendix Public Cloud:**
+**Mendix Cloud:**
 
 * Pros: Fast and easy, all hosting is taken care of.  It has the best utilization rate for your infrastructure allowing you to maintain optimal flexibility and convert your capital investment into operational expenses. This option is supported by Mendix and it is the most optimized cloud to run Mendix applications.
 * Cons: Some organizations don’t allow shared cloud usage and require air-gapped or private-cloud options
@@ -1135,7 +1134,7 @@ Note that Mendix also offers [other deployment options](/releasenotes/developer-
 
 You can deploy your application for free on the Mendix Cloud. These [Free Apps have limitations](/developerportal/deploy/mendix-cloud-deploy/#free-app) when it comes to run time, features and resources. You can publish Free Apps to test the Mendix platform, a specific feature of to quickly prototype an application to test an idea. Once you decide to take your application to the next-level and start serious development on it, you will need to obtain a licensed node, so this is something you will need to do before your launch.
 
-If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#31-obtaining-a-licensed-node).
+If you have an existing contract that allows for more licensed nodes, you can [request a new licensed node](/developerportal/deploy/licensing-apps/#obtaining-licensed-node).
 If you don’t have a contract, or if your contract doesn’t allow for more licensed nodes, contact your Customer Success Manager.
 
 **Link your application to your licensed node**

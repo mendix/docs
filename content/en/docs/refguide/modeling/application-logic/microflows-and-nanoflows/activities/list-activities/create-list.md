@@ -2,7 +2,6 @@
 title: "Create List"
 url: /refguide/create-list/
 weight: 3
-tags: ["studio pro"]
 ---
 
 {{% alert color="info" %}}

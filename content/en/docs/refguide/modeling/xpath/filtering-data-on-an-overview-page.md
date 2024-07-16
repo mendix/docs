@@ -4,7 +4,6 @@ linktitle: "Filter Data Using XPath"
 url: /refguide/filtering-data-on-an-overview-page/
 weight: 5
 description: "Describes how to filter data using different XPath constraints."
-tags: ["filter", "xpath"]
 aliases:
     - /howto/logic-business-rules/filtering-data-on-an-overview-page/
 ---
@@ -70,7 +69,7 @@ In the previous section, you set up a basic data structure and created some samp
 
     {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/order-list-open-status.png" width="500px" class="no-border" >}}
 
-6. To filter order data by a mimimum total price, add another search field by selecting **Add search field** > **Comparison**.
+6. To filter order data by a minimum total price, add another search field by selecting **Add search field** > **Comparison**.
 7. Select the **TotalPrice** attribute, set **Comparison** to **Greater or equal**, and change the **Caption** to *Minimum total price*.
 
     {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/create-search-field-minimum-total-price.png" width="500px" class="no-border" >}}
@@ -81,7 +80,7 @@ In the previous section, you set up a basic data structure and created some samp
 
 ## 4 Filtering the Orders List by Order Status Using XPath 
 
-In the previous section, you used the search bar to filter data on the **Orders** overview page. In this section, you add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can filter (in a hard-coded way) the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In the follwing example, you constrain the data grid using XPath so that the data grid only displays orders with the status **Open**. 
+In the previous section, you used the search bar to filter data on the **Orders** overview page. In this section, you add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can filter (in a hard-coded way) the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide/xpath-constraints/). In the following example, you constrain the data grid using XPath so that the data grid only displays orders with the status **Open**. 
 
 1. Select the **Orders** data grid and go to its **Properties** pane.
 2. Choose **XPath** for **Data source** > **Type** and then click in the **XPath Constraint** field:
@@ -133,7 +132,7 @@ In the previous two sections, you used single constraints to constrain the data 
 
 In the previous section, you constrained the data grid on attributes of the same entity as the data grid entity. In this section, you constrain the data grid on attributes of an associated object. In the following example, you filter the orders by cities where associated customers are from.
 
-1. To constrain the results in the orders list to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']` (Note that this XPath assumes that **MyFirstModule** has been renamed to **Sales** in the app explorer).
+1. To constrain the results in the orders list to only orders from customers in Rotterdam, enter the following XPath into the **XPath Constraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']` (Note that this XPath assumes that **MyFirstModule** has been renamed to **Sales** in the app explorer).
 
     {{< figure src="/attachments/refguide/modeling/xpath/filtering-data-on-an-overview-page/XPath-constraint-Rotterdam-customers.png" width="600px" class="no-border" >}}
 

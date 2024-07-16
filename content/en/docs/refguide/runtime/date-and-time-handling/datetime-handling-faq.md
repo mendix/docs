@@ -1,8 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
 url: /refguide/datetime-handling-faq/
-notoc: true
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -66,7 +64,7 @@ It depends on when you run this statement. Usually it will return true because t
 
 ## 14 If I Am Comparing Something with a `[%CurrentDateTime%]` Token in a DataGrid, Which Time Should It Use as a Constraint for a Localized and for a Non-Localized Date? 
 
-So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
+So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]`, what should I expect in the result when it is 12:10pm in Boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
 Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the `[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
 

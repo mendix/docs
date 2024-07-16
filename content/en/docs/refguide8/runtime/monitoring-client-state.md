@@ -1,8 +1,6 @@
 ---
 title: "Monitoring Client State"
 url: /refguide8/monitoring-client-state/
-
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Mathematical Function Calls"
 url: /refguide/mathematical-function-calls/
 weight: 70
-tags: ["studio pro", "mathematical function call", "mathematical function", "expressions"]
 ---
 
 ## 1 Introduction
@@ -293,7 +292,7 @@ The output is:
 ```
 
 {{% alert color="info" %}}
-Calculation of `pow` with a decimal power might be less accurate, as the standard Java/Javascript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/Javascript action if high precision is required for this case.
+Calculation of `pow` with a decimal power might be less accurate, as the standard Java/JavaScript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/JavaScript action if high precision is required for this case.
 {{% /alert %}}
 
 ## 9 abs

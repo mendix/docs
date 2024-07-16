@@ -3,7 +3,6 @@ title: "Scheduled Events – Task Queue"
 url: /refguide9/scheduled-events-task-queue/
 weight: 10
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -29,7 +28,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide9/microflow/)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example the Developer Portal or Windows Service Console). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example [Apps](https://sprintr.home.mendix.com/) or Windows Service Console). |
 
 ## 4 Timing Properties
 
@@ -177,3 +176,7 @@ This limit cannot be overridden.
 ### 5.3 Unsupported Intervals
 
 Hour- and minute-based intervals can only be integer divisors of 24 or 60, respectively. For example you cannot schedule an event to run every seven minutes as this does not divide precisely into sixty minutes. If it is absolutely critical that an unsupported interval is used, you should schedule the event with interval value of one (every hour or every minute) and decide within the microflow whether it should continue executing at that particular time.
+
+### 5.4 One Session for All Scheduled Events
+
+Each runtime node has one specific session in memory which is used for all scheduled events. Changes to this session are visible for all scheduled events on that node. Things like changing the time zone via a Java action in one scheduled event can lead to unexpected behavior in other scheduled events. You are therefore strongly discouraged from changing the session object for scheduled events.

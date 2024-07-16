@@ -2,7 +2,6 @@
 title: "Rollback Object"
 url: /refguide8/rollback-object/
 weight: 70
-tags: ["studio pro"]
 ---
 
 {{% alert color="warning" %}}

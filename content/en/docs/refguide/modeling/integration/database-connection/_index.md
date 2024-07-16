@@ -3,7 +3,6 @@ title: "External Database Connection"
 url: /refguide/external-database-connection/
 weight: 80
 description: "Overview of the [External Database Connection document](https://marketplace.mendix.com/link/component/219862) in Studio Pro, downloaded from the Mendix Marketplace."
-tags: ["studio pro", "database connector", "mendix 10", "mendix connect", "connect to database"]
 ---
 
 ## 1 Introduction
@@ -13,14 +12,14 @@ The [Database Connector](/appstore/modules/external-database-connector/) integra
 This page references the **External database connection** document in Studio Pro. See [External Database Connector](/appstore/modules/external-database-connector/) for the complete documentation. 
 
 {{% alert color="warning" %}}
-You must have the [External Database Connector](https://marketplace.mendix.com/link/component/219862) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/overview/use-content/).
+You must have the [External Database Connector](https://marketplace.mendix.com/link/component/219862) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/use-content/).
 {{% /alert %}}
 
 ## 2 Connect to Database Wizard {#wizard}
 
 Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/database-connection-wizard.png" class="no-border" >}}
 
 Once in the wizard, enter or select the following:
 
@@ -50,13 +49,17 @@ If you select **Use connection string**, enter the following:
     * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
     * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
+### 2.3 Password Security
+
+The password that you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. Starting with Mendix 10.9, you can indicate which constants contain private or sensitive information, to ensure that this information is saved locally, and is not shared on the TeamServer, or the Cloud Portal.
+
 ## 3 External Database Connection Document {#external-database-document}
 
 After entering your database information in the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 
 
 The name of the document is the **Name** (not **Database name**) you provided when running the wizard:
 
-{{< figure src="/attachments/appstore/modules/external-database-connector/database-service-document.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/external-database-connector/database-service-document.png" class="no-border" >}}
 
 ### 3.1 Query Screen {#query-screen}
 
@@ -75,7 +78,7 @@ In the **Parameters** section, click **Add Parameter** to enter the following in
 * **Data Type** — select the type of data for your parameter
 * **Test Value** — enter or select the value of the parameter
 
-Click **Execute Query** to view a preview of the reponse.
+Click **Execute Query** to view a preview of the response.
 
 ### 3.2 Tables & Columns {#tables-columns}
 

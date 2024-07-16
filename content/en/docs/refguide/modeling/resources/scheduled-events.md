@@ -3,7 +3,6 @@ title: "Scheduled Events"
 url: /refguide/scheduled-events/
 weight: 80
 description: "Options for configuring scheduled events"
-tags: ["Scheduled Event", "Execution properties", "Timing", "intervals", "scheduling issues", "time zones", "daylight saving", "task queue"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -29,7 +28,7 @@ Scheduled events can be tested locally, but they will not be run if your app is 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide/microflow/)). |
-| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example the Developer Portal or Windows Service Console). |
+| Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example the Mendix Portal or Windows Service Console). |
 
 ## 4 Timing Properties
 
@@ -147,7 +146,7 @@ This allows you to run the event every minute, or number of minutes.
 
 ### 4.7 Long-running Events {#long-events}
 
-If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made how to handle this. This is set in the **On overlap** property of the scheduled event.
+If a repeated scheduled event takes longer than the interval, an overlap would occur. To prevent this a choice must be made on how to handle this. This is set in the **On overlap** property of the scheduled event.
 
 * **Skip next** – If an event takes longer than its interval, subsequent events are skipped until it has completed. The next event will start at the next available scheduled time.
 
@@ -181,3 +180,7 @@ Hour- and minute-based intervals can only be integer divisors of 24 or 60, respe
 ### 5.4 Cleaning Up Completed Runs of Scheduled Events
 
 Every time a scheduled event is run it produces an entry in the `System.ProcessedQueueTask` table in the database. Over time these accumulate and the table can grow large. Refer to the documentation on [Cleaning Up Old Processed Tasks](/refguide/task-queue/#cleanup) in *Task Queue* to learn how to remove processed entries.
+
+### 5.5 One Session for All Scheduled Events
+
+Each runtime node has one specific session in memory which is used for all scheduled events. Changes to this session are visible for all scheduled events on that node. Things like changing the time zone via a Java action in one scheduled event can lead to unexpected behavior in other scheduled events. You are therefore strongly discouraged from changing the session object for scheduled events.

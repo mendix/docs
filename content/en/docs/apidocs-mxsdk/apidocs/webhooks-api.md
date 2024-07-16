@@ -4,7 +4,6 @@ url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
 weight: 120
 description: "Use this API to manage webhooks."
-tags: ["API", "webhooks", "Mendix Cloud"]
 ---
 
 ## 1 Introduction
@@ -53,7 +52,7 @@ The following procedure will create a webhook endpoint and update the webhook en
 
 1. Set up your authentication PAT.
 
-2. To create a wehhook for an app, call `POST /apps/{app-id}/webhooks`. For example:
+2. To create a webhook for an app, call `POST /apps/{app-id}/webhooks`. For example:
 
    ```http {linenos=false}
    POST /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks

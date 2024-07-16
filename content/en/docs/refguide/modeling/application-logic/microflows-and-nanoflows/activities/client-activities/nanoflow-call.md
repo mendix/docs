@@ -2,7 +2,6 @@
 title: "Call Nanoflow"
 url: /refguide/nanoflow-call/
 weight: 2
-tags: ["studio pro", "nanoflow call", "call nanoflow"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -64,6 +63,8 @@ This property determines if the returned value from the called nanoflow should b
 ### 3.5 Variable Name, Object Name, or List Name {#name}
 
 The name of the variable, list, or object returned by the activity.
+
+If you specify a name for the returned value in the called nanoflow's end event, this field will utilise that name while ensuring it remains unique within the current scope.
 
 ## 4 Common Section {#common}
 

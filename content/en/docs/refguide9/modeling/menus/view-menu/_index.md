@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide9/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["view menu", "pane", "connector", "console", "find results", "widget developer console", "documentation pane", "full screen", "distraction free", "reset layout"]
 ---
 
 ## 1 Introduction
@@ -89,7 +88,7 @@ There are two **Find Results** panes. If you lock the results of the first pane,
 
 ### 3.9 Marketplace
 
-For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/overview/use-content/).
+For details on using Mendix Marketplace components in your app modeling, see [Using Marketplace Content](/appstore/use-content/).
 
 ### 3.10 MxAssist Performance Bot {#mx-bot}
 

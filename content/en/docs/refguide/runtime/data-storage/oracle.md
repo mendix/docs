@@ -2,12 +2,11 @@
 title: "Oracle"
 url: /refguide/oracle/
 weight: 60
-tags: ["studio pro", "database", "oracle"]
 ---
 
 ## 1 Introduction
 
-There are some minor differences in how Mendix behaves when using an Oracle database in comparision to using a PostgreSQL database. This document describes these differences.
+There are some minor differences in how Mendix behaves when using an Oracle database in comparison to using a PostgreSQL database. This document describes these differences.
 
 ## 2 Setting Up a User for Mendix
 

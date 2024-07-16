@@ -3,7 +3,6 @@ title: "Published REST Service"
 url: /refguide8/published-rest-service/
 weight: 10
 description: "Configuration options for a published REST service"
-tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -143,7 +142,7 @@ Resources and Operations are appended to [Location](#location) to form a URL on 
 
 **How to publish REST in Studio Pro 8**
 
-{{% youtube Ff_P84NOcZk %}}
+{{< youtube Ff_P84NOcZk >}}
 
 ## 8 Read More
 

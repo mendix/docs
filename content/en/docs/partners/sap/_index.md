@@ -3,7 +3,6 @@ title: "SAP"
 url: /partners/sap/
 description: "Presents a list of reference documents for users who need material on consuming SAP services."
 weight: 20
-tags: ["SAP", "OData", "XSUAA", "Destination Services", "Fiori"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -39,7 +38,7 @@ The following articles contain the documentation for all platform-supported SAP 
 
 The following articles contain information about deploying your Mendix app on the SAP Business Technology Platform:
 
-* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) - provides information about deployinh your app to the SAP Business Technology Platform
+* [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/) - provides information about deploying your app to the SAP Business Technology Platform
 * [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/)
 * [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) – presents details on enabling your Mendix app running on SAP BTP to use external services and systems
 * [Use SAP Connectivity Services with REST and SOAP](/developerportal/deploy/sap-cloud-platform/sap-destination-with-rest/)

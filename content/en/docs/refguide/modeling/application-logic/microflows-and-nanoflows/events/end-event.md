@@ -2,7 +2,6 @@
 title: "End Event"
 url: /refguide/end-event/
 weight: 2
-tags: ["studio pro", "end event", "event"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -24,6 +23,7 @@ The end event properties pane consists of the following sections:
 
 * [Return value](#return-value)
 * [Return type](#return-type)
+* [Return variable name](#return-variable-name)
 
 ### 2.1 Return Value {#return-value}
 
@@ -43,13 +43,22 @@ You can choose to return nothing, or to return, for example, a list, enumeration
 
 After you type an [expression](/refguide/expressions/) in the **End Event** dialog box, you will see an option that allows you to update the return type:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-form.png" width="500px" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/end-event-form.png" width="500px" >}}
 
 {{% alert color="info" %}}
 If you are calling a microflow from another microflow, a *calling* microflow cannot control what is returned. It is controlled by the *called* microflow. 
 {{% /alert %}}
 
+### 2.3 Return Variable Name {#return-variable-name}
+
+The return value of a microflow or nanoflow will be given this name. 
+
+When you update the return type, a default variable name is set based on the return type (whether it is a variable, object, or list). You can change the name of the returned variable which will be used later in the microflow or nanoflow call.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/events/end-event/return-variable-name.png" width="500px" >}}
+
 ## 3 Read More
 
 * [Start Event](/refguide/start-event/)
 * [Microflow Call](/refguide/microflow-call/)
+* [Call Nanoflow](/refguide/nanoflow-call/)

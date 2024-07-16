@@ -2,7 +2,6 @@
 title: "History"
 url: /refguide/history-dialog/
 weight: 50
-tags: ["studio pro", "commit", "history", "select revision", "commit history"]
 ---
 ## 1 Introduction
 

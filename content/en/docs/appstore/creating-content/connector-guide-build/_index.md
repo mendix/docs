@@ -1,10 +1,8 @@
 ---
 title: "Build a Connector"
 url: /appstore/creating-content/connector-guide-build/
-
 weight: 5
 description: "Introduces the concept of connectors, how they work, and the basic steps for building and publishing connectors."
-tags: ["data hub", "connectors", "studio pro", "build", "connector guide", "how to"]
 ---
 
 ## 1 Introduction
@@ -118,7 +116,7 @@ Because Mendix connectors are like any other Mendix [module](/appstore/modules/)
 * Specified resource files (from the **resources** folder)
 * Specified related Java files (from the modules subfolder in the **javasource** folder)
 
-#### 3.3.1 Exporting as an .mpk File
+#### 3.3.1 Exporting as an .mpk File{#export-as-mpk}
 
 To export your connector as an *.mpk* file, do the following:
 

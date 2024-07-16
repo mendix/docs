@@ -16,7 +16,7 @@ Data snapshots consist of a PostgreSQL database dump and all the file objects re
 
 Database archives are a zip file which contains all the data in the snapshot, or the database and files separately if you prefer. 
 
-You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
+You cannot currently upload an archive through this API. This function is currently only supported via the [Mendix Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
 This API focuses on working with snapshots and archives asynchronously, because these can be very long-running tasks for large quantities of data. It replaces the deprecated Backups API v1.
 
@@ -59,8 +59,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Query Parameters**
 
@@ -146,8 +146,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Request Body**
 
@@ -228,8 +228,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the snapshot being created.
 
 **Example Request**
@@ -299,8 +299,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the snapshot for which you want to create an archive.
 
 **Query Parameters**
@@ -376,8 +376,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *ArchiveId* (String): Identifier of the archive being created.
 
@@ -449,8 +449,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *Comment* (String): Optional comment for this snapshot.
 
@@ -531,8 +531,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *Comment* (String): Optional comment for this snapshot.
 
@@ -567,7 +567,7 @@ No content is returned when a backup has been successfully removed.
 
 #### 4.8.1 Description
 
-Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Mendix Portal.
 
 ```bash
 HTTP Method: POST
@@ -578,8 +578,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Query Parameters**
 
@@ -670,8 +670,8 @@ URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<Environment
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *RestoreId* (String): Identifier of the request to restore the data.
 
 **Example Request**

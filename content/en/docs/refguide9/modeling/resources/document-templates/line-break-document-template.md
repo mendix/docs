@@ -1,7 +1,6 @@
 ---
 title: "Line Break (Document Template)"
 url: /refguide9/line-break-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide9/Line+Break+(document+template).html
     - /refguide9/line-break-(document-template).html

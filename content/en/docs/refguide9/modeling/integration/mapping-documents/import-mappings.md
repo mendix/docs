@@ -1,7 +1,6 @@
 ---
 title: "Import Mappings"
 url: /refguide9/import-mappings/
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -17,7 +16,7 @@ Figure 1 depicts an example of an Import Mapping document in which two elements 
 
 ### 1.1 Obtaining an Object
 
-For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can define how a Mendix object is obtained in the window depicted in figure 2, which is shown after double clicking a specific mapping element.
+For each XML or JSON object, a Mendix object needs to be obtained. You can create one or you can find an existing object in the database. Alternatively, you can use a custom microflow that returns an object. You can define how a Mendix object is obtained in the window depicted in figure 2, which is shown after double-clicking a specific mapping element.
 
 {{< figure src="/attachments/refguide9/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
 
@@ -65,7 +64,7 @@ Be aware that lists are not stored ordered in the Mendix database. The XML Schem
 
 ## 2 Mapping Attributes in Import Mappings{#mapping-attributes}
 
-Each schema value in a selected XML or JSON schema object needs to be mapped to an attribute of an entity to be used in your app. If you don't want to map certain values, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double clicking a specific mapping element.
+Each schema value in a selected XML or JSON schema object needs to be mapped to an attribute of an entity to be used in your app. If you don't want to map certain values, simply uncheck them in the **Select elements...** dialog box. Configuring how to map the attributes is done in the screen depicted in figure 3, which is shown after double-clicking a specific mapping element.
 
 {{< figure src="/attachments/refguide9/modeling/integration/mapping-documents/import-mappings/16843943.png" class="no-border" >}}
 

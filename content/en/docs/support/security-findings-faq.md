@@ -4,7 +4,6 @@ linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
 weight: 60
 description: "FAQ about existing security findings and other security questions."
-tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file scanning", "insecure cookie", "cookies without security", "insecure access", "web server", "unauthorized access" ]
 aliases:
     - /developerportal/support/security-findings-faq/
     - /community-tools/support/security-findings-faq/
@@ -87,9 +86,9 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
+* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Using Marketplace Content* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/use-content/#update-module) in *Using Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 

@@ -2,7 +2,6 @@
 title: "Language Settings"
 url: /refguide8/language-settings/
 weight: 10
-tags: ["studio pro", "translation", "languages", "translatable text", "add language", "date format", "completeness"]
 ---
 
 ## 1 Introduction

@@ -2,7 +2,6 @@
 title: "Workflow Engine"
 url: /refguide/workflow-engine/
 weight: 35
-tags: ["workflow", "workflows", "workflow engine", "engine"]
 ---
 
 ## 1 Introduction
@@ -154,7 +153,7 @@ In the table below, you can find description of these states and allowed actions
 | ------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | InProgress   | The state of the workflow instance when it starts. This state indicates that the workflow instance can be executed. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Pause&nbsp;workflow</li></ul> |
 | Paused       | This state prevents the workflow from being executed.        | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Unpause&nbsp;workflow</li></ul> |
-| Incompatible | This state indicates that this workflow instance is not compatible with the current workflow in the model.<br><br>The attribute **CanBeRestarted** indicates whether the workflow can be restarted, the attribute **CanBeContinued** indicates whether the workflow can be marked as resolved.<br><br>Resolving the Incompatible state puts the workflow in either InProgress or Paused state depending on its previous state before it became Incompatible. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Mark&nbsp;as&nbsp;resolved</li></ul> |
+| Incompatible | This state indicates that this workflow instance is not compatible with the current workflow in the model.<br><br>The attribute **CanBeRestarted** indicates whether the workflow can be restarted, the attribute **CanBeContinued** indicates whether the workflow can be marked as resolved, the **CanApplyJumpTo** attribute indicates whether a jump-to option can be applied to the workflow.<br><br>Resolving the Incompatible state puts the workflow in either InProgress or Paused state depending on its previous state before it became Incompatible. | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Mark&nbsp;as&nbsp;resolved</li></ul> |
 | Failed       | This state indicates that an exception has occurred during execution of the workflow or the workflow-initiated microflow. The exception details can be found in the **Reason** attribute.<br><br>{{% alert color="info" %}}Failed workflows should be either retried/restarted to fix the problem or aborted to clean up user tasks that are part of the failed workflows.{{% /alert %}} | <ul><li>Abort&nbsp;workflow</li><li>Restart&nbsp;workflow</li><li>Generate&nbsp;jump&#8209;to&nbsp;options</li><li>Apply&nbsp;jump&#8209;to&nbsp;option</li><li>Retry&nbsp;workflow</li></ul> |
 | Completed    | This state indicates that the workflow has successfully completed. |                                                              |
 | Aborted      | This state indicates that this workflow instance has been aborted by a user. The reason is stored in the **Reason** member. |                                                              |

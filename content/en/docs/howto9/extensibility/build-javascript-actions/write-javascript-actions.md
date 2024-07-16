@@ -4,7 +4,6 @@ linktitle: "1. Build JavaScript Actions"
 url: /howto9/extensibility/write-javascript-actions/
 weight: 10
 description: "This how-to teaches you how to create a JavaScript action."
-tags: ["widget", "TexttoSpeech", "SpeechtoText", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction

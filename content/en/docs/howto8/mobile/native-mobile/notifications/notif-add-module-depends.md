@@ -3,7 +3,6 @@ title: "Add Module Dependencies"
 url: /howto8/mobile/notif-add-module-depends/
 weight: 52
 description: Tutorial for adding push notification module dependencies.
-tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
 ## 1 Introduction

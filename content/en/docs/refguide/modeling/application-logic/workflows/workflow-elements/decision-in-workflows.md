@@ -2,7 +2,6 @@
 title: "Decision in Workflows"
 url: /refguide/decision-in-workflows/
 weight: 40
-tags: ["workflow", "workflows", "decision", "Studio Pro"]
 ---
 
 ## 1 Introduction

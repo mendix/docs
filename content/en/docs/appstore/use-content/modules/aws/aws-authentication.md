@@ -263,6 +263,12 @@ These entities are used as input for the `GetSigV4Headers` microflow action, whi
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 
-#### 5 Read More
+### 4.4 Overriding HTTP client configurations {override-client-config}
+
+The platform-supported AWS Connectors have been developed using the AWS Software Development Kit (SDK) instead of the native Mendix Call REST service activity. This approach prioritizes efficiency in handling AWS integrations. It eliminates the complexity of customizing HTTP headers and signing requests, as the SDK automates these tasks. Additionally, it offers built-in features like retry logic and throttling management.
+
+
+## 5 Read More
 
 * [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)
+* [AWS Authentication: New Features in the Connector Suite](https://www.mendix.com/blog/aws-authentication-new-features-in-the-connector-suite/)

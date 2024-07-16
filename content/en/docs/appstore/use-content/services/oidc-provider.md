@@ -10,17 +10,11 @@ aliases:
 
 ## 1 Introduction
 
-The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) service can be used to build a Mendix app that acts as an OpenID provider for other apps, providing a Single Sign-On (SSO) experience for the end-users of those applications. This app could also delegate authentication of end-users to another Identity provider (IdP), causing it to act as an IAM broker.
+ The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module enables developers to build Mendix applications that issues security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, let us refer to such an application as an access provider application.
 
-The service supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module. 
+An access provider application can offer a Single Sign-On (SSO) experience for end-users of connected applications Additionally, it can issue Access Tokens for API consumption when APIs are secured with OAuth bearer tokens.
 
-The idea is that you set up a single Mendix app which uses the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module to authenticate end-users with your central IdP. The same app also acts as an OIDC provider for your other apps to use as the IdP for OIDC SSO. This means it is working as an IAM (Identity and Access Management) broker for authentication and, optionally, authorization. You can easily add or remove apps from the IAM Broker app within the Mendix ecosystem using an API without each app and relevant user roles having to be added to your central IdP. However, you retain all the benefits of your central IdP in controlling on- and offboarding of users.
-
-For more information on the concepts behind authorization, see [About Authorization](#about-authorization), below.
-
-{{< figure src="/attachments/appstore/use-content/services/oidc-provider/typical-usage.png" class="no-border" >}}
-
-You can also set up your users manually in your app, using the Mendix [Administration](/appstore/modules/administration/) module, rather than linking to your central IdP.
+The service supports responsive browser-based applications and has been tested with applications that use the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module.
 
 ### 1.1 Typical Usage Scenarios
 

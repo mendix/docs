@@ -144,7 +144,7 @@ The image below represents an example of how to configure audit trail event hand
 
 {{< figure src="/attachments/appstore/use-content/modules/workflow-commons/configuration.png" alt="configuration" max-width=90% >}}
 
-{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time and could contain many non-human activities. In this case, we advice to only select a limited set of events depending on your need and to regularly delete old audit records. {{% /alert %}}
+{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time, and could contain many non-human activities. In this case, we recommend to only select a limited set of events depending on your need and to regularly delete old audit records. You can use the included scheduled event, see the [Clean-up](#clean-up) section for details.{{% /alert %}}
 
 ### 5.3 Viewing the Audit Trail
 
@@ -161,7 +161,17 @@ You can view audit trail on three levels:
 2. **A workflow definition**: Here you can see all audit trail logs for all instances of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > **Audit trail** tab.
 3. **A specific workflow instance**: Here you can see all audit trail logs for a specific instance of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > in the **Workflow** tab, select a workflow > **Audit trail** tab.
 
-### 5.4 Q&A
+### 5.4 Clean-up {#clean-up}
+
+Workflow Commons contains a scheduled events to automatically clean-up expired audit trail records: **SE_WorkflowAuditTrailRecord_CleanUp**. 
+
+The scheduled event will delete all the audit trail records for workflow instances that are either completed or aborted for a period longer than the number of days configured in the constant **AuditTrailRetentionInDays**. Audit trail records always get deleted per workflow instance and not individually.
+
+{{% alert color="info" %}}For the scheduled event to work, make sure that the **Workflow Completed** and **Workflow Aborted** events are selected in the [Configuration](#configuration) section. {{% /alert %}}
+
+By default, the scheduled event runs every night at 01:00 AM. 
+
+### 5.5 Q&A
 
 * Should I always select all events to be audited?
 

@@ -253,7 +253,7 @@ This helper entity extends the `GenAICommons.Response` entity with attributes sp
 
 ##### 4.1.2.10 RetrievalResult {#retrieval-result}
 
-This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation
+This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation.
 
 | Attribute | Description |
 | --- | --- |
@@ -812,7 +812,7 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History {#retrieve-and-generate-with-history}
+###### 4.2.1.3.1 Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
@@ -872,7 +872,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 ##### 4.2.2.5  Request: Add Retrieve Request Extension {#add-r-extension}
 
-Use this microflow to add a new [RetrieveRequest_Extension]() object to your request. This is required in order to use the [Retrieve] It requires `Connection`, and `RetrieveRequest` as input parameters.
+Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
 

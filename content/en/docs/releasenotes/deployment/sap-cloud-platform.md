@@ -16,14 +16,11 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 #### Portal Improvements
 
-* We have upgraded the CF APIs to version 3, resulting in a faster and more streamlined process. The changes in action include:
-   * Deployment of the package in the environment
-   * Starting and stopping the environment
-   * Changing the application URL
-* Renamed the Portal to 'Deployment'
+* Upgraded CF calls to API v3, involving deployment and management of the environment.
+* Renamed the Portal to 'Deployment'.
 
 #### Bug Fixes
-* Fixed the MxDock 'login' issue
+* Fixed the MxDock 'login' issue.
 
 ## 2022
 

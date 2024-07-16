@@ -233,27 +233,27 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 
 ##### 4.1.1.8 RetrieveRequest_Extension {#retrieve-request-extension}
 
-This helper entity extends the GenAICommons.Request entity with attributes specific to the 'Retrieve' operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
+This helper entity extends the `GenAICommons.Request` entity with attributes specific to the `Retrieve` operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
 | Attribute | Description |
 | --- | --- |
 | `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
 | `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
 
 It can be added to the request using the [Request: Add Retrieve Request Extension](#add-r-extension) operation.
 
 ##### 4.1.1.9 RetrieveResponse {#retrieve-response}
 
-This helper entity extends the GenAICommons.Response entity with attributes specific to the 'Retrieve' operation.
+This helper entity extends the `GenAICommons.Response` entity with attributes specific to the `Retrieve` operation.
 
 | Attribute | Description |
 | --- | --- |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
 
 ##### 4.1.2.10 RetrievalResult {#retrieval-result}
 
-This helper entity extends the GenAICommons.Reference entity with attributes specific to the 'Retrieve' operation
+This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation
 
 | Attribute | Description |
 | --- | --- |

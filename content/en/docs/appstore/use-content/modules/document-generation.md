@@ -425,6 +425,8 @@ In case of issues regarding styling, Mendix recommends temporarily adding the pa
 
 In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
 
+In case the resulting PDF document contains an additional blank page at the end of the document, verify that the page contains an outer layout grid.
+
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
 {{% /alert %}}

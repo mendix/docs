@@ -16,8 +16,8 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where the owner dropdown did not show all the possible users.
-* We addressed a bug where switching active company would result in an error on the registration form.
+* We fixed an issue where the owner drop-down did not show all the possible users.
+* We addressed a bug where switching the active company resulted in an error on the registration form.
 
 ### July 11, 2024
 

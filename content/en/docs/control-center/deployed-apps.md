@@ -17,6 +17,11 @@ The **Deployed Apps Overview** page shows all the apps within your company. You 
 
 The **Deployed Apps Overview** page has the following tabs: [Mendix Cloud](#mendix-cloud), [Free Apps](#free-apps), and [Apps with License Keys](#apps-license-keys).
 
+Click the **...** icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
+
+* [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
+* [Offboard Environment](/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
+
 ## 2 Mendix Cloud {#mendix-cloud}
 
 The **Mendix Cloud** tab gives you an overview of all the apps that are deployed on Mendix Cloud and allows you to manage your cloud resources using the self-service tool.
@@ -25,21 +30,14 @@ The **Mendix Cloud** tab gives you an overview of all the apps that are deployed
 This feature is in beta. To see if this capability can be activated for your company, contact your Customer Success Manager.
 {{% /alert %}}
 
-{{% todo %}}Check what the following text refers to{{% /todo %}}
-
-Click the icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
-
-* [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
-* [Offboard Environment](/support/new-app-node-request-template/#offboard) – requests that an app is offboarded
-
 The list on this tab shows the following information:
 
-* **App Name**: This is the name of the app. Click the name of an app goes to the [app environment details](#mendix-cloud-app-environment) page
+* **App Name** – This is the name of the app. Click the name of an app goes to the [app environment details](#mendix-cloud-app-environment) page
 * **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
-* **Status**
-* **Env Count**: This is the number of the environments available for this app.
-* **Credits Used**: This shows the number of credits that the app has used.
+* **Status** – This shows whether app is active or not.
+* **Env Count** – This is the number of the environments available for this app.
+* **Credits Used** – This shows the number of credits that the app has used.
 
 ### 2.1 App Environment Details {#mendix-cloud-app-environment}
 
@@ -55,13 +53,13 @@ On the right side above the list, you see the **Add Environment** button. You ca
 
 The list shows the all the environments available for the app, with the following columns:
 
-* **Environment**: This is the name of the environment.
-* **Resource Pack**: This is the resource pack selected for the environment.
-* **Running State**: This shows whether the app is running or not deployed.
-* **Production**: This shows whether the environment is a production environment.
-* **URL**: This shows the URL of the environment.
-* **Mendix Version**: 
-* **Credits Used**: This shows the number of the credit that the environment has used.
+* **Environment** – This is the name of the environment.
+* **Resource Pack** –This is the resource pack selected for the environment.
+* **Running State** – This shows whether the app is running or not deployed.
+* **Production** – This shows whether the environment is a production environment.
+* **URL** – This shows the URL of the environment.
+* **Mendix Version** – This shows the Mendix version.
+* **Credits Used** – This shows the number of the credit that the environment has used.
 * **Action**
   * **Offboard** – Clicking this button starts [offboarding an environment](#offboard-environment)
 
@@ -89,7 +87,13 @@ Offboarding an environment deletes it permanently. You are responsible for makin
 
 The **Free Apps** tab shows all the apps deployed to Mendix Free Cloud.
 
-{{% todo %}}Add info here.{{% /todo %}}
+The list shows the following information:
+
+* **App Name** – This is the name of the app.
+* **App ID** – This is the app ID of the app.
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+
+* **Status** – This shows whether app is active or not.
 
 ## 4 Apps with License Keys {#apps-license-keys}
 

@@ -20,27 +20,34 @@ The Mendix Portal is the online platform of Mendix. It includes Apps, [Control C
 
 [Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. In **Apps**, you can create, deploy, and manage apps as well as collaborate with each other. After you open **Apps**, you will get a summary of your current apps, your company apps, and your pending invites.
 
-{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" class="no-border" >}}
+{{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
 
-## 2 Create App
+## 2 Creating an App
 
-You can create a new app and start collaborating by clicking the button marked **Create App**. This will open a screen that will guide you through te process.
+To create a new app and start collaborating, you can perform the following procedure.
 
-{{< figure src="/attachments/developerportal/create-app-step-1.png" alt="Create App Step One" class="no-border" >}}
+1.  In Apps, click **Create App** in the upper-right corner. A screen opens to guide you through the process.
 
-In step 1, you provide basic information of your app
+    {{< figure src="/attachments/developerportal/create-app-step-1.png" alt="Create App Step One" >}}
 
-* **App name** - Every app must have a name. It can not be longer than 200 characters (but prefferably no more than 40). It may contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (` `). It must not start with a white space or a number
-* **App description** - Give your app a short description (optional)
-* **App icon** - Choose an icon for your app. We generated one for you. You can change the colour or the icon, if you like. You can upload a custom icon after you created the app in the [App Settings](/developerportal/collaborate/general-settings/#general) page
+2.  Enter the following information for your app:
 
-Click the button marked 'Next' to go to step 2.
+    * **App name** – Every app must have a name. It cannot be longer than 200 characters (but preferably no more than 40 characters). It can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (` `). It must not start with a white space or a number.
 
-{{< figure src="/attachments/developerportal/create-app-step-2.png" alt="Create App Step Two" class="no-border" >}}
+    * **App description (Optional)** – Give your app a short description. This is optional.
 
-In step 2, you select a starter app template on which the app will be based. A few most used starter app templates are available. If you want to use a different starter app template, you can select one from Marketplace by following the link 'discover community starter apps'.
+    * **App icon** – Mendix has generated an icon for your app. You can change the color or the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/collaborate/general-settings/#general) page after you created the app.
 
-After selecting a starter app template, click 'Create App' and the app will be created. Based on the starter app template you selected, this takes some time. In that time we will set up the app, its repository, and access to the collaboration tools.
+
+3.  Click **Next** in the lower-right corner to go to step 2.
+
+    {{< figure src="/attachments/developerportal/create-app-step-2.png" alt="Create App Step Two" >}}
+
+4. Select a starter app template on which the app will be based. Some most used starter app templates are shown.
+
+    If you want to use a different starter app template, you can select one from Marketplace by following the link **discover community starter apps** on the top.
+
+5. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
 
 ## 3 My Apps {#my-apps}
 
@@ -58,7 +65,7 @@ To stop watching an app and disable notifications for that app, click the {{% ic
 
 By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in the app tile, you can quickly perform the actions **Edit in Mendix Studio Pro** and **Leave App**.
 
-{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" class="no-border" >}}
+{{< figure src="/attachments/developerportal/quick-action-menu.png" alt="Quick actions menu for an app" width="50%" >}}
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
@@ -73,7 +80,7 @@ The navigation pane is divided into four main categories:
 * [App Insights](/developerportal/app-insights/)
 * [Deployment](/developerportal/deploy/general/)
 
-{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" class="no-border" >}}
+{{< figure src="/attachments/developerportal/navigation-pane.png" alt="The navigation pane" width="45%" >}}
 
 {{% alert color="info" %}}
 The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).

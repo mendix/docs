@@ -6,9 +6,6 @@ weight: 70
 description: "Describes the best practices to designing Conversational AI Bots."
 ---
 
-{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/" alt="Description" >}}
-
-
 ## 1 Introduction {#introduction}
 
 Conversational AIs are easy to create, but you want them to be easy to use and reflect the ethos of your business. To help you, Mendix has come up with this conversational AI design checklist which helps you think about how you want end-users to perceive and use the conversational AI.
@@ -88,7 +85,15 @@ The same information can frustrate more experienced users (violating the Coopera
 
 Don’t overwhelm the user with lots of details upfront.
 
-### 3.3 Example
+### 3.3 Examples
+
+Greet and explain the system status to the novice user.
+
+{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/bot-is-experiment.png" alt="A pop-up explaining what Bot is." >}}
+
+For recurring users.
+
+{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/bot-recurring.png" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
 
 ## 4 Determining Value{#value}
 

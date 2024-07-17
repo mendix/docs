@@ -44,21 +44,36 @@ Once a database and mapping have been defined, you can use the **importByMapping
 
 You can create new database connections from the **Databases** page. Each connection has a few basic properties. After creating a database connection, you should synchronize the table information using the button on the overview. This makes sure the connection information is correct, and that the replication module has all the table information from your database.
 
-#### 2.1.1 Type
+On this page you must select the database type before filling in the connection details. Available database parameters vary depending on database type.
 
-This is the type of database you want to import. Available database parameters vary per database type.
+#### 2.1.1 Common Parameters
 
-#### 2.1.2 Host and Port
+The following parameters are available to most database types:
+* Host
+* Port
+* Username
+* Password
 
-This is the host name and port number of the server on which your database is running.
+Depending on the database, some of the following parameters may be available:
+* Database name
+* Instance name
+* Service name (exclusive to Oracle)
+* SID (exclusive to Oracle)
+* Use Integrated Security (e.g. to connect to SQL Server using the your Windows user credentials)
 
-#### 2.1.3 Name and Instance Name
+#### 2.1.2 Custom Connection Parameters
 
-This is the name and instance name of the database to connect to. The **Instance name** is optional.
+If your database type is not listed, it may still be possible to connect using a JDBC compatible driver and the **Custom** connection option. You need to obtain the drivers and place them inside the `userlib` directory and then configure the connection parameters:
 
-#### 2.1.4 Username and Password
-
-These are the credentials necessary to sign in to the database.
+* Username and Password: The credentials given to the driver to connect to the database server.
+* Connection string: A fully formed JDBC URL string (e.g. `jdbc:postgresql://localhost:5432/database` for a PostgreSQL database).
+* Open/Close escape character: Characters used to quote table and column names (e.g. `"` in PostgreSQL or `[` and `]` in SQL Server).
+* Driver class: The full name of the driver to be loaded (e.g. `org.postgresql.Driver` for PostgreSQL).
+* Escape column names: Indicates if column names must be quoted using the escape characters when querying the database.
+* Escape table names: Indicates if table names must be quoted using the escape characters when querying the database.
+* Escape the schema and table name separately: Indicates if we should quote schema and table names together (e.g. `"public_schema.table_name"`) or separately (e.g. `"public_schema"."table_name"`).
+* Allow AS token for tables: Indicates if `AS` is necessary when aliasing table names (e.g. `SELECT * FROM table AS A` vs `SELECT * FROM table A`).
+* Close connection after query: Indicates if the connection to the database must be closed after every query.
 
 ### 2.2 Mapping Properties
 

@@ -295,7 +295,7 @@ The following are the relevant entities in the domain model for customizing HTTP
 
 This Microflow shows how a **BasicClientConfig** object can be added to a InvokeLambda request to customize the Timeout Setting:
 
-{{< figure src="/attachments/appstore/use-content/modules/aws-authentication/auth-basic-client-config.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/aws-authentication/Auth-basic-client-config.png" class="no-border" >}}
 
 ## 5 Read More
 

@@ -20,7 +20,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* We have improved the flow to [create an app](#create-app) in Apps.
+* We have improved the flow to [create an app](/developerportal/#create-app) in Apps.
 
 ### June 30, 2024
 

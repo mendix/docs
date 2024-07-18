@@ -184,12 +184,12 @@ In the import mapping sidebar, you can configure which Teamcenter properties, re
 
 The sidebar shows all properties, references, and relations for the configured Teamcenter object. Depending on the use case, each one of them is accompanied with check boxes for reading ({{% icon name="view" %}}) and writing ({{% icon name="pencil" %}}) for you to configure what to include when retrieving data from or creating data in Teamcenter.
 
-You often see that check boxes are selected by default or greyed out. In general, the following rules apply:
+You often see that check boxes are selected by default or grayed out. In general, the following rules apply:
 
 1. Properties that are already available on the Mendix entity or one of its generalizations are selected by default and cannot be unchecked.
 2. Properties, references, and relations for Marketplace entities are disabled by default, as it is not good practice to change Mendix marketplace content.
 
-As an example, if a check box for reading ({{% icon name="view" %}}) is selected and greyed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and greyed out, it means the property is required during creation or revision of the selected object.
+As an example, if a check box for reading ({{% icon name="view" %}}) is selected and grayed out, it means that property already exists as an attribute on the selected object or one of its generalizations. Similarly, if a check box for writing ({{% icon name="pencil" %}}) is selected and grayed out, it means the property is required during creation or revision of the selected object.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/attributes-associations.png" max-width=60% >}}
 

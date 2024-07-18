@@ -32,11 +32,13 @@ To create a new app and start collaborating, you can perform the following proce
 
 2.  Enter the following information for your app:
 
-    * **App name** – Every app must have a name. It cannot be longer than 200 characters (but preferably no more than 40 characters). It can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (` `). It must not start with a white space.
+    * **App name** – Every app must have a name.
+
+        The app name cannot be longer than 200 characters (but preferably, no more than 40 characters). The app name can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (). The app name must not start with a white space.
 
     * **App description (Optional)** – Give your app a short description. This is optional.
-
-    * **App icon** – Mendix has generated an icon for your app. You can change the color or the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/collaborate/general-settings/#general) page after you created the app.
+    
+    * **App icon** – Mendix has generated an icon for your app. You can change the color of the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/collaborate/general-settings/#general) page after you created the app.
 
 
 3.  Click **Next** in the lower-right corner to go to step 2.
@@ -45,7 +47,7 @@ To create a new app and start collaborating, you can perform the following proce
 
 4. Select a starter app template on which the app will be based. Some most used starter app templates are shown.
 
-    {{% alert color="info" %}}If you would like to choose a different starter app template, click the **discover community starter apps** link at the top. This takes you to the Marketplace where you can browse through all available starter app templates and select one that suits your needs.{{% /alert %}}
+    {{% alert color="info" %}}If you would like to choose a different starter app template than the ones shown here, click the **discover community starter apps** link at the top. This takes you to the Marketplace where you can browse through all available starter app templates and select one that suits your needs.{{% /alert %}}
 
 5. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
 

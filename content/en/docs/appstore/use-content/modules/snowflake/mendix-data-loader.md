@@ -91,13 +91,13 @@ The ingested data is stored in the target schema of the target database specifie
 
 ## 4 Verifying the Access Token
 
-When using OAuth authentication with the Mendix Data Loader, it's crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
+When using OAuth authentication with the Mendix Data Loader, it is crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
 
-{{% alert color="info" %}} If your organization already has an established solution for token verification, you can implement the Mendix Data Loader using OAuth as the authentication method without additional steps. However, if you don't have an existing solution, please note that the platform-supported [OIDC SSO module]([url](https://marketplace.mendix.com/link/component/120371)) has this feature on its roadmap. {{% /alert %}}
+{{% alert color="info" %}} If your organization already has an established solution for token verification, you can implement the Mendix Data Loader using OAuth as the authentication method without additional steps. However, if you do not have an existing solution, note that the platform-supported [OIDC SSO module]([url](https://marketplace.mendix.com/link/component/120371)) has this feature on its roadmap. {{% /alert %}}
 
 ### 4.1 Token Verification Process
 
-To verify an access token, follow these conceptual steps:
+To verify an access token, follow these high-level steps:
 
 1. Decode the access token using the JSON Web Key Set (JWKS) from your OAuth provider.
 2. Extract the claims from the token's payload.
@@ -107,10 +107,10 @@ To verify an access token, follow these conceptual steps:
 
 When verifying the payload, typically you should check the following properties:
 
-- `iss` (Issuer): Ensure it matches the expected OAuth provider's URL.
-- `aud` (Audience): Confirm it corresponds to your application's client ID.
-- `exp` (Expiration Time): Verify the token hasn't expired.
-- `iat` (Issued At): Check if the token was issued at a reasonable time.
+* `iss` (Issuer): Ensure it matches the expected OAuth provider's URL.
+* `aud` (Audience): Confirm it corresponds to your application's client ID.
+* `exp` (Expiration Time): Verify the token hasn't expired.
+* `iat` (Issued At): Check if the token was issued at a reasonable time.
 
 Additionally, you may need to verify custom claims specific to your OAuth provider or application requirements.
 

@@ -68,13 +68,13 @@ Follow the steps below:
 
 Now every time a user with the **Administrator** user signs in to the application, the **Account_Overview** page is shown. Users with other roles will be redirected to the default home page.
 
-## 4 Setting a Fallback Page
+## 4 Setting a Fallback Page {#fallback}
 
-The Fallback page is a page or microflow that can be used to customise the application's behaviour when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the default pop-up window stating "The page you requested was not found. You are redirected to the home page" will be replaced by the fallback microflow or the page. Fallback pages are not available for offline profiles.
+The fallback page is a page or microflow that can be used to customise the application's behavior when trying to access a [microflow](/refguide/microflow/#url) or [page](/refguide/page-properties/#url) URL that does not exist. When configured, the default pop-up stating "The page you requested was not found. You are redirected to the home page" is replaced by the fallback microflow or the page. Fallback pages are not available for offline profiles.
 
 If a microflow is used as a fallback, it can have only one String parameter named 'Path', which will contain the URL that could not be found.
 
-The Fallback page will only be used for URLs that start with the [URL Prefix](/refguide/app-settings/#url-prefix).
+The fallback page will only be used for URLs that start with a [URL Prefix](/refguide/app-settings/#url-prefix).
 
 ## 5 Setting a Nanoflow as a Home Page {#nanoflow-home-page}
 

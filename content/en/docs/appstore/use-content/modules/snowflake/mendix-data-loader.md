@@ -39,7 +39,7 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 
 2. Click the **MENDIX_DATA_LOADER** tab in the header to open the application interface.
 
-3. Grant the application the **USAGE** privilege on a warehouse. This step is required if you wish to schedule ingestions.
+3. Grant the application the **USAGE** privilege on a warehouse. This step is required if you want to schedule the data ingestions.
 
 4. Grant the application the **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is required for the application to create the staging database for data ingestion and to execute tasks.
 

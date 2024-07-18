@@ -71,11 +71,11 @@ If your database type is not listed, it may still be possible to connect using a
 * Connection string: A fully formed JDBC URL string (for example, `jdbc:postgresql://localhost:5432/database` for a PostgreSQL database).
 * Open/Close escape character: Characters used to quote table and column names (for example, `"` in PostgreSQL or `[` and `]` in SQL Server).
 * Driver class: The full name of the driver to be loaded (for example, `org.postgresql.Driver` for PostgreSQL).
-* Escape column names: Indicates if column names must be quoted using the escape characters when querying the database.
-* Escape table names: Indicates if table names must be quoted using the escape characters when querying the database.
-* Escape the schema and table name separately: Indicates if we should quote schema and table names together (for example, `"public_schema.table_name"`) or separately (for example, `"public_schema"."table_name"`).
-* Allow AS token for tables: Indicates if `AS` is necessary when aliasing table names (for example, `SELECT * FROM table AS A` vs `SELECT * FROM table A`).
-* Close connection after query: Indicates if the connection to the database must be closed after every query.
+* Escape column names: Checkbox indicating if column names must be quoted using the escape characters when querying the database.
+* Escape table names: Checkbox indicating if table names must be quoted using the escape characters when querying the database.
+* Escape the schema and table name separately: Checkbox indicating schema and table names should be quoted together (for example, `"public_schema.table_name"`) or separately (for example, `"public_schema"."table_name"`).
+* Allow AS token for tables: Checkbox indicating if `AS` is necessary when aliasing table names (for example, `SELECT * FROM table AS A` vs `SELECT * FROM table A`).
+* Close connection after query: Checkbox indicating if the connection to the database must be closed after every query.
 
 ### 2.2 Mapping Properties
 

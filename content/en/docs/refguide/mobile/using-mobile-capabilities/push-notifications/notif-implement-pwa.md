@@ -12,7 +12,7 @@ This section will help you set up your progressive web app to handle push notifi
 
 ## 2 Initialize Firebase
 
-Push notifications in progressive web apps require firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize firebase there. Follow these steps to do so:
+Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there. Follow these steps to do so:
 
 1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto/front-end/customize-styling-new/#custom-web).
 2. Edit the created `index.html` file in your favorite text editor.
@@ -51,7 +51,7 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 ```
 
-5. Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the web certificate from part 3.
+5. Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
 

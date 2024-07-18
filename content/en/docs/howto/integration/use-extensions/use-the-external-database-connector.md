@@ -126,7 +126,7 @@ To call a stored procedure, do the following:
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/9.png" class="no-border" >}}
 
 3. Create IN,OUT,INOUT Parameters for all Parameters present in Stored Procedure.
-Make sure to provide "Name in db" same as the name of parameter in that stored procedure.
+Make sure to provide "Name in DB" same as the name of parameter in that stored procedure.
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/10.png" class="no-border" >}}
 
 4. On **Run Query**, it returns entity with **Number of affected rows and all INOUT and OUT Parameters** and if the stored procedure returns a **result set** an associated Entity is created.

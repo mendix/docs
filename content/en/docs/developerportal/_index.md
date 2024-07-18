@@ -22,7 +22,7 @@ The Mendix Portal is the online platform of Mendix. It includes Apps, [Control C
 
 {{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
 
-## 2 Creating an App
+## 2 Creating an App {#create-app}
 
 To create a new app and start collaborating, you can perform the following procedure.
 

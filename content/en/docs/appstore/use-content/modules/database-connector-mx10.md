@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
 If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
@@ -43,14 +43,14 @@ This connector supports the following statements:
 * `INSERT` 
 * `UPDATE`
 * `DELETE`
+* `Stored Procedure`
 
 ### 1.3 Limitations 
 
-* `SELECT` queries can be saved only if they are successfully executed and a response structure is created
-* The connector supports columns with primitive data types only
+* `SELECT` queries and `Stored Procedure` can be saved only if they are successfully executed and a response structure is created
+* The connector supports columns and Stored Procedure parameters with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
-* Stored procedures with no parameters are only supported in [Studio Pro 10.9 and above](/releasenotes/studio-pro/10.9/).
 
 ### 1.4 Prerequisites
 
@@ -152,3 +152,4 @@ You can now use the microflow in your app. Below is an example of a configured m
 {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/example-microflow.png" class="no-border" >}}
 
 See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.
+See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector) for further explanation of how to call a Stored Procedure.

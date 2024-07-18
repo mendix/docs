@@ -12,7 +12,7 @@ You can use Snowflake's [SSO capabilities](https://docs.snowflake.com/en/user-gu
 
 The following diagram is a visual representation of how the Snowflake SSO can be used with a Mendix application with the help of the an external OAUTH provider. 
 
- {{< figure src="/attachments/appstore/modules/snowflake-sso/RBAC-SSO-explanations.jpg" >}}
+ {{< figure src="/attachments/appstore/modules/snowflake-sso/RBAC-SSO-explanations.png" >}}
 
 You can integrate between Snowflake and Mendix applications by using OAUTH providers such as Azure Entra ID, Amazon Cognito, OKTA, and others. The following sections describe an example of how you can use Azure Entra ID to enable automatic role-based access control (RBAC) in a Mendix application. In the context of integration between Snowflake and Mendix, RBAC helps ensure that the data being exposed to a certain user or role within Snowflake is the same as the data presented to the same user in a Mendix app.
 

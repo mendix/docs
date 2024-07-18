@@ -1,18 +1,18 @@
 ---
 title: "Teamcenter Extension"
 url: /appstore/modules/teamcenter-extension/
-description: "Describes the Teamcenter Extension from the Mendix Marketplace. The extension facilitates a low-code approach to integrating with Teamcenter"
+description: "Describes Teamcenter Extension from the Mendix Marketplace. Teamcenter Extension facilitates a low-code approach to integrating with Teamcenter."
 ---
 
 ## 1 Introduction {#introduction}
 
-The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. The Teamcenter Extension is layered atop the Teamcenter Connector.It provides a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
+The [Teamcenter Extension](https://marketplace.mendix.com/link/component/225544) is a Mendix Extension built using the Mendix Extensibility Framework to provide you with an effortless means to harness the capabilities of [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) for Mendix. Teamcenter Extension is layered atop the Teamcenter Connector.It provides a low-code experience by making it easier to visualize and access Teamcenter data model and automate creation of Mendix domain models and microflows.
 
 ### 1.1 Typical Use Cases {#usecases}
 
-The Teamcenter Extension offers a list of use cases for which domain models and microflows can be created. After you select a use case, it uses an import mapping approach similar to Mendix [import mapping](/refguide/import-mappings/). Here, the Teamcenter Extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, the Teamcenter Extension generates and updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag and drop into your application logic.
+Teamcenter Extension offers a list of use cases for which domain models and microflows can be created. After you select a use case, it uses an import mapping approach similar to Mendix [import mapping](/refguide/import-mappings/). Here, Teamcenter Extension allows you to select data from the business model of your Teamcenter instance. Based on the selected use case, the import mapping and, for some use cases, additional configurations, Teamcenter Extension generates and updates the domain model for your integration and generates one or more ready-to-use microflows that you can drag and drop into your application logic.
 
-The extension offers the following integration options:
+Teamcenter Extension offers the following integration options:
 
 * Get item revisions
 * Get workspace objects
@@ -23,34 +23,40 @@ The extension offers the following integration options:
 
 ### 1.2 License {#license}
 
-The Teamcenter Extension is free to download and use. You may, however, require a Teamcenter (Author or Consumer) license to connect to Teamcenter.
+Teamcenter Extension is free to download and use. You may, however, require a Teamcenter (Author or Consumer) license to connect to Teamcenter.
 
-### 1.3 Pre-requisites {#prerequisities}
+### 1.3 Prerequisites {#prerequisities}
 
-To use the Teamcenter Extension, the minimum version of Mendix Studio Pro required is 10.6.5. Due to a change in the Extensibility Framework, Teamcenter Extension V 1.0.0 can be used in Studio Pro versions that fall between 10.6.5 and 10.7. If your version is 10.12 or higher, please use Teamcenter Extension V 2.0.0.
+The compatibility between Teamcenter Extension and Studio Pro is as follows:
 
-This means Teamcenter Extension cannot be used if you are using versions 10.8 - 10.11. In such cases, a possible workaround is to use the Extension in the recommended versions of Studio Pro first, create necessary artifacts and then import them into your version. However, we always recommend using the latest MTS or LTS Studio Pro version.
+* Teamcenter Extension V 1.0.0 is compatible with Studio Pro versions between 10.6.5 and 10.7.
 
-### 1.4 Dependencies (#dependencies)
+* Teamcenter Extension V 2.0.0 is compatible with Studio Pro version 10.12 or higher.
 
-Please make sure to have the [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) modules installed from the marketplace. 
+{{% alert color="info" %}}Teamcenter Extension is not compatible with Studio Pro versions between 10.8 to 10.11. </br></br>If you use one of these Studio Pro versions, a possible workaround is to use Teamcenter Extension in one of the compatible versions of Studio Pro first, create necessary artifacts and then import them into your version. However, Mendix always recommends using the latest MTS or LTS Studio Pro version.{{% /alert %}}
 
-If you are using Teamcenter Extension v 1.0.0, you also need the [Community Commons](https://marketplace.mendix.com/link/component/170) module
+### 1.4 Dependencies {#dependencies}
 
-The table below outlines version compatiblity between the three products
+You must have these Marketplace modules installed:
 
-| Teamcenter Extension  | Teamcenter Connector | Mendix Studio Pro |
+* [Community Commons](https://marketplace.mendix.com/link/component/170): only needed for Teamcenter Extension V 1.0.0
+
+* [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627): needed for all versions of Teamcenter Extension
+
+  The table below details the compatibility between Teamcenter Extension, Teamcenter Connector, and Studio Pro.
+
+| Teamcenter Extension Version | Teamcenter Connector | Studio Pro Version |
 | ------------- | ------------- | ------------- |
 | 1.0.0  | 3.6.1, 3.6.0, 3.5.0  | 10.6.5 thru 10.7  |
 | 2.0.0  | 2406  | 10.12.1 and above  |
 
-### 1.5 Demo App (#demoapp)
+### 1.5 Demo App {#demoapp}
 
-To see Teamcenter Extension in action, download and play with the Teamcenter Extension Sample App, which is available for free on the [Mendix Marketplace](https://marketplace.mendix.com/link/component/225910).
+To see Teamcenter Extension in action, download and play with the [Teamcenter Extension Sample App](https://marketplace.mendix.com/link/component/225910).
 
-## 2 Installation (#installation)
+## 2 Installation {#installation}
 
-Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Teamcenter Extension into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import Teamcenter Extension into your app.
 
 ## 3 Usage
 
@@ -109,58 +115,67 @@ This feature is designed specifically for generating microflows and domain model
 
 ### 3.2 Landing Page {#homepage}
 
-To open the Teamcenter Extension in Studio Pro, go to **Extensions** > **Teamcenter Extension** > **Teamcenter Extension**. The landing page will open with three tabs: **Menu**, **History** and **Settings**. 
-If you are using Studio Pro versions 10.7 or lower, the Teamcenter Extension is available under **View** > **Teamcenter Extension**. Please see **Pre-requisites** section on version dependencies between Studio Pro and Teamcenter Extension
+To open Teamcenter Extension in Studio Pro, go to **Extensions** > **Teamcenter Extension** > **Teamcenter Extension**. The landing page will open with three tabs: **Menu**, **History**, and **Settings**. 
 
-The **Menu** tab displays use cases or actions you can create artifacts for using the extension.
+If you use Studio Pro versions 10.7 or lower, Teamcenter Extension is available under **View** > **Teamcenter Extension**. See the [Prerequisites](#prerequisites) section on version dependencies between Studio Pro and Teamcenter Extension.
 
-![image](https://github.com/rohanwanchoo123/docs/assets/157635704/843cb54e-3b14-4a81-b4c0-cf4227d1ba40)
+#### 3.2.1 Menu Tab
 
-The **History** tab displays the history of all actions (also referred as integrations) carried out in the Extension.
+The **Menu** tab displays use cases or actions you can create artifacts for using Teamcenter Extension.
 
-![image](https://github.com/rohanwanchoo123/docs/assets/157635704/e7206b0f-babe-4a24-9073-a8a6fc2b2719)
+{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/menu-tab.png" >}}
 
-Here you can view details of each action, such as entities and microflows created, Teamcenter URL used to connect with, preview of the import mapping and much more. 
+#### 3.2.2 History Tab
 
-You can also edit, duplicate or delete an action. The "Edit" operation allows you to modify an existing action and updating existing domain model and microflows. When you click on Edit, it will take you to the import mapping page, where you can add or edit entities, attributes, and associations, subsequently updating the domain model and microflows
+The **History** tab displays the history of all actions (also referred as integrations) carried out in Teamcenter Extension.
 
-The "Duplicate" operation allows you to create a new action based on an existing one. When you click Duplicate, it will clone the selected action and take you to the import mapping page, where you can modify your mapping and subsequently create new domain model and microflows. This operation does not modify any of existing actions.
+{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/history-tab.png" >}}
 
-The "Delete" operation will delete the selected action from the list. It will, however, not delete the corresponding entities and microflows since they may impact pages and/or other integrations.
+On the **History** tab, you can view details of each action, such as entities and microflows created, Teamcenter URL used to connect with, preview of the import mapping, and much more. 
 
-On selecting each item in the action list, the extension performs a validation check to see if the Teamcenter objects, entities and microflows still exist and are valid. The results are reported in the "Validation" section.
+You can also edit, duplicate or delete an action on the **History** tab:
 
-It is not advisable to make certain adjustments to artifacts generated by the Extension, outside the Extension. Doing so may result in breaking the integration. Instead, you should make adjustments inside the extension, wherever possible using "Edit", "Delete" or "Duplicate" operations. Examples of adjustments that are not advisable outside the Extension are as follows:
-* Modifying **CreateInput** and **CompoundCreateInput** entities generated from The **Create Item** action
-* All entities generated from the **Revise Item Revision** action
-* Deleting attributes or associations generated by the Extension
-* Deleting or editing microflows generated by the Extension
+* **Delete** – This operation will delete the selected action from the list. It will, however, not delete the corresponding entities and microflows since they may impact pages or other integrations.
+* **Duplicate** – This operation allows you to create a new action based on an existing one. When you click Duplicate, it will clone the selected action and take you to the import mapping page, where you can modify your mapping and subsequently create new domain model and microflows. This operation does not modify any of existing actions.
+* **Edit** – This operation allows you to modify an existing action and updating existing domain model and microflows. When you click on Edit, it will take you to the import mapping page, where you can add or edit entities, attributes, and associations, subsequently updating the domain model and microflows.
 
-You may, however, make the following adjustments outside the Extension
+It is not recommended to make specific adjustments to artifacts generated by Teamcenter Extension outside of Teamcenter Extension. Doing so may result in breaking the integration. Instead, you should make adjustments inside Teamcenter Extension, wherever possible using the **Delete**, **Duplicate** or **Edit** operations. Examples of adjustments that are not advisable outside Teamcenter Extension are as follows:
+* Modifying the **CreateInput** and **CompoundCreateInput** entities generated from The **Create Item** action
+* Modifying any entity generated from the **Revise Item Revision** action
+* Deleting attributes or associations generated by Teamcenter Extension
+* Deleting or editing microflows generated by Teamcenter Extension
+
+However, you can make the following adjustments outside Teamcenter Extension:
 * Adding attributes or associations
 * Moving microflows
 * Renaming microflows
 
-The **Settings** tab allows you to provide details of your Teamcenter instance to connect to, while using the extension. The **Settings** tab displays the Teamcenter configuration page. Here you can provide your Teamcenter Instance details to connect to while building your app. Click **Edit** to open a panel to enter details. The certificate path should be relative to the app directly.
+If you select an item in the **Action** list, Teamcenter Extension performs a validation check to see if the Teamcenter objects, entities, and microflows still exist and are valid. The results are reported in the **Validation** section.
 
-![image](https://github.com/rohanwanchoo123/docs/assets/157635704/2ea468ea-e1ca-441f-bb92-e736f99eadae)
+#### 3.2.3 Settings Tab
 
-The extension supports both HTTP and HTTPS connections. Additionally, it supports certificates that have *.crt* and *.pfx* file extensions.
+The **Settings** tab displays the Teamcenter configuration page. 
 
-### 3.3 Import mapping {#importmapping}
+{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/settings-tab.png" max-width=60% >}}
+
+On the **Settings** tab, you can provide your Teamcenter Instance details to connect to, while using Teamcenter Extension and building your app. Click **Edit** to open a panel to enter details. The certificate path should be relative to the app directly.
+
+Teamcenter Extension supports both HTTP and HTTPS connections. Additionally, it supports certificates that have *.crt* and *.pfx* file extensions.
+
+### 3.3 Import Mapping {#importmapping}
 
 Clicking any one of the actions opens an empty [import mapping](/refguide/import-mappings/) page. Here you can define what data you want to retrieve from Teamcenter and how to handle this data in Mendix. Depending on the action, the import mapping page starts with one or multiple entities or objects to configure, one per business object that needs to be configured. 
 
-During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, the Teamcenter Extension displays both the display names of the objects and their properties, references, relations, and the corresponding technical names, as they will end up in the Mendix domain model.
+During configuration, the import mapping page will build up a preview of the Mendix domain model involved in the integration. In addition, the import mapping page shows the corresponding business objects on the Teamcenter side. For this, Teamcenter Extension displays both the display names of the objects and their properties, references, relations, and the corresponding technical names, as they will end up in the Mendix domain model.
 
-In the Teamcenter Extension, the import mapping consists of the following steps:
+In Teamcenter Extension, the import mapping consists of the following steps:
 
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called object mapping.
 2. Selection of properties, references, and relations: Configure  which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/domain-model.png" max-width=80% >}}
 
-#### 3.3.1 Object mapping {#objectmapping}
+#### 3.3.1 Object Mapping {#objectmapping}
 
 Clicking any one of the empty boxes in the import mapping page opens the object mapping dialog. On the left side of the dialog, a tree with all relevant business objects available from the configured Teamcenter instance is displayed. If you have created any custom business objects in Teamcenter BMIDE, those objects will be shown as well. The right side shows a tree of all relevant entities in your Mendix app.
 
@@ -168,17 +183,17 @@ The relevant objects and entities are dependent on the actions you are configuri
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/select-objects.png" >}}
 
-When retrieving a tree of objects, relevance can also be based on the type of the relation or reference. When working with typed relations o references, the type of Teamcenter business object is dictated by the relation or reference. By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, the Teamcenter Extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
+When retrieving a tree of objects, relevance can also be based on the type of the relation or reference. When working with typed relations o references, the type of Teamcenter business object is dictated by the relation or reference. By limiting the list of Teamcenter objects and Mendix entities to those that are relevant, Teamcenter Extension guides you to select Teamcenter business objects that make sense in the context of the action you want to perform.
 
 To configure which type of Teamcenter business object you are interested in and what type of Mendix entities this should be mapped to, select a business object in the Teamcenter tree on the left side and an entity on the Mendix tree on the right side and click **OK**. 
 
-It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the **Create new specialization of selected entity** check box and provide an entity name. Once finishing the configuration for the actions, the Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create the specialization of the generated entities in subsequent actions.
+It is also possible to create new entities for your integrations. This new entity needs to be a specialization of the root entity in the Mendix tree or one of its specializations. When you want to use a new entity, click your generalization of choice, click the **Create new specialization of selected entity** check box and provide an entity name. Once finishing the configuration for the actions, Teamcenter Extension will create a new entity with the given name and the selected entity as its generalization. You can also reuse or create the specialization of the generated entities in subsequent actions.
 
 {{< figure src="/attachments/appstore/modules/teamcenter-extension/new-entity.png" >}}
 
 Once you click **OK**, you will return to the import mapping tab with a sidebar open for you to configure which Teamcenter properties, references, and relations to include when retrieving data for this business object.
 
-#### 3.3.2 Teamcenter properties, references, and relations {#tcprop}
+#### 3.3.2 Teamcenter Properties, References, and Relations {#tcprop}
 
 In the import mapping sidebar, you can configure which Teamcenter properties, references, and relations to include when retrieving data from Teamcenter. The import mapping sidebar is launched automatically after the completion of object mapping. When you are on the import mapping page and the sidebar is closed, you can double-click a previously configured entity to open the sidebar for that entity.
 

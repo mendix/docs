@@ -65,9 +65,9 @@ Don’t just jump right in. Say "Hello".
 
 ### 2.3 Example
 
-Welcome the user. Greet the user briefly, for example, with a simple "Welcome" or "Hi".
+* Welcome the user. Greet the user briefly, for example, with a simple "Welcome" or "Hi".
 
-{{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" alt="Hello Ana, How can I help you today?" >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
 ## 3 Tailoring Greeting{#greeting}
 
@@ -87,13 +87,13 @@ Don’t overwhelm the user with lots of details upfront.
 
 ### 3.3 Examples
 
-Greet and explain the system status to the novice user.
+* Greet and explain the system status to the novice user.
 
-{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" alt="A pop-up explaining what Bot is." >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" max-width="320px" alt="A pop-up explaining what Bot is." >}}
 
-For recurring users.
+* For recurring users.
 
-{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="320px" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
 
 ## 4 Determining Value{#value}
 
@@ -115,7 +115,17 @@ You should help users to determine the value of the AI feature. Designers can he
 * System version: Help users understand the capabilities and limitations of the system, setting appropriate expectations for their experience.
 * For recurring users, actively communicate with the user about new features and updates of the system.
 
-### 4.3 Example
+### 4.3 Examples
+
+* Communicate what the user can do with the system 
+* Proactively ensure user data protection.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
+
+* Effectively communicate the new features or improved service to the users and let users properly evaluate the value of the AI system. 
+* Communicate the version of the system, allowing the user to determine, the system limitation.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/upgraded-recommendations.png" max-width="320px" alt="Pop-up informing that new features are available" >}}
 
 ## 5 Assuring Privacy and Security{#privacy}
 
@@ -128,7 +138,15 @@ Users seek trust and assurance that their personal information is handled secure
 * **Transparent Data Handling**: Design interfaces should clearly communicate how data is collected, processed, and used.
 * **Empower User Control**: Allow users to customize privacy settings and manage their data.
 
-### 5.3 Example
+### 5.3 Examples
+
+* Proactively protect users' personal & corporate data.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Indicate that data is protected" >}}
+
+* Allow the user to delete the conversation history, and turn off collecting conversation.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/delete-conversation.png" max-width="320px" alt="Show a switch to turn activity history on and off" >}}
 
 ## 6 Giving Local Control{#local-control}
 
@@ -142,7 +160,19 @@ Additionally, people are more motivated and engaged when they believe they can i
 * **Default option**: Set defaults based on user research and common use cases. Offer a clear "reset to defaults" option for users who want to return to the original settings.
 * **Discoverability:** Place local control options within clear context, near the feature they impact. Use intuitive icons and labels. Offer tooltips or contextual help for advanced settings.
 
-### 6.3 Example
+### 6.3 Examples
+
+* Provide the user the ability to override AI action via editing the prompt.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-button.png" max-width="320px" alt="Show a button to allow user to edit a prompt" >}}
+
+* Provide an option to pause the AI Interaction.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/pause.png" max-width="320px" alt="Show a switch to pause current interaction" >}}
+
+* Options to select a response within the interaction without the user to rewrite the new prompt.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
 
 ## 7 Creating Input Mechanism{#input}
 
@@ -155,8 +185,13 @@ It is a method for the user to provide information to the system. This can be th
 * Clear affordance is key to where the user can enter their input.
 * Provide feedback once the system receives the user’s input to verify the system understood the input correctly.
 * Don’t overload various inputs at the same time, it might confuse the user with which action to take.
+* Allow user to input free text, or initiate conversation
 
 ### 7.3 Example
+
+* Provide inputs of both command buttons and free text inputs for the user to navigate the conversation.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
 ## 8 Prompting{#prompting}
 
@@ -173,7 +208,19 @@ Move beyond reactive measures. Design systems that prioritize user privacy from 
 * **Managing User Input**: Setting Clear Expectations  
 Input Character Handling: Set realistic expectations for user input. Communicate limitations on character count or format to avoid user frustration while ensuring efficient data processing by the AI system.
 
-### 8.3 Example
+### 8.3 Examples
+
+* Examples of prompts are presented in the input field, helping the user to sense how to draft prompts in the system. Further help is provided with ⓘ icon.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
+
+* Showcasing prompt for advanced users.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/further-advice.png" max-width="320px" alt="Pop up shown while response is generated giving additional suggestions for how to construct a prompt" >}}
+
+* Provide ready-to-use prompts, so the user can compose on top of the provided context.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/context-driven-prompts.png" max-width="320px" alt="Suggested responses to latest output explaining a typo in the question" >}}
 
 ## 9 Displaying History{#history}
 
@@ -192,7 +239,15 @@ This feature, often called *Quote and Reply* allows users to quote specific part
 * **Clarity and Readability**: Ensure quoted text is displayed clearly and legibly, distinguishing it from the user’s input. Use visual cues such as indentation, color, or formatting to differentiate quoted text from new messages.
 * **Interactivity**: Design the quote-reply feature to be interactive and responsive. Allow users to click or tap on quoted text to expand or collapse it, providing a seamless way to view the context without cluttering the interface.
 
-### 9.3 Example
+### 9.3 Examples
+
+* Use a salient discoverability of the functionality.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate a response is required" >}}
+
+* Make the selected quote visible in the input area and ensure the user’s control to disable it simultaneously.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Summarize the Bot's question near the prompt" >}}
 
 ## 10 Hinting and Discoverability{#hinting}
 
@@ -212,7 +267,19 @@ Provide clear motivation for any action you want the user to take. Tell the user
 * **Action-oriented:** Always provide users with the next action to take.
 * **Serendipity:** Algorithmic recommendations can create filter bubbles, The Serendipity feature helps users discover new things outside their echo chambers.
 
-### 10.3 Example
+### 10.3 Examples
+
+* When text is highlighted, the modification icon appears, signaling an opportunity for further interaction.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-icon.png" max-width="320px" alt="Modify icon appears near highlighted response from Bot" >}}
+
+* After hitting the modify icon the user can discover modification options.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-options.png" max-width="320px" alt="Some standard modify options (Regenerate, Make Shorter, Remove) are given next to Bot's response" >}}
+
+* The user can discover options to "Show drafts" or "Hide drafts" of the generated text.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/drafts.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## 11 Reporting Errors{#errors}
 
@@ -229,6 +296,10 @@ Transparent error messages tell users exactly what went wrong, preventing confus
 
 ### 11.3 Example
 
+* Offer a context as to why the requested action can’t be made. Also, provide alternative solutions.
+
+
+
 ## 12 Confirming Intent{#confirming}
 
 ### 12.1 Why It Matters
@@ -244,3 +315,10 @@ Clarifying user intent ensures the system understands what the user wants, leadi
 
 ### 12.3 Example
 
+* “Did I get that right?” helps the user and the system shape conversation direction.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
+
+* If the system can’t handle the quarry, provide fall-back options for further navigation.
+
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="480px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}

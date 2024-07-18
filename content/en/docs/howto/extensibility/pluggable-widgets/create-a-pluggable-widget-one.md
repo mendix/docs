@@ -75,7 +75,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 * License: *{Your license}*
 * Initial Version:*{Your initial version number}*
 * Author: *{Your author name}*
-* Mendix App path: *{/path/to/your/Mendix/app}*
+* Mendix App path: **../../**
 * Programming language: **TypeScript**
 * Which type of components do you want to use? **Function Components** 
 * Widget type: **For web and hybrid mobile apps**

@@ -32,7 +32,7 @@ To create a new app and start collaborating, you can perform the following proce
 
 2.  Enter the following information for your app:
 
-    * **App name** – Every app must have a name. It cannot be longer than 200 characters (but preferably no more than 40 characters). It can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (` `). It must not start with a white space or a number.
+    * **App name** – Every app must have a name. It cannot be longer than 200 characters (but preferably no more than 40 characters). It can contain letters, numbers, underscores (`_`), dashes (`-`), or white spaces (` `). It must not start with a white space.
 
     * **App description (Optional)** – Give your app a short description. This is optional.
 

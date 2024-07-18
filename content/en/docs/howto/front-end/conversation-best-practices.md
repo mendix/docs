@@ -317,6 +317,6 @@ Clarifying user intent ensures the system understands what the user wants, leadi
 
 {{< figure src="/attachments/howto/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
 
-* If the system can’t handle the quarry, provide fall-back options for further navigation.
+* If the system can’t handle the query, provide fall-back options for further navigation.
 
 {{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="480px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}

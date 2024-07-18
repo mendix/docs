@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-After [configuring the Push Notifications module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) and [building your native app](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) it is now time to send your first test push notification.
+After [configuring the Push Notifications module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) and [implementing push notifications in your native app](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) or your [progressive web app](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/) it is now time to send your first test push notification.
 
 ## 2 Sending the Test Notification
 

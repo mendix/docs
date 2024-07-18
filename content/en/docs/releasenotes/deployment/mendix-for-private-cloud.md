@@ -17,8 +17,6 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 * We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
 
-### July 18th, 2024
-
 #### Portal Enhancements
 
 * We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.

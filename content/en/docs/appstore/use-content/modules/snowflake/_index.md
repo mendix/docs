@@ -33,7 +33,7 @@ For a comparison of the functions of the connectors, refer to the sections below
 
 The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option that you can use to integrate your Mendix app with Snowflake. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol and the usage of Python stored procedures in addition to Java. 
 
-The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user or it also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
+The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
 
 The External Database connector has GA support for Snowflake from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). Some Cortex functionalities are currently limited when using the External Database connector, but they are on the roadmap.
 

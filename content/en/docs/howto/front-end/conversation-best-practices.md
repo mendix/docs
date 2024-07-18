@@ -93,7 +93,7 @@ Don’t overwhelm the user with lots of details upfront.
 
 * For recurring users.
 
-{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="320px" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
 
 ## 4 Determining Value{#value}
 

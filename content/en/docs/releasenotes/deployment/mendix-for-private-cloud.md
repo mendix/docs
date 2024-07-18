@@ -11,6 +11,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 18th, 2024
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+* We have resolved an issue that prevented users from setting the CPU core request below 1 while creating an environment (Ticket [222687](https://mendixsupport.zendesk.com/agent/tickets/222687)) and (Ticket [222284](https://mendixsupport.zendesk.com/agent/tickets/222284)).
+* We have resolved an issue where users were unable to deselect the namespace in the **Convert Namespace** flow.
+* We have resolved an issue where users were unable to close the **Convert Namespace** screen after navigating back to the namespace selection page.
+* We have resolved an issue where a newly created standalone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
+
 ### July 10th, 2024
 
 #### Mendix Operator v2.18.0 {#2.18.0}

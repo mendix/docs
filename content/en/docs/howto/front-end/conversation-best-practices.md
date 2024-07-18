@@ -298,8 +298,6 @@ Transparent error messages tell users exactly what went wrong, preventing confus
 
 * Offer a context as to why the requested action can’t be made. Also, provide alternative solutions.
 
-
-
 ## 12 Confirming Intent{#confirming}
 
 ### 12.1 Why It Matters

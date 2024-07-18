@@ -34,24 +34,24 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 
 ## 4 Implementing the Nanoflow Commons Module
 
-Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
+Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
-1. Search for *Nanoflow commons*.
-1. Open the [Nanoflow commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module.
-1. Click **Download**.
-1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](/appstore/modules/nanoflow-commons/).
+2. Search for *Nanoflow commons*.
+3. Open the [Nanoflow commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module.
+4. Click **Download**.
+5. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](/appstore/modules/nanoflow-commons/).
 
 ## 5 Implementing the Native Mobile Resources Module
 
-Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
+Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app. This module is required even for progressive web apps. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
-1. Search for *Native mobile resources*.
-1. Open the [Native mobile resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module.
-1. Click **Download**.
-1. Add the `NativeMobileResources.User` module role to any user role that needs to interact with notifications.
-1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](/appstore/modules/native-mobile-resources/).
+2. Search for *Native mobile resources*.
+3. Open the [Native mobile resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module.
+4. Click **Download**.
+5. Add the `NativeMobileResources.User` module role to any user role that needs to interact with notifications.
+6. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](/appstore/modules/native-mobile-resources/).
 
 ## 6 Implementing the Atlas Core Module
 

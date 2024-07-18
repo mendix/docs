@@ -60,11 +60,11 @@ The Pluggable Widget Generator is the quickest way to start developing a widget.
 
 Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *myPluggableWidgets*, and start the generator using:
 
-   ```shell {linenos=false}
-   mkdir myPluggableWidgets
-   cd myPluggableWidgets
-   npx @mendix/generator-widget TextBox
-   ```
+```shell {linenos=false}
+mkdir myPluggableWidgets
+cd myPluggableWidgets
+npx @mendix/generator-widget TextBox
+```
 
 The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
 

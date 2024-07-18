@@ -67,7 +67,7 @@ Don’t just jump right in. Say "Hello".
 
 Welcome the user. Greet the user briefly, for example, with a simple "Welcome" or "Hi".
 
-{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/say-hi.png" alt="Hello Ana, How can I help you today?" >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" alt="Hello Ana, How can I help you today?" >}}
 
 ## 3 Tailoring Greeting{#greeting}
 
@@ -89,11 +89,11 @@ Don’t overwhelm the user with lots of details upfront.
 
 Greet and explain the system status to the novice user.
 
-{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/bot-is-experiment.png" alt="A pop-up explaining what Bot is." >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" alt="A pop-up explaining what Bot is." >}}
 
 For recurring users.
 
-{{< figure src="/attachments/appstore/modules/genai/conversation-best-practices/bot-recurring.png" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
+{{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" alt="Recurring users get straight to bot with some suggestions and an offer to start asking questions" >}}
 
 ## 4 Determining Value{#value}
 

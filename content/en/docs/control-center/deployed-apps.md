@@ -13,11 +13,11 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## 1 Introduction
 
-The **Deployed Apps Overview** page shows all the apps within your company. You can use it to view an app's name, ID, Technical Contact, status, number of environments, and how many [cloud credits](/control-center/entitlements/#cloud-credits) are used if applicable. It also offers you a self-service tool to provision and offboard environments for apps on Mendix Cloud.
+The **Deployed Apps Overview** page provides a comprehensive view of all the apps within your company. On this page, you can find detailed information about each app, including its name, ID, Technical Contact, status, number of environments, and the number of [cloud credits](/control-center/entitlements/#cloud-credits) used, if applicable. Additionally, this page allows you to provision and offboard environments for apps on Mendix Cloud. Moreover, you can email or download the license keys for your apps directly from this page.
 
 The **Deployed Apps Overview** page has the following tabs: [Mendix Cloud](#mendix-cloud), [Free Apps](#free-apps), and [Apps with License Keys](#apps-license-keys).
 
-Click the **...** icon in the top right corner to access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
+If you click the **...** icon in the upper-right corner, you can access the following pages that allow you to [make requests to Mendix Support](/support/submit-support-request/#submitting):
 
 * [Resize Environment](/support/new-app-node-request-template/#resize) – requests a container size change
 * [Offboard Environment](/support/new-app-node-request-template/#offboard) – requests that an app is offboarded

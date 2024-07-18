@@ -263,7 +263,7 @@ These entities are used as input for the `GetSigV4Headers` microflow action, whi
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 
-### 4.4 Customizing HTTP client configurations {customize-client-config}
+### 4.4 Customizing HTTP client configurations {#customize-client-config}
 
 The platform-supported AWS Connectors have been developed using the AWS Software Development Kit (SDK) instead of the native Mendix Call REST service activity. This approach prioritizes efficiency in handling AWS integrations. It eliminates the complexity of customizing HTTP headers and signing requests, as the SDK automates these tasks. Additionally, it offers built-in features like retry logic and throttling management.
 
@@ -296,6 +296,17 @@ The following are the relevant entities in the domain model for customizing HTTP
 This Microflow shows how a **BasicClientConfig** object can be added to a InvokeLambda request to customize the Timeout Setting:
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/Auth-basic-client-config.png" class="no-border" >}}
+
+### 4.5 Validating Credentials {#validate-credentials}
+
+To confirm that an application has been configured correctly with a valid set of credentials, the `Validate Credentials` microflow action can be used. It performs a [GetCallerIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetCallerIdentity.html) call to check if the provided credentials are valid AWS credentials.
+
+It takes the following parameters as input:
+
+* A `Credentials` object
+* A `ENUM_Region` enumeration value
+
+The output is a boolean indicating whether the credentials are valid. 
 
 ## 5 Read More
 

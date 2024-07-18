@@ -47,3 +47,4 @@ If you did not receive the message, check the application's logs to see if the m
 | Not receiving push notifications on a PWA | Push notifications on PWAs are only shown when the app is in the background or closed | Close the app and try again |
 | Registration fails on a PWA on iOS | To receive push notifications on iOS the app must be served over https and added to the home page | Deploy your app and add it to the home page via the Share button in Safari and try again |
 | Clicking on a push notification does not open the PWA | Push notifications for PWAs require a Web link to be set. | Make sure the Web link is set to a valid path of your application (for example "/") |
+| Application no longer starts after changing index.html | Firebase is not found | Ensure that the script tags that load Firebase are placed above the script tag that loads mxui.js |

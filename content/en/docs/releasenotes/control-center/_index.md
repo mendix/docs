@@ -12,7 +12,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
-### June 22, 2024
+### July 22, 2024
 
 * We added the **Licensed Apps** tab to the **Deployed Apps** page. This new tab provides you with an overview of  all the apps for which you have been provided with a license key. This includes your apps deployed on Mendix for Private Cloud Standalone or any form of server-based deployments.
 

@@ -41,14 +41,14 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 #### 1.2.3 It Helps the User Formulate a Better AI Response
 
 * [It provides the user with a prompt guide](#prompting)
-* [The user can effortlessly Re-Prompt](#history)
+* [The user can effortlessly re-prompt](#history)
 * [It provides sufficient hints and discoverability](#hinting)
 
 #### 1.2.4 It Embraces graceful Error-handling
 
 * [It has transparent error messages that help the user identify the solution and take appropriate action correctly](#errors)
 * [It proactively clarifies with the user to understand the user intent better](#confirming)
-* [It has a Maximum No of error counters to avoid users in a frustration loop](#confirming)
+* [It has a maximum number of error counters to avoid users in a frustration loop](#confirming)
 * [If the system can’t provide an appropriate solution to the user, it gives fallback options to support the user as alternatives](#confirming)
 
 ## 2 Saying Hi{#hi}
@@ -185,7 +185,7 @@ It is a method for the user to provide information to the system. This can be th
 * Clear affordance is key to where the user can enter their input.
 * Provide feedback once the system receives the user’s input to verify the system understood the input correctly.
 * Don’t overload various inputs at the same time, it might confuse the user with which action to take.
-* Allow user to input free text, or initiate conversation
+* Allow user to input free text, or initiate a conversation
 
 ### 7.3 Example
 
@@ -206,7 +206,7 @@ Empower users with adjustable "temperature" settings for AI responses. This coul
 * **Shielding User Data**: Proactive Protection  
 Move beyond reactive measures. Design systems that prioritize user privacy from the outset. Implement robust data encryption and access controls to safeguard user information.
 * **Managing User Input**: Setting Clear Expectations  
-Input Character Handling: Set realistic expectations for user input. Communicate limitations on character count or format to avoid user frustration while ensuring efficient data processing by the AI system.
+* **Input Character Handling**: Set realistic expectations for user input. Communicate limitations on character count or format to avoid user frustration while ensuring efficient data processing by the AI system.
 
 ### 8.3 Examples
 
@@ -265,7 +265,7 @@ Provide clear motivation for any action you want the user to take. Tell the user
 * **Predictive Suggestions**: Implementing predictive suggestions or autocomplete features powered by AI algorithms can help users anticipate system responses and discover new functionalities.
 * **Progressive Disclosure**: Employing progressive disclosure techniques to reveal AI capabilities as users interact with the system gradually can prevent overwhelming users with too much information upfront while encouraging exploration over time.
 * **Action-oriented:** Always provide users with the next action to take.
-* **Serendipity:** Algorithmic recommendations can create filter bubbles, The Serendipity feature helps users discover new things outside their echo chambers.
+* **Serendipity:** Algorithmic recommendations can create filter bubbles. The Serendipity feature helps users discover new things outside their echo chambers.
 
 ### 10.3 Examples
 

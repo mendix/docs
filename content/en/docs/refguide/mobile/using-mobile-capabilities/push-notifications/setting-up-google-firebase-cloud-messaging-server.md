@@ -133,7 +133,7 @@ Copy the text that is highlighted in the screenshot above and store it somewhere
 
 ## 9 Set up Web Push Certificate
 
-For progressive web apps, an additional certificate is needed. You can skip this step for native mobile apps. To obtain the certificate, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **Cloud Messaging** tab and click on **Generate Key Pair**:
+For progressive web apps, an additional certificate is needed. You can skip this step for native mobile apps. To generate the certificate and obtain its public key, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **Cloud Messaging** tab and click on **Generate Key Pair**:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/push_notifications_web_certificate.png"   width="350"  class="no-border" >}}
 

@@ -33,7 +33,7 @@ This feature is in beta. To see if this capability can be activated for your com
 The list on this tab shows the following information:
 
 * **App Name** – This is the name of the app. Click the name of an app goes to the [app environment details](#mendix-cloud-app-environment) page
-* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Status** – This shows whether app is active or not.
 * **Env Count** – This is the number of the environments available for this app.
@@ -91,36 +91,36 @@ The list shows the following information:
 
 * **App Name** – This is the name of the app.
 * **App ID** – This is the app ID of the app.
-* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Status** – This shows whether app is active or not.
 
 ## 4 Apps with License Keys {#apps-license-keys}
 
-The **Apps with License Keys** tab gives you an overview of all the apps for which you have been provided with a license key. This includes your apps deployed on Mendix for Private Cloud Standalone or any form of server-based deployments.
+The **Apps with License Keys** tab gives you an overview of all the apps for which you have been provided with a license key. This includes your apps deployed on Mendix for Private Cloud Standalone or any form of server-based environments.
 
 License keys are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key.
 
-{{% alert color="info" %}}When contracts are created or renewed, new license keys are automatically generated, which must be applied to the environments of the app the contract was changed for.{{% /alert %}}
+{{% alert color="info" %}}When contracts are created or renewed, new license keys are automatically generated, which must be applied to the environments of the app for which the contract was changed.{{% /alert %}}
 
 To download all the license keys, click {{% icon name="download-bottom" %}} **Download all keys** on the right side above the list.
 
 The list shows the following information:
 
-* **App Name**: This is the name of the app. Note that the app names shown are the names that were initially given to these apps when license keys needed to be generated. Your current app names may differ. You can click on the app name to go to the [app environment details](#apps-license-keys-app-environment).
-* **Technical Contact**: This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the pencil button next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
-* **Created Date**: This is the date on which the app was originally created.
-* **Actions**: You can carry out actions with the following icons:
-  * **Email** icon ({{% icon name="email" %}})–  Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
-  * **Download** button ({{% icon name="download-bottom" %}})– Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
+* **App Name** – This is the name of the app. Note that the app names shown are the names that were initially given to these apps when license keys needed to be generated. Your current app names may differ. You can click on the app name to go to the [app environment details](#apps-license-keys-app-environment).
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Created Date** – This is the date on which the app was originally created.
+* **Actions** – You can carry out actions with the following icons:
+  * {{% icon name="email" %}} – Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
+  * {{% icon name="download-bottom" %}} – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
 
 ### 4.1 App Environment Details {#apps-license-keys-app-environment}
 
 After clicking an app name in the list, a page opens and shows the environments that belong to that app, together with the license start and end dates. This page allows you to verify the validity of your license keys and download or email them to the Technical Contact of the app.
 
-At the left top of the page, you see the name of the app, the email address of the Technical Contact, and the date that will be used as the license end date when new keys are generated.
+At the upper-left corner the page, you see the name of the app, the email address of the Technical Contact, and the date that will be used as the license end date when new keys are generated.
 
-To quickly change the Technical Contact for your app, click **Edit** by the name of the contact, and then select the new contact from the list. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+To quickly change the Technical Contact for your app, click the edit icon ({{% icon name="pencil" %}}) by the name of the contact, and then select the new contact from the list. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 On the right side above the list, you can see two buttons:
 
@@ -130,9 +130,9 @@ On the right side above the list, you can see two buttons:
 
 The list below show the details of the environments with the following columns:
 
-* **Environment**: This shows the names of the environments that belong to the app that you selected.
-* **ServerID**: This shows the server ids that have been used to generate the license keys for each environment.
+* **Environment** – This shows the names of the environments that belong to the app that you selected.
+* **ServerID** – This shows the server IDs that were used to generate the license keys for each environment.
 
-* **LicenseID**: This is the id of the license that has been emailed to the Technical Contact when the license keys were generated. It is a unique identifier for the license that you might have stored for reference and you can match your license administration with the licenses for your environments.
-* **Start Date** and **End Date**: These two columns show the dates between which your license keys are valid. Apps need active contracts with a contract end date in the future to keep working.
+* **LicenseID** – This shows the ID of the license that was emailed to the Technical Contact when the license keys were generated. This unique identifier allows you to reference and manage your licenses, ensuring they align with the licenses in your various environments.
+* **Start Date** and **End Date** – These two columns show the dates between which your license keys are valid. Apps need active contracts with a future end date to keep working.
 

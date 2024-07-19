@@ -136,6 +136,7 @@ Make sure to provide "Name in DB" same as the name of parameter in that stored p
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/12.png" class="no-border" >}}
 
 {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
+
 {{% alert color="info" %}}Stored Procedures with primitive datatype parameters are only supported.{{% /alert %}}
 
 For postgres we support below listed parameters:
@@ -156,6 +157,8 @@ Timestamp with timezone
 Date only
 Time without timezone
 Time with timezone
+
+{{% alert color="info" %}}For MSSQL INOUT & OUT Parameter of type decimal, test values(In design time) are rounded off.{{% /alert %}}
 
 
 ## 6 Use the Query External Database Activity

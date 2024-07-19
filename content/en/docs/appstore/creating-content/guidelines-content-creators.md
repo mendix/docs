@@ -105,7 +105,7 @@ If your product is not licensed as an open-source component and you would like t
 
 | Software Name and Version | Software URL | What does the Software do? Why is it needed? | License |
 | ------------------------- | ------------ | -------------------------------------------- | ------- |
-| Service A                 |              |                                              |         |
+| Pro Secure Net 5.0 | https://example.com/prosecurenet/9f86d081884c7d659a2feaa0c55ad915 | A network security software that protects systems from unauthorized access and cyber threats. The software is needed to ensure the safety and integrity of network data. | MIT |
 
 - Export control
 - Data Privacy, including data processing agreement, as necessary 

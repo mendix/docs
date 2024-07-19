@@ -25,7 +25,7 @@ Teamcenter Extension offers the following integration options:
 
 Teamcenter Extension is free to download and use. You may, however, require a Teamcenter (Author or Consumer) license to connect to Teamcenter.
 
-### 1.3 Prerequisites {#prerequisities}
+### 1.3 Prerequisites {#prerequisites}
 
 The compatibility between Teamcenter Extension and Studio Pro is as follows:
 

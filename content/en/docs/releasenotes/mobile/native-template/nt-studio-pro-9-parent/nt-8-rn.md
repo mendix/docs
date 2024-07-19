@@ -11,7 +11,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We updated the `@mendix/native` dependency to fix an encryption issue.
+* <a id="fix-cookie-encryption"></a> We fixed a known cookie encryption issue by updating the `@mendix/native` dependency. Users who still have problems after the app is updated to this version should clear their app's cache and load the app again.
 
 ## 8.2.3 {#812}
 
@@ -21,11 +21,10 @@ description: "Native Template 8 release notes."
 
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
 
-Known issue: In this version we addressed a cookie encryption security issue which turned out to be incompatible with the existing mechanism.
-This leads to the following exception when loading the app:
-`java.security.InvalidAlgorithmParameterException
-Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
-We fixed this in Native Template 8.2.5. Users which still have problems after the app is updated to this version, should clear the app's cache and load the app again.
+### Known Issues
+
+* In this version we addressed a cookie encryption security issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+    * Fixed in [Native Template 8.2.5](#fix-cookie-encryption). 
 
 ## 8.2.2 {#811}
 

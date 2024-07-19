@@ -98,7 +98,7 @@ We fixed this in Native Template 8.2.5. Users which still have problems after th
 * We fixed a synchronization issue that affected encrypting-decrypting files.
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
 
-Known issue: In this version we addressed a cookie encryption security issue which turned out to be in compatible with the existing mechanism.
+Known issue: In this version we addressed a cookie encryption security issue which turned out to be incompatible with the existing mechanism.
 This leads to the following exception when loading the app:
 `java.security.InvalidAlgorithmParameterException
 Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`

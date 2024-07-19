@@ -126,19 +126,24 @@ You can convert a namespace which currently uses the standard operator to be a G
  
     {{< figure src="/attachments/deployment/private-cloud/global-operator/choose-standard-namespace.png" >}}
 
-3. After selecting the namespace, click **Next**. You will be redirected to a page with the command needed to convert the namespace to a managed namespace, managed by the global operator. 
+3. After selecting the namespace, click **Next**. You will be redirected to a page with the command needed to convert the standard namespace to a global operator managed namespace.
 
     {{< figure src="/attachments/deployment/private-cloud/global-operator/convert-namespace-command.png" >}}
 
 4. Run the command.
 
-    Once the command has been run successfully, your namespace will be converted to the Global Operator installation on the cluster side.
+    Once the command has been run successfully, your namespace will be converted to managed namespace as part of Global Operator installation on the cluster side.
 
     If the conversion command is not run and the **Next** button is clicked directly, an error message will be displayed because the presence of the standard namespace could not be verified in the list of managed namespaces.
 
     {{% alert color="info" %}}The namespace to be converted must be in the same cluster as the main namespace. Additionally, ensure that both namespaces have the same operator version; otherwise, the conversion will not be performed.{{% /alert %}}
 
-5. Once the conversion command runs successfully, click **Next** to be redirected to the Conversion Summary pop-up page, which will confirm the successful conversion.
+5. Once the conversion command runs successfully, click **Next** to be redirected to the Conversion Summary pop-up page, which will confirm the successful conversion. This step will also ensure that the namespace conversion is visible on the portal side as well.
+
+{{% alert color="info" %}}
+Once all the standard namespaces within a cluster created on portal side are converted to Global Operator Managed namespace, then the status of the cluster would be changed to **Conversion Finalized**, otherwise it will show **Conversion in Progress** if not all the namespaces within that cluster are converted.
+{{% /alert %}}
+
 
 ## 4 Licensing
 

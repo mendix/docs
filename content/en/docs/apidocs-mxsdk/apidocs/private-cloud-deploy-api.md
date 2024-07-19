@@ -25,7 +25,7 @@ The Mendix for Private Cloud Deploy API is for connected private cloud clusters 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The Global Operator installation is not yet available in Deploy API.
+The Standard Operator conversion to Global Operator managed namespace is not yet available in Deploy API.
 {{% /alert %}}
 
 ## 2 Using the API

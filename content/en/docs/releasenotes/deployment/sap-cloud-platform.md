@@ -11,6 +11,19 @@ SAP Business Technology Platform deployments are also dependent on the latest ve
 
 For information on the current status of deployment to SAP BTP and any planned releases see [Mendix Status](https://status.mendix.com/).
 
+## 2024
+
+### July 14, 2024
+
+#### Portal Improvements
+
+* We upgraded the CF calls to API v3. This includes the deployment and management of the environment.
+* We renamed the Portal to **Deployment**.
+
+#### Bug Fixes
+
+* We fixed an MxDock login issue.
+
 ## 2022
 
 ### November 17, 2022

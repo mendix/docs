@@ -130,7 +130,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 * The tool now handles apps with multiple MPR files correctly.
 * The tool now discloses the error that led to a Native Template update failing in the error dialog.
-* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
+* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the Xcode or Node versions to accommodate new requirements.
 
 #### Fixes
 

@@ -43,7 +43,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed build errors caused by the recent XCode 15 update.
+* We fixed build errors caused by the recent Xcode 15 update.
 
 ## 7.0.8 {#708}
 

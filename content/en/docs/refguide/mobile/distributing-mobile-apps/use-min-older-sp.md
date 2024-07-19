@@ -89,7 +89,7 @@ Open your *android/app/src/main/AndroidManifest.xml* file and find the section w
 
 ##### 1.2.2.3 Integrate the API Key into an iOS Project
 
-To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in the *ApiKeys.xcconfig* file.
+To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in Xcode, change the API key in the *ApiKeys.xcconfig* file.
 
 ## 2 Building your Application
 
@@ -172,7 +172,7 @@ Android builds are made via Android Studio:
 
 ### 4.1 iOS
 
-iOS applications require XCode, so we assume you have the latest version installed and ready to use.
+iOS applications require Xcode, so we assume you have the latest version installed and ready to use.
 
 Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as follows:
 
@@ -239,7 +239,7 @@ To work around this, do one of the following:
 
 To configure Google Maps functionality, do the following:
 
-* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
+* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in Xcode, change the API key in `ApiKeys.xcconfig` file.
 
 ### 5.2 Android
 

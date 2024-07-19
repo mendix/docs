@@ -551,34 +551,35 @@ You also need to handle loading and saving of the todo data.
 
 In this section, you will add a menu item to the toolbar that will allow you to select the ToDo list from a menu item.
 
-1. Create a `MenuBarExtension`.
-2. Add another class and call it `ToDoListMenuBarExtension.cs`.
+1. Create a `MenuExtension`.
+2. Add another class and call it `ToDoListMenuExtension.cs`.
 3.  Replace the contents of the file with the following code:
 
     ```csharp
-    using System.ComponentModel.Composition;
-    using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
-    using Mendix.StudioPro.ExtensionsAPI.UI.Services;
-    
-    namespace Mendix.ToDoExtension;
-    
-    [Export(typeof(MenuBarExtension))]
-    public class ToDoListMenuBarExtension : MenuBarExtension
+    using System.Collections.Generic;
+using System.ComponentModel.Composition;
+using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
+using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
+using Mendix.StudioPro.ExtensionsAPI.UI.Services;
+
+namespace Mendix.ToDoExtension;
+
+[Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
+public class ToDoListMenuBarExtension : MenuExtension
+{
+    private readonly IDockingWindowService _dockingWindowService;
+
+    [ImportingConstructor]
+    public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
     {
-        private readonly IDockingWindowService _dockingWindowService;
-    
-        [ImportingConstructor]
-        public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
-        {
-            _dockingWindowService = dockingWindowService;
-        }
-    
-        public override IEnumerable<MenuViewModelBase> GetMenus()
-        {
-            yield return new MenuItemViewModel("To Do List", new[] { "View" }, "Stories")
-                { Action = () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId) };
-        }
+        _dockingWindowService = dockingWindowService;
     }
+
+    public override IEnumerable<MenuViewModel> GetMenus()
+    {
+        yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+    }
+}
     ```
 
 ## 9 Adding a Web-based User Interface

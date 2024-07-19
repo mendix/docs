@@ -220,7 +220,7 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 ### 8.3 Examples
 
-* Presenting examples of prompts in the input field, helping the end-user to sense how to draft prompts in the system. Further help is provided with information(ⓘ) icon.
+* Presenting examples of prompts in the input field, helping the end-user to sense how to draft prompts in the system. Further help is provided with information (ⓘ) icon.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
 
@@ -265,7 +265,7 @@ This feature, often called *Quote and Re-prompt* allows end-users to quote speci
 
 With conversational AI, the burden of discovering the capability of a bot or voice assistants is up to the end-user. They can only know a chatbot can’t do something after it fails to provide a good response. If there are no hints or affordances, end-users are more likely to have unrealistic expectations.
 
-Provide a sclear motivation for any action you want the end-user to take. Tell the end-user why they might want to do something before telling them how to do it.
+Provide a clear motivation for any action you want the end-user to take. Tell the end-user why they might want to do something before telling them how to do it.
 
 ### 10.2 How We Do It
 

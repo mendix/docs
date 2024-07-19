@@ -60,7 +60,7 @@ If the **Generate Domain Model** option is greyed out, it is because it currentl
 
 After a domain model is generated and if the dedicated chat is still active, you can still ask Maia to add more entities and associations to the generated domain model. 
 
-However, it currently does not support deleting or editing what are already in the generated domain model. This includes adding more attributes to an existing entity. Such requests will currently not be handled properly.
+However, it currently does not support deleting or editing what are already in the generated domain model. This includes adding more attributes to an existing entity. Such requests will not be handled properly at this moment.
 
 You can always edit the generated domain model manually, or remove it and ask Maia to generate a domain model again with adjusted text inputs.
 

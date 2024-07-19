@@ -130,7 +130,7 @@ To call a stored procedure, do the following:
    
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/10.png" class="no-border" >}}
 
-4. Click **Run Query**. This returns an entity with **Number of affected rows and all INOUT and OUT Parameters**. If the stored procedure returns a **Result set**, an associated entity is created.
+4. Click **Run Query**. This returns an entity with the number of affected rows and all INOUT and OUT parameters. If the stored procedure returns a **Result set**, an associated entity is created.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/11.png" class="no-border" >}}
 
@@ -161,7 +161,7 @@ For Postgres, Mendix supports the following parameters:
 * Time without timezone
 * Time with timezone
 
-For MSSQL, **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off. 
+For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off. 
 
 ## 6 Use the Query External Database Activity
 

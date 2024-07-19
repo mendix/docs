@@ -250,7 +250,7 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 #### 3.2.1 Updating the Module to a Newer Version {#update-module}
 
-To update the module in your app to a newer version, follow these steps::
+To update the module in your app to a newer version, follow these steps:
 
 1. Before downloading the newer version, remove all the Java libraries that are only used by this module from the **userlib** folder in your app directory. Java libraries are accompanied by a blank *[Module].RequiredLib* file. This will help you identify by which module the Java libraries are used. Doing this prevents you from ending up with having conflicting Java libraries which cause unexpected issues. 
 

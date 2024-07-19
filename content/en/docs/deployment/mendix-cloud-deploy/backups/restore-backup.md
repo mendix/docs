@@ -81,7 +81,7 @@ However, the app previously deployed to the node does not need to have had the s
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. 1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
+1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.

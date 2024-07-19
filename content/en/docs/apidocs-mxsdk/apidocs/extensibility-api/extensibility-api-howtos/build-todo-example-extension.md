@@ -198,8 +198,8 @@ In this section, you will add a view model to store our view data:
     using Mendix.StudioPro.ExtensionsAPI.UI.WebView;
     
     namespace Mendix.ToDoExtension;
-    {
-        public class ToDoListDockablePaneViewModel : WebViewDockablePaneViewModel
+    
+    public class ToDoListDockablePaneViewModel : WebViewDockablePaneViewModel {
     
         private readonly Uri _baseUri;
         private readonly Func<IModel?> _getCurrentApp;

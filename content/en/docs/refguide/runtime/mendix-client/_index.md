@@ -139,7 +139,7 @@ For a description of the session and authentication tokens, see [Session Managem
 
 ### 2.13 Runtime Server
 
-The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data (plus any additional state information where appropriate). This is done through a private API called *xas*.
+The Runtime Server waits for requests from the Mendix Client, processes the request, and returns the requested data (plus any additional state information where appropriate). This is done using a number of [request handlers](/refguide/request-handlers/) called over a private API. One of these, for example, is called xas.
 
 It will also notify the Mendix Client when changes are made to the app, and allows developers to connect a debugger to the client to debug nanoflows.
 

@@ -74,7 +74,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We switched to XCode 15.1 for cloud builds (App Center) to comply with the updated minimum iOS SDK requirements.
+* We switched to Xcode 15.1 for cloud builds (App Center) to comply with the updated minimum iOS SDK requirements.
 * We added support for Hermes.
 
 ### Known Issues
@@ -103,7 +103,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We resolved a build error related to Flipper on XCode 15.3.
+* We resolved a build error related to Flipper on Xcode 15.3.
 * We upgraded security-crypto dependency on Android to version 1.1.0-alpha06.
 * We upgraded `@mendix/react-native-sqlite-storage` to version 7.1.0 and `@mendix/native` to the latest compatible version.
 

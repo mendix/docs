@@ -22,7 +22,7 @@ This document describes how to build your hybrid apps locally.
 * Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp/#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
-* Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
+* Install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
 ### 2.1 Prepare Your App for Building
 
@@ -48,7 +48,7 @@ Possible targets are `development`, `test`, `acceptance`, `production` (default)
 
 ### 2.2 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or Xcode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Xcode is more involved, but Xcode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
@@ -56,7 +56,7 @@ There are two possible ways to build your apps: the Cordova CLI or XCode. The Co
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
-This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
+This process is shorter than using Xcode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
     * Starts a release build that will create binaries for a physical device
@@ -69,9 +69,9 @@ This process is shorter than using XCode but might require more work to understa
 
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documentation.
 
-#### 2.2.2 Building iOS using XCode
+#### 2.2.2 Building iOS using Xcode
 
-Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
+Using Xcode can be easier than the Cordova CLI due to Xcode's friendly visual interface. To build your app using Xcode do the following:
 
 1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
@@ -90,7 +90,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  class="no-border" >}}
 
 1. Enable **Automatically manage signing** again.
-1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, Xcode will prompt you to do so.
 1. When configured correctly all errors should be gone.
 1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
@@ -100,7 +100,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  class="no-border" >}}
 
-1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through Xcode's **Window** menu:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  class="no-border" >}}
 

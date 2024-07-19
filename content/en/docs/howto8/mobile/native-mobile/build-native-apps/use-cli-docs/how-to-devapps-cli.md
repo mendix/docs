@@ -82,11 +82,11 @@ Before installing, make sure you have completed the following prerequisites:
 * Have a Mac OSX machine
 * Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
-* Install the latest XCode version
+* Install the latest Xcode version
 
 #### 4.2.1 Installing on an Emulator
 
-Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on Xcode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
@@ -110,7 +110,7 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" class="no-border" >}}
 
-8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8. In Xcode select the **Dev** target and the emulator you want to build your developer app for:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" class="no-border" >}}
 

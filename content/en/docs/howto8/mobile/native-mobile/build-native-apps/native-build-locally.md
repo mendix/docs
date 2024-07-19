@@ -12,7 +12,7 @@ description: Describes how to build your first Mendix native mobile app locally 
 For this how-to, Mendix Studio Pro 8.15.1 is required. If you are using an older Studio Pro version, please use [How to Build a Mendix Native Mobile App Locally Manually](/howto8/mobile/native-build-locally-manually/).
 {{% /alert %}}
 
-By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like XCode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
+By default when building your native mobile app binaries, Mendix uses [Visual Studio App Center](https://appcenter.ms/sign-in?original_url=%2Fapps) as a service so that users can build without having to install tools like Xcode or Android Studio. However, there are cases when using App Center is not allowed or possible. In those situations, you can build your apps locally.
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. For further customization options for your local builds, see the [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below.
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 For iOS builds:
 
 * Have a Mac OS X machine 
-* Install [XCode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or higher and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
+* Install [Xcode 12.4](https://apps.apple.com/us/app/xcode/id497799835?mt=12) or higher and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html) 
 
 For Android Builds:
 
@@ -79,7 +79,7 @@ If GitHub is enabled, in addition to the previous steps, it will do the followin
 
 ## 4 Building Your Native Mobile App {#building-app-project}
 
-Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the app with Android Studio or XCode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
+Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your project you can open the app with Android Studio or Xcode for the Android and iOS project respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
 In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
@@ -108,23 +108,23 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  class="no-border" >}}
 
-### 4.2 Building an iOS App with XCode
+### 4.2 Building an iOS App with Xcode
 
 1. If you have not ran it yet, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) in the app root to install the required dependencies.
 1. Change directory by running `cd ios` and run `pod install` to install the iOS dependencies.
 
     The iOS project is using CocoaPods for its dependency management. For more information on installing the CocoaPods dependency manager on your machine see CocoaPods [documentation](https://cocoapods.org/#install).
 
-1. Open *.xcodeworkspace* using XCode.
+1. Open *.xcodeworkspace* using Xcode.
 1. Navigate to **Signing and Capabilities** and choose your **Team** from the drop-down menu:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-setup-team.png" alt="XCode Build Toolbar"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-setup-team.png" alt="Xcode Build Toolbar"   width="350"  class="no-border" >}}
 
     As with the Android **Build Variants** the iOS app makes use of **Build Targets** to switch between building a custom developer app or a release app.
 
 1. From the drop-down menu choose **nativeTemplate** and the device you would like to run the app on, then click **Run Locally** ({{% icon name="controls-play" %}}) to start a build for your app:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="XCode Build Toolbar"   width="250"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/xc-start-build.png" alt="Xcode Build Toolbar"   width="250"  class="no-border" >}}
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 

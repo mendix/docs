@@ -10,7 +10,7 @@ description: "Native Template 7 release notes."
 **Release date: June 28, 2024**
 
 ### Fixes
-We have fixed an issue with cookies encryption. In case the app still does not load correctly after updating to this version into a problem, please clear the app cache and reload the app.
+We have fixed an issue with cookies encryption. If the app still does not load correctly after updating to this version into a problem, please clear the app cache and reload the app.
 
 ## 7.0.13 {#713}
 

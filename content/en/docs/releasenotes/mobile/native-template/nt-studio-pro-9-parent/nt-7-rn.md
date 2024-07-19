@@ -23,7 +23,7 @@ description: "Native Template 7 release notes."
 
 ### Known Issues
 
-* In this version we addressed a cookie encryption security issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+* In this version we addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
     * Fixed in [Native Template 7.0.14](#fix-cookie-encryption). 
 
 ## 7.0.12 {#712}

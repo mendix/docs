@@ -151,5 +151,5 @@ You can now use the microflow in your app. Below is an example of a configured m
 
 {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/example-microflow.png" class="no-border" >}}
 
-See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.
-See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector) for further explanation of how to call a Stored Procedure.
+See the [Integration Activities](/refguide/integration-activities/) section of the *Studio Pro Guide* for further explanation of the properties in this activity.
+See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector/) section of *Use the External Database Connector* for more information on how to call a Stored Procedure.

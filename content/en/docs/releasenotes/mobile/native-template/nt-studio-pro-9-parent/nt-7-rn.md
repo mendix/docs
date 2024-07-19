@@ -20,7 +20,7 @@ We have fixed an issue with cookies encryption. If the app still does not load c
 
 * We enhanced encrypted file sync on Android.
 
-Known issue: In this version we addressed a cookie encryption security issue which turned out to be in compatible with the existing mechanism.
+Known issue: In this version we addressed a cookie encryption security issue which turned out to be incompatible with the existing mechanism.
 This leads to the following exception when loading the app:
 `java.security.InvalidAlgorithmParameterException
 Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`

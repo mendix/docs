@@ -11,7 +11,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* <a id="fix-cookie-encryption"></a> We fixed a known cookie encryption issue by updating the `@mendix/native` dependency. Users who still have problems after the app is updated to this version should clear their app's cache and load the app again.
+* <a id="fix-cookie-encryption"></a> We fixed a [known cookie encryption issue](#kis-713) by updating the `@mendix/native` dependency. Users who still have problems after the app is updated to this version should clear their app's cache and load the app again.
 
 ## 7.0.13 {#713}
 
@@ -21,9 +21,9 @@ description: "Native Template 7 release notes."
 
 * We enhanced encrypted file sync on Android.
 
-### Known Issues
+### Known Issues {#kis-713}
 
-* In this version we addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+* We addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
     * Fixed in [Native Template 7.0.14](#fix-cookie-encryption). 
 
 ## 7.0.12 {#712}

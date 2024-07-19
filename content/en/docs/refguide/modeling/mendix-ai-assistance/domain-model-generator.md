@@ -1,7 +1,7 @@
 ---
 title: "Domain Model Generator"
 url: /refguide/domain-model-generator/
-weight: 30
+weight: 50
 description: "Describes the features in Domain Model Generator."
 ---
 

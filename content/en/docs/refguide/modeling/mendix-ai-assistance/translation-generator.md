@@ -1,7 +1,7 @@
 ---
 title: "Translation Generator"
 url: /refguide/translation-generator/
-weight: 30
+weight: 80
 description: "Describes the features in Translation Generator."
 ---
 

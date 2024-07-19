@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 
 {{% alert color="info" %}}
 If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).

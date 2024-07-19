@@ -1,7 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
 url: /refguide7/datetime-handling-faq/
-notoc: true
 ---
 
 

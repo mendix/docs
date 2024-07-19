@@ -243,7 +243,7 @@ This is the request entity of the ReceiveMessage action.
 
 | Attribute | Description |
 | --- | --- |
-|`MaxNoOfMessages`| Can be set to specifiy the maxinum number of messages to receive. If left empty, the SQS default value is used.|
+|`MaxNoOfMessages`| Can be set to specify the maximum number of messages to receive. If left empty, the SQS default value is used.|
 |`WaitTimeSeconds`| The duration (in seconds) for which the call waits for a message to arrive in the queue before returning. If left empty, the SQS default value is used.|
 |`QueueURL`| Required Attribute. The URL of the queue to receive messages from.|
 |`ReceiveRequestAttemptId`| This parameter applies only to FIFO (first-in-first-out) queues. The token used for deduplication of ReceiveMessage calls. If a networking issue occurs after a ReceiveMessage action, and instead of a response you receive a generic error, it is possible to retry the same action with an identical ReceiveRequestAttemptId to retrieve the same set of messages, even if their visibility timeout has not yet expired.|
@@ -325,7 +325,7 @@ This is a specialization of the `AbstractMessageAttribtue` entity.
 
 | Attribute | Description |
 | --- | --- |
-|`Value`| The Value attribute describes the string value of the MessageAttribute..|
+|`Value`| The Value attribute describes the string value of the MessageAttribute.|
 
 #### 4.1.38 NumberMessageAttribute {#numbermessageattribute}
 
@@ -411,7 +411,7 @@ This is a specialization of the `AbstractSendMessage` entity.
 
 | Attribute | Description |
 | --- | --- |
-|`DelaySeconds`| The `DelaySeconds` attribute describes the length of time, in seconds, for which a specific message is delayed..|
+|`DelaySeconds`| The `DelaySeconds` attribute describes the length of time, in seconds, for which a specific message is delayed.|
 
 #### 4.1.50 SendMessageAttributeUsage {#sendmessageattributeusage}
 
@@ -433,7 +433,7 @@ This is the response entity of the SendMessageBatch action.
 | Attribute | Description |
 | --- | --- |
 |`_Id`| The _Id attribute describes the identifier for the message in this batch.|
-|`MD5OfMessageAttributes`| The MD5OfMessageAttributes attribute describes the MD5 digest of the non-URL-encoded message attribute string. You can use this attribute to verify that Amazon SQS received the message correctly..|
+|`MD5OfMessageAttributes`| The MD5OfMessageAttributes attribute describes the MD5 digest of the non-URL-encoded message attribute string. You can use this attribute to verify that Amazon SQS received the message correctly.|
 |`MD5OfMessageBody`| The MD5OfMessageBody attribute describes the MD5 digest of the non-URL-encoded message body string. You can use this attribute to verify that Amazon SQS received the message correctly.|
 |`MD5OfMessageSystemAttributes`| The MD5OfMessageSystemAttributes attribute describes the MD5 digest of the non-URL-encoded message system attribute string. You can use this attribute to verify that Amazon SQS received the message correctly.|
 |`MessageId`| The MessageId attribute describes the Identifier of the message.|

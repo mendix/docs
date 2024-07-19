@@ -277,7 +277,7 @@ Use-cases include:
 
 4.4.1 Domain Model
 
-All platform-supported AWS Connectors have request entities that inherit from the 'AbstractRequest' entity from AWS Authentication. To override the default HTTP configurations, you need to set the attributes on an object of (sub)-type BasicClientConfig and associate it with the request prior to invoking the connector action.
+All platform-supported AWS Connectors have request entities that inherit from the **AbstractRequest** entity from AWS Authentication. To override the default HTTP configurations, you need to create a **BasicClientConfig** (or a specialization) object, set the attributes there and then associate it with the request prior to invoking the connector action.
 
 The following are the relevant entities in the domain model for customizing HTTP client configurations:
 

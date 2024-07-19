@@ -84,7 +84,7 @@ SQL Query:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" class="no-border" >}}
 
-### 3.4 Type Cast Parameter Data Yype
+### 3.4 Typecast Parameter Data Yype
 
 You can typecast `String` into UUID as shown below:
 
@@ -116,21 +116,21 @@ You can typecast `String` into UUID as shown below:
 
 ## 5 Call Stored Procedure
 
-{{% alert color="info" %}} Calling stored procedures with parameters is supported in Studio Pro 10.13 and above.  {{% /alert %}}
+{{% alert color="info" %}} Calling stored procedures with parameters is supported for Studio Pro 10.13 and above. {{% /alert %}}
 
-To call a stored procedure, do the following: 
+To call a stored procedure, do the following:
 
-1. Select the **Stored Procedure** checkbox.
+1. Select the **Stored procedure** checkbox.
 
 2. Enter the query to call a stored procedure. Use the syntax: `Call latest_schema.InsertDataIntoTable1({1},{2})`
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/9.png" class="no-border" >}}
 
-3. Create **IN**, **OUT**, AND **INOUT** Parameters for all parameters present in the stored procedure. Make sure to provide "Name in DB" same as the name of parameter in that stored procedure.
+3. Create **IN**, **OUT**, and **INOUT** parameters for all parameters present in the stored procedure. Make sure the **Name in DB** is the same as the name of parameter in the stored procedure.
    
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/10.png" class="no-border" >}}
 
-4. On **Run Query**, it returns entity with **Number of affected rows and all INOUT and OUT Parameters** and if the stored procedure returns a **result set** an associated Entity is created.
+4. Click **Run Query**. This returns an entity with **Number of affected rows and all INOUT and OUT Parameters**. If the stored procedure returns a **Result set**, an associated entity is created.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/11.png" class="no-border" >}}
 
@@ -140,7 +140,7 @@ To call a stored procedure, do the following:
 
 {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
 
-{{% alert color="info" %}}Stored Procedures with primitive datatype parameters are only supported.{{% /alert %}}
+{{% alert color="info" %}}Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
 
 For Postgres, Mendix supports the following parameters:
 * Decimal/numeric

@@ -232,7 +232,6 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
-
 ##### 4.1.1.8 CohereEmbedOptions_Extension (#cohere-embed-options-extension)
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
@@ -242,7 +241,6 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 | `InputType` | Prepends special tokens to differentiate each type from one another. It expects a value of the `ENUM_InputType_CohereEmbed` enumeration. |
 | `EmbeddingTypes` | Specifies the types of embeddings you want to have returned. Optional and default is `None`, which returns the Embed Floats response type. It expects a value of the `ENUM_EmbeddingsTypes_CohereEmbed` enumeration. |
 | `Truncate` | Specifies how the API handles inputs longer than the maximum token length. It expects a value of the `ENUM_Truncate_CohereEmbed` enumeration. |
-
 
 ##### 4.1.1.9 CohereEmbedResponse {#cohere-embed-response}
 

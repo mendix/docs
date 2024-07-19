@@ -12,6 +12,37 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### July 18, 2024
+
+#### Fixes
+
+* We fixed an issue where the owner drop-down did not show all the possible users.
+* We addressed a bug where switching the active company resulted in an error on the registration form.
+
+### July 11, 2024
+
+#### Fixes
+
+* We fixed a bug that allowed users to add tags from other companies to their endpoints.
+* We made some minor aesthetics changes to the Control Center and **Service Edit** pages to align with the overall aesthetic standards defined for the app. 
+
+### June 27, 2024
+
+#### Fixes 
+
+* We addressed some aesthetics bugs and made some aesthetic improvements on the **Home**, **Search**, and registration pages. 
+
+#### Improvement
+
+* We have aligned our top-menu navigation to the rest of the platform, which has adjusted some navigation across the Catalog app.
+
+### June 20, 2024
+
+#### Fixes 
+
+* We fixed a bug where the **Share** button would sometimes copy the wrong link to the clipboard.
+* We improved notification messages to include more details.
+
 ### June 6, 2024
 
 #### Fixes
@@ -802,7 +833,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
+* We fixed an issue where the [Business Owner](/catalog/manage/search/#business-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
 
 ### October 14, 2021

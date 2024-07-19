@@ -29,7 +29,7 @@ After they are created automatically, demo users do not differ in any way from o
 
 ## 3 Demo User Properties
 
-Double click the demo user to open its properties:
+Double-click the demo user to open its properties:
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/demo-users/demo-user-properties.png" class="no-border" >}}
 

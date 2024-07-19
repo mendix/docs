@@ -19,7 +19,7 @@ We will enhance this page to provide information about apps deployed on standalo
 
 ## 2 Mendix Cloud
 
-The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Public Cloud.
+The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Cloud.
 
 By default you only see apps and their production environments. Turn off the **Production** toggle on the right side above the table to see all the environments.
 
@@ -59,13 +59,13 @@ The description of the items that you can select are as follows:
 
 * **Created Date**: the date the app was created
 
-*  **Env Owner**: the company that owns the environments of this app
+* **Env Owner**: the company that owns the environments of this app
 
     {{% alert color="info" %}}If the owner fo the environments is not your company, you have limited control over the deployment of your app. For information on how to resolve this, see [How to Resolve Shared Ownership of Apps](/control-center/resolve-shared-ownership-of-apps/).{{% /alert %}}
 
 * **Env Owner Id**: the ID of the company that owns the environments of this app 
 
-*  **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
+* **Cloud Resource Pack**: the resource pack for the cloud environment where the app is deployed
 
     {{% alert color="info" %}}For the technical details of each cloud resource pack, see the [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) section in *Mendix Cloud*.{{% /alert %}}
 
@@ -75,13 +75,13 @@ The description of the items that you can select are as follows:
 
 * **DB RAM**:  the size the RAM allocation for database operations
 
-* **DB Storage**: the size of the dabase storage
+* **DB Storage**: the size of the database storage
 
 * **DB Storage Extra**: the extra storage of the database
 
 * **File Storage**: the size of the storage allocated for storing files
 
-*  **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
+* **Fallback**: whether the data in the database is automatically copied to a database in a second availability zone.
 
     {{% alert color="info" %}}For more information, see the [High Availability and Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) section in *Mendix Cloud*.{{% /alert %}}
 
@@ -89,7 +89,7 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Private Cloud (Connected)
+## 3 Private Cloud (Connected) {#pc-connected}
 
 The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
 
@@ -105,7 +105,7 @@ The description of the items that you can select are as follows:
 
   {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
   
-*  **Technical Contact**: the technical contact of the app
+* **Technical Contact**: the technical contact of the app
 
     {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
   
@@ -127,7 +127,7 @@ The description of the items that you can select are as follows:
 
 * **NamespaceID**: the ID of the namespace
 
-*  **Namespace**: the Kubernets namespace
+*  **Namespace**: the Kubernetes namespace
 
     {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 
@@ -147,11 +147,11 @@ The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
 
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 
-*  **Technical Contact**: the technical contact of the app. 
+* **Technical Contact**: the technical contact of the app. 
 
     {{% alert color="info" %}}You can edit the Technical Contact of an app by clicking **Edit** ({{% icon name="pencil" %}}) next to the current Technical Contact in the table.{{% /alert %}}
 
@@ -190,7 +190,7 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Last Commit**: the date of the last commit in the main line
@@ -215,7 +215,7 @@ You can customize the columns of the table by clicking the column selector (the 
 The description of the items that you can select are as follows:
 
 * **AppID**: the unique identifier of the app
-*  **App Name**: the name of the app
+* **App Name**: the name of the app
 
     {{% alert color="info" %}}You can view the [app details](#app-details) by clicking the app name in the table.{{% /alert %}}
 * **Created Date**: the date the app was created
@@ -252,11 +252,11 @@ If you click an app name on a tab, a page opens and shows the details of this ap
 
 The app details page has the following tabs:
 
-* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [General Settings](/developerportal/collaborate/general-settings/) page for your app in the Developer Portal.
+* **App Info** – This tab has the **Description** and **App ID** fields, which are also available on the [Settings](/developerportal/collaborate/general-settings/) page for your app in [Apps](https://sprintr.home.mendix.com/).
 * **Members** – This tab presents the team members in the app development team.
     * You can directly deactivate a team member from the app by clicking their name and selecting **Deactivate Member**.
     * For other member management options, click **Manage Members**, which will open the [Team](/developerportal/general/team/#managing) page of the app. As a Mendix Admin, you can also add yourself to a team via this page.
-* **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Developer Portal.
+* **Environments** – This tab shows all Mendix Cloud environments. For the free Mendix Cloud environment, you can delete the environment on this tab. Once the free environment is deleted, all data will be removed. However, the app team members can still access the associated app repository in the Mendix Portal.
 * **App Roles** – This tab presents the app team roles defined via the **Default App Roles** feature on the [Roles & Permissions](/control-center/roles-and-permissions/) page.
 
 If the app is not a licensed app, you can see the action menu ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. If the app is active, then you have the options to deactivate the app and delete the app; and if the app is deactivated, then you have the options to activate the app and delete the app.
@@ -267,7 +267,7 @@ Deleting and deactivating apps is currently not supported for licensed apps or a
 
 ## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
 
-You can delete or deactivate a single app, or deactive (or activate) mutilple apps in one go.
+You can delete or deactivate a single app, or deactivate (or activate) multiple apps in one go.
 
 The consequences of deactivating and deleting an app are as below:
 
@@ -276,7 +276,7 @@ The consequences of deactivating and deleting an app are as below:
 | App code repository stays persistent                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | App team members can access the app code repository         | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | App stays persistent                                        | {{< icon name="checkmark-circle-filled" color="green" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
-| App team members can access the app in the Developer Portal | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
+| App team members can access the app in [Apps](https://sprintr.home.mendix.com/) | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 | Cloud environment stays persistent                          | {{< icon name="remove-circle-filled" color="red" >}} | {{< icon name="remove-circle-filled" color="red" >}} |
 
 {{% alert color="info" %}}

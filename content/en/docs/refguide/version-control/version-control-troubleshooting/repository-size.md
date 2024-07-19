@@ -26,7 +26,7 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 * Retrieving a list of branches
 * Cloning on the command line or in a CI/CD pipeline
-* Team Server page in the Developer Portal, if you are using Team Server as your Git server
+* [Team Server](/developerportal/general/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
 
 ## 4 Preventing and Mitigating a Large Repository Size
 
@@ -56,7 +56,7 @@ As a first step we will ensure new apps are created with a new split format (v2)
 
 When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
 
-Another improvement that is currently in development is partial cloning, which will instruct Git to only retrieve a part of the history from the server when cloning. In case you do need to access older history, for example, when merging an older branch, the data is retrieved from the server only when needed. Partial cloning is expected to be released in the Summer of 2024 and will be backported to the 10.12 MTS release.
+As of Mendix 10.12 it is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
 
 ### 4.3 Mitigating Large Repository Size
 
@@ -75,7 +75,7 @@ The tool is currently in public beta. The cleanup tool can be downloaded [here](
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Apps](https://sprintr.home.mendix.com/), because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process
@@ -147,7 +147,7 @@ Force pushing your results to the server is a separate step, in a separate scrip
 
 If you are using Mendix Team Server as your Git version control server, you can follow the steps below:
 
-* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#92-authenticating-to-team-server) section in *Using Version Control in Studio Pro*. 
+* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#authenticating) section in *Using Version Control in Studio Pro*. 
 * Run the second script.
     * When prompted, enable force pushing.
     * Conduct the force push.

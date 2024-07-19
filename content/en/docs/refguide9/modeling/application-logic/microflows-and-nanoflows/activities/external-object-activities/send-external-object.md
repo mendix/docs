@@ -40,7 +40,7 @@ This activity sends new objects and their attributes and owned associations to b
 
 ## 3 Activity Properties
 
-To manage the properties of the activity, double click the **Send external object** activity, or right-click the activity and select **Properties**. 
+To manage the properties of the activity, double-click the **Send external object** activity, or right-click the activity and select **Properties**. 
 
 Single-clicking on the activity displays the properties in the **Properties** pane.
 

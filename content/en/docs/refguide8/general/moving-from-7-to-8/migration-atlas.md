@@ -111,7 +111,7 @@ If you added or changed custom styling in the custom folder, copy your content o
 
 If you have altered your *styles/sass/lib* folder, consult the instructions below. If you have not, you may ignore this subsection.
 
-If you changed any files in the *styles/sass/lib* folder, complete the actions below::
+If you changed any files in the *styles/sass/lib* folder, complete the actions below:
 
 * If you changed a file’s content or name, you must manually make the same changes in the new file and in the new theme folder (while also keeping the Mendix 8 [DOM changes](/refguide8/migration-dom-issues/) in mind)
 * If you removed a file, no action is required

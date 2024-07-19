@@ -11,6 +11,45 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 18th, 2024
+
+#### License Manage CLI v0.8.0
+
+* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+* We have resolved an issue that prevented users from setting the CPU core request below 1 while creating an environment (Ticket [222687](https://mendixsupport.zendesk.com/agent/tickets/222687)) and (Ticket [222284](https://mendixsupport.zendesk.com/agent/tickets/222284)).
+* We have resolved an issue where users were unable to deselect the namespace in the **Convert Namespace** flow.
+* We have resolved an issue where users were unable to close the **Convert Namespace** screen after navigating back to the namespace selection page.
+* We have resolved an issue where a newly created standalone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
+
+### July 10th, 2024
+
+#### Mendix Operator v2.18.0 {#2.18.0}
+
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* We have resolved an issue where the Operator attempted to reload the runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
+* We have fixed an issue where the Operator would throw an error when no licenses were installed on the PCLM server.
+* We have updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
+* We have addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
+
+#### Portal Enhancements
+
+* You can now [convert](/developerportal/deploy/global-operator/#convert-standard-operator-to-global-operator) a Standard namespace to a Global Operator managed namespace using the **Convert Namespace** button available in Cluster details page. This feature is available from Operator v2.18.
+
+### July 4th, 2024
+
+#### Portal Enhancements
+
+* We have renamed **Mendix for Private Cloud** to **Deployment** in the upper navigation bar.
+* We have removed the **Uptime** field from the **Namespace overview** page.
+
+#### Deploy API
+
+* We have fixed the API specification for the Deploy API where the limit and offset were not specified when trying to retrieve all applications deployed in Private Cloud.
+
 ### June 13th, 2024
 
 #### Mendix Operator v2.17.1 {#2.17.1}

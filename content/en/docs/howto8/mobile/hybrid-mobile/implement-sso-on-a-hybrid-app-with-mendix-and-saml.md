@@ -31,7 +31,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ### 3.1 Hybrid Apps, Cordova, and PhoneGap Build
 
-Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, XCode) for this.
+Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, Xcode) for this.
 
 ### 3.2 How Authentication Against an IdP Works {#how}
 
@@ -77,7 +77,7 @@ To address the [first problem](#firstproblem), when the mobile app is starting t
 ```javascript
 MxApp.onConfigReady(function(config) {
     var samlLogin = function() {
-        var samlWindow = cordova.InAppBrowser.open(window.mx.remoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
+        var samlWindow = cordova.InAppBrowser.open(config.unmodifiedRemoteUrl + "SSO/", "_blank", "location=no,toolbar=no");
 
         var exitFn = function() {
             navigator.app.exitApp();
@@ -89,7 +89,7 @@ MxApp.onConfigReady(function(config) {
             samlWindow.executeScript({
                 code: "window.location.href;"
             }, function(href) {
-                if (href[0].toLowerCase().indexOf(window.mx.remoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
+                if (href[0].toLowerCase().indexOf(config.unmodifiedRemoteUrl.toLowerCase()) == 0 && href[0].indexOf("SSO") == -1) {
                     samlWindow.executeScript({
                         code: "document.cookie;"
                     }, function(values) {
@@ -129,7 +129,7 @@ To address the [second problem](#secondproblem), after a successful authenticati
 
 To use the hybrid app package, follow these steps:
 
-1. Open your app in the Developer Portal. In the navigation pane, click **Mobile App**.
+1. Open your app in [Apps](https://sprintr.home.mendix.com/). In the navigation pane, click **Mobile App**.
 2. Click **Publish for Mobile App Stores**:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/download-hybrid-app-package-step1.png" class="no-border" >}}

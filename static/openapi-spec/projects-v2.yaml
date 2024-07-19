@@ -15,7 +15,7 @@ paths:
     get:
       tags:
         - Projects
-      summary: 'Get a list of projects'
+      summary: 'Get a list of company-owned projects'
       description: 'Returns a list of app projects owned by the company of the requesting user. Inactive app projects are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-projects
       parameters:
@@ -133,7 +133,7 @@ paths:
         - $ref: '#/components/parameters/user-id'
       responses:
         '204':
-          description: No Content
+          $ref: '#/components/responses/Http204'
         '401':
           $ref: '#/components/responses/Http401'
         '404':
@@ -142,6 +142,58 @@ paths:
           $ref: '#/components/responses/Http409'
         '500':
           $ref: '#/components/responses/Http500'
+    patch:
+      tags:
+        - Projects
+      summary: 'Update a project team member'
+      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member''s project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      operationId: patch-project-member
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+        - $ref: '#/components/parameters/user-id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                attributes:
+                  type: array
+                  description: 'Array of attributes to be changed.'
+                  items:
+                    type: object
+                    properties:
+                      key:
+                        type: string
+                        description: 'Name of the attribute to be changed. Possible values are `roleId`, `isPinned`, or `isWatching`. All other values will be ignored.'
+                        maxLength: 100
+                      value:
+                        type: string
+                        description: 'New value of the attribute. The `roleId` expects a valid UUID. The attributes `isPinned` and `isWatching` expect a Boolean.'
+                        maxLength: 200
+            examples:
+              Example 1:
+                value:
+                  attributes:
+                  - key: 'roleId'
+                    value: 'fdea56de-3c79-48d9-93ff-61cbc736426c'
+              Example 2:
+                value:
+                  attributes:
+                  - key: 'isPinned'
+                    value: 'true'
+      responses:
+        '204':
+          $ref: '#/components/responses/Http204'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+
   '/projects/jobs/{job-id}':
     get:
       tags:
@@ -627,8 +679,10 @@ components:
                       ihasCloudAccess: boolean
                       ihasStoryAccess: boolean
                       ihasInvitationRights: boolean
+    Http204:
+      description: 'No Content'
     Http400:
-      description: '400 Bad Request'
+      description: 'Bad Request'
       content:
         application/json:
           schema:
@@ -665,7 +719,7 @@ components:
                         description: 'A human readable description of the error'
                         maxLength: 200
     Http401:
-      description: '401 Unauthorized'
+      description: 'Unauthorized'
       content:
         application/json:
           schema:
@@ -690,7 +744,7 @@ components:
                     type: string
                     description: 'UUID of the request for troubleshooting purposes'
     Http403:
-      description: '403 Forbidden'
+      description: 'Forbidden'
       content:
         application/json:
           schema:
@@ -715,7 +769,7 @@ components:
                     type: string
                     description: 'UUID of the request for troubleshooting purposes'
     Http404:
-      description: '404 Not Found'
+      description: 'Not Found'
       content:
         application/json:
           schema:
@@ -740,7 +794,7 @@ components:
                     type: string
                     description: 'UUID of the request for troubleshooting purposes'
     Http409:
-      description: '409 Conflict'
+      description: 'Conflict'
       content:
         application/json:
           schema:
@@ -765,7 +819,7 @@ components:
                     type: string
                     description: 'UUID of the request for troubleshooting purposes'
     Http500:
-      description: '500 Internal Server Error'
+      description: 'Internal Server Error'
       content:
         application/json:
           schema:

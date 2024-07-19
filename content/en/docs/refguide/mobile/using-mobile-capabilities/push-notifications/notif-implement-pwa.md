@@ -34,7 +34,7 @@ firebase.initializeApp(firebaseConfig);
 </script>
 ```
 
-4. Create the file `theme\web\firebase-messaging-sw.js` with the following content (replace `firebaseConfig` with your configuratiom from step 3):
+4. Create the file `theme\web\firebase-messaging-sw.js` with the following content (replace `firebaseConfig` with your configuration from step 3):
 
 ```js
 importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js');
@@ -51,11 +51,11 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 ```
 
-5. Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
+5.  Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
 
-{{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
+  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
 
 6. Add the Snippet `WebRegistration_Snippet` found in `_USE ME/Web` in the Push Notifications module to your home page. It contains a button that your users must click to register for push notifications.
-7. Stop the Mendix runtime in Studio Pro if it is running and start it afterwards. Do not use Rerun as that will not pick up the changes in your theme folder.
+7. Stop the Mendix Runtime in Studio Pro if it is running and start it afterwards. Do not use **Rerun**, as that will not pick up the changes in your theme folder.
 
 You have now successfully added a button to enable receiving push notifications for your users. Go ahead to the next section to test sending a push notification.

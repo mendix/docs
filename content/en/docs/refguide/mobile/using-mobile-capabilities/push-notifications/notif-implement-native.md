@@ -17,11 +17,11 @@ This section will help you set up, build and publish your native app to handle p
 To make setup easy, the Push Notifications Connector module includes snippets that will help you with the initial setup. Do the following:
 
 1. Expand the **Marketplace modules** > **PushNotifications** > **USE ME** folder.
-2. Find and copy the **Native** folder.
-3. Paste the **Native** folder contents into your own app's navigation.
-4. In your app's navigation, expand the new **Native** folder.
-5. Copy the **NativeHomepage_Snippet** snippet.
-6. Paste the snippet into your Native navigation’s home page.
+1. Find and copy the **Native** folder.
+1. Paste the **Native** folder contents into your own app's navigation.
+1. In your app's navigation, expand the new **Native** folder.
+1. Copy the **NativeHomepage_Snippet** snippet.
+1. Paste the snippet into your Native navigation’s home page.
 
 ## 2 App Events Widget
 
@@ -75,6 +75,6 @@ Now that you have everything set up, it is time to deploy your native app. See [
     | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
 1. Save the configuration. Now you are ready to build.
 
-When building for local development, keep in mind that Mendix's Make it Native does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
+When building for local development, keep in mind that Mendix's Make It Native app does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
 
 Now you are able to build, the next step is to run your app in an emulator or test device. Proceed to [part 7](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) to send your first push notifications or continue with the next section to set up push notifications for progressive web apps.

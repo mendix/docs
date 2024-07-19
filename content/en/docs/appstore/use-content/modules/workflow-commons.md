@@ -163,13 +163,13 @@ You can view audit trail on three levels:
 
 ### 5.4 Clean-up {#clean-up}
 
-Workflow Commons contains a scheduled events to automatically clean-up expired audit trail records: **SE_WorkflowAuditTrailRecord_CleanUp**. 
+Workflow Commons contains a scheduled event to disposition expired audit trail records after a pre-configured retirement period. 
 
-The scheduled event will delete all the audit trail records for workflow instances that are either completed or aborted for a period longer than the number of days configured in the constant **AuditTrailRetentionInDays**. Audit trail records always get deleted per workflow instance and not individually.
+The scheduled event **SE_WorkflowAuditTrailRecord_CleanUp** will delete all the audit trail records for workflow instances that are either completed or aborted for a period longer than the number of days configured in the constant **AuditTrailRetentionInDays**. Audit trail records always get deleted per workflow instance and not individually. 
 
-{{% alert color="info" %}}For the scheduled event to work, make sure that the **Workflow Completed** and **Workflow Aborted** events are selected in the [Configuration](#configuration) section. {{% /alert %}}
+This scheduled event is set to run every night at 01:00 AM and will permanently delete the audit trail records. Make sure to configure it according to your needs. 
 
-By default, the scheduled event runs every night at 01:00 AM. 
+{{% alert color="info" %}}For the scheduled event to work, make sure that the **Workflow Completed** and **Workflow Aborted** events are selected in the [Configuration](#configuration) section.{{% /alert %}}
 
 ### 5.5 Q&A
 

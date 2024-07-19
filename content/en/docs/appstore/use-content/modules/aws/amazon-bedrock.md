@@ -227,18 +227,26 @@ This entity can be used to request an additional model-specific response field t
 
 It can be added to the GenAICommons Request using the [Request: Add Additional Response Field](#add-response-field) operation.
 
-##### 4.1.1.8 ChatCompletionsResponse_Extension {#chatcompletions-response-extension}
+##### 4.1.1.8 ChatCompletionsResponse {#chatcompletions-response}
 
-This entity extends the GenAICommons.Response entity. It contains the requested model-specific response fields, if they were requested. 
+This entity inherits from the GenAICommons.Response entity. An object of this type is returned by the [ChatCompletions (with history)](#chat-completions-with-history) and [ChatCompletions (without history)](#chat-completions-without-history) operations.
+
+| Attribute | Description |
+| --- | --- |
+| `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
+
+##### 4.1.1.9 RequestedResponseField {#requested-response-field}
+
+This entity holds information about additional model-specific response fields. If valid additional response fields were requested during the request a list of this entity will be returned as part of the response.
 
 | Attribute | Description |
 | --- | --- |
 | `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
 | `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
 
-All returned ChatCompletionsResponse_Extension objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+All returned ChatCompletionsResponse_Extension objects can be retrieved using the [ChatCompletionsResponse: Get Requested Response Fields](#get-response-fields) operation.
 
-##### 4.1.1.9 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
+##### 4.1.1.10 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
 This helper entity extends the GenAICommons.Request entity with attributes specific to the 'RetrieveAndGenerate' operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
@@ -250,7 +258,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
 
-##### 4.1.1.10 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+##### 4.1.1.11 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This entity extends the GenAICommons.Response entity with attributes specific to `RetrieveAndGenerate`.
 
@@ -258,7 +266,7 @@ This entity extends the GenAICommons.Response entity with attributes specific to
 | --- | --- |
 | `SessionId` | See `RetrieveAndGenerateRequest_Extension.SessionId`. |
 
-##### 4.1.1.11 KnowledgeBaseTool {#knowledge-base-tool}
+##### 4.1.1.12 KnowledgeBaseTool {#knowledge-base-tool}
 
 This entity extends the GenAICommons.Tool entity and holds information about the specified knowledge base. A KnowledgeBaseTool object must be used to specify the knowledge base to use for the Retrieve And Generate operation. 
 
@@ -830,7 +838,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `ChatCompletionsResponse`|
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
@@ -842,7 +850,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `ChatCompletionsResponse`|
 
 In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
@@ -925,15 +933,15 @@ This operation corresponds to the **Request_CreateResponseFieldRequest** microfl
 
 If the used model supports that response field, it will be returned as a [ChatCompletionsResponse_Extension](#chatcompletions-response-extension) object as part of the response.
 
-##### 4.2.2.6 Response: Get Requested Response Fields {#get-response-fields}
+##### 4.2.2.6 ChatCompletionsResponse: Get Requested Response Fields {#get-response-fields}
 
 Use this microflow to retrieve all requested model-specific response fields from the response.
 
-This operation corresponds to the **Response_GetChatCompletionResponse_Extension** microflow.
+This operation corresponds to the **ChatCompletionsResponse_GetRequestedResponseFields** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`| `ChatCompletionsResponse_Extension (list)` |
+| `ChatCompletionsResponse (object)`| `RequestedResponseField (list)` |
 
 #### 4.2.3 Other Operations
 

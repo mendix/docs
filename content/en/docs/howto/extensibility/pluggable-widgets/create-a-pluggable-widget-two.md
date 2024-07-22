@@ -547,9 +547,7 @@ To add preview mode functionality, create a new file *src/TextBox.editorPreview.
    import { TextBoxPreviewProps } from "../typings/TextBoxProps";
    import { TextInput } from "./components/TextInput";
    
-   declare function require(name: string): string;
-   
-   export function preview(props: TextBoxPreviewProps): ReactNode {
+   export function preview(props: TextBoxPreviewProps): ReactElement {
       return <TextInput value={`[${props.textAttribute}]`} />;
    }
    

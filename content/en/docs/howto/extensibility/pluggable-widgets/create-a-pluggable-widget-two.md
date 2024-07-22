@@ -417,39 +417,39 @@ To make the input widget more accessible for people using screen readers, you wi
 
     ```tsx
     export function TextBox(props: TextBoxContainerProps): ReactElement {
-    const value = props.textAttribute.value || "";
-    const validationFeedback = props.textAttribute.validation;
-    const required = !!(props.requiredMessage && props.requiredMessage.value);
-
-    useEffect(() => {
-        props.textAttribute.setValidator((value?: string): string | undefined => {
-            if (!value) {
-                return props.requiredMessage?.value ?? "";
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        const required = !!(props.requiredMessage && props.requiredMessage.value);
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        function onLeave(value: string, isChanged: boolean): void {
+            if (!isChanged) {
+                return;
             }
-        });
-    }, []);
-
-    function onLeave(value: string, isChanged: boolean): void {
-        if (!isChanged) {
-            return;
+            props.textAttribute.setValue(value);
         }
-        props.textAttribute.setValue(value);
-    }
-
-    return (
-        <Fragment>
-            <TextInput
-                id={props.id}
-                value={value}
-                onLeave={onLeave}
-                tabIndex={props.tabIndex}
-                disabled={props.textAttribute.readOnly}
-                required={required}
-                hasError={!!validationFeedback}
-            />
-            <Alert>{validationFeedback}</Alert>
-        </Fragment>
-    );
+        
+        return (
+            <Fragment>
+                <TextInput
+                    id={props.id}
+                    value={value}
+                    onLeave={onLeave}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                    required={required}
+                    hasError={!!validationFeedback}
+                />
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 

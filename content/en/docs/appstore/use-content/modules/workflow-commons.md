@@ -144,7 +144,7 @@ The image below represents an example of how to configure audit trail event hand
 
 {{< figure src="/attachments/appstore/use-content/modules/workflow-commons/configuration.png" alt="configuration" max-width=90% >}}
 
-{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time, and could contain many non-human activities. In this case, we recommend to only select a limited set of events depending on your need and to regularly delete old audit records. You can use the included scheduled event, see the [Clean-up](#clean-up) section for details.{{% /alert %}}
+{{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time, and could contain many non-human activities. In this case, we recommend to only select a limited set of events depending on your need and to regularly delete old audit records. You can use the included scheduled event: for details, see the [Clean-Up](#clean-up) section below.{{% /alert %}}
 
 ### 5.3 Viewing the Audit Trail
 
@@ -161,9 +161,13 @@ You can view audit trail on three levels:
 2. **A workflow definition**: Here you can see all audit trail logs for all instances of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > **Audit trail** tab.
 3. **A specific workflow instance**: Here you can see all audit trail logs for a specific instance of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > in the **Workflow** tab, select a workflow > **Audit trail** tab.
 
-### 5.4 Clean-up {#clean-up}
+### 5.4 Clean-Up {#clean-up}
 
-Workflow Commons contains a scheduled event to disposition expired audit trail records after a pre-configured retention period. 
+{{% alert color="info" %}}
+This was introduced in [Workflow Commons 3.7.0](https://marketplace.mendix.com/link/component/117066).
+{{% /alert %}}
+
+Workflow Commons contains a scheduled event for the disposition of expired audit trail records after a pre-configured retention period. 
 
 The scheduled event **SE_WorkflowAuditTrailRecord_CleanUp** will delete all the audit trail records for workflow instances that are either completed or aborted for a period longer than the number of days configured in the constant **AuditTrailRetentionInDays**. Audit trail records always get deleted per workflow instance and not individually. 
 

@@ -492,22 +492,36 @@ To make the input widget more accessible for people using screen readers, you wi
     Then add the `id` and `aria` attributes to be rendered:
 
     ```tsx
-    return (
-        <input
-            id={id}
-            type="text"
-            value={getCurrentValue()}
-            onChange={event => setState({ editedValue: event.target.value })}
-            onBlur={onBlur}
-            className={"form-control " + className}
-            disabled={disabled}
-            style={style}
-            tabIndex={tabIndex}
-            aria-labelledby={labelledby}
-            aria-invalid={hasError}
-            aria-required={required}
-        />
-    );
+    export function TextInput({ value, onLeave, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        const [state, setState] = useState<TextInputState>({ editedValue: undefined });
+        useEffect(() => setState({ editedValue: undefined }), [value]);
+        
+        function getCurrentValue(): string {
+            return state.editedValue !== undefined ? state.editedValue : value;
+        }
+        
+        function onBlur(): void {
+            onLeave?.(getCurrentValue(), getCurrentValue() !== value);
+            setState({ editedValue: undefined });
+        }
+        
+        return (
+            <input
+                id={id}
+                type="text"
+                value={getCurrentValue()}
+                onChange={event => setState({ editedValue: event.target.value })}
+                onBlur={onBlur}
+                className={"form-control " + className}
+                disabled={disabled}
+                style={style}
+                tabIndex={tabIndex}
+                aria-labelledby={`${props.id}-label`}
+                aria-invalid={props.hasError}
+                aria-required={props.required}
+            />
+        );
+    }
     ```
 
     After altering this code, do the following to see your changes:

@@ -163,7 +163,7 @@ You can view audit trail on three levels:
 
 ### 5.4 Clean-up {#clean-up}
 
-Workflow Commons contains a scheduled event to disposition expired audit trail records after a pre-configured retirement period. 
+Workflow Commons contains a scheduled event to disposition expired audit trail records after a pre-configured retention period. 
 
 The scheduled event **SE_WorkflowAuditTrailRecord_CleanUp** will delete all the audit trail records for workflow instances that are either completed or aborted for a period longer than the number of days configured in the constant **AuditTrailRetentionInDays**. Audit trail records always get deleted per workflow instance and not individually. 
 

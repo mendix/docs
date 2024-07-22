@@ -153,8 +153,8 @@ This section teaches you how to add validation to your TextBox widget. Using mic
         className?: string;
         children?: ReactNode;
     }
-    
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle = "danger", className, children }) =>
+   
+    export const Alert = ({ alertStyle = "danger", className, children }: AlertProps): ReactElement | null =>
         children
             ? <div className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}
@@ -453,7 +453,7 @@ To make the input widget more accessible for people using screen readers, you wi
     }
     ```
 
-2. In *components/Alert.tsx*, add the `id` and `alert`properties:
+2. In *components/Alert.tsx*, add the `id` property:
 
     ```tsx
     import { FunctionComponent, createElement, ReactNode } from "react";
@@ -465,7 +465,7 @@ To make the input widget more accessible for people using screen readers, you wi
         children?: ReactNode;
     }
     
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle = "danger", className, children, id }) =>
+    export const Alert = ({ alertStyle = "danger", className, children, id }: AlertProps): ReactElement | null =>
         children ? (
             <div id={id} className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}

@@ -62,7 +62,7 @@ After a domain model is generated and if the dedicated chat is still active, you
 
 However, it currently does not support deleting or editing what are already in the generated domain model. This includes adding more attributes to an existing entity. Such requests will not be handled properly at this moment.
 
-You can always edit the generated domain model manually, or remove it and ask Maia to generate a new domain model with adjusted text inputs.
+You can always edit the generated domain model manually, or remove it and ask Maia to generate a new domain model with adjusted text input.
 
 ## 4 Read More
 

@@ -49,7 +49,7 @@ If you are updating the module from a version below 1.4.1 to 1.4.1 or above (inc
 
 ## 3 FileDocument Encryption
 
-Encrypt and decrypt the contents of FileDocument entities using the [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symetric encryption is embedded into encrypted file content. The certificate to use asymetric encryption of the symetric key is stored in the database.
+Encrypt and decrypt the contents of FileDocument entities using the [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) algorithm. The key used for symmetric encryption is embedded into encrypted file content. The certificate to use asymmetric encryption of the symmetric key is stored in the database.
 
 ### 3.1 Typical Use Cases
 

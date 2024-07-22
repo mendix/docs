@@ -35,7 +35,7 @@ For all other attributes, the functions from *java.util.Formatter* are used (for
 
 All the patterns use the locale from the context. Based on the user's language, the pattern will change its behavior if necessary.
 
-### 2.2 Display Pattern Example (Using En_US Lanuage)
+### 2.2 Display Pattern Example (Using En_US Language)
 
 * Long attribute with a thousand separator:
     * Pattern:  `%,8d%n`

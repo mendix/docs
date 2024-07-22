@@ -50,7 +50,7 @@ Next you will add a virtual image of your business card to overlap the physical 
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-added.png" alt="Square added"   width="400"  class="no-border" >}}
 
-1. Double click the **Square (AR)** widget.
+1. Double-click the **Square (AR)** widget.
 1. Select the **Material** tab.
 1. Select **Material type** > **Texture**.
 1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your **Image Tracker (AR)**. When finished your dialog box will look like this:

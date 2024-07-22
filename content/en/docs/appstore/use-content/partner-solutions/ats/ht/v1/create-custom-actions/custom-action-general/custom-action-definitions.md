@@ -6,7 +6,7 @@ description: "Explains the different types of custom actions."
 
 ## 1 Introduction
 
-A custom action is an action created by the user. The how-to's for creating custom actions are divided by type. This document describes the different custom action types and how you can identify them.
+A custom action is an action created by the user. The how-tos for creating custom actions are divided by type. This document describes the different custom action types and how you can identify them.
 
 ## 2 Prerequisites
 
@@ -37,15 +37,15 @@ There are two ways of making a combined action:
 
 The steps in a Mendix app:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-app-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-app-steps.png" class="no-border" >}}
 
 The steps in ATS:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-steps.png" class="no-border" >}}
 
 The combined action:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-newexpense-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/combined-action-ats-newexpense-action.png" class="no-border" >}}
 
 ### 2.2 Summary
 
@@ -63,21 +63,21 @@ When you encounter a widget that you cannot interact with using the standard act
 
 An unsupported widget action uses core actions to interact with a widget. It is comparable to a standard Mendix action, but it is created by the user.
 
-Follow the guidelines bekiw for building a custom action to create an unsupported widget action.
+Follow the guidelines below for building a custom action to create an unsupported widget action.
 
 ### 3.2 Example
 
 The widget in a Mendix app:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-app-widget.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-app-widget.png" class="no-border" >}}
 
 The steps in ATS:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-steps.png" class="no-border" >}}
 
 The unsupported widget action:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-switch-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/unsupported-widget-action-ats-switch-action.png" class="no-border" >}}
 
 ### 3.3 Summary
 
@@ -98,15 +98,15 @@ The focus is on finding an element that you can use to find the widget. The [fin
 
 An element in a Mendix app:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-app.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-app.png" class="no-border" >}}
 
 The steps in ATS:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-steps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-steps.png" class="no-border" >}}
 
 The search context action:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/searchcontext-action-listview-ats-action.png" class="no-border" >}}
 
 ### 4.3 Summary
 
@@ -129,11 +129,11 @@ Function actions distinguish themselves from other actions by their purpose. If 
 
 The steps in ATS:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-teststeps.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-teststeps.png" class="no-border" >}}
 
 The function action:
 
-{{< figure src="/attachments/appstore/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-function-action.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-general/custom-action-definitions/function-action-ats-function-action.png" class="no-border" >}}
 
 ### 5.3 Summary
 

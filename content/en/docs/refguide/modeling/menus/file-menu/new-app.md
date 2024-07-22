@@ -38,7 +38,7 @@ The name of your new app. This name is used as the name of the app directory and
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create an app in [Apps](https://sprintr.home.mendix.com/) in the Mendix Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide/version-control/) and [cloud deployment](/deployment/). When enabled, this will create an app in [Apps](https://sprintr.home.mendix.com/) in the Mendix Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 

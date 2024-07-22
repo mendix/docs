@@ -2,7 +2,7 @@
 title: "Microflow Activities"
 url: /refguide7/microflow-activities/
 ---
-## Integration Activitities
+## Integration Activities
 
 Integration activities can be used to integrate with other systems, for example by calling a web service.
 

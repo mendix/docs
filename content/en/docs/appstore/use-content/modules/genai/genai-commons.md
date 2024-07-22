@@ -47,7 +47,7 @@ The technical purpose of GenAI Commons module is to define a common domain model
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-##### 4.1.1 `Connection` {#connection}
+#### 4.1.1 `Connection` {#connection}
 
 The `Connection` entity contains specifications to interact with an AI provider.
 
@@ -55,7 +55,7 @@ The `Connection` entity contains specifications to interact with an AI provider.
 | --- | --- |
 | `Model` | The name of the model to be used for an operation. |
 
-##### 4.1.2 `Request` {#request} 
+#### 4.1.2 `Request` {#request} 
 
 `Request` is an input object for the chat completions operations defined in the platform-supported GenAI-connectors and contains all content-related input needed for an LLM to generate a response for the given chat conversation. 
 
@@ -358,7 +358,7 @@ Use this microflow to control how the model should determine which function to l
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `Request` | [Request](#request) | Yes | The request for which to set a tool choice. |
-| `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumaration values. |
+| `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumeration values. |
 | `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values. |
 
 ###### 4.3.1.7.2 Return Value
@@ -389,21 +389,21 @@ This microflow can be used to get the content from the latest assistant message 
 
 Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content, and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
 
-###### 4.3.2.2.1 Input Parameters
+##### 4.3.2.2.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `Response` | [Response](#response) | Yes | The response object. |
 
-###### 4.3.2.2.2 Return Value
+##### 4.3.2.2.2 Return Value
 
 | Name | Type | Description |
 |---|---|---|
-| `ReferenceList` | List of [Reference](#reference) | The references with optinional citations that were part of the response message. |
+| `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
 
 ### 4.3.3 Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) boh have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
 We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 

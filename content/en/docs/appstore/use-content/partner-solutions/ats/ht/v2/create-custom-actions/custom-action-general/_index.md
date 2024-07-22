@@ -3,7 +3,7 @@ title: "General"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-general/
 ---
 
-All the necessary information for the Create Custom Action how-to's is found here:
+All the necessary information for the Create Custom Action how-tos is found here:
 
 * [Definitions](/appstore/partner-solutions/ats/ht-two-custom-action-definitions/)
 * [Custom Action Expense App](/appstore/partner-solutions/ats/ht-two-custom-action-expense-app/)

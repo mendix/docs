@@ -172,7 +172,11 @@ An optional citation. This entity can be used to visualize the link between a pa
 | `Text` | The part of the generated text that contains a citation. | 
 | `Quote` | Contains the cited text from the reference. |
 
-#### 4.1.14 `Chunk` {#chunk-entity}
+#### 4.1.14 `ChunkCollection`  
+
+This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
+
+#### 4.1.15 `Chunk` {#chunk-entity}
 
 A piece of information (InputText) and the corresponding embeddings vector retrieved from an Embeddings API.
 
@@ -182,7 +186,7 @@ A piece of information (InputText) and the corresponding embeddings vector retri
 | `EmbeddingVector`| The corresponding embedding vector of the input text. |
 | `_Index` | Internal attribute. Do not use. |
 
-#### 4.1.15 `KnowledgeBaseChunk` {#knowledgebasechunk-entity}
+#### 4.1.16 `KnowledgeBaseChunk` {#knowledgebasechunk-entity}
 
 This entity represents a discrete piece of knowledge that can be used in embed and store operations. It is a specialization of [Chunk](#chunk-entity).
 
@@ -194,11 +198,11 @@ This entity represents a discrete piece of knowledge that can be used in embed a
 | `MxEntity` | If the KnowledgeBaseChunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation. |
 | `Similarity` | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
 
-#### 4.1.16 `MetadataCollection` {#metadatacollection-entity}
+#### 4.1.17 `MetadataCollection` {#metadatacollection-entity}
 
 An optional collection of metadata. This is a wrapper entity for one or more [Metadata](#metadata-entity) objects for a [KnowledgeBaseChunk](#knowledgebasechunk-entity).
 
-#### 4.1.17 `Metadata` {#metadata-entity}
+#### 4.1.18 `Metadata` {#metadata-entity}
 
 This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. It can be used for custom filtering during retrieval.
 
@@ -207,7 +211,7 @@ This entity represents additional information that is to be stored with the [Kno
 | `Key` | This is the name of the metadata and typically tells how the value should be interpreted. |
 | `Value` | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
 
-#### 4.1.18 `EmbeddingsOptions` {#embeddingsoptions-entity}
+#### 4.1.19 `EmbeddingsOptions` {#embeddingsoptions-entity}
 
 An optional input object for the embeddings operations to set optional request attributes.
 
@@ -215,7 +219,7 @@ An optional input object for the embeddings operations to set optional request a
 | ----------- | ------------------------------------------------------------------------------------------------ |
 | `Dimensions`| The number of dimensions the resulting output embeddings should have. |
 
-#### 4.1.19 `EmbeddingsResponse` {#embeddingsresponse-entity}
+#### 4.1.20 `EmbeddingsResponse` {#embeddingsresponse-entity}
 
 The response returned by the model contains token usage metrics. Not all connectors or models might support token usage metrics.
 

@@ -111,7 +111,7 @@ The list shows the following information:
 * **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. You may only have one Technical Contact per app. When you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 * **Created Date** – This is the date on which the app was originally created.
 * **Actions** – You can carry out actions with the following icons:
-  * {{% icon name="email" %}} – Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
+  * {{% icon name="email" %}} – Clicking this emails the license keys of the corresponding app to the registered Technical Contact. 
   * {{% icon name="download-bottom" %}} – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
 
 ### 4.1 App Environment Details {#apps-license-keys-app-environment}
@@ -124,7 +124,7 @@ To quickly change the Technical Contact for your app, click the edit icon ({{% i
 
 On the right side above the list, you can see two buttons:
 
-*  {{% icon name="email" %}} **Email Keys** – Clicking this will email the license keys of the corresponding app to the registered Technical Contact. 
+*  {{% icon name="email" %}} **Email Keys** – Clicking this emails the license keys of the corresponding app to the registered Technical Contact. 
 
 * {{% icon name="download-bottom" %}} **Download Keys** – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created.
 
@@ -132,7 +132,8 @@ The list below show the details of the environments with the following columns:
 
 * **Environment** – This shows the names of the environments that belong to the app that you selected.
 * **ServerID** – This shows the server IDs that were used to generate the license keys for each environment.
-
 * **LicenseID** – This shows the ID of the license that was emailed to the Technical Contact when the license keys were generated. This unique identifier allows you to reference and manage your licenses, ensuring they align with the licenses in your various environments.
 * **Start Date** and **End Date** – These two columns show the dates between which your license keys are valid. Apps need active contracts with a future end date to keep working.
+* **Actions**– You can carry out an action with the following icon:
+  * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app has been offboarded, the app must be offboarded and not show up on the higher-level app screen anymore.
 

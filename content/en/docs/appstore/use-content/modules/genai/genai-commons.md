@@ -288,7 +288,7 @@ The response returned by the model contains token usage metrics. Not all connect
 | --- | --- | --- |
 | `Url` | **Url** | The `Source` attribute contains the URL to the source on the internet. |
 
-### 4.3 Microflows and Java Actions {#microflows}
+### 4.3 Microflows activities {#microflows}
 
 Use the exposed microflows and Java Actions to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa. Two sets of operations are provided: one for text and files, plus a second one for embeddings and knowledge bases.
 
@@ -323,10 +323,10 @@ This microflow can be used to add a new [Message](#message) to the [Request](#re
 
 | Name | Type | Mandatory | Description |
 |--- |---|---|---|
-| `Request` | [Request](#request) | Yes | This is the request object that contains the functional input for the model to generate a response. |
-| `ENUM_MessageRole` | [ENUM_MessageRole](#enum-messagerole) | Yes | The role of the message author. |
+| `Request` | [Request](#request) | mandatory | This is the request object that contains the functional input for the model to generate a response. |
+| `ENUM_MessageRole` | [ENUM_MessageRole](#enum-messagerole) | mandatory | The role of the message author. |
 | `FileCollection` | [FileCollection](#filecollection) | No | This is an optional collection of files that are part of the message. |
-| `ContentString` | String | Yes | This is the textual content of the message. |
+| `ContentString` | String | mandatory | This is the textual content of the message. |
 
 ###### 4.3.1.2.2 Return Value
 
@@ -340,8 +340,8 @@ This microflow can be used to add an optional [StopSequence](#stopsequence) to t
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `Request` | [Request](#request) | Yes | This is the request object that contains the functional input for the model to generate a response. |
-| `StopSequence` | String | Yes | This is the stop sequence string, which is used to make the model stop generating tokens at a desired point. |
+| `Request` | [Request](#request) | mandatory | This is the request object that contains the functional input for the model to generate a response. |
+| `StopSequence` | String | mandatory | This is the stop sequence string, which is used to make the model stop generating tokens at a desired point. |
 
 ###### 4.3.1.3.2 Return Value
 
@@ -357,7 +357,7 @@ In order to include files within a message, you must provide them in the form of
 |---|---|---|---|
 | `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
-| `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | Yes | This is the type of the file. |
+| `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | This is the type of the file. |
 | `TextContent` | String | No | An optional text content describing the file content or giving it a specific name. |
 
 ###### 4.3.1.4.2 Return Value
@@ -374,11 +374,11 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `FileCollection` | [FileCollection](#filecollection) | Yes | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
+| `FileCollection` | [FileCollection](#filecollection) | mandatory | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
 | `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. Either provide a System.FileDocument object or a file URL String. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents need to be sent with a message. Either provide a System.FileDocument object or an Image URL String. |
-| `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | Yes | This is the type of the file. |
-| `TextContent` | String | Yes | An optional text content describing the file content or giving it a specific name. |
+| `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | This is the type of the file. |
+| `TextContent` | String | mandatory | An optional text content describing the file content or giving it a specific name. |
 
 ###### 4.3.1.5.2 Return Value
 
@@ -392,10 +392,10 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 
  Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `Request` | [Request](#request) | Yes | The request to add the function to. |
-| `ToolName` | String | Yes | The name of the tool to use/call. |
+| `Request` | [Request](#request) | mandatory | The request to add the function to. |
+| `ToolName` | String | mandatory | The name of the tool to use/call. |
 | `ToolDescription` | String | No | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| `FunctionMicroflow` | Microflow | Yes | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
+| `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
 
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.
@@ -415,9 +415,9 @@ Use this microflow to control how the model should determine which function to l
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `Request` | [Request](#request) | Yes | The request for which to set a tool choice. |
+| `Request` | [Request](#request) | mandatory | The request for which to set a tool choice. |
 | `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumeration values. |
-| `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | Yes | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values. |
+| `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | mandatory | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values. |
 
 ###### 4.3.1.7.2 Return Value
 
@@ -435,7 +435,7 @@ This microflow can be used to get the content from the latest assistant message 
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `Response` | [Response](#response) | Yes | The response object. |
+| `Response` | [Response](#response) | mandatory | The response object. |
 
 ###### 4.3.2.1.2 Return Value
 
@@ -451,7 +451,7 @@ Use this microflow to get the list of references that may be included in the mod
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `Response` | [Response](#response) | Yes | The response object. |
+| `Response` | [Response](#response) | mandatory | The response object. |
 
 ###### 4.3.2.2.2 Return Value
 
@@ -496,8 +496,8 @@ The `Chat Completions (with history)` operation interface supports more complex 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- |--- |
-| `Connection` | [Connection](#connection) | Yes | This is an object that contains specifications to interact with an AI provider. |
-| `Request` | [Request](#request) | Yes | This is an object that contains messages, optional attributes and an optional [ToolCollection](#toolcollection). |
+| `Connection` | [Connection](#connection) | mandatory | This is an object that contains specifications to interact with an AI provider. |
+| `Request` | [Request](#request) | mandatory | This is an object that contains messages, optional attributes and an optional [ToolCollection](#toolcollection). |
 
 ###### 4.3.3.2.2 Return Value
 
@@ -507,11 +507,11 @@ The `Chat Completions (with history)` operation interface supports more complex 
 
 #### 4.3.4 Knowledge Bases & Embeddings
 
-The following microflows help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
+The following microflows and Java actions help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
 
 ##### 4.3.4.1 Chunks: Initialize Chunkcollection{#chunkcollection-create}
 
-This microflow creates a new ChunkCollection and returns it.
+This microflow creates a new [ChunkCollection](#chunkcollection) and returns it.
 
 ###### 4.3.4.1.1 Input Parameters
 
@@ -521,72 +521,72 @@ This microflow has no input parameters.
 
 | Name | Type | Description |
 |--- |--- |--- |
-| `ChunkCollection` | GenAICommons.ChunkCollection | The newly created ChunkCollection object. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | The newly created ChunkCollection object. |
 
 
 ##### 4.3.4.2 Chunk: Add Chunk to ChunkCollection{#chunkcollection-add-chunk}
 
-This microflow adds a new chunk to the ChunkCollection.
+This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunkcollection).
 
 ###### 4.3.4.2.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `InputText` | String | Yes | Input text that will be embedded. |
-| `ChunkCollection` | GenAICommons.ChunkCollection | Yes | Collection to add chunks to. |
+| `InputText` | String | mandatory | Input text that will be embedded. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | Collection to add Chunks to. |
 
 ###### 4.3.4.2.2 Return Value
 
 | Name | Type | Description |
 |--- |--- |--- |
-| `Chunk` | GenAICommons.Chunk | The added chunk object. |
+| `Chunk` | [Chunk](#chunk-entity) | The added Chunk object. |
 
 ##### 4.3.4.3 Chunk: Add KnowledgeBaseChunk to ChunkCollection{#chunkcollection-add-knowledgebasechunk}
 
-This Java action adds a new KnowledgeBaseChunk to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering.
+This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering.
 
 ###### 4.3.4.3.1 Input parameters
 
 | Name | Type | Mandatory | Documentation |
 |--- |--- |--- |--- |
-| `ChunkCollection` | GenAICommons.ChunkCollection | Yes | This is the (mandatory) ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
-| `InputText` | String | Yes | This is the input text to create the embedding for. |
-| `HumanReadableID` | String | Yes | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
-| `MxObject` | Type parameter 'Entity' | Yes | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
-| `MetadataCollection` | GenAICommons.MetadataCollection | No | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any Key-Value pairs can be store. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | This is the (mandatory) ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
+| `InputText` | String | mandatory | This is the input text to create the embedding for. |
+| `HumanReadableID` | String | mandatory | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
+| `MxObject` | Type parameter | optional | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
+| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any Key-Value pairs can be store. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
 
 ###### 4.3.4.3.2 Return Value
 
 | Name | Type | Description |
 |--- |--- |--- |
-| `KnowledgeBaseChunk` | GenAICommons.KnowledgeBaseChunk | The added KnowledgeBaseChunk object. |
+| `KnowledgeBaseChunk` | [KnowledgeBaseChunk](#knowledgebasechunk-entity) | The added KnowledgeBaseChunk object. |
 
 ##### 4.3.4.4 Embeddings: Create EmbeddingsOptions {#embeddingsoptions-create}
 
-This microflow creates new EmbeddingsOptions.
+This microflow creates new [EmbeddingsOptions](#embeddingsoptions-entity).
 
 ###### 4.3.4.4.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `Dimensions` | Integer/Long | No | Optional: the number of dimensions the resulting output embeddings should have. See connector documentation for supported values and models. |
+| `Dimensions` | Integer/Long | optional | The number of dimensions the resulting output embedding vectors should have. See connector documentation for supported values and models. |
 
 ###### 4.3.4.4.2 Return Value
 
 | Name | Type | Description |
 |--- |--- |--- |
-| `EmbeddingsOptions` | GenAICommons.EmbeddingsOptions | The newly created EmbeddingsOptions object. |
+| `EmbeddingsOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | The newly created EmbeddingsOptions object. |
 
 
 ##### 4.3.4.5 Embeddings: Get First Vector from Response {#embeddings-get-first-vector}
 
-This microflow gets the First Vector from the Response.
+This microflow gets the first embedding vector from the response of an embeddings operation.
 
 ###### 4.3.4.5.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `EmbeddingsResponse` | GenAICommons.EmbeddingsResponse | Yes | Response object that gets returned by embeddings operations. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | mandatory | Response object that gets returned by embeddings operations. |
 
 ###### 4.3.4.5.2 Return Value
 
@@ -597,33 +597,33 @@ This microflow gets the First Vector from the Response.
 
 ##### 4.3.4.6 Knowledge Base: Initialize MetadataCollection with Metadata {#knowledgebase-initialize-metadatacollection}
 
-This microflow creates a new MetadataCollection and adds a new Metadata. The MetadataCollection will be returned. To add additional Metadata, use MetadataCollection_AddMetadata.
+This microflow creates a new [MetadataCollection](#metadatacollection-entity) and adds a new [Metadata](#metadatacollection-entity). The [MetadataCollection](#metadatacollection-entity) will be returned. To add additional Metadata, use `MetadataCollection_AddMetadata`.
 
 ###### 4.3.4.6.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `Key` | String | Yes | This is the name of the metadata and typically tells how the value should be interpreted. |
-| `Value` | String | Yes | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
+| `Key` | String | madatory | This is the name of the metadata and typically tells how the value should be interpreted. |
+| `Value` | String | mandatory | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
 
 ###### 4.3.4.6.2 Return Value
 
 | Name | Type | Description |
 |--- |--- |--- |
-| `MetadataCollection` | GenAICommons.MetadataCollection | The newly created MetadataCollection object. |
+| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | The newly created MetadataCollection object. |
 
 
 ##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
 
-This microflow adds a new Metadata object to a given MetadataCollection. Use MetadataCollection_CreateAndAddMetadata to first create the collection.
+This microflow adds a new Metadata object to a given MetadataCollection. Use `MetadataCollection_CreateAndAddMetadata` to first create the collection.
 
 ###### 4.3.4.7.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `Key` | String | Yes | This is the name of the metadata and typically tells how the value should be interpreted. |
-| `Value` | String | Yes | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
-| `MetadataCollection` | GenAICommons.MetadataCollection | Yes | The MetadataCollection to which the new Metadata object will be added. |
+| `Key` | String | mandatory | This is the name of the metadata and typically tells how the value should be interpreted. |
+| `Value` | String | mandatory | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
+| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | mandatory | The MetadataCollection to which the new Metadata object will be added. |
 
 ###### 4.3.4.7.2 Return Value
 
@@ -640,36 +640,36 @@ These operations are not implemented in this module. The module only describes t
 
 ##### 4.3.5.1 Embeddings (String)
 
-The `Embeddings (String)` operation interface allows the invocation of the embeddings API with a String input and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse_GetFirstVector` from GenAI Commons can be used to retrieve the corresponding embedding vector in a String representation.
+The `Embeddings (String)` operation interface allows the invocation of the embeddings API with a String input and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse_GetFirstVector` microflow from GenAI Commons can be used to retrieve the corresponding embedding vector in a String representation.
 
 ###### 4.3.5.1.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 | --- | --- | ---| --- |
 | `InputText` | String | mandatory | Input text to create the embedding vector for. |
-| `Connection` | GenAICommons.Connection | mandatory | Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
-| `EmbeddingOptions` | EmbeddingsOptions (optional) | optional | Can be used to pass optional request attributes.|
+| `Connection` | [Connection](#connection) | mandatory | Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
+| `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes.|
 
 ###### 4.3.5.1.2 Return Value
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | EmbeddingsResponse | An `EmbeddingsResponse` object that contains the token usage statistics and the corresponding embedding vector as part of a `ChunkCollection` |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | A response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection |
 
 ##### 4.3.5.2 Embeddings (ChunkCollection)
 
-The `Embeddings (ChunkCollection)` operation interface allows the invocation of an embeddings API with a `ChunkCollection` and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse` object is associated with the original `ChunkCollection` used as an input, and the `Chunk` (or `KnowledgeBaseChunk`) objects will be updated with their corresponding embedding vector retrieved from the Embeddings API within this microflow.
+The `Embeddings (ChunkCollection)` operation interface allows the invocation of an embeddings API with a [ChunkCollection](#chunkcollection) and returns an [EmbeddingsResponse](#embeddingsresponse-entity) object with token usage statistics, if applicable. The response object is associated with the original [ChunkCollection](#chunkcollection) used as an input, and the [Chunk](#chunk-entity) (or [KnowledgeBaseChunk](#knowledgebasechunk-entity)) objects will be updated with their corresponding embedding vector retrieved from the Embeddings API within this microflow.
 
 ###### 4.3.5.2.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 | --- | --- | ---| --- |
-| `ChunkCollection` | ChunkCollection | mandatory | A `ChunkCollection` with `Chunks` for which an embedding vector should be generated. Use operations from GenAI commons to create a `ChunkCollection` and add `Chunks` or `KnowledgeBaseChunks` to it. |
-| `Connection` | GenAICommons.Connection | mandatory | Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
-| `EmbeddingOptions` | EmbeddingsOptions (optional) | optional | Can be used to pass optional request attributes. |
+| `ChunkCollection` | ChunkCollection | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
+| `Connection` | [Connection](#connection) | mandatory | A Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
+| `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
 
 ###### 4.3.5.2.2 Return Value
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | EmbeddingsResponse | An `EmbeddingsResponse` object that contains the token usage statistics and the corresponding embedding vector as part of a `ChunkCollection`. |
+| `EmbeddingsResponse` | EmbeddingsResponse | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |

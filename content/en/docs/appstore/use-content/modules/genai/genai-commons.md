@@ -504,3 +504,172 @@ The `Chat Completions (with history)` operation interface supports more complex 
 | Name | Type | Description |
 | --- | --- | --- |
 | `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation. |
+
+#### 4.3.4 Knowledge Bases & Embeddings
+
+The following microflows help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
+
+##### 4.3.4.1 Chunks: Initialize Chunkcollection{#chunkcollection-create}
+
+This microflow creates a new ChunkCollection and returns it.
+
+###### 4.3.4.1.1 Input Parameters
+
+This microflow has no input parameters.
+
+###### 4.3.4.1.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `ChunkCollection` | GenAICommons.ChunkCollection | The newly created ChunkCollection object. |
+
+
+##### 4.3.4.2 Chunk: Add Chunk to ChunkCollection{#chunkcollection-add-chunk}
+
+This microflow adds a new chunk to the ChunkCollection.
+
+###### 4.3.4.2.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `InputText` | String | Yes | Input text that will be embedded. |
+| `ChunkCollection` | GenAICommons.ChunkCollection | Yes | Collection to add chunks to. |
+
+###### 4.3.4.2.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `Chunk` | GenAICommons.Chunk | The added chunk object. |
+
+##### 4.3.4.3 Chunk: Add KnowledgeBaseChunk to ChunkCollection{#chunkcollection-add-knowledgebasechunk}
+
+This Java action adds a new KnowledgeBaseChunk to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering.
+
+###### 4.3.4.3.1 Input parameters
+
+| Name | Type | Mandatory | Documentation |
+|--- |--- |--- |--- |
+| `ChunkCollection` | GenAICommons.ChunkCollection | Yes | This is the (mandatory) ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
+| `InputText` | String | Yes | This is the input text to create the embedding for. |
+| `HumanReadableID` | String | Yes | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
+| `MxObject` | Type parameter 'Entity' | Yes | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
+| `MetadataCollection` | GenAICommons.MetadataCollection | No | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any Key-Value pairs can be store. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
+
+###### 4.3.4.3.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `KnowledgeBaseChunk` | GenAICommons.KnowledgeBaseChunk | The added KnowledgeBaseChunk object. |
+
+##### 4.3.4.4 Embeddings: Create EmbeddingsOptions {#embeddingsoptions-create}
+
+This microflow creates new EmbeddingsOptions.
+
+###### 4.3.4.4.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `Dimensions` | Integer/Long | No | Optional: the number of dimensions the resulting output embeddings should have. See connector documentation for supported values and models. |
+
+###### 4.3.4.4.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `EmbeddingsOptions` | GenAICommons.EmbeddingsOptions | The newly created EmbeddingsOptions object. |
+
+
+##### 4.3.4.5 Embeddings: Get First Vector from Response {#embeddings-get-first-vector}
+
+This microflow gets the First Vector from the Response.
+
+###### 4.3.4.5.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `EmbeddingsResponse` | GenAICommons.EmbeddingsResponse | Yes | Response object that gets returned by embeddings operations. |
+
+###### 4.3.4.5.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `Vector` | String | The first vector from the response. |
+
+
+##### 4.3.4.6 Knowledge Base: Initialize MetadataCollection with Metadata {#knowledgebase-initialize-metadatacollection}
+
+This microflow creates a new MetadataCollection and adds a new Metadata. The MetadataCollection will be returned. To add additional Metadata, use MetadataCollection_AddMetadata.
+
+###### 4.3.4.6.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `Key` | String | Yes | This is the name of the metadata and typically tells how the value should be interpreted. |
+| `Value` | String | Yes | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
+
+###### 4.3.4.6.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `MetadataCollection` | GenAICommons.MetadataCollection | The newly created MetadataCollection object. |
+
+
+##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
+
+This microflow adds a new Metadata object to a given MetadataCollection. Use MetadataCollection_CreateAndAddMetadata to first create the collection.
+
+###### 4.3.4.7.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `Key` | String | Yes | This is the name of the metadata and typically tells how the value should be interpreted. |
+| `Value` | String | Yes | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
+| `MetadataCollection` | GenAICommons.MetadataCollection | Yes | The MetadataCollection to which the new Metadata object will be added. |
+
+###### 4.3.4.7.2 Return Value
+
+This microflow does not have a return value.
+
+
+#### 4.3.5 Knowledge Bases & Embeddings: Embeddings Interface {#embeddings-interface}
+
+To make use of embeddings in a Mendix app, GenAI Commons defines interfaces for embedding operations that connectors can adhere to. We recommend that you adapt to the same interface when developing custom embedding operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
+
+{{% alert color="info" %}}
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
+{{% /alert %}}
+
+##### 4.3.5.1 Embeddings (String)
+
+The `Embeddings (String)` operation interface allows the invocation of the embeddings API with a String input and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse_GetFirstVector` from GenAI Commons can be used to retrieve the corresponding embedding vector in a String representation.
+
+###### 4.3.5.1.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+| --- | --- | ---| --- |
+| `InputText` | String | mandatory | Input text to create the embedding vector for. |
+| `Connection` | GenAICommons.Connection | mandatory | Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
+| `EmbeddingOptions` | EmbeddingsOptions (optional) | optional | Can be used to pass optional request attributes.|
+
+###### 4.3.5.1.2 Return Value
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `EmbeddingsResponse` | EmbeddingsResponse | An `EmbeddingsResponse` object that contains the token usage statistics and the corresponding embedding vector as part of a `ChunkCollection` |
+
+##### 4.3.5.2 Embeddings (ChunkCollection)
+
+The `Embeddings (ChunkCollection)` operation interface allows the invocation of an embeddings API with a `ChunkCollection` and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse` object is associated with the original `ChunkCollection` used as an input, and the `Chunk` (or `KnowledgeBaseChunk`) objects will be updated with their corresponding embedding vector retrieved from the Embeddings API within this microflow.
+
+###### 4.3.5.2.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+| --- | --- | ---| --- |
+| `ChunkCollection` | ChunkCollection | mandatory | A `ChunkCollection` with `Chunks` for which an embedding vector should be generated. Use operations from GenAI commons to create a `ChunkCollection` and add `Chunks` or `KnowledgeBaseChunks` to it. |
+| `Connection` | GenAICommons.Connection | mandatory | Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
+| `EmbeddingOptions` | EmbeddingsOptions (optional) | optional | Can be used to pass optional request attributes. |
+
+###### 4.3.5.2.2 Return Value
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `EmbeddingsResponse` | EmbeddingsResponse | An `EmbeddingsResponse` object that contains the token usage statistics and the corresponding embedding vector as part of a `ChunkCollection`. |

@@ -137,3 +137,5 @@ The list below show the details of the environments with the following columns:
 * **Actions**– You can carry out an action with the following icon:
   * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app has been offboarded, the app must be offboarded and not show up on the higher-level app screen anymore.
 
+### 4.2 Frequent Asked Questions {#license-keys-faq}
+

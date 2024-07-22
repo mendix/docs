@@ -413,7 +413,7 @@ Until now the components did not keep any state. Each keystroke passed through t
 
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
 
-1. In *TextBox.tsx*, replace the return statement with `id`, `required`, and `hasError` properties:
+1. In TextBox.tsx, add the `id`, `required`, and `hasError` props to the `TextInput` and `Alert` components:
 
     ```tsx
     export function TextBox(props: TextBoxContainerProps): ReactElement {

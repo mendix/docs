@@ -156,7 +156,24 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 4. Click **Install PCLM**.
 
-## 3 Installing the Private Mendix Platform
+## 3 Optional: Installing the Svix Component {#install-svix}
+
+Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
+
+1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you plan to use for Private Mendix Platform.
+2. Select **Svix** and specify the following parameters:
+
+    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`
+    * **REDIS_DSN** - A Redis DSN, for example, `redis://redis:6379`
+    * **Image** - Svix server docker images which can access your cluster. The default value is set to the public registry `svix/svix-server:v0.75.0`. You can change it to your private image in a private cluster.
+
+3. Click **Install Svix**.
+
+{{% alert color="info" %}}
+The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
+{{% /alert %}}
+
+## 4 Installing the Private Mendix Platform
 
 Install the Private Mendix Platform by doing the following steps:
 
@@ -209,22 +226,14 @@ Install the Private Mendix Platform by doing the following steps:
 
 {{< figure src="/attachments/private-platform/pmp-install10.png" class="no-border" >}}
 
-## 4 Optional: Installing the Svix Component {#install-svix}
+### 4.1 Adding Additional Components After Installing the Private Mendix Platform
 
-Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
+To ensure that components such as svix and PCLM work correctly, you should install them before you install the Private Mendix Platform itself. If you want to add a component after the Platform installation (for example, if you want to install svix because you decided to enable webhooks), you must perform the following steps:
 
-1. Run the command `./installer component -n=<namespace name>`, where `-n` indicates a namespace. The namespace must be the same as the namespace that you used for Private Mendix Platform.
-2. Select **Svix** and specify the following parameters:
+1. Install the component as described in [Installing Private Cloud License Manager](#install-pclm) and [Installing the Svix Component](#install-svix).
+2. Run the command `./installer platform -n=<namespace name>`, where `-n` is the same namespace as the one where you installed Svix and PCLM.
 
-    * **POSTGRES_DSN** - A Postgres DSN, for example, `postgresql://postgres:postgres@pgbouncer/postgres`
-    * **REDIS_DSN** - A Redis DSN, for example, `redis://redis:6379`
-    * **Image** - Svix server docker images which can access your cluster. The default value is set to the public registry `svix/svix-server:v0.75.0`. You can change it to your private image in a private cluster.
-
-3. Click **Install Svix**.
-
-{{% alert color="info" %}}
-The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
-{{% /alert %}}
+Re-running the installation command ensures that the installer fetches the relevant information from the components that you added.
 
 ## 5 Upgrading the Private Mendix Platform
 

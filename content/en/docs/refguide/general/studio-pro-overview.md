@@ -92,7 +92,7 @@ On the right is the currently selected language. If you have set up multiple lan
 
 ## 8 Read More
 
-* [Keyboard Shortcuts](/refguide/keyboard-shortcuts)
+* [Keyboard Shortcuts](/refguide/keyboard-shortcuts/)
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)
 * [Best Practices for Development](/refguide/dev-best-practices/)

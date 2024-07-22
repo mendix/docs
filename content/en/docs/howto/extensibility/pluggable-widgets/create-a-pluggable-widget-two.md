@@ -447,7 +447,7 @@ To make the input widget more accessible for people using screen readers, you wi
                     required={required}
                     hasError={!!validationFeedback}
                 />
-                <Alert>{validationFeedback}</Alert>
+                <Alert id={props.id}>{validationFeedback}</Alert>
             </Fragment>
         );
     }

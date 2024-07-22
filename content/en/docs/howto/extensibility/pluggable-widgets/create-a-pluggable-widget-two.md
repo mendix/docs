@@ -456,8 +456,6 @@ To make the input widget more accessible for people using screen readers, you wi
 2. In *components/Alert.tsx*, add the `id` property:
 
     ```tsx
-    import { FunctionComponent, createElement, ReactNode } from "react";
-
     export interface AlertProps {
         id?: string;
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";

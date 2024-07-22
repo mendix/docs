@@ -288,9 +288,9 @@ The response returned by the model contains token usage metrics. Not all connect
 | --- | --- | --- |
 | `Url` | **Url** | The `Source` attribute contains the URL to the source on the internet. |
 
-### 4.3 Microflows {#microflows}
+### 4.3 Microflows and Java Actions {#microflows}
 
-Use the exposed microflows to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa. Two sets of microflows are provided: one for text and files, plus a second one for embeddings and knowledge bases.
+Use the exposed microflows and Java Actions to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa. Two sets of operations are provided: one for text and files, plus a second one for embeddings and knowledge bases.
 
 #### 4.3.1 Text & Files: Build request {#text-build-request}
 

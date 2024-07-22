@@ -184,7 +184,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
                     onChange={props.textAttribute.setValue}
                     tabIndex={props.tabIndex}
                     disabled={props.textAttribute.readOnly}
-                ></TextInput>
+                />
                 <Alert>{validationFeedback}</Alert>
             </Fragment>
         );
@@ -255,7 +255,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
                     onChange={props.textAttribute.setValue}
                     tabIndex={props.tabIndex}
                     disabled={props.textAttribute.readOnly}
-                ></TextInput>
+                />
                 <Alert>{validationFeedback}</Alert>
             </Fragment>
         );
@@ -347,7 +347,7 @@ Until now the components did not keep any state. Each keystroke passed through t
                     onLeave={onLeave}
                     tabIndex={props.tabIndex}
                     disabled={props.textAttribute.readOnly}
-                ></TextInput>
+                />
                 <Alert>{validationFeedback}</Alert>
             </Fragment>
         );
@@ -446,7 +446,7 @@ To make the input widget more accessible for people using screen readers, you wi
                 disabled={props.textAttribute.readOnly}
                 required={required}
                 hasError={!!validationFeedback}
-            ></TextInput>
+            />
             <Alert>{validationFeedback}</Alert>
         </Fragment>
     );

@@ -71,7 +71,7 @@ All operations that include knowledge base interaction need the connection detai
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting list can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting collection can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
@@ -89,15 +89,15 @@ This operation handles the following:
 * Creating the empty knowledge base if it does not exist
 * Inserting all provided chunks with their metadata into the knowledge base
 
-The population handles a whole list of chunks at once, and this list should be created using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) operations. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
 #### 3.3.2 `Insert` {#insert}
 
-In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a list of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
+In cases where additional records need to be added to existing knowledge bases, the `Insert` operation can be used. This operation handles a collection of chunks that need to be inserted into the knowledge base. It behaves similarly to the [(Re)populate](#repopulate-knowledge-base) operation, except that it does not delete any data. 
 
 #### 3.3.3 `Replace` {#replace}
 
-The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes, which needs to be reflected in the knowledge base. The operation handles a list of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted.
+The `Replace` operation is intended to be used in scenarios in which the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database). It can be used to keep the knowledge base in sync when the Mendix data changes, which needs to be reflected in the knowledge base. The operation handles a collection of chunks: it will remove the knowledge base data for the Mendix objects the chunks refer to, after which the new data is inserted.
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
@@ -120,7 +120,7 @@ A typical pattern for this retrieval is as follows:
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
-Use this operation to retrieve knowledge base chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata or a Mendix object. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the list. If a Mendix object is passed, only knowledge base chunks that were related to this Mendix object during insertion will be retrieved.
+Use this operation to retrieve knowledge base chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata or a Mendix object. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the collection. If a Mendix object is passed, only knowledge base chunks that were related to this Mendix object during insertion will be retrieved.
 
 #### 3.4.2 `Retrieve & Associate` {#retrieve-associate}
 
@@ -261,7 +261,7 @@ The `Connection` entity passed must be of type `PgVectorKnowledgeBaseConnection`
 
 The `Replace` operation is used to replace existing knowledge base chunks in a knowledge base based on the Mendix objects the chunks represent. This operation handles a collection of chunks with their metadata in a single operation.
 
-Use [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input for this activity, which needs to be passed as `ChunkCollection`. In order to replace the right data in the knowledge base, all `KnowledgeBaseChunks` in `ChunkCollection` need to represent a Mendix object: this is set during chunk creation in [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). 
+Use [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input for this activity, which needs to be passed as `ChunkCollection`. In order to replace the right data in the knowledge base, all `KnowledgeBaseChunks` in `ChunkCollection` need to represent a Mendix object: this is set during chunk creation in [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkCollection (metadata included). 
 
 **Input parameters**
 
@@ -416,7 +416,7 @@ The `Connection` entity passed must be of type `PgVectorKnowledgeBaseConnection`
 
 ##### 4.2.4.3 Delete List {#delete-list-technical}
 
-Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
+Use this operation to delete existing chunks and corresponding metadata in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
 
 **Input parameters**
 

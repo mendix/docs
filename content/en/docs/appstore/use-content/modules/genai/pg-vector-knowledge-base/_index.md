@@ -67,11 +67,11 @@ After following the general setup above, you are all set to use the microflows a
 
 #### 3.2.1 `Create PgVector Knowledge Base Connection` {#create-pgvectorconnection}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be (re) used for knowledge base operations.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for knowledge base operations.
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting list can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting list can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
@@ -101,38 +101,38 @@ The `Replace` operation is intended to be used in scenarios in which the chunks 
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine distance between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). The details for this are captured in the [PgVectorKnowledgeBaseConnection](#pgvectorconnection). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
 
-A typical pattern for retrieval from a knowledge base is as follows:
+A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 
-1. Create a list of labels.
-2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) to set up a MetadataCollection for filtering with its first key/value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
 3. Do the retrieval. For example, you could use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
 For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
-1. Create a list of labels.
-2. Use [Create Label](#create-label) as many times as needed to add the necessary labels.
-3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
+1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) to set up a MetadataCollection for filtering with its first key/value pair added immediately. 
+2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
+3. Do the retrieval. For example, you could use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
-Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels or a Mendix object. If labels are provided, this operation only returns chunks that conform with all of the labels in the list. If a Mendix object is passed, only chunks that were related to this Mendix object during insertion will be retrieved.
+Use this operation to retrieve knowledge base chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata or a Mendix object. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the list. If a Mendix object is passed, only knowledge base chunks that were related to this Mendix object during insertion will be retrieved.
 
 #### 3.4.2 `Retrieve & Associate` {#retrieve-associate}
 
-Use this operation to retrieve chunks from the knowledge base and set associations to the related Mendix objects (if applicable). Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that are conform with all the metadata in the collection.
 
 #### 3.4.3 `Retrieve Nearest Neighbors` {#retrieve-nearest-neighbors}
 
-Use this operation to retrieve chunks from the knowledge base where the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, and a list of labels. If labels are provided, this operation only returns chunks that conform with all of the labels in the list.
+Use this operation to retrieve knowledge base chunks from the knowledge base where the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, and a collection of metadata. If a metadata collection is provided, this operation only returns chunks that conform with all of the metadata in the collection.
 
 #### 3.4.4 `Retrieve Nearest Neighbors & Associate` {#retrieve-nearest-neighbors-associate}
 
-Use this operation to retrieve chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that are conform with all of the labels in the list.
+Use this operation to retrieve knowledge base chunks from the knowledge base and set associations to the related Mendix objects (if applicable). In this operation the retrieval and sorting are based on vector similarity with regard to a given input vector. Additional selection and filtering can be done by specifying the optional input parameters: minimum (cosine) similarity (0–1.0), maximum number of results, as well as a collection of metadata. If a metadata collection is provided, this operation only returns knowledge base chunks that are conform with all of the metadata in the collection.
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
@@ -144,11 +144,11 @@ Use this operation to delete a complete knowledge base at once. After execution,
 
 #### 3.5.2 `Delete` {#delete}
 
-In scenarios where the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related chunks from the knowledge base. For this, the `Delete` operation can be used. The `Delete` operation accepts any kind of Mendix object, and it removes all the chunks related to the provided Mendix object at the time of insertion.
+In scenarios where the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related knowledge base chunks from the knowledge base. For this, the `Delete` operation can be used. The `Delete` operation accepts any kind of Mendix object, and it removes all the knowledge base chunks related to the provided Mendix object at the time of insertion.
 
 #### 3.5.3 `Delete List` {#delete-list}
 
-This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the chunks related to the provided Mendix objects at the time of insertion.
+This operation is meant to be used in a similar scenario to the one described for the `Delete` operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the knowledge base chunks related to the provided Mendix objects at the time of insertion.
 
 ## 4 Technical Reference {#technical-reference}
 

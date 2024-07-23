@@ -61,7 +61,7 @@ The list shows the all the environments available for the app, with the followin
 * **Mendix Version** – This shows the Mendix version.
 * **Credits Used** – This shows the number of the credit that the environment has used.
 * **Action**
-  * **Offboard** – Clicking this button starts [offboarding an environment](#offboard-environment)
+    * **Offboard** – Clicking this button starts [offboarding an environment](#offboard-environment)
 
 #### 2.2.1 Adding a New Environment {#add-environment}
 
@@ -149,7 +149,7 @@ The list below show the details of the environments with the following columns:
 
 License keys are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key.
 
-For details on how to apply license keys, see [How to Activate a Mendix License](https://docs.mendix.com/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license). Any changes to licenses will require the Technical Contacts of these apps to reapply license keys to their respective app environments.
+Any changes to licenses will require the Technical Contacts of these apps to reapply license keys to their respective app environments. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*. 
 
 When contracts are created or renewed, new license keys are automatically generated. These new license keys must be applied to the environments of the app for which the contract was changed.
 
@@ -157,7 +157,7 @@ When contracts are created or renewed, new license keys are automatically genera
 
 #### 4.3.1 How Do I Know If My Company Uses License Keys?
 
-Several deployment options require you to manually apply license keys to your app environments. For details, see [How to Activate a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license).
+Several deployment options require you to manually apply license keys to your app environments. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in Licensing Apps.
 
 In some exceptional cases, you may also receive license keys for other deployment models. Your Mendix Admins should be aware of these.
 
@@ -165,7 +165,7 @@ You can find the latest version of license keys created for your apps on the **A
 
 #### 4.3.2 Do These Unrecognized Apps and License Keys Belong to Us?
 
-Yes, all apps and license keys visible in Control Center belong to your account. These keys have been requested by the Technical Contact of the apps. If there are apps or app environments that are no longer active, you should delete them from the list.
+Yes, all apps and license keys visible in Control Center belong to your account. These keys have been requested by the Technical Contact of the apps. If there are apps or app environments that are no longer active, you should delete them from the **Apps with License Keys** tab on the **Deployed Apps** page in Control Center.
 
 If you have any doubts, contact Mendix Support.
 
@@ -178,28 +178,28 @@ These apps still appear in Control Center because they were not formally offboar
 There might be multiple reasons for this. However, it is likely that your app is using incorrect license keys for the app environments. Try the following:
 
 1. [Request new license keys](https://newnode.mendix.com/) for the app environments.
-2. Download the keys.
-3. Follow the instructions in [How to Activate a Mendix License](#activate-mendix-license) to reapply keys for apps with discrepancies.
+2. Download the license keys.
+3. Reapply license keys for apps with discrepancies. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*.
 
 #### 4.3.5 How Can My License End Date Differ from My License Keys End Date?
 
-The license keys end date is configured to match your Mendix contract end date. These license keys are published on Control Center and have correct dates.
+The license keys end date is configured to match your Mendix contract end date. These license keys are published in Control Center and have correct dates.
 
-In case of discrepancy, download the keys and follow the normal procedure to reapply keys for apps with discrepancies.
+In case of discrepancy, download the license keys and reapply the license keys for apps with discrepancies. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) in *Licensing Apps*.
 
 #### 4.3.6 Do I Have to Download New License Keys Once I Renew My Contract?
 
-Upon renewal of your Mendix contract, new license keys will be automatically emailed to the Technical Contact of your apps. Additionally, Mendix administrators can also download them from the License Keys view on Control Center.
+Upon renewal of your Mendix contract, new license keys will be automatically emailed to the Technical Contact of your apps. Additionally, Mendix Admins can also download them on the **Apps with Licensed Keys** tab on the **Deployed Apps** page in Control Center.
 
 #### 4.3.7 Do I Have to Manually Activate License Keys After Contract Renewal?
 
-Yes, you need to manually apply new license keys to your app after renewing your contract. For further details, see [Deployment](/deployment/).
+Yes, you need to manually apply new license keys to your app after renewing your contract. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) in *Licensing Apps*.
 
 #### 4.3.8 What Happens If I Do Not Update My License Keys After the License Key End Date? Will I Lose My Data?
 
 After the end date of the license key has passed, your apps enter a 30-day grace period. During this grace period, the app will continue to run normally using the expired license. However, you may notice extra warning messages in the app logs during this period.
 
-If you do not update your keys by the end of this period, your app may be forcefully stopped by the Mendix runtime. Upon restart, the app will switch to trial mode and will follow the limitations of trial mode. For details of license limitations, see [How to License Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
+If you do not update your keys by the end of this period, your app may be forcefully stopped by the Mendix runtime. Upon restart, the app will switch to trial mode and will follow the limitations of trial mode. For details of license limitations, see [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 #### 4.3.9 My App Stopped Working Because the License Key Expired. What Should I Do?
 

@@ -175,47 +175,47 @@ This entity holds the necessary information to perform Bedrock operations such a
 
 This entity extends the GenAICommons.Request with further options for the `ChatCompletions` operation. 
 
-It can be used to add model-specific request parameters as well as requesting model specific response fields. This can be done by associating the following entites to a ChatCompletionsRequest_Extension.
+It can be used to add model-specific request parameters as well as requesting model specific response fields. This can be done by associating the following entities to a ChatCompletionsRequest_Extension.
 
 ##### 4.1.1.3 AbstractRequestParameter {#abstract-request-parameter}
 
-This is an abstract entity. **Do not use this entity directly. Instead, please use one of it's specializations.**
+This is an abstract entity. **Do not use this entity directly. Instead, please use one of its specializations.**
 
-The specializations of this entity can be used to add additional model-specific request paramters to the request. 
+The specializations of this entity can be used to add additional model-specific request parameters to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Key` | The Key attribute describes the identifier of the additional model-specific request parameter. |
+| `Key` | The Key attribute holds the identifier of the additional model-specific request parameter. |
 
 ##### 4.1.1.4 StringRequestParameter {#string-request-parameter}
 
-This entity can be used to add an additional model-specific request paramter with a string value to the request. 
+This entity can be used to add an additional model-specific request parameter with a string value to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Value` | The Value attribute describes the value of the additional model-specific request parameter. |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
 
-It can be added to the GenAICommons Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
 
 ##### 4.1.1.5 DecimalRequestParameter {#decimal-request-parameter}
 
-This entity can be used to add an additional model-specific request paramter with a decimal value to the request. 
+This entity can be used to add an additional model-specific request parameter with a decimal value to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Value` | The Value attribute describes the value of the additional model-specific request parameter. |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
 
-It can be added to the GenAICommons Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
 
 ##### 4.1.1.6 IntegerRequestParameter {#int-request-parameter}
 
-This entity can be used to add an additional model-specific request paramter with an integer value to the request. 
+This entity can be used to add an additional model-specific request parameter with an integer value to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Value` | The FieldName attribute describes the name of the additional response field that should be returned.  |
+| `Value` | The FieldName attribute holds the name of the additional response field that should be returned.  |
 
-It can be added to the GenAICommons Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
 
 ##### 4.1.1.7 ResponseFieldRequest {#response-field-request}
 
@@ -225,7 +225,7 @@ This entity can be used to request an additional model-specific response field t
 | --- | --- |
 | `FieldName` | The FieldName attribute describes the name of the additional response field that should be returned. |
 
-It can be added to the GenAICommons Request using the [Request: Add Additional Response Field](#add-response-field) operation.
+It can be added to the GenAICommons.Request using the [Request: Add Additional Response Field](#add-response-field) operation.
 
 ##### 4.1.1.8 ChatCompletionsResponse {#chatcompletions-response}
 

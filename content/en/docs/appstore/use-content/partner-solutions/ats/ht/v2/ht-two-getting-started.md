@@ -103,7 +103,7 @@ For further documentation on how-to install the ATS Helper and the Recorder see 
 
 ## 4 Test Cases
 
-The **Test Cases** menu is where you access the repositoy, test data and user stories.
+The **Test Cases** menu is where you access the repository, test data and user stories.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/test-cases-menu.png" class="no-border" >}}
 
@@ -193,7 +193,7 @@ In this tab, you can connect your datasets to a test case. Use the arrow to sele
 If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 {{% /alert %}}
 
-For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
+For further documentation on how-to create a data-driven test case, see [How-to create a data-driven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
 
 #### 4.2.3 Show Usages Tab
 
@@ -274,7 +274,7 @@ When you select a supported selenium provider like Browserstack additional optio
 
 | Field | Description |
 | --- | --- |
-| **Platform** | Select the plaform you want to test on. |
+| **Platform** | Select the platform you want to test on. |
 | **Resolution** | Select the resolution of the session screen. |
 
 Now click **Run** again in the upper-right corner to execute the test case/suite against the provided parameters.

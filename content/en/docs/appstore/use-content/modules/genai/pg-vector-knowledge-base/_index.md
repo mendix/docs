@@ -31,7 +31,7 @@ Also without invoking LLMs directly with the retrieved information, the similari
 
 ### 1.2 Features {#features}
 
-With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling to support an additional traditional search component.
+With the current version, Mendix supports inserting data chunks with their vectors into a knowledge base (population) and selecting those records from that moment onwards (retrieval). Apart from cosine similarity search, which is executed based on the vector only, custom filtering is possible using key-value labeling (metadata) to support an additional traditional search component.
 
 ### 1.3 Prerequisites {#prerequisites}
 
@@ -57,7 +57,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.1 General Configuration {#general-configuration}
 
-1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities, [Chunk](#chunk), and [Label](#label).
+1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **PgVectorKnowledgeBase.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
 3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
@@ -87,7 +87,7 @@ This operation handles the following:
 
 * Clearing the knowledge base if it does exist 
 * Creating the empty knowledge base if it does not exist
-* Inserting all provided chunks with their labels into the knowledge base
+* Inserting all provided chunks with their metadata into the knowledge base
 
 The population handles a whole list of chunks at once, and this list should be created using the `Create Chunk` operation. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
@@ -101,7 +101,7 @@ The `Replace` operation is intended to be used in scenarios in which the chunks 
 
 ### 3.4 Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). The details for this are captured in the [PgVectorKnowledgeBaseConnection](#pgvectorconnection). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on [Labels](#create-label). 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). The details for this are captured in the [PgVectorKnowledgeBaseConnection](#pgvectorconnection). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on metadata. 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 

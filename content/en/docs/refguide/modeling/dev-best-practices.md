@@ -105,6 +105,10 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 #### Folder Names
 
+Folder names should clearly indicate their contents. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* to reflect its function.
+
+Keep in mind that folders do not affect the full path of the resource. For example, when referencing the folder **ODataAPIs** in MyFirstModule, the path name would be *MyFirstModule.ODataAPIs*. 
+
 #### Folder Structure
 
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 

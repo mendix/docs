@@ -18,7 +18,7 @@ Private Mendix Platform depends on Mendix for Private Cloud for the installation
 Before starting the installation process, make sure that you have all the necessary prerequisites:
 
 * A Kubernetes instance where the target namespace has already been created. For more information, see [Supported Providers: Supported Versions](/developerportal/deploy/private-cloud-supported-environments/#supported-versions).
-* A database. For more information, see [Supported Providers: Databases](/developerportal/deploy/private-cloud-supported-environments/#databases).
+* A PostgreSQL 12 database.
 * File storage. For more information, see [Supported Providers: File Storage](/developerportal/deploy/private-cloud-supported-environments/#file-storage).
 * A registry. For more information, see [Supported Providers: Container Registries](/developerportal/deploy/private-cloud-supported-environments/#container-registries).
 * A domain.

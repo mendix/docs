@@ -20,7 +20,7 @@ By proactively monitoring quality on a daily basis customers can improve maintai
 
 ## 2 Maintainability
 
-The Mendix QSM maintainability model is based on the SIG/TÜViT Evaluation Criteria. These criteria provide standardized evaluation and certification of the technical quality of the source code of software products. By ensuring that an application is highly maintainable, the maintenance load can be reduced, reducing cost and freeing up capacity to focus on innovation. QSM provides actionable insights to structurally and itteratively improve the maintainability of any application and leverages AI to provide explanations and methods to determine what to do with individual findings. 
+The Mendix QSM maintainability model is based on the SIG/TÜViT Evaluation Criteria. These criteria provide standardized evaluation and certification of the technical quality of the source code of software products. By ensuring that an application is highly maintainable, the maintenance load can be reduced, reducing cost and freeing up capacity to focus on innovation. QSM provides actionable insights to structurally and iteratively improve the maintainability of any application and leverages AI to provide explanations and methods to determine what to do with individual findings. 
 
 The general notion of software quality embraces a variety of quality aspects, of which a taxonomy is available in the [ISO/IEC 25010](https://iso25000.com/index.php/en/iso-25000-standards/iso-25010) international standard on software product quality. The scope of the SIG/TÜViT **Evaluation Criteria** is limited to the internal quality characteristic of maintainability and its sub-characteristics of **analyzability, modifiability, testability, modularity and reusability**. The evaluation concerns the source code of a software product, not the behavior of the product in a test or production environment. 
 
@@ -40,7 +40,7 @@ Because QSM can provide these findings out of the box and in early stages of dev
 
 ## 5 Open-source Health
 
-In addition to the security of your own code, it is essential to also consider the security of third-party code within your system. Open-source health allows you to automatically generate an exhaustive list of all open-source software present in your system. Both Mendix modules or widgets, and Java or Javascript libraries are caught and analyzed by this model. QSM will inform you whenever there is a known vulnerability in such a library, or which ones have new updates available. This way, QSM can support you pro-actively, keeping your dependencies up-to-date and avoiding security incidents before they even have a chance to appear. 
+In addition to the security of your own code, it is essential to also consider the security of third-party code within your system. Open-source health allows you to automatically generate an exhaustive list of all open-source software present in your system. Both Mendix modules or widgets, and Java or JavaScript libraries are caught and analyzed by this model. QSM will inform you whenever there is a known vulnerability in such a library, or which ones have new updates available. This way, QSM can support you pro-actively, keeping your dependencies up-to-date and avoiding security incidents before they even have a chance to appear. 
 
 ## 6 Additional Information
 

@@ -546,7 +546,7 @@ To easily view changes to your widget while in Mendix Studio Pro's **Design mode
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
    ```tsx
-   import { createElement, ReactNode } from "react";
+   import { createElement, ReactElement } from "react";
    import { TextBoxPreviewProps } from "../typings/TextBoxProps";
    import { TextInput } from "./components/TextInput";
    

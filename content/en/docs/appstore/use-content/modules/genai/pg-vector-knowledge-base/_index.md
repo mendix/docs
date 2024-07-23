@@ -45,6 +45,7 @@ You should have access to your own (remote) PostgreSQL database server with the 
 * [Encryption](https://marketplace.mendix.com/link/component/1011) module
 * [Community Commons](https://marketplace.mendix.com/link/component/170) module
 * [Database Connector](https://marketplace.mendix.com/link/component/2888) module
+* [GenAI Commons](https://marketplace.mendix.com/link/component/227933) module
 
 ## 2 Installation {#installation}
 
@@ -62,15 +63,11 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(re)populate](#repopulate-knowledge-base)) and finding relevant data chunks in an existing knowledge base (for example, [retrieve](#retrieve)). In both steps, [Labels](#label) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [retrieve](#retrieve)), deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
-#### 3.2.1 `Create label` {#create-label}
+#### 3.2.1 `Create PgVector Knowledge Base Connection` {#create-pgvectorconnection}
 
-Labels can optionally be used to attach additional information to chunks. That will be used for custom filtering during the retrieval step. Each Label stands for a single key-value combination. In the operations to create a knowledge base chunk, a list of Labels can be passed as optional input. During the retrieval, if a list of Labels is provided as search input, all key-value pairs passed in the form of Label objects to the operation must match any previously attached labels to the chunk during population. Examples for typical key-value pairs are as follows:
-
-* Category: Bug, Feature
-* Status: Open, Closed, In Progress
-* Machine Type: MachineX, MachineY
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be (re) used for knowledge base operations.
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
@@ -184,38 +181,14 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 | --------- | ---------------------------------------------------- |
 | `Password`  | This is the (unencrypted) password used by the runtime to authenticate towards your knowledge base database. |
 
-#### 4.1.2 Knowledge Base Interaction {#knowledgebase-domain-model}
+##### 4.1.1.3 `PgVectorKnowledgeBaseConnection` {#pgvectorconnection}
 
-{{< figure src="/attachments/appstore/use-content/modules/pgvector-knowledge-base/domain-model-knowledge-base-interaction.png" >}}
+This non-persistent entity, a specialization of [Connection](/appstore/modules/genai/commons/#connection) contains the details needed to let the system establsih a connect to a PgVector knowledge base. For the operations to work, it must have a `DatabaseConfiguration` associated. By providing the `KnowledgeBaseName`, you determine the knowledge base inside of the database server that is applicable for the use case.
 
-##### 4.1.2.1 `Chunk` {#chunk}
+| Attribute | Description                                          |
+| --------- | ---------------------------------------------------- |
+| `KnowledgeBaseName`  | This is the name of the knowledge base |
 
-This entity represents a discrete piece of knowledge that needs to go into or comes out of the knowledge base. 
-
-| Attribute         | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| `ChunkID`         | This is a system-generated GUID for the chunk in the knowledge base. |
-| `HumanReadableID` | This is a front-end reference to the chunk so that users know what it refers to (e.g. URL, document location, human-readable record ID) |
-| `Vector`          | This is the embedding vector that was generated for the knowledge for this chunk which is used in the vector database for similarity calculations. |
-| `ChunkType`       | This is the type of the chunk. See the enumeration [ChunkType](#enum-chunktype). |
-| `Key`             | This is the original string that was used to generate the vector and can be used directly after retrieval. |
-| `Value`           | This represents a value that has no effect on the vector or similarity search but is to be used directly after retrieval. |
-| `MxObjectID`      | If the chunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation. |
-| `MxEntity`        | If the chunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation. |
-| `Similarity`      | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
-
-The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Chunk`. This facilitates easy implementation on pages where retrieved data is shown.
-
-##### 4.1.2.2 `Label` {#label} 
-
-This represents additional information that is to be stored with the chunks in the knowledge base. It can be used for custom filtering during retrieval. A chunk can be associated to multiple labels; labels in turn can be shared across multiple chunks.
-
-| Attribute            | Description                                                                                   |
-| -------------------- | --------------------------------------------------------------------------------------------- |
-| `Key`                | This is the name of the label and typically tells how the value should be interpreted.        |
-| `Value`              | This is the value of the label that provides additional information about the chunk in the context of the given key.          |
-
-The **PgVectorKnowledgeBase.User** module role has read access to all attributes of `Label`. This facilitates easy implementation on pages where retrieved data is shown.
 
 ### 4.2 Enumerations {#enumerations} 
 

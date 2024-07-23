@@ -105,7 +105,7 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 #### Folder Names
 
-Folder names should clearly indicate their contents. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* to reflect its function.
+Mendix recommends to use folder names that clearly identify their contents. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* to reflect its function.
 
 Keep in mind that folders do not affect the full path of the resource. For example, when referencing the folder **ODataAPIs** in MyFirstModule, the path name would be *MyFirstModule.ODataAPIs*. 
 

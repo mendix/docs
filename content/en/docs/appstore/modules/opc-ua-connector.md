@@ -8,7 +8,8 @@ tags: ["OPC-UA", "Integration", "IIOT", "low-code"]
 
 ## 1 Introduction
 
-The OPC-UA connector is a Mendix Module to connect to your OPC-UA server.
+[OPC](opcfoundation.org) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries.
+You can use the OPC-UA connector with your Mendix app to communicate with OPC-UA server.
 
 ## 1.1 Typical Use Case
 

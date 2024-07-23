@@ -70,7 +70,7 @@ Mendix connectors offer direct support for the following models:
 | | Mistral Small | Chat Completions | text | text | Function calling | |
 
 
-Please refer to [this](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) additional documentation for more details on the supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations.
+Please refer to [this](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) additional documentation for more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations.
 
 The available showcase applications offer implementation inspiration for many of the listed models.
 

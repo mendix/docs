@@ -169,11 +169,11 @@ Yes, all apps and license keys visible in Control Center belong to your account.
 
 If you have any doubts, contact Mendix Support.
 
-#### 4.3.3 Why Are Unused or Unrecognized App Names Still in the List? How Can I Correct This?
+#### 4.3.3 Why Are Unused or Unrecognized App Names Still in Control Center? How Can I Correct This?
 
-These apps still appear in Control Center because they were not formally offboarded. You can easily offboard these apps by removing the keys associated with the environments of the app.
+Some apps still appear on the **Apps with Licensed Keys** tab on the **Deployed Apps** page in Control Center, because they were not formally offboarded. You can easily offboard these apps by removing the keys associated with the environments of the app.
 
-#### 4.3.4 Why Are Some Apps Hosted via License Keys Not Shown in the List?
+#### 4.3.4 Why Are Some Apps Hosted via License Keys Not Shown in Control Center?
 
 There might be multiple reasons for this. However, it is likely that your app is using incorrect license keys for the app environments. Try the following:
 
@@ -181,7 +181,7 @@ There might be multiple reasons for this. However, it is likely that your app is
 2. Download the license keys.
 3. Reapply license keys for apps with discrepancies. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*.
 
-#### 4.3.5 How Can My License End Date Differ from My License Keys End Date?
+#### 4.3.5 How Can My License End Date Differ from My License Keys End Date? How to Correct this?
 
 The license keys end date is configured to match your Mendix contract end date. These license keys are published in Control Center and have correct dates.
 

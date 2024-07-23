@@ -11,16 +11,24 @@ tags: ["OPC-UA", "Integration", "IIOT", "low-code"]
 [OPC](opcfoundation.org) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries.
 You can use the OPC-UA connector with your Mendix app to communicate with OPC-UA server.
 
-## 1.1 Typical Use Case
+The OPC-UA connector is based on [Eclipse Milo](https://github.com/eclipse/milo) client SDK, an open-source implementation of OPC.
 
-The OPC-UA connector should be used ...
+## 1.1 Features
+
+The OPC-UA connector consists of microflow that enable you to do the following:
+* Connect to OPC-UA server
+* Browse OPC-UA server nodes
+* Read and write OPC-UA node attributes
+* Subscribe to OPC-UA data change
 
 ## 1.2 License
 
 The OPC-UA connector is licensed under the EPL2.0 License.
 
-## Pre-requisites
-Mendix Studio Pro version 9.24.3+
+## 1.3 Pre-requisites
+
+* Mendix Studio Pro version 9.24.3+
+* OPC-UA server 1.03+
 
 ## 1.4 Dependencies {#dependencies}
 

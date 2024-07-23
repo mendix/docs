@@ -74,16 +74,15 @@ Labels can optionally be used to attach additional information to chunks. That w
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the `Create Chunk` operation. After you create the chunks, the resulting list can be inserted into the knowledge base using the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create chunks for those using the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting list can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new list of `Chunk`.
+1. Create a new `ChunkCollection`.
 2. For each knowledge item, do the following:
-    * Create a new list of `Label`.
-    * Use [Create label](#create-label-technical) as many times as needed to add the necessary labels.
-    * With both lists, use [Create chunk](#create-chunk-technical) for the knowledge item.
-3. With the list of `Chunk`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
+    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
+    * With both collections, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) for the knowledge item.
+3. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
@@ -124,7 +123,7 @@ A typical pattern for this retrieval is as follows:
 
 #### 3.4.1 `Retrieve` {#retrieve}
 
-Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels. If labels are provided, this operation only returns chunks that conform with all of the labels in the list.
+Use this operation to retrieve chunks from the knowledge base. Additional selection and filtering can be done by specifying the optional input parameters for offset and a maximum number of results, as well as a list of labels or a Mendix object. If labels are provided, this operation only returns chunks that conform with all of the labels in the list. If a Mendix object is passed, only chunks that were related to this Mendix object during insertion will be retrieved.
 
 #### 3.4.2 `Retrieve & Associate` {#retrieve-associate}
 
@@ -280,11 +279,12 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `ChunkCollection` | [ChunkCollection]/appstore/modules/genai/commons/(#chunkcollection) | mandatory | This list is for replacing the chunk data into the knowledge base. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base to be repopulated with the provided chunks.
 
 **Return value**
 
@@ -296,19 +296,18 @@ The `(Re)populate Knowledge Base` activity is used to populate a whole knowledge
 
 The `Insert` operation is used to add chunks to a knowledge base. This operation handles a list of chunks with their labels in a single operation.
 
-By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables. 
-
 This operation takes care of the creation of the actual tables if needed. If for the provided `KnowledgeBaseName` there is already data present from an earlier iteration with the same chunk ID, this operation will return `false` with an error logged.
 
-Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
+Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. 
 
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `ChunkCollection` | [ChunkCollection]/appstore/modules/genai/commons/(#chunkcollection) | mandatory | This list is for inserting the chunk data into the knowledge base. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base into which the chunks are to be inserted.
 
 **Return value**
 
@@ -322,15 +321,14 @@ The `Replace` operation is used to replace existing chunks in a knowledge base b
 
 Use [Create Label](#create-label-technical) and [Create Chunk](#create-chunk-technical) to construct the input for this microflow, which needs to be passed as `ChunkList`. In order to replace the right data in the knowledge base, all chunks in `ChunkList` need to represent a Mendix object: this is set during chunk creation in [Create Chunk](#create-chunk-technical) by specifying the `MxObject` input parameter. Existing chunks related to those Mendix objects will be deleted from the knowledge base first, and then be inserted according to the new state as specified by the ChunkList (labels included). By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. It is used later on to retrieve elements from the right tables.
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
-
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `ChunkList`          | List of [chunks](#chunk)                                                    | mandatory | This list is for inserting the [chunks'](#chunk) data into the knowledge base. Based on the Mendix object they represent deletion of chunks will happen first. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `ChunkCollection` | [ChunkCollection]/appstore/modules/genai/commons/(#chunkcollection) | mandatory | This list is for replacing the chunk data into the knowledge base. Based on the Mendix object they represent deletion of chunks will happen first. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base in which the chunks are to be replaced.
 
 **Return value**
 
@@ -346,17 +344,16 @@ Activities that support the retrieval of the knowledge from the knowledge base.
 
 The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned, which can be used for custom logic. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
-
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
-| `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a number of records in the retrieve. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `MetadataCollection` | [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) | optional | When provided, this operation only returns knowledge base chunks that conform with all of the metadata key/value pairs in the collection. |  
+| `MaxNumberOfResults` | Integer/Long | optional | This is to optionally limit the number of results that should be returned. |
+| `Offset` | Integer/Long | optional | This is for skipping a number of records in the retrieve. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base from which the chunks are to be retrieved.
 
 **Return value**
 
@@ -368,18 +365,17 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 The `Retrieve & Associate` activity is used to retrieve a subset of or the whole knowledge base. In addition to the [Retrieve](#retrieve-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary associations exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned, which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a list of [Labels](#label), see [Create Label](#create-label-technical) activity. `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
-
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database that contains the data to retrieve. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this is set by this operation. This also describes the type of the returned list. |
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels are returned. |
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This is to optionally limit the number of results that should be returned. |
-| `Offset`          | Integer/Long                                                        | optional                     | This is for skipping a specified number of records in the retrieval. |
+| `MetadataCollection` | [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) | optional | When provided, this operation only returns knowledge base chunks that conform with all of the metadata key/value pairs in the collection. |
+| `MaxNumberOfResults` | Integer/Long | optional | This is to optionally limit the number of results that should be returned. |
+| `Offset` | Integer/Long | optional | This is for skipping a specified number of records in the retrieval. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base from which the chunks are to be retrieved.
 
 **Return value**
 
@@ -395,14 +391,15 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
-| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neighbors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
-| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that only chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `Vector` | String | mandatory | This is the vector representation of the data for which the nearest neighbors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base. |
+| `MetadataCollection` | [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) | optional | When provided, this operation only returns knowledge base chunks that conform with all of the metadata key/value pairs in the collection. |
+| `MinimumSimilarity` | Decimal | optional | This is to filter the results, so that only chunks are returned which similarity score is equal or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
+| `MaxNumberOfResults` | Integer/Long | optional | This can be used to limit the number of results that should be returned. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base from which the nearest neighbors are to be retrieved.
 
 **Return value**
 
@@ -414,19 +411,18 @@ The `DatabaseConfiguration` that is passed must contain the connection details t
 
 The `Retrieve Nearest Neighbors & Associate` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. In addition to the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [Chunk](#chunk) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a list of [Labels](#label) (for more information, see the [Create Label](#create-label-technical) activity). `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering. 
 
-The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
-
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database which contains the data to retrieve.|
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
 | `TargetChunk` | Entity parameter | mandatory | This must be a specialization of the [Chunk](#chunk) entity. If it contains associations to (specializations of) the related Mendix object for which the chunk was created, this will be set by this operation. This will also describe the type of the returned list. |
-| `Vector`          | String                                                       | mandatory                     | This is the vector representation of the data for which the nearest neighbors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base.|
-| `LabelList`          | List of [Labels](#label)                                                    | optional | This list is for additional filtering in the retrieve. Only chunks that comply with the labels will be returned. |
-| `MinimumSimilarity`          | Decimal                                                        | optional                     | This is to filter the results, so that it only returns those chunks with a similarity score equal to or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
-| `MaxNumberOfResults`          | Integer/Long                                                      | optional                    | This can be used to limit the number of results that should be returned. |
+| `Vector` | String | mandatory | This is the vector representation of the data for which the nearest neighbors should be calculated. The dimension needs to be the same as the vectors stored in the knowledge base. |
+| `MetadataCollection` | [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) | optional | When provided, this operation only returns knowledge base chunks that conform with all of the metadata key/value pairs in the collection. |
+| `MinimumSimilarity` | Decimal | optional | This is to filter the results, so that it only returns those chunks with a similarity score equal to or greater than the value provided. The score ranges from 0 (not similar) to 1.0 (the same vector). |
+| `MaxNumberOfResults` | Integer/Long | optional | This can be used to limit the number of results that should be returned. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base from which the chunks are to be retrieved.
 
 **Return value**
 
@@ -444,10 +440,11 @@ Use this operation to delete a complete knowledge base at once. This operation t
 
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base that will be deleted.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base to be deleted.
 
 **Return value**
 
@@ -463,11 +460,12 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 
 **Input parameters**
 
-| Name                | Type                                    | Mandatory | Description                                           |
+| Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
-| `MxObject`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+| `Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection`. |
+| `MxObject` | Object | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the `KnowledgeBaseName` on the `Connection`, you determine the knowledge base from which the chunks are to be deleted.
 
 **Return value**
 
@@ -479,15 +477,14 @@ By providing the `KnowledgeBaseName` parameter, you determine the knowledge base
 
 Use this operation to delete existing chunks and corresponding labels in a knowledge base based on the Mendix objects provided: `MxObjectList` is the list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted.
 
-By providing the `KnowledgeBaseName` parameter, you determine the knowledge base. The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic.
-
 **Input parameters**
 
 | Name                | Type                                    | Mandatory | Description                                           |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `KnowledgeBaseName`          | String                                                       | mandatory                     | This is the name of the knowledge base in your database.|
-| `DatabaseConfiguration` | [DatabaseConfiguration](#databaseconfiguration-entity) | mandatory | This object is used for connecting to and authenticating with the database where the knowledge base is located. |
+|`Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgebaseConnection` |
 | `MxObjectList`          | Object                                                    | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+
+The `Connection` entity passed must be of type `PgVectorKnowledgebaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the KnowledgeBaseName on the Connection, you determine the knowledge base from which the chunks are to be deleted.
 
 **Return value**
 

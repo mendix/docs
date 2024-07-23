@@ -172,7 +172,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 | `Text` | The part of the generated text that contains a citation. | 
 | `Quote` | Contains the cited text from the reference. |
 
-#### 4.1.14 `ChunkCollection`  
+#### 4.1.14 `ChunkCollection` {#chunkcollection}
 
 This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
 

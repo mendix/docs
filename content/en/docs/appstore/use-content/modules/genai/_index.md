@@ -45,7 +45,7 @@ To help you get started, the following sections list the available GenAI compone
 
 ### 2.2 Available Models {#models}
 
-Mendix connectors and showcase apps offer direct support for the following models:
+Mendix connectors offer direct support for the following models:
 
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
@@ -54,11 +54,25 @@ Mendix connectors and showcase apps offer direct support for the following model
 | | DALL·E 2, DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
 | Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
+| | AI21 Jamba-Instruct | Chat Completions | text | text |  |
+| | AI21 Labs Jurassic-2 (Text) | Chat Completions | text | text |  |
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
-| | Amazon Titan Embeddings G1 - Text, Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |
+| | Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings| |
 | | Anthropic Claude v2.0, Anthropic Claude v2.1| Chat Completions | text | text |  |
 | | Anthropic Claude v3 Sonnet, Anthropic Claude v3.5 Sonnet, Anthropic Claude v3 Haiku, Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
-| | Cohere Embed | Embeddings | text | embeddings | |
+| | Cohere Command | Chat Completions | text | text | |
+| | Cohere Command Light | Chat Completions | text | text | |
+| | Cohere Command R, Cohere Command R+ | Chat Completions | text | text | Function calling | |
+| | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
+| | Meta Llama 2, MetaLlama 3| Chat Completions | text | text |  |
+| | Mistral AI Instruct | Chat Completions | text | text |  |
+| | Mistral Large | Chat Completions | text | text | Function calling | |
+| | Mistral Small | Chat Completions | text | text | Function calling | |
+
+
+Please refer to [this](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) additional documentation for more details on the supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations.
+
+The available showcase applications offer implementation inspiration for many of the listed models.
 
 #### 2.2.1 Connecting to Other Models
 

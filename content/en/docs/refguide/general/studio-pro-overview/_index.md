@@ -90,7 +90,7 @@ At the bottom of the Studio Pro main window pane is a status bar. On the left is
 
 On the right is the currently selected language. If you have set up multiple languages in your app, you can change the currently selected language by clicking here. For more information, see [Language Menu](/refguide/translatable-texts/).
 
-## 8 Read More
+## 7 Read More
 
 * [Keyboard Shortcuts](/refguide/keyboard-shortcuts/)
 * [App Explorer](/refguide/app-explorer/)

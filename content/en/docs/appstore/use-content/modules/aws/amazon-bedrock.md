@@ -936,7 +936,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the *NegativeText* attribute.
+Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the **NegativeText** attribute.
 
 This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
 
@@ -950,7 +950,7 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-Use this microflow to set the *Height* and *Width* attributes of your GenAICommons.ImageOptions object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
+Use this microflow to set the **Height** and **Width** attributes of your **GenAICommons.ImageOptions** object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
 
 This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
 
@@ -964,7 +964,7 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-Use this microflow to set the *Seed* and *CfgScale* attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
+Use this microflow to set the **Seed** and **CfgScale** attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
 
 For more information, please refer to the specific model documentation such as [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
 

@@ -274,6 +274,8 @@ The Default Variant type is the type of value you want to write (e.g. Boolean, I
 
 ## 4.5 Subscriptions
 
+Subscriptions are the entry points to create MonitoredItems.
+
 ### 4.5.1 Initialize Commit Subscription
 For a given ServerConfiguration, this microflow lets you create a new subsription.
 
@@ -281,6 +283,8 @@ For a given ServerConfiguration, this microflow lets you create a new subsriptio
 For a given ServerConfiguration, this microflow lets you remove a subscription.
 
 ### 4.5.3 Monitoring Items
+
+Monitored Items are use to receive notifications on a subscribed node data change.
 
 #### 4.5.3.1 Monitored Item Commit
 This microflow lets you monitor data changes on the server.

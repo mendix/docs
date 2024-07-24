@@ -71,22 +71,22 @@ The configuration contains the following attributes:
   * If None, messages are encrypted
   * If Sign, messages are signed by the Client Certificate
   * If Sign&Encrypt, messages are signed and encrypted by the client certificate.
-* Security Policy URI to determine what algorithm to use to encrypt and sign the data. Can be found from GetEndpoints (> UserIdentityToken > SecurityPolicyURI)
+* Security Policy URI to determine what algorithm to use to encrypt and sign the data. Can be found from GetEndpoints>UserIdentityToken>SecurityPolicyURI.
 
 ### 3.2.1 Identity Token
-A connection to an OPC-UA server is made user an IdentityToken, similar to a user role in Mendix. The server will dictate based on the response in GetEndpoints > UserIdentityToken > TokenType, which types of IdentityTokens it will support. 
+A connection to an OPC-UA server is made using an IdentityToken, similar to a user role in Mendix. The server will dictate based on the response in GetEndpoints>UserIdentityToken>TokenType, which types of IdentityTokens it will support. 
 The three options are:
 * Anonymous Identity Token. Identity token for anonymous users and gives access to the server without credentials.
 * Username Identity Token. Identity token based on a username and password combination.
 * Certificate Identity Token. Identity Token based on a certificate, the certificate must be trusted by the OPC-UA server before it can be used.
 
 ### 3.2.2 Client Certificate
-A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response in GetEndpoints (> EndpointDescription > SecurityMode) which Message Security Modes i.e. forms of encryption it requires for a connection. If the Message Security Mode is set to Sign or Sign&Encrypt, the ServerConfiguration object requires a ClientCertificateHolder with ClientCertificate and ClientCertificatePrivateKey objects.
+A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response in GetEndpoints>EndpointDescription>SecurityMode which Message Security Modes (i.e. forms of encryption) it requires for a connection. If the Message Security Mode is set to Sign or Sign&Encrypt, the ServerConfiguration object requires a ClientCertificateHolder with ClientCertificate and ClientCertificatePrivateKey objects.
 * The client certificate must be an X509 formatted PEM file.
 * The private key must be an Encrypted PKCS8 or PKCS1 formatted PEM file.
 
 ### 3.2.3 Server Certificate
-A connection between an OPC-UA server and OPC-UA client (The Mendix Application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (GetEndpoints > EndpointDescription > ServerCertificate), then use "Get Endpoints - Server Certificate" and then use "Trust certificate".
+A connection between an OPC-UA server and OPC-UA client (The Mendix Application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (GetEndpoints>EndpointDescription>ServerCertificate), then use "Get Endpoints - Server Certificate" and then use "Trust certificate".
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 

@@ -3,12 +3,12 @@ title: "Conversational AI Design Checklist"
 url: /howto/front-end/conversation-checklist/
 linktitle: "Conversation Checklist"
 weight: 70
-description: "Describes the best practices to designing Conversational AI Bots."
+description: "Describes best practices for designing Conversational AI Bots."
 ---
 
 ## 1 Introduction {#introduction}
 
-Conversational AIs are easy to create, but you want them to be easy to use and reflect the ethos of your business. Creating conversational AIs is different from designing traditional user interfaces and there are aspects that you may not have come across before.
+Conversational AIs are easy to create, but you want them to be easy to use and reflect the ethos of your business. Creating conversational AIs is different from designing traditional user interfaces, and there are aspects that you may not have come across before.
 
 To help you, Mendix has come up with this conversational AI design checklist which helps you think about how you want end-users to perceive and use the conversational AI. It is meant as an inspiration rather than a template. There are no references to specific Mendix features or modules to help you with your design, but these will be added to the Mendix offering as Mendix integrates more conversational AI features into its offering.
 
@@ -16,11 +16,11 @@ In the examples below, we have named the conversational AI "Bot".
 
 ### 1.1 Key Design Elements
 
-Mendix suggests that you set up a Conversational AI service blueprint. This is a journey map for main user groups. It will contain the following design elements:
+Mendix suggests that you set up a Conversational AI service blueprint. This is a journey map that you can use to tailor your design to your main targeted user groups. It contains the following design elements:
 
-* a distinctive personality
-* a specific tone and voice
-* a consistent sound, feel, and behavior
+* A distinctive personality
+* A specific tone and voice
+* A consistent sound, feel, and behavior
 
 ### 1.2 Conversational AI Behavior Design
 
@@ -30,7 +30,7 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 
 * [It says hi](#hi)
 * [It tailors greetings to different end-users](#greeting)
-* [It shows the value of the system/service and tries to match the end-user’s expectations](#value)
+* [It shows the value of the system or service and tries to match the end-user’s expectations](#value)
 * [It proactively assures the end-user about data protection](#privacy)
 
 #### 1.2.2 It Helps the End-User Feel In Control
@@ -43,15 +43,15 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 #### 1.2.3 It Helps the End-User Formulate a Better AI Response
 
 * [It provides the end-user with a prompt guide](#prompting)
-* [It allows the end-user to re-prompt effortlessly](#history)
+* [It allows the end-user to reprompt effortlessly](#quote-reprompt)
 * [It provides sufficient hints and discoverability](#hinting)
 
-#### 1.2.4 It Embraces Graceful Error-handling
+#### 1.2.4 It Embraces Graceful Error-Handling
 
 * [It has transparent error messages that help the end-user identify the solution and take appropriate action correctly](#errors)
-* [It proactively clarifies with the end-user to understand the end-user intent better](#confirming)
+* [It proactively clarifies with the end-user to better understand the end-user's intent](#confirming)
 * [It has a maximum number of error counters to avoid putting end-users in a frustrating loop](#confirming)
-* [If the system can’t provide an appropriate solution to the end-user, it gives fallback options to support the end-user as alternatives](#confirming)
+* [If the system cannot provide an appropriate solution to the end-user, it gives fallback options as alternatives to support the end-user](#confirming)
 
 ## 2 Saying Hi{#hi}
 
@@ -63,11 +63,11 @@ Making a good first impression by showing value, welcoming the end-user, setting
 
 By providing a warm welcome, the chatbot establishes a positive tone and makes end-users feel valued. This approach helps to build rapport and encourages engagement, enhancing the overall end-user experience.
 
-Don’t just jump right in. Say "Hello".
+Don’t just jump right in. Say "Hello."
 
 ### 2.3 Example
 
-* Welcome the end-user. Greet the end-user briefly, for example, with a simple "Welcome" or "Hi".
+* Welcome the end-user. Greet the end-user briefly, for example, with a simple "Welcome" or "Hi."
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
@@ -77,7 +77,7 @@ Don’t just jump right in. Say "Hello".
 
 Tailoring greetings for different end-user groups can create a more engaging end-user experience than general greetings. Differentiate the greetings between first-time and repeated end-users.
 
-A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users (violating the Cooperative Principle ).
+A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users (violating the Cooperative Principle).
 
 On the other hand, an expert end-user might benefit from a well-placed tip about an advanced feature (information that might overwhelm a novice end-user).
 
@@ -95,7 +95,7 @@ Don’t overwhelm the end-user with lots of details upfront.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" max-width="320px" alt="A pop-up explaining what Bot is." >}}
 
-* For recurring end-users.
+* For recurring end-users
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring end-users get straight to bot with some suggestions and an offer to start asking questions" >}}
 
@@ -116,8 +116,8 @@ You should help end-users to determine the value of the AI feature. Designers ca
     * Why should I trust it?
     * What does it want me to do next?
 
-* **System version**: Help end-users understand the capabilities and limitations of the system, setting appropriate expectations for their experience.
-* For recurring end-users, actively communicate with the end-user about new features and updates of the system.
+* **System status or version**: Help end-users understand the capabilities and limitations of the system, setting appropriate expectations for their experience. For example, let the user know if the system is in beta.
+* **New features and updates**: For recurring end-users, actively communicate with the end-user about new features and updates of the system.
 
 ### 4.3 Examples
 
@@ -127,7 +127,7 @@ You should help end-users to determine the value of the AI feature. Designers ca
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
 
 * Effectively communicate the new features or improved service to the end-users and let end-users properly evaluate the value of the AI system. 
-* Communicate the version of the system, allowing the end-user to determine the system limitation.
+* Communicate the version of the system, allowing the end-user to determine the system's limitations.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/upgraded-recommendations.png" max-width="320px" alt="Pop-up informing that new features are available" >}}
 
@@ -139,8 +139,8 @@ Users seek trust and assurance that their personal information is handled secure
 
 ### 5.2 How We Do It
 
-* **Transparent Data Handling**: Interfaces should clearly communicate how data is collected, processed, and used.
-* **Empower End-User Control**: Allow end-users to customize privacy settings and manage their data.
+* **Transparent data handling**: Clearly communicate how data is collected, processed, and used.
+* **Empower end-user control**: Allow end-users to customize privacy settings and manage their data.
 
 ### 5.3 Examples
 
@@ -148,7 +148,7 @@ Users seek trust and assurance that their personal information is handled secure
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Indicate that data is protected" >}}
 
-* Allow the end-user to delete the conversation history, and turn off collecting the conversation.
+* Allow the end-user to delete the conversation history and turn off collecting the conversation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/delete-conversation.png" max-width="320px" alt="Show a switch to turn activity history on and off" >}}
 
@@ -157,7 +157,8 @@ Users seek trust and assurance that their personal information is handled secure
 ### 6.1 Why It Matters
 
 Local control allows end-users to adapt the AI's suggestions or outputs to their situation. 
-Additionally, people are more motivated and engaged when they believe they can influence outcomes (Self-efficiency). Offering end-user control options reinforces a end-user's sense of self-efficacy and motivates them to interact with the AI system.
+
+Additionally, people are more motivated and engaged when they believe they can influence outcomes (self-efficiency). Offering end-user control options reinforces a end-user's sense of self-efficacy and motivates them to interact with the AI system.
 
 ### 6.2 How We Do It
 
@@ -166,7 +167,7 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 ### 6.3 Examples
 
-* Provide the end-user the ability to override AI action via editing the prompt.
+* Make it easy for the end-user to edit a previous prompt to generate a new response.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
 
@@ -178,22 +179,24 @@ Additionally, people are more motivated and engaged when they believe they can i
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
 
-## 7 Creating Input Mechanism{#input}
+## 7 Creating an Input Mechanism{#input}
 
 ### 7.1 Why It Matters
 
-This is the method for the end-user to provide information to the system. This can be through text, voice, buttons, menus, or a combination of these elements. However, it is always important for the end-user to feel free to facilitate the input, especially primary input, which should always be available. 
+The input mechanism is the method through which the end-user provides information to the system. This can be through text, voice, buttons, menus, or a combination of these elements.
+
+The primary input mechanism should be the text input in the conversational interface. This primary input mechanism should never be blocked or disabled; the end-user should always have a way to provide primary input.
 
 ### 7.2 How We Do It
 
-* Clear affordance is key to where the end-user can enter their input.
+* Make it easy for users to perceive where they can provide input, whether via text, a button, or another input mechanism.
 * Provide feedback once the system receives the end-user’s input to verify the system understood the input correctly.
-* Don’t overload various inputs at the same time, it might confuse the end-user with which action to take.
-* Allow the end-user to input free text, or initiate a conversation.
+* Don't overwhelm the end-user with too many input options at once. Keep it simple or provide just-in-time input options to avoid confusing the end-user about which action they should take.
+* Allow the end-user to initiate a conversation by using suggested topics or inputting free text.
 
 ### 7.3 Example
 
-* Provide inputs of both command buttons and free text for the end-user to navigate the conversation.
+* Provide inputs of command buttons as well as free text for the end-user to navigate the conversation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
@@ -201,30 +204,23 @@ This is the method for the end-user to provide information to the system. This c
 
 ### 8.1 Why It Matters
 
-A helpful prompt guide bridges the gap between what end-users want and what the AI can understand. Eventually,it provides better AI responses for end-users.
+A helpful prompt guide bridges the gap between what end-users want and what the AI can understand. Eventually, it provides better AI responses for end-users.
 
 ### 8.2 How We Do It
 
-* **AI Response Temperature**: Putting end-users in Control
+* **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This  allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
 
-    * Empower end-users with adjustable "temperature" settings for AI responses. This could range from factual and concise to creative and elaborate, allowing end-users to customize the level of detail and personality they desire.
+* **Shielding end-user data**: Strive for proactive protection; move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
 
-* **Shielding End-User Data**: Proactive Protection
-
-    * Move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
-
-* **Managing End-User Input**: Set Clear Expectations,
-* **Input Character Handling**: Set realistic expectations for end-user input.
-
-    * Communicate limitations on character count or format to avoid end-user frustration while ensuring efficient data processing by the AI system.
+* **Input character handling**: Set clear and realistic expectations for end-user input. Communicate limitations on character count or format to avoid end-user frustration while ensuring efficient data processing by the AI system.
 
 ### 8.3 Examples
 
-* Presenting examples of prompts in the input field, helping the end-user to sense how to draft prompts in the system. Further help is provided with information (ⓘ) icon.
+* Presenting examples of prompts in the input field, helping the end-user to sense how to draft prompts in the system. Provide further help via an information icon ({{% icon name="info-circle" %}}).
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
 
-* Showcasing prompts for advanced end-users.
+* Showcase prompts for advanced end-users.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/further-advice.png" max-width="320px" alt="Pop up shown while response is generated giving additional suggestions for how to construct a prompt" >}}
 
@@ -232,62 +228,61 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/context-driven-prompts.png" max-width="320px" alt="Suggested responses to latest output explaining a typo in the question" >}}
 
-## 9 Displaying History{#history}
+## 9 Quote and Reprompt {#quote-reprompt}
 
 ### 9.1 Why It Matters
 
-This feature, often called *Quote and Re-prompt* allows end-users to quote specific parts of previous messages and reply directly, facilitating clearer and more focused communication within the conversation.
+This feature allows end-users to quote specific parts of previous messages and reply directly, facilitating clearer and more focused communication within the conversation.
 
-* **Clarity and Context**: Quoting maintains clarity and context by referencing specific parts of previous messages, aiding understanding of the conversation flow.
+* **Clarity and context**: Quoting maintains clarity and context by referencing specific parts of previous messages, aiding understanding of the conversation flow.
 * **Precision**: Replying to specific parts allows for more precise addressing of questions or comments, ensuring relevance.
-* **Organization**: Quoting and re-prompting helps organize conversations, separating topics into distinct threads for easier follow-up.
+* **Organization**: Quoting and reprompting helps organize conversations, separating topics into distinct threads for easier follow-up.
 * **Efficiency**: Referencing previous messages enables focused exchanges, covering multiple topics efficiently within the same conversation.
 
 ### 9.2 How We Do It
 
-* **Visibility and Accessibility**: Make the quote-re-prompt feature easily accessible and visible within the interface. End-users should be able to select and quote specific parts of messages intuitively, without difficulty.
-* **Clarity and Readability**: Ensure quoted text is displayed clearly and legibly, distinguishing it from the end-user’s input. Use visual cues such as indentation, color, or formatting to differentiate quoted text from new messages.
-* **Interactivity**: Design the quote-re-prompt feature to be interactive and responsive. Allow end-users to click or tap on quoted text to expand or collapse it, providing a seamless way to view the context without cluttering the interface.
+* **Visibility and accessibility**: Make the quote-and-reprompt feature easily accessible and visible within the interface. End-users should be able to select and quote specific parts of messages intuitively, without difficulty.
+* **Clarity and readability**: Ensure quoted text is displayed clearly and legibly, distinguishing it from the end-user’s input. Use visual cues such as indentation, color, or formatting to differentiate quoted text from new messages.
+* **Interactivity**: Design the quote-and-reprompt feature to be interactive and responsive. Allow end-users to click or tap on quoted text to expand or collapse it, providing a seamless way to view the context without cluttering the interface.
 
 ### 9.3 Examples
 
 * Use a salient discoverability of the functionality.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate a response is required" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
-* Make the selected quote visible in the input area and ensure the end-user can disable it if it is no longer needed.
+* Make the selected quote visible in the input area. Ensure the end-user can dismiss it if it is no longer needed.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Summarize the Bot's question near the prompt" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Display selected text near the input area" >}}
 
 ## 10 Hinting and Discoverability{#hinting}
 
 ### 10.1 Why It Matters
 
-With conversational AI, the burden of discovering the capability of a bot or voice assistants is up to the end-user. They can only know a chatbot can’t do something after it fails to provide a good response. If there are no hints or affordances, end-users are more likely to have unrealistic expectations.
+With conversational AI, the burden of discovering the capability of a bot or voice assistants is up to the end-user. They can only know a chatbot cannot do something after it fails to provide a good response. If there are no hints or interface cues, end-users are more likely to have unrealistic expectations.
 
 Provide a clear motivation for any action you want the end-user to take. Tell the end-user why they might want to do something before telling them how to do it.
 
 ### 10.2 How We Do It
 
-* **Visual Cues**: Incorporating visual indicators or icons to signify AI-driven features or suggestions can help end-users identify and interact with AI elements more easily.
-* **Onboarding Tutorials**: Providing guided onboarding tutorials or tooltips that introduce end-users to AI functionalities can enhance discoverability and encourage exploration.
-* **Contextual Help**: Offering contextual help prompts or pop-ups that appear when end-users encounter AI features for the first time can help them to utilize these features effectively.
-* **Predictive Suggestions**: Implementing predictive suggestions or autocomplete features powered by AI algorithms can help end-users anticipate system responses and discover new functionalities.
-* **Progressive Disclosure**: Employing progressive disclosure techniques to gradually reveal AI capabilities as end-users interact with the system can avoid overwhelming end-users with too much information upfront while encouraging exploration over time.
-* **Action-oriented**: Always provide end-users with the next action to take.
-* **Serendipity**: Algorithmic recommendations can create filter bubbles. Adding serendipity helps end-users discover new things outside their echo chambers.
+* **Visual cues**: Incorporating visual indicators or icons to signify AI-driven features or suggestions can help end-users identify and interact with AI elements more easily.
+* **Onboarding tutorials**: Providing guided onboarding tutorials or tooltips that introduce end-users to AI functionalities can enhance discoverability and encourage exploration.
+* **Contextual help**: Offering contextual help prompts or pop-ups that appear when end-users encounter AI features for the first time can help them to use these features effectively.
+* **Predictive suggestions**: Implementing predictive suggestions or autocomplete features powered by AI algorithms can help end-users anticipate system responses and discover new functionalities.
+* **Progressive disclosure**: Employing progressive disclosure techniques to gradually reveal AI capabilities as end-users interact with the system can avoid overwhelming end-users with too much information upfront while encouraging exploration over time.
+* **Action orientation**: Always provide end-users with the next action to take.
 
 ### 10.3 Examples
 
-* When text is highlighted, the modification icon appears, signaling an opportunity for further interaction.
+* When text is highlighted, the **Modify selected text** icon ({{% icon name="pencil-filled" %}}) appears, signaling an opportunity for further interaction.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-icon.png" max-width="320px" alt="Modify icon appears near highlighted response from Bot" >}}
 
-* After hitting the modify icon the end-user can discover modification options.
+* After clicking the **Modify selected text** icon, the end-user can discover modification options.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-options.png" max-width="320px" alt="Some standard modify options (Regenerate, Make Shorter, Remove) are given next to Bot's response" >}}
 
-* The end-user can discover options to "Show drafts" or "Hide drafts" of the generated text.
+* The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version."
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/drafts.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
@@ -301,14 +296,14 @@ Transparent error messages tell end-users exactly what went wrong, preventing co
 
 * **Use precise language**: Instead of "An error occurred," pinpoint the issue. For example, "We couldn't find a profile with that email address. Please check your spelling and try again."
 * **Offer context**: Briefly explain why the error happened. For instance, "The password you entered doesn't meet our security requirements. It must be at least 8 characters long and contain a combination of uppercase and lowercase letters, numbers, and symbols."
-* **Provide solutions**: Offer actionable steps end-users can take to fix the problem. This could be suggesting alternative actions, linking to relevant help articles, or offering to reset a password.
+* **Provide solutions**: Offer actionable steps that end-users can take to fix the problem. This could be suggesting alternative actions, linking to relevant help articles, or offering to reset a password.
 * **Maintain a positive tone**: Even when reporting an error, use polite and helpful language. For example, "We encountered a problem processing your request. Let's try again!"
 
 ### 11.3 Example
 
-* Offer a context as to why the requested action can’t be made. Also, provide alternative solutions.
+* Offer context explaining why the requested action can’t be made. Also, provide alternative solutions.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/error.png" max-width="480px" alt="Bot responds explaining why it can't send an email and suggesting something it can do" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/error.png" max-width="480px" alt="Bot responds explaining why it cannot send an email and suggesting something it can do" >}}
 
 ## 12 Confirming Intent{#confirming}
 
@@ -318,10 +313,10 @@ Clarifying end-user intent ensures the system understands what the end-user want
 
 ### 12.2 How We Do It
 
-* **Confirmation Prompts**: Rephrase the end-user's request in a question to confirm understanding before proceeding. ("Did you mean...?")
-* **Multiple Response Options**: Offer a few concise answer choices that reflect common end-user goals.
-* **Context Awareness**: Consider past interactions and end-user history to inform interpretations of current requests.
-* **Fallback Mechanisms**: Have built-in fallback options like offering to connect the end-user with a live agent or providing a menu of common tasks. This ensures the end-user has options even if the system can't fulfill the initial request perfectly.
+* **Confirmation prompts**: Rephrase the end-user's request in a question to confirm understanding before proceeding. ("Did you mean...?")
+* **Multiple response options**: Offer a few concise answer choices that reflect common end-user goals.
+* **Context awareness**: Consider past interactions and end-user history to inform interpretations of current requests.
+* **Fallback mechanisms**: Have built-in fallback options like offering to connect the end-user with a live agent or providing a menu of common tasks. This ensures the end-user has options even if the system cannot fulfill the initial request perfectly.
 
 ### 12.3 Example
 
@@ -329,6 +324,6 @@ Clarifying end-user intent ensures the system understands what the end-user want
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
 
-* If the system can’t handle the query, provide fall-back options for further navigation.
+* If the system cannot handle the query, provide fallback options for further navigation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="480px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}

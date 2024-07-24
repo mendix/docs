@@ -949,10 +949,9 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 | --- | --- |
 | `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
 
-
 ##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
 
-Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. This is useful to include parameters that are unique to Cohere Embed models.
+Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
 
 This operation corresponds to the **CohereEmbedOptions_Extension_Create** microflow.
 
@@ -960,17 +959,15 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
 
-
 ##### 4.2.2.5 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
 
-Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. This is useful to include parameters that are unique to Titan Embeddings models.
+Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
 
 This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
 
 | Input | Output |
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
-
 
 #### 4.2.3 Other Operations
 

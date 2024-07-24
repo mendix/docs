@@ -50,13 +50,17 @@ Below are some examples you can use as a starting point:
 
 As an experimental feature, Domain Model Generator has some limitations.
 
-### 3.1 Empty Domain Model Only
+### 3.1 Studio Pro Restart Required
+
+Studio Pro restart is required after Domain Model Generator is enabled in the Preferences.
+
+### 3.2 Empty Domain Model Only
 
 If the **Generate Domain Model** option is greyed out, it is because it currently only works for empty domain models. You can always start fresh with an empty domain model by creating a new module in your application.
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/domain-model-generator/domain-model-generator-greyed-out.png" max-width=100% >}}
 
-### 3.2 Creating only
+### 3.3 Creating only
 
 After a domain model is generated and if the dedicated chat is still active, you can still ask Maia to add more entities and associations to the generated domain model. 
 

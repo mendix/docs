@@ -49,8 +49,8 @@ Mendix connectors offer direct support for the following models:
 
 | Architecture | Models | Category | Input | Output | Additional capabilities |
 |--------------|---------------------|---------------------|-------------------|-----------|-------------------------|
-| Azure / OpenAI | ChatGPT-3.5 | Chat completions | text | text | Function calling |
-| | ChatGPT-4, ChatGPT-4o, ChatGPT-4o mini | Chat completions | text, image | text | Function calling |
+| Azure / OpenAI | gpt-3.5 | Chat completions | text | text | Function calling |
+| | gpt-4, gpt-4o, gpt-4o mini | Chat completions | text, image | text | Function calling |
 | | DALL·E 2, DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
 | Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | |

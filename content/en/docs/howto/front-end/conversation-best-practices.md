@@ -38,7 +38,7 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 * [The end-user can stop the AI response while it is being generated](#local-control)
 * [The end-user can format the prompt at the beginning](#input)
 * [The end-user can set the temperature](#value)
-* [The end-user can remove the interaction history](#local-control)
+* [The end-user can remove the interaction history](#privacy)
 
 #### 1.2.3 It Helps the End-User Formulate a Better AI Response
 

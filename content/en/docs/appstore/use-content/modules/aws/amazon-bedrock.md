@@ -271,7 +271,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 
 ##### 4.1.1.12 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
 
-This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, solely to simplify the export mapping.
+This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, in order to simplify the export mapping.
 
 | Attribute | Description |
 | --- | --- |

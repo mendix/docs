@@ -893,7 +893,6 @@ For Cohere Embed and Titan Embeddings, the request can be associated to their re
 
 Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
 
-
 ##### 4.2.1.5 Embeddings (chunk collection) {#embeddings-chunk-collection}
 
 The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.

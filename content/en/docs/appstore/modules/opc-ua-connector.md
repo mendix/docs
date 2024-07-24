@@ -165,6 +165,30 @@ Expected Read and write formats for attribute services
 Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you can write to the VariableNode. To make writing the value to a Variable easier we included a default action that 
 takes the NodeID, a payload and a DefaultVariantType as an input. The latter is recommended to use. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently not all default types are supported and no custom type is supported. For example payloads see the table above.
 
+
+## 3.5 Monitoring Items
+In order to get notifications upon a change of a value, one needs first to create a subscription, that is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. Then we define to what and how to listen to any change of a value via MonitoredItems.
+
+To create a subscription, simply call the CreateSubscription action from your toolbox.
+The Requested Publishing interval is how often at most you will receive a notification. This value may be set by the developer but may be overwritten if the server deems the publishing interval not feasible. 
+
+To receive a notification from a monitored item we need two artifacts.
+
+1. We need to instruct our Mendix application what needs to happen when we receive a notification
+2. We need to instruct the server to what information needs to be checked on the server
+
+### 3.5.2 Instruct Mendix
+When a notification comes in a microflow will be triggered. An Example microflow, called EXAMPLE_MonitoredItem_LogDefaultMessage, is provided in the USE_ME > 12.MonitoredItems_service_set folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a MessageMonitoredItem, a MessageMonitoredItemReadValueId and a MessageDataValue. These are the only parameters that are allowed for a microflow to be called on a notification but not all are required.
+* A messageMonitoredItem parameter contains the monitoredItem information, that is, how the notification was generated.
+* A messageMonitoredItemReadValueID contains the information on what node and attribute was read.
+* A messageDataValue contains the information on the actual read value on the 'Value' attribute.
+
+
+
+   
+
+
+
 # 4 Usage
 
 ## 4.1 Discovery Services

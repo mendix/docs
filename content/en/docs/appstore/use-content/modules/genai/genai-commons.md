@@ -543,7 +543,7 @@ This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunk
 
 ##### 4.3.4.3 Chunk: Add KnowledgeBaseChunk to ChunkCollection{#chunkcollection-add-knowledgebasechunk}
 
-This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering.
+This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering. Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
 
 ###### 4.3.4.3.1 Input parameters
 
@@ -553,7 +553,7 @@ This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to 
 | `InputText` | String | mandatory | This is the input text to create the embedding for. |
 | `HumanReadableID` | String | mandatory | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
 | `MxObject` | Type parameter | optional | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
-| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any Key-Value pairs can be store. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
+| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any key-value pairs can be stored. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
 
 ###### 4.3.4.3.2 Return Value
 
@@ -597,7 +597,7 @@ This microflow gets the first embedding vector from the response of an embedding
 
 ##### 4.3.4.6 Knowledge Base: Initialize MetadataCollection with Metadata {#knowledgebase-initialize-metadatacollection}
 
-This microflow creates a new [MetadataCollection](#metadatacollection-entity) and adds a new [Metadata](#metadatacollection-entity). The [MetadataCollection](#metadatacollection-entity) will be returned. To add additional Metadata, use `MetadataCollection_AddMetadata`.
+This microflow creates a new [MetadataCollection](#metadatacollection-entity) and adds a new [Metadata](#metadatacollection-entity). The [MetadataCollection](#metadatacollection-entity) will be returned. To add additional Metadata, use [Add Metadata to MetadataCollection](#knowledgebase-add-metadata).
 
 ###### 4.3.4.6.1 Input Parameters
 
@@ -615,7 +615,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 ##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
 
-This microflow adds a new Metadata object to a given MetadataCollection. Use `MetadataCollection_CreateAndAddMetadata` to first create the collection.
+This microflow adds a new Metadata object to a given MetadataCollection. Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
 
 ###### 4.3.4.7.1 Input Parameters
 
@@ -664,7 +664,7 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | ---| --- |
-| `ChunkCollection` | ChunkCollection | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
+| `ChunkCollection` |  [ChunkCollection](#chunkcollection) | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
 | `Connection` | [Connection](#connection) | mandatory | A Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
 | `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
 
@@ -672,4 +672,4 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | EmbeddingsResponse | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |

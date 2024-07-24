@@ -77,7 +77,7 @@ Don’t just jump right in. Say "Hello."
 
 Tailoring greetings for different end-user groups can create a more engaging end-user experience than general greetings. Differentiate the greetings between first-time and repeated end-users.
 
-A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users and thus violate the Cooperative Principle.
+A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users.
 
 On the other hand, an expert end-user might benefit from a well-placed tip about an advanced feature. This sort of information might overwhelm a novice end-user.
 
@@ -122,7 +122,7 @@ You should help end-users to determine the value of the AI feature. Designers ca
 ### 4.3 Examples
 
 * Communicate what the end-user can do with the system.
-* Proactively ensure the end-user's data protection.
+* Proactively ensure the end-user's data protection and let the end-user know about it.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
 
@@ -283,7 +283,7 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/drafts.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## 11 Reporting Errors{#errors}
 

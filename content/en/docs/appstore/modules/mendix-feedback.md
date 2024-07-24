@@ -77,7 +77,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 3. Drop the Feedback widget into a position in the layout:
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/Feedback-on-layout.png" >}} 
 
 4. [Configure the Feedback widget](#configuration).
 

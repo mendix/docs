@@ -179,7 +179,7 @@ This entity extends the GenAICommons.Request with attributes specific to Anthrop
 | Attribute | Description |
 | --- | --- |
 | `Version` | This attribute specifies the anthropic version. |
-| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
+| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation. |
 
 ##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
 
@@ -588,11 +588,11 @@ The `ModelInvocationInput` contains parameters that specify the input to the pre
 
 | Attribute | Description |
 | --- | --- |
-| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence.|
-| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType.|
-| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden.|
-| `Text` | The `Text` attribute holds the text that prompted the agent at this step.|
-| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence.|
+| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence. |
+| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType. |
+| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden. |
+| `Text` | The `Text` attribute holds the text that prompted the agent at this step. |
+| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence. |
 
 ##### 4.1.2.39 Parameter {#parameter}
 
@@ -600,8 +600,8 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 
 | Attribute | Description |
 | --- | --- |
-| `Name` | The `Name` attribute holds name of the parameter.|
-| `_Type` | The `_Type` attribute specifies the parameter type.|
+| `Name` | The `Name` attribute holds name of the parameter. |
+| `_Type` | The `_Type` attribute specifies the parameter type. |
 | `Value` | The `Value` attribute specifies the parameter value. |
 
 ##### 4.1.2.40 InvokeAgentAttribute {#invoke-agent-attribute}
@@ -610,8 +610,8 @@ The `InvokeAgentAttribute` holds all attributes needed to to create a request to
 
 | Attribute | Description |
 | --- | --- |
-| `Key` | The `Key` attribute holds an attribute key.|
-| `Value` | The `Value` attribute holds an attribute value.|
+| `Key` | The `Key` attribute holds an attribute key. |
+| `Value` | The `Value` attribute holds an attribute value. |
 
 ##### 4.1.2.41 InvokeAgentRequest {#invoke-agent-request}
 
@@ -619,12 +619,12 @@ The `InvokeAgentRequest` holds all attributes needed to create a request to invo
 
 | Attribute | Description |
 | --- | --- |
-| `InputText` | The `InputText` attribute holds the prompt text to send to the agent.|
-| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
-| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
-| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
-| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
-| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+| `InputText` | The `InputText` attribute holds the prompt text to send to the agent. |
+| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use. |
+| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use. |
+| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation. |
+| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process. |
+| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not. |
 
 ##### 4.1.2.42 SessionState {#session-state}
 
@@ -656,7 +656,7 @@ The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 
 | Attribute | Description |
 | --- | --- |
-| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text.|
+| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text. |
 
 ##### 4.1.2.46 InvokeAgentCitation {#invoke-agent-citation}
 
@@ -672,9 +672,9 @@ The `TracePart` is a generalization which contains information about the agent a
 
 | Attribute | Description |
 | --- | --- |
-| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest.|
+| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest. |
 
 ##### 4.1.2.48 AbstractTrace {#abstract-trace}
 
@@ -682,8 +682,8 @@ The `AbstractTrace` contains one part of the agent's reasoning process and resul
 
 | Attribute | Description |
 | --- | --- |
-| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace.|
-| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type.|
+| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace. |
+| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type. |
 
 ##### 4.1.2.49 FailureTrace {#failure-trace}
 
@@ -691,7 +691,7 @@ The `FailureTrace` contains information about the failure of the interaction.
 
 | Attribute | Description |
 | --- | --- |
-| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction.|
+| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction. |
 
 ##### 4.1.2.50 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
 
@@ -699,8 +699,8 @@ The `PreProcessingModelInvocationOutput` contains information about the foundati
 
 | Attribute | Description |
 | --- | --- |
-| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not.|
-| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid.|
+| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not. |
+| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid. |
 
 ##### 4.1.2.51 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
 
@@ -716,7 +716,7 @@ The `PostProcessingModelInvocationOutput` contains information about the foundat
 
 | Attribute | Description |
 | --- | --- |
-| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step.|
+| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step. |
 
 ##### 4.1.2.53 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
 
@@ -740,7 +740,7 @@ The `InvocationInput` contains information pertaining to the action group or kno
 
 | Attribute | Description |
 | --- | --- |
-| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base.|
+| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base. |
 
 ##### 4.1.2.56 ActionGroupInvocationInput {#action-group-invocation-input}
 
@@ -748,9 +748,9 @@ The `ActionGroupInvocationInput` contains information pertaining to the action g
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group.|
-| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group.|
-| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group.|
+| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group. |
+| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group. |
+| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group. |
 
 ##### 4.1.2.57 RequestBodyContent {#request-body-content}
 
@@ -766,7 +766,7 @@ The `RequestBodyContentParameter` is a parameter in the Lambda input event (for 
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
 ##### 4.1.2.59 InvocationInputParameter {#invocation-input-parameter}
 
@@ -774,7 +774,7 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
 ##### 4.1.2.60 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
 
@@ -782,8 +782,8 @@ The `KnowledgeBaseLookupInput` contains details about the knowledge base to look
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up.|
-| `Text` | The `Text` is the query made to the knowledge base.|
+| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up. |
+| `Text` | The `Text` is the query made to the knowledge base. |
 
 ##### 4.1.2.61 Rationale {#rationale}
 
@@ -791,7 +791,7 @@ The `Rationale` contains the reasoning, based on the input, that the agent uses 
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input.|
+| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input. |
 
 ##### 4.1.62 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
 
@@ -799,7 +799,7 @@ The `OrchestrationModelInvocationInput` holds the input for the pre-processing s
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input).|
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
 ##### 4.1.63 Observation {#observation}
 
@@ -807,9 +807,9 @@ The `Observation` contains the result or output of an action group or knowledge 
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group.|
-| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user.|
-| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible.|
+| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group. |
+| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user. |
+| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible. |
 
 ##### 4.1.64 RepromptResponse {#reprompt-response}
 
@@ -817,8 +817,8 @@ The `RepromptResponse` contains details about the agent's response to reprompt t
 
 | Attribute | Description |
 | --- | --- |
-| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input.|
-| `Text` | The `Text` reprompting the input.|
+| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input. |
+| `Text` | The `Text` reprompting the input. |
 
 ##### 4.1.65 ObservationRetrievedReference {#observation-retrieved-reference}
 
@@ -826,7 +826,7 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
+| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference). |
 
 ### 4.2 Activities {#activities}
 

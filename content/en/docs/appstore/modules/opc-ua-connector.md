@@ -28,7 +28,7 @@ The OPC-UA connector is licensed under the EPL2.0 License.
 ## 1.3 Pre-requisites
 
 * Mendix Studio Pro version 9.24.3+
-* OPC-UA server 1.03+
+* an OPC-UA server 1.03+
 
 ## 1.4 Dependencies
 
@@ -280,42 +280,42 @@ For a given ServerConfiguration, this microflow lets you create a new subsriptio
 ### 4.5.2 De-Initialize Delete Subscription
 For a given ServerConfiguration, this microflow lets you remove a subscription.
 
-## 4.6 Monitored Items
+### 4.5.3 Monitoring Items
 
-### 4.6.1 Monitored Item Commit
+#### 4.5.3.1 Monitored Item Commit
 This microflow lets you monitor data changes on the server.
 The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
 The microflow returns a status codes, that is associated to the monitored item in the input. The monitored item is committed if and only if the status code associated has status Good. If the status Code has no Good status, the description explains what went wrong.
 
-### 4.6.2 Monitored Item List Commit
+#### 4.5.3.2 Monitored Item List Commit
 This microflow lets you monitor data changes on the server.
 The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
 The microflow returns a list of status codes, where each is associated to one of the monitored items in the input. A monitored item is committed if and only if there is a status code associated with it, that has status Good. If the status Code has no Good status, the description explains what went wrong.
 
-### 4.6.3 Monitored Item Delete
+#### 4.5.3.3 Monitored Item Delete
 This microflow lets you stop listening to a monitoring item. 
 The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
 The microflow returns a status code, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
 If the initialization is not succesfull the status code will have an error message to explain why the initialization is not succesfull.
 
-### 4.6.4 Monitored Item List Delete
+#### 4.5.3.4 Monitored Item List Delete
 This microflow lets you stop listening to monitoring items.
 The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
 The microflow returns a list of status codes, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
 If the initialization is not succesfull the status code will have an error message to explain why the initialization is not succesfull.
 
-## 4.7 Mendix Specific
+## 4.6 Mendix specific
 
-### 4.7.1 Update Client Certificate
+### 4.6.1 Update Client Certificate
 Update the client certificate with the supplied one. The client will try to reconnect to each of the servers afterwards.
 
-### 4.7.2 Force Refresh Connection
+### 4.6.2 Force Refresh Connection
 Deletes the server configuration from the client and then tried to reconnect with a new instance to the server. This can be particularly usefull when updating the certificate of the client.
 
-### 4.7.3 ASU Subscription
+### 4.6.3 ASU Subscription
 After start up microflow to reconnect to servers and initialize active subscriptions.
 
-### 4.7.4 BSD Subscription
+### 4.6.4 BSD Subscription
 Before shut down microflow to disconnec from servers and deactivate subscriptions.
 
 

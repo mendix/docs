@@ -54,6 +54,7 @@ The following parameters are available to most database types:
 * Port
 * Username
 * Password
+* Database time zone
 
 Depending on the database, some of the following parameters may be available:
 
@@ -62,6 +63,10 @@ Depending on the database, some of the following parameters may be available:
 * Service name (exclusive to Oracle)
 * SID (exclusive to Oracle)
 * Use Integrated Security (for example, to connect to SQL Server using the your Windows user credentials)
+
+##### 2.1.1.1 Database time zone {#database-timezone}
+
+By default, the module assumes that time zone of the source database is the same as Mendix application server time zone. Starting with module version 8.2.0, it is possible to configure source database time zone. If the setting is defined, the module will convert imported datetime values from specified database time zone to UTC. If the setting is not defined, the module will assume that database time zone is the same as application server time zone and will convert imported datetime values from server time zone to UTC.
 
 #### 2.1.2 Custom Connection Parameters
 
@@ -243,6 +248,16 @@ Setting this to advanced reveals more options. These should only be modified by 
 * **Reset empty associations** – this means that if there is an empty value found for the associations, the reference should be reset
 * **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
 * **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
+
+### 7.5 Final microflow
+
+This setting allows specifying a microflow that will be executed after the import is completed. The microflow can have 2 optional parameters: TableMapping and ReplicationStatus. The TableMapping is the instance that has just been executed, a ReplicationStatus (not committed) contains the statistics that are also printed in the log.
+
+### 7.6 Time zone of datetime values in the database
+
+This setting specifies the time zone in which datetime values are stored in the source database. If the setting is defined, all imported datetime values are converted from database time zone to UTC and stored in UTC in resulting Mendix objects. If the setting is not defined, it defaults to [Database time zone](#database-timezone).
+
+In most of the cases, there is no need to change this setting unless you know that datetime values in this particular table are stored in a time zone that is different from the rest of the database.
 
 ## 8 Configuring an Import Call {#import-call}
 

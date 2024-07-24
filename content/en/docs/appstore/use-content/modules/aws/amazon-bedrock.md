@@ -870,13 +870,13 @@ The history can be enabled using the `SessionId` parameter on the [RetrieveAndGe
 This activity was introduced in Amazon Bedrock Connector version 3.1.0.
 {{% /alert %}}
 
-The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently 'Amazon Titan Image Generator G1' is the only supported model for image generation of the Amazon Bedrock Connector. 
+The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `UserPrompt (String)`,<br/>`AmazonBedrockConnection (object)`,<br/>`GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
+| `UserPrompt (String)`, `AmazonBedrockConnection (object)`, `GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
 
 `GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation. 
 

@@ -89,7 +89,7 @@ This is a file in a collection of files that belongs to a message. Each instance
 | Attribute | Description |
 | --- | --- |
 | `FileContent` | Depending on the `ContentType`, this is either a URL or the base64-encoded file data. |
-| `ContentType` | This describes the type of file data. Supported content types are either URL or base64-encoded file data. For more information, see the [ENUM_FileContentType](#enum-filecontenttype) section.
+| `ContentType` | This describes the type of file data. Supported content types are either URL or base64-encoded file data. For more information, see the [ENUM_ContentType](#enum-contenttype) section.
 | `FileType` | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype) section.
 | `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
 | `MediaType` | This is a combination of FileType and the extension of the file, for example, *image/png*. | 
@@ -228,7 +228,18 @@ The response returned by the model contains token usage metrics. Not all connect
 | `PromptTokens` | Number of tokens in the prompt. |
 | `TotalTokens` | Total number of tokens used in the request. |
 
+#### 4.1.21 `ImageOptions` {#imageoptions-entity}
 
+An optional input object for the image generations operations to set optional request attributes.
+
+| Attribute              | Description |
+| ---------------------- | -------------------------------------------------------- |
+| `Height`               | This determines the height of the image. |
+| `Width`                | This determines the width of the image. |
+| `NumberOfImages`       | This determines the number of images to be generated. |
+| `Seed`                 | This can be used to influence the randomness of the generation. |
+| `CfgScale`             | This can be used to influence the randomness of the generation. |
+| `ImageGenerationType`  | This describes the type of image generation. Currently only text to image is supported. For more information, see [ENUM_ImageGenerationType](#enum-imagegenerationtype). |
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -252,9 +263,9 @@ The response returned by the model contains token usage metrics. Not all connect
 | `Text` | **Text** | The message represents a normal message and contains text content in the `Content` attribute. | 
 | `File` | **File** | The message contains file data and the files in the associated [FileCollection](#filecollection) should be taken into account. |
 
-#### 4.2.3 `ENUM_FileContentType` {#enum-filecontenttype}
+#### 4.2.3 `ENUM_ContentType` {#enum-contenttype}
 
-`ENUM_FileContentType` provides a list of possible file content types, which describe how the file data is encoded in the `FileContent` attribute on the [FileContent](#filecontent) object that is part with the Message.
+`ENUM_ContentType` provides a list of possible file content types, which describe how the file data is encoded in the `FileContent` attribute on the [FileContent](#filecontent) object that is part with the Message.
 
 | Name | Caption | Description |
 | --- | --- -- | --- |
@@ -287,6 +298,14 @@ The response returned by the model contains token usage metrics. Not all connect
 | Name | Caption | Description |
 | --- | --- | --- |
 | `Url` | **Url** | The `Source` attribute contains the URL to the source on the internet. |
+
+#### 4.2.6 `ENUM_ImageGenerationType` {#enum-imagegenerationtype}
+
+`ENUM_ImageGenerationType` describes how the image generations operation is to be used. Currently only text to image is supported.
+
+| Name            | Caption           | Description |
+| --------------- | ----------------- | ----------- |
+| `TEXT_TO_IMAGE` | **TEXT_TO_IMAGE** | The LLM will generate an image (or multiple images) based on a text description. |
 
 ### 4.3 Microflows activities {#microflows}
 
@@ -384,11 +403,29 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 
 This microflow does not have a return value.
 
-##### 4.3.1.6 Tools: Add Function to Request {#add-function-to-request}
+##### 4.3.1.6 Image: Create ImageOptions {#imageoptions-create}
+
+This microflow creates new [ImageOptions](#imageoptions-entity).
+
+###### 4.3.1.6.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|--- |--- |--- |--- |
+| `Height` | Integer/Long | optional | To set Width. |
+| `Width` | Integer/Long | optional | To set Height. |
+| `NumberOfImages` | Integer/Long | optional | To set NumberOfImages. |
+
+###### 4.3.1.6.2 Return Value
+
+| Name | Type | Description |
+|--- |--- |--- |
+| `ImageOptions` | [ImageOptions](#imageoptions-entity) | The newly created ImageOptions object. |
+
+##### 4.3.1.7 Tools: Add Function to Request {#add-function-to-request}
 
 Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Request. Use this microflow when you have microflows in your application that may be called to retrieve the required information as part of a GenAI interaction. If you want the model to be aware of these microflows, you can use this operation to add them as functions to the request. If supported by the LLM connector, the chat completion operation calls the right functions based on the LLM response and continues the process until the assistant's final response is returned.
 
-###### 4.3.1.6.1 Input Parameters
+###### 4.3.1.7.1 Input Parameters
 
  Name | Type | Mandatory | Description |
 |---|---|---|---|
@@ -401,17 +438,17 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.
 {{% /alert %}}
 
-###### 4.3.1.6.2 Return Value
+###### 4.3.1.7.2 Return Value
 
 | Name | Type | Description |
 |---|---|---|
 | `Function` | [Function](#function) | This is the function object that was added [ToolCollection](#toolcollection) which is part of the request. This object can be used optionally as input for controlling the tool choice of the [Request](#request), see [Tools: Set Tool Choice](#set-toolchoice). |
 
-##### 4.3.1.7 Tools: Set Tool Choice {#set-toolchoice}
+##### 4.3.1.8 Tools: Set Tool Choice {#set-toolchoice}
 
 Use this microflow to control how the model should determine which function to leverage (typically to gather additional information). The microflow sets the ToolChoice within a [Request](#request). This controls which (if any) function is called by the model. If the ENUM_ToolChoice equals `tool`, the `Tool` input is required which will become the tool choice. This will force the model to call that particular tool. 
 
-###### 4.3.1.7.1 Input Parameters
+###### 4.3.1.8.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
@@ -419,7 +456,7 @@ Use this microflow to control how the model should determine which function to l
 | `Tool` | [Tool](#tool) | Required if `ENUM_ToolChoice` equals `tool`. | Specifies the tool to be used. Required if the `ENUM_ToolChoice` equals `tool`; ignored for all other enumeration values. |
 | `ENUM_ToolChoice` | [ENUM_ToolChoice](#enum-toolchoice) | mandatory | Determines the tool choice. For more information, see the [ENUM_ToolChoice](#enum-toolchoice) section for a list of the available values. |
 
-###### 4.3.1.7.2 Return Value
+###### 4.3.1.8.2 Return Value
 
 This microflow does not have a return value.
 
@@ -459,11 +496,43 @@ Use this microflow to get the list of references that may be included in the mod
 |---|---|---|
 | `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
 
+##### 4.3.2.3 Image: Get Generated Image (Single) {#image-get-single}
+
+This operations processes a response that was created by an image generations operation. A return entity can be specified using ResponseImageEntity (needs to be of type image or its specialization). An image of that type will be created and returned.
+
+###### 4.3.2.3.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|---|---|---|---|
+| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type System.Image or its specializations. |
+| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generation operation. It contains the FileContent to create the image. |
+
+###### 4.3.2.3.2 Return Value
+
+| Name | Type | Description |
+|---|---|---|
+| `GeneratedImage` | Object of type determined by `ResponseImageEntity` | The generated image. |
+
+##### 4.3.2.4 Image: Get Generated Images (List) {#image-get-list}
+
+###### 4.3.2.4.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+|---|---|---|---|
+| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type System.Image or its specializations. |
+| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generation operation. It contains the FileContent to create the image. |
+
+###### 4.3.2.4.2 Return Value
+
+| Name | Type | Description |
+|---|---|---|
+| `GeneratedImageList` | List of type determined by `ResponseImageEntity` | The list of generated images. |
+
 #### 4.3.3 Text & Files: Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completion operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completion and image generation operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
-We recommend that you adapt to the same interface when developing custom chat completion operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
+We recommend that you adapt to the same interface when developing custom chat completion or image generation operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 {{% alert color="info" %}}
 These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
@@ -504,6 +573,24 @@ The `Chat Completions (with history)` operation interface supports more complex 
 | Name | Type | Description |
 | --- | --- | --- |
 | `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation. |
+
+##### 4.3.3.3 Image Generation
+
+The `Image Generation` operation interface supports the generation of images based on a `UserPrompt` passed as string. The returned `Response` needs to contain a `FileContent` via `FileCollection` and `Message`. See microflows in the `Connector Building` folder to construct the output.
+
+###### 4.3.3.3.1 Input Parameters
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- |--- |
+| `Connection` | [Connection](#connection) | mandatory | This is an object that contains specifications to interact with an AI provider. |
+| `UserPrompt` | String | mandatory | This is the description the image will be based on. |
+| `ImageOptions` | [ImageOptions](#imageoptions-entity) | optional | This can be used to pass optional request attributes. |
+
+###### 4.3.3.3.2 Return Value
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which will be used in [Image: Get Generated Image (Single)](#image-get-single). |
 
 #### 4.3.4 Knowledge Bases & Embeddings
 

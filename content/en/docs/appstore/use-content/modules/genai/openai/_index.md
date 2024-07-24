@@ -258,7 +258,7 @@ For technical details, see the [Technical Reference](#embeddings-string-technica
 
 #### 3.4.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection}
 
-The microflow activity `Embeddings (ChunkCollection)` supports the more complex scenario where a collection of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects are vectorized in a single API call, such as when converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. In order to create embeddings, it does not matter whether the `ChunkCollection` contains Chunks or the specialization KnowledgeBaseChunks. However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. though the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
+The microflow activity `Embeddings (ChunkCollection)` supports the more complex scenario where a collection of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects are vectorized in a single API call, such as when converting a collection of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#ChunkCollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. though the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
 
 For technical details, see the [Technical Reference](#embeddings-chunkcollection-technical) section.
 
@@ -610,63 +610,42 @@ The embeddings API from OpenAI accepts a complex JSON structure that consists of
 
 ##### 4.3.3.1 Embeddings (String) {#embeddings-string-technical} 
 
-Use the microflow `Embeddings_Execute_String` to execute a call to the embeddings API for a single string input. The microflow returns an [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) containing token usage metrics. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used.
+Use the microflow `Embeddings_Execute_String` to execute a call to the embeddings API for a single string input. The microflow returns an [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) containing token usage metrics. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) from the GenAI commons module can be used.
 
 **Input parameters**
 
 | Name             | Type                                                         | Mandatory                     | Description                                                  |
 | ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `Connection`     | [Connection](/appstore/modules/genai/commons/#connection)    | mandatory                     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Connection`     | [Connection](/appstore/modules/genai/commons/#connection)    | mandatory                     | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
 | `InputText`      | String                                                       | mandatory                     | This is the input text to create the embedding vector for.   |
 | `EmbeddingsOptions` | [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) | optional | This can be used to specify optional attributes like vector dimension. NOte that not all models may support all embeddings options attributes. For more information see [OpenAI API reference](https://platform.openai.com/docs/api-reference/embeddings/create).  |
 
 **Return value**
 
-| Name              | Type   | Description                                                  |
-| ----------------- | ------ | ------------------------------------------------------------ |
-| `EmbeddingsResponse` | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) | Response object containing token usage metric and pointing to a `ChunkCollection`containing the Chunk for which an embedding vector was created. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used. |
+| Name                  | Type                                                                              | Description                                                  |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `EmbeddingsResponse`  | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity)  | Response object containing token usage metric and pointing to a `ChunkCollection`containing the Chunk for which an embedding vector was created. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used. |
 
 ##### 4.3.3.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection-technical}
 
-Use the microflow `Embeddings_Execute_ChunkCollection` to execute an embeddings API call with a [ChunkCollection](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). For details on which encoding formats are supported, see [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). The encoding format can be left empty; if no value is specified, the API assumes the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create). The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ChunkCollection` to execute an embeddings API call with a [ChunkCollection](/appstore/modules/genai/commons/#ChunkCollection) containing one or multiple [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the original `Chunks`.
 
 **Input parameters**
 
-| Name             | Type                                                         | Mandatory                     | Description                                                  |
-| ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `DataBatch`      | [DataBatch](#databatch)                                      | mandatory                     | This is a wrapper object for a list of `DataChunk` objects with Inputs for which an Embeddings vector should be generated. |
-| `Configuration`  | [Configuration](#configuration-entity)                       | mandatory                     | This is an object that contains endpoint and API key.        |
-| `Model`          | String                                                       | only mandatory for **OpenAI** | This is the ID of the model to use. This is not considered for **Azure OpenAI** configurations. |
-| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional                      | This can be used to specify the format in which the generated vectors must be returned. |
+| Name                  | Type                                                                              | Mandatory | Description                                                  |
+| --------------------- | --------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------ |
+| `ChunkCollection`     | [ChunkCollection](/appstore/modules/genai/commons/#ChunkCollection)               | mandatory | This is a wrapper object for a list of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects with `InputTexts` for which an Embeddings vector should be generated. |
+| `Connection`          | [Connection](/appstore/modules/genai/commons/#connection)                         | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `EmbeddingsOptions`   | [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity)    | optional  | This can be used to specify optional attributes like vector dimension. NOte that not all models may support all embeddings options attributes. For more information see [OpenAI API reference](https://platform.openai.com/docs/api-reference/embeddings/create).  |
 
 **Return value**
 
-| Name        | Type    | Description                                                  |
-| ----------- | ------- | ------------------------------------------------------------ |
-| `Success`   | Boolean | The value is `true` if the embeddings request was successful. The value is `false` if an error occurred or a validation failed. |
+| Name                  | Type                                                                              | Description                                                  |
+| --------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| `EmbeddingsResponse`  | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity)  | Response object containing token usage metric and pointing to a `ChunkCollection`containing the Chunk for which an embedding vector was created. Note that the `EmbeddingVector` gets updated on the original objects. So for further logic, the `ChunkCollection` used as input for this operation can be reused and is the same as the `ChunkCollection` the `EmbeddingsResponse` is pointing to. |
 
-To construct the input for the microflow, see [OpenAI Exposed Microflows](#exposed-microflows). Each `DataChunk` will be enriched with the corresponding embedding vector that was returned in the API call: the microflow `Embeddings_Execute_ListInput` already takes care of mapping the result onto the correct `DataChunk` entities, and the operation itself only returns a `Success` Boolean.
-
-##### 4.3.3.3 Embeddings (Advanced) {#embeddings-advanced-technical}
-
-For developers who want to configure the [EmbeddingsRequest](#embeddingsrequest) object themselves and adjust its attributes according to their needs, Mendix recommends using the `Embeddings_CallAPI` microflow. The inputs and output are shown in the table below: 
-
-**Input parameters**
-
-| Name                | Type                                    | Mandatory | Description                                           |
-| ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
-| `EmbeddingsRequest` | [EmbeddingsRequest](#embeddingsrequest) | mandatory | This is the request object for the Embeddings API.    |
-| `Configuration`     | [Configuration](#configuration-entity)  | mandatory | This is an object that contains endpoint and API key. |
-
-**Return value**
-
-| Name                 | Type                                      | Description                                                  |
-| -------------------- | ----------------------------------------- | ------------------------------------------------------------ |
-| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse) | This is the response object containing the generated embedding vectors. |
-
-This option can be used if the default values and behavior of the `EmbeddingsRequest` are insufficient and must be changed to work for your specific use case. It is also useful if you are interested in other [EmbeddingsResponse](#embeddingsresponse) values apart from the vector embeddings. For example, it can provide usage metrics. 
-
-The following flows may be used to construct and handle the required inputs: `EmbeddingsRequest_Create` and `EmbeddingsInput_Create`.
+To construct the input for the microflow, see the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk).
+In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#ChunkCollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. though the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
 
 ## 5 Showcase Application {#showcase-application}
 

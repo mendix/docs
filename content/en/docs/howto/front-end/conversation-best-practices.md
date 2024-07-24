@@ -12,7 +12,7 @@ Conversational AIs are easy to create, but you want them to be easy to use and r
 
 To help you, Mendix has come up with this conversational AI design checklist which helps you think about how you want end-users to perceive and use the conversational AI. It is meant as an inspiration rather than a template. There are no references to specific Mendix features or modules to help you with your design, but these will be added to the Mendix offering as Mendix integrates more conversational AI features into its offering.
 
-In the examples below, the conversational AI is named "Bot".
+In the examples below, the conversational AI is named Bot.
 
 ### 1.1 Key Design Elements
 
@@ -43,7 +43,7 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 #### 1.2.3 It Helps the End-User Formulate a Better AI Response
 
 * [It provides the end-user with a prompt guide](#prompting)
-* [It allows the end-user to reprompt effortlessly](#quote-reprompt)
+* [It allows the end-user to reprompt effortlessly](#reprompting)
 * [It provides sufficient hints and discoverability](#hinting)
 
 #### 1.2.4 It Embraces Graceful Error-Handling
@@ -57,7 +57,7 @@ Mendix recommends giving your conversational AI the following behavior. Click ea
 
 ### 2.1 Why It Matters
 
-Making a good first impression by showing value, welcoming the end-user, setting expectations, and letting the end-user take control.
+Make a good first impression by showing value, welcoming the end-user, setting expectations, and letting the end-user take control.
 
 ### 2.2 How We Do It
 
@@ -67,7 +67,7 @@ Don’t just jump right in. Say "Hello."
 
 ### 2.3 Example
 
-* Welcome the end-user. Greet the end-user briefly, for example, with a simple "Welcome" or "Hi."
+* Welcome the end-user. Greet the end-user briefly, for example with a simple "Welcome" or "Hi."
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
@@ -77,9 +77,9 @@ Don’t just jump right in. Say "Hello."
 
 Tailoring greetings for different end-user groups can create a more engaging end-user experience than general greetings. Differentiate the greetings between first-time and repeated end-users.
 
-A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users (violating the Cooperative Principle).
+A novice end-user might need more detailed descriptions of your conversational AI’s options and features. The same information can frustrate more experienced end-users and thus violate the Cooperative Principle.
 
-On the other hand, an expert end-user might benefit from a well-placed tip about an advanced feature (information that might overwhelm a novice end-user).
+On the other hand, an expert end-user might benefit from a well-placed tip about an advanced feature. This sort of information might overwhelm a novice end-user.
 
 ### 3.2 How We Do It
 
@@ -107,7 +107,7 @@ You should help end-users to determine the value of the AI feature. Designers ca
 
 ### 4.2 How We Do It
 
-* When confronting a new system, the end-user will have these unspoken questions:
+* **Expectation-setting**: When confronting a new system, the end-user has these unspoken questions:
 
     * What is it?
     * What can it do for me?
@@ -116,18 +116,18 @@ You should help end-users to determine the value of the AI feature. Designers ca
     * Why should I trust it?
     * What does it want me to do next?
 
-* **System status or version**: Help end-users understand the capabilities and limitations of the system, setting appropriate expectations for their experience. For example, let the user know if the system is in beta.
-* **New features and updates**: For recurring end-users, actively communicate with the end-user about new features and updates of the system.
+* **System status or version**: Help end-users understand the capabilities and limitations of the system, setting appropriate expectations for their experience. For example, let them know if the system is in beta.
+* **New features and updates**: For returning end-users, actively communicate with the end-user about new features and updates of the system.
 
 ### 4.3 Examples
 
 * Communicate what the end-user can do with the system.
-* Proactively ensure end-user data protection.
+* Proactively ensure the end-user's data protection.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Give example questions and indicate on the screen that data is protected" >}}
 
-* Effectively communicate the new features or improved service to the end-users and let end-users properly evaluate the value of the AI system. 
-* Communicate the version of the system, allowing the end-user to determine the system's limitations.
+* Communicate the new features or improved service to the end-users. Let end-users properly evaluate the value of the AI system. 
+* Indicate the version of the system, allowing the end-user to determine the system's limitations.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/upgraded-recommendations.png" max-width="320px" alt="Pop-up informing that new features are available" >}}
 
@@ -144,11 +144,11 @@ Users seek trust and assurance that their personal information is handled secure
 
 ### 5.3 Examples
 
-* Proactively protect end-users' personal and corporate data.
+* Proactively protect end-users' personal and corporate data. Make sure to also indicate to the end-user that their data is protected.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Indicate that data is protected" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
 
-* Allow the end-user to delete the conversation history and turn off collecting the conversation.
+* Allow the end-user to delete records of previous conversations and control whether conversation history is stored.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/delete-conversation.png" max-width="320px" alt="Show a switch to turn activity history on and off" >}}
 
@@ -167,15 +167,15 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 ### 6.3 Examples
 
-* Make it easy for the end-user to edit a previous prompt to generate a new response.
+* Make it easy for the end-user to edit and update a previous prompt to generate a new response.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
 
-* Provide an option to pause the AI interaction.
+* Provide a way to stop or pause the AI interaction.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/pause.png" max-width="320px" alt="Show a switch to pause current interaction" >}}
 
-* Provide options for the end-user to select a response within the interaction without having to write a new prompt.
+* Provide options for the end-user to select a preferred response to their prompt—for example, by choosing between three different draft versions or even generating new versions—without having to write a new prompt.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
 
@@ -185,10 +185,9 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 The input mechanism is the method through which the end-user provides information to the system. This can be through text, voice, buttons, menus, or a combination of these elements.
 
-The primary input mechanism should be the text input in the conversational interface. This primary input mechanism should never be blocked or disabled; the end-user should always have a way to provide primary input.
-
 ### 7.2 How We Do It
 
+* The primary input mechanism should be the text input in the conversational interface. This primary input mechanism should never be blocked or disabled; the end-user should always have a way to provide primary input.
 * Make it easy for users to perceive where they can provide input, whether via text, a button, or another input mechanism.
 * Provide feedback once the system receives the end-user’s input to verify the system understood the input correctly.
 * Don't overwhelm the end-user with too many input options at once. Keep it simple or provide just-in-time input options to avoid confusing the end-user about which action they should take.
@@ -196,7 +195,7 @@ The primary input mechanism should be the text input in the conversational inter
 
 ### 7.3 Example
 
-* Provide inputs of command buttons as well as free text for the end-user to navigate the conversation.
+* Provide input options via command buttons as well as free text.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
@@ -216,7 +215,7 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 ### 8.3 Examples
 
-* Presenting examples of prompts in the input field, helping the end-user to sense how to draft prompts in the system. Provide further help via an information icon ({{% icon name="info-circle" %}}).
+* Present examples of prompts in the input field, helping the end-user to understand how to draft prompts in the system. Provide further guidance via an information icon ({{% icon name="info-circle" %}}).
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/prompts.png" max-width="320px" alt="Suggested prompt fragments on buttons and further help next to input field" >}}
 
@@ -228,38 +227,38 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/context-driven-prompts.png" max-width="320px" alt="Suggested responses to latest output explaining a typo in the question" >}}
 
-## 9 Quote and Reprompt {#quote-reprompt}
+## 9 Quoting and Reprompting {#reprompting}
 
 ### 9.1 Why It Matters
 
-This feature allows end-users to quote specific parts of previous messages and reply directly, facilitating clearer and more focused communication within the conversation.
+If you allow end-users to quote specific parts of previous messages and reply directly, this facilitates clearer and more focused communication within the conversation.
 
 * **Clarity and context**: Quoting maintains clarity and context by referencing specific parts of previous messages, aiding understanding of the conversation flow.
-* **Precision**: Replying to specific parts allows for more precise addressing of questions or comments, ensuring relevance.
+* **Precision**: Replying to specific text makes it straightforward to precisely address questions or comments, ensuring relevance.
 * **Organization**: Quoting and reprompting helps organize conversations, separating topics into distinct threads for easier follow-up.
 * **Efficiency**: Referencing previous messages enables focused exchanges, covering multiple topics efficiently within the same conversation.
 
 ### 9.2 How We Do It
 
-* **Visibility and accessibility**: Make the quote-and-reprompt feature easily accessible and visible within the interface. End-users should be able to select and quote specific parts of messages intuitively, without difficulty.
+* **Visibility and accessibility**: Make the quote-and-reprompt feature easily accessible and visible within the interface. End-users should be able to select and quote specific parts of messages intuitively and smoothly.
 * **Clarity and readability**: Ensure quoted text is displayed clearly and legibly, distinguishing it from the end-user’s input. Use visual cues such as indentation, color, or formatting to differentiate quoted text from new messages.
 * **Interactivity**: Design the quote-and-reprompt feature to be interactive and responsive. Allow end-users to click or tap on quoted text to expand or collapse it, providing a seamless way to view the context without cluttering the interface.
 
 ### 9.3 Examples
 
-* Ensure that additional functionality such as hints are discoverable but do not overwhelm the interface or distract from the main task.
+* Ensure that additional functionalities are discoverable but do not overwhelm the interface or distract from the main task. For example, when the end-user selects some text, an icon could appear indicating that they can reply directly to their selection.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
-* Make the selected quote visible in the input area. Ensure the end-user can dismiss it if it is no longer needed.
+* Display the selected text near the input area. Let the end-user dismiss it if it is no longer needed.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Display selected text near the input area" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/highlight-the-question.png" max-width="320px" alt="Display selected text above the input area" >}}
 
 ## 10 Hinting and Discoverability{#hinting}
 
 ### 10.1 Why It Matters
 
-With conversational AI, the burden of discovering the capability of a bot or voice assistants is up to the end-user. They can only know a chatbot cannot do something after it fails to provide a good response. If there are no hints or interface cues, end-users are more likely to have unrealistic expectations.
+With conversational AI, the burden of discovering the capability of a bot or voice assistant is up to the end-user. They only learn that a chatbot cannot do something after it fails to provide a good response. If there are no hints or interface cues, end-users are more likely to have unrealistic expectations.
 
 Provide a clear motivation for any action you want the end-user to take. Tell the end-user why they might want to do something before telling them how to do it.
 
@@ -320,7 +319,7 @@ Clarifying end-user intent ensures the system understands what the end-user want
 
 ### 12.3 Example
 
-* “Did I get that right?” helps the end-user and the system shape conversation direction.
+* Asking “Did I get that right?” helps the end-user and the system shape conversation direction.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/am-i-right.png" max-width="480px" alt="Bot responds with asking if response is correct with Yes/No buttons to allow response" >}}
 

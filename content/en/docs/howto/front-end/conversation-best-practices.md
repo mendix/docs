@@ -12,7 +12,7 @@ Conversational AIs are easy to create, but you want them to be easy to use and r
 
 To help you, Mendix has come up with this conversational AI design checklist which helps you think about how you want end-users to perceive and use the conversational AI. It is meant as an inspiration rather than a template. There are no references to specific Mendix features or modules to help you with your design, but these will be added to the Mendix offering as Mendix integrates more conversational AI features into its offering.
 
-In the examples below, we have named the conversational AI "Bot".
+In the examples below, the conversational AI is named "Bot".
 
 ### 1.1 Key Design Elements
 
@@ -71,7 +71,7 @@ Don’t just jump right in. Say "Hello."
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
-## 3 Tailoring Greeting{#greeting}
+## 3 Tailoring Greetings{#greeting}
 
 ### 3.1 Why It Matters
 
@@ -84,20 +84,20 @@ On the other hand, an expert end-user might benefit from a well-placed tip about
 ### 3.2 How We Do It
 
 * **New end-user**: Provide a warm welcome and a brief introduction to the system's capabilities.
-* **Repeated end-user**: Use a friendly greeting that acknowledges their familiarity.
+* **Returning end-user**: Use a friendly greeting that acknowledges their familiarity.
 * **Resuming interrupted task**: Consider the context of the previous interaction, especially for returning end-users.
 
 Don’t overwhelm the end-user with lots of details upfront.
 
 ### 3.3 Examples
 
-* Greet and explain the system status to the novice end-user.
+* Greet and explain the system status to the novice end-user:
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" max-width="320px" alt="A pop-up explaining what Bot is." >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-is-experiment.png" max-width="480px" alt="A pop-up explaining what Bot is." >}}
 
-* For recurring end-users
+* For returning end-users:
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring end-users get straight to bot with some suggestions and an offer to start asking questions" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/bot-recurring.png" max-width="480px" alt="Recurring end-users get straight to Bot with some suggestions and an offer to start asking questions" >}}
 
 ## 4 Determining Value{#value}
 
@@ -175,7 +175,7 @@ Additionally, people are more motivated and engaged when they believe they can i
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/pause.png" max-width="320px" alt="Show a switch to pause current interaction" >}}
 
-* Provide options to select a response within the interaction without the end-user having to rewrite a new prompt.
+* Provide options for the end-user to select a response within the interaction without having to write a new prompt.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/regenerate.png" max-width="320px" alt="Allow end-user to select a previous prompt and generate new responses from it" >}}
 
@@ -247,7 +247,7 @@ This feature allows end-users to quote specific parts of previous messages and r
 
 ### 9.3 Examples
 
-* Use a salient discoverability of the functionality.
+* Ensure that additional functionality such as hints are discoverable but do not overwhelm the interface or distract from the main task.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
@@ -282,7 +282,7 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-options.png" max-width="320px" alt="Some standard modify options (Regenerate, Make Shorter, Remove) are given next to Bot's response" >}}
 
-* The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version."
+* The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/drafts.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
@@ -303,7 +303,7 @@ Transparent error messages tell end-users exactly what went wrong, preventing co
 
 * Offer context explaining why the requested action can’t be made. Also, provide alternative solutions.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/error.png" max-width="480px" alt="Bot responds explaining why it cannot send an email and suggesting something it can do" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/error.png" max-width="320px" alt="Bot responds explaining why it cannot send an email and suggesting something it can do" >}}
 
 ## 12 Confirming Intent{#confirming}
 
@@ -326,4 +326,4 @@ Clarifying end-user intent ensures the system understands what the end-user want
 
 * If the system cannot handle the query, provide fallback options for further navigation.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="480px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/do-not-understand.png" max-width="320px" alt="Bot responds that it cannot understand and prompts with buttons showing possible next steps" >}}

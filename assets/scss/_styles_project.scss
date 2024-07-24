@@ -854,3 +854,13 @@ nav.foldable-nav {
     font-size: $font-size-base !important;
     color: $primary !important;
 }
+
+// Yiyun - Adjust the stack order so that the clickable images set in body-end.html are not overridden by the left sidebar.
+.doc-image{
+    z-index: 10;
+}
+
+.medium-zoom-overlay{
+    z-index:10;
+    opacity: 0.5 !important;
+}

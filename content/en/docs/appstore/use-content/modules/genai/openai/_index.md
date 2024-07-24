@@ -544,16 +544,16 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 
 **Input parameters**
 
-| Name                     | Type                                                                 | Mandatory               | Description                                                                                                        |
-| ------------------------ | ------------------------------- | ---------------------------------- |--------------------------------------------------------------------------------------------------------------------------- |
-| `Connection`     | [Connection](/appstore/modules/genai/commons/#connection)              | Yes     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `Request`        | [Request](/appstore/modules/genai/commons/#request)                    | Yes     | This is an object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
+| Name             | Type                                                       | Mandatory | Description                                                               |
+| -----------------| ---------------------------------------------------------- | --------- |---------------------------------------------------------------------------|
+| `Connection`     | [Connection](/appstore/modules/genai/commons/#connection)  | Yes       | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Request`        | [Request](/appstore/modules/genai/commons/#request)        | Yes       | This is an object that contains messages, optional attributes and optional [ToolCollection](/appstore/modules/genai/commons/#toolcollection). Associate the [OpenAIRequest_Extension](#openairequest-extension) object to the Request to configure additional OpenAI specific attributes.                        |
 
 **Return value**
 
 | Name        | Type                                                        | Description                                                  |
 | ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/commons/#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/commons/#chat-get-model-response-text) operation.        |
+| `Response`  | [Response](/appstore/modules/genai/commons/#response)       | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/commons/#chat-get-model-response-text) operation.|
 
 To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/commons/#microflows).
 
@@ -606,30 +606,29 @@ The microflow `ImageGenerationsRequest_Create` may be used here to create and ha
 
 #### 4.3.3 Embeddings
 
-The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string, one vector is returned. Depending on the use case, there may be a need for generating an embedding for a single text at a time. Alternatively, in the case of processing larger amount of data, bigger texts or datasets will be split up in discrete chunks, for which embeddings can be generated using batches of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and facilitate easier implementation in certain use cases. 
+The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string, one vector is returned. Depending on the use case, there may be a need for generating an embedding for a single text at a time. Alternatively, in the case of processing larger amount of data, bigger texts or datasets will be split up in discrete chunks, for which embeddings can be generated using collections of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and facilitate easier implementation in certain use cases. 
 
-##### 4.3.3.1 Embeddings (Single Input) {#embeddings-string-technical} 
+##### 4.3.3.1 Embeddings (String) {#embeddings-string-technical} 
 
-Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output is the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information on what is supported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the API assumes the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create). The `Model` value is mandatory for OpenAI but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_String` to execute a call to the embeddings API for a single string input. The microflow returns an [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) containing token usage metrics. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used.
 
 **Input parameters**
 
 | Name             | Type                                                         | Mandatory                     | Description                                                  |
 | ---------------- | ------------------------------------------------------------ | ----------------------------- | ------------------------------------------------------------ |
-| `Input`          | String                                                       | mandatory                     | This is the input text to embed.                             |
-| `Configuration`  | [Configuration](#configuration-entity)                       | mandatory                     | This is an object that contains endpoint and API key.        |
-| `Model`          | String                                                       | only mandatory for **OpenAI** | This is the ID of the model to use. This is not considered for **Azure OpenAI** configurations. |
-| `EncodingFormat` | [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) | optional                      | This can be used to specify the format in which the generated vectors must be returned. |
+| `Connection`     | [Connection](/appstore/modules/genai/commons/#connection)    | mandatory                     | This is an object that points to the configuration object (endpoint and API key). The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `InputText`      | String                                                       | mandatory                     | This is the input text to create the embedding vector for.   |
+| `EmbeddingsOptions` | [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) | optional | This can be used to specify optional attributes like vector dimension. NOte that not all models may support all embeddings options attributes. For more information see [OpenAI API reference](https://platform.openai.com/docs/api-reference/embeddings/create).  |
 
 **Return value**
 
 | Name              | Type   | Description                                                  |
 | ----------------- | ------ | ------------------------------------------------------------ |
-| `EmbeddingVector` | String | This is the string representation of a vector embedding for the input. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) | Response object containing token usage metric and pointing to a `ChunkCollection`containing the Chunk for which an embedding vector was created. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used. |
 
-##### 4.3.3.2 Embeddings (list input) {#embeddings-list-technical}
+##### 4.3.3.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection-technical}
 
-Use the microflow `Embeddings_Execute_ListInput` to execute an embeddings API call with a [DataBatch](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). For details on which encoding formats are supported, see [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). The encoding format can be left empty; if no value is specified, the API assumes the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create). The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
+Use the microflow `Embeddings_Execute_ChunkCollection` to execute an embeddings API call with a [ChunkCollection](#databatch) input with a list of text strings, attached to the batch in the form of [DataChunk](#datachunk) objects. The resulting embedding vectors returned by the model end up in the `EmbeddingVector` string attribute of the [DataChunks](#datachunk). For details on which encoding formats are supported, see [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings). The encoding format can be left empty; if no value is specified, the API assumes the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create). The `Model` value is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 
 **Input parameters**
 

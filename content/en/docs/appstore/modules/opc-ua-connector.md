@@ -59,27 +59,29 @@ The connector provides a simple wizard to set up your own connection to an OPC-U
 For each of these parts see the sections below.
 
 ## 3.2 Server Configuration
-The core information of the configuration to connect to an OPC-UA server must be stored on Server Configuration objects. The configuration contains the following attributes
+The core information of the configuration to connect to an OPC-UA server must be stored on Server Configuration objects. 
+The configuration contains the following attributes:
 * Configuration Name.  Name to identify the configuration.
 * Endpoint URL. URL of the endpoint of the OPC-UA server.
 * Session Timeout. Requested maximum number of milliseconds a session should remain open without activity.
 * Request Timeout. Requested maximum number of milliseconds a request should remain open without response.
 * Message security mode. The type of security to apply to messages.
-* * If None, messages are encrypted
+  * If None, messages are encrypted
   * If Sign, messages are signed by the Client Certificate
   * If Sign&Encrypt, messages are signed and encrypted by the client certificate.
 * Security Policy URI to determine what algorithm to use to encrypt and sign the data. Can be found from GetEndpoints (> UserIdentityToken > SecurityPolicyURI)
 
 ### 3.2.1 Identity Token
-A connection to an OPC-UA server is made user an IdentityToken, similar to a user role in Mendix. The server will dictate based on the response in GetEndpoints > UserIdentityToken > TokenType, which types of IdentityTokens it will support. The three options are
+A connection to an OPC-UA server is made user an IdentityToken, similar to a user role in Mendix. The server will dictate based on the response in GetEndpoints > UserIdentityToken > TokenType, which types of IdentityTokens it will support. 
+The three options are:
 * Anonymous Identity Token. Identity token for anonymous users and gives access to the server without credentials.
 * Username Identity Token. Identity token based on a username and password combination.
 * Certificate Identity Token. Identity Token based on a certificate, the certificate must be trusted by the OPC-UA server before it can be used.
 
 ### 3.2.2 Client Certificate
 A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response in GetEndpoints (> EndpointDescription > SecurityMode) which Message Security Modes i.e. forms of encryption it requires for a connection. If the Message Security Mode is set to Sign or Sign&Encrypt, the ServerConfiguration object requires a ClientCertificateHolder with ClientCertificate and ClientCertificatePrivateKey objects.
-- The client certificate must be an X509 formatted PEM file.
-- The private key must be an Encrypted PKCS8 or PKCS1 formatted PEM file.
+* The client certificate must be an X509 formatted PEM file.
+* The private key must be an Encrypted PKCS8 or PKCS1 formatted PEM file.
 
 ### 3.2.3 Server Certificate
 A connection between an OPC-UA server and OPC-UA client (The Mendix Application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (GetEndpoints > EndpointDescription > ServerCertificate), then use "Get Endpoints - Server Certificate" and then use "Trust certificate".
@@ -87,31 +89,33 @@ The association does not have to be set in the domain model but can be used to c
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 
 ## 3.3 View Services
-Browsing lets you navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. These are 
+Browsing lets you navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. 
+These are:
 * Get Roots. Retrieves the top level nodes of the server
 * Get Children. Retrieves the sub level node for a given node.
 * Get Parent. Retrieve the parent node for a given node.
 
 ### 3.3.1 The Browse action
 The browse action lets you traverse from one node to others. 
-The request object for the action is a BrowseDescription. The BrowseDescription contains the following fields.
+The request object for the action is a BrowseDescription. 
+The BrowseDescription contains the following fields:
 * Node ID. The node ID of the node from where you want to browse.
 * Browse directions. In which direction to traverse.
 * Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
 * Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
 * Node Class Mask. Specifies which NodeClasses will be returned. If no value is provided, no filter will be applied.
-* * Note that this is an integer attribute, while the interpretation is in binary format.
+  * Note that this is an integer attribute, while the interpretation is in binary format.
   * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
   * Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
-* * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
+  * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.
   * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2<sup>3</sup> = 8.
 
 The response of the Browse action returns a browse response object. 
 There is a StatusCode associated to the response,which represents the status of the call.
 The response may contain one or more BrowseNodes, these are the references from the response.
-A browse node contains the following fields.
+A browse node contains the following fields:
 * Node ID. The Identifier of the referenced node.
 * Browse name. Browse name of the referenced node.
 * Display name. Display name of the referenced node.
@@ -269,7 +273,7 @@ For a given ServerConfiguration, this microflow lets you remove a subscription.
 ## 4.6 Monitored Items
 
 ### 4.6.1 Monitored Item Commit
-This microflow lets you monitor data changes on the server.\r\n
+This microflow lets you monitor data changes on the server.
 The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
 The microflow returns a status codes, that is associated to the monitored item in the input. The monitored item is committed if and only if the status code associated has status Good. If the status Code has no Good status, the description explains what went wrong.
 
@@ -286,7 +290,8 @@ If the initialization is not succesfull the status code will have an error messa
 
 ### 4.6.4 Monitored Item List Delete
 This microflow lets you stop listening to monitoring items.
-The microflow may throw an exception when the connection is unsuccesful or the input is invalid.\r\nThe microflow returns a list of status codes, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
+The microflow may throw an exception when the connection is unsuccesful or the input is invalid.
+The microflow returns a list of status codes, where the _IsCommitted field will be set to true if and only if the initialization is successfull.
 If the initialization is not succesfull the status code will have an error message to explain why the initialization is not succesfull.
 
 ## 4.7 Mendix Specific

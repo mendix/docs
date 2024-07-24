@@ -251,8 +251,6 @@ This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` enti
 | `Response_Type` | This value is either 'embedding_floats' or 'embedding_by_type' if `CohereEmbedOptions_Extension.EmbeddingTypes` has been specified. |
 | `_Id` | An identifier for the response. |
 
-
-
 ##### 4.1.1.10 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
 
 This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
@@ -263,9 +261,6 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
 | `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
 
-
-
-
 ##### 4.1.1.11 TitanEmbeddingsOptions_Extension (#titan-embeddings-options-extension)
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
@@ -273,9 +268,6 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 | Attribute | Description |
 | --- | --- |
 | `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
-
-
-
 
 ##### 4.1.1.12 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
 
@@ -286,9 +278,6 @@ This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions`
 | `InputText` | See `InputText` of the `GenAICommons.EmbeddingsOptions` entity. |
 | `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
 | `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
-
-
-
 
 #### 4.1.2 No GenAICommons dependency
 

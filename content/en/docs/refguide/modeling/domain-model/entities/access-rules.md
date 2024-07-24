@@ -25,7 +25,7 @@ Access rules are not inherited from an entity's [generalization](/refguide/entit
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-The **System.User** entity has inbuilt access rules where access is given to its attributes if the end-user can manage the role of that User object. Specializations of **System.User** (such as **Administration.Account**) cannot restrict this access with their own access rules.
+The **System.User** entity has inbuilt access rules where access is given to its attributes if the end-user can manage the role of that User object. Specializations of **System.User** (such as **Administration.Account**) cannot change this access with their own access rules.
 {{% /alert %}}
 
 ## 2 Defining Access Rules

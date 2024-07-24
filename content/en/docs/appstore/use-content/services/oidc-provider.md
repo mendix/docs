@@ -413,15 +413,14 @@ The format of non-custom claims in the access token is as follows:
 
 ```json {linenos=false}
 {
-    "aud": "d99a49b9-95d7-410e-b79a",
+    "aud": "DemoClient",
     "sub": "T6hOS9jBEBMqk3Dk",
     "nbf": 1681969726,
     "scope": "",
     "iss": "http://localhost:8080/",
     "name": "test",
     "exp": 1682056126,
-    "iat": 1681969726,
-    "client_id": "d99a49b9-95d7-410e-b79a"
+    "iat": 1681969726
 }
 ```
 
@@ -441,7 +440,7 @@ The format of non-custom claims in the ID-token is as follows:
         "FullName": "Jane Doe",
         "IsLocalUser": "true"
     },
-    "aud": "d99a49b9-95d7-410e-b79a",
+    "aud": "DemoClient",
     "scope": "",
     "name": "Jane Doe",
     "exp": 1681970318,

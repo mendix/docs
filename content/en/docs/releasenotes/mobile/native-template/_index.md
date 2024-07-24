@@ -6,7 +6,7 @@ description: "Native Template release notes."
 ---
 
 
-For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [Build a Mendix Native App in the Cloud](/refguide9/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
+For more information on native mobile app development, see the [native-template](https://github.com/mendix/native-template/) repository and [Build a Mendix Native App in the Cloud](/refguide/mobile/distributing-mobile-apps/building-native-apps/deploying-native-app/) guide. Below you can see the current versions in active development and which Mendix Studio Pro versions they correspond with.
 
 Compatible with Studio Pro 10:
 

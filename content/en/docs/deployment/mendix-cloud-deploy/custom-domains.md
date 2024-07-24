@@ -129,7 +129,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/custom-domains/signed-certificate.png" width=80% class="no-border" >}}
 
-    {{% alert color="warning" %}}The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS to users of modern browsers. However, you cannot predict how your users will attempt to connect to your website; not including an intermediate certificate may result in connection issues for some users. Tools such as cURL do not recognize intermediate certificates automatically. Because of this, intermediate certificates are highly recommended but optional.{{% /alert %}}
+    {{% alert color="warning" %}}The intermediate certificates of the main certificate authorities are included in the built-in CA databases of modern browsers. Therefore, you do not need to include an intermediate certificate to serve your website through SSL/TLS to users of modern browsers. However, you cannot predict how your users will attempt to connect to your website; not including an intermediate certificate may result in connection issues for some users. Tools such as curl do not recognize intermediate certificates automatically. Because of this, intermediate certificates are highly recommended but optional.{{% /alert %}}
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 

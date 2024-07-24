@@ -56,7 +56,7 @@ The UI layer performs navigation, resource loading, and platform integration. It
 
 ### 2.5 HTTPS Server
 
-The HTTPS server serves pages, widgets, and javascript actions, held in the model, to the end-user of the app.
+The HTTPS server serves pages, widgets, and JavaScript actions, held in the model, to the end-user of the app.
 
 ### 2.6 Logic
 

@@ -32,7 +32,7 @@ There are two ways to access Maia Chat:
 * You can click the {{% icon name="sparkles" %}} icon at the top right bar of Studio Pro
 * Or you can go to the **View** menu and click **Maia**
 
-The Chat interface appears at the right side of Studio Pro under the **Maia** tab:
+The chat interface appears at the right side of Studio Pro under the **Maia** tab:
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-interface.png" width="300px">}}
 

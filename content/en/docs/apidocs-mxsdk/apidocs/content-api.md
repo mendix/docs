@@ -14,7 +14,7 @@ If you have Marketplace content, this API can help you get the following informa
 
 * The latest version of the content used, allowing you to keep track of outdated content on your side and check for newly added versions including release notes
 * The latest version that is compatible with your Mendix Studio Pro version
-* [Component details](/appstore/overview/#details) such as content type, category, and license
+* [Component details](/appstore/component-details/) such as content type, category, and license
 
 ## 2 Authentication {#authentication}
 
@@ -26,7 +26,7 @@ For details on how to generate a PAT, see the [Creating a PAT](/community-tools/
 
 Select the following : 
 
-Select **mx:marketplace-content:read** as the **Marketplace** scope in orde to perform `GET` operations.
+Select **mx:marketplace-content:read** as the **Marketplace** scope in order to perform `GET` operations.
 
 Copy and store the generated value (`{GENERATED_PAT}`) somewhere safe so you can use it to authorize your API calls.
 

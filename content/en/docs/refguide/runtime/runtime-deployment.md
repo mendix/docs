@@ -7,7 +7,7 @@ weight: 30
 
 ## 1 Introduction
 
-To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your app, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see the [Deployment](/developerportal/deploy/) section of the Developer Portal documentation.
+To convert your Mendix model into an app running in the cloud, it needs to be deployed. This document describes the concepts behind the deployment of your app, and the processes it goes through to begin running in the cloud. For technical details on how to deploy your app, see [Deployment](/deployment/).
 
 This description of deployment is based on an app running in the cloud. You can also run Mendix locally for testing, but this is conceptually the same.
 
@@ -21,7 +21,7 @@ Below is a chart showing the processes involved in deploying your app. Each of t
 
 ### 2.1 Deployer
 
-This is initiated by the Mendix Cloud portal to manage the deployment of an app.
+This is initiated by Mendix Cloud portal to manage the deployment of an app.
 
 ### 2.2 Docker Environment
 

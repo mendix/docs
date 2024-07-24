@@ -23,7 +23,7 @@ The top-bar of Studio Pro contains the following menus:
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in the *Developer Portal Guide*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in *Apps*.
 
 ## 3 File Menu {#file}
 
@@ -35,7 +35,7 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 ## 5 View Menu {#view}
 
-The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
 
 ## 6 App Menu {#app}
 

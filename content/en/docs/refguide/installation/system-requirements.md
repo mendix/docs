@@ -17,6 +17,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 ### 2.1 Software Specifications {#software}
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
+We support running on Windows locally, or locally virtualized.
 
 Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
@@ -32,7 +33,7 @@ Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac usi
 
 {{% alert color="info" %}}
 
-If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+If you were using Parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit Parallels to be able to sign in to Studio Pro. 
 
 {{% /alert %}}
 
@@ -260,7 +261,11 @@ For server-based installations, the following storage types mounted by the OS ar
 * NAS 
 * SAN 
 * GFS
-* Local Storage 
+* Local Storage
+
+{{% alert color="info" %}}
+AWS S3 is also supported in the Windows Service Console.
+{{% /alert %}}
 
 ## 9 Browsers {#browsers}
 

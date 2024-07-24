@@ -82,7 +82,7 @@ You can request a license token by clicking the **Contact Us** button on the [3D
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Using Marketplace Content*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
+To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/use-content/#import) section in *Using Marketplace Content*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
 
 ## 3 Initializing on App Startup
 
@@ -314,7 +314,7 @@ You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to d
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in the Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
@@ -326,7 +326,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### 4.7.2 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/deployment/).
 
 ## 5 Usage
 
@@ -585,7 +585,7 @@ The sections below describe these tools.
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace**.
+2. Go to the Marketplace home page.
 3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 4. Find **3D Viewer** in the list.
 5. Click **Usage Dashboard** to show the usage details.

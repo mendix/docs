@@ -8,6 +8,6 @@ description_list: true
 
 ## 1 Introduction
 
-This category of how-to's presents information on using version control via the Mendix Team Server, collaborating via GitHub, translating app content, and other ways to collaborate and manage requirements.
+This category of how-tos presents information on using version control via the Mendix Team Server, collaborating via GitHub, translating app content, and other ways to collaborate and manage requirements.
 
 ## 2 Documents in This Category

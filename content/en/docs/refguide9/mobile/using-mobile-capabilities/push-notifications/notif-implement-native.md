@@ -49,7 +49,7 @@ To configure your own actions, do the following:
 
 1. Copy or inline the snippet **NativeHomepage_Snippet** into your own module.
 1. Open the properties of the notifications widget. In the **General** tab, add a new action and give it a unique name. This name should match the action name that is used when sending a notification.
-1. In the **"On recieve"** field, select the action you want to be triggered when the notification is recieved while the app is open. For example, use a nanoflow and the Notification object as a parameter (see the **ORN_ExampleNotification** as a reference).
+1. In the **"On receive"** field, select the action you want to be triggered when the notification is received while the app is open. For example, use a nanoflow and the Notification object as a parameter (see the **ORN_ExampleNotification** as a reference).
 1. In the **"On open"** field, select the action you want to be triggered when the user taps on the notification in the system tray. For example, use a nanoflow and the Notification object as a parameter (see the **OON_ExampleNotification** as a reference).
 
 ## 4 Customizing Offline Synchronization

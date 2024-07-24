@@ -4,7 +4,7 @@ url: /refguide/mobile/building-efficient-mobile-apps/enable-hermes/
 weight: 15
 description: "Improve native app performance by enable the Hermes engine."
 aliases:
-    - /refguide/mobile/building-efficient-mobile-apps/hermes/
+    - /refguide/mobile/hermes
 ---
 
 ## 1 Introduction

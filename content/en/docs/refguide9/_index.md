@@ -40,7 +40,7 @@ When it comes to testing your application, you first need to decide what you are
 
 Studio Pro allows you to run and view your app locally or in the default environment.
 
-For more information on options for deploying your app see [Deployment](/developerportal/deploy/).
+For more information on options for deploying your app, see [Deployment](/deployment/).
 
 ## 3 Version Control
 

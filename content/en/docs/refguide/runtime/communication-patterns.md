@@ -20,7 +20,7 @@ The goals of this document are to present information for:
 The Mendix Platform consists of the following components:
 
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-* Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+* Mendix Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
 * Mendix Studio Pro – the modeling studio of the Mendix platform
 * Team Server – a central repository for managing application model versions
@@ -44,7 +44,7 @@ Communication between these components operates as follows:
 
 ## 3 Runtime Operations {#RO}
 
-Data-related communication between the Mendix Client and the Runtime Server is controlled by Runtime Operations over a REST-like protocol. 
+Data-related communication between the Mendix Client and the Runtime Server is controlled by Runtime Operations over a REST-like protocol. This uses the `/xas` [request handler](/refguide/request-handlers/) of the app's runtime server.
 
 For every data-related Client action, there is a corresponding Runtime Operation type:
 
@@ -56,7 +56,7 @@ For every data-related Client action, there is a corresponding Runtime Operation
 
 The above operations are requested by the Client and are executed by the Runtime.
 
-During building, Studio Pro analyses your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
+During building, Studio Pro analyzes your application. All data-related Client actions used in pages, widgets, or nanoflows are registered in the Runtime registry as a Runtime Operation.
 
 A registration of the Runtime Operation has the following properties:
 

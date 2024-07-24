@@ -57,7 +57,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
     7. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
     8. Add a new **Create object** action on your microflow.
 
-3. Open the new **Create object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+3. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
 4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
@@ -240,7 +240,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     }
     ```
 
-    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in Javascript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
+    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in JavaScript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
 
 2. Until we update the type of our TextInputProps, Typescript will display errors in *TextBox.tsx*. In *src/components/TextInput.tsx*, add the missing properties to the interface and pass them to the `input` component:
 
@@ -267,7 +267,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     Explaining the code:
     * The `style` property is an object containing CSS properties which can be used to quickly add styling to a component. It is available on all [HTML components offered by React](https://react.dev/reference/react-dom/components/common#applying-css-styles).
-    * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
+    * The question marks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
     * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
 
 3. Refresh your Mendix app in the browser, the result should be a well-styled input widget. If the change does not appear immediately, open your browser's devtools and disable cache. This ensures you are loading your widget's latest assets.
@@ -302,7 +302,7 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
 
-{{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#411-form-orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
+{{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
 
 ### 3.6 Handling Updates
 

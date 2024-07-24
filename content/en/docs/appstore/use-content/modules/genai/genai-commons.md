@@ -304,10 +304,10 @@ This microflow can be used to create a request for a chat completion operation. 
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `SystemPrompt` | String | No | A system message can be used to specify the assistant persona or give the model more guidance, context or instructions. This attribute is optional. |
-| `Temperature` | Decimal | No | This is the sampling temperature. Higher values will make the output more random, while lower values make it more focused and deterministic. This attribute is optional. |
+| `SystemPrompt` | String | optional | A system message can be used to specify the assistant persona or give the model more guidance, context or instructions. This attribute is optional. |
+| `Temperature` | Decimal | optional | This is the sampling temperature. Higher values will make the output more random, while lower values make it more focused and deterministic. This attribute is optional. |
 | `MaxTokens` | Integer/Long | Depends on AI provider or model | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the models context length. This attribute is optional. |
-| `TopP` | Decimal | No | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with Top_p probability mass. Mendix generally recommends altering Top_p or Temperature but not both. This attribute is optional. |
+| `TopP` | Decimal | optional | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with Top_p probability mass. Mendix generally recommends altering Top_p or Temperature but not both. This attribute is optional. |
 
 ###### 4.3.1.1.2 Return Value
 
@@ -325,7 +325,7 @@ This microflow can be used to add a new [Message](#message) to the [Request](#re
 |--- |---|---|---|
 | `Request` | [Request](#request) | mandatory | This is the request object that contains the functional input for the model to generate a response. |
 | `ENUM_MessageRole` | [ENUM_MessageRole](#enum-messagerole) | mandatory | The role of the message author. |
-| `FileCollection` | [FileCollection](#filecollection) | No | This is an optional collection of files that are part of the message. |
+| `FileCollection` | [FileCollection](#filecollection) | optional | This is an optional collection of files that are part of the message. |
 | `ContentString` | String | mandatory | This is the textual content of the message. |
 
 ###### 4.3.1.2.2 Return Value
@@ -358,7 +358,7 @@ In order to include files within a message, you must provide them in the form of
 | `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | This is the type of the file. |
-| `TextContent` | String | No | An optional text content describing the file content or giving it a specific name. |
+| `TextContent` | String | optional | An optional text content describing the file content or giving it a specific name. |
 
 ###### 4.3.1.4.2 Return Value
 
@@ -394,7 +394,7 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 |---|---|---|---|
 | `Request` | [Request](#request) | mandatory | The request to add the function to. |
 | `ToolName` | String | mandatory | The name of the tool to use/call. |
-| `ToolDescription` | String | No | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
+| `ToolDescription` | String | optional | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
 | `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
 
 {{% alert color="info" %}}
@@ -505,7 +505,7 @@ The `Chat Completions (with history)` operation interface supports more complex 
 | --- | --- | --- |
 | `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation. |
 
-#### 4.3.4 Knowledge Bases & Embeddings
+#### 4.3.4 Knowledge Bases & Embeddings{#knowledgebases-embeddings}
 
 The following microflows and Java actions help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
 

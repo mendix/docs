@@ -15,7 +15,7 @@ The [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/2250
 
 This module is particularly powerful for Mendix apps that use large language models in generative AI contexts. The PgVector Knowledge Base module allows these apps to securely use private company data in the app logic. For example, this might be essential when constructing prompts.
 
-When there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store data chunks in the private knowledge base and retrieve relevant information for end-user actions or app processes.
+When there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store discrete pieces of data (commonly refered to as **chunks**) in the private knowledge base and retrieve relevant information for end-user actions or app processes.
 
 {{% alert color="info" %}}
 Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) to see example implementations, including retrieval augmented generation and semantic search with knowledge bases.
@@ -57,27 +57,33 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.1 General Configuration {#general-configuration}
 
+The following steps are required to let a Mendix app integrate with a PgVector knowledge base:
+
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
 3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
+
+Note: It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
 After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [retrieve](#retrieve)), deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
+Additionally, there is one activity to prepare the connection input, which is a required input for all operations, under **USE_ME > Connection**, and exposed separately in the toolbox.
+
 #### 3.2.1 `Create PgVector Knowledge Base Connection` {#create-pgvectorconnection}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for knowledge base operations.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
 
-### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
+### 3.3 (Re)populate Operations {#repopulate-operations-configuration} 
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the operations for Chunks in the [GenAI Commons module](/appstore/modules/genai/commons/). After you create the Knowledge Base Chunks, the resulting collection can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the [operations for Chunks in the GenAI Commons module](/appstore/modules/genai/commons/#knowledgebases-embeddings). After you create the Knowledge Base Chunks, the resulting collection can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
 1. Create a new `ChunkCollection`, see [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create).
-2. For each knowledge item, do the following:
-    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
+2. For each knowledge item that needs to be inserted, do the following:
+    * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata for the knowledge base item.
     * With both collections, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) for the knowledge item.
 3. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
@@ -89,7 +95,7 @@ This operation handles the following:
 * Creating the empty knowledge base if it does not exist
 * Inserting all provided chunks with their metadata into the knowledge base
 
-The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) operations. It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+The population handles a whole collection of chunks at once, and this `ChunkCollection` should be created using the [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) and [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) operations. 
 
 #### 3.3.2 `Insert` {#insert}
 
@@ -107,15 +113,15 @@ A typical pattern for retrieval from a knowledge base uses GenAI Commons operati
 
 1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) to set up a MetadataCollection for filtering with its first key/value pair added immediately. 
 2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
-3. Do the retrieval. For example, you could use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
+3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors) to find chunks based on vector similarity.
 
-For scenarios in which the chunks were created based on Mendix objects at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
+For scenarios in which the created chunks were **based on Mendix objects** at the time of population, and these objects need to be used in logic after the retrieval step, two additional operations are available. The Java Actions [Retrieve & Associate](#retrieve-associate) and [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) take care of the chunk retrieval and set the association towards the original object, if applicable.
 
 A typical pattern for this retrieval is as follows:
 
 1. Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) to set up a MetadataCollection for filtering with its first key/value pair added immediately. 
 2. Use [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata.
-3. Do the retrieval. For example, you could use [`Retrieve Nearest Neighbors`](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
+3. Do the retrieval. For example, you could use [Retrieve Nearest Neighbors & Associate](#retrieve-nearest-neighbors-associate) to find chunks based on vector similarity.
 4. For each retrieved chunk, retrieve the original Mendix object and do custom logic.
 
 #### 3.4.1 `Retrieve` {#retrieve}
@@ -136,7 +142,7 @@ Use this operation to retrieve knowledge base chunks from the knowledge base and
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
-When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead.
+When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead. For cases where the chunks in the knowledge base were based on Mendix objects during insertion, chunks can be deleted using the original Mendix object as a starting point in two additional Delete (List) operations.
 
 #### 3.5.1 `Delete Knowledge Base` {#delete-knowledge-base}
 
@@ -183,7 +189,7 @@ This non-persistent entity is only used for editing the `DatabasePassword`. The 
 
 ##### 4.1.1.3 `PgVectorKnowledgeBaseConnection` {#pgvectorconnection}
 
-This non-persistent entity, a specialization of [Connection](/appstore/modules/genai/commons/#connection) contains the details needed to let the system establsih a connect to a PgVector knowledge base. For the operations to work, it must have a `DatabaseConfiguration` associated. By providing the `KnowledgeBaseName`, you determine the knowledge base inside of the database server that is applicable for the use case.
+This non-persistent entity, a specialization of [Connection](/appstore/modules/genai/commons/#connection), contains the details needed to let the system establsih a connect to a PgVector knowledge base. For the operations to work, it must have a `DatabaseConfiguration` associated. By providing the `KnowledgeBaseName`, you determine which knowledge base inside of the database server is applicable for the use case.
 
 | Attribute | Description                                          |
 | --------- | ---------------------------------------------------- |
@@ -192,11 +198,11 @@ This non-persistent entity, a specialization of [Connection](/appstore/modules/g
 
 ### 4.2 Activities {#activities}
 
-Activities define the actions that are executed from a microflow or nanoflow. In this module, activities can be found in the form of microflows or Java actions in the **USE_ME > Operations** folder.
+Activities define the actions that are executed from a microflow or nanoflow. In this module, activities can be found in the form of microflows or Java actions in the **USE_ME > Operations** and the **USE_ME > Configuration** folders.
 
 #### 4.2.1 General Operations {#general-operations-technical}
 
-Operations that can be used in multiple knowledge base processes and do not fall into a specific category.
+There is one operation that can be used in multiple knowledge base processes and do not fall into a specific category.
 
 ##### 4.2.1.1 Create PgVector Knowledge Base Connection {#create-pgvectorconnection-technical}
 
@@ -211,7 +217,7 @@ The `Create PgVector Knowledge Base Connection` activity can be used to create a
 
 #### 4.2.2 (Re)populate Operations {#repopulate-operations-technical}
 
-Operations that support the (re)creation and population of a knowledge base.
+These operations support the (re)creation and population of a knowledge base.
 
 ##### 4.2.2.1 (Re)populate Knowledge Base {#repopulate-knowledge-base-technical}
 
@@ -280,7 +286,7 @@ The `Connection` entity passed must be of type `PgVectorKnowledgeBaseConnection`
 
 #### 4.2.3 Retrieve Operations {#retrieve-operations-technical}
 
-Activities that support the retrieval of the knowledge from the knowledge base.
+The activities below support the retrieval of the knowledge from the knowledge base.
 
 ##### 4.2.3.1 Retrieve {#retrieve-technical}
 
@@ -375,7 +381,7 @@ The `Connection` entity passed must be of type `PgVectorKnowledgeBaseConnection`
 
 #### 4.2.4 Delete Operations {#delete-operations-technical}
 
-Activities that support the deletion of knowledge bases.
+The following activities support the deletion of knowledge bases.
 
 ##### 4.2.4.1 Delete Knowledge Base {#delete-knowledge-base-technical}
 
@@ -423,7 +429,7 @@ Use this operation to delete existing chunks and corresponding metadata in a kno
 | Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 |`Connection` | [Connection](#connection) | mandatory | Connection object that holds the knowledge base name and database connection details. This must be of type `PgVectorKnowledgeBaseConnection` |
-| `MxObjectList` | Object | mandatory | This is the original Mendix object that the chunks in the knowledge base represent. Only chunks related to this Mendix object are deleted. |
+| `MxObjectList` | List of Object | mandatory | This is a list of original Mendix objects that the chunks in the knowledge base represent. Only chunks related to these Mendix objects are deleted. |
 
 The `Connection` entity passed must be of type `PgVectorKnowledgeBaseConnection` and must contain the `KnowledgeBaseName` string attribute filled and a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server with the PgVector extension installed. This DatabaseConfiguration entity is typically configured at runtime or in after-startup logic. By providing the KnowledgeBaseName on the Connection, you determine the knowledge base from which the chunks are to be deleted.
 

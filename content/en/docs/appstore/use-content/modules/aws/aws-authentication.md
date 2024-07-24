@@ -263,27 +263,32 @@ These entities are used as input for the `GetSigV4Headers` microflow action, whi
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 
-### 4.4 Customizing HTTP client configurations {#customize-client-config}
+### 4.4 Customizing HTTP Client Configuration {#customize-client-config}
 
-The platform-supported AWS Connectors have been developed using the AWS Software Development Kit (SDK) instead of the native Mendix Call REST service activity. This approach prioritizes efficiency in handling AWS integrations. It eliminates the complexity of customizing HTTP headers and signing requests, as the SDK automates these tasks. Additionally, it offers built-in features like retry logic and throttling management.
+The platform-supported AWS connectors have been developed using the AWS Software Development Kit (SDK) instead of the native Mendix Call REST service activity. This approach prioritizes efficiency in handling AWS integrations. It eliminates the complexity of customizing HTTP headers and signing requests, as the SDK automates these tasks. Additionally, it offers built-in features like retry logic and throttling management.
 
-The AWS Authentication Connector offers the ability to customize HTTP client configurations.
-
-Use-cases include:
+The AWS Authentication Connector offers the ability to customize HTTP client configurations and supports the following use cases:
 
 * Extending the timeout settings to accommodate operations that might run longer, such as AWS Lambda functions.
 * Customizing the retry mechanism to alter the behavior for how the client recovers from failed AWS service requests.
 * Overriding invocation endpoints (required for use cases such as testing locally), integrating with a self-hosted instance of AWS service, and invoking VPC endpoints (private cloud).
 
-4.4.1 Domain Model
+#### 4.4.1 Overriding the Default HTTP Configuration
 
-All platform-supported AWS Connectors have request entities that inherit from the **AbstractRequest** entity from AWS Authentication. To override the default HTTP configurations, you need to create a **BasicClientConfig** (or a specialization) object, set the attributes there and then associate it with the request prior to invoking the connector action.
+All platform-supported AWS Connectors have request entities that inherit from the **AbstractRequest** entity from AWS Authentication. To override the default HTTP configuration, perform the following steps:
+
+1. Create a **BasicClientConfig** (or a specialization) object.
+2. Set the attributes in the objects that you created.
+3. Associate the object with the request. 
+4. Invoke the connector action.
+
+##### 4.4.1.1 Domain Model Entities
 
 The following are the relevant entities in the domain model for customizing HTTP client configurations:
 
-* `AbstractRequest` - This entity is the generalization of all request entities of platform-supported AWS Connectors.
-* `BasicClientConfig` - This entity provides basic client customization settings: APITimeOutInMs and EndpointUrl. To use these settings, associate a BasicClientConfig object to your request object.
-* `SDKClientConfig` - This entity is required when adding advanced client customization settings. It points to the `AbstractRetryPolicy` and `AbstractHttpConfig` entities, whose specializations can be used to add advanced settings. APITimeOutInMs can be set directly on this entity. 
+* `AbstractRequest` - This entity is the generalization of all request entities of platform-supported AWS connectors.
+* `BasicClientConfig` - This entity provides basic client customization settings: `APITimeOutInMs` and `EndpointUrl`. To use these settings, associate a `BasicClientConfig` object to your request object.
+* `SDKClientConfig` - This entity is required when adding advanced client customization settings. It points to the `AbstractRetryPolicy` and `AbstractHttpConfig` entities, whose specializations can be used to add advanced settings. `APITimeOutInMs` can be set directly on this entity. 
 * `AbstractRetryPolicy` - Use one of this entities specializations to specify a retry policy.
 * `NumberOfRetryPolicy` - This entity can be used to configure the number of retries.
 * `NoRetryPolicy` - Including this entity sets the retry behavior to *never retry*.
@@ -291,9 +296,9 @@ The following are the relevant entities in the domain model for customizing HTTP
 * `ApacheHttpClient` - This entity can be used to override the settings of the ApacheHttpClient. More Information: [Apache based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-apache.html).
 * `UrlHttpClient` - This entity can be used to use the URL-Connection based HttpClient and override it's settings. More Information: [URL-Connection based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-url.html).
 
-  4.4.2 Example Microflow
+#### 4.4.2 Example Microflow
 
-This Microflow shows how a **BasicClientConfig** object can be added to a InvokeLambda request to customize the Timeout Setting:
+The following figure shows a microflow which demonstrates how a **BasicClientConfig** object can be added to a InvokeLambda request to customize the Timeout Setting:
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/Auth-basic-client-config.png" class="no-border" >}}
 

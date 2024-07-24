@@ -10,7 +10,7 @@ description: "Introduces Menditect Test Automation, which is new Mendix partner 
 [Menditect Test Automation (MTA)](https://marketplace.mendix.com/link/component/120116) is a tool for automated regression testing. MTA offers a no-code, visual suite of automated test tools for embedding unit, component, process and API testing into your application lifecycle. For more information, see the [Automated testing for Mendix] (link to be added) (mendix.com) and the [Menditect](https://menditect.com/) website. 
 
 {{% alert color="info" %}}
-For more information about purchasing MTA, contact your Customer Support Manager (CSM) or fill out the contact [form](link to be added). 
+For more information about purchasing MTA, contact your Customer Success Manager (CSM) or fill out the contact [form](https://www.mendix.com/contact-us/#contactform). 
 {{% /alert %}}
 
 ## 2 Documentation in This Category
@@ -34,4 +34,3 @@ MTA is offered as a paid add-on separate from the Mendix subscription. As a Mend
 ## 4 Read More
 
 * [Test Automation and Quality Assurance](https://www.mendix.com/evaluation-guide/app-lifecycle/test-automation-quality-assurance/)
-* [Quality and Security Management](https://docs.mendix.com/appstore/partner-solutions/qsm/)

@@ -55,7 +55,9 @@ You must have these Marketplace modules installed:
 # 3 How to Guide
 
 ## 3.1 Connecting to an OPC-UA server (Session Services)
-The connector provides a simple wizard to set up your own connection to an OPC-UA server. However, if you wish to have your own custom business logic to connect to a server you are free to do so. To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
+The connector provides a simple wizard to set up your own connection to an OPC-UA server. However, if you wish to have your own custom business logic to connect to a server you are free to do so. 
+
+To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
 For each of these parts see the sections below.
 
 ## 3.2 Server Configuration
@@ -98,6 +100,7 @@ These are:
 ### 3.3.1 The Browse action
 The browse action lets you traverse from one node to others. 
 The request object for the action is a BrowseDescription. 
+
 The BrowseDescription contains the following fields:
 * Node ID. The node ID of the node from where you want to browse.
 * Browse directions. In which direction to traverse.
@@ -115,6 +118,7 @@ The BrowseDescription contains the following fields:
 The response of the Browse action returns a browse response object. 
 There is a StatusCode associated to the response,which represents the status of the call.
 The response may contain one or more BrowseNodes, these are the references from the response.
+
 A browse node contains the following fields:
 * Node ID. The Identifier of the referenced node.
 * Browse name. Browse name of the referenced node.
@@ -166,14 +170,20 @@ takes the NodeID, a payload and a DefaultVariantType as an input. The latter is 
 ## 4.1 Discovery Services
 
 ### 4.1.1 Find Servers
-Finds the servers for a given endpoint URL. Examples for Endpoint URLs are:
-opc.tcp://SERVERNAME:PORT or opc.http://SERVERNAME:PORT
+Finds the servers for a given endpoint URL. 
 The microflow may throw an error when the input is invalid or the server could not be found.
 
+Examples for Endpoint URLs are:
+* opc.tcp://SERVERNAME:PORT 
+* opc.http&colon;//SERVERNAME:PORT.
+
 ### 4.1.2 Get Endpoints
-Get endpoints for a given URL. Examples for Endpoint URLs are:
-opc.tcp://SERVERNAME:PORT or opc.http://SERVERNAME:PORT
+Get endpoints for a given URL. 
 The microflow may throw an error when the input is invalid or an endpoint cannot be found.
+
+Examples for Endpoint URLs are:
+* opc.tcp://SERVERNAME:PORT
+* opc.http&colon;//SERVERNAME:PORT.
 
 ### 4.1.3 Get Endpoints create certificate
 Creates a ServerCertificate FileDocument from an endpoint response.

@@ -156,7 +156,7 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 ### 3.2 Chat Completions Configuration {#chat-completions-configuration} 
 
-After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows for chat completions are exposed as microflow actions under the **OpenAI Operations** category in the **Toolbox** in Mendix Studio Pro. 
+After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows for chat completions are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro. 
 
 These microflows expect an [OpenAIConnection](#openaiconnection) object that refers to a [Configuration](#configuration-entity). Additionally, a model or deployment needs to be passed:
 
@@ -223,7 +223,7 @@ For more information on vision, see [OpenAI](https://platform.openai.com/docs/gu
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
-To implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, two microflows for image generations are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro.
+To implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, two microflows for image generations are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
 These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating image responses in the case of OpenAI configurations. In this case, the field is optional because OpenAI assumes a default value `dall-e-2`.
 
@@ -243,35 +243,24 @@ For technical details, see the [Technical Reference](#image-generations-advanced
 
 ### 3.4 Embeddings Configuration {#embeddings-configuration}
 
-In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, three microflows for embeddings are exposed as microflow actions under the **OpenAI Connector** category in the **Toolbox** in Mendix Studio Pro.
+In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, two microflows for embeddings are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-These microflows expect a [Configuration](#configuration-entity) entity, as well as the desired AI model that should be used for generating responses.
+These microflows require a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) which determines the Model and endpoint to use as well as optional [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) to determine optional attributes like the dimensions of the embedding vectors. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/appstore/modules/genai/commons/#ChunkCollection) need to be provided. The current version of this operation only supports the float representation of the resulting vector.
 
-* For the OpenAI API configuration, the desired model must be specified for every call.
+* For a OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
-#### 3.4.1 Embeddings (Single Input) {#embeddings-single}
+#### 3.4.1 Embeddings (String) {#embeddings-string}
 
-The microflow activity `Embeddings (single input)` supports scenarios where the vector embedding of a single string must be generated. This input string can be passed directly as the `Input` parameter of this microflow. Note that the parameter `EncodingFormat` is optional; the current version of this operation only supports the float representation of the resulting vector.
+The microflow activity `Embeddings (String)` supports scenarios where the vector embedding of a single string must be generated, e.g. to perform a nearest neighbor search across an existing knowledge base. This input string can be passed directly as the `TextInput` parameter of this microflow. Note that the parameter [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) is optional. Use the exposed microflow [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) to retrieve the generated embeddings vector.
 
-For technical details, see the [Technical Reference](#embeddings-single-technical) section.
+For technical details, see the [Technical Reference](#embeddings-string-technical) section.
 
-#### 3.4.2 Embeddings (List Input) {#embeddings-list}
+#### 3.4.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection}
 
-The microflow activity `Embeddings (list input)` supports the more complex scenario where a list of strings must be vectorized in a single API call, such as when converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `DataChunk` entity. Thus, the microflow does not return an Object or List, but only a `Success` Boolean. Use the exposed microflows [Embeddings: Create DataBatch](#create-databatch) and [Embeddings: Create DataChunk](#create-datachunk) to construct the input.
+The microflow activity `Embeddings (ChunkCollection)` supports the more complex scenario where a collection of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects are vectorized in a single API call, such as when converting a batch of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. In order to create embeddings, it does not matter whether the `ChunkCollection` contains Chunks or the specialization KnowledgeBaseChunks. However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. though the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
 
-For technical details, see the [Technical Reference](#embeddings-list-technical) section.
-
-#### 3.4.3 Embeddings (Advanced) {#embeddings-advanced}
-
-The microflow activity `Embeddings (advanced)` can be used in cases where the above-mentioned microflows do not provide enough support or flexibility. The interface of this operation resembles the API interface. Two accompanying microflows are available to help construct the input for the main microflow: 
-
-* `EmbeddingsRequest_Create` is used to create the request object.
-* `EmbeddingsInput_Create` is used to create the input object.
-
-The construction of the request and handling of the response must be implemented in a custom way.
-
-For technical details, see the [Technical Reference](#embeddings-advanced-technical) section.
+For technical details, see the [Technical Reference](#embeddings-chunkcollection-technical) section.
 
 ### 3.5 Exposed Microflows {#exposed-microflows}
 
@@ -292,14 +281,6 @@ This microflow can be used to initialize a new `FileCollection` and add a new `F
 #### 3.5.4 `Files: Add OpenAI File to Collection` {#add-file}
 
 This microflow can be used to add a new `FileDocument` or URL to an existing `FileCollection`. Optionally, the [Image Detail](#enum-imagedetail) or a description using `TextContent` can be passed.
-
-#### 3.5.5 `Embeddings: Create DataBatch` {#create-databatch}
-
-This microflow can be used to create a data batch (wrapper entity) to group the [DataChunks](#create-datachunk). This object needs to be passed into the [Embeddings (list input)](#embeddings-list) operation.
-
-#### 3.5.6 `Embeddings: Create DataChunk` {#create-datachunk}
-
-This microflow can be used to add a data chunk for the given content that needs to be converted into an embedding vector. The pattern uses the DataBatch to group the inputs (see [DataChunks](#create-databatch)). The order of the chunks is not relevant.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -438,76 +419,7 @@ The `ImageGenerationsRequest` object is an image generations request that create
 
 #### 4.1.5 Embeddings {#embeddings-domain-model}
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-embeddings-with-data-batch.png" >}}
-
-##### 4.1.5.1 `EmbeddingsRequest` {#embeddingsrequest} 
-
-`EmbeddingsRequest` is an embeddings request that generates a model response including a vector embedding per given input string text. 
-
-| Attribute         | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| `Model`           | This is the model used for generating embeddings. This is a mandatory field for OpenAI.<br />For more information, see the [compatible models](https://platform.openai.com/docs/models) in the OpenAI documentation. |
-| `Encoding_format` | This is the format in which the embeddings are returned. The connector currently only supports float and not base64.<br />For more information see the [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) section. |
-| `User`            | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
-
-{{% alert color="info" %}}The request and response parts of the domain model were designed to portray the [API reference of OpenAI](https://platform.openai.com/docs/api-reference/images/create) as closely as possible.{{% /alert %}}
-
-##### 4.1.5.2 `EmbeddingsInput` {#embeddingsinput}
-
-`EmbeddingsInput` is an entity that is used to contain a string input text for the embeddings model. 
-
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| `Input`   | This is the string input for a text chunk for which the embedding vector needs to be generated. |
-
-##### 4.1.5.3 `EmbeddingsResponse` {#embeddingsresponse}
-
-`EmbeddingsResponse` represents an embeddings response returned by the model, based on the provided input.
-
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| `_object` | This is the object type, which is always `list`.             |
-| `Model`   | This is the model that has been used for generating the embeddings. |
-
-##### 4.1.5.4 `EmbeddingsUsage` {#embeddingsusage}
-
-`EmbeddingsUsage` represents usage statistics for the embeddings request that was processed.
-
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| `Prompt_tokens` | Number of tokens in the prompt.       |
-| `Total_tokens`   | Total number of tokens used in the request. |
-
-##### 4.1.5.5 `EmbeddingVector` {#embeddingvector}
-
-`EmbeddingVector` is the vector that represents the embedding for the text input that was given in the request. There will be an instance of this entity for every input text string provided.
-
-| Attribute | Description                                                  |
-| --------- | ------------------------------------------------------------ |
-| `_object` | This is the object type, which is always `embedding`.        |
-| `Index`   | This is the index of the embedding in the list of embeddings. This can be used for ordering. |
-
-##### 4.1.5.6 `EmbeddingValue` {#embeddingvalue}
-
-`EmbeddingValue` represents an element in the list of floats in the embedding vector returned by the API. It is a separate entity for mapping purposes and is only relevant for the [encoding format](#enum-encodingformat-embeddings) option `float`. The length of the vector depends on the model, as listed in the [documentation](https://platform.openai.com/docs/guides/embeddings/what-are-embeddings) of OpenAI.
-
-| Attribute | Description                                |
-| --------- | ------------------------------------------ |
-| `Value`   | This is a decimal in the embedding vector. |
-
-##### 4.1.5.7 `DataBatch` {#databatch}
-
-`DataBatch` functions as a wrapper object for the [list input operation for embeddings](#embeddings-list-technical). It is associated with a list of input objects of entity [DataChunk](#datachunk) that contain the string texts for which the embedding vectors must be generated. 
-
-##### 4.1.5.8 `DataChunk` {#datachunk}
-
-`DataChunk` represents a text string, usually a part of a larger base text or discrete piece of text in a data set. It is designed to contain the input string and the corresponding embedding vector retrieved from the Embeddings API.
-
-| Attribute         | Description                                                  |
-| ----------------- | ------------------------------------------------------------ |
-| `Input`           | This is the input text to embed. It will be mapped to the `EmbeddingsInput` entity as part of the request. |
-| `EmbeddingVector` | This is the string representation of the embedding vector of the input string. |
-| `Index`           | This is used for mapping the EmbeddingVector from the response onto the correct DataChunk in the list. |
+The connector does not provide specific entities for embeddings because they are part of the [GenAI Commons](/appstore/modules/genai/commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/commons/#domain-model).
 
 ### 4.2 Enumerations {#enumerations} 
 
@@ -596,18 +508,6 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | ---------- | ------------ |
 | `standard` | **Standard** |
 | `hd`       | **HD**       |
-
-#### 4.2.4 Embeddings {#embeddings-enumerations}
-
-##### 4.2.4.1 `ENUM_EncodingFormat_Embeddings` {#enum-encodingformat-embeddings}
-
-`ENUM_EncodingFormat_Embeddings` provides a list of supported encoding formats for embeddings returned by the API. The connector operations currently only support the floating point representation of embedding vectors and not base64. Therefore, only one value `float` exists.
-
-| Name     | Caption   |
-| -------- | --------- |
-| `_float` | **float** |
-
-{{% alert color="info" %}}In this case, the captions are the values that are relevant for the raw API calls, because enumeration key values do not allow certain characters or words.{{% /alert %}}
 
 ### 4.3 Activities {#activities} 
 
@@ -708,7 +608,7 @@ The microflow `ImageGenerationsRequest_Create` may be used here to create and ha
 
 The embeddings API from OpenAI accepts a complex JSON structure that consists of a number of parameters plus one or more text strings as input and generates a structure of model-generated vector embeddings as output; per input string, one vector is returned. Depending on the use case, there may be a need for generating an embedding for a single text at a time. Alternatively, in the case of processing larger amount of data, bigger texts or datasets will be split up in discrete chunks, for which embeddings can be generated using batches of multiple input texts. The exposed microflows in this connector are built to abstract away the complex message structure and facilitate easier implementation in certain use cases. 
 
-##### 4.3.3.1 Embeddings (Single Input) {#embeddings-single-technical} 
+##### 4.3.3.1 Embeddings (Single Input) {#embeddings-string-technical} 
 
 Use the microflow `Embeddings_Execute_SingleInput` to execute a call to the embeddings API for a single string input. The output is the string representation of a vector embedding for the input. See [ENUM_EncodingFormat_Embeddings](#enum-encodingformat-embeddings) for information on what is supported in terms of vector encoding formats. The encoding format can be left empty: if no value is specified, the API assumes the default value as specified in the [OpenAI documentation](https://platform.openai.com/docs/api-reference/chat/create). The `Model` value is mandatory for OpenAI but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already.
 

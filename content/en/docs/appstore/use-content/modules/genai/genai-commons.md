@@ -17,7 +17,7 @@ Developers who want to connect to another LLM provider or their own service are 
 
 ### 1.1 Limitations {#limitations}
 
-The current scope of the module is focused only on text generation use cases.
+The current scope of the module is focused only on text generation and embeddings use cases.
 
 ### 1.2 Dependencies {#dependencies}
 

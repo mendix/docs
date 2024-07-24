@@ -361,7 +361,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
 11. Click the **+** next to the component to add **Endpoints**.
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-13. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
+13. Fill in the **Cloud Foundry Direct URL**. This can be found using the Cloud Foundry command `cf app {app_name}`.
 14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
     If your app is running on Insights Hub on **AWS** use Region `eu1`:

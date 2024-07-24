@@ -27,7 +27,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/domain-model.png" >}}
 
 2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
-3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
+3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [Key-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
 4. In your Mendix app, create a new **Account Overview** page, were you can add the connection details to the users. A new **Connection Details** record is needed for every user that has access to data in Snowflake. The Connection Details object should be filled in at the end-user level.
 
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/connection-details-account.png" >}}

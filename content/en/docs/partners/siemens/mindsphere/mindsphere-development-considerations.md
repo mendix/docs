@@ -45,7 +45,7 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
 
 2. Developer Tenant:
 
-    The following cloud foundry environment variables must be set for the app:
+    The following Cloud Foundry environment variables must be set for the app:
 
     | Developer Tenant | Description |
     | ----- | ----- |

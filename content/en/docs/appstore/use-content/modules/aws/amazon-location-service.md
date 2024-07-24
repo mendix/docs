@@ -64,8 +64,8 @@ After you configure the authentication profile for Amazon Location Service, you 
     1. For the `CalculateRoute` activity, you must provide a credentials object and specify the AWS Region. You must then add your `CalculateRouteRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
 
         * `CalculatorName` - The name of the route calculator resource that you want to use to calculate the route.
-        * `DeparturePosition` - The start position for the route. This entity specifies the longitude and lattitude of the start position of the route and are both required.
-        * `DestinationPosition` - The position of the destination for the route. This entity specifies the logitude and lattitude of the destination position of the route and are both required.
+        * `DeparturePosition` - The start position for the route. This entity specifies the longitude and latitude of the start position of the route and are both required.
+        * `DestinationPosition` - The position of the destination for the route. This entity specifies the longitude and latitude of the destination position of the route and are both required.
 
     2. Optionally, configure the following additional parameters:
        
@@ -74,9 +74,9 @@ After you configure the authentication profile for Amazon Location Service, you 
         * `DepartureTime` - Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
         * `DistanceUnit` - Set the unit system to specify the distance. 
         * `IncludeLegGeometry` - Set to include the geometry details in the result for each path between a pair of positions.
-        * `TravelMode` - Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle or Motorcycle as options for the TravelMode.
-        * `CarModeOptions` - This entity can be used when in car mode to set settings like "AvoidFeries" and "AvoidTolls"   
-        * `TruckModeOptions` - This entity and its associated entities can be used when in truck mode to set settings like "AvoidFeries", "AvoidTolls", "Truckweight" and "TruckDimensions".
+        * `TravelMode` - Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle, or Motorcycle as options for the TravelMode.
+        * `CarModeOptions` - This entity can be used when in car mode to set settings like "AvoidFerries" and "AvoidTolls"   
+        * `TruckModeOptions` - This entity and its associated entities can be used when in truck mode to set settings like "AvoidFerries", "AvoidTolls", "Truckweight" and "TruckDimensions".
 
 7. Configure a method to trigger the `ACT_CalculateRoute` activity. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).

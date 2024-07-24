@@ -16,6 +16,15 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### July 16, 2024
+
+#### Improved alert thresholds
+* We changed the alert thresholds for the following alert types and cloud resource packs:
+   * Database Freeable Memory - XS21: we changed the critical alert threshold from 10% to 5% freeable memory.
+   * Database Freeable Memory - XS20 (Legacy): we changed the critical alert threshold from 10% to 5% freeable memory.
+   * Database Freeable Memory - S (Legacy): we changed the critical alert threshold from 10% to 5% freeable memory.
+   * Database Freeable Memory - Strato (Legacy): we changed the critical alert threshold from 10% to 5% freeable memory.
+
 ### July 4, 2024
 
 #### Pipelines New Features

@@ -43,7 +43,7 @@ The previous section stated that nanoflows perform best in online applications w
 
 ## 3 Differences from Microflows
 
-There are three main differences betweeen nanoflows and microflows:
+There are three main differences between nanoflows and microflows:
 
 * When a nanoflow steps through its actions, client actions are directly executed. For example, an open page action immediately opens a page instead of at the end of the nanoflow. This is different from client actions in a microflow, which only run when the client receives the result from the microflow.
 * When used in nanoflow activities, expressions do not support the following variables: `$latestError`, `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
@@ -104,26 +104,26 @@ Gateways deal with making choices and merging different paths.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" class="no-border" >}} | [Exclusive split](/refguide7/exclusive-split/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallell execution in nanoflows. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/917726.png" link="/refguide7/exclusive-split/" class="no-border" >}} | [Exclusive split](/refguide7/exclusive-split/) | Makes a decision based on a condition and follows one and only one of the outgoing flows. Please note that there is no parallel execution in nanoflows. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/microflows/918116.png" link="/refguide7/merge/" class="no-border" >}} | [Merge](/refguide7/merge/) | Can be used to combine multiple sequence flows into one. If a choice is made in a nanoflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
 ### 5.4 Activities {#activities}
 
 Activities are the actions that are executed in a nanoflow.
 
-#### 5.4.1 Object Activitities
+#### 5.4.1 Object Activities
 
 Object activities can be used to create and manipulate objects. The [domain model](/refguide7/domain-model/) defines the object types ([entities](/refguide7/entities/)) that can be used.
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917661.png" link="/refguide7/change-object/" class="no-border" >}} | [Change object](/refguide7/change-object/) | Can be used to change the members of an object. This can be done with or without commiting. |
+| {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917661.png" link="/refguide7/change-object/" class="no-border" >}} | [Change object](/refguide7/change-object/) | Can be used to change the members of an object. This can be done with or without committing. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/17661961.png" link="/refguide7/committing-objects/" class="no-border" >}} | [Commit object(s)](/refguide7/committing-objects/) | Can be used to commit the changes to one or more objects. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917756.png" link="/refguide7/create-object/" class="no-border" >}} | [Create object](/refguide7/create-object/) | Can be used to create an object. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/917866.png" link="/refguide7/retrieve/" class="no-border" >}} | [Retrieve](/refguide7/retrieve/) | Can be used to get one (or more) associated objects of another object. The activity can also get one (or more) objects directly from the database. |
 | {{< figure src="/attachments/refguide7/desktop-modeler/application-logic/common-elements/activities/918119.png" link="/refguide7/rollback-object/" class="no-border" >}} | [Rollback object](/refguide7/rollback-object/) | Can be used to undo the changes (that have not been committed) made to the object in the part of the nanoflow preceding the activity. This also deletes objects that have been created but never committed. |
 
-#### 5.4.2 List Activitities
+#### 5.4.2 List Activities
 
 List activities can be used to create and manipulate lists of objects.
 

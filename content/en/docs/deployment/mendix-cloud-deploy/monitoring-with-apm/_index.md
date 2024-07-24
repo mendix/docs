@@ -38,7 +38,7 @@ For details on how to add a specific APM tool to your app, see one of the follow
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
-## 2 What Information Can Mendix Supply to a SaaS-based Data Analytics Platform?
+## 2 What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?
 
 {{% alert color="info" %}}
 The integration with Splunk Cloud Platform sends only runtime application logs. It does not include other monitoring information.

@@ -71,7 +71,7 @@ In OpenShift, the cluster administrator must have a `system:admin` role.
 
 #### 2.2.1 CPU requirements
 
-Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) achitecture.
+Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) architecture.
 
 {{% alert color="info" %}}
 
@@ -152,13 +152,13 @@ The EKS cluster should be configured so that it can [pull images from ECR](https
 
 [Google Cloud Platform](https://cloud.google.com/) provides the [artifact registry](https://cloud.google.com/artifact-registry).
 
-Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
+Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a Kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 
 ### 3.6 Azure Container Registry
 
 [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
 
-When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's kubernetes service account.
+When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
 
 ## 4 Databases{#databases}
 
@@ -332,6 +332,7 @@ configuration details.
 [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
 
 Mendix Operator can perform the following tasks:
+
 * Provide a static access key and other credentials to environments (a static config).
 * Handle the lifecycle of a storage container by creating a dedicated container and Azure Managed Identity for every new environment, and ensuring that an environment can only access its dedicated container (through the environment's Managed Identity); this feature works with Mendix 10.10 (or later versions).
 

@@ -99,7 +99,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 ### 3.4 Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAIComons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
 These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model.   
 
@@ -127,7 +127,7 @@ To invoke a specific model, perform the following steps:
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
 6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
 
-    {{< figure src="/attachments/appstore/modules/aws-bedrock/microflow.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
 ### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
@@ -183,7 +183,7 @@ This entity extends the GenAICommons.Request with attributes specific to Anthrop
 
 ##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
 
-This entity is a specialiazion of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
+This entity is a specialization of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
 
 | Attribute | Description |
 | --- | --- |
@@ -437,7 +437,6 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
-
 
 ##### 4.1.2.20 SessionConfiguration {#session-configuration}
 
@@ -836,7 +835,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the concersation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
 
 The input and output for this service are shown in the table below:
 
@@ -873,7 +872,7 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History
+###### Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
@@ -917,7 +916,7 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | Input | Output |
 | --- | --- |
-| `ENUM_Region (enumeration)`, `UseStaticCredenitals (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
 ##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 
@@ -995,7 +994,7 @@ The input and output for this service are shown in the table below:
 
 ##### 4.2.3.3 ListKnowledgeBases {#list-knowledge-bases}
 
-The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them.. It requires `ENUM_Region`, `Credentials`, and `ListKnowledgeBasesRequest` as input parameters.
+The `ListKnowledgeBases` activity allows you to list the knowledge bases in an account and get information about each of them. It requires `ENUM_Region`, `Credentials`, and `ListKnowledgeBasesRequest` as input parameters.
 
 To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base). 
 

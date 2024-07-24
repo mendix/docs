@@ -38,6 +38,7 @@ When a user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platfor
 
 BYOIDP SSO has the following features:
 
+* BYOIDP is based on the OpenID Connect (OIDC) protocol which supports corporate IdPs such as Entra ID.
 * Mendix Platform services and Studio Pro delegate authentication of platform users to your IdP.
 * Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
@@ -71,7 +72,7 @@ BYOIDP SSO has the following limitations.
     * Create a service account in the company IdP
     * Create a service account on an email domain that is not federated with BYOIDP
 * When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
-* Your conditional access policies in Entra ID (formerly Azure ID) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
+* Your conditional access policies in Entra ID (formerly Azure AD) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
 * You cannot associate multiple Mendix accounts (for example, an Admin account and a regular account) with a single identity in your IdP.
 
 ## 2 Prerequisites

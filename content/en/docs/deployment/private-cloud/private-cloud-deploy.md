@@ -55,6 +55,10 @@ When you first create your app, it will be set to deploy to the Mendix Cloud. Yo
 
 Before you can create an environment, you will need to create a deployment package. Ensure that you have committed the version of the app you want to deploy before continuing.
 
+{{% alert color="warning" %}}
+Deployment package creation for Mendix versions 7 and below is no longer supported. Upgrade to version 8 or above in order to build and deploy.
+{{% /alert %}}
+
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 

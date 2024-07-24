@@ -33,7 +33,7 @@ Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac usi
 
 {{% alert color="info" %}}
 
-If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+If you were using Parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit Parallels to be able to sign in to Studio Pro. 
 
 {{% /alert %}}
 
@@ -47,6 +47,7 @@ The following frameworks are required. They will be installed automatically by t
     
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
+* Gradle version 8.5 or above (if your Java version is 11 or 17, Gradle version 7.6 or above will also work) - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -71,14 +72,12 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 These are the known limitations for Mac:
 
-* No native mobile support.
-* No support for document templates.
-* No **Structure mode** for the page editor.
-* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
+* No native mobile support
+* No support for document templates
+* No **Structure mode** for the page editor
+* Start from spreadsheet cannot be used at this time 
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
     * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).
-
-* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
 ### 2.2 Hardware Specifications {#hardware}
 

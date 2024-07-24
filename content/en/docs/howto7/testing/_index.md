@@ -8,7 +8,7 @@ description_list: true
 
 ## 1 Introduction
 
-Testing is a vital component when creating a Mendix application. In this category, you can find all the test-related how-to's and blogs written by experienced Mendix professionals.
+Testing is a vital component when creating a Mendix application. In this category, you can find all the test-related how-tos and blogs written by experienced Mendix professionals.
 
 ## 2 Additional References
 

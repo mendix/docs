@@ -31,17 +31,17 @@ To help you get started, the following sections list the available GenAI compone
 
 ### 2.1 Mendix Components
 
-| Asset | Description | Studio Pro Version |
-|----------------------|------------------------------------|----------------|
-| [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | 10.12 |
-| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | 10.12 |
-| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module.  | 9.24.2 |
-| [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) | Discover how to use Amazon Bedrock capabilities. | 9.24.2 |
-| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | 9.24.2 |
-| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to Azure OpenAI. | 9.24.2 |
-| [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to Amazon Bedrock. Use Retrieve & Generate or Bedrock agents. | 9.24.2 |
-| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | 9.24.2 |
-| [GenAI Commons](/appstore/modules/genai/commons/) | Common capabilities such as a **System** module for every new or existing GenAI app. | 9.24.2 |
+| Asset |  Description | Type | Studio Pro Version |
+|-------------------|---------------------------------------------------|----------------------------------|------------|
+| [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | Starter App | 10.12 |
+| [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | Starter App | 10.12 |
+| [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module. |Showcase App | 9.24.2 |
+| [Bedrock Showcase App](https://marketplace.mendix.com/link/component/223535) |  Discover how to use Amazon Bedrock capabilities. | Showcase App | 9.24.2 |
+| [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | UI Module | 9.24.2 |
+| [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to Azure OpenAI. | Connector Module | 9.24.2 |
+| [Bedrock Connector](/appstore/modules/genai/bedrock/) | Connect to Amazon Bedrock. Use Retrieve & Generate or Bedrock agents. | Connector Module | 9.24.2 |
+| [PgVector Knowledge Base](/appstore/modules/genai/pgvector/) | Manage and interact with a PostgreSQL *pgvector* Knowledge Base. | Connector Module | 9.24.2 |
+| [GenAI Commons](/appstore/modules/genai/commons/) | Common capabilities that allow all GenAI connectors to be integrated with the other modules. You can also implement your own connector based on this. | Common Module | 9.24.2 |
 
 ### 2.2 Available Models {#models}
 
@@ -52,7 +52,7 @@ Mendix connectors and showcase apps offer direct support for the following model
 | Azure / OpenAI | ChatGPT-3.5 | Chat completions | text | text | Function calling |
 | | ChatGPT-4, ChatGPT-4o | Chat completions | text, image | text | Function calling |
 | | DALL·E 2, DALL·E 3 | Image generation | text | image | |
-| | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large	 | Embeddings | text | embeddings| |
+| | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
 | Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings G1 - Text, Amazon Titan Embedding Text v2 | Embeddings | text | embeddings| |

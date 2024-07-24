@@ -3,7 +3,7 @@ title: "General"
 url: /appstore/partner-solutions/ats/ht-one-custom-action-general/
 ---
 
-All the necessary information for the create-custom-action how-to's is found here:
+All the necessary information for the create-custom-action how-tos is found here:
 
 * [Definitions](/appstore/partner-solutions/ats/ht-one-custom-action-definitions/)
 * [Prerequisites for How-tos](/appstore/partner-solutions/ats/ht-one-custom-action-prerequisites/)

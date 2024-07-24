@@ -47,7 +47,7 @@ The technical purpose of GenAI Commons module is to define a common domain model
 
 The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Domain Model](/refguide/domain-model/) documentation. To learn about where the entities from the domain model are used and relevant during implementation, see the [Microflows](#microflows) section below.
 
-##### 4.1.1 `Connection` {#connection}
+#### 4.1.1 `Connection` {#connection}
 
 The `Connection` entity contains specifications to interact with an AI provider.
 
@@ -55,7 +55,7 @@ The `Connection` entity contains specifications to interact with an AI provider.
 | --- | --- |
 | `Model` | The name of the model to be used for an operation. |
 
-##### 4.1.2 `Request` {#request} 
+#### 4.1.2 `Request` {#request} 
 
 `Request` is an input object for the chat completions operations defined in the platform-supported GenAI-connectors and contains all content-related input needed for an LLM to generate a response for the given chat conversation. 
 
@@ -389,13 +389,13 @@ This microflow can be used to get the content from the latest assistant message 
 
 Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content, and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
 
-###### 4.3.2.2.1 Input Parameters
+##### 4.3.2.2.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `Response` | [Response](#response) | Yes | The response object. |
 
-###### 4.3.2.2.2 Return Value
+##### 4.3.2.2.2 Return Value
 
 | Name | Type | Description |
 |---|---|---|

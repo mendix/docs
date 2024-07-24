@@ -98,7 +98,8 @@ For more information and a complete walkthrough example, see the [Azure SQL Mana
 {{% /alert %}}
 
 To set a Mendix app constant, use the `mx-const-{name}` format (replace `{name}` with the name of the app constant).
-For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, specify its value via the `mx-const-MyFirstModule.WelcomePageTitle` key.
+For example, if you need to set the `MyFirstModule.WelcomePageTitle` constant, specify its value via the `mx-const-MyFirstModule.WelcomePageTitle` key. 
+In case you want to use the Key vault on Azure, the value should be mx-const-MyFirstModule-WelcomePageTitle
 
 To set a [Mendix Runtime custom setting](/refguide/custom-settings/), use the `mx-runtime-{name}` format (replace `{name}` with the name of the custom setting).
 For example, if you need to set the `com.mendix.storage.s3.EncryptionKeys` constant, specify its value via the `mx-runtime-com.mendix.storage.s3.EncryptionKeys` key.
@@ -220,6 +221,7 @@ To enable your environment to use Vault as external secret storage, follow these
     kind: SecretProviderClass
     metadata:
       name: <{MendixApp CR name}>
+      namespace: <Namespace name>
       annotations:
         privatecloud.mendix.com/environment-class: "true"
     spec:

@@ -1,27 +1,28 @@
 ---
 title: "Create a Menu Extension"
-url: /extensibility-api/create-menu-extension/
+url: /apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/
 weight: 4
 ---
 
 ## 1 Introduction
 
-This how-to describes the procedure of creating an extension that adds an item to Studio Pro menu from scratch.
+This how-to describes how you can create an extension that adds an item to Studio Pro menu from scratch.
 
-You can download a copy of this tutorial [here](https://github.com/mendix/ExtensionAPI-Samples).
+You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
 ## 2 Creating an Extension Project
 
 1. Create a new project in Visual Studio based on `C# Class Library` template.
 2. Choose a name for the project. Use a format similar to `MyCompany.MyProject.MendixExtension`, but it is not a hard requirement.
-3. Choose `.NET 6.0` Framework.
-4. Add `Mendix.StudioPro.ExtensionsAPI` NuGet package to the project references. Pick the version that does not exceed the Studio Pro version you installed. To do so, perform the following steps:
-   1. Include a reference to the Extensions API [NuGet package](https://www.nuget.org/packages/Mendix.StudioPro.ExtensionsAPI): 
-   2. Add new file named `manifest.json` to your project. Put the following content into it:
+3. Choose `.NET 8.0` Framework.
+4.  Add `Mendix.StudioPro.ExtensionsAPI` NuGet package to the project references. Pick the version that does not exceed the Studio Pro version you installed. To do so, perform the following steps:
+    1. Include a reference to the Extensions API [NuGet package](https://www.nuget.org/packages/Mendix.StudioPro.ExtensionsAPI): 
+    2. Add new file named `manifest.json` to your project. Put the following content into it:
 
     ```json
     { "mx_extensions": [ "<name_of_your_project>.dll" ] }
     ```
+
     3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
 ## 3 Creating a Test Mendix App
@@ -41,6 +42,7 @@ Now if you build your extension project, (usually you can do this by pressing  <
 ## 4 Creating Your First Extension
 
 To introduce a simple extension that adds a menu item to Studio Pro, add the following class:
+
 ```csharp
 using System.ComponentModel.Composition;
 using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
@@ -95,6 +97,7 @@ public class MyMenuExtension() : MenuExtension
 ## 6 Adding NuGet dependency
 
 You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. The following one-time additional setup is required:
+
 1. Open your extension project `.csproj` file by right-clicking **Solution Explorer** > **Edit Project File**.
 2. Add the following line into the first `<PropertyGroup>`:
 

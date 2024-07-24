@@ -36,13 +36,9 @@ Follow instructions in [Install an app from a listing](https://other-docs.snowfl
 Once the Mendix Data Loader is deployed, follow these steps to configure and use it:
 
 1. View the README file which the application displays upon starting.
-
 2. Click the **MENDIX_DATA_LOADER** tab in the header to open the application interface.
-
 3. Grant the application the **USAGE** privilege on a warehouse. This step is required if you wish to schedule ingestions.
-
 4. Grant the application the **CREATE DATABASE** and **EXECUTE TASK** privileges. This step is required for the application to create the staging database for data ingestion and to execute tasks.
-
 5. Configure the Mendix Data Loader by performing the following steps:
 
     1. Select either **Basic** or **OAuth** as the authentication type.
@@ -72,7 +68,6 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 
 6. Click **Generate access script**.
 7. Copy the script, navigate to an SQL worksheet, and execute the entire script.
-
 8. Ingest the data by choosing one of the following options:
  
     * If you want to do a one-time ingestion from a Mendix app into Snowflake, navigate to the main tab and click **Ingest Data**. All ingested data is stored in [transient tables](https://docs.snowflake.com/en/user-guide/tables-temp-transient#transient-tables).

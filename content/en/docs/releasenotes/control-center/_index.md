@@ -14,7 +14,7 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ### July 22, 2024
 
-* We have enhanced the **Deployed Apps** page to show information of your apps with license keys. It covers all your apps deployed on Mendix for Private Cloud Standalone or any form of server-based environments.
+* We introduced the **Apps with License Keys** tab on the **Deployed Apps** page, which provides a comprehensive overview and management capabilities for all apps with issued license keys. This new feature allows you to view apps with active license keys across all environments, resend or download licenses, and update Technical Contacts as needed.
 
 ### June 14, 2024
 

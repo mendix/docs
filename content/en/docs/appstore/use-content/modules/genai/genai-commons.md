@@ -17,7 +17,7 @@ Developers who want to connect to another LLM provider or their own service are 
 
 ### 1.1 Limitations {#limitations}
 
-The current scope of the module is focused only on text generation use cases.
+The current scope of the module is focused only on text generation and embeddings use cases.
 
 ### 1.2 Dependencies {#dependencies}
 
@@ -323,10 +323,10 @@ This microflow can be used to create a request for a chat completion operation. 
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `SystemPrompt` | String | No | A system message can be used to specify the assistant persona or give the model more guidance, context or instructions. This attribute is optional. |
-| `Temperature` | Decimal | No | This is the sampling temperature. Higher values will make the output more random, while lower values make it more focused and deterministic. This attribute is optional. |
+| `SystemPrompt` | String | optional | A system message can be used to specify the assistant persona or give the model more guidance, context or instructions. This attribute is optional. |
+| `Temperature` | Decimal | optional | This is the sampling temperature. Higher values will make the output more random, while lower values make it more focused and deterministic. This attribute is optional. |
 | `MaxTokens` | Integer/Long | Depends on AI provider or model | This is the maximum number of tokens to generate in the chat completion. The total length of input tokens and generated tokens is limited by the models context length. This attribute is optional. |
-| `TopP` | Decimal | No | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with Top_p probability mass. Mendix generally recommends altering Top_p or Temperature but not both. This attribute is optional. |
+| `TopP` | Decimal | optional | This is an alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with Top_p probability mass. Mendix generally recommends altering Top_p or Temperature but not both. This attribute is optional. |
 
 ###### 4.3.1.1.2 Return Value
 
@@ -344,7 +344,7 @@ This microflow can be used to add a new [Message](#message) to the [Request](#re
 |--- |---|---|---|
 | `Request` | [Request](#request) | mandatory | This is the request object that contains the functional input for the model to generate a response. |
 | `ENUM_MessageRole` | [ENUM_MessageRole](#enum-messagerole) | mandatory | The role of the message author. |
-| `FileCollection` | [FileCollection](#filecollection) | No | This is an optional collection of files that are part of the message. |
+| `FileCollection` | [FileCollection](#filecollection) | optional | This is an optional collection of files that are part of the message. |
 | `ContentString` | String | mandatory | This is the textual content of the message. |
 
 ###### 4.3.1.2.2 Return Value
@@ -377,7 +377,7 @@ In order to include files within a message, you must provide them in the form of
 | `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. |
 | `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | This is the type of the file. |
-| `TextContent` | String | No | An optional text content describing the file content or giving it a specific name. |
+| `TextContent` | String | optional | An optional text content describing the file content or giving it a specific name. |
 
 ###### 4.3.1.4.2 Return Value
 
@@ -431,7 +431,7 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 |---|---|---|---|
 | `Request` | [Request](#request) | mandatory | The request to add the function to. |
 | `ToolName` | String | mandatory | The name of the tool to use/call. |
-| `ToolDescription` | String | No | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
+| `ToolDescription` | String | optional | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
 | `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
 
 {{% alert color="info" %}}
@@ -630,7 +630,7 @@ This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunk
 
 ##### 4.3.4.3 Chunk: Add KnowledgeBaseChunk to ChunkCollection{#chunkcollection-add-knowledgebasechunk}
 
-This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering.
+This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to the ChunkCollection to create the input for embeddings or knowledge base operations. Optionally, a MetadataCollection can be added for more advanced filtering. Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
 
 ###### 4.3.4.3.1 Input parameters
 
@@ -640,7 +640,7 @@ This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to 
 | `InputText` | String | mandatory | This is the input text to create the embedding for. |
 | `HumanReadableID` | String | mandatory | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
 | `MxObject` | Type parameter | optional | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
-| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any Key-Value pairs can be store. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
+| `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any key-value pairs can be stored. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
 
 ###### 4.3.4.3.2 Return Value
 
@@ -684,7 +684,7 @@ This microflow gets the first embedding vector from the response of an embedding
 
 ##### 4.3.4.6 Knowledge Base: Initialize MetadataCollection with Metadata {#knowledgebase-initialize-metadatacollection}
 
-This microflow creates a new [MetadataCollection](#metadatacollection-entity) and adds a new [Metadata](#metadatacollection-entity). The [MetadataCollection](#metadatacollection-entity) will be returned. To add additional Metadata, use `MetadataCollection_AddMetadata`.
+This microflow creates a new [MetadataCollection](#metadatacollection-entity) and adds a new [Metadata](#metadatacollection-entity). The [MetadataCollection](#metadatacollection-entity) will be returned. To add additional Metadata, use [Add Metadata to MetadataCollection](#knowledgebase-add-metadata).
 
 ###### 4.3.4.6.1 Input Parameters
 
@@ -702,7 +702,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 ##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
 
-This microflow adds a new Metadata object to a given MetadataCollection. Use `MetadataCollection_CreateAndAddMetadata` to first create the collection.
+This microflow adds a new Metadata object to a given MetadataCollection. Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
 
 ###### 4.3.4.7.1 Input Parameters
 
@@ -751,7 +751,7 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | ---| --- |
-| `ChunkCollection` | ChunkCollection | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
+| `ChunkCollection` |  [ChunkCollection](#chunkcollection) | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
 | `Connection` | [Connection](#connection) | mandatory | A Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
 | `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
 
@@ -759,4 +759,4 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `EmbeddingsResponse` | EmbeddingsResponse | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |

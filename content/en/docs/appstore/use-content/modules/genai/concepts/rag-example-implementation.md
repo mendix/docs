@@ -3,7 +3,7 @@ title: "RAG Example Implementation in the OpenAI Showcase Application"
 url: /appstore/modules/genai/rag/
 
 linktitle: "Retrieval Augmented Generation (RAG)"
-weight: 5
+weight: 30
 description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
 ---
 

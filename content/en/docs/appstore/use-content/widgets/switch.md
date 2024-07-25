@@ -35,7 +35,3 @@ Features:
 * Display in various bootstrap styles
 
 To use this widget, place it in the context of an object that has a Boolean attribute.
-
-## 4 Read More
-
-* [CAB.02 - Switch](/appstore/partner-solutions/ats/ht-two-cab-02-switch/)

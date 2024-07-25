@@ -22,7 +22,3 @@ The [Simple Checkbox Set Selector](https://marketplace.mendix.com/link/component
 ## 2 Installation
 
 After importing the widget into your app, add it to a [data view](/refguide/data-view/) on a page. Then, configure the properties to determine how the widget will behave in your application.
-
-## 3 Read More
-
-* [Simple Checkbox Set Selector](/appstore/partner-solutions/ats/rg-one-simple-checkbox-set-selector/) for ATS in the *Quality Add-ons Guide*

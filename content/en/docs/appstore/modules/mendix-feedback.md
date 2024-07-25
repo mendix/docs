@@ -73,11 +73,11 @@ You should install the latest version of the Mendix Feedback module, as it will 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/Toolbox-feedback.png" width="250px">}} 
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/toolbox-feedback.png" width="250px">}} 
 
 3. Drop the Feedback widget into a position in the layout:
 
-    {{< figure src="/attachments/appstore/modules/mendix-feedback/Feedback-on-layout.png" >}} 
+    {{< figure src="/attachments/appstore/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
 4. [Configure the Feedback widget](#configuration).
 
@@ -97,21 +97,21 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Configuration** tab
 
-    * **Feedback button action** - This controls what happens once you click the feedback button. By default, it will open the Share Feedback screen. If you select custom, you can select a different on click action.
-    *  **Project Settings** - This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in the Developer Portal.
+    * **Feedback button action** –This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
+    *  **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
 
-    {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
-    {{% /alert %}}
-  
-    * **HTML2Canvas screenshot settings** – These options control the rendering of the screenshots. If you are experiencing problems with screenshots, turn the Foreign rendering on.
-    * 
+        {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
+      {{% /alert %}}
+    
+    * **HTML2Canvas screenshot settings** – These options control the rendering of the screenshots. If you are experiencing problems with screenshots, turn the **Foreign rendering** on.
+    
 * **Customize Button** tab
 
     * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
-    * **Feedback Button Styling** – This controls how the feedback button is rendered. There are three options
-     * Side Tab - The feedback button will hover vertically at the right side of the screen. This is the default.
-     * Button - The feedback button will show as a horizontal button on the location the widget is set
-     * Do not render - The feedback button will not show. You can still trigger the feedback flow through a custom button action.
+    * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
+      * **Side Tab** – If this option is selected, the **Feedback** button hovers vertically at the right side of the screen. This is the default option.
+      * **Button** – If this option is selected, the **Feedback** button shows as a horizontal button on the location the widget is set
+      * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
 
 ### 3.3 Submitting Feedback on an App
 

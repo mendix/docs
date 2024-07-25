@@ -87,28 +87,28 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 ### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
 
-A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The [ChatCompletions](TODO) operation offers an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operation is built on top of Bedorck's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
+A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operation offers an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operation is built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
 
 An overview on supported models and model-specifc capabilities and limitations can be found here: [Amazon Bedrock Converse API | AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 To build a simple microflow that uses the ChatCompletions operation to send a single message to the Anthropic Claude 3.5 Sonnet model and show the response on a page, perform the following steps:
 
-1. Create a new microflow and give it a name, for example *AmazonBedrockChatCompletions*
+1. Create a new microflow and name it, for example *AmazonBedrockChatCompletions*
 2. In the **Toolbox**, search for the **Chat Completions (without history)** operation in the *Amazon Bedrock (Operations)* and drag onto your microflow.
-4. Double click on it to see it's parameters.
+4. Double click on it to see its parameters.
     1. The **Request** and **FileCollection** parameters are not needed for this example, so you can set them to **empty**.
     2. For the **UserPrompt** parameter, enter a string of your choice, for example 'Hi, Claude!'. 
     3. CLick Ok, the input for the **Connection** parameter will be created in the next step.
-5. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag to the beginning of your microflow.
-6. Double-click it to configure it's parameters.
+5. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag it to the beginning of your microflow.
+6. Double-click it to configure its parameters.
     1. For the **ENUM_Region** parameter, enter a value of the `AWSAuthentication.ENUM_Region` enumeration. Choose the region where you have access to Amazon Bedrock. For example, *AWSAuthentication.ENUM_Region.us_east_1*.
     2. For the **ModelId** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
     3. For the **UseStaticCredentials** parameter, enter *true* if you have configured static AWS Credentials, and *false* if you have configured temporary AWS Credentials.
     4. Click Ok to close the pop-up.
 5. Double-click the ChatCompletion operation and for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
 6. From the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category and drag it to the end of your microflow.
-7. Double-click on it and pass the **Response** from the ChatCompletions operation as paramater. The **Get Model Response Text** will return the response from Claude as a string.
-8. Finally, add a **Show Message** activity to end of the microflow and configure it to show the returned response string.
+7. Double-click on it and pass the **Response** from the ChatCompletions operation as parameter. The **Get Model Response Text** will return the response from Claude as a string.
+8. Finally, add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
 9. Add a button that calls this microflow, run your project and try it out!
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
@@ -928,7 +928,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 ##### 4.2.2.4 Request: Add Additional Request Parameter {#add-request-parameter}
 
-Use this microflow to add an additional model-specific request parameter to your request.
+Use this microflow to add an additional model-specific request parameter to your request. Please follow this link to find available additional request parameters: [Inference parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html)
 
 This operation corresponds to the **Request_CreateAdditionalRequestParameter** microflow.
 
@@ -956,7 +956,7 @@ If the used model supports that response field, it will be returned as a [ChatCo
 
 Use this microflow to retrieve all requested model-specific response fields from the response. 
 
-Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-fields) operation.  
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-fields) operation. 
 
 This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
 

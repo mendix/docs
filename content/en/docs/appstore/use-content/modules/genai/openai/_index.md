@@ -225,7 +225,7 @@ For more information on vision, see [OpenAI](https://platform.openai.com/docs/gu
 
 In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, one microflow for image generations is exposed as microflow action under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) which determines the Model and endpoint to use as well as optional [ImageOptions](/appstore/modules/genai/commons/#imagesoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Image: Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom Image entity.
+The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) which determines the Model and endpoint to use as well as optional [ImageOptions](/appstore/modules/genai/commons/#imagesoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom Image entity.
 
 For technical details, see the [Technical Reference](#image-generations-technical) section.
 
@@ -272,7 +272,7 @@ This microflow can be used to add a new `FileDocument` or URL to an existing `Fi
 
 #### 3.5.5 `Image Generations: Set ImageOptions Extension` {#set-imageoptions-extension}
 
-This microflow can be used to add a new `OpenAIImageOptions_Extension` to an [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) object to specify additional configurations for the image generations operation. The parameters are optional.
+This microflow can be used to add a new `OpenAIImageOptions_Extension` to an [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) object to specify additional configurations for the image generations operation. The object will be used inside of the image generations operation if the same `ImageOptions` are passed. The parameters are optional.
 
 ## 4 Technical Reference {#technical-reference}
 
@@ -515,7 +515,7 @@ Use the microflow `ImageGenerations_Execute` to execute an image generations API
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` can be converted into a single or multiple images using the response handling microflows. |
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` that can be converted into a single or multiple images using the response handling microflows. |
 
 #### 4.3.3 Embeddings
 

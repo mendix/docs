@@ -215,6 +215,18 @@ The entities in the table below describe all generalizations. These are reused b
 | `DestinationKey` | Describes the target `Key` of the object |
 | `SourceKey` | Describes the source `Key` of the object |
 
+#### 4.1.17 AbstractS3Request {#abstracts3request}
+
+This entity is the generalization of all request entities of the S3 Connector. It has an association to the `S3Configuration` entity.
+
+#### 4.1.18 S3Configuration {s3configuration}
+
+| Attribute | Description | 
+| --- | --- |
+| `PathStyleAccessEnabled` | The PathStyleAccessEnabled attribute specifies whether the S3 resources are accessed using the path-style hosting or its default virtual hosting. |
+
+[Read more about these hosting styles | AWS Documentation ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
+
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).

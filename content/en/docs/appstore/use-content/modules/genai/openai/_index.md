@@ -28,7 +28,7 @@ The OpenAI Connector is commonly used for text generation, image generation, and
     * Draft documents 
     * Write computer code 
     * Answer questions about a knowledge base 
-    * Analyze texts 
+    * Analyze texts
     * Give software a natural language interface 
     * Tutor in a range of subjects 
     * Translate languages 
@@ -361,11 +361,13 @@ The connector does not provide specific entities for chat completions because th
 
 #### 4.1.4 Image Generations {#imagegenerations-domain-model}
 
-Most entities for image generations are part of the [GenAI Commons](/appstore/modules/genai/commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/commons/#domain-model).
+Most entities for image generations are part of the [GenAI Commons](/appstore/modules/genai/commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/commons/#domain-model). OpenAI-specific parameters are available in either extension entities or specializations.
+
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/OpenAIImageOptionsExtension.png" >}}
 
 ##### 4.1.4.1 `OpenAIImageOptions_Extension` {#openai-imageoptions-entity} 
 
-The `OpenAIImageOptions_Extension` object can be used to add OpenAI-specific configurations to a image generations request. It is optional and can be added via `ImageOptions_SetOpenAIExtension` to the [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) object that can be passed to the operation.
+The `OpenAIImageOptions_Extension` object can be used to add OpenAI-specific configurations to an image generations request. It is optional and can be added with [Image Generations: Set ImageOptions Extension](#set-imageoptions-extension) to the [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) object that is passed to the operation.
 
 | Attribute        | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
@@ -502,17 +504,17 @@ To construct the input for the microflow, see [OpenAI exposed microflows](#expos
 
 #### 4.3.2 Image Generations {#image-generations-technical} 
 
-The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input. It generates a structure of one or many model-generated images as output. The image is returned as a URL or as a base64-encoded string. Depending on the model used, the API can return one or many model-generated images based on the input prompt plus other optional parameters. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and facilitate easier implementation in certain use cases.
+The image generations API from OpenAI accepts a JSON structure that consists of a number of parameters including the user prompt as input. It generates a structure of one or many model-generated images as output. The image is returned as a public URL or as a base64-encoded string. Depending on the model used, the API can return one or many model-generated images based on the input prompt. The exposed microflows in this connector are built to abstract away part of the complexity of the input and output structures and facilitate easier implementation in certain use cases.
 
 ##### 4.3.2.1 Image Generations {#image-generations-technical} 
 
-Use the microflow `ImageGenerations_Execute` to execute an image generations API call based on a prompt string input. Add optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) (and [OpenAIImageOptions_Extension](#openai-imageoptions-entity) via [ImageOptions_SetOpenAIExtension](#set-imageoptions-extension)) for additional configurations. The [Response](/appstore/modules/genai/commons/#response) object needs to be processed to create a single or multiple images (use [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) and [Get Generated Images (List)](/appstore/modules/genai/commons/#image-get-list) respectively).
+Use the exposed microflow operation `Image Generations` to execute an image generations API call based on a prompt string input. Add optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) (and [OpenAIImageOptions_Extension](#openai-imageoptions-entity) with [Image Generations: Set ImageOptions Extension](#set-imageoptions-extension)) for additional configurations. The [Response](/appstore/modules/genai/commons/#response) object needs to be processed to create a single or multiple images.
 
 **Input parameters**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- |--- |
-| `Connection` | [Connection](#connection) | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `Connection` | [Connection](/appstore/modules/genai/commons/#connection) | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
 | `UserPrompt` | String | mandatory | This is the description the image will be based on. |
 | `ImageOptions` | [ImageOptions](#imageoptions-entity) | optional | This can be used to pass optional request attributes. An [OpenAIImageOptions_Extension](#openai-imageoptions-entity) will be associated to the ImageOptions and considered in the operation. |
 
@@ -520,7 +522,9 @@ Use the microflow `ImageGenerations_Execute` to execute an image generations API
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` that can be converted into a single or multiple images using the response handling microflows. |
+| `Response` | [Response](/appstore/modules/genai/commons/#response)   | A `Response` object pointing to a message with a [FileCollection](/appstore/modules/genai/commons/#filecollection) containing one or multiple [FileContent](/appstore/modules/genai/commons/#filecontent) objects that can be converted into a single or multiple images using the response handling microflows. |
+
+Use [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) and [Get Generated Images (List)](/appstore/modules/genai/commons/#image-get-list) to retrieve the generated image(s) from the response.
 
 #### 4.3.3 Embeddings
 
@@ -570,7 +574,7 @@ In order to create embeddings, it does not matter whether the [ChunkCollection](
 For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [showcase app](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/)
+Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/)
 {{% /alert %}}
 
 ## 6 Troubleshooting {#troubleshooting}

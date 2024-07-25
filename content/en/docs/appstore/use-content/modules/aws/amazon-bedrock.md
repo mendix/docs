@@ -940,7 +940,9 @@ You need to provide a value using either the *StringValue*, *DecimalValue* or *I
 
 ##### 4.2.2.5 Request: Add Additional Response Field {#add-response-field}
 
-Use this microflow to add an additional model-specific response field to your request.
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. Use this microflow to add an additional model-specific response field to your request. 
+
+You can retrieve the additional requested response fields using the [Response: Get Requested Response Fields](#get-response-fields) operation.
 
 This operation corresponds to the **Request_CreateResponseFieldRequest** microflow.
 
@@ -952,7 +954,9 @@ If the used model supports that response field, it will be returned as a [ChatCo
 
 ##### 4.2.2.6 Response: Get Requested Response Fields {#get-response-fields}
 
-Use this microflow to retrieve all requested model-specific response fields from the response.
+Use this microflow to retrieve all requested model-specific response fields from the response. 
+
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-fields) operation.  
 
 This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
 

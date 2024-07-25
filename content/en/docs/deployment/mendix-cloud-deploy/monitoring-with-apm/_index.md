@@ -35,6 +35,10 @@ For details on how to add a specific APM tool to your app, see one of the follow
 * [New Relic for Mendix Cloud](/developerportal/operate/newrelic-metrics/)
 
 {{% alert color="info" %}}
+These third-party integrations require an agent to run alongside your runtime container, gathering and sending metrics. This agent consumes resources from your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
+{{% /alert %}}
+
+{{% alert color="info" %}}
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 

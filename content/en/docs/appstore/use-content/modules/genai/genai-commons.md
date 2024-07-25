@@ -17,7 +17,7 @@ Developers who want to connect to another LLM provider or their own service are 
 
 ### 1.1 Limitations {#limitations}
 
-The current scope of the module is focused only on text generation and embeddings use cases.
+The current scope of the module is focused only on text & image generation as well as embeddings and knowledgebase use cases.
 
 ### 1.2 Dependencies {#dependencies}
 
@@ -52,8 +52,8 @@ The domain model in Mendix is a data model that describes the information in you
 The `Connection` entity contains specifications to interact with an AI provider.
 
 | Attribute | Description |
-| --- | --- |
-| `Model` | The name of the model to be used for an operation. |
+| --------- | ----------- |
+| `Model`   | The name of the model to be used for an operation. |
 
 #### 4.1.2 `Request` {#request} 
 
@@ -180,23 +180,23 @@ This entity represents a collection of chunks. It is a wrapper entity for [Chunk
 
 A piece of information (InputText) and the corresponding embeddings vector retrieved from an Embeddings API.
 
-| Attribute | Description |
-| --------------- | ----------------------------------------------------------- |
-| `InputText` | The input text to create the embedding for. |
-| `EmbeddingVector`| The corresponding embedding vector of the input text. |
-| `_Index` | Internal attribute. Do not use. |
+| Attribute          | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| `InputText`        | The input text to create the embedding for.                  |
+| `EmbeddingVector`  | The corresponding embedding vector of the input text.        |
+| `_Index`           | Internal attribute. Do not use.                              |
 
 #### 4.1.16 `KnowledgeBaseChunk` {#knowledgebasechunk-entity}
 
 This entity represents a discrete piece of knowledge that can be used in embed and store operations. It is a specialization of [Chunk](#chunk-entity).
 
-| Attribute | Description |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `ChunkID` | This is a system-generated UUID for the chunk in the knowledge base. |
-| `HumanReadableID`| This is a front-end reference to the KnowledgeBaseChunk so that users know what it refers to (e.g. URL, document location, human-readable record ID). |
-| `MxObjectID` | If the KnowledgeBaseChunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation. |
-| `MxEntity` | If the KnowledgeBaseChunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation. |
-| `Similarity` | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
+| Attribute          | Description |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| `ChunkID`          | This is a system-generated UUID for the chunk in the knowledge base. |
+| `HumanReadableID`  | This is a front-end reference to the KnowledgeBaseChunk so that users know what it refers to (e.g. URL, document location, human-readable record ID). |
+| `MxObjectID`       | If the KnowledgeBaseChunk was based on a Mendix object during creation, this will contain the GUID of that object at the time of creation. |
+| `MxEntity`         | If the KnowledgeBaseChunk was based on a Mendix object during creation, this will contain its full entity name at the time of creation. |
+| `Similarity`       | In case the chunk was retrieved from the knowledge base as part of a similarity search (e.g nearest neighbors retrieval) this will contain the cosine similarity to the input vector for the retrieval that was executed. |
 
 #### 4.1.17 `MetadataCollection` {#metadatacollection-entity}
 
@@ -206,10 +206,10 @@ An optional collection of metadata. This is a wrapper entity for one or more [Me
 
 This entity represents additional information that is to be stored with the [KnowledgeBaseChunk](#knowledgebasechunk-entity) in the knowledge base. It can be used for custom filtering during retrieval.
 
-| Attribute | Description |
+| Attribute       | Description |
 | --------------- | ----------------------------------------------------------------------------------------------------- |
-| `Key` | This is the name of the metadata and typically tells how the value should be interpreted. |
-| `Value` | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
+| `Key`           | This is the name of the metadata and typically tells how the value should be interpreted. |
+| `Value`         | This is the value of the metadata that provides additional information about the chunk in the context of the given key. |
 
 #### 4.1.19 `EmbeddingsOptions` {#embeddingsoptions-entity}
 
@@ -223,10 +223,10 @@ An optional input object for the embeddings operations to set optional request a
 
 The response returned by the model contains token usage metrics. Not all connectors or models might support token usage metrics.
 
-| Attribute | Description |
+| Attribute       | Description |
 | --------------- | -------------------------------------------------------- |
-| `PromptTokens` | Number of tokens in the prompt. |
-| `TotalTokens` | Total number of tokens used in the request. |
+| `PromptTokens`  | Number of tokens in the prompt. |
+| `TotalTokens`   | Total number of tokens used in the request. |
 
 #### 4.1.21 `ImageOptions` {#imageoptions-entity}
 
@@ -237,8 +237,8 @@ An optional input object for the image generations operations to set optional re
 | `Height`               | This determines the height of the image. |
 | `Width`                | This determines the width of the image. |
 | `NumberOfImages`       | This determines the number of images to be generated. |
-| `Seed`                 | This can be used to influence the randomness of the generation. |
-| `CfgScale`             | This can be used to influence the randomness of the generation. |
+| `Seed`                 | This can be used to influence the randomness of the generation. Ensures the reproducability and consistency in the generated images by controlling the initial state of the random number generator. |
+| `CfgScale`             | This can be used to influence the randomness of the generation. Adjusts the balance between adherence to the prompt and creative randomness in the image generation process. |
 | `ImageGenerationType`  | This describes the type of image generation. Currently only text to image is supported. For more information, see [ENUM_ImageGenerationType](#enum-imagegenerationtype). |
 
 ### 4.2 Enumerations {#enumerations} 
@@ -247,19 +247,19 @@ An optional input object for the image generations operations to set optional re
 
 `ENUM_MessageRole` provides a list of message author roles. 
 
-| Name | Caption | Description |
-| --- | --- | ---|
-| `user` | **User** | A user message is the input from an end-user. |
-| `assistant` | **Assistant** | An assistant message was generated by the model as a response to a user message. |
-| `system` | **System** | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. | 
-| `tool` | **Tool** | A tool message contains the return value of a tool call as its content. Additionally, a tool message has a `ToolCallId` that is used to map it to the corresponding previous assistant response which provided the tool call input. | 
+| Name         | Caption         | Description                                   |
+| ------------ | --------------- | --------------------------------------------- |
+| `user`       | **User**        | A user message is the input from an end-user. |
+| `assistant`  | **Assistant**   | An assistant message was generated by the model as a response to a user message. |
+| `system`     | **System**      | A system message can be used to specify the assistant persona or give the model more guidance and context. This is typically specified by the developer to steer the model response. | 
+| `tool`       | **Tool**        | A tool message contains the return value of a tool call as its content. Additionally, a tool message has a `ToolCallId` that is used to map it to the corresponding previous assistant response which provided the tool call input. | 
 
 #### 4.2.2 `ENUM_MessageType` {#enum-messagetype}
 
 `ENUM_MessageType` provides a list of ways of interpreting a message object.
 
-| Name | Caption | Description |
-| --- | --- | --- |
+| Name   | Caption  | Description |
+| ------ | -------- | ----------- |
 | `Text` | **Text** | The message represents a normal message and contains text content in the `Content` attribute. | 
 | `File` | **File** | The message contains file data and the files in the associated [FileCollection](#filecollection) should be taken into account. |
 
@@ -267,37 +267,37 @@ An optional input object for the image generations operations to set optional re
 
 `ENUM_ContentType` provides a list of possible file content types, which describe how the file data is encoded in the `FileContent` attribute on the [FileContent](#filecontent) object that is part with the Message.
 
-| Name | Caption | Description |
-| --- | --- -- | --- |
-| `URL` | **Url** | The content of the file can be found on a (publicly available) URL which is provided in the `FileContent` attribute. |
-| `Base64` | **Base64** | The content of the file can be found as a base64-encoded string in the `FileContent` attribute. |
+| Name      | Caption      | Description |
+| --------- | ------------ | ----------- |
+| `URL`     | **Url**      | The content of the file can be found on a (publicly available) URL which is provided in the `FileContent` attribute. |
+| `Base64`  | **Base64**   | The content of the file can be found as a base64-encoded string in the `FileContent` attribute. |
 
 #### 4.2.4 `ENUM_FileType` {#enum-filetype}
 
 `ENUM_FileType` provides a list of file types. Currently only *image* is a supported file type. Not all file types might be supported by all AI providers or models.
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `image` | **Image** | The file represents an image (e.g. a *.png* file). | 
+| Name      | Caption   | Description |
+| --------- | --------- | ----------- |
+| `image`   | **Image** | The file represents an image (e.g. a *.png* file). | 
 
 #### 4.2.5 `ENUM_ToolChoice` {#enum-toolchoice}
 
 `ENUM_ToolChoice` provides a list of ways to control which (if any) tool is called by the model. Not all tool choices might be supported by all AI providers or models.
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `auto` | **Auto** | The model can pick between generating a message or calling a function. |
-| `none` | **None** | The model does not call a function and instead generates a message. |
-| `any` | **Any** | Any function will be called. Not available for all providers and might be changed to auto. |
-| `tool` | **Tool** | A particular tool needs to be called, which is the one specified over association `ToolCollection_ToolChoice`. |
+| Name   | Caption   | Description |
+| ------ | --------- | ----------- |
+| `auto` | **Auto**  | The model can pick between generating a message or calling a function. |
+| `none` | **None**  | The model does not call a function and instead generates a message. |
+| `any`  | **Any**   | Any function will be called. Not available for all providers and might be changed to auto. |
+| `tool` | **Tool**  | A particular tool needs to be called, which is the one specified over association `ToolCollection_ToolChoice`. |
 
 #### 4.2.6 `ENUM_SourceType` {#enum-sourcetype}
 
 `ENUM_SourceType` provides a list of source types, which describe how the pointer to the `Source` attribute on the [Reference](#reference) object should be interpreted to get the source location. Currently, only `Url` is supported.
 
-| Name | Caption | Description |
-| --- | --- | --- |
-| `Url` | **Url** | The `Source` attribute contains the URL to the source on the internet. |
+| Name   | Caption | Description |
+| ------ | ------- | ----------- |
+| `Url`  | **Url** | The `Source` attribute contains the URL to the source on the internet. |
 
 #### 4.2.6 `ENUM_ImageGenerationType` {#enum-imagegenerationtype}
 
@@ -413,13 +413,13 @@ This microflow creates new [ImageOptions](#imageoptions-entity).
 |--- |--- |--- |--- |
 | `Height` | Integer/Long | optional | To set Width. |
 | `Width` | Integer/Long | optional | To set Height. |
-| `NumberOfImages` | Integer/Long | optional | To set NumberOfImages. |
+| `NumberOfImages` | Integer/Long | optional | To set NumberOfImages to create. |
 
 ###### 4.3.1.6.2 Return Value
 
-| Name | Type | Description |
-|--- |--- |--- |
-| `ImageOptions` | [ImageOptions](#imageoptions-entity) | The newly created ImageOptions object. |
+| Name            | Type                                 | Description                            |
+|---------------- |------------------------------------- |--------------------------------------- |
+| `ImageOptions`  | [ImageOptions](#imageoptions-entity) | The newly created ImageOptions object. |
 
 ##### 4.3.1.7 Tools: Add Function to Request {#add-function-to-request}
 
@@ -464,7 +464,7 @@ This microflow does not have a return value.
 
 The following microflows handle the response processing.
 
-##### 4.3.2.1 Chat: Get Model Response Text {#chat-get-model-response-text}
+##### 4.3.2.1 Get Model Response Text {#chat-get-model-response-text}
 
 This microflow can be used to get the content from the latest assistant message over association `Response_Message`. Use this microflow to get the response text from the latest assistant response message. In many cases, this is the main value needed for further logic after the operation or is displayed to the end user.
 
@@ -480,7 +480,7 @@ This microflow can be used to get the content from the latest assistant message 
 |---|---|---|
 | `ResponseText` | String | This is the string `Content` of message with role `assistant` that was generated by the model as a response to a user message. |
 
-##### 4.3.2.2 Chat: Get References {#chat-get-references}
+##### 4.3.2.2 Get References {#chat-get-references}
 
 Use this microflow to get the list of references that may be included in the model response. These can be used to display source information, content, and citations on which the model response text was based according to the language model. References are only available if they were specifically requested from the LLM and mapped from the LLM response into the GenAI Commons [domain model](#domain-model).
 
@@ -496,16 +496,16 @@ Use this microflow to get the list of references that may be included in the mod
 |---|---|---|
 | `ReferenceList` | List of [Reference](#reference) | The references with optional citations that were part of the response message. |
 
-##### 4.3.2.3 Image: Get Generated Image (Single) {#image-get-single}
+##### 4.3.2.3 Get Generated Image (Single) {#image-get-single}
 
-This operations processes a response that was created by an image generations operation. A return entity can be specified using ResponseImageEntity (needs to be of type image or its specialization). An image of that type will be created and returned.
+This operation processes a response that was created by an image generations operation. A return entity can be specified using ResponseImageEntity (needs to be of type `System.Image` or its specialization). An image of that type will be created and returned.
 
 ###### 4.3.2.3.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type System.Image or its specializations. |
-| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generation operation. It contains the FileContent to create the image. |
+| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type `System.Image` or its specializations. |
+| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generations operation. It points to a message with the FileContent to create the image. |
 
 ###### 4.3.2.3.2 Return Value
 
@@ -513,14 +513,16 @@ This operations processes a response that was created by an image generations op
 |---|---|---|
 | `GeneratedImage` | Object of type determined by `ResponseImageEntity` | The generated image. |
 
-##### 4.3.2.4 Image: Get Generated Images (List) {#image-get-list}
+##### 4.3.2.4 Get Generated Images (List) {#image-get-list}
+
+This operation processes a response that was created by an image generations operation. A return entity can be specified using ResponseImageEntity (needs to be of type `System.Image` or its specialization). A list of images of that type will be created and returned.
 
 ###### 4.3.2.4.1 Input Parameters
 
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
-| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type System.Image or its specializations. |
-| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generation operation. It contains the FileContent to create the image. |
+| `ResponseImageEntity` | Entity | mandatory | This is to specify the entity of the returned image. Must be of type `System.Image` or its specializations. |
+| `Response` | [Response](#response) | mandatory | This is the response that was returned by an image generations operation. It points to a message with the FileContent to create the image. |
 
 ###### 4.3.2.4.2 Return Value
 
@@ -530,12 +532,12 @@ This operations processes a response that was created by an image generations op
 
 #### 4.3.3 Text & Files: Chat Completions Interface {#chat-completions-interface}
 
-The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completion and image generation operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
+The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completions and image generations operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
-We recommend that you adapt to the same interface when developing custom chat completion or image generation operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
+We recommend that you adapt to the same interface when developing custom chat completions or image generations operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 {{% alert color="info" %}}
-These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Amazon Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
 {{% /alert %}}
 
 ##### 4.3.3.1 Chat Completions (Without History)
@@ -555,7 +557,7 @@ The `Chat Completions (without history)` operation interface supports scenarios 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation.|
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](#chat-get-model-response-text) operation.|
 
 ##### 4.3.3.2 Chat Completions (With History)
 
@@ -572,11 +574,11 @@ The `Chat Completions (with history)` operation interface supports more complex 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](#chat-get-model-response-text) operation. |
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Get Model Response Text](#chat-get-model-response-text) operation. |
 
-##### 4.3.3.3 Image Generation
+##### 4.3.3.3 Image Generations
 
-The `Image Generation` operation interface supports the generation of images based on a `UserPrompt` passed as string. The returned `Response` needs to contain a `FileContent` via `FileCollection` and `Message`. See microflows in the `Connector Building` folder to construct the output.
+The `Image Generations` operation interface supports the generation of images based on a `UserPrompt` passed as string. The returned `Response` contains a `FileContent` via `FileCollection` and `Message`. See microflows in the `Connector Building` folder to construct the output.
 
 ###### 4.3.3.3.1 Input Parameters
 
@@ -590,7 +592,7 @@ The `Image Generation` operation interface supports the generation of images bas
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which will be used in [Image: Get Generated Image (Single)](#image-get-single). |
+| `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which will be used in [Get Generated Image (Single)](#image-get-single). |
 
 #### 4.3.4 Knowledge Bases & Embeddings
 
@@ -619,8 +621,8 @@ This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunk
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `InputText` | String | mandatory | Input text that will be embedded. |
-| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | Collection to add Chunks to. |
+| `InputText` | String | mandatory | Input text to generate an embedding vector for. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | ChunkCollection to add the new Chunks to. |
 
 ###### 4.3.4.2.2 Return Value
 
@@ -636,8 +638,8 @@ This Java action adds a new [KnowledgeBaseChunk](#knowledgebasechunk-entity) to 
 
 | Name | Type | Mandatory | Documentation |
 |--- |--- |--- |--- |
-| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | This is the (mandatory) ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
-| `InputText` | String | mandatory | This is the input text to create the embedding for. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | This is the ChunkCollection to which the KnowledgebaseChunk will be added. This ChunkCollection is the input for other operations. |
+| `InputText` | String | mandatory | Input text to generate an embedding vector for. |
 | `HumanReadableID` | String | mandatory | This is a front-end identifier that can be used for showing or retrieving sources in a custom way. If it is not relevant, "empty" must be passed explicitly here. |
 | `MxObject` | Type parameter | optional | This parameter is used to capture the Mendix object to which the chunk refers. This can be used for finding back the record in the Mendix database later on after the retrieval step. |
 | `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | optional | This is an optional MetadataCollection that contains extra information about the KnowledgeBaaseChunk. Any key-value pairs can be stored. In the retrieval operations it is possible to filter on one or multiple metadata key-value pairs. |
@@ -673,7 +675,7 @@ This microflow gets the first embedding vector from the response of an embedding
 
 | Name | Type | Mandatory | Description |
 |--- |--- |--- |--- |
-| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | mandatory | Response object that gets returned by embeddings operations. |
+| `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | mandatory | Response object that gets returned by the embeddings operations. |
 
 ###### 4.3.4.5.2 Return Value
 
@@ -702,7 +704,7 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 
 ##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
 
-This microflow adds a new Metadata object to a given MetadataCollection. Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
+This microflow adds a new [Metadata](#metadatacollection-entity) object to a given [MetadataCollection](#metadatacollection-entity). Use [Initialize MetadataCollection with Metadata](#knowledgebase-initialize-metadatacollection) to instantiate a MetadataCollection first, if needed.
 
 ###### 4.3.4.7.1 Input Parameters
 
@@ -716,18 +718,17 @@ This microflow adds a new Metadata object to a given MetadataCollection. Use [In
 
 This microflow does not have a return value.
 
-
 #### 4.3.5 Knowledge Bases & Embeddings: Embeddings Interface {#embeddings-interface}
 
 To make use of embeddings in a Mendix app, GenAI Commons defines interfaces for embedding operations that connectors can adhere to. We recommend that you adapt to the same interface when developing custom embedding operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 
 {{% alert color="info" %}}
-These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
+These operations are not implemented in this module. The module only describes the interface (microflow input parameters, return value, and expected behavior), and it is up to connectors that adhere to the principles of GenAI Commons to provide an implementation. For an implementation example, see the respective sections in the [OpenAI connector](/appstore/modules/genai/openai/) or the [Amazon Bedrock Connector](/appstore/modules/genai/bedrock/), or take a look at the [showcase app](https://marketplace.mendix.com/link/component/220475) where both connectors are implemented to decide at runtime whether to call the LLM through OpenAI or Amazon Bedrock.
 {{% /alert %}}
 
 ##### 4.3.5.1 Embeddings (String)
 
-The `Embeddings (String)` operation interface allows the invocation of the embeddings API with a String input and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse_GetFirstVector` microflow from GenAI Commons can be used to retrieve the corresponding embedding vector in a String representation.
+The `Embeddings (String)` operation interface allows the invocation of the embeddings API with a String input and returns an `EmbeddingsResponse` object with token usage statistics, if applicable. The `EmbeddingsResponse_GetFirstVector` microflow from GenAI Commons can be used to retrieve the corresponding embedding vector in a String representation. This operation supports scenarios where the vector embedding of a single string must be generated, e.g. to perform a nearest neighbor search across an existing knowledge base. 
 
 ###### 4.3.5.1.1 Input Parameters
 
@@ -751,7 +752,7 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | ---| --- |
-| `ChunkCollection` |  [ChunkCollection](#chunkcollection) | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
+| `ChunkCollection` | [ChunkCollection](#chunkcollection) | mandatory | A ChunkCollection with Chunks for which an embedding vector should be generated. Use operations from GenAI commons to create a ChunkCollection and add Chunks or KnowledgeBaseChunks to it. |
 | `Connection` | [Connection](#connection) | mandatory | A Connection object that contains the required endpoint details and API credentials. Depending on the connector module, a specific specialization must be passed. |
 | `EmbeddingOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | optional | Can be used to pass optional request attributes. |
 

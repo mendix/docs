@@ -151,13 +151,13 @@ When a whole knowledge base, or part of its data, is no longer needed, this can 
 
 Use this operation to delete a complete knowledge base at once. After execution, the knowledge base including its data will no longer exist in the vector database.
 
-#### 3.5.2 `Delete` {#delete}
+#### 3.5.2 `Delete for Object` {#delete}
 
-In scenarios where the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related knowledge base chunks from the knowledge base. For this, the `Delete` operation can be used. The `Delete` operation accepts any kind of Mendix object, and it removes all the knowledge base chunks related to the provided Mendix object at the time of insertion.
+In scenarios where the chunks in the knowledge base are related to Mendix objects (in other words, data in the Mendix database), deletion of Mendix data typically needs to result in the removal of its related knowledge base chunks from the knowledge base. For this, the `Delete for Object` operation can be used. The `Delete for Object` operation accepts any kind of Mendix object, and it removes all the knowledge base chunks related to the provided Mendix object at the time of insertion.
 
-#### 3.5.3 `Delete List` {#delete-list}
+#### 3.5.3 `Delete for List` {#delete-list}
 
-This operation is meant to be used in a similar scenario to the one described for the [Delete](#delete) operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the knowledge base chunks related to the provided Mendix objects at the time of insertion.
+This operation is meant to be used in a similar scenario to the one described for the [Delete for Object](#delete) operation, but handles a list of Mendix objects in a single operation. Executing this operation removes all the knowledge base chunks related to the provided Mendix objects at the time of insertion.
 
 ## 4 Technical Reference {#technical-reference}
 

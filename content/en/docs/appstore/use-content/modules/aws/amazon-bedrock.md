@@ -1056,7 +1056,7 @@ If you would like to add lambda functions to your agent, please refer to the [AW
 
 The `ListAgents` activity allows you to list the agents in an account and get information about each of them. It requires `ENUM_Region`, `Credentials`, and `ListAgentsRequest` as input parameters.
 
-To use this activity, you must set up an agent in your Amazon Bedrock Environment. 
+To use this activity, you must set up an agent in your Amazon Bedrock environment. 
 
 The input and output for this service are shown in the table below:
 

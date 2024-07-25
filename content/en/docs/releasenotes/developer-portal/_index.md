@@ -20,7 +20,8 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* We have improved the flow to [create an app](/developerportal/#create-app) in Apps.
+* We have greatly simplified the process of [creating an app](/developerportal/#create-app) from the Platform, making it easier and quicker to start working on your new app
+* When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page
 
 ### June 30, 2024
 

@@ -131,7 +131,7 @@ We support all tiers of Atlassian’s Bitbucket service, including Bitbucket.org
 
 On Bitbucket.org, the personal access token are called app passwords.
 
-To setup an App Password for your Bitbucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
+To set up an App Password for your Bitbucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
 Bitbucket Server and Bitbucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 

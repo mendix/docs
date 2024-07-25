@@ -166,7 +166,7 @@ See the following link for more information about plotly.js and the options: htt
 
 * **Mode**: You can use these charts in three different modes:
 
-    * **Basic**: quickly setup a chart with the various widget options
+    * **Basic**: quickly set up a chart with the various widget options
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 

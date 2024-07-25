@@ -229,6 +229,9 @@ The microflow requires a specialized [Connection](/appstore/modules/genai/common
 
 For technical details, see the [Technical Reference](#image-generations-technical) section.
 
+* For a OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
+
 ### 3.4 Embeddings Configuration {#embeddings-configuration}
 
 In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, two microflows for embeddings are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.

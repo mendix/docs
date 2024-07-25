@@ -227,6 +227,24 @@ This entity is the generalization of all request entities of the S3 Connector. I
 
 [Read more about these hosting styles | AWS Documentation ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
 
+#### 4.1.19 AbstractPresignConfig {#abstractpresignconfig}
+
+| Attribute | Description | 
+| --- | --- |
+| `Expiration` | The Expiration attribute specifies after how long (in seconds) the pre-signed URL expires. |
+
+#### 4.1.20 PutObjectPresignConfig {#putobjectpresignconfig}
+
+This entity can be used to presign a `PutObjectRequest`. To do so, associate an instance of this object to your `PutObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
+#### 4.1.21 GetObjectPresignConfig {#getobjectpresignconfig}
+
+This entity can be used to presign a `GetObjectRequest`. To do so, associate an instance of this object to your `GetObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
+#### 4.1.222 DeleteObjectPresignConfig {#deleteobjectpresignconfig}
+
+This entity can be used to presign a `DeleteObjectRequest`. To do so, associate an instance of this object to your `DeleteObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
 ### 4.2 Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For more information, see [Enumerations](/refguide/enumerations/).
@@ -321,3 +339,17 @@ The `MoveObject` Amazon S3 actions allows you move an s3 object between buckets 
 | Input | Output | 
 | --- | --- | 
 | `MoveObjectRequest`, `AWS_Region`, `Credentials` | `Boolean` |
+
+#### 4.3.10 GeneratePresignedUrl {#generatepresignedurl}
+
+The `GeneratePresignedUrl` Amazon S3 actions allows you to presign a request and generate and returns the presigned url. The presigned url can be used to send the request in a later point in time without requiring additional authentication. It requires a valid `AWS_Region` parameter and `Credentials`, as well as aspecialized object of the `AbstractS3Request` entity, which must be of one of the following types:
+
+* `PutObjectRequest`, with an association to a `PutObjectPresignConfig` object.
+* `GetObjectRequest`, with an association to a `DeleteObjectPresignConfig` object.
+* `DeleteObjectRequest`, with an association to a `DeleteObjectPresignConfig` object.
+
+It returns a String. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |

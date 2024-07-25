@@ -88,6 +88,14 @@ The navigation pane is divided into four main categories:
 The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 {{% /alert %}}
 
+### 3.3 Pending Invitations {#pending-invitations}
+
+If you are invited to collaborate on a project, the invitation will appear on top of the **My Apps** page. You can accept or decline the invitation.
+
+{{% alert color="info" %}}
+You  get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+{{% /alert %}}
+
 ## 4 Company Apps {#my-company-apps}
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
@@ -95,18 +103,6 @@ The **Company Apps** tab displays all the apps created by members of your [compa
 There are also details on the app's [Target Cloud](/deployment/), and the [Total Members](/control-center/members/) who can view or edit the app.
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
-
-## 5 Pending Invites {#pending-invites}
-
-{{% alert color="info" %}}
-The **Pending Invites** tab is only visible if you have any pending invites.
-{{% /alert %}}
-
-The **Pending Invites** tab presents the pending invitations to apps that you have received. You can accept or decline the invite.
-
-{{% alert color="info" %}}
-You  get an invite only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
-{{% /alert %}}
 
 ## 6 Guide Categories
 

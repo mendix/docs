@@ -87,7 +87,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 ### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
 
-A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operation offers an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operation is built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
+A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
 
 An overview on supported models and model-specifc capabilities and limitations can be found here: [Amazon Bedrock Converse API | AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 

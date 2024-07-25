@@ -342,7 +342,7 @@ The `MoveObject` Amazon S3 actions allows you move an s3 object between buckets 
 
 #### 4.3.10 GeneratePresignedUrl {#generatepresignedurl}
 
-The `GeneratePresignedUrl` Amazon S3 actions allows you to presign a request and generate and returns the presigned url. The presigned url can be used to send the request in a later point in time without requiring additional authentication. It requires a valid `AWS_Region` parameter and `Credentials`, as well as aspecialized object of the `AbstractS3Request` entity, which must be of one of the following types:
+The `GeneratePresignedUrl` Amazon S3 actions allows you to presign a request and generates and returns the presigned url. The presigned url can be used to send the request in a later point in time without requiring additional authentication. It requires a valid `AWS_Region` parameter and `Credentials`, as well as aspecialized object of the `AbstractS3Request` entity, which must be of one of the following types:
 
 * `PutObjectRequest`, with an association to a `PutObjectPresignConfig` object.
 * `GetObjectRequest`, with an association to a `DeleteObjectPresignConfig` object.

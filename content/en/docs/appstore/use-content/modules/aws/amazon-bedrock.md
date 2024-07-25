@@ -259,7 +259,7 @@ This entity holds information about additional model-specific response fields. I
 | `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
 | `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
 
-All returned ChatCompletionsResponse_Extension objects can be retrieved using the [ChatCompletionsResponse: Get Requested Response Fields](#get-response-fields) operation.
+All returned ChatCompletionsResponse_Extension objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
 
 ##### 4.1.1.10 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
@@ -853,7 +853,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `ChatCompletionsResponse`|
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
@@ -865,7 +865,7 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request`, `AmazonBedrockConnection`| `ChatCompletionsResponse`|
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
 In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
@@ -948,15 +948,15 @@ This operation corresponds to the **Request_CreateResponseFieldRequest** microfl
 
 If the used model supports that response field, it will be returned as a [ChatCompletionsResponse_Extension](#chatcompletions-response-extension) object as part of the response.
 
-##### 4.2.2.6 ChatCompletionsResponse: Get Requested Response Fields {#get-response-fields}
+##### 4.2.2.6 Response: Get Requested Response Fields {#get-response-fields}
 
 Use this microflow to retrieve all requested model-specific response fields from the response.
 
-This operation corresponds to the **ChatCompletionsResponse_GetRequestedResponseFields** microflow.
+This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
 
 | Input | Output |
 | --- | --- |
-| `ChatCompletionsResponse (object)`| `RequestedResponseField (list)` |
+| `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
 
 #### 4.2.3 Other Operations
 

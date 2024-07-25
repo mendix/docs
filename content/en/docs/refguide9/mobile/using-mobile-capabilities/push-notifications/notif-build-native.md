@@ -10,26 +10,54 @@ aliases:
 
 ## 1 Introduction
 
-Now that you have implemented push notifications, it is time to build and deploy the native mobile app. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
+This section will help you set up your progressive web app to handle push notifications.
 
-## 2 Building Your Native App {#build-native-app}
+## 2 Initialize Firebase
 
-1. In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
-    * If you are building your native app for the first time, click [here](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) for instructions.</br>
-1. After choosing the type of build (local development or distribution) go to **App capabilities**.</br>
-1. Under **Firebase configuration** switch **Push notifications** to **On**.</br>
-1. Scroll down and upload the Firebase configurations:</br>
-    1. *google-services.json* for the Android build.</br>
-    1. *GoogleServices-Info.plist* for the iOS build.</br>
+Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there:
 
-    These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. 
+1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto/front-end/customize-styling-new/#custom-web).
+1. Edit the created `index.html` file in your favorite text editor.
+1.  Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
 
-    | **File**    | **Source**   | **Usage**      |
-    | -------- | -------- | ------- |
-    | **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
-    | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
-1. Save the configuration. Now you are ready to build.
+    ```html
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js"></script>
+    <script>
+    const firebaseConfig = {
+    apiKey: "...",
+    authDomain: "...",
+    projectId: "...",
+    storageBucket: "...",
+    messagingSenderId: "...",
+    appId: "..."
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    ```
 
-When building for local development, keep in mind that Mendix's Make it Native does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
+1.  Create the file `theme\web\firebase-messaging-sw.js` with the following content (replace `firebaseConfig` with your configuration from step 3):
 
-Now you are able to build, the next step is to run your app in an emulator or test device. This will let you send your first test push notification in the next section.
+    ```js
+    importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js');
+    importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js');
+    const firebaseConfig = {
+    apiKey: "...",
+    authDomain: "...",
+    projectId: "...",
+    storageBucket: "...",
+    messagingSenderId: "...",
+    appId: "..."
+    };
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+    ```
+
+1.  Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
+
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
+
+1. Add the snippet `WebRegistration_Snippet` found in `_USE ME/Web` in the Push Notifications module to your home page. It contains a button that your users must click to register for push notifications.
+1. Stop the Mendix Runtime in Studio Pro if it is running and start it afterwards. Do not use **Rerun**, as that will not pick up the changes in your theme folder.
+
+You have now successfully added a button to enable receiving push notifications for your users. Go ahead to the next section to test sending a push notification.

@@ -12,50 +12,50 @@ This section will help you set up your progressive web app to handle push notifi
 
 ## 2 Initialize Firebase
 
-Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there. Follow these steps to do so:
+Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there:
 
-1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto/front-end/customize-styling-new/#custom-web).
-2. Edit the created `index.html` file in your favorite text editor.
-3. Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
+1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto9/front-end/customize-styling-new/#custom-web).
+1. Edit the created `index.html` file in your favorite text editor.
+1.  Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
 
-```html
-<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js"></script>
-<script>
-const firebaseConfig = {
-  apiKey: "...",
-  authDomain: "...",
-  projectId: "...",
-  storageBucket: "...",
-  messagingSenderId: "...",
-  appId: "..."
-};
-firebase.initializeApp(firebaseConfig);
-</script>
-```
+    ```html
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js"></script>
+    <script>
+    const firebaseConfig = {
+      apiKey: "...",
+      authDomain: "...",
+      projectId: "...",
+      storageBucket: "...",
+      messagingSenderId: "...",
+      appId: "..."
+    };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    ```
 
-4. Create the file `theme\web\firebase-messaging-sw.js` with the following content (replace `firebaseConfig` with your configuration from step 3):
+1. Create the file `theme\web\firebase-messaging-sw.js` with the following content (replace `firebaseConfig` with your configuration from step 3):
 
-```js
-importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js');
-importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js');
-const firebaseConfig = {
-  apiKey: "...",
-  authDomain: "...",
-  projectId: "...",
-  storageBucket: "...",
-  messagingSenderId: "...",
-  appId: "..."
-};
-firebase.initializeApp(firebaseConfig);
-const messaging = firebase.messaging();
-```
+    ```js
+    importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js');
+    importScripts('https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js');
+    const firebaseConfig = {
+      apiKey: "...",
+      authDomain: "...",
+      projectId: "...",
+      storageBucket: "...",
+      messagingSenderId: "...",
+      appId: "..."
+    };
+    firebase.initializeApp(firebaseConfig);
+    const messaging = firebase.messaging();
+    ```
 
-5.  Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
+1. Back in Studio Pro, set the constant `WebPushVapidKey` found in `_USE ME/Web/` in the Push Notifications module to the public key of the Web Push certificate you created in part 3.
 
-  {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-implement-pwa/vapid-idwizard.png" alt="VAPID Constant"   width="400"  class="no-border" >}}
 
-6. Add the Snippet `WebRegistration_Snippet` found in `_USE ME/Web` in the Push Notifications module to your home page. It contains a button that your users must click to register for push notifications.
-7. Stop the Mendix Runtime in Studio Pro if it is running and start it afterwards. Do not use **Rerun**, as that will not pick up the changes in your theme folder.
+1. Add the snippet `WebRegistration_Snippet` found in `_USE ME/Web` in the Push Notifications module to your home page. It contains a button that your users must click to register for push notifications.
+1. Stop the Mendix Runtime in Studio Pro if it is running and start it afterwards. Do not use **Rerun**, as that will not pick up the changes in your theme folder.
 
 You have now successfully added a button to enable receiving push notifications for your users. Go ahead to the next section to test sending a push notification.

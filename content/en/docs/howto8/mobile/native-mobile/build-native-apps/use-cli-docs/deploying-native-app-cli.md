@@ -359,14 +359,14 @@ When you try to build an app for tablets, your app will run as a phone app in a 
 
 There are two ways to enable tablet mode:
 
-* If you are working with a Mac and are familiar with Git you can use XCode
+* If you are working with a Mac and are familiar with Git you can use Xcode
 * You can directly do the changes in the appropriate files using GitHub's page
 
-##### 6.2.3.1 Use XCode on a Mac
+##### 6.2.3.1 Use Xcode on a Mac
 
-By default, building for tablets is disabled in XCode. Do the following to enable tablet settings:
+By default, building for tablets is disabled in Xcode. Do the following to enable tablet settings:
 
-1. Select the following options in your XCode workspace:<br />
+1. Select the following options in your Xcode workspace:<br />
     1. **iPad**: this enables tablet mode. By default, if tablet mode in enabled you also have to support any possible orientation.<br />
     1. **Portrait**.<br />
     1. **Landscape Left**.<br />

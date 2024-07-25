@@ -59,7 +59,7 @@ When you view the details of a story, the **Story Details** pop-up window opens 
 
 ### 2.5 Changing the Status of a Story or a Task {#changing-status}
 
-If you use Studio Pro version 10.10 or higher, you can change the status of a story on the **Stories** pane. To do so, just select a new status in the **Status** column. The list of statuses to choose from can be managed via [Epics](/developerportal/project-management/epics/) in the Mendix Portal or the connected [Jira board](/developerportal/project-management/jira-connector/).
+If you use Studio Pro version 10.10 or above, you can change the status of a story on the **Stories** pane. To do so, just select a new status in the **Status** column. The list of statuses to choose from can be managed via [Epics](/developerportal/project-management/epics/) in the Mendix Portal or the connected [Jira board](/developerportal/project-management/jira-connector/).
 
 To change the status of a task, select or clear the checkbox in the **Status** column:
 

@@ -51,9 +51,9 @@ The string used to delimit values in the resulting CSV file.
 
 Indicates the maximum number of rows that can be present in the datagrid when exporting. Useful to prevent users from exporting large quantities of data, potentially placing a heavy load on the server.
 
-### Generate Excel seperator hint
+### Generate Excel separator hint
 
-If true, adds an extra line to the CSV file header that informs Excel what the seperator character is. This solves compatibility issues with Excel and localization.
+If true, adds an extra line to the CSV file header that informs Excel what the separator character is. This solves compatibility issues with Excel and localization.
 
 ### Use grid date format
 

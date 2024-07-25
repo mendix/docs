@@ -199,7 +199,7 @@ Before [adding fonts manually](#manual):
 * Understand the native mobile [local build process](/howto9/mobile/native-build-locally/)
 * Locally check out your repository 
 * Understand Git and have a Git tool installed
-* Have XCode installed for the iOS sections below
+* Have Xcode installed for the iOS sections below
 
 ### 3.3 Adding Custom Fonts With the Mendix Native Mobile Builder {#fonts-nbui}
 
@@ -271,7 +271,7 @@ Congratulations, you have learned how to add fonts to an Android app.
 
 #### 3.5.2 Adding Custom Fonts to an iOS App
 
-Use XCode to manually add fonts to an iOS app:
+Use Xcode to manually add fonts to an iOS app:
 
 1. Collect all the fonts you would like to use.
 1. Use a tool like [Open Type Inspector](https://opentype.js.org/font-inspector.html) and derive the PostScript names for each font:
@@ -282,11 +282,11 @@ Use XCode to manually add fonts to an iOS app:
     * TimesNewRomanPSMT, for regular
     * TimesNewRomanPS-BoldMT, for bold
 
-1. Open XCode and select the workspace at **ios\NativeTemplate.xcworkspace**.
+1. Open Xcode and select the workspace at **ios\NativeTemplate.xcworkspace**.
 1. Drag the renamed fonts into the **Resources/Fonts** folder in App Explorer. 
 1. Select both targets from the dialog box that shows up:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="XCode option dialog for adding files"   width="400"  class="no-border" >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-xcode-dialog.png" alt="Xcode option dialog for adding files"   width="400"  class="no-border" >}}
 
 1. Your folder structure should look like this:
 
@@ -294,7 +294,7 @@ Use XCode to manually add fonts to an iOS app:
 
 1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd>` and searching for the file. Press <kbd>{Enter}</kbd> to open it:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/xcode-open-infoplist.png" alt="XCode Open file dialog"   width="400"  class="no-border" >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/xcode-open-infoplist.png" alt="Xcode Open file dialog"   width="400"  class="no-border" >}}
 
 1. Find the key `Fonts provided by the application`. Expand it if needed:
 

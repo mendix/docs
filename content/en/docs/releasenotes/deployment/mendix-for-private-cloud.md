@@ -11,6 +11,20 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### July 18th, 2024
+
+#### License Manage CLI v0.8.0
+
+* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+* We have resolved an issue that prevented users from setting the CPU core request below 1 while creating an environment (Ticket [222687](https://mendixsupport.zendesk.com/agent/tickets/222687)) and (Ticket [222284](https://mendixsupport.zendesk.com/agent/tickets/222284)).
+* We have resolved an issue where users were unable to deselect the namespace in the **Convert Namespace** flow.
+* We have resolved an issue where users were unable to close the **Convert Namespace** screen after navigating back to the namespace selection page.
+* We have resolved an issue where a newly created standalone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
+
 ### July 10th, 2024
 
 #### Mendix Operator v2.18.0 {#2.18.0}
@@ -435,7 +449,7 @@ This feature is currently in a [beta release](/releasenotes/beta-features/).
 * We have updated components to use Go 1.19 and the latest dependency versions, in order to improve security score ratings for all container images.
 * We fixed an issue where applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/) failed.
 * We added a `runtimeLeaderSelection` option that allows you to run an environment without a leader replica - so that an app can be deployed into multiple regions.
-* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and Curl to start the Runtime.
+* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and curl to start the Runtime.
 * It is now possible to choose between plaintext and JSON formats for Mendix app logs.
 * We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
 * We have updated the list of supported platforms to include OpenShift 4.12.

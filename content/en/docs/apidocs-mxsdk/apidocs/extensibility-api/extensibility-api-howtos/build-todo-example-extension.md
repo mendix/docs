@@ -198,8 +198,8 @@ In this section, you will add a view model to store our view data:
     using Mendix.StudioPro.ExtensionsAPI.UI.WebView;
     
     namespace Mendix.ToDoExtension;
-    {
-        public class ToDoListDockablePaneViewModel : WebViewDockablePaneViewModel
+    
+    public class ToDoListDockablePaneViewModel : WebViewDockablePaneViewModel {
     
         private readonly Uri _baseUri;
         private readonly Func<IModel?> _getCurrentApp;
@@ -551,34 +551,35 @@ You also need to handle loading and saving of the todo data.
 
 In this section, you will add a menu item to the toolbar that will allow you to select the ToDo list from a menu item.
 
-1. Create a `MenuBarExtension`.
-2. Add another class and call it `ToDoListMenuBarExtension.cs`.
+1. Create a `MenuExtension`.
+2. Add another class and call it `ToDoListMenuExtension.cs`.
 3.  Replace the contents of the file with the following code:
 
     ```csharp
-    using System.ComponentModel.Composition;
-    using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
-    using Mendix.StudioPro.ExtensionsAPI.UI.Services;
-    
-    namespace Mendix.ToDoExtension;
-    
-    [Export(typeof(MenuBarExtension))]
-    public class ToDoListMenuBarExtension : MenuBarExtension
+    using System.Collections.Generic;
+using System.ComponentModel.Composition;
+using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
+using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
+using Mendix.StudioPro.ExtensionsAPI.UI.Services;
+
+namespace Mendix.ToDoExtension;
+
+[Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
+public class ToDoListMenuBarExtension : MenuExtension
+{
+    private readonly IDockingWindowService _dockingWindowService;
+
+    [ImportingConstructor]
+    public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
     {
-        private readonly IDockingWindowService _dockingWindowService;
-    
-        [ImportingConstructor]
-        public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
-        {
-            _dockingWindowService = dockingWindowService;
-        }
-    
-        public override IEnumerable<MenuViewModelBase> GetMenus()
-        {
-            yield return new MenuItemViewModel("To Do List", new[] { "View" }, "Stories")
-                { Action = () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId) };
-        }
+        _dockingWindowService = dockingWindowService;
     }
+
+    public override IEnumerable<MenuViewModel> GetMenus()
+    {
+        yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+    }
+}
     ```
 
 ## 9 Adding a Web-based User Interface
@@ -591,7 +592,7 @@ Up to now you have been adding all the logic that will allow your extension to r
 2. In the folder, add two files:
 
     * A HTML page that contains the layout of the user interface. Call it `index.html`
-    * A Javascript file that contains the client side logic for the user interface. Call it `main.js`
+    * A JavaScript file that contains the client side logic for the user interface. Call it `main.js`
 
 3. Open `index.html`.
 4.  Replace its contents with the following:
@@ -640,7 +641,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     </html>
     ```
 
-5.  Open `main.js` and add the Javascript logic by replacing the contents of the file with the following:
+5.  Open `main.js` and add the JavaScript logic by replacing the contents of the file with the following:
 
     ```js
     function postMessage(message, data) {
@@ -716,7 +717,7 @@ Up to now you have been adding all the logic that will allow your extension to r
 
 This HTML page is self-explanatory, as you are providing a very simple interface with some added css styling provided by Tailwind CSS.
 
-Within the Javascript file, you need to add some logic so that the web view can communicate with your extension logic correctly.
+Within the JavaScript file, you need to add some logic so that the web view can communicate with your extension logic correctly.
 
 You add a small helper function to simplify the call to the browser API:
 
@@ -726,7 +727,7 @@ function postMessage(message, data) {
 }
 ```
 
-You also need to perform some initialization to ensure that you can respond to messages send to javascript and 
+You also need to perform some initialization to ensure that you can respond to messages send to JavaScript and 
 
 ```javascript
 // Register message handler.
@@ -746,7 +747,7 @@ It is important to set these two `index.html` and `main.js` files to *Copy alway
 
 ## 10 Setting up Communication Between the User Interface and Extension {#set-up-communication}
 
-So far you have configured the extension to be usable in Studio Pro. You added support for storing the to do items. You also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web based javascript logic.
+So far you have configured the extension to be usable in Studio Pro. You added support for storing the to do items. You also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web-based JavaScript logic.
 
 1. Start with adding a utility class to help simplify the way you interact with web responses. Call the file `HttpListenerResponseUtils.cs`.
 2.  Replace the contents of the file with the following:

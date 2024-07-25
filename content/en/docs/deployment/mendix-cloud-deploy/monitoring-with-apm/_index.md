@@ -38,7 +38,7 @@ For details on how to add a specific APM tool to your app, see one of the follow
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
-## 2 What Information Can Mendix Supply to a SaaS-based Data Analytics Platform?
+## 2 What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?
 
 {{% alert color="info" %}}
 The integration with Splunk Cloud Platform sends only runtime application logs. It does not include other monitoring information.
@@ -48,12 +48,6 @@ Mendix provides two types of monitoring data:
 
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (for example, Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
-
-{{% alert color="info" %}}
-If you are using AppDynamics with `APPDYNAMICS_MACHINE_AGENT_ENABLED` set to `false`, you will receive only the general AppDynamics metrics provided by the AppDynamics Java Agent.
-
-Mendix recommends setting this to `true` to receive the analytics, which will help you monitor your app environment.
-{{% /alert %}}
 
 ## 3 Environment Metrics{#environment}
 

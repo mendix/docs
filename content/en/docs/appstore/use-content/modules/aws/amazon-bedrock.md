@@ -54,18 +54,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### 3.1.1 Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state.
-
-#### 3.1.2 Server-Side Validation
-
-Amazon Bedrock has server-side validation for specific models. For example, the Completion API for older Claude models requires all prompts to be in the following format:
-
-```text
-Human: <PROMPT>
-Assistant:
-```
-
-For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programatically get information about available models and their lifecycle status you can use the [ListFoundationModels](#list-foundation-models) operation.
 
 ### 3.2 Configuring AWS Authentication
 
@@ -96,7 +85,33 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.4 Invoking Specific Models by Using the InvokeModel Operation
+### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
+
+A common use-case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The [ChatCompletions](TODO) operation offers an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operation is built on top of Bedorck's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
+
+An overview on supported models and model-specifc capabilities and limitations can be found here: [Amazon Bedrock Converse API | AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
+
+To build a simple microflow that uses the ChatCompletions operation to send a single message to the Anthropic Claude 3.5 Sonnet model and show the response on a page, perform the following steps:
+
+1. Create a new microflow and give it a name, for example *AmazonBedrockChatCompletions*
+2. In the **Toolbox**, search for the **Chat Completions (without history)** operation in the *Amazon Bedrock (Operations)* and drag onto your microflow.
+4. Double click on it to see it's parameters.
+    1. The **Request** and **FileCollection** parameters are not needed for this example, so you can set them to **empty**.
+    2. For the **UserPrompt** parameter, enter a string of your choice, for example 'Hi, Claude!'. 
+    3. CLick Ok, the input for the **Connection** parameter will be created in the next step.
+5. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag to the beginning of your microflow.
+6. Double-click it to configure it's parameters.
+    1. For the **ENUM_Region** parameter, enter a value of the `AWSAuthentication.ENUM_Region` enumeration. Choose the region where you have access to Amazon Bedrock. For example, *AWSAuthentication.ENUM_Region.us_east_1*.
+    2. For the **ModelId** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
+    3. For the **UseStaticCredentials** parameter, enter *true* if you have configured static AWS Credentials, and *false* if you have configured temporary AWS Credentials.
+    4. Click Ok to close the pop-up.
+5. Double-click the ChatCompletion operation and for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
+6. From the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category and drag it to the end of your microflow.
+7. Double-click on it and pass the **Response** from the ChatCompletions operation as paramater. The **Get Model Response Text** will return the response from Claude as a string.
+8. Finally, add a **Show Message** activity to end of the microflow and configure it to show the returned response string.
+9. Add a button that calls this microflow, run your project and try it out!
+
+### 3.5 Invoking Specific Models by Using the InvokeModel Operation
 
 Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (Operations)** section. You can also find guidance on how to implement the required structures in the [GenAIComons](https://docs.mendix.com/appstore/modules/genai/) documentation.
 
@@ -128,7 +143,7 @@ If you need to invoke a specific model that is not covered by the ChatCompletion
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
-### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
+### 3.6 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
 Agents in Amazon Bedrock can perform certain automated tasks such as API calls and data source interactions. For more information, see [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html).
 

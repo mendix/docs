@@ -49,12 +49,6 @@ Mendix provides two types of monitoring data:
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (for example, Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
-{{% alert color="info" %}}
-If you are using AppDynamics with `APPDYNAMICS_MACHINE_AGENT_ENABLED` set to `false`, you will receive only the general AppDynamics metrics provided by the AppDynamics Java Agent.
-
-Mendix recommends setting this to `true` to receive the analytics, which will help you monitor your app environment.
-{{% /alert %}}
-
 ## 3 Environment Metrics{#environment}
 
 Once you have configured your data analytics platform for your app, it will automatically send information about the environment in which your app is running.

@@ -787,7 +787,7 @@ Start the app from the Mendix Portal to bind the services. Once they are bound, 
 
 ### 10.4 Error: Unable to Initialize Metrics Client: Unsupported Metric Type
 
-The app cannot be started with DataDog, Dynatrace, or other similar tools configured. The following error is displayed: `Caused by: com.mendix.metrics.MonitoringConfigurationError: Unable to initialize Metrics client: unsupported metric type: statsd`.
+The app cannot be started with Datadog, Dynatrace, or other similar tools configured. The following error is displayed: `Caused by: com.mendix.metrics.MonitoringConfigurationError: Unable to initialize Metrics client: unsupported metric type: statsd`.
 
 #### 10.4.1 Cause
 

@@ -203,7 +203,7 @@ Datadog sends gauge database metrics to Datadog as a default. Rate and count met
 
 If these additional metrics are enabled, the rate and counter metrics will be sent to Datadog. These metrics are suffixed by `_rate` and `_count`, respectively, to prevent collisions with the official Datadog metrics. You can change the metric types in the Datadog console to reflect this; for more information, see [Modify a Metric’s Type within Datadog](https://docs.datadoghq.com/developers/metrics/type_modifiers/?tab=count#modify-a-metrics-type-within-datadog) in the Datadog documentation. There is also a helpful `interval` tag (10s), which you can use here.
 
-You can find the correct type and unit for submitted metrics in the GitHub repo for [Datadog core integrations](https://github.com/DataDog/integrations-core/blob/master/postgres/metadata.csv).
+You can find the correct type and unit for submitted metrics in the GitHub repo for [Datadog core integrations](https://github.com/Datadog/integrations-core/blob/master/postgres/metadata.csv).
 
 ### 5.6 System Metrics{#system-metrics}
 

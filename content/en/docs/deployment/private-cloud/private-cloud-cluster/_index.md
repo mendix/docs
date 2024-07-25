@@ -125,7 +125,7 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
     For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
 
-    In above page, once you do a json format, you will get the links for mxpc-cli for different available versions.
+    In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 

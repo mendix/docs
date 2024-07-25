@@ -94,7 +94,7 @@ Above the list, you can use the search box to search for a component name or a c
 The list shows the following information about the component:
 
 * **Component**: This is the name of the component.
-* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
+* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and Java libraries (JAR). In case a type is not recognized, it is shown as **Unknown**.
 * **Version**: This is the component version.
 * **Apps using component**: This shows the number of apps where the component is used.
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.

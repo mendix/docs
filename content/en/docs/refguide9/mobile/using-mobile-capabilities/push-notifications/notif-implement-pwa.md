@@ -1,7 +1,7 @@
 ---
-title: "Part 6: Implement Push Notifications in Your Progressive Web App"
+title: "Part 7: Implement Push Notifications in Your Progressive Web App"
 linktitle: "6. Push Notifications in Progressive Web App"
-url: /refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/
+url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/
 weight: 70
 description: Tutorial for implementing push notifications in a progressive web app.
 ---
@@ -14,7 +14,7 @@ This section will help you set up your progressive web app to handle push notifi
 
 Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there:
 
-1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto/front-end/customize-styling-new/#custom-web).
+1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto9/front-end/customize-styling-new/#custom-web).
 1. Edit the created `index.html` file in your favorite text editor.
 1.  Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
 

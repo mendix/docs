@@ -91,7 +91,7 @@ The **Generate document** activity has been added:
 
 {{< figure src="/attachments/refguide7/desktop-modeler/document-templates/how-to-create-your-own-documents/2018-03-01_13-06-33.png" class="no-border" >}}
 
-After you have configured the general settings of the document template, you do not need a seperate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
+After you have configured the general settings of the document template, you do not need a separate commit for **NewOrderDocument**. This entity is automatically committed via the document template activity.
 
 Now that you have set up the **Generate document** configuration, you can configure the template itself.
 

@@ -67,7 +67,7 @@ Typically, the Google Tag widget in **Advanced** mode with the **Command** setti
 
 #### 2.2.2 Event Command {#widget-advanced-event}
 
-When **Command** is set to **Config**, the widget issues an `event` command to `gtag.js`. This requires **Event name** and accepts additional parameters configured via the **Parameters** property. Additionally, if the **Track Page Changes** property is set to **Yes**, the widget re-issues the `event` command when a page change happens.
+When **Command** is set to **Event**, the widget issues an `event` command to `gtag.js`. This requires **Event name** and accepts additional parameters configured via the **Parameters** property. Additionally, if the **Track Page Changes** property is set to **Yes**, the widget re-issues the `event` command when a page change happens.
 
 For this scenario, a widget in the **Advanced** mode must be combined with either a widget in **Basic** mode or with a widget in **Advanced** mode with the **Config** command.
 

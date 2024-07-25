@@ -801,7 +801,7 @@ When a user successfully signs in at your IdP, your IdP may or may not return an
 
 ## 9 Testing and Troubleshooting{#testing}
 
-Once you have your app deployed, you can test the SSO set-up by trying to login. If you have multiple IdPs setup, you will be able to choose which IdP to use for authentication. If you have only one IdP provider configured, then you will be taken directly to that IdP's sign in page.
+Once you have your app deployed, you can test the SSO set-up by trying to login. If you have multiple IdPs set up, you will be able to choose which IdP to use for authentication. If you have only one IdP provider configured, then you will be taken directly to that IdP's sign in page.
 
 The OIDC SSO module uses two endpoints at your IdP to achieve the SSO. You may get errors from either of these endpoints.
 

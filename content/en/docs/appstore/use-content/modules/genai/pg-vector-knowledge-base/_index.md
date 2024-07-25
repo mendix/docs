@@ -3,6 +3,7 @@ title: "PgVector Knowledge Base"
 url: /appstore/modules/genai/pgvector/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace. This module allows developers to integrate PostgreSQL databases with pgvector installed as knowledge bases into their Mendix app."
+weight: 70
 aliases:
    - /appstore/modules/pgvector-knowledge-base/
 ---

@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Installed the latest version of Mendix Studio Pro
 * Downloaded the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
-* Setup a chart, see [How to Create a Chart](/howto/front-end/charts-basic-create/)
+* Set up a chart, see [How to Create a Chart](/howto/front-end/charts-basic-create/)
 
 ## 3 Changing the Layout {#layout-changes}
 

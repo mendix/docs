@@ -312,7 +312,7 @@ still fail if the keystore values are invalid.
 
 #### Fixes
 
-* We fixed an issue with android certificates not being verified correctly.
+* We fixed an issue with Android certificates not being verified correctly.
 * We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
 
 ### Release v1.0.81

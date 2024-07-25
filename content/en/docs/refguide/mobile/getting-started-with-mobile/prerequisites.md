@@ -138,4 +138,4 @@ To use Studio Pro on a Mac device, you will first need to install and configure 
 
 Storing a Mendix project on a network drive or in a cloud folder (such as those provided by OneDrive or Dropbox) is **not recommended**. Storing your projects in such folders will significantly slow down Studio Pro and cause errors when trying to run projects containing a native mobile profile. Note also that projects with a native mobile profile can only be started from drive **C:**.
 
-If your home directory is managed by OneDrive, create a new folder on your computer outside of your home directoy (for example **C:\Mendix**) and place the Mendix projects in there.
+If your home directory is managed by OneDrive, create a new folder on your computer outside of your home directory (for example **C:\Mendix**) and place the Mendix projects in there.

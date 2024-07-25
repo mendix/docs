@@ -70,7 +70,7 @@ Content-Disposition: form-data;
 --MultipartBoundary--
 ```
 
-Curl example:
+curl example:
 
 ```bash
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"

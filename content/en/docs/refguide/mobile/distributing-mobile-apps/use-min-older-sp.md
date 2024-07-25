@@ -276,11 +276,11 @@ As a last resort, delete the following folders relatively to the project's direc
 1. Delete the `.gradle` folder.
 2. Delete the `.idea` folder.
 3. Delete both `build` folders in `/app` and `/mendixNative`.
-4. Restart android studio and open the project.
+4. Restart Android Studio and open the project.
 
 #### 6.1.3 Windows Long Path Limitation
 
-When building on windows, the NDK build step generates extremely long paths that might break the build. A possible indication of this problem is errors in the form of "can't find directory or file in `c:\<extremely long path name>`".
+When building on Windows, the NDK build step generates extremely long paths that might break the build. A possible indication of this problem is errors in the form of "can't find directory or file in `c:\<extremely long path name>`".
 
 To fix this issue, do the following:
 

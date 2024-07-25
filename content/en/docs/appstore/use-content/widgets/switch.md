@@ -31,7 +31,7 @@ Features:
 * Execute a microflow when toggled
 * Execute a nanoflow when toggled
 * Add a label to the switch
-* Display in either iOS style or android(material design)
+* Display in either iOS style or Android (material design)
 * Display in various bootstrap styles
 
 To use this widget, place it in the context of an object that has a Boolean attribute.

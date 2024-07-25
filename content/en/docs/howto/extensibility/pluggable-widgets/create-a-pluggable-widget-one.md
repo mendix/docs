@@ -267,7 +267,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     Explaining the code:
     * The `style` property is an object containing CSS properties which can be used to quickly add styling to a component. It is available on all [HTML components offered by React](https://react.dev/reference/react-dom/components/common#applying-css-styles).
-    * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
+    * The question marks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
     * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
 
 3. Refresh your Mendix app in the browser, the result should be a well-styled input widget. If the change does not appear immediately, open your browser's devtools and disable cache. This ensures you are loading your widget's latest assets.

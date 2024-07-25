@@ -111,6 +111,8 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
 8. Finally, add a **Show Message** activity to end of the microflow and configure it to show the returned response string.
 9. Add a button that calls this microflow, run your project and try it out!
 
+{{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
+
 ### 3.5 Invoking Specific Models by Using the InvokeModel Operation
 
 Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (Operations)** section. You can also find guidance on how to implement the required structures in the [GenAIComons](https://docs.mendix.com/appstore/modules/genai/) documentation.

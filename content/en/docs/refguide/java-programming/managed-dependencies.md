@@ -176,7 +176,7 @@ You may have a VPN or firewall that blocks/restricts access to certain websites.
 
 If the above options do not work, you can try adding your proxy settings to the JDK proxy settings file. After you reboot your system to apply the settings, Gradle will pick up these settings and will attempt to connect to external repositories through the proxy.
 
-You can find the file your java installation under `/conf/net.properties`
+You can find the file for your Java installation under `/conf/net.properties`
 
 Sample `net.properties` file
 

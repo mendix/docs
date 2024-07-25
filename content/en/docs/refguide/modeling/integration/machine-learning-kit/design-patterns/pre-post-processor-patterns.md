@@ -18,7 +18,7 @@ This document explores four pre-processor and post-processor design patterns for
 * [ONNX operators](#onnx-operators)
 * [Hybrid activities](#complex-hybrid)
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
@@ -245,7 +245,7 @@ More often than not the pre- and post-processing steps are deeply coupled with t
 
 There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. 
 
-A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
+A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a Java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
 
 ```
 

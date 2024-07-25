@@ -135,7 +135,7 @@ The action is defined as follows:
 * **ResultEntity** – the type of object that will be the result of the import
 * **Return type** – an object of the type specified with `ResultEntity`
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" class="no-border" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping Java action parameters" class="no-border" >}}
 
 Implement the action in Java as follows:
 
@@ -143,7 +143,7 @@ Implement the action in Java as follows:
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String java action" class="no-border" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String Java action" class="no-border" >}}
 
 ## 5 Some Development Tips
 

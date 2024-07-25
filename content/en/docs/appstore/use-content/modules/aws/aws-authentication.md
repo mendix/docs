@@ -292,7 +292,7 @@ The following are the relevant entities in the domain model for customizing HTTP
 * `AbstractRetryPolicy` - Use one of this entities specializations to specify a retry policy.
 * `NumberOfRetryPolicy` - This entity can be used to configure the number of retries.
 * `NoRetryPolicy` - Including this entity sets the retry behavior to *never retry*.
-* `AbstractHttpConfig` - Use one of this entities to override the values of a speciic HttpClient.
+* `AbstractHttpConfig` - Use one of this entities to override the values of a specific HttpClient.
 * `ApacheHttpClient` - This entity can be used to override the settings of the ApacheHttpClient. More Information: [Apache based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-apache.html).
 * `UrlHttpClient` - This entity can be used to use the URL-Connection based HttpClient and override it's settings. More Information: [URL-Connection based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-url.html).
 

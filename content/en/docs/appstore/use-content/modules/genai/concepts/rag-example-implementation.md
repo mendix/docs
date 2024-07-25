@@ -49,7 +49,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 2. Go to the **Retrieval Augmented Generation** example and read **Step 1: Introduction**.
 
-3. [Setup a PostgreSQL vector database](/appstore/modules/genai/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
+3. [Set Up a PostgreSQL vector database](/appstore/modules/genai/pgvector-setup/) and configure the connection in **Step 2: Vector Database Configuration**.
 
 4. Go to **Step 3: Knowledge Base** and create embeddings from a text and store. You can use our default text about ornamental flowering plants, or paste your own content.
 

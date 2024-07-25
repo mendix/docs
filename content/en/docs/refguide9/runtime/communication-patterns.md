@@ -486,7 +486,7 @@ Data is transported between Mendix Client and database as required. The followin
 
 * Data entered by a user in a page is stored in JavaScript objects
 * For communication to the Runtime Server, JavaScript objects are serialized to JSON
-* The Runtime Server transforms the JSON objects to java MxObjects
+* The Runtime Server transforms the JSON objects to Java MxObjects
 * MxObject properties are bound to SQL statement parameters as needed by SQL queries
 * JDBC result set data is transformed to MxObjects
 * MxObjects are serialized to JSON when send to the Mendix Client

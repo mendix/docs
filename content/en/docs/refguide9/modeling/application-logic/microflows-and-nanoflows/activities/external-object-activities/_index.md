@@ -2,7 +2,6 @@
 title: "External Object Activities"
 url: /refguide9/external-object-activities/
 weight: 100
-tags: ["studio pro"]
 ---
 {{% alert color="warning" %}}
 These activities can only be used in **Microflows**.

@@ -3,7 +3,6 @@ title: "Image Collection"
 url: /refguide8/image-collection/
 weight: 5
 description: "Why and how to create an image collection"
-tags: ["Studio Pro", "Images", "Image Collection"]
 ---
 
 ## 1 Introduction
@@ -25,7 +24,7 @@ To add an image collection, do the following.
 1. Right-click a module in the **Project Explorer**.
 2. Select **Add other > Image collection**:
 
-    {{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/add-collection.png" alt="Add an image collection" >}}
+    {{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/add-collection.png" alt="Add an image collection" class="no-border" >}}
 
 3. Give your image collection a name.
 
@@ -33,7 +32,7 @@ To add an image collection, do the following.
 
 You can perform the following actions within image collections using the icons at the top of the image collection tab.
 
-{{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" >}}
+{{< figure src="/attachments/refguide8/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" class="no-border" >}}
 
 Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 

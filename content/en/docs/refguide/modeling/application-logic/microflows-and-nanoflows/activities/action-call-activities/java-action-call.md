@@ -2,7 +2,6 @@
 title: "Java Action Call"
 url: /refguide/java-action-call/
 weight: 10
-tags: ["studio pro", "Java", "java action call", "action call"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -18,7 +17,7 @@ The **Java action call** activity can be used to call a [Java action](/refguide/
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" max-width=80% >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/java-action-call-properties.png" alt="Java Action Call Properties" max-width=80% class="no-border" >}}
 
 The **Java action call** properties pane consists of the following sections:
 
@@ -45,7 +44,7 @@ An argument is the input data that you are passing to the Java action. For each 
 
 The values of the arguments are defined using [expressions](/refguide/expressions/):
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" class="no-border" >}}
 
 ### 3.3 Return Type
 

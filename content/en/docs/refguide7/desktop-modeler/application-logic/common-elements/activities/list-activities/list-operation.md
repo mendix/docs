@@ -1,6 +1,7 @@
 ---
 title: "List Operation"
 url: /refguide7/list-operation/
+canonical_url: "https://docs.mendix.com/refguide/list-operation/"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

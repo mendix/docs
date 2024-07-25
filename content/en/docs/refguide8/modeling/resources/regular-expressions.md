@@ -2,7 +2,6 @@
 title: "Regular Expressions"
 url: /refguide8/regular-expressions/
 weight: 70
-tags: ["studio pro", "regular expressions", "regular expression"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -92,4 +91,4 @@ The following quantifiers can be used:
 ## 4 Read More
 
 * [Class Pattern](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html#matches-java.lang.String-java.lang.CharSequence-) – information from the Oracle Java SE documentation
-* [Using Regular Expressions in Java](http://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website
+* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website

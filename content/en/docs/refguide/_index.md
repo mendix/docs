@@ -2,12 +2,11 @@
 title: "Studio Pro 10 Guide"
 url: /refguide/
 description: "The various sections of the Mendix Studio Pro Guide provide details on the features and functionality of the Mendix Platform."
-tags: ["studio pro"]
 weight: 10
 no_list: false
 description_list: true
 cascade:
-    - space: "Studio Pro 10 Guide"
+    - content_type: "Studio Pro 10"
     - mendix_version: 10
     - sitemap:
         priority: 0.8
@@ -17,7 +16,7 @@ cascade:
 
 The *Mendix Studio Pro 10 Guide* covers important topics concerning [Studio Pro](/refguide/modeling/), the [Mendix Runtime](/refguide/runtime/), and other components of the Mendix Platform.
 
-Studio pro runs on both Windows and macOS. Before installing Studio Pro 10, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
+Studio Pro runs on both Windows and macOS. Before installing Studio Pro 10, please read [System Requirements](/refguide/system-requirements/). For information on how to install Studio Pro, see [Installing Mendix Studio Pro](/refguide/install/).
 
 If you have been using Studio Pro version 9, Mendix recommends reading [Upgrading from Mendix Studio Pro 9 to 10](/refguide/upgrading-from-9-to-10/).
 
@@ -41,7 +40,7 @@ When it comes to testing your application, you first need to decide what you are
 
 Studio Pro allows you to run and view your app locally or in the default environment.
 
-For more information on options for deploying your app see [Deployment](/developerportal/deploy/).
+For more information on options for deploying your app see [Deployment](/deployment/).
 
 ## 3 Version Control
 

@@ -3,7 +3,6 @@ title: "Published REST Service"
 url: /refguide/published-rest-service/
 weight: 10
 description: "Configuration options for a published REST service"
-tags: ["published REST", "service", "reserved URL prefixes", "swagger", "security", "CORS", "resources", "operation", "how-to", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -127,7 +126,7 @@ When you select a resource, you see the [operations](/refguide/published-rest-op
 
 Resources and operations are appended to [Location](#location) to form a URL on which they can be accessed.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-rest-services/published-rest-service/example-location-url.png" class="no-border" >}}
 
 ## 8 Read More
 

@@ -3,7 +3,6 @@ title: "Migrate to Git"
 url: /developerportal/general/migrate-to-git/
 weight: 10
 description: "Describes how to migrate apps to Git."
-tags: ["Studio Pro", "Team Server", "migration", "Git", "migrate"]
 aliases:
     - /developerportal/collaborate/migrate-to-git/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -22,22 +21,16 @@ To be able to migrate your app to Git, your app needs to meet the following crit
 * The main line ('main') branch in the app is Mendix version 9.24.11 or above
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
-* The size of the `.mpr` file for the latest revision of your app is less than 100MB
-* The version control history consists of fewer than 1000 commits
+* The size of the `.mpr` file for the latest revision of your app and the total number of commits in your version control history fall in one of these three categories:
+
+    1. fewer than 2500 commits and `.mpr` file smaller than 50 MB
+    2. fewer than 2000 commits and `.mpr` file smaller than 75 MB
+    3. fewer than 1250 commits and `.mpr` file smaller than 125 MB
 
 {{% alert type="info" %}}
 
 Only a user with the Scrum Master role can migrate an app. For more information, see [App Roles](/developerportal/general/app-roles/). 
 
-{{% /alert %}}
-
-{{% alert color="warning" %}}
-At this moment we are limited in our ability to migrate large SVN repositories under the following circumstances:
-
-* if the full SVN repository including all history and branches exceeds approximately 80GB, migration will probably fail
-* some Git repos will not support `.mpr` files which are greater than 100MB
-
-We are working on solutions to both notify you when this issue applies to you and to resolve these issues for large repositories.
 {{% /alert %}}
 
 ## 3 How Migration Works
@@ -72,7 +65,7 @@ Inform your team members that they should commit their changes before migration.
 After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
 1. Open Studio Pro, then select the app that was migrated to Git. You can identify it by its Git icon. Click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control.
-1. Remove previous local copies of the app to avoid working on the wrong app version.
+2. Remove previous local copies of the app to avoid working on the wrong app version.
 
 ## 5 If Migration Failed
 

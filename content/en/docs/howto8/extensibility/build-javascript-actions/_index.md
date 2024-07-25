@@ -1,9 +1,7 @@
 ---
 title: "Build JavaScript Actions"
 url: /howto8/extensibility/build-javascript-actions/
-category: "Extensibility"
 weight: 40
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 Mendix has made nanoflows even more powerful with pluggable nanoflow actions — called JavaScript actions — in Mendix 8. With JavaScript actions, the standard set of actions can be extended with new functionality. This how-to series teaches you how to harness the power of JavaScript actions step by step: 

@@ -2,7 +2,6 @@
 title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
-tags: ["data hub", "Catalog", "data hub Landscape"]
 weight: 36
 aliases:
     - /releasenotes/data-hub/
@@ -12,6 +11,86 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### July 18, 2024
+
+#### Fixes
+
+* We fixed an issue where the owner drop-down did not show all the possible users.
+* We addressed a bug where switching the active company resulted in an error on the registration form.
+
+### July 11, 2024
+
+#### Fixes
+
+* We fixed a bug that allowed users to add tags from other companies to their endpoints.
+* We made some minor aesthetics changes to the Control Center and **Service Edit** pages to align with the overall aesthetic standards defined for the app. 
+
+### June 27, 2024
+
+#### Fixes 
+
+* We addressed some aesthetics bugs and made some aesthetic improvements on the **Home**, **Search**, and registration pages. 
+
+#### Improvement
+
+* We have aligned our top-menu navigation to the rest of the platform, which has adjusted some navigation across the Catalog app.
+
+### June 20, 2024
+
+#### Fixes 
+
+* We fixed a bug where the **Share** button would sometimes copy the wrong link to the clipboard.
+* We improved notification messages to include more details.
+
+### June 6, 2024
+
+#### Fixes
+
+* We fixed some minor aesthetics bugs that were present on the **Home**, **Curate**, and registration pages. 
+
+### May 23, 2024
+
+#### Fixes
+
+* We fixed an issue where entity results were not appearing in the UI search results.
+
+### May 16, 2024
+
+#### Fixes
+
+* We fixed an issue in the Registration API where an unintended `400` response was returned if an owner that was not yet known in the Catalog was assigned to an application.
+
+### April 25, 2024
+
+#### Fixes
+
+* We fixed an issue where in some rare cases when switching from the Landscape View of a data source to its Data View, information from a different data source would be shown.
+
+### April 18, 2024
+
+#### Fixes
+
+* We fixed an issue where updating a service contract from the **Search** page results in incorrectly parsed OData services.
+* We addressed an issue where clicking **Browse** from the hub URL redirects to the **Home** page instead of the **Search** page.
+
+### April 11, 2024
+
+#### Fixes
+
+* We addressed a potential security vulnerability ([CVE-2023-52428](https://nvd.nist.gov/vuln/detail/CVE-2023-52428)).
+
+### March 21, 2024
+
+#### Improvement
+
+* We improved the accessibility for various pages on the app.
+
+### March 14, 2024
+
+#### Fixes
+
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
 
 ### February 29, 2024
 
@@ -151,7 +230,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Features
 
-* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://forum.mendix.com/link/space/catalog).
+* We added [beta](/releasenotes/beta-features/) support for published REST services (OpenAPI) to the Catalog. REST services in your Mendix app are now automatically registered when you deploy to the Mendix Cloud. For more information, see [OpenAPI Automatic Registration](/catalog/register/openapi-automatic-registration/). Have a look and [let us know what you think](https://community.mendix.com/link/space/catalog).
 
 #### Improvements
 
@@ -637,7 +716,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### New Features
 
-* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the [Curation Bar](/catalog/manage/curate/#curation-bar) for the data source and click **Edit**, then click **Delete Data Source**.
+* We added an option to [delete a data source](/catalog/manage/curate/#delete-data-source), available for users with [curation](/catalog/manage/curate/) rights. To delete a data source, go to the Curation Bar for the data source and click **Edit**, then click **Delete Data Source**.
 
 #### Fixes
 
@@ -754,7 +833,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where the [Business Owner](/catalog/manage/search/#busines-owner) name was not visible in the metadata of a data source.
+* We fixed an issue where the [Business Owner](/catalog/manage/search/#business-owner) name was not visible in the metadata of a data source.
 * We removed the temporary administration link from the home page. The owner management page is now available from the [Curate](/catalog/manage/curate/) tab for Data Hub Curators and from the [Administration](/control-center/catalog-admin/#custom-owners) page in Control Center for Mendix Admins.
 
 ### October 14, 2021
@@ -1092,6 +1171,6 @@ No more! We are very proud to announce that [Mendix Data Hub](https://catalog.me
 
 Every organization has valuable data in different applications. With Mendix Data Hub, you can use the data from different sources in your app without having to deal with complex integrations. All you need to do is just search for the data, add it to your domain model, and use it.
 
-Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](http://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
+Want to know how it can help you? Check out the launch blog post: [Data Hub: The Low-Code Approach to Data Integration](https://www.mendix.com/blogs/data-hub-the-low-code-approach-to-data-integration).
 
 For even more information, please consult the [Data Hub Guide](/data-hub/).

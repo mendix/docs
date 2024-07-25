@@ -3,7 +3,6 @@ title: "Wrap Services, APIs, or Databases with OData"
 url: /refguide9/wrap-services-odata/
 linktitle: "Wrap with OData"
 weight: 80
-tags: ["connectors", "studio pro", "build", "connector guide", "connector kit 2", "published odata services", "integration"]
 ---
 
 ## 1 Introduction
@@ -83,7 +82,7 @@ The microflow is executed when a consumer sends a GET request to the service end
 5. Store the count value in the **ODataResponse** object.
 6. Return a list of objects that matches the exposed entity.
 
-{{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." >}}
+{{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/call-microflow-implementation.png" alt="Example of an implementation of calling a microflow to handle an incoming GET request." class="no-border" >}}
 
 {{% alert color="info" %}}
 When you use a microflow to provide data, any security constraints are applied to the result of the microflow.{{% /alert %}}
@@ -172,11 +171,11 @@ Set up a connector module that communicates to the Twitter API with OData by fol
 
 1. Use the Twitter API to find the JSON structures for the calls for users, tweets, and followers, and add the [JSON structure](/refguide9/json-structures/) for each.
 2. Create [import mappings](/refguide9/mapping-documents/#import-mappings) for each, which generates entities in your domain model.
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-connector-domain-model.png" alt="Domain model for Twitter connector module." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-connector-domain-model.png" alt="Domain model for Twitter connector module." class="no-border" >}}
 3. Publish all three non-persistable entities as a published OData service (see [Non-Persistable Entities as Published OData Resources](#npe-published-odata)).
 4. Select a new [key](#select-key) to be used for each entity. For example, you can set the **UserId**, a **String** value, as a key for the **User** entity.
 5. For every exposed entity, specify the microflow that handles the count and query capabilities (for example, a QueryFollowers microflow). See [Data Sources for Published OData Resources](#odata-data-sources).
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/query-followers-microflow.png" alt="Microflow for querying followers." class="no-border" >}}
 6. Export the metadata file of the published OData service to be used in the client module. To do so, open the service and go to **Settings**, and click **Export** next to the **Metadata** field.
 
     Since you are working in local development environment and not deploying locally, your published resource will not automatically be available in the Catalog or the Data Hub pane. See [Data Hub without the Mendix Cloud](/data-hub/data-hub-without-mendix-cloud/) to understand how to work with Data Hub (external entities and the Catalog) for local deployments.
@@ -191,15 +190,15 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 
     Double-click the entity, and in the **Persistable** field, choose **No**. The domain model for the Twitter client looks like this:
 
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/twitter-client-domain-model.png" alt="Twitter client domain model with external entities and non-persistent entity." class="no-border" >}}
 
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/newtwitterinput-microflow.png" alt="Microflow that handles inputted usernames." class="no-border" >}}
 
 4. Add a new page to display the data, and create a ShowUserPage microflow.
 
     The microflow includes a **Retrieve Object** action that pulls information from the **TwitterClientInput** non-persistable entity. In this case, you can use the XPath constraint [Username=$TwitterClientInput/Username] to get the users with the username you entered. This is then translated into an OData request that is sent to the connector.
 
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/showuserpage-microflow.png" alt="Microflow that handles TwitterClientInput request and shows a page." class="no-border" >}}
 
 5. On the **TwitterPage**, use a **Data Grid**, and pull data **by Association** from the to get the tweets and followers connected to the user.
 
@@ -208,7 +207,7 @@ Set up a Twitter client module that allows users to input a Twitter ID and commu
 Run the Twitter client to receive decoded OData requests. 
 
 1. Manually parse the URI, and create a microflow to read data from the URI. 
-    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/read-uri-data.png" alt="Microflow that finds query parameter values." >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/wrap-services-odata/read-uri-data.png" alt="Microflow that finds query parameter values." class="no-border" >}}
 2. Extract the Twitter user ID from the query, and use a **Call REST** object to ping the Twitter API for the followers (or other data). The API response goes into the import mapping.
 
 Ensure that you have created microflows for all entities used in your connector. When you run your app, you can enter the ID of a Twitter user and view their latest tweets and followers.

@@ -1,13 +1,12 @@
 ---
 title: "SDK How-tos"
 url: /apidocs-mxsdk/mxsdk/sdk-howtos/
-category: "Mendix Platform SDK"
 weight: 4
 ---
 
 ## 1 Introduction
 
-Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step how-to's listed below to learn everything you need about using the SDK. After finishing the how-to's, you'll not only know how to use the SDK, but also how all the parts fit together.
+Before the Mendix SDK can make your life easier, there's some learning to do. Follow the step-by-step how-tos listed below to learn everything you need about using the SDK. After finishing the how-tos, you'll not only know how to use the SDK, but also how all the parts fit together.
 
 If you'd rather find your own way, just scroll through this page to get an overview of the available documents and examples, and start wherever you want. To get set up quickly, take a look at [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/).
 

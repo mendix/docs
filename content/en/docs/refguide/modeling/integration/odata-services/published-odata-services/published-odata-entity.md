@@ -1,11 +1,9 @@
 ---
 title: "Published OData Entity"
 url: /refguide/published-odata-entity/
-tags: ["studio pro", "OData"]
 alias:
     - /refguide/published-odata-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
-
 ---
 
 ## 1 Introduction
@@ -44,7 +42,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-You cannot include associations to and from entities that are published without the __Readable__ capability. 
+You cannot include associations to and from entities that are published without the **Readable** capability. 
 
 ### 3.1 Required Validation Rules for Published Attributes
 
@@ -76,7 +74,7 @@ These features make it easier to refactor the domain model without affecting ext
 
 ## 5 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, as it can change in certain scenarios (such as data migration). That means it is not recommended to use the ID as a key. A published entity should have a key attribute or a combination of attributes that form a key instead. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+A published entity should have a key attribute or a combination of attributes that form a key. This allows you to easily retrieve the entity and makes it easy to combine data referring to the same object (for example a customer) from several systems. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -88,11 +86,13 @@ Having an [index](/refguide/indexes/) for the key attribute (or attributes) make
 
 You can set unique and required constraints using [validation rules](/refguide/validation-rules/).
 
-Selecting a key is required when the __Readable__ capability is enabled.
+Selecting a key is required when the **Readable** capability is enabled.
 
 {{% alert color="info" %}}
 Selecting more than one attribute as the key is only available for published OData services that use OData v4.
 {{% /alert %}}
+
+Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
 
 ## 6 Capabilities {#capabilities}
 
@@ -113,7 +113,7 @@ This is the behavior when you choose the action **Write to database**.
 
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
 ### 6.2 Readable {#readable}
 
@@ -129,7 +129,7 @@ A published OData entity is readable by default. It is possible to disable this 
 When **Readable** is enabled, you can configure how data is queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
 
 {{% alert type="info" %}}
-Support for publishing entities without the __Readable__ capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
 ## 6.2.1 Query Options {#query-options}
@@ -158,7 +158,7 @@ This is the behavior when you choose the action **Write to database**.
 
 You can also choose the **Call a microflow** action to use your own logic. Specify a microflow that takes the entity as a parameter, and optionally a [System.HttpRequest](/refguide/http-request-and-response-entities/) parameter. In the microflow, you can use the [Commit](/refguide/committing-objects/) activity to commit the changes to the database. 
 
-In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [OData query options](/refguide/odata-query-options/#updating-objects).
+In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
 ### 6.4 Deletable {#deletable}
 

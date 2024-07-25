@@ -2,11 +2,10 @@
 title: "Build a Mendix Hybrid App Locally"
 url: /howto8/mobile/build-hybrid-locally/
 weight: 9
-tags: ["mobile", "deploy", "hybrid", "local"]
 ---
 
 {{% alert color="warning" %}}
-Hybrid mobile packages require Node.js v12 with npm v6. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
+Hybrid mobile packages require Node.js v18. Versions above those fail to install and compile dependencies. We are working to update hybrid mobile packages to support later versions.
 
 To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
 {{% /alert %}}
@@ -20,10 +19,10 @@ This document describes how to build your hybrid apps locally.
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
+* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp/#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
-* Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
+* Install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
 ### 2.1 Prepare Your App for Building
 
@@ -45,19 +44,19 @@ To target a specific DTAP endpoint with your app, you can specify it as a parame
 npm run package -- --env target=test  # target the test endpoint for ARM architecture
 ```
 
-Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env.target` parameter is provided, the hybrid app endpoint will default to the production environment. 
+Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env target` parameter is provided, the hybrid app endpoint will default to the production environment. 
 
 ### 2.2 Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or Xcode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Xcode is more involved, but Xcode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
 #### 2.2.1 Building iOS Using the Cordova CLI
 
-**Prerequsites:**
+**Prerequisites:**
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
-This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
+This process is shorter than using Xcode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
     * Starts a release build that will create binaries for a physical device
@@ -66,55 +65,55 @@ This process is shorter than using XCode but might require more work to understa
     * Optionally, if you wish to build for an emulator and do a debug build use the following command instead: `npm run build -- ios --debug --emulator`.
 1. When the build succeeds the generated *IPA* file can be found in */build/platforms/ios/build*. That folder should have the following file structure(if you did a build for an emulator an *.app* file will be available):
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final.png" alt="Signing screen correctly configured" class="no-border" >}}
 
-1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documenation.
+1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documentation.
 
-#### 2.2.2 Building iOS using XCode
+#### 2.2.2 Building iOS using Xcode
 
-Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
+Using Xcode can be easier than the Cordova CLI due to Xcode's friendly visual interface. To build your app using Xcode do the following:
 
 1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/xc-workspace.png" alt="Opening XCWorkspace"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/xc-workspace.png" alt="Opening XCWorkspace"   width="400"  class="no-border" >}}
 
 1. Select the root element from the tree view in the left-side panel:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/root-element.png" alt="Selecting the root element"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/root-element.png" alt="Selecting the root element"   width="400"  class="no-border" >}}
 
 1. The screen should change to the following view. If it does not, select the item under **Targets** on the left panel not the item under **App** and select the tab **Signing & Certificates**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-wrong.png" alt="Signing screen with errors"   width="400"  class="no-border" >}}
 
 1. Both **Debug** and **Release** might have been configured for **Automatically manage signing**. Clear both checkboxes to switch to manual signing. The screen should change to the following:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  class="no-border" >}}
 
 1. Enable **Automatically manage signing** again.
-1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, Xcode will prompt you to do so.
 1. When configured correctly all errors should be gone.
 1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/target-device.png" alt="Signing screen correctly configured"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/target-device.png" alt="Signing screen correctly configured"   width="400"  class="no-border" >}}
 
 1. Select **Product** and then **Archive** from the menu bar:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  class="no-border" >}}
 
-1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through Xcode's **Window** menu:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  class="no-border" >}}
 
 1. You can now use the **Distribute App** button to distribute your app to the appstore or archive it for local distribution:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png" alt="Distribute Options"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png" alt="Distribute Options"   width="400"  class="no-border" >}}
 
 ## 3 Building Your Android App Locally {#building-android-locally}
 
 **Prerequisites:**
 
 * Install [AndroidStudio](https://developer.android.com/studio)
-* Install [NodeJS 12 with NPM 6](https://nodejs.org/download/release/latest-v12.x/) using the all-in-one installation option
+* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Install JDK 1.8
 * Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys/#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages/#download-local-package) from Cloud Portal and unzip it in a known location
@@ -169,7 +168,7 @@ The command to build your app locally for release is `npm run build -- android -
 
 1. When the build succeeds the generated *APK* file can be found in **/build/platform/android/app/release**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  class="no-border" >}}
 
 #### 3.3.2 Building Android Using Android Studio
 
@@ -177,28 +176,28 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 1. Start Android Studio:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png" alt="Android Studio Welcome Screen"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-welcome.png" alt="Android Studio Welcome Screen"   width="400"  class="no-border" >}}
 
 1. Open an existing Android Studio project and select your app's Android folder, for example **/Downloads/localbuild/build/platform/android**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png" alt="Android Studio Open Folder"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-open-folder.png" alt="Android Studio Open Folder"   width="400"  class="no-border" >}}
 
 1. Wait for Android Studio to finish syncing your app.
 1. Click the **Build** > **Generate Signed Bundle / APK**:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png" alt="Android Studio Build Menu"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-build-menu.png" alt="Android Studio Build Menu"   width="400"  class="no-border" >}}
 
 1. Select the *APK* checkbox:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png" alt="Android Studio Sign Wizard Step 1"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-1.png" alt="Android Studio Sign Wizard Step 1"   width="400"  class="no-border" >}}
 
 1. Select your Android keystore and complete the form with the correct keystore password, alias, and password:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png" alt="Android Studio Sign Wizard Step 2"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-2.png" alt="Android Studio Sign Wizard Step 2"   width="400"  class="no-border" >}}
 
 1. Select the destination folder for the *APK*, **Build Variant** release, and **V1 and V2 Signature** versions:
 
-    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png" alt="Android Studio Sign Wizard Step 3"   width="400"  >}}
+    {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/android-studio-sign-wizard-3.png" alt="Android Studio Sign Wizard Step 3"   width="400"  class="no-border" >}}
 
 1. Click **Finish**.
 
@@ -206,7 +205,7 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 
 ## 4 Read More
 
-* [Deploy and Manage Guide](/developerportal/deploy/)
+* [Deployment](/deployment/)
 * [Offline Reference Guide](/refguide8/offline-first/)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

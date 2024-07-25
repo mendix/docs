@@ -1,9 +1,7 @@
 ---
 title: "Domain Model"
 url: /refguide8/domain-model/
-category: "App Modeling"
 weight: 30
-tags: ["domain model", "entity", "association", "annotation", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -15,7 +13,7 @@ A domain model consists of [entities](/refguide8/entities/) with their relations
 
 Below is a domain model that defines customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide8/attributes/) of the entities together with the [type](/refguide8/attributes/#type) of data they hold. There is also a [non-persistable](/refguide8/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/annotated-domain-model.png" alt="Domain Model annotated with structure" class="no-border" >}}
 
 | Element | Displays |
 | --- | --- |
@@ -39,7 +37,7 @@ In the database every entity is stored in a separate table and has columns for t
 
 Take a look at the following domain model.
 
-{{< figure src="/attachments/refguide8/modeling/domain-model/customer-order.png" >}}
+{{< figure src="/attachments/refguide8/modeling/domain-model/customer-order.png" class="no-border" >}}
 
 The entity 'Customer' is stored in the table 'module$customer' which is shown below. Take note of the 'system$owner' and 'system$changedby' columns which contain the IDs of the 'User' objects from the 'System' module.
 

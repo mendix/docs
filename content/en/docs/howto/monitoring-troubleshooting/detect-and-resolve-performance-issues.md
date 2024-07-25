@@ -1,9 +1,7 @@
 ---
 title: "Detect and Resolve Performance Issues"
 url: /howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/
-category: "Monitoring and Troubleshooting"
 description: "Describes possible performance issues with root causes and resolutions."
-tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 
 ## 1 Introduction
@@ -12,7 +10,7 @@ Any application can run into performance issues. This document describes a numbe
 
 The flow chart below, which is designed like a microflow, presents infrastructure for deciding how to troubleshoot and resolve performance-related issues. This document is based on this flow.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580226.png" class="no-border" >}}
 
 ## 2 Issues
 
@@ -77,31 +75,31 @@ Tools you can use to identify your slow microflow and the specific slow activiti
 
 ### 4.1 Server Monitoring
 
-The Mendix Server and [Developer Portal](/developerportal/operate/) offer a number of performance graphs and logs.
+The Mendix Server and [Apps](/developerportal/) offer a number of performance graphs and logs.
 
 ### 4.2 Microflow Debugger
 
 Once you have identified a slow page, it is easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows (such as data sources), and also at sub-microflows, on-change event handlers, and domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a breakpoint and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### 4.3 Microflow Time Stamps
 
 Times stamps can allow you to objectively identify slow microflows and activities by timing their execution. To do so, consider a simple microflow like this:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580222.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580222.png" class="no-border" >}}
 
 To set up a timer, first add a **Create variable** activity as the first step, where you are going to store the current time:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580221.png" class="no-border" >}}
 
 Then, add a **Log message** activity at the end of your microflow:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580219.png" class="no-border" >}}
 
 Set up the activity similar to this:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580220.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580220.png" class="no-border" >}}
 
 Here, you are calculating the number of milliseconds between when your microflow began and when it completed, and then writing that out to the console as info. When you run your app, you will see a line in the console every time this microflow executes. The message will contain the execution time.
 
@@ -131,7 +129,7 @@ If you are committing large amounts of data (for example, thousands of rows), yo
 
 Below is an example of how to retrieve in batches. You can do something quite similar for commits as well.
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580216.png" class="no-border" >}}
 
 #### 5.2.2 Refresh in Client {#refresh}
 
@@ -149,11 +147,11 @@ If your microflow is slow as a whole but there is no particular activity that st
 
 If you find yourself committing data inside a loop, you can typically optimize this by making changes to your entities and storing them into a list. For example, consider this microflow:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580218.png" class="no-border" >}}
 
 Every time the loop executes, an **Order** object is committed. You can optimize this by committing the entire list outside the loop after processing is completed. Simply set the **Commit** property to **No** on the **Change order** activity, then add a commit of the entire OrderList outside the loop:
 
-{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/18580217.png" class="no-border" >}}
 
 This ultimately reduces the number of database operations that need to be performed during execution of your microflow, thus enhancing performance.
 
@@ -169,12 +167,12 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at the retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## 6 Using MxAssist Best Practice Bot
+## 6 Using Best Practice Recommender
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
+[Best Practice Recommender](/refguide/best-practice-recommender/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Recommender**.
 
-For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from Best Practice Recommender](/refguide/performance-best-practices/).
 
 ## 7 Read More
 
-* [Expert Webinar Series: Performance](http://ww2.mendix.com/Expert-Webinar.Performance.html)
+* [Expert Webinar Series: Performance](https://youtu.be/xNR3BjJYt3U)

@@ -1,10 +1,8 @@
 ---
 title: "Atlas UI Kit for Figma"
 url: /howto/front-end/figma-ui-kit/
-category: "Front End"
 weight: 70
 description: "Learn how to set up and use the Atlas UI Kit for Figma."
-tags: ["Figma", "UI", "Kit", "design"]
 ---
 
 ## 1 Introduction

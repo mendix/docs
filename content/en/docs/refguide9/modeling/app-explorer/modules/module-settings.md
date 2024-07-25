@@ -2,7 +2,6 @@
 title: "Module Settings"
 url: /refguide9/module-settings/
 weight: 10
-tags: ["studio pro", "module settings", "module", "add-on", "solution"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,11 +13,11 @@ In Studio Pro 9, add-on modules and solution modules were previously available i
 
 Module settings allow you to choose the type of the module when you build your app and to set a version for certain module types:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/module-settings-dialog.png" class="no-border" >}}
 
 To open module settings, select the module in the App Explorer and double-click **Settings**:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/settings.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/modules/module-settings/settings.png" class="no-border" >}}
 
 ## 2 Module Type {#module-type}
 

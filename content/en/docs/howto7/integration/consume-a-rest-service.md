@@ -1,9 +1,7 @@
 ---
 title: "Consume a REST Service"
 url: /howto7/integration/consume-a-rest-service/
-category: "Integration"
 weight: 9
-tags: ["integration", "rest service", "data model", "consume"]
 description: "Describes how to get information from a REST service."
 ---
 
@@ -24,7 +22,7 @@ We will start by providing the Modeler as an example of what the REST service re
 1. Open your browser and go to [https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti](https://en.wikipedia.org/api/rest_v1/page/summary/Tahiti).
     * This calls the REST service with a GET request – the result is the summary of the [Tahiti page on Wikipedia](https://en.wikipedia.org/wiki/Tahiti) in the JSON format
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/get-call-result.png" alt="Screenshot of the result of the rest call" class="no-border" >}}
 
 2. Copy the whole JSON snippet.
 3. Now you need to add a new JSON structure to your app. A [JSON structure](/refguide7/json-structures/) contains sample JSON that you can use in the app. To do this, follow these steps in the Desktop Modeler:<br>
@@ -33,7 +31,7 @@ We will start by providing the Modeler as an example of what the REST service re
     3. Paste the JSON snippet.<br>
 4. Click **Refresh**. This analyzes the structure of the JSON snippet so we can use later.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/json-structure.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/json-structure.png" class="no-border" >}}
 
 5. Click **OK**.
 
@@ -48,7 +46,7 @@ To create an import mapping:
 3. Double-click **JSON_structure**.
 4. Click **Expand all** and then click **Check all**.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/import-mapping.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/import-mapping.png" class="no-border" >}}
 
 5. Click **OK**. You will now see the structure on the right.
 6. Click **Map automatically** in the editor toolbar. The Modeler will inform you that it has applied some changes. That means that it has generated entities that match the JSON structure.
@@ -56,7 +54,7 @@ To create an import mapping:
 
 ## 4 Adding an Input Entity to the Domain Model
 
-Our sevice takes the title of the page as an input. It returns the summary of the page. 
+Our service takes the title of the page as an input. It returns the summary of the page. 
 
 In this section, you are creating an entity that represents this input and associating it with its summary.
 
@@ -71,7 +69,7 @@ To add an input entity to the domain model, follow these steps:
 7. Click **OK**.
 8. Drag an association from **Input** to **Summary**.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/domain-model.png" class="no-border" >}}
 
 ## 5 Calling the REST Service in a Microflow
 
@@ -84,13 +82,13 @@ To call the REST service in a microflow, follow these steps:
 3. From the **Toolbox**, drag a **Call REST service** activity into the microflow and double-click it.
 4. Edit the location to `https://en.wikipedia.org/api/rest_v1/page/summary/{1}`, with the parameter `$Input/Title`.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/location.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/location.png" class="no-border" >}}
 
 5. On the **Response** tab, set **Response handling** to **Apply import mapping** (or to **Import mapping for the entire response**, depending on your Modeler version).
 6. Click **Select** and double-click **Import_mapping**.
 7. For **Variable**, enter *Summary*.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/response.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/response.png" class="no-border" >}}
 
 8. Click **OK**.
 9. From the **Toolbox**, drag a **Change object** activity into the microflow and double-click it.
@@ -100,15 +98,15 @@ To call the REST service in a microflow, follow these steps:
 13. Under **Member**, select **MyFirstModule.Input_Summary (MyFirstModule.Summary)**.
 14. Under **Value**, enter `$Summary`.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/set-association.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/set-association.png" class="no-border" >}}
 
 15. Click **OK**
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/change-object.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/change-object.png" class="no-border" >}}
 
 16. Click **OK**
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/microflow.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/microflow.png" class="no-border" >}}
 
 There you have it: a microflow that takes the title of an article as input and associates it with its summary.
 
@@ -136,7 +134,7 @@ To create a page for this app, follow these steps:
 16. Click **OK**.
 17. Delete the **Save** and **Cancel** buttons.
 
-    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/page.png" >}}
+    {{< figure src="/attachments/howto7/integration/consume-a-rest-service/page.png" class="no-border" >}}
 
 ## 7 Filling In the CreateInput Microflow
 
@@ -159,7 +157,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 **How to consume REST natively with Mendix**
 
-{{% youtube waOlvSqdaP4 %}}
+{{< youtube waOlvSqdaP4 >}}
 
 ## 9 Read More
 

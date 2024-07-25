@@ -2,7 +2,6 @@
 title: Generate Jump-To Options
 url: /refguide9/generate-jump-to-options/
 weight: 35
-tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
 {{% alert color="warning" %}}
@@ -17,7 +16,7 @@ This activity was introduced in Studio Pro [9.17.0](/releasenotes/studio-pro/9.1
 
 The **Generate jump-to options** activity allows you to generate a list of workflow activities where the workflow can jump to as its next step. The [Apply jump-to option](/refguide9/apply-jump-to-option/) activity should be used after the **Generate jump-to options** to let the workflow continue from the selected activity. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue. 
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options.jpg" class="no-border" >}}
 
 {{% alert color="warning" %}} 
 
@@ -37,7 +36,7 @@ This functionality is different from the [Jump activity](/refguide9/jump-activit
 
 An example of **Generate jump-to options** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

@@ -3,7 +3,6 @@ title: "App Settings"
 url: /refguide/app-settings/
 weight: 10
 description: "Settings which apply to the app as a whole."
-tags: ["app", "configuration", "runtime", "Studio Pro", "languages", "certificate", "theme", "hashing", "hashing algorithm"]
 aliases:
     - /refguide/project-settings/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -13,7 +12,7 @@ aliases:
 
 In the **App Settings** dialog box, you can alter the settings that are applicable to the whole app:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-settings-configuration.png" width="300px" class="no-border" >}}
 
 The categories described below are available.
 
@@ -29,7 +28,7 @@ These settings influence the behavior of the Runtime when running your applicati
 
 ### 3.1 Use React Client (Beta) {#react-client}
 
-This setting enables the new React client. This client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
+This setting enables the new React version of the Mendix Client. This React client was released into beta in [Mendix 10.7](/releasenotes/studio-pro/10.7/#react-client). There are three options:
 
 * **No**: Do not use the React client (default).
 * **Yes**: Use the React client. In this mode, you will get consistency errors for incompatible widgets.
@@ -51,19 +50,21 @@ If you experience an issue while running your app in which objects seem to be lo
 
 Here you have the option to change the default URL prefix for all pages and microflows in your application. The default prefix value is `/p/`.
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/url-prefix.png" width="300px" class="no-border" >}}
 
 The URL prefix must be alphanumeric. It cannot be empty, contain whitespace, or contain any of the following values: 
 
 * "api-doc"
+* "file"
 * "odata"
 * "odata-doc"
-* "pages"
 * "reload"
 * "rest-doc"
 * "ws"
 * "ws-doc"
 * "xas"
+
+Furthermore, static files are served on `/`. So any prefix that has the same name as a static folder located in `/deployment/web/` will cause an error.
 
 If the URL prefix breaks any of the rules mentioned above, then you will get a consistency error.
 
@@ -71,7 +72,13 @@ If the URL prefix breaks any of the rules mentioned above, then you will get a c
 
 Here you can select which Java version to use for you application.
 
-For local development the JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk-directory) has to be compatible with the Java version configured here.
+{{% alert color="info" %}}
+
+For Studio Pro versions 10.6.7 and 10.8.0 and above, you can choose Java 17.
+
+{{% /alert %}}
+
+For local development the Java version configured here needs to have a corresponding JDK configured in the [Studio Pro preferences](/refguide/preferences-dialog/#jdk).
 
 Applications deployed to the cloud will use this setting to select which Java version to use.
 
@@ -93,7 +100,7 @@ Here you can select a microflow that is automatically executed when a shutdown c
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
-The result of each check is returned as a string, which is displayed in the [Developer Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
+The result of each check is returned as a string, which is displayed in the [Mendix Portal](/developerportal/deploy/environments/). When the microflow returns an empty string, the application is healthy; otherwise, the string presents an explanation of why the application is not healthy.
 
 This microflow gets called every 10 seconds to check if the app is still healthy. This is done by executing it using m2ee on the admin port of your app. For more information, see the section [Health Check](/refguide/monitoring-mendix-runtime/#check-health) in *Monitoring Mendix Runtime*.
 
@@ -213,6 +220,19 @@ To force a query to the runtime, use microflows. For example, create a microflow
 
 Default: *Yes*
 
+### 3.15 Foreign Key Constraints {#database-fkc}
+
+If this option is enabled, database [foreign key constraints](/refguide/data-storage/#fkc) will be used. An attempt to commit a dangling reference will throw a runtime exception.
+
+{{% alert color="info" %}}
+This option was added in Mendix version 10.10.
+{{% /alert %}}
+
+Default: *depends on the version of Mendix used to create the app:*
+
+* *Yes* for apps created with Mendix versions 10.6.0 and above
+* *No* for apps created with Mendix versions below 10.6
+
 ## 4 Languages Tab {#languages-tab}
 
 For more information about using different languages in your app, see [Language Menu](/refguide/translatable-texts/).
@@ -255,7 +275,7 @@ Certificates can be installed in the Windows Certificate Store using the **Insta
 {{% /alert %}}
 {{% alert color="info" %}}
 
-When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](http://www.ietf.org/rfc/rfc5746.txt)-compatible.
+When an SSLException occurs at runtime with the message `HelloRequest followed by an unexpected handshake message` or when a web service does not respond (Java 6 update 21 and above) when using the imported certificates, this is caused by either the client or server not being [RFC-5746](https://www.ietf.org/rfc/rfc5746.txt)-compatible.
 
 If updating the client and server to be compatible with RFC-5746 is not feasible, the following should be added to **Extra JVM parameters** in the **Server** tab to avoid this exception:
 
@@ -265,7 +285,7 @@ Be warned that this does make the client-server communication vulnerable to an e
 
 When client and server are RFC-5746 compatible at a future point in time, this JVM parameter can be removed.
 
-For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](http://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
+For background information, see [Transport Layer Security (TLS) Renegotiation Issue Readme](https://www.oracle.com/technetwork/java/javase/documentation/tlsreadme2-176330.html).
 
 {{% /alert %}}
 
@@ -299,7 +319,7 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/green-module.png" alt="green module" class="no-border" >}}
 
 ### 6.4 Ordering UI Resource Modules
 
@@ -307,7 +327,7 @@ When a module contains styling (SCSS/CSS), be sure it is added to the compiled C
 
 You can set an explicit order in the theme settings (**App Settings** > **Theme**). This contains a list of all modules that are marked as UI resource modules, and allows you to set the explicit order in which they are added to the CSS file. Note that the lower a module is ordered in the list, the higher its precedence. For example, an app that uses a company theme module could be ordered as follows:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/app-settings/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
 ## 7 Workflows Tab {#workflows}
 
@@ -372,9 +392,25 @@ A microflow selected for this setting will start every time a workflow changes i
 
 A microflow selected for this setting will start every time a user task changes its state, for example, when a user task is completed or paused. This setting is app-wide; you can override it by setting a workflow-specific microflow in [workflow properties](/refguide/workflow-properties/#events).
 
-## 8 Deployment Tab {#deployment}
+## 8 Dependencies Tab {#deployment}
 
-This tab allows you to exclude libraries from deployment. For example, you can exclude libraries when you consume a different version of an existing add-on module.
+{{% alert color="info" %}}
+The Deployment tab was renamed to **Dependencies** in Studio Pro 10.12.0.
+{{% /alert %}}
+
+This tab can be used to view the managed dependencies in your app in one place and to manage the dependencies in the userlib directory. It contains three tabbed sections.
+
+### 8.1 Overview
+
+This shows all the direct managed dependencies in your app listed by group and artifact. It shows which versions of the dependencies you have and which modules they are coming from. If your app reports multiple versions of the same group and artifact then the highest version is used, so having multiple versions of a dependency is not necessarily a problem.
+
+### 8.2 Managed Dependency Exclusions
+
+This shows all the managed dependencies in your app listed by package name. This overview includes both direct and transitive dependencies. If you have conflicts between different dependencies, you can uncheck here any files which you want to exclude. Ensure you leave at least one dependency which supports any calls made by your app or its dependencies.
+
+### 8.3 Userlib Exclusions
+
+This shows the libraries from the userlib directory and allows you to exclude them from deployment. Use this, for example, if there is an add-on module that ships with a different version of a library that is already in your 'userlib' folder.
 
 ## 9 Solution Tab {#solution}
 

@@ -1,10 +1,8 @@
 ---
 title: "REST Services"
 url: /refguide/integration/rest-services/
-category: "Integration"
-weight: 51
-description: "Introduces REST."
-tags: ["REST services"]
+weight: 30
+description: "Introduces REST services."
 ---
 
 ## 1 Introduction

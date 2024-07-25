@@ -1,9 +1,7 @@
 ---
 title: "Migrate Your Mendix Database"
 url: /howto8/data-models/migrating-your-mendix-database/
-category: "Data Models"
 weight: 7
-tags: ["database", "migrate", "PostgreSQL", "export", "import"]
 ---
 
 ## 1 Introduction
@@ -39,11 +37,11 @@ These settings can be configured as follows:
 
 * Studio Pro – in **Project Explorer**, expand **Project**, double-click **Settings**, edit a configuration, and go to the **Custom** tab:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398970.png" >}} 
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398970.png" class="no-border" >}} 
 
 * Service Console – click an app in the left pane, click **Configuration**, click **Advanced**, then see **Custom Mendix settings**:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398971.png" >}} 
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/19398971.png" class="no-border" >}} 
 
 * m2ee-tools – add the custom settings to the mxruntime section (for more information, see [Full Documented m2ee](https://github.com/mendix/m2ee-tools/blob/develop/examples/full-documented-m2ee.yaml))
 
@@ -75,7 +73,7 @@ To do this, perform the following steps:
     * **User name** – the user name of a database administrator in your local PostgreSQL
     * **Password** – the password for the user specified above
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/postgresql-config.png" >}}
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/postgresql-config.png" class="no-border" >}}
 
     Your new configuration will be set as the active configuration.
 5. Ensure that PostgreSQL is running locally on the correct port.
@@ -99,13 +97,13 @@ To export a PostgreSQL database, refer to either the [pg_dump](https://www.postg
 
 ### 4.2 Uploading an Exported PostgreSQL Database to the Mendix Cloud Database
 
-Use Developer Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in the Developer Portal: select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
+Use Mendix Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in [Apps](https://sprintr.home.mendix.com/): select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
 
 ## 5 Exporting a Mendix Cloud Database
 
 The same procedure can be used to export an existing Mendix Cloud database, import it into an on-premises PostgreSQL source database and migrate that to an on-premises non-PostgreSQL target database.
 
-Export the Mendix Cloud database via the Developer Portal. This can be accessed using the Nodes page in the Developer Portal:
+Export the Mendix Cloud database via the Mendix Portal. This can be accessed using the Nodes page in the Mendix Portal:
 
 1. Select your app and environment.
 2. Click **Backups**.
@@ -146,9 +144,9 @@ To do this, perform the following steps:
 
     as shown in the highlighted image below:
 
-    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/sap-postgres-config.png" >}}
+    {{< figure src="/attachments/howto8/data-models/migrating-your-mendix-database/sap-postgres-config.png" class="no-border" >}}
 
-4. Create an environment using the SAP HANA database service using Mendix Developer Portal.
+4. Create an environment using the SAP HANA database service using Mendix Portal.
 5. Deploy the mda, but **do not start the application**.
 6. Sign in to the SAP BTP, Cloud Foundry environment (containing the SAP HANA service) using the Cloud Foundry command line.
 7. Set the following runtime properties in the SAP HANA environment using the command line. Use the values from the PostgreSQL instance values you noted above.
@@ -161,5 +159,5 @@ To do this, perform the following steps:
     cf set-env {application-name}  MXRUNTIME_SourceDatabasePassword {password}
     ```
 
-8. Start the application either from the Developer Portal or the command line. 
+8. Start the application either from the Mendix Portal or the command line. 
 9. Once the application is started, verify the data in the application.

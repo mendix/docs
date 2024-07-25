@@ -1,9 +1,7 @@
 ---
 title: "Create a Custom Save Button"
 url: /howto8/logic-business-rules/create-a-custom-save-button/
-category: "Logic and Business Rules"
 weight: 3
-tags: ["microflow", "logic", "save button", "how-to"]
 ---
 ## 1 Introduction
 
@@ -28,7 +26,7 @@ To replace the default **Save** button with a custom one, follow these steps:
 
 1. Open the **Customer_Detail** page:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/customer-detail.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/customer-detail.png" class="no-border" >}}
 
 2. Select the **Save** button press <kbd>Delete</kbd> to remove it.
 
@@ -36,17 +34,17 @@ To replace the default **Save** button with a custom one, follow these steps:
 
 4. In the **Select Microflow** dialog box, click **New** to create a new microflow. called **Customer_Save**.
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/customer-save.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/customer-save.png" class="no-border" >}}
 
 5. After the button is created, open its **Properties** pane.
 
 6. Change the **Caption** property to *Save*:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/button-properties.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/button-properties.png" class="no-border" >}}
 
 7. Set a floppy disk as the **Icon**:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/18580987.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/18580987.png" class="no-border" >}}
 
 You have created a button that calls a microflow.
 
@@ -56,22 +54,22 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
 
 1. Right-click the new **Microflow** button and select **Go to microflow** to open the new microflow. The microflow should look like the one below:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/created-microflow.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/created-microflow.png" class="no-border" >}}
 
 2. Open the **Toolbox** and select the **Commit object(s)** activity there:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/8946802.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/8946802.png" class="no-border" >}}
 
 3. Drag a **Commit object(s)** action from the **Toolbox** to the flow between the start and end events.
 4. Double-click the **Commit object(s)** activity to open its properties.
 
 5. In the **Input** section, select **Customer** for **Object or List**, and click **OK**:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/commit-object-properties.png" class="no-border" >}}
 
 6. Open the **Toolbox**, find the **Close page** activity there, and drag it into the flow after the **Commit object(s)** activity:
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/close-page-activity.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/close-page-activity.png" class="no-border" >}}
 
 You have recreated the default **Save** button logic.
 
@@ -85,13 +83,13 @@ To extend the logic with a custom message that will be shown when end-users clic
 
 3. In the **Template** property enter a text that will be displayed in the message. Type in *Customer is saved!* 
 
-    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/show-message-properties.png" >}}
+    {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/show-message-properties.png" class="no-border" >}}
 
 4. Click **OK** to save the changes. 
 
 Congratulations! You have created a microflow and customized the **Save** button: 
 
-{{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/microflow.png" >}}
+{{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/microflow.png" class="no-border" >}}
 
 ## 6 Read More
 

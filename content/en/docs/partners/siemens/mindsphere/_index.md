@@ -1,39 +1,34 @@
 ---
 title: "Insights Hub"
 url: /partners/siemens/mindsphere/
-category: "Siemens"
 description: "Presents reference content for using apps deployed to Insights Hub."
 weight: 10
-tags: ["Siemens", "MindSphere", "Insights Hub"]
 ---
 
 ## 1 Introduction
 
 Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix Applications. There are two ways to leverage these integrations.
 
-1. If you would like to have a standalone Mendix application and want to incorporate IIoT Data coming from Insights Hub into your business logic, then [Insights Hub IIoT for Makers](#iiot-for-makers) is the right choice for you.
+1. If you would like to have a standalone Mendix application and just want to incorporate IIoT Data coming from Insights Hub into your business logic, please see [Siemens Insights Hub – API calls only](/partners/siemens/mindsphere-api-only/).
 
-2. If you would like to have full integration within Insights Hub displaying your application on the Insights Hub Launchpad, manage the user access via the Insights Hub Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the Insights Hub eco system to other Insights Hub customers (multitenancy), then **Mendix on Insights Hub** is the right choice.
+1. If you would like to have full integration within Insights Hub displaying your application on the Insights Hub Launchpad, manage the user access via the Insights Hub Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the Insights Hub eco system to other Insights Hub customers (multitenancy), then see the documentation described below.
 
-## 2 Insights Hub IIoT for Makers{#iiot-for-makers}
+Within the Mendix Academy two learning paths are provided to show how to develop a full integrated Insights Hub application:
 
-**Insights Hub IIoT for Makers** is the ideal solution if you want to add IIoT data coming from Insights Hub to an app which runs in the Mendix Cloud or another platform, especially when you are combining Insights Hub data with information from other sources.
+* [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path teaches you how to develop an app for Insights Hub with Mendix
+* [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 
-With Insights Hub IIoT for Makers, you can use either REST or OData via Data Hub for integration.  
+Once your app is registered in Insights Hub, there are a number of things you need to consider as you develop your Mendix app. These are covered in the following two documents:
 
-Insights Hub IIoT for Makers uses the [IIoT Authenticator Module](https://marketplace.mendix.com/link/component/117578) to authenticate your REST and OData calls to Insights Hub.
+* [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/) – covers things which you should address when developing for Insights Hub, including the following:
 
-The Insights Hub IIoT for Makers is easy to add to your app but has the following limitations:
+    * [Cloud Foundry environment variables](/partners/siemens/mindsphere-development-considerations/#cfenvvars)
+    * [Local testing](/partners/siemens/mindsphere-development-considerations/#localtesting)
+    * [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy)
+    * [Validation<br style="margin-bottom: 10px;">](/partners/siemens/mindsphere-development-considerations/#validation)
 
-* You cannot make your app multi-tenant – see [Multi-tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations* for more information on multi-tenancy
-* Your app cannot be deployed to the Insights Hub platform and cannot leverage the Insights Hub Application Lifecycle including the deployment to third parties
-* End-users cannot use Insights Hub credentials to sign in to your app, you must handle app security within your app
-* It is not possible to use Sub- / Cross Tenancy
+* [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/) – contains more technical details about the Insights Hub modules that you need to include in your Mendix app to enable it to run on Insights Hub
 
-For full information on using the Insights Hub IIoT for Makers see [Insights Hub IIoT for Makers](/partners/siemens/mindsphere-app-service/).
+If you want to work with an example application, look at the following document:
 
-## 3 Mendix on Insights Hub {#mendix-on-mindsphere}
-
-A Mendix app can be fully integrated into Siemens Insights Hub's application lifecycle. This includes the capability to provide your app to third parties in the Insights Hub eco system. To find out how to develop and deploy your app to Siemens Insights Hub, see [Siemens Insights Hub – Deployment](/developerportal/deploy/deploying-to-mindsphere/).
-
-Once your app is registered in Insights Hub, there are a number of things you need to consider as you develop your Mendix app. For details see [Mendix on Insights Hub](/partners/siemens/mendix-on-mindsphere/).
+* [How to Use the Siemens Insights Hub Monitor Example](/partners/siemens/mindsphere-example-app/) – this contains documentation and assistance in using the [Siemens Insights Hub Monitor Example](https://marketplace.mendix.com/link/component/117954) available in the Marketplace

@@ -2,7 +2,6 @@
 title: "Workflows"
 url: /refguide9/workflows/
 weight: 20
-tags: ["workflow", "workflows", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -40,7 +39,7 @@ To add a workflow to your app, do the following:
 1. In the [App Explorer](/refguide9/app-explorer/), right-click the module or a folder you want to create a page in and select **Add workflow**.
 2. In the **Add workflow** dialog box, fill in Name and click **OK**:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" >}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/add-workflow-dialog.jpg" alt="Adding Workflow" class="no-border" >}}
 
 The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide9/workflow-parameters/).
 
@@ -87,7 +86,7 @@ When using cut/copy/paste, note the following:
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
-* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#2-performing-basic-functions))
+* Workflow (this can be only be done in the [App Explorer](/refguide9/app-explorer/#basic-functions))
 * WorkflowContext
 * Start activity
 * End activity (the final **End activity** which is at the end of the workflow)
@@ -133,7 +132,7 @@ Do the following:
 5. Set **Workflow** to to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
-    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500">}}
+    {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500" class="no-border" >}}
 
 7. Click **OK**.
 
@@ -181,7 +180,7 @@ You can trigger workflows or user tasks from pages via specific on-click events 
 
 ## 8 Workflow Commons Module
 
-The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in the Developer Portal. These templates already contain the **Workflows Commons** module.
+The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Apps](https://sprintr.home.mendix.com/). These templates already contain the **Workflows Commons** module.
 
 For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/).
 

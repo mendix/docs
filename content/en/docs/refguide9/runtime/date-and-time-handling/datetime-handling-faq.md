@@ -1,8 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
 url: /refguide9/datetime-handling-faq/
-notoc: true
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -11,7 +9,7 @@ This page addresses some FAQs about DateTime.
 
 ## 2 What Is DateTime for Computer Programs?
 
-A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [http://en.wikipedia.org/wiki/Unix_time](http://en.wikipedia.org/wiki/Unix_time).
+A DateTime is nothing more than a number to a computer. This number represents the amount of seconds (or milliseconds) since 1970-01-01 00:00:00 UTC. It's beyond the scope of this FAQ to explain why this date was universally chosen but you can find this by searching for Unix Epoch or reading [Unix Time](https://en.wikipedia.org/wiki/Unix_time).
 
 This also means there is NO time zone information stored in a DateTime itself. It is important to keep this in mind when reasoning about dates and times. For things such as comparing DateTime objects, nothing concerning localization or time zones is done. Only when formatting time, which means as much as making it readable to humans, or for operations such as getting the beginning of the day, time zones come into play.
 
@@ -66,7 +64,7 @@ It depends on when you run this statement. Usually it will return true because t
 
 ## 14 If I Am Comparing Something with a `[%CurrentDateTime%]` Token in a DataGrid, Which Time Should It Use as a Constraint for a Localized and for a Non-Localized Date? 
 
-So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
+So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in Boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
 Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the `[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
 

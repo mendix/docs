@@ -1,10 +1,8 @@
 ---
 title: "Solving Known Version Control Issues"
 url: /howto7/collaboration-requirements-management/troubleshoot-version-control-issues/
-category: "Collaboration and Requirements Management"
 weight: 7
 description: "This document presents a list of problems and fixes for version control issues."
-tags: ["version control", "troubleshoot", "modeler"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,13 +21,13 @@ Below is a list of known problems and steps to fix them.
 
 ### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
-{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" >}}
+{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" class="no-border" >}}
 
 This error means that the Modeler has problems reaching the version control server because of a proxy server.
 
 The proxy settings can be changed in the Modeler by selecting **Edit** > **Preferences** and then the **Advanced** tab. In the **Proxy server** section, you can change the proxy authentication settings. Fill in the correct **User name** and **Password** for the proxy server.
 
-{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" >}}
+{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" class="no-border" >}}
 
 ### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
@@ -122,7 +120,7 @@ Note that the first five lines are the same and after that the lists deviate.
 
 Merging the branch to the main line will result in the following information message.
 
-{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/mergesuccessfuldialog.png" >}}
+{{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/mergesuccessfuldialog.png" class="no-border" >}}
 
 Note that a conflict is reported on the project *folder*. This usually means that there is a conflict on the `svn:ignore` property.
 
@@ -134,7 +132,7 @@ To resolve a conflict on the svn:ignore property, perform the following steps.
 
     The following dialog is shown (resized to show everything):
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/editconflictsdialog.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/editconflictsdialog.png" class="no-border" >}}
 
 4. Copy all lines starting from `modeler-merge-marker` to the clipboard. 
 5. Click **Manually edit property**.
@@ -144,7 +142,7 @@ To resolve a conflict on the svn:ignore property, perform the following steps.
 
     For this example, we end up with the following combined ignore list:
 
-    {{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" >}}
+    {{< figure src="/attachments/howto7/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" class="no-border" >}}
 
     Note that it includes both the lines from the main line and from the branch. The order is not important.
 

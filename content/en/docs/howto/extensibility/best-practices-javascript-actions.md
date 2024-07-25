@@ -2,10 +2,8 @@
 title: "Implement Best Practices for JavaScript Actions"
 linktitle: "JavaScript Actions Best Practices"
 url: /howto/extensibility/best-practices-javascript-actions/
-category: "Extensibility"
 weight: 60
 description: "Describes how to create high-quality JavaScript actions, use common implementation patterns, design better APIs, and use JavaScript actions in nanoflows."
-tags: ["JavaScript", "API", "nanoflow"]
 ---
 
 ## 1 Introduction
@@ -178,7 +176,7 @@ If you know your JavaScript action does not require this extended precision (for
 const numberValue = Number(bigJsValue); // number
 ```
 
-For information on how to use *Big.js*, consult [big.js API](https://mikemcl.github.io/big.js/).
+For information on how to use *Big.js*, consult the [big.js API](https://mikemcl.github.io/big.js/).
 
 #### 2.2.3 Creating Objects
 
@@ -418,7 +416,7 @@ JavaScript Actions can be used in a nanoflow with a JavaScript action call activ
 
 Use **Category** to group actions, **Icon** and **Image** to give the exposed nanoflow action easy recognition inside the nanoflow:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/narrow-expose.png" alt="exposed nanoflow with info" width="650" class="no-border" >}}
 
 ### 3.3 Publishing JavaScript Actions
 
@@ -462,7 +460,7 @@ Initially, JavaScript actions' source code is not loaded. Their source code will
 
 After the file is loaded, breakpoints can be set in the code by clicking the inline number (**A**, in the screenshot below). Alternatively, select **Pause on caught exceptions**  could be used to find issues (**B**). As a last resort, you could alter the source code by adding the line `debugger;` (**C**). This statement will start the debugging tools the first time the action is executed, and will apply a breakpoint:
 
-{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  >}}
+{{< figure src="/attachments/howto/extensibility/best-practices-javascript-actions/debugging.png" alt="debugging"   width="500"  class="no-border" >}}
 
 ## 6 Understanding Bad Practices {#badpractice}
 

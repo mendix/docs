@@ -3,7 +3,6 @@ title: "Any Chart Widgets"
 url: /refguide/charts-any-configuration/
 description: "A reference for the configuration of the Any Chart widget to pass the correct values to plotly. This enables you to draw a wide variety of charts"
 weight: 30
-tags: ["Any Chart", "Options", "Configuration", "Charts", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -36,7 +35,7 @@ This is an unlimited string attribute which is an attribute of the entity which 
 
 In the image below, the **Source attribute** is the *data* attribute of the *ChartContext* entity which is the data view context in which the Any Chart widget is placed.
 
-{{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/chart-widgets/charts-any-configuration/any-chart-page-placement.png" class="no-border" >}}
 
 The **Source attribute** contains a JSON structure which will merge with, and overwrite, the **Static** data. Commonly, this contains the data which you wish to plot, but it can also overwrite other static elements such as the type of chart, colors of lines, or the orientation of bars in a bar chart.
 
@@ -108,7 +107,7 @@ Events will be triggered by hovering over or clicking on the points plotted on t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Preventing the hover event from triggerring will also prevent the click event from triggering. This includes setting the layout parameter `hovermode` to `false` and setting the data parameter `hoverinfo` to `skip`.
+Preventing the hover event from triggering will also prevent the click event from triggering. This includes setting the layout parameter `hovermode` to `false` and setting the data parameter `hoverinfo` to `skip`.
 {{% /alert %}}
 
 When an event occurs, plotly will return a JSON object as described here: https://plot.ly/javascript/plotlyjs-events/#event-data. This JSON data is stored in a string attribute of an entity object which is passed to **Any Data**. The JSON contains raw data from the chart which has been plotted, such as the x and y coordinates of the point, and needs to be interpreted in the microflow which is triggered by the event.

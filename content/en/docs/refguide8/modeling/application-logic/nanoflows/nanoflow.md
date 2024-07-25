@@ -1,7 +1,6 @@
 ---
 title: "Nanoflow Properties"
 url: /refguide8/nanoflow/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ This page describes the properties of nanoflows. For details on using nanoflows 
 
 An example of nanoflow properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/nanoflows/nanoflow/nanoflow-properties.png" alt="Nanoflow Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/nanoflows/nanoflow/nanoflow-properties.png" alt="Nanoflow Properties"   width="250"  class="no-border" >}}
 
 Nanoflow properties consist of the following sections:
 

@@ -1,7 +1,6 @@
 ---
 title: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
-category: "Mobile"
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -25,7 +24,7 @@ The Mendix Native Mobile Builder is a UI-based tool, complimentary to Mendix Stu
 
 #### Fixes
 
-*  We fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
+* We fixed an issue where the namespace in the `native-template` Gradle file was not updating correctly when building an application using Native Builder UI.
 
 ### Release 1.0.129
 
@@ -131,7 +130,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 * The tool now handles apps with multiple MPR files correctly.
 * The tool now discloses the error that led to a Native Template update failing in the error dialog.
-* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
+* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the Xcode or Node versions to accommodate new requirements.
 
 #### Fixes
 
@@ -219,7 +218,7 @@ App Center's CodePush OTA page improvements:
 #### Fixes
 
 * We identified and fixed a bug with AppCenter's CodePush OTA not respecting the user's platform of choice. If one of the platforms was missing an App Center build configuration, the OTA build button would remain falsely disabled.
-* We fixed an issue with missing asset files for newly-created Github projects when building in **Advanced** mode.
+* We fixed an issue with missing asset files for newly created GitHub projects when building in **Advanced** mode.
 * We identified and fixed a bug with Firebase configuration's validation when changes are made to the **App Identifier**.
 
 ### Release 1.0.90
@@ -313,7 +312,7 @@ still fail if the keystore values are invalid.
 
 #### Fixes
 
-* We fixed an issue with android certificates not being verified correctly.
+* We fixed an issue with Android certificates not being verified correctly.
 * We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
 
 ### Release v1.0.81

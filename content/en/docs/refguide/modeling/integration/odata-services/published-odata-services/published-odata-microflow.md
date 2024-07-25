@@ -1,7 +1,6 @@
 ---
 title: "Published OData Microflow"
 url: /refguide/published-odata-microflow/
-tags: ["studio pro","OData","publish"]
 aliases:
   - /refguide/published-odata-microflow-parameter/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -17,7 +16,7 @@ As of Mendix 10.2.0, Studio Pro allows you to publish microflows as part of an O
 
 Open your [published OData service](/refguide/published-odata-services/) or create a new one.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/microflows-grid.png" alt="Published microflows" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/microflows-grid.png" alt="Published microflows" width="600" class="no-border" >}}
 
 In the **Microflows** tab of the published OData service, click **Add**. This opens a selector dialog box where you can select the microflow you want to publish. You can also click **New** to create a new microflow.
 
@@ -50,7 +49,7 @@ This shows the return type of the published microflow.
 
 When you publish a microflow for the first time, the current microflow parameters are added to the **Parameters for microflow** grid of the published microflow. 
 
-{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/parameters-grid.png" alt="published microflow parameters" width="600" >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/parameters-grid.png" alt="published microflow parameters" width="600" class="no-border" >}}
 
 You can **Add** or **Delete** parameters from the published microflow.
 
@@ -60,7 +59,7 @@ To edit a published parameter, either select the parameter and click **Edit** or
 
 You can also select **Can be empty**. If this checkbox is cleared, calls to the published microflow will fail unless the parameter is provided.
 
-{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/published-parameter.png" alt="Published microflow parameter" width="700" >}}
+{{< figure src="/attachments/refguide/modeling/integration/published-odata-services/published-odata-microflow/published-parameter.png" alt="Published microflow parameter" width="700" class="no-border" >}}
 
 {{% alert color="info" %}}
 Boolean and list parameters can never be empty.

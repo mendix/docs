@@ -1,7 +1,6 @@
 ---
 title: "System Texts"
 url: /refguide/system-texts/
-tags: ["studio pro", "system text"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -11,7 +10,7 @@ System texts are texts that are shown automatically to end-users by the server o
 
 For example, if an end-user enters a string into a search field that expects a number, the system will show the error message 'Invalid number' to the end-user:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/app/system-texts/example-invalid-number.png" width="300px" class="no-border" >}}
 
 You can change the system texts in the following way:
 

@@ -3,14 +3,13 @@ title: "Version Control Menu"
 url: /refguide8/version-control-menu/
 description: "Describes the Project Menu in Studio Pro."
 weight: 40
-tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 In the **Version Control** menu you can view and/or manipulate settings that are connected to the version control. For example, you can view the history of the current development line.
 
-{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu"   width="300"  class="no-border" >}}
 
 ## 2 Update
 

@@ -2,10 +2,8 @@
 title: "Create Your First Two Overview and Detail Pages"
 linktitle: "Create Overview and Detail Pages"
 url: /howto/front-end/create-your-first-two-overview-and-detail-pages/
-category: "Front End"
 weight: 25
 description: "Describes how to create overview and detail pages, and how to configure navigation and security."
-tags: ["front end"]
 ---
 
 ## 1 Introduction
@@ -23,9 +21,9 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Create a domain model by following [Configuring a Domain Model](/refguide/configuring-a-domain-model/):
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" class="no-border" >}}
 
-## 3 Creating Overview and Detail Pages Automatically
+## 3 Creating Overview and Detail Pages Automatically {#create-automatically}
 
 To create the overview and detail pages for your data structure, follow these steps:
 
@@ -53,28 +51,28 @@ To create a new overview page and add it to your app, follow these steps:
 4. Select *Sidebar_Full_Responsive* as the navigation layout.
 5. Click **Blank**, then select the **Blank** page template and click **OK**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581337.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581337.png" class="no-border" >}}
 
 6. Click **Data Grid** in the menu bar of the page builder to select the data grid widget:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581335.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581335.png" class="no-border" >}}
 
 7. Click inside the page editor to create the data grid widget:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581334.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581334.png" class="no-border" >}}
 
 8. Right-click the data grid and select **Select Entity**.
 9. Select the **Customer** entity in the **Select Data Source** pop-up window and click **Select**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581345.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581345.png" class="no-border" >}}
 
 10. Click **OK** to auto-fill the data grid with search fields and columns:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581343.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581343.png" class="no-border" >}}
 
 You should now have an overview page with a data grid like this:
 
-{{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581330.png" >}}
+{{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581330.png" class="no-border" >}}
 
 ### 4.1 Creating the Detail Page
 
@@ -84,15 +82,15 @@ To create a new detail page manually, follow these steps:
 2. Select **PopupLayout** as the **Navigation layout**.
 3. Select **Form Horizontal** and then click **OK**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581327.png" >}} 
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581327.png" class="no-border" >}} 
 
 4. Right-click **New** on the data grid on the overview page again and select **Go to page**:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581326.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581326.png" class="no-border" >}}
 
     You should now have a detail page like this:
 
-    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" >}}
+    {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18581325.png" class="no-border" >}}
 
 ## 5 Navigation and Security
 

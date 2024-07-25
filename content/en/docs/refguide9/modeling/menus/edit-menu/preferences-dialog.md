@@ -2,14 +2,13 @@
 title: "Preferences"
 url: /refguide9/preferences-dialog/
 weight: 50
-tags: ["studio pro", "preferences", "settings", "edit menu"]
 ---
 
 ## 1 Introduction
 
 The **Preferences** option in the menu opens a dialog box where you can set user-specific preferences which apply to the whole of Studio Pro:
 
-{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/edit-menu/preferences-dialog/preferences.png" alt="Preferences" width="600" class="no-border" >}}
 
 ## 2 General Tab {#general}
 
@@ -43,11 +42,11 @@ When **Highlight shown errors and warnings in the editor** is checked, the error
 
 ### 2.3 Deployment
 
-#### 2.3.1 JDK directory
+#### 2.3.1 JDK directory {#jdk}
 
-This is the directory in which the Java Development Kit (JDK) is located on the computer on which you deploy the application. Usually, the correct directory is located automatically.
+Here the directories of the Java Development Kit (JDK) for each supported Java version can be selected. These JDKs are used when you locally deploy an application. Usually, the correct directories are located automatically.
 
-The JDK is necessary to run Mendix applications, because the Mendix Runtime is written in Java.
+A JDK is necessary to run Mendix applications, because the Mendix Runtime runs on the Java Virtual Machine (JVM).
 
 #### 2.3.2 Enable Run Optimizations
 
@@ -65,7 +64,7 @@ Gradle is necessary to deploy Mendix applications if the **Build using Gradle** 
 
 ### 2.4 Disk Location
 
-#### 2.4.1 Default App Directory
+#### 2.4.1 Default App Directory{#default-directory}
 
 This is the directory where new apps are stored. It is used in the [App Settings](/refguide9/new-app/#app-settings) dialog box when you create a new app. If a different directory is selected in the **App Settings** dialog box, that directory is stored as the new default app directory.
 

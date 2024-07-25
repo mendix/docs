@@ -3,7 +3,6 @@ title: "Consuming Add-on Modules and Solutions"
 url: /refguide/consume-add-on-modules-and-solutions/
 linktitle: "Consume Add-on Modules and Solutions"
 weight: 30
-tags: ["studio pro", "add-on", "solution", "module", "modules"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,7 +22,7 @@ When consuming add-on modules and solutions, you may come across the following l
 
 ## 3 Importing an Add-on Module 
 
-There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/overview/use-content/#install) section in *Using Marketplace Content*.
+There are several ways to import an add-on module from the Marketplace. For more information, see the [Installing Marketplace Content](/appstore/use-content/#install) section in *Using Marketplace Content*.
 
 You can also add an add-on module to your app not through the Marketplace. For more information, see the [Importing Module Package](/refguide/import-and-export/#import-module) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
@@ -35,7 +34,7 @@ A solution package is imported to your app as any other app package. For more in
 
 When you import an add-on module, it shows up in the **Add-ons** folder in the App Explorer. The main difference of the add-on module is that the implementation details of some functionality and elements, such as microflows, are *hidden* from consumers so that IP is protected. This means that add-on modules have a clear API: you know which elements you can use. For example, when you open a microflow, you will see its API including the microflow and parameter documentation. You cannot see how the microflow is built, but you are able to use it in your app, for example, you can call the microflow with protected implementation from another microflow:
 
-{{< figure src="/attachments/refguide/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" >}}
+{{< figure src="/attachments/refguide/modeling/app-explorer/modules/consume-add-on-modules-and-solutions/protected-microflow.png" class="no-border" >}}
 
 You also might not see the full domain model of the module, only entities, attributes, and associations that were specifically exposed by the publisher. The visible parts of the domain model are intended to be reused; hidden elements are not needed for proper use of the module.
 
@@ -51,5 +50,5 @@ The module is deleted from your app.
 ## 6 Read More
 
 * [IP Protection](/appstore/creating-content/sol-ip-protection/)
-* [Using Marketplace Content](/appstore/overview/use-content/)
+* [Using Marketplace Content](/appstore/use-content/)
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)

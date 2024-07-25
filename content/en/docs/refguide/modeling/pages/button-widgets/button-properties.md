@@ -1,7 +1,6 @@
 ---
 title: "Button Properties"
 url: /refguide/button-properties/
-tags: ["studio pro", "button", "action button", "drop-down button", "button widget", "image property"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -13,7 +12,7 @@ A button can perform various actions such as calling a microflow or nanoflow or 
 
 An example of button properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-properties.png" alt="Button Properties"   width="250"  >}}
+{{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-properties.png" alt="Button Properties"   width="250"  class="no-border" >}}
 
 Button properties consist of the following sections:
 
@@ -73,7 +72,7 @@ Parameters are attributes the value of which will be displayed. To view **Parame
 * Double-click the **Caption** setting in properties
 * Double-click the button on the page and click **Edit** in the **General** section > **Caption**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/opening-parameters.png" alt="Opening Parameters" >}} 
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/opening-parameters.png" alt="Opening Parameters" class="no-border" >}} 
 
 Parameters have the following settings:
 
@@ -81,7 +80,7 @@ Parameters have the following settings:
 * **Attribute (path)** – an attribute a value of which will be displayed 
 * **Format** – a format in which an attribute value will be displayed
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-settings.png" alt="Parameter Settings" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-settings.png" alt="Parameter Settings" class="no-border" >}}
 
 ##### 2.5.2.1 Adding New Parameters
 
@@ -91,12 +90,12 @@ To add parameters, do the following:
 2. Double-click the **Caption** setting in the button widget properties.
 3. In the **Edit Caption** dialog box > **Parameters** section click **New**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/new-parameter.png" alt="Adding New Parameter" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/new-parameter.png" alt="Adding New Parameter" class="no-border" >}}
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
 5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-example.png" alt="Parameter Example" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-example.png" alt="Parameter Example" class="no-border" >}}
 
 ##### 2.5.2.2 Performing Other Actions on Parameters
 
@@ -107,7 +106,7 @@ In addition to adding new parameters, you can perform the following actions on p
 * **Move up** – to move a parameter up in the list of parameters and also to change its index, click **Move up**
 * **Move down** – to move a parameter down in the list of parameters and also to change its index, click **Move down**
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-actions.png" alt="Parameter Actions" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/button-parameter-actions.png" alt="Parameter Actions" class="no-border" >}}
 
 #### 2.5.3 Tooltip
 
@@ -169,7 +168,7 @@ Each item has the following properties:
 * **Caption** – defines a caption of the item
 * **Action** – defines an on-click event performed when the item is clicked (for more information on-click events, see [On Click Event and Events Section](/refguide/on-click-event/))
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/items-properties.png" alt="Properties of Items" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/items-properties.png" alt="Properties of Items" class="no-border" >}}
 
 #### 2.6.1 Adding New Items
 
@@ -178,7 +177,7 @@ To add items to a drop-down buttons, do the following:
 1. Double-click the **Items** setting in the button widget properties.
 2. In the **Edit Items** dialog box, click **New**:
 
-    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/adding-new-item.png" alt="Adding New Item" >}}
+    {{< figure src="/attachments/refguide/modeling/pages/button-widgets/button-properties/adding-new-item.png" alt="Adding New Item" class="no-border" >}}
 
 3. In the **Edit Drop-down Button** Item dialog box, do the following:
     1. Specify the caption for the item.

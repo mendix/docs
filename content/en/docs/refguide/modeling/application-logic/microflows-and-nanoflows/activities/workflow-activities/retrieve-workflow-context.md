@@ -2,7 +2,6 @@
 title: "Retrieve Workflow Context"
 url: /refguide/retrieve-workflow-context/
 weight: 40
-tags: ["studio pro", "user task", "workflow", "task outcome", "complete task"]
 ---
 
 {{% alert color="info" %}}
@@ -19,7 +18,7 @@ It needs the **System.Workflow** entity as its input. The action determines the 
 
 An example of retrieve workflow context properties is presented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/retrieve-workflow-context/properties.png" alt="retrieve Workflow Context Properties" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

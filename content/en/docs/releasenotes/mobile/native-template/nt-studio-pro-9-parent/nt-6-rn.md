@@ -11,7 +11,7 @@ description: "Native Template 6 release notes."
 ### Fixes
 
 * We fixed an issue with cookie management in native apps. (Ticket 178053)
-* We fixed an issue which affected compiling a native iOS app using XCode 14 or higher.
+* We fixed an issue which affected compiling a native iOS app using Xcode 14 or higher.
   
 ## 6.3.5
 
@@ -53,7 +53,7 @@ If you already have a project in AppCenter, then you must add the following envi
 
 In the end, your variable should be set up like this:
 
-{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" >}}
+{{< figure src="/attachments/releasenotes/mobile/native-template/environment-variable.png" alt="environment variable example" class="no-border" >}}
 
 ## 6.3.2
 
@@ -299,7 +299,7 @@ In the end, your variable should be set up like this:
 
 ### Improvements
 
-* iOS 15 requires you to recompile your apps with XCode 13. This release bumps the configuration of App Center to use XCode 13.
+* iOS 15 requires you to recompile your apps with Xcode 13. This release bumps the configuration of App Center to use Xcode 13.
 
 ## 6.2.4
 

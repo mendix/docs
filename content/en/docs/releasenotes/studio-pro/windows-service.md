@@ -1,7 +1,6 @@
 ---
 title: "Windows Service"
 url: /releasenotes/studio-pro/windows-service/
-category: "Studio Pro"
 weight: 40
 aliases:
     - /releasenotes/desktop-modeler/windows-service.html
@@ -73,7 +72,7 @@ To download the Windows Service, go to the [Get Studio Pro](https://marketplace.
 * We updated the [Newtonsoft Json.NET](https://www.newtonsoft.com/json) library from 5.0.3 to 12.0.2.
 * We updated the [DotNetZip](https://archive.codeplex.com/?p=DotNetZip) library from version 1.11.0 to 1.13.3.
 * We replaced an old version of the [Active Directory Common Dialogs .NET](https://archive.codeplex.com/?p=adui) library with [Tulpep.ActiveDirectoryObjectPicker](https://www.nuget.org/packages/Tulpep.ActiveDirectoryObjectPicker/) 2.3.133.
-* We founhd a known issue where if an Oracle Java 8 installation is available, this version is selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
+* We found a known issue where if an Oracle Java 8 installation is available, this version is selected by default for Mendix 8 apps. Please make sure you select JRE or JDK 11 from Oracle or OpenJDK (AdoptOpenJDK).
     * Fixed in [4.6.1](#46ki).
 
 ## 4.5
@@ -237,7 +236,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Added the possibility to add an existing Mendix 3 or 4 app with its license. (Click Add app, Import old app...)
 * Now you can see quickly some license info for each running app.
 * Added a wizard to add and configure a new app.
-* Added a log line with progress bar while synchronizing the app with the database. The currently running synchronization SQL command can be viewed by double clicking the log line.
+* Added a log line with progress bar while synchronizing the app with the database. The currently running synchronization SQL command can be viewed by double-clicking the log line.
 * Now the old log lines will not be removed anymore when an application has been stopped and started again. The new log session will be marked by a new gray log line.
 * Now only up to 1000 log lines will be shown. Any more log lines will be removed, starting with the oldest.
 * Now an app will not be stopped automatically anymore if the Mendix Service Console has been closed and the app was started but not as Windows service. When the Mendix Service Console is started again and the app is clicked, it will reconnect to the running app.
@@ -323,7 +322,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Added settings 'Uploaded files path' and 'Temporary files path' to the Common Configuration panel.
 * Now the system log file m2ee_log.txt is closed immediately when the process cannot start.
 * Connecting to an already running server will be done asynchronously while starting the Service Console, so the form will be shown more quickly.
-* Now all configurated paths will be validated when the server or the service starts.
+* Now all configured paths will be validated when the server or the service starts.
 * Windows service exceptions will now be shown in the Service Console (so you don't have to go to Administrative Tools -> Event Viewer anymore).
 * Default folder of project path changed to 'Project' (was 'Application').
 * Default folders will be created if they do not exist when they are needed.

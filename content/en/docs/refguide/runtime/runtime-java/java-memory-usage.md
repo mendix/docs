@@ -2,7 +2,6 @@
 title: "Java Memory Usage"
 url: /refguide/java-memory-usage/
 weight: 2
-tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -28,13 +27,13 @@ In JVM version 7 and before, this data was stored in what was called the permane
 
 The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix,  information about microflows, the domain model, and all other Mendix-specific information.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844065.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844065.png" class="no-border" >}}
 
 All information regarding the stack is stored in memory. All runtime information is stored in the Heap, all program or JVM specific information is stored in the Non Heap.
 
-All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
+All classes from the Mendix Platform, the custom Java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844066.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844066.png" class="no-border" >}}
 
 All data in the Heap only moves to a different segment when the garbage collection executes. We can see a difference between a minor garbage collection run and a major collection run.
 
@@ -54,11 +53,11 @@ The **Old / Tenured Generation** will be cleaned less frequently by the garbage 
 
 ### 2.2 Examples
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844068.png" class="no-border" >}}
 
 A healthy Mendix application that consumes a small amount of memory will show a graph similar to the graph above.
 
-{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844067.png" >}}
+{{< figure src="/attachments/refguide/runtime/runtime-java/java-memory-usage/16844067.png" class="no-border" >}}
 
 This second graph, above, shows an application which becomes unhealthy. As can be seen here, the memory usage steadily increases throughout the span of one week. This can only be caused by a process that keeps consuming memory.
 

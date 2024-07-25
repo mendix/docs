@@ -3,7 +3,6 @@ title: "Advanced Custom Settings in Mendix Runtime"
 linktitle: "Advanced Custom Settings"
 url: /refguide7/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
-tags: ["Support", "custom settings"]
 ---
 
 ## 1 Introduction
@@ -63,7 +62,7 @@ You can find these log entries by looking for the following phrase in your appli
 
 ### 4.1 Connection Pooling
 
-The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](http://commons.apache.org/pool/).
+The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/).
 
 | Name | Value | Default value |
 | --- | --- | --- |
@@ -93,7 +92,7 @@ The most interesting setting is `ConnectionPoolingMaxActive`, as this caps the t
 
 And/or you get a DB connection pool graph that looks like this:
 
-{{< figure src="/attachments/refguide7/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" >}}
+{{< figure src="/attachments/refguide7/runtime/custom-settings/tricky-custom-runtime-settings/mendix-customsettings-tricky-img1.png" class="no-border" >}}
 
 It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (much) higher number. But if any of the following are true, this is not the right action to take:
 

@@ -2,10 +2,8 @@
 title: "Migrating Workflow Apps"
 url: /refguide9/workflow-beta-migration/
 linktitle: "Migrate Workflow Apps"
-category: "General Info"
 weight: 25
 description: "Describes how to migrate existing Workflow applications to the new feedback-improved beta."
-tags: ["studio pro", "workflow", "migration", "beta"]
 ---
 
 ## 1 Introduction

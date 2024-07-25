@@ -1,9 +1,7 @@
 ---
 title: "Images"
 url: /refguide7/images/
-category: "Desktop Modeler"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
-tags: ["Images", "Image Collections", "png", "Desktop Modeler"]
 ---
 
 ## 1 Introduction

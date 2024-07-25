@@ -3,14 +3,13 @@ title: "App Menu"
 url: /refguide9/app-menu/
 description: "Describes the App Menu in Studio Pro."
 weight: 30
-tags: ["Studio Pro", "app menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 In the **App** menu, you can view and/or manipulate settings that are connected to your app and deployment. For example, you can create a deployment package.
 
-{{< figure src="/attachments/refguide9/modeling/menus/app-menu/app-menu.png" alt="App Menu" >}}
+{{< figure src="/attachments/refguide9/modeling/menus/app-menu/app-menu.png" alt="App Menu" class="no-border" >}}
 
 ## 2 Tools
 
@@ -85,4 +84,4 @@ For more information on using this option, see [Deploy to the Cloud](/refguide9/
 ## 9 Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)
-* [Deployment](/developerportal/deploy/)
+* [Deployment](/deployment/)

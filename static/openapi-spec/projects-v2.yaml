@@ -1,0 +1,844 @@
+openapi: 3.0.0
+info:
+  version: '2.0'
+  title: projects-api
+  termsOfService: https://www.mendix.com/terms-of-use/
+  description: Projects API
+  contact:
+    name: Mendix Support
+    url: 'https://support.mendix.com'
+    email: support@mendix.com
+servers:
+  - url: 'https://projects-api.home.mendix.com/v2'
+paths:
+  '/projects':
+    get:
+      tags:
+        - Projects
+      summary: 'Get a list of company-owned projects'
+      description: 'Returns a list of app projects owned by the company of the requesting user. Inactive app projects are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      operationId: get-projects
+      parameters:
+        - name: createdSince
+          in: query
+          description: 'Retrieve all projects created after this date. Time is in UTC and must be provided in this format: 2020-01-16T05:53:28Z'
+          schema:
+            type: string
+        - $ref: '#components/parameters/limit'
+        - $ref: '#components/parameters/offset'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProjectsResponse'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '403':
+          $ref: '#/components/responses/Http403'
+        '500':
+          $ref: '#/components/responses/Http500'
+    post:
+      tags:
+        - Projects
+      summary: 'Create a project'
+      description:  'Schedules a job on the server to create a project. The job will be handled asynchronously; the operation returns a jobId that can be used to monitor the status of the process.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
+      operationId: post-project
+      requestBody:
+        $ref: '#/components/requestBodies/Project'
+      responses:
+        '202':
+          $ref: '#/components/responses/ProjectJobIdResponse'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '500':
+          $ref: '#/components/responses/Http500'
+  '/projects/{app-id}':
+    delete:
+      tags:
+        - Projects
+      summary: 'Delete a project'
+      description: 'Deletes a project, its repository, cloud resources, and all collaboration data. A project cannot be deleted if it is attached to a licensed node or if it is hosted in a non-public Mendix cloud.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:delete`.'
+      operationId: delete-project
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+      responses:
+        '202':
+          description: Accepted
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+  '/projects/{app-id}/members':
+    get:
+      tags:
+        - Projects
+      summary: 'Get project team members'
+      description: 'Returns a list of team members of the project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      operationId: get-project-members
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+        - $ref: '#components/parameters/limit'
+        - $ref: '#components/parameters/offset'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProjectMembersResponse'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '403':
+          $ref: '#/components/responses/Http403'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+    post:
+      tags:
+        - Projects
+      summary: 'Add a project team member'
+      description: 'Adds a team member to the project with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum Master role can be assigned.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
+      operationId: post-project-member
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+      requestBody:
+        $ref: '#/components/requestBodies/ProjectMember'
+      responses:
+        '201':
+          description: Accepted
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+  '/projects/{app-id}/members/{user-id}':
+    delete:
+      tags:
+        - Projects
+      summary: 'Remove a project team member'
+      description: 'Removes a team member from a project. The member is not removed when they are the last Scrum Master of the project, the last member of the project, or the Technical Contact of a licensed app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
+      operationId: delete-project-member
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+        - $ref: '#/components/parameters/user-id'
+      responses:
+        '204':
+          $ref: '#/components/responses/Http204'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '409':
+          $ref: '#/components/responses/Http409'
+        '500':
+          $ref: '#/components/responses/Http500'
+    patch:
+      tags:
+        - Projects
+      summary: 'Update a project team member'
+      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member''s project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      operationId: patch-project-member
+      parameters:
+        - $ref: '#/components/parameters/app-id'
+        - $ref: '#/components/parameters/user-id'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                attributes:
+                  type: array
+                  description: 'Array of attributes to be changed.'
+                  items:
+                    type: object
+                    properties:
+                      key:
+                        type: string
+                        description: 'Name of the attribute to be changed. Possible values are `roleId`, `isPinned`, or `isWatching`. All other values will be ignored.'
+                        maxLength: 100
+                      value:
+                        type: string
+                        description: 'New value of the attribute. The `roleId` expects a valid UUID. The attributes `isPinned` and `isWatching` expect a Boolean.'
+                        maxLength: 200
+            examples:
+              Example 1:
+                value:
+                  attributes:
+                  - key: 'roleId'
+                    value: 'fdea56de-3c79-48d9-93ff-61cbc736426c'
+              Example 2:
+                value:
+                  attributes:
+                  - key: 'isPinned'
+                    value: 'true'
+      responses:
+        '204':
+          $ref: '#/components/responses/Http204'
+        '400':
+          $ref: '#/components/responses/Http400'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+
+  '/projects/jobs/{job-id}':
+    get:
+      tags:
+        - Projects
+      summary: 'Get the status of a job creating a project'
+      description: 'Returns the status of the process that creates a project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
+      operationId: get-project-job
+      parameters:
+        - $ref: '#/components/parameters/job-id'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProjectJobResponse'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+  '/users/{user-id}/projects':
+    get:
+      tags:
+        - Users
+      summary: 'Get a list of projects the user is a team member of'
+      description: 'Returns a list of projects that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      operationId: get-user-projects
+      parameters:
+        - $ref: '#/components/parameters/user-id'
+        - name: permissions
+          in: query
+          description: 'A comma separated list of permissions the user has within the project. Possible values are `administrator`, `technicalcontact`, `repositoryaccess`, `cloudaccess`, `storyaccess`, `invitationrights`. The values are applied to the query using the AND operator'
+          schema:
+            type: string
+        - name: isPinnedByUser
+          in: query
+          description: 'Indicates whether the user has pinned the app as a favourite app. If not supplied, both pinned and un-pinned projects are returned.'
+          schema:
+            type: boolean
+        - $ref: '#/components/parameters/limit'
+        - $ref: '#/components/parameters/offset'
+      responses:
+        '200':
+          $ref: '#/components/responses/UserProjectsResponse'
+        '401':
+          $ref: '#/components/responses/Http401'
+        '404':
+          $ref: '#/components/responses/Http404'
+        '500':
+          $ref: '#/components/responses/Http500'
+tags:
+  - name: Users
+    description: 'Mendix platform users'
+  - name: Projects
+    description: 'App projects managed on the Mendix platform'
+components:
+  parameters:
+    app-id:
+      name: app-id
+      in: path
+      description: The unique id of the app
+      required: true
+      schema:
+        type: string
+    user-id:
+      name: user-id
+      in: path
+      description: The unique id of the user
+      required: true
+      schema:
+        type: string
+    job-id:
+      name: job-id
+      in: path
+      description: Identifier of a project creation job
+      required: true
+      schema:
+        type: string
+    limit:
+      name: limit
+      in: query
+      description: The maximum number of items to be returned per request. The default and maximum value is 100.
+      schema:
+        type: integer
+    offset:
+      name: offset
+      in: query
+      description: The zero-based index of the first item to be returned on the page. The default value is 0.
+      schema:
+        type: integer
+  requestBodies:
+    ProjectMember:
+      description: ''
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              memberId:
+                type: string
+                description: Unique identifier of the member
+              roleId:
+                type: string
+                description: Unique identifier of the role that will be assigned to the member
+            x-examples:
+              Example 1:
+                memberId: d207ff9b-3603-4060-aa0a-62d5b264bac7
+                roleId: fdea56de-3c79-48d9-93ff-61cbc736426c
+          examples:
+            Example 1:
+              value:
+                memberId: string
+                roleId: string
+    Project:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name of the project
+                maxLength: 100
+              summary:
+                type: string
+                description: Description of the project
+                maxLength: 400
+              image:
+                type: string
+                description: 'Base-64 encoded string of the project icon image. The file size is limited to 5MB, minimum of 200 x 200 px and amaximum of 400 x 400 px.'
+              templateId:
+                type: string
+                description: 'Identifier of the template that the project will be copied from. If empty, the default template will be used.'
+                format: uuid
+                pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+                maxLength: 36
+            required:
+              - name
+            x-examples:
+              Example 1:
+                name: name
+                summary: summary
+                image: image
+                templateId: templateId
+          examples:
+            Example 1:
+              value:
+                name: string
+                summary: string
+                image: string
+                templateId: bbb9c2b3-18f3-43ab-b149-c0dabf946f4b
+  securitySchemes:
+    PersonalAccessToken:
+      type: apiKey
+      description: "For more information about requesting and using a token see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/>The header must be set to `MxToken <Your PAT>`."
+      name: Authorization
+      in: header
+  responses:
+    ProjectsResponse:
+      description: List of projects
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              page:
+                type: object
+                description: 'Contains information about the current page, and total elements to be retrieved'
+                properties:
+                  totalElements:
+                    type: integer
+                    description: 'Total number of items to be expected'
+                  offset:
+                    type: integer
+                    description: 'Offset used by the current request'
+                  elements:
+                    type: integer
+                    description: 'Number of items in this current page'
+              items:
+                type: array
+                description: 'Array of projects.'
+                items:
+                  type: object
+                  properties:
+                    projectId:
+                      type: string
+                      description: Unique identifier for projects on the Mendix platform.
+                    name:
+                      type: string
+                      description: Name of the project.
+                    description:
+                      type: string
+                      description: Description of the project.
+                    logo:
+                      type: string
+                      description: URL of the project image/logo.
+                    createdOn:
+                      type: string
+                      description: Date and time in UTC when the project was created.
+                    active:
+                      type: boolean
+                      description: 'Indicates whether a project is active or not. Inactive projects will only be returned to Mendix administrators.'
+                    createdBy:
+                      type: object
+                      description: Contains information about the person that created this project.
+                      properties:
+                        userId:
+                          type: string
+                          description: 'Unique identifier of the user on the Mendix platform.'
+                        fullName:
+                          type: string
+                          description: Full name of the member.
+            x-examples:
+              Example 1:
+                page:
+                  totalElements: 101
+                  offset: 0
+                  elements: 100
+                items:
+                  - projectId: Unique UUID
+                    name: Project Name
+                    description: Project with a lovely description
+                    logo: Image URL
+                    createdOn: 'Jun 29, 2023 4:39 PM'
+                    active: true
+                    createdBy:
+                      userId: Unique UUID
+                      fullName: John Doe
+          examples:
+            Example 1:
+              value:
+                page:
+                  totalElements: 0
+                  offset: 0
+                  elements: 0
+                items:
+                  - projectId: string
+                    name: string
+                    description: string
+                    logo: string
+                    createdOn: string
+                    active: true
+                    createdBy:
+                      userId: string
+                      fullName: string
+    ProjectMembersResponse:
+      description: List of project members
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              page:
+                type: object
+                description: 'Contains information about the current page, and total elements to be retrieved'
+                properties:
+                  totalElements:
+                    type: integer
+                    description: 'Total number of items to be expected'
+                  offset:
+                    type: integer
+                    description: 'Offset used by the current request'
+                  elements:
+                    type: integer
+                    description: 'Number of items in this current page'
+              items:
+                type: array
+                description: Array of members that match path and query parameters and authorization access
+                items:
+                  type: object
+                  properties:
+                    userId:
+                      type: string
+                      description: Unique identifier for the member on the Mendix platform
+                    displayName:
+                      type: string
+                      description: Full name of the member.
+                    avatarUrl:
+                      type: string
+                      description: URL of the avatar image of the member.
+                    isActive:
+                      type: boolean
+                      description: Indicator of whether the member is an active member on the platform
+                    company:
+                      type: object
+                      description: Contains information of the company to which the member belongs.
+                      properties:
+                        companyName:
+                          type: string
+                          description: Name of the company to which the member belongs.
+            x-examples:
+              Example 1:
+                page:
+                  totalElements: 101
+                  offset: 0
+                  elements: 100
+                items:
+                  - userId: UUID-v4
+                    displayName: Joe Best
+                    avatarUrl: 'https://etcetera'
+                    isActive: true
+                    company:
+                      companyName: My Awesome Company Ltd.
+          examples:
+            Example 1:
+              value:
+                page:
+                  totalElements: 0
+                  offset: 0
+                  elements: 0
+                items:
+                  - userId: string
+                    displayName: string
+                    avatarUrl: string
+                    isActive: true
+                    company:
+                      companyName: string
+    ProjectJobIdResponse:
+      description: Accepted
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              jobId:
+                type: string
+                description: Unique identifier of the job that creates the project. Use this ID to query the status of the process.
+                format: uuid
+                pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+                minLength: 36
+                maxLength: 36
+            x-examples:
+              Example 1:
+                jobId: jobId
+          examples:
+            Example 1:
+              value:
+                jobId: bbb9c2b3-18f3-43ab-b149-c0dabf946f4b
+    ProjectJobResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                description: 'Status of the project creation job. Possible values are ''scheduled'', ''running'', ''completed'', or ''failed''.'
+                maxLength: 200
+              errorMessage:
+                type: string
+                description: Error message provided in case the job has failed
+              projectId:
+                type: string
+                description: Identifier of the new created project
+                format: uuid
+                pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+                maxLength: 36
+            x-examples:
+              Example 1:
+                status: String
+                error_message: String
+                project_id: String
+          examples:
+            Example 2:
+              value:
+                status: string
+                errorMessage: string
+                projectId: bbb9c2b3-18f3-43ab-b149-c0dabf946f4b
+    UserProjectsResponse:
+      description: List of projects
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              page:
+                type: object
+                description: 'Contains information about the current page, and total elements to be retrieved'
+                properties:
+                  totalElements:
+                    type: integer
+                    description: 'Total number of items to be expected'
+                  offset:
+                    type: integer
+                    description: 'Offset used by the current request'
+                  elements:
+                    type: integer
+                    description: 'Number of items in this current page'
+              items:
+                type: array
+                description: 'Array of projects.'
+                items:
+                  type: object
+                  properties:
+                    projectId:
+                      type: string
+                      description: 'Unique identifier for apps on the Mendix platform.'
+                    name:
+                      type: string
+                      description: 'Name of the app.'
+                    description:
+                      type: string
+                      description: 'Description of the app.'
+                    logo:
+                      type: string
+                      description: 'URL of the project image/logo.'
+                    cloudTarget:
+                      type: string
+                      description: 'URL of the cloud portal the app is hosted on.'
+                    active:
+                      type: boolean
+                      description: 'Indicates whether a project is active and can be maintained by a team. Inactive projects will only be returned to Mendix administrators. Note this attribute does not indicate whether the app is actively deployed or running in the cloud.'
+                    isPinnedByUser:
+                      type: boolean
+                      description: 'Indicates whether the app was pinned as a favourite app by the user.'
+                    role:
+                      type: object
+                      description: 'The set of permissions the team member has within the project team.'
+                      properties:
+                        name:
+                          type: string
+                          description: 'Name of the role.'
+                        isAdministrator:
+                          type: boolean
+                          description: 'Indicates whether the team member is a project administrator.'
+                        isTechnicalContact:
+                          type: boolean
+                          description: 'Indicates whether the team member is the technical contact of the app.'
+                        hasRepositoryAccess:
+                          type: boolean
+                          description: 'Indicates whether the team member is allowed to make changes to the app''s model.'
+                        hasCloudAccess:
+                          type: boolean
+                          description: 'Indicates whether the team member has access to the cloud environments.'
+                        hasStoryAccess:
+                          type: boolean
+                          description: 'Indicates whether the team member has access to Stories and Feedback of the app.'
+                        hasInvitationRights:
+                          type: boolean
+                          description: 'Indicates whether the team member is allowed to invite other users to the project team.'
+            x-examples:
+              Example 1:
+                page:
+                  totalElements: 101
+                  offset: 0
+                  elements: 100
+                items:
+                  - projectId: Unique UUID
+                    name: Project Name
+                    description: Project with a lovely description
+                    logo: 'https://etcetera/lovely-photograph.jpg'
+                    cloudTarget: 'https://etcetera/cloud'
+                    active: true
+                    isPinnedByUser: true
+                    role:
+                      name: Scrum master
+                      isAdministrator: true
+                      sTechnicalContact: false
+                      hasRepositoryAccess: true
+                      hasCloudAccess: true
+                      hasStoryAccess: true
+                      hasInvitationRights: true
+          examples:
+            Example 1:
+              value:
+                page:
+                  totalElements: 0
+                  offset: 0
+                  elements: 0
+                items:
+                  - projectId: string
+                    name: string
+                    description: string
+                    logo: string
+                    cloudTarget: string
+                    createdOn: string
+                    active: boolean
+                    isPinnedByUser: boolean
+                    role:
+                      name: string
+                      isAdministrator: boolean
+                      iisTechnicalContact: boolean
+                      ihasRepositoryAccess: boolean
+                      ihasCloudAccess: boolean
+                      ihasStoryAccess: boolean
+                      ihasInvitationRights: boolean
+    Http204:
+      description: 'No Content'
+    Http400:
+      description: 'Bad Request'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Bad Request'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 400
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+                  invalid-params:
+                    type: array
+                    description: 'A list of invalid parameters'
+                    properties:
+                      name:
+                        type: string
+                        description: 'Name of the attribute in error'
+                        maxLength: 200
+                      reason:
+                        type: string
+                        description: 'A human readable description of the error'
+                        maxLength: 200
+    Http401:
+      description: 'Unauthorized'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Unauthorized'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 401
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+    Http403:
+      description: 'Forbidden'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Forbidden'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 403
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+    Http404:
+      description: 'Not Found'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Not Found'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 404
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+    Http409:
+      description: 'Conflict'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Conflict'
+                  detail:
+                    type: string
+                    description: 'A human-readable description of the specific error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 409
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+    Http500:
+      description: 'Internal Server Error'
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: object
+                description: 'Detailed information on the error'
+                properties:
+                  message:
+                    type: string
+                    description: 'A short, human-readable title for the general error type'
+                    default: 'Internal Server Error'
+                  code:
+                    type: integer
+                    description: 'HTTP status code'
+                    default: 500
+                  instance:
+                    type: string
+                    description: 'UUID of the request for troubleshooting purposes'
+security:
+  - PersonalAccessToken: []

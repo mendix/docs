@@ -15,7 +15,7 @@ An action page has the following tabs:
 
 ## General
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843926.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843926.png" class="no-border" >}}
 
 ### Name
 
@@ -35,7 +35,7 @@ Describes the action. The consumer will see this description their overview.
 
 ## Parameters
 
-### {{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843923.png" >}}
+### {{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843923.png" class="no-border" >}}
 
 ### Microflow parameter
 
@@ -55,7 +55,7 @@ Defines the name of the parameter in the app service action call. This is initia
 
 ### Exposed attributes and associations
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843922.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843922.png" class="no-border" >}}
 
 A button is available for complex types (for example, an entity from your domain model), to define whether to include or exclude the attribute in an entity, as well as to define whether an attribute can be empty as input.
 
@@ -69,7 +69,7 @@ Defines whether the return value can be **empty**.
 
 {{% alert color="info" %}}
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843921.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/published-app-services/actions/16843921.png" class="no-border" >}}
 
 The Return Type tab of an app service action. An **empty** ReturnObject is disallowed here.
 

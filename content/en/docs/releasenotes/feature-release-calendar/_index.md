@@ -2,9 +2,7 @@
 title: "Mendix 10 Feature Release Calendar"
 linktitle: "Mx10 Feature Release Calendar"
 url: /releasenotes/feature-release-calendar/
-tags: ["announcements", "features", "feature release", "products", "features and products", "calendar", "new", "mendix 10", "mx10"]
 weight: 4
-#notoc: true
 #layout: wide
 ---
 
@@ -14,7 +12,7 @@ At the Mendix 10 launch event on June 27, 2023, there were a number of announcem
 
 The new features were divided into these major themes, which are described in the sections below:
 
-{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." >}}
+{{< figure src="/attachments/releasenotes/calendar/themes.png" alt="Themes are continuous collaboration, developer experience, composability, multi-cloud deployment, and governance and control." class="no-border" >}}
 
 {{% alert color="info" %}}
 "GA" means general availability for all users. A GA release is different than a beta or experimental release. For more information, see [Beta and Experimental Releases](/releasenotes/beta-features/).
@@ -26,8 +24,8 @@ The new features were divided into these major themes, which are described in th
 | --- | --- |
 | Portfolio Management | Released for GA [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023) |
 | App Insights | Released for GA [Aug 12, 2023](/releasenotes/developer-portal/#august-12-2023) |
-| Jira integration | Released for public beta [Jun 22, 2023](/releasenotes/developer-portal/#june-22-2023)<br>GA: Q1 2024 |
-| Community spaces | Currently in private beta<br>GA: TBD |
+| Jira integration | Released for GA [May 1, 2023](/releasenotes/developer-portal/#may-1-2024) |
+| Community spaces | Released for GA [March 30, 2023](/releasenotes/community-tools/#spaces-ga-release) |
 
 ## 3 Developer Experience {#dev-exp}
 
@@ -40,15 +38,15 @@ The new features were divided into these major themes, which are described in th
 | Git version control (removal of SVN support) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Custom icons support | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Flexible page URLs | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
-| MxAssist Best Practice Bot | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
+| Best Practice Recommender | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | Workflow enhancements (multi-user tasks,<br/>Wait for notification activity) | Released for GA [Jun 27, 2023](/releasenotes/studio-pro/10.0/) |
 | PDF Document Generation module | Released for GA [Aug 29, 2023](/appstore/modules/document-generation/) |
 | Managed Java dependencies | Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#java-dependency-management) |
 | Insights into commits by peers| Released for GA [Sep 26, 2023](/releasenotes/studio-pro/10.3/#commit) |
 | Rich design properties | Released for GA [Dec 21, 2023](/releasenotes/studio-pro/10.6/) |
-| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q1 2024 |
-| MendixChat | Released for public beta [Dec 21, 2023](/releasenotes/studio-pro/10.6/)<br>GA: TBD |
-| Mixed online and offline data | GA: Q1 2024 |
+| Visual data filters (visual builder) | Released for public beta [Nov 28, 2023](/releasenotes/studio-pro/10.5/)<br>GA: Q2 2024 |
+| Maia Chat | Released for GA [Jun 25, 2024](/releasenotes/studio-pro/10.12/) |
+| Mixed online and offline data | GA: Q4 2024 |
 | Mac support | Released for public beta [Jan 30, 2024](/releasenotes/studio-pro/10.7/) <br>GA: TBD |
 
 ## 4 Composability {#composability}
@@ -83,5 +81,5 @@ The new features were divided into these major themes, which are described in th
 | BYO IDP (Mendix Cloud, Cloud Dedicated) | Released for GA [May 16, 2023](/releasenotes/developer-portal/#byoidp) |
 | Landscape overview (Mendix Cloud, Cloud Dedicated) | Released for public beta [Aug 28, 2023](/releasenotes/control-center/#august-28-2023)<br>GA: TBD |
 | Cloud self-service (Mendix Cloud) | Currently in private beta<br>GA: TBD |
-| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q1 2024<br>GA: TBD |
+| Software composition (Mendix Cloud, Cloud Dedicated) | Public beta: Q2 2024<br>GA: TBD |
 | Cloud self-service (Cloud Dedicated) | Private beta: Q2 2024<br>GA: TBD |

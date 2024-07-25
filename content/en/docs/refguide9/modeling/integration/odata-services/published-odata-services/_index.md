@@ -2,7 +2,6 @@
 title: "Published OData Services"
 url: /refguide9/published-odata-services/
 weight: 10
-tags: ["studio pro","OData","publish"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -14,8 +13,8 @@ A published OData service is a REST service with an OpenAPI contract, which mean
 
 The standards used for OData in Mendix are:
 
-* [OData v3](http://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
-* [OData v4](http://www.odata.org/documentation), which returns data in JSON format.
+* [OData v3](https://www.odata.org/documentation/odata-version-3-0), which returns data in Atom XML format.
+* [OData v4](https://www.odata.org/documentation), which returns data in JSON format.
 
 {{% alert color="info" %}}
 The OData v4 feature was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/).
@@ -247,4 +246,4 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 
 * `200`, `201`, `204` – [Successful responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
-* `500` – Mendix default when something goes wrong and it has not been modelled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+* `500` – Mendix default when something goes wrong and it has not been modeled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)

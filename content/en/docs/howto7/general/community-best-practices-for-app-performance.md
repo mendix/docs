@@ -2,16 +2,14 @@
 title: "Implement Community Best Practices for App Performance"
 linktitle: "Best Practices for App Performance"
 url: /howto7/general/community-best-practices-for-app-performance/
-category: "General"
 weight: 4
-tags: ["best practice", "performance", "community"]
 ---
 
 ## 1 Introduction
 
 {{% alert color="info" %}}
 
-This document is created by and for the Mendix community. It collects performance best practices in the form of do's and don'ts.
+This document is created by and for the Mendix community. It collects performance best practices in the form of dos and don'ts.
 
 {{% /alert %}}
 
@@ -30,7 +28,7 @@ If you made a simple and sound design of the app's domain models, consider the f
 * Create indexes on entities that will get more than 100 records and that will be searched by anything besides Mendix references/IDs.
 * Minimize the use of calculated attributes, as they fire on every retrieve and per row for a list retrieve. You seldom need these for conditional visibility.
 * Minimize the use and work of event handlers, because they fire on every event (for example, commit).
-* Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especialy reference sets—cause extra queries and thus extra load on the database.
+* Minimize the use of reference set associations. Mendix retrieves the IDs (per row for a list retrieve) on every query. So, many references—and especially reference sets—cause extra queries and thus extra load on the database.
 * Consider archiving data if your volume grows too large and you do not need all the data all the time. You can even consider creating two identical entities, one with the data currently being used, and the other with all the data that is only used for reporting or other historic reasons.
 * Consider denormalizing the data, which means copying attribute values to other entities. This is so the data is not retrieved every time from the source. If data does not change a lot, this can save a lot of queries. However, you need to build the logic to keep the copied attributes in sync!
 * Don't use multiple levels of inheritance and too many specializations on entities that will contain a substantial amount of data, especially when you are using domain model XPath access on entities. This will generate complex queries adding XPaths for every specialization's security rules and, on a large dataset, will lead to slow queries. Consider the following alternatives:
@@ -47,7 +45,7 @@ Mendix is said to have optimized the retrieves, so not every association ID is l
 
 ## 3 Index Best Practices
 
-Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practises apply:
+Indexes is a topic with a long history of best practices from the database world. For Mendix apps, the following best practices apply:
 
 * Create as many indexes as needed. Although every index takes up space and the `insert`, `update`, and `delete` statements will be a bit slower, your queries will benefit a lot.
 * Since Mendix will retrieve the object for you with all of its columns, your index is needed for two reasons. The first reason is to get the unique internal Mendix IDs fast. The second reason is for sorting.
@@ -88,7 +86,7 @@ Indexes is a topic with a long history of best practices from the database world
 ## 7 XPath Best Practices
 
 * Avoid "unequal" and "not" clauses in XPath. Often they can be rewritten to positive statements, like `<boolean>=false()`, `<enum> = valueA`, `<enum> = valueB`, `integer>valueA`, or `integer<valueB`.
-* Combine paths to the same assoicated entity if query logic allows this.
+* Combine paths to the same associated entity if query logic allows this.
 * In older PostgreSQL databases, it was wise to start the XPath with attribute clauses, since the database query optimizer was processing clauses in order. Nowadays, it is claimed that the query optimizer has improved, and this "rule" is no longer needed.
 * Make sure that the attributes used are indexed.
 

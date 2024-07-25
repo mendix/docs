@@ -2,7 +2,6 @@
 title: "Module Security"
 url: /refguide9/module-security/
 weight: 20
-tags: ["studio pro", "module security", "security", "module"]
 aliases:
     - /refguide9/module-role.html
     - /refguide9/module-role
@@ -26,13 +25,13 @@ A module role has the following properties:
 * **Name** – the name of a module role; end-users do not see the names of module roles, if they create or view user accounts, they only see the names of user roles
 * **Documentation** – the documentation of a module role is there only for the convenience of Studio Pro users, it is not displayed to the end-users
 
-    {{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/module-roles-tab.png" >}}
+    {{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/module-roles-tab.png" class="no-border" >}}
 
 ## 2 Page Access {#page-access}
 
 **Page Access** defines which pages are visible to each role. The **Page access** tab is displayed as a matrix showing pages and modules roles. You can choose to show the unused pages in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/page-access-tab.png" alt="page access tab" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/page-access-tab.png" alt="page access tab" class="no-border" >}}
 
 For each combination you can indicate whether or not the page is visible for the module role. You can also edit this information in a page using the **Visible for** property.
 
@@ -46,7 +45,7 @@ Page access settings do not restrict users from navigating to a page through oth
 
 The **Microflow access** tab is displayed as a matrix showing microflows and modules roles. You can choose to show the unused microflows in the matrix or hide them by enabling/disabling the **Show unused pages** setting. 
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/microflow-access-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/microflow-access-tab.png" class="no-border" >}}
 
 For each combination you can indicate whether or not the module role has access to the microflow. You can also edit this information in a [microflow](/refguide9/microflow/) using the **Allowed roles** property.
 
@@ -60,7 +59,7 @@ Note that these roles are only checked when the microflow is executed from the c
 
 The **Nanoflow access** tab is displayed as a matrix showing nanoflows and modules roles. You can choose to show the unused nanoflows in the matrix or hide them by enabling/disabling the **Show unused nanoflows** setting. 
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/nanoflow-access-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/nanoflow-access-tab.png" class="no-border" >}}
 
 For each combination you can indicate whether or not the module role has access to the nanoflow. You can also edit this information in the [nanoflow](/refguide9/nanoflow/) using the **Allowed roles** property.
 
@@ -70,7 +69,7 @@ For each combination you can indicate whether or not the module role has access 
 
 The **Entity Access** tab is displayed as a matrix showing access rules that apply to entities:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/entity-access-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/entity-access-tab.png" class="no-border" >}}
 
 Each access rule in turn applies to a set of module roles. For more information, see [Access Rules](/refguide9/access-rules/).
 
@@ -80,7 +79,7 @@ Each access rule in turn applies to a set of module roles. For more information,
 
 The **OData Access** tab is displayed as a matrix showing published OData services and modules roles:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/odata-access-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/odata-access-tab.png" class="no-border" >}}
 
 For each combination, you can indicate whether the module role has access to the published OData service. You can also edit this information in [published OData services](/refguide9/published-odata-services/) using the **Allowed roles** property in the **Settings** tab.
 
@@ -90,7 +89,7 @@ For each combination, you can indicate whether the module role has access to the
 
 The **REST Access** tab is displayed as a matrix showing published REST services and modules roles:
 
-{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/rest-access-tab.png" >}}
+{{< figure src="/attachments/refguide9/modeling/app-explorer/security/module-security/rest-access-tab.png" class="no-border" >}}
 
 For each REST service, you can indicate whether or not the module role has access to the published REST service.
 

@@ -1,7 +1,6 @@
 ---
 title: "Static Label (Document Template)"
 url: /refguide/static-label-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/Static+label+(document+template).html
     - /refguide/static-label-(document-template).html
@@ -16,7 +15,7 @@ A static label shows a line of static text. You can use it to place custom text 
 
 For example, a label with text 'Customer name' will be look like this:
 
-{{< figure src="/attachments/refguide/modeling/resources/document-templates/918130.png" >}}
+{{< figure src="/attachments/refguide/modeling/resources/document-templates/918130.png" class="no-border" >}}
 
 If you want to insert the current page number or the total page count in your document, you can use a token inside a static label (and only in a static label).
 

@@ -3,14 +3,13 @@ title: "Version Control Menu"
 url: /refguide/version-control-menu/
 description: "Describes the Version Control menu in Studio Pro."
 weight: 40
-tags: ["Studio Pro", "version control", "top bar"]
 ---
 
 ## 1 Introduction
 
 In the **Version Control** menu, you can view and/or manipulate settings that are connected to version control. For example, you can view the history of the current development line.
 
-{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu" >}}
+{{< figure src="/attachments/refguide/modeling/menus/version-control-menu/version-control-menu.png" alt="Version Control Menu" class="no-border" >}}
 
 ## 2 Pull
 
@@ -48,9 +47,9 @@ The **Manage Branch Lines** option allows you to manage branch lines on the vers
 
 The **Merge Changes Here** option allows you to merge changes that were committed in another development line to the development line that is currently opened in Studio Pro.
 
-## 11 Reverse Merge Changes
+## 11 Revert a Commit
 
-The **Reverse Merge Changes** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
+The **Revert a Commit** option allows locally rolling back changes that were committed to the version control repository. These local changes can then be committed as a new revision.
 
 ## 12 Revert All Changes {#revert-all-changes}
 

@@ -1,9 +1,7 @@
 ---
 title: "Date and Time Handling"
 url: /refguide/date-and-time-handling/
-category: "Mendix Runtime"
 description: "Describes date and time handling for a Mendix application."
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

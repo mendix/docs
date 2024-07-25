@@ -1,7 +1,6 @@
 ---
 title: "XPath max"
 url: /refguide9/xpath-max/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

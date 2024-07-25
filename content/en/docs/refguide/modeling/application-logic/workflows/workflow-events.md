@@ -2,21 +2,20 @@
 title: "Workflow Events"
 url: /refguide/workflow-events/
 weight: 55
-tags: ["workflow", "workflows", "workflow-events", "workflow event"]
 ---
 
 ## 1 Introduction
 
 The [Workflow Engine](/refguide/workflow-engine/) emits near real-time workflow events. These events provide a great way to build audit trails, handle errors, update KPI dashboards, etc. For example, you can define an event handler that only collects data from user task events.
 
-## 2 Configuration
+## 2 Configuration {#configuration}
 
 There are two ways in which you can configure workflow-related event handlers:
 
 * The events can be configured via the **Event handlers** setting in [workflow properties](/refguide/workflow-properties/#event-handlers).
 * The **Event handlers** setting can also be configured in [App Settings](/refguide/app-settings/#event-handlers):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% class="image-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-overview.png" max-width=80% >}}
 
 {{% alert color="info" %}}
 The event handlers added in workflow properties override the app-wide event handlers in **App Settings**.
@@ -24,18 +23,28 @@ The event handlers added in workflow properties override the app-wide event hand
 
 The image below presents an example of how you can configure an event handler either in workflow properties or in **App Settings**:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/add-event-handler.png" max-width=80% >}}
 
-## 3 Event Mechanism
+## 3 Event Mechanism {#event-mechanism}
 
-When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent [workflow entities](/refguide/workflows/#workflow-entities): **WorkflowEvent**, **WorkflowRecord** and **WorkflowActivityRecord**.
+When something happens in the workflow engine, an event is emitted when subscribed to that event. This event is posted asynchronously using the task queue as described in [Workflow Engine](/refguide/workflow-engine/#workflow-task-queue). We take a snapshot of the event state at the time when it occurs to get real-time data. This snapshot data is then converted by the task queue task to the system module non-persistent workflow entities: **WorkflowEvent**, **WorkflowRecord**, and **WorkflowActivityRecord**.
 
 There are a few advantages of this mechanism:
 
 * The event handler microflow might fail, without failing or halting the workflow.
 * The execution (time) of the event handler microflow is not delaying the continuation of the workflow.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% class="image-border" >}}
+The **WorkflowEvent** entity represents workflow event data at a specific execution moment. It contains the following attributes and association:
+
+* **EventTime** – the time at which the event occurred.
+* **EventType** – the type of the event being triggered. For more information, see the [Event Types](#workflow-event-types) section below.
+* **WorkflowEvent_Initiator** – an association to the current user object which is logged in. The [activity workflow events](/refguide/workflow-events/#activity-event-type) will have an initiator in cases where a user takes some action, otherwise it will be empty. For example, when a user specifies the outcome of a user task or when a user notifies a suspended workflow, then this user becomes the initiator. As a special case, it will also be empty for the **Workflow Initiated** event of a sub-workflow because a sub-workflow is directly related to the [Call workflow](/refguide/call-workflow/) activity.
+
+The **WorkflowActivityRecord** entity represents workflow activity data at a specific execution moment. For example, a snapshot of a workflow activity at the moment when it was completed.
+
+The **WorkflowRecord** entity represents workflow instance data at a specific execution moment. For example, a snapshot of a workflow instance at the moment when it was completed.
+
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% >}}
 
 {{% alert color="warning" %}}
 All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred.
@@ -43,7 +52,7 @@ All associations to the above-mentioned non-persistent entities (with the except
 
 These non-persistent entities are provided as the default input parameters to the microflow specified in the event handler configuration:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% class="image-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% >}}
 
 You can use the data from these input parameters to construct audit trails, for logging purposes, etc. For example, you can define an event handler that only collects data from user task events.
 
@@ -62,7 +71,7 @@ In the case of workflow [operations](/refguide/change-workflow-state/#operation)
 ## 5 Event Types {#workflow-event-types}
 
 {{% alert color="info" %}}
-The event types listed in the tables below correspond to the enumeration values of the **EventType** attribute of the [workflow entity](/refguide/workflows/#workflow-entities) **WorkflowEvent** in the system module.
+The event types listed in the tables below correspond to the enumeration values of the **EventType** attribute of the workflow entity **WorkflowEvent** in the system module.
 {{% /alert %}}
 
 ### 5.1 Workflow Lifecycle Events

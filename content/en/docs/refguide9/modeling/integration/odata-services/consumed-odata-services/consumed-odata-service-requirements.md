@@ -3,7 +3,6 @@ title: "Consumed OData Service Requirements"
 url: /refguide9/consumed-odata-service-requirements/
 weight: 20
 description: "Requirements on OData services consumed in Mendix."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -116,4 +115,4 @@ When you publish a self-referencing association, you can only publish one side o
 
 ### 3.6 Enumerations
 
-Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide9/enumerations/#312-name) are not supported.
+Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide9/enumerations/#name) are not supported.

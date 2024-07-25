@@ -1,17 +1,15 @@
 ---
 title: "Menus"
 url: /refguide/menus/
-category: "App Modeling"
 description: "Describes Studio Pro menus."
 weight: 20
-tags: ["Studio Pro", "menu", "top bar"]
 ---
 
 ## 1 Introduction
 
 The top-bar of Studio Pro contains the following menus:
 
-{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" >}}
+{{< figure src="/attachments/refguide/modeling/menus/menu-bar.png" alt="Menu-bar" class="no-border" >}}
 
 * [Global Navigation Menu](#global-navigation-menu) – allows you to navigate to other parts of the platform
 * [File](#file) – allows you to manage documents and apps
@@ -21,11 +19,11 @@ The top-bar of Studio Pro contains the following menus:
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Forum](https://forum.mendixcloud.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help)  – allows you to view documentation, the [Mendix Community](https://community.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 
-The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in the *Developer Portal Guide*.
+The **Global Navigation Menu** menu is located at the upper left of Studio Pro and is represented as a nine-dots icon. It contains links to various parts of the platform that will open in a new browser window. For more information, see [Global Navigation](/developerportal/global-navigation/) in *Apps*.
 
 ## 3 File Menu {#file}
 
@@ -37,7 +35,7 @@ The **Edit** menu allows you to perform editing functions, such as cut/copy/past
 
 ## 5 View Menu {#view}
 
-The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the projappect layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
+The **View** menu allows you to view dockable panes, to enable the full screen mode, and reset the project layout. For more information on the **View** menu and its items, see [View Menu](/refguide/view-menu/).
 
 ## 6 App Menu {#app}
 
@@ -57,13 +55,7 @@ In the **Language** menu, you can add alternative languages to your app so that 
 
 ## 10 Help Menu {#help}
 
-| Menu Item | Description | Shortcut Key |
-| --- | --- | --- |
-| **Help** | Opens the documentation page about the currently selected element. If an entity is selected, for example, the documentation for entities will be shown. | <kbd>F1</kbd> |
-| **Help Contents** | Opens the home page of the documentation in the default web browser. |   |
-| **Ask a Question** | Opens the Mendix Forum in the default web browser. |   |
-| **Open Log File Directory** | Opens the log files written by Studio Pro that can be used to see what might be the reason something went wrong in Studio Pro. Log files can also be used to share with Mendix Support when you submit a ticket. |   |
-| **About Mendix Studio Pro** | Shows information about the current version of Mendix Studio Pro. |   |
+In the **Help** menu, you can ask questions and find answers to common problems you may experience while using Studio Pro. For more information on the **Help** menu, see [Help Menu](/refguide/help-menu/).
 
 ## 11 Read More
 

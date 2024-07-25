@@ -4,7 +4,6 @@ linktitle: "Security Findings FAQ"
 url: /support/security-findings-faq
 weight: 60
 description: "FAQ about existing security findings and other security questions."
-tags: ["support", "FAQ", "security", "vulnerability", "malicious files", "file scanning", "insecure cookie", "cookies without security", "insecure access", "web server", "unauthorized access" ]
 aliases:
     - /developerportal/support/security-findings-faq/
     - /community-tools/support/security-findings-faq/
@@ -47,7 +46,7 @@ Mendix applications consist of two parts: the Mendix Client, running in the end-
 
 The Mendix Client communicates with the Runtime Server using the Mendix Client API, making requests to the `/xas/` request handler on the Runtime Server. The Client API is built on the premise that requests from the client can't be trusted to be safe or secure. As the client is running on the end-user's device, outside of the control of the server, any data or action can be manipulated there. "Nothing that happens on the client can be considered secure" is a statement that applies to everything which is held on the client (for example, in a browser) not just to Mendix applications.
 
-Therefore, in Mendix, security is always taken care of in the back end, the Runtime Server, with entity access rules and allowed roles on microflows. The Runtime Server cannot be manipulated by the end-user. 
+Therefore, in Mendix, security is always taken care of in the back end, the Runtime Server, with properly-set entity access rules and allowed roles on microflows. The Runtime Server cannot be manipulated by the end-user. 
 
 That is why it is important to [implement correct access rules](/howto/security/best-practices-security/#access-rules) for end-user roles.
 
@@ -87,9 +86,9 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
+* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
-* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/overview/use-content/#update-module) in *Using Marketplace Content* for more information.
+* You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/use-content/#update-module) in *Using Marketplace Content* for more information.
 
 ### 4.1 Why Is Mendix Not Using the Latest Version of a Library?
 

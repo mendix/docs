@@ -3,7 +3,6 @@ title: "JavaScript Actions"
 url: /refguide9/javascript-actions/
 weight: 20
 description: "This reference guide details the ways JavaScript Actions can extend the functionality of your Mendix app."
-tags: ["javascript", "javascript action", "parameter", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -23,13 +22,13 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 {{% /alert %}}
 
-To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/) how-to's.
+To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/) how-tos.
 
 ## 2 General Settings
 
 After double-clicking a JavaScript action in your **App Explorer** you will see the JavaScript action's settings: 
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/javascript-action-settings-no-para.png" alt="javascript settings"   width="400"  class="no-border" >}}
 
 The settings for JavaScript actions and their implications are detailed below.
 
@@ -41,15 +40,15 @@ This setting handles a JavaScript action's name, which a nanoflow refers to when
 
 Parameters pass data to JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/parameter-naming.png" alt="parameter" class="no-border" >}}
 
 In a JavaScript action's **Code** tab, you can see its parameters' values and handle its implementation. Each parameter has a name (1), type (2), category, description (3), and return type (4):
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/parameter-code.png" alt="parameter code" class="no-border" >}}
 
 You will see a parameter's category (1), parameter name (2), and description (3) in the **Call JavaScript Action** dialog box after double-clicking its activity in your nanoflow:
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/call-js-action-dialog.png" alt="call javascript action dialog"   width="400"  >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/call-js-action-dialog.png" alt="call javascript action dialog"   width="400"  class="no-border" >}}
 
 The parameter types supported by JavaScript actions are described below.
 
@@ -80,9 +79,21 @@ Use categories to keep parameters apart in a [JavaScript Action Call](/refguide9
 
 For apps with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to app collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-### 2.3 Return Type
+### 2.3 Return
+
+Your JavaScript action can return different data types to your app.
+
+#### 2.3.1 Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
+
+#### 2.3.2 Variable Name
+
+This setting allows you to give a name to the JavaScript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
+
+{{% alert color="info" %}}
+The ability to name return variables was added in Mendix version 9.23.0
+{{% /alert %}}
 
 ### 2.4 Platform {#platform}
 
@@ -98,7 +109,7 @@ When using a JavaScript action for a specific platform in a nanoflow, it will re
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/type-parameter.png" alt="type parameter" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/type-parameter.png" alt="type parameter" class="no-border" >}}
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
@@ -106,11 +117,11 @@ A JavaScript action can have zero or more type parameters. Each type parameter s
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon or image:
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/expose-jsaction.png" alt="expose action" class="no-border" >}}
 
 When the **Expose as nanoflow action** option is selected, the JavaScript will appear in the **Toolbox** of a [nanoflow editor](/refguide9/nanoflows/) in the category of your choice.  When this action is used in a nanoflow, it will show the caption and icon you provided. The category and caption are apparent here, and the default icon and image are being displayed as no custom icon and image were assigned: 
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" class="no-border" >}}
 
 ### 4.1 Caption
 
@@ -142,11 +153,11 @@ A separate image can be provided for the [dark mode](/refguide9/preferences-dial
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/documentation-pro.png" alt="documentation"   width="450"  >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/documentation-pro.png" alt="documentation"   width="450"  class="no-border" >}}
 
 Documentation is visible in the **Code** tab. Your documentation also is copied into the JavaScript action as comment on the function in the corresponding *.js* file:
 
-{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  >}}
+{{< figure src="/attachments/refguide9/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  class="no-border" >}}
 
 ## 6 Code
 

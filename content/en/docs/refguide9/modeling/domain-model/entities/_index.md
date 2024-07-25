@@ -2,7 +2,6 @@
 title: "Entities"
 url: /refguide9/entities/
 weight: 10
-tags: ["domain model", "entity", "entities", "attribute", "validation rule", "even handler", "access rule", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -12,7 +11,7 @@ An entity usually represents a class of real-world objects, such as customers, i
 
 For example, the object representing the CD 'Exodus' could be an instance of the entity 'CD'.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}} 
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" class="no-border" >}} 
 
 The properties or features of an entity are described using [attributes](/refguide9/attributes/). An attribute represents a small piece of information about an entity, such as the name or birth date of a person.
 
@@ -32,7 +31,7 @@ The entity type defines how the data is handled and there are two types:
 * [Persistable entity](#persistable-entity) 
 * [Non-persistable entity](#non-persistable-entity)
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/type-of-entities.jpg" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/type-of-entities.jpg" class="no-border" >}}
 
 {{% alert color="info" %}}
 You can also use data sources from other applications in your app through the [Data Hub](/refguide9/data-hub-pane/) pane. These data sources are represented in the domain model as *external entities* which are displayed as purple entity containers in the domain model.
@@ -52,7 +51,7 @@ Non-persistable entities are stored in the runtime memory and never get committe
 
 An example of the entity properties is represented in the image below:
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/entity-properties.png"   width="300"  >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/entity-properties.png"   width="300"  class="no-border" >}}
 
 Entity properties consist of the following sections:
 
@@ -112,7 +111,7 @@ One important use of this feature is to derive functionality from the **System**
 
 For example, this property can be used in a situation where, you have a **Student** entity and a **Professor** entity, which have some generic properties. They both have a name, telephone number, and email address and can be a member of one or more courses. Both entities are *generalized* in the **Member** entity. Conversely, this means that the **Member** entity is *specialized* in the **Student** and **Professor** entities.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/917900.png" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/917900.png" class="no-border" >}}
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide9/generalization-and-association/).
 
@@ -178,7 +177,7 @@ This property defines whether the entity has the system association 'changedBy'.
 
 You can also edit an entity by opening the entity properties dialog box.
 
-{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" >}}
+{{< figure src="/attachments/refguide9/modeling/domain-model/entities/example-entity.png" alt="Example of a CD entity" class="no-border" >}}
 
 In addition to the properties described above, there are also tabs which allow you to edit the following:
 

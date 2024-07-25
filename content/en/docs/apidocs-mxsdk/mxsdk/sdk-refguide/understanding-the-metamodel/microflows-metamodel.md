@@ -12,7 +12,7 @@ Microflows have parameters, a return type (the return value is defined in an obj
 
 ### 1.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842814.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842814.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -29,7 +29,7 @@ For example, a simple microflow could consist of a start event, a single activit
 
 #### 1.2.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842811.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842811.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -42,9 +42,9 @@ There are several types of objects that can be added to a microflow. One type is
 
 #### 1.3.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842852.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842852.svg" class="no-border" >}}
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582249.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582249.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -65,7 +65,7 @@ Annotation flows are used to connect annotations to other microflow objects.
 
 #### 1.4.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842853.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842853.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | ---  |
@@ -88,7 +88,7 @@ A decision conditionally splits on either an expression or a rule. In case of a 
 
 #### 1.5.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842854.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842854.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- | 
@@ -110,7 +110,7 @@ Object attributes can be updated with a change action, both in a create action a
 
 #### 2.1.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582248.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582248.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -124,12 +124,12 @@ A retrieve action is either an association-based retrieve or a database-based re
 
 #### 2.2.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582244.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582244.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
 | [Retrieve](/refguide/retrieve/) |[RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.retrievesource.html) |
-| [XPath](/refguide/xpath/) constraints |[AssocationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html) |
+| [XPath](/refguide/xpath/) constraints |[AssociationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html) |
 | |[DatabaseRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.databaseretrievesource.html) |
 | |[Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.range.html), [ConstantRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.constantrange.html) and [CustomRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.customrange.html) |
 | |[SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.sortitemlist.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.sortitem.html) |
@@ -140,7 +140,7 @@ Microflows can call other microflows by defining a mapping of expressions to par
 
 #### 2.3.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842821.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842821.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -154,7 +154,7 @@ Microflows can trigger behavior in the browser: showing and closing pages, showi
 
 #### 2.4.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582245.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582245.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -170,7 +170,7 @@ An app service call action points to a specific app service action (which is par
 
 #### 2.5.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842823.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842823.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -185,7 +185,7 @@ A web service call to an imported web service has an HTTP configuration, and a r
 
 #### 2.6.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842843.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842843.svg" class="no-border" >}}
 
 See the following diagrams for details on the HTTP configuration, request handling, and response handling.
 
@@ -201,7 +201,7 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 #### 2.7.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842844.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842844.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -219,7 +219,7 @@ A web service operation request needs to be mapped from Mendix app concepts to t
 
 #### 2.8.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582232.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582232.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -235,7 +235,7 @@ The result of a web service operation needs to be mapped to Mendix app concepts 
 
 #### 2.9.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842842.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842842.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -250,7 +250,7 @@ Microflow variables can be created and changed with specific actions. A create v
 
 #### 2.10.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842846.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842846.svg" class="no-border" >}}
 
 Studio Pro Guide | Model SDK API docs
 --- | --- |
@@ -263,7 +263,7 @@ Lists can be created, changed and deleted with specific actions. List aggregatio
 
 #### 2.11.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582227.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582227.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -279,7 +279,7 @@ Lists can be manipulated with different types of operations. Lists can be sorted
 
 #### 2.12.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582228.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582228.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -294,7 +294,7 @@ Lists can be manipulated with several binary operations, which take two lists as
 
 #### 2.13.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842849.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16842849.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -311,7 +311,7 @@ Java action calls point to a specific Java action and have a parameter mapping w
 
 #### 2.14.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582230.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582230.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -326,7 +326,7 @@ Logging actions target a single log node on a specific log level. The log messag
 
 #### 2.15.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16844080.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16844080.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
@@ -343,7 +343,7 @@ XML export actions use a domain-to-XML mapping similar to web service request ma
 
 #### 2.16.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582238.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/18582238.svg" class="no-border" >}}
 
 Model SDK API docs
 
@@ -360,7 +360,7 @@ Documents are generated from a document template. Such a template has parameters
 
 #### 2.17.1 Graphical Overview
 
-{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16844082.svg" >}}
+{{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/microflows-metamodel/16844082.svg" class="no-border" >}}
 
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |

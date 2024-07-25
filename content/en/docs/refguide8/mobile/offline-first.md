@@ -1,9 +1,7 @@
 ---
 title: "Offline-First"
 url: /refguide8/offline-first/
-category: "Mobile"
 weight: 30
-tags: ["offline", "native", "mobile", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -100,7 +98,7 @@ These settings are not applied for [selective synchronization](#selective-sync).
 
 By default, Mendix automatically determines which objects need to be synchronized as mentioned in [Synchronization](#synchronization).
 
-Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behaviour for an entity. You can choose between the following options:
+Depending on the use-case, more fine-grained synchronization controls might be required. Therefore, it is possible to change the download behavior for an entity. You can choose between the following options:
 
 * **All Objects** — download all objects applying the regular security constraints
 * **By XPath** — only download the objects which match the [XPath Constraints](/refguide8/xpath-constraints/) in addition to the regular security constraints. This means all previously synchronized objects that do not match the XPath constraint will be removed.
@@ -109,7 +107,7 @@ Depending on the use-case, more fine-grained synchronization controls might be r
 
 If you have custom widgets or JavaScript actions which use an entity that cannot be detected by Studio Pro in your offline-first profile (because its only used in the code), you can use customizable synchronization to include such entities.
 
-{{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  >}}
+{{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  class="no-border" >}}
 
 ### 2.5 Limitations
 

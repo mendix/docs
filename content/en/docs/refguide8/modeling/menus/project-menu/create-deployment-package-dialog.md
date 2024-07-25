@@ -1,14 +1,13 @@
 ---
 title: "Create Deployment Package"
 url: /refguide8/create-deployment-package-dialog/
-tags: ["studio pro", "project menu", "deployment package"]
 ---
 
 ## 1 Introduction
 
 A deployment package can be deployed to the Mendix Cloud, another cloud provider (for example SAP BTP), or on a server that is configured to run Mendix software. While developing you can deploy and run on your local machine, but once you are ready to deploy your project elsewhere you will need to create a deployment package. For some platforms, this is done automatically as part of the deploy process but, for others, you will need to explicitly create the deployment package.
 
-{{< figure src="/attachments/refguide8/modeling/menus/project-menu/create-deployment-package-dialog/create-deployment-package.png" alt="Create Deployment Package dialog" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/project-menu/create-deployment-package-dialog/create-deployment-package.png" alt="Create Deployment Package dialog" class="no-border" >}}
 
 ## 2 Versioned
 
@@ -40,7 +39,7 @@ Studio Pro will show you the latest version that you created a package for (if a
 
 ### 3.4 Description
 
-You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Developer Portal will show you this description along with the version number.
+You can enter a custom **Description** for this deployment package. It is purely for your own reference so that you can quickly recognize a package. The Mendix Portal will show you this description along with the version number.
 
 ## 4 File Name
 

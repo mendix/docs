@@ -18,7 +18,7 @@ Import mappings are used to define how incoming XML or JSON is converted into Me
 
 This is an example of an import mapping document that maps an **Order** from a web service to a **ReceivedOrder** entity:
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/mapping-documents/16843933.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/mapping-documents/16843933.png" class="no-border" >}}
 
 For more details, see [Import Mappings](/refguide7/import-mappings/).
 
@@ -31,7 +31,7 @@ Export mappings are used to define how Mendix objects can be converted to XML ac
 
 This is an example of an export mapping document:
 
-{{< figure src="/attachments/refguide7/desktop-modeler/integration/mapping-documents/16843940.png" >}}
+{{< figure src="/attachments/refguide7/desktop-modeler/integration/mapping-documents/16843940.png" class="no-border" >}}
 
 In this example, a **Cheesecake** entity will be passed when the export mapping is called. Subsequently, the **Topping** entities will be fetched by following the **Topping_Cheesecake** association from the passed Cheesecake Mendix object. The result is passed to an XML document or sent to a web service.
 
@@ -75,7 +75,7 @@ Mapping documents rely heavily on two windows. If they are not visible in the Mo
 ## 7 User Interactions
 
 * Dragging entities. Drag an entity from the Connector Window and drop it on an entity placeholder (dashed box) to relate it to an XML element. 
-* Double clicking on a mapping element (on either the entity side or the XML side). Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
+* Double-clicking on a mapping element (on either the entity side or the XML side). Opens a dialog that allows you to specify details for the individual mapping. If the element is not yet related to an entity, a dialog appears that lets you select the entity first.
 * Right mouse click, "Select Entity". Change the entity that is coupled to an XML element.
 * Right mouse click, "Go to Entity". Open the Domain Model that contains the entity and jumps to the entity.
 * Right mouse click, "Collapse All". Hides all the children of the mapping element, so you can keep overview in large mappings.

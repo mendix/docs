@@ -3,7 +3,6 @@ title: "Integration Pane"
 url: /refguide/integration-pane/
 weight: 30
 description: "Describes the Integration Pane in Mendix Studio Pro."
-tags: ["data hub", "studio Pro", "Integration Pane", "data hub catalog"]
 aliases:
     - /refguide/data-hub-pane/
 ---
@@ -37,7 +36,7 @@ The following functionality is available in the pane:
 
 When you do not enter search text in the Integration pane, then the **Used in your App** section is displayed. This shows the consumed services and the related external entities and actions used in the current app. The list of entities, associations, attributes, and actions for the consumed services are shown as for the search results:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/used-in-your-app.png" alt="User in Your App Section" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/used-in-your-app.png" alt="User in Your App Section" class="no-border" >}}
 
 For more information on how to add entities and actions to your app, see [Adding an External Entity to an App](/refguide/external-entities/#adding-external-entities) section in *External Entities* or [Call external action](/refguide/call-external-action/).
 
@@ -61,7 +60,7 @@ The search strings must be a minimum of three alphanumeric characters. Punctuati
 
 By default, the search is performed on assets in the **Production** environment. To include all other environments such as test, acceptance, and also the Mendix free app environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/filter-icon.png" alt="Filter Icon"   width="300"  >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/filter-icon.png" alt="Filter Icon"   width="300"  class="no-border" >}}
 
 {{% alert color="info" %}}
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
@@ -87,12 +86,12 @@ The search results and **User in your App** section show the following informati
     * **View in Catalog** – click this to go to the [data source details](/catalog/manage/search/#service-details) page in the Catalog
     * **Go to connection settings** – click this to open the [consumed OData service](/refguide/consumed-odata-service/) document
 
-        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-menu.png" alt="info on a Service" >}}
+        {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/integration-pane-menu.png" alt="info on a Service" class="no-border" >}}
 
 * **Gray shield icon** shows if the service or entity is validated in the Catalog
 * **Update icon** is a blue arrow icon that indicates that there is another version of the consumed service available in the Catalog. Click to update the service that is consumed in the app to the contract that is now available:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Integration pane update" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/update-available.png" alt="Integration pane update" class="no-border" >}}
 
     {{% alert color="info" %}}If there is an OData service update available, then the entities that are listed are those that are available in that version of the OData service. These entities are grayed-out to indicate that they cannot be dragged into the domain model, as the *current* contract that is consumed in the app does not have these entities. You must update the contract to the version shown in the search results by clicking the **Update** icon. {{% /alert %}}
 
@@ -100,7 +99,7 @@ The search results and **User in your App** section show the following informati
 
 * **Information icon** allows you to view further details for the service and a link to go directly to the [Service Details](/catalog/manage/search/#search-details) screen in the Catalog:
 
-    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Integration pane Information" >}}
+    {{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/integration-pane-info.png" alt="Integration pane Information" class="no-border" >}}
 
 ### 4.2 Entities, Attributes, and Associations {#association-attributes}
 
@@ -108,7 +107,7 @@ Entities, attributes, and associations are displayed under the service name.
 
 For any service in the list, you can click **Show details** to see the full list of the exposed entities, associations, and attributes for that service.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Integration pane Information" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Integration pane Information" class="no-border" >}}
 
 {{% alert color="info" %}}The associations and attributes that are not supported in your Mendix app are shown as non-selectable (gray) and will not be included when you drag them into the domain model.{{% /alert %}}
 
@@ -126,7 +125,7 @@ The associations that are exposed in the services are listed before attributes i
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your app:
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/multiple-associations.png" alt="multiple associations" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/multiple-associations.png" alt="multiple associations" class="no-border" >}}
 
 #### 4.2.3 Attributes
 
@@ -147,7 +146,7 @@ External actions are displayed under the service, below the entities. By default
 
 By clicking the expand button next to the action, the parameters and return type of that action are shown. You can right-click and select **Find Usages** in order to search for all the places the action is used throughout the app.
 
-{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/actions.png" alt="integration pane actions" width="400" >}}
+{{< figure src="/attachments/refguide/modeling/menus/view-menu/data-hub-pane/actions.png" alt="integration pane actions" width="400" class="no-border" >}}
 
 {{% alert color="info" %}}Actions that [are not supported](/refguide/consumed-odata-service-requirements/#actions) in your Mendix app are shown as non-selectable (gray) and cannot be dragged into a microflow.{{% /alert %}}
 

@@ -2,7 +2,6 @@
 title: "Message Definitions"
 url: /refguide9/message-definitions/
 weight: 5
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -45,7 +44,7 @@ To generate mappings, do the following:
 3. Ensure that the required mapping(s) is selected.
 4. Click **OK**.
 
-    {{< figure src="/attachments/refguide9/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" >}}
+    {{< figure src="/attachments/refguide9/modeling/integration/message-definitions/generate-mappings.png" alt="General mappings dialog" class="no-border" >}}
 
 ## 4 Defining a Message Definition{#message-definition}
 
@@ -55,7 +54,7 @@ In the message definitions document, click **Add** to create a new message defin
 
 The message definition is defined in the **General** tab.
 
-{{< figure src="/attachments/refguide9/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" >}}
+{{< figure src="/attachments/refguide9/modeling/integration/message-definitions/message-definition.png" alt="The Message Definition General tab" class="no-border" >}}
 
 #### 4.1.1 Name
 

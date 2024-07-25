@@ -4,7 +4,6 @@ linktitle: "SVN On-Premises Version Control Server"
 url: /refguide9/on-premises-svn/
 weight: 50
 description: "Introduces how to work with SVN on-premises version control server."
-tags: ["on-premises", "svn", "version control"]
 aliases:
     - /howto9/collaboration-requirements-management/on-premises-svn-howto/
 ---
@@ -32,9 +31,9 @@ Subversion uses repositories for storing all the data of your version-controlled
 
 Mendix requires you to store each Mendix application in a separate repository. It is not possible to place multiple Mendix apps into a single repository.
 
-When uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](http://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
+When uploading an app to a repository, Mendix requires the repository to be empty (except for the recommended SVN layout, as described in [Recommended Repository Layout](https://svnbook.red-bean.com/en/1.7/svn.tour.importing.html#svn.tour.importing.layout)). Specifically, this means that the repository should contain only three empty folders, called **branches**, **tags**, and **trunk**.
 
-Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](http://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
+Usually, repositories are created and maintained by the administrator of your SVN server. For more details about repositories, see [Repository Administration](https://svnbook.red-bean.com/en/1.7/svn-book.html#svn.reposadmin).
 
 In the following sections of this document, it is assumed that you have a repository available for your application.
 
@@ -62,13 +61,13 @@ To create a new app to store in your on-premises SVN server, you must create the
 
 ## 6 Moving an App from Mendix Team Server to an SVN Server
 
-To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in the [Developer Portal](/developerportal/). In this case a Team Server app is created automatically.
+To look at moving an app from Mendix Team Server to a private SVN server, we will use the scenario of creating a new app in [Apps](/developerportal/). In this case a Team Server app is created automatically.
 
 {{% alert color="warning" %}}
 For the purpose of creating an app to store in your on-premises SVN server, this is a deprecated workflow.
 {{% /alert %}}
 
-1. Click **Create App** in the [Developer Portal](https://sprintr.home.mendix.com/index.html).
+1. Click **Create App** in [Apps](https://sprintr.home.mendix.com/).
 2. After you have created your app, click the arrow next to **Edit App**, select **Edit in Mendix Studio Pro**, then open the app in the relevant Studio Pro version. You need to open your app in Studio Pro in order to download it to your local machine (for more information, see [Version Control](/refguide9/version-control/)).
 3. Your app contains a link to the location of the Mendix Team Server by default. To replace this with the address of your own SVN server, create a ticket in the [Mendix Support Portal](https://support.mendix.com/) specifying your app and the address of your SVN server. This address must include the name of the repository you are going to use for your app (for example, `https://svn.example.com:9876/repos/myapp`). This will allow Mendix Support to change the URL of your app.
 4. Wait for confirmation from Mendix Support before continuing the process.

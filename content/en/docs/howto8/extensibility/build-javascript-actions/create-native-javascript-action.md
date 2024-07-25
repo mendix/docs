@@ -3,7 +3,6 @@ title: "Build JavaScript Actions for Native Mobile"
 url: /howto8/extensibility/create-native-javascript-action/
 weight: 30
 description: "This tutorial teaches you how to build a JavaScript action for native mobile apps."
-tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
@@ -72,7 +71,7 @@ Follow these instructions to set up your NFC project:
 
 Your Mendix project should looks something like this:
 
-{{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-home-studio-pro.png" alt="native nfc app home"   width="550"  >}}
+{{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-home-studio-pro.png" alt="native nfc app home"   width="550"  class="no-border" >}}
 
 ### 3.2 Building a Native Custom Developer App {#custom-developer-app}
 
@@ -91,11 +90,11 @@ Now you will build a native custom developer app and install it on your phone:
 
     As a result of the `prepare` command your app is created in [App Center](https://appcenter.ms/apps):
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/app-center-apps.png" alt="App Center apps"   width="550"  >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/app-center-apps.png" alt="App Center apps"   width="550"  class="no-border" >}}
 
     A new repository is created in your GitHub account:
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/github-template-repo.png" alt="Github template repo" >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/github-template-repo.png" alt="Github template repo" class="no-border" >}}
 
 1. To build the app for the first time, complete the [Build Your Developer App](/howto8/mobile/how-to-devapps/#build-your-developer-app) section of *Create a Custom Developer App* using this build command:
 
@@ -198,11 +197,11 @@ For Android devices, you must add code which checks if a user permits the module
 
 For iOS you have to add permission to use NFC capabilities:
 
-1. Open your project in xCode.
+1. Open your project in Xcode.
 1. Select your project in the left menu.
 1. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/xcode-capabilities-nfc.png" alt="ios capabilities" >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/xcode-capabilities-nfc.png" alt="ios capabilities" class="no-border" >}}
 
 1. Add a usage description so the user can give their permission to use the NFC reader.<br />
     1. In **ios/nativeTemplate/Info.plist** right-click.<br />
@@ -268,7 +267,7 @@ Build an action to check if a device supports NFC:
 
     When finished, your code will look like this:
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/action-has-nfc-support-code.png" alt="has NFC support action code" >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/action-has-nfc-support-code.png" alt="has NFC support action code" class="no-border" >}}
 
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.    
 
@@ -300,7 +299,7 @@ Now make an JavaScript action to read the NFC tag information:
     
     When finished, your code will look like this:
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/action-read-nfc-tag-code.png" alt="Read NFC tag action code" >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/action-read-nfc-tag-code.png" alt="Read NFC tag action code" class="no-border" >}}
 
 1. Optionally, click the **Expose as nanoflow action** tab, select **Expose as nanoflow action**, and **Select** an icon for your JavaScript action.
 
@@ -308,7 +307,7 @@ Now make an JavaScript action to read the NFC tag information:
 
 Make a nanoflow to use your new actions:
 
-{{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/scan-tag-nanoflow.png" alt="Scan tag nanoflow" >}}
+{{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/scan-tag-nanoflow.png" alt="Scan tag nanoflow" class="no-border" >}}
 
 To make the nanoflow shown above, do the following:
 
@@ -344,7 +343,7 @@ To write your own NFC tag, do the following:
 1. Tap **Write / 30 Bytes**.
 1. Scan your tag. You will see a **Write complete** dialog box:
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/nfc-tools-write-tag.png" alt="write nfc tag"   width="250"  >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/nfc-tools-write-tag.png" alt="write nfc tag"   width="250"  class="no-border" >}}
 
 {{% alert color="info" %}}
 
@@ -358,7 +357,7 @@ Now that you added NFC capability to your app's source code, you must rebuild yo
 
 {{% alert color="info" %}}
 
-Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder/#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
+Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder/#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [Xcode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
 
 {{% /alert %}}
 
@@ -375,7 +374,7 @@ Making software is an iterative process. If you integrate your own module or bui
 1. Install the app on your device. For more information on installing an app on your device, see the [Distributing](/howto8/mobile/deploying-native-app/#distributing) section of *Build a Mendix Native App in the Cloud*.
 1. Open the app, tap **Scan tag**, and scan your NFC tag. You should see a dialog box with the text you assigned to your tag:
 
-    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-success-android.png" alt="read NFC successfully"   width="250"  >}}
+    {{< figure src="/attachments/howto8/extensibility/build-javascript-actions/create-native-javascript-action/native-nfc-app-success-android.png" alt="read NFC successfully"   width="250"  class="no-border" >}}
 
 Congratulations for completing this NFC tutorial! To go beyond the lessons you have learned, see the sections below. 
 

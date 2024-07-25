@@ -2,14 +2,13 @@
 title: "Project Explorer"
 url: /refguide8/project-explorer/
 weight: 40
-tags: ["studio pro", "project explorer"]
 ---
 
 ## 1 Introduction
 
 The **Project Explorer** shows the complete structure of your project including all documents inside the modules:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project-explorer.png"   width="250"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/project-explorer.png"   width="250"  class="no-border" >}}
 
 The **Project Explorer** consists of the following:
 

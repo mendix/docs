@@ -2,7 +2,6 @@
 title: "Customizing Local Build Packages"
 url: /howto8/mobile/customizing-phonegap-build-packages/
 weight: 30
-tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/customizing-phonegap-build-packages.html
     - /refguide8/customizing-phonegap-build-packages
@@ -21,8 +20,8 @@ To publish your app in an app store, Mendix recommends building native iOS apps 
 
 ## 2 Downloading the Local Build Package {#download-local-package}
 
-To download the local build  package, publish your app for mobile app stores through the Developer Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
+To download the local build  package, publish your app for mobile app stores through the Mendix Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
 
 ## 3 Customizing the Local Build Package
 
-You can customize the local build package to suit your use case. Once you have customized your app according to your needs, you can build your app locally using the Cordova CLI or XCode by following [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/).
+You can customize the local build package to suit your use case. Once you have customized your app according to your needs, you can build your app locally using the Cordova CLI or Xcode by following [How to Build a Mendix Hybrid App Locally](/howto8/mobile/build-hybrid-locally/).

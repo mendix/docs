@@ -2,7 +2,6 @@
 title: Generate Jump-To Options
 url: /refguide/generate-jump-to-options/
 weight: 35
-tags: ["studio pro", "workflow", "generate jump-to options"]
 ---
 
 {{% alert color="info" %}}
@@ -31,7 +30,7 @@ This functionality is different from the [Jump activity](/refguide/jump-activity
 
 An example of **Generate jump-to options** properties is represented in the image below:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" width="650px" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/generate-jump-to-options/generate-jump-to-options-properties.jpg" width="650px" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 

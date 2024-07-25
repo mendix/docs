@@ -1,7 +1,6 @@
 ---
 title: "Packaging Hybrid Mobile Apps"
 url: /refguide7/packaging-hybrid-mobile-apps/
-category: "Mobile Development"
 ---
 
 A Mendix hybrid application is a hybrid of a web and native app. If you want to publish your hybrid app on the Apple App Store or Google Play, you have to wrap your app in a native shell. Mendix uses Cordova to make hybrid apps. 

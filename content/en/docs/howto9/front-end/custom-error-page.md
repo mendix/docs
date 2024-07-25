@@ -1,10 +1,8 @@
 ---
 title: "Create Custom Error Pages"
 url: /howto9/front-end/custom-error-page/
-category: "Front End"
 weight: 55
 description: "Describes how to create a custom error page for a more tailored user experience."
-tags: ["theming", "UX", "Error page", "offline", "404", "403", "front end"]
 ---
 
 {{% alert color="info" %}}
@@ -27,7 +25,7 @@ The different files serve different purposes:
 
 If you do not create these files, the default error page will be used for each scenario:
 
-{{< figure src="/attachments/howto9/front-end/custom-error-page/custom-error-page.png" >}}
+{{< figure src="/attachments/howto9/front-end/custom-error-page/custom-error-page.png" class="no-border" >}}
 
 This how-to teaches you how to do the following:
 
@@ -52,19 +50,19 @@ If you are using Atlas 3, do the following:
 1. Open the local folder of your app.
 2. Go to **theme**:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/theme.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/theme.png" class="no-border" >}}
 
 3. Go to **web**:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/web.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/web.png" class="no-border" >}}
 
 4. Create a new folder named *error_page*:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/error-page.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/error-page.png" class="no-border" >}}
 
 5. In the **error_page** folder, place your *offline.html* file:
 
-    {{< figure src="/attachments/howto9/front-end/custom-error-page/offline.png" >}}
+    {{< figure src="/attachments/howto9/front-end/custom-error-page/offline.png" class="no-border" >}}
 
     Optionally, you can also create *404.html* and *403.html* pages.
 

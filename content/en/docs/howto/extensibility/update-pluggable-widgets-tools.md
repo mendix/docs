@@ -1,11 +1,9 @@
 ---
 title: "Update Pluggable Widgets Tools"
 url: /howto/extensibility/update-pluggable-widgets-tools/
-category: "Extensibility"
 description: "Follow this guide to update the Pluggable Widgets Tools package used by your pluggable widget to a newer version.
 "
 weight: 10
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction

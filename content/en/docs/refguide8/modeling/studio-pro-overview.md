@@ -1,10 +1,8 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide8/studio-pro-overview/
-category: "App Modeling"
 description: "Describes Studio Pro in general: tabs, menus, shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide8/desktop-modeler-overview.html
     - /refguide8/desktop-modeler-overview
@@ -24,7 +22,7 @@ When Studio Pro is open, press <kbd>F1</kbd> to quickly jump to documentation.
 
 This document describes the user interface of Mendix Studio Pro:
 
-{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" >}}
+{{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
 ## 2 Top Bar
 
@@ -32,7 +30,7 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and Marketplace](#links) 
+* [Links to Apps and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 
@@ -44,15 +42,15 @@ For more information on menus, see [Menus](/refguide8/menus/).
 
 You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
 
-For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
+For more information on deployment in Mendix, see [Deployment](/deployment/).
 
 For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Developer Portal and Marketplace {#links}
+### 2.3 Links to Apps and Marketplace {#links}
 
-You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
+You can find links to [Apps](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
-Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, the Developer Portal, your profile, or to sign out. 
+Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, your profile, or to sign out. 
 
 ## 3 Project Structure
 

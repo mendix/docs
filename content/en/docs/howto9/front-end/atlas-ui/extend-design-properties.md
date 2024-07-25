@@ -2,7 +2,6 @@
 title: "Extend Design Properties"
 url: /howto9/front-end/extend-design-properties/
 weight: 60
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ Design properties are based on the classes in the styling for both web apps and 
 
 Design properties are visible as part of the widget properties:
 
-{{< figure src="/attachments/howto9/front-end/atlas-ui/extend-design-properties/studio-pro-design-properties.png" alt="Design Properties in Studio Pro"   width="350"  >}}
+{{< figure src="/attachments/howto9/front-end/atlas-ui/extend-design-properties/studio-pro-design-properties.png" alt="Design Properties in Studio Pro"   width="350"  class="no-border" >}}
 
 For more information on learning how to add design properties, see the [Design Properties API Documentation](/apidocs-mxsdk/apidocs/design-properties/).
 

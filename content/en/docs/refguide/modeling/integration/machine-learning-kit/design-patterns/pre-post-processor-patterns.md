@@ -1,9 +1,7 @@
 ---
 title: "Pre/Post-Processor Design Patterns"
 url: /refguide/machine-learning-kit/design-patterns/pre-post-processor-patterns/
-category: Design Patterns
 weight: 35
-tags: ["studio pro", "machine learning", "ml kit", "models", "design patterns"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -20,7 +18,7 @@ This document explores four pre-processor and post-processor design patterns for
 * [ONNX operators](#onnx-operators)
 * [Hybrid activities](#complex-hybrid)
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
@@ -32,11 +30,11 @@ Machine learning models cannot interpret categorical data without pre-processing
 
 A preprocessor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" class="no-border" >}}
 
 Create Variable Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/categorical-numerical-create-variable.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/categorical-numerical-create-variable.png" alt="." class="no-border" >}}
 
 As an example, production quality grade of a bike could be ranging from letter A to F. In order to feed that feature into model, the quality grade enumeration can be converted to ordinal data which holds priority ordering with each variable ranging from 1 to 6.
 
@@ -46,11 +44,11 @@ In a similar scenario, an output of an ML model that is a numerical value might 
 
 A post-processor activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-postprocessor-activity.png" class="no-border" >}}
 
 Create Variable Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/numerical-categorical-create-variable.png" class="no-border" >}}
 
 For instance, the output of the model that is called target_probability which is ranging from 0 and 1 can be converted into a binary value based on a threshold (0.80) value.
 
@@ -60,11 +58,11 @@ Some numerical features can be somewhat summarized using aggregation components.
 
 An aggregation activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregation-activity.png" class="no-border" >}}
 
 Aggregate List Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/aggregate-list-activity.png" class="no-border" >}}
  
 For instance, a new feature (minimum bike age) is calculated via Aggregate List activity and fed into the model.
 
@@ -78,7 +76,7 @@ If your model has multidimensional numeric inputs and/or outputs, you need to en
 
 Consider the following microflow:
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/java-actions-encoding-features-microflow.png" alt="." class="no-border" >}}
  
 Below there is a very simple pre-processing that essentially retrieves float values from the Iris entity, converts it InputStream, encodes it as Base64 string, and returns it as the result so that it can be injected into the model later on. See this Random Forest example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/iris_randomforest/actions/PreProcessor.java):
 
@@ -247,7 +245,7 @@ More often than not the pre- and post-processing steps are deeply coupled with t
 
 There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. 
 
-A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
+A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a Java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
 
 ```
 
@@ -291,7 +289,7 @@ There is nothing to be done inside Studio Pro, as the Mendix Runtime supports it
 
 ResNet Pre-processor and Model Inference in Separate MLKit Activities
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-sep-activities.png" alt="." class="no-border" >}}
 
 The below code snippet creates a preprocessor ONNX artifact that contains the necessary feature pre-processor transformation steps by the [ResNet models](https://github.com/onnx/models/tree/main/vision/classification/resnet) that can be found in the ONNX Model Zoo (see in the example below):
 
@@ -348,9 +346,9 @@ ONNX model is represented using protocol buffers. Dealing with ONNX protocol buf
 
 ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." class="no-border" >}}
 
-Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Pyhton API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
+Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
 
 ```
 
@@ -376,4 +374,4 @@ Typically, the necessary pre-processing actions of Computer Vision models are qu
 
 Here is an overview of a typical NLP model inference pipeline in microflows.
 
-{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" >}}
+{{< figure src="/attachments/refguide/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/hybrid-activity-microflow.png" class="no-border" >}}

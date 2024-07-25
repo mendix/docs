@@ -1,7 +1,6 @@
 ---
 title: "Call REST Service"
 url: /refguide8/call-rest-action/
-tags: ["studio pro", "integration activity", "call rest service"]
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -18,7 +17,7 @@ The **Call REST service** activity can be used to call a REST endpoint. You can 
 
 An example of call rest action properties is represented in the image below:
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/call-rest-action-properties.png" alt="call rest action properties" class="no-border" >}}
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -44,7 +43,7 @@ The properties dialog box consists of four tabs:
 
 ## 4 General Tab {#general}
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/general-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/general-tab.png" class="no-border" >}}
 
 ### 4.1 Location
 
@@ -115,7 +114,7 @@ When this identifier is not set (either not pinned or not present in *ClientCert
 
 ## 5 HTTP Headers Tab {#http-headers}
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/http-headers-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/http-headers-tab.png" class="no-border" >}}
 
 ### 5.1 Use HTTP Authentication
 
@@ -135,7 +134,7 @@ These headers are added to the HTTP request header. Each custom header is a pair
 
 ## 6 Request Tab {#request}
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/request-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/request-tab.png" class="no-border" >}}
 
 The sections below describe the options in the drop-down menu for generating the request.
 
@@ -191,7 +190,7 @@ See [String Template](#string-template), above, for more information on construc
 
 ## 7 Response Tab {#response}
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/response-tab.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/activities/integration-activities/call-rest-action/response-tab.png" class="no-border" >}}
 
 ### 7.1 Response Handling
 

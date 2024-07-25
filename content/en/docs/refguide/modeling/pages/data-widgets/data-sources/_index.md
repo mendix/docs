@@ -2,7 +2,6 @@
 title: "Data Sources"
 url: /refguide/data-sources/
 weight: 40
-tags: ["studio pro", "data source"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -33,9 +32,9 @@ Data grids, template grids, and list views are list widgets. Also, some [pluggab
 
 * [Database](/refguide/database-source/) – objects are retrieved from the database; database constraints can be used to limit which objects are shown. 
 * [XPath](/refguide/xpath-source/) – objects are retrieved from the database; an XPath constraint can be used to constrain which objects are shown.
-    {{% alert color="info" %}}
-    From Mendix version 10.5, most widgets do not have a separate XPath source, you can apply XPath constraints to the **Database** source.
-    {{% /alert %}}
+{{% alert color="info" %}}
+From Mendix version 10.5, most widgets do not have a separate XPath source, you can apply XPath constraints to the **Database** source.
+{{% /alert %}}
 * [Microflow](/refguide/microflow-source/) – objects retrieved are determined by the result of calling the selected microflow. The microflow can take objects in the context as parameter and needs to return a list of objects.
 * [Nanoflow](/refguide/nanoflow-source/) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a list of objects. Nanoflow data source is only available for data views and list views. 
 * [Association](/refguide/association-source/) – the objects are retrieved from memory by following an association from the object in the context. Thus, this data source is only available when a widget is nested in another data container. 
@@ -60,7 +59,7 @@ If **Network load** is the default, you can change this to **Network round trips
 
 The optimization mode cannot be changed for [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), and [list view](/refguide/list-view/) widgets. 
 
-{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage">}}
+{{< figure src="/attachments/refguide/modeling/pages/data-widgets/data-sources/data-source-advanced.png" alt="data source advanced tabpage" class="no-border" >}}
 
 #### 3.2.1 Optimize for Network Round Trips {#optimize-for-network-round-trips}
 

@@ -2,9 +2,7 @@
 title: "Implement Mendix Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /howto8/general/dev-best-practices/
-category: "General Info"
 weight: 7
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 #Academy are SMEs for verification, they discuss and link to this doc in training
 ---
 
@@ -96,7 +94,7 @@ If you have multiple associations between the same entities Mendix recommends ex
 
 When an association already exists between entities and you change the name on one or both of the entities, Mendix will rename the association automatically. 
 
-With models built in lower versions of Mendix, however, you will need to manually rename the assocation to keep your model consistent and up-to-date.
+With models built in lower versions of Mendix, however, you will need to manually rename the association to keep your model consistent and up-to-date.
 
 ### 3.3 Folders
 

@@ -1,10 +1,8 @@
 ---
 title: "UI Design"
 url: /howto/front-end/atlas-ui/
-category: "Front End"
 weight: 5
 description: "Presents a list of how-tos to guide you to create customized applications using Atlas UI."
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction
@@ -13,7 +11,7 @@ Mendix offers Atlas UI, a cross-platform UI framework that gives teams the found
 
 Atlas comes with a default design system which can be fully tailored and extended. New apps are based on this design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-The following how-to's are available here:
+The following how-tos are available here:
 
 * [Get Started](/howto/front-end/get-started/) — Learn more about Atlas UI and get started on your first customizations.
 * [Customize Styling](/howto/front-end/customize-styling-new/) — Customize your styling in deeper ways. Specifically, you will see how our progressive and web apps use SASS (SCSS) and our  native mobile apps use JavaScript to create your app's styling.

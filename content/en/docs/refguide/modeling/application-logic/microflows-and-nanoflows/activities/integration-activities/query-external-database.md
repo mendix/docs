@@ -1,7 +1,6 @@
 ---
 title: "Query External Database"
 url: /refguide/query-external-database/
-tags: ["studio pro", "integration activity", "query external database"]
 weight: 90
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -12,7 +11,7 @@ This activity can only be used in **Microflows**.
 
 ## 1 Introduction
 
-The **Query External Database** activity is used with the [External Database Connector](/appstore/connectors/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.
+The **Query External Database** activity is used with the [External Database Connector](/appstore/modules/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.
 
 This document covers the properties of the **Query External Database** activity. 
 

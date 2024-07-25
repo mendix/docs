@@ -2,7 +2,6 @@
 title: "Configuration Module API – Mx9"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api-9/
 description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Studio Pro Mendix 9.
-tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
 weight: 35
 ---
 
@@ -20,7 +19,7 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function:
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
@@ -35,7 +34,7 @@ function getProperties(
 Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Please note that when a property is hidden,, its value will be cleared.
+Please note that when a property is hidden, its value will be cleared.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -377,7 +376,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 };
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  class="no-border" >}}
 
 ### 7.2 Container
 
@@ -409,7 +408,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.3 Row Layout {#row-layout}
 
@@ -428,7 +427,7 @@ Row layouts are similar to a container, and can be used to render multiple eleme
 
 When `columnSize` is not set (or set to `"fixed"`) all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding and shrinking the column based on the content size. 
 
-As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically recieve the value 1.
+As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically receive the value 1.
 
 As an example, consider this. The following code creates a row layout with four children. The first child (`Image`) takes the first half of the available space, and the other three children (`Texts`) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3:
 
@@ -446,11 +445,11 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.2 Grow
 
-When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically recieve the value 1.
+When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically receive the value 1.
 
 If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (a high grow factor means a low shrink factor) until they reach their minimum sizes:
 
@@ -493,7 +492,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  class="no-border" >}}
 
 ##### 7.3.1.3 Example
 
@@ -526,7 +525,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
     });
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  class="no-border" >}}
 
 ### 7.4 Text
 
@@ -586,7 +585,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version
 })
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  class="no-border" >}}
 
 ### 7.6 Selectable
 
@@ -629,7 +628,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean, _ve
 }
 ```
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  class="no-border" >}}
 
 ### 7.7 Datasource
 
@@ -656,4 +655,4 @@ The **datasource** preview type can be used when developing a widget with a data
 
 Here is a preview of a **datasource** component containing a drop-zone with two text boxes:
 
-{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  >}}
+{{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-datasource.png" alt="a widget with a datasource" width="400"  class="no-border" >}}

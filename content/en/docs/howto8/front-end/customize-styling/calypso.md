@@ -2,7 +2,6 @@
 title: "Customize Styling Using Calypso"
 url: /howto8/front-end/calypso/
 weight: 10
-tags: ["Atlas", "UI", "UX", "Calypso", "styling", "CSS", "low-code"]
 description: "This document teaches you how to use Calypso, a tool which improves the way you edit styling."
 ---
 
@@ -31,7 +30,7 @@ For a deep-dive look into styling with Calypso, check out this video:
 1. Install Calypso.
 2. Open Calypso:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/calypso.png" alt="calypso" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/calypso.png" alt="calypso" class="no-border" >}}
 
 3. In the **Hostname** drop-down menu, select the host name of your Mendix app's device (or put its IP address in manually by clicking **Other** and typing in the IP address). 
 
@@ -48,11 +47,11 @@ For a deep-dive look into styling with Calypso, check out this video:
 
     Most users will only need to select the **Watching** > **theme/styles** option. However, when you are building custom error pages or are using JavaScript on your pages, you may wish to select the other two folders as well.
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/calypso-watching.png" alt="files to watch" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/calypso-watching.png" alt="files to watch" class="no-border" >}}
 
 9. Click the sun in the upper-right corner to toggle between dark mode and regular mode:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/dark-mode.png" alt="dark mode" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/dark-mode.png" alt="dark mode" class="no-border" >}}
 
 10. Click **Run Locally** in Mendix Studio Pro to use Calypso.
 
@@ -60,11 +59,11 @@ For a deep-dive look into styling with Calypso, check out this video:
 
     Browser address:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/browser-address.png" alt="browser address" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/browser-address.png" alt="browser address" class="no-border" >}}
 
     Calypso's **Console**:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/console.png" alt="console" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/console.png" alt="console" class="no-border" >}}
 
 ## 4 Testing Calypso
 
@@ -72,18 +71,18 @@ With your Mendix app and Calypso running, complete the steps below to see how Ca
 
 1. Add a button widget to your app's **Home_Responsive** page: 
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/drop-a-button.png" alt="drop a button" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/drop-a-button.png" alt="drop a button" class="no-border" >}}
 
 2. Run your app again by clicking **Run Locally** to see your new button in your browser:
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/blue-button.png" alt="blue text button" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/blue-button.png" alt="blue text button" class="no-border" >}}
 
 3. Click **Project** > **Show Project Directory in Explorer**.
 4. Open `theme\styles\web\sass\app\_custom-variables.scss` .
 5. Change `$brand-primary: #0595DB;` to `$brand-primary: brown`, then save your changes.
 6. Look at your app in your browser again. The button's text has switched from blue to brown.
 
-    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/brown-button.png" alt="brown text button" >}}
+    {{< figure src="/attachments/howto8/front-end/customize-styling/calypso/brown-button.png" alt="brown text button" class="no-border" >}}
 
 Good job! You've installed Calypso and used it to customize your styling quickly and easily.
 

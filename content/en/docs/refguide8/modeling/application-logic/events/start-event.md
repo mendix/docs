@@ -2,7 +2,6 @@
 title: "Start Event"
 url: /refguide8/start-event/
 weight: 1
-tags: ["studio pro", "start event", "event"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ A start event defines the starting point of a microflow or a nanoflow and is rep
 
 Link the start event to an activity with which you would like to start the microflow using a [sequence flow](/refguide8/sequence-flow/).
 
-{{< figure src="/attachments/refguide8/modeling/application-logic/events/start-event/start-event.png" >}}
+{{< figure src="/attachments/refguide8/modeling/application-logic/events/start-event/start-event.png" class="no-border" >}}
 
 ## 2 Read More
 

@@ -3,7 +3,6 @@ title: "View Menu"
 url: /refguide8/view-menu/
 description: "Describes the View Menu in Studio Pro."
 weight: 20
-tags: ["Studio Pro", "view menu", "top bar"]
 ---
 
 ## 1 Introduction
@@ -12,7 +11,7 @@ Studio Pro supports a number of dockable window panes, such as the **Changes** a
 
 Via this menu you can also enable or disable the [full screen mode](#full-screen) or [reset the layout](#reset-layout) of your project to the default.  
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/view-menu.png" alt="View Menu"   width="300"  >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/view-menu.png" alt="View Menu"   width="300"  class="no-border" >}}
 
 ## 2 Layout of Panes {#layout-of-panes}
 
@@ -24,7 +23,7 @@ Note that this section describes the behavior of panes, not the behavior of docu
 
 When you drag a pane, you can see arrows that indicate where you can position this pane. You can position the pane either inside the current pane (arrows grouped together) or make it full-window height or width (individual arrows on the borders). Each position is labelled and explained below:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/interaction-with-panes.png" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/interaction-with-panes.png" class="no-border" >}}
 
 1. Within the current *pane* you can position a pane in one of the following ways:
 
@@ -58,7 +57,7 @@ For version control enabled projects (projects with [Team Server](/developerport
 
 This pane has two levels, so when you zoom into a changed document, you can review all the changes within that document without going back and forth between levels. The zoomed-in level of the pane is split into two grids, with elements on the left and properties on the right. Selecting an element on the left presents the changed properties on the right:
 
-{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes.gif" >}}
+{{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes.gif" class="no-border" >}}
 
 ### 3.2 Connector {#connector}
 

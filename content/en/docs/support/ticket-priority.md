@@ -3,7 +3,6 @@ title: "Support Ticket Priority"
 url: /support/ticket-priority/
 weight: 40
 description: "Describes how priority levels are determined for Mendix Support."
-tags: ["support", "request", "impact", "urgency"]
 aliases:
     - /developerportal/support/ticket-priority/
     - /community-tools/support/ticket-priority/
@@ -32,7 +31,7 @@ The priority levels are based on the impact and urgency of the request.
 
 The ticket priority that Mendix Support validates is based on this matrix:
 
-{{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" >}}
+{{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" class="no-border" >}}
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 

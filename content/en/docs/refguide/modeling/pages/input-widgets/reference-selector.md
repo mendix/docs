@@ -2,9 +2,10 @@
 title: "Reference Selector"
 url: /refguide/reference-selector/
 weight: 70
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
+
+{{% alert color="warning" %}}The **reference selector** widget is not supported by React. To upgrade it to a React-compliant widget, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).{{% /alert %}}
 
 ## 1 Introduction
 
@@ -14,13 +15,13 @@ A reference selector must be placed in a [data container](/refguide/data-widgets
 
 For example, if you have an employee they will work for one company. A company can have many employees. The entities **Employee** and **Company** have a one-to-many association, **Employee_Company**, which you can select by choosing a Company from the Employee through the reference selector.  
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-domain-model.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector-domain-model.png" class="no-border" >}}
 
 In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/reference-selector.png" class="no-border" >}}
 
 {{% alert color="info" %}}
 If you only want to *display* information, you can also use a [text box](/refguide/text-box/). This has the added advantage that you can choose an attribute from an object which is linked via several association steps.
@@ -102,7 +103,7 @@ This page can be used to select an associated object from the list of all possib
 
 It is recommended that you generate a new page to show by right-clicking the widget and selecting **Generate select page…**. You can then edit the resulting page, if required.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/generate-select-page.png" alt="Generate a select page by right-clicking the widget" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/generate-select-page.png" alt="Generate a select page by right-clicking the widget" class="no-border" >}}
 
 See the [Show a Page](/refguide/on-click-event/#show-page) section of *On Click Event and Events Section*. Note that select pages must have a [pop-up layout](/refguide/layout/#layout-type).
 
@@ -179,52 +180,32 @@ The properties in the Selectable objects section determine the objects from whic
 The **Source** property sets which of the three ways to define the selectable objects is used:
 
 * Database *(default)*
+* Microflow
 * XPath
     {{% alert color="info" %}}From Mendix version 10.5, the reference selector does not have a separate XPath source, you can apply XPath constraints to the **Database** source.{{% /alert %}}
-* Microflow
 
 #### 3.10.1 Database
 
-Database is the default source for the selectable objects. By default, all database objects of the correct entity type will be selectable.
+**Database** is the default source for the selectable objects. By default, all database objects of the correct entity type will be selectable. You can filter the objects which are selectable using an XPath constraint and/or path constraints.
 
-**Constraints**
+##### 3.10.1.1 XPath Constraint
 
-From Mendix version 10.5, click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/).
+The XPath constraint limits the list of objects that can be selected. See the [constraints](/refguide/database-source/#constraints) section of *Database Source* for more information.
 
-Below Mendix version 10.5, you can limit the objects presented to the end-user by adding constraints. You will be guided through making constraints in the **Edit Constraints** dialog box:
-
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" >}}
-
-See the [constraints](/refguide/database-source/#constraints) section of *Database Source* for more information.
-
-**Sort Order**
-
-The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
-
-#### 3.10.2 XPath{#xpath-constraints}
-
-{{% alert color="info" %}}
-In Mendix version 10.5 and above, you can add a full XPath constraint to a Database source; click **Edit…** next to the **XPath constraint** field. There is no separate **XPath** source. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
-{{% /alert %}}
-
-If the source is XPath, the list of objects is also taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
-
-**XPath Constraint**
-
-The XPath constraint limits the list of objects that can be selected.
+From Mendix version 10.5, click **Edit** to edit the [XPath constraint](/refguide/xpath-constraints/). In Mendix versions below this, there is a separate **XPath** source.
 
 For example, the XPath constraint `[InStock = true()]` on a reference selector for products will ensure that only products that are in stock are selectable.
 
 See [XPath Constraints](/refguide/xpath-constraints/) for more information on XPath constraints.
 
-**Constrained By**
+##### 3.10.1.2 Constrained By
 
 A reference selector can be constrained by one or more paths. This is typically used to make one reference selector dependent on another. The best way to explain this is through an example.
 
 Imagine you have an ordering system where the products are sorted into categories – for example, food products and drink products. On a page where you can edit an order line, a product selector can be constrained by a category selector. After selecting a category (*food*, for example), the product selector is constrained by this category and shows only products in the category.
 
 *Example Domain model*
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" class="no-border" >}}
 
 In the domain model, the order line has one-to-many associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
@@ -234,31 +215,39 @@ Such a triangle-shaped part of the domain model is what makes using **constraine
 
 On the form, you have two reference selectors: one for **Category** and one for **Product**.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-reference-selectors.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-reference-selectors.png" class="no-border" >}}
 
 Without a constraint, the reference set selector will offer all the products:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-no-constraint.png" alt="List of all products, food and drink" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-no-constraint.png" alt="List of all products, food and drink" class="no-border" >}}
 
 However, because of the structure of the domain model, you can add a constraint which means that only the products of the previously selected category will be chosen. This is set by the **Constrained by** property.
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-constrained-by.png" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-constrained-by.png" class="no-border" >}}
 
 Now the end-user will only see products in the selected category:
 
-{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png" alt="List of just products in the drink category" >}}
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png" alt="List of just products in the drink category" class="no-border" >}}
 
-**Sort Order**
+{{% alert color="info" %}}
+If you use the **Database** source in Mendix versions below 10.5, you can also add constraints. The list of constraints is presented differently but you will be guided through making constraints in the **Edit Constraints** dialog box:
+
+{{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" class="no-border" >}}
+
+Alternatively, you can use the XPath data source. This provides the same options in versions below Mendix 10.5 as are provided by the Database source in Mendix versions 10.5 and above.
+{{% /alert %}}
+
+##### 3.10.1.3 Sort Order
 
 The sort order specifies the order in which the items in the reference selector are shown. You can sort on multiple attributes in both directions (ascending and descending). If **(default)** sort order is specified, the reference selector sorts on the displayed attribute.
 
-#### 3.10.3 Microflow
+#### 3.10.2 Microflow
 
 {{% alert color="warning" %}}
 A microflow can only be used if the selection is made using a drop-down.
 {{% /alert %}}
 
-If the source microflow is selected, a microflow is called, and returns the list of objects that the reference selector will show.
+If the source microflow is selected, a microflow is called. The microflow returns the list of objects that the reference selector will show.
 
 **Microflow**
 
@@ -267,6 +256,12 @@ Microflow specifies the microflow which is run to return the list of objects.
 **Microflow Settings**
 
 In microflow settings you can specify what parameters are passed to the microflow, depending on the parameters specified in the microflow itself.
+
+#### 3.10.3 XPath{#xpath-constraints}
+
+In Mendix versions below 10.5, there is a separate **XPath** source. Use this if you need to enter an XPath. See [XPath Constraints](/refguide/xpath-constraints/) for more information.
+
+If the source is XPath, the list of objects is taken from the database, but the objects which are displayed are chosen by an XPath Constraint.
 
 ## 4 Styling
 

@@ -947,7 +947,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-{{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+{{% alert color="warning" %}}You may see a large increase in the size of the unused Java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
 ### June 17, 2020
 

@@ -55,9 +55,9 @@ To ensure push notification integration executes properly on your native app you
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) for instructions on enabling push notifications when building a native app. 
-
 ## 5 Building Your Native App {#build-native-app}
+
+Now that you have everything set up, it is time to deploy your native app:
 
 1. In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
     * If you are building your native app for the first time, click [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) for instructions.</br>

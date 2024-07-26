@@ -429,7 +429,7 @@ The format of non-custom claims in the access token is as follows:
 }
 ```
 
-In versions of the OIDC Provider above 3.0.0, a new `client_id` attribute has been added.
+In the version 3.0.0 and above of the OIDC Provider module, a new `client_id` attribute has been added.
 
 ### 5.2 Non-custom Claims in ID-token
 

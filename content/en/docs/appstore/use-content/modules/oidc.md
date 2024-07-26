@@ -77,7 +77,7 @@ The OIDC SSO module supports the following features:
 
 For readers with more knowledge of the OAuth and OIDC protocol:
 
-* Uses the Authorization Code Grant flow to sign the end-user in via the browser
+* Helps you build an OAuth client that initiates the Authorization Code grant flow to sign the end-user in via the browser
 * Uses the `nonce` parameter to defend against replay attacks
 * Validates ID-token signatures
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
@@ -92,6 +92,8 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
 * Supports response_mode=query and response_mode=form_post
+* Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
+* When the OIDC SSO module secures an API with the Client Credential grant, it expects the `client_id` claim to be included, as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure). To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. These client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
 
 #### 1.2.3 Limitations
 
@@ -107,6 +109,8 @@ The OIDC SSO module also has the following limitations:
 
 * If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IdP can be used to sign the end-user in.
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
+* If OIDC SSO is used for API security, it does not validate the value of the "aud" claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
+* The Admin screens have separate tabs for configuring clients that use the Client Credential gant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
 
 ## 2 Dependencies
 

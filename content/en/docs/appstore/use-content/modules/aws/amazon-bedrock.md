@@ -54,7 +54,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### 3.1.1 Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programatically get information about available models and their lifecycle status you can use the [ListFoundationModels](#list-foundation-models) operation.
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
 
 ### 3.2 Configuring AWS Authentication
 

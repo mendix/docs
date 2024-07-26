@@ -19,6 +19,7 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Chatting with an AI assistant, including a chat history.
 * Building an AI agent to answer questions about proprietary data.
 * Generating images based on text prompts and displaying them in the Mendix app.
+* Generating embedding vectors for text inputs.
 
 ### 1.2 Prerequisites {#prerequisites}
 
@@ -178,7 +179,7 @@ This entity extends the GenAICommons.Request with attributes specific to Anthrop
 | Attribute | Description |
 | --- | --- |
 | `Version` | This attribute specifies the anthropic version. |
-| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
+| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation. |
 
 ##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
 
@@ -231,7 +232,54 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
-##### 4.1.1.8 RetrieveRequest_Extension {#retrieve-request-extension}
+##### 4.1.1.8 CohereEmbedOptions_Extension {#cohere-embed-options-extension}
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | Prepends special tokens to differentiate each type from one another. It expects a value of the `ENUM_InputType_CohereEmbed` enumeration. |
+| `EmbeddingTypes` | Specifies the types of embeddings you want to have returned. Optional and default is `None`, which returns the Embed Floats response type. It expects a value of the `ENUM_EmbeddingsTypes_CohereEmbed` enumeration. |
+| `Truncate` | Specifies how the API handles inputs longer than the maximum token length. It expects a value of the `ENUM_Truncate_CohereEmbed` enumeration. |
+
+##### 4.1.1.9 CohereEmbedResponse {#cohere-embed-response}
+
+This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
+
+| Attribute | Description |
+| --- | --- |
+| `Response_Type` | This value is either 'embedding_floats' or 'embedding_by_type' if `CohereEmbedOptions_Extension.EmbeddingTypes` has been specified. |
+| `_Id` | An identifier for the response. |
+
+##### 4.1.1.10 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
+
+This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | See `InputType` of the `CohereEmbedOptions_Extension` entity. |
+| `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
+| `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
+
+##### 4.1.1.11 TitanEmbeddingsOptions_Extension {#titan-embeddings-options-extension}
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
+
+| Attribute | Description |
+| --- | --- |
+| `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
+
+##### 4.1.1.12 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
+
+This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, in order to simplify the export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputText` | See `InputText` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
+
+##### 4.1.1.13 RetrieveRequest_Extension {#retrieve-request-extension}
 
 This helper entity extends the `GenAICommons.Request` entity with attributes specific to the `Retrieve` operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
@@ -243,7 +291,7 @@ This helper entity extends the `GenAICommons.Request` entity with attributes spe
 
 It can be added to the request using the [Request: Add Retrieve Request Extension](#add-r-extension) operation.
 
-##### 4.1.1.9 RetrieveResponse {#retrieve-response}
+##### 4.1.1.14 RetrieveResponse {#retrieve-response}
 
 This helper entity extends the `GenAICommons.Response` entity with attributes specific to the `Retrieve` operation.
 
@@ -251,7 +299,7 @@ This helper entity extends the `GenAICommons.Response` entity with attributes sp
 | --- | --- |
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
 
-##### 4.1.2.10 RetrievalResult {#retrieval-result}
+##### 4.1.2.15 RetrievalResult {#retrieval-result}
 
 This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation.
 
@@ -527,11 +575,11 @@ The `ModelInvocationInput` contains parameters that specify the input to the pre
 
 | Attribute | Description |
 | --- | --- |
-| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence.|
-| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType.|
-| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden.|
-| `Text` | The `Text` attribute holds the text that prompted the agent at this step.|
-| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence.|
+| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence. |
+| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType. |
+| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden. |
+| `Text` | The `Text` attribute holds the text that prompted the agent at this step. |
+| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence. |
 
 ##### 4.1.2.34 Parameter {#parameter}
 
@@ -539,8 +587,8 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 
 | Attribute | Description |
 | --- | --- |
-| `Name` | The `Name` attribute holds name of the parameter.|
-| `_Type` | The `_Type` attribute specifies the parameter type.|
+| `Name` | The `Name` attribute holds name of the parameter. |
+| `_Type` | The `_Type` attribute specifies the parameter type. |
 | `Value` | The `Value` attribute specifies the parameter value. |
 
 ##### 4.1.2.35 InvokeAgentAttribute {#invoke-agent-attribute}
@@ -549,8 +597,8 @@ The `InvokeAgentAttribute` holds all attributes needed to to create a request to
 
 | Attribute | Description |
 | --- | --- |
-| `Key` | The `Key` attribute holds an attribute key.|
-| `Value` | The `Value` attribute holds an attribute value.|
+| `Key` | The `Key` attribute holds an attribute key. |
+| `Value` | The `Value` attribute holds an attribute value. |
 
 ##### 4.1.2.36 InvokeAgentRequest {#invoke-agent-request}
 
@@ -558,12 +606,12 @@ The `InvokeAgentRequest` holds all attributes needed to create a request to invo
 
 | Attribute | Description |
 | --- | --- |
-| `InputText` | The `InputText` attribute holds the prompt text to send to the agent.|
-| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
-| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
-| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
-| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
-| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+| `InputText` | The `InputText` attribute holds the prompt text to send to the agent. |
+| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use. |
+| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use. |
+| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation. |
+| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process. |
+| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not. |
 
 ##### 4.1.2.37 SessionState {#session-state}
 
@@ -595,7 +643,7 @@ The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 
 | Attribute | Description |
 | --- | --- |
-| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text.|
+| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text. |
 
 ##### 4.1.2.41 InvokeAgentCitation {#invoke-agent-citation}
 
@@ -611,9 +659,9 @@ The `TracePart` is a generalization which contains information about the agent a
 
 | Attribute | Description |
 | --- | --- |
-| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest.|
+| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest. |
 
 ##### 4.1.2.43 AbstractTrace {#abstract-trace}
 
@@ -621,8 +669,8 @@ The `AbstractTrace` contains one part of the agent's reasoning process and resul
 
 | Attribute | Description |
 | --- | --- |
-| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace.|
-| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type.|
+| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace. |
+| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type. |
 
 ##### 4.1.2.44 FailureTrace {#failure-trace}
 
@@ -630,7 +678,7 @@ The `FailureTrace` contains information about the failure of the interaction.
 
 | Attribute | Description |
 | --- | --- |
-| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction.|
+| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction. |
 
 ##### 4.1.2.45 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
 
@@ -638,8 +686,8 @@ The `PreProcessingModelInvocationOutput` contains information about the foundati
 
 | Attribute | Description |
 | --- | --- |
-| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not.|
-| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid.|
+| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not. |
+| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid. |
 
 ##### 4.1.2.46 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
 
@@ -655,7 +703,7 @@ The `PostProcessingModelInvocationOutput` contains information about the foundat
 
 | Attribute | Description |
 | --- | --- |
-| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step.|
+| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step. |
 
 ##### 4.1.2.48 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
 
@@ -679,7 +727,7 @@ The `InvocationInput` contains information pertaining to the action group or kno
 
 | Attribute | Description |
 | --- | --- |
-| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base.|
+| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base. |
 
 ##### 4.1.2.51 ActionGroupInvocationInput {#action-group-invocation-input}
 
@@ -687,9 +735,9 @@ The `ActionGroupInvocationInput` contains information pertaining to the action g
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group.|
-| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group.|
-| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group.|
+| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group. |
+| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group. |
+| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group. |
 
 ##### 4.1.2.52 RequestBodyContent {#request-body-content}
 
@@ -705,7 +753,7 @@ The `RequestBodyContentParameter` is a parameter in the Lambda input event (for 
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
 ##### 4.1.2.54 InvocationInputParameter {#invocation-input-parameter}
 
@@ -713,7 +761,7 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
 ##### 4.1.2.55 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
 
@@ -721,8 +769,8 @@ The `KnowledgeBaseLookupInput` contains details about the knowledge base to look
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up.|
-| `Text` | The `Text` is the query made to the knowledge base.|
+| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up. |
+| `Text` | The `Text` is the query made to the knowledge base. |
 
 ##### 4.1.2.56 Rationale {#rationale}
 
@@ -730,7 +778,7 @@ The `Rationale` contains the reasoning, based on the input, that the agent uses 
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input.|
+| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input. |
 
 ##### 4.1.57 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
 
@@ -738,7 +786,7 @@ The `OrchestrationModelInvocationInput` holds the input for the pre-processing s
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input).|
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
 ##### 4.1.58 Observation {#observation}
 
@@ -746,9 +794,9 @@ The `Observation` contains the result or output of an action group or knowledge 
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group.|
-| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user.|
-| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible.|
+| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group. |
+| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user. |
+| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible. |
 
 ##### 4.1.59 RepromptResponse {#reprompt-response}
 
@@ -756,8 +804,8 @@ The `RepromptResponse` contains details about the agent's response to reprompt t
 
 | Attribute | Description |
 | --- | --- |
-| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input.|
-| `Text` | The `Text` reprompting the input.|
+| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input. |
+| `Text` | The `Text` reprompting the input. |
 
 ##### 4.1.60 ObservationRetrievedReference {#observation-retrieved-reference}
 
@@ -765,7 +813,7 @@ The `ObservationRetrievedReference` holds information about a sources cited for 
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
+| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference). |
 
 ### 4.2 Activities {#activities}
 
@@ -818,10 +866,38 @@ The `RetrieveAndGenerate` operation only allows a single user message to be part
 
 The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
 
-##### 4.2.1.4 Retrieve {#retrieve}
+##### 4.2.1.4 Embeddings (single string) {#embeddings-single-string}
 
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it.
-This operation corresponds to the *Retrieve* microflow.
+The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `InputText`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For Cohere Embed and Titan Embeddings, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (single string) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
+
+##### 4.2.1.5 Embeddings (chunk collection) {#embeddings-chunk-collection}
+
+The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
+
+##### 4.2.1.6 Retrieve {#retrieve}
+
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. This operation corresponds to the *Retrieve* microflow. 
+
 The input and output for this service are shown in the table below:
 
 | Input | Output |
@@ -870,7 +946,27 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 | --- | --- |
 | `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
 
-##### 4.2.2.5  Request: Add Retrieve Request Extension {#add-r-extension}
+##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
+
+Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
+
+This operation corresponds to the **CohereEmbedOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
+
+##### 4.2.2.6 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+
+Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
+
+This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
+
+##### 4.2.2.7  Request: Add Retrieve Request Extension {#add-r-extension}
 
 Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
 

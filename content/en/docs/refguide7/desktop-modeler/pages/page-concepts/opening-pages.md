@@ -16,7 +16,7 @@ Mendix allows for a number of methods for opening a page. Each of these methods 
 
 ### Page
 
-This is the [page](/refguide7/page/) that is shown to the end-user. There can be a number restrictions on the page, depending on the place from which the page is opened. For example, a page that is opened by the **Create** button must contain a data view that is connected to the same entity as the grid.
+This is the [page](/refguide7/page/) that is shown to the end-user. There can be a number of restrictions on the page, depending on the place from which the page is opened. For example, a page that is opened by the **Create** button must contain a data view that is connected to the same entity as the grid.
 
 ### Page title
 

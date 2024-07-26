@@ -107,7 +107,7 @@ Events will be triggered by hovering over or clicking on the points plotted on t
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Preventing the hover event from triggerring will also prevent the click event from triggering. This includes setting the layout parameter `hovermode` to `false` and setting the data parameter `hoverinfo` to `skip`.
+Preventing the hover event from triggering will also prevent the click event from triggering. This includes setting the layout parameter `hovermode` to `false` and setting the data parameter `hoverinfo` to `skip`.
 {{% /alert %}}
 
 When an event occurs, plotly will return a JSON object as described here: https://plot.ly/javascript/plotlyjs-events/#event-data. This JSON data is stored in a string attribute of an entity object which is passed to **Any Data**. The JSON contains raw data from the chart which has been plotted, such as the x and y coordinates of the point, and needs to be interpreted in the microflow which is triggered by the event.

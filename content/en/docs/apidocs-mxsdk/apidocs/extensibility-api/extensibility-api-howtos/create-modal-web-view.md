@@ -8,7 +8,7 @@ weight: 7
 
 This how-to describes how you can create a new web view hosted inside a modal dialog. You will then open the modal from a new menu item.
 
-You can download the example in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples)
+You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples)
 
 ## 2 Adding a View Model for Your New Modal
 

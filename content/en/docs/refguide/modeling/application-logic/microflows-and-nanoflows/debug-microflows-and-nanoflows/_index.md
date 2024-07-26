@@ -86,7 +86,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
 To debug a microflow from a nanoflow you need to add a separate breakpoint to the microflow. Stepping into the microflow won't work in this situation.
 
-For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/studio-pro-overview/#debugger-shortcuts) section of *Studio Pro Overview*.
+For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/keyboard-shortcuts/#debugger-shortcuts) section of *Keyboard Shortcuts*.
 
 ## 6 Variables Viewer
 

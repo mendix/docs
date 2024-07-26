@@ -265,7 +265,7 @@ Docker Hub will automatically create the repository when an image is pushed.
 Before pushing images to quay.io, you will need to create the repository first.
 To access quay.io, you will need to create a robot account, and give this account write permissions to the destination repository.
 
-**JFROG Artifactory**, **Sonatype Nexus**, **Harbor**, **Gitlab registry** and other on-premise registries
+**JFROG Artifactory**, **Sonatype Nexus**, **Harbor**, **GitLab registry** and other on-premise registries
 
 | Field               | Value                  |
 | ------------------- | ---------------------- |

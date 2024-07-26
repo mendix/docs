@@ -146,7 +146,7 @@ Use **Configure Username mapping** from the **Toolbox** (the **JA_ConfigureUsern
 
 Use the formatter microflows to change how externally-stored values will be displayed inside your Mendix application.
 
-| Microflow | Formater | Description |
+| Microflow | Formatter | Description |
 | --------- | -------- |---|
 | **GetAttributes_ConvertDate** | Date formatter |Date formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the date follows the US format (month/day/year).|
 | **GetAttributes_ConvertDecimal** | Decimal formatter |Decimal formatting is determined inside JA_ConfigureFormatters in the after start-up flow. By default, the decimal formatting follows the US format (period—".") to separate an integer from its partial fractional part.|
@@ -180,7 +180,7 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 
 | Feature | Advanced Audit Trail | Audit Trail |
 | --- | --- | --- |
-| Storage of audit trail events | Seperate Backend | Mendix Database |
+| Storage of audit trail events | Separate Backend | Mendix Database |
 | Implementation in app model | Event Handler | Inheritance |
 | Data storage efficiency | High (1 serialized JSON per change) | Low (1 log object per changed attribute) |
 | List commit handling | Optimized | Not optimized |

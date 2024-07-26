@@ -306,6 +306,10 @@ In this section you can select an action to be executed **On change** by the fil
 When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+{{% /alert %}}
+
 When adding a new option, the following properties are required:
 
 * **Caption** — The text being rendered for each option in the drop-down.
@@ -332,10 +336,6 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 #### 7.2.2 Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
-
-{{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, **Default value**, and **On change** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
-{{% /alert %}}
 
 ### 7.3 Number Filter
 

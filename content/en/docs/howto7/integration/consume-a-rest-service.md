@@ -54,7 +54,7 @@ To create an import mapping:
 
 ## 4 Adding an Input Entity to the Domain Model
 
-Our sevice takes the title of the page as an input. It returns the summary of the page. 
+Our service takes the title of the page as an input. It returns the summary of the page. 
 
 In this section, you are creating an entity that represents this input and associating it with its summary.
 

@@ -89,7 +89,7 @@ Open your *android/app/src/main/AndroidManifest.xml* file and find the section w
 
 ##### 1.2.2.3 Integrate the API Key into an iOS Project
 
-To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in the *ApiKeys.xcconfig* file.
+To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in Xcode, change the API key in the *ApiKeys.xcconfig* file.
 
 ## 2 Building your Application
 
@@ -172,7 +172,7 @@ Android builds are made via Android Studio:
 
 ### 4.1 iOS
 
-iOS applications require XCode, so we assume you have the latest version installed and ready to use.
+iOS applications require Xcode, so we assume you have the latest version installed and ready to use.
 
 Mendix uses CocoaPods to manage the iOS dependencies, which you can set up as follows:
 
@@ -239,7 +239,7 @@ To work around this, do one of the following:
 
 To configure Google Maps functionality, do the following:
 
-* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in XCode, change the API key in `ApiKeys.xcconfig` file.
+* To run a iOS FastLane script containing an API key, please define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in Xcode, change the API key in `ApiKeys.xcconfig` file.
 
 ### 5.2 Android
 
@@ -276,11 +276,11 @@ As a last resort, delete the following folders relatively to the project's direc
 1. Delete the `.gradle` folder.
 2. Delete the `.idea` folder.
 3. Delete both `build` folders in `/app` and `/mendixNative`.
-4. Restart android studio and open the project.
+4. Restart Android Studio and open the project.
 
 #### 6.1.3 Windows Long Path Limitation
 
-When building on windows, the NDK build step generates extremely long paths that might break the build. A possible indication of this problem is errors in the form of "can't find directory or file in `c:\<extremely long path name>`".
+When building on Windows, the NDK build step generates extremely long paths that might break the build. A possible indication of this problem is errors in the form of "can't find directory or file in `c:\<extremely long path name>`".
 
 To fix this issue, do the following:
 

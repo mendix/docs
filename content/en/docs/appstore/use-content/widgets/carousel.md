@@ -74,7 +74,7 @@ The widget requires a context configured on the **Data Source** tab. The possibl
 Static Data Source:
 
 * In the **Static images** section, click **New** to add static images from Studio Pro and also configure an on-click action
-* On the **On click action** tab of the **Edit Static Images Item** dialog box, configure only one of option:: **Microflow**, **Nanoflow**, or **Page**
+* On the **On click action** tab of the **Edit Static Images Item** dialog box, configure only one of option: **Microflow**, **Nanoflow**, or **Page**
 
 Database Data Source:
 

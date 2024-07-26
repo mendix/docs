@@ -110,6 +110,21 @@ The BrowseDescription contains the following fields:
   * Note that this is an integer attribute, while the interpretation is in binary format.
   * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
   * Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
+ 
+| Bit | Node class | Value |
+| --- | ---------- | -----  |
+| 0 | Object | 1 |
+| 1 | Variable | 2 |
+| 2 | Method | 4 |
+| 3 | ObjectType | 8 |
+| 4 | VariableType | 16 |
+| 5 | ReferenceType | 32 |
+| 6 | DataType | 64 |
+| 7 | View | 128 |
+
+Sum up the value to create the mask
+Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 1 + 2 + 128 = 131.
+
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
   * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
   * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.

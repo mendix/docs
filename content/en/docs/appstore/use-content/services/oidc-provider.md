@@ -220,7 +220,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 If you cannot use automatic registration, you can register the client manually.
 
 {{% alert color="info" %}}
-Starting from version 2.0.1, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
+Starting from version 3.0.0, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
 {{% /alert %}}
 
 1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
@@ -429,7 +429,7 @@ The format of non-custom claims in the access token is as follows:
 }
 ```
 
-In versions of the OIDC Provider above 2.0.1, a new `client_id` attribute has been added.
+In versions of the OIDC Provider above 3.0.0, a new `client_id` attribute has been added.
 
 ### 5.2 Non-custom Claims in ID-token
 

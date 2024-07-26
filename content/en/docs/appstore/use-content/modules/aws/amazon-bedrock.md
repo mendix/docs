@@ -780,7 +780,7 @@ The `Rationale` contains the reasoning, based on the input, that the agent uses 
 | --- | --- |
 | `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input. |
 
-##### 4.1.57 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
+##### 4.1.2.57 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
 
 The `OrchestrationModelInvocationInput` holds the input for the pre-processing step.
 
@@ -788,7 +788,7 @@ The `OrchestrationModelInvocationInput` holds the input for the pre-processing s
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.58 Observation {#observation}
+##### 4.1.2.58 Observation {#observation}
 
 The `Observation` contains the result or output of an action group or knowledge base, or the response to the user.
 
@@ -798,7 +798,7 @@ The `Observation` contains the result or output of an action group or knowledge 
 | `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user. |
 | `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible. |
 
-##### 4.1.59 RepromptResponse {#reprompt-response}
+##### 4.1.2.59 RepromptResponse {#reprompt-response}
 
 The `RepromptResponse` contains details about the agent's response to reprompt the input.
 
@@ -807,13 +807,81 @@ The `RepromptResponse` contains details about the agent's response to reprompt t
 | `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input. |
 | `Text` | The `Text` reprompting the input. |
 
-##### 4.1.60 ObservationRetrievedReference {#observation-retrieved-reference}
+##### 4.1.2.60 ObservationRetrievedReference {#observation-retrieved-reference}
 
 The `ObservationRetrievedReference` holds information about a sources cited for the generated response.
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference). |
+
+##### 4.1.2.61 ListAgentsRequest {#list-agents-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | The maximum number of results to return in the response.  |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+##### 4.1.2.62 ListAgentsResponse {#list-agents-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+##### 4.1.2.63 AgentSummary {#agent-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentID` | The unique identifier of the agent.  |
+| `AgentName` | The name of the agent.  |
+| `AgentStatus` | The status of the agent.  |
+| `Description` | The description of the agent.  |
+| `LatestAgentVersion` | The latest version of the agent.  |
+| `UpdatedAt` | The time at which the agent was last updated.  |
+
+##### 4.1.2.64 GetAgentRequest {#get-agent-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentID` | The unique identifier of the agent.  |
+
+##### 4.1.2.65 GetAgentResponse {#get-agent-response}
+
+| Attribute | Description |
+| --- | --- |
+| `N/A` | - |
+
+##### 4.1.2.66 Agent {#agent}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentARN` | The Amazon Resource Name (ARN) of the agent. |
+| `AgentID` | The unique identifier of the agent.  |
+| `AgentName` | The name of the agent.  |
+| `AgentResourceRoleARN` | The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.  |
+| `AgentStatus` | The status of the agent.  |
+| `AgentVersion` | The version of the agent.  |
+| `CreatedAt` | The time at which the agent was created.  |
+| `IdleSessionTTLInSeconds` | The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.  |
+| `UpdatedAt` | The time at which the agent was last updated.  |
+| `ClientToken` | A unique, case-sensitive identifier to ensure that the API request completes no more than one time.   |
+| `CustomerEncryptionKeyArn` | The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.  |
+| `Description` | The description of the agent.  |
+| `FoundationModel` | The foundation model used for orchestration by the agent. |
+| `Instruction` | Instructions that tell the agent what it should do and how it should interact with users. |
+| `PreparedAt` | The time at which the agent was last prepared.  |
+
+##### 4.1.2.67 AgentFailureReason {#agent-failure-reason}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Reason the agent-related API that you invoked failed. |
+
+##### 4.1.2.68 RecommendedAction {#recommended-action}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Contains a recommended action to take for the agent-related API that you invoked to succeed. |
 
 ### 4.2 Activities {#activities}
 
@@ -1078,6 +1146,30 @@ Without action groups, the agent will still access associated knowledge bases, b
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
 If you would like to add lambda functions to your agent, please refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
+
+##### 4.2.3.8 ListAgents {#list-agents}
+
+The `ListAgents` activity allows you to list the agents in an account and get information about each of them. It requires `ENUM_Region`, `Credentials`, and `ListAgentsRequest` as input parameters.
+
+To use this activity, you must set up an agent in your Amazon Bedrock environment. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListAgentsRequest (object)` | `ListAgentsResponse (object)` |
+
+##### 4.2.3.9 GetAgent {#get-agent}
+
+The `GetAgent` activity allows you to retrieve information about an agent. It requires `ENUM_Region`, `Credentials`, and `GetAgentRequest` as input parameters.
+
+To use this activity, you must set up an agent in your Amazon Bedrock Environment. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `GetAgentRequest (object)` | `GetAgentResponse (object)` |
 
 ## 5 Troubleshooting
 

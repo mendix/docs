@@ -63,7 +63,7 @@ The OIDC SSO module supports the following features:
 
     * Easy configuration, by leveraging the so-called well-known discovery endpoint at your IdP. The IdP's well-known endpoint also indicates which user claims the IdP may provide during single sign-on. The module reads this information, so the developer does not need to configure it. The available claims can be used in custom provisioning microflow, as described in the section [Custom User Provisioning Using a Microflow.](#custom-provisioning-mf)
         * For example, PKCE will be used automatically if it is detected.
-    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above). 
+    * Configuration can be controlled through constants set during your deployment (version 2.3.0 and above).
     * Comes with default user provisioning microflow that works with Entra ID; there you may need to build a custom user provisioning flow.
     * User provisioning microflows can be used from any other modules in your app. They do not need to be exclusively a part of the OIDC module.
 
@@ -81,8 +81,8 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
-    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
-    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+  * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+  * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
@@ -476,7 +476,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 2. Navigate to the `OIDC.OIDC_Client_Overview` page set up in the app navigation.
 3. Select the **Provisioning** tab.
 4. Set up the following information:
-    
+
     * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the [Administration module](https://marketplace.mendix.com/link/component/23513), this would be `Administration.Account`.
     * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
     * **Allow the module to create users** – this enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
@@ -593,7 +593,7 @@ If you are just delegating authentication for your app to the IdP you will not n
 If you want to use the information in an access token which is a JWT, you need to parse the access token in a microflow. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
-    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+  * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
 
         ```json {linenos=false}
         "sws.samauth.role.name": [
@@ -601,7 +601,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+  * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
         ```json {linenos=false}
         "roles": [
@@ -721,7 +721,7 @@ Page URLs and Microflow URLs are supported with OIDC SSO for Mendix version 10.6
 1. The user is redirected to the OIDC login page for authentication.
 1. After successful log in, the user is directed to the desired page using page URLs and microflow URLs within the application.
 
-If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above. 
+If you are building a new app using the OIDC SSO module (Mendix version 10.6 and above) and you are using Page URLs and Microflow URLs, follow the same steps as above.
 
 To allow the end users to navigate to the desired page:
 
@@ -732,8 +732,8 @@ To allow the end users to navigate to the desired page:
 * If multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias)
 `oauth/v2/login?idp={MyIdPAlias}&cont={page/Microflowurl}`
 
-    For example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath` 
-    
+    For example, `http://localhost:8080/oauth/v2/login?idp=Okta&cont=link/pagepath`
+
 The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 
@@ -813,12 +813,12 @@ The `/authorize` endpoint logs the end-user in through the browser.
 
 The `/authorize` endpoint may reply with an error-response, for example when the end-user enters a wrong password but also other situations may occur.  The `Error` level response can be retrieved from the OIDC log node.
 
-```log
-handleAuthorization: Authorization code missing 
-StatusCode = 200 
-error = access_denied 
-error_description = user is not assigned to the client application. 
-```
+    ```log
+handleAuthorization: Authorization code missing
+StatusCode = 200
+error = access_denied
+error_description = user is not assigned to the client application.
+    ```
 
 Section 4.1.2.1 of [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749) and section 3.1.2.6 of [OIDC specifications](https://openid.net/specs/openid-connect-core-1_0.html#AuthError), indicate all error codes that may be returned.
 
@@ -828,18 +828,18 @@ The `/token` endpoint is a back-end call to get an access token.
 
 The error “Unable to get access token” indicates that the OAuth **/token** endpoint at your IdP has returned an error response. Often this error occurs when your client_id and client_secret are not correct. The `Error` level response can be retrieved from the OIDC log node.
 
-```log
-401: Unauthorized 
-    at OIDC.handleAuthorizationCode (CallRest : 'Call REST (POST)') 
-    at OIDC.webCallback (SubMicroflow : 'handleAuthorizationCode') 
-Advanced stacktrace: 
+    ```log
+401: Unauthorized
+    at OIDC.handleAuthorizationCode (CallRest : 'Call REST (POST)')
+    at OIDC.webCallback (SubMicroflow : 'handleAuthorizationCode')
+Advanced stacktrace:
     at com.mendix.integration.actions.microflow.RestCaIIAction.execute(RestCaIIAction.scala : 79)
 
-latestHttpResponse: 
-StatusCode - 401 
-ReasonPhrase - Unauthorized 
-Content - {"error":"invalid_client","error_description":"client authentication failed"} 
-```
+latestHttpResponse:
+StatusCode - 401
+ReasonPhrase - Unauthorized
+Content - {"error":"invalid_client","error_description":"client authentication failed"}
+    ```
 
 [Section 5.2 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-5.2) indicates and clarifies all the possible error codes that may be returned.
 

@@ -236,7 +236,7 @@ Use [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollectio
 | Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `Connection` | [Connection](/appstore/modules/genai/commons/#connection) | mandatory | This is a connection object that holds the knowledge base name and database connection details. This must be of type [PgVectorKnowledgeBaseConnection](#pgvectorconnection). |
-| `ChunkCollection` | [ChunkCollection](/appstore/modules/genai/commons/(#chunkcollection)) | mandatory | This collection contains the knowledge base chunks for replacing the data in the knowledge base. |
+| `ChunkCollection` | [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) | mandatory | This collection contains the knowledge base chunks for replacing the data in the knowledge base. |
 
 The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection](#pgvectorconnection). It must have the `KnowledgeBaseName` string attribute populated and include a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server that has the PgVector extension installed. This `DatabaseConfiguration` entity is typically configured at runtime or in after-startup logic
 
@@ -259,7 +259,7 @@ Use [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollectio
 | Name | Type | Mandatory | Description |
 | ------------------- | --------------------------------------- | --------- | ----------------------------------------------------- |
 | `Connection` | [Connection](/appstore/modules/genai/commons/#connection) | mandatory | This is a connection object that holds the knowledge base name and database connection details. This must be of type [PgVectorKnowledgeBaseConnection](#pgvectorconnection). |
-| `ChunkCollection` | [ChunkCollection](/appstore/modules/genai/commons/(#chunkcollection)) | mandatory | This collection contains the knowledge base chunks for inserting the chunk data into the knowledge base. |
+| `ChunkCollection` | [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) | mandatory | This collection contains the knowledge base chunks for inserting the chunk data into the knowledge base. |
 
 The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection](#pgvectorconnection). It must have the `KnowledgeBaseName` string attribute populated and include a `DatabaseConfiguration` associated with the connection details to a PostgreSQL database server that has the PgVector extension installed. This `DatabaseConfiguration` entity is typically configured at runtime or in after-startup logic. 
 

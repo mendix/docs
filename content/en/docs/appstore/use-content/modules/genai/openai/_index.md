@@ -226,7 +226,7 @@ For more information on vision, see [OpenAI](https://platform.openai.com/docs/gu
 
 In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, one microflow for image generations is exposed as a microflow action under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imagesoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
+The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
 
 For technical details, see the [Technical Reference](#image-generations-technical) section.
 

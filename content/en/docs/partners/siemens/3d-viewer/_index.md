@@ -64,7 +64,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in **Design mode**. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, supports glTF, STL, OBJ, and JT (JT version 9 and above) formats.
-* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
+* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7-Zip, make sure you enter *cu* in **Parameters**.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" class="no-border" >}}
 

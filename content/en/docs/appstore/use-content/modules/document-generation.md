@@ -191,7 +191,7 @@ Rule | Name | Pattern | Rewrite URL
 1 | p | `^(p/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 2 | docgen | `^(docgen/)(.*)` | `http://localhost:8080/{R:1}{R:2}`
 
-{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. In case you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
+{{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. If you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
 ## 4 Usage
 
@@ -355,7 +355,7 @@ The PDF document generation service does not store pages or documents at any tim
 
 ### 6.1 App Environment Registration Issues
 
-In case you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
+If you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
 | Error | Error message | Description | Suggestion |
 |-------|------------------|-------------|------------|
@@ -369,7 +369,7 @@ In case you encounter any issues while [registering your app environment](#regis
 
 ### 6.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
-In general, we recommend that you perform the following steps in case of any issues during runtime:
+In general, we recommend that you perform the following steps if you get any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
@@ -382,7 +382,7 @@ The sections below contain the exceptions that can possibly occur during the doc
 
 ##### 6.2.1.1 Wait for Content Exception
 
-In case you encounter a `DocGenWaitForContentException` exception with error code `DOCGEN_WAIT_FOR_CONTENT_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
+If you encounter a `DocGenWaitForContentException` exception with error code `DOCGEN_WAIT_FOR_CONTENT_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
 | Error message                            | Potential reasons                                            |
 | ---------------------------------------- | ------------------------------------------------------------ |
@@ -390,7 +390,7 @@ In case you encounter a `DocGenWaitForContentException` exception with error cod
 
 ##### 6.2.1.2 Navigation Exception
 
-In case you encounter a `DocGenNavigationException` exception with error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
+If you encounter a `DocGenNavigationException` exception with error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
 | Error message                                                | Potential reasons                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -402,7 +402,7 @@ In case you encounter a `DocGenNavigationException` exception with error code `D
 
 ##### 6.2.1.3 Runtime Exception
 
-In case you encounter a `DocGenRuntimeException` exception with error code `DOCGEN_RUNTIME_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
+If you encounter a `DocGenRuntimeException` exception with error code `DOCGEN_RUNTIME_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
 | Error message                                                | Potential reasons                                            |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -413,17 +413,19 @@ If you encounter a `DocGenRuntimeException` exception with a message that is not
 
 ##### 6.2.1.4 Polling Exception
 
-In case you encounter a `DocGenPollingException` exception while generating a document, this means that the module timed out while waiting for the service to send the resulting PDF. Verify if the application logs contain any other errors and try again.
+If you encounter a `DocGenPollingException` exception while generating a document, this means that the module timed out while waiting for the service to send the resulting PDF. Verify if the application logs contain any other errors and try again.
 
 ##### 6.2.1.5 Default Exception
 
-In case you encounter a `DocGenException` exception with error code `DOCGEN_UNKNOWN_ERROR` while generating a document, we recommend you [submit a support request](/support/submit-support-request/).
+If you encounter a `DocGenException` exception with error code `DOCGEN_UNKNOWN_ERROR` while generating a document, we recommend you [submit a support request](/support/submit-support-request/).
 
 #### 6.2.2 Rendering/Styling Issues
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
-In case the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
+If the resulting PDF document only contains a part of the expected content, verify that the layout used for the page does not include a scroll container. Layouts that do include a scroll container, such as **Atlas_Default**, will not work properly.
+
+If the resulting PDF document contains an additional blank page at the end of the document, try to wrap the content in a layout grid.
 
 {{% alert color="warning" %}}
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
@@ -431,7 +433,7 @@ When testing the PDF Document Generation module locally using Chrome or Chromium
 
 #### 6.2.3 Local Service Errors
 
-In case you encounter the message "Local service exited with error" in your runtime logs, for example:
+If you encounter the message "Local service exited with error" in your runtime logs, for example:
 
 ```
 com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinterfaces.MendixRuntimeException: java.lang.RuntimeException: Local service exited with error
@@ -442,14 +444,14 @@ We recommend that you temporarily set the log level of the `DocumentGeneration` 
 
 #### 6.2.4 Cloud Service Errors
 
-In case you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
+If you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
 * The scheduled event **SE_AccessToken_Refresh** is not enabled, which caused the registration to expire. Enable the scheduled event and [register](#register-app) the affected app environment again.
 * The URL of the app environment does not match the URL that was provided during registration. This could be the case when you requested a change to the URL of your app, or after restoring a database backup from one environment to another. [Register](#register-app) the affected app environment (or environments) again.
 
-In case you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
+If you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 
-In case you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
+If you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
 
 #### 6.2.4 Timeout Errors
 

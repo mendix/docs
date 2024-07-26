@@ -27,7 +27,7 @@ Depending on the Mendix version used to build your app, you have to use a differ
 * **10.6.0 to 10.10.x** – Make It Native 10 MTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10), [iOS](https://apps.apple.com/app/make-it-native-10/id6450037464))
 * **9.24.0 to 10.5.x** – Make It Native 9 LTS ([Android](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx9), [iOS](https://apps.apple.com/app/make-it-native-9/id1542182000))
 * **8.18.x** – Make It Native 8 LTS ([iOS](https://apps.apple.com/app/make-it-native-8/id1334081181))
-* **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/)
+* **Other** – [Creating a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [Building Your Own Make It Native App](https://github.com/mendix/make-it-native)
 
 For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
@@ -51,7 +51,7 @@ Download the MTS version of Make it Native 10 using these QR codes:
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
-To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relavant links above](#get-min-app) and follow the instructions. 
+To access the latest version of Make It Native, you must join our official beta testing programs on the Google Play store and the Apple App Store. To do so, click the [relevant links above](#get-min-app) and follow the instructions.
 
 Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
 
@@ -138,4 +138,4 @@ To use Studio Pro on a Mac device, you will first need to install and configure 
 
 Storing a Mendix project on a network drive or in a cloud folder (such as those provided by OneDrive or Dropbox) is **not recommended**. Storing your projects in such folders will significantly slow down Studio Pro and cause errors when trying to run projects containing a native mobile profile. Note also that projects with a native mobile profile can only be started from drive **C:**.
 
-If your home directory is managed by OneDrive, create a new folder on your computer outside of your home directoy (for example **C:\Mendix**) and place the Mendix projects in there.
+If your home directory is managed by OneDrive, create a new folder on your computer outside of your home directory (for example **C:\Mendix**) and place the Mendix projects in there.

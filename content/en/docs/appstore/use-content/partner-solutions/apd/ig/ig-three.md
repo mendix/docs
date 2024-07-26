@@ -10,7 +10,7 @@ This is the installation guide for CLEVR APD 3, the successor to [APM 2](/appsto
 
 ## 2 Prerequisites
 
-Before starting this how-to, make sure you have completed the following prerequisites::
+Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Before using APD 3, create a database backup and have a backup deployment ready
 * If APM 2 was installed, do the following: 

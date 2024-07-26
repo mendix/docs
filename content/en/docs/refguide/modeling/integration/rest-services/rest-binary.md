@@ -20,7 +20,7 @@ If you are only interested in consuming files, you can skip down to the [Retriev
 
 ### 1.1 Prerequisites
 
-It is recommend to read the following for some more background information:
+It is recommended to read the following for some more background information:
 
 * [Publishing](/howto/integration/publish-rest-service/) and [consuming](/howto/integration/consume-a-rest-service/) REST services
 * Working with [Images, Videos, and Files](/refguide/image-and-file-widgets/) in Studio Pro

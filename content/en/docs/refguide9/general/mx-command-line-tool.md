@@ -212,48 +212,13 @@ Return codes are described in the table below:
 | --- | --- |
 | 0 | The command ran successfully. |
 
-### 3.5 mx show-java-version Command [version 9.24.26+]
-
-The `mx show-java-version` command reports what the configured Java version of the app is.
-
-The input is a single MPR file.
-
-{{% alert color="info" %}}
-The MPR file must be the same version as mx.
-{{% /alert %}}
-
-#### 3.5.1 Usage
-
-Use the following command pattern for `mx show-java-version`:
-
-`mx show-java-version INPUT`
-
-For `INPUT`, enter a *.mpr* file.
-
-#### 3.5.2 Examples
-
-Examples of commands are described in the table below:
-
-| Example | Result |
-| --- | --- |
-| `mx show-java-version C:\Mendix\App1\App1.mpr` | Displays the configured Java version of the app. |
-
-#### 3.5.3 Return Codes
-
-Return codes are described in the table below:
-
-| Return Code | Description |
-| --- | --- |
-| 0 | The command ran successfully. |
-| 1 | The command failed. For example because the *.mpr* file could not be found. |
-
-### 3.6 mx merge Command [version 9.17+]
+### 3.5 mx merge Command [version 9.17+]
 
 The mx merge command performs a three-way merge of two MPR files having a common base commit.
 
 The input is three MPR files: base, mine, and theirs
 
-#### 3.6.1 Usage
+#### 3.5.1 Usage
 
 Use the following command pattern for `mx merge`:
 
@@ -271,15 +236,15 @@ The `OPTIONS` are described in the table below:
 
 `THEIRS` is the version to merge changes from.
 
-#### 3.6.2 Conflicts
+#### 3.5.2 Conflicts
 
 If there are conflicts during the merge, you have to resolve those by opening the app in Studio Pro.
 
-#### 3.6.3 Examples
+#### 3.5.3 Examples
 
 `mx merge C:\MyApp\MyApp.mpr C:\MyApp-main\MyApp.mpr C:\MyApp-FeatureBranch\MyApp.mpr`
 
-#### 3.6.4 Return Codes
+#### 3.5.4 Return Codes
 
 | Return Code | Description                                                  |
 | ----------- | ------------------------------------------------------------ |
@@ -289,11 +254,11 @@ If there are conflicts during the merge, you have to resolve those by opening th
 | 3           | This code means an exception – an error occurred during the merge. Error details are printed to the command line output. |
 | 4           | The version is unsupported.                                  |
 
-### 3.7 mx show-app-version Command [version 9.24.2+]
+### 3.6 mx show-app-version Command [version 9.24.2+]
 
 The mx show-app-version command allows you to see the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (meaning, the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (meaning, the version of the solution package when you consumed the solution).
 
-#### 3.7.1 Usage
+#### 3.6.1 Usage
 
 Use the following command pattern for `mx show-app-version`:
 
@@ -310,13 +275,13 @@ For MPR-FILE enter a *.mpr* file.
 
 `Based on` version is a version of a solution package (.mxsolution) current App is based on.
 
-#### 3.7.2 Examples
+#### 3.6.2 Examples
 
 `mx show-app-version C:\MyApp\MyApp.mpr`
 
 `mx show-app-version C:\MyApp\MyApp.mpr -b`
 
-#### 3.7.3 Return Codes
+#### 3.6.3 Return Codes
 
 This command uses common format exit codes for all app-version related commands.
 
@@ -354,11 +319,11 @@ In case of errors the exit code consists of 3 digits XYZ:
 | 315         | if -b was specified but the app is not based on a solution.  |
 | 313         | if -b was not specified but distribution as a solution is not enabled for the app. |
 
-### 3.8 mx set-app-version Command [version 9.24.2+]
+### 3.7 mx set-app-version Command [version 9.24.2+]
 
 The mx set-app-version command allows you to set the version of your [solution when building it](/appstore/creating-content/sol-solutions-guide/).
 
-#### 3.8.1 Usage
+#### 3.7.1 Usage
 
 Use the following command pattern for `mx set-app-version`:
 
@@ -374,11 +339,11 @@ For MPR-FILE enter a *.mpr* file.
 
 For VERSION enter a version in [SemVer](https://semver.org) format
 
-#### 3.8.2 Examples
+#### 3.7.2 Examples
 
 `mx set-app-version C:\MyApp\MyApp.mpr 1.2.3`
 
-#### 3.8.3 Return Codes
+#### 3.7.3 Return Codes
 
 This command uses common format exit codes for all app-version related commands.
 
@@ -416,6 +381,6 @@ In case of errors the exit code consists of 3 digits XYZ:
 | 124         | if Version is not in SemVer format                       |
 | 313         | if Distribution as a solution is not enabled for the app |
 
-### 3.9 Undocumented Options
+### 3.8 Undocumented Options
 
 The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options can be used only at your own risk.

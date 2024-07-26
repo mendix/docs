@@ -497,9 +497,9 @@ Use the microflow `ChatCompletions_Execute_WithHistory` to execute a chat comple
 
 **Return value**
 
-| Name        | Type                                                        | Description                                                  |
-| ----------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| `Response`  | [Response](/appstore/modules/genai/commons/#response)       | A `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/commons/#chat-get-model-response-text) operation.|
+| Name       | Type                                                  | Description                                                  |
+| ---------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| `Response` | [Response](/appstore/modules/genai/commons/#response) | This is a `Response` object that contains the assistant's response. The return message string can be extracted by using the [Chat: Get Model Response Text](/appstore/modules/genai/commons/#chat-get-model-response-text) operation. |
 
 To construct the input for the microflow, see [OpenAI exposed microflows](#exposed-microflows) or [GenAI Commons exposed microflows](/appstore/modules/genai/commons/#microflows).
 
@@ -523,7 +523,7 @@ Use the exposed microflow operation `Image Generations` to execute an image gene
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](/appstore/modules/genai/commons/#response)   | A `Response` object pointing to a message with a [FileCollection](/appstore/modules/genai/commons/#filecollection) containing one or multiple [FileContent](/appstore/modules/genai/commons/#filecontent) objects. These `FileContent` objects can be converted into a single or multiple images using the response handling microflows. |
+| `Response` | [Response](/appstore/modules/genai/commons/#response)   | This is a `Response` object pointing to a message with a [FileCollection](/appstore/modules/genai/commons/#filecollection) containing one or multiple [FileContent](/appstore/modules/genai/commons/#filecontent) objects. These `FileContent` objects can be converted into a single or multiple images using the response handling microflows. |
 
 Use [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) and [Get Generated Images (List)](/appstore/modules/genai/commons/#image-get-list) to retrieve the generated images from the response.
 
@@ -545,9 +545,9 @@ Use the microflow `Embeddings_Execute_String` to execute a call to the embedding
 
 **Return value**
 
-| Name                  | Type                                                                              | Description                                                  |
-| --------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `EmbeddingsResponse`  | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity)  | Response object containing token usage metric and pointing to a `ChunkCollection`containing the Chunk for which an embedding vector was created. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used. |
+| Name                 | Type                                                         | Description                                                  |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `EmbeddingsResponse` | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) | This is a response object containing token usage metric and pointing to a `ChunkCollection`. The `ChunkCollection` contains the chunk for which an embedding vector was created. In order to retrieve the generated vector, [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) can be used. |
 
 ##### 4.3.3.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection-technical}
 
@@ -555,17 +555,17 @@ Use the microflow `Embeddings_Execute_ChunkCollection` to execute an embeddings 
 
 **Input parameters**
 
-| Name                  | Type                                                                              | Mandatory | Description                                                  |
-| --------------------- | --------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------ |
-| `ChunkCollection`     | [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection)               | mandatory | This is a wrapper object for a list of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects with `InputTexts` for which an Embeddings vector should be generated. |
-| `Connection`          | [Connection](/appstore/modules/genai/commons/#connection)                         | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `EmbeddingsOptions`   | [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity)    | optional  | This can be used to specify optional attributes like vector dimension. Note that not all models may support all embeddings options attributes. For more information see [OpenAI API reference](https://platform.openai.com/docs/api-reference/embeddings/create).  |
+| Name                | Type                                                         | Mandatory | Description                                                  |
+| ------------------- | ------------------------------------------------------------ | --------- | ------------------------------------------------------------ |
+| `ChunkCollection`   | [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) | mandatory | This is a wrapper object for a list of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects with `InputTexts` for which an embeddings vector should be generated. |
+| `Connection`        | [Connection](/appstore/modules/genai/commons/#connection)    | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
+| `EmbeddingsOptions` | [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) | optional  | This can be used to specify optional attributes like vector dimension. Note that not all models may support all embeddings options attributes. For more information see [OpenAI API reference](https://platform.openai.com/docs/api-reference/embeddings/create). |
 
 **Return value**
 
-| Name                  | Type                                                                              | Description                                                  |
-| --------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| `EmbeddingsResponse`  | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity)  | Response object containing token usage metric and pointing to a `ChunkCollection` containing the Chunk for which an embedding vector was created. Note that the `EmbeddingVector` gets updated on the original objects. So for further logic, the `ChunkCollection` used as input for this operation can be reused and is the same as the `ChunkCollection` the `EmbeddingsResponse` is pointing to. |
+| Name                 | Type                                                         | Description                                                  |
+| -------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `EmbeddingsResponse` | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity) | This is a response object containing token usage metric and pointing to a `ChunkCollection`. The `ChunkCollection` contains the chunk for which an embedding vector was created. Note that the `EmbeddingVector` gets updated on the original objects. So for further logic, the `ChunkCollection` used as input for this operation can be reused and is the same as the `ChunkCollection` to which the `EmbeddingsResponse` is pointing. |
 
 To construct the input for the microflow, see the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk).
 In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterwards directly be used to populate the knowledge base with.

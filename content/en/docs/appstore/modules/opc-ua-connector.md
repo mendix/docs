@@ -107,9 +107,8 @@ The BrowseDescription contains the following fields:
 * Node ID reference type. Specifies the Node ID of the reference type to follow. If left empty, returns all references.
 * Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
 * Node Class Mask. Specifies which NodeClasses will be returned. If no value is provided, no filter will be applied.
-  * Note that this is an integer attribute, while the interpretation is in binary format.
-  * The bits represent in order: Object, Variable, Method, ObjectType, VariableType, ReferenceType, DataType, View.
-  * Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 2<sup>0</sup> + 2<sup>1</sup> + 2<sup>7</sup> = 131.
+
+This is an integer attribute, while the interpretation is a set of bits as described follow:
  
 | Bit | Node class | Value |
 | --- | ---------- | -----  |
@@ -122,13 +121,22 @@ The BrowseDescription contains the following fields:
 | 6 | DataType | 64 |
 | 7 | View | 128 |
 
-Sum up the value to create the mask
-Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] <br> which is 1 + 2 + 128 = 131.
+Sum up the value to create the mask. Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] which has to be setup as 1 + 2 + 128 = 131 integer value.
 
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
-  * Note that this fields must be supplied in decimal format, while the interpretation is in binary format.
-  * The bits represent in order: ReferenceType, IsForward, NodeClass, BrowseName, DisplayName, TypeDefinition.
-  * Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] <br> which is in decimal representation 2<sup>3</sup> = 8.
+
+This is an integer attribute, while the interpretation is a set of bits as described follow:
+
+| Bit | Node class | Value |
+| --- | ---------- | -----  |
+| 0 | ReferenceType | 1 |
+| 1 | IsForward | 2 |
+| 2 | NodeClass | 4 |
+| 3 | BrowseName | 8 |
+| 4 | DisplayName | 16 |
+| 5 | TypeDefinition | 32 |
+
+Sum up the value to create the mask. Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] which has to be setup as 8 integer value.
 
 The response of the Browse action returns a browse response object. 
 There is a StatusCode associated to the response,which represents the status of the call.

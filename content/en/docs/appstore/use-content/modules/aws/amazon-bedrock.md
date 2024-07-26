@@ -232,7 +232,7 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
-##### 4.1.1.8 CohereEmbedOptions_Extension (#cohere-embed-options-extension)
+##### 4.1.1.8 CohereEmbedOptions_Extension {#cohere-embed-options-extension}
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
 
@@ -261,7 +261,7 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
 | `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
 
-##### 4.1.1.11 TitanEmbeddingsOptions_Extension (#titan-embeddings-options-extension)
+##### 4.1.1.11 TitanEmbeddingsOptions_Extension {#titan-embeddings-options-extension}
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
 

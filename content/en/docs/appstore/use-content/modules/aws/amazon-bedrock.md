@@ -169,7 +169,7 @@ This entity holds the necessary information to perform Bedrock operations such a
 | Attribute | Description |
 | --- | --- |
 | `Region` | The region where the AWS data centers are located that shall be used for execution. This value is of type AWSAuthentication.ENUM_Region enumeration. |
-| `UseStaticCredentials` | This boolean specifies whether static or non-static credentials (temporary) shall be used. |
+| `UseStaticCredentials` | This Boolean specifies whether static or non-static credentials (temporary) shall be used. |
 | `ModelFamily` | This enumeration specifies the model family of the large language model to use. |
 
 ##### 4.1.1.2 AnthropicClaudeRequest_Extension {#anthropic-claude-request-extension}
@@ -197,7 +197,7 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | Attribute | Description |
 | --- | --- |
 | `Version` | See `Version` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopK` | See `Top_K` of the `AnthropicClaudeRequest_Extension` entity |
+| `TopK` | See `Top_k` of the `AnthropicClaudeRequest_Extension` entity |
 | `TopP` | See `TopP` of the `GenAICommons.Request` entity |
 | `Temperature` | See `Temperature` of the `GenAICommons.Request` entity |
 | `MaxTokens` | See `MaxTokens` of the `GenAICommons.Request` entity |
@@ -211,7 +211,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 | Attribute | Description |
 | --- | --- |
 | `SessionId` | The SessionId attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
-| `KmsKeyARN` | The KMSKeyArn attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The KMSKeyARN attribute describes the ARN of the AWS KMS key encrypting the session. |
 | `RetrieveAndGenerateType` | The RetrieveAndGenerateType describes the type of resource that is queried by the request. The only supported value currently is "KNOWLEDGE_BASE"  |
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
@@ -232,7 +232,39 @@ This entity extends the GenAICommons.Tool entity and holds information about the
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
 
-##### 4.1.1.8 CohereEmbedOptions_Extension {#cohere-embed-options-extension}
+##### 4.1.1.8 TitanImageOptions_Extension {#titan-image-options-extension}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed [Image Generation: Add Titan Image Extension](#add-titan-image-extension) operation can be used.
+
+| Attribute | Description |
+| --- | --- |
+| `NegativeText` | The NegativeText attribute is a string containing a prompt describing what not to include in the image. |
+
+##### 4.1.1.9 TitanImageResponse {#titan-image-response}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This entity extends the GenAICommons.Response entity with values specific to Titan Image models.
+
+| Attribute | Description |
+| --- | --- |
+| `Error` | The Error attribute contains the error message if the request violates the content moderation policy. |
+
+##### 4.1.1.10 TitanImageMappingHelper {#titan-image-mapping-helper}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This helper entity summarizes data from several associated entities into a single entity where it can be formatted to produce the correct export mapping.
+
+##### 4.1.1.11 CohereEmbedOptions_Extension {#cohere-embed-options-extension}
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
 
@@ -242,7 +274,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 | `EmbeddingTypes` | Specifies the types of embeddings you want to have returned. Optional and default is `None`, which returns the Embed Floats response type. It expects a value of the `ENUM_EmbeddingsTypes_CohereEmbed` enumeration. |
 | `Truncate` | Specifies how the API handles inputs longer than the maximum token length. It expects a value of the `ENUM_Truncate_CohereEmbed` enumeration. |
 
-##### 4.1.1.9 CohereEmbedResponse {#cohere-embed-response}
+##### 4.1.1.12 CohereEmbedResponse {#cohere-embed-response}
 
 This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
 
@@ -251,7 +283,7 @@ This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` enti
 | `Response_Type` | This value is either 'embedding_floats' or 'embedding_by_type' if `CohereEmbedOptions_Extension.EmbeddingTypes` has been specified. |
 | `_Id` | An identifier for the response. |
 
-##### 4.1.1.10 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
+##### 4.1.1.13 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
 
 This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
 
@@ -261,7 +293,7 @@ This helper entity solely serves the purpose to create a flat entity to produce 
 | `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
 | `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
 
-##### 4.1.1.11 TitanEmbeddingsOptions_Extension {#titan-embeddings-options-extension}
+##### 4.1.1.14 TitanEmbeddingsOptions_Extension {#titan-embeddings-options-extension}
 
 This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
 
@@ -269,7 +301,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 | --- | --- |
 | `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
 
-##### 4.1.1.12 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
+##### 4.1.1.15 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
 
 This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, in order to simplify the export mapping.
 
@@ -279,7 +311,7 @@ This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions`
 | `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
 | `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
 
-##### 4.1.1.13 RetrieveRequest_Extension {#retrieve-request-extension}
+##### 4.1.1.16 RetrieveRequest_Extension {#retrieve-request-extension}
 
 This helper entity extends the `GenAICommons.Request` entity with attributes specific to the `Retrieve` operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
@@ -291,7 +323,7 @@ This helper entity extends the `GenAICommons.Request` entity with attributes spe
 
 It can be added to the request using the [Request: Add Retrieve Request Extension](#add-r-extension) operation.
 
-##### 4.1.1.14 RetrieveResponse {#retrieve-response}
+##### 4.1.1.17 RetrieveResponse {#retrieve-response}
 
 This helper entity extends the `GenAICommons.Response` entity with attributes specific to the `Retrieve` operation.
 
@@ -299,7 +331,7 @@ This helper entity extends the `GenAICommons.Response` entity with attributes sp
 | --- | --- |
 | `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
 
-##### 4.1.2.15 RetrievalResult {#retrieval-result}
+##### 4.1.1.18 RetrievalResult {#retrieval-result}
 
 This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation.
 
@@ -334,7 +366,7 @@ The `FoundationModelSummary` entity stores the details (per model) needed to inv
 | `ModelID` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
 | `ModelName` | The name of the foundational model (string)|
 | `ProviderName` | The provider name of the foundational model (string)|
-| `ResponseStreamingSupported` | Indicates whether the model supports streaming (boolean)|
+| `ResponseStreamingSupported` | Indicates whether the model supports streaming (Boolean)|
 
 ##### 4.1.2.4 FoundationModelLifecycle {#foundation-model-lifecycle}
 
@@ -432,7 +464,7 @@ The `SessionConfiguration` entity holds information about details of the session
 
 | Attribute | Description |
 | --- | --- |
-| `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The `KmsKeyARN` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
 ##### 4.1.2.16 Citation {#citation}
 
@@ -593,7 +625,7 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 
 ##### 4.1.2.35 InvokeAgentAttribute {#invoke-agent-attribute}
 
-The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
+The `InvokeAgentAttribute` holds all attributes needed to create a request to invoke an agent.
 
 | Attribute | Description |
 | --- | --- |
@@ -897,7 +929,9 @@ The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request`, `FileCollection`| `GenAICommons.Response`|
+
+`GenAICommons.Request` and `FileCollection` can be empty, in which case they are not sent to the Bedrock API.
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
@@ -934,7 +968,29 @@ The `RetrieveAndGenerate` operation only allows a single user message to be part
 
 The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
 
-##### 4.2.1.4 Embeddings (single string) {#embeddings-single-string}
+##### 4.2.1.4 Image Generation {#image-generation}
+
+{{% alert color="info" %}}
+This activity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `UserPrompt (String)`, `AmazonBedrockConnection (object)`, `GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
+
+`GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation. 
+
+`GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons.
+
+To retrieve actual image objects from the response, the `Image: Get Generated Image (Single)` or `Image: Get Generated Images (List)` helper operations from GenAICommons can be used. 
+
+For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image-specific values (currently only *NegativeText*). 
+
+##### 4.2.1.5 Embeddings (single string) {#embeddings-single-string}
 
 The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
 
@@ -948,7 +1004,7 @@ For Cohere Embed and Titan Embeddings, the request can be associated to their re
 
 Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
 
-##### 4.2.1.5 Embeddings (chunk collection) {#embeddings-chunk-collection}
+##### 4.2.1.6 Embeddings (chunk collection) {#embeddings-chunk-collection}
 
 The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
 
@@ -962,7 +1018,7 @@ For each model family, the request can be associated to an extension of the Embe
 
 Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
 
-##### 4.2.1.6 Retrieve {#retrieve}
+##### 4.2.1.7 Retrieve {#retrieve}
 
 The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. This operation corresponds to the *Retrieve* microflow. 
 
@@ -980,9 +1036,7 @@ Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-c
 
 This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
 ##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 
@@ -993,6 +1047,8 @@ This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** mi
 | Input | Output |
 | --- | --- |
 | `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
+
+`Version` and `Top_K` can be empty, in which case they are not sent to the Bedrock API
 
 ##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
@@ -1012,7 +1068,55 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+| `GenAICommons.Request (object)`, `KmsKeyARN (string)`, `SessionId (string)`, `Enum_RetrieveAndGenerateType (enumeration)` | `RetrieveAndGenerateRequest_Extension (object)` |
+
+`KmsKeyARN`, `SessionId`, and `Enum_RetrieveAndGenerateType` can be empty, in which case they are not sent to the Bedrock API.
+
+##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the **NegativeText** attribute.
+
+This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `NegativeText (string)` | `TitanImageOptions_Extension (object)` |
+
+##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to set the **Height** and **Width** attributes of your **GenAICommons.ImageOptions** object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
+
+This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
+
+##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to set the **Seed** and **CfgScale** attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
+
+For more information, please refer to the specific model documentation such as [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
+
+This operation corresponds to the **ImageOptions_SetRandomness** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `Seed (integer)`, `CfgScale (decimal)` | `none` |
+
+`Seed` and `GfgScale` can be empty, in which case they are not sent to the Bedrock API.
 
 ##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
 

@@ -90,7 +90,7 @@ The features in the navigation pane can also be accessed via APIs, enabling thir
 
 ### 3.3 Pending Invitations {#pending-invitations}
 
-If you are invited to collaborate on a project, the invitation will appear at the top of the **My Apps** page. You can accept or decline the invitation.
+If you are invited to collaborate on an app, the invitation will appear at the top of the **My Apps** page. You can accept or decline the invitation.
 
 {{% alert color="info" %}}
 You  get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.

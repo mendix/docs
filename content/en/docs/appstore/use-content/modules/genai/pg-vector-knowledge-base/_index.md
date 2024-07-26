@@ -91,7 +91,7 @@ A typical pattern for populating a knowledge base is as follows:
 3. Call an embeddings endpoint with the `ChunkCollection` to generate an embedding vector for each `KnowledgeBaseChunk`
 4. With the `ChunkCollection`, use [(Re)populate Knowledge Base](#repopulate-knowledge-base) to store the chunks.
 
-{{< figure src="/attachments/appstore/use-content/modules/pgvector-knowledge-base/pgvector_embedandrepopulate.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/pgvector-knowledge-base/pgvector-embedandrepopulate.png" >}}
 
 #### 3.3.1 `(Re)populate Knowledge Base` {#repopulate-knowledge-base}
 
@@ -172,7 +172,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/use-content/modules/pgvector-knowledge-base/pgvector_connection.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/pgvector-knowledge-base/pgvector-connection.png" >}}
 
 ##### 4.1.1.1 `DatabaseConfiguration` {#databaseconfiguration-entity} 
 

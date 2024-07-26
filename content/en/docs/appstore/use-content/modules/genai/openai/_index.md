@@ -294,7 +294,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-configuration.png" alt="" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-configuration.png" >}}
 
 ##### 4.1.1.1 `Configuration` {#configuration-entity} 
 
@@ -336,7 +336,7 @@ The domain model in Mendix is a data model that describes the information in you
 
 For chat completions operations, the connector is based on entities from the [GenAI Commons](/appstore/modules/genai/commons/) module. OpenAI-specific parameters are available in either extension entities or specializations.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-openai-request_extension.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/domain-model-openai-request-extension.png" >}}
 
 ##### 4.1.2.1 `OpenAIRequest_Extension` {#openairequest-extension} 
 
@@ -364,7 +364,7 @@ The connector does not provide specific entities for chat completions because th
 
 Most entities for image generations are part of the [GenAI Commons](/appstore/modules/genai/commons/) module, which represents common patterns for dealing with LLMs. For more information, see [GenAI Commons Domain Model](/appstore/modules/genai/commons/#domain-model). OpenAI-specific parameters are available in either extension entities or specializations.
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/openai/OpenAIImageOptionsExtension.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/openai/openai-image-options-extension.png" >}}
 
 ##### 4.1.4.1 `OpenAIImageOptions_Extension` {#openai-imageoptions-entity} 
 

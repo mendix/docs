@@ -2,13 +2,15 @@
 title: "Conversational UI"
 url: /appstore/modules/genai/conversational-ui/
 linktitle: "Conversational UI"
-weight: 3
+weight: 20
 description: "Describes the Conversational UI marketplace module that assists developers in implementing conversational use cases such as an AI Bot."
 ---
 
 ## 1 Introduction {#introduction}
 
 With the [Conversational UI module](https://marketplace.mendix.com/link/component/227931), you can create an AI-based chat user interface. It contains the needed data model, pages, snippets and building blocks to do so. You can integrate with any LLM and knowledge base to create your own full screen, sidebar or modal chat. It integrates with the Atlas framework and is the basis for the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926). It is also included in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934).
+
+Mendix has produced a [Conversational AI Design Checklist](/howto/front-end/conversation-checklist/) which suggests some best practices for introducing conversational AI into your app.
 
 ### 1.1 Typical Use Cases {#use-cases}
 
@@ -86,6 +88,7 @@ If you need additional attributes or associations on the `ChatContext`, use an e
 #### 4.2.1 Chat Context Operations {#chat-context-operations}
 
 The following operations can be found in the toolbox for processing the [ChatContext](#chat-context):
+
 * `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
 * `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `Create ChatContext & Set ProviderConfig (List)` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
@@ -133,7 +136,7 @@ Add the action microflow to an existing `ProviderConfig` by using the **Set Acti
 If you want to create your own custom action microflow, keep the following considerations in in mind:
 
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
-* The return type needs to be a `Success` boolean.
+* The return type needs to be a `Success` Boolean.
 * Use the [request operations](#request-operations) to facilitate the interaction between the chat context and the model.
 * When creating the `ProviderConfig`, use [Set ActionMicroflow](#set-action-microflow) to set the microflow.
 
@@ -145,7 +148,7 @@ You can include the following pages in your navigation, or copy them to your mod
 * **ConversationalUI_PopUp** - This is a floating pop-up in the bottom-right corner. To open it, users can click the **Snippet_FloatingChatButton** that floats in the bottom-right corner. Alternatively, you can use the building block **Floating Button OpenChat** from the toolbox to create your custom opening logic.
 * **ConversationalUI_Sidebar** - This page displays the chat interface on the right side with the full height.
 
-All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for exampleor in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
+All pages expect a [ChatContext](#chat-context) that needs to have an active [ProviderConfig](#provider-config). The user can chat with the LLM on all pages, but not configure any additional settings, such as the model or system prompt. This needs to happen before the page was opened, for example, or in the [action microflow](#action-microflow) that is stored in the active [ProviderConfig](#provider-config).
 
 ### 4.5 Snippets {#snippets}
 

@@ -279,6 +279,34 @@ This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions`
 | `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
 | `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
 
+##### 4.1.1.13 RetrieveRequest_Extension {#retrieve-request-extension}
+
+This helper entity extends the `GenAICommons.Request` entity with attributes specific to the `Retrieve` operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
+
+| Attribute | Description |
+| --- | --- |
+| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
+| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
+
+It can be added to the request using the [Request: Add Retrieve Request Extension](#add-r-extension) operation.
+
+##### 4.1.1.14 RetrieveResponse {#retrieve-response}
+
+This helper entity extends the `GenAICommons.Response` entity with attributes specific to the `Retrieve` operation.
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
+
+##### 4.1.2.15 RetrievalResult {#retrieval-result}
+
+This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation.
+
+| Attribute | Description |
+| --- | --- |
+| `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
+
 #### 4.1.2 No GenAICommons dependency
 
 ##### 4.1.2.1 ListFoundationModelsRequest {#list-foundation-models-request}
@@ -368,17 +396,7 @@ This is the response entity of the `InvokeModel` action.
 | `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved. |
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model. |
 
-##### 4.1.2.11 RetrieveRequest {#retrieve-request}
-
-This is the request entity of the `Retrieve` action.
-
-| Attribute | Description |
-| --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
-| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
-
-##### 4.1.2.12 RetrievalConfiguration {#retrieval-configuration}
+##### 4.1.2.11 RetrievalConfiguration {#retrieval-configuration}
 
 The `RetrievalConfiguration` entity holds information about how the results should be returned.
 
@@ -386,31 +404,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 | --- | --- |
 | `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return. |
 
-##### 4.1.2.13 RetrieveResponse {#retrieve-response}
-
-This is the response entity of the `Retrieve` action.
-
-| Attribute | Description |
-| --- | --- |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
-
-##### 4.1.2.14 RetrievalResult {#retrieval-result}
-
-The `RetrievalResult` entity holds information about the query made to the knowledge base.
-
-| Attribute | Description |
-| --- | --- |
-| `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
-
-##### 4.1.2.15 Content {#content}
-
-The `Content` entity holds information about the cited text from the data source.
-
-| Attribute | Description |
-| --- | --- |
-| `Text` | The `Text` attribute describes the cited text from the data source. |
-
-##### 4.1.2.16 Location {#location}
+##### 4.1.2.12 Location {#location}
 
 The `Location` entity holds information about the location of the data source.
 
@@ -418,7 +412,7 @@ The `Location` entity holds information about the location of the data source.
 | --- | --- |
 | `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source. |
 
-##### 4.1.2.17 S3Location {#s3location}
+##### 4.1.2.13 S3Location {#s3location}
 
 The `S3Location` entity holds information about the S3 location of the data source.
 
@@ -426,19 +420,13 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | `URI` | The `URI` attribute describes the S3 URI of the data source. |
 
-##### 4.1.2.18 RetrieveLocation {#retrieve-location}
+##### 4.1.2.14 ReferenceLocation {#reference-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-##### 4.1.2.19 ReferenceLocation {#reference-location}
-
-| Attribute | Description |
-| --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
-
-##### 4.1.2.20 SessionConfiguration {#session-configuration}
+##### 4.1.2.15 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
@@ -446,7 +434,7 @@ The `SessionConfiguration` entity holds information about details of the session
 | --- | --- |
 | `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
-##### 4.1.2.21 Citation {#citation}
+##### 4.1.2.16 Citation {#citation}
 
 The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -454,7 +442,7 @@ The `Citation` entity contains a segment of the generated response that is based
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
 
-##### 4.1.2.22 GeneratedResponsePart {#generated-response-part}
+##### 4.1.2.17 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -464,7 +452,7 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output. |
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output. |
 
-##### 4.1.2.23 RetrievedReference {#retrieved-reference}
+##### 4.1.2.18 RetrievedReference {#retrieved-reference}
 
 The `RetrievedReference` entity holds information about a sources cited for the generated response.
 
@@ -472,7 +460,7 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source. |
 
-##### 4.1.2.24 CitationRetrievedReference (#citation-retrieved-reference)
+##### 4.1.2.19 CitationRetrievedReference (#citation-retrieved-reference)
 
 The `CitationRetrievedResponse` entity holds information about the citation, which contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -480,26 +468,26 @@ The `CitationRetrievedResponse` entity holds information about the citation, whi
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`RetrievedReference`](#retrieved-reference) entity. |
 
-##### 4.1.2.25 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
+##### 4.1.2.20 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-##### 4.1.2.26 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
+##### 4.1.2.21 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
 
 | Attribute | Description |
 | --- | --- |
 | `MaxResults` | The maximum number of results to return in the response.  |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.27 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
+##### 4.1.2.22 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
 
 | Attribute | Description |
 | --- | --- |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.28 KnowledgeBaseSummary {#knowledge-base-summary}
+##### 4.1.2.23 KnowledgeBaseSummary {#knowledge-base-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -509,7 +497,7 @@ The `CitationRetrievedResponse` entity holds information about the citation, whi
 | `UpdatedAt` | The time at which the knowledge base was last updated.  |
 | `Description` | The description of the knowledge base.  |
 
-##### 4.1.2.29 StartIngestionJobRequest {#start-ingestion-job-request}
+##### 4.1.2.24 StartIngestionJobRequest {#start-ingestion-job-request}
 
 This is the request entity of the `StartIngestionJob` action.
 
@@ -518,7 +506,7 @@ This is the request entity of the `StartIngestionJob` action.
 | `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-##### 4.1.2.30 GetIngestionJobRequest {#get-ingestion-job-request}
+##### 4.1.2.25 GetIngestionJobRequest {#get-ingestion-job-request}
 
 This is the request entity of the `GetIngestionJob` action.
 
@@ -528,27 +516,27 @@ This is the request entity of the `GetIngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-##### 4.1.2.31 GetIngestionJobResponse {#get-ingestion-job-response}
+##### 4.1.2.26 GetIngestionJobResponse {#get-ingestion-job-response}
 
 This is the response entity of the `GetIngestionJob` action.
 
-##### 4.1.2.32 StartIngestionJobResponse {#start-ingestion-job-response}
+##### 4.1.2.27 StartIngestionJobResponse {#start-ingestion-job-response}
 
 This is the response entity of the `StartIngestionJob` action.
 
-##### 4.1.2.33 StartIngestionJob {#start-ingestion-job}
+##### 4.1.2.28 StartIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-##### 4.1.2.34 GetIngestionJob {#start-ingestion-job}
+##### 4.1.2.29 GetIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-##### 4.1.2.35 IngestionJob {#ingestion-job}
+##### 4.1.2.30 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -561,7 +549,7 @@ This is the response entity of the `IngestionJob` action.
 | `StartedAt` | The `Timestamp` at which the ingestion job started. |
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated. |
 
-##### 4.1.2.36 FailureReason {#failure-reason}
+##### 4.1.2.31 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
@@ -569,7 +557,7 @@ The `FailureReason` entity holds the reason an interaction failed.
 | --- | --- |
 | `Text` | The `Text` attribute describes reason the interaction failed. |
 
-##### 4.1.2.37 IngestionJobStats {#ingestion-job-stats}
+##### 4.1.2.32 IngestionJobStats {#ingestion-job-stats}
 
 The `IngestionJobStats` entity contains information about the failure of the interaction.
 
@@ -581,7 +569,7 @@ The `IngestionJobStats` entity contains information about the failure of the int
 | `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed. |
 | `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed. |
 
-##### 4.1.2.38 ModelInvocationInput {#model-invocation-input}
+##### 4.1.2.33 ModelInvocationInput {#model-invocation-input}
 
 The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step.
 
@@ -593,7 +581,7 @@ The `ModelInvocationInput` contains parameters that specify the input to the pre
 | `Text` | The `Text` attribute holds the text that prompted the agent at this step. |
 | `PromptType` | The `PromptType` attribute specifies the step in the agent sequence. |
 
-##### 4.1.2.39 Parameter {#parameter}
+##### 4.1.2.34 Parameter {#parameter}
 
 The `Parameter` is a generalization for orchestration trace parameter objects.
 
@@ -603,7 +591,7 @@ The `Parameter` is a generalization for orchestration trace parameter objects.
 | `_Type` | The `_Type` attribute specifies the parameter type. |
 | `Value` | The `Value` attribute specifies the parameter value. |
 
-##### 4.1.2.40 InvokeAgentAttribute {#invoke-agent-attribute}
+##### 4.1.2.35 InvokeAgentAttribute {#invoke-agent-attribute}
 
 The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
 
@@ -612,7 +600,7 @@ The `InvokeAgentAttribute` holds all attributes needed to to create a request to
 | `Key` | The `Key` attribute holds an attribute key. |
 | `Value` | The `Value` attribute holds an attribute value. |
 
-##### 4.1.2.41 InvokeAgentRequest {#invoke-agent-request}
+##### 4.1.2.36 InvokeAgentRequest {#invoke-agent-request}
 
 The `InvokeAgentRequest` holds all attributes needed to create a request to invoke an agent.
 
@@ -625,7 +613,7 @@ The `InvokeAgentRequest` holds all attributes needed to create a request to invo
 | `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process. |
 | `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not. |
 
-##### 4.1.2.42 SessionState {#session-state}
+##### 4.1.2.37 SessionState {#session-state}
 
 The `SessionState` entity is associated to objects that hold information about the session.
 
@@ -633,7 +621,7 @@ The `SessionState` entity is associated to objects that hold information about t
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
 
-##### 4.1.2.43 SessionAttribute {#session-attribute}
+##### 4.1.2.38 SessionAttribute {#session-attribute}
 
 The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -641,7 +629,7 @@ The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-##### 4.1.2.44 PromptSessionAttribute {#session-attribute}
+##### 4.1.2.39 PromptSessionAttribute {#session-attribute}
 
 The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -649,7 +637,7 @@ The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entit
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-##### 4.1.2.45 InvokeAgentResponse {#invoke-agent-response}
+##### 4.1.2.40 InvokeAgentResponse {#invoke-agent-response}
 
 The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 
@@ -657,7 +645,7 @@ The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 | --- | --- |
 | `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text. |
 
-##### 4.1.2.46 InvokeAgentCitation {#invoke-agent-citation}
+##### 4.1.2.41 InvokeAgentCitation {#invoke-agent-citation}
 
 The `InvokeAgentCitation` contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -665,7 +653,7 @@ The `InvokeAgentCitation` contains a segment of the generated response that is b
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Citation`](#citation). |
 
-##### 4.1.2.47 TracePart {#trace-part}
+##### 4.1.2.42 TracePart {#trace-part}
 
 The `TracePart` is a generalization which contains information about the agent and session, alongside the agent's reasoning process and results from calling API actions and querying knowledge bases and metadata about the trace. 
 
@@ -675,7 +663,7 @@ The `TracePart` is a generalization which contains information about the agent a
 | `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest. |
 | `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest. |
 
-##### 4.1.2.48 AbstractTrace {#abstract-trace}
+##### 4.1.2.43 AbstractTrace {#abstract-trace}
 
 The `AbstractTrace` contains one part of the agent's reasoning process and results from calling API actions and querying knowledge bases. 
 
@@ -684,7 +672,7 @@ The `AbstractTrace` contains one part of the agent's reasoning process and resul
 | `TraceId` | The `TraceId` attribute holds the unique identifier of the trace. |
 | `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type. |
 
-##### 4.1.2.49 FailureTrace {#failure-trace}
+##### 4.1.2.44 FailureTrace {#failure-trace}
 
 The `FailureTrace` contains information about the failure of the interaction. 
 
@@ -692,7 +680,7 @@ The `FailureTrace` contains information about the failure of the interaction.
 | --- | --- |
 | `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction. |
 
-##### 4.1.2.50 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
+##### 4.1.2.45 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
 
 The `PreProcessingModelInvocationOutput` contains information about the foundation model output from the pre-processing step. 
 
@@ -701,7 +689,7 @@ The `PreProcessingModelInvocationOutput` contains information about the foundati
 | `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not. |
 | `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid. |
 
-##### 4.1.2.51 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
+##### 4.1.2.46 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
 
 The `PreProcessingModelInvocationInput` contains the foundation model input for the pre-processing step.
 
@@ -709,7 +697,7 @@ The `PreProcessingModelInvocationInput` contains the foundation model input for 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.2.52 PostProcessingModelInvocationOutput {#post-processing-model-invocation-output}
+##### 4.1.2.47 PostProcessingModelInvocationOutput {#post-processing-model-invocation-output}
 
 The `PostProcessingModelInvocationOutput` contains information about the foundation model output from the post-processing step. 
 
@@ -717,7 +705,7 @@ The `PostProcessingModelInvocationOutput` contains information about the foundat
 | --- | --- |
 | `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step. |
 
-##### 4.1.2.53 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
+##### 4.1.2.48 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
 
 The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
 
@@ -725,7 +713,7 @@ The `PostProcessingModelInvocationInput` contains the foundation model input for
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.2.54 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
+##### 4.1.2.49 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
 
 The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
 
@@ -733,7 +721,7 @@ The `PostProcessingModelInvocationInput` contains the foundation model input for
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.2.55 InvocationInput {#invocation-input}
+##### 4.1.2.50 InvocationInput {#invocation-input}
 
 The `InvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
 
@@ -741,7 +729,7 @@ The `InvocationInput` contains information pertaining to the action group or kno
 | --- | --- |
 | `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base. |
 
-##### 4.1.2.56 ActionGroupInvocationInput {#action-group-invocation-input}
+##### 4.1.2.51 ActionGroupInvocationInput {#action-group-invocation-input}
 
 The `ActionGroupInvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
 
@@ -751,7 +739,7 @@ The `ActionGroupInvocationInput` contains information pertaining to the action g
 | `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group. |
 | `Verb` | The `Verb` attribute specifies the API method being used, based off the action group. |
 
-##### 4.1.2.57 RequestBodyContent {#request-body-content}
+##### 4.1.2.52 RequestBodyContent {#request-body-content}
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
 
@@ -759,7 +747,7 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 | --- | --- |
 | `ContentKey` | The `ContentKey` as returned in the RequestBodyContent|
 
-##### 4.1.2.58 RequestBodyContentParameter {#request-body-content-parameter}
+##### 4.1.2.53 RequestBodyContentParameter {#request-body-content-parameter}
 
 The `RequestBodyContentParameter` is a parameter in the Lambda input event (for the request body).
 
@@ -767,7 +755,7 @@ The `RequestBodyContentParameter` is a parameter in the Lambda input event (for 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
-##### 4.1.2.59 InvocationInputParameter {#invocation-input-parameter}
+##### 4.1.2.54 InvocationInputParameter {#invocation-input-parameter}
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
 
@@ -775,7 +763,7 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
-##### 4.1.2.60 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
+##### 4.1.2.55 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
 
 The `KnowledgeBaseLookupInput` contains details about the knowledge base to look up and the query to be made.
 
@@ -784,7 +772,7 @@ The `KnowledgeBaseLookupInput` contains details about the knowledge base to look
 | `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up. |
 | `Text` | The `Text` is the query made to the knowledge base. |
 
-##### 4.1.2.61 Rationale {#rationale}
+##### 4.1.2.56 Rationale {#rationale}
 
 The `Rationale` contains the reasoning, based on the input, that the agent uses to justify carrying out an action group or getting information from a knowledge base.
 
@@ -792,7 +780,7 @@ The `Rationale` contains the reasoning, based on the input, that the agent uses 
 | --- | --- |
 | `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input. |
 
-##### 4.1.62 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
+##### 4.1.57 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
 
 The `OrchestrationModelInvocationInput` holds the input for the pre-processing step.
 
@@ -800,7 +788,7 @@ The `OrchestrationModelInvocationInput` holds the input for the pre-processing s
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.63 Observation {#observation}
+##### 4.1.58 Observation {#observation}
 
 The `Observation` contains the result or output of an action group or knowledge base, or the response to the user.
 
@@ -810,7 +798,7 @@ The `Observation` contains the result or output of an action group or knowledge 
 | `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user. |
 | `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible. |
 
-##### 4.1.64 RepromptResponse {#reprompt-response}
+##### 4.1.59 RepromptResponse {#reprompt-response}
 
 The `RepromptResponse` contains details about the agent's response to reprompt the input.
 
@@ -819,7 +807,7 @@ The `RepromptResponse` contains details about the agent's response to reprompt t
 | `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input. |
 | `Text` | The `Text` reprompting the input. |
 
-##### 4.1.65 ObservationRetrievedReference {#observation-retrieved-reference}
+##### 4.1.60 ObservationRetrievedReference {#observation-retrieved-reference}
 
 The `ObservationRetrievedReference` holds information about a sources cited for the generated response.
 
@@ -872,7 +860,7 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History {#retrieve-and-generate-with-history}
+###### 4.2.1.3.1 Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
@@ -905,6 +893,16 @@ The input and output for this service are shown in the table below:
 For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
 Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
+
+##### 4.2.1.6 Retrieve {#retrieve}
+
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. This operation corresponds to the *Retrieve* microflow. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
 #### 4.2.2 GenAI Commons Helper Operations
 
@@ -958,7 +956,7 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
 
-##### 4.2.2.5 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+##### 4.2.2.6 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
 
 Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
 
@@ -967,6 +965,18 @@ This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** mi
 | Input | Output |
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
+
+##### 4.2.2.7  Request: Add Retrieve Request Extension {#add-r-extension}
+
+Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
 #### 4.2.3 Other Operations
 
@@ -1004,17 +1014,6 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
 
-##### 4.2.3.4 Retrieve {#retrieve}
-
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials`, and `RetrieveRequest` as input parameters.
-
-To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
 ##### 4.2.3.5 StartIngestionJob {#start-ingestion-job}
 

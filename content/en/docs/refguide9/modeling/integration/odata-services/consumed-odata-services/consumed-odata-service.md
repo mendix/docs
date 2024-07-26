@@ -101,7 +101,7 @@ The microflow should have an argument of type `System.HttpResponse`. If the ODat
 
 The microflow must return a `String` containing the error message. If it returns `empty`, the original generic message is used.
 
-Note for developers of java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
+Note for developers of Java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
 {{% alert color="info" %}}
 The *error handling microflow* feature was introduced in Studio Pro 9.6.0.

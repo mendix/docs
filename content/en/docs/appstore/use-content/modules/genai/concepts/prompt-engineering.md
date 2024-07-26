@@ -2,7 +2,7 @@
 title: "Prompt Engineering"
 url: /appstore/modules/genai/prompt-engineering/
 linktitle: "Prompt Engineering"
-weight: 2
+weight: 10
 description: "Describes Prompt Engineering as used with generative AI in Mendix"
 ---
 

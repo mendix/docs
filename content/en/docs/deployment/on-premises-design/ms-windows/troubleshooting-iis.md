@@ -87,7 +87,7 @@ Mendix cannot work if IIS is hiding detailed error messages. You need to turn on
 
 First assess whether you are hitting the Mendix application. If IIS forwards anything to the running Mendix app you can see that in the log. The log nodes 'Connector' and 'Jetty' can be most helpful. The Connector log node is able to print information about any incoming request. If you enable Trace logging you can see if the request comes in to the right request handler.
 
-If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty'. The 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not setup correctly. 
+If the 'Connector' doesn't print anything you can also enable trace logging on 'Jetty'. The 'Jetty' log node will print a message for every connection that is established with Mendix. If Jetty doesn't print a trace message the IIS rewrite rules are definitely not set up correctly. 
 
 If you do have information in the 'Connector' log node you can see where the requests are being forwarded to. This should help you understand where the rewrite rules are directing traffic and how to change it.
 

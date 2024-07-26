@@ -6,11 +6,13 @@ weight: 60
 description: Tutorial for implementing push notifications in a native app.
 aliases:
     - /howto/mobile/notif-implement-native/
+    - /howto/mobile/notif-build-native/
+    - /refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/
 ---
 
 ## 1 Introduction
 
-This section will help you set up the elements which allow your native app to handle push notifications sent from your server Mendix application. After completing this step you will be able to build a native app with support for push notifications.
+This guide will help you set up, build, and publish your native app to handle push notifications. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
 To make setup easy, the Push Notifications Connector module includes snippets that will help you with the initial setup. Do the following:
 
@@ -53,4 +55,26 @@ To ensure push notification integration executes properly on your native app you
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-Now that you have everything set up, it is time to deploy your native app. See [Build a Native Mobile App with Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) for instructions on enabling push notifications when building a native app. 
+## 5 Building Your Native App {#build-native-app}
+
+Now that you have everything set up, it is time to deploy your native app:
+
+1. In Studio Pro top bar navigation, click **App** > **Build Native Mobile App**: </br>
+    * If you are building your native app for the first time, click [here](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) for instructions.</br>
+1. After choosing the type of build (local development or distribution) go to **App capabilities**.</br>
+1. Under **Firebase configuration** switch **Push notifications** to **On**.</br>
+1. Scroll down and upload the Firebase configurations:</br>
+    1. *google-services.json* for the Android build.</br>
+    1. *GoogleServices-Info.plist* for the iOS build.</br>
+
+    These files contain the information and private keys necessary to enable push notifications in your iOS and Android apps. 
+
+    | **File**    | **Source**   | **Usage**      |
+    | -------- | -------- | ------- |
+    | **google-services.json** | Google Firebase | Firebase configuration and private key, bundled as part of your Android application. |
+    | **GoogleServices-Info.plist** | Google Firebase | Firebase configuration and private key, bundled as part of your iOS application. |
+1. Save the configuration. Now you are ready to build.
+
+When building for local development, keep in mind that Mendix's Make It Native app does not support push notifications. In order to use and test push notifications, you will have to build your own native app as described above and distribute it to an emulator (Android only) or test device.
+
+Now you are able to build, the next step is to run your app in an emulator or test device. Proceed to [part 7](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) to send your first push notifications or continue with the next section to set up push notifications for progressive web apps.

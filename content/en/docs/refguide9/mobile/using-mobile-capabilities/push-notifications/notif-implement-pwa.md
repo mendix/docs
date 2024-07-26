@@ -1,5 +1,5 @@
 ---
-title: "Part 7: Implement Push Notifications in Your Progressive Web App"
+title: "Part 6: Implement Push Notifications in Your Progressive Web App"
 linktitle: "6. Push Notifications in Progressive Web App"
 url: /refguide9/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/
 weight: 70

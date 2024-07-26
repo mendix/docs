@@ -161,7 +161,7 @@ After following the general setup above, you are all set to use the microflows i
 
 These microflows expect an [OpenAIConnection](#openaiconnection) object that refers to a [Configuration](#configuration-entity). Additionally, a model or deployment needs to be passed:
 
-* For the OpenAI API configuration, the desired model must be specified for every call in the Model attribute of the [OpenAIConnection](#openaiconnection).
+* For the OpenAI API configuration, the desired model must be specified for every call in the `Model` attribute of the [OpenAIConnection](#openaiconnection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal) that was set on the referenced [Configuration](#configuration-entity). Any model explicitly specified will be ignored and hence can be left empty. 
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. Different exposed microflow activities may require different prompts and logic for how the prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole](/appstore/modules/genai/commons/#enum-messagerole) section in *GenAI Commons*.
@@ -224,20 +224,20 @@ For more information on vision, see [OpenAI](https://platform.openai.com/docs/gu
 
 ### 3.3 Image Generations Configuration {#image-generations-configuration}
 
-In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, one microflow for image generations is exposed as microflow action under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
+In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, one microflow for image generations is exposed as a microflow action under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) which determines the Model and endpoint to use as well as optional [ImageOptions](/appstore/modules/genai/commons/#imagesoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom Image entity.
+The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imagesoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
 
 For technical details, see the [Technical Reference](#image-generations-technical) section.
 
-* For a OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
+* For an OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
 
 ### 3.4 Embeddings Configuration {#embeddings-configuration}
 
 In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, two microflows for embeddings are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-These microflows require a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) which determines the Model and endpoint to use as well as optional [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) to determine optional attributes like the dimensions of the embedding vectors. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) need to be provided. The current version of this operation only supports the float representation of the resulting vector.
+These microflows require a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and they also require optional [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) to determine optional attributes like the dimensions of the embedding vectors. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) needs to be provided. The current version of this operation only supports the float representation of the resulting vector.
 
 * For a OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -252,7 +252,7 @@ For technical details, see the [Technical Reference](#embeddings-string-technica
 
 The microflow activity `Embeddings (ChunkCollection)` supports the more complex scenario where a collection of [Chunk](/appstore/modules/genai/commons/#chunk-entity) objects are vectorized in a single API call, such as when converting a collection of text strings (chunks) from a private knowledge base into embeddings. Instead of calling the API for each string, executing a single call for a list of strings can significantly reduce HTTP overhead. The embedding vectors returned after a successful API call will be stored as `EmbeddingVector` attribute in the same `Chunk` object. Use the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) to construct the input. 
 
-In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
+In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterwards directly be used to populate the knowledge base with.
 
 For technical details, see the [Technical Reference](#embeddings-chunkcollection-technical) section.
 
@@ -516,16 +516,16 @@ Use the exposed microflow operation `Image Generations` to execute an image gene
 | Name | Type | Mandatory | Description |
 | --- | --- | --- |--- |
 | `Connection` | [Connection](/appstore/modules/genai/commons/#connection) | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
-| `UserPrompt` | String | mandatory | This is the description the image will be based on. |
+| `UserPrompt` | String | mandatory | This is the description on which the image will be based. |
 | `ImageOptions` | [ImageOptions](#imageoptions-entity) | optional | This can be used to pass optional request attributes. An [OpenAIImageOptions_Extension](#openai-imageoptions-entity) will be associated to the ImageOptions and considered in the operation. |
 
 **Return value**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| `Response` | [Response](/appstore/modules/genai/commons/#response)   | A `Response` object pointing to a message with a [FileCollection](/appstore/modules/genai/commons/#filecollection) containing one or multiple [FileContent](/appstore/modules/genai/commons/#filecontent) objects that can be converted into a single or multiple images using the response handling microflows. |
+| `Response` | [Response](/appstore/modules/genai/commons/#response)   | A `Response` object pointing to a message with a [FileCollection](/appstore/modules/genai/commons/#filecollection) containing one or multiple [FileContent](/appstore/modules/genai/commons/#filecontent) objects. These `FileContent` objects can be converted into a single or multiple images using the response handling microflows. |
 
-Use [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) and [Get Generated Images (List)](/appstore/modules/genai/commons/#image-get-list) to retrieve the generated image(s) from the response.
+Use [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) and [Get Generated Images (List)](/appstore/modules/genai/commons/#image-get-list) to retrieve the generated images from the response.
 
 #### 4.3.3 Embeddings
 
@@ -568,7 +568,7 @@ Use the microflow `Embeddings_Execute_ChunkCollection` to execute an embeddings 
 | `EmbeddingsResponse`  | [EmbeddingsResponse](/appstore/modules/genai/commons/#embeddingsresponse-entity)  | Response object containing token usage metric and pointing to a `ChunkCollection` containing the Chunk for which an embedding vector was created. Note that the `EmbeddingVector` gets updated on the original objects. So for further logic, the `ChunkCollection` used as input for this operation can be reused and is the same as the `ChunkCollection` the `EmbeddingsResponse` is pointing to. |
 
 To construct the input for the microflow, see the exposed microflows of GenAI Commons [Chunks: Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create), [Chunks: Add Chunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-chunk) or [Chunks: Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk).
-In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends to add `KnowledgeBaseChunks` to the `ChunkCollection` and use these as an input for the embeddings operations so they can afterwards directly be used to populate the knowledge base with.
+In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector KnowledgeBase](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterwards directly be used to populate the knowledge base with.
 
 ## 5 Showcase Application {#showcase-application}
 

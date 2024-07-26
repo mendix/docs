@@ -12,7 +12,7 @@ aliases:
 
 ## 1 Introduction
 
-This section will help you set up, build and publish your native app to handle push notifications. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
+This guide will help you set up, build, and publish your native app to handle push notifications. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
 To make setup easy, the Push Notifications Connector module includes snippets that will help you with the initial setup. Do the following:
 

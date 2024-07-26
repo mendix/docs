@@ -8,7 +8,7 @@ description: Tutorial for implementing push notifications in a progressive web a
 
 ## 1 Introduction
 
-This section will help you set up your progressive web app to handle push notifications.
+This guide will help you set up your progressive web app to handle push notifications.
 
 ## 2 Initialize Firebase
 

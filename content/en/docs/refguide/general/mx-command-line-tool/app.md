@@ -92,7 +92,7 @@ These are the return codes:
 | --- | --- |
 | `0` | The command ran successfully. |
 
-## 4 mx show-java-version Command {#show-java-version}
+## 4 mx show-java-version Command {#show-java-version} [version 10.12.2+]
 
 The `mx show-java-version` command reports what the configured Java version of the app is.
 
@@ -108,7 +108,7 @@ Use the following command pattern for `mx show-java-version`:
 
 `mx show-java-version INPUT`
 
-For `INPUT`, enter a *.mpr* file.
+For `INPUT`, enter an *.mpr* file.
 
 ### 4.2 Examples
 

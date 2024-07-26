@@ -9,6 +9,6 @@ description_list: true
 
 ## 1 Introduction
 
-This category of how-to's presents details on how to secure your data and make sure that the right user is seeing the data that they are allowed to see.
+This category of how-tos presents details on how to secure your data and make sure that the right user is seeing the data that they are allowed to see.
 
 ## 2 Documents in This Category

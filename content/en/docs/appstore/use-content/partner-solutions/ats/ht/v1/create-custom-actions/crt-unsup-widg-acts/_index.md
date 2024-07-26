@@ -3,7 +3,7 @@ title: "Create Unsupported Widget Actions"
 url: /appstore/partner-solutions/ats/ht-one-crt-unsup-widg-acts/
 ---
 
-In this sub-category, you can find all the how-to's for creating an Unsupported Widget action:
+In this sub-category, you can find all the how-tos for creating an Unsupported Widget action:
 
 * [CAB.02 - Switch](/appstore/partner-solutions/ats/ht-one-cab-02-switch/)
 * [CAB.03 - TextBox](/appstore/partner-solutions/ats/ht-one-cab-03-textbox/)

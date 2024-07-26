@@ -125,7 +125,7 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
     For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
 
-    In above page, once you do a json format, you will get the links for mxpc-cli for different available versions.
+    In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
 
 ## 4. Installing and Configuring the Mendix Operator {#install-operator}
 
@@ -200,7 +200,7 @@ spec:
 At the moment, the `baseOSImageTagTemplate` can be set to one of the following values:
 
 * `ubi8-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 8 Micro images; this is the default option.
-* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this option can be used to use a newer OS and improve security scores..
+* `ubi9-1-jre{{.JavaVersion}}-entrypoint` - to use Red Hat UBI 9 Micro images; this option can be used to use a newer OS and improve security scores.
 
 {{% alert color="info" %}}
 

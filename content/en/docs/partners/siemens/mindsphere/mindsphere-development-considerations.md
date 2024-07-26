@@ -45,7 +45,7 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
 
 2. Developer Tenant:
 
-    The following cloud foundry environment variables must be set for the app:
+    The following Cloud Foundry environment variables must be set for the app:
 
     | Developer Tenant | Description |
     | ----- | ----- |
@@ -146,7 +146,8 @@ The *ClientID* is built from the combination of:
 ```*Host tenant*-*Cockpit application name*-*Cockpit application version*```
 
 Ensure you have filled these constants correctly.
-If everything is setup correctly the form is auto filled and submitted.
+
+If everything is set up correctly, the form is auto filled and submitted.
 
 Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}

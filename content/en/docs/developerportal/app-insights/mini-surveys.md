@@ -207,7 +207,7 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/global-navigation/#notifications) on how many responses have been collected.
 
-To check the responses that have been collected, follow these steps::
+To check the responses that have been collected, follow these steps:
 
 1. Open the app in [Apps](https://sprintr.home.mendix.com/).
 

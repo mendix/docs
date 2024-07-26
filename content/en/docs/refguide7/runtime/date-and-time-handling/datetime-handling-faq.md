@@ -1,7 +1,6 @@
 ---
 title: "DateTime Handling FAQ"
 url: /refguide7/datetime-handling-faq/
-notoc: true
 ---
 
 
@@ -57,7 +56,7 @@ If you want to compare times of the day between different time zones, so you wou
 
 It depends on when you run this statement. Usually it will return true because the beginning of the current day in UTC is sooner (so smaller) than the begin of the current day in EST. However, if you run this when the day already changed in UTC time but not in EST time (so between midnight and 05:00 UTC, or 19:00 and midnight EST) then it will return false, because the begin of the current day will be a day later in the UTC time zone.
 
-## If I am comparing something with a `[%CurrentDateTime%]` token in a DataGrid, which time should it use as a constraint for a localized and for a non-localized date? So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
+## If I am comparing something with a `[%CurrentDateTime%]` token in a DataGrid, which time should it use as a constraint for a localized and for a non-localized date? So if I do an XPath with the following constraint `[LocalDateAttr > [%CurrentDateTime%]` or the following constraint `[NotLocalDateAttr > [%CurrentDateTime%]` what should I expect in the result when it is 12:10pm in Boston ET? Should it show all records with a date after 12:10 or all records after 17:10?
 
 Whether something is a local date or not is irrelevant in this case. Note that there is no UTC variant of the `[%CurrentDateTime%]` token because this wouldn't make any sense, a moment in time is the same everywhere in the world, even if it may be displayed differently depending on the place. To answer the question, this is yes to both. It will show all records after 12:10 EST (for the localized dates) which is the same as 17:10 UTC (which is how your non-localized dates would show), but these times are the same.
 

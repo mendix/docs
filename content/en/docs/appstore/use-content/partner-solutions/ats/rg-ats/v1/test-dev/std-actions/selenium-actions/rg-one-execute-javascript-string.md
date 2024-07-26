@@ -1,5 +1,5 @@
 ---
-title: "Execute Javascript String"
+title: "Execute JavaScript String"
 url: /appstore/partner-solutions/ats/rg-one-execute-javascript-string/
 ---
 

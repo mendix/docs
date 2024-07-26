@@ -37,6 +37,6 @@ Some proxies require authentication. To specify the user and password, simply pa
 
 ## 4 SSL
 
-You can also connect while using a secure sockets layer (ie https). To configure the proxy, you need to specify **different** proxy settings to connect. These settings are called https.proxyHost and https.proxyPort. In addition, you need to import the ssl certificate of the proxy server into your java keystore. More info can be found on the [Oracle website](https://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
+You can also connect while using a secure sockets layer (ie https). To configure the proxy, you need to specify **different** proxy settings to connect. These settings are called https.proxyHost and https.proxyPort. In addition, you need to import the ssl certificate of the proxy server into your Java keystore. More info can be found on the [Oracle website](https://download.oracle.com/javaee/1.4/tutorial/doc/Security6.html)
 
-For more inforamtion, see the [Oracle documentation on proxies](https://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html).
+For more information, see the [Oracle documentation on proxies](https://download.oracle.com/javase/6/docs/technotes/guides/net/proxies.html).

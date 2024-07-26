@@ -1,14 +1,16 @@
 ---
 title: "Use Key-Pair Authentication for Role-Based Access Control"
 url: /appstore/modules/snowflake/key-pair-auth/
-description: "Describes how to use key-pair authentication to enable role-based access control in a Mendix application."
+description: "Describes how to use key-pair authentication to enable role-based access control in a Mendix application." 
 weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
 ## 1 Introduction
 
-You can use key-pair authentication to enable your Mendix app to use role-based access control (RBAC). 
+You can use key-pair authentication to enable your Mendix app to use role-based access control (RBAC). Key pair authentication is a method of authenticating with a system using a pair of keys that comply with specific security requirements. The following diagram is a graphic representation of how key-pair authentication can work between Snowflake and a Mendix application. 
+
+{{< figure src="/attachments/appstore/use-content/modules/snowflake-sso/RBACKeyPairExplanations.png" >}}
 
 In the context of integration between Snowflake and Mendix, RBAC helps ensure that the data being exposed to a certain user or role within Snowflake is the same as the data presented to the same user in a Mendix app.
 
@@ -25,7 +27,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/domain-model.png" >}}
 
 2. Decide on the authentication method. For Snowflake, key-pair authentication is recommended.
-3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [ey-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
+3. Configure the necessary keys and credentials in your Snowflake account and assign the public key to a Snowflake user. For more information, see [Key-pair authentication and key-pair rotation](https://docs.snowflake.com/en/user-guide/key-pair-auth) in the Snowflake documentation.
 4. In your Mendix app, create a new **Account Overview** page, were you can add the connection details to the users. A new **Connection Details** record is needed for every user that has access to data in Snowflake. The Connection Details object should be filled in at the end-user level.
 
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/connection-details-account.png" >}}

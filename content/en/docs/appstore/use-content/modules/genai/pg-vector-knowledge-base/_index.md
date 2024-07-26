@@ -3,6 +3,7 @@ title: "PgVector Knowledge Base"
 url: /appstore/modules/genai/pgvector/
 linktitle: "PgVector Knowledge Base"
 description: "Describes the configuration and usage of the PgVector Knowledge Base module from the Mendix Marketplace. This module allows developers to integrate PostgreSQL databases with pgvector installed as knowledge bases into their Mendix app."
+weight: 70
 aliases:
    - /appstore/modules/pgvector-knowledge-base/
 ---
@@ -62,7 +63,7 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(re)populate](#repopulate-knowledge-base)) and finding relevant data chunks in an existing knowledge base (for example, [retrieve](#retrieve)). In both steps, [Labels](#label) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into two categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(re)populate](#repopulate-knowledge-base)) and finding relevant data chunks in an existing knowledge base (for example, [retrieve](#retrieve)). In both steps, [Labels](#label) can be provided to enable additional filtering.
 
 #### 3.2.1 `Create label` {#create-label}
 

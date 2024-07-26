@@ -78,4 +78,4 @@ See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-
 
 You have now learned how to install the ATS tools, so the next how-to is [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/).
 
-For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/appstore/partner-solutions/ats/ht-one/). We advise following the how-to's in the order listed there.
+For an overview of all the how-tos and the structure, see [ATS 1 How-tos](/appstore/partner-solutions/ats/ht-one/). We advise following the how-tos in the order listed there.

@@ -147,7 +147,7 @@ The following sections of this document contain additional suggestions and best 
 When building the domain model for your connector, keep the following considerations in mind:
 
 * Always create a request entity that inherits from the AWSAuthentication.AbstractRequest even if there is no payload.
-* Create a response entity if the action returns anything other than a Boolean attribute, such as `IsSuccesful` or `IsCompleted`.
+* Create a response entity if the action returns anything other than a Boolean attribute, such as `IsSuccessful` or `IsCompleted`.
 * Implement timeout settings by adding and associating a BasicClientConfig object to the request and setting the timeout value in there.
 * Make sure that the entity metadata is as human-readable as possible, and includes information such as:
     * Generalization label

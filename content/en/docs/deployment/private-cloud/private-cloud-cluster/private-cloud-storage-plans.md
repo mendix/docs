@@ -389,7 +389,7 @@ AWS IRSA allows a Kubernetes Service Account to assume an IAM role. For this to 
 The Postgres database is an automated, on-demand database. The Postgres plan offers a good balance between automation, ease of use, and security.
 [Managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) removes static passwords and instead uses IAM roles for authentication.
 
-This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Postgres. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authentication.
 
 ##### 2.3.3.1 Prerequisites
 
@@ -1631,7 +1631,7 @@ If you would like to simply share a container between environments, or to manual
 This automated, on-demand option allows to use an existing blob storage accounts in multiple environments, and isolates environments from accessing each other's data.
 
 {{% alert color="info" %}}
-This section provides technical details on how managed identity authentication works with Azure Blob Storage. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authenticaiton.
+This section provides technical details on how managed identity authentication works with Azure Blob Storage. If you just need instructions to get started, the [Azure Managed Identity-based storage walkthrough](#walkthrough-azure-azwi) provides a quick start guide to set the Mendix Operator to manage a Postgres database, SQL Server and Blob Storage account using managed identity authentication.
 {{% /alert %}}
 
 ##### 3.4.1.1 Prerequisites
@@ -1661,7 +1661,7 @@ When a new environment is created, the Mendix Operator performs the following ac
 * Create a Managed Identity for an environment. This Managed Identity will be created in the same resource group, subscription and region as the *Blob Storage Admin* managed identity.
 * Create a Kubernetes Service Account and attach it to the environment's Managed Identity. This Service Account acts as a replacement for static credentials, and can also be used to authenticate with the environment's Blob Storage Container.
 * Create a new container in the shared blob storage account. This will be the environment's dedicated container.
-* Add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to an envrionment's Managed Identity, scoped to its container.
+* Add the [Storage Blob Data Contributor](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/storage#storage-blob-data-contributor) role to an environment's Managed Identity, scoped to its container.
 * Create a Kubernetes secret to provide connection details to the new app environment - to automatically configure the new environment.
    Since the app environment will authenticate through a managed identity role, this secret will not contain any static passwords - only the blob storage endpoint, container name and other non-sensitive connection details.
 

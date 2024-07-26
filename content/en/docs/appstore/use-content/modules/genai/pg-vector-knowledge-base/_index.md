@@ -36,7 +36,7 @@ With the current version, Mendix supports inserting data chunks with their vecto
 
 ### 1.3 Prerequisites {#prerequisites}
 
-You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/).
+You should have access to your own (remote) PostgreSQL database server with the [pgvector](https://github.com/pgvector/pgvector) extension installed. For more information, see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section.
 
 {{% alert color="info" %}}This module cannot be used with the Mendix Cloud app database. It only works if you are using your own database server or Amazon RDS.{{% /alert %}}
 
@@ -58,31 +58,33 @@ After you install the PgVector Knowledge Base module, you can find it in the **A
 
 ### 3.1 General Configuration {#general-configuration}
 
-The following steps are required to let a Mendix app integrate with a PgVector knowledge base:
+You must perform the following steps to integrate a Mendix app integrate a PgVector knowledge base:
 
 1. Add the module role **PgVectorKnowledgeBase.Administrator** to your Administrator user role in the security settings of your app. Optionally, map **GenAICommons.User** to any user roles that need read access directly on retrieved entities.
 2. Add the **DatabaseConfiguration_Overview** page (**USE_ME > Configuration**) to your navigation, or add the **Snippet_DatabaseConfigurations** to a page that is already part of your navigation. 
 3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
-Note: It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+{{% alert color="info" %}}
+It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+{{% /alert %}}
 
 ### 3.2 General Operations {#general-operations-configuration} 
 
-After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) can be provided to enable additional filtering.
+After following the general setup above, you are all set to use the microflows and Java actions in the **USE_ME > Operations** folder in your logic. Currently, ten operations (microflows and Java actions) are exposed as microflow actions under the **PgVector Knowledge Base Operations** category in the **Toolbox** in Mendix Studio Pro. These can be split into three categories, corresponding to the main functionalities: managing data chunks in the knowledge base (for example, [(Re)populate](#repopulate-knowledge-base)), finding relevant data chunks in an existing knowledge base (for example, [Retrieve](#retrieve)), and deleting chunk data or a whole knowledge base (for exapmle, [Delete Knowledge Base](#delete-knowledge-base)). In many occasions, metadata in a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity) can be provided to enable additional filtering.
 
-Additionally, there is one activity to prepare the connection input, which is a required input parameter for all operations, under **USE_ME > Connection**, and exposed separately in the toolbox.
+Additionally, there is one activity to prepare the connection input, which is a required input parameter for all operations, under **USE_ME > Connection**, and exposed separately in the **Toolbox** in Studio Pro.
 
 #### 3.2.1 `Create PgVector Knowledge Base Connection` {#create-pgvectorconnection}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity, see [PgVectorKnowledgeBaseConnection](#pgvectorconnection) in this document. After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity (see the [PgVectorKnowledgeBaseConnection](#pgvectorconnection) section). After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
 
-### 3.3 (Re)populate Operations {#repopulate-operations-configuration} 
+### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create Knowledge Base Chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/commons/#knowledgebases-embeddings). After you create the Knowledge Base Chunks and [generate embedding vectors for them](/appstore/modules/genai/commons/#embeddings-interface), the resulting ChunkCollection can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/commons/#knowledgebases-embeddings). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/commons/#embeddings-interface), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 
-1. Create a new `ChunkCollection`, see [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create).
+1. Create a new `ChunkCollection`. See the [Initialize ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-create) section.
 2. For each knowledge item that needs to be inserted, do the following:
     * Use [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) as many times as needed to create a collection of the necessary metadata for the knowledge base item.
     * With both collections as input parameters, use [Add KnowledgeBaseChunk to ChunkCollection](/appstore/modules/genai/commons/#chunkcollection-add-knowledgebasechunk) for the knowledge item.
@@ -146,7 +148,7 @@ Use this operation to retrieve knowledge base chunks from the knowledge base and
 
 ### 3.5 Delete Operations {#delete-operations-configuration}
 
-When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced, refer to the [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead. For cases where the chunks in the knowledge base were based on Mendix objects during insertion, chunks can be deleted using the original Mendix object as a starting point in two additional Delete (List) operations.
+When a whole knowledge base, or part of its data, is no longer needed, this can be handled by using a delete operation. If, however, the knowledge base is still needed, but the data needs to be replaced (see [(Re)populate Operations](#repopulate-operations-configuration) or [Replace](#replace) operations instead). For cases where the chunks in the knowledge base were based on Mendix objects during insertion, chunks can be deleted using the original Mendix object as a starting point in two additional Delete (List) operations.
 
 #### 3.5.1 `Delete Knowledge Base` {#delete-knowledge-base}
 
@@ -166,7 +168,7 @@ To help you use the PgVector Knowledge Base module, the following sections list 
 
 ### 4.1 Domain Model {#domain-model} 
 
-The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see [Domain Model](/refguide/domain-model/). To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
+The domain model in Mendix is a data model that describes the information in your application domain in an abstract way. For more general information, see the [Domain Model](/refguide/domain-model/) section. To learn about where the entities from the domain model are used and relevant during implementation, see the [Activities](#activities) section below.
 
 #### 4.1.1 Configuration {#configuration-domain-model}
 
@@ -294,7 +296,7 @@ The activities below support the retrieval of the knowledge from the knowledge b
 
 ##### 4.2.3.1 Retrieve {#retrieve-technical}
 
-The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned, which can be used for custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata). Also, if during insertion, the original Mendix object was used at the creation of the chunks, the `MxObject` parameter can be used to only retrieve those chunks. Lastly, `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
+The `Retrieve` activity is used to retrieve a subset of or the whole knowledge base. A list of chunks is returned, which can be used for custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see the [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) section and the [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) section. Also, if during insertion, the original Mendix object was used at the creation of the chunks, the `MxObject` parameter can be used to only retrieve those chunks. Lastly, `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
 **Input parameters**
 
@@ -316,7 +318,7 @@ The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection]
 
 ##### 4.2.3.2 Retrieve & Associate {#retrieve-associate-technical}
 
-The `Retrieve & Associate` activity is used to retrieve a subset of or the whole knowledge base. In addition to the [Retrieve](#retrieve-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [KnowledgeBaseChunk](#knowledgebasechunk-entity) entity in the domain model of the application and to make sure the necessary associations exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned, which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata). Lastly, `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
+The `Retrieve & Associate` activity is used to retrieve a subset of or the whole knowledge base. In addition to the [Retrieve](#retrieve-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [KnowledgeBaseChunk](#knowledgebasechunk-entity) entity in the domain model of the application and to make sure the necessary associations exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/Java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned, which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see the [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) section and the [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) section. Lastly, `Offset` and `MaxNumberOfResults` can be used for pagination or specific selection use cases.
 
 **Input parameters**
 
@@ -338,7 +340,7 @@ The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection]
 
 ##### 4.2.3.3 Retrieve Nearest Neighbors {#retrieve-nearest-neighbors-technical}
 
-The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata). Lastly, `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering.
+The `Retrieve Nearest Neighbors` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see the [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) section and the [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) section. Lastly, `MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering.
 
 The `DatabaseConfiguration` that is passed must contain the connection details to a PostgreSQL database server with the PgVector extension installed. This entity is typically configured at runtime or in [after-startup](/refguide/app-settings/#after-startup) logic. By providing the `KnowledgeBaseName` parameter, you determine the knowledge base that was used for population earlier.
 
@@ -362,7 +364,7 @@ The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection]
 
 ##### 4.2.3.4 Retrieve Nearest Neighbors & Associate {#retrieve-nearest-neighbors-associate-technical}
 
-The `Retrieve Nearest Neighbors & Associate` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. In addition to the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [KnowledgeBaseChunk](#knowledgebasechunk-entity) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) and [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata). Lastly,`MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering.
+The `Retrieve Nearest Neighbors & Associate` activity is used to retrieve chunks from the knowledge base ordered by similarity based on the given vector. In addition to the [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors-technical) operation, this operation also sets the associations to the Mendix objects for which the chunks were created. In order for this to work, it is necessary to create a custom specialization of the [KnowledgeBaseChunk](#knowledgebasechunk-entity) entity in the domain model of the application and to make sure the necessary association(s) exist towards the Mendix objects which the chunks represent. This specialization must be passed as [Entity parameter](/refguide/Java-actions/#entity-type) called `TargetChunk`. A list of this type is then returned which can be used for retrieval of the Mendix objects in custom logic. For additional filtering, provide a [MetadataCollection](/appstore/modules/genai/commons/#metadatacollection-entity), see the [Initialize MetadataCollection with Metadata](/appstore/modules/genai/commons/#knowledgebase-initialize-metadatacollection) section and the [Add Metadata to MetadataCollection](/appstore/modules/genai/commons/#knowledgebase-add-metadata) section. Lastly,`MinimumSimilarity` (range 0 - 1.0) and `MaxNumberOfResults` can be used for optional filtering.
 
 **Input parameters**
 
@@ -448,7 +450,7 @@ The `Connection` entity passed must be of type [PgVectorKnowledgeBaseConnection]
 For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG),  see [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) and [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/).
+For more information on how to set up a vector database for retrieval augmented generation (RAG),  see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section and the [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/) section.
 {{% /alert %}}
 
 ## 6 Read More {#read-more}

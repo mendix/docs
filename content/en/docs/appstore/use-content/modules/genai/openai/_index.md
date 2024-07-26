@@ -517,7 +517,7 @@ Use the exposed microflow operation `Image Generations` to execute an image gene
 | --- | --- | --- |--- |
 | `Connection` | [Connection](/appstore/modules/genai/commons/#connection) | mandatory | This is an object that points to the configuration object (endpoint and API key). The `Model` attribute is mandatory for OpenAI, but is ignored for Azure OpenAI type configurations where it is implicitly specified by the deployment already. The object must be of type [OpenAIConnection](#openaiconnection) and needs to be associated to a [Configuration](#configuration-entity) object. |
 | `UserPrompt` | String | mandatory | This is the description on which the image will be based. |
-| `ImageOptions` | [ImageOptions](#imageoptions-entity) | optional | This can be used to pass optional request attributes. An [OpenAIImageOptions_Extension](#openai-imageoptions-entity) will be associated to the ImageOptions and considered in the operation. |
+| `ImageOptions` | [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) | optional | This can be used to pass optional request attributes. An [OpenAIImageOptions_Extension](#openai-imageoptions-entity) will be associated to the ImageOptions and considered in the operation. |
 
 **Return value**
 

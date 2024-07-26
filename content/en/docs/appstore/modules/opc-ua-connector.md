@@ -121,7 +121,7 @@ This is an integer attribute, while the interpretation is a set of bits as descr
 | 6 | DataType | 64 |
 | 7 | View | 128 |
 
-Sum up the value to create the mask. Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] which has to be setup as 1 + 2 + 128 = 131 integer value.
+Sum up the value to create the mask. Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] which has to be setup as 1 + 2 + 128 = 131 for the integer value.
 
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
 
@@ -136,7 +136,7 @@ This is an integer attribute, while the interpretation is a set of bits as descr
 | 4 | DisplayName | 16 |
 | 5 | TypeDefinition | 32 |
 
-Sum up the value to create the mask. Example: Requesting only the field DisplayName is binary represented by [0,0,0,1,0,0] which has to be setup as 8 integer value.
+Sum up the value to create the mask. Example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
 
 The response of the Browse action returns a browse response object. 
 There is a StatusCode associated to the response,which represents the status of the call.

@@ -16,6 +16,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### July 16, 2024
+
+#### Improvements
+
+* We changed the [Database Freeable Memory alert thresholds](/developerportal/operate/monitoring-application-health/#dbase-freeable-memory) for the following cloud resource packs:
+    * XS21: The critical alert threshold changed from 10% to 5% freeable memory.
+    * XS20 (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * S (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * Strato (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+
 ### July 4, 2024
 
 #### Pipelines New Features

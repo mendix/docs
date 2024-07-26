@@ -21,7 +21,7 @@ If [security](/refguide8/project-security/) is enabled, the menu will only show 
 
 ## 2 Menu Item {#menu-item}
 
-Menus are composed of menu items. Menu items can contain a number sub-items. Menu bars can go two levels deep, the navigation tree – three levels, and the simple menu bar cannot have any sub-items.
+Menus are composed of menu items. Menu items can contain a number of sub-items. Menu bars can go two levels deep, the navigation tree – three levels, and the simple menu bar cannot have any sub-items.
 
 ### 2.1 Menu Item Properties 
 

@@ -6,7 +6,7 @@ weight: 6
 
 ## 1 Introduction
 
-In ATS there are two ways for creating custom actions. First you can extract actions from you test case steps, to encapsulate multiple test steps into a single test step. The second way is to create custom actions from scratch. This section provides you with *Do's and Don'ts* for your custom action creation process, to help you achieve the actions you want.  
+In ATS there are two ways for creating custom actions. First you can extract actions from you test case steps, to encapsulate multiple test steps into a single test step. The second way is to create custom actions from scratch. This section provides you with *Dos and Don'ts* for your custom action creation process, to help you achieve the actions you want.  
 
 ## 2 Write Reusable and Focused Actions
 

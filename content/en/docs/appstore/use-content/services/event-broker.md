@@ -155,7 +155,7 @@ Once the Mendix Event Broker Bridge has been successfully deployed, its configur
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_bridges_overview.png" class="no-border" >}}
 
-### 3.6 Configure AWS Acesss Policy for Sending Messages to Mendix
+### 3.6 Configure AWS Access Policy for Sending Messages to Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is sending messages to Mendix.
 
@@ -175,7 +175,7 @@ Add this object to your Access Policy of the AWS SQS queue if it is sending mess
 }
 ```
 
-### 3.7 Configure AWS Acesss Policy for Receiving Messages from Mendix
+### 3.7 Configure AWS Access Policy for Receiving Messages from Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is receiving messages from Mendix.
 

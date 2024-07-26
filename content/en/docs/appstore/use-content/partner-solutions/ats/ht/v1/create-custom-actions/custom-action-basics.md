@@ -133,7 +133,7 @@ You have now created an input parameter. You can add as many input parameters as
 
 3. Enter a description in the **Description** field. Use this field to give a more detailed description of what is returned.
 4. Select a data type from the **Datatype** drop-down menu (for example, *Web Element*).
-5. Select a **Required/Optional** option. Only use **Optional** if the action still works whebn nothing is returned.
+5. Select a **Required/Optional** option. Only use **Optional** if the action still works when nothing is returned.
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/custom-action-basics/new-action-output-parameter-complete.png" class="no-border" >}}
 

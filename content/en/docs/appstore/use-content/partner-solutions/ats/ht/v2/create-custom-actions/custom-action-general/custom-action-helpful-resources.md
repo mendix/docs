@@ -33,7 +33,7 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | ATS Helper | The ATS Helper is an extension that you use to get information from a widget. |
 | ATS Recorder | The ATS Recorder tool is used to record your test scripts. |
 | [jQuery Unique Selector](https://chrome.google.com/webstore/detail/jquery-unique-selector/cmdmlphjbobhblimniofbnlfkmpcjlgd) | This is a third-party extension for the Google Chrome browser. It helps you find the unique selector for any element on a page. |
-| [jQuery Injector](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi) | This is a third-party extension for the Chrome brower. It enables you to inject jQuery into the page. Some pages don’t have jQuery or something goes wrong while loading.  |
+| [jQuery Injector](https://chrome.google.com/webstore/detail/jquery-injector/ekkjohcjbjcjjifokpingdbdlfekjcgi) | This is a third-party extension for the Chrome browser. It enables you to inject jQuery into the page. Some pages don’t have jQuery or something goes wrong while loading.  |
 
 {{% alert color="info" %}}
 To get the ATS Helper and the ATS Recorder, click **Information** ({{% icon name="info-circle" %}}) in ATS.

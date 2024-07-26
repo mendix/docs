@@ -137,9 +137,9 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Close Window | Closes the currently active window. Does not switch to another window automatically. |
 | Close Window & Auto-Switch | Closes the currently active window and automatically switches to the next one. |
 | Element matches Selector | Returns whether the given element matches the selector. |
-| Execute Javascript Integer | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns an integer. |
-| Execute Javascript String | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns a string. |
-| Execute Javascript WebElement | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns a web element. |
+| Execute JavaScript Integer | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns an integer. |
+| Execute JavaScript String | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns a string. |
+| Execute JavaScript WebElement | Executes the JavaScript snippet. Runs asynchronously when the timeout is set. Returns a web element. |
 | Find Element | Finds a web element. It optionally restricts the search to the specified SearchContext element. The occurrence lets you specify which element to fetch from the result list, starting at 1 for the first element (defaults to the first element). |
 | Find Element by CSS | Finds a web element by CSS. It optionally restricts search to the specified SearchContext element. The occurrence lets you specify which element to fetch from the result list, starting at 1 for the first element (defaults to the first element). |
 | Find Element by ID | Finds a web element by the ID. It optionally restricts the search to the specified SearchContext element. The occurrence lets you specify which element to fetch from the result-list, starting at 1 for the first element (defaults to the first element). |
@@ -167,7 +167,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Switch to Next Window | Switches to the next open window. An error is thrown if there is only one window. Returns the window handle (meaning, the identifier) of the new active window. |
 | Switch to Window | Switches to the window via its identifier. An error is thrown if the window is not found. |
 | Unfocus WebElement | Removes focus from a web element by calling the blur method. |
-| Wait for Condition | Repeatedly runs the condition java script snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul>|
+| Wait for Condition | Repeatedly runs the condition JavaScript snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul>|
 | Wait for Condition JS | Waits until the given expression returns true. |
 
 ## 9 Mouse & Keyboard

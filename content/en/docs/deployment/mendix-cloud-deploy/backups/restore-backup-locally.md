@@ -28,14 +28,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}This how-to was made with PostgreSQL version 9.6.5.{{% /alert %}}
 
-* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7zip](https://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
+* When you are restoring a database hosted in Mendix Cloud, or when downloading a full backup, your local machine must have [7-Zip](https://www.7-zip.org/) or another utility that can extract files from *.gz* and *.tar* archives.
 
 ## 3 Restoring the Backup to Postgres
 
 Once PostgreSQL is installed and you have downloaded a backup file, you need to create a local database in PostgreSQL. The backup database will be restored into this local PostgreSQL database.
 
 {{% alert color="info" %}}
-If your backup came from Mendix Cloud, it will have been compressed as a *.gz* file. You will first have to extract the file (or files) from this archive using a tool such as 7zip.
+If your backup came from Mendix Cloud, it will have been compressed as a *.gz* file. You will first have to extract the file (or files) from this archive using a tool such as 7-Zip.
 
 If you have downloaded a full backup, this will also have been archived as a *.tar* file, which you need to extract to get your *.backup* file containing the database backup. The *.backup* file is in the **db** folder of the archive.
 {{% /alert %}}
@@ -104,7 +104,7 @@ If you also want to restore the **FileDocuments**, follow these steps:
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup-locally/project-directory.png" class="no-border" >}}
 
 3. Navigate to the **deployment/data/files** folder within your app.
-4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like **7-zip**.
+4. Extract the *{backup name}.tar* file from the *.gz* archive using a program like 7-Zip.
 5. Extract the contents of your **tree** folder from the backup archive to the  **deployment/data/files** folder within your app.
 6. Run the app by clicking **Run Locally** ({{% icon name="controls-play-filled" %}}) or choosing the menu option **Run > Run Locally**.
 

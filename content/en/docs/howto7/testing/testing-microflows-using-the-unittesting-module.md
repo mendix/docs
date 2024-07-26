@@ -84,7 +84,7 @@ In this chapter you will set up the unit testing module and run the example test
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580357.png" class="no-border" >}}
 
-19. Double click **UnitTesting.TestValidUnitTest**.
+19. Double-click **UnitTesting.TestValidUnitTest**.
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580340.png" class="no-border" >}}
 

@@ -61,25 +61,25 @@ After you configure the authentication profile for Amazon Location Service, you 
 5. Drag the one you would like to use and the **SynthesizeSpeech** microflow in to your microflow in that order.
 6. Double-click the **CalculateRoute** activity to configure the required parameters. 
     
-    For the `CalculateRoute` activity, you must provide a credentials object and specify the AWS Region. You must then add your `CalculateRouteRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
+    1. For the `CalculateRoute` activity, you must provide a credentials object and specify the AWS Region. You must then add your `CalculateRouteRequest` entity in your microflow as the last parameter. This entity requires the following parameters:
 
-    * `CalculatorName` - The name of the route calculator resource that you want to use to calculate the route.
-    * `DeparturePosition` - The start position for the route. This entity specifies the logitude and lattitude of the start position of the route and are both required.
-    * `DestinationPosition` - The position of the destination for the route. This entity specifies the logitude and lattitude of the destination position of the route and are both required.
+        * `CalculatorName` - The name of the route calculator resource that you want to use to calculate the route.
+        * `DeparturePosition` - The start position for the route. This entity specifies the longitude and latitude of the start position of the route and are both required.
+        * `DestinationPosition` - The position of the destination for the route. This entity specifies the longitude and latitude of the destination position of the route and are both required.
 
-    The following parameters are optional:
-    * `WaypointPosition` - This entity is used to add additional locations you want to visit along the route. This entity specifies the logitude and lattitude of the
-    * `DepartNow` - Sets the time of departure as the current time. Uses the current time to calculate a route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
-    * `DepartureTime` - Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
-    * `DistanceUnit` - Set the unit system to specify the distance. 
-    * `IncludeLegGeometry` - Set to include the geometry details in the result for each path between a pair of positions.
-    * `TravelMode` - Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle or Motorcycle as options for the TravelMode.
-    * `CarModeOptions` - This entity can be used when in car mode to set settings like "AvoidFeries" and "AvoidTolls"   
-    * `TruckModeOptions` - This entity and its associated entities can be used when in truck mode to set settings like "AvoidFeries", "AvoidTolls", "Truckweight" and "TruckDimensions".
+    2. Optionally, configure the following additional parameters:
+       
+        * `WaypointPosition` - This entity is used to add additional locations you want to visit along the route. This entity specifies the longitude and latitude of the
+        * `DepartNow` - Sets the time of departure as the current time. Uses the current time to calculate a route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
+        * `DepartureTime` - Specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.
+        * `DistanceUnit` - Set the unit system to specify the distance. 
+        * `IncludeLegGeometry` - Set to include the geometry details in the result for each path between a pair of positions.
+        * `TravelMode` - Specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle, or Motorcycle as options for the TravelMode.
+        * `CarModeOptions` - This entity can be used when in car mode to set settings like "AvoidFerries" and "AvoidTolls"   
+        * `TruckModeOptions` - This entity and its associated entities can be used when in truck mode to set settings like "AvoidFerries", "AvoidTolls", "Truckweight" and "TruckDimensions".
 
 7. Configure a method to trigger the `ACT_CalculateRoute` activity. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
-
 
 ## 4 Technical Reference
 
@@ -93,269 +93,269 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description |
 | --- | --- |
-| `Longitude` | The `Longitude` attribute is used to specify the longitude of the coordinate set of a specific location.|
-| `Latitude` | The `Latitude` attribute is used to specify the latitude of the coordinate set of a specific location.|
+| `Longitude` | The `Longitude` attribute is used to specify the longitude of the coordinate set of a specific location. |
+| `Latitude` | The `Latitude` attribute is used to specify the latitude of the coordinate set of a specific location. |
 
 #### 4.1.2 TravelModeOptions
 
 | Name | Description |
 | --- | --- |
-| `AvoidFerries` | The `AvoidFerries` attribute can be used to avoid ferries.|
-| `AvoidTolls` | The `AvoidTolls` attribute can be used to avoid tolls.|
+| `AvoidFerries` | The `AvoidFerries` attribute can be used to avoid ferries. |
+| `AvoidTolls` | The `AvoidTolls` attribute can be used to avoid tolls. |
 
 #### 4.1.3 Result
 
 | Name | Description |
 | --- | --- |
-| `Distance` | The `Distance` attribute holds the distance from the bias position of the `SearchPlaceIndexForText` operation and the distance from the index position of the `SearchPlaceIndexForPosition` operation.|
+| `Distance` | The `Distance` attribute holds the distance from the bias position of the `SearchPlaceIndexForText` operation and the distance from the index position of the `SearchPlaceIndexForPosition` operation. |
 
 #### 4.1.4 Place
 
 | Name | Description |
 | --- | --- |
-| `AddressNumber` | The `AddressNumber` attribute holds the numerical portion of an address, such as a building number.|
-| `Country` | The `Country` attribute holds a country/region specified using ISO 3166 3-digit country/region code. For example, CAN.|
-| `Interpolated` | The `Interpolated` attribute returns False for an address location that is found in the partner data, but returns True if an address does not exist in the partner data and its location is calculated by interpolating between other known addresses.|
-| `Label` | The `Label` attribute holds the full name and address of the point of interest such as a city, region, or country. For example, 123 Any Street, Any Town, USA.|
-| `Municipality` | The `Municipality` attribute holds a name for a local area, such as a city or town name. For example, Toronto.|
-| `Neighborhood` | The `Neighborhood` attribute holds the name of a community district. For example, Downtown.|
-| `PostalCode` | The `PostalCode` attribute holds a group of numbers and letters in a country-specific format, which accompanies the address for the purpose of identifying a location.|
-| `Region` | The `Region` attribute holds a name for an area or geographical division, such as a province or state name. For example, British Columbia.|
-| `Street` | The `Street` attribute holds the name for a street or a road to identify a location. For example, Main Street.|
-| `SubRegion` | The `SubRegion` attribute holds a county, or an area that's part of a larger region. For example, Metro Vancouver.|
+| `AddressNumber` | The `AddressNumber` attribute holds the numerical portion of an address, such as a building number. |
+| `Country` | The `Country` attribute holds a country/region specified using ISO 3166 3-digit country/region code. For example, CAN. |
+| `Interpolated` | The `Interpolated` attribute returns False for an address location that is found in the partner data, but returns True if an address does not exist in the partner data and its location is calculated by interpolating between other known addresses. |
+| `Label` | The `Label` attribute holds the full name and address of the point of interest such as a city, region, or country. For example, 123 Any Street, Any Town, USA. |
+| `Municipality` | The `Municipality` attribute holds a name for a local area, such as a city or town name. For example, Toronto. |
+| `Neighborhood` | The `Neighborhood` attribute holds the name of a community district. For example, Downtown. |
+| `PostalCode` | The `PostalCode` attribute holds a group of numbers and letters in a country-specific format, which accompanies the address for the purpose of identifying a location. |
+| `Region` | The `Region` attribute holds a name for an area or geographical division, such as a province or state name. For example, British Columbia. |
+| `Street` | The `Street` attribute holds the name for a street or a road to identify a location. For example, Main Street. |
+| `SubRegion` | The `SubRegion` attribute holds a county, or an area that's part of a larger region. For example, Metro Vancouver. |
 
 #### 4.1.5 TimeZone
 
 | Name | Description |
 | --- | --- |
-| `Name` | The `Name` attribute holds the name of the time zone, following the IANA time zone standard. For example, America/Los_Angeles.|
-| `Offset` | The `Offset` attribute holds the time zone's offset, in seconds, from UTC.|
+| `Name` | The `Name` attribute holds the name of the time zone, following the IANA time zone standard. For example, America/Los_Angeles. |
+| `Offset` | The `Offset` attribute holds the time zone's offset, in seconds, from UTC. |
 
 #### 4.1.6 GeometryPoint
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.7 BoundingBox
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a generalization for the `FilterBBox` and `RouteBBox` entities and has no additional attributes.|
+| N/A | This is a generalization for the `FilterBBox` and `RouteBBox` entities and has no additional attributes. |
 
 #### 4.1.8 SouthWestPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.9 NorthEastPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.10 SearchPlaceIndexForTextRequest
 
 | Name | Description |
 | --- | --- |
-| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English.|
-| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request.|
-| `Text` | The `Text` attribute is used to specify the address, name, city, or region to be used in the search in free-form text format. For example, 123 Any Street.|
-| `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search.|
+| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English. |
+| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request. |
+| `Text` | The `Text` attribute is used to specify the address, name, city, or region to be used in the search in free-form text format. For example, 123 Any Street. |
+| `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search. |
 
 #### 4.1.11 FilterCountry
 
 | Name | Description |
 | --- | --- |
-| `Value` | The `Value` attribute is used if one wants to limit the search results by returning only places that are in a specified list of countries.|
+| `Value` | The `Value` attribute is used if one wants to limit the search results by returning only places that are in a specified list of countries. |
 
 #### 4.1.12 FilterBBox
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes.|
+| N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes. |
 
 #### 4.1.13 BiasPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.14 SearchPlaceIndexForTextResponse
 
 | Name | Description |
 | --- | --- |
-| N/A | This has no attributes but holds a list of results via an associated list of `SearchForTextResult` objects.|
+| N/A | This has no attributes but holds a list of results via an associated list of `SearchForTextResult` objects. |
 
 #### 4.1.15 SearchForTextResult
 
 | Name | Description |
 | --- | --- |
-| `Relevance` | The `Relevance` attribute is holds the relative confidence in the match for a result among the results returned. For example, if more fields for an address match (including house number, street, city, country/region, and postal code), the relevance score is closer to 1.|
+| `Relevance` | The `Relevance` attribute is holds the relative confidence in the match for a result among the results returned. For example, if more fields for an address match (including house number, street, city, country/region, and postal code), the relevance score is closer to 1. |
 
 #### 4.1.16 CalculateRouteRequest
 
 | Name | Description |
 | --- | --- |
-| `CalculatorName` | The `CalculatorName` attribute specifies the name of the route calculator resource that you want to use to calculate the route.|
-| `DepartNow` | The `DepartNow` attribute specifies the time of departure as the current time. Uses the current time to calculate a route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.|
-| `DepartureTime` | The `DepartureTime` attribute specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route.|
-| `DistanceUnit` | The `DistanceUnit` attribute specifies the unit system to specify the distance.|
-| `IncludeLegGeometry` | The `IncludeLegGeometry` attribute sets if to include the geometry details in the result for each path between a pair of positions.|
-| `TravelMode` | The `TravelMode` attribute specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle or Motorcycle as options for the TravelMode.|
+| `CalculatorName` | The `CalculatorName` attribute specifies the name of the route calculator resource that you want to use to calculate the route. |
+| `DepartNow` | The `DepartNow` attribute specifies the time of departure as the current time. Uses the current time to calculate a route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route. |
+| `DepartureTime` | The `DepartureTime` attribute specifies the desired time of departure. Uses the given time to calculate the route. Otherwise, the best time of day to travel with the best traffic conditions is used to calculate the route. |
+| `DistanceUnit` | The `DistanceUnit` attribute specifies the unit system to specify the distance. |
+| `IncludeLegGeometry` | The `IncludeLegGeometry` attribute sets if to include the geometry details in the result for each path between a pair of positions. |
+| `TravelMode` | The `TravelMode` attribute specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle or Motorcycle as options for the TravelMode. |
 
 #### 4.1.17 DeparturePosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.18 DestinationPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.19 WaypointPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.20 CarModeOptions
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes.|
+| N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes. |
 
 #### 4.1.20 TruckModeOptions
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes.|
+| N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes. |
 
 #### 4.1.21 TruckWeight
 
 | Name | Description |
 | --- | --- |
-| `Total` | The `Total` attribute specifies the total weight of the truck.|
-| `VehicleWeightUnit` | The `VehicleWeightUnit` attribute specifies the unit of measurement to use for the truck weight.|
+| `Total` | The `Total` attribute specifies the total weight of the truck. |
+| `VehicleWeightUnit` | The `VehicleWeightUnit` attribute specifies the unit of measurement to use for the truck weight. |
 
 #### 4.1.22 TruckDimensions
 
 | Name | Description |
 | --- | --- |
-| `Height` | The `Height` attribute is used to specify the height of the truck.|
-| `Length` | The `Length` attribute is used to specify the length of the truck.|
-| `DimensionUnit` | The `DimensionUnit` attribute is used to specify the unit of measurement for the truck dimensions.|
-| `Width` | The `IndexName` attribute is used to specify the width of the truck.|
+| `Height` | The `Height` attribute is used to specify the height of the truck. |
+| `Length` | The `Length` attribute is used to specify the length of the truck. |
+| `DimensionUnit` | The `DimensionUnit` attribute is used to specify the unit of measurement for the truck dimensions. |
+| `Width` | The `IndexName` attribute is used to specify the width of the truck. |
 
 #### 4.1.23 CalculateRouteResponse
 
 | Name | Description |
 | --- | --- |
-| N/A | This has no attributes but holds a `CalculateRouteSummary` object and a list of results via an associated list of `Leg` objects.|
+| N/A | This has no attributes but holds a `CalculateRouteSummary` object and a list of results via an associated list of `Leg` objects. |
 
 #### 4.1.24 CalculateRouteSummary
 
 | Name | Description |
 | --- | --- |
-| `DataSource` | The `DataSource` attribute specifies the data provider of traffic and road network data used to calculate the route. Indicates one of the available providers: Esri, Grab or Here.|
-| `DistanceUnit` | The `DistanceUnit` attribute specifies the unit system to specify the distance.|
-| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route.|
-| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route.|
+| `DataSource` | The `DataSource` attribute specifies the data provider of traffic and road network data used to calculate the route. Indicates one of the available providers: Esri, Grab or Here. |
+| `DistanceUnit` | The `DistanceUnit` attribute specifies the unit system to specify the distance. |
+| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
+| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
 #### 4.1.25 RouteBBox
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes.|
+| N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes. |
 
 #### 4.1.26 Step
 
 | Name | Description |
 | --- | --- |
-| `GeometryOffset` | The `GeometryOffset` attribute represents the start position, or index, in a sequence of steps within the leg's line string geometry. For example, the index of the first step in a leg geometry is 0.|
-| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route.|
-| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route.|
+| `GeometryOffset` | The `GeometryOffset` attribute represents the start position, or index, in a sequence of steps within the leg's line string geometry. For example, the index of the first step in a leg geometry is 0. |
+| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
+| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
 #### 4.1.27 Leg
 
 | Name | Description |
 | --- | --- |
-| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route.|
-| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route.|
+| `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
+| `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
 #### 4.1.28 StepStartPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.29 StepEndPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.30 GeometryLineString
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.31 LegStartPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.32 LegEndPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.33 SearchPlaceIndexForPositionRequest
 
 | Name | Description |
 | --- | --- |
-| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English.|
-| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request.|
-| `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search.|
+| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English. |
+| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request. |
+| `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search. |
 
 #### 4.1.34 SearchPlaceIndexForPositionPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 #### 4.1.35 SearchPlaceIndexForPositionResponse
 
 | Name | Description |
 | --- | --- |
-| N/A | This has no attributes but holds a `SearchPlaceIndexForPositionSummary` object and and an associated list of `SearchForPositionResult` objects.|
+| N/A | This has no attributes but holds a `SearchPlaceIndexForPositionSummary` object and and an associated list of `SearchForPositionResult` objects. |
 
 #### 4.1.36 SearchForPositionResult
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `result` entity and has no additional attributes.|
+| N/A | This is a specialization of the `result` entity and has no additional attributes. |
 
 #### 4.1.37 SearchPlaceIndexForPositionSummary
 
 | Name | Description |
 | --- | --- |
-| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English.|
-| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request.|
-| `DataSource` | The `DataSource` attribute specifies the data provider of traffic and road network data used. Indicates one of the available providers: Esri, Grab or Here.|
+| `Language` | The `Language` attribute is used to specify the preferred language used to return results. The value must be a valid BCP 47 language tag, for example, en for English. |
+| `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request. |
+| `DataSource` | The `DataSource` attribute specifies the data provider of traffic and road network data used. Indicates one of the available providers: Esri, Grab or Here. |
 
 #### 4.1.38 SearchPlaceIndexForPositionSummaryPosition
 
 | Name | Description |
 | --- | --- |
-| N/A | This is a specialization of the `Position` entity and has no additional attributes.|
+| N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
 ### 4.2 Enumerations
 
@@ -365,38 +365,38 @@ An enumeration is a predefined list of values that can be used as an attribute t
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| Meters | Meters | Specifies that the distance units are meters.|
-| Feet | Feet | Specifies that the distance units are feet.|
+| Meters | Meters | Specifies that the distance units are meters. |
+| Feet | Feet | Specifies that the distance units are feet. |
 
 #### 4.2.2 `ENUM_DistanceUnit`
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| Kilometers | Kilometers | Specifies that the distance units are kilometers.|
-| Miles | Miles | Specifies that the distance units are miles.|
+| Kilometers | Kilometers | Specifies that the distance units are kilometers. |
+| Miles | Miles | Specifies that the distance units are miles. |
 
 #### 4.2.3 `ENUM_TravelMode`
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| Car | Car | Specifies that mode of travel is by car.|
-| Truck | Truck | Specifies that mode of travel is by truck.|
-| Walking | Walking | Specifies that mode of travel is by walking.|
-| Bicycle | Bicycle | Specifies that mode of travel is by bicycle.|
-| Motorcycle | Motorcycle | Specifies that mode of travel is by motorcycle.|
+| Car | Car | Specifies that mode of travel is by car. |
+| Truck | Truck | Specifies that mode of travel is by truck. |
+| Walking | Walking | Specifies that mode of travel is by walking. |
+| Bicycle | Bicycle | Specifies that mode of travel is by bicycle. |
+| Motorcycle | Motorcycle | Specifies that mode of travel is by motorcycle. |
 
 #### 4.2.4 `ENUM_VehicleWeightUnit`
 
 | Name | Caption | Description |
 | --- | --- | --- |
-| Kilograms | Kilograms | Specifies that the weigth of the vehicle is expressed in kilograms.|
-| Pounds | Pounds | Specifies that the weigth of the vehicle is expressed in pounds.|
+| Kilograms | Kilograms | Specifies that the weight of the vehicle is expressed in kilograms. |
+| Pounds | Pounds | Specifies that the weight of the vehicle is expressed in pounds. |
 
 ### 4.3 Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 4.3.1 CalculateRoute
+#### 4.3.1 CalculateRoute {#calculate-route}
 
 The `CalculateRoute` activity allows you to calculate a route between multiple points and returns the distance and duration of the proposed routes. It requires a `Credentials` object, a `CalculateRouteRequest` object containing the required information and the AWS_Region in which the Location service should be called.
 

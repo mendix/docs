@@ -332,7 +332,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Attribute | Description |
 | --- | --- |
-| `AsssetID` | Describes the asset ID from whose relationships will be received. |
+| `AssetID` | Describes the asset ID from whose relationships will be received. |
 | `MaxResults` | Describes the maximum number of project assets returned in the response. By default it is set to 50 and can return a maximum of 250 asset models. |
 | `NextToken` | Describes to the Amazon IoT SiteWise service that the list is being continued on with a token. |
 
@@ -923,7 +923,7 @@ The `BatchPutAssetPropertyValue` Amazon Iot SiteWise activity allows you to put 
 
 #### 4.3.18 JA_FindNearestSecond {#find-nearest-second}
 
-The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attbibutes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created the `JA_FindNearestSecond` java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
+The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAssetPropertyAggregates](#get-asset-property-aggregates) and [BatchGetAssetPropertyValueHistory](#get-asset-property-value-history) Amazon Iot SiteWise activities have two attributes call `StartDate` and `EndDate` that can be given to describe the range from which to query historical data. The date and time variable given to these two attributes must be expressed in seconds (millisecond must be 000). For our users to be able to find the nearest second to their chosen time if need be, we have created the `JA_FindNearestSecond` Java action with three different enum variables for the `FindType` parameter. It requires a date and time `DateTime` parameter and a [`FindType`](#find-nearest-second) enum parameter and returns a date and time value.
 
 | Input | Output | 
 | --- | --- | 

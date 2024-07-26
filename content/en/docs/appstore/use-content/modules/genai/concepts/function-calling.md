@@ -2,7 +2,7 @@
 title: "Function Calling"
 url: /appstore/modules/genai/function-calling/
 linktitle: "Function Calling"
-weight: 5
+weight: 20
 description: "Describes function calling with OpenAI"
 ---
 

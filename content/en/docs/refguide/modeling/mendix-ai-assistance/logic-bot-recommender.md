@@ -26,7 +26,7 @@ The key features of Logic Recommender are the following:
 * **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
 * **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
-## 2  Using Logic Recommender
+## 2 Using Logic Recommender
 
 ### 2.1 Studio Pro 10.6 and Above
 

@@ -382,9 +382,9 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
     In the [Server](/refguide/configuration/#server) tab of the active configuration of your client app, change the **Runtime port** and **Admin port** to be different from those of your IAM broker app. For example, if your IAM broker is running using `8080` and `8090`, you could use `8081` and `8091` respectively.
     {{% /alert %}}
 
-    1. When you get to [Configuration of OIDC Provider](/appstore/modules/oidc/#oidc-configuration), you already have the values from the previous section.
+    1. When you get to [IdP Configuration](/appstore/modules/oidc/#idpconfiguration), you already have the values from the previous section.
 
-    1. In the [OIDC Client Configuration](/appstore/modules/oidc/#oidc-configuration) section, add a client configuration and use the following values:
+    1. In the [Runtime Configuration of Your IdP at Your App](/appstore/modules/oidc/#runtime-idp-app) section, add a client configuration and use the following values:
 
         * **Client ID** – the **Client ID** of the IAM Broker
         * **Client Authentication Method** – *Client ID and Secret*

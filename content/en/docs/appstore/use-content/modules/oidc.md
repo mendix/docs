@@ -231,14 +231,14 @@ In addition, administrators will need to have access to configure OIDC and also 
 
 Follow the instructions to [set an encryption key in the Encryption module](/appstore/modules/encryption/#configuration). The constant to set is called `Encryption.EncryptionKey` and should be a random value 32 characters long. This key will be used to encrypt and decrypt values.
 
-## 5 IdP Configuration
+## 5 IdP Configuration {#idpconfiguration}
 
-To connect your App with your IdP, you need to configure both your IdP (as described in the [Configure your App at your IdP](#configureIdP) section below) and your Mendix application. For the Mendix application setup, you can choose between two methods:
+To connect your App with your IdP, you need to configure both your IdP (as described in the [Configure your App at your IdP](#configure_app_idp) section below) and your Mendix application. For the Mendix application setup, you can choose between two methods:
 
 * Deploytime configuration of your IdP at your App
 * Runtime configuration of your IdP at your App
 
-### 5.1 Configure Your App at Your IdP {#configureIdP}
+### 5.1 Configure Your App at Your IdP {#configure_app_idp}
 
 #### 5.1.1 General OIDC Providers {#general-providers}
 
@@ -268,7 +268,7 @@ By adding a custom claim to the App Registration’s Expose an API tab and reque
 
 For information about configuring Amazon Cognito for the OIDC SSO module, see [Amazon Cognito: Configuring Amazon Cognito](/appstore/modules/aws/amazon-cognito/#cognito-provider).
 
-### 5.2 Runtime Configuration of Your IdP at Your App
+### 5.2 Runtime Configuration of Your IdP at Your App {#runtime-idp-app}
 
 This section describes how you can configure your IdP in your Mendix app using the Admin UIs provided by the OIDC SSO module. These screens offer two tabs:
 
@@ -505,7 +505,7 @@ You can set up custom user provisioning by setting the following constants. You 
 | PrincipalEntityAttribute | the attribute holding the unique identifier of an authenticated user | | `Name` |
 | PrincipalIdPAttribute | the IdP claim which is the unique identifier of an authenticated user | | `sub` |
 | AllowcreateUsers | allow to create users in the application | *optional* | `True` |
-| Userrole | the role which will be assigned to newly created users | *optional* <br> - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
+| Userrole | the role which will be assigned to newly created users | *optional* - Default Userrole is assigned only at user creation <br> - User updates do not change the default role <br> - No bulk update for existing users when the default userrole changes | `User` |
 | UserType | assign usertype to the created users | *optional* | `Internal` |
 | CustomUserProvisioning | a custom microflow to use for user provisioning | *optional* – in the form `modulename.microflowname` – the microflow name must begin with the string `CustomUserProvisioning` | `Mymodule.CustomUserProvisioningEntra` |
 
@@ -677,7 +677,7 @@ To parse access tokens, you need to do the following:
 1. Create a secure REST API endpoint following the instructions in [API Authentication](#api-authentication), above.
 1. Run your app and sign in as an administrator, for example `Demo_administrator`.
 1. Configure the client information in the OIDC Client configuration screen.
-1. Check **Enable Access Token Parsing** to parse access tokens when performing [OIDC Client Configuration](#client-configuration).
+1. Check **Enable Access Token Parsing** to parse access tokens when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app).
 1. Select the appropriate microflow to parse the access token as described in the relevant section below. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
 
 {{% alert color="info" %}}
@@ -690,7 +690,7 @@ In version 2.0.0 and above of the OIDC SSO module you will also find a microflow
 This section is only relevant if you are a Mendix partner and you want to integrate your app with the Siemens SAM IdP.
 {{% /alert %}}
 
-To parse of SAM access tokens you need to do the following when performing [OIDC Client Configuration](#client-configuration):
+To parse of SAM access tokens you need to do the following when performing [Runtime Configuration of Your IdP at Your App](#runtime-idp-app):
 
 1. Select *OIDC.Default_SAM_TokenProcessing_CustomATP* as the **custom AccessToken processing microflow**.
 
@@ -733,7 +733,7 @@ To confirm that the authorization is working, get an access token from your OIDC
 If you choose to implement your own microflow to parse an access token, the microflow name must contain `CustomATP`, for example `CustomATP_MyTokenParser`. This is how you can parse access tokens issued by IdPs such as Microsoft Entra ID.
 
 {{% alert color="info" %}}
-If you are using Microsoft Entra ID, ensure you have followed the instructions for getting valid tokens in [Configuration of OIDC Provider](#oidc-configuration), above.
+If you are using Microsoft Entra ID, ensure you have followed the instructions for getting valid tokens in [IdP Configuration](#idpconfiguration), above.
 {{% /alert %}}
 
 You can find a sample microflow for parsing access tokens, `OIDC.ACT_Token_CustomATPRetrieveRoles` in the OIDC module.

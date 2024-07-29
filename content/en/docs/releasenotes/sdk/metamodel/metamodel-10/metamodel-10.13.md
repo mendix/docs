@@ -1,6 +1,7 @@
 ---
 title: "10.13"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.13/
+weight: 87
 ---
 
 ## 10.13.0
@@ -22,6 +23,4 @@ parent: "metamodel-10"
 * We introduced the `notFoundHomepage` property. 
 
 #### NotFoundHomePage (Element)
-* We introduced this element. 
-
-This page has been generated automatically.
+* We introduced this element.

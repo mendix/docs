@@ -316,7 +316,7 @@ An optional input object for the image generations operations to set optional re
 
 Use the exposed microflows and Java Actions to map the required information for GenAI operations from your custom app implementation to the GenAI model and vice versa. Two sets of operations are provided: one for text and files, plus a second one for embeddings and knowledge bases.
 
-#### 4.3.1 Text & Files: Build request {#text-build-request}
+#### 4.3.1 Text and Files: Build request {#text-build-request}
 
 The following microflows help you construct the input request structures for the operations for text and files defined in GenAI Commons.
 
@@ -465,7 +465,7 @@ Use this microflow to control how the model should determine which function to l
 
 This microflow does not have a return value.
 
-#### 4.3.2 Text & Files: Handle Response {#text-handle-response}
+#### 4.3.2 Text and Files: Handle Response {#text-handle-response}
 
 The following microflows handle the response processing.
 
@@ -535,7 +535,7 @@ This operation processes a response that was created by an image generations ope
 |---|---|---|
 | `GeneratedImageList` | List of type determined by `ResponseImageEntity` | The list of generated images. |
 
-#### 4.3.3 Text & Files: Chat Completions Interface {#chat-completions-interface}
+#### 4.3.3 Text and Files: Chat Completions Interface {#chat-completions-interface}
 
 The [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/) both have two chat completions and image generations operations implemented that share the same interface, meaning that they expect the same entities as input and as output. This has the advantage that these operations can be exchanged very easily without much additional development effort.
 
@@ -599,7 +599,7 @@ The `Image Generations` operation interface supports the generation of images ba
 | --- | --- | --- |
 | `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which will be used in [Get Generated Image (Single)](#image-get-single). |
 
-#### 4.3.4 Knowledge Bases & Embeddings {#knowledge-bases-embeddings}
+#### 4.3.4 Knowledge Bases and Embeddings {#knowledge-bases-embeddings}
 
 The following microflows and Java actions help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
 
@@ -723,7 +723,7 @@ This microflow adds a new [Metadata](#metadatacollection-entity) object to a giv
 
 This microflow does not have a return value.
 
-#### 4.3.5 Knowledge Bases & Embeddings: Embeddings Interface {#embeddings-interface}
+#### 4.3.5 Knowledge Bases and Embeddings: Embeddings Interface {#embeddings-interface}
 
 To make use of embeddings in a Mendix app, GenAI Commons defines interfaces for embedding operations that connectors can adhere to. We recommend that you adapt to the same interface when developing custom embedding operations, such as integration with different AI providers. The generic interfaces are described below. For more detailed information, refer to the documentation of the connector that you want to use, since it may expect specializations of the generic GenAI common entities as an input.
 

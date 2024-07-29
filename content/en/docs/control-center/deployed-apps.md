@@ -3,6 +3,7 @@ title: "Deployed Apps"
 url: /control-center/deployed-apps/
 description: "Describes the Deployed Apps page in the Mendix Control Center."
 weight: 55
+beta: true
 no_list: true
 
 ---

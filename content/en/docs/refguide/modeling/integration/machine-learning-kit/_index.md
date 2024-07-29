@@ -10,7 +10,7 @@ description: "Introduces the Machine Learning (ML) Kit, used to deploy a machine
 
 Studio Pro supports a unique approach to machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a machine learning model built using common ML framework and language into the Mendix Runtime.
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ## 2 Under the Hood {#ml-kit-hood}
 

@@ -3,7 +3,7 @@ title: "Setting up a Vector Database"
 url: /appstore/modules/genai/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
-description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"
+description: "Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 ---
 
 ## 1 Introduction {#introduction}

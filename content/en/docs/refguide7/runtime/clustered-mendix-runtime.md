@@ -1,12 +1,12 @@
 ---
 title: "Clustered Mendix Runtime"
 url: /refguide7/clustered-mendix-runtime/
-description: "This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
+description: "This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 ---
 
 ## 1 Introduction
 
-This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can setup your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
+This page describes the impact and its behavior of running Mendix Runtime as a Cluster. Using the Cluster functionality you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
 
 Mendix 7 contains a completely new build approach for clustering. The main feature enabling this is the stateless runtime architecture. This means that the dirty state (the non-persistable entity instances and not yet persisted changes) are not stored on the server but on the client. This enables much easier scaling of the Mendix Runtime as each cluster node can handle any request from the client. The stateless runtime architecture also allows for better dirty state maintainability and better insight in application state.
 

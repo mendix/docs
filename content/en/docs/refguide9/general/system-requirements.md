@@ -31,6 +31,7 @@ The following frameworks are required. They will be installed automatically by t
 * Git for Windows (x64)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
+* For Studio Pro 9.24 and above: Gradle version 8.5 or above (if your Java version is 11 or 17, Gradle version 7.6 or above will also work) - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 
 If you are running Studio Pro on an ARM64 device (for example, an M1 Mac), you need the following version of .NET 6 in addition to the x64 version listed above:
 
@@ -124,15 +125,15 @@ To get a PAT for your user account , see the [Personal access tokens](https://do
 
 You need `write_repository` permission for the token.
 
-#### 2.6.4 BitBucket 
+#### 2.6.4 Bitbucket 
 
-We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
+We support all tiers of Atlassian’s Bitbucket service, including Bitbucket.org, Bitbucket Server, and Bitbucket Data Center on-premises solutions.
 
-On BitBucket.org, the personal access token are called app passwords.
+On Bitbucket.org, the personal access token are called app passwords.
 
-To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
+To set up an App Password for your Bitbucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+Bitbucket Server and Bitbucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 
 In both cases you need `repository write` permission.
 

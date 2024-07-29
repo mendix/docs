@@ -57,9 +57,9 @@ Studio Pro is able to use the following Git server providers:
 * GitLab.com
 * GitLab EE
 * GitLab CE
-* BitBucket.org
-* BitBucket Server
-* BitBucket Data Center
+* Bitbucket.org
+* Bitbucket Server
+* Bitbucket Data Center
 
 {{% alert color="info" %}} Please note that some Git server providers have added additional limitations to their Git offering, such as a limit on the size of individual files. In some cases the Mendix .MPR file can grow larger than 100MB. Please take this into account when choosing a provider. {{% /alert %}}
 

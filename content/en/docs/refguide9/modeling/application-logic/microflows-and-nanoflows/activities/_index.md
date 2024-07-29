@@ -45,7 +45,7 @@ Action call activities can be used to call another microflow or to call a Java a
 
 | Graphic | Name | Description |
 | --- | --- | --- |
-| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="java action call" link="/refguide9/java-action-call/" class="no-border" >}} | [Call Java action](/refguide9/java-action-call/) *(only in microflows)* | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
+| {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/call-java-action.png" alt="Java action call" link="/refguide9/java-action-call/" class="no-border" >}} | [Call Java action](/refguide9/java-action-call/) *(only in microflows)* | Calls a Java action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide9/javascript-action-call/" class="no-border" >}} | [Call JavaScript action](/refguide9/javascript-action-call/) *(only in nanoflows)* | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="microflow call" link="/refguide9/microflow-call/" class="no-border" >}} | [Microflow call](/refguide9/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 

@@ -1,7 +1,7 @@
 ---
 title: "Set Up a Local Docker Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/
-description: "Describes the options to setup a local selenium solution."
+description: "Describes the options to set up a local selenium solution."
 ---
 
 ## 1 Introduction
@@ -162,4 +162,4 @@ Some side notes in case you follow this step:
 * You cannot scale using this configuration
 * Be aware that VNC is not a secure protocol, you might not want to open this port for the world
 
-Congratulations you have finished setting up a local docker Selenium hub. The next how-to is [How to setup a Local Selenoid hub](/appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.
+Congratulations you have finished setting up a local docker Selenium hub. The next how-to is [How to set up a Local Selenoid hub](/appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

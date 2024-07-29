@@ -405,7 +405,7 @@ When you find a BAPI, you can click **Information** ({{% icon name="info-circle"
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-bapi-info.png" alt="BAPI Explorer – BAPI Info" class="no-border" >}}
 
-Once you find the BAPI you need, select it and click **Next** to generate the BAPI schema file. Download the schema json, which you will use in the [Model Creator for SAP Integrations](#create-bapi-module) to create the Mendix BAPI module containing the domain model which supports this BAPI.
+Once you find the BAPI you need, select it and click **Next** to generate the BAPI schema file. Download the schema JSON, which you will use in the [Model Creator for SAP Integrations](#create-bapi-module) to create the Mendix BAPI module containing the domain model which supports this BAPI.
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-select-bapi.png" alt="BAPI Explorer – Select BAPI" class="no-border" >}}
 

@@ -124,7 +124,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `BucketName` | Describes the name of the bucket to put the object in|
+| `BucketName` | Describes the name of the bucket to put the object in |
 | `Key`| Describes the unique identifier for the object that needs to be put |
 
 #### 4.1.5 GetObjectRequest {#getobjectrequest}
@@ -183,7 +183,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| N/A | Is a generalization of the S3 object|
+| N/A | Is a generalization of the S3 object |
 
 #### 4.1.13 CommonPrefix {#commonprefix}
 
@@ -195,7 +195,7 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `SourceBucketName` | Describes the name of the source bucket| 
+| `SourceBucketName` | Describes the name of the source bucket | 
 | `SourceKey` | Describes the source Key of the object |
 | `DestinationBucketName` | Describes the name of the target bucket |
 | `DestinationKey` | Describes the target Key of the object |
@@ -210,10 +210,53 @@ The entities in the table below describe all generalizations. These are reused b
 
 | Attribute | Description | 
 | --- | --- |
-| `SourceBucketName` | Describes the name of the source bucket| 
+| `SourceBucketName` | Describes the name of the source bucket | 
 | `DestinationBucketName` | Describes the name of the target bucket |
 | `DestinationKey` | Describes the target `Key` of the object |
 | `SourceKey` | Describes the source `Key` of the object |
+
+#### 4.1.17 AbstractS3Request {#abstracts3request}
+
+This entity is the generalization of all request entities of the S3 Connector. It has an association to the `S3Configuration` entity.
+
+#### 4.1.18 S3Configuration {s3configuration}
+
+| Attribute | Description | 
+| --- | --- |
+| `PathStyleAccessEnabled` | The PathStyleAccessEnabled attribute specifies whether the S3 resources are accessed using the path-style hosting or its default virtual hosting. |
+
+[Read more about these hosting styles | AWS Documentation ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
+
+#### 4.1.19 AbstractPresignConfig {#abstractpresignconfig}
+
+| Attribute | Description | 
+| --- | --- |
+| `Expiration` | The Expiration attribute specifies after how long (in seconds) the pre-signed URL expires. |
+
+#### 4.1.20 PutObjectPresignConfig {#putobjectpresignconfig}
+
+This entity can be used to presign a `PutObjectRequest`. To do so, associate an instance of this object to your `PutObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
+#### 4.1.21 GetObjectPresignConfig {#getobjectpresignconfig}
+
+This entity can be used to presign a `GetObjectRequest`. To do so, associate an instance of this object to your `GetObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
+#### 4.1.22 DeleteObjectPresignConfig {#deleteobjectpresignconfig}
+
+This entity can be used to presign a `DeleteObjectRequest`. To do so, associate an instance of this object to your `DeleteObjectRequest` and specify the `Expiration` attribute. Then you can generate a presigned url using the [Generate Presigned Url](#generatepresignedurl) operation.
+
+#### 4.1.23 HeadBucketRequest {#headbucketrequest}
+
+| Attribute | Description | 
+| --- | --- |
+| `BucketName` | Describes the name of the bucket | 
+
+#### 4.1.24 HeadBucketResponse {#headbucketresponse}
+
+| Attribute | Description | 
+| --- | --- |
+| `Region` | Describes the AWS location of the given bucket |
+| `AccessPointAlias` | Describes whether the bucket was requested through an Access Point Alias |
 
 ### 4.2 Enumerations
 
@@ -240,7 +283,7 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 #### 4.3.1 CreateBucket {#createbucket}
 
-The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `CreateBucketRequest` object. It returns a `CreateBucketResponse` object. The input and output for this service are shown in the table below: 
+The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `CreateBucketRequest` object. It returns a `CreateBucketResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -248,7 +291,7 @@ The `CreateBucket` Amazon S3 action allows you to create a new S3 Bucket. It req
 
 #### 4.3.2 PutObject {#putobject}
 
-The `PutObject` Amazon S3 actions allows you put an object into a specified S3 bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `PutObjectRequest` object and a `FileDocument` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `PutObject` Amazon S3 action allows you to put an object into a specified S3 bucket. It requires a valid `AWS_Region` parameter, `Credentials`, a `PutObjectRequest` object and a `FileDocument` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -256,7 +299,7 @@ The `PutObject` Amazon S3 actions allows you put an object into a specified S3 b
 
 #### 4.3.3 DeleteObject {#deleteobject}
 
-The `DeleteObject` Amazon S3 actions allows you delete an object from a specified S3 bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `DeleteObjectRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `DeleteObject` Amazon S3 action allows you to delete an object from a specified S3 bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `DeleteObjectRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -264,7 +307,7 @@ The `DeleteObject` Amazon S3 actions allows you delete an object from a specifie
 
 #### 4.3.4 ListBuckets {#listbuckets}
 
-The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`. It returns a`ListBucketsResponse` object. The input and output for this service are shown in the table below: 
+The `ListBuckets` Amazon S3 action allows you to retrieve a list of all buckets in one’s Amazon S3 environment. It requires a valid `AWS_Region` parameter and `Credentials`. It returns a `ListBucketsResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -272,7 +315,7 @@ The `ListBuckets` Amazon S3 actions allows you retrieve a list of all buckets in
 
 #### 4.3.5 ListObjects {#listobjects}
 
-The `ListObjects` Amazon S3 actions allows you retrieve a list of the metadata of the objects for a specified bucket in one's Amazon S3 environment. It requires a valid `AWS_Region` and `Credentials`, as well as a `ListObjectsRequest` object. It returns a `ListObjectsResponse` object. The input and output for this service are shown in the table below: 
+The `ListObjects` Amazon S3 action allows you to retrieve a list of the metadata of the objects for a specified bucket in one's Amazon S3 environment. It requires a valid `AWS_Region` parameter, `Credentials`, and a `ListObjectsRequest` object. It returns a `ListObjectsResponse` object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -280,7 +323,7 @@ The `ListObjects` Amazon S3 actions allows you retrieve a list of the metadata o
 
 #### 4.3.6 DeleteBucket {#deletebucket}
 
-The `DeleteBucket` Amazon S3 actions allows you delete a bucket. It requires a valid `AWS_Region` and `Credentials`, as well as a `DeleteBucketRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
+The `DeleteBucket` Amazon S3 action allows you to delete a bucket. It requires a valid `AWS_Region` parameter, `Credentials`, and a `DeleteBucketRequest` object. It returns a Boolean which indicates if the action was successful. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -288,7 +331,7 @@ The `DeleteBucket` Amazon S3 actions allows you delete a bucket. It requires a v
 
 #### 4.3.7 GetObject {#getObject}
 
-The `GetObject` Amazon S3 actions allows you to get an object from the s3 simple storage service. It requires a valid `AWS_Region` and `Credentials`, as well as a `GetObjectRequest` object. It returns a `GetObjectResponse` object which is a `FileDocument` generalization object. The input and output for this service are shown in the table below: 
+The `GetObject` Amazon S3 action allows you to get an object from the s3 simple storage service. It requires a valid `AWS_Region` parameter, `Credentials`, and a `GetObjectRequest` object. It returns a `GetObjectResponse` object which is a `FileDocument` generalization object. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -296,7 +339,7 @@ The `GetObject` Amazon S3 actions allows you to get an object from the s3 simple
 
 #### 4.3.8 CopyObject {#copyobject}
 
-The `CopyObject` Amazon S3 actions allows you copy an s3 object placed within a bucket or prefix to an other bucket or prefix. It requires a valid `AWS_Region` parameter and `Credentials`, as well as a `CopyObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
+The `CopyObject` Amazon S3 action allows you to copy an s3 object placed within a bucket or prefix to an other bucket or prefix. It requires a valid `AWS_Region` parameter and `Credentials`, and a `CopyObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
@@ -304,8 +347,31 @@ The `CopyObject` Amazon S3 actions allows you copy an s3 object placed within a 
 
 #### 4.3.9 MoveObject {#moveobject}
 
-The `MoveObject` Amazon S3 actions allows you move an s3 object between buckets or prefixes. It requires a valid `AWS_Region` parameter and `Credentials`, as well as a `MoveObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
+The `MoveObject` Amazon S3 action allows you to move an s3 object between buckets or prefixes. It requires a valid `AWS_Region` parameter, `Credentials`, and a `MoveObjectRequest` object. It returns a Boolean. The input and output for this service are shown in the table below: 
 
 | Input | Output | 
 | --- | --- | 
 | `MoveObjectRequest`, `AWS_Region`, `Credentials` | `Boolean` |
+
+#### 4.3.10 GeneratePresignedUrl {#generatepresignedurl}
+
+The `GeneratePresignedUrl` Amazon S3 actions allows you to presign a request and generates and returns the presigned url. The presigned url can be used to send the request in a later point in time without requiring additional authentication. It requires a valid `AWS_Region` parameter and `Credentials`, as well as a specialized object of the `AbstractS3Request` entity, which must be of one of the following types:
+
+* `PutObjectRequest`, with an association to a `PutObjectPresignConfig` object.
+* `GetObjectRequest`, with an association to a `GetObjectPresignConfig` object.
+* `DeleteObjectRequest`, with an association to a `DeleteObjectPresignConfig` object.
+
+It returns the presigned url as a String. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
+=======
+#### 4.3.11 HeadBucket {#headbucket}
+
+The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
+
+| Input | Output | 
+| --- | --- | 
+| `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |
+

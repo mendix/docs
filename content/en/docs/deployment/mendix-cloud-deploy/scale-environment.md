@@ -47,6 +47,7 @@ To scale your licensed app in Mendix Cloud, follow these steps:
 * Restarting your environment to apply horizontal or vertical scaling changes causes brief downtime.
 * The number of available instances depends on the total memory provided by your cloud resource pack and the memory per instance that you have set. It is not possible to set scaling values that exceed the memory provided by your [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 * It is not possible for a single instance to use more than 32 GiB of RAM. Some very large cloud resource packs, such as XXXL21 or XXXXL21, provide more than this 32 GiB maximum; to use the full RAM in this case, you need more than one instance. For example, to use 64 GiB of RAM, you must spread the RAM between two or more instances.
+* Consider the functionality that runs inside task queues; think about whether the scope of these task queues should be configured to run in all instances or once per cluster. It is possible to set the [scope of the threads](/refguide/task-queue/#create-queue) per task queue.
 
 ## 4 Examples
 

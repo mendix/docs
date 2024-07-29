@@ -270,18 +270,18 @@ For information about configuring Amazon Cognito for the OIDC SSO module, see [A
 
 ### 5.2 Runtime Configuration of Your IdP at Your App
 
-You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito](/appstore/modules/aws/amazon-cognito/). In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
-
 This section describes how you can configure your IdP in your Mendix app using the Admin UIs provided by the OIDC SSO module. These screens offer two tabs:
 
 * **IdPs for SSO and API security**: Use this more extensive configuration screen if you are implementing SSO and optionally API security.
 * **IdPs for API security only**: Use this simpler configuration screen if you are configuring an IdP that is only used for API security (i.e., Client Credential grant). For more information, see the [API Security Configuration for Client Credential Grant](#client-credential-grant) section below.
 
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito](/appstore/modules/aws/amazon-cognito/). In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+
 #### 5.2.1 General OIDC Clients {#general-oidc}
 
 In this case, the OIDC client is the app you are making.
 
-1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID setup page.
+1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for SSO and API security** setup page.
 2. Add a new client configuration and give it an **Alias** so you can identify it if you have more than one client configuration.
 3. Add the **Client ID**.
 
@@ -338,7 +338,7 @@ See the section [Optional Features](#optional) information on additional optiona
 
 For Entra ID access to APIs through an access token, in addition to the configuration described above, we can request the scope [configured in Azure portal](#azure-portal), described above, from the OIDC SSO UI configuration.
 
-1. Start your app, log in as an administrator, for example *demo_administrator*, and access the OpenID Setup page.
+1. Start your app, log in as an administrator, for example *demo_administrator*, and access the **IdPs for API security only** Setup page.
 1. Add the custom scope which you [configured in Azure](#azure-portal) in **Available scopes**.
 1. Save the configuration.
 1. Edit the Entra ID configuration and add the custom scope to **Selected scopes**.
@@ -365,7 +365,7 @@ Use the following security best-practices when setting up your constants:
 The configuration you set through constants will mirror the configuration described in [General OIDC Clients](#general-oidc), above.
 
 {{% alert color="info" %}}
-SSO configurations created using constants will be shown as read only on the OpenID Setup page in the app.
+SSO configurations created using constants will be shown as read only on the **IdPs for SSO and API security** and **IdPs for API security only** Setup page in the app.
 
 The following error messages will be displayed when you try to edit/delete.
 

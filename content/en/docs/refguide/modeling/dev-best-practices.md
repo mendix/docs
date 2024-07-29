@@ -105,7 +105,7 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 #### Folder Names
 
-Mendix recommends to use folder names that clearly identify their contents. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* to reflect its function.
+Mendix recommends to use unique folder names that clearly identify their contents. You can use any combination of letters and symbols to identify a folder. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* or *OData_APIs* to reflect its function. 
 
 Keep in mind that folders do not affect the full path of the resource. For example, when referencing the folder **ODataAPIs** in MyFirstModule, the path name would be *MyFirstModule.ODataAPIs*. 
 

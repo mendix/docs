@@ -599,7 +599,7 @@ The `Image Generations` operation interface supports the generation of images ba
 | --- | --- | --- |
 | `Response` | [Response](#response) | A `Response` object that contains the assistant's response including a `FileContent` which will be used in [Get Generated Image (Single)](#image-get-single). |
 
-#### 4.3.4 Knowledge Bases & Embeddings
+#### 4.3.4 Knowledge Bases & Embeddings {#knowledge-bases-embeddings}
 
 The following microflows and Java actions help you construct the input structures and handle the response object for the operations for knowledge bases and embeddings as defined in GenAI Commons.
 

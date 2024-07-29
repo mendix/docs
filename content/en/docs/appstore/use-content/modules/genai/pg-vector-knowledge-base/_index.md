@@ -80,7 +80,7 @@ All operations that include knowledge base interaction need the connection detai
 
 ### 3.3 (Re)populate Operations {#repopulate-operations-configuration}
 
-In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/commons/#knowledgebases-embeddings). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/commons/#embeddings-interface), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
+In order to add data to the knowledge base, you need to have discrete pieces of information and create knowledge base chunks for those. You can use the [operations for Chunks and KnowledgeBaseChunks in the GenAI Commons module](/appstore/modules/genai/commons/#knowledge-bases-embeddings). After you create the knowledge base chunks and [generate embedding vectors for them](/appstore/modules/genai/commons/#embeddings-interface), the resulting `ChunkCollection` can be inserted into the knowledge base using an operation for insertion, for example the `(Re)populate Knowledge Base` operation. 
 
 A typical pattern for populating a knowledge base is as follows:
 

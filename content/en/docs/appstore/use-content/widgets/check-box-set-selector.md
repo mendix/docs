@@ -43,3 +43,7 @@ The [Checkbox Set Selector](https://marketplace.mendix.com/link/component/121/) 
 * **Currency type** – lets you display the attribute as a currency (leave on **None** if not applicable)
 
 You must designate at least one **Display Attribute** (with **Header text** and **Attribute** included), or else the widget might block the page or pop-up window from loading.
+
+## 3 Read More
+
+* [Checkbox Set Selector (ATS)](/appstore/partner-solutions/ats/rg-one-checkbox-set-selector/)

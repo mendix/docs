@@ -563,6 +563,22 @@ You can create your own APIs within your Mendix app and secure the end point ove
 2. Use **Custom** as the [authentication method](/refguide/published-rest-service/#authentication) to secure the endpoint with an access token.
 3. Select the `OIDC.APIAuthentication` microflow which has `HTTPRequest` as the input and returns `System.User` as the output.
 
+### 7.1 Using `APIAuthentication` for Client Credentials Grant
+
+The client credentials grant type is used when applications request an access token to access their own resources, rather than on behalf of a user. To do this:
+
+1. Request an Access Token using `/token` endpoint.
+2. Access the Secured API Endpoint
+3. `APIAuthentication` will validate the token and extract the claims.
+4. The OIDC SSO module verifies if `clientid` is available in the `client_id`, `appid`, or `cid` parameters; if not, it throws an exception message.
+5. Create a new user using the client ID from the token if one does not already exist.
+
+{{% alert color="info" %}}
+
+* By default, the OIDC SSO module uses the **IdPs for API security only** configuration. If it is not available, it will use the **IdPs for SSO and API security** configuration.
+* To maintain backward compatibility, if `sub` is available in the token, the module will use it to create or update System.User.
+{{% /alert %}}
+
 ## 8 Optional Features{#optional}
 
 ### 8.1 Performing API Calls on Behalf of an Authenticated User

@@ -71,11 +71,11 @@ You should install the latest version of the Mendix Feedback module, as it will 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
-    {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/Toolbox-feedback.png" width="250px" class="no-border" >}} 
+    {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/toolbox-feedback.png" width="250px" class="no-border" >}}
 
 3. Drop the Feedback widget into a position in the layout:
 
-    {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/feedback-on-layout.png" class="no-border" >}} 
+    {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/feedback-on-layout.png" >}} 
 
 4. [Configure the Feedback widget](#configuration).
 
@@ -93,49 +93,21 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 To configure the Feedback widget, double-click it to open the **Edit Feedback** dialog box. To use the feedback feature, configure the following properties:
 
-* **Project** tab
+* **Configuration** tab
+    * **Feedback button action** –This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
+    *  **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
 
-    * **Allow screenshots** – This controls whether the end-user can take a screenshot or not.
-    * **Submit successful image url** – This changes the image to show on the last successfully submitted page. Leaving this empty will result in no image being shown.
-    * **Submit failed image url** – This changes the image to show on the failed submitted page. Leaving this empty will result in no image being shown.
-
-* **Advanced** tab
-
-    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [Settings](/developerportal/collaborate/general-settings/) in [Apps](https://sprintr.home.mendix.com/).
-
-    {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
-    {{% /alert %}}
-
-    * **Feedback server location** – This is the URL of the feedback server (usually `https://feedback-api.mendix.com`). You should only change it when you use a different environment.
-
-    * **Screenshot Foreign Rendering**
-
-        * **No** (default)
-        * **Yes** – This is only used when the page includes sensitive information.
-        
-    * **Visibility** – Select the correct user role for the widget.
-
-* **Authentication** tab
-
-  {{% alert color="info" %}}For the best user experience, we strongly encourage you to apply Mendix SSO to your app and connect the Mendix SSO module to the latest version of the Mendix Feedback module. The widget works without authentication configured correctly. However, without authentication, each user will be an anonymous user. The latest widget provides a quicker method to configure the widget. For details on the configuration of the previous version, see the [Configuration](#legacy-configuration) section of the legacy docs.{{% /alert %}}
-
-    * **Use data source** – If the data source is applied and the following settings are configured correctly, the end-user can leave feedback without providing their name and email address.
-
-        * **User entity** – Choose the method that returns the entity that contains the user's information. It needs to be a list and the first item from the list will be used. Mendix recommends only allowing the user to see the information of the current user. After this is configured, the options for **Display name attribute** and **Email address attribute** will show up. 
-
-      {{% alert color="info" %}}If you are using MendixSSO 4, select the **MendixSSOUser** entity from the **MendixSSOModule** folder.{{% /alert %}}
-
-        * **Display name attribute** – Select the display name of the user from the user entity.
-        
-        * **Email address attribute** – Select the email address of the user from the user entity.
-
-    See the screenshot below for an example:
-
-    {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/authentication-user-data-source.png" width="600px" class="no-border" >}}
-
-    * **Provided by user** – Select this if you prefer users fill in their information or you are using the widget for anonymous users. 
-
-* **Translation** tab – The translation should be filled in automatically but you can still configure your own text and translation here.
+          {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
+        {{% /alert %}}
+    
+    * **HTML2Canvas screenshot settings** – These options control the rendering of the screenshots. If you are experiencing problems with screenshots, turn the **Foreign rendering** on.
+    
+* **Customize Button** tab
+    * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
+    * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
+        * **Side Tab** – If this option is selected, the **Feedback** button hovers vertically at the right side of the screen. This is the default option.
+        * **Button** – If this option is selected, the **Feedback** button shows as a horizontal button on the location the widget is set
+        * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
 
 ### 3.3 Submitting Feedback on an App
 

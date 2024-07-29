@@ -3,6 +3,7 @@ title: "Deployed Apps"
 url: /control-center/deployed-apps/
 description: "Describes the Deployed Apps page in the Mendix Control Center."
 weight: 55
+beta: true
 no_list: true
 
 ---
@@ -146,13 +147,13 @@ The list below show the details of the environments with the following columns:
 * **LicenseID** – This shows the ID of the license that was emailed to the Technical Contact when the license keys were generated. This unique identifier allows you to reference and manage your licenses, ensuring they align with the licenses in your various environments.
 * **Start Date** and **End Date** – Your license keys are valid between these two dates. An app needs an active contract with a future end date to keep working.
 * **Actions** – You can carry out an action with the following icon:
-  * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app is offboarded, the app is automatically offboarded and will no longer show up on the **Apps with Licensed Keys** tab.
+  * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app is offboarded, the app is automatically offboarded and will no longer show up on the **Apps with License Keys** tab.
 
 ### 4.2 Frequent Asked Questions {#license-keys-faq}
 
-#### 4.2.1 How Do We Know If Our Company Has Apps with Issued Licensed Keys?
+#### 4.2.1 How Do We Know If Our Company Has Apps with Issued License Keys?
 
-The latest version of license keys created for the apps are shown on the **Apps with Licensed Keys** tab on the **Deployed Apps** page in Control Center.
+The latest version of license keys created for the apps are shown on the **Apps with License Keys** tab on the **Deployed Apps** page in Control Center.
 
 Several deployment options require the Technical Contact to manually apply license keys to the app environments. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in Licensing Apps.
 
@@ -166,7 +167,7 @@ If you have any doubts, contact Mendix Support.
 
 #### 4.2.3 Why Are Unused or Unrecognized App Names Still in Control Center? How Can We Correct This?
 
-Some apps still appear on the **Apps with Licensed Keys** tab on the **Deployed Apps** page in Control Center, because they were not formally offboarded. You can easily offboard these apps by removing the license keys associated with the environments of the app.
+Some apps still appear on the **Apps with License Keys** tab on the **Deployed Apps** page in Control Center, because they were not formally offboarded. You can easily offboard these apps by removing the license keys associated with the environments of the app.
 
 #### 4.2.4 Why Are Some Apps Hosted via License Keys Not Shown in Control Center?
 
@@ -184,7 +185,7 @@ In case of discrepancy, email the license keys to the Technical Contacts of thes
 
 #### 4.2.6 Do We Have to Download New License Keys Once We Renew Our Contract?
 
-Upon renewal of a Mendix contract, new license keys will be automatically emailed to the Technical Contacts of the apps. Additionally, you can also download them on the **Apps with Licensed Keys** tab on the **Deployed Apps** page in Control Center.
+Upon renewal of a Mendix contract, new license keys will be automatically emailed to the Technical Contacts of the apps. Additionally, you can also download them on the **Apps with License Keys** tab on the **Deployed Apps** page in Control Center.
 
 #### 4.2.7 Do We Have to Manually Activate License Keys After Contract Renewal?
 

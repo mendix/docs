@@ -107,11 +107,11 @@ Contact [Mendix Support](https://support.mendix.com/) if you need further assist
 
 You may want to restore a backup that has been created on another platform (for example, an on-premises deployment). In this case, you will have to construct a backup file that Mendix Cloud will recognize. It is possible to upload a **Database Only** or **Full Snapshot** backup file.
 
-### 7.1 Database Only Format
+### 7.1 Database Only Format{#database-only}
 
 A **Database Only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
 
-### 7.2 Full Snapshot Format
+### 7.2 Full Snapshot Format{#full-snapshot}
 
 #### 7.2.1 .tar.gz Archive
 

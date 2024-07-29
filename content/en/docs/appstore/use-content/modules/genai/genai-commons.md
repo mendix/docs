@@ -55,8 +55,8 @@ The domain model in Mendix is a data model that describes the information in you
 The `Connection` entity contains specifications to interact with an AI provider.
 
 | Attribute | Description |
-| --------- | ----------- |
-| `Model`   | The name of the model to be used for an operation. |
+| --- | --- |
+| `Model` | The name of the model to be used for an operation. |
 
 #### 4.1.2 `Request` {#request} 
 

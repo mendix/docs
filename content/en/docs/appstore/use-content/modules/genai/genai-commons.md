@@ -5,7 +5,7 @@ linktitle: "GenAI Commons"
 description: "Describes the purpose, configuration and usage of the GenAI Commons module from the Mendix Marketplace that allows developers to integrate GenAI common principles and patterns into their Mendix app."
 weight: 50
 aliases:
- - /appstore/modules/genai-commons/
+    - /appstore/modules/genai-commons/
 ---
 
 ## 1 Introduction {#introduction}

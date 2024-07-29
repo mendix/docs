@@ -12,6 +12,10 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### July 29, 2024
+
+* We introduced the **Apps with License Keys** tab on the **Deployed Apps** page, which provides a comprehensive overview and management capabilities for all apps with issued license keys. This new feature allows you to view apps with active license keys across all environments, resend or download licenses, and update Technical Contacts as needed.
+
 ### June 14, 2024
 
 #### New Features

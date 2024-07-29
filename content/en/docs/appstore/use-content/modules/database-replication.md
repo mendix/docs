@@ -249,13 +249,13 @@ Setting this to advanced reveals more options. These should only be modified by 
 * **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
 * **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
 
-### 7.5 Final microflow
+### 7.5 Final Microflow
 
-This setting allows specifying a microflow that will be executed after the import is completed. The microflow can have 2 optional parameters: TableMapping and ReplicationStatus. The TableMapping is the instance that has just been executed, a ReplicationStatus (not committed) contains the statistics that are also printed in the log.
+This setting allows specifying a microflow that will be executed after the import is completed. The microflow can have 2 optional parameters: `TableMapping` and `ReplicationStatus`. `TableMapping` is the instance that has just been executed. `ReplicationStatus` (not committed) contains the statistics that are also printed in the log.
 
-### 7.6 Time zone of datetime values in the database
+### 7.6 Time Zone of Datetime Values in the Database
 
-This setting specifies the time zone in which datetime values are stored in the source database. If the setting is defined, all imported datetime values are converted from database time zone to UTC and stored in UTC in resulting Mendix objects. If the setting is not defined, it defaults to [Database time zone](#database-timezone).
+This setting specifies the time zone in which datetime values are stored in the source database. If the setting is defined, all imported datetime values are converted from database time zone to UTC and stored in UTC in resulting Mendix objects. If the setting is not defined, it defaults to [database time zone](#database-timezone).
 
 In most of the cases, there is no need to change this setting unless you know that datetime values in this particular table are stored in a time zone that is different from the rest of the database.
 

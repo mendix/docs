@@ -436,7 +436,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
     * What the action is doing
     * The returned value
     * Supported platforms, such as web, mobile, or native
-    * Browser compatibility, such as Chrome, FireFox, or Edge
+    * Browser compatibility, such as Chrome, Firefox, or Edge
     * Dependent modules (if any)
     * The used library or function
 * For parameters, add a description and provide the default if implemented

@@ -26,7 +26,7 @@ When designing an application, a developer can specify access rules on an entity
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
-* Attributes determined by the system (like the status of an order) should never be writeable
+* Attributes determined by the system (like the status of an order) should never be writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules

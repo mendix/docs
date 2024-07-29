@@ -93,7 +93,16 @@ The list shows the following information about the component:
 
 * **Component**: This is the name of the component.
 * **Version**: This is the component version.
-* **Type**: This shows the type of the component.
+* **Type**: This shows the type of the component. This could be modules, widgets, framework which refers to the Mendix Runtime version, and Java libraries (JAR), etc. The description of each type is as follows:
+
+  * **Modules** – Standard marketplace modules imported from the marketplace, for example [Community Commons](https://marketplace.mendix.com/link/component/170)
+  * **Widgets** – User interface elements downloaded from the marketplace, for example [Charts](https://marketplace.mendix.com/link/component/105695)
+  * **Jars** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, for example `org.apache.commons.io`
+  * **npms** – npm libraries that are used in your [JavaScript actions](/refguide/javascript-actions/)
+  * **Framework** – Mendix Runtime version, for example 10.12.0
+  * **Unknown** – When the type of the component is none of the above and hence undetermined
+
+  For more information, refer to [SBOM Generation](/refguide/sbom-generation/).
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the checkboxes.
 * **View details**: Clicking this opens the [Component Usage](#component-usage) page.
 

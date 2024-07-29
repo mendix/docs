@@ -19,7 +19,7 @@ If you are using Mendix 9.20 and above, ensure you are using version 2.0.0 or ab
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If you are migrating to OIDC module version 3.0.0 and above, you need to include the [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency and configure your app to run the startup microflow (OIDC.Startup) in the OIDC module as part of the after-startup microflow.
+If you are migrating to OIDC module version 3.0.0 and above, you need to include the [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency and configure your app to run the startup microflow (OIDC.ASU_OIDC_Startup) in the OIDC module as part of the after-startup microflow.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -93,7 +93,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
 * Supports response_mode=query and response_mode=form_post
 * Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
-* When the OIDC SSO module secures an API with the Client Credential grant, it expects the `client_id` claim to be included, as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure). To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. These client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
+* When the OIDC SSO module secures an API with the Client Credential grant, it expects the `client_id` claim to be included, as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure). To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
 
 #### 1.2.3 Limitations
 
@@ -134,7 +134,7 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
 3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that  is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
-5. Follow the instructions in [OIDC App Configuration](#app-configuration) to set up your app.
+5. Follow the instructions in [Design-time App configuration](#app-configuration) to set up your app.
 
 ### 3.1 Installing Mx Model Reflection{#mxmodelreflection}
 
@@ -180,7 +180,7 @@ If your app is already developed using Mendix 9 or above, but uses the community
 1. Import the OIDC platform edition module from the Marketplace.
 2. Import the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Marketplace.
 
-## 4 OIDC App Configuration{#app-configuration}
+## 4 Design-time App configuration{#app-configuration}
 
 This section shows you how to configure your app to use OIDC for SSO.
 
@@ -235,8 +235,8 @@ Follow the instructions to [set an encryption key in the Encryption module](/app
 
 To connect your App with your IdP, you need to configure both your IdP (as described in the [Configure your App at your IdP](#configure_app_idp) section below) and your Mendix application. For the Mendix application setup, you can choose between two methods:
 
-* Deploytime configuration of your IdP at your App
-* Runtime configuration of your IdP at your App
+* [Deploytime configuration of your IdP at your App](#deploytime-idp-configuration)
+* [Runtime configuration of your IdP at your App](#runtime-idp-app)
 
 ### 5.1 Configure Your App at Your IdP {#configure_app_idp}
 
@@ -349,13 +349,13 @@ Now, you can acquire tokens which can be validated using JWKS URI.
 
 For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
 
-### 5.3 Deploytime configuration of Your IdP at Your App
+### 5.3 Deploytime configuration of Your IdP at Your App{#deploytime-idp-configuration}
 
 #### 5.3.1 Automated Deploy-time SSO Configuration{#deploy-time}
 
 In version 2.3.0 and above, you can configure the OIDC SSO module using app [constants](/refguide/constants/) rather than using the app administration pages. As the developer of an app using OIDC SSO, you can set default values. These values can be overridden using the app constants.
 
-To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.
+To enable the use of app constants to configure the OIDC SSO module, configure your app to run the Startup microflow in the OIDC module (OIDC.ASU_OIDC_Startup) as (part of) the [after startup](/refguide/app-settings/#after-startup) microflow.
 
 Use the following security best-practices when setting up your constants:
 
@@ -436,7 +436,7 @@ The following constants are optional:
 
     Example: `Mymodule.CustomUserProvisioningEntra`
 
-#### 5.3.2 Custom Client Credentials Configuration
+##### 5.3.1.2 Custom Client Credentials Configuration
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default Client Credentials configuration at Deploytime Configuration.
 

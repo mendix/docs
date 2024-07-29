@@ -253,6 +253,7 @@ This entity inherits from the GenAICommons.Response entity. An object of this ty
 | --- | --- |
 | `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
 
+
 ##### 4.1.1.9 RequestedResponseField {#requested-response-field}
 
 This entity holds information about additional model-specific response fields. If valid additional response fields were requested during the request a list of this entity will be returned as part of the response.
@@ -262,7 +263,7 @@ This entity holds information about additional model-specific response fields. I
 | `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
 | `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
 
-All returned ChatCompletionsResponse_Extension objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+All returned `RequestedResponseField` objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
 
 ##### 4.1.1.10 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
@@ -1102,19 +1103,8 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
-##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 
-Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
-
-This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** microflow.
-
-| Input | Output |
-| --- | --- |
-| `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
-
-`Version` and `Top_K` can be empty, in which case they are not sent to the Bedrock API
-
-##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
+##### 4.2.2.2 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
 
@@ -1136,7 +1126,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 `KmsKeyARN`, `SessionId`, and `Enum_RetrieveAndGenerateType` can be empty, in which case they are not sent to the Bedrock API.
 
-##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
+##### 4.2.2.4 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1150,7 +1140,7 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 | --- | --- |
 | `GenAICommons.ImageOptions (object)`, `NegativeText (string)` | `TitanImageOptions_Extension (object)` |
 
-##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
+##### 4.2.2.5 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1164,7 +1154,7 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 | --- | --- |
 | `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
 
-##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
+##### 4.2.2.6 Image Generation: Set Randomness {#set-randomness}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1182,7 +1172,7 @@ This operation corresponds to the **ImageOptions_SetRandomness** microflow.
 
 `Seed` and `GfgScale` can be empty, in which case they are not sent to the Bedrock API.
 
-##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
+##### 4.2.2.7 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
 
 Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
 
@@ -1192,7 +1182,7 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
 
-##### 4.2.2.6 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+##### 4.2.2.8 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
 
 Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
 
@@ -1202,7 +1192,7 @@ This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** mi
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
 
-##### 4.2.2.7  Request: Add Retrieve Request Extension {#add-r-extension}
+##### 4.2.2.9  Request: Add Retrieve Request Extension {#add-r-extension}
 
 Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
 
@@ -1214,7 +1204,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
-##### 4.2.2.4 Request: Add Additional Request Parameter {#add-request-parameter}
+##### 4.2.2.10 Request: Add Additional Request Parameter {#add-request-parameter}
 
 Use this microflow to add an additional model-specific request parameter to your request. Please follow this link to find available additional request parameters: [Inference parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html)
 
@@ -1226,7 +1216,7 @@ This operation corresponds to the **Request_CreateAdditionalRequestParameter** m
 
 You need to provide a value using either the *StringValue*, *DecimalValue* or *IntegerValue* parameters. For example, if you providing a *StringValue* as value of the parameter, *DecimalValue* and *IntgerValue* should be left **empty**.
 
-##### 4.2.2.5 Request: Add Additional Response Field {#add-response-field}
+##### 4.2.2.11 Request: Add Additional Response Field {#add-response-field}
 
 Some models can return additional information that is not part of the `GenAICommons.Response` entity. Use this microflow to add an additional model-specific response field to your request. 
 
@@ -1238,13 +1228,13 @@ This operation corresponds to the **Request_CreateResponseFieldRequest** microfl
 | --- | --- |
 | `GenAICommons.Request (object)`, `FieldName (string)`| `none` |
 
-If the used model supports that response field, it will be returned as a [ChatCompletionsResponse_Extension](#chatcompletions-response-extension) object as part of the response.
+If the used model supports that response field, it will be returned as a [ChatCompletionsResponse](#chatcompletions-response) object as part of the response.
 
-##### 4.2.2.6 Response: Get Requested Response Fields {#get-response-fields}
+##### 4.2.2.12 Response: Get Requested Response Fields {#get-response-fields}
 
 Use this microflow to retrieve all requested model-specific response fields from the response. 
 
-Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-fields) operation. 
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-field) operation. 
 
 This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
 

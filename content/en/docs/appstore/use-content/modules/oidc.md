@@ -93,7 +93,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
 * Supports response_mode=query and response_mode=form_post
 * Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
-* When the OIDC SSO module secures an API with the Client Credential grant, `sub` (which contains either user-id or client-id) should always be in access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure).  If sub is not included, the  module  look for `client_id`. To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
+* When the OIDC SSO module secures an API with the Client Credential grant, the `sub` as claim (which contains either user-id or client-id) should always be available in the access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure).  If it is not included, the module will look for `client_id`. To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
 
 #### 1.2.3 Limitations
 
@@ -185,7 +185,7 @@ If your app is already developed using Mendix 9 or above, but uses the community
 This section shows you how to configure your app to use OIDC for SSO.
 
 {{% alert color="warning" %}}
-If you are using OIDC module version 3.2.0 and above, you need to configure your app to run the startup microflow (`OIDC.ASU_OIDC_Startup`) in the OIDC module as part of the after-startup microflow.
+If you are using OIDC module version 3.1.0 and above, you need to configure your app to run the startup microflow (`OIDC.ASU_OIDC_Startup`) in the OIDC module as part of the after-startup microflow.
 {{% /alert %}}
 
 ### 4.1 Configuring Roles
@@ -461,7 +461,7 @@ Example: OIDC.Default_SAM_TokenProcessing_CustomATP
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
 {{% alert color="warning" %}}
-If `IsClientGrantOnly` constant is set to *true*, then only OIDC SSO module considers the configuration as Client Credential grant configuration.
+When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module considers the configuration as Client Credential grant configuration.
 {{% /alert %}}
 
 ## 6 User Provisioning
@@ -582,7 +582,7 @@ The client credentials grant type is used when applications request an access to
 1. Request an Access Token using `/token` endpoint.
 2. Access the Secured API Endpoint
 3. `APIAuthentication` will validate the token and extract the claims.
-4. The OIDC SSO module verifies that if `sub` (which contains client-id) is available in the access token. If not, it will verify `client_id`, `appid`, or `cid` parameters; otherwise, it throws an exception message.
+4. The OIDC SSO module checks if the `sub` claim (which contains the `client-id`) is present in the access token. If it is not, the module will verify the `client_id`, `appid`, or `cid` parameters. If none of these are found, it will throw an exception message.
 5. Create a new user using the client ID from the token if one does not already exist.
 
 {{% alert color="info" %}}

@@ -93,7 +93,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Supports ACR in authorization requests. The ACR in OIDC protocol is used to indicate the desired level of assurance or strength of authentication during the authentication process. It allows the relying party (your application) to request a specific level of authentication assurance from the identity provider (IdP) (version 2.3.0 and above)
 * Supports response_mode=query and response_mode=form_post
 * Helps you implement an OAuth Resource Server that receives an Access Token which is obtained by a client via either Authorization Code grant or Client Credential grant.
-* When the OIDC SSO module secures an API with the Client Credential grant, it expects the `client_id` claim to be included, as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure). To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
+* When the OIDC SSO module secures an API with the Client Credential grant, `sub` (which contains either user-id or client-id) should always be in access token as per [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#name-data-structure).  If sub is not included, the  module  look for `client_id`. To be compliant with Microsoft's Entra ID and Okta, it will use `app_id` or `cid` as alternatives to `client_id`. Any of these client identifiers are used to create a user in the Mendix application, allowing the Mendix security model to apply not only to users (human identities) but also to clients (machine identities).
 
 #### 1.2.3 Limitations
 
@@ -373,9 +373,19 @@ The following error messages will be displayed when you try to edit/delete.
 * error at delete:  You cannot delete as it is created from deployment.
 {{% /alert %}}
 
-##### 5.3.1.1 Custom IdP Configuration
+##### 5.3.1.1 Customizing default deploy-time configuration
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
+
+In this configuration, you have several options to customize the Identity Provider (IdP) settings. Firstly, you can configure the IdP using constants. Additionally, the OIDC module supports further customization of the IdP configuration through the implementation of a custom microflow called `Custom_CreateIdPConfiguration`. This microflow returns a list of configured IdPs, which the OIDC module then uses to generate the necessary SSO configurations for multiple IdPs.
+
+In this non-default configuration method, users have the flexibility to introduce your own constants by creating custom IdP configurations.
+
+##### 5.3.1.2 Deploy-time IdPs for SSO and API security Configuration
+
+{{% alert color="info" %}}
+**IdPs for SSO and API security** configuration supports both Authorization code and Client Credential grant type.
+{{% /alert %}}
 
 The following constants are mandatory when creating an OIDC SSO IdP configuration:
 
@@ -436,9 +446,11 @@ The following constants are optional:
 
     Example: `Mymodule.CustomUserProvisioningEntra`
 
-##### 5.3.1.2 Custom Client Credentials Configuration
+##### 5.3.1.3 Deploy-time IdPs for API Security Only Configuration
 
-By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default Client Credentials configuration at Deploytime Configuration.
+{{% alert color="info" %}}
+**IdPs for API security only** configuration supports Client Credential grant type only.
+{{% /alert %}}
 
 The following constants are mandatory when creating an OIDC SSO Client Credentials configuration:
 
@@ -449,7 +461,7 @@ Example: OIDC.Default_SAM_TokenProcessing_CustomATP
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
 {{% alert color="warning" %}}
-It is mandatory to set `IsClientGrantOnly` constant to *true*.
+If `IsClientGrantOnly` constant is set to *true*, then only OIDC SSO module considers the configuration as Client Credential grant configuration.
 {{% /alert %}}
 
 ## 6 User Provisioning
@@ -486,7 +498,7 @@ Make a single call from `CUSTOM_UserProvisioning` to your own module where you i
 
 The OIDC SSO module supports multiple IdPs. Since each provider can provide user data in a different format, you may want to use multiple provisioning flows. The microflow should contain the prefix `OIDC_CustomUserParsing`. See the microflow `UserProvisioning_Sample` for an example and details on how to do this.
 
-#### 6.2.2 Custom User Provisioning at Deploy Time{#custom-provisioning-dep}
+#### 6.2.2 Deploy-time User Provisioning Configuration{#custom-provisioning-dep}
 
 {{% alert color="info" %}}
 This feature is available in version 2.4.0 and above
@@ -570,7 +582,7 @@ The client credentials grant type is used when applications request an access to
 1. Request an Access Token using `/token` endpoint.
 2. Access the Secured API Endpoint
 3. `APIAuthentication` will validate the token and extract the claims.
-4. The OIDC SSO module verifies if `clientid` is available in the `client_id`, `appid`, or `cid` parameters; if not, it throws an exception message.
+4. The OIDC SSO module verifies that if `sub` (which contains client-id) is available in the access token. If not, it will verify `client_id`, `appid`, or `cid` parameters; otherwise, it throws an exception message.
 5. Create a new user using the client ID from the token if one does not already exist.
 
 {{% alert color="info" %}}

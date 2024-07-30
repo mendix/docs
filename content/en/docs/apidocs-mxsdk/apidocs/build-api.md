@@ -141,7 +141,7 @@ An object with the following key-value pairs:
     * Uploading
     * Failed
 * *Size* (Long) : Size of the package in bytes
-* *Url* (object): A json object containing the following:
+* *Url* (object): A JSON object containing the following:
 
     * *Location* (String): The URL pointing to the package file.
     * *TTL* (Long): How long the URL is valid (in seconds).

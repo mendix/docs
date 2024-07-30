@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This section teaches you how to configure the runtime for using push notifications in native apps. 
+This guide teaches you how to configure the runtime for using push notifications in native apps. 
 
 ### 2 Configuring Your Notifications
 
@@ -30,4 +30,4 @@ When selecting a platform to support, the wizard will ask for the Google Firebas
 | -------- | -------- | ------- |
 | **{project_id}-firebase-adminsdk-{identifier}.json** | Google Firebase | Private key for the Firebase service account, used in runtime configuration. |  
 
-Now you completed the initial setup wizard, you can move on the next section.
+Now you completed the initial setup wizard, you can move on the next section to set up push notifications in your native mobile app or to part 6 do so in a progressive web app.

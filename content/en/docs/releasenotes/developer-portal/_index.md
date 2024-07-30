@@ -16,6 +16,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### July 28, 2024
+
+#### Improvements
+
+* We have greatly simplified the process of [creating an app](/developerportal/#create-app) from Apps, making it easier and quicker to start working on your new app.
+* When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page.
+
 ### June 30, 2024
 
 #### New features
@@ -34,13 +41,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
 
-### Improvements
+#### Improvements
 
 * To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 
-### Improvements
+#### Improvements
 
 * When you open the Developer Portal, you can now see these tabs: **My Apps**, **Company Apps**, and **Pending Invites**. For details, see [Developer Portal](/developerportal/).
 * On the top bar of some pages in the Developer Portal, you now see **Apps** instead of **Developer Portal**. This way the presentation of our information architecture is more consistent. 

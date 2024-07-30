@@ -69,7 +69,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
 
 After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
 
-1. In your Mendix app, configure a new OIDC client, as described in [OIDC SSO: OIDC Client Configuration](/appstore/modules/oidc/#client-configuration). Make sure to configure the following settings:
+1. In your Mendix app, configure a new OIDC client, as described in [OIDC SSO: Runtime Configuration of Your IdP at Your App](/appstore/modules/oidc/#runtime-idp-app). Make sure to configure the following settings:
     * **Alias** - Enter a descriptive name to identify your app
     * **Client ID** - Enter the app client ID that you obtained from the user pool in Amazon Cognito
     * **Client secret** - Enter the client secret that you obtained from the user pool in Amazon Cognito

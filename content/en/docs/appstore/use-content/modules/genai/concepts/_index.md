@@ -2,7 +2,7 @@
 title: "Using Generative AI"
 url: /appstore/modules/genai/using-gen-ai/
 linktitle: "Using GenAI"
-weight: 2
+weight: 10
 description: "Describes the concepts behind generative AI and what you might implement with it."
 ---
 

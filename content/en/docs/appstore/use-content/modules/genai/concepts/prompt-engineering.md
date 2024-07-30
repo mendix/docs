@@ -2,7 +2,7 @@
 title: "Prompt Engineering"
 url: /appstore/modules/genai/prompt-engineering/
 linktitle: "Prompt Engineering"
-weight: 2
+weight: 10
 description: "Describes Prompt Engineering as used with generative AI in Mendix"
 ---
 
@@ -96,7 +96,25 @@ Tip: if you are unsure about whether a prompt is clear enough, ask a co-worker t
 
 Instead of relying on the model to come up with the best strategy to solve a problem, break the larger problem down into smaller steps.
 
-Provide the model with instructions on the steps to solve the problem. This is normally done by providing one or more examples. This encourages the model to follow those instructions. As an end result the quality of the output will be higher compared to asking the LLM to come up with the answer right away. 
+Provide the model with instructions on the steps to solve the problem. This is normally done by providing one or more examples. This encourages the model to follow those instructions. As an end result, the quality of the output will be higher compared to asking the LLM to come up with the answer right away.
+
+When you want the model to respond in a specific manner or syntax that is hard to describe, it can be particularly useful to provide examples. This technique is known as *One-Shot-Prompting* (1 example) or *Few-Shot-Prompting* (mulitple examples).
+
+```text  {linenos=false}
+You are an classification assistant.
+You're job is to classify user reviews based on their sentiment.
+
+<examples>
+User prompt: I love the product!
+Response: positive
+
+User prompt: It didn't meet my expectations
+Response: negative
+
+User prompt: It's the best thing I ever bought
+Response: positive
+</examples>
+```
 
 ### 4.3 Allow the Model to Say "I don't know"
 

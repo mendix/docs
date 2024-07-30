@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 ## 3 Linux-Specific Steps {#linux}
 
-Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your java options in the *m2ee.yaml* file. Make sure to replace the path to the actual path of the *newrelic.jar*.
+Add `-javaagent:/PATH/TO/NEWRELIC.JAR` to your Java options in the *m2ee.yaml* file. Make sure to replace the path to the actual path of the *newrelic.jar*.
 
 The configuration section in *m2ee.yaml* should look like this:
 

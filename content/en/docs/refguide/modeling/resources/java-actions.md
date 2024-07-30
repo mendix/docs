@@ -89,7 +89,7 @@ A Java action has zero or more type parameters. Each type parameter should have 
 
 By selecting the **Expose as microflow action** option, it is possible to expose the Java action as a microflow action. Exposing the Java action will make it appear in the **Toolbox** window when editing a microflow in the category of your choice. When this action is used in a microflow, it will show the provided caption and icon.
 
-The caption and category of the microflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independently for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default java action icon and tile image are used.
+The caption and category of the microflow action are required, but the icon and tile image are optional. It is possible to specify icon and tile image independently for light and dark modes of Studio Pro. When no icon or no tile image are selected, the default Java action icon and tile image are used.
 
 The size for the icon must be 64x64 pixels and 256x192 pixels for the tile image. The images must be in PNG format.
 

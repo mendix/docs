@@ -590,7 +590,7 @@ Removed functions to import of log files in log, statistics and performance tool
 
 ### Compatibility
 
-This version supports Mendix 6.2.0 and above only. Also only on java 8.
+This version supports Mendix 6.2.0 and above only. Also only on Java 8.
 
 ### Bug fixes and Minor Changes
 
@@ -664,10 +664,10 @@ Per module it can be configured to remove data after a certain amount of days. D
 
 ### Compatibility, Bug Fixes and Minor Changes
 
-This version supports Mendix 6.2.0 and above only. Also only on java 8.
+This version supports Mendix 6.2.0 and above only. Also only on Java 8.
 
 * Statistics Tool gave a parse error on logout in the logging. Not really visible for users, but would create a trap if trapping on warnings. Now fixed, so logout is also in the statistics.
-* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
+* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import Java actions to prevent these installation errors. Also parameter 'MicroflowName' in Java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
 * A grid in the Mendix 6 version of the performance tool details was changed from to be able to sort on loop iterations.
 * When choosing sample data during install the explain plan sample data for MySQL is now also added.
 

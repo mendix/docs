@@ -1,7 +1,7 @@
 ---
 title: "Set Up a Local Selenium Solution"
 url: /appstore/partner-solutions/ats/ht-two-setting-up-a-local-selenium-solution/
-description: "Describes the options to set up a local selenium solution."
+description: "Describes the options to set up a local Selenium solution."
 ---
 
 ## 1 Introduction
@@ -73,7 +73,7 @@ Characteristics of the Selenium solution are the following:
 * Live-view with a separate to be installed portal. Works with debugging browser images and VNC.
 * It has an out-of-the-box video recording option
 
-## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like Browserstack or Saucelabs)
+## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like BrowserStack or Sauce Labs)
 
 The following reasons describe why a SaaS-solution is preferred above a local Selenium solution:
 

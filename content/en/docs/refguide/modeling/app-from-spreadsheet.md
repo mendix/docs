@@ -9,7 +9,7 @@ description: "Describes how to import an Excel spreadsheet to your app in Mendix
 
 ## 1 Introduction
 
-With the **Start from spreadsheet** starting point, you can import a Microsoft Excel spreadsheet and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be generated.
+You can choose the **App from a spreadsheet** starting point in Studio Pro, import a Microsoft Excel spreadsheet, and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be generated.
 
 ## 2 Preparing Your Data for Import
 
@@ -43,6 +43,8 @@ During the import process, spreadsheet data is analyzed and converted the follow
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/refguide/modeling/app-from-spreadsheet/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
 ## 4 Starting an App from a Spreadsheet {#importing-spreadsheet}
+
+Choose the **App from a spreadsheet** starting point in Studio Pro. 
 
 When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 

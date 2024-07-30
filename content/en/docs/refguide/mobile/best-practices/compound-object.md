@@ -44,7 +44,7 @@ To implement this pattern, do the following:
     1. Commit the list of compound objects.
     1. Here is an example illustration for an entity that is nested 2 levels deep (**Store** → **StoreSection** → **Product**):
 
-        {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-4.png" alt="Microflow that creates or updates all OfflineProduct objects when an assoicated object of the Product object changes" >}}
+        {{< figure src="/attachments/refguide/mobile/best-practices/compound-object-4.png" alt="Microflow that creates or updates all OfflineProduct objects when an associated object of the Product object changes" >}}
 
 1. Replace all usages of the target object and related objects with the compound object in your offline client.
 

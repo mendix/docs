@@ -103,7 +103,7 @@ Here is a cube with the **Left** orientation:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/left-cube.png" alt="Cube on tracker with Left orientation"   width="400"  class="no-border" >}}
 
-**Physical marker size** - this is where you put the physical size of your tracker, and how AR determains how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
+**Physical marker size** - this is where you put the physical size of your tracker, and how AR determines how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
 
 ## 4 Configuring Your Cube (AR) Widget
 
@@ -161,7 +161,7 @@ The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/material-tab.png" alt="Material"   width="400"  class="no-border" >}}
 
-* **Material type** - can be either **Texture** or **Color**. **Material type** determains what will be put onto the cube, an image or a solid color.
+* **Material type** - can be either **Texture** or **Color**. **Material type** determines what will be put onto the cube, an image or a solid color.
 
 * **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 

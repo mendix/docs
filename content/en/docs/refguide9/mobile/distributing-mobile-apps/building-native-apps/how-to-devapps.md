@@ -123,6 +123,6 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
 #### 4.2.2 Distributing the Custom Developer App to the Apple App Store
 
-To run your custom developer app on a device which is not registered as a test device on the Apple Developer Portal, you will have to sign the developer app with your certificates manually and distibrute it via TestFlight.
+To run your custom developer app on a device which is not registered as a test device on the Apple Developer Portal, you will have to sign the developer app with your certificates manually and distribute it via TestFlight.
 
 Read more on TestFlight in the [official documentation](https://testflight.apple.com/).

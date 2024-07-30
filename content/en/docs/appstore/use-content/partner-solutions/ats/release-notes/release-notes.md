@@ -905,7 +905,7 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Important Change
 
-The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
+The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7, this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the function's description accordingly.
 
 **IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function**Assert not null** with **Assert null**. This change is done automatically and will not affect the behavior of your existing test cases.
 

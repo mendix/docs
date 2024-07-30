@@ -103,7 +103,7 @@ When the build script completes it will package your widget as a `.mpk` file and
 1. Drag the Text Box widget to the Data View added in [Creating a Test Project](#creating-a-test-project).
 1. Run your app locally and open it in the browser. The homepage should now display Hello World below the text widget:
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
 
 ### 3.4 Adding the Attribute
 
@@ -292,7 +292,7 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
 {{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
 
-### 3.6 Handling Updates
+### 3.7 Handling Updates
 
 Our widget now looks like a Mendix widget, but does not behave like one yet. While it is able to display the value of the text attribute, it is not able to update it yet. In this section we will close that loop.
 

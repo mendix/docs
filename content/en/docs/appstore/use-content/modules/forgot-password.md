@@ -77,7 +77,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
             * **Email_Connector.EmailConnectorAdmin** or **EmailTemplate.Administrator** - **Email_Connector** permissions are needed if you are using version 4.1.0 or above (for Mendix 8) or version 5.1.0 or above (for Mendix 9 and above). **EmailTemplate** permissions are only needed if using a version which uses the deprecated [Email Module with Templates](https://marketplace.mendix.com/link/component/259/) module
             * **Encryption.user**
             * **ForgotPassword.Administrator**
-            * **MxModeIReflection.ModeAdministrator**
+            * **MxModelReflection.ModeAdministrator**
             * **System.Administrator**
             * **MyFirstModule.Administrator**
         * Guest
@@ -93,7 +93,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
             * **MxModelReflection.Readonly**
             * **MxModelReflection.TokenUser**
             * **System.User**
-            * **yFirstModule.User**
+            * **MyFirstModule.User**
 
     * In the **Anonymous users** tab, set **Allow Anonymous users** to *Yes*
 1. Open [Navigation](/refguide/navigation/) and do the following:

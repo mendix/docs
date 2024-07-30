@@ -8,7 +8,7 @@ The test case (or test suite) details page will open. On this page you can see a
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-test-run/testCaseDetails.png" alt="Test case details" class="no-border" >}}
 
-The *Select Run Configuration* page will open. On this page, you can set the run configuration for the test case (or test suite) you want to exectue.
+The *Select Run Configuration* page will open. On this page, you can set the run configuration for the test case (or test suite) you want to execute.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-test-run/runConfiguration.png" alt="Test Run Configuration" class="no-border" >}}
 

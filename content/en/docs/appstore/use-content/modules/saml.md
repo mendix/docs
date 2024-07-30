@@ -72,7 +72,7 @@ The Mendix SAML SSO module does not support the following:
 * Enhanced Client/Proxy SSO profile
 * HTTP artifact binding for SAML requests
 
-When using SSO connections with multiple IdP's, the SAML EntityID for your app will be shared with all connected IdPs. The SAML module does not allow you to configure different EntityID's for each of your connected IdPs.
+When using SSO connections with multiple IdPs, the SAML EntityID for your app will be shared with all connected IdPs. The SAML module does not allow you to configure different EntityID's for each of your connected IdPs.
 
 Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
 

@@ -263,7 +263,7 @@ To manually add custom fonts to your Android app, follow these instructions:
 1. Copy the renamed fonts to the `android\app\src\main\assets\fonts` folder.
 1. If you plan on using the tool to build your app, commit your changes:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading cutom fonts"   width="400"  class="no-border" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-android-repo.png" alt="GitHub repo after uploading custom fonts"   width="400"  class="no-border" >}}
 
 1. Build your Android app using your preferred method.
 
@@ -307,7 +307,7 @@ Use Xcode to manually add fonts to an iOS app:
 
 1. If you plan on using the tool to build your app, commit your changes:
 
-    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading cutom fonts"   width="400"  class="no-border" >}}
+    {{< figure src="/attachments/howto/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-ios-repo.png" alt="GitHub repo after uploading custom fonts"   width="400"  class="no-border" >}}
 
 1. Build your iOS app with your preferred method.
 

@@ -4,7 +4,7 @@ url: /appstore/creating-content/sol-adapt/
 weight: 20
 no_list: false
 description_list: true
-description: "Presents introductory information on adpatable solutions."
+description: "Presents introductory information on adaptable solutions."
 ---
 
 ## 1 Introduction

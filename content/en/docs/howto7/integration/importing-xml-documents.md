@@ -125,7 +125,7 @@ To create the import logic, follow these steps:
 
 5. Open the **Toolbox** and drag an **Import with mapping** activity to the line between the start and end event. This inserts a new import XML activity.
 6. Double-click the new activity to open the **Import With Mapping** dialog box and do the following:<br />
-    1. Select the input paramater **XMLDocument** as the **Variable**.<br />
+    1. Select the input parameter **XMLDocument** as the **Variable**.<br />
     2. Select the previously created XML-to-domain mapping **ImportCustomersMapping** as the mapping.<br />
     3. Click **OK** to save the properties.<br />
 

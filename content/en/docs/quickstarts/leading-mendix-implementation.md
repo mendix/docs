@@ -478,7 +478,7 @@ Here’s a **quick checklist of things to consider when choosing your first appl
 
 **Don’t get bogged down in requirements:** Digital innovation projects are often marked by unclear business requirements. Don’t worry; this is a good thing, because it is better to define a high-level goal or purpose versus having detailed requirements. The more requirements your first applications have upfront, the longer it’s going to take to release. Make sure that you have at least two follow-up iterations planned so that you can capture and refine requirements and build trust with the business stakeholders. This shows them that even if their requirements don’t make it into the initial MVP, they will come in the next versions. 
 
-**Make failures into wins:** It’s ok to admit defeat. In this case, it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
+**Make failures into wins:** It’s okay to admit defeat. In this case, it’s actually beneficial. It may sound contradictory, but good first applications are often ones that your organization previously failed to deliver.
 
 For instance, a Mendix customer initially failed to build an application that calculates prices because the algorithm was so specific to the business, and the .NET developer couldn’t grasp all the nuances. Using Mendix, business stakeholders and IT developers were able to take that failure and turn it into a win, collaborate much more closely, and successfully deliver a first version of the application in a few days. 
 
@@ -988,7 +988,7 @@ A sample agenda for a successful project kickoff might include:
 
 * The background of the project i.e. why are you doing it in the first place? (Go back to your application value definition and simply present the most important points to your team).
 
-* What is the project scope: You might not have your MVP scope defined in the kick-off meeting and that’s ok. What is important is to have a clear understanding of the problem you are solving and what the most crucial aspect of that problem to tackle first.
+* What is the project scope: You might not have your MVP scope defined in the kick-off meeting and that’s okay. What is important is to have a clear understanding of the problem you are solving and what the most crucial aspect of that problem to tackle first.
 
 * Who’s doing what: Here every team member should have a clear understanding of their roles and responsibilities (in the context of the scrum framework as well as in general).
 
@@ -1045,7 +1045,7 @@ Care should be taken to incorporate feedback from team retrospectives and other 
 
 Development teams can work most efficiently if requirements are clearly described (e.g. in user stories), to estimate the effort and implementation. Because of this, it is important that you choose a tool in which these can be tracked. The Mendix platform offers a collaborative tool called [Epics](https://www.mendix.com/blog/mendix-projects-and-the-wizardry-of-epics/), in which this is possible. Here you can manage the backlog, epics, create user stories, and of course sprints. Both the Agile and Kanban methods are supported.
 
-An organization that is familiar with the Agile way of working will likely already use related tools, such as JIRA. JIRA is often used for Scrum projects, which is why it is now possible to link JIRA to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
+An organization that is familiar with the Agile way of working will likely already use related tools, such as Jira. Jira is often used for Scrum projects, which is why it is now possible to link Jira to your Mendix Project. The Scrum Master of the project can choose between Epics or Jira in the Settings part of the project navigation, in the Project Management tab.
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/project-management.png"  >}}
 
@@ -1064,7 +1064,7 @@ Next step is to prioritize features based on their importance to achieving the p
 
 ### 6.5 Standard Requirements and Reusability
 
-There will always be requirements that are repeated for each and every application you build, things like access management or standardized navigation, or maybe things that each app you build needs to have which are specific to your business. If you already see things like that, note them down and think about whether it makes sense to add them to your standard company app template, or maybe to invest in creating a reusable component, which will save you time in the long run. It's also ok to move quickly for this first app and look into reusability later, some of our most successful customers started like that!
+There will always be requirements that are repeated for each and every application you build, things like access management or standardized navigation, or maybe things that each app you build needs to have which are specific to your business. If you already see things like that, note them down and think about whether it makes sense to add them to your standard company app template, or maybe to invest in creating a reusable component, which will save you time in the long run. It's also okay to move quickly for this first app and look into reusability later, some of our most successful customers started like that!
 
 Here is a couple of topics to keep in mind:
 

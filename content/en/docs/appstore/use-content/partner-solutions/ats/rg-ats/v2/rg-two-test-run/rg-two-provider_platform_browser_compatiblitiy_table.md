@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/ats/rg-two-provider_platform_browser_compatibli
 
 ## 1 Introduction
 
-The following tables document provider, operating system, and browser compatability. 
+The following tables document provider, operating system, and browser compatibility. 
 
 ## 2 BrowserStack
 

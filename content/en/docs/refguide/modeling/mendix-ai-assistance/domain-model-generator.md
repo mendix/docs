@@ -68,6 +68,14 @@ However, it currently does not support deleting or editing what are already in t
 
 You can always edit the generated domain model manually, or remove it and ask Maia to generate a new domain model with adjusted text input.
 
+### 3.4 Enumeration Generation Not Supported
+
+Currently, it cannot generate [enumerations](/refguide/enumerations/). So, it is not possible to generate an attribute of type Enumeration.
+
+### 3.5 Generalization Not Supported
+
+Currently, it cannot set [generalization](/refguide/generalization-and-association/) for an entity.
+
 ## 4 Read More
 
 * [Domain Model](/refguide/domain-model/)

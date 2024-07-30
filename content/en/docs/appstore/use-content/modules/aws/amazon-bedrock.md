@@ -19,6 +19,7 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Chatting with an AI assistant, including a chat history.
 * Building an AI agent to answer questions about proprietary data.
 * Generating images based on text prompts and displaying them in the Mendix app.
+* Generating embedding vectors for text inputs.
 
 ### 1.2 Prerequisites {#prerequisites}
 
@@ -54,18 +55,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### 3.1.1 Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state.
-
-#### 3.1.2 Server-Side Validation
-
-Amazon Bedrock has server-side validation for specific models. For example, the Completion API for older Claude models requires all prompts to be in the following format:
-
-```text
-Human: <PROMPT>
-Assistant:
-```
-
-For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
 
 ### 3.2 Configuring AWS Authentication
 
@@ -96,13 +86,41 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.4 Invoking Specific Models by Using the InvokeModel Operation
+### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
+
+A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
+
+For an overview of supported models and model-specifc capabilities and limitations, see [Amazon Bedrock Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.
+
+To build a simple microflow that uses the ChatCompletions operation to send a single message to the Anthropic Claude 3.5 Sonnet model and show the response on a page, perform the following steps:
+
+1. Create a new microflow and name it, for example, *AmazonBedrockChatCompletions*.
+2. In the **Toolbox**, search for the **Chat Completions (without history)** activity in the *Amazon Bedrock (Operations)* and drag it onto your microflow.
+4. Double click on the activity to see its parameters.
+    1. The **Request** and **FileCollection** parameters are not needed for this example, so you can set them to **empty**.
+    2. For the **UserPrompt** parameter, enter a string of your choice, for example *Hi, Claude!*. 
+    3. CLick **OK**. The input for the **Connection** parameter will be created in the next step.
+5. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag it to the beginning of your microflow.
+6. Double-click it to configure its parameters.
+    1. For the **ENUM_Region** parameter, enter a value of the `AWSAuthentication.ENUM_Region` enumeration. Choose the region where you have access to Amazon Bedrock. For example, *AWSAuthentication.ENUM_Region.us_east_1*.
+    2. For the **ModelId** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
+    3. For the **UseStaticCredentials** parameter, enter *true* if you have configured static AWS Credentials, and *false* if you have configured temporary AWS Credentials.
+    4. Click **OK**.
+5. Double-click the **ChatCompletion** operation and, for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
+6. In the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category, and drag it to the end of your microflow.
+7. Double-click on it and pass the **Response** from the ChatCompletions operation as parameter. The **Get Model Response Text** will return the response from Claude as a string.
+8. Add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
+9. Add a button that calls this microflow, run your project, and verify the results.
+
+{{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
+
+### 3.5 Invoking Specific Models by Using the InvokeModel Operation
 
 Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
-These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model.   
+Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
-To invoke a specific model, perform the following steps:
+To invoke a specific model that is not covered by the ChatCompletions operation, perform the following steps:
 
 1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
@@ -128,7 +146,7 @@ To invoke a specific model, perform the following steps:
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
-### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
+### 3.6 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
 Agents in Amazon Bedrock can perform certain automated tasks such as API calls and data source interactions. For more information, see [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html).
 
@@ -168,54 +186,98 @@ This entity holds the necessary information to perform Bedrock operations such a
 | Attribute | Description |
 | --- | --- |
 | `Region` | The region where the AWS data centers are located that shall be used for execution. This value is of type AWSAuthentication.ENUM_Region enumeration. |
-| `UseStaticCredentials` | This boolean specifies whether static or non-static credentials (temporary) shall be used. |
+| `UseStaticCredentials` | This Boolean specifies whether static or non-static credentials (temporary) shall be used. |
 | `ModelFamily` | This enumeration specifies the model family of the large language model to use. |
 
-##### 4.1.1.2 AnthropicClaudeRequest_Extension {#anthropic-claude-request-extension}
+##### 4.1.1.2 ChatCompletionsRequest_Extension {#chatcompletions-request-extension}
 
-This entity extends the GenAICommons.Request with attributes specific to Anthropic Claude Messages API. 
+This entity extends the GenAICommons.Request with further options for the `ChatCompletions` operation. 
 
-| Attribute | Description |
-| --- | --- |
-| `Version` | This attribute specifies the anthropic version. |
-| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation.|
+It can be used to add model-specific request parameters as well as requesting model specific response fields. This can be done by associating the following entities to a ChatCompletionsRequest_Extension.
 
-##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
+##### 4.1.1.3 AbstractRequestParameter {#abstract-request-parameter}
 
-This entity is a specialization of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
+This is an abstract entity. **Do not use this entity directly. Instead, please use one of its specializations.**
 
-| Attribute | Description |
-| --- | --- |
-| `ResponseID` | A unique identifier of the response.  |
-| `StopSequence` | A stop sequence that was specified for the request and then generated by the model. |
-
-##### 4.1.1.4 AnthropicClaudeMappingHelper {#anthropic-claude-mapping-helper}
-
-This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+The specializations of this entity can be used to add additional model-specific request parameters to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Version` | See `Version` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopK` | See `Top_K` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopP` | See `TopP` of the `GenAICommons.Request` entity |
-| `Temperature` | See `Temperature` of the `GenAICommons.Request` entity |
-| `MaxTokens` | See `MaxTokens` of the `GenAICommons.Request` entity |
-| `SystemPrompt` | See `SystemPrompt` of the `GenAICommons.Request` entity |
-| `ToolChoice` | See `ToolChoice` of the `GenAICommons.Request` entity |
+| `Key` | The Key attribute holds the identifier of the additional model-specific request parameter. |
 
-##### 4.1.1.5 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
+##### 4.1.1.4 StringRequestParameter {#string-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with a string value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.5 DecimalRequestParameter {#decimal-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with a decimal value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.6 IntegerRequestParameter {#int-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with an integer value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The FieldName attribute holds the name of the additional response field that should be returned.  |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.7 ResponseFieldRequest {#response-field-request}
+
+This entity can be used to request an additional model-specific response field to be returned. 
+
+| Attribute | Description |
+| --- | --- |
+| `FieldName` | The FieldName attribute describes the name of the additional response field that should be returned. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Response Field](#add-response-field) operation.
+
+##### 4.1.1.8 ChatCompletionsResponse {#chatcompletions-response}
+
+This entity inherits from the GenAICommons.Response entity. An object of this type is returned by the [ChatCompletions (with history)](#chat-completions-with-history) and [ChatCompletions (without history)](#chat-completions-without-history) operations.
+
+| Attribute | Description |
+| --- | --- |
+| `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
+
+
+##### 4.1.1.9 RequestedResponseField {#requested-response-field}
+
+This entity holds information about additional model-specific response fields. If valid additional response fields were requested during the request a list of this entity will be returned as part of the response.
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
+| `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
+
+All returned `RequestedResponseField` objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+
+##### 4.1.1.10 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
 This helper entity extends the GenAICommons.Request entity with attributes specific to the 'RetrieveAndGenerate' operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
 | Attribute | Description |
 | --- | --- |
 | `SessionId` | The SessionId attribute describes the unique identifier of the session. Reuse the same value to continue the same session with the knowledge base. |
-| `KmsKeyARN` | The KMSKeyArn attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The KMSKeyARN attribute describes the ARN of the AWS KMS key encrypting the session. |
 | `RetrieveAndGenerateType` | The RetrieveAndGenerateType describes the type of resource that is queried by the request. The only supported value currently is "KNOWLEDGE_BASE"  |
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
 
-##### 4.1.1.6 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+##### 4.1.1.11 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This entity extends the GenAICommons.Response entity with attributes specific to `RetrieveAndGenerate`.
 
@@ -223,13 +285,120 @@ This entity extends the GenAICommons.Response entity with attributes specific to
 | --- | --- |
 | `SessionId` | See `RetrieveAndGenerateRequest_Extension.SessionId`. |
 
-##### 4.1.1.7 KnowledgeBaseTool {#knowledge-base-tool}
+##### 4.1.1.12 KnowledgeBaseTool {#knowledge-base-tool}
 
 This entity extends the GenAICommons.Tool entity and holds information about the specified knowledge base. A KnowledgeBaseTool object must be used to specify the knowledge base to use for the Retrieve And Generate operation. 
 
 | Attribute | Description |
 | --- | --- |
 | `KnowledgeBaseId` | The KnowledgeBaseId attribute describes the unique identifier of the knowledge base that is queried and the foundation model used for generation. |
+
+##### 4.1.1.8 TitanImageOptions_Extension {#titan-image-options-extension}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This entity extends the GenAICommons.ImageOptions entity with values specific to Titan Image models. To add an instance of this entity to an GenAICommons.ImageOptions object, the exposed [Image Generation: Add Titan Image Extension](#add-titan-image-extension) operation can be used.
+
+| Attribute | Description |
+| --- | --- |
+| `NegativeText` | The NegativeText attribute is a string containing a prompt describing what not to include in the image. |
+
+##### 4.1.1.9 TitanImageResponse {#titan-image-response}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This entity extends the GenAICommons.Response entity with values specific to Titan Image models.
+
+| Attribute | Description |
+| --- | --- |
+| `Error` | The Error attribute contains the error message if the request violates the content moderation policy. |
+
+##### 4.1.1.10 TitanImageMappingHelper {#titan-image-mapping-helper}
+
+{{% alert color="info" %}}
+This entity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+This helper entity summarizes data from several associated entities into a single entity where it can be formatted to produce the correct export mapping.
+
+##### 4.1.1.11 CohereEmbedOptions_Extension {#cohere-embed-options-extension}
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family. 
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | Prepends special tokens to differentiate each type from one another. It expects a value of the `ENUM_InputType_CohereEmbed` enumeration. |
+| `EmbeddingTypes` | Specifies the types of embeddings you want to have returned. Optional and default is `None`, which returns the Embed Floats response type. It expects a value of the `ENUM_EmbeddingsTypes_CohereEmbed` enumeration. |
+| `Truncate` | Specifies how the API handles inputs longer than the maximum token length. It expects a value of the `ENUM_Truncate_CohereEmbed` enumeration. |
+
+##### 4.1.1.12 CohereEmbedResponse {#cohere-embed-response}
+
+This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
+
+| Attribute | Description |
+| --- | --- |
+| `Response_Type` | This value is either 'embedding_floats' or 'embedding_by_type' if `CohereEmbedOptions_Extension.EmbeddingTypes` has been specified. |
+| `_Id` | An identifier for the response. |
+
+##### 4.1.1.13 CohereEmbedMappingHelper {#cohere-embed-mapping-helper}
+
+This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputType` | See `InputType` of the `CohereEmbedOptions_Extension` entity. |
+| `EmbeddingTypes` | See `EmbeddingTypes` of the `CohereEmbedOptions_Extension` entity. |
+| `Truncate` | See `Truncate` of the `CohereEmbedOptions_Extension` entity. |
+
+##### 4.1.1.14 TitanEmbeddingsOptions_Extension {#titan-embeddings-options-extension}
+
+This entity extends the GenAICommons.EmbeddingsOptions entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for Titan Embeddings v2 API. 
+
+| Attribute | Description |
+| --- | --- |
+| `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
+
+##### 4.1.1.15 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
+
+This helper entity combines attributes from the `GenAICommons.EmbeddingsOptions` as well as the `TitanEmbeddingsOptions_Extension`, in order to simplify the export mapping.
+
+| Attribute | Description |
+| --- | --- |
+| `InputText` | See `InputText` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Dimension` | See `Dimension` of the `GenAICommons.EmbeddingsOptions` entity. |
+| `Normalize` | See `Normalize` of the `TitanEmbeddingsOptions_Extension` entity. |
+
+##### 4.1.1.16 RetrieveRequest_Extension {#retrieve-request-extension}
+
+This helper entity extends the `GenAICommons.Request` entity with attributes specific to the `Retrieve` operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
+
+| Attribute | Description |
+| --- | --- |
+| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
+| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
+
+It can be added to the request using the [Request: Add Retrieve Request Extension](#add-r-extension) operation.
+
+##### 4.1.1.17 RetrieveResponse {#retrieve-response}
+
+This helper entity extends the `GenAICommons.Response` entity with attributes specific to the `Retrieve` operation.
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a `nextToken`. |
+
+##### 4.1.1.18 RetrievalResult {#retrieval-result}
+
+This helper entity extends the `GenAICommons.Reference` entity with attributes specific to the `Retrieve` operation.
+
+| Attribute | Description |
+| --- | --- |
+| `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
 
 #### 4.1.2 No GenAICommons dependency
 
@@ -258,7 +427,7 @@ The `FoundationModelSummary` entity stores the details (per model) needed to inv
 | `ModelID` | ID assigned by Amazon Bedrock to their specific foundational models; it is used to invoke the model in question (string)|
 | `ModelName` | The name of the foundational model (string)|
 | `ProviderName` | The provider name of the foundational model (string)|
-| `ResponseStreamingSupported` | Indicates whether the model supports streaming (boolean)|
+| `ResponseStreamingSupported` | Indicates whether the model supports streaming (Boolean)|
 
 ##### 4.1.2.4 FoundationModelLifecycle {#foundation-model-lifecycle}
 
@@ -320,17 +489,7 @@ This is the response entity of the `InvokeModel` action.
 | `PromptId` | The `PromptId` describes the identifier of the prompt. Only is available for prompts that are saved. |
 | `ResponseBody` | The `ResponseBody` attribute holds the JSON response body of the specific model. |
 
-##### 4.1.2.11 RetrieveRequest {#retrieve-request}
-
-This is the request entity of the `Retrieve` action.
-
-| Attribute | Description |
-| --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` attribute describes the unique identifier of the knowledge base to query and is a required parameter. |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
-| `QueryText` | The `QueryText` attribute describes the text of the query made to the knowledge base. |
-
-##### 4.1.2.12 RetrievalConfiguration {#retrieval-configuration}
+##### 4.1.2.11 RetrievalConfiguration {#retrieval-configuration}
 
 The `RetrievalConfiguration` entity holds information about how the results should be returned.
 
@@ -338,31 +497,7 @@ The `RetrievalConfiguration` entity holds information about how the results shou
 | --- | --- |
 | `NumberOfResults` | The `NumberOfResults` attribute describes the number of results to return. |
 
-##### 4.1.2.13 RetrieveResponse {#retrieve-response}
-
-This is the response entity of the `Retrieve` action.
-
-| Attribute | Description |
-| --- | --- |
-| `NextToken` | The `NextToken` attribute describes if there are more results than can fit in the response, the response returns a nextToken. |
-
-##### 4.1.2.14 RetrievalResult {#retrieval-result}
-
-The `RetrievalResult` entity holds information about the query made to the knowledge base.
-
-| Attribute | Description |
-| --- | --- |
-| `Score` | The `Score` attribute describes the level of relevance of the result to the query. |
-
-##### 4.1.2.15 Content {#content}
-
-The `Content` entity holds information about the cited text from the data source.
-
-| Attribute | Description |
-| --- | --- |
-| `Text` | The `Text` attribute describes the cited text from the data source. |
-
-##### 4.1.2.16 Location {#location}
+##### 4.1.2.12 Location {#location}
 
 The `Location` entity holds information about the location of the data source.
 
@@ -370,7 +505,7 @@ The `Location` entity holds information about the location of the data source.
 | --- | --- |
 | `DataSourceType` | The `DataSourceType` attribute describes the type of the location of the data source. |
 
-##### 4.1.2.17 S3Location {#s3location}
+##### 4.1.2.13 S3Location {#s3location}
 
 The `S3Location` entity holds information about the S3 location of the data source.
 
@@ -378,27 +513,21 @@ The `S3Location` entity holds information about the S3 location of the data sour
 | --- | --- |
 | `URI` | The `URI` attribute describes the S3 URI of the data source. |
 
-##### 4.1.2.18 RetrieveLocation {#retrieve-location}
+##### 4.1.2.14 ReferenceLocation {#reference-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-##### 4.1.2.19 ReferenceLocation {#reference-location}
-
-| Attribute | Description |
-| --- | --- |
-| N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
-
-##### 4.1.2.20 SessionConfiguration {#session-configuration}
+##### 4.1.2.15 SessionConfiguration {#session-configuration}
 
 The `SessionConfiguration` entity holds information about details of the session with the knowledge base.
 
 | Attribute | Description |
 | --- | --- |
-| `KmsKeyArn` | The `KmsKeyArn` attribute describes the ARN of the AWS KMS key encrypting the session. |
+| `KmsKeyARN` | The `KmsKeyARN` attribute describes the ARN of the AWS KMS key encrypting the session. |
 
-##### 4.1.2.21 Citation {#citation}
+##### 4.1.2.16 Citation {#citation}
 
 The `Citation` entity contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -406,7 +535,7 @@ The `Citation` entity contains a segment of the generated response that is based
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
 
-##### 4.1.2.22 GeneratedResponsePart {#generated-response-part}
+##### 4.1.2.17 GeneratedResponsePart {#generated-response-part}
 
 The `GeneratedResponsePart` entity holds information about a part of the generated response that is accompanied by a citation.
 
@@ -416,7 +545,7 @@ The `GeneratedResponsePart` entity holds information about a part of the generat
 | `Start` | The `Start` attribute describes where the text with a citation starts in the generated output. |
 | `End` | The `End` attribute describes where the text with a citation ends in the generated output. |
 
-##### 4.1.2.23 RetrievedReference {#retrieved-reference}
+##### 4.1.2.18 RetrievedReference {#retrieved-reference}
 
 The `RetrievedReference` entity holds information about a sources cited for the generated response.
 
@@ -424,7 +553,7 @@ The `RetrievedReference` entity holds information about a sources cited for the 
 | --- | --- |
 | `Text` | The `Text` attribute contains the cited text from the data source. |
 
-##### 4.1.2.24 CitationRetrievedReference (#citation-retrieved-reference)
+##### 4.1.2.19 CitationRetrievedReference (#citation-retrieved-reference)
 
 The `CitationRetrievedResponse` entity holds information about the citation, which contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -432,26 +561,26 @@ The `CitationRetrievedResponse` entity holds information about the citation, whi
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`RetrievedReference`](#retrieved-reference) entity. |
 
-##### 4.1.2.25 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
+##### 4.1.2.20 RetrieveAndGenerateLocation {#retrieve-and-generate-location}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`Location`](#location) entity. |
 
-##### 4.1.2.26 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
+##### 4.1.2.21 ListKnowledgeBasesRequest {#list-knowledge-bases-request}
 
 | Attribute | Description |
 | --- | --- |
 | `MaxResults` | The maximum number of results to return in the response.  |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.27 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
+##### 4.1.2.22 ListKnowledgeBasesResponse {#list-knowledge-bases-response}
 
 | Attribute | Description |
 | --- | --- |
 | `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
 
-##### 4.1.2.28 KnowledgeBaseSummary {#knowledge-base-summary}
+##### 4.1.2.23 KnowledgeBaseSummary {#knowledge-base-summary}
 
 | Attribute | Description |
 | --- | --- |
@@ -461,7 +590,7 @@ The `CitationRetrievedResponse` entity holds information about the citation, whi
 | `UpdatedAt` | The time at which the knowledge base was last updated.  |
 | `Description` | The description of the knowledge base.  |
 
-##### 4.1.2.29 StartIngestionJobRequest {#start-ingestion-job-request}
+##### 4.1.2.24 StartIngestionJobRequest {#start-ingestion-job-request}
 
 This is the request entity of the `StartIngestionJob` action.
 
@@ -470,7 +599,7 @@ This is the request entity of the `StartIngestionJob` action.
 | `DataSourceId` | The `Text` attribute contains the unique identifier of the data source to ingest. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-##### 4.1.2.30 GetIngestionJobRequest {#get-ingestion-job-request}
+##### 4.1.2.25 GetIngestionJobRequest {#get-ingestion-job-request}
 
 This is the request entity of the `GetIngestionJob` action.
 
@@ -480,27 +609,27 @@ This is the request entity of the `GetIngestionJob` action.
 | `IngestionJobId` | The `Text` attribute contains the unique identifier of the ingestion job to retrieve. |
 | `KnowledgeBaseId` | The `Text` attribute contains the unique identifier of the knowledge base to which to add the data source. |
 
-##### 4.1.2.31 GetIngestionJobResponse {#get-ingestion-job-response}
+##### 4.1.2.26 GetIngestionJobResponse {#get-ingestion-job-response}
 
 This is the response entity of the `GetIngestionJob` action.
 
-##### 4.1.2.32 StartIngestionJobResponse {#start-ingestion-job-response}
+##### 4.1.2.27 StartIngestionJobResponse {#start-ingestion-job-response}
 
 This is the response entity of the `StartIngestionJob` action.
 
-##### 4.1.2.33 StartIngestionJob {#start-ingestion-job}
+##### 4.1.2.28 StartIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-##### 4.1.2.34 GetIngestionJob {#start-ingestion-job}
+##### 4.1.2.29 GetIngestionJob {#start-ingestion-job}
 
 | Attribute | Description |
 | --- | --- |
 | N/A | The entity does not contain any attributes, but it inherits from the [`IngestionJob`](#ingestion-job) entity. |
 
-##### 4.1.2.35 IngestionJob {#ingestion-job}
+##### 4.1.2.30 IngestionJob {#ingestion-job}
 
 This is the response entity of the `IngestionJob` action.
 
@@ -513,7 +642,7 @@ This is the response entity of the `IngestionJob` action.
 | `StartedAt` | The `Timestamp` at which the ingestion job started. |
 | `UpdatedAt` | The `Timestamp` at which the ingestion job was last updated. |
 
-##### 4.1.2.36 FailureReason {#failure-reason}
+##### 4.1.2.31 FailureReason {#failure-reason}
 
 The `FailureReason` entity holds the reason an interaction failed.
 
@@ -521,7 +650,7 @@ The `FailureReason` entity holds the reason an interaction failed.
 | --- | --- |
 | `Text` | The `Text` attribute describes reason the interaction failed. |
 
-##### 4.1.2.37 IngestionJobStats {#ingestion-job-stats}
+##### 4.1.2.32 IngestionJobStats {#ingestion-job-stats}
 
 The `IngestionJobStats` entity contains information about the failure of the interaction.
 
@@ -533,51 +662,51 @@ The `IngestionJobStats` entity contains information about the failure of the int
 | `numberOfModifiedDocumentsIndexed` | The `Long` attribute holds the number of modified documents in the data source that were successfully indexed. |
 | `numberOfNewDocumentsIndexed` | The `Long` attribute holds the number of new documents in the data source that were successfully indexed. |
 
-##### 4.1.2.38 ModelInvocationInput {#model-invocation-input}
+##### 4.1.2.33 ModelInvocationInput {#model-invocation-input}
 
 The `ModelInvocationInput` contains parameters that specify the input to the pre- or post-processing step.
 
 | Attribute | Description |
 | --- | --- |
-| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence.|
-| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType.|
-| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden.|
-| `Text` | The `Text` attribute holds the text that prompted the agent at this step.|
-| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence.|
+| `OverrideLambda` | The `OverrideLambda` attribute holds the ARN of the Lambda function to use when parsing the raw foundation model output in parts of the agent sequence. |
+| `ParserMode` | The `ParserMode` attribute specifies whether to override the default parser Lambda function when parsing the raw foundation model output in the part of the agent sequence defined by the promptType. |
+| `PromptCreationMode` | The `PromptCreationMode` attribute specifies whether the default prompt template was overridden. |
+| `Text` | The `Text` attribute holds the text that prompted the agent at this step. |
+| `PromptType` | The `PromptType` attribute specifies the step in the agent sequence. |
 
-##### 4.1.2.39 Parameter {#parameter}
+##### 4.1.2.34 Parameter {#parameter}
 
 The `Parameter` is a generalization for orchestration trace parameter objects.
 
 | Attribute | Description |
 | --- | --- |
-| `Name` | The `Name` attribute holds name of the parameter.|
-| `_Type` | The `_Type` attribute specifies the parameter type.|
+| `Name` | The `Name` attribute holds name of the parameter. |
+| `_Type` | The `_Type` attribute specifies the parameter type. |
 | `Value` | The `Value` attribute specifies the parameter value. |
 
-##### 4.1.2.40 InvokeAgentAttribute {#invoke-agent-attribute}
+##### 4.1.2.35 InvokeAgentAttribute {#invoke-agent-attribute}
 
-The `InvokeAgentAttribute` holds all attributes needed to to create a request to invoke an agent.
+The `InvokeAgentAttribute` holds all attributes needed to create a request to invoke an agent.
 
 | Attribute | Description |
 | --- | --- |
-| `Key` | The `Key` attribute holds an attribute key.|
-| `Value` | The `Value` attribute holds an attribute value.|
+| `Key` | The `Key` attribute holds an attribute key. |
+| `Value` | The `Value` attribute holds an attribute value. |
 
-##### 4.1.2.41 InvokeAgentRequest {#invoke-agent-request}
+##### 4.1.2.36 InvokeAgentRequest {#invoke-agent-request}
 
 The `InvokeAgentRequest` holds all attributes needed to create a request to invoke an agent.
 
 | Attribute | Description |
 | --- | --- |
-| `InputText` | The `InputText` attribute holds the prompt text to send to the agent.|
-| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use.|
-| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use.|
-| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation.|
-| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process.|
-| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not.|
+| `InputText` | The `InputText` attribute holds the prompt text to send to the agent. |
+| `AgentId` | The `AgentId` attribute holds the unique identifier of the agent to use. |
+| `AgentAliasId` | The `AgentAliasId` attribute holding the alias of the agent to use. |
+| `SessionId` | The `SessionId` attribute holds the unique identifier of the session. Use the same value across requests to continue the same conversation. |
+| `EnableTrace` | The `EnableTrace` attribute specifies whether to turn on the trace or not to track the agent's reasoning process. |
+| `EndSession` | The `EndSession` attribute specifies whether to end the session with the agent or not. |
 
-##### 4.1.2.42 SessionState {#session-state}
+##### 4.1.2.37 SessionState {#session-state}
 
 The `SessionState` entity is associated to objects that hold information about the session.
 
@@ -585,7 +714,7 @@ The `SessionState` entity is associated to objects that hold information about t
 | --- | --- |
 | N/A | The entity does not contain any attributes. |
 
-##### 4.1.2.43 SessionAttribute {#session-attribute}
+##### 4.1.2.38 SessionAttribute {#session-attribute}
 
 The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -593,7 +722,7 @@ The `SessionAttribute` entity inherits from the InvokeAgentAttribute entity and 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-##### 4.1.2.44 PromptSessionAttribute {#session-attribute}
+##### 4.1.2.39 PromptSessionAttribute {#session-attribute}
 
 The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entity and holds information about the session.
 
@@ -601,15 +730,15 @@ The `PromptSessionAttribute` entity inherits from the InvokeAgentAttribute entit
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`InvokeAgentAttribute`](#invoke-agent-attribute). |
 
-##### 4.1.2.45 InvokeAgentResponse {#invoke-agent-response}
+##### 4.1.2.40 InvokeAgentResponse {#invoke-agent-response}
 
 The `InvokeAgentResponse` is the response object of the invokeAgent operation.
 
 | Attribute | Description |
 | --- | --- |
-| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text.|
+| `OutputText` | The `OutputText` attribute contains the 'bytes' part of the response as text. |
 
-##### 4.1.2.46 InvokeAgentCitation {#invoke-agent-citation}
+##### 4.1.2.41 InvokeAgentCitation {#invoke-agent-citation}
 
 The `InvokeAgentCitation` contains a segment of the generated response that is based on a source in the knowledge base, alongside information about the source.
 
@@ -617,43 +746,43 @@ The `InvokeAgentCitation` contains a segment of the generated response that is b
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`Citation`](#citation). |
 
-##### 4.1.2.47 TracePart {#trace-part}
+##### 4.1.2.42 TracePart {#trace-part}
 
 The `TracePart` is a generalization which contains information about the agent and session, alongside the agent's reasoning process and results from calling API actions and querying knowledge bases and metadata about the trace. 
 
 | Attribute | Description |
 | --- | --- |
-| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest.|
-| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest.|
+| `AgentAliasId` | The `AgentAliasId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `AgentId` | The `AgentId` attribute holds the corresponding value from the InvokeAgentRequest. |
+| `SessionId` | The `SessionId` attribute holds the corresponding value from the InvokeAgentRequest. |
 
-##### 4.1.2.48 AbstractTrace {#abstract-trace}
+##### 4.1.2.43 AbstractTrace {#abstract-trace}
 
 The `AbstractTrace` contains one part of the agent's reasoning process and results from calling API actions and querying knowledge bases. 
 
 | Attribute | Description |
 | --- | --- |
-| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace.|
-| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type.|
+| `TraceId` | The `TraceId` attribute holds the unique identifier of the trace. |
+| `TraceType` | The `TraceType` attribute holds the enumeration value of the trace type. |
 
-##### 4.1.2.49 FailureTrace {#failure-trace}
+##### 4.1.2.44 FailureTrace {#failure-trace}
 
 The `FailureTrace` contains information about the failure of the interaction. 
 
 | Attribute | Description |
 | --- | --- |
-| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction.|
+| `FailureReason` | The `FailureReason` attribute holds the reason for the failure of the interaction. |
 
-##### 4.1.2.50 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
+##### 4.1.2.45 PreProcessingModelInvocationOutput {#pre-processing-model-invocation-output}
 
 The `PreProcessingModelInvocationOutput` contains information about the foundation model output from the pre-processing step. 
 
 | Attribute | Description |
 | --- | --- |
-| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not.|
-| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid.|
+| `IsValid` | The `IsValid` attribute actually comes from entity PreProcessingParsedResponse. Specifies whether the user input is valid or not. |
+| `Rationale` | The `Rationale` attribute holds the text returned by the parsing of the pre-processing step, explaining the steps that the agent plans to take in orchestration, if the user input is valid. |
 
-##### 4.1.2.51 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
+##### 4.1.2.46 PreProcessingModelInvocationInput {#pre-processing-model-invocation-input}
 
 The `PreProcessingModelInvocationInput` contains the foundation model input for the pre-processing step.
 
@@ -661,23 +790,15 @@ The `PreProcessingModelInvocationInput` contains the foundation model input for 
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.2.52 PostProcessingModelInvocationOutput {#post-processing-model-invocation-output}
+##### 4.1.2.47 PostProcessingModelInvocationOutput {#post-processing-model-invocation-output}
 
 The `PostProcessingModelInvocationOutput` contains information about the foundation model output from the post-processing step. 
 
 | Attribute | Description |
 | --- | --- |
-| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step.|
+| `ParsedResponse` | The `ParsedResponse` attribute holds details about the response from the Lambda parsing of the output of the post-processing step. |
 
-##### 4.1.2.53 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
-
-The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
-
-| Attribute | Description |
-| --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
-
-##### 4.1.2.54 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
+##### 4.1.2.48 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
 
 The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
 
@@ -685,25 +806,33 @@ The `PostProcessingModelInvocationInput` contains the foundation model input for
 | --- | --- |
 | N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.2.55 InvocationInput {#invocation-input}
+##### 4.1.2.49 PostProcessingModelInvocationInput {#post-processing-model-invocation-input}
+
+The `PostProcessingModelInvocationInput` contains the foundation model input for the post-processing step. 
+
+| Attribute | Description |
+| --- | --- |
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
+
+##### 4.1.2.50 InvocationInput {#invocation-input}
 
 The `InvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
 
 | Attribute | Description |
 | --- | --- |
-| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base.|
+| `InvocationType` | The `InvocationType` attribute specifies whether the agent is invoking an action group or a knowledge base. |
 
-##### 4.1.2.56 ActionGroupInvocationInput {#action-group-invocation-input}
+##### 4.1.2.51 ActionGroupInvocationInput {#action-group-invocation-input}
 
 The `ActionGroupInvocationInput` contains information pertaining to the action group or knowledge base that is being invoked.
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group.|
-| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group.|
-| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group.|
+| `ActionGroupName` | The `ActionGroupName` attribute specifies the name of the action group. |
+| `ApiPath` | The `ApiPath` attribute specifies the path to the API to call, based off the action group. |
+| `Verb` | The `Verb` attribute specifies the API method being used, based off the action group. |
 
-##### 4.1.2.57 RequestBodyContent {#request-body-content}
+##### 4.1.2.52 RequestBodyContent {#request-body-content}
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
 
@@ -711,73 +840,141 @@ The `RequestBodyContent` holds the parameters in the request body for the Lambda
 | --- | --- |
 | `ContentKey` | The `ContentKey` as returned in the RequestBodyContent|
 
-##### 4.1.2.58 RequestBodyContentParameter {#request-body-content-parameter}
+##### 4.1.2.53 RequestBodyContentParameter {#request-body-content-parameter}
 
 The `RequestBodyContentParameter` is a parameter in the Lambda input event (for the request body).
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
-##### 4.1.2.59 InvocationInputParameter {#invocation-input-parameter}
+##### 4.1.2.54 InvocationInputParameter {#invocation-input-parameter}
 
 The `RequestBodyContent` holds the parameters in the request body for the Lambda input event.
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter).|
+| N/A | The entity does not contain any attributes but it inherits from the [`Parameter`](#parameter). |
 
-##### 4.1.2.60 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
+##### 4.1.2.55 KnowledgeBaseLookupInput {#knowledge-base-lookup-input}
 
 The `KnowledgeBaseLookupInput` contains details about the knowledge base to look up and the query to be made.
 
 | Attribute | Description |
 | --- | --- |
-| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up.|
-| `Text` | The `Text` is the query made to the knowledge base.|
+| `KnowledgeBaseId` | The `KnowledgeBaseId` the unique identifier of the knowledge base to look up. |
+| `Text` | The `Text` is the query made to the knowledge base. |
 
-##### 4.1.2.61 Rationale {#rationale}
+##### 4.1.2.56 Rationale {#rationale}
 
 The `Rationale` contains the reasoning, based on the input, that the agent uses to justify carrying out an action group or getting information from a knowledge base.
 
 | Attribute | Description |
 | --- | --- |
-| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input.|
+| `Text` | The `Text` attribute specifies the reasoning or thought process of the agent, based on the input. |
 
-##### 4.1.62 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
+##### 4.1.2.57 OrchestrationModelInvocationInput {#orchestration-model-invocation-input}
 
 The `OrchestrationModelInvocationInput` holds the input for the pre-processing step.
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input).|
+| N/A | The entity does not contain any attributes but it inherits from the [`ModelInvocationInput`](#model-invocation-input). |
 
-##### 4.1.63 Observation {#observation}
+##### 4.1.2.58 Observation {#observation}
 
 The `Observation` contains the result or output of an action group or knowledge base, or the response to the user.
 
 | Attribute | Description |
 | --- | --- |
-| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group.|
-| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user.|
-| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible.|
+| `ActionGroupInvocationOutput` | The `ActionGroupInvocationOutput` attribute contains the JSON-formatted string returned by the API invoked by the action group. |
+| `FinalResponse` | The `FinalResponse` attribute contains details about the response to the user. |
+| `ObservationType` | The `ObservationType` attribute specifies what kind of information the agent returns in the observation. The following values are possible. |
 
-##### 4.1.64 RepromptResponse {#reprompt-response}
+##### 4.1.2.59 RepromptResponse {#reprompt-response}
 
 The `RepromptResponse` contains details about the agent's response to reprompt the input.
 
 | Attribute | Description |
 | --- | --- |
-| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input.|
-| `Text` | The `Text` reprompting the input.|
+| `RepromptSource` | The `RepromptSource` attribute specifies what output is prompting the agent to reprompt the input. |
+| `Text` | The `Text` reprompting the input. |
 
-##### 4.1.65 ObservationRetrievedReference {#observation-retrieved-reference}
+##### 4.1.2.60 ObservationRetrievedReference {#observation-retrieved-reference}
 
 The `ObservationRetrievedReference` holds information about a sources cited for the generated response.
 
 | Attribute | Description |
 | --- | --- |
-| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference).|
+| N/A | The entity does not contain any attributes but it inherits from the [`RetrievedReference`](#retrieved-reference). |
+
+##### 4.1.2.61 ListAgentsRequest {#list-agents-request}
+
+| Attribute | Description |
+| --- | --- |
+| `MaxResults` | The maximum number of results to return in the response.  |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+##### 4.1.2.62 ListAgentsResponse {#list-agents-response}
+
+| Attribute | Description |
+| --- | --- |
+| `NextToken` | If the total number of results is greater than the maxResults value provided in the request, enter the token returned in the NextToken field in the response in this field to return the next batch of results. |
+
+##### 4.1.2.63 AgentSummary {#agent-summary}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentID` | The unique identifier of the agent.  |
+| `AgentName` | The name of the agent.  |
+| `AgentStatus` | The status of the agent.  |
+| `Description` | The description of the agent.  |
+| `LatestAgentVersion` | The latest version of the agent.  |
+| `UpdatedAt` | The time at which the agent was last updated.  |
+
+##### 4.1.2.64 GetAgentRequest {#get-agent-request}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentID` | The unique identifier of the agent.  |
+
+##### 4.1.2.65 GetAgentResponse {#get-agent-response}
+
+| Attribute | Description |
+| --- | --- |
+| `N/A` | - |
+
+##### 4.1.2.66 Agent {#agent}
+
+| Attribute | Description |
+| --- | --- |
+| `AgentARN` | The Amazon Resource Name (ARN) of the agent. |
+| `AgentID` | The unique identifier of the agent.  |
+| `AgentName` | The name of the agent.  |
+| `AgentResourceRoleARN` | The Amazon Resource Name (ARN) of the IAM role with permissions to invoke API operations on the agent.  |
+| `AgentStatus` | The status of the agent.  |
+| `AgentVersion` | The version of the agent.  |
+| `CreatedAt` | The time at which the agent was created.  |
+| `IdleSessionTTLInSeconds` | The number of seconds for which Amazon Bedrock keeps information about a user's conversation with the agent.  |
+| `UpdatedAt` | The time at which the agent was last updated.  |
+| `ClientToken` | A unique, case-sensitive identifier to ensure that the API request completes no more than one time.   |
+| `CustomerEncryptionKeyArn` | The Amazon Resource Name (ARN) of the AWS KMS key that encrypts the agent.  |
+| `Description` | The description of the agent.  |
+| `FoundationModel` | The foundation model used for orchestration by the agent. |
+| `Instruction` | Instructions that tell the agent what it should do and how it should interact with users. |
+| `PreparedAt` | The time at which the agent was last prepared.  |
+
+##### 4.1.2.67 AgentFailureReason {#agent-failure-reason}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Reason the agent-related API that you invoked failed. |
+
+##### 4.1.2.68 RecommendedAction {#recommended-action}
+
+| Attribute | Description |
+| --- | --- |
+| `Text` | Contains a recommended action to take for the agent-related API that you invoked to succeed. |
 
 ### 4.2 Activities {#activities}
 
@@ -787,17 +984,23 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with a variety of supported LLM's. There is no option to keep the concersation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+
+This operation leverages the Amazon Bedrock Converse API. For a full overview of supported models and model capabilities, please refer to the [AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 The input and output for this service are shown in the table below:
 
 | Input | Output |
 | --- | --- |
-| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request (optional)`, `FileCollection (optional)`| `GenAICommons.Response`|
+| `Userprompt (string)`, `AmazonBedrockConnection`, `GenAICommons.Request`, `FileCollection`| `GenAICommons.Response`|
+
+`GenAICommons.Request` and `FileCollection` can be empty, in which case they are not sent to the Bedrock API.
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
-The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithHistory_AmazonBedrock** microflow.
+The `ChatCompletions (with history)` activity can be used for any conversations with a variety of supported LLM's. It is possible for it to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithHistory_AmazonBedrock** microflow.
+
+This operation leverages the Amazon Bedrock Converse API. For a full overview of supported models and model capabilities, please refer to the [AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 The input and output for this service are shown in the table below:
 
@@ -805,13 +1008,13 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
-Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
+Some capabilities of the chat completions operations are currently only available for specific models:
 
-* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
+* **Function Calling** - You can use function calling in all chat completions operations using a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
 
-* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation.
+* **Vision** - This operation supports the *vision* capability of [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation.
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -824,11 +1027,71 @@ The input and output for this service are shown in the table below:
 
 The request object passed to this operation must include a [KnowledgeBaseTool](#knowledge-base-tool) object, which can be added to the request using the [Request: Add Knowledge Base Tool to Collection](#add-knowledge-base-tool) operation.
 
-###### Chatting with History {#retrieve-and-generate-with-history}
+###### 4.2.1.3.1 Chatting with History {#retrieve-and-generate-with-history}
 
 The `RetrieveAndGenerate` operation only allows a single user message to be part of the request. Unlike the `ChatCompletions` operation, it is not supported to send a history of messages to the model. 
 
 The history can be enabled using the `SessionId` parameter on the [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) entity. By reusing the same `SessionId` value, the model will run in the context of the session. 
+
+##### 4.2.1.4 Image Generation {#image-generation}
+
+{{% alert color="info" %}}
+This activity was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+The `Image Generation` operation can be used to generate one or more images. This operation corresponds to the *ImageGeneration_AmazonBedrock* microflow. Currently *Amazon Titan Image Generator G1* is the only supported model for image generation of the Amazon Bedrock Connector. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `UserPrompt (String)`, `AmazonBedrockConnection (object)`, `GenAICommons.ImageOptions (object)`| `GenAICommons.Response (object)`|
+
+`GenAICommons.ImageOptions` can be an empty object. If provided, it allows you to set additional options for Image Generation. 
+
+`GenAICommons.ImageOptions` can be created by using the `Image: Create Options` operation of GenAI Commons.
+
+To retrieve actual image objects from the response, the `Image: Get Generated Image (Single)` or `Image: Get Generated Images (List)` helper operations from GenAICommons can be used. 
+
+For Titan Image models, the `Image Generation: Add Titan Image Extension` operation can be used to configure Titan image-specific values (currently only *NegativeText*). 
+
+##### 4.2.1.5 Embeddings (single string) {#embeddings-single-string}
+
+The `Embeddings (single string)` activity can be used to generate an embedding vector for a given input string with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_SingleString_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `InputText`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For Cohere Embed and Titan Embeddings, the request can be associated to their respective EmbeddingsOptions extension object which can be created with the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (single string) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family and or Titan Embeddings v2.
+
+##### 4.2.1.6 Embeddings (chunk collection) {#embeddings-chunk-collection}
+
+The `Embeddings (chunk collection)` activity can be used to generate a collection of embedding vectors for a given collection of text chunks with one of the Cohere Embed models or Titan Embeddings v2. This operation corresponds to the **Embeddings_ChunkCollection_AmazonBedrock** microflow.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
+
+For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+
+Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
+
+##### 4.2.1.7 Retrieve {#retrieve}
+
+The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. This operation corresponds to the *Retrieve* microflow. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
 #### 4.2.2 GenAI Commons Helper Operations
 
@@ -838,21 +1101,10 @@ Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-c
 
 This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
-##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
 
-Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
-
-This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** microflow.
-
-| Input | Output |
-| --- | --- |
-| `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
-
-##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
+##### 4.2.2.2 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
 
@@ -862,7 +1114,7 @@ This operation corresponds to the **RetrieveAndGenerateRequest_Extension_Create*
 | --- | --- |
 | `GenAICommons.Request (object)`, `KnowledgeBaseId (string)` | *none* |
 
-##### 4.2.2.4 Request: Add Retrieve And Generate Request Extension {#add-rag-extension}
+##### 4.2.2.3 Request: Add Retrieve And Generate Request Extension {#add-rag-extension}
 
 Use this microflow to add a new [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) object to your request. This is required in order to use the [Retrieve And Generate](#retrieve-and-generate) operation successfully.
 
@@ -870,7 +1122,125 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 | Input | Output |
 | --- | --- |
-| `GenAICommons.Request (object)`, `KmsKeyArn (string, optional)`, `SessionId (string, optional)`, `Enum_RetrieveAndGenerateType (enumeration, optional)` | `RetrieveAndGenerateRequest_Extension (object)` |
+| `GenAICommons.Request (object)`, `KmsKeyARN (string)`, `SessionId (string)`, `Enum_RetrieveAndGenerateType (enumeration)` | `RetrieveAndGenerateRequest_Extension (object)` |
+
+`KmsKeyARN`, `SessionId`, and `Enum_RetrieveAndGenerateType` can be empty, in which case they are not sent to the Bedrock API.
+
+##### 4.2.2.4 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to add a new [TitanImageOptions_Extension](#titan-image-options-extension) object to your GenAICommons.ImageOptions object. This will allow you to configure the **NegativeText** attribute.
+
+This operation corresponds to the **TitanImageOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `NegativeText (string)` | `TitanImageOptions_Extension (object)` |
+
+##### 4.2.2.5 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to set the **Height** and **Width** attributes of your **GenAICommons.ImageOptions** object to any valid image size supported by Titan Image models. The `ENUM_ImageSize_TitanImage` enumeration contains all valid height-width combinations to choose from.
+
+This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
+
+##### 4.2.2.6 Image Generation: Set Randomness {#set-randomness}
+
+{{% alert color="info" %}}
+This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
+{{% /alert %}}
+
+Use this microflow to set the **Seed** and **CfgScale** attributes of your GenAICommons.ImageOptions object. These attributes can be used to influence the randomness of the image generation.
+
+For more information, please refer to the specific model documentation such as [Titan Image Generator G1](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-image.html).
+
+This operation corresponds to the **ImageOptions_SetRandomness** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.ImageOptions (object)`, `Seed (integer)`, `CfgScale (decimal)` | `none` |
+
+`Seed` and `GfgScale` can be empty, in which case they are not sent to the Bedrock API.
+
+##### 4.2.2.7 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
+
+Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
+
+This operation corresponds to the **CohereEmbedOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
+
+##### 4.2.2.8 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+
+Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
+
+This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
+
+##### 4.2.2.9  Request: Add Retrieve Request Extension {#add-r-extension}
+
+Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
+
+To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
+
+##### 4.2.2.10 Request: Add Additional Request Parameter {#add-request-parameter}
+
+Use this microflow to add an additional model-specific request parameter to your request. Please follow this link to find available additional request parameters: [Inference parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html)
+
+This operation corresponds to the **Request_CreateAdditionalRequestParameter** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `Key (string)`, `StringValue (string)`, `DecimalValue (decimal)`, `IntegerValue (integer)` | `none` |
+
+You need to provide a value using either the *StringValue*, *DecimalValue* or *IntegerValue* parameters. For example, if you providing a *StringValue* as value of the parameter, *DecimalValue* and *IntgerValue* should be left **empty**.
+
+##### 4.2.2.11 Request: Add Additional Response Field {#add-response-field}
+
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. Use this microflow to add an additional model-specific response field to your request. 
+
+You can retrieve the additional requested response fields using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+
+This operation corresponds to the **Request_CreateResponseFieldRequest** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `FieldName (string)`| `none` |
+
+If the used model supports that response field, it will be returned as a [ChatCompletionsResponse](#chatcompletions-response) object as part of the response.
+
+##### 4.2.2.12 Response: Get Requested Response Fields {#get-response-fields}
+
+Use this microflow to retrieve all requested model-specific response fields from the response. 
+
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-field) operation. 
+
+This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
 
 #### 4.2.3 Other Operations
 
@@ -908,17 +1278,6 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
 
-##### 4.2.3.4 Retrieve {#retrieve}
-
-The `Retrieve` activity allows you to query a knowledge base and retrieve information from it. It requires `ENUM_Region`, `Credentials`, and `RetrieveRequest` as input parameters.
-
-To use this activity, you must set up a knowledge base in your Amazon Bedrock Environment. For more information, see [Knowledge Base](#knowledge-base).
-
-The input and output for this service are shown in the table below:
-
-| Input | Output |
-| --- | --- |
-| `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
 
 ##### 4.2.3.5 StartIngestionJob {#start-ingestion-job}
 
@@ -983,6 +1342,30 @@ Without action groups, the agent will still access associated knowledge bases, b
 For example, it might be beneficial for the agent to dynamically retrieve more information via a REST endpoint or other source, rather than storing all possible information in a knowledge base. To achieve this, a lambda function must first be specified for the REST request and then associated with the agent as part of an action group. 
 
 If you would like to add lambda functions to your agent, please refer to the [AWS documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-lambda.html).
+
+##### 4.2.3.8 ListAgents {#list-agents}
+
+The `ListAgents` activity allows you to list the agents in an account and get information about each of them. It requires `ENUM_Region`, `Credentials`, and `ListAgentsRequest` as input parameters.
+
+To use this activity, you must set up an agent in your Amazon Bedrock environment. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `ListAgentsRequest (object)` | `ListAgentsResponse (object)` |
+
+##### 4.2.3.9 GetAgent {#get-agent}
+
+The `GetAgent` activity allows you to retrieve information about an agent. It requires `ENUM_Region`, `Credentials`, and `GetAgentRequest` as input parameters.
+
+To use this activity, you must set up an agent in your Amazon Bedrock Environment. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `Credentials (object)`, `GetAgentRequest (object)` | `GetAgentResponse (object)` |
 
 ## 5 Troubleshooting
 

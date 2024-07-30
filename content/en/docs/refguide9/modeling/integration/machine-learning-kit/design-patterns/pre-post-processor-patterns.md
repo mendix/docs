@@ -19,7 +19,7 @@ This document explores four pre-processor and post-processor design patterns for
 * [ONNX operators](#onnx-operators)
 * [Hybrid activities](#complex-hybrid)
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
@@ -246,7 +246,7 @@ More often than not the pre- and post-processing steps are deeply coupled with t
 
 There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. 
 
-A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
+A specific example could be this spam filter trained out of a simple corpus that integrates a count-vectorizer into the ONNX file via a pipeline. It is not a Java action but a snipped of the Titanic XGBoost notebook in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/titanic_survivors.ipynb):
 
 ```
 
@@ -349,7 +349,7 @@ ResNet Pre-processor and Model Inference Combined in a Single MLKit Activity
 
 {{< figure src="/attachments/refguide9/modeling/integration/ml-kit/design-patterns/pre-postprocessor-design-patterns/ResNet-pre-processor-Model-Inference-single-activity.png" alt="." class="no-border" >}}
 
-Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Pyhton API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
+Another common scenario is merging multiple ONNX artifacts. For instance, an existing pre- / post-processor ONNX artifact can be merged with an existing/pre-trained ONNX model in order to create a single, all-in-one ONNX model that can handle model inference along with the related pre- / post-processing actions. See the example below, taken from the [Python API Overview](https://github.com/onnx/onnx/blob/main/docs/PythonAPIOverview.md) in the ONNX Model Zoo:
 
 ```
 

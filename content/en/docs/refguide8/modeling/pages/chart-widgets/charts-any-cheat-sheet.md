@@ -7,7 +7,7 @@ weight: 50
 
 ## 1 Introduction
 
-This *cheat sheet* lists the most common chart types, together with a visual sample and the json required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+This *cheat sheet* lists the most common chart types, together with a visual sample and the JSON required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
 
 ## 2 Basic Charts
 

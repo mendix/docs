@@ -1,7 +1,7 @@
 ---
 title: "Logic Recommender"
 url: /refguide/logic-recommender/
-weight: 10
+weight: 20
 description: "Describes Logic Recommender in Mendix Studio Pro."
 aliases:
     - /refguide/mx-assist-logic-bot/

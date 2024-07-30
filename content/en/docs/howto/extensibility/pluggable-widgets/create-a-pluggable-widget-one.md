@@ -85,7 +85,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
 
-As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. 
+As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build` inside your widget's directory.
 
 There is also a watcher available that will rebuild your widget as you make changes to files. Start the watcher by running `npm start`.
 

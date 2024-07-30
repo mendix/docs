@@ -26,7 +26,7 @@ The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
+You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by this module.
 
 ### 1.3 Licensing and Cost
 
@@ -77,7 +77,19 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### 3.3 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. Inside the `USE_ME` folder you will find several subfolders containing operations that depend on the GenAICommons module. The following example microflows have been created for each of these inside the `ExampleImplementations` folder:
+
+* EXAMPLE_ChatCompletions_FunctionCalling
+* EXAMPLE_ChatCompletions_Vision
+* EXAMPLE_ChatCompletions_withHistory
+* EXAMPLE_ChatCompletions_withoutHistory
+* EXAMPLE_Embeddings_ChunkCollection
+* EXAMPLE_Embeddings_SingleString
+* EXAMPLE_Retrieve
+* EXAMPLE_RetrieveAndGenerate
+* EXAMPLE_ImageGeneration_MultipleImages
+
+For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.

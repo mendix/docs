@@ -597,8 +597,8 @@ The client credentials grant type is used when applications request an access to
 
 {{% alert color="info" %}}
 
-* By default, the OIDC SSO module uses the **IdPs for API security only** configuration. If it is not available, it will use the **IdPs for SSO and API security** configuration.
-* To maintain backward compatibility, if `sub` is available in the token, the module will use it to create or update System.User.
+By default, the OIDC SSO module uses the **IdPs for API security only** configuration. If it is not available, it will use the **IdPs for SSO and API security** configuration.
+
 {{% /alert %}}
 
 ## 8 Optional Features{#optional}

@@ -34,7 +34,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
 
 ### 3.1 Creating a Test App {#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
+1. Open Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
     1. In the domain model of **MyFirstModule**, add a new entity.<br />
     2. Add a new attribute of type **String**.<br />
@@ -353,7 +353,7 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
 Congratulations, you have now made a fully functional input widget!
 
-Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
+Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Studio Pro preview.
 
 ## 4 Read More
 

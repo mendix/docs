@@ -17,7 +17,7 @@ This how-to teaches you how to do the following:
 * Add custom validations
 * Create an onChange action
 * Improve accessibility for screen readers 
-* Enable Mendix Studio Pro preview
+* Enable Preview Mode in Mendix Studio Pro
 
 ## 2 Prerequisites
 
@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Mendix Studio Pro): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Studio Pro): 
 
     ```xml
     <propertyGroup caption="Editability">
@@ -48,7 +48,7 @@ To add these restrictions, follow the instructions below:
     </propertyGroup>
     ```
 
-2. Run `npm start` to update the widget and start the watcher if you haven't done so. When viewing in Studio Pro, the `Editability` property can be seen here:
+2. Run `npm start` to update the widget and start the watcher if you have not already done so. When viewing in Studio Pro, the `Editability` property can be seen here:
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  class="no-border" >}}
 
@@ -106,7 +106,7 @@ To add these restrictions, follow the instructions below:
 
     After altering this code, do the following to see your changes:
 
-    1. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
     2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
     3. Click **View App** to see your changes.
 
@@ -114,7 +114,7 @@ To add these restrictions, follow the instructions below:
 
     * The property `disabled` in an input element will behave according to the HTML's specifications — it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
-5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
+5. When you select **Never** for your TextBox widget's `Editable` property in Studio Pro, the widget will function like this: 
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png" alt="editable never result"   width="500"  class="no-border" >}}
 
@@ -141,7 +141,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     2. Set **Variable** to **Entity (MyFirstModule Entity)**.
     3. Set **Member** to **Attribute**, and type *Validation feedback from a microflow* into **Template**.
     4. Click **OK**.
-    5. Click **File** > **Save All** from the Mendix Studio Pro drop-down menu.
+    5. Click **File** > **Save All** from the Studio Pro drop-down menu.
 
 3. To render the message, create a new component *components/Alert.tsx*:
 
@@ -199,7 +199,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     ```
 
     After altering this code, do the following to see your changes:
-    1. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
     2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
     3. Click **View App** to see your changes.
 
@@ -263,7 +263,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
     ```
 
     After altering this code, do the following to see your changes:
-    1. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
     2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
     3. Click **View App** to see your changes.
 
@@ -303,7 +303,7 @@ Until now the components did not keep any state. Each keystroke passed through t
     ```
 
     After altering this code, do the following to see your changes:
-    1. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
     2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
     3. Click **View App** to see your changes.
 
@@ -525,7 +525,7 @@ To make the input widget more accessible for people using screen readers, you wi
     ```
 
     After altering this code, do the following to see your changes:
-    1. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
     2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
     3. Click **View App** to see your changes.
 
@@ -541,7 +541,7 @@ You have now made your widget compatible with screen readers. If a screen reader
 
 ### 3.6 Enabling Preview Mode
 
-To easily view changes to your widget while in Mendix Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
+To easily view changes to your widget while in Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 

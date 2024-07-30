@@ -19,7 +19,7 @@ If you are using Mendix 9.20 and above, ensure you are using version 2.0.0 or ab
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-If you are migrating to OIDC module version 3.0.0 and above, you need to include the [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency and configure your app to run the startup microflow (OIDC.ASU_OIDC_Startup) in the OIDC module as part of the after-startup microflow.
+If you are migrating to OIDC module version 3.0.0 and above, you need to include the [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency and configure your app to run the startup microflow (OIDC.Startup) in the OIDC module as part of the after-startup microflow. For the module version 3.1.0 and above, replace the OIDC.Startup with OIDC.ASU_OIDC_Startup as part of after-startup microflow. For more information, see the [Upgrading the OIDC SSO Module](#upgrade) section below.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -180,7 +180,17 @@ If your app is already developed using Mendix 9 or above, but uses the community
 1. Import the OIDC platform edition module from the Marketplace.
 2. Import the [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) module from the Marketplace.
 
-## 4 Design-time App configuration{#app-configuration}
+### 3.3 Upgrading the OIDC SSO Module{#upgrade}
+
+This section provides an overview of updates for the OIDC SSO module across different versions. It includes new dependencies, snippet replacements, and microflow renaming to ensure a smooth transition while migrating to higher module versions.
+
+| Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information|
+| --- | --- | --- | --- |
+| 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | -Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency <br> -Set `OIDC.Startup` microflow as part of the after-startup microflow | -New UserCommons module <br> -Assign UserProvisioning for existing IdP configurations |
+| 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic ` snippet removed from module |
+| 9.24.2 and above | 3.1.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | `OIDC.Startup` microflow renamed to `OIDC.ASU_OIDC_Startup` |
+
+## 4 Design-time App Configuration{#app-configuration}
 
 This section shows you how to configure your app to use OIDC for SSO.
 
@@ -275,7 +285,7 @@ This section describes how you can configure your IdP in your Mendix app using t
 * **IdPs for SSO and API security**: Use this more extensive configuration screen if you are implementing SSO and optionally API security.
 * **IdPs for API security only**: Use this simpler configuration screen if you are configuring an IdP that is only used for API security (i.e., Client Credential grant). For more information, see the [API Security Configuration for Client Credential Grant](#client-credential-grant) section below.
 
-You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration](#azure), and [Amazon Cognito](/appstore/modules/aws/amazon-cognito/). In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
+You can configure your OIDC client using the app pages – see [General OIDC Clients](#general-oidc), [Microsoft Entra ID Client Configuration for APIs](#azure), and [Amazon Cognito](/appstore/modules/aws/amazon-cognito/). In version 2.3.0 and above, you can also use constants to configure your app at deployment time – see [Automated Deploy-time SSO Configuration](#deploy-time), below.
 
 #### 5.2.1 General OIDC Clients {#general-oidc}
 
@@ -349,7 +359,7 @@ Now, you can acquire tokens which can be validated using JWKS URI.
 
 For more information about configuring your app for OIDC with Amazon Cognito, see [Amazon Cognito: Configuring the Required Settings in Your Mendix App](/appstore/modules/aws/amazon-cognito/#cognito).
 
-### 5.3 Deploytime configuration of Your IdP at Your App{#deploytime-idp-configuration}
+### 5.3 Deploytime Configuration of Your IdP at Your App{#deploytime-idp-configuration}
 
 #### 5.3.1 Automated Deploy-time SSO Configuration{#deploy-time}
 
@@ -373,7 +383,7 @@ The following error messages will be displayed when you try to edit/delete.
 * error at delete:  You cannot delete as it is created from deployment.
 {{% /alert %}}
 
-##### 5.3.1.1 Customizing default deploy-time configuration
+##### 5.3.1.1 Customizing Default Deploy-time Configuration
 
 By default, the `Custom_CreateIDPConfiguration` microflow in the **MOVE_ME** folder of the OIDC module uses the `Default_CreateIDPConfiguration` microflow. Review the microflow `Custom_CreateIDPConfiguration` in the **MOVE_ME** folder. This is where you can change the default IdP configuration at Deploytime Configuration.
 
@@ -381,7 +391,7 @@ In this configuration, you have several options to customize the Identity Provid
 
 In this non-default configuration method, users have the flexibility to introduce your own constants by creating custom IdP configurations.
 
-##### 5.3.1.2 Deploy-time IdPs for SSO and API security Configuration
+##### 5.3.1.2 Deploy-time IdPs for SSO and API Security Configuration
 
 {{% alert color="info" %}}
 **IdPs for SSO and API security** configuration supports both Authorization code and Client Credential grant type.
@@ -394,7 +404,7 @@ The following constants are mandatory when creating an OIDC SSO IdP configuratio
 * **ClientSecret** – the client secret (see security best-practice, above)
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
 
-For more information on creating user provisioning with constants, see the [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) section below.
+For more information on creating user provisioning with constants, see the [Deploy-time User Provisioning Configuration](#custom-provisioning-dep) section below.
 
 The following constants are optional:
 
@@ -468,7 +478,7 @@ When the `IsClientGrantOnly` constant is set to *true*, the OIDC SSO module cons
 
 Initially your app will not have any end-users. The OIDC module provides so-called Just-In-Time (JIT) user provisioning. This means that an end-user will be created in your app when they log in for the first time. If you do not want JIT user provisioning, it is possible to disable it as described in the section [Custom User Provisioning at Runtime](#custom-provisioning-rt).
 
-By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 2.4.0 and above) [Custom User Provisioning at Deploy Time](#custom-provisioning-dep) or [Custom User Provisioning at Runtime](#custom-provisioning-rt).
+By default, end-users are provisioned using the `Account` object in the Administration module. If you need to use a custom user entity you can do this via [Custom User Provisioning Using a Microflow](#custom-provisioning-mf) or (in version 2.4.0 and above) [Deploy-time User Provisioning Configuration](#custom-provisioning-dep) or [Custom User Provisioning at Runtime](#custom-provisioning-rt).
 
 ### 6.1 Default User Provisioning
 

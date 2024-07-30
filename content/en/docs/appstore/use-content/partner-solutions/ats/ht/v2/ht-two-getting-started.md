@@ -193,7 +193,7 @@ In this tab, you can connect your datasets to a test case. Use the arrow to sele
 If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 {{% /alert %}}
 
-For further documentation on how-to create a data-driven test case see [How-to create a data-driven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
+For further documentation on how-to create a data-driven test case, see [How-to create a data-driven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
 
 #### 4.2.3 Show Usages Tab
 

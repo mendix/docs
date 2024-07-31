@@ -94,7 +94,7 @@ For operations that do not depend on the GenAICommons, you can take a different 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
-4. In the **App Explorer**, in the **AmazonBedrockConnector (other)** section, find the **ListFoundationModels** activity.
+4. In the **Toolboxr** find the **ListFoundationModels** activity , in the **Amazon Bedrock (other)** section,.
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
@@ -107,6 +107,8 @@ For operations that do not depend on the GenAICommons, you can take a different 
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+
+You can follow a similar approach to implement any of the other operations in **Amazon Bedrock (other)**.
 
 ### 3.4 Invoking Specific Models by Using the InvokeModel Operation
 

@@ -10,8 +10,8 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.13.0
 
-* We fixed a bug where error handling for an activity was lost after deploying an app.
-* We fixed a bug where extensions where being reloaded during the creation of a deployment package.
+* We fixed a bug where error handling for an activity was lost after you deployed an app.
+* We fixed a bug where extensions got reloaded during the creation of a deployment package.
 
 ## Version 10.12.0
 

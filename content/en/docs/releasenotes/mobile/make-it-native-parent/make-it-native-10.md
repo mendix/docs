@@ -8,6 +8,14 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 3.0.0 / iOS 3.0.0
+
+**Release date: July 31, 2023**
+
+### Improvements
+
+* We have upgraded our React Native version to 0.73.9. This significant update improves performance and increases compatibility with React Native's latest features.
+
 ## Android 2.0.1
 
 **Release date: April 4, 2024**

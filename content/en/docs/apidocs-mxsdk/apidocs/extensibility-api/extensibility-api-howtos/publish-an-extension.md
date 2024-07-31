@@ -26,4 +26,4 @@ To be able to export extension add-on modules, you need to have the feature flag
 
 5. Click **OK** to save the settings, and export the module.
 
-You can now [publish the extension in the Marketplace](/appstore/sharing-content/) or share it directly with other Mendix developers.
+You can now [publish the extension in the Marketplace](/appstore/sharing-content/#adding) or share it directly with other Mendix developers.

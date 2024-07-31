@@ -2,7 +2,7 @@
 title: "Export an Extension"
 linktitle: "Export an Extension"
 url: /apidocs-mxsdk/apidocs/extensibility-api/export-an-extension/
-weight: 16
+weight: 22
 ---
 
 ## 1 Introduction

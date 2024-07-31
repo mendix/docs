@@ -9,8 +9,8 @@ weight: 6
 These release notes cover changes to the Extensibility API.
 
 ## Version 10.13.0
-* We fixed a bug where error handling for an activity was lost after deploying an app.
 
+* We fixed a bug where error handling for an activity was lost after deploying an app.
 * We fixed a bug where extensions where being reloaded during the creation of a deployment package.
 
 ## Version 10.12.0
@@ -32,11 +32,9 @@ These release notes cover changes to the Extensibility API.
 ## Version 10.7.0
 
 * We renamed the `MicroflowService UpdateActionAfterRename` method to `RenameVariable`.
-
 * We enable error dialogs for extensions when using the `--enable-extension-development` feature flag.
 
 ## Version 10.6.0
 
 * The Extensibility API is released for beta usage. 
-
 * We fixed a bug when dealing with model elements detached from a container.

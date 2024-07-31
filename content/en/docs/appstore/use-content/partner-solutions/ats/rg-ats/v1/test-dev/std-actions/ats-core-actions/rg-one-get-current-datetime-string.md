@@ -9,7 +9,7 @@ Returns the current date and time in supplied format (Java date format) (for exa
 
 ## 2 Usage
 
-Pass the format for the datetime. For more informations about formating datetime in Java, see the [SimpleDateFormat](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) Java reference.
+Pass the format for the datetime. For more informations about formatting datetime in Java, see the [SimpleDateFormat](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) Java reference.
 
 ## 3 Input Parameters
 

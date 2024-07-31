@@ -103,15 +103,23 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 ### 3.3 Folders
 
+#### Folder Names
+
+Mendix recommends to use unique folder names that clearly identify their contents. You can use any combination of letters and symbols to identify a folder. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* or *OData_APIs* to reflect its function. 
+
+Keep in mind that folders do not affect the full path of the resource. For example, when referencing the folder **ODataAPIs** in MyFirstModule, the path name would be *MyFirstModule.ODataAPIs*. 
+
+#### Folder Structure
+
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
 The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. Mendix recommends combining the guidelines below in a way that fits your app.
 
-#### 3.3.1 Process-Related Sources
+##### 3.3.1 Process-Related Sources
 
 Every app consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
 
-#### 3.3.2 Entity-Related Sources
+##### 3.3.2 Entity-Related Sources
 
 Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 

@@ -20,10 +20,12 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-The Portfolio Management tool has the following improvements:
+- In Portfolio Management, when a Portfolio Manager approves the [access request](/developerportal/portfolio-management/access-management/#access-requests) of a user, now they can assign an access role different than the one the user requested.
 
-* In [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view), now you can drag initiative cards around within a column to change their sequence or drag them to different columns to change their stages. 
-* When a Portfolio Manager approves the [access request](/developerportal/portfolio-management/access-management/#access-requests) of a user, they can assign an access role different than the one the user requested.
+#### New features
+
+* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](https://github.com/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the  same stage.
+
 ### July 31, 2024
 
 #### Fixes

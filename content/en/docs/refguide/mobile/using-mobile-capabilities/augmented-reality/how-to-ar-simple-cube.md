@@ -32,7 +32,7 @@ If you want to make use of the **Realistic** lighting option which can make your
 
 Create a new app by following these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Blank Native Mobile App**.
 1. Click **Use this starting point.**
 1. Name your app *Hello World* and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the intro screen widget and other containers.

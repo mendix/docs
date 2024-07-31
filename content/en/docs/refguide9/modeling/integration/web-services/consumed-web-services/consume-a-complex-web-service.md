@@ -39,7 +39,7 @@ To import a web service using the wizard, follow these steps:
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-import-schema.png" alt="wizard banner" class="no-border" >}}
 
 3. On the **Import Web Service** dialog box, select **Web service operation** and click **Next**.
-4. In the **New Web Service Operation** dialog box, for **WSDL source** , specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
+4. In the **New Web Service Operation** dialog box, for **WSDL source**, specify the WSDL to be used for this imported web service. For the **WSDL source** you can either provide the **URL** (for example, http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL) or load a **File** from your computer.
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-complex-web-service/wizard-new-operation.png" class="no-border" >}}
 

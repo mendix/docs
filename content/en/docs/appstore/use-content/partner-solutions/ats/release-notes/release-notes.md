@@ -897,7 +897,7 @@ It is now possible to see a video recording for test cases executed on BrowserSt
 
 ### Fixes
 
-* The built-in function **Assert Condition Fails** was not working due to a bug . It is now fixed.
+* The built-in function **Assert Condition Fails** was not working due to a bug. It is now fixed.
 * The built-in function **Assert at least one not null** was not working due to a bug. It is now fixed.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
 * Coping a data-driven test case did not copy the association to the dataset. This is now fixed.
@@ -1102,7 +1102,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ### Known Issues
 
-* The grid that shows the jobs on the **Test Runs** page is refreshing every 3 seconds. This can result in flickering on the highlighted row . If you try to click a button in the exact moment of the refresh, it w will not work. The effect is more pronounced on slower computers that take longer to render the refreshed data.
+* The grid that shows the jobs on the **Test Runs** page is refreshing every 3 seconds. This can result in flickering on the highlighted row. If you try to click a button in the exact moment of the refresh, it will not work. The effect is more pronounced on slower computers that take longer to render the refreshed data.
 
 ## 2.4.1
 

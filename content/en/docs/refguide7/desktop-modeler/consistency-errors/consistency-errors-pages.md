@@ -16,7 +16,7 @@ The scheme below shows that the data source of the list view has been set to **D
 
 {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-list-view-error.png" alt="Data Source Consistency Error Scheme" class="no-border" >}}
 
-The table below describes the most common errors you can come across when configuring a list view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors you can come across when configuring a list view, causes of these errors, and ways to fix them. 
 
 | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -31,7 +31,7 @@ Not configuring a [data source](/refguide7/data-sources/) for a [data view](/ref
 
 {{< figure src="/attachments/refguide7/desktop-modeler/consistency-errors/consistency-errors-pages/dm-data-view-no-list-widget.png" alt="Data View With no List Widget Configured" class="no-border" >}}
 
-The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors you can come across when configuring a data view, causes of these errors, and ways to fix them. 
 
 | Text in the Checks Panel                                     | Cause of an Error                                            | Way to Fix                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

@@ -24,7 +24,7 @@ The configuration of *Any chart* widgets is in another document, here: [Any Char
 
 ## 2 Common configuration
 
-The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
+The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
 ### 2.1 Chart properties
 

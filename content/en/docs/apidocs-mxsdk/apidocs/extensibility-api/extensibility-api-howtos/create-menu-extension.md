@@ -32,7 +32,7 @@ It is handy to have a single App where the extension is used for the testing pur
 1. Create new Mendix App to use for extension testing, based on a starter app of your choice. You can also use an existing app.
 2. Open App in Windows Explorer by selecting **App** > **Show App Directory in Explorer**.
 3. Create a new folder `extensions` inside the app directory.
-4. Create a subfolder named after your extension, for example,  `MyCompany`, inside the `extensions` folder.
+4. Create a subfolder named after your extension, for example, `MyCompany`, inside the `extensions` folder.
 5. Copy the full path of the subfolder by pressing <kbd>Shift</kbd> and right-clicking at the same time, and then selecting **Copy as path**.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`

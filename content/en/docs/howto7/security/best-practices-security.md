@@ -38,7 +38,7 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
 * Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:

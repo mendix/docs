@@ -176,13 +176,13 @@ microflowCallActivity.Action = microflowCallAction;
 
 microflowCallAction.OutputVariableName = outputVariableName;
 ```
-In order to create `IActionActivity`,  `IMicroflowCallAction` must also be created, and set as the `Action` property of the `IActionActivity`.
+In order to create `IActionActivity`, `IMicroflowCallAction` must also be created, and set as the `Action` property of the `IActionActivity`.
 
 Then, for `IMicroflowCallAction`, `IMicroflowCall` must also be created and set as the `MicroflowCall` property of the `IMicroflowCallAction`.
 
-Next,  `QualifiedName` of the microflow, which is to be called by this activity, must be set as the `Microflow` property of the `MicroflowCall` object.
+Next, `QualifiedName` of the microflow, which is to be called by this activity, must be set as the `Microflow` property of the `MicroflowCall` object.
 
-Finally, you can set `OutputVariableName` on `IActionActivity` , which is what the calling microflow will read from the called microflow.
+Finally, you can set `OutputVariableName` on `IActionActivity`, which is what the calling microflow will read from the called microflow.
 
 ## 4 Passing Parameters
 

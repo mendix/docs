@@ -48,7 +48,7 @@ The OIDC Provider has the following features and limitations:
 #### 1.2.2 Limitations
 
 * The hybrid resource owner password credential is not supported, although the OIDC Provider may contain some (rudimentary) implementation to support it.
-* The OIDC Provider service ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in an authentication request . Instead, the OIDC Provider service will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
+* The OIDC Provider service ignores "email", "phone" and "profile" scope values (as specified by OIDC specs) when the client includes these in an authentication request. Instead, the OIDC Provider service will include user claims in an ID-token based on a custom microflow, regardless of the scopes in the request.
 * Front channel and back-channel logout are implemented as alpha features.
 * The module does not support `CustomRedirectLogicMicroflow` constant.
 

@@ -453,7 +453,7 @@ The available advanced options and their usage are described below.
 
 #### 7.3.1 Layout Options for All Charts
 
-The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`,  and `yaxis`. 
+The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`, and `yaxis`. 
 
 ```json
 {

@@ -157,7 +157,7 @@ And guess what? We have a tool to help you with that. Mendix Portfolio Managemen
 
 {{< figure src="/attachments/quickstarts/leading-mendix-implementation/portfolio-landscape-overview.png"  >}}
 
-If you would like to learn more about how to manage your portfolio of ideas and applications, . You might also have done a portfolio workshop with Mendix experts before, in which case, you may already have an Excel file with your list of initiatives that you can easily import into your brand new board. If not, we discuss your first app selection in more detail in 3.
+If you would like to learn more about how to manage your portfolio of ideas and applications. You might also have done a portfolio workshop with Mendix experts before, in which case, you may already have an Excel file with your list of initiatives that you can easily import into your brand new board. If not, we discuss your first app selection in more detail in 3.
 
 #### 2.3.2 People: Building a Strong Mendix Team
 
@@ -452,7 +452,7 @@ You should have already created your portfolio in section [Summary](#summary), i
 
 If you have done a portfolio workshop already and maybe have your list of initiatives in an Excel file, you can easily import them. If not, just create a few cards that represent your ideas. Your Mendix team can also help you with this, so please do not hesitate to reach out to them to go over everything together.
 
-Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated learning path . For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
+Portfolio management is a key activity that ensures you are always creating solutions that bring the most value to your organization (and since we’re talking Mendix here, this is where you also decide if Mendix is the right tool for each one of the ideas). This means that you (maybe together with your stakeholders) need to go over your main portfolio, keep initiatives up to date and adjust or reprioritize if needed. You can learn a lot more about this process in the dedicated learning path. For now, the most important thing is to list the initiatives that are top of mind for you and use that input to choose the ideal first app. 
 
 So, let’s add your initiatives. Click the *Create Initiative* button on the top right and start jotting down your ideas.
 
@@ -640,7 +640,7 @@ Some highlights to consider:
 
 * Cons: Requires your own experienced staff to set up and maintain with reduced Mendix Support due to lack of access and visibility.
 
-For Private deployment , **please be ready to start that process immediately in order to avoid development and go-live date delays**. 
+For Private deployment, **please be ready to start that process immediately in order to avoid development and go-live date delays**. 
 
 See below for Private Cloud responsibility matrix:
 

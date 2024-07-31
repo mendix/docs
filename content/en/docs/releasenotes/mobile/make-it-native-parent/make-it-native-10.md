@@ -99,7 +99,7 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ## iOS 1.0.0
 
-**iOS Release date: June 27th , 2023**
+**iOS Release date: June 27th, 2023**
 
 This is the official release of the iOS version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0.
 

@@ -41,7 +41,7 @@ For more information on building native mobile apps, see the [Build a Native Mob
 
 To start a new app based on a template, follow these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Blank Native Mobile App**.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
 4. Click **Run Locally** ({{% icon name="controls-play" %}}) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.

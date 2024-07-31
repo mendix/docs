@@ -142,7 +142,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
 | <kbd>Home</kbd> | Highlights and focus on the start event of the current microflow. |
 | <kbd>End</kbd> | Highlights and focus on an end event in the current microflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
-| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
+| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd>, the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}

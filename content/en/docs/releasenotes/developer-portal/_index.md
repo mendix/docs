@@ -20,7 +20,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Fixes
 
-* We fixed a bug where story points set in your [Epics](/developerportal/project-management/epics/board/) story would be reset to 0 (zero) when changing the status of the story in the [Stories Pane](/refguide/stories-pane/)
+* We fixed a bug that caused story points in your [Epics](/developerportal/project-management/epics/board/) to reset to zero when you changed the status of the story in the [Stories Pane](/refguide/stories-pane/).
 
 ### July 28, 2024
 

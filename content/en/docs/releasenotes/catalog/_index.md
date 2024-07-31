@@ -12,6 +12,18 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### August 01, 2024
+
+#### Improvements
+
+* In the v5 of [Catalog Search  API](/apidocs-mxsdk/apidocs/catalog-apis/#search) OData Actions have been included. Users can now perform searches using name , summary or Description of OData Actions and view OData Action details in the Search responses.
+
+* Existing OData Contracts stored in the Catalog are reparsed through a migration process to store the OData Actions.
+
+#### Fixes
+
+* We fixed a bug where Notifications about newly registered endpoints where not showing correct number.
+
 ### July 18, 2024
 
 #### Fixes

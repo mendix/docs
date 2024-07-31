@@ -20,7 +20,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### New features
 
-* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the  same stage.
+* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the same stage.
 
 #### Improvements
 

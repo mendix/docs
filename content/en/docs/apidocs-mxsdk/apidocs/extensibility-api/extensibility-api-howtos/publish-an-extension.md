@@ -19,7 +19,7 @@ To be able to export extension add-on modules, you need to have the feature flag
 
 2. Open the module settings and go to the **Export** tab.
 
-3. Set module type to *Add-on module*.
+3. Set **Module type** to *Add-on module*.
 
 4. In the **Extension Name** field, select the name of your extension. This must match with your module name.
     {{% alert color="info" %}} If you do not set the **Extension Name** field, your feature flag is not configured correctly. For more information, see [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/). {{% /alert %}}

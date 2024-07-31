@@ -119,9 +119,9 @@ If you are using [pgAdmin](https://www.pgadmin.org/docs/), follow these steps:
 
 1. Right-click the migrated backup and select **Backup**.
 1. In the **Filename** field, click **Save As** ({{% icon name="folder-closed" %}}) and save the file as a *.backup* file.
+{{< figure src="/attachments/howto/data-models/migrating-your-mendix-database/saving-backup-file.png" alt="" >}}
 1. Click **Backup** and wait for the process to complete.
-1. Move the modified *.backup* data to the **db** folder.
-1. Compress the folders (**db**, **tree** and **.metadata**) into a TAR file using an archival tool, such as 7-Zip.
+1. If you want to upload a [full snapshot](/developerportal/operate/restore-backup/#full-snapshot) instead of just the database, move the modified *.backup* data to the **db** folder within your (unzipped) **.tar.gz** folder. Then compress the folders (**db**, **tree** and **.metadata**) into a TAR file using an archival tool such as 7-Zip.
 
 ### 4.3 Step 3: Uploading an Exported PostgreSQL Database to a Mendix Cloud Database
 

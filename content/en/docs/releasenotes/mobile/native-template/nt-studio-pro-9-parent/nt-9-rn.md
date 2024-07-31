@@ -1,7 +1,7 @@
 ---
 title: "Native Template 9"
 url: /releasenotes/mobile/nt-9-rn/
-weight: 8
+weight: 7
 description: "Native Template 9 release notes."
 ---
 
@@ -11,4 +11,4 @@ description: "Native Template 9 release notes."
 
 ### Improvements
 
-* We upgraded our React Native version to 0.73.8.
+* We upgraded our React Native version to 0.73.8. This significant update improves performance and increases compatibility with React Native's latest features.

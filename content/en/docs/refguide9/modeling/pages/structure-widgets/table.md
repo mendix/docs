@@ -49,7 +49,7 @@ A cell has the following properties:
 
 ### 2.3 Performing Actions on Rows
 
-To perform an action on a row , select a row and right-click it. A list of actions will open. 
+To perform an action on a row, select a row and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 
@@ -60,7 +60,7 @@ You can perform the following actions:
 
 ### 2.4 Performing Actions on Columns
 
-To perform an action on a column , select a column and right-click it. A list of actions will open. 
+To perform an action on a column, select a column and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 

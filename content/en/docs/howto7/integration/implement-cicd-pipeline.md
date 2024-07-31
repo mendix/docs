@@ -36,7 +36,7 @@ To be able to use the Mendix APIs to access your environment, you will need to g
 
 To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/) and the [Build API](/apidocs-mxsdk/apidocs/build-api/). In this scenario, a package will be built for the latest revision, but you can use whatever version you wish.
 
-#### 3.2.1 Geting the Latest Revision
+#### 3.2.1 Getting the Latest Revision
 
 To get the latest revision, use the [Retrieve Branch API call](/apidocs-mxsdk/apidocs/team-server-api/#retrieve-branch) to get the `LatestRevisionNumber` from the output.
 
@@ -108,7 +108,7 @@ When the tests are completed (check the status for when completed is `true`), yo
 
 {{% alert color="info" %}}
 
-You can also (manually) create a web service that exposes the standard junit structure from the data available in the UnitTesting module.
+You can also (manually) create a web service that exposes the standard unit structure from the data available in the UnitTesting module.
 
 {{% /alert %}}
 
@@ -128,7 +128,7 @@ The sections below present examples of how to call a Mendix API with Jenkins (us
 
 To call a REST service with Jenkins (using a groovy script), install the [HTTP Request Plugin](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin). If you also want to bind credentials to variables (see `withCredentials` in the code snippet below), install the [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/). The `Mendix-Username` and `Mendix-ApiKey` will be set in a `customHeaders` array.
 
-This code snippet example gets the latest revision numbere so it can be used when building the deployment package:
+This code snippet example gets the latest revision number so it can be used when building the deployment package:
 
 {{< figure src="/attachments/howto7/integration/implement-cicd-pipeline/12Jenkins.png" class="no-border" >}}
 

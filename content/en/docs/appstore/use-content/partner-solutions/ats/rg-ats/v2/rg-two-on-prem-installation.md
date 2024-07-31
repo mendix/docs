@@ -49,7 +49,7 @@ ATS itself has no requirements regarding the database.
 
 ### 3.5 Selenium
 
-Only the selenium server version that is delivered as part of the ATS installation is supported.
+Only the Selenium server version that is delivered as part of the ATS installation is supported.
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---

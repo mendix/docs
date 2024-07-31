@@ -18,7 +18,7 @@ In this document, you will learn how you can incorporate ML into your Mendix app
 
 To complete this tutorial, you need the following tools:
 
-* [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/) - For creating and training the model. Amazon SageMaker is a fully managed machine-learning service from Amazon that helps you build, train and deploy machine learning models quickly. It offers a wide range of features that include, but are not limited to, Jupyter Notebooks, Pipelines,  SageMaker Studio, Canvas and RStudio.
+* [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/) - For creating and training the model. Amazon SageMaker is a fully managed machine-learning service from Amazon that helps you build, train and deploy machine learning models quickly. It offers a wide range of features that include, but are not limited to, Jupyter Notebooks, Pipelines, SageMaker Studio, Canvas and RStudio.
 * Python 3.0 - To write the code.
 * Mendix Studio Pro 10.1.1 or higher - The latest version of Mendix; includes the ML Kit required to create tailored smart end-user apps.
 

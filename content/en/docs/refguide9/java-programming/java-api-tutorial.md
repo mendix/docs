@@ -102,7 +102,7 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 	inputStream = Core.getFileDocumentContent(iMendixObject);
 	newAttachment = Attachment.create(context);
 	newAttachment.setAttachment_GenericObject(destinationObject);
-	Core.storeFileDocumentContent(context, newAttachment.getMendixObject(), (String) iMendixObject.getValue(system.proxies.Document.MemberNames.Name.toString()),  inputStream);
+	Core.storeFileDocumentContent(context, newAttachment.getMendixObject(), (String) iMendixObject.getValue(system.proxies.Document.MemberNames.Name.toString()), inputStream);
 }
 ```
 

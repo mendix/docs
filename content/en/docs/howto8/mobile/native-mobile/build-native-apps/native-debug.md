@@ -79,8 +79,8 @@ To use the Make It Native app with React Developer Tools, do the following:
 
 With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
 
-1. Install the LTS of [node.js](https://nodejs.org/en/).
-2. Open your command line interface (CLI).
+1. Install the LTS of [Node.js](https://nodejs.org/en/).
+2. Open your command-line interface (CLI).
 3. Run `npm i -g react-devtools@3` to install the React developer tools.
 4. Run `react-devtools`.
 

@@ -17,7 +17,7 @@ In this tutorial, you will learn to use a native mobile navigation profile. Apps
 
 ### 1.1 Getting to Know Mendix Native Mobile
 
-Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance,  advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
+Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance, advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. This tutorial will familiarize you with the following Mendix native mobile concepts:
 

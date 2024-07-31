@@ -5,9 +5,9 @@ url: /appstore/partner-solutions/ats/rg-two-provider_platform_browser_compatibli
 
 ## 1 Introduction
 
-The following tables document provider, operating system, and browser compatability. 
+The following tables document provider, operating system, and browser compatibility. 
 
-## 2 Browserstack
+## 2 BrowserStack
 
 Operating System       | Chrome   | Firefox  | Internet Explorer
 ---------------------  | :------: | :------: | :------------------:
@@ -18,7 +18,7 @@ Operating System       | Chrome   | Firefox  | Internet Explorer
 **macOS Sierra**       | &#10003; | &#10003; | N/A
 **OS X El Capitan**    | &#10003; | &#10003; | N/A
 
-## 3 Saucelabs
+## 3 Sauce Labs
 
 Operating System       | Chrome   | Firefox  | Internet Explorer
 ---------------------  | :------: | :------: | :------------------:

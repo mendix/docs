@@ -902,7 +902,7 @@ To do this you will need to do the following:
 5. Copy the files from your Visual Studio extension projects `bin/debug` subfolder into your mendix app extension folder: [`Mendix App]/extensions/MyTodoExtension`.
 6. Run Studio Pro. 
 
-While developing extensions,  also use command line flag to enable extensions as follows:
+While developing extensions, also use command line flag to enable extensions as follows:
 
 1. Navigate to your Studio Pro Installation folder.
 2. From the command line, call the following command: `.\studiopro.exe --enable-extension-development`.

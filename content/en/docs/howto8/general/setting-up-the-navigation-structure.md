@@ -120,7 +120,7 @@ Now that you have created a menu structure it is time to start using it on pages
 
 The menu widget is now showing the navigation items created in the navigation editor.
 
-To avoid adding the menu widget on every page in your project,  you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets/).
+To avoid adding the menu widget on every page in your project, you can use a layout. With layouts you can define a structure for pages in your project. You can define where the menu should be rendered and you can simply reuse that layout for all or several pages. For more information on how to use layouts, see [How to Use Layouts and Snippets](/howto8/front-end/layouts-and-snippets/).
 
 ## 7 Read More
 

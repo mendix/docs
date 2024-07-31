@@ -173,13 +173,13 @@ The default class to style all page titles is named `PageTitle`.
 
 The layout grid widget can be used to structure the content on your page. You are able to create rows and columns which you can configure to have fixed or dynamic sizing.
 
-The widget’s style properties are divided over several objects: `LayoutGrid`, `row`, `noGuttersRow`, `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, and `noGutters`.
+The widget’s style properties are divided over several objects: `LayoutGrid`, `row`, `noGuttersRow`, `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`, `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, and `noGutters`.
 
 `col` is being applied when the Width property on a column is "Auto-fill".
 
 `colFitToContent` is being applied when the Width property on a column is "Auto-fit content".
 
-`col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is "Manual". Only one class is applied based on the related Size property.
+`col1`, `col2`, `col3`, `col4`, `col5`, `col6`, `col7`, `col8`, `col9`, `col10`, `col11`, `col12` are applied when the Width on a column property is "Manual". Only one class is applied based on the related Size property.
 
 `noGuttersRow` (Row) and `noGutters` (Column) are being applied when the Spacing between columns property on a row is set to "No".
 
@@ -195,7 +195,7 @@ The `row`, `noGuttersRow`:
 <container></container>
 ```
 
-The `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`,  `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, `noGutters`:
+The `col`, `colFitToContent`, `col1`, `col2`, `col3`, `col4`, `col5`, `col6`, `col7`, `col8`, `col9`, `col10`, `col11`, `col12`, `noGutters`:
 
 ```xml
 <container></container>

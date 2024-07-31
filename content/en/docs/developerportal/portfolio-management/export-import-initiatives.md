@@ -71,7 +71,7 @@ All the details of an initiative are exported, except the data of the following 
 
    * The Excel file should not contain any columns other than the ones listed in the table below. The data in the Excel file should meet the requirements specified in the table below.
 
-    {{% alert color="info" %}}If you import initiatives using an Excel file [exported from a portfolio](#export-initiatives), the Excel file contains the following additional columns: **RICEScore**, **WSJFScore**, **ExpectedValue**,  and **CreationDate**. You can import this Excel file as it is, but the data from these columns will not be imported.{{% /alert %}}
+    {{% alert color="info" %}}If you import initiatives using an Excel file [exported from a portfolio](#export-initiatives), the Excel file contains the following additional columns: **RICEScore**, **WSJFScore**, **ExpectedValue**, and **CreationDate**. You can import this Excel file as it is, but the data from these columns will not be imported.{{% /alert %}}
 
    | Column | Required                                                     | Format                       | Additional Constraints | Remarks               | Example Value                          |
    | --------------------- | ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |--| -------------------------------------- |

@@ -35,11 +35,11 @@ When strict mode is enabled, the following [client APIs](/apidocs-mxsdk/apidocs/
 
 The APIs will be disabled on the Runtime, which means that these APIs cannot be invoked in online apps via JavaScript actions or the browser's console. If any of these APIs are used in a JavaScript action, consider using a nanoflow instead.
 
-## 3 Save Changes Action
+## 3 Save And Cancel Changes Action {#save-and-cancel}
 
-In strict mode, your model is analyzed by Studio Pro to ensure that only entities within editable widgets can be saved during a save changes action. 
+In strict mode, your model is analyzed by Studio Pro to ensure that only entities within editable widgets can be saved or rolled back during save or cancel actions. 
 
-Additionally, since **Save Changes Actions** are not analyzed for layouts, placing a save button within a layout triggers a consistency error. Instead, use a save button within a snippet.
+Additionally, since **Save Changes Actions** and **Cancel Changes Actions** are not analyzed for layouts, placing a save or cancel button within a layout triggers a consistency error. Instead, these actions can be used within a snippet.
 
 ## 4 Read More
 

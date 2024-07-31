@@ -10,7 +10,7 @@ Multi-user tasks are tasks that have to be executed by multiple users. Each user
 
 For example, you can assign a review task to multiple users:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-user Task Example" width="200" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task/multi-user-task.jpg" alt="Multi-User Task Example" width="200" class="no-border" >}}
 
 ## 2 Properties
 

@@ -33,9 +33,8 @@ For more information, see [Progressive Web App](/refguide/mobile/introduction-to
 Mendix offers options to build both native mobile apps and PWAs. Depending on your app's requirements or constraints, one or the other can be a better fit. It is also possible to have both native mobile and PWA profiles in a single app, which can run next to each other and overlap significantly.
 
 {{% alert color="warning" %}}
-PWAs have the following limitations:
+PWAs have the following limitation:
 
-* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 

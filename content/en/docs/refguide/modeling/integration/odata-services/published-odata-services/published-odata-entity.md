@@ -176,7 +176,13 @@ It is possible to customize the name of the entity set that is displayed in the 
 
 Default: {Entity name}s
 
-### 7.2 Use Paging {#paging}
+### 7.2 Alternative Name (in URL)
+
+You can choose to specify an alternative to the exposed set name. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the entity will be available on two different URLs: one that uses the exposed set name, and one that uses the alternative name. This value is optional. 
+
+Use an alternative name when you require the published entity to be available on a URL that would be invalid in OData but valid in OpenAPI, such as `my-entities`.
+
+### 7.3 Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continues to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
@@ -186,7 +192,7 @@ When set to **Yes**, select **Top supported** and **Skip supported** [query opti
 
 Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. For example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
-#### 7.3 Page Size
+#### 7.4 Page Size
 
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 

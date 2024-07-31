@@ -1,13 +1,13 @@
 ---
-title: "Publish an Extension"
-linktitle: "Publish an Extension"
-url: /apidocs-mxsdk/apidocs/extensibility-api/publishing-an-extension/
+title: "Export an Extension"
+linktitle: "Export an Extension"
+url: /apidocs-mxsdk/apidocs/extensibility-api/export-an-extension/
 weight: 16
 ---
 
 ## 1 Introduction
 
-This how-to describes how you can create an extension so that you can publish it to the Marketplace.
+This how-to describes how you can export an extension.
 
 ## 2 Prerequisites
 
@@ -26,4 +26,4 @@ To be able to export extension add-on modules, you need to have the feature flag
 
 5. Click **OK** to save the settings, and export the module.
 
-You can now [share the extension in the Marketplace](/appstore/sharing-content/) with other Mendix developers.
+You can now [publish the extension in the Marketplace](/appstore/sharing-content/) or share it directly with other Mendix developers.

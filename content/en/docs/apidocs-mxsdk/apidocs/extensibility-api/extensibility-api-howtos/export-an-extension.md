@@ -15,19 +15,24 @@ To be able to export extension add-on modules, you need to have the feature flag
 
 ## 3 Procedure
 
-1. In the app that contains your development extension, create a new module with the same name as your extension folder. For example, if your extension folder is called 'MyFirstExtension', your module must also be called 'MyFirstExtension'.
+1. In Studio Pro, open the app that contains your development extension.
 
-2. Open the module settings and go to the **Export** tab.
+2. Create a new module with the same name as your extension folder. For example, if your extension folder is called 'MyFirstExtension', your module must also be called 'MyFirstExtension'.
+
+3. In **App Explorer**, go to **Settings** of this module and then go to the **Export** tab.
 
      {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/export-an-extension/export-tab.png" max-width=80% >}}
 
-3. Set **Module type** to *Add-on module*.
+4. Set **Module type** to *Add-on module*.
 
-4. In the **Module version** field, enter the version number of the extension.
+5. In the **Module version** field, enter the version number of the extension.
 
-5. In the **Extension Name** field, select the name of your extension. This must match with your module name.
-    {{% alert color="info" %}} If you do not set the **Extension name** field, your feature flag is not configured correctly. For more information, see [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/). {{% /alert %}}
+6. In the **Extension Name** field, select the name of your extension. This must match with your module name.
 
-6. Click **OK** to save the settings and export the extension.
+     {{% alert color="info" %}} If you do not set the **Extension name** field, your feature flag is not configured correctly. For more information, see [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/). {{% /alert %}}
+
+7. Click **OK** to save the settings.
+
+8. In **App Explorer**, right-click the module and click **Export** to export the extension.
 
 Now you can [publish the extension in the Marketplace](/appstore/sharing-content/#adding) or directly share it with other Mendix developers.

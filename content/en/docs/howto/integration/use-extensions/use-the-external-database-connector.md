@@ -143,6 +143,7 @@ To call a stored procedure, do the following:
 {{% alert color="info" %}}Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
 
 For Postgres, Mendix supports the following parameters:
+
 * Decimal/numeric
 * Real
 * Double Precision

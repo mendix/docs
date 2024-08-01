@@ -127,7 +127,7 @@ The description of the items that you can select are as follows:
 
 * **NamespaceID**: the ID of the namespace
 
-*  **Namespace**: the Kubernetes namespace
+* **Namespace**: the Kubernetes namespace
 
     {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 

@@ -70,7 +70,6 @@ description: "Native Template 8 release notes."
 
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
 
-
 ## 8.1.0 {#806}
 
 **Release date: April 04, 2024**
@@ -90,7 +89,6 @@ description: "Native Template 8 release notes."
 ### Fixes
 
 * We updated the `@mendix/native` dependency to fix an encryption issue.
-
 
 ## 8.0.10 {#809}
 

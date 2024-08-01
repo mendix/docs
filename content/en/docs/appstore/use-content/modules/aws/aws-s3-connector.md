@@ -225,7 +225,7 @@ This entity is the generalization of all request entities of the S3 Connector. I
 | --- | --- |
 | `PathStyleAccessEnabled` | The PathStyleAccessEnabled attribute specifies whether the S3 resources are accessed using the path-style hosting or its default virtual hosting. |
 
-[Read more about these hosting styles | AWS Documentation ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
+[Read more about these hosting styles | AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
 
 #### 4.1.19 AbstractPresignConfig {#abstractpresignconfig}
 
@@ -367,6 +367,7 @@ It returns the presigned url as a String. The input and output for this service 
 | --- | --- | 
 | `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
 =======
+
 #### 4.3.11 HeadBucket {#headbucket}
 
 The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
@@ -374,4 +375,3 @@ The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucke
 | Input | Output | 
 | --- | --- | 
 | `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |
-

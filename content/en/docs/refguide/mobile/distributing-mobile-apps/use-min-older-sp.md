@@ -47,7 +47,9 @@ Make It Native, just like any other native apps, relies on third party dependenc
    ```bash
    npm install
    ```
+
 1. Install pods (only for iOS):
+
    ```bash
    cd ios && pod install && cd ..
    ```

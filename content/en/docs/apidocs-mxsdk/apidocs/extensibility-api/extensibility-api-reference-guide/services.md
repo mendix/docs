@@ -11,14 +11,14 @@ A Studio Pro service is an interface that exposes some core Studio Pro functiona
 {{% alert color="info" %}}You should not implement these interfaces in your production code, although it is possible to make sense to do so for unit testing purposes.{{% /alert %}}
 
 ## 2 List of Available Services
-- Helpers to operate on the app model or parts of it:
-  - [`IMicroflowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowService.md)
-  - [`IMicroflowExpressionService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowExpressionService.md)
-- Services giving access to interactive operations:
-  - [`IAppService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IAppService.md)
-  - [`ISelectorDialogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/ISelectorDialogService.md)
-  - [`IDockingWindowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IDockingWindowService.md)
-- Utility services:
-  - [`IConfigurationService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IConfigurationService.md)
-  - [`ILogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/ILogService.md)
-  - [`IExtensionFileService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IExtensionFileService.md)
+* Helpers to operate on the app model or parts of it:
+    * [`IMicroflowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowService.md)
+    * [`IMicroflowExpressionService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IMicroflowExpressionService.md)
+* Services giving access to interactive operations:
+    * [`IAppService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IAppService.md)
+    * [`ISelectorDialogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/ISelectorDialogService.md)
+    * [`IDockingWindowService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Services/IDockingWindowService.md)
+* Utility services:
+    * [`IConfigurationService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IConfigurationService.md)
+    * [`ILogService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/ILogService.md)
+    * [`IExtensionFileService`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Services/IExtensionFileService.md)

@@ -19,7 +19,7 @@ This how-to teaches you how to find the app ID and environment ID, and create de
 To get the app ID, do as follows:
 
 1. In [Apps](https://sprintr.home.mendix.com/), open the app.
-2.  On the navigation pane, go to **Settings**. You can find the app ID on the **General** tab.
+2. On the navigation pane, go to **Settings**. You can find the app ID on the **General** tab.
 
     {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/app-id.png" width="500px" alt="App ID on the Settings page" class="no-border" >}}
 
@@ -28,7 +28,6 @@ To get the environment ID, do as follows:
 1. In Apps, open the app.
 
 2. On the navigation pane, go to **Environments**, and then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view. You can find the environment ID on the **General** tab.
-
 
 ## 3 Creating a Deep Link in Apps
 
@@ -44,7 +43,7 @@ If you want to provide links directly to a specific element in your app in [Apps
 
 * App team: `https://sprintr.home.mendix.com/link/team/<appID>`
 
-*  Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
+* Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
 
     {{% alert color="info" %}}To get the link to a specific feedback item, [open the feedback item](/developerportal/app-insights/feedback/#feedback-details) in Feedback, and click the **Copy Link** icon ({{% icon name="hyperlink" %}}).{{% /alert %}}
 

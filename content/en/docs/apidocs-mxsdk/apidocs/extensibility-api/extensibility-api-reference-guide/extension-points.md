@@ -17,11 +17,11 @@ that is employed by Studio Pro.
 ## 2 List of Available Extension Points
 
 ### 2.1 Studio Pro UI Extensions
-- [ContextMenuExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Menu/ContextMenuExtension-1.md) – This allows injecting new context menu items into model elements.
+* [ContextMenuExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Menu/ContextMenuExtension-1.md) – This allows injecting new context menu items into model elements.
 
-- [MenuExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Menu/MenuExtension.md) – This allows injecting new menu items into Studio Pro menu bar.
+* [MenuExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Menu/MenuExtension.md) – This allows injecting new menu items into Studio Pro menu bar.
 
-- [DockablePaneExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.DockablePane/DockablePaneExtension.md) – allows introducing new
+* [DockablePaneExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.DockablePane/DockablePaneExtension.md) – allows introducing new
   [dockable pane](/refguide/studio-pro-overview/#panes) like Connector or Documentation. Panes integrate with Studio Pro
   [layout system](/refguide/view-menu/#layout-of-panes) automatically.
   
@@ -29,10 +29,10 @@ that is employed by Studio Pro.
 
 Additionally, there are additional features that provide access to the following:
 
-- [Studio Pro configuration](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI/ExtensionBase/Configuration.md)
-- [The currently opened app](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase/CurrentApp.md), as well as event subscription mechanism to that app
-- Events can be subscribed to by using the subscribe and unsubscribe methods exposed in [UIExtensionBase](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md). 
+* [Studio Pro configuration](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI/ExtensionBase/Configuration.md)
+* [The currently opened app](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase/CurrentApp.md), as well as event subscription mechanism to that app
+* Events can be subscribed to by using the subscribe and unsubscribe methods exposed in [UIExtensionBase](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md). 
 
 ### 2.2 Studio Pro and MxBuild Extensions
-- [ConsistencyCheckExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.ConsistencyCheck/ConsistencyCheckExtension-1.md) – This allows injecting custom logic into
+* [ConsistencyCheckExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.ConsistencyCheck/ConsistencyCheckExtension-1.md) – This allows injecting custom logic into
   the [Consistency check](https://docs.mendix.com/refguide/consistency-errors/) process.

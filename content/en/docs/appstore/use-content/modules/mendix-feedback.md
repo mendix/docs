@@ -95,7 +95,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 * **Configuration** tab
     * **Feedback button action** –This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
-    *  **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
+    * **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
 
           {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}

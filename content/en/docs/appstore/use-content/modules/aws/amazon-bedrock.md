@@ -253,7 +253,6 @@ This entity inherits from the GenAICommons.Response entity. An object of this ty
 | --- | --- |
 | `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
 
-
 ##### 4.1.1.9 RequestedResponseField {#requested-response-field}
 
 This entity holds information about additional model-specific response fields. If valid additional response fields were requested during the request a list of this entity will be returned as part of the response.
@@ -1103,7 +1102,6 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
-
 ##### 4.2.2.2 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
@@ -1277,7 +1275,6 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
-
 
 ##### 4.2.3.5 StartIngestionJob {#start-ingestion-job}
 

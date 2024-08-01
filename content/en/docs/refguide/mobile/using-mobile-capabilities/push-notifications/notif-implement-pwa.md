@@ -16,7 +16,7 @@ Push notifications in progressive web apps require Firebase to be set up as earl
 
 1. Create a custom `index.html` in your `theme\web` folder by following [this guide](/howto/front-end/customize-styling-new/#custom-web).
 1. Edit the created `index.html` file in your favorite text editor.
-1.  Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
+1. Add below text before the line `<script src="mxclientsystem/mxui/mxui.js?{{cachebust}}"></script>` (replace `firebaseConfig` with your configuration from step 3):
 
     ```html
     <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>

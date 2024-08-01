@@ -83,8 +83,8 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
-  * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
-  * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
@@ -187,7 +187,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information|
 | --- | --- | --- | --- |
 | 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | -Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency <br> -Set `OIDC.Startup` microflow as part of the after-startup microflow | -New UserCommons module <br> -Assign UserProvisioning for existing IdP configurations |
-| 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic ` snippet removed from module |
+| 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic` snippet removed from module |
 | 9.24.2 and above | 3.1.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | `OIDC.Startup` microflow renamed to `OIDC.ASU_OIDC_Startup` |
 
 ## 4 Design-time App Configuration{#app-configuration}
@@ -676,7 +676,7 @@ If you are just delegating authentication for your app to the IdP you will not n
 If you want to use the information in an access token which is a JWT, you need to parse the access token in a microflow. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
-  * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
 
         ```json {linenos=false}
         "sws.samauth.role.name": [
@@ -684,7 +684,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-  * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
         ```json {linenos=false}
         "roles": [

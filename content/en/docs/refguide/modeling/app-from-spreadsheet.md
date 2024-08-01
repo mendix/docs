@@ -62,7 +62,7 @@ To create an app using your own data, do the following:
 
    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/drag-and-drop.jpg"  width="650"  class="no-border" >}}
 
-	{{% alert color="info" %}}If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later.{{% /alert %}}
+    {{% alert color="info" %}}If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later.{{% /alert %}}
 
 ### 4.1 Previewing Spreadsheet Data
 

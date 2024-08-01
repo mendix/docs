@@ -10,8 +10,9 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.14.0
 
-* We added the event `ActiveDocumentChanged` which allows an extension to be notified when the active document changes in Studio Pro. If the document is not yet supported by the Extensibility API, just its name and type will be returned.
-* We added support for several microflow activities for lists and objects. We also added the `IMicroflowActivitiesService` with several functions that help creating all these new activities.
+* We added the event `ActiveDocumentChanged`, which allows an extension to be notified when the active document changes in Studio Pro. If the document is not yet supported by the Extensibility API, only its name and type will be returned.
+* We added support for several microflow activities for lists and objects.
+* We introduced `IMicroflowActivitiesService`, which includes several functions to facilitate the creation of these new activities.
   
 ## Version 10.13.0
 

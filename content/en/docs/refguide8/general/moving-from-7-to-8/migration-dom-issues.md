@@ -7,7 +7,7 @@ description: "This document explains the updated DOM structure for Mendix 8, and
 
 ## 1 Introduction
 
-Among other improvements to the client in Mendix 8,  the HTML of Mendix applications has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
+Among other improvements to the client in Mendix 8, the HTML of Mendix applications has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
 However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' Document Object Model structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 
@@ -128,7 +128,7 @@ The markup for list view widgets has also been changed. To simplify the styling,
 * `mx-listview-search-input` 
 * `mx-listview-clear-button`
 
-For list views that are not in a select page for a reference or reference set selector,  the list view's `mx-listview-selectable` has been removed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
+For list views that are not in a select page for a reference or reference set selector, the list view's `mx-listview-selectable` has been removed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
 
 The order of the list view search bar's DOM elements has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
 

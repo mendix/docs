@@ -57,7 +57,7 @@ The component details page also presents the following tabs:
   * Each version can be downloaded by clicking **Download.**
   * If any version has the label **React-Ready** next to it, it means this version is optimized for React Client applications.
 * **Reviews** – This tab shows user reviews of the component.
-  * You can browse,  sort by review date, and filter by ratings for insights on the component.
+  * You can browse, sort by review date, and filter by ratings for insights on the component.
   * You can select the **Only show my reviews** checkbox to check your own reviews.
   * You can click **Write Review** to open a section where you can add text, rate the component, and submit the review.
     * Before you write a review, you can first read the **Tips for Sharing Your Review**, which appears on the right. You can now rate a component four or five stars without leaving a review. For three-, two-, and one-star ratings, a review is mandatory.

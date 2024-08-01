@@ -101,7 +101,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 1. Click **API Business Hub**.
 
-    You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name) , and page through it using the paging buttons.
+    You will be presented with a list of packages containing OData API definitions. You can search this list (this includes text in the package description as well as the package name), and page through it using the paging buttons.
 
     {{< figure src="/attachments/appstore/use-content/services/sap-model-creator/model-creator-wizard-2-api.png" class="no-border" >}}
 

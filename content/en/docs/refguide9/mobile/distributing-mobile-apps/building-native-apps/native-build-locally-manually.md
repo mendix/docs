@@ -21,9 +21,9 @@ To understand the local build process, it is important to grasp a few basic conc
 * The JS code and static assets need to be bundled together for RN to use
 * The bundled code and assets are put into a React Native Template that represents an iOS and Android app
 
-In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
+In a similar fashion, MxBuild and the Mendix Native Template follow these rules:
 
-* When using MXBuild, the JS code and static assets are bundled together
+* When using MxBuild, the JS code and static assets are bundled together
 * The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
 
 ## 2 Prerequisites {#local-manual-prerecs}
@@ -112,7 +112,7 @@ For bundling your resources, Mendix Studio Pro comes with a helpful tool called 
 
 The bundles will be generated relatively to the `app-directory\deployment\native\bundle`
 
-1. Run MXBuild against your app to generate the required bundle and assets.
+1. Run MxBuild against your app to generate the required bundle and assets.
 
 When completed there should be a folder under the app's deployment folder **app-directory\deployment\native\bundle** with two folders: one named **iOS** and one named **android**. After confirming these folders are correct, do the following:
 
@@ -157,7 +157,7 @@ To build an Android app with Android Studio, do the following:
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Variants"   width="350"  class="no-border" >}}
 
 1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 
@@ -187,7 +187,7 @@ After the build succeeds the app should be running on the selected device and co
 
 Mendix Studio Pro 9 and later support a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
-In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialisation process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
+In some cases though, like when a dependency isn't derivable by its use case, like from a widget or JS action, or the dependency requires extra additions, like an elaborated initialization process that can't be described via the auto-linking protocol, you will have to modify your app and add it manually.
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 

@@ -927,4 +927,4 @@ The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAsset
 
 | Input | Output | 
 | --- | --- | 
-| `DateTime` , `FindType` | Date and time value |
+| `DateTime`, `FindType` | Date and time value |

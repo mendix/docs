@@ -132,7 +132,7 @@ To get started, click **Add Content** in the top bar of the Marketplace home scr
 
 ### 4.1 General {#general}
 
-On the **General** page,  you need to provide some details about your component. 
+On the **General** page, you need to provide some details about your component. 
 
 #### 4.1.1 Describing Your Content
 

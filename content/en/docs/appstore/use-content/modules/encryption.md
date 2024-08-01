@@ -37,7 +37,7 @@ In version 2.2.0, the key length was increased from 128 to 256 bits. The `Encryp
 Set the `EncryptionPrefix` constant located in the **Private - String en/de-cryption** folder. The value depends on the module version you are using:
 
 * For version 2.2.0 or above, set the constant to `{AES3}`
-* For versions 1.4.1–2.1.3 , set the constant to `{AES2}`
+* For versions 1.4.1–2.1.3, set the constant to `{AES2}`
 
 {{% alert color="info" %}}
 In version 1.4.1, the AES algorithm used for encrypting/decrypting text was switched from CBC to GCM mode, because CBC mode was vulnerable to Oracle padding attacks. For backward compatibility, the module still supports decrypting texts encrypted using CBC mode in older versions of the module. It does not support encrypting strings using the legacy CBC mode. So, strings encrypted in versions below 1.4.1 in CBC mode have the prefix `{AES}`, while strings encrypted in GCM mode in version 1.4.1 have the prefix `{AES2}`. If the `EncryptionPrefix` constant is set to `{AES}`, the module in version 1.4.1 or above will still encrypt the string using a new GCM mode. Then, when decrypting the string, the module will detect the prefix `{AES}` and try to decrypt it using the legacy CBC mode, which will fail because the string was encrypted using GCM mode (which is incompatible with CBC).

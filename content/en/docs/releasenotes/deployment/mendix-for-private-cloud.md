@@ -604,7 +604,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed an issue where deployment with spaces in the branch lines triggered an error. (Ticket 167448 and 167577)
 * We have added a new status on the environment details page when environment is attached to a service account.
 * The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
-* We added activity log entries whan development mode is enabled or disabled in a Namespace.
+* We added activity log entries when development mode is enabled or disabled in a Namespace.
 
 ### November 14, 2022
 

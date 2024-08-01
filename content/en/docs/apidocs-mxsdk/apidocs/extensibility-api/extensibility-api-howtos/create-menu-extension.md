@@ -27,12 +27,12 @@ You can download the example in this how-to in [this GitHub repository](https://
 
 ## 3 Creating a Test Mendix App
 
-It is handy to have a single App where the extension is used for the testing purposes. Perhaps you even want to share this app with your team by committing its code next to the extension project.
+It is handy to have an app where the extension is used for the testing purposes. Perhaps you even want to share this app with your team by committing its code next to the extension project.
 
-1. Create new Mendix App to use for extension testing, based on a starter app of your choice. You can also use an existing app.
-2. Open App in Windows Explorer by selecting **App** > **Show App Directory in Explorer**.
+1. Create a new Mendix app to use for testing the extension, based on a starter app of your choice. You can also use an existing app.
+2. Go to **App** > **Show App Directory in Explorer** to open the app directory.
 3. Create a new folder `extensions` inside the app directory.
-4. Create a subfolder named after your extension, for example,  `MyCompany`, inside the `extensions` folder.
+4. Create a subfolder named after your extension, for example, `MyCompany`, inside the `extensions` folder.
 5. Copy the full path of the subfolder by pressing <kbd>Shift</kbd> and right-clicking at the same time, and then selecting **Copy as path**.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`
@@ -94,7 +94,7 @@ public class MyMenuExtension() : MenuExtension
 
 3. Add a Breakpoint inside `Action` delegate in `MyMenuExtension.GetMenus()`. It will be hit when you click **Extensions** > **MyCompany** > **Say hello** menu item.
 
-## 6 Adding NuGet dependency
+## 6 Adding a NuGet Dependency
 
 You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. The following one-time additional setup is required:
 

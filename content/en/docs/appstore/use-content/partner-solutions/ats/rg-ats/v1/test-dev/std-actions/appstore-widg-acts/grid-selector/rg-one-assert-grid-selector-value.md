@@ -21,5 +21,5 @@ Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 Column Caption | String | Yes | The column caption of the checkbox cell you want to assert.
-Row Caption | String | Yes | The row capion of the checkbox cell you want to assert.
+Row Caption | String | Yes | The row caption of the checkbox cell you want to assert.
 Checked | Boolean | Yes | The value you want to assert (true or false).

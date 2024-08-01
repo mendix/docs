@@ -1492,7 +1492,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Fixes
 
-* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210, 68386)
 
 ### June 26, 2018
 

@@ -204,7 +204,7 @@ To upload your Mendix app to the Play Console, follow the instructions on Google
 
 ## 7 Examples
 
-The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it  details how to find these packages in PhoneGap and add security keys to them.
+The video below shows how to build a PhoneGap app in the cloud. After showing you how to build mobile app store packages, it details how to find these packages in PhoneGap and add security keys to them.
 
 **How to build a Phonegap app in the cloud**
 {{< youtube 7ic625u2YJE >}}

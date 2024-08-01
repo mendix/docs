@@ -50,7 +50,7 @@ To be able to use the data from your model in the REST service, you need to crea
     {{< figure src="/attachments/howto7/integration/publish-rest-service/message_definition.png" class="no-border" >}}
 
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
-3. The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
+3. The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select**, then choose the **Order** entity from the list.
 
     {{< figure src="/attachments/howto7/integration/publish-rest-service/MD_AddEntity.png" class="no-border" >}}
 

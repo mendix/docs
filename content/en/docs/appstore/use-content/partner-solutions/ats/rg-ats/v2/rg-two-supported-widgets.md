@@ -8,7 +8,7 @@ url: /appstore/partner-solutions/ats/rg-two-supported-widgets/
 The following table shows an overview of all the supported widgets in ATS.
 
 {{% alert color="warning" %}}
-ATS does not support customized versions of Mendix Marketplace widgets. Also, ATS does not support using JavaScript that changes the behavior or apperance of standard or Marketplace widgets.
+ATS does not support customized versions of Mendix Marketplace widgets. Also, ATS does not support using JavaScript that changes the behavior or appearance of standard or Marketplace widgets.
 {{% /alert %}}
 
 ## 2 Standard Widgets

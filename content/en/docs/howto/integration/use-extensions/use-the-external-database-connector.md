@@ -84,7 +84,7 @@ SQL Query:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" class="no-border" >}}
 
-### 3.4 Typecast Parameter Data Yype
+### 3.4 Typecast Parameter Data Type
 
 You can typecast `String` into UUID as shown below:
 

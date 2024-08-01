@@ -339,7 +339,7 @@ To navigate to a series' custom settings, do the following:
 
     {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-1.png" width="450px" alt="Two dialog boxes. First shows Data source property with list of series records. Second dialog box show settings for the first series in list. Big red arrow pointing to the Advanced tab of the second dialog box." class="no-border" >}}
 
-    {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea elemnt." class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea element." class="no-border" >}}
 
 ### 6.2 Custom Layout {#custom-layout}
 
@@ -453,7 +453,7 @@ The available advanced options and their usage are described below.
 
 #### 7.3.1 Layout Options for All Charts
 
-The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`,  and `yaxis`. 
+The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`, and `yaxis`. 
 
 ```json
 {
@@ -477,7 +477,7 @@ Configuration options control the appearance of a chart beyond the layout option
 }
 ```
 
-For more details, see the [Addvanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
+For more details, see the [Advanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
 #### 7.3.3 Data Options for the Pie Chart
 
@@ -489,7 +489,7 @@ On the [Pie chart](#pie-chart), the data options control the appearance of the p
 }
 ```
 
-For more details, see the [Addvanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
+For more details, see the [Advanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
 #### 7.3.4 Series Options for the Line and Column Charts
 
@@ -549,7 +549,7 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 ```
 
 {{% alert color="warning" %}}
-Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precendence.
+Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 {{% /alert %}}
 
 ### 8 Read More

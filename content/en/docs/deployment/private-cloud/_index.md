@@ -131,7 +131,7 @@ You can run the Mendix Operator in trial mode for evaluation purposes. When the 
 
 ### 5.2 Runtime License
 
-The Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself. You need both licenses to manage and run an application through Mendix for Private Cloud.
+The Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself and a runtime license per environment is required. You need both licenses to manage and run an application through Mendix for Private Cloud.
 
 You can request a Runtime license by doing the following:
 

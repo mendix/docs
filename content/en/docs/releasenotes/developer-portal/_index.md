@@ -16,6 +16,16 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### August 1, 2024
+
+#### New features
+
+* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the same stage.
+
+#### Improvements
+
+* In Portfolio Management, when a Portfolio Manager approves the [access request](/developerportal/portfolio-management/access-management/#access-requests) of a user, now they can assign an access role different than the one the user requested.
+
 ### July 31, 2024
 
 #### Fixes
@@ -28,7 +38,6 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * We have greatly simplified the process of [creating an app](/developerportal/#create-app) from Apps, making it easier and quicker to start working on your new app.
 * When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page.
-
 ### June 30, 2024
 
 #### New features

@@ -2,12 +2,11 @@
 title: "Demo Users"
 url: /refguide8/demo-users/
 weight: 30
-tags: ["studio pro", "demo users", "demo-users", "project security"]
 ---
 
 ## 1 Introduction
 
-Demo users are a demonstration of each [user role](/refguide8/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 
+Demo users are a demonstration of each [user role](/refguide8/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section). 
 
 When the application is started for the first time, the specified demo users are created automatically.
 

@@ -1,7 +1,6 @@
 ---
 title: "Hybrid App Base and Template"
 url: /releasenotes/mobile/hybrid-app/
-category: "Mobile"
 weight: 30
 description: "Mendix Hybrid App Base and Hybrid App Template release notes."
 ---
@@ -81,7 +80,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 **Release date: January 3, 2020**
 
 * We fixed an issue with race conditions in asynchronous hooks.
-* We introduced a new **onBeforeSynchonization** hook.
+* We introduced a new **onBeforeSynchronization** hook.
 
 ## 2019
 

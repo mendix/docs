@@ -2,10 +2,8 @@
 title: "Create Your First Two Overview and Detail Pages"
 linktitle: "Create Overview and Detail Pages"
 url: /howto/front-end/create-your-first-two-overview-and-detail-pages/
-category: "Front End"
 weight: 25
 description: "Describes how to create overview and detail pages, and how to configure navigation and security."
-tags: ["front end"]
 ---
 
 ## 1 Introduction
@@ -25,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
     {{< figure src="/attachments/howto/front-end/create-your-first-two-overview-and-detail-pages/18582175.png" class="no-border" >}}
 
-## 3 Creating Overview and Detail Pages Automatically
+## 3 Creating Overview and Detail Pages Automatically {#create-automatically}
 
 To create the overview and detail pages for your data structure, follow these steps:
 

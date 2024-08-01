@@ -2,8 +2,6 @@
 title: "Filter Data on an Overview Page Using XPath"
 linktitle: "Filter Data Using XPath"
 url: /howto8/logic-business-rules/filtering-data-on-an-overview-page/
-category: "Logic and Business Rules"
-tags: ["filter", "xpath"]
 ---
 
 ## 1 Introduction
@@ -130,7 +128,7 @@ In the previous two sections you used single constraints to filter the data grid
 
 In the previous section you have constrained the data grid on attributes of the same entity as the data grid entity. In this section you will constrain on attributes over an associated object. In the example of this section you will filter the orders by their associated customers based on the city letter of the customer. 
 
-1. To constrain the results in the order overview to only orders from customers in Rotterdam, enter the following XPath into the **XPath Contraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']`.
+1. To constrain the results in the order overview to only orders from customers in Rotterdam, enter the following XPath into the **XPath Constraint** editor: `[Sales.Order_Customer/Sales.Customer/City = 'Rotterdam']`.
 
     {{< figure src="/attachments/howto8/logic-business-rules/filtering-data-on-an-overview-page/18581363.png" class="no-border" >}}
 

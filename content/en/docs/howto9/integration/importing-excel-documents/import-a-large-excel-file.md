@@ -1,7 +1,6 @@
 ---
 title: "Import a Large Excel File"
 url: /howto9/integration/import-a-large-excel-file/
-tags: ["excel", "excel  importer", "marketplace", "sheet"]
 ---
 
 ## 1 Introduction
@@ -141,6 +140,6 @@ The XSD file is ready to be imported into. To import it, follow these steps:
 
 A video demonstrating this technique can be viewed below:  
 
-{{% youtube 8qLyIoUqKEE %}}
+{{< youtube 8qLyIoUqKEE >}}
 
 Happy modeling!

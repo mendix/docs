@@ -3,7 +3,6 @@ title: "Set Up Maps in Native Mobile Apps"
 url: /howto8/mobile/how-to-maps/
 weight: 78
 description: This guide teaches you how to set up native mobile maps capabilities for Android and Apple devices.
-tags: ["maps", "google maps", "native", "mobile"]
 ---
 
 ## 1 Introduction

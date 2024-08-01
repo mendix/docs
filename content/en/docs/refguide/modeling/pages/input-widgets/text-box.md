@@ -3,7 +3,6 @@ title: "Text Box"
 url: /refguide/text-box/
 description: "A text box is used to display and, optionally, allow the end-user to edit the value of an attribute from an object in a textual form."
 weight: 10
-tags: ["studio pro", "data"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -61,7 +60,7 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 | Value | Description |
 | --- | --- |
 | False *(default)*| Normal text box |
-| True | Typed characters are not shown to the end-user , instead an asterisk is shown for every typed character |
+| True | Typed characters are not shown to the end-user, instead an asterisk is shown for every typed character |
 
 #### 3.1.2 Input Mask
 

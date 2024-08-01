@@ -1,24 +1,22 @@
 ---
 title: "mx Command-Line Tool"
 url: /refguide/mx-command-line-tool/
-category: "General Info"
 weight: 50
 description: "Describes the options of the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux"]
 ---
 
 ## 1 Introduction
 
-The **mx tool** is a Windows and Linux command-line tool that can be used to perform various actions on a Mendix app.
+The mx tool is a Windows and Linux command-line tool that can be used to perform various actions on a Mendix app.
 
 ## 2 Location
 
-Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file can in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*). It is also included if you download [mxbuild](/refguide/mxbuild/).
+Mendix Studio Pro comes with the mx command-line tool. You can find the executable *mx.exe* file in the same folder that contains *studiopro.exe* (for example, *C:\Program Files\Mendix\10.0.0.5003\modeler\mx.exe*). It is also included if you download [mxbuild](/refguide/mxbuild/).
 
 ## 3 Available Commands
 
 {{% alert color="info" %}}
-To see a list of commands you can use the command `mx --help`.
+To see a list of commands, use the command `mx --help`.
 {{% /alert %}}
 
 ### 3.1 App Commands
@@ -73,4 +71,4 @@ These are the available [merging and diffing commands](/refguide/mx-command-line
 
 ## 4 Undocumented Options
 
-The mx tool contains options that are not described in this document. Those are for internal Mendix usage and are not officially supported. This might change in the future, but these options are used at your own risk.
+The mx tool contains options that are not described in this document. These options are for internal Mendix usage and are not officially supported. This might change in the future, but these options are used at your own risk.

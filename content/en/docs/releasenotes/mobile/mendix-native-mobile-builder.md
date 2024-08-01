@@ -1,7 +1,6 @@
 ---
 title: "Mendix Native Mobile Builder"
 url: /releasenotes/mobile/mendix-native-mobile-builder/
-category: "Mobile"
 weight: 11
 description: "Mendix Native Mobile Builder release notes."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -131,7 +130,7 @@ Now, instead of accessing the first MPR file found in the directory, the tool wi
 
 * The tool now handles apps with multiple MPR files correctly.
 * The tool now discloses the error that led to a Native Template update failing in the error dialog.
-* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the XCode or Node versions to accommodate new requirements.
+* The tool now correctly updates the App Center build configuration for already-configured builds. This will allow for updates to things like the Xcode or Node versions to accommodate new requirements.
 
 #### Fixes
 
@@ -313,7 +312,7 @@ still fail if the keystore values are invalid.
 
 #### Fixes
 
-* We fixed an issue with android certificates not being verified correctly.
+* We fixed an issue with Android certificates not being verified correctly.
 * We fixed a bug where Native Mobile Builder might try to configure the wrong app on App Center. 
 
 ### Release v1.0.81

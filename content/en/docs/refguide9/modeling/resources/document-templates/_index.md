@@ -2,7 +2,6 @@
 title: "Document Templates"
 url: /refguide9/document-templates/
 weight: 90
-tags: ["studio pro", "document template"]
 aliases:
     - /refguide9/Document+Templates.html
     - /refguide9/Document+Templates

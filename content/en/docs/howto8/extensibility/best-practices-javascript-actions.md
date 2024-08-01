@@ -2,10 +2,8 @@
 title: "Implement Best Practices for JavaScript Actions"
 linktitle: "JavaScript Actions Best Practices"
 url: /howto8/extensibility/best-practices-javascript-actions/
-category: "Extensibility"
 weight: 60
 description: "This set of best practices will help you get the most out of your JavaScript actions."
-tags: ["JavaScript", "API", "nanoflow"]
 ---
 
 ## 1 Introduction
@@ -403,7 +401,7 @@ With well-designed APIs, JavaScript actions will become easier to reuse. Please 
 
 Consider these additional technical suggestions for best API practices:
 
-* Favor enumerations for limited options over a free format string – for example: source "Camera”,  "Gallery", or "User choice"
+* Favor enumerations for limited options over a free format string – for example: source "Camera”, "Gallery", or "User choice"
 * Prefer Boolean options for binary parameter – for example: 'Blocking dialog' (true / false)
 * Prefer primitive return types – do not return objects where possible, but use return String or Decimal instead
 * Do not change objects; create new non-persistable entity (NPE) objects instead – NPE objects should be shipped with the action in a module, and can be reused in various unrelated nanoflows
@@ -438,7 +436,7 @@ Well-documented actions are easier to reuse. Consider the following when documen
     * What the action is doing
     * The returned value
     * Supported platforms, such as web, mobile, or native
-    * Browser compatibility, such as Chrome, FireFox, or Edge
+    * Browser compatibility, such as Chrome, Firefox, or Edge
     * Dependent modules (if any)
     * The used library or function
 * For parameters, add a description and provide the default if implemented

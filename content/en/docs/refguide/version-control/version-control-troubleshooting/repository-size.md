@@ -4,7 +4,6 @@ url: /refguide/troubleshoot-repository-size/
 linktitle: "Repository Size"
 weight: 20
 description: "Explains consequences and root cause of a large repository size and how to mitigate this."
-tags: ["version control", "troubleshoot", "repository size", "mpr size", "performance", "git"]
 ---
 
 ## 1 Introduction
@@ -27,7 +26,7 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 * Retrieving a list of branches
 * Cloning on the command line or in a CI/CD pipeline
-* Team Server page in the Developer Portal, if you are using Team Server as your Git server
+* [Team Server](/developerportal/general/team-server/) page in **Apps** in the Mendix Portal, if you are using Team Server as your Git server
 
 ## 4 Preventing and Mitigating a Large Repository Size
 
@@ -35,13 +34,29 @@ Other places where you might encounter performance issues or timeouts are the fo
 
 The *.mpr* storage format will be changed to reduce the rapid repository growth. Switching to the new storage format will be done under the hood and does not result in functional changes.
 
-Mendix aims to introduce the new format for new apps in Q2 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
+Mendix aims to introduce the new format for new apps in Q3 2024. Existing apps will be automatically converted in a later version, targeted for H2 2024.
+
+#### 4.1.1 MPR Format
+
+An app modeled in Mendix is traditionally stored in a single *.mpr* file. This is essentially a database which contains data for all documents, such as microflows, workflows, pages. As the Mendix app is stored in a single file, your version control system only sees that a single file is changed. To show the exact documents that have changed inside the *.mpr* file a tool that comprehends the format is required, such as Studio Pro.
+
+#### 4.1.2 Repository Growth
+
+Version control systems like Git do not store a full copy of a document for every commit. Instead, they store the difference between the two revisions, also called a delta. For binary files such as the *.mpr* file Git cannot effectively calculate the delta. When a microflow is changed, a small delta of a couple of kilobytes is expected, but the storage format results in a delta of a megabyte or more. The consequence of this is that your Git repository grows more rapidly than you expected.
+
+#### 4.1.3 Future Format Change
+
+Mendix will introduce a new version of the *.mpr* format. The key difference is that all documents, such as microflows, will no longer be stored as part of the *.mpr* file but as separate files in the *mprcontents* directory. The *.mpr* file will function as an index file pointing to all the different files on disk. 
+
+This means that when you change one document, for example a page, in your app only one file on disk will change. This allows Git to calculate an efficient delta, which results in a more appropriate repository growth. Functionally there will be no differences between the split (v2) or the combined (v1) format. 
+
+As a first step we will ensure new apps are created with a new split format (v2). Converting existing apps will initially be a manual action through the **File** menu. In a later release Mendix intends to convert the MPR format from the combined version (v1) to a new split version (v2).
 
 ### 4.2 Working with a Large Repository Size
 
 When cloning an app, the default behavior of Git is to download the full history. As Mendix uses different folders on disk for different branches, downloading full history is done for each branch. To mitigate that, Mendix uses local cloning for subsequent branch downloads. When cloning a new branch, data from a local branch you already have is used to reduce data that needs to be downloaded. 
 
-Another improvement that is currently in development is partial cloning, which will instruct Git to only retrieve a part of the history from the server when cloning. In case you do need to access older history, for example, when merging an older branch, the data is retrieved from the server only when needed. Mendix expects to deliver this improvement in the summer of 2024 and intends to backport this to the 10.12 MTS release.
+As of Mendix 10.12 it is possible to prevent downloading the full history, by changing the [Clone type](/refguide/clone-type/) to use partial clones. A partial clone downloads all data for a specific revision without downloading the contents of all historical commits.
 
 ### 4.3 Mitigating Large Repository Size
 
@@ -60,7 +75,7 @@ The tool is currently in public beta. The cleanup tool can be downloaded [here](
 {{% /alert %}}
 
 {{% alert color="info" %}}
-This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page in Developer Portal because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
+This tool is executed on a Mendix Git repository. If your Mendix app is still on SVN you will first have to migrate to Git. In case the Migrate button is not showing on the Team Server page after you open your app in [Apps](https://sprintr.home.mendix.com/), because of the size restrictions, you can reach out to your CSM to get your app whitelisted.
 {{% /alert %}}
 
 ### 5.1 Cleanup Process
@@ -132,7 +147,7 @@ Force pushing your results to the server is a separate step, in a separate scrip
 
 If you are using Mendix Team Server as your Git version control server, you can follow the steps below:
 
-* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#92-authenticating-to-team-server) section in *Using Version Control in Studio Pro*. 
+* Ensure you have configured a Personal Access Token to use it as described in the [Authenticating to Team Server](/refguide/using-version-control-in-studio-pro/#authenticating) section in *Using Version Control in Studio Pro*. 
 * Run the second script.
     * When prompted, enable force pushing.
     * Conduct the force push.

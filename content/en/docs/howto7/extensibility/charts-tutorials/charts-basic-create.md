@@ -3,7 +3,6 @@ title: "Create a Basic Chart"
 url: /howto7/extensibility/charts-basic-create/
 weight: 10
 description: "How to create a basic chart and configure the display options"
-tags: ["Charts", "Widgets", "Basic Chart", "Area Chart"]
 ---
 
 ## 1 Introduction
@@ -42,7 +41,7 @@ To use the Charts widget, a specific data structure is set up. This is defined b
 
 To create a basic data entry page from which the Charts widget will fetch data, follow these steps:
 
-1. Right Click on value entity.
+1. Right-click the value entity.
 
 2. Select **Generate overview pages**.
 

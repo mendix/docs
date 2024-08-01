@@ -2,7 +2,6 @@
 title: "Implement Push Notifications"
 url: /howto8/mobile/implementation-guide/
 weight: 10
-tags: ["mobile", "push notification"]
 ---
 
 ## 1 Introduction
@@ -107,7 +106,7 @@ At this point, all the implementation steps are done and you can deploy your app
 
 {{% alert color="warning" %}}
 
-Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Developer Portal.
+Make sure that the `Encryption.EncryptionKey` constant has a value before you start the application. If the value is not set, you will get a `NullPointerException` when you try to send a notification to APNs. If you are using a Free App, set a default value for the constant in the model. Otherwise, configure the constant value in the Mendix Portal.
 
 {{% /alert %}}
 

@@ -3,7 +3,6 @@ title: "Planning"
 url: /developerportal/project-management/epics/planning/
 weight: 20
 description: "Describes the Planning page in Epics. This page looks different, depending on whether you use the Scrum workflow or Kanban workflow."
-tags: ["Project Management", "Epics", "Sprint", "Planning", "Stories", Developer Portal"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 ## 1 Introduction
@@ -175,7 +174,7 @@ When you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}})
 
 On this tab, you can add, rename, and delete tags, as well as change tag colors. The changes here affect all the tags in your app.
 
-To add a tag, click **+Add Tag**, enter the name,  select a color, and then click **Save** {{% icon name="checkmark-circle" %}} to save it.
+To add a tag, click **+Add Tag**, enter the name, select a color, and then click **Save** {{% icon name="checkmark-circle" %}} to save it.
 
 To rename a tag, double-click the tag name, change the name in the text box, and then click outside the text box to save it.
 

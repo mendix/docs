@@ -1,9 +1,7 @@
 ---
 title: "Use a Client Certificate"
 url: /howto9/integration/use-a-client-certificate/
-category: "Integration"
 description: "Describes how to configure your app to authenticate using a client certificate."
-tags: ["integration", "web service", "client certificate"]
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
@@ -68,7 +66,7 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 
-1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.

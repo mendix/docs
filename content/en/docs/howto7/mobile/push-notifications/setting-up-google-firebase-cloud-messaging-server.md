@@ -3,7 +3,6 @@ title: "Set Up the Google Firebase Cloud Messaging Server"
 linktitle: "Set Up Firebase Cloud Messaging"
 url: /howto7/mobile/setting-up-google-firebase-cloud-messaging-server/
 weight: 40
-tags: ["mobile", "push notification", "google", "firebase", "server"]
 ---
 
 ## 1 Introduction

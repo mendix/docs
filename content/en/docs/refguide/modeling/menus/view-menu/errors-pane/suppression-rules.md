@@ -3,7 +3,6 @@ title: "Suppression Rules"
 url: /refguide/suppression-rules/
 weight: 10
 description: "Describes suppression rules for warnings in Studio Pro."
-tags: ["Studio Pro", "consistency errors", "checks", "warnings"]
 ---
 
 ## 1 Introduction  {#intro}

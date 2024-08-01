@@ -1,10 +1,8 @@
 ---
 title: "Internationalize Mobile Apps"
 url: /refguide/mobile/using-mobile-capabilities/native-language-change
-category: Mobile
 weight: 30
 description: "This guide allows your end-user to change the interface language on their mobile device within a Mendix mobile app."
-tags: ["studio pro", "translation", "language", "multi lingual", "native", "translatable text", "mobile", "pwa"]
 ---
 
 

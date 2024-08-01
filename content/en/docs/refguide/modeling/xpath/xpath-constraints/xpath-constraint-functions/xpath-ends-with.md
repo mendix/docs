@@ -2,7 +2,6 @@
 title: "XPath ends-with"
 url: /refguide/xpath-ends-with/
 weight: 18
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

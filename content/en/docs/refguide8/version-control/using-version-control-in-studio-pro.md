@@ -1,10 +1,8 @@
 ---
 title: "Using Version Control in Studio Pro"
 url: /refguide8/using-version-control-in-studio-pro/
-category: "Version Control"
 weight: 10
 description: "How to work with version control and how to resolve some issues which may arise"
-tags: ["Version Control", "Conflicts", "Resolve", "Merge", "Patch", "Branch", "Development"]
 # Renamed from version-control-scenarios
 ---
 
@@ -17,7 +15,7 @@ This reference guide describes how to use version control in Mendix Studio Pro. 
 To start a new project with version control do the following:
 
 1. Choose **New Project...** in Studio Pro.
-2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Developer Portal project.
+2. In the **App Settings** dialog, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Mendix Portal project.
 3. Change the **Project directory**, or leave the default suggested by Studio Pro.
 4. Click **Create app**.
 
@@ -99,7 +97,7 @@ In general, it is a good idea to commit after implementing one feature or fixing
 Committing results in a new revision in the repository. You can add the following information in Studio Pro when you perform a commit, and this will be attached to the newly created revision:
 
 * A textual message. This should be a summary of the changes you made
-* A list of Developer Portal stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Developer Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
+* A list of stories that relate to the commit. A small commit will probably relate to one story. Studio Pro shows stories that are in the current Sprint and do not have a status of *Done*. Adding the story to the commit will not change the state of the Mendix Portal story. Setting the status to 'Done' must be done manually and depends on your *definition of done*.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-21_13-50-03.png" class="no-border" >}}
 
@@ -138,7 +136,7 @@ The *history* of the project is a list of all revisions that have been committed
 
 The revisions are shown in reverse chronological order (newest is at top of list). The history dialog shows you revision number, date, time, author and message of each revision.
 
-Select a revision to see additional details such as related Developer Portal stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the project.
+Select a revision to see additional details such as related stories, changed documents, Studio Pro version and changes on disk. Icons summarize the kinds of changes that happened in the project.
 
 {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/2018-02-21_14-06-46.png" class="no-border" >}}
 
@@ -214,7 +212,7 @@ It is often convenient to have more than one development line. For example, one 
 
 If you want to add some functionality to a deployed application or you want to fix a bug in it, you can do so without interfering with other development.
 
-1. Determine the version of the deployed application. This information is in the Developer Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
+1. Determine the version of the deployed application. This information is in the Mendix Portal. Alternatively, you can find the version in the *metadata.json* file in the **model** subfolder of your deployment package (mda) archive. For example, `"ModelVersion": "1.0.0.16"`
 2. Choose **Version Control** > **Manage Branch Lines...** and create a branch based on the tag with the that version number as its name.
 
     {{< figure src="/attachments/refguide8/version-control/using-version-control-in-studio-pro/create-from-tag.png" class="no-border" >}}

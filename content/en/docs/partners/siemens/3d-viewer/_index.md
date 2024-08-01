@@ -1,10 +1,8 @@
 ---
 title: "3D Viewer"
 url: /partners/siemens/3d-viewer/
-category: "Siemens"
 weight: 20
 description: "Describes the configuration and usage of the 3D Viewer app service, which enables uploading, visualizing, and operating on 3D JT files in your web apps."
-tags: ["3d visualization", "cad", "app store", "marketplace", "component", "platform support"]
 aliases:
   - /appstore/app-services/3d-viewer/index.html
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -66,7 +64,7 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 * One **Container3D** widget can only contain one **Viewer** widget. If multiple Viewer widgets are placed inside a Container3D widget, you will see error message in **Design mode**. 
 * The **Viewer** widget is used to display a 3D model. All other 3D widgets (except the **Uploader** and **Container3D** widgets) need a Viewer widget present on the page to interact with.
 * Currently, supports glTF, STL, OBJ, and JT (JT version 9 and above) formats.
-* Before uploading a shattered JT *.zip* file,  make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7Zip, make sure you enter *cu* in **Parameters**.
+* Before uploading a shattered JT *.zip* file, make sure you are using UTF-8 encode to zip the JT files. For example, if you are using 7-Zip, make sure you enter *cu* in **Parameters**.
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/shatteredjt-utf8.png" alt="shatteredjt-utf8" class="no-border" >}}
 
@@ -84,7 +82,7 @@ You can request a license token by clicking the **Contact Us** button on the [3D
 
 ### 2.2 Installing the Component in Your App
 
-To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/overview/use-content/#import) section in *Using Marketplace Content*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
+To download and install the 3D Viewer app service in your app, follow the instructions in the [Importing Content from the App Explorer](/appstore/use-content/#import) section in *Using Marketplace Content*. After the app service is installed, you can see a collection of ready-to-use items under the **Viewer3D** folder and a collection of 3D widgets in the **Add-on widget** category in the **Toolbox**.
 
 ## 3 Initializing on App Startup
 
@@ -250,7 +248,7 @@ This widget presents a hierarchical tree display of a model's product manufactur
 
 On the **General** tab, the **Expand all tree nodes** property determines if all tree nodes are expanded by default. When set to **Yes**, the end-user sees a PMI tree fully expanded by default on the widget load. When set to **No**, the PMI tree will not fully expand by default. 
 
-Also on the **General** tab,  the **Auto load** property determines if all PMI information should be automatically loaded into viewer once the PMI structure tree is loaded.
+Also on the **General** tab, the **Auto load** property determines if all PMI information should be automatically loaded into viewer once the PMI structure tree is loaded.
 
 ##### 4.6.2.4 Section View {#section-view}
 
@@ -276,7 +274,7 @@ This widget enables performing measurements on 3D models, including measuring di
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to perform measurements on the model. 
 
-No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts . For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
+No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
 ##### 4.6.2.7 Preference {#preference}
 
@@ -316,7 +314,7 @@ You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to d
 
 #### 4.7.1 For an App Deployed in the Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Developer Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in the Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 
@@ -328,7 +326,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### 4.7.2 For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/developerportal/deploy/).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/deployment/).
 
 ## 5 Usage
 
@@ -587,7 +585,7 @@ The sections below describe these tools.
 The **Usage Dashboard** shows the real-time statistics about the usage of an app service. Perform the following steps to check the real-time statistics:
 
 1. Log into the Marketplace.
-2. Go to **My Marketplace**.
+2. Go to the Marketplace home page.
 3. On the left navigation menu, click [Company Subscriptions](https://marketplace.mendix.com/link/company/subscriptions). This page gives an overview of all the subscriptions of your organization.
 4. Find **3D Viewer** in the list.
 5. Click **Usage Dashboard** to show the usage details.

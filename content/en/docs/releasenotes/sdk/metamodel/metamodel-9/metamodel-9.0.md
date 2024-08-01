@@ -18,7 +18,7 @@ weight: 100
 
 #### JavaActionCallAction (Element)
 
-* We intoduced the `queue` property.
+* We introduced the `queue` property.
 
 #### WorkflowCallAction, SetTaskOutcomeAction, OpenUserTaskAction, and OpenWorkflowAction (Elements)
 
@@ -67,7 +67,7 @@ weight: 100
 * We removed the experimental status of this element.
 * We introduced the `onCreatedEvent` property.
 
-#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome, and MicroflowBasedUserSource (Elemenst)
+#### Flow, CallWorkflowActivity, ConditionOutcomeActivity, EndWorkflowActivity, ExclusiveSplitActivity, ParallelSplitActivity, CallMicroflowTask, MicroflowCallParameterMapping, UserSource, XPathBasedUserSource, Outcome, UserTaskOutcome, ParallelSplitOutcome, ConditionOutcome, BooleanConditionOutcome, EnumerationValueConditionOutcome, VoidConditionOutcome, and MicroflowBasedUserSource (Elements)
 
 * We removed the experimental status of these elements.
 

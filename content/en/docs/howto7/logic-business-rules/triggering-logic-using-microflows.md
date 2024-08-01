@@ -1,9 +1,7 @@
 ---
 title: "Trigger Logic Using Microflows"
 url: /howto7/logic-business-rules/triggering-logic-using-microflows/
-category: "Logic and Business Rules"
 weight: 2
-tags: ["microflow", "logic"]
 ---
 To add custom logic to your Mendix application you can use microflows. Microflows can be triggered in various ways, as in, buttons, input fields, scheduled events, and more. This how-to teaches you how to configure the properties and settings of a microflow button placed on a grid or reference set selector. You will start with adding the microflow button to the right widget. Next you will need to configure the right properties and settings of the microflow button. 
 
@@ -53,7 +51,7 @@ At the moment there is only a button with no microflow behind it yet. In this ex
     | **Tooltip** | This property indicates what text will be displayed when users mouse over the button. |
     | **Icon** | This property indicates which image will be shown in front of the caption of the trigger. |
     | **Button style** | This property indicates the style of the button. |
-    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double clicking a row. Whether a click or a double click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide7/data-grid/), [Template grid](/refguide7/template-grid/) or [Reference set selector](/refguide7/reference-set-selector/). {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580939.png" class="no-border" >}} |
+    | **Is default button** | This property indicates whether this button is the default button of the grid or reference set selector. A grid or reference set selector can only have one default button. The default button is triggered when clicking or double-clicking a row. Whether a click or a double-click triggers it depends on the 'default button trigger' property of the [Data grid](/refguide7/data-grid/), [Template grid](/refguide7/template-grid/) or [Reference set selector](/refguide7/reference-set-selector/). {{< figure src="/attachments/howto7/logic-business-rules/triggering-logic-using-microflows/18580939.png" class="no-border" >}} |
     | **Visible** | By default, whether or not an element is displayed in the browser is determined by how the page is designed and the user's roles within the application. However, the page can be configured to hide the element unless a certain condition is met. **Attribute**: When checked, this setting hides the widget unless the value of a particular attribute has a certain value. Only boolean and enumeration attributes can be assigned to this purpose. **Ignore security**: Check this box if you want the microflow button to be visible even if security says it should be hidden. |
     | **Name** | This property specifies the name of the microflow in the page builderClass: The class property allows you to specify a cascading style sheet (CSS) class for the widget. This class will be applied to the widget in the browser and the widget will get the corresponding styling. The class should be a class from the theme that is used in the project. It overrules the default styling of the widget. |
     | **Style** | The style property allows you to specify additional CSS styling. If a class is also specified, this styling is applied *after* the class. |

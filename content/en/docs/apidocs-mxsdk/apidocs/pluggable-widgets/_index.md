@@ -1,12 +1,10 @@
 ---
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
-category: "API Documentation"
 description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs in Mx10."
 no_list: false
 description_list: true
 weight: 90
-tags: ["Widget", "Pluggable", "Custom", "JavaScript", "React"]
 ---
 
 ## 1 Introduction
@@ -131,7 +129,7 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-The presentation of the widget in Studio pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
+The presentation of the widget in Studio Pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
 
 * `name` — The display name of the widget.
 * `description` — A short written description of the widget.
@@ -149,7 +147,6 @@ In Mendix Studio Pro, the widget described above would look like this:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget.png" alt="basic widget" >}}
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
-
 
 #### 4.2.1 Toolbox Category {#toolbox-category}
 
@@ -186,7 +183,6 @@ For more complex help pages you can link to a markdown page. For security reason
 * Must use HTTPS protocol
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
-
 
 #### 4.2.3 Icon {#icon}
 

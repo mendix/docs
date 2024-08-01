@@ -1,10 +1,8 @@
 ---
 title: "Access a Samba Share"
 url: /howto9/integration/access-a-samba-share-from-the-mxcloud/
-category: "Integration"
 weight: 11
 description: "Describes how to access a Samba share from the MxCloud and use a server name."
-tags: ["Samba", "share"]
 ---
 
 ## 1 Introduction

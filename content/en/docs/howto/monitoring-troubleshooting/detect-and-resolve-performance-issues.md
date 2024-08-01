@@ -1,9 +1,7 @@
 ---
 title: "Detect and Resolve Performance Issues"
 url: /howto/monitoring-troubleshooting/detect-and-resolve-performance-issues/
-category: "Monitoring and Troubleshooting"
 description: "Describes possible performance issues with root causes and resolutions."
-tags: ["monitoring", "troubleshooting", "performance issue", "performance"]
 ---
 
 ## 1 Introduction
@@ -77,13 +75,13 @@ Tools you can use to identify your slow microflow and the specific slow activiti
 
 ### 4.1 Server Monitoring
 
-The Mendix Server and [Developer Portal](/developerportal/operate/) offer a number of performance graphs and logs.
+The Mendix Server and [Apps](/developerportal/) offer a number of performance graphs and logs.
 
 ### 4.2 Microflow Debugger
 
 Once you have identified a slow page, it is easy to identify which microflows are executed on that page. Make sure you look at directly referenced microflows (such as data sources), and also at sub-microflows, on-change event handlers, and domain model event handlers that could be called by your page.
 
-Setting a break point and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
+Setting a breakpoint and stepping through these relevant microflows can often give you a quick (although subjective) way to find a slow action (for details, see [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)). If you cannot subjectively identify your slow process, move on to the next step.
 
 ### 4.3 Microflow Time Stamps
 
@@ -169,11 +167,11 @@ If you find that your microflow has a large number of objects to loop over, or e
 
 As always, make sure you look at the retrieves and commits performed in your loops, and try to minimize them wherever possible.
 
-## 6 Using MxAssist Best Practice Bot
+## 6 Using Best Practice Recommender
 
-[MxAssist Best Practice Bot](/refguide/mx-assist-performance-bot/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Bot**.
+[Best Practice Recommender](/refguide/best-practice-recommender/) can help you find potential improvements to your app in general, such as performance, security, naming conventions, and so on. It can be accessed via **View** > **Best Practice Recommender**.
 
-For more information on best practices, see [Recommendations from MxAssist Best Practice Bot](/refguide/performance-best-practices/).
+For more information on best practices, see [Recommendations from Best Practice Recommender](/refguide/performance-best-practices/).
 
 ## 7 Read More
 

@@ -2,7 +2,6 @@
 title: "App Explorer"
 url: /refguide/app-explorer/
 weight: 25
-tags: ["studio pro", "App Explorer"]
 aliases:
     - /refguide/project-explorer/
 ---

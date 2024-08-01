@@ -1,9 +1,7 @@
 ---
 title: "Pages"
 url: /refguide8/pages/
-category: "App Modeling"
 weight: 30
-tags: ["Pages", "Widgets", "Studio Pro", "page structure"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #This document also has a redirect from opening-pages (which has been deleted)
 ---

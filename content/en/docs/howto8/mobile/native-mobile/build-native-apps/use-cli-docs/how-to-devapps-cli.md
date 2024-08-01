@@ -4,7 +4,6 @@ linktitle: "Custom Developer App with Native Builder CLI"
 url: /howto8/mobile/how-to-devapps-cli/
 weight: 30
 description: A tutorial for creating custom developer apps.
-tags: ["native", "mobile", "developer", "native-builder", "developer app", "make it native"]
 ---
 
 ## 1 Introduction
@@ -33,7 +32,7 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
     ```
 
     This command does the following: <br />
-    1. Creates a branch named `developer` based on the commited changes to your `main`. <br />
+    1. Creates a branch named `developer` based on the committed changes to your `main`. <br />
     1. Starts a build using the developer app flavors for your project.
 4. Wait until the Native Builder completes your builds.
 
@@ -61,9 +60,9 @@ There are various ways install an app on a device. Installing using a USB is det
 
 1. Connect your device to your machine via USB.
 2. Enable file transfer on your device (differs per device).
-3. Open **This PC** in File Exploer; your device should be listed as an external device.
+3. Open **This PC** in File Explorer; your device should be listed as an external device.
 4. Drag your *APK* onto your device.
-5. Wait for it to finish transfering.
+5. Wait for it to finish transferring.
 6. Open your device's file manager.
 7. Navigate to the root of the file system.
 8. Tap the *APK* to install.
@@ -83,11 +82,11 @@ Before installing, make sure you have completed the following prerequisites:
 * Have a Mac OSX machine
 * Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
-* Install the latest XCode version
+* Install the latest Xcode version
 
 #### 4.2.1 Installing on an Emulator
 
-Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Native Builder are stripped of simulator artifacts. Therefore, to run on Xcode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
@@ -111,7 +110,7 @@ Builds with the Native Builder are stripped of simulator artifacts. Therefore, t
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/ios-folder.png" alt="iOS folder structure" class="no-border" >}}
 
-8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8. In Xcode select the **Dev** target and the emulator you want to build your developer app for:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-devapps-cli/xcode-target-selection.png" alt="Dev target selection" class="no-border" >}}
 

@@ -1,10 +1,8 @@
 ---
 title: "System Requirements"
 url: /refguide/system-requirements/
-category: "Installation"
 weight: 20
 description: "Presents the system requirements for using the Mendix Platform."
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -19,6 +17,7 @@ Mendix Studio Pro has the requirements listed in the following sections.
 ### 2.1 Software Specifications {#software}
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
+We support running on Windows locally, or locally virtualized.
 
 Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
@@ -34,22 +33,31 @@ Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac usi
 
 {{% alert color="info" %}}
 
-If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+If you were using Parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit Parallels to be able to sign in to Studio Pro. 
 
 {{% /alert %}}
 
 The following frameworks are required. They will be installed automatically by the Studio Pro installer, if necessary:
 
-* Microsoft .NET 6.0.x desktop runtime (x64) and all applicable Windows security patches
+* Microsoft .NET desktop runtime (x64) and all applicable Windows security patches
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
+    
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
-* A Java Developer Kit (JDK) version 11 or 17 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 11 (x64)'
+* A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
+* Gradle version 8.5 or above (if your Java version is 11 or 17, Gradle version 7.6 or above will also work) - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
 
 When you are running Studio Pro on a Parallels virtual machine on an ARM64 device (for example, an M1 Mac), you need the following dependencies in addition to the x64 version listed above:
 
-* .NET 6 Desktop Runtime (arm64)
+* .NET Desktop Runtime (arm64)
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 Desktop Runtime | .NET 8 Desktop Runtime |
 * Microsoft Edge WebView2 Evergreen Runtime (arm64)
 
 {{% alert color="info" %}}
@@ -64,14 +72,12 @@ Please note the limitation that the database viewer built into Studio Pro (as de
 
 These are the known limitations for Mac:
 
-* No native mobile support.
-* No support for document templates.
-* No **Structure mode** for the page editor.
-* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
+* No native mobile support
+* No support for document templates
+* No **Structure mode** for the page editor
+* Start from spreadsheet cannot be used at this time 
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
     * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).
-
-* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
 
 ### 2.2 Hardware Specifications {#hardware}
 
@@ -90,6 +96,7 @@ Studio Pro needs access to the following URLs in order to work. If your firewall
 * `*.mendix.com`
 * `*.mendixcloud.com`
 * `*.teamserver.sprintr.com`
+* `*.api.mendix.com`
 
 If you have set up managed dependencies and are working behind a firewall or using a proxy, see the [Proxy Settings](/refguide/managed-dependencies/#proxy-settings) section of *Managed Dependencies* for advice on what you need to do to allow the managed dependencies to work.
 
@@ -145,19 +152,19 @@ You need `repo` permissions for your token.
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
-To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
+To get a PAT for your user account, see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
 
 You need `write_repository` permission for the token.
 
-#### 2.5.4 BitBucket 
+#### 2.5.4 Bitbucket 
 
-We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
+We support all tiers of Atlassian’s Bitbucket service, including Bitbucket.org, Bitbucket Server, and Bitbucket Data Center on-premises solutions.
 
-On BitBucket.org, the personal access token are called app passwords.
+On Bitbucket.org, the personal access token are called app passwords.
 
-To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
+To set up an App Password for your Bitbucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+Bitbucket Server and Bitbucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 
 In both cases you need `repository write` permission.
 
@@ -204,10 +211,10 @@ The Mendix Docker buildpack supports the following Kubernetes versions:
 
 ### 6.3 Java {#java}
 
-When running Mendix on a server, you will need Java Runtime Environment (JRE) 11 or 17. To download an OpenJDK distribution from Adoptium, see [Adoptium Installation](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 {{% alert color="warning" %}}
-Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 is planned for Studio Pro version 10.10, to be released in April 2024. Mendix recommends switching to a Studio Pro version compatible with Java 21 once it is available.
+Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 has been released with Studio Pro version 10.11. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
 ## 7 Databases {#databases}
@@ -253,7 +260,11 @@ For server-based installations, the following storage types mounted by the OS ar
 * NAS 
 * SAN 
 * GFS
-* Local Storage 
+* Local Storage
+
+{{% alert color="info" %}}
+AWS S3 is also supported in the Windows Service Console.
+{{% /alert %}}
 
 ## 9 Browsers {#browsers}
 
@@ -288,7 +299,12 @@ Depending on your app's complexity, these minimum hardware requirements might no
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
-* .NET 6.0
+* .NET
+
+    | Studio Pro 10.0.0 - 10.10.0 | Studio Pro 10.11.0 and above |
+    | --- | --- |
+    | .NET 6 | .NET 8 |
+
 * JDK 11
 
 ## 12 mx Command-Line Tool {#mxtool}

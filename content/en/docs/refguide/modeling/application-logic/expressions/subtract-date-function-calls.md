@@ -2,7 +2,6 @@
 title: "Subtract Date Function Calls"
 url: /refguide/subtract-date-function-calls/
 weight: 115
-tags: ["studio pro", "expressions", "subtract date function"]
 ---
 
 ## 1 Introduction

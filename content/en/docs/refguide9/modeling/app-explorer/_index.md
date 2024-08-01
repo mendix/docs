@@ -2,7 +2,6 @@
 title: "App Explorer"
 url: /refguide9/app-explorer/
 weight: 25
-tags: ["studio pro", "App Explorer"]
 aliases:
     - /refguide9/project-explorer/
 ---
@@ -20,7 +19,7 @@ The **App Explorer** consists of the following:
     * **Domain model** – a model that describes the information (or *data*) used by your application in an abstract way; one module can have one domain model only 
     * **Document** – an individual file, for example, a [page](/refguide9/pages/), [microflow](/refguide9/microflows/), or a [scheduled event](/refguide9/scheduled-events/). 
 
-## 2 Performing Basic Functions
+## 2 Performing Basic Functions{#basic-functions}
 
 In the **App Explorer**, you can do the following:
 

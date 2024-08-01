@@ -3,7 +3,6 @@ title: "Part 2: Badges"
 url: /howto8/mobile/local-notif-badges/
 weight: 20
 description: A tutorial for setting up badges for local push notifications.
-tags: ["mobile", "push notification", "local", "push", "notification"]
 ---
 
 ## 1 Introduction

@@ -1,10 +1,8 @@
 ---
 title: "Expose Data to BI Tools Using OData"
 url: /howto9/integration/exposing-data-to-bi-tools-using-odata/
-category: "Integration"
 weight: 13
-description: "Describes how to create a published OData service with resources, add the OData server to Tableau and Excel, combine resources in Tableau, and create qustom queries."
-tags: ["expose", "bi tools", "odata", "integration", "reporting tools", "excel", "tableau"]
+description: "Describes how to create a published OData service with resources, add the OData server to Tableau and Excel, combine resources in Tableau, and create custom queries."
 ---
 
 ## 1 Introduction
@@ -53,7 +51,7 @@ The OData service is now ready to be consumed.
 
 1. Open Excel.
 2. Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**.
-3. Retun to Studio Pro, and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
+3. Return to Studio Pro, and double-click the published OData service. Copy the link in the **Location** field to the clipboard.
 4. Back in Excel, on the **OData Feed** dialog box, enter the copied link for the **URL** and Click **OK**:
 5. Select the name of the published entity in the Navigator and click **Load**.
 

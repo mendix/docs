@@ -1,9 +1,7 @@
 ---
 title: "Consume a REST Service"
 url: /howto7/integration/consume-a-rest-service/
-category: "Integration"
 weight: 9
-tags: ["integration", "rest service", "data model", "consume"]
 description: "Describes how to get information from a REST service."
 ---
 
@@ -56,7 +54,7 @@ To create an import mapping:
 
 ## 4 Adding an Input Entity to the Domain Model
 
-Our sevice takes the title of the page as an input. It returns the summary of the page. 
+Our service takes the title of the page as an input. It returns the summary of the page. 
 
 In this section, you are creating an entity that represents this input and associating it with its summary.
 
@@ -159,7 +157,7 @@ Congratulations! You can now start your app and get summaries from Wikipedia.
 
 **How to consume REST natively with Mendix**
 
-{{% youtube waOlvSqdaP4 %}}
+{{< youtube waOlvSqdaP4 >}}
 
 ## 9 Read More
 

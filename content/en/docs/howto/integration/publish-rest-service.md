@@ -1,10 +1,8 @@
 ---
 title: "Publish a REST Service"
 url: /howto/integration/publish-rest-service/
-category: "Integration"
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
-tags: ["rest", "rest service", "web service", "integration"]
 aliases:
     - /howto/integration/publish-rest-service/
 ---
@@ -33,7 +31,7 @@ To set up the example app that you will use in the next sections for publishing 
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/domainmodel.png" alt="Many-to-one association from OrderItem to Order" class="no-border" >}}
 
-4. [Generate overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/#3-creating-overview-and-detail-pages-automatically) for the **Order** and **OrderItem** entities.
+4. [Generate overview and detail pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/#create-automatically) for the **Order** and **OrderItem** entities.
 5. [Add a data grid](/refguide/data-grid/) to the **Order_NewEdit** page. Set it to display the **OrderItem** objects from the database over an association, like this:
     
     {{< figure src="/attachments/howto/integration/publish-rest-service/DataGridSettings.png" alt="Data grid settings for the Order_NewEdit page" class="no-border" >}}
@@ -83,7 +81,7 @@ To create the mapping, follow these steps:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/OperationsDialogSettings.png" alt="Operation path, microflow, and parameter settings" class="no-border" >}}
 
-8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box,  then click **Show** to start editing the newly created microflow. Add a **OrderID** parameter.
+8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box, then click **Show** to start editing the newly created microflow. Add a **OrderID** parameter.
 
     {{% alert color="info" %}}This parameter might be added automatically, along with an **httpRequest** parameter. If an **httpRequest** parameter is added, remove it to avoid getting errors.<br/>
     An **httpResponse** parameter may also be automatically added. If this happens and you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the parameter to avoid getting errors.{{% /alert %}}

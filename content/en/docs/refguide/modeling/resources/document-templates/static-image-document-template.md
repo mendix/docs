@@ -1,7 +1,6 @@
 ---
 title: "Static Image (Document Template)"
 url: /refguide/static-image-document-template/
-tags: ["studio pro"]
 aliases:
     - /refguide/Static+Image+(document+template).html
     - /refguide/static-image-(document-template).html

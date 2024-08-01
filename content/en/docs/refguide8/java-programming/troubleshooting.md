@@ -1,8 +1,6 @@
 ---
 title: "Troubleshooting"
 url: /refguide8/troubleshooting/
-category: "Java Programming"
-tags: ["studio pro"]
 ---
 
 ## JAR Compatibility List

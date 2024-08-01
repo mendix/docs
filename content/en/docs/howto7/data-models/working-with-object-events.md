@@ -1,9 +1,7 @@
 ---
 title: "Work with Object Events"
 url: /howto7/data-models/working-with-object-events/
-category: "Data Models"
 weight: 3
-tags: ["microflow"]
 #To update screenshots of these microflows in the Desktop Modeler, use the Microflow Screenshots app.
 ---
 
@@ -28,7 +26,7 @@ When an object is committed through a default Save button, a commit activity, or
 
 An autocommit is an automatic commit from the platform, which is done to keep the domain model in sync. If your application ends up having autocommitted objects, then you will have a modeling error. Since an association is also a member of an object, the association will be stored in the database as well. This means that if you create an order line inside an order and the order line is the parent of the association, when you commit the order line, the order will be autocommitted.
 
-If you end up with autocommited objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
+If you end up with autocommitted objects, it is always because of a modeling error. At some point in time, an association was set to a new object, the associated object was committed, and all of its associations were committed as well to keep all the data consistent.
 
 * Events: all before and after events are executed, and if any before-rollback event returns false, an exception can be thrown
     * If an exception occurs during an event, all the applied changes are reverted with the default error handling behavior

@@ -3,7 +3,6 @@ title: "Adding a Native Mobile App"
 url: /quickstarts/native-mobile-app/
 weight: 20
 description: "Learn the basics of making a native mobile app."
-tags: ["hello world", "microflows", "widgets", "app", "nanoflow", "app development"]
 aliases:
     - /quickstarts/part2/
     - /refguide/quickstart-part2/
@@ -18,7 +17,7 @@ In this tutorial, you will learn to use a native mobile navigation profile. Apps
 
 ### 1.1 Getting to Know Mendix Native Mobile
 
-Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance,  advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
+Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance, advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. This tutorial will familiarize you with the following Mendix native mobile concepts:
 
@@ -87,7 +86,7 @@ Now, the existing images are displayed from the database.
 
 Next, you will develop functionality that allows the end-user to take new pictures with the app and then upload them to the server.
 
-## 4 Using a Nanoflow to Call a JavaScript Action
+## 4 Using a Nanoflow to Call a JavaScript Action {#nanoflow-use-case}
 
 Your app needs a button that allows the end-user to take a picture. Instead of a regular button, you can use a floating action button optimized for mobile users that calls a nanoflow: 
 

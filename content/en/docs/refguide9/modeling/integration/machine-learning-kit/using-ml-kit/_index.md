@@ -1,9 +1,7 @@
 ---
 title: "Using ML Kit"
 url: /refguide9/machine-learning-kit/using-ml-kit/
-category: Integration
 weight: 15
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 {{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
@@ -12,7 +10,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 
 Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy an ML model built using common ML framework and language into the Mendix Runtime.
 
-{{% alert color="info" %}}Check out a demo app and Jupyter notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
+{{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
 ## 2 Usage {#usage}
 
@@ -354,7 +352,7 @@ This is currently not supported.
 
     In short: mind the growth of memory usage with very complex model outputs. 
 
-    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
+    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]`), will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
 4. I have an exception when executing the ML model or running it. 
   

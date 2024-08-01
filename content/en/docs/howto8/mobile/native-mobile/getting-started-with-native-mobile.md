@@ -3,7 +3,6 @@ title: "Get Started with Native Mobile"
 url: /howto8/mobile/getting-started-with-native-mobile/
 weight: 5
 description: A how-to for creating a native mobile Mendix app and viewing it on a mobile device.
-tags: ["native", "mobile", "developer", "test"]
 ---
 
 ## 1 Introduction
@@ -33,7 +32,7 @@ For details on making a Mendix app using the Blank Native Mobile App template, d
 
 To start a new app based on a template, follow these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New Project** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New Project**, and then select the **Blank Native Mobile App**.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
 4. Click **Run Locally** to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.

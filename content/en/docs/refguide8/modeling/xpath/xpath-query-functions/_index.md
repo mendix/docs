@@ -1,7 +1,6 @@
 ---
 title: "XPath Query Functions"
 url: /refguide8/xpath-query-functions/
-tags: ["studio pro"]
 ---
 
 The following XPath query aggregate functions are available:

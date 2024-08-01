@@ -1,15 +1,13 @@
 ---
 title: "Find the Root Cause of Runtime Errors"
 url: /howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/
-category: "Monitoring and Troubleshooting"
 weight: 8
 description: "Describes how to find the root cause of runtime errors via Studio Pro and via the application logs."
-tags: ["monitoring", "troubleshooting", "runtime error", "runtime", "error"]
 ---
 
 ## 1 Introduction
 
-This how to will show you how to find the information necessary to locate the root cause of a runtime error. The message displayed in the application is often vague and non-descript. Depending on the environment in which the error occurred, there are two methods for finding this information.
+This how to will show you how to find the information necessary to locate the root cause of a runtime error. The message displayed in the application is often vague and nondescript. Depending on the environment in which the error occurred, there are two methods for finding this information.
 
 This how-to teaches you how to do the following:
 
@@ -21,7 +19,7 @@ If the application is deployed from Studio Pro, the information is located in th
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" class="no-border" >}}
 
-When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **VIew Log Line Details** pop-up window:
+When an error occurs, a line with a red font appears in the console.  Double-clicking on this line brings up the **View Log Line Details** dialog box:
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" class="no-border" >}}
 

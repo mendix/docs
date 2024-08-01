@@ -2,7 +2,6 @@
 title: "Change Workflow State"
 url: /refguide9/change-workflow-state/
 weight: 20
-tags: ["studio pro", "user task", "workflow", "change workflow state", "workflow state"]
 ---
 
 {{% alert color="warning" %}}
@@ -42,7 +41,7 @@ You can select the following operations that represent the new state of the work
 
 * **Abort workflow** – This operation aborts the workflow instance and brings it to its final state; there is no operation to undo an abort operation. The **Reason** property can be set for administration purposes to indicate why the workflow instance is aborted. For more information on the **Reason** property, see the [Reason](#reason) section below.
 
-* **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state . If the task is no longer in the new workflow definition, this action results in an error.
+* **Continue workflow** – This operation continues the processing of the workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance will no longer be in the *Incompatible* state. If the task is no longer in the new workflow definition, this action results in an error.
 
 * **Pause workflow** – This operation pauses further processing of the workflow. User tasks cannot be completed when the workflow instance is in the *Pause* state. Use the **Resume workflow** operation to resume processing of the workflow.
 

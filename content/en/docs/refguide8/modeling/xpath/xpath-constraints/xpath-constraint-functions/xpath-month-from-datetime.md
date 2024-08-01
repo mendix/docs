@@ -1,7 +1,6 @@
 ---
 title: "XPath Month-From-DateTime"
 url: /refguide8/xpath-month-from-datetime/
-tags: ["studio pro"]
 ---
 
 ## 1 Overview

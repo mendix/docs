@@ -1,13 +1,11 @@
 ---
 title: "Mendix 7 Reference Guide"
 url: /refguide7/
-notoc: true
 description: "The various sections of the reference guide provide details on the features and functionality of the Mendix Platform."
 weight: 85
 no_list: false
 description_list: true
 cascade:
-    - space: "Mendix 7"
     - content_type: "Mendix 7"
     - mendix_version: 7
     - banner_7: true

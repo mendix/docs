@@ -3,7 +3,6 @@ title: "Parse and Format Date Function Calls"
 url: /refguide8/parse-and-format-date-function-calls/
 weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
-tags: ["studio pro", "expressions", "parsing", "formatting"]
 ---
 
 ## 1 Introduction 
@@ -22,7 +21,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy` , `mm/dd/yyyy`, etc. |
+| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy`, `mm/dd/yyyy`, etc. |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 

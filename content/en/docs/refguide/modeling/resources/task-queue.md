@@ -3,7 +3,6 @@ title: "Task Queue"
 url: /refguide/task-queue/
 weight: 85
 description: "Concepts and usage of the task queue"
-tags: ["task queue", "process queue", "parallel", "scheduling", "microflow"]
 ---
 
 ## 1 Introduction
@@ -50,7 +49,7 @@ Background execution is done in so called **Task Queues**. They can be created i
     * with "Per Node" the maximum thread count will be limited per node. When this option is selected, adding new nodes to the cluster will also increase the total thread count in overall cluster.
     * with "Cluster-wide" the maximum thread count will be limited cluster-wide. When this option is selected, total thread count in the cluster will be fixed and adding/removing new nodes will not have any impact on the thread count.
 
-Task Queues have a number threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
+Task Queues have a number of threads. Each of these threads can process one task at a time. That is, a queue will pick up as many concurrent tasks as it has threads. Whenever a task is finished, the next one will be picked up.
     
 #### 2.2.1 Thread Count Recommendation 
 

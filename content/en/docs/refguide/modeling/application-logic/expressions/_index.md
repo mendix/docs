@@ -3,7 +3,6 @@ title: "Expressions"
 url: /refguide/expressions/
 weight: 30
 description: "Describes the expressions that can be used in Mendix for a variety of purposes (for example, to change a member of an object based on logic)."
-tags: ["studio pro", "expressions", "microflow expressions"]
 aliases:
     - /refguide/microflow-expressions.html
     - /refguide/microflow-expressions
@@ -14,7 +13,7 @@ aliases:
 
 Expressions change a value based on a function or combination of functions. 
 
-Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
+Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example, `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
@@ -33,7 +32,7 @@ Arithmetic functions (subtraction, dividing, and multiplying) are being combined
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
 ```java
-if $package/weight < 1.00 then 0.00 else 5.00`
+if $package/weight < 1.00 then 0.00 else 5.00
 ```
 
 {{% alert color="warning" %}}

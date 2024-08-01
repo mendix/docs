@@ -154,6 +154,7 @@
         padding: 0.5rem; // NK - changed
         line-height: 1.25; // NK - added to match code text
         font-size: $font-size-base; // NK - added to match code text
+        border:none;
 
         > code {
             background-color: inherit !important;
@@ -231,8 +232,8 @@ a:not(.btn):not(.td-sidebar-link):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons and breadcrumb)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a)::after {
+// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -294,14 +295,12 @@ html {
 }
 
 .td-main main {
+    padding-top: 4rem;  // DB - Moved out of breakpoint
         @include media-breakpoint-up(md) {
-            padding-top: 3.75rem;  // NK - made smaller
             border-left: 1px solid $gray-border; // NK - moved from toc, to fully span height of screen
             border-right: 1px solid $gray-border; // NK - moved from left menu, to fully span height of screen
         }
-
-
-        padding-bottom: 2rem;
+    padding-bottom: 0rem;
     }
     // NK - custom addition
     main.lp{
@@ -536,11 +535,14 @@ nav.foldable-nav {
                 text-decoration: underline;
             }
         }
-        // NK - styling for ToC highlighting
+
+        // Styling for ToC highlighting
         .activeToc {
-            font-weight: $font-weight-bold;
-            color: $link-color;
             border-left-color: $link-color;
+        }
+
+        .activeToc > a {
+            font-weight: $font-weight-bold;
         }
     }
 }
@@ -642,14 +644,14 @@ nav.foldable-nav {
   
     thead th {
       vertical-align: bottom;
-      border-bottom: (2 * $table-border-width) solid $table-border-color;  // NK - added borders to tables
+      border-bottom: calc(#{$table-border-width} * 2) solid $table-border-color;  // NK - added borders to tables
       border-top: $table-border-width solid $table-border-color;
       border-left: $table-border-width solid $table-border-color;
       border-right: $table-border-width solid $table-border-color;
     }
   
     tbody + tbody {
-      border: (2 * $table-border-width) solid $table-border-color; // NK - added borders to tables
+      border: calc(#{$table-border-width} * 2) solid $table-border-color; // NK - added borders to tables
     }
   }
 

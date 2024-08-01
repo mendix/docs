@@ -1,10 +1,8 @@
 ---
 title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
-category: "Community Tools"
 weight: 2
-description: "Describes the user settings for the Mendix Developer Portal."
-tags: ["profile", "Developer Portal", "settings", "accounts", "notification settings", "developer settings", "API keys", "personal access tokens", "pat", "personal data"]
+description: "Describes the user settings for the Mendix Portal."
 ---
 
 ## 1 Introduction {#settings}
@@ -56,14 +54,14 @@ Before you start with a new profile merge action, it is important to understand 
 * **None of the user accounts gives you access to the Mendix Platform** – You should own at least one user account that provides access to the Mendix Platform.
 
 {{% alert color="warning" %}}
-If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge and you cannot log in with the Mendix Profile you want to merge, click **Create Support Request**  to go to Mendix Support. Mendix Support will contact you to change the profile **Recovery** email. Once this is done, you will be able to follow the steps below. 
+If you do not have access to any of the email addresses linked to the user accounts/profiles that you want to merge and you cannot log in with the Mendix Profile you want to merge, click **Create Support Request** to go to Mendix Support. Mendix Support will contact you to change the profile **Recovery** email. Once this is done, you will be able to follow the steps below. 
 {{% /alert %}}
 
 {{% alert color="warning" %}}
 When merging user profiles, a merge confirmation is needed for the user account you are not signed in with. The verification code that you need to confirm the merge operation will arrive by email. Therefore, you must be able to receive the verification email in an email inbox that is associated with the user account or the associated profile.  
 {{% /alert %}}
 
-### 2.2 Merge Process
+### 2.2 Merge Process {#merge-process}
 
 Follow these steps to merge your profiles:
 
@@ -71,7 +69,7 @@ Follow these steps to merge your profiles:
 2. In the dialog box that appears, enter the email address of one of the accounts linked to the profile you want to transfer information from. Then click **Next**.
 3. You will be asked to choose an email address to receive a verification code, so choose an email address you have access to. This step is needed to verify that you are the owner of the Mendix Profile you are trying to merge.
 4. Enter the verification code you received via the selected email address.
-5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and the information that will be kept. This includes earned points, achievements, credits, certifications, and Academy progress that will be merged to your target profile.
+5. After clicking **Verify**, you will see an overview of the profile information that will be deleted and the information that will be kept. This includes earned points, achievements, certifications, and Academy progress that will be merged to your target profile. Note that credits cannot be merged; they remain on the accounts where they were earned.
 6. To proceed with the merge, click **Merge**. You will be notified once the merge is completed.
 
 {{% alert color="info" %}} 
@@ -110,7 +108,7 @@ If you are using the Mendix platform to manage credentials then your password ha
 
     You can update the password of your logged-in account via the [Change Password](https://login.mendix.com/mxid3/request-password-reset) button that is available by clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the logged-in account. You can also reach this screen using the **Forgot password?** link on the login screen.
 
-* Passwords on the Mendix platform must fulfil the following criteria:
+* Passwords on the Mendix platform must fulfill the following criteria:
 
     * The password must contain 
         * at least one special character from `` `~!@#$%^&*()-_+=[]{};:'"\|,.<>/? ``

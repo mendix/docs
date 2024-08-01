@@ -1,9 +1,9 @@
 ---
-title: "Epics"
+title: "Epics Overview"
+linktitle: "Epics"
 url: /developerportal/project-management/epics/epics/
 weight: 30
 description: "Describes the Epics page in Epics."
-tags: ["Project Management", "Epics", "Sprint", "Stories", "Developer Portal"]
 ---
 
 ## 1 Introduction
@@ -40,7 +40,7 @@ The epic details dialog box shows the following items:
     * You can link a story in the editor by typing *#* and the story title, and then selecting the right story from the list.
     * You can type a person in the editor by typing *@* and the person's name, and then selecting the right person from the list. Once you save the epic, the system will send a notification to the tagged person.
 
-* **Assign to** – You can assign the epic to anybody who can access the app in the Developer Portal.
+* **Assign to** – You can assign the epic to anybody who can access the app in [Apps](https://sprintr.home.mendix.com/).
 * **Tags** – You can add or remove tags.
     * You can create a new tag by typing the tag in the text box and clicking **Create new "[tag name]"**
     * You can [manage tags](/developerportal/project-management/epics/planning/#manage-tags) by clicking **Manage Tags** ({{% icon name="cog" %}}) at the end.

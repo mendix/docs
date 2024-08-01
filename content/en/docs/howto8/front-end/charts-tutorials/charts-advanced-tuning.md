@@ -4,7 +4,6 @@ linktitle: "Chart Advanced Tuning"
 url: /howto8/front-end/charts-advanced-tuning/
 weight: 30
 description: "Describes the settings you can use to change chart layouts and types"
-tags: ["Studio Pro", "Charts", "Layout", "Chart Type"]
 ---
 
 ## 1 Introduction
@@ -23,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Installed the latest version of Mendix Studio Pro
 * Downloaded the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
-* Setup a chart, see [How to Create a Chart](/howto8/front-end/charts-basic-create/)
+* Set up a chart, see [How to Create a Chart](/howto8/front-end/charts-basic-create/)
 
 ## 3 Changing the Layout {#layout-changes}
 

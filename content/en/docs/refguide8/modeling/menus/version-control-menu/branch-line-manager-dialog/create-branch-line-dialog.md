@@ -2,7 +2,6 @@
 title: "Create Branch Line"
 url: /refguide8/create-branch-line-dialog/
 weight: 90
-tags: ["studio pro", "create branch line"]
 ---
 
 ## 1 Introduction
@@ -11,7 +10,7 @@ Use the **Create Branch Line** dialog box to create a new [branch line](/refguid
 
 {{< figure src="/attachments/refguide8/modeling/menus/version-control-menu/branch-line-manager-dialog/create-branch-line-dialog/create-branch-line.png" class="no-border" >}}
 
-To view the **Create Branch Line** dialog box,  do the following:
+To view the **Create Branch Line** dialog box, do the following:
 
 1. Open **Version Control** > **Manage Branch Lines**.
 2. In the **Branch Line Manager**, click **New**. 

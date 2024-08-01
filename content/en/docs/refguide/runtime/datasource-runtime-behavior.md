@@ -1,7 +1,6 @@
 ---
 title: "Data Sources Retrieval"
 url: /refguide/datasource-runtime/
-tags: ["studio pro", "data source"]
 weight: 60
 ---
 
@@ -55,7 +54,7 @@ Because the object is cached, data shown in widgets on the page will be updated 
 
 In some scenarios the Mendix Client must have all the attributes of the object available. In this case **Network Round Trips** will be the default mode and cannot be changed.
 
-### 3.2 Optimize for Network Load
+### 3.2 Optimize for Network Load {#optimize-for-network-load}
 
 In the **Optimize for Network Load** optimization mode, the Runtime Server returns only the attributes used by the grid for the requested objects of the `OrderLine` entity. This limits the amount of data transferred over the network.
 

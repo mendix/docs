@@ -1,10 +1,8 @@
 ---
 title: "Test Web Services Using SoapUI"
 url: /refguide9/integration/testing-web-services-using-soapui/
-category: "Web Services"
 weight: 30
 description: "Describes how to create a SOAP project with SoapUI, create assertions in SoapUI, and build an automated test using SoapUI."
-tags: ["test", "testing", "web service", "soapui"]
 aliases: 
     - /howto9/testing/testing-web-services-using-soapui/
 ---

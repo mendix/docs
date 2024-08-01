@@ -4,7 +4,6 @@ url: /howto7/widget-development/
 weight: 90
 no_list: false
 description_list: true 
-tags: ["widget", "develop widget", "customize"]
 ---
 
 ## 1 Introduction
@@ -65,7 +64,7 @@ The Yeoman widget generator ships two versions of a boilerplate created by Mendi
 
 ## 4 Further Reading
 
-This category of how-to's presents in-depth information on how to build your own widgets. A few more tips are below.
+This category of how-tos presents in-depth information on how to build your own widgets. A few more tips are below.
 
 ### 4.1 Learn by Example
 

@@ -2,8 +2,6 @@
 title: "Communication Patterns in the Mendix Runtime"
 linktitle: "Communication Patterns"
 url: /refguide8/communication-patterns/
-category: "Mendix Runtime"
-tags: ["studio pro", "Mendix Runtime", "Communications", "Runtime Server", "Mendix Client"]
 ---
 
 ## 1 Introduction
@@ -20,7 +18,7 @@ The goals of this document are to present information for:
 The Mendix Platform consists of the following components:
 
 * Mendix Platform – a completely integrated application platform-as-a-service (aPaaS) for designing, building, deploying, and managing apps
-* Developer Portal – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
+* Apps – a web-based collaborative environment for designing, developing, and deploying apps, managing users and environments, deploying apps to the cloud with a single click, and managing and monitoring their performance
 * Marketplace – a portal with hundreds of publicly-available building blocks to speed up app development
 * Mendix Studio Pro – multi-user modeling studio of the Mendix Platform
 * Team Server – a central repository for managing application model versions
@@ -476,7 +474,7 @@ Data is transported between Mendix Client and database as required. The followin
 
 * Data entered by a user in a page is stored in JavaScript objects
 * For communication to the Runtime Server, JavaScript objects are serialized to JSON
-* The Runtime Server transforms the JSON objects to java MxObjects
+* The Runtime Server transforms the JSON objects to Java MxObjects
 * MxObject properties are bound to SQL statement parameters as needed by SQL queries
 * JDBC result set data is transformed to MxObjects
 * MxObjects are serialized to JSON when send to the Mendix Client

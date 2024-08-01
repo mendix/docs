@@ -1,9 +1,7 @@
 ---
 title: "Work with Images and Files"
 url: /howto7/data-models/working-with-images-and-files/
-category: "Data Models"
 weight: 4
-tags: []
 ---
 
 ## 1 Introduction
@@ -36,18 +34,18 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/howto7/data-models/working-with-images-and-files/18582131.png" class="no-border" >}}
 
-7. Open the **detail page** and double click the ImageUploader to open its properties. On this form you can select the maximum file size, and thumbnail width and height. Mendix automatically generates a thumbnail for the images you upload via the ImageUploader.
+7. Open the **detail page** and double-click the ImageUploader to open its properties. On this form you can select the maximum file size, and thumbnail width and height. Mendix automatically generates a thumbnail for the images you upload via the ImageUploader.
 
     {{< figure src="/attachments/howto7/data-models/working-with-images-and-files/18582130.png" class="no-border" >}}
 
-8. Double click the ImageViewer to open its properties. On this form you can select the default image, width, height and if the viewer should show the thumbnail or full image.
+8. Double-click the ImageViewer to open its properties. On this form you can select the default image, width, height and if the viewer should show the thumbnail or full image.
 
     {{< figure src="/attachments/howto7/data-models/working-with-images-and-files/18582129.png" class="no-border" >}}
 
 ## 4 File Documents
 
 1. Open your domain model and create an entity **MyDocument**.
-2. Double click the entity to open its **properties.**
+2. Double-click the entity to open its **properties.**
 3. Click **Select** at the **Generalization** property to open the entity selector.
 4. In the **Select Entity** dialog box, select **System.FileDocument**.
 5. Click **OK** in the entities property form. Your entity now inherits all properties from the **System.FileDocument** entity you selected and should look like this:
@@ -58,13 +56,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/howto7/data-models/working-with-images-and-files/18582125.png" class="no-border" >}}
 
-7. Open the detail page and double click the FileManager to open its properties. On this form you can select the maximum file size and allowed file extensions.
+7. Open the detail page and double-click the FileManager to open its properties. On this form you can select the maximum file size and allowed file extensions.
 
     {{< figure src="/attachments/howto7/data-models/working-with-images-and-files/18582122.png" class="no-border" >}}
 
 ## 5 Navigation and Security
 
-1. Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
+1. Create a navigation item for your overview page to start using it. If you don't know how to set up the navigation structure, take a look at [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/).
 2. If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [How to Create a Secure App](/howto7/security/create-a-secure-app/).
 
 ## 6 Read More

@@ -3,7 +3,6 @@ title: "Debug Native Mobile Apps (Advanced)"
 url: /howto8/mobile/native-debug/
 weight: 40
 description: A how-to for debugging native mobile apps using the Make It Native app.
-tags: ["native", "mobile", "debug", "Make It Native"]
 ---
 
 ## 1 Introduction
@@ -80,8 +79,8 @@ To use the Make It Native app with React Developer Tools, do the following:
 
 With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
 
-1. Install the LTS of [node.js](https://nodejs.org/en/).
-2. Open your command line interface (CLI).
+1. Install the LTS of [Node.js](https://nodejs.org/en/).
+2. Open your command-line interface (CLI).
 3. Run `npm i -g react-devtools@3` to install the React developer tools.
 4. Run `react-devtools`.
 
@@ -97,7 +96,7 @@ After running `react-devtools` you will see the React developer tools GUI. To us
 
 When your Mendix app is crashing or the logging in Mendix Studio Pro is incomplete, you might want to dive into your operating system's log files for information. There are 2 options:
 
-1. You could start the app in [XCode or Android Studio](/howto8/mobile/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
+1. You could start the app in [Xcode or Android Studio](/howto8/mobile/native-build-locally/#building-app-project), either of which will give you more information and allow you to set breakpoint and inspect variable values. This approach is a bit more cumbersome. 
 1. Get the log files directly from your device.
 
 The first approach is self-explanatory. For information on getting log files directly from your device, however, see below.

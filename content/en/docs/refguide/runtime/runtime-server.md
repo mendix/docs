@@ -1,10 +1,8 @@
 ---
 title: "Runtime Server"
 url: /refguide/runtime-server/
-category: "Mendix Runtime"
 description: "Describes the Runtime Server and how it functions."
 weight: 10
-tags: ["runtime", "runtime server", "stateless", "database", "java", "microflows"]
 ---
 
 ## 1 Introduction
@@ -95,11 +93,7 @@ This runs custom Java which is held as Java actions in the app model.
 
 This receives requests from the Mendix Client, decodes them and passes them to the runtime core or the object manager, and formats a response to the Mendix Client once the request has been processed. The Mendix Client API is known as xas (XML Application Server).
 
-### 2.18 Custom Request Handler
-
-This is a request handler added to the app using the `com.mendix.core.Core#addRequestHandler({name of the request handler})` API call.
-
-### 2.19 External Service Requests
+### 2.18 External Service Requests
 
 This receives requests from other services, decodes them, and passes them to the runtime core or the object manager. After the request has been processed, this component formats a response to the request. The following requests can be processed:
 
@@ -108,14 +102,14 @@ This receives requests from other services, decodes them, and passes them to the
 * OData – this exposes entity data as an OData endpoint
 * Other – these are metadata interfaces including WSDL and Swagger
 
-### 2.20 HTTPS Server
+### 2.19 HTTPS Server
 
 This decodes HTTPS requests from Mendix Clients or other services, and passes them to the Runtime Server.
 
-### 2.21 Mendix Client
+### 2.20 Mendix Client
 
 This is the web browser (for example, Google Chrome) or mobile device (for example, an iPhone) which allows the user to interact with the app. It typically has a screen, pointer device, and input device to allow users to use the app.
 
-The Runtime Server communicates with the Mendix Client by using a private API called xas.
+The Runtime Server communicates with the Mendix Client using a number of [request handlers](/refguide/request-handlers/) called over a private API. One of these, for example, is called xas.
 
 For a description of the Mendix Client, see [Mendix Client](/refguide/mendix-client/).

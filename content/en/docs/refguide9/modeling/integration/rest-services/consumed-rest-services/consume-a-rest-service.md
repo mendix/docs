@@ -1,10 +1,8 @@
 ---
 title: "Consume a REST Service"
 url: /refguide9/integration/consume-a-rest-service/
-category: "Integration"
 weight: 9
 description: "Describes how to integrate an existing system or a legacy system into a Mendix app by calling a REST service in a microflow."
-tags: ["integration", "rest service", "data model", "consume"]
 description: "Describes how to get information from a REST service."
 aliases:
     - /howto9/integration/consume-a-rest-service/
@@ -68,7 +66,7 @@ To add an input entity to the domain model, follow these steps:
 3. From the **Toolbox**, drag an **Entity** into the domain model. 
 4. Double-click the entity and enter *Input* for the **Name**.
 5. For **Persistable**, select **No**.
-6. On the **Attributes** tab, click **New** to add a string attribute,  name it *Title*, then click **OK**.
+6. On the **Attributes** tab, click **New** to add a string attribute, name it *Title*, then click **OK**.
 7. Drag an association from **Input** to **Summary**.
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-rest-service/domain-model.png" class="no-border" >}}

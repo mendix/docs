@@ -2,7 +2,6 @@
 title: "Data View"
 url: /refguide/data-view/
 weight: 10
-tags: ["page", "data view", "widget", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -41,7 +40,7 @@ Styling:
 
 ### 4.1 General Section {#general}
 
-#### 4.1.1 Form Orientation
+#### 4.1.1 Form Orientation {#orientation}
 
 With this property, you can specify the position of the input widget labels inside the data view. If the orientation is horizontal, the labels will be placed next to the input elements. If the orientation is vertical, the labels will be placed above the input elements.
 

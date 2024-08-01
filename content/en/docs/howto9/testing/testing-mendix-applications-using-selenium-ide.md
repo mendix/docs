@@ -1,10 +1,8 @@
 ---
 title: "Test Mendix Apps Using Selenium IDE"
 url: /howto9/testing/testing-mendix-applications-using-selenium-ide/
-category: "Testing"
 weight: 40
 description: "Describes how to download and install Selenium IDE as a Mozilla Firefox plugin."
-tags: ["test", "testing", "selenium"]
 ---
 
 ## 1 Introduction

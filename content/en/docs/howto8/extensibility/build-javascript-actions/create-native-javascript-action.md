@@ -3,7 +3,6 @@ title: "Build JavaScript Actions for Native Mobile"
 url: /howto8/extensibility/create-native-javascript-action/
 weight: 30
 description: "This tutorial teaches you how to build a JavaScript action for native mobile apps."
-tags: ["NFC", "Near Field Communication", "JavaScript", "native", "mobile"]
 ---
 
 ## 1 Introduction
@@ -22,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Mendix 8.6.0 (Build 715) from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
-* Install npm's [node js](https://nodejs.org)
+* Install npm's [Node.js](https://nodejs.org)
 * Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (this tutorial can only be completed using Native Builder v3.1.0 or higher)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Own a mobile device with NFC capabilities
@@ -198,7 +197,7 @@ For Android devices, you must add code which checks if a user permits the module
 
 For iOS you have to add permission to use NFC capabilities:
 
-1. Open your project in xCode.
+1. Open your project in Xcode.
 1. Select your project in the left menu.
 1. In **Signing & Capabilities**, click **Capability** and select **Near Field Communication Tag Reading**
 
@@ -358,7 +357,7 @@ Now that you added NFC capability to your app's source code, you must rebuild yo
 
 {{% alert color="info" %}}
 
-Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder/#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [XCode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
+Making software is an iterative process. If you integrate your own module or build your own actions, it is highly recommended to set up a system which allows you to iterate quickly. For more information on setting up a local development environment, see the [Advanced Usage](/refguide8/native-builder/#advanced-usage) section of the *Native Builder Reference Guide*. This will require an Apple Mac with [Xcode](https://developer.apple.com/xcode/) for iOS and [Android Studio](https://developer.android.com/studio) for Android devices.
 
 {{% /alert %}}
 

@@ -3,7 +3,6 @@ title: "Use the Charts Theme"
 url: /howto8/front-end/charts-theme/
 weight: 40
 description: "How to set up a theme which will be applied to all the charts created with charts widgets in an app"
-tags: ["Charts", "Theme", "Widget", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -20,7 +19,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
-* Setup a chart: see [How to create a charts](/howto8/front-end/charts-basic-create/)
+* Set up a chart: see [How to create a charts](/howto8/front-end/charts-basic-create/)
 
 ## 3 Creating a Chart Theme
 

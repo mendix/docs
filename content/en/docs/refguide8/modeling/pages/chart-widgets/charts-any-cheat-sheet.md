@@ -3,12 +3,11 @@ title: "Any Chart Cheat Sheet"
 url: /refguide8/charts-any-cheat-sheet/
 description: "Shows, with examples, how the most common types of chart can be configured using the Any Chart Widget"
 weight: 50
-tags: ["Any Chart", "Examples", "Charts", "Widget", "studio pro"]
 ---
 
 ## 1 Introduction
 
-This *cheat sheet* lists the most common chart types, together with a visual sample and the json required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
+This *cheat sheet* lists the most common chart types, together with a visual sample and the JSON required to create them. More chart types can be found at [https://plot.ly/javascript/](https://plot.ly/javascript/).
 
 ## 2 Basic Charts
 

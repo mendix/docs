@@ -2,7 +2,6 @@
 title: "Commit Object(s)"
 url: /refguide9/committing-objects/
 weight: 30
-tags: ["studio pro", "commit object", "activity"]
 ---
 
 {{% alert color="warning" %}}

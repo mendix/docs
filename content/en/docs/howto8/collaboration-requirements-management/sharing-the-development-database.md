@@ -1,9 +1,7 @@
 ---
 title: "Share the Development Database"
 url: /howto8/collaboration-requirements-management/sharing-the-development-database/
-category: "Collaboration"
 weight: 40
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

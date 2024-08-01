@@ -1,10 +1,8 @@
 ---
 title: "Studio Pro Overview"
 url: /refguide9/studio-pro-overview/
-category: "App Modeling"
 description: "Describes Studio Pro in general, for example, tabs, menus, and shortcut keys."
 weight: 10
-tags: ["Studio Pro"]
 aliases:
     - /refguide9/desktop-modeler-overview.html
     - /refguide9/desktop-modeler-overview
@@ -32,7 +30,7 @@ The Studio Pro top bar contains the following items:
 
 * [Menus](#menus) 
 * [Buttons to run and view your app](#run-and-view)
-* [Links to the Developer Portal and Marketplace](#links) 
+* [Links to Apps and Marketplace](#links) 
 
 ### 2.1 Menus {#menus}
 
@@ -46,13 +44,13 @@ You can deploy your app by clicking **Publish** or **Run Locally** ({{% icon nam
 
 {{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View App, Publish, and Run Locally buttons" class="no-border" >}}
 
-For more information on deployment in Mendix, see [Deployment](/developerportal/deploy/).
+For more information on deployment in Mendix, see [Deployment](/deployment/).
 
 For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide9/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links and User Profile Menu {#links}
 
-You can find links to the [Developer Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
+You can find links to [Apps](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and signing out option. 
 

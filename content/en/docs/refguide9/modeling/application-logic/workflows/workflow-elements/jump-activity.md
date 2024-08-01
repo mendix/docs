@@ -2,7 +2,6 @@
 title: "Jump Activity"
 url: /refguide9/jump-activity/
 weight: 60
-tags: ["workflow", "workflows", "jump", "Studio Pro"]
 ---
 
 ## 1 Introduction

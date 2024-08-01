@@ -1,10 +1,8 @@
 ---
 title: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
-category: "Deployment"
 weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
-tags: ["release notes", "deployment", "Mendix for Private Cloud", "Private Cloud"]
 ---
 
 These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
@@ -12,6 +10,81 @@ These release notes cover changes to deployment to [Mendix for Private Cloud](/d
 For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### July 18th, 2024
+
+#### License Manage CLI v0.8.0
+
+* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+* We have resolved an issue that prevented users from setting the CPU core request below 1 while creating an environment (Ticket [222687](https://mendixsupport.zendesk.com/agent/tickets/222687)) and (Ticket [222284](https://mendixsupport.zendesk.com/agent/tickets/222284)).
+* We have resolved an issue where users were unable to deselect the namespace in the **Convert Namespace** flow.
+* We have resolved an issue where users were unable to close the **Convert Namespace** screen after navigating back to the namespace selection page.
+* We have resolved an issue where a newly created standalone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
+
+### July 10th, 2024
+
+#### Mendix Operator v2.18.0 {#2.18.0}
+
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* We have resolved an issue where the Operator attempted to reload the runtime license when the PCLM server was down. With this fix, the Operator will no longer attempt to load the runtime license during PCLM server downtime, preventing application restarts.
+* We have fixed an issue where the Operator would throw an error when no licenses were installed on the PCLM server.
+* We have updated Operator images from ubi8 to ubi9. Mendix apps built with this version of the Operator will keep using ubi8 as the base image by default - this can be changed in the Operator Configuration.
+* We have addressed an issue where ARM64 images were shipped with an x86-64 version of the base operating system.
+
+#### Portal Enhancements
+
+* You can now [convert](/developerportal/deploy/global-operator/#convert-standard-operator-to-global-operator) a Standard namespace to a Global Operator managed namespace using the **Convert Namespace** button available in Cluster details page. This feature is available from Operator v2.18.
+
+### July 4th, 2024
+
+#### Portal Enhancements
+
+* We have renamed **Mendix for Private Cloud** to **Deployment** in the upper navigation bar.
+* We have removed the **Uptime** field from the **Namespace overview** page.
+
+#### Deploy API
+
+* We have fixed the API specification for the Deploy API where the limit and offset were not specified when trying to retrieve all applications deployed in Private Cloud.
+
+### June 13th, 2024
+
+#### Mendix Operator v2.17.1 {#2.17.1}
+
+* We have fixed a known issue from a previous release - memory usage when building an MDA is now back to normal.
+
+### June 7th, 2024
+
+#### Mendix Operator v2.17.0 {#2.17.0}
+
+* We have added support for Azure Managed Identity authentication for environments using Key vault. Instead of a static password, a Mendix app can use its Managed Identity to authenticate with a Postgres (Flexible Server) database, Azure SQL database, and Azure Blob storage.
+* We have added support for Azure Managed Identity authentication to the SQL Server and Postgres provisioners. With this mode, all authentication is handled through Managed Identities, and no static passwords are used.
+* We have added an Azure Managed Identity authentication mode to the Azure Blob Storage provisioner. This provisioner isolates environments from each other - every environment can only access its own container, and use its Managed Identity to authenticate with Azure Blob Storage. With this mode, all authentication is handled through Managed Identities, and no static passwords are used.
+* For Kubernetes liveness checks, the status of the `ping` calls will be ignored, and instead the app status will be checked with a [check_health](/refguide/monitoring-mendix-runtime/#check-health) command. If an app has a health check microflow, its status will be propagated back to Kubernetes. For apps without a health check microflow, Kubernetes will only receive the result of the [runtime_status](/refguide/monitoring-mendix-runtime/#runtime-status) call.
+* If a storage provisioner fails to authenticate with a Postgres or SQL Server database, it will no longer assume it is a network communication issue, and avoid retrying incorrect credentials.
+* We have fixed an issue where invalid images were built if the cluster used a custom registry air-gapped with the [Registry Migration](/developerportal/deploy/private-cloud-migrating/) tool.
+* We have fixed an issue where running the `mxpc-cli` installation and configuration tool in a pod (container) would fail to authenticate.
+* We have updated components to the latest dependency versions, in order to improve security score ratings for all container images.
+* Upgrading to Mendix Operator v2.17.0 from a previous version will restart environments managed by that version of the Operator.
+
+#### Known Issue
+
+This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
+
+* Building an MDA file larger than 100 MB fails with an `OOMKilled` pod status. The image builder has a regression where the entire MDA is loaded into memory, instead of reading it in blocks from a temporary file.
+
+### May 30th, 2024
+
+#### Portal Enhancements
+
+* Standalone cluster members are now redirected directly to the mxpc-cli download page instead of the Installation page.
+* An issue has been resolved where an incorrect notification email was sent when cluster/namespace membership was auto-accepted.
+* A new field, License Provision Error, has been added to the Environment details page for cases where license provisioning fails.
+* A problem preventing users with developer permissions from accessing the Model Option from the Environment Overview page has been fixed (Ticket [215150](https://mendixsupport.zendesk.com/agent/tickets/215150)).
+* The error message that appears when a user tries to delete the environment after the namespace is deleted directly from the cluster has been corrected.
 
 ### May 9th, 2024
 
@@ -376,7 +449,7 @@ This feature is currently in a [beta release](/releasenotes/beta-features/).
 * We have updated components to use Go 1.19 and the latest dependency versions, in order to improve security score ratings for all container images.
 * We fixed an issue where applying a custom TLS trust config in [non-interactive mode](/developerportal/deploy/private-cloud-cli-non-interactive/) failed.
 * We added a `runtimeLeaderSelection` option that allows you to run an environment without a leader replica - so that an app can be deployed into multiple regions.
-* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and Curl to start the Runtime.
+* We refactored the way the Mendix Runtime is launched. This removes the need to use Bash and curl to start the Runtime.
 * It is now possible to choose between plaintext and JSON formats for Mendix app logs.
 * We have extended the options for configuring Ceph RADOS storage buckets. It is now possible to share a bucket between multiple environments.
 * We have updated the list of supported platforms to include OpenShift 4.12.
@@ -531,7 +604,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed an issue where deployment with spaces in the branch lines triggered an error. (Ticket 167448 and 167577)
 * We have added a new status on the environment details page when environment is attached to a service account.
 * The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
-* We added activity log entries whan development mode is enabled or disabled in a Namespace.
+* We added activity log entries when development mode is enabled or disabled in a Namespace.
 
 ### November 14, 2022
 

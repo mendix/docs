@@ -2,7 +2,6 @@
 title: "Write Data to Another App"
 url: /howto/integration/write-data/
 description: "Describes how to add annotations to an OData service in Mendix Studio Pro, see external entities with these features in the Catalog, and use them to build your app."
-tags: ["data hub", "external entities", "published OData service" ,"how to","OData", "Catalog"]
 weight: 20
 aliases:
     - /data-hub/write-data/
@@ -11,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to builds on the information provided in [How to Share Data Between Apps](/howto/integration/share-data/) and shows you how OData annotations give you the power to create, update, and delete data.
+This how-to builds on the information provided in [Share Data Between Apps](/howto/integration/share-data/) and shows how OData annotations give you the power to create, update, and delete data.
 
 This how-to teaches you how to do the following:
 
@@ -35,7 +34,7 @@ Note the following terminology differences described in the table below:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the most recent version of [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
-* Understand how read-only external entities behave by reading [How to Share Data Between Apps](/howto/integration/share-data/)
+* Understand how read-only external entities behave by reading [Share Data Between Apps](/howto/integration/share-data/)
 
 ## 3 Exposing OData Contracts in Mendix Studio Pro
 
@@ -43,7 +42,7 @@ When you publish an entity in a published OData service, the client can read the
 
 1. Open the published OData service in **MyFirstModule** > **APIs** > **{yourname}CustomerODataService**.
 2. Select the **Customer** entity and click **Edit**.
-3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Updatable**, and/or **Deletable**.
+3. Select the checkboxes to indicate whether the entity should be **Insertable**, **Readable**, **Updatable**, and/or **Deletable**.
 
 ## 4 Viewing OData Capabilities in Catalog {#view-capabilities}
 
@@ -65,10 +64,10 @@ Just like in the Catalog, you can see the **CRUD** capabilities of entities, att
 To consume an OData entity, do the following:
 
 1. In the **Integration** pane, enter a term in the search field. 
-2. Select your entity from the **Integration** pane. By default, the pane only shows results published to the production environment. If you also want to see results from other environments, click the filter icon and select the **Show development environment** checkbox.
+2. Select your entity from the **Integration** pane. By default, the pane only shows results published to the production environment. If you also want to see results from other environments, click the filter icon and select the **Show development environments** checkbox.
 3. Drag the entity into the domain model.
 
-Now you have an external entity in your domain model. Depending on the capabilities, you can generally use external entities to model your app as you would normally do, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
+Now you have an external entity in your domain model. Depending on the capabilities, you can use external entities to model your app as you normally would, although there are some limitations. For more information on limitations, see the [External Entities Limitations](/refguide/external-entities/#limitations) section in *External Entities*. 
 
 ## 6 Validating Data and Error Handling {#data-validation}
 

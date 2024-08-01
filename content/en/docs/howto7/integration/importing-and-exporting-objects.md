@@ -1,9 +1,7 @@
 ---
 title: "Import and Export Objects"
 url: /howto7/integration/importing-and-exporting-objects/
-category: "Integration"
 weight: 2
-tags: ["mpk", "project package", "import", "export", "document", "project", "module", "widget"]
 ---
 
 ## 1 Introduction
@@ -151,7 +149,7 @@ To import widgets, follow these steps:
 
 ### 2.5 Importing Content from the Marketplace
 
-To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/overview/use-content/).
+To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/use-content/).
 
 ## 3 Exporting Objects
 

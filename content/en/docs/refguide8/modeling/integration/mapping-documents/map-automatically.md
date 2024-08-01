@@ -1,7 +1,6 @@
 ---
 title: "Map Automatically"
 url: /refguide8/map-automatically/
-tags: ["studio pro"]
 ---
 
 ## 1 Creating Entities, Attributes and Associations from Import or Export Mappings
@@ -34,7 +33,7 @@ If the domain model already contains entities that map to schema elements, they 
 
 The parameter entity for import mappings is not created by "Map Automatically". By default, non-persistable entities are created. You can change that manually in the domain model.
 
-Note that "Map Automatically" is not going to create entity generalization if there is any impact on the persistence behaviour of the entity.
+Note that "Map Automatically" is not going to create entity generalization if there is any impact on the persistence behavior of the entity.
 
 ## 4 Manual Verification
 

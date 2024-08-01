@@ -1,16 +1,14 @@
 ---
 title: "Buzz"
 url: /developerportal/general/buzz/
-category: "General"
 weight: 1
 description: "Describes the Mendix Buzz, which is the landing page for working on a Mendix app."
-tags: ["Buzz","Developer Portal"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
 ## 1 Introduction
 
-Located in the Developer Portal, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
+Located in the [navigation pane](/developerportal/#navigation-pane) of **Apps**, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
 
 {{< figure src="/attachments/developerportal/general/buzz/app-buzz.png" >}}
 

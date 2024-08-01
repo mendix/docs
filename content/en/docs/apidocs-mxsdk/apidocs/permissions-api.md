@@ -1,8 +1,7 @@
 ---
 title: "Permissions API"
 url: /apidocs-mxsdk/apidocs/permissions-api/
-category: "API Documentation"
-description: "With this API, you can retrieve the user roles of your app users so that you can grant them specific access levels."
+description: "This API is deprecated. With this API, you can retrieve the user roles of your app users so that you can grant them specific access levels."
 weight: 85
 deprecated: true
 ---
@@ -19,7 +18,7 @@ The Permissions API enables retrieving the [user roles](/refguide/user-roles/) a
 
 {{% alert color="info" %}}
 
-The Permissions API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Developer Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Permissions API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Developer Portal.
+The Permissions API will require the EnvironmentUUID and EnvironmentPassword parameters to authenticate and authorize requests; the values for these should come from constants from the AppCloudServices module with the same name. The Mendix Portal will automatically set these constants; you do not need to set these yourself. For this reason, the Permissions API will however only function for applications which use the AppCloudServices module and are deployed through the Mendix Portal.
 
 {{% /alert %}}
 
@@ -48,8 +47,8 @@ API Version 1.
 | Name | Parameter type | Required | Description |
 | --- | --- | --- | --- |
 | OpenID | String | Yes | OpenID of the user for which you are retrieving the roles. |
-| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
-| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Developer Portal will fill in automatically. |
+| EnvironmentUUID | String | Yes | UUID of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Portal will fill in automatically. |
+| EnvironmentPassword | String | Yes | Password of the requesting environment. This should be the value of the AppCloudServices.EnvironmentUUID constant, which the Mendix Portal will fill in automatically. |
 
 #### 2.1.4 Return type
 

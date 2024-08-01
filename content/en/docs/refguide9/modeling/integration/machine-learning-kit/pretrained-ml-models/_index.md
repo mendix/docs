@@ -1,16 +1,14 @@
 ---
 title: "Pre-Trained ML Models"
 url: /refguide9/machine-learning-kit/pretrained-ml-models/
-category: Machine Learning Kit
 weight: 20
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration"]
 ---
 
 {{% alert color="info" %}}Machine learning model support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
 ## 1 Introduction
 
-The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture. All the ONNX models in the ONNX Zoo should be compatible with the *Mendix ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
+The ONNX community provides an ML model repository, called [ONNX Model Zoo](https://github.com/onnx/models), where common computer vision and language models can be found. The [ONNX Model Zoo](https://github.com/onnx/models) is a collection of pre-trained, state-of-the-art models in the ONNX format contributed by community members. Accompanying each model are Jupyter Notebooks for model training and running inference with the trained model. The notebooks are written in Python and include links to the training dataset, as well as references to the original paper that describes the model architecture. All the ONNX models in the ONNX Zoo should be compatible with the *Mendix ML Kit*. You can pick up any model from this repository, customize it with your own data and integrate it in your Mendix app using the *ML Kit*.
 
 ## 2 ONNX Model Zoo
 

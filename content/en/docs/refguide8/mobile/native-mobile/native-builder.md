@@ -2,7 +2,6 @@
 title: "Native Builder (CLI)"
 url: /refguide8/native-builder/
 weight: 70
-tags: ["native", "mobile", "deploy", "native-builder", "builder", "appcenter", "deprecated"]
 ---
 
 {{% alert color="warning" %}}
@@ -221,7 +220,7 @@ native-builder.exe release list --project-name "CoolApp"
 
 ### 2.8 Generating Only the App Bundles
 
-When used, the `bundle` command **will only run the MXBuild step** (skipping GitHub configuration and the App Center build steps). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
+When used, the `bundle` command **will only run the MxBuild step** (skipping GitHub configuration and the App Center build steps). This command outputs *ZIP* archives with the corresponding JavaScript bundle and resources for each platform.
 
 Here is an example of a command featuring `bundle`:
 
@@ -349,7 +348,7 @@ The Native Template is being continuously developed. This means new versions are
 
 You should update your project's template in the following scenarios:
 
-* You app crashes unexpectively even though all Studio Pro modules and resources are fully updated using the Mendix Marketplace
+* You app crashes unexpectedly even though all Studio Pro modules and resources are fully updated using the Mendix Marketplace
 * You updated your Studio Pro version
 
 The Native Template is tightly tied to the version of Studio Pro you are running. Therefore, every time your project is updated, consider running `regenerate` using the Native Builder to update your template.

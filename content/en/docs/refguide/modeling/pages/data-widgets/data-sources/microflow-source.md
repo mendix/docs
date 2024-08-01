@@ -1,7 +1,6 @@
 ---
 title: "Microflow Source"
 url: /refguide/microflow-source/
-tags: ["studio pro", "microflow source", "data source"]
 weight: 40
 ---
 

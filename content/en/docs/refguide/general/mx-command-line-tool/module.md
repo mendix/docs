@@ -3,7 +3,6 @@ title: "Module Commands"
 url: /refguide/mx-command-line-tool/module
 weight: 30
 description: "Describes the module-related commands for the mx command-line tool."
-tags: ["mx", "command-line", "tool", "mx", "studio pro", "windows", "linux", "module", "show-module-version", "set-module-version"]
 ---
 
 ## 1 Introduction
@@ -13,7 +12,7 @@ The commands in this group are related to Mendix modules.
 Typically, these commands require a path to the *.mpr* file and the module name as parameters.
 
 {{% alert color="info" %}}
-To see the command parameters for each command you can use the `--help` parameter. For example `mx show-module-version --help`.
+To see the command parameters for each command, use the `--help` parameter. For example, `mx show-module-version --help`.
 {{% /alert %}}
 
 ## 2 mx show-module-version Command {#show-module-version}
@@ -43,7 +42,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version |
+| `1` | The module does not have a version. |
 
 The command will output the version of the module to the command line output.
 
@@ -76,7 +75,7 @@ This table shows the return codes and their description:
 | Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
-| `1` | The module does not have a version |
+| `1` | The module does not have a version. |
 
 ## 4 mx module-import Command {#module-import}
 
@@ -102,7 +101,7 @@ Here is an example:
 
 The command returns 0 if it is successful.
 
-If there are errors, the exit code consists of three digits: XYZ where:
+In case of errors, the exit code consists of three digits `XYZ`:
 
 * X determines the error type:
 

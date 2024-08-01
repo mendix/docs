@@ -2,7 +2,6 @@
 title: "Configuration Module API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets-config-api/
 description: A guide for understanding the configuration module API which influences the behavior of pluggable widgets in Mx10.
-tags: ["Widget", "Pluggable", "Custom", "Preview", "Structure Mode", "Visibility", "editorConfig"]
 weight: 35
 aliases:
 - /apidocs-mxsdk/apidocs/config-api-for-pluggable-widgets
@@ -22,7 +21,7 @@ Errors that are related to the configuration module are shown in the Widget Deve
 
 ## 3 Customizing the Widget’s Properties
 
-To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function:
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
@@ -37,7 +36,7 @@ function getProperties(
 Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Please note that when a property is hidden,, its value will be cleared.
+Please note that when a property is hidden, its value will be cleared.
 {{% /alert %}}
 
 {{% alert color="info" %}}

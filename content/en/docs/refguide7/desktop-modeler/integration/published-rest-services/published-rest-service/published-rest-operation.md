@@ -3,7 +3,6 @@ title: "Published REST Operation"
 url: /refguide7/published-rest-operation/
 weight: 10
 description: "Options to  configure a published REST operation."
-tags: ["Published REST", "operation", "method", "path", "example location", "mapping", "operation parameters", "how to"]
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
@@ -174,4 +173,4 @@ The description provides a complete overview of what the operation does. You can
 
 **How to publish REST natively with Mendix**
 
-{{% youtube HzrFkv0U4n8 %}}
+{{< youtube HzrFkv0U4n8 >}}

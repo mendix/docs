@@ -1,10 +1,8 @@
 ---
 title: "Debug a Hybrid Mobile App"
 url: /howto7/mobile/debug-a-mobile-app/
-category: "Mobile Development"
 weight: 40
 description: "How to set up a mobile app to run from your local machine and debug using Mendix's tools"
-tags: ["mobile", "debug", "android", "ios"]
 ---
 
 ## 1 Introduction

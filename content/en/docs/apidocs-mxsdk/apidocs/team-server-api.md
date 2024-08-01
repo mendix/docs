@@ -1,8 +1,7 @@
 ---
 title: "Team Server API"
 url: /apidocs-mxsdk/apidocs/team-server-api/
-category: "API Documentation"
-description: "This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
+description: "This API is deprecated. This API enables retrieving information (branches, revisions) about application models stored in Mendix Team Server."
 weight: 110
 deprecated: true
 ---
@@ -23,7 +22,7 @@ The team server API is only available to *licensed* apps which are running in a 
 
 ## 2 Authentication
 
-The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+The team server API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
 ## 3 API Calls
 
@@ -58,7 +57,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 List of objects with the following key-value pairs:
 
 * *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
 * *LatestRevisionNumber* (Long) : Number of the latest revision.
 * *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in this revision.
 
@@ -117,7 +116,7 @@ Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 An object with the following key-value pairs:
 
 * *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
 * *LatestRevisionNumber* (Long) : Number of the latest revision.
 * *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in the latest revision.
 

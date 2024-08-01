@@ -1,10 +1,8 @@
 ---
 title: "UI Design"
 url: /howto9/front-end/atlas-ui/
-category: "Front End"
 weight: 5
 description: "Presents a list of how-tos to guide you to create customized applications using Atlas UI."
-tags: ["Atlas", "UI", "UX", "user experience", "design"]
 ---
 
 ## 1 Introduction
@@ -17,7 +15,7 @@ If you are migrating from Atlas 2 to Atlas 3, see [How to Migrate from Atlas 2 t
 
 Atlas comes with a default design system which can be fully tailored and extended. New apps are based on this design system. For more information, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
-The following how-to's are available here:
+The following how-tos are available here:
 
 * [Get Started](/howto9/front-end/get-started/) — Learn more about Atlas UI and get started on your first customizations.
 * [Customize Styling](/howto9/front-end/customize-styling-new/) — Customize your styling in deeper ways. Specifically, you will see how our progressive and web apps use SASS (SCSS) and our  native mobile apps use JavaScript to create your app's styling.

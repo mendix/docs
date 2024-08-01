@@ -3,7 +3,6 @@ title: "Get Started with WebXR"
 url: /refguide/mobile/using-mobile-capabilities/augmented-reality/get-started-with-web-xr/
 weight: 10
 description: "Tutorials for setting up and using XR in Mendix Studio Pro."
-tags: ["AR", "VR", "XR", "WebXR"]
 ---
 
 ## 1 Introduction
@@ -104,7 +103,7 @@ These are widgets that show a 3D Object, either predetermined (like **Cube (XR)*
 
 ### 4.1 Shared Properties
 
-These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)**) as well as the **Node (XR)** widget.
+These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)**, **Text (XR)**) as well as the **Node (XR)** widget.
 
 #### 4.1.1 General Tab
 

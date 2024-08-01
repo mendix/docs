@@ -1,10 +1,8 @@
 ---
 title: "Images"
 url: /refguide9/images/
-category: "App Modeling"
 weight: 70
 description: "Introduces the image functionality in Studio Pro."
-tags: ["Images", "Image Collections", "png", "Studio Pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

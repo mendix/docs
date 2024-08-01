@@ -1,9 +1,7 @@
 ---
 title: "Logistic Regression Example"
 url: /refguide9/machine-learning-kit/using-ml-kit/logistic-regression/
-category: Using ML Kit
 weight: 20
-tags: ["studio pro", "machine learning", "ml kit", "models", "integration", "example", "logistic regression"]
 ---
 {{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
@@ -11,7 +9,7 @@ tags: ["studio pro", "machine learning", "ml kit", "models", "integration", "exa
 
 This document walks through the steps an example of a logistic regression model, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping.  [Usage](/refguide9/machine-learning-kit/using-ml-kit/#usage) section of *Using ML Kit* lists the steps you need to get started with integrating machine learning models into Studio Pro. 
 
-{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
+{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter Notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
 
 ## 2 Importing and Configuring the Model
 
@@ -53,4 +51,4 @@ The complete microflow to predict the IRIS flower classification using logistic 
 
 {{< figure src="/attachments/refguide9/modeling/integration/ml-kit/ml-kit/logistic-regression/predict-iris-class-microflow.png" class="no-border" >}}
 
-{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
+{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter Notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}

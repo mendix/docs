@@ -3,7 +3,6 @@ title: "Project Menu"
 url: /refguide8/project-menu/
 description: "Describes the Project Menu in Studio Pro."
 weight: 30
-tags: ["Studio Pro", "project menu", "top bar"]
 ---
 
 ## 1 Introduction
@@ -87,4 +86,4 @@ For more information on using this option, see [Deploy to the Cloud](/refguide8/
 ## 9 Read More
 
 * [Studio Pro Overview](/refguide8/studio-pro-overview/)
-* [Deployment](/developerportal/deploy/)
+* [Deployment](/deployment/)

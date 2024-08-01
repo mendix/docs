@@ -1,10 +1,8 @@
 ---
 title: "Clustered Mendix Runtime"
 url: /refguide/clustered-mendix-runtime/
-category: "Mendix Runtime"
 weight: 40
 description: "Introduces the cluster functionality of the Mendix Runtime, which allows you to set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
-tags: ["runtime", "cluster", "load balancer", "failover", "studio pro"]
 ---
 
 ## 1 Introduction
@@ -57,7 +55,7 @@ If no database synchronization is required, all the cluster nodes will become fu
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
-For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide/custom-settings/).
+For more information about configuring the Mendix Runtime to store files on these storage facilities, see [Runtime Customization](/refguide/custom-settings/).
 
 ## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 

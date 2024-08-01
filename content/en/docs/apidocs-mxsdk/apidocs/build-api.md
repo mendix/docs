@@ -1,10 +1,8 @@
 ---
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
-category: "API Documentation"
 description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
 weight: 20
-tags: ["API", "Build Server", "Team Server", "Deployment package", "Mendix Cloud"]
 ---
 
 {{% alert color="warning" %}}
@@ -143,7 +141,7 @@ An object with the following key-value pairs:
     * Uploading
     * Failed
 * *Size* (Long) : Size of the package in bytes
-* *Url* (object): A json object containing the following:
+* *Url* (object): A JSON object containing the following:
 
     * *Location* (String): The URL pointing to the package file.
     * *TTL* (Long): How long the URL is valid (in seconds).

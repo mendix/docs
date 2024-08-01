@@ -3,7 +3,6 @@ title: "Using Translatable Validation Messages"
 url: /refguide9/translatable-validation-messages/
 weight: 140
 description: "Describes how to use translatable validation messages."
-tags: ["validation", "microflow", "translate"]
 aliases:
     - /howto9/logic-business-rules/translatable-validation-messages/
 ---

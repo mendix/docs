@@ -3,7 +3,6 @@ title: "Distributing Native Apps"
 url: /refguide/mobile/distributing-mobile-apps/distributing-native-apps/
 weight: 20
 description: "This guide will help you distribute a mobile app to a mobile app store."
-tags: ["distribution", "app store", "ios", "android"]
 aliases:
     - /refguide/managing-app-signing-keys/
 ---
@@ -26,7 +25,7 @@ If you have an Apple Mac available, see the Apple developer documentation on [ce
 
 ### 2.2 On Other Platforms
 
-If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utilty. 
+If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utility. 
 
 {{% alert color="warning" %}}
 **Do not use OpenSSL version 3.x on Windows**

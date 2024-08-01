@@ -2,7 +2,6 @@
 title: "Reports"
 url: /refguide9/report-widgets/
 weight: 50
-tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +9,7 @@ tags: ["studio pro", "report widgets", "report", "widgets", "data set"]
 
 ## 1 Introduction
 
-With reports widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example , total sales per customer). 
+With reports widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example, total sales per customer). 
 
 The **Report widgets** category contains the following widgets:
 

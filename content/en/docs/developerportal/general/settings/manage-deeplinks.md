@@ -2,8 +2,7 @@
 title: "Manage Deep Links"
 url: /developerportal/general/manage-deeplinks/
 weight: 2
-description: "Describes how to implement deep links to Developer Portal pages."
-tags: ["Developer Portal", "deep link"]
+description: "Describes how to implement deep links to Mendix Portal pages."
 aliases:
     - /developerportal/settings/manage-deeplinks
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
@@ -11,54 +10,58 @@ aliases:
 
 ## 1 Introduction
 
-To go directly to the desired element of your app in the Developer Portal, you can use deep links.
+To go directly to the desired element of your app in [Apps](https://sprintr.home.mendix.com/), you can use deep links.
 
-This how-to teaches you how to do the following:
+This how-to teaches you how to find the app ID and environment ID, and create deep links.
 
-* Find the App ID, Story ID, and Feedback Item Number for your app
-* Create deep links for your app, story, and feedback item
+## 2 Getting the App ID and Environment ID
 
-## 2 Getting the AppID, storyID, and feedbackItemNr {#id}
+To get the app ID, do as follows:
 
-To create a deep link, you need the app ID, story ID, or feedback item number or the desired element in the Developer Portal:
+1. In [Apps](https://sprintr.home.mendix.com/), open the app.
+2.  On the navigation pane, go to **Settings**. You can find the app ID on the **General** tab.
 
-* For the app ID, select the **General** tab of the **Settings** – you will find the ID at the bottom of the page:
+    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/app-id.png" width="500px" alt="App ID on the Settings page" class="no-border" >}}
 
-    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/app-id.png" width="500px" alt="App ID on General Settings page" class="no-border" >}}
+To get the environment ID, do as follows:
 
-* For the story ID, select **Collaborate** > **Stories** – then click the story title to show the details, the ID is below the story title:
+1. In Apps, open the app.
 
-    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/story-id.png" width="500px" alt="Story ID on Stories page" class="no-border" >}}
+2. On the navigation pane, go to **Environments**, and then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view. You can find the environment ID on the **General** tab.
 
-* For the feedback item number, under **App Insights** > **Feedback** – the number is next to the feedback item title:
 
-    {{< figure src="/attachments/developerportal/general/settings/manage-deeplinks/feedback-nr.png" width="500px" alt="Feedback item number on Feedback page" >}}
+## 3 Creating a Deep Link in Apps
 
-## 3 Creating a Developer Portal Deep Link
-
-If you want to provide links directly to a specific element in your app in the Developer Portal, follow these steps:
-
-1. Paste the URL to the Developer in your browser's address bar (as in, `https://sprintr.home.mendix.com/` or `https://cloud.home.mendix.com/`).
-2. Paste the desired App ID, Environment ID, Story ID, or Feedback Item Number after the final slash.
-
-The following deep links can be used:
+If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), use the following links, with the specific app ID or environment ID added, as instructed:
 
 * Overview of your apps: `https://sprintr.home.mendix.com/link/myapps`
+
 * Specific app: `https://sprintr.home.mendix.com/link/project/<appID>`
+
 * App settings: `https://sprintr.home.mendix.com/link/settings/<appID>`
+
 * App Buzz: `https://sprintr.home.mendix.com/link/buzz/<appID>`
+
 * App team: `https://sprintr.home.mendix.com/link/team/<appID>`
-* Stories overview for app: `https://sprintr.home.mendix.com/link/stories/<appID>`
-* Specific story ID: `https://sprintr.home.mendix.com/link/story/<storyID>`
-* Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
-* Specific feedback item: `https://appinsights.mendix.com/link/feedback/<appId>/item/<feedbackItemNr>`
+
+*  Feedback for app: `https://appinsights.mendix.com/link/feedback/<appID>`
+
+    {{% alert color="info" %}}To get the link to a specific feedback item, [open the feedback item](/developerportal/app-insights/feedback/#feedback-details) in Feedback, and click the **Copy Link** icon ({{% icon name="hyperlink" %}}).{{% /alert %}}
+
 * Sprint status of an app: `https://sprintr.home.mendix.com/link/sprint-status/<appID>`
+
 * App specific API keys: `https://sprintr.home.mendix.com/link/apikeys/<appID>`
+
 * App user management: `https://sprintr.home.mendix.com/link/appusermanagement/<appID>`
+
 * Environments for app: `https://cloud.home.mendix.com/link/deploy/<appID>`
+
 * Metrics for app: `https://cloud.home.mendix.com/link/metrics/<appID>`
+
 * Alerts for app: `https://cloud.home.mendix.com/link/monitor/<appID>`
+
 * Alerts for environment: `https://cloud.home.mendix.com/link/monitor/<appID>/<envID>`
+
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
 ## 4 Read More

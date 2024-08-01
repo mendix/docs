@@ -1,9 +1,7 @@
 ---
 title: "Monitoring Mendix Runtime"
 url: /refguide/monitoring-mendix-runtime/
-category: "Mendix Runtime"
 description: "Describes the supported Mendix Runtime monitoring actions."
-tags: ["runtime", "json", "studio pro", "on-premises", "local"]
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
@@ -16,7 +14,7 @@ This is only available for local and on-premises deployments of your app.
 
 For deployments to other platforms (for example, Mendix for Private Cloud), you do not have access to the m2ee admin handler to make these requests.
 
-For deployments to Mendix Cloud, you can get the same information from various pages in the Developer Portal. For more information, see:
+For deployments to Mendix Cloud, you can get the same information from various pages in the Mendix Portal. For more information, see:
 
 * [Metrics](/developerportal/operate/metrics/)
 * [Running Now](/developerportal/deploy/mxcloud-runningnow/)
@@ -258,9 +256,9 @@ Memory statistics should only be interpreted by experts, lack of detailed knowle
 
 {{% /alert %}}
 
-Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](https://docs.oracle.com/en/java/javase/11/gctuning/introduction-garbage-collection-tuning.html). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryUsage.html) page.
+Represents the number of bytes allocated to the specified memory sections. For a general explanation, see the [Oracle documentation on tuning garbage collection](https://docs.oracle.com/en/java/javase/21/gctuning/introduction-garbage-collection-tuning.html). For the heap and non-heap fields see the [memory usage](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/MemoryUsage.html) page.
 
-The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](https://docs.oracle.com/en/java/javase/11/docs/api/java.management/java/lang/management/MemoryPoolMXBean.html):
+The "memorypools" section contains an ordered list of all the memory pools exactly as we receive them from the JVM with some fields of the [MemoryPoolMxBean](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/MemoryPoolMXBean.html):
 
 * "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
 * "is_heap" – is this memory pool part of the heap or not?

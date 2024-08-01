@@ -1,9 +1,7 @@
 ---
 title: "Optimize Retrieve Activities"
 url: /howto8/logic-business-rules/optimizing-retrieve-activities/
-category: "Logic and Business Rules"
 weight: 9
-tags: ["microflow", "retrieve", "optimize"]
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 

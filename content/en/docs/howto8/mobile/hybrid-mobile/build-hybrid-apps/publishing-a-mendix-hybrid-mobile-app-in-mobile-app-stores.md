@@ -3,7 +3,6 @@ title: "Publish a Mendix Hybrid Mobile App in Mobile App Stores"
 linktitle: "Publish Hybrid Mobile App in App Stores"
 url: /howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/
 weight: 20
-tags: ["mobile", "marketplace", "phonegap"]
 aliases:
     - /refguide8/publish-packages-to-mobile-stores.html
     - /refguide8/publish-packages-to-mobile-stores
@@ -49,7 +48,7 @@ To publish your app in the Google Play store, do the following:
 
 To start the packaging process, follow these steps:
 
-1. Open the [Developer Portal](https://sprintr.home.mendix.com/).
+1. Open [Apps](https://sprintr.home.mendix.com/).
 2. Go to the app of the Mendix app that you want to publish.
 3. Go to the **Deploy > Mobile app** entry in the side menu of the app.
 4. You will be shown the **Publish App for Mobile App Stores** page, where you need to set up some options for your hybrid mobile app.
@@ -89,7 +88,7 @@ For more context on building hybrid apps in the cloud, as well as other options 
 
 The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap Build website and set up the app signing keys. To set up the app signing keys, follow these steps:
 
-1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Here you can see the PhoneGap Build app that was created by the Mendix Developer Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
+1. Click **Log in to PhoneGap Build**. A new page will be opened on PhoneGap's [apps tab](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Here you can see the PhoneGap Build app that was created by the Mendix Portal for your app. The app is named as you defined it in the **App Info** in the [Starting the Packaging Process](#starting-the-packaging-process) section above.
 2. Set up the app signing key for your app in your account.
 3. Click the avatar icon on the upper-right side of the page, and then click **Edit account** to configure how your app will build:
 
@@ -127,7 +126,7 @@ Your PhoneGap Build account is now ready and you can continue the packaging proc
 
 ### 6.1 Completing the Packaging Process
 
-To complete the building process in the Mendix Developer Portal, follow these steps:
+To complete the building process in the Mendix Portal, follow these steps:
 
 1. Close your **Adobe PhoneGap Build** page and navigate back to your original **Mendix Developer Platform** page.
 2. Click **Restart build job** to restart the packaging process.</br> 

@@ -1,10 +1,8 @@
 ---
 title: "Configure Parallels"
 url: /howto8/general/using-mendix-studio-pro-on-a-mac/
-category: "General Info"
 weight: 2
 description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
-tags: ["Native", "Parallels", "Mac", "Mobile"]
 ---
 
 ## 1 Introduction

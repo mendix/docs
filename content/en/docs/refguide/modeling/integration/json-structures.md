@@ -2,7 +2,7 @@
 title: "JSON Structures"
 url: /refguide/json-structures/
 weight: 10
-tags: ["studio pro"]
+description: "Describes how to use a JSON structure document that can be used in import and export mappings."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -10,7 +10,7 @@ tags: ["studio pro"]
 
 A JSON structure document stores a JSON snippet and converts it into a schema structure that can be used in [Import Mappings](/refguide/import-mappings/) and [Export Mappings](/refguide/export-mappings/) to convert JSON content to Mendix objects and vice versa. 
 
-{{< figure src="/attachments/refguide/modeling/integration/json-structures/19398772.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/json-structures/sample-structure.png" class="no-border" width="600" >}}
 
 ### 1.1 JSON Snippet
 
@@ -60,7 +60,7 @@ Documentation that describes the snippet.
 
 A simple JSON object is contained in curly braces (between `{` and `}`). It contains a comma-separated list of JSON properties. See the following example.
 
-{{< figure src="/attachments/refguide/modeling/integration/json-structures/19398772.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/json-structures/sample-structure.png" class="no-border" width="600" >}}
 
 Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
 

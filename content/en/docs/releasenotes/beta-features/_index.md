@@ -1,9 +1,7 @@
 ---
 title: "Beta and Experimental Releases"
 url: /releasenotes/beta-features/
-tags: ["beta", "experimental", "GA", "general availability", "feature", "feature flag", "product"]
 weight: 55
-#notoc: true
 #layout: wide
 ---
 
@@ -59,4 +57,5 @@ Please take note of the following limitations regarding beta/experimental featur
 * Beta/experimental features and products may change in future releases, depending on the feedback
 * Beta/experimental features and products may be incomplete
     * Future releases may include more functionality to complete the feature or product
- 
+* Experimental features and products may be made available to a limited group of users
+* Experimental features and products may be removed at any time from existing and future releases

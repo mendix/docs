@@ -2,9 +2,7 @@
 title: "Implement Best Practices for Development"
 linktitle: "Best Practices for Development"
 url: /howto7/general/dev-best-practices/
-category: "General"
 weight: 3
-tags: ["best practice", "development", "develop", "reusable", "prefix"]
 ---
 
 ## 1 Introduction
@@ -85,7 +83,7 @@ A second recommendation is that when an association already exists between entit
 Starting with version 7.19, Mendix will rename the association automatically. 
 {{% /alert %}}
 
-With models built in lower versions of Mendix, however, you will need to manually rename the assocation to keep your model consistent and up-to-date.
+With models built in lower versions of Mendix, however, you will need to manually rename the association to keep your model consistent and up-to-date.
 
 ### 3.3 Folders
 
@@ -103,7 +101,7 @@ Every app has documents that are needed for specific entities. Think of overview
 
 ### 3.4 Microflows
 
-Generally, [microflow](/refguide7/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide7/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example, **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 

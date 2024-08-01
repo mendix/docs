@@ -1,9 +1,7 @@
 ---
 title: "Differences Between Git and SVN"
 url: /refguide9/svn-git-differences/
-category: "Version Control"
 weight: 45
-tags: ["git", "svn", "subversion", "byo-git", "byo-svn"]
 aliases:
     - /refguide/svn-git-differences	
 ---
@@ -13,7 +11,7 @@ aliases:
 
 With Studio Pro version 9.12 and above, users can choose whether to start a new app with SVN or Git version control. Git offers [several advantages](/refguide9/version-control-faq/#git-advantages) over SVN and provides a way to have a stronger and more robust collaboration with your team members. However, there are some differences in the way you commit changes and the way you collaborate, as well as some downsides when working with large repositories. This document describes the most prominent changes between Git and SVN.
 
-For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/) in the *Developer Portal Guide*.
+For more information on how to migrate to Git, see [Migrate to Git](/developerportal/general/migrate-to-git/).
 
 {{% alert color="info" %}}
 For existing apps in Mendix 9, Mendix recommends sticking to SVN version control until planning an upgrade to Mendix 10, unless you require Git-specific capabilities.

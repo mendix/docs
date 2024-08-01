@@ -1,10 +1,8 @@
 ---
 title: "Set Up Anonymous User Security"
 url: /howto/security/set-up-anonymous-user-security/
-category: "Security"
 weight: 30
 description: "Describes how to set access to a non-persistable object and give anonymous users read and write access."
-tags: ["anonymous", "security"]
 ---
 
 ## 1 Introduction

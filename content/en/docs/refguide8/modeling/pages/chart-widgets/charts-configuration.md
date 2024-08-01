@@ -2,7 +2,6 @@
 title: "Chart Configuration"
 url: /refguide8/charts-configuration/
 weight: 10
-tags: ["Charts", "Widgets", "Studio Pro", "Chart Configuration", "Configuration"]
 ---
 
 ## 1 Introduction
@@ -25,7 +24,7 @@ The configuration of *Any chart* widgets is in another document, here: [Any Char
 
 ## 2 Common configuration
 
-The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type),  below.
+The common configuration for all charts is described here. For chart specific configuration see [Configuration by Chart Type](#configuration-by-chart-type), below.
 
 ### 2.1 Chart properties
 
@@ -167,7 +166,7 @@ See the following link for more information about plotly.js and the options: htt
 
 * **Mode**: You can use these charts in three different modes:
 
-    * **Basic**: quickly setup a chart with the various widget options
+    * **Basic**: quickly set up a chart with the various widget options
     * **Advanced**: specify additional JSON configuration
     * **Developer**: this will add a **Toggle Editor** button to the chart at runtime which toggles an editor to play with different advanced configuration options
 

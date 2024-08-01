@@ -1,7 +1,6 @@
 ---
 title: "Actions"
 url: /refguide8/actions/
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction

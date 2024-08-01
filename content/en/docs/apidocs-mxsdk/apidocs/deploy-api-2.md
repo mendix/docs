@@ -2,10 +2,8 @@
 title: "Deploy API – Version 2"
 linktitle: "Deploy API v2"
 url: /apidocs-mxsdk/apidocs/deploy-api-2/
-category: "API Documentation"
 description: "The Deploy API v2 can be used to deploy Mendix apps to licensed nodes, manage application environments in Mendix Cloud, retrieve statuses, start and stop applications, and deploy or transport new model versions to application environments."
 weight: 42
-tags: ["API", "deploy", "licensed", "deployment", "cloud"]
 ---
 
 {{% alert color="warning" %}}
@@ -72,7 +70,7 @@ Content-Disposition: form-data;
 --MultipartBoundary--
 ```
 
-Curl example:
+curl example:
 
 ```bash
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"

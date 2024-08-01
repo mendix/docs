@@ -2,7 +2,6 @@
 title: "Cast Object"
 url: /refguide9/cast-object/
 weight: 10
-tags: ["studio pro", "cast object", "activity"]
 ---
 
 {{% alert color="warning" %}}

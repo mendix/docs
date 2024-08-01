@@ -1,10 +1,8 @@
 ---
 title: "Install Mendix Studio Pro"
 url: /howto8/general/install/
-category: "General Info"
 weight: 10
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
-tags: ["studio pro", "install", "install studio pro", "download"]
 ---
 
 ## 1 Introduction

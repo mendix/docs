@@ -3,7 +3,6 @@ title: "Access Management"
 url: /developerportal/portfolio-management/access-management/
 weight: 15
 description: "Describes the Access Management page in the Mendix Portfolio Management app."
-tags: ["access management", portfolio management"]
 ---
 
 ## 1 Introduction
@@ -30,8 +29,8 @@ The **Members** tab lists all the users that have portfolio access. You can sear
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) (only available to Portfolio Managers) – Clicking the button opens a menu with the following items:
 
-  * **Edit Role** – Selecting this allows you to change the role of the user.
-  * **Remove** – Selecting this allows you to remove the user from the portfolio. 
+    * **Edit Role** – Selecting this allows you to change the role of the user.
+    * **Remove** – Selecting this allows you to remove the user from the portfolio. 
 
 The table below shows the permissions of Portfolio Managers, Contributors, and Viewers:
 
@@ -69,7 +68,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 
 * Delete the portfolio permanently together with all the data in the portfolio when you leave the portfolio; or
 * Assign another user to be the new Portfolio Manager before you leave the portfolio.
-  * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
+    * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
 
 ### 2.2 Adding New Users {#add-users}
 
@@ -129,6 +128,6 @@ The **Pending Invites** tab shows all pending invites of external users. You can
 * **Invite Date** – This shows the date the invite was sent.
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu with the following items:
 
-  * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
+    * **Edit Role** – Selecting this allows you to change the access role of the pending invite.
 
-  * **Delete** – Selecting this allows you to cancel the pending invite.
+    * **Delete** – Selecting this allows you to cancel the pending invite.

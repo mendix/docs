@@ -2,7 +2,6 @@
 title: "Export Project Package"
 url: /refguide8/export-project-package-dialog/
 weight: 30
-tags: ["studio pro", "export app", "export project package"]
 aliases:
     - /community-tools/support/export-a-project-package.html
     - /community-tools/support/export-a-project-package

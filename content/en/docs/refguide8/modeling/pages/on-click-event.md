@@ -2,7 +2,6 @@
 title: "On Click Event and Events Section"
 url: /refguide8/on-click-event/
 weight: 130
-tags: ["studio pro", "events section", "properties", "widget", "on click", "action", "on click event"]
 aliases:
     - /refguide8/opening-pages.html
     - /refguide8/starting-microflows.html

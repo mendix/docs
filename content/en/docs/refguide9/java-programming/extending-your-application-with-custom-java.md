@@ -3,9 +3,7 @@ title: "Extending Your Application with Custom Java"
 linktitle: "Extending App with Custom Java"
 url: /refguide9/extending-your-application-with-custom-java/
 weight: 3
-category: "Java Programming"
 description: "Describes how to extend your application with custom Java code."
-tags: ["microflow", "logic", "java", "extend", "jdk", "custom", "UnsupportedClassVersionError"]
 ---
 
 ## 1 Introduction

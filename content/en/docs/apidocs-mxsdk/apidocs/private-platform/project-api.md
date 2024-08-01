@@ -2,7 +2,6 @@
 title: "Private Mendix Platform Project API"
 url: /apidocs-mxsdk/apidocs/private-platform-project-api/
 type: swagger
-category: "API Documentation"
 description: "This API allows you to manage projects in Private Mendix Platform."
 weight: 60
 ---

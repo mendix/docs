@@ -2,7 +2,6 @@
 title: "XPath Constraints"
 url: /refguide9/xpath-constraints/
 weight: 2
-tags: ["studio pro"]
 ---
 
 ## 1 Introduction
@@ -70,7 +69,7 @@ This query retrieves all customers who live in Rotterdam or Losdun:
 This query retrieves all customers who live in New Amsterdam, Guyana (as opposed to those that live in, for example, New Amsterdam, Indiana):
 
 ```java {linenos=false}
-//Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Adress_Country/Sales.Country/Name = 'Guyana']
+//Sales.Customer[Sales.Customer_Address/Sales.Address[City = 'New Amsterdam']/Sales.Address_Country/Sales.Country/Name = 'Guyana']
 ```
 
 Avoid the use of the same path more than once in a single constraint. For example, the example on Rotterdam and Losdun could also be established like this:

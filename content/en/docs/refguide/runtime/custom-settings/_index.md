@@ -1,9 +1,7 @@
 ---
 title: "Runtime Customization"
 url: /refguide/custom-settings/
-category: "Mendix Runtime"
 description: "Describes custom settings for server, log file, database, Amazon S3 storage service, IBM Cloud Object Storage, Microsoft Azure, IBM Bluemix object storage, web client, and proxy server in Mendix."
-tags: ["Runtime", "Customization", "Settings", "Configuration", "IBM Cloud", "Amazon S3", "IBM Cloud Object Storage", "Microsoft Azure", "Custom Settings", "Metrics", "Proxy", "studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
@@ -18,9 +16,9 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to set the hash algorithm to BCRYPT you add a custom setting with name `HashAlgorithm` and value `BCRYPT`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud or SAP Business Technology Platform, you can access these settings in the Developer Portal via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
+If you are running your app on Mendix Cloud or SAP Business Technology Platform, you can access these settings by opening your app in [Apps](https://sprintr.home.mendix.com/) and choosing **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see:
 
-* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about the Mendix Cloud
+* the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details* for information about Mendix Cloud
 * the [Runtime tab](/developerportal/deploy/sap-cloud-platform/#runtime-tab) section of *SAP Business Technology Platform* for information about the SAP BTP
 
 When you are running your app locally, you can set these values in a [Configuration](/refguide/configuration/#custom).
@@ -94,11 +92,11 @@ When setting up either routing variant, most content is correctly served automat
 
 For the first case, domain-based routing is generally more stable, although path-based routing is possible with Mendix version 10.3.0 or above.
 
-Examples of the second case are OData contracts, sending mails to your organization, and any place you want to render a static URL in your application. For this case it is possible to specify the ApplicationRootURL.
+Examples of the second case are OData contracts, sending mails to your organization, and any place you want to render a static URL in your application. For this case it is possible to specify the ApplicationRootUrl.
 
 #### 2.1.1 Multiple External Domains
 
-Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootURL` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
+Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port`, `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
 
 ## 3 Log File Settings
 
@@ -120,7 +118,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="DatabaseType" href="#DatabaseType">DatabaseType</a> | Defines the database engine which is used as the Mendix database. Valid values are `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | <a id="DatabaseUserName" href="#DatabaseUserName">DatabaseUserName</a> | Name required for authentication to the database. | |
 | <a id="DatabasePassword" href="#DatabasePassword">DatabasePassword</a> | Password for the `DatabaseUserName` supplied above. | |
-| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
+| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseJdbcUrl" href="#DatabaseJdbcUrl">DatabaseJdbcUrl</a> | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | When `true`, the connection will be made using SSL without certificate validation. If you need certificate validation, use [DatabaseJdbcUrl](#DatabaseJdbcUrl) instead.<br />When `false`, the connection will be made without SSL (this is only relevant for SQL Server, which uses SSL by default). | |
@@ -134,7 +132,7 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.2 Connection Pooling {#connection-pooling}
 
-The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/) . 
+The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 
@@ -176,7 +174,7 @@ Before the data copying process starts, the main database structure will be gene
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |
@@ -198,12 +196,12 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 
-## 6 Microsoft Azure SQL
+## 6 Microsoft Azure SQL {#azure-sql}
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 First, you need to create an Azure SQL database (for information on how to do this, see this [SQL Database Tutorial](https://azure.microsoft.com/en-us/documentation/articles/sql-database-get-started/)). Make sure your Azure firewall settings allow your Mendix application to reach the Azure SQL database (by default, the Azure firewall does not allow external connections).
@@ -226,7 +224,7 @@ This will use the credential information present in the running environment to c
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
 {{% alert color="warning" %}}
-For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these settings are managed for you and cannot be overwritten.
+For deployments to Mendix Cloud, SAP BTP, and Mendix for Private Cloud, these settings are managed for you and cannot be overwritten.
 {{% /alert %}}
 
 | Name | Description | Default Value |

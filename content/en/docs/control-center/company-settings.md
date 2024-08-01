@@ -1,16 +1,14 @@
 ---
 title: "Company Settings"
 url: /control-center/company-settings/
-category: "Control Center"
 description: "Describes the Company Settings page in the Mendix Control Center."
-tags: ["control center", "mendix admin", "company settings"]
 weight: 30
 no_list: list
 ---
 
 ## 1 Introduction
 
-The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreoever, you can view and add Mendix Admins of your company.
+The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreover, you can view and add Mendix Admins of your company.
 
 ## 2 General Settings
 
@@ -52,7 +50,7 @@ Click **Delete** to delete the existing Security Contact. This is the first step
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
-## 3 Mendix Admins
+## 3 Mendix Admins{#mendix-admins}
 
 The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 
 

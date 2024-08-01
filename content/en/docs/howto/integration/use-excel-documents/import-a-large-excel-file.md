@@ -1,7 +1,6 @@
 ---
 title: "Import a Large Excel File"
 url: /howto/integration/import-a-large-excel-file/
-tags: ["excel", "excel  importer", "marketplace", "sheet"]
 weight: 10
 ---
 
@@ -139,4 +138,4 @@ To keep your application clean, you can delete the XSD schema and XML-to-domain 
 
 A video demonstrating this technique can be viewed below:  
 
-{{% youtube 8qLyIoUqKEE %}}
+{{< youtube 8qLyIoUqKEE >}}

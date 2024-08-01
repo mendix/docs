@@ -2,7 +2,6 @@
 title: "Create a Company Design System"
 url: /howto9/front-end/create-a-company-design-system/
 weight: 45
-tags: ["Atlas", "UI", "UX", "user experience"]
 ---
 
 ## 1 Introduction

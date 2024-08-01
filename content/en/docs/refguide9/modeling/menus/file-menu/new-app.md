@@ -3,7 +3,6 @@ title: "New App"
 url: /refguide9/new-app/
 weight: 10
 description: "This document describes the New App flow and the App Settings dialog box."
-tags: ["studio pro", "create app", "new app", "creating new app"]
 aliases:
     - /refguide9/app-settings-dialog.html
     - /refguide9/app-settings-dialog
@@ -39,7 +38,7 @@ The name of your new app. This name is used as the name of the app directory and
 
 ### 2.2 Enable Online Services
 
-The Mendix Platform offers online services such as [version control](/refguide9/version-control/) and [cloud deployment](/developerportal/deploy/). When enabled, this will create an app in the Developer Portal and a corresponding version control repository.
+The Mendix Platform offers online services such as [version control](/refguide9/version-control/) and [cloud deployment](/deployment/). When enabled, this will create an app in [Apps](https://sprintr.home.mendix.com/) and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 
@@ -53,7 +52,7 @@ Specify the directory in which the files for your app are stored.
 
 If you enable the online services for the new app, you will see that the suffix *-main* has been added to the directory name automatically. It is used to indicate that the directory contains the main branch line of your app. While working on your app, you can create new branches and download them to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide9/branch-line-manager-dialog/).
 
-The default directory in which new apps are stored can be changed in the [Preferences](/refguide9/preferences-dialog/#241-default-app-directory) dialog box.
+The default directory in which new apps are stored can be changed in the [Preferences](/refguide9/preferences-dialog/#default-directory) dialog box.
 
 ## 3 Read More
 

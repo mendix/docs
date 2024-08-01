@@ -1,9 +1,8 @@
 ---
 title: "App Repository API"
 url: /apidocs-mxsdk/apidocs/app-repository-api/
-category: "API Documentation"
 description: "This API enables retrieving information (branches, commits) of application models stored in the Mendix Team Server."
-weight: 5
+weight: 10
 ---
 
 ## 1 Introduction
@@ -105,7 +104,7 @@ Returns information about the version control repository for a Mendix app.
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) settings tab of your app in the Developer Portal. |
+|`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
 
 ##### 6.1.1.2 Example
 
@@ -279,7 +278,7 @@ An object with the following key-value pairs:
 |`latestCommit.author.name`|String|The full name of the commit author. {{% alert color="info" %}}For Subversion repositories, this will be the same value as the email address of the author. {{% /alert %}}|
 |`latestCommit.author.email`|String|The email address of the commit author.|
 |`latestCommit.date`|String|The commit date and time in RFC 3339 format.|
-|`latestCommit.message`|String|The comit message.|
+|`latestCommit.message`|String|The commit message.|
 |`latestCommit.relatedStories`|Array|An array of related user story IDs, if available.|
 |`latestCommit.mendixVersion`|String, optional|The Mendix version used to make this commit, if available.|
 

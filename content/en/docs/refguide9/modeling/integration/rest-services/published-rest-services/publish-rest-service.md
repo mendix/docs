@@ -1,10 +1,8 @@
 ---
 title: "Publish a REST Service"
 url: /refguide9/integration/publish-rest-service/
-category: "Integration"
 weight: 10
 description: "Describes how to create a published REST service and return the results in JSON or XML."
-tags: ["rest", "rest service", "web service", "integration"]
 aliases:
     - /howto9/integration/publish-rest-service/
 ---
@@ -50,7 +48,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add** > **Other** > **Message Definitions**.
 2. In the **Add Message Definition** dialog box, enter *MD_Orders* as the name for this definition.
-3. The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select** , then choose the **Order** entity from the list.
+3. The message definition is now opened and you need to select the entity to use for the MD_Orders definition. To do this, select **Add** and in the dialog box, click **Select**, then choose the **Order** entity from the list.
 
     {{< figure src="/attachments/refguide9/modeling/integration/publish-rest-service/MD_AddEntity.png" class="no-border" >}}
 

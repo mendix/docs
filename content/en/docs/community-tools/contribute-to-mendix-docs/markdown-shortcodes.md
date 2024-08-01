@@ -55,7 +55,7 @@ This alert is indented to match the sub-list item.
 
 ```json
 {
-     "Status" :  "Stopped" ,
+     "Status" :  "Stopped",
      "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com",
@@ -193,7 +193,7 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 #### YouTube Video
 
-{{% youtube 5tznw5ZUQgk %}}
+{{< youtube 5tznw5ZUQgk >}}
 
 ## Other Markdown and HTML Guidelines
 

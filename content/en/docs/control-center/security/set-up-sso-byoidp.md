@@ -1,10 +1,8 @@
 ---
 title: "Set Up an SSO (BYOIDP)"
 url: /control-center/security/set-up-sso-byoidp/
-category: "Security"
 weight: 5
 description: "Describes how you can use your company IdP to authenticate to Mendix."
-tags: ["BYOIDP", "IdP", "Bring Your Own IdP", "Microsoft Azure", "SSO", "Single Sign-on", "Azure AD", "Entra ID"]
 aliases:
     - /developerportal/control-center/set-up-sso-byoidp/
 ---
@@ -13,7 +11,7 @@ aliases:
 
 The Mendix Platform contains an identity provider (IdP) that allows platform users to sign in to:
 
-* Mendix Platform services such as the Developer Portal, the Marketplace, Control Center, and the Mendix Community
+* Mendix Platform services such as the Mendix Portal, the Marketplace, Control Center, and the Mendix Community
 * Studio Pro
 
 Platform users can have separate Mendix credentials, or you can provide them with an end-to-end SSO experience by setting up an identity federation between the Mendix Platform and your corporate IdP. 
@@ -26,7 +24,7 @@ This document describes the steps to set up a single sign-on configuration in Me
 
 Benefits of using BYOIDP SSO are:
 
-* **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users don't need to have separate credentials in the Mendix Platform to access the Developer Portal.
+* **Security** – You are in control of the credentials and authentication of your platform users. You can, for example, apply password complexity rules and two-factor authentication (2FA). Users don't need to have separate credentials in the Mendix Platform to access the Mendix Portal.
 * **Access governance** – You are in control of denying access to the platform via SSO, for example when an employee has left the company or your corporate policy does not allow an employee to develop Mendix applications.
 * **Convenience** – Platform users have the convenience of SSO and don't have to manage credentials for the Mendix Platform.
 
@@ -40,6 +38,7 @@ When a user who has BYOIDP SSO enabled attempts to sign in to the Mendix Platfor
 
 BYOIDP SSO has the following features:
 
+* BYOIDP is based on the OpenID Connect (OIDC) protocol which supports corporate IdPs such as Entra ID.
 * Mendix Platform services and Studio Pro delegate authentication of platform users to your IdP.
 * Authentication is delegated for any user that has an email address where the email domain is associated with your company. This includes service accounts (for example non-personal accounts used for consuming APIs) that may have been created on the Mendix Platform. 
 * When you add a domain to your company account, it is automatically added to the active IdP configuration. 
@@ -73,7 +72,7 @@ BYOIDP SSO has the following limitations.
     * Create a service account in the company IdP
     * Create a service account on an email domain that is not federated with BYOIDP
 * When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
-* Your conditional access policies in Entra ID (formerly Azure ID) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
+* Your conditional access policies in Entra ID (formerly Azure AD) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
 * You cannot associate multiple Mendix accounts (for example, an Admin account and a regular account) with a single identity in your IdP.
 
 ## 2 Prerequisites
@@ -85,7 +84,7 @@ To set up an IdP configuration for the Mendix Platform and your Mendix app, you 
     * a full list of compliant providers can be found in the [OpenID Certified OpenID Providers](https://openid.net/certification/)
 * The URL for the so-called "well-known endpoint" of your IdP, where configuration details can be retrieved
     * The IdP's well-known endpoint must have a URL for the JWKS endpoint
-* The Mendix Developer Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret
+* The Mendix Portal needs to be registered as a client in your IdP, and you need to know the corresponding client ID and secret
 
 ## 3 Configuring Your BYOIDP Setup
 
@@ -107,16 +106,19 @@ From here you can do the following:
 When adding a configuration, you will need to provide the information described below:
 
 * **Configuration Name** – A name for the IdP setup in the SSO configuration for your own reference.
-* **OpenID Connect Endpoint URL** – The well-known endpoint at your IdP from which the Mendix Platform can retrieve the configuration metadata, including all necessary endpoints and public key location information.
+* **OpenID Connect Endpoint URL** – This is the issuer URL at your IdP. For example, if you are using Entra ID, the issuer URL is: `https://login.microsoftonline.com/550e8400-e29b-41d4-a716-446655440000/v2.0`. Mendix will extend this URL with `/.well-known/openid-configuration` to retrieve the configuration metadata, including all necessary endpoints and public key location information.
     If your IdP supports multiple protocols, make sure you enter the OIDC endpoint.
-* **Client ID** – The ID of the Developer Portal registration in your IdP.
-* **Client Secret** – The password or secret of the Developer Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
-* **Select Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Developer Portal.
+
+    {{% alert color="info" %}}Enter the issuer endpoint URL without `/.well-known/openid-configuration` as it will be appended automatically to form the well-known URL. {{% /alert %}}
+
+* **Client ID** – The ID of the Mendix Portal registration in your IdP.
+* **Client Secret** – The password or secret of the Mendix Portal registration in your IdP. Enter this once. After saving your configuration, it will no longer be shown to you. For information about changing this value once your configuration is active, see the [Changing the Client Secret](#client-secret) section below.
+* **Select Scopes** – Selecting a scope to configure the data Mendix is allowed to read from your IdP. Mendix uses this data to map the user's identity in your IdP environment with a corresponding identity in the Mendix Portal.
 
     * The scope **OpenID** is required.
     * Typically the scopes **Profile** and **Email** are also needed to get the user's email address and name, which are required for SSO to fully map the user's identity. Your IdP may provide additional scopes you can use.
 
-Use the **Copy** button to copy **the redirect URL used by the Mendix Platform Client** – the callback URL to the Developer Portal to which your IdP needs to send the authenticated user.
+Use the **Copy** button to copy **the redirect URL used by the Mendix Platform Client** – the callback URL to the Mendix Portal to which your IdP needs to send the authenticated user.
 
 {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/customer-idp-wizard-page-2.png" class="no-border" >}}
 
@@ -152,7 +154,7 @@ When you have completed your IdP setup, you can perform a test sign-in before ac
 
 You can test in one of two ways:
 
-* Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Developer Portal landing page opens.
+* Use the **Test Link** for your configuration. It will redirect you to the login page of your IdP. Enter the credentials of a user known to your IdP. If the test succeeds, the Mendix Portal landing page opens.
 * Copy the ***Test Email Domain** of your configuration from the overview page. Go to https://login.mendix.com/ and, in the **Username** field, paste the test email domain. The password field disappears. Click **Sign in with SSO**. This will redirect you to a login page of your IdP. Enter credentials known to your IdP. If the test succeeds, the Mendix Platform home page opens.
 
 For advice on where to look for issues if your test fails, see the [Troubleshooting](#troubleshooting) section.
@@ -176,7 +178,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-overview.png" class="no-border" >}}
 
-3. Enter a name for your configuration, and select the preferred account type. Under **Redirect URI**, paste the callback URL you were shown when setting up the IdP in the Developer Portal.
+3. Enter a name for your configuration, and select the preferred account type. Under **Redirect URI**, paste the callback URL you were shown when setting up the IdP in the Mendix Portal.
 4. Click **Register** to save the registration.
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-1.png" class="no-border" >}}
@@ -185,7 +187,7 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-2.png" class="no-border" >}}
 
-    You will need this Client ID when setting up your IdP in the Developer Portal.
+    You will need this Client ID when setting up your IdP in the Mendix Portal.
 
 6. Click **Endpoints** in the top bar of the app registration details page. A sidebar with all available endpoints opens.
 7. Copy the **OpenID Connect metadata document** URL.
@@ -204,11 +206,11 @@ Entra ID (formerly Microsoft Azure AD) is one of the most used IdPs, and it supp
 
     If you wish to let the certificate to expire, write down the date the certificate will expire.
 
-12. Copy the client secret. You need this to set up your IdP in the Developer Portal.
+12. Copy the client secret. You need this to set up your IdP in the Mendix Portal.
 
     {{< figure src="/attachments/control-center/security/set-up-sso-byoidp/azure-app-registration-step-6.png" class="no-border" >}}
 
-That's it! You are now ready to resume your IdP setup in the Developer Portal.
+That's it! You are now ready to resume your IdP setup in the Mendix Portal.
 
 For more information on setting up federation with a Microsoft Entra ID IdP, see [Quickstart: Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app) in the Microsoft documentation.
 
@@ -227,9 +229,9 @@ For Entra ID, you can create a mapping between Entra ID and Mendix as described 
 
 ### 8.1 Onboarding
 
-Users who do not currently have a Mendix account can sign in to the Mendix Platform via your own IdP. They are then taken through onboarding onto the Mendix Developer Portal. They do not need to sign up explicitly.
+Users who do not currently have a Mendix account can sign in to the Mendix Platform via your own IdP. They are then taken through onboarding onto the Mendix Portal. They do not need to sign up explicitly.
 
-Existing users of the Developer Portal can continue to use their accounts, but they will have to use the authentication provided by BYOIDP. They can no longer use the password they created on the Mendix Platform.
+Existing users of the Mendix Portal can continue to use their accounts, but they will have to use the authentication provided by BYOIDP. They can no longer use the password they created on the Mendix Platform.
 
 ### 8.2 BYOIDP and Team Server {#team-server}
 

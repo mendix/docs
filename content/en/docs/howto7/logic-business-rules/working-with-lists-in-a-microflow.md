@@ -1,10 +1,8 @@
 ---
 title: "Work with Lists in a Microflow"
 url: /howto7/logic-business-rules/working-with-lists-in-a-microflow/
-category: "Logic and Business Rules"
 weight: 6
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
-tags: ["microflow", "logic", "list"]
 ---
 
 In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide7/xpath-contains/) in the Mendix Reference Guide. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide7/loop/). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
@@ -103,7 +101,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     {{% /alert %}}
 
-3. Double click the loop activity and select the **OrderList** to iterate over.
+3. Double-click the loop activity and select the **OrderList** to iterate over.
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581085.png" class="no-border" >}}
 
@@ -111,7 +109,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581084.png" class="no-border" >}}
 
-5. Double click the **change activity** to open its properties.
+5. Double-click the **change activity** to open its properties.
 6. Select the **IteratorOrder** at the **Variable** drop-down menu and click the **New** button. This will open the **Edit Change Item** editor.
 7. Set the following properties:
     1. For **Member** select **Orderstatus**.
@@ -147,7 +145,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581073.png" class="no-border" >}}
 
-4. Double click the **variable** to open its properties and set the following properties:
+4. Double-click the **variable** to open its properties and set the following properties:
     1. For **Data type** select **Float**.
     2. In the value editor, enter `0`.
     3. For **Variable** enter *CalculatedTotalPrice*.
@@ -158,7 +156,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581069.png" class="no-border" >}}
 
-6. Double click the **change** variable activity to open its **properties** and set the following properties:
+6. Double-click the **change** variable activity to open its **properties** and set the following properties:
     1. For **Variable** select **CalculatedTotalPrice**.
     2. For **Value** enter `$CalculatedTotalPrice + $IteratorOrder/TotalPrice`.
 
@@ -195,7 +193,7 @@ In the previous section you iterated over a list to add the value of single obje
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581061.png" class="no-border" >}}
 
-3. Double click the aggregate list activity to open its properties and set the following properties:
+3. Double-click the aggregate list activity to open its properties and set the following properties:
     1. For **Variable** select **OrderList**.
     2. For **Function** select **Sum** (see the [documentation](/refguide7/aggregate-list/) for the description of the other functions).
     3. For **Attribute** select **TotalPrice**.
@@ -204,7 +202,7 @@ In the previous section you iterated over a list to add the value of single obje
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581059.png" class="no-border" >}}
 
 4. Click **OK**.
-5. Double click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
+5. Double-click the message activity and replace the `$CalculatedTotalPrice` variable in the **Parameters** expression with the `$SumTotalPrice` variable.
 
     {{< figure src="/attachments/howto7/logic-business-rules/working-with-lists-in-a-microflow/18581055.png" class="no-border" >}}
 

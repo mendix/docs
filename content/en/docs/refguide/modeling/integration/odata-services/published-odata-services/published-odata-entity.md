@@ -1,11 +1,9 @@
 ---
 title: "Published OData Entity"
 url: /refguide/published-odata-entity/
-tags: ["studio pro", "OData"]
 alias:
     - /refguide/published-odata-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
-
 ---
 
 ## 1 Introduction
@@ -76,7 +74,7 @@ These features make it easier to refactor the domain model without affecting ext
 
 ## 5 Key {#key}
 
-Every entity in Mendix has an [ID](/refguide/odata-representation/#id-representation) that is used internally to store the object in the database. However, this ID is not stable over time, as it can change in certain scenarios (such as data migration). That means it is not recommended to use the ID as a key. A published entity should have a key attribute or a combination of attributes that form a key instead. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
+A published entity should have a key attribute or a combination of attributes that form a key. This allows you to easily retrieve the entity and makes it easy to combine data referring to the same object (for example a customer) from several systems. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
 Select a combination of attributes with the following constraints:
 
@@ -93,6 +91,8 @@ Selecting a key is required when the **Readable** capability is enabled.
 {{% alert color="info" %}}
 Selecting more than one attribute as the key is only available for published OData services that use OData v4.
 {{% /alert %}}
+
+Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
 
 ## 6 Capabilities {#capabilities}
 
@@ -176,7 +176,13 @@ It is possible to customize the name of the entity set that is displayed in the 
 
 Default: {Entity name}s
 
-### 7.2 Use Paging {#paging}
+### 7.2 Alternative Name (in URL)
+
+You can choose to specify an alternative to the exposed set name. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the entity will be available on two different URLs: one that uses the exposed set name, and one that uses the alternative name. This value is optional. 
+
+Use an alternative name when you require the published entity to be available on a URL that would be invalid in OData but valid in OpenAPI, such as `my-entities`.
+
+### 7.3 Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continues to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
@@ -186,7 +192,7 @@ When set to **Yes**, select **Top supported** and **Skip supported** [query opti
 
 Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. For example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
-#### 7.3 Page Size
+#### 7.4 Page Size
 
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 

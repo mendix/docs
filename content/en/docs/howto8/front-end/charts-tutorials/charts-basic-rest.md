@@ -2,7 +2,6 @@
 title: "Use a Chart with a REST Data Source"
 url: /howto8/front-end/charts-basic-rest/
 weight: 60
-tags: ["Charts", "Widgets", "REST", "Studio Pro"]
 ---
 
 ## 1 Introduction
@@ -73,7 +72,7 @@ To use the REST Data source endpoint in your chart, follow these steps:
 
 1. Create a page in your app containing an **Area chart** widget.
 
-1. Double click the **Area chart** widget.
+1. Double-click the **Area chart** widget.
 
 1. In the tab **Chart properties**, add a new chart **Series** property.
 

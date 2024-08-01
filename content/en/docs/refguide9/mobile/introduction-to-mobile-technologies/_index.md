@@ -1,7 +1,6 @@
 ---
 title: "Introduction to Mobile Technologies"
 url: /refguide9/mobile/introduction-to-mobile-technologies/
-category: Mobile
 weight: 20
 ---
 

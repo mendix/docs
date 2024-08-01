@@ -2,7 +2,6 @@
 title: "Table"
 url: /refguide/table/
 weight: 60
-tags: ["studio pro", "table", "container widget", "widget"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -50,7 +49,7 @@ A cell has the following properties:
 
 ### 2.3 Performing Actions on Rows
 
-To perform an action on a row , select a row and right-click it. A list of actions will open. 
+To perform an action on a row, select a row and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 
@@ -61,7 +60,7 @@ You can perform the following actions:
 
 ### 2.4 Performing Actions on Columns
 
-To perform an action on a column , select a column and right-click it. A list of actions will open. 
+To perform an action on a column, select a column and right-click it. A list of actions will open. 
 
 You can perform the following actions:
 

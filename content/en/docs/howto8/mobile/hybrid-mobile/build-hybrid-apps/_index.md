@@ -4,7 +4,6 @@ url: /howto8/mobile/build-hybrid-apps/
 weight: 2
 no_list: false
 description_list: true 
-tags: ["mobile", "hybrid"]
 ---
 
 ## 1 Introduction
@@ -15,6 +14,6 @@ Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Un
 
 Hybrid apps are built by using PhoneGap to wrap a web app in a native wrapper. However, because PhoneGap has ceased supporting iOS builds 13 and higher Mendix recommends building native iOS apps instead. For more information, see [How to Build Native Apps](/howto8/mobile/build-native-apps/).
 
-The documents in this section focus on publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp/) in the Developer Portal Guide.
+The documents in this section focus on publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp/).
 
 ## 2 Documents in This Section

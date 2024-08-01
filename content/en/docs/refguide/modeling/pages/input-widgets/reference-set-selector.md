@@ -2,7 +2,6 @@
 title: "Reference Set Selector"
 url: /refguide/reference-set-selector/
 weight: 80
-tags: ["studio pro"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -151,12 +150,12 @@ Possible values:
 
 #### 3.1.10 Default Button Trigger {#default-button-trigger}
 
-The default button can be triggered by a single or a double click a row.
+The default button can be triggered by single- or double-clicking a row.
 
 | Value | Description |
 | --- | --- |
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
-| Double click  *(default)* | A double click triggers the default button. |
+| Double click  *(default)* | A double-click triggers the default button. |
 
 ### 3.2 Data Source Section {#data-source}
 

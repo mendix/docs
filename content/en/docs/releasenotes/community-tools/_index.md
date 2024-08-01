@@ -1,15 +1,22 @@
 ---
-title: "Community Tools"
+title: "Community"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
-tags: ["forum", "mendix profile", "profile"]
 weight: 37
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-These release notes cover changes to the Mendix Profile, Mendix Community, and other [Mendix community tools](/community-tools/).
+These release notes cover changes to the [Mendix Profile, Mendix Community, and other Mendix community tools](/community-tools/).
 
 ## 2024
+
+### June 28, 2024
+
+#### New Features
+
+* We released two AI-powered features in the [Mendix Community](/community-tools/mendix-community/): Maia (Mendix AI Assistance) Summarize and Maia Rewrite:
+    * Maia Summarize condenses lengthy discussions for a question into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread.
+    * Maia Rewrite is an assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered.
 
 ### February 8, 2024
 
@@ -40,6 +47,12 @@ These release notes cover changes to the Mendix Profile, Mendix Community, and o
 #### Improvements
 
 * We changed the process for merging Mendix Profiles so that the profiles are truly merged and your user accounts stay connected to the resulting Mendix Profile. Previously, profile data was moved from one account to another.
+
+### March 30, 2023
+
+#### New Features  {#spaces-ga-release}
+
+* We releases Spaces in the Mendix Forum  for GA.
 
 ### March 23, 2023
 

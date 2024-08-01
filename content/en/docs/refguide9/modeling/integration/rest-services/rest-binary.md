@@ -3,7 +3,6 @@ title: "Publish and Retrieve Images and Files with REST"
 url: /refguide9/send-receive-files-rest/
 linktitle: "Images and Files with REST"
 weight: 79
-tags: ["rest", "binary", "send files", "receive files", "OData", "expose", "published REST service", "consume"]
 ---
 
 ## 1 Introduction
@@ -133,7 +132,7 @@ You can implement a client in your app that will retrieve binary files from any 
     * In the **Domain Model**, right click to add an entity called **RetrievedFile**.
     * Double-click on the entity to open the **Properties** and select the **Generalization**. To test with the PNG file, we can use **System.Image**, or **System.FileDocument** if you want to work with a PDF file.
 
-Then, you can retrieve the image with the [Image widget](#image-widget), retrieve a PDF with the [HTML/Javascript snippet widget](#html-snippet) for PDFs, or [retrieve images or PDFs with a microflow](#retrieve-microflow).
+Then, you can retrieve the image with the [Image widget](#image-widget), retrieve a PDF with the [HTML/JavaScript snippet widget](#html-snippet) for PDFs, or [retrieve images or PDFs with a microflow](#retrieve-microflow).
 
 ### 3.1 Retrieving Images Using the Image Widget {#image-widget}
 
@@ -149,14 +148,14 @@ To do so, do the following:
 6. In the **Data source** field, select the **Image URL** for **Image type**.
 7. Paste the location of the file in the REST service (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`).
 
-### 3.2 Retrieving PDFs Using the HTML/Javascript Snippet Widget {#html-snippet}
+### 3.2 Retrieving PDFs Using the HTML/JavaScript Snippet Widget {#html-snippet}
 
-Retrieve PDFs with the URL of the published REST service by using the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
+Retrieve PDFs with the URL of the published REST service by using the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
 
 To do so, do the following:
 
 1. Complete the two steps in the [Retrieve Files with REST](#retrieve-files) section.
-2. Download the [HTML/Javascript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Mendix Marketplace and import it into your app.
+2. Download the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget from the Mendix Marketplace and import it into your app.
 3. In the [Toolbox](/refguide9/view-menu/#toolbox), click **Widgets** and search for "HTMLSnippet".
 4. Drag the **HTMLSnippet** widget onto a page.
 5. Double-click the widget you dragged onto your page to open the **Properties**.
@@ -190,6 +189,6 @@ To retrieve files using a microflow, do the following:
   
 4. For images: 
    Drag a **Change object** action into the microflow after the **Call REST service** action, so that the image viewer will display the retrieved image. 
-    * Double click the newly created action to open the properties.
+    * Double-click the newly created action to open the properties.
     * In the **Object** field, select the **GetResponseFile** variable for the **RetrievedFile** entity.
     * In the **Refresh in client** field, select **Yes**.

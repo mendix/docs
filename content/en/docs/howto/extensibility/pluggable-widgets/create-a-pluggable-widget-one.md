@@ -4,7 +4,6 @@ linktitle: "1. Build Pluggable Web Widget"
 url: /howto/extensibility/create-a-pluggable-widget-one/
 weight: 10
 description: "This how-to teaches you how to create a pluggable web widget."
-tags: ["widget", "pluggable", "JavaScript", "API", "JavaScript-API"]
 ---
 
 ## 1 Introduction
@@ -26,18 +25,6 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the LTS version of [Node.js](https://nodejs.org/en/download/).
-* Install [Yeoman](https://yeoman.io/) with the following command:
-
-    ```shell {linenos=false}
-      $ npm install -g yo
-    ```
-
-* Install the Mendix Pluggable Widget Generator with the following command:
-
-    ```shell {linenos=false}
-    $ npm install -g @mendix/generator-widget
-    ```
-
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -47,7 +34,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
 
 ### 3.1 Creating a Test App {#creating-a-test-project}
 
-1. Open Mendix Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
+1. Open Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
     1. In the domain model of **MyFirstModule**, add a new entity.<br />
     2. Add a new attribute of type **String**.<br />
@@ -58,7 +45,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
     7. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
     8. Add a new **Create object** action on your microflow.
 
-3. Open the new **Create object** action's properties by double clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+3. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
 4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
 5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
 6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
@@ -76,7 +63,7 @@ Using a terminal or command line, navigate to your new Mendix app's folder, crea
 ```shell {linenos=false}
 mkdir myPluggableWidgets
 cd myPluggableWidgets
-yo @mendix/widget TextBox
+npx @mendix/generator-widget TextBox
 ```
 
 The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
@@ -98,7 +85,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/generatorblack-new.png" alt="The Mendix Widget generator with the prompts answered according to the list above." class="no-border" >}}
 
-As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build`. 
+As part of the widget scaffolding, the generator builds the widget for the first time. You can do this yourself by running `npm run build` inside your widget's directory.
 
 There is also a watcher available that will rebuild your widget as you make changes to files. Start the watcher by running `npm start`.
 
@@ -116,7 +103,7 @@ When the build script completes it will package your widget as a `.mpk` file and
 1. Drag the Text Box widget to the Data View added in [Creating a Test Project](#creating-a-test-project).
 1. Run your app locally and open it in the browser. The homepage should now display Hello World below the text widget:
 
-{{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
+    {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/hello-world.png" alt="A live mendix app displaying a text field and below it the pluggable widget with the text Hello World." class="no-border" >}}
 
 ### 3.4 Adding the Attribute
 
@@ -156,7 +143,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     When done generating the types can be found in `typings/TextBoxProps.d.ts`
 
-    {{% alert color="info" %}}The console will display an error along the lines of _"HelloWorldSample.tsx could not be found"_. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
+    {{% alert color="info" %}}The console will display an error along the lines of `HelloWorldSample.tsx could not be found`. We will address this in the section [Labeling the Input](#label-input) of this how-to. It can be ignored for now.{{% /alert %}}
 
 4. Create a new file, `src/components/TextInput.tsx`. This will be the display component. A display component is a regular React component and does not interact with Mendix APIs. It can be re-used in any React application.
 
@@ -176,7 +163,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
     
     In short, the component receives an input object, called props, containing a string property named `value`. In turn the component returns a [React input element](https://react.dev/reference/react-dom/components/input) with its value set to what the `TextInput` component received in `props.value`. While the syntax looks like HTML, [it actually is JavaScript](https://react.dev/learn/writing-markup-with-jsx).
 
-5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In *TextBox.tsx* overwrite the render function until they look like this:
+5. The container component *src/TextBox.tsx* receives the properties in the runtime, and forwards the data to the display component. The container works like glue between the Mendix application and the display component. In *TextBox.tsx* update the component to look like this:
 
     ```tsx
     import { createElement, ReactElement } from "react"; 
@@ -217,8 +204,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/updateallwidgets.png" alt="A demonstration of opening the context menu of a widget in the page editor to reveal the Update all widgets command." class="no-border" >}}
 
-8.  Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
-
+8. Open the widget properties. In the **Data source** tab **select** the **text attribute** created in [section 3.1](#creating-a-test-project).
 
 9. **Run** the app locally to see the results, the new widget is already functional. The first text box is a standard Text box widget and the second is your pluggable web widget. Select the first text box and enter some text, unfocus the text box and the pluggable widget will now display the same data.
 
@@ -242,7 +228,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     }
     ```
 
-    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in Javascript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
+    You may notice that we do not [destructure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the props object into variables for our Container component. The reason is that `class` [is a reserved keyword](https://developer.mozilla.org/en-US/docs/Web/API/Element/className#notes) in JavaScript and cannot be used as a variable name. This is also why we use `className` in the JSX of our components.
 
 2. Until we update the type of our TextInputProps, Typescript will display errors in *TextBox.tsx*. In *src/components/TextInput.tsx*, add the missing properties to the interface and pass them to the `input` component:
 
@@ -269,13 +255,12 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     Explaining the code:
     * The `style` property is an object containing CSS properties which can be used to quickly add styling to a component. It is available on all [HTML components offered by React](https://react.dev/reference/react-dom/components/common#applying-css-styles).
-    * The questionmarks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
+    * The question marks in the props indicate that [a property is optional](https://www.typescriptlang.org/docs/handbook/2/objects.html#optional-properties). This is why the unchanged usage of `TextInput` in *src/TextBox.editorPreview.tsx* is not causing type errors.
     * To ensure our input has basic input [styling from Bootstrap](https://getbootstrap.com/docs/5.3/forms/form-control/), we prepend the css class `form-control` to the `className` property. Similar to how you would add classes to an HTML `class` attribute. There is no need to include Bootstrap, as Mendix' Atlas UI is based on Bootstrap.
 
 3. Refresh your Mendix app in the browser, the result should be a well-styled input widget. If the change does not appear immediately, open your browser's devtools and disable cache. This ensures you are loading your widget's latest assets.
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="A live Mendix app with two text fields with a similar appearance." class="no-border" >}}
-
 
 ### 3.6 Labeling the Input{#label-input}
 
@@ -288,12 +273,12 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
         <systemProperty key="Label" />
     </propertyGroup>
     ```
-1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBox.d.ts*.
+
+1. Open *src/TextBox.tsx* and remove the `style` and `className` props from `TextInput`. Now that the widget is a labeled input, it should no longer have the layout styling applied to it. In fact, the `pluggable-widget-tools` removed them from the type definition in *typings/TextBoxProps.d.ts*.
 
     ```tsx
     return <TextInput value={value} tabIndex={props.tabIndex} />;
     ```
-
 
 1. **Synchronize** your project and **update** all widgets. Now open the widget **Properties** and open the **Label** tab.
 
@@ -305,11 +290,9 @@ Comparing our widget to the Mendix text input widget we are still missing a labe
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="A live Mendix app with two text fields with labels. The second text field has the label TextBox" class="no-border" >}}
 
+{{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
 
-{{% alert color="info" %}}The labels will appear in front of, or above the inputs. This depends on the surrounding [data view's properties](/refguide/data-view/#411-form-orientation) (**form orientation** and **label width**) and the size of the screen.{{% /alert %}}
-
-
-### 3.6 Handling Updates
+### 3.7 Handling Updates
 
 Our widget now looks like a Mendix widget, but does not behave like one yet. While it is able to display the value of the text attribute, it is not able to update it yet. In this section we will close that loop.
 
@@ -370,7 +353,7 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
 Congratulations, you have now made a fully functional input widget!
 
-Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
+Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Studio Pro preview.
 
 ## 4 Read More
 

@@ -1,7 +1,6 @@
 ---
 title: "Mendix Community"
 url: /community-tools/mendix-community/
-category: "Community Tools"
 weight: 3
 description: "Describes the Mendix Community, where community members can ask and answer questions, exchange information, as well as post ideas for how to improve the Mendix Platform."
 aliases:
@@ -29,16 +28,16 @@ Clicking **PERSONAL** > **Community Feed** brings you back to the home page of t
 
 In **PERSONAL** > **Bookmarks**, the following tabs are available:
 
-* **Questions** – the questions you have bookmarked (for details, see [Question Details](#question-details) below)
-* **Exchanges** – the exchanges you have bookmarked (for details, see [Exchange Details](#exchange-details) below)
-* **Ideas** – the ideas you have bookmarked (for details, see [Idea Details](#idea-details) below)
+* **Questions** – the questions you have bookmarked
+* **Exchanges** – the exchanges you have bookmarked
+* **Ideas** – the ideas you have bookmarked
 
 ### 2.3 Posts {#posts}
 
 In **PERSONAL** > **Posts**, the following tabs are available:
 
-* **Posted** – the questions and ideas you have posted (for details, see [Asking Your Question](#asking-question) and [Posting Your Idea](#posting-idea) below)
-* **Answered** – the questions you have answered (for details, see [Question Details](#question-details) below)
+* **Posted** – the questions, exchanges, and ideas you have posted
+* **Answered** – the questions you have answered
 * **Commented** – the questions, exchanges, and ideas that you have commented on
 * **Drafts** – the post drafts you have started
 
@@ -48,25 +47,26 @@ In **PERSONAL** > **Posts**, the following tabs are available:
 
 In **GENERAL** > **Questions**, you can see an overview of the questions that have been asked. Here is an example question:
 
-{{< figure src="/attachments/community-tools/mendix-community/question-example.png" class="no-border" >}}
+{{< figure src="/attachments/community-tools/mendix-community/question-example.png" >}}
 
 Each question has the following details:
 
-* ① A descriptive title (clicking the question title opens the specific [Question details](#question-details) page)
-* ② The beginning of the question description, which is taken from the [Question details](#question-details) page
-* ③ The type of post (**Question**, **Exchange**, or **Idea**)
-* ④ The space, which is set when [asking a question](#asking-question)
-    * Clicking the space opens an overview page that lists all the posts in the same space
-* ⑤ Tags, which are set when [asking a question](#asking-question)
-    * Clicking a tag opens an overview page that lists all the posts with the same tag
-* ⑥ The number of votes for the question
-* ⑦ The number of answers to the question
-* ⑧ The number of views the question has received
-* ⑨ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
-* ⑩ The avatars of the Mendix comminity members who have answered and commented
+1. A descriptive title
+   * Clicking the question title opens the specific [question details](#question-details) page.
+2. The beginning of the question description, which is taken from the question details page
+3. The type of post (**Question**, **Exchange**, or **Idea**)
+4. The space, set by the person when asking the question
+   * Clicking the space opens an overview page that lists all the posts in the same space.
+5. Tags, set by the person when asking the question
+   * Clicking a tag opens an overview page that lists all the questions with the same tag.
+6. The number of views the question has received
+7. The number of answers to the question
+8. The number of emojis received 
+9. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who asked the question
+10. The avatars of the Mendix community members who have answered and commented
 
 {{% alert color="info" %}}
-Hover over the developer name to see the profile card with their Mendix points. Click the developer name on the card to go to their Mendix Profile.
+Hover over the Mendix user name to see the profile card with their Mendix points. Click the Mendix user name on the card to go to their Mendix Profile.
 {{% /alert %}}
 
 #### 3.1.1 Searching and Filtering Questions
@@ -77,43 +77,47 @@ To filter the searching results, you can use the following filters:
 
 * **Status** > **Unanswered**, **Answered**, or **Answer Accepted**
 * **Last Updated** > **Last Updated** (default), **Newest**, or **Most Popular**
-* **Spaces** – the space set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
-* **Type in a Tag** – the tags set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
-* **Version** – the Mendix version to which the question is related (for details, see [Asking Your Question](#asking-question) below)
+* **Spaces** – the space set when the question was asked
+* **Type in a Tag** – the tags set when the question was asked
+* **Version** – the Mendix version to which the question is related
 
 #### 3.1.2 Question Details {#question-details}
 
-Clicking the title of a question brings you to its details page:
+Clicking the title of a question brings you to the question details page.
 
-{{< figure src="/attachments/community-tools/mendix-community/question-details.png" class="no-border" >}}
+{{% alert color="info" %}}
+Each page has a unique URL.
+{{% /alert %}}
 
-On this page, you do the following:
+{{< figure src="/attachments/community-tools/mendix-community/question-details.png" >}}
 
-* ① View the question details:
+On the right side of the question details page, you can see the following:
+
+* **Summarize**: Click this button to get a key-points summary of the discussion, generated by Maia Summarize, an AI-powered summarize assist. Maia Summarize makes it easier for you to find solutions to your questions without having to read through every answer in the thread.
+
+* **Bookmark**: Click this button to bookmark the question.
+
+* Question details:
+
     * When the question was **Submitted**
+
     * The **Last activity** date and time for when the question was updated
+
     * How many times the question has been **Viewed**
+
     * The **Space** of the question
-    * The **Tags** applied to the question (clicking a tag opens an overview page that lists posts with the same tag)
-    * The **Version** set when the question was asked (for details, see [Asking Your Question](#asking-question) below)
-* ② Click the **▲** or **▼** button to upvote or downvote the question based on its usefulness
-* ③ Click **Comment** to write and submit a comment on the question
-* ④ Click **Bookmark** to bookmark the question
-* ⑤ Click **Follow this Question** if you want to follow the discussion via email notifications
-    * You are automatically subscribed for email notifications on questions that you have asked
-    * If you want to unsubscribe from these notifications, click **Unfollow this Question**
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
+  
+    * The **Tags** applied to the question
+        * Clicking a tag opens an overview page that lists all the questions with the same tag.
+  
+    * The **Version** set by the person when asking the question
 
-Below the question details are the answers to the question. Click the **▲** or **▼** button to upvote or downvote the answer based on how it addresses the question. You can also click **Comment** to comment on an answer.
-
-{{< figure src="/attachments/community-tools/mendix-community/question-answer.png"   width="65%" class="no-border" >}}
+Below the question details are the answers to the question. You can click the thumbs-up icon ({{% icon name="thumbs-up" %}}) or thumbs-down icon ({{% icon name="thumbs-down" %}}) to give your feedback on the answer based on how it addresses the question. By clicking **Comment**, you can comment on an answer.
 
 In the **Your Answer** section, you can contribute to the Mendix Community by writing your answer in the editor and then clicking **Submit Answer**:
 
-{{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" class="no-border" >}}
-
-{{% alert color="info" %}}
-The URL for each question is unique.
-{{% /alert %}}
+{{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" >}}
 
 #### 3.1.3 Asking Your Question {#asking-question}
 
@@ -131,12 +135,10 @@ To ask your own question in the Mendix Community, follow these steps:
     * The question **Description** (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
     * The **Mendix Studio Pro Version** that is relevant to your question (only available when you select a version-dependent **Space**)
     * The **Tags** that reflect the question topic (users can filter the list of questions by tag)
-
-3. Click **Ask Question** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
-
-{{% alert color="info" %}}
-You can easily upload images in the Mendix Community by dragging them directly into the text editor. In order to resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
-{{% /alert %}}
+3. To upload images, drag them directly into the text editor. To resize and position an image, double-click it in the editor or click the **Image** button in the toolbar.
+4. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
+5. To use Maia Rewrite, an AI-powered rewrite assist, to help you with your writing, click **Rewrite**. Maia Rewrite is an assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered!
+6. To publish the question, click **Ask Questions**.
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer. You should accept the answer that properly and accurately responds to your question in the best way possible.
 
@@ -144,21 +146,23 @@ Once a question you have asked receives several answers, you can accept an answe
 
 In **GENERAL** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
-{{< figure src="/attachments/community-tools/mendix-community/exchange-example.png" class="no-border" >}}
+{{< figure src="/attachments/community-tools/mendix-community/exchange-example.png">}}
 
 Each exchange has the following details:
 
-* ① A descriptive title (clicking the exchange title opens the specific [Exchange details](#exchange-details) page)
-* ② The beginning of the exchange description, which is taken from the [Exchange details](#exchange-details) page
-* ③ The type of post (**Question**, **Exchange**, or **Idea**)
-* ④ The space, which is set when [posting an exchange](#posting-exchange)
-    * Clicking the space opens an overview page that lists all the posts in the same space
-* ⑤ Tags, which are set when [posting an exchange](#posting-exchange)
-    * Clicking a tag opens an overview page that lists all the posts with the same tag
-* ⑥ The number of comments on the exchange
-* ⑦ The number of views the exchange has received
-* ⑧ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
-* ⑨ The avatars of the Mendix community members who have commented
+1. A descriptive title
+    * Clicking the exchange title opens the specific [exchange details](#exchange-details) page.
+2. The beginning of the exchange description, which is taken from the exchange details page
+3. The type of post (**Question**, **Exchange**, or **Idea**)
+4. The space, set by the person when posting the exchange
+    * Clicking the space opens an overview page that lists all the posts in the same space.
+5. Tags, set by the person when posting the exchange
+    * Clicking a tag opens an overview page that lists all the exchanges with the same tag.
+6. The number of views the exchange has received
+7. The number of comments on the exchange
+8. The number of emojis received
+9. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
+10. The avatars of the Mendix community members who have commented
 
 #### 3.2.1 Searching and Filtering Exchanges
 
@@ -167,72 +171,100 @@ To search for an exchange, enter your keywords in the **Search** text box.
 To filter the searching results, you can use the following filters:
 
 * **Last Updated** > **Last Updated** (default), **Newest**, or **Most Popular**
-* **Spaces** – the space set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
-* **Type in a Tag** – the tags set when the exchange was posted (for details, see [Posting an Exchange](#posting-exchange) below)
+* **Spaces** – the space set when the exchange was posted
+* **Type in a Tag** – the tags set when the exchange was posted
 
 #### 3.2.2 Exchange Details {#exchange-details}
 
-Clicking the title of an exchange brings you to its details page:
+Clicking the title of an exchange brings you to the exchange details page.
 
-{{< figure src="/attachments/community-tools/mendix-community/exchange-details.png" class="no-border" >}}
+{{% alert color="info" %}}
+Each page has a unique URL.
+{{% /alert %}}
 
-On this page, you do the following:
+{{< figure src="/attachments/community-tools/mendix-community/exchange-details.png" >}}
 
-* ① View the exchange details:
+On the right side of the exchange details page, you can see the following:
+
+* **Bookmark**: Click this to bookmark the exchange.
+
+* Exchange details:
+
     * When the exchange was **Shared**
-    * The **Last activity** date and time for when the exchange was updated
-    * How many times the exchange has been **Viewed**
-    * The **Space** of the exchange
-    * The **Tags** applied to the exchange (clicking a tag opens an overview page that lists posts with the same tag)
-* ② Click **Comment** to write and submit a comment on the question
-* ③ Click **Bookmark** to bookmark the question
 
+    * The **Last activity** date and time for when the exchange was updated
+
+    * How many times the exchange has been **Viewed**
+
+    * The **Space** of the exchange
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
+  
+    * The **Tags** applied to the exchange
+        * Clicking a tag opens an overview page that lists all the exchanges with the same tag.
+  
 Below the exchange details are comments on the exchange. 
 
 In the **Your Comment** section, you can contribute to the Mendix Community by writing your comment in the editor and then clicking **Submit Comment**.
 
-{{% alert color="info" %}}
-The URL for each exchange is unique.
-{{% /alert %}}
-
 #### 3.2.3 Posting an Exchange {#posting-exchange}
 
-To ask your own question in the Mendix Community, follow these steps:
+To post an exchange in the Mendix Community, follow these steps:
 
 1. Click **Create a Post** > **Exchange with Community** on the home page, or click **Post Exchange** on the **Exchanges** page. 
 2. On the **Create a Post** page, fill in the following details in the editor:
 
     * The **Space** that reflects your post
     * The post **Title** (this is how users will first see your post, so make it descriptive and interesting)
-    * The post **Description** (add all the details about your question to make it searchable and so other users can answer it; consider including steps to reproduce the issue)
-    * The **Tags** that reflect the post topic (users can filter the list of questions by tag)
-
-3. Click **Post Exchange** to post your question or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
+    * The post **Description** (add all the details about your exchange to make it searchable and so other users can comment on it; consider including steps to reproduce the issue)
+    * The **Tags** that reflect the post topic (users can filter the list of exchanges by tag)
+3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
+5. To publish the exchange, click **Post Exchange**.
 
 ### 3.3 Ideas {#ideas-tab}
 
 In **GENERAL** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
-{{< figure src="/attachments/community-tools/mendix-community/idea-example.png" class="no-border" >}}
+{{< figure src="/attachments/community-tools/mendix-community/idea-example.png" >}}
 
 Each idea has the following details:
 
-* ① A descriptive title (clicking the idea title opens the specific [Idea details](#idea-details) page) along with the status
-* ② The review status of the idea:
-    * **Planned** – the idea has been accepted by Mendix Product Managers and scheduled for implementation
-    * **Implemented** – the idea has been implemented
-    * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
-    * Note that if there is no **Status** listed, the idea is **Open**, meaning, it has not been reviewed yet
-* ③ The beginning of the idea description, which is taken from the [Idea details](#idea-details) page
-* ④ The type of post (**Question**, **Exchange**, or **Idea**)
-* ⑤ The space, which is set when [posting an idea](#posting-idea)
-    * Clicking the space opens an overview page that lists all the posts in the same space
-* ⑥ Tags, which are set when [posting an idea](#posting-idea)
-* ⑦ The number of votes on the idea
-* ⑧ The number of comments on the idea
-* ⑨ The number of views the idea has received
-* ⑩ The name, avatar, and [level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
-* ⑪ The avatars of the Mendix comminity members who have commented
+1. A descriptive title
+
+   * Clicking the idea title opens the specific [idea details](#idea-details) page.
+
+2. The review status of the idea:
+
+   * **Planned** – the idea has been accepted by Mendix Product Managers and scheduled for implementation
+
+   * **Implemented** – the idea has been implemented
+
+   * **Closed** – the idea has been reviewed by the Product Managers but it has not been accepted
+
+   {{% alert color="info" %}}If there is no status shown, the idea has not been reviewed yet.{{% /alert %}}
+
+3. The beginning of the idea description, which is taken from the idea details page
+
+4. The type of post (**Question**, **Exchange**, or **Idea**)
+
+5. The space, set by the person when posting the idea
+
+   * Clicking the space opens an overview page that lists all the posts in the same space
+
+6. Tags, set by the person when posting the idea
+
+   * Clicking a tag opens an overview page that lists all the ideas with the same tag.
+
+7. The number of votes on the idea
+
+8. The number of views the idea has received
+
+9. The number of comments on the idea
+
+10. The number of emojis received
+
+11. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the idea
+
+12. The avatars of the Mendix community members who have commented
 
 #### 3.3.1 Searching and Filtering Ideas
 
@@ -242,40 +274,46 @@ To filter the searching results, you can use the following filters:
 
 * **Status** > **Open**, **Planned**, **Implemented**, or **Closed**
 * **Last Updated** > **Last Updated** (default), **Most Votes**, or **Most Recent**
-* **Spaces** – the space set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
-* **Type in a Tag** – the tags set when the idea was posted (for details, see [Posting Your Idea](#posting-idea) below)
+* **Spaces** – the space set when the idea was posted
+* **Type in a Tag** – the tags set when the idea was posted
 
 #### 3.3.2 Idea Details {#idea-details}
 
-Clicking the title of an idea brings you to its details page:
+Clicking the title of an idea brings you to the idea details page.
 
-{{< figure src="/attachments/community-tools/mendix-community/idea-details.png" class="no-border" >}}
+{{% alert color="info" %}}
+Each page has a unique URL.
+{{% /alert %}}
 
-On this page, you do the following:
+{{< figure src="/attachments/community-tools/mendix-community/idea-details.png" >}}
 
-* ① View the idea details:
+On the right side of the idea details page, you can see the following:
+
+* **Bookmark**: Click this to bookmark the idea.
+
+* Idea details:
+
     * The review **Status** of the idea
+
     * When the idea was **Shared**
+
     * The **Last activity** date and time for when the idea was updated
+
     * How many times the idea has been **Viewed**
+
     * The **Space** of the idea
-    * The **Tags** applied to the idea (clicking a tag opens an overview page that lists posts with the same tag)
-* ② Click the **Vote** button to upvote the idea based on its usefulness
-    * By upvoting ideas, you can show the Mendix Product Managers and Mendix community what you would like to see added to the Mendix Platform
-    * The upvotes are used as input for the Mendix Product Managers and Mendix community MVPs to decide which features are nominated for implementation (please note that the level of impact also needs to be considered)
-* ③ If the review status of the idea has been **Planned**, a comment from the Mendix Product Manager about the planned implementation can appear here
-* ④ Click **Bookmark** to bookmark the idea
-* ⑤ Click **Follow this Idea** if you want to follow the discussion via email notifications
-    * You are automatically subscribed for email notifications on ideas that you have asked
-    * If you want to unsubscribe from these notifications, click **Unfollow this Idea**
+        * Clicking a tag opens an overview page that lists all the posts in the same space.
+  
+    * The **Tags** applied to the idea
+        * Clicking a tag opens an overview page that lists all the ideas with the same tag.
+  
+Under the title, you can click **Vote** to upvote the idea based on its usefulness. By upvoting ideas, you can show the Mendix Product Managers and Mendix community what you would like to see added to the Mendix Platform The upvotes are used as input for the Mendix Product Managers and Mendix community MVPs to decide which features are nominated for implementation. The level of impact also plays a role.
+
+If the review status of the idea has been **Planned**, a comment from the Mendix Product Manager about the planned implementation can appear here
 
 Below the ideas details are the comments on the idea. 
 
 In the **Your Comment** section, you can contribute to the Mendix Community by writing your idea in the editor and then clicking **Submit Comment**.
-
-{{% alert color="info" %}}
-The URL for each idea is unique.
-{{% /alert %}}
 
 #### 3.3.3 Posting an Idea {#posting-idea}
 
@@ -285,15 +323,15 @@ If you have a great idea that you would like to see implemented on the Mendix Pl
 
 To submit your own idea to the Mendix Community, follow these steps:
 
-1. Click **Create a Post** > **Share an Idea** on the home page, or click **Ask a Question** on the **Ideas** page. 
+1. Click **Create a Post** > **Share an Idea** on the home page, or click **Share an Idea** on the **Ideas** page. 
 2. On the **Share an Idea** page, fill in the following details in the editor:
 
     * The **Space** that reflects your idea (for example, **Catalog**, **Marketplace**, or **Usability**)
     * The idea **Title** (this is how users will first see your idea, so make it descriptive and interesting)
     * The idea **Description** (add all the details about your idea to make it searchable and so other users can can vote and comment on it)
-    * The **Tags** that reflect the idea topic (users can filter the list of questions by tag)
-
-3. Click **Share Idea** to submit your idea or **Save as Draft** to return to it via [Posts](#posts) > **Drafts** .
+    * The **Tags** that reflect the idea topic (users can filter the list of ideas by tag)
+3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
+5. To publish the idea, click **Share Idea**.
 
 Mendix looks forward to hearing your ideas!
 

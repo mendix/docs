@@ -2,9 +2,7 @@
 title: "Test Microflows Using the Unit Testing Module"
 linktitle: "Test Microflows Using Unit Test Module"
 url: /howto7/testing/testing-microflows-using-the-unittesting-module/
-category: "Testing"
 weight: 10
-tags: ["test", "testing", "microflow", "unittesting"]
 ---
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the UnitTesting module. The UnitTesting module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
@@ -86,7 +84,7 @@ In this chapter you will set up the unit testing module and run the example test
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580357.png" class="no-border" >}}
 
-19. Double click **UnitTesting.TestValidUnitTest**.
+19. Double-click **UnitTesting.TestValidUnitTest**.
 
     {{< figure src="/attachments/howto7/testing/testing-microflows-using-the-unittesting-module/18580340.png" class="no-border" >}}
 

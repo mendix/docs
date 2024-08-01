@@ -3,7 +3,6 @@ title: "Navigation"
 url: /refguide9/mobile/designing-mobile-user-interfaces/navigation/
 weight: 20
 description: "General information for native navigation in Mendix."
-tags: ["navigation", "profiles"]
 aliases:
     - /refguide9/native-navigation/
 ---
@@ -36,7 +35,7 @@ Pop-ups can be very useful when asking for input in certain contexts. For exampl
 
 Native layouts have helpful properties that enable the most common patterns used in native apps.
 
-### 3.1 Header
+### 3.1 Header{#header}
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 

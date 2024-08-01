@@ -2,7 +2,6 @@
 title: "Java Memory Usage"
 url: /refguide8/java-memory-usage/
 weight: 2
-tags: ["runtime", "java", "memory usage", "memory", "studio pro"]
 ---
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
@@ -28,7 +27,7 @@ This image on the right shows shows in detail how data moves through the memory.
 
 All information regarding the stack is stored in memory. All runtime information is stored in the Heap, all program or JVM specific information is stored in the Non Heap.
 
-All classes from the Mendix Platform, the custom java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
+All classes from the Mendix Platform, the custom Java code, and user libraries are stored in the Non Heap. This also holds the information from the deployment archive.
 
 {{< figure src="/attachments/refguide8/runtime/runtime-java/java-memory-usage/16844066.png" class="no-border" >}}
 

@@ -1,10 +1,8 @@
 ---
 title: "Import Excel Documents"
 url: /howto9/integration/importing-excel-documents/
-category: "Integration"
 weight: 5
 description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
-tags: ["import", "excel", "integration"]
 ---
 
 ## 1 Introduction
@@ -19,7 +17,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto9/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [Setting Up Navigation](/refguide9/setting-up-the-navigation-structure/))
 * Create microflows (see [Triggering a Microflow From a Menu Item](/refguide9/triggering-microflow-from-menu-item/)
-* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/overview/use-content/))
+* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/use-content/))
 * Secure your applications (see [How to Create a Secure App](/howto9/security/create-a-secure-app/))
 
 ## 3 Preparing the Data Structure, GUI and Modules

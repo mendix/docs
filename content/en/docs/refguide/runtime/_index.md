@@ -5,7 +5,6 @@ weight: 40
 description: "Gives an overview of the Mendix Runtime."
 no_list: false
 description_list: true
-tags: ["runtime", "runtime server", "mendix client", "cluster leader"]
 ---
 
 ## 1 Introduction
@@ -28,7 +27,7 @@ The *Runtime Server* is launched on a cloud platform. It executes microflows, an
 
 The *Mendix Client* is started by the user, either within a web browser, or on another supported device. If it is in online mode, it starts a session with the Runtime Server which may or may not require authentication. The Runtime Server records the session details in the database, so that the Mendix Client can make requests. The Mendix Client is described in more detail in [Mendix Client](/refguide/mendix-client/).
 
-The user interacts with the Mendix Client, which then makes requests to the Runtime Server to process data or perform server-side functions (for example, microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
+The user interacts with the Mendix Client, which then makes requests, via the [request handlers](/refguide/request-handlers/), to the Runtime Server to process data or perform server-side functions (for example, to run microflows). At the end of the request, all state (including uncommitted data) is passed back to the Mendix Client. You can find more details of how this communication takes place in [Communication Patterns in the Mendix Runtime](/refguide/communication-patterns/).
 
 Passing state from the Runtime Server to the Mendix Client enables the Runtime Server to be stateless, which means that any Runtime Server instance can respond to a request from the Mendix Client. A load balancer decides which Runtime Server instance will respond to a request. When a user session ends, the Runtime Server removes references to that session.
 

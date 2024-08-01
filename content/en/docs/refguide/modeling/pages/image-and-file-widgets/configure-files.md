@@ -4,7 +4,6 @@ url: /refguide/configure-files/
 linktitle: "Configure File Upload and Download"
 weight: 70
 description: "Describes how to configure file manager in Mendix Studio Pro."
-tags: ["studio pro", "pages", "file", "upload files", "attach", "file manager"]
 ---
 
 ## 1 Introduction 
@@ -52,8 +51,8 @@ Do the following:
 2. Double-click the new entity to open its properties.
 3. Set the **Name** property to *Document*. 
 4. In the **Generalization** property, click **Select**, choose the **Image** entity under **System**, and confirm your choice:
-5. Now you need to create an association from the **Receipt** entity to the **Report** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
-6. In the **Select Entity** dialog box, select **Report** and confirm your choice.
+5. Now you need to create an association from the **Document** entity to the **Employee** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
+6. In the **Select Entity** dialog box, select **Employee** and confirm your choice.
 7. Click **OK** to close the **Properties** dialog box.
 
 Good job! You have created the Document entity, which is a specialization of the System.File entity, and an association from it to the **Employee** entity:

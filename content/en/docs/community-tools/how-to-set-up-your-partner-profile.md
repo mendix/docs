@@ -1,10 +1,8 @@
 ---
 title: "Set Up Your Partner Profile"
 url: /community-tools/how-to-set-up-your-partner-profile/
-category: "Community Tools"
 weight: 5
 description: "Describes how to configure the various parts of your Mendix Partner Profile, such as projects."
-tags: ["authorized", "expert", "professional", "4 p's"]
 aliases:
     - /developerportal/community-tools/how-to-set-up-your-partner-profile/
 ---

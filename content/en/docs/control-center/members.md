@@ -1,9 +1,7 @@
 ---
 title: "Members"
 url: /control-center/members/
-category: "Control Center"
 description: "Describes the Members page in the Mendix Control Center."
-tags: ["control center", "mendix admin", members"]
 weight: 20
 no_list: true 
 ---

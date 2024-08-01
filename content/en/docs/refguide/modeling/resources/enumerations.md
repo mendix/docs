@@ -2,7 +2,6 @@
 title: "Enumerations"
 url: /refguide/enumerations/
 weight: 40
-tags: ["studio pro", "enumeration", "enumeration values", "enumeration value"]
 aliases:
     - /refguide/enumeration-values.html
     - /refguide/enumeration-values
@@ -58,6 +57,7 @@ The name of an enumeration value must be a technical name, starting with a lette
 
 <details><summary>It cannot be a reserved word (click to see a list of reserved words)</summary>
 
+* `_`
 * `abstract`
 * `assert`
 * `boolean`

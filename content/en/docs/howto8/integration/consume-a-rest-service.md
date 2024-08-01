@@ -1,9 +1,7 @@
 ---
 title: "Consume a REST Service"
 url: /howto8/integration/consume-a-rest-service/
-category: "Integration"
 weight: 9
-tags: ["integration", "rest service", "data model", "consume", "legacy system", "legacy"]
 description: "Describes how to get information from a REST service."
 ---
 
@@ -177,7 +175,7 @@ For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from w
 
 {{< figure src="/attachments/howto8/integration/consume-a-rest-service/response.png" class="no-border" >}}
 
-{{% youtube OhzWTa1kZ00 %}}
+{{< youtube OhzWTa1kZ00 >}}
 
 ## 9 Read More
 

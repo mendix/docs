@@ -2,10 +2,8 @@
 title: "Use Mendix Data Storage APIs to Build Reusable microflow Actions"
 linktitle: "Data Storage APIs for Reusable Microflows"
 url: /howto7/extensibility/howto-datastorage-api/
-category: "Extensibility"
 weight: 5
 description: "Describes creating custom microflow actions using Data Storage APIs."
-tags: ["java", "connector kit", "microflow action", "parameter type", "sql", "xpath", "oql", "datastorage"]
 ---
 
 ## 1 Introduction
@@ -54,7 +52,7 @@ Finally, you should define how you want to display the microflow in the microflo
 
 {{< figure src="/attachments/howto7/extensibility/howto-datastorage-api/image007.png" class="no-border" >}}
 
-The implementation of this Java action is pretty straight forward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
+The implementation of this Java action is pretty straightforward; you can use the [Core.retrieveXPathQuery](https://apidocs.rnd.mendix.com/7/runtime/com/mendix/core/Core.html#retrieveXPathQuery-com.mendix.systemwideinterfaces.core.IContext-java.lang.String-) API to execute your XPath expression and return a list of Mendix objects.
 
 The implementation also validates that the list returned contains objects of the entity specified.
 

@@ -3,7 +3,6 @@ title: "Use Notifications"
 url: /howto8/mobile/notifications/
 weight: 54
 description: Tutorials for configuring push and local notifications.
-tags: ["mobile", "native", "push", "local", "firebase"]
 ---
 
 ## 1 Introduction {#intro}
@@ -18,7 +17,7 @@ These guides teach you how to configure push notifications (also known as remote
 * [Build a Native App with Push Notifications Enabled](/howto8/mobile/notif-build-native/) — Build a native app with push notifications enabled.
 * [Send Your First Test Push Notification](/howto8/mobile/notif-send-test/) — Send a test notification to confirm your app is working properly.
 
-After you complete the how-to's above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:
+After you complete the how-tos above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this how-to:
 
 * [Send Notifications to Multiple Devices](/howto8/mobile/notif-mult-devices/)
 

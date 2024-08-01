@@ -129,7 +129,7 @@ A retrieve action is either an association-based retrieve or a database-based re
 | Studio Pro Guide | Model SDK API docs |
 | --- | --- |
 | [Retrieve](/refguide/retrieve/) |[RetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.retrievesource.html) |
-| [XPath](/refguide/xpath/) constraints |[AssocationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html) |
+| [XPath](/refguide/xpath/) constraints |[AssociationRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.associationretrievesource.html) |
 | |[DatabaseRetrieveSource](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.databaseretrievesource.html) |
 | |[Range](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.range.html), [ConstantRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.constantrange.html) and [CustomRange](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.customrange.html) |
 | |[SortItemList](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.sortitemlist.html) and [SortItem](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/microflows.sortitem.html) |

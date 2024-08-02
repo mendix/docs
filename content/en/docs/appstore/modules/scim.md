@@ -3,7 +3,6 @@ title: "SCIM"
 url: /appstore/modules/scim/
 
 description: "Describes the configuration and usage of the SCIM module, which is available in the Mendix Marketplace."
-tags: ["marketplace", "marketplace component", "scim", "IdP", "platform support"]
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -21,17 +20,17 @@ Before you include the SCIM module in your app, you need to check if your IdP su
 
 ### 1.1 Typical Use Cases
 
-* Seamless integration into the JML process: Organizations need to handle employee access rights efficiently, when employees join, switch roles, or leave the organization. The Joiner, Mover, Leaver (JML) process is crucial for this, and the SCIM module helps your app integrate smoothly into these processes. 
+* **Seamless integration into the JML process:** Organizations need to handle employee access rights efficiently, when employees join, switch roles, or leave the organization. The Joiner, Mover, Leaver (JML) process is crucial for this, and the SCIM module helps your app integrate smoothly into these processes.
 
-* User onboarding before first login: The SCIM module can be used when you want to create users in your Mendix app before their first login. For example, if your app has workflow logic, you can assign tasks to users even before their first login.
+* **User onboarding before first login:** The SCIM module can be used when you want to create users in your Mendix app before their first login. For example, if your app has workflow logic, you can assign tasks to users even before their first login.
 
-* Use user groups to control access to your app: Entra ID helps you organize various groups based on their jobs and roles. To manage apps access based on these groups, you can use the SCIM module. If someone changes their job or role and is no longer part of a group that allows access to the app, the SCIM module automatically deactivates the user in the app. Even if the user still has an active Entra ID account, it becomes inactive in your app. This way, you can also save on licensing costs.
+* **Use user groups to control access to your app:** Entra ID helps you organize various groups based on their jobs and roles. To manage apps access based on these groups, you can use the SCIM module. If someone changes their job or role and is no longer part of a group that allows access to the app, the SCIM module automatically deactivates the user in the app. Even if the user still has an active Entra ID account, it becomes inactive in your app. This way, you can also save on licensing costs.
 
-* Update local user profile: Changes in personal details of your employees, such as email address or username modifications due to life events like marriage, are synchronized between the local user profile and Entra ID through the SCIM module.
+* **Update local user profile:** Changes in personal details of your employees, such as email address or username modifications due to life events like marriage, are synchronized between the local user profile and Entra ID through the SCIM module.
 
-* B2E vs. B2C apps: Many organizations use a common Identity Provider, such as Entra ID in Microsoft’s office 365 suit, to centralize employee accounts. If you are building apps for employees (Business-to-Employee or B2E), connecting them with Entra ID is a common and easy choice. As an app developer, you can use OIDC SSO or SAML for Single Sign-On and the SCIM module for managing users. For apps designed for customers (Business-to-Customer or B2C), the use of the SCIM module may not be as obvious. If your organization uses a third-party solution, such as Entra ID to handle customer accounts, you can also use the SCIM module for that.
+* **B2E vs. B2C apps:** Many organizations use a common Identity Provider, such as Entra ID in Microsoft’s office 365 suit, to centralize employee accounts. If you are building apps for employees (Business-to-Employee or B2E), connecting them with Entra ID is a common and easy choice. As an app developer, you can use OIDC SSO or SAML for Single Sign-On and the SCIM module for managing users. For apps designed for customers (Business-to-Customer or B2C), the use of the SCIM module may not be as obvious. If your organization uses a third-party solution, such as Entra ID to handle customer accounts, you can also use the SCIM module for that.
 
-### 1.2 Features
+### 1.2 Features {#features}
 
 Your IdP can perform create, read, update and delete (CRUD) operations on the users in your app when it includes the SCIM module. It has the following features:
 
@@ -56,7 +55,7 @@ The SCIM module also has the following features:
     | Okta| Verified | Verified |
 
     {{% alert color="info" %}}
-    Choose the right attribute mappings to align with the user identifiers. For more information, see the [Attribute Mapping] (#attribute-mapping) section below.
+You need to choose the right attribute mappings to align with the user identifiers. For more information, see the [Attribute Mapping](#attribute-mapping) section below.
     {{% /alert %}}
 
 * Your IdP allows the selection of users that sync with your Mendix app, meaning your IdP controls which users are created and active in your app.
@@ -125,7 +124,7 @@ It is necessary to include the following Marketplace modules in your app:
 
 ### 2.1 Design-time / Development Time Configuration
 
-Import the SCIM module from the marketplace and do the following configuration: 
+Import the SCIM module from the marketplace and do the following configuration:
 
 #### 2.1.1 Configuring Roles
 
@@ -151,35 +150,41 @@ The SCIM module has some configuration pages targeted at the users with local ad
 Add these pages to the **Navigation** tab and assign the **Administrator** user role.
 Open [Navigation](/refguide/navigation/) tab and do the following:
 
-* Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **Call_IdPConfOverview** page and assign it to the **Administrator** user role.
+* Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **Call_IdPConfOverview** nanoflow and assign it to the **Administrator** user role.
 * Add the **Menu** item **MxObjects** to the app **Navigation**. Link this item to the **MxModelReflection.MxObjects_Overview** page and assign it to the **Administrator** user role.
 
 #### 2.1.4 Setting Encryption Key
 
-Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app. 
+Set up the required configuration of the [Encryption](https://marketplace.mendix.com/link/component/1011) module as described in the [Encryption](/appstore/modules/encryption/) document. The encryption module is used to encrypt the API key (token) that a SCIM client needs to interact with the SCIM endpoint in your app.
 
 #### 2.1.5 Default User Provisioning
 
-The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#Attribute) section below.
+When using SCIM, Mendix recommends disabling Just-In-Time (JIT) user provisioning in your SSO module. This ensures that SCIM remains in control of user provisioning and to prevent the creation of duplicate users.
+
+The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#attribute-mapping) section below.
+
+Ideally, both SCIM and SSO modules should utilize the same immutable user identifier for user identification.  This approach enables the SCIM module to modify any attribute except the principal attribute without creating a new user. However in practice, this may require attention depending on your identity provider (IdP). When you are using Entra ID, OIDC SSO, and SCIM, (see the table mentioned in the [Features](#features) section above) the default user provisioning flows may not work for you. You may need to create custom user provisioning microflows for either module.
 
 #### 2.1.6 Attribute Mapping {#attribute-mapping}
 
-For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults. If you wish to deviate from this default setting, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
+This section provides reference information about the attribute mapping applied by the default user provisioning flow in the SCIM module. User-identifying attributes in SCIM are compared with those in SSO modules.
+
+If you wish to deviate from this default attribute mapping, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
+
+For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults.
 
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
 | externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` |
 | familyName| lastname | Doe | Doe John |
 | givenName| firstname | John |  |
-| emails| Email | john.doe@companyA.com | johndoe@companyA.com |
-| userName| FullName | johndoe@companyA.com | johndoe@companyA.com |
+| emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |
+| userName| FullName | `johndoe@companyA.com` | `johndoe@companyA.com` |
 | active| Active | true | true |
 | locale| Timezone | Newyork/America | Newyork/America |
 | preferredLanguage| Language| English,United States | English,United States |
 
-Ideally, both SCIM and SSO modules should utilize the same immutable user identifier for user identification. This approach enables the SCIM module to modify any attribute except the principal attribute without creating a new user. However, in practice, this may require attention, depending on your Identity Provider (IdP). You may need to create custom user provisioning microflows for either module. Mendix recommends disabling Just-In-Time user provisioning in your SSO module. This ensures that SCIM remains in control of user provisioning, preventing the creation of duplicate users.
-
-The table below describes the comparison of IdP claims (sub) values between SCIM and SSO modules.
+The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
 
 | **IdP** | **SSO Module** | **Remark** |
 | --- | --- | --- |
@@ -192,33 +197,33 @@ The table below describes the comparison of IdP claims (sub) values between SCIM
 
 #### 2.2.1 API Security {#api_security}
 
-Ensure that only legitimate SCIM clients can interact with your app via the SCIM module. You need to enable your SCIM client to authenticate itself with your app. The SCIM module currently supports usage of an **API Key** (token) for the authentication. You can either generate an API Key to download or upload one into your SCIM client during [Deploy Time Configuration](#deploy_time_config). This can be done by below two options:
+Ensure that only legitimate SCIM clients can interact with your app via the SCIM module. You need to enable your SCIM client to authenticate itself with your app. The SCIM module currently supports usage of an **API Key** (token) for the authentication. You can either generate an API Key to download or upload one into your SCIM client during [Deploy Time Configuration](#deploy-time). This can be done by below two options:
 
 1. Using SCIM module to generate API-key
 
-    To generate and download an API-key, click **New** in the **IdPConfiguration** page and configure below fields: 
+    To generate and download an API-key, click **New** in the **IdPConfiguration** page and configure below fields:
 
     * **Alias**: This is an alias name for your configuration. For Example, *Azure*.
 
-    * **API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request. 
+    * **API Key**: Used as a token for header-based authentication. IdP will send this as the authorization header parameter in the request.
 
     {{< figure src="/attachments/appstore/modules/scim/alias.png" class="no-border" >}}
-    
+
 2. Configuring API-Key via Pipeline
 
 Another option is to generate an API key yourself and submit it to the SCIM module via a SCIM constant. To do this, set the constant `SCIM.Default_APIKey_Value` in the **Acceptance Environment Details** of the Mendix application environment. This approach enables you to manage API security without requiring a local administrator to log in to your application. It provides the flexibility to use the same API key for multiple applications using the SCIM module.
 
-#### 2.2.2 User Provisioning 
+#### 2.2.2 User Provisioning
 
 In the **Provisioning** tab of the SCIM server configuration, you need to configure the following fields:
 
 * **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
 * **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
 * **Allow the module to create users**:this enables the module to create users based on user provisioning and attribute mapping configurations.
-    * By default, the value is set to ***Yes***.
-* **Default Userrole**: the role which will be assigned to newly created users by default. 
-* **User Type**: this allows you to configure end-users of your application as internal or external. 
-    * By default, the value is set to ***Internal***.
+  * By default, the value is set to ***Yes***.
+* **Default Userrole**: the role which will be assigned to newly created users by default.
+* **User Type**: this allows you to configure end-users of your application as internal or external.
+  * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
 Note the following:
@@ -227,15 +232,15 @@ Note the following:
 * You can map only one IdP claim to a **Custom user Entity** attribute.
 * The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
 * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
-* Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#cusom_userprovisioning_microflow).
+* Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning using a microflow.
 
-The custm microflow name must begin with the string `CustomUserProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
+The custm microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
 
 {{< figure src="/attachments/appstore/modules/scim/user_commons.png" class="no-border" >}}
 
 This selection can be blank if you do not want to add custom logic. Save this configuration. Double click on **Alias** name and you will be able to copy the generated **API Key**.
 
-### 2.3 Deploy Time Configuration
+### 2.3 Deploy-time Configuration {#deploy-time}
 
 Setting up connectivity with an IdP varies depending on the vendor. The following subsection shows the configuration for the Microsoft Entra ID.
 
@@ -248,7 +253,7 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 
 3. Configure the SCIM server (Mendix SCIM Application) with the following details:
 
-    * **Tenant URL**: `https://intranet.acme.com/scim/v2`. Replace `intranet.acme.com` with your intranet domain.
+    * **Tenant URL**: `https://{host name}/scim/v2`. Replace `{host name}` with your intranet domain. For example, `https://intranet.acme.com/scim/v2`.
     * **Secret Token**: copy the **API Key** (token) from the **IdPConfiguration** page of User Commons, as described in the [API Security](#api_security) section above.
     * Click **Test Connection**.
 
@@ -266,14 +271,14 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 
 ## 3 Testing and Troubleshooting
 
-Once you have your SCIM module configured, you can test it by creating, updating, and deleting the user. 
+Once you have your SCIM module configured, you can test it by creating, updating, and deleting the user.
 
 ### 3.1 Testing with Entra ID
 
 The test case below is defined for the scope of **Sync only assigned user and groups** and validation of provisioning status in the SCIM server.
 
 * Create a user with default `userPrincipalName`. Optionally, you may choose to change the user Mappings in the Microsoft Entra ID. You can change Entra ID attribute from `userPrincipalName` to another attribute. For example, `mailNickName`.
-* Update a user in the Microsoft Entra ID. For Example, add/update work email, last name etc. 
+* Update a user in the Microsoft Entra ID. For Example, add/update work email, last name etc.
 * Delete a user in the Microsoft Entra ID.
 
 You may want to use **Provision on demand** while testing SCIM module integration for immediate provisioning. You can either select individual users or users in a group (or groups).

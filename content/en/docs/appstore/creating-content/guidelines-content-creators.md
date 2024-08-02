@@ -68,7 +68,7 @@ This section covers the legal and compliance guidelines.
 
 #### 3.1.1 Acceptable Use Policy
 
-Your products must comply with the [Acceptable Use Policy](https://assets.ctfassets.net/17si5cpawjzf/7GAYqpSdeZHciTtkfz7FoF/2f10c6aa72f80e06921e25154f46a973/Siemens_AUP-English.pdf).
+Your products must comply with the [Acceptable Use Policy](https://www.sw.siemens.com/en-US/sw-terms/aup/).
 
 #### 3.2.2 Intellectual Property
 

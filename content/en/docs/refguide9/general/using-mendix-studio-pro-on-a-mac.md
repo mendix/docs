@@ -17,7 +17,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version start
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
+When using Parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
 {{% /alert %}}
 
 To start making Mendix apps on your Mac, follow this how-to.
@@ -129,7 +129,7 @@ To improve the performance, you can do the following:
 
 ### 7.1 Increasing Network Speed {#increase-network-speed}
 
-When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. You try the following approach, which can increase the upload speed significantly:
+When using Parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. You try the following approach, which can increase the upload speed significantly:
 
 1. In Windows 10 or 11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
 2. Right-click **Parallels VirtIO Ethernet Adapter** and select **Properties** in the drop-down list. 

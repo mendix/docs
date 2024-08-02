@@ -580,11 +580,11 @@ native-mobile-toolkit configure --config-path='./<name of the configuration>.jso
 
 Mendix Native apps are based on React Native. When building your Mendix app using the Mendix Native Mobile Builder, your app is first compiled to JavaScript code and static assets. Using React Native's Metro Bundler, the client code and assets are then compiled to platform specific React Native Bundles. These are finally moved to the correct location in Native Template before compiling the final apps.
 
-This whole process is unified using a tool called MXBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](/refguide/mxbuild/).
+This whole process is unified using a tool called MxBuild that is included with every installation of Mendix Studio Pro. For more information, see the [MxBuild Reference Guide](/refguide/mxbuild/).
 
 ### 6.1 Using MxBuild to Build your Native App
 
-If for some reason you cannot use Mendix Native Mobile Builder to configure and build your app, for example when operating in a CI environment which lacks a display, you will have to explicitly have set up the correct Mendix Studio Pro version for the app you are building and then manually run MXBuild.
+If for some reason you cannot use Mendix Native Mobile Builder to configure and build your app, for example when operating in a CI environment which lacks a display, you will have to explicitly have set up the correct Mendix Studio Pro version for the app you are building and then manually run MxBuild.
 
 To do so: 
 
@@ -647,10 +647,10 @@ A CI environment needs to be able to do the following to successfully configure 
 * Check out the latest Mendix app
 * Check out your app's Native Template (the one used when configuring the app)
 * Run `mxbuild`
-* Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementor's choice) 
+* Set up the configuration and move assets as needed (this can be done with simple shell scripts or any other solution, and is the implementer's choice) 
 * Run `npm i` and `npm run configure` to configure the app using Mendix Mobile Toolkit before the build.
 
-How to build the apps is a choice for the implementor. Mendix Native App Builder use App Center for convenience. There are multiple other 
+How to build the apps is a choice for the implementer. Mendix Native App Builder use App Center for convenience. There are multiple other 
 solutions, on premise or as a service, that can be used for this purpose. We do not endorse one over the other.
 
 ## 9 Read More

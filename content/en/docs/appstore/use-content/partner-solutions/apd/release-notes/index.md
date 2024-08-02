@@ -208,7 +208,7 @@ Measuring real end-user experiences allows you to grasp the actual end-user expe
 
 The browser agent works in desktop browsers, mobile device browsers, and Mendix-native PhoneGap apps.
 
-The browser agent statistics now even show click-paths. This is an inital version of a feature that shows huge potential in seeing how your app is really used!
+The browser agent statistics now even show click-paths. This is an initial version of a feature that shows huge potential in seeing how your app is really used!
 
 ### Upgrade Notes
 
@@ -233,7 +233,7 @@ This release is identical to 1.11.1, but it is for Mendix 7.0.2 and above.
 ### Other Fixes
 
 * When defining a **Create trap message** action in the trigger configuration, the trap was not created and linked to the triggered event. Both issues are fixed.
-* If the log tool is used, there is now protection in place to configure the 1.11**Max messages to store**. By default, this is set to 100,000 records. This protection is in place to protect from overloading the database with records. **Fallback level** protection is now also in place. When the log tool notices issues like too much data is being processed, the **Fallback level** will set the logging to **INFO** for all log levels. In exceptional cases, the application generates too much INFO logging, which consumes heap memory and eventually causes the application to run out of memory. In this release, this behaviour still consumes heap memory, but there is a fix in place to prevent the application from running out of heap memory. The following fix in Mendix 7.7.1 is also needed: We improved the memory management of persistable entities that have been committed to the persistent storage.
+* If the log tool is used, there is now protection in place to configure the 1.11**Max messages to store**. By default, this is set to 100,000 records. This protection is in place to protect from overloading the database with records. **Fallback level** protection is now also in place. When the log tool notices issues like too much data is being processed, the **Fallback level** will set the logging to **INFO** for all log levels. In exceptional cases, the application generates too much INFO logging, which consumes heap memory and eventually causes the application to run out of memory. In this release, this behavior still consumes heap memory, but there is a fix in place to prevent the application from running out of heap memory. The following fix in Mendix 7.7.1 is also needed: We improved the memory management of persistable entities that have been committed to the persistent storage.
 
 ## 1.12.0
 
@@ -284,7 +284,7 @@ Customers wanted one button to configure the entire system to production or non-
 * Some JSON messages appeared in the log because other modules (REST mappings) used the same log node. These have been filtered out.
 * The check that requires both `CompanyName` and `AppName` to be configured did not give an error if no `AppName` was given. This has been fixed.
 * The sorting of the trap tool messages has been set to show the error on top.
-* The default settings for the trap tool buffer in production is now to stop the tool. So, if a customer has a high volumne of errors and does not configure APM to exclude them, the APM tool will stop instead of causing a limited amount of load all the time.
+* The default settings for the trap tool buffer in production is now to stop the tool. So, if a customer has a high volume of errors and does not configure APM to exclude them, the APM tool will stop instead of causing a limited amount of load all the time.
 * Statistics and message triggers now stop after firing when they are configured to do so.
 * The delete function now starts logging progress when it takes more than 5 seconds.
 * To prevent running out of memory, the performance tool now stops recording at 80% memory usage (which can still be saved). If memory usage goes over 95% due to a non-APM functionality, all memory claimed by APM is is freed by canceling the recording and discarding the recorded data.
@@ -420,7 +420,7 @@ The measurements tool has been redesigned to include some new features.
 * The processing of a trap in the performance tool has been simplified so you no longer have to select rows. The complete trap or in advanced search the complete result set in the grid is sent to the performance tool. This makes this function a two-click function (the second being ‘Are you sure?’).
 * Fixed performance tool tree widget showing [+] and [-].
 * Removed option to process recorded data before shutdown. Hardly used and could cause delay in shutdown.
-* Simplified the explain plan dialog to execute immidiately if there are no parameters. If there are parameters
+* Simplified the explain plan dialog to execute immediately if there are no parameters. If there are parameters
 functionality has been added to replace them with constants.
 
 ### Query Tool
@@ -484,7 +484,7 @@ The new console has four parts:
 
 ### Trap Tool Separates Trap and Messages
 
-The Trap tool separartes the trap and the messages, so that it is clearer which messages belong to which trap, and in order to show a list of traps without messages in the GUI.
+The Trap tool separates the trap and the messages, so that it is clearer which messages belong to which trap, and in order to show a list of traps without messages in the GUI.
 
 {{< figure src="/attachments/releasenotes/add-ons/apd/apm-1/apm-1.8/Trap_View.png" class="no-border" >}}
 
@@ -569,7 +569,7 @@ All options dialogs are redesigned to show advised production/non-production set
 
 ### Simplified Licensing
 
-On Sandboxes and Cloud Foundry the licensing was invalid after a restart due to the fact that hostname/IP changed. Using a hostname no longer holds up in these days of cloud and virtualisation, so the licensing is now per project.
+On Sandboxes and Cloud Foundry the licensing was invalid after a restart due to the fact that hostname/IP changed. Using a hostname no longer holds up in these days of cloud and virtualization, so the licensing is now per project.
 A constant 'CompanyName' is introduced to link the license to the user.
 On load balanced environment now 1 license will work. All settings are shared in the database.
 When using database dumps the license works on other environments as well. No dependency on type Modeller/Runtime anymore.
@@ -590,7 +590,7 @@ Removed functions to import of log files in log, statistics and performance tool
 
 ### Compatibility
 
-This version supports Mendix 6.2.0 and above only. Also only on java 8.
+This version supports Mendix 6.2.0 and above only. Also only on Java 8.
 
 ### Bug fixes and Minor Changes
 
@@ -648,7 +648,7 @@ The APM Tool has now an OData source so users can use their own reporting agains
 CLEVR has a load test tool that can be used in projects by our consultants. The tool is likely to be productized in the future and is NOT INCLUDED in the APM Tool. This tool needs a recorder to record sessions. These sessions can then be scripted/parametrized for usage in the load test.
 The APM Tool now includes the load test recorder, so APM Tool users are immediately ready for a load test and need not again add a module to their App.
 Load test customers will need the APM Tool for measurements and hence also benefit from the addition.
-This feature is visible in the addional tools menu.
+This feature is visible in the additional tools menu.
 
 ### New feature: Cleanup of Data After a Certain Period of Time
 
@@ -664,10 +664,10 @@ Per module it can be configured to remove data after a certain amount of days. D
 
 ### Compatibility, Bug Fixes and Minor Changes
 
-This version supports Mendix 6.2.0 and above only. Also only on java 8.
+This version supports Mendix 6.2.0 and above only. Also only on Java 8.
 
 * Statistics Tool gave a parse error on logout in the logging. Not really visible for users, but would create a trap if trapping on warnings. Now fixed, so logout is also in the statistics.
-* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import java actions to prevent these installation errors. Also parameter 'MicroflowName' in java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
+* During installation there were sometimes errors on startup, because Mendix generates different parameter names in Java in different Mendix versions. Sometimes 'FileName' was allowed, sometimes not and then it becomes 'FileNameParameter1' in java. The parameter names with 'FileName' have changed to 'FileNameParameter' in 3 import Java actions to prevent these installation errors. Also parameter 'MicroflowName' in Java action ExecuteMicroflowAsync is changed into 'MicroflowNameParameter'.
 * A grid in the Mendix 6 version of the performance tool details was changed from to be able to sort on loop iterations.
 * When choosing sample data during install the explain plan sample data for MySQL is now also added.
 

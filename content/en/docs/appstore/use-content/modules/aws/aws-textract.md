@@ -89,7 +89,7 @@ After setting up the authentication, to analyze a document, implement the [Analy
 19. Configure the  **Create object** activity by doing the following steps:
     1. Double-click the activity. 
     2. Select the **AnalyzeDocumentRequest** entity. 
-20. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** enitity.
+20. Add another **Create object** activity, and select the **AnalyzeDocFeatureType** entity.
 21. Set its **Value** attribute to **ENUM_FeatureType.FORMS** and the **AnalyzeDocFeatureType_AnalyzeDocumentRequest** association to the **AnalyzeDocumentRequest** object created in step 2.
 22. In the **Toolbox** pane, in the **AmazonTextractConnector** section, find the **AnalyzeDocument** activity.
 23. Drag the **AnalyzeDocument** activity onto the work area of your microflow between the **Create object** activities and the microflow end event.

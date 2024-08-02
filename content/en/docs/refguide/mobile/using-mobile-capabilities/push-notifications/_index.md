@@ -16,7 +16,7 @@ These guides teach you how to configure push notifications (also known as remote
 * [Setting Up the Google Firebase Cloud Messaging Server](/refguide/mobile/using-mobile-capabilities/push-notifications/setting-up-google-firebase-cloud-messaging-server/) – Set up a Firebase account and configure the service in your app so that you can send push notifications.
 * [Configuring Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) – Learn to configure push notifications in the runtime.
 * [Implementing Push Notifications in Your Native App](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/) – Implement push notifications for a native app.
-* [Building a Native App with Push Notifications Enabled](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/) – Build a native app with push notifications enabled.
+* [Implementing Push Notifications in Your Progressive Web App](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/) – Implement push notifications for a progressive web app.
 * [Sending Your First Test Push Notification](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/) – Send a test notification to confirm your app is working properly.
 
 After you complete the tasks above, you may wish to do more advanced tasks with notifications. For information on **sending push notifications to multiple devices**, use this documentation:

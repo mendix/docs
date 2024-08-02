@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-The [AWS IoT TwinmMaker](https://marketplace.mendix.com/link/component/209624) connector allows you to connect your Mendix app to [AWS IoT TwinMaker](https://aws.amazon.com/iot-twinmaker/) and read data from the digital twin of your system.
+The [AWS IoT TwinMaker](https://marketplace.mendix.com/link/component/209624) connector allows you to connect your Mendix app to [AWS IoT TwinMaker](https://aws.amazon.com/iot-twinmaker/) and read data from the digital twin of your system.
 
 ### 1.1 Typical Use Cases
 

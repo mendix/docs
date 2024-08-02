@@ -178,13 +178,13 @@ For distributing to a specific platform, consult the appropriate section below:
 
 ### 6.1 Distribute the iOS app to App Store Connect {#ios-distributing}
 
-Depending on whether you chose to sign your iOS app or not, the output of the build will be an *IPA* or *XCArchive* file, respectively. *IPA* files can be directly distributed to App Store Connect for further processing. *XCArchives* require XCode to sign and generate an *IPA* before they can be further processed.
+Depending on whether you chose to sign your iOS app or not, the output of the build will be an *IPA* or *XCArchive* file, respectively. *IPA* files can be directly distributed to App Store Connect for further processing. *XCArchives* require Xcode to sign and generate an *IPA* before they can be further processed.
 
 #### 6.1.1 Distribute a Signed IPA
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, Xcode includes a command line tool. Assuming Xcode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```text
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"

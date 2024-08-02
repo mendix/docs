@@ -73,7 +73,7 @@ The database and, below version 10.5, XPath sources retrieve objects from the da
 
 If this property is set to *Yes*, items in the list view can be edited. The changes made to list view items can be saved with a **Save** button and reverted with a **Cancel** button. **On click** and **Page size** properties are not displayed to avoid confusion about what changes are saved or reverted.
 
-#### 2.4.2 On Click 
+#### 2.4.2 On Click {#on-click}
 
 An on-click event defines what action is performed when a user clicks a list view row. For more information on on-click events, see [On Click Event](/refguide/on-click-event/). 
 
@@ -96,7 +96,7 @@ This property determines whether the list view lays out its items vertically (de
 With this property you can change the number of items that will be shown next to each other in one row.
 If you set the scroll direction property to horizontal, this property determines the number of items per column.
 
-#### 2.4.6 Pull Down Action
+#### 2.4.6 Pull Down Action {#pull-down}
 
 {{% alert color="info" %}}The number of columns property is only supported on native mobile pages.{{% /alert %}}
 

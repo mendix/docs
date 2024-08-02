@@ -6,4 +6,4 @@ no_list: false
 description_list: true 
 ---
 
-Following the how-to's in the order below is recommended:
+Following the how-tos in the order below is recommended:

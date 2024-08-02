@@ -1,12 +1,12 @@
 ---
 title: "Custom Action Expense App"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-expense-app/
-description: "Explains how to find and use the Custom Action App that is used in the how-to's."
+description: "Explains how to find and use the Custom Action App that is used in the how-tos."
 ---
 
 ## 1 Introduction
 
-This document explains how the Custom Action App works. All custom action how-to's are based on the Custom Action App. You can follow the how-to's in the Custom Action App for a better understanding.
+This document explains how the Custom Action App works. All custom action how-tos are based on the Custom Action App. You can follow the how-tos in the Custom Action App for a better understanding.
 
 ## 2 Login Information
 
@@ -30,7 +30,7 @@ When you log in for the first time, you see the **My Expenses** page. On this pa
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-expense-app/company-expenses-my-expenses.png" class="no-border" >}}
 
-This page is used to create the how-to's for combined actions.
+This page is used to create the how-tos for combined actions.
 
 ## 4 The Custom Action Page
 
@@ -38,6 +38,6 @@ Click the **Custom Actions** tab to open the page:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-general/custom-action-expense-app/company-expenses-custom-action-page.png" class="no-border" >}}
 
-All the how-to's for Unsupported Widget actions and Search Context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the Switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
+All the how-tos for Unsupported Widget actions and Search Context actions are based on widgets that are available on this page. Each how-to has a title that corresponds with a widget on this page. For example, **CAB.02 - Switch** is based on the Switch widget on this page. This allows you to follow the how-to directly in the app to get a better understanding of what to do, how, and why.
 
 Feel free to try and solve an issue yourself, but don't forget to verify you did it in the correct manner!

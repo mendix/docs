@@ -93,7 +93,7 @@ An expression that returns the CSS class for the row. The data source entity is 
 
 This property determines how the click action is triggered. 
 
-The default option is **Single click**, which triggers the action on a single click on a row. If set to **Double click**, the action is triggered when the row is double clicked.
+The default option is **Single click**, which triggers the action on a single click on a row. If set to **Double click**, the action is triggered when the row is double-clicked.
 
 #### 2.4.2 On Click Action
 

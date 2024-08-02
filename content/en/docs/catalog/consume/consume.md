@@ -72,7 +72,7 @@ For registered OData datasets from non-Mendix apps, the restrictions described b
 All datasets must have a key. The key can have one or more properties with the following conditions:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified)
-* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`,     `Boolean`, `Decimal`, `Single`, `Double`, and `String`
+* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
 * If the property type is `String`, a `MaxLength` must be specified
 
 The key attributes are not available as attributes of the external entity.

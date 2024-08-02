@@ -25,7 +25,7 @@ The Mendix for Private Cloud Deploy API is for connected private cloud clusters 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-The Global Operator installation is not yet available in Deploy API.
+The Standard Operator conversion to Global Operator managed namespace is not yet available in Deploy API.
 {{% /alert %}}
 
 ## 2 Using the API
@@ -112,7 +112,7 @@ The following steps will create a cluster, register and install a namespace, add
     Once the installer has run, the namespace is ready to use (namespace installed, agent connected, database and store plans configured, ingress configured, registry configured).
 11. Call `GET /clusters` to retrieve all the clusters that have been created. Copy the `clusterId` from the response of this call.
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
-13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
+13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true. You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.

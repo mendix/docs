@@ -230,7 +230,7 @@ Now the end-user will only see products in the selected category:
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/orderline-with-constraint.png" alt="List of just products in the drink category" class="no-border" >}}
 
 {{% alert color="info" %}}
-If you use the **Database** source in Mendix versions below 10.5, you can also add constraints. The list of contraints is presented differently but you will be guided through making constraints in the **Edit Constraints** dialog box:
+If you use the **Database** source in Mendix versions below 10.5, you can also add constraints. The list of constraints is presented differently but you will be guided through making constraints in the **Edit Constraints** dialog box:
 
 {{< figure src="/attachments/refguide/modeling/pages/input-widgets/reference-selector/database-constraints.png" alt="Edit constraints dialog box" class="no-border" >}}
 

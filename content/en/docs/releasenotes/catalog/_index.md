@@ -12,6 +12,26 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### August 01, 2024
+
+#### Fixes
+
+* We fixed a bug where notifications about newly-registered endpoints were not showing the correct number.
+
+### July 18, 2024
+
+#### Fixes
+
+* We fixed an issue where the owner drop-down did not show all the possible users.
+* We addressed a bug where switching the active company resulted in an error on the registration form.
+
+### July 11, 2024
+
+#### Fixes
+
+* We fixed a bug that allowed users to add tags from other companies to their endpoints.
+* We made some minor aesthetics changes to the Control Center and **Service Edit** pages to align with the overall aesthetic standards defined for the app. 
+
 ### June 27, 2024
 
 #### Fixes 

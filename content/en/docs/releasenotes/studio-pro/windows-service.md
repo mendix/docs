@@ -236,7 +236,7 @@ Now each app has its own license, even if it runs under the same user account as
 * Added the possibility to add an existing Mendix 3 or 4 app with its license. (Click Add app, Import old app...)
 * Now you can see quickly some license info for each running app.
 * Added a wizard to add and configure a new app.
-* Added a log line with progress bar while synchronizing the app with the database. The currently running synchronization SQL command can be viewed by double clicking the log line.
+* Added a log line with progress bar while synchronizing the app with the database. The currently running synchronization SQL command can be viewed by double-clicking the log line.
 * Now the old log lines will not be removed anymore when an application has been stopped and started again. The new log session will be marked by a new gray log line.
 * Now only up to 1000 log lines will be shown. Any more log lines will be removed, starting with the oldest.
 * Now an app will not be stopped automatically anymore if the Mendix Service Console has been closed and the app was started but not as Windows service. When the Mendix Service Console is started again and the app is clicked, it will reconnect to the running app.

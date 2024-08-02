@@ -81,7 +81,7 @@ To create the mapping, follow these steps:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/OperationsDialogSettings.png" alt="Operation path, microflow, and parameter settings" class="no-border" >}}
 
-8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box,  then click **Show** to start editing the newly created microflow. Add a **OrderID** parameter.
+8. <a id="edit-microflow"></a>Click **OK** to close out the **Operation** dialog box, then click **Show** to start editing the newly created microflow. Add a **OrderID** parameter.
 
     {{% alert color="info" %}}This parameter might be added automatically, along with an **httpRequest** parameter. If an **httpRequest** parameter is added, remove it to avoid getting errors.<br/>
     An **httpResponse** parameter may also be automatically added. If this happens and you follow the steps below in [Building an Export Mapping](#export-mapping), you must remove the parameter to avoid getting errors.{{% /alert %}}

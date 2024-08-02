@@ -1,7 +1,7 @@
 ---
 title: "Workflow Recommender"
 url: /refguide/workflow-recommender/
-weight: 20
+weight: 30
 description: "Describes Workflow Recommender in Mendix Studio Pro."
 ---
 

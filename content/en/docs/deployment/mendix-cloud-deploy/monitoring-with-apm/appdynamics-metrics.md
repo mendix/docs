@@ -59,7 +59,7 @@ To send your runtime information to AppDynamics, you must set it up using enviro
 
     {{% alert color="warning" %}}To start sending data to AppDynamics, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
 
-## 4 Multi-instance metrics{#multi-instance-metrics}
+## 4 Multi-Instance Metrics{#multi-instance-metrics}
 
 You can view metrics for multiple instances of an application on the AppDynamics Controller.
 

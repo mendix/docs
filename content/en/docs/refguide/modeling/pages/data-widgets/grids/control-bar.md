@@ -43,7 +43,7 @@ To add additional buttons to the control bar, do the following:
 1. Right-click on the control bar while it is highlighed.
 1. Select **Add button**.
 1. Select the new type of button.
-1. Double click on the new button to customize.
+1. Double-click on the new button to customize.
 
 {{< figure src="/attachments/refguide/modeling/pages/data-widgets/grids/control-bar/control-bar-add-button.png" alt="Add Button to Control Bar" class="no-border" >}}
 

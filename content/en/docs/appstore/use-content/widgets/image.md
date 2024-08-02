@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the Image widget, which i
 
 ## 1 Introduction
 
-The [Image](https://marketplace.mendix.com/link/component/118579) widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a mircoflow, and more.
+The [Image](https://marketplace.mendix.com/link/component/118579) widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a microflow, and more.
 
 ### 1.1 Features
 

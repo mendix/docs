@@ -3,7 +3,7 @@ title: "Setting up a Vector Database"
 url: /appstore/modules/genai/pgvector-setup/
 linktitle: "Vector Database Setup"
 weight: 5
-description: "Describes how to setup a vector database to store and manage vector embeddings for a knowledge base"
+description: "Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 ---
 
 ## 1 Introduction {#introduction}
@@ -98,7 +98,7 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
          The value for `{vectorDatabaseName}` in the URL is the initial database name you set when you [created the PostgreSQL database with Amazon RDS](#rds-database).
 
-      4. `5432` is the default port for PostrgreSQL databases. If you manually chose another port, then change this in the URL as well.
+      4. `5432` is the default port for PostgreSQL databases. If you manually chose another port, then change this in the URL as well.
 
    2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#rds-database) as your username and password.
 

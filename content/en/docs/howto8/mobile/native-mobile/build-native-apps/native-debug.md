@@ -116,7 +116,7 @@ The Android Debug Bridge (ADB) can get the log files via command line (specifica
 1. Connect your phone via USB, then accept the **Allow USB debugging?** dialog box on your phone.
 1. Execute the command `adb logcat > output.txt`. All output will be written in *output.txt*.
 1. Open your Mendix app and implement the actions that you want to debug.
-1. Stop the log capturing in your command line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+1. Stop the log capturing in your command line tool by pressing <kbd>Ctrl</kbd> + <kbd>c</kbd>.
 1. Open *output.txt* in a text editor.
 1. Search for your issue.
 

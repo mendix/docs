@@ -292,7 +292,7 @@ Use Xcode to manually add fonts to an iOS app:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/custom-fonts-project-explorer-filled.png" alt="App Explorer with fonts"   width="400"  class="no-border" >}}
 
-1. Open the *Info.plist* file by pressing <kbd>{⌘}</kbd> + <kbd>{Shift}</kbd> + <kbd>{0}</kbd>` and searching for the file. Press <kbd>{Enter}</kbd> to open it:
+1. Open the *Info.plist* file by pressing <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>Space</kbd>` and searching for the file. Press <kbd>Enter</kbd> to open it:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/implementation/native-custom-fonts/xcode-open-infoplist.png" alt="Xcode Open file dialog"   width="400"  class="no-border" >}}
 

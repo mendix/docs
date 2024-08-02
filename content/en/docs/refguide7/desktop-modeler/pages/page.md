@@ -99,7 +99,7 @@ Configures the behavior of the popup close button (the little cross in the upper
 
 ### 7.1 Mark as Used
 
-You can search for unused items in the Modeler by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because the Modeler cannot look inside Java source code.
+You can search for unused items in the Modeler by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>. Pages that are only used from Java code will be listed as unused, because the Modeler cannot look inside Java source code.
 
 By setting the propery **Mark as used** to **Yes**, you specify that the document is used implicitly and the Modeler will no longer list it when searching for unused items.
 

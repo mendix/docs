@@ -58,7 +58,7 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 8. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
 9. Double-click the **List Queues** activity to configure the required parameter.
 10. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-11. In the expression builder, type *ENUM_Region*, and then press **Ctrl+Space**.
+11. In the expression builder, type *ENUM_Region*, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 12. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type **.** and select your AWS region from the list and click **OK**.
 13. Double-click the **List Queues** activity to configure the required parameters.
 14. Set the value of the **Region** parameter in the same way as for the **GetStaticCredentials** or **GetTemporaryCredentials** activity.

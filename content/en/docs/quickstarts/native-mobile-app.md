@@ -43,7 +43,7 @@ Before starting this tutorial, make sure you have completed the following prereq
 
 ## 3 Building the Native Mobile Picture App
 
-Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>CTRL</kbd> + <kbd>G</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
+Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>Ctrl</kbd> + <kbd>g</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.

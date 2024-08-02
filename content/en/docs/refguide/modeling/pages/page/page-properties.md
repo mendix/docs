@@ -101,7 +101,7 @@ You can also use multiple page parameters. Multiple page parameters allow you to
 
 #### 3.4.1 Mark as Used
 
-You can search for unused items in Studio Pro by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>. Pages that are only used from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
+You can search for unused items in Studio Pro by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>. Pages that are only used from Java code will be listed as unused, because Studio Pro cannot look inside Java source code.
 
 By setting the property **Mark as used** to *Yes*, you specify that the document is used implicitly and Studio Pro will no longer list it when searching for unused items.
 

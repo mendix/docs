@@ -71,8 +71,8 @@ For Windows, you can use the following keyboard shortcuts to select stories on t
 
 | Action                              | Windows                        | Mac                               |
 | ----------------------------------- | ------------------------------ | --------------------------------- |
-| Select all stories                  | <kbd>Ctrl</kbd> + <kbd>A</kbd> | <kbd>Ctrl</kbd> + <kbd>A</kbd>    |
-| Cancel the selection of all stories | <kbd>Ctrl</kbd> + <kbd>D</kbd> | <kbd>Command</kbd> + <kbd>D</kbd> |
+| Select all stories                  | <kbd>Ctrl</kbd> + <kbd>a</kbd> | <kbd>Ctrl</kbd> + <kbd>a</kbd>    |
+| Cancel the selection of all stories | <kbd>Ctrl</kbd> + <kbd>d</kbd> | <kbd>Command</kbd> + <kbd>d</kbd> |
 | Select multiple stories             | <kbd>Ctrl</kbd> + click        | <kbd>Command</kbd> + click        |
 | Select a range of stories           | <kbd>Shift</kbd> + click       | <kbd>Shift</kbd> + click          |
 

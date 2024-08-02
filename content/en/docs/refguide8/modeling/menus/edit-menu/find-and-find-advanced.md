@@ -15,7 +15,7 @@ You can search for changes or usages of different elements, documents, XPaths, c
 
 You can find various elements in your app via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
 
-1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>F</kbd>.
+1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd> + <kbd>f</kbd>.
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 3. In the **Look in** section unselect items in your project where you do not want to search in:  
 
@@ -33,7 +33,7 @@ With the **Find Advanced** option you can set advanced criteria and find specifi
 
 You can search for microflows that have object activities in them. Do the following:
 
-1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>.
     The **Find Advanced** dialog box will open:
     {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" class="no-border" >}}
 2. In the **Search for** option, select **Microflow actions**:
@@ -48,7 +48,7 @@ While you develop your app, it might occur that specific functionality (for exam
 
 To find the unused items, do the following:
 
-1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>.
 2. In the **Find Advanced** dialog box, select **Unused items** in the **Search for** option:
 
     {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" class="no-border" >}}

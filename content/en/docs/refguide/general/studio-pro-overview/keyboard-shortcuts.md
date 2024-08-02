@@ -40,17 +40,17 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>C</kbd> | <kbd>Cmd</kbd> + <kbd>C</kbd> | Copy the selected element to the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>V</kbd> | <kbd>Cmd</kbd> + <kbd>V</kbd> | Paste the contents of the clipboard in the current editor. |
-| <kbd>Ctrl</kbd> + <kbd>X</kbd> | <kbd>Cmd</kbd> + <kbd>X</kbd> | Move the selected element to the clipboard. |
-| <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>Cmd</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
-| <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>Cmd</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
+| <kbd>Ctrl</kbd> + <kbd>c</kbd> | <kbd>Command</kbd> + <kbd>c</kbd> | Copy the selected element to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>v</kbd> | <kbd>Command</kbd> + <kbd>v</kbd> | Paste the contents of the clipboard in the current editor. |
+| <kbd>Ctrl</kbd> + <kbd>x</kbd> | <kbd>Command</kbd> + <kbd>x</kbd> | Move the selected element to the clipboard. |
+| <kbd>Ctrl</kbd> + <kbd>y</kbd> | <kbd>Command</kbd> + <kbd>y</kbd> | Redo the last undone action in an editor pane. |
+| <kbd>Ctrl</kbd> + <kbd>z</kbd> | <kbd>Command</kbd> + <kbd>z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
-| <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Cmd</kbd> + Mouse scroll wheel | Zooms in or out. |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zooms in or out. |
 | <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Not available | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Not available | Paste the widget styling onto another selected widget. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | Not available | Paste the widget styling onto another selected widget. |
 
 #### 2.1.3 Panes Only
 
@@ -66,7 +66,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 
 | Windows | Mac                               | Description |
 | --- | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Cmd</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
+| <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Command</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Not available | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
 | <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Not available | Switches between tabs in a tabbed dialog box. |
 
@@ -74,7 +74,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 
 | Windows | Mac                            | Description |
 | --- | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>N</kbd> | <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
+| <kbd>Ctrl</kbd> + <kbd>n</kbd> | <kbd>Ctrl</kbd> + <kbd>n</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Not available | Deletes the currently selected item (or items). |
 | <kbd>↑</kbd> / <kbd>↓</kbd> | <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
@@ -87,8 +87,8 @@ The following shortcut keys are available in the domain model editor:
 | Windows | Mac                                     | Description |
 | --- | --- | --- |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>A</kbd> | <kbd>Cmd</kbd>&nbsp;+&nbsp;<kbd>A</kbd> | Selects all entities. |
-| <kbd>Ctrl</kbd> | <kbd>Cmd</kbd> | When pressing the <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> will deselect it. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>a</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;<kbd>a</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> | <kbd>Command</kbd> | When pressing the <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears selection. |
 
@@ -129,7 +129,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>F3</kbd> | <kbd>Fn</kbd> + <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and open it in an editor. |
 | <kbd>Shift</kbd> + <kbd>F3</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F3</kbd> | Highlights the previous find result in the **Find Results** pane and open it in an editor. |
 | <kbd>F4</kbd> | <kbd>Fn</kbd> + <kbd>F4</kbd> | Synchronizes the app directory. |
-| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | <kbd>Cmd</kbd> + <kbd>Q</kbd> | Exits. |
+| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | <kbd>Command</kbd> + <kbd>Q</kbd> | Exits. |
 | <kbd>F5</kbd> | <kbd>Fn</kbd> + <kbd>F5</kbd> | Runs the app locally so you can view the app. |
 | <kbd>Shift</kbd> + <kbd>F5</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | Stops the currently running app. |
 | <kbd>Ctrl</kbd> + <kbd>F5</kbd> | <kbd>Ctrl</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | Deploys to licensed cloud node. |
@@ -142,18 +142,18 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F9</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F9</kbd> | Shows the currently running app in the browser (tablet simulation). |
 | <kbd>F11</kbd> | <kbd>Fn</kbd> + <kbd>F11</kbd> | Enables and disable full screen mode. |
 | <kbd>Shift</kbd> + <kbd>F11</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F11</kbd> | Enables and disable distraction free mode. |
-| <kbd>Ctrl</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>F</kbd> | Opens search dialog box. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens advanced search dialog box. |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> | <kbd>Cmd</kbd> + <kbd>Option</kbd>+ <kbd>F</kbd> | Displays usages of the selected object. |
-| <kbd>Ctrl</kbd> + <kbd>G</kbd> | <kbd>Cmd</kbd> + <kbd>G</kbd> | Goes to any document or domain model element. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | <kbd>Cmd</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>L</kbd> | Cycles through the configured languages. |
-| <kbd>Ctrl</kbd> + <kbd>N</kbd> | <kbd>Cmd</kbd> + <kbd>N</kbd> | Creates a new document. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> | Creates a new app. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> | Opens an existing app or app package. |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>Cmd</kbd> + <kbd>S</kbd> | Saves the changes in the currently active document tab. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Saves the changes in all open documents. |
-| <kbd>Ctrl</kbd> + <kbd>W</kbd> | <kbd>Cmd</kbd> + <kbd>W</kbd> | Closes the current document. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
+| <kbd>Ctrl</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>f</kbd> | Opens search dialog box. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens advanced search dialog box. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Option</kbd>+ <kbd>f</kbd> | Displays usages of the selected object. |
+| <kbd>Ctrl</kbd> + <kbd>g</kbd> | <kbd>Command</kbd> + <kbd>g</kbd> | Goes to any document or domain model element. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>l</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>l</kbd> | Cycles through the configured languages. |
+| <kbd>Ctrl</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>n</kbd> | Creates a new document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | Creates a new app. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens an existing app or app package. |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>Command</kbd> + <kbd>S</kbd> | Saves the changes in the currently active document tab. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Saves the changes in all open documents. |
+| <kbd>Ctrl</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>W</kbd> | Closes the current document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected element. |
 
 ## 8 Read More

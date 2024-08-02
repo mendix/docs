@@ -58,8 +58,8 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| New Document | Creates a new document within the project that is currently open. You can choose the name, location and type of the document. | <kbd>Ctrl</kbd> + <kbd>N</kbd> |
-| New Project | Creates a new single-developer project. A single-developer project is simply a file (with the extension *.mpr* , which stands for "Mendix project") that is stored in the local file system. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
+| New Document | Creates a new document within the project that is currently open. You can choose the name, location and type of the document. | <kbd>Ctrl</kbd> + <kbd>n</kbd> |
+| New Project | Creates a new single-developer project. A single-developer project is simply a file (with the extension *.mpr* , which stands for "Mendix project") that is stored in the local file system. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> |
 | Open Project | Opens an existing single-developer project (*.mpr*) or a project package (*.mpk*). See **New Project** above for information on single-developer projects. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> |
 | Recent Projects | Shows a list of recently opened projects for quick opening. |   |
 | Save | Saves the changes in the currently active document tab. | <kbd>Ctrl</kbd> + <kbd>S</kbd> |
@@ -76,18 +76,18 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| Undo | Undoes the last action in a document tab. Undo and redo actions are unlimited. | <kbd>Ctrl</kbd> + <kbd>Z</kbd> |
-| Redo | Redoes the last action that was undone in a document tab. | <kbd>Ctrl</kbd> + <kbd>Y</kbd> |
-| Cut | Copies the selected element to the clipboard and delete it. | <kbd>Ctrl</kbd> + <kbd>X</kbd> |
-| Copy | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>C</kbd> |
-| Paste | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>V</kbd> |
+| Undo | Undoes the last action in a document tab. Undo and redo actions are unlimited. | <kbd>Ctrl</kbd> + <kbd>z</kbd> |
+| Redo | Redoes the last action that was undone in a document tab. | <kbd>Ctrl</kbd> + <kbd>y</kbd> |
+| Cut | Copies the selected element to the clipboard and delete it. | <kbd>Ctrl</kbd> + <kbd>x</kbd> |
+| Copy | Copies the selected element to the clipboard. | <kbd>Ctrl</kbd> + <kbd>c</kbd> |
+| Paste | Pastes the contents of the clipboard in the current editor. | <kbd>Ctrl</kbd> + <kbd>v</kbd> |
 | Delete | Deletes the selected element. | <kbd>Delete</kbd> |
-| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (captions of labels, buttons, etc); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; form widget names; captions and documentation of microflow objects; variable definitions in microflow. | <kbd>Ctrl</kbd> + <kbd>F</kbd> |
-| Find Advanced | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd> |
-| Find Usages | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> |
+| Find | Searches the model for text. The following texts are searched: all texts that appear in the end user interface (captions of labels, buttons, etc); names and documentation of documents; entity, association, and attribute names and documentation; access rule documentation; form widget names; captions and documentation of microflow objects; variable definitions in microflow. | <kbd>Ctrl</kbd> + <kbd>f</kbd> |
+| Find Advanced | Opens a dialog box that allows for advanced search operations. Examples are searching for any document type and searching for unused documents. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> |
+| Find Usages | Opens the **Find Results** pane and displays usages of the selected object. | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>f</kbd> |
 | Next Find Result | Highlights the next find result in the **Find Results** pane and open it in an editor. | <kbd>F3</kbd> |
 | Previous Find Result | Highlights the previous find result in the **Find Results** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F3</kbd> |
-| Go to | Quickly navigates to any document or domain model element in the project by typing a few letters and pressing <kbd>Enter</kbd>. | <kbd>Ctrl</kbd> + <kbd>G</kbd> |
+| Go to | Quickly navigates to any document or domain model element in the project by typing a few letters and pressing <kbd>Enter</kbd>. | <kbd>Ctrl</kbd> + <kbd>g</kbd> |
 | Next Error | Highlights the next error in the **Error List** pane and open it in an editor. | <kbd>F8</kbd> |
 | Previous Error | Highlights the previous error result in the **Error List** pane and open it in an editor. | <kbd>Shift</kbd> + <kbd>F8</kbd> |
 | Preferences | Opens the **Preferences** dialog box, where you can set your general, model, and advanced editing preferences. |  |
@@ -162,8 +162,8 @@ Using items in the menu bar of the Modeler, you can create new projects, deploy 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | Current Language | Displays the current language of your app and allows you to make another language the current language. | |
-| Select Previous Language | Makes the previous language of your app the current language. | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd> |
-| Select Next Language | Makes the next language of your app the current language. | <kbd>Ctrl</kbd>+<kbd>L</kbd> |
+| Select Previous Language | Makes the previous language of your app the current language. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> |
+| Select Next Language | Makes the next language of your app the current language. | <kbd>Ctrl</kbd> + <kbd>l</kbd> |
 | Language Settings | Opens the **Project Settings** dialog box to the **Languages** tab so that you can adjust the language configuration of the app. | |
 | Batch Replace | Opens a form in which you can correct texts within one language. This is useful to check whether texts presented to the user are consistent. |   |
 | Batch Translate | Opens a form in which you can quickly translate many texts from one language to another. |   |
@@ -196,7 +196,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
+| <kbd>Ctrl</kbd> + <kbd>n</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
@@ -207,7 +207,7 @@ The following shortcut keys are available in the domain model editor:
 | Key | Description |
 | --- | --- |
 | <kbd>F2</kbd> | Edits the name of the selected element. |
-| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
 ## 7 Form Editor Shortcut Keys

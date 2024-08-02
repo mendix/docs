@@ -87,7 +87,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     For the `ListTables` activity, you must specify the region for which you want to retrieve the tables from, a `Credentials` object and a `ListTablesRequest` object. Other activities may have different required parameters.
     
 12. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+13. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 15. Click **OK**, and then click **OK** again.
 16. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.

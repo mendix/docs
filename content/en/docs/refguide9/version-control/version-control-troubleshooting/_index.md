@@ -77,12 +77,12 @@ To solve this issue, follow the steps below:
 2. Open the app folder via Studio Pro by selecting **App** > **Show App Directory in Explorer**.
 3. Right-click the background of the app folder and select **TortoiseSVN** > **Properties**. The **Properties** dialog box opens.
 4. Double-click the `svn:ignore` property. The **Edit Properties** dialog box opens.
-5. Copy all text of the **Property value** via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+5. Copy all text of the **Property value** via <kbd>Ctrl</kbd> + <kbd>a</kbd> followed by <kbd>Ctrl</kbd> + <kbd>c</kbd>.
 6. Paste the text into a new document in Notepad++ (or another editor that understands newline conventions).
 7. In the lower-right corner of the screen, double-click **Windows (CR LF)** and select **Unix (LF)** instead. This will change the newline type from CRLF to LF.
 8. Copy all text again.
 9. Go back to the **Edit Properties** dialog box.
-10. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+10. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd> + <kbd>a</kbd> followed by <kbd>Ctrl</kbd> + <kbd>v</kbd>.
 11. Click **OK** to close the **Edit Properties** dialog box.
 12. Click **OK** to close the **Properties** dialog box.
 13. Restart Studio Pro.
@@ -153,7 +153,7 @@ To resolve a conflict on the `svn:ignore` property, follow these steps:
 4. Copy all the lines starting with `modeler-merge-marker` to the clipboard. 
 5. Click **Manually edit property**.
 6. Double-click the `svn:ignore` line in the grid.
-7. Paste the previously copied lines via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+7. Paste the previously copied lines via <kbd>Ctrl</kbd> + <kbd>a</kbd> followed by <kbd>Ctrl</kbd> + <kbd>v</kbd>.
 8. Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
 
     {{< figure src="/attachments/refguide9/version-control/troubleshoot-version-control-issues/combinedignorelist.png" class="no-border" >}}

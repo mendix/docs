@@ -148,15 +148,15 @@ For the keyboard navigation and keyboard selection to work, the user must open t
 
 Using the keyboard arrow keys (<kbd>{↑}</kbd>, <kbd>{↓}</kbd>, <kbd>{←}</kbd>, <kbd>{→}</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>{Home}</kbd>, <kbd>{End}</kbd>, <kbd>{Pageup}</kbd>, and <kbd>{Pagedown}</kbd>.
 
-With the keyboard, the user can press <kbd>{tab}</kbd> and navigate between elements to reach the Gallery items.
+With the keyboard, the user can press <kbd>Tab</kbd> and navigate between elements to reach the Gallery items.
 
 ### 5.2 Keyboard Selection
 
-Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>{Shift}</kbd> +<kbd>{Space}</kbd> and the item will be selected.
+Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>Shift</kbd> +<kbd>Space</kbd> and the item will be selected.
 
 ### 5.3 Keyboard Multi-Selection
 
-To further improve the user experience, it is also possible to select many items only using the keyboard. To achieve this, the user can hold <kbd>{Shift}</kbd> on the first item and navigate with arrow key to the last item they want to select. By doing this, all the items between the first and last selected will also be selected.
+To further improve the user experience, it is also possible to select many items only using the keyboard. To achieve this, the user can hold <kbd>Shift</kbd> on the first item and navigate with arrow key to the last item they want to select. By doing this, all the items between the first and last selected will also be selected.
 
 ### 5.4 Accessibility
 

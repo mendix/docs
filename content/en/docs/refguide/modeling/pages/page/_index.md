@@ -111,8 +111,8 @@ To view properties of an element, do one of the following:
 
 To cut/copy/paste you can use the following shortcuts:
 
-* <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
-* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
+* <kbd>Ctrl</kbd> + <kbd>z</kbd> /  <kbd>Ctrl</kbd> + <kbd>c</kbd> / <kbd>Ctrl</kbd> + <kbd>v</kbd>  
+* <kbd>Command</kbd> + <kbd>z</kbd> /  <kbd>Command</kbd> + <kbd>c</kbd> / <kbd>Command</kbd> + <kbd>v</kbd>
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
@@ -207,8 +207,8 @@ When enabled, certain widgets appear bigger with an extra outline so they are ea
 
 **X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
 
-* Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
-* Mac: <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
+* Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>x</kbd>
+* Mac: <kbd>Command</kbd> + <kbd>Alt</kbd> + <kbd>x</kbd>
 
 Here is a page as shown in **Design mode** with **X-ray mode** disabled:
 

@@ -54,7 +54,7 @@ If no database synchronization is required, all the cluster nodes will become fu
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
-For more information about configuring the Mendix Runtime to store files on these storage facilities,  see [Runtime Customization](/refguide8/custom-settings/).
+For more information about configuring the Mendix Runtime to store files on these storage facilities, see [Runtime Customization](/refguide8/custom-settings/).
 
 ## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 

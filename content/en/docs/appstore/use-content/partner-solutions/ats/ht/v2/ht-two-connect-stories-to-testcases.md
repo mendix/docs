@@ -148,7 +148,7 @@ On the **Edit Story** page you can do the following:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/add-existing-test-case-e.png" class="no-border" >}}
 
-Clicking **Add selected** links the test case to the user story. As this test case ran successfully, the **Succes** is 100%:
+Clicking **Add selected** links the test case to the user story. As this test case ran successfully, the **Success** is 100%:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/existing-test-case-added-e.png" class="no-border" >}}
 

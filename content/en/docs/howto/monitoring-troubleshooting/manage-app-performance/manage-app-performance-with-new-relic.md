@@ -54,7 +54,7 @@ The following steps are only relevant for on-premises deployments (if you are de
 
 Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
-### 3.2.2 On-PremiseS Linux and Windows Service Console
+### 3.2.2 On-Premises Linux and Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 

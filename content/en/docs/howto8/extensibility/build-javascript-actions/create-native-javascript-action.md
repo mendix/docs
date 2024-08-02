@@ -21,7 +21,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Install Mendix 8.6.0 (Build 715) from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * Install the [Git](https://git-scm.com/downloads) command line tool
-* Install npm's [node js](https://nodejs.org)
+* Install npm's [Node.js](https://nodejs.org)
 * Install [Native Builder v3.1.0](https://www.dropbox.com/sh/hpw7sshut9bco68/AABackrr75rPSgW7u5LBMkMra?dl=0) (this tutorial can only be completed using Native Builder v3.1.0 or higher)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Own a mobile device with NFC capabilities

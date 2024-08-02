@@ -25,7 +25,7 @@ Classes and libraries within the JVM are allocated in metaspace. This is a separ
 
 In JVM version 7 and before, this data was stored in what was called the permanent generation (perm gen). In contrast to the perm gen, metaspace is able to collect classes that are no longer used and thus reduce memory impact.
 
-The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix,  information about microflows, the domain model, and all other Mendix-specific information.
+The image below shows in detail how data moves through the memory. The Stack is made up of all threads and classes and, in case of Mendix, information about microflows, the domain model, and all other Mendix-specific information.
 
 {{< figure src="/attachments/refguide9/runtime/runtime-java/java-memory-usage/16844065.png" class="no-border" >}}
 

@@ -144,7 +144,7 @@ Mendix recommends using a strict versioning system (for example, semantic number
 
 #### 4.2.1 Minor Service Updates
 
-*Minor* service updates are, for example,  additional fields added to the service or new operations included which would not break any apps that consume the previous versions.
+*Minor* service updates are, for example, additional fields added to the service or new operations included which would not break any apps that consume the previous versions.
 
 If semantic numbering is used then a minor/non-breaking change to a service can be indicated by an increase in the decimal part of the version number. For example, 1.0.11, 1.0.12, 1.1, 1.2.
 
@@ -216,7 +216,7 @@ In the example given in the [Consuming from Service Endpoints](#consume-service-
 
 A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane.
 
-In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **OrderManagementService** version **1.0.0** deployed to a production environment is consumed in the app. However, the same service is deployed to the **Acceptance** environment:
 
 {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png" alt="major change environment" class="no-border" >}}
 

@@ -22,7 +22,7 @@ When designing an application, a developer can specify access rules on an entity
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
-* Attributes determined by the system (like the status of an order) should never be writeable
+* Attributes determined by the system (like the status of an order) should never be writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules and visibility constraints in page components (grids, list views, data views)
@@ -38,7 +38,7 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
 * Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:

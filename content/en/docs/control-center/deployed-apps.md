@@ -34,7 +34,7 @@ This feature is in beta. To see if this capability can be activated for your com
 The list on this tab shows the following information:
 
 * **App Name** – This is the name of the app. To view the [app environment details](#mendix-cloud-app-environment), click the app name.
-* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Techncial Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Status** – This shows whether app is active or not.
 * **Env Count** – This is the number of the environments available for this app.
@@ -48,7 +48,7 @@ If you click the name of an app in the list, a page opens and shows the app envi
 
 On the top, you can see the app name, credits used, and the Technical Contact. The labels below show whether the app is licensed or active.
 
-To quickly change the Technical Contact for your app, click **Edit** by the name of the Technical Contact, and then select the new Technical Contact from the list. Every app can only have one Techncial Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+To quickly change the Technical Contact for your app, click **Edit** by the name of the Technical Contact, and then select the new Technical Contact from the list. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 On the right side above the list, you see the **Add Environment** button. You can click it to [add a new environment](#add-environment).
 
@@ -92,7 +92,7 @@ The list shows the following information:
 
 * **App Name** – This is the name of the app.
 * **App ID** – This shows the app ID.
-* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Techncial Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Technical Contact** – This shows the registered email address for sending license keys to. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Status** – This shows whether app is active or not.
 
@@ -118,7 +118,7 @@ The list shows the following information:
 
     {{% alert color="info" %}}The app name shown here is the name that was initially given to the app when the license keys were generated. Your current app name may be different.{{% /alert %}}
 
-* **Technical Contact** – This shows the registered email address to which the license keys are sent. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Techncial Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+* **Technical Contact** – This shows the registered email address to which the license keys are sent. If the Technical Contact is not correct, you can change it by clicking the edit icon ({{% icon name="pencil" %}}) next to the email address. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 * **Created Date** – This is the date on which the app was originally created.
 
@@ -132,7 +132,7 @@ After clicking an app name in the list, a page opens and shows the environments 
 
 At the upper-left corner the page, you see the name of the app, the email address of the Technical Contact, and the date that will be used as the license end date when new keys are generated.
 
-To quickly change the Technical Contact for your app, click the edit icon ({{% icon name="pencil" %}}) by the name of the Technical Contact, and then select the new Technical Contact from the list. Every app can only have one Techncial Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
+To quickly change the Technical Contact for your app, click the edit icon ({{% icon name="pencil" %}}) by the name of the Technical Contact, and then select the new Technical Contact from the list. Every app can only have one Technical Contact. After you change the Technical Contact, both the new and the old contact receive a notification email about the change.
 
 On the right side above the list, you can see the following buttons:
 

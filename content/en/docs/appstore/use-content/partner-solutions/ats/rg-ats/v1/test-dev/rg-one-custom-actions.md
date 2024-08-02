@@ -16,7 +16,7 @@ Now click **Add Item**, a popup window will appear.
 
 In that window you can choose which type of item you want to create.
 Choose **Action** and give it a **name** and an optional **description**. You can change the name and the description later on if you want.
-When you have entered all needed informations, click **Create**.
+When you have entered all needed information, click **Create**.
 
 Now open the newly created action by double-clicking its name in the repository.
 
@@ -48,7 +48,7 @@ While inside your custom action, you can change the action just like you would i
 
 ## 4 Setting Input Parameters
 
-{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/21168184.png" alt="Costum action settings screen" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/21168184.png" alt="Custom action settings screen" class="no-border" >}}
 
 By clicking **New** under **Input Parameters**, you open the **Edit Input Parameter** dialog box, where you set the properties of your new input parameter:
 

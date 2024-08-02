@@ -132,7 +132,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/18581961.png" class="no-border" >}}
 
-17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
+17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are described below.
 18. Choose **Reference** instead of **Attribute** as a type.
 19. Click on the arrow next to the **Reference** box, here you will select over which association the Order is linked to the Customer.
 

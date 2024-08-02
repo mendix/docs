@@ -24,7 +24,7 @@ When using IP protection and [solution modules](/refguide/module-settings/#solut
 
 ## 4 What Should Be Protected?
 
-To allow for [adaptability](/appstore/creating-content/sol-adapt/#three-parts), not all parts of a solution or component need to be protected . It is often desirable to protect the following:
+To allow for [adaptability](/appstore/creating-content/sol-adapt/#three-parts), not all parts of a solution or component need to be protected. It is often desirable to protect the following:
 
 * **The core IP of the solution** – analyze the business logic (for example, scheduling or planning algorithms), complex data mappings, business rules, and decision logic that needs protection
 * **Custom usage metering** – ensure that the metering is tamper-proof (whether done accidentally or intentionally)

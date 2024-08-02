@@ -9,11 +9,11 @@ tags: ["marketplace", "marketplace component", "scim", "IdP", "platform support"
 
 ## 1 Introduction
 
-The SCIM module facilitates integration with Microsoft Entra ID (formerly known as Azure AD) to create (pre-provision) selected users in your application as soon as they are created in Entra ID, and deactivate them when removed from Entra ID or deactivated in Entra ID. 
+The SCIM module facilitates integration with your IdP to create (pre-provision) selected users in your application as soon as they are created in the IdP, and deactivates them when they are removed or deactivated in the IdP.
 
-SCIM is an abbreviation for System for Cross-domain Identity Management; a protocol that is supported by most major IdP technologies, such as Entra ID, Okta, Auth0, etc. For more information, see the [SCIM protocol](https://scim.cloud/). 
+SCIM is an abbreviation for System for Cross-domain Identity Management; a protocol that is supported by most major IdP technologies, such as Entra ID (formerly known as Azure AD), Okta, Auth0, etc. For more information, see the [SCIM protocol](https://scim.cloud/).
 
-The SCIM module allows you to integrate your app with the Joiner, Mover, Leaver (JML) process in your organization. It enables the assignment of tasks to users before their first login to the app. Additionally, based on the information in Entra ID, the SCIM module automatically deactivates users in your app. This functionality helps you to control Mendix user licensing cost.
+The SCIM module allows you to integrate your app with the Joiner, Mover, Leaver (JML) process in your organization. It enables the assignment of tasks to users before their first login to the app. Additionally, based on the information in your IdP (for example, user groups), the SCIM module automatically creates and deactivates users in your app. This functionality helps you to control Mendix user licensing cost.
 
 {{% alert color="info" %}}
 Before you include the SCIM module in your app, you need to check if your IdP supports SCIM protocol. If you want to integrate with an on-premises AD or similar, you may need to use the [LDAP module](/appstore/modules/ldap/) instead.
@@ -41,18 +41,26 @@ Your IdP can perform create, read, update and delete (CRUD) operations on the us
 
 * The following user attributes are supported during the creation or updating of users: first name, last name, and email address.
 
-* Update users: synchronizes changes in the user's profile in your IdP with your Mendix app, such as a change in the user’s name. 
+* Update users: synchronizes changes in the user's profile in your IdP with your Mendix app, such as a change in the user’s name.
 
 * Disable (Deactivate) / Enable (activate) users: deactivates or activates users in your Mendix app when you disable or enable them in the Entra ID.
 
 The SCIM module also has the following features:
 
 * It has been tested with Entra ID and Okta.
+* It has been tested in combination with SAML and OIDC SSO module.
+
+    | **IdP** | **SAML** | **OIDC SSO** |
+    | --- | --- | --- |
+    | Entra ID | Verified | Verified |
+    | Okta| Verified | Verified |
+
+    {{% alert color="info" %}}
+    Choose the right attribute mappings to align with the user identifiers. For more information, see the [Attribute Mapping] (#attribute-mapping) section below.
+    {{% /alert %}}
 
 * Your IdP allows the selection of users that sync with your Mendix app, meaning your IdP controls which users are created and active in your app.
-
 * Each application within your organization using the SCIM module must undergo separate configuration. This allows the selection of the right target group of users for each app.
-
 * Users can be synchronized from multiple SCIM clients.
 
 ### 1.3 Limitations
@@ -124,7 +132,6 @@ Import the SCIM module from the marketplace and do the following configuration:
 Configure the following module roles:
 
 * **Administrator**:  able to create/delete and read/write the app configuration.
-* **AdministratorReadOnly**:  only read the app configuration. You will probably never need this module role.
 
 The following is a typical example of how you may want to include the SCIM module’s **Module Roles** to the **User roles** of your app.
 
@@ -136,7 +143,7 @@ The following is a typical example of how you may want to include the SCIM modul
 
 #### 2.1.2 After Startup Microflow
 
-In the **Runtime** tab, add the microflow **SCIM.StartUp** as the **After startup** microflow.
+In the **Runtime** tab, add the microflow **SCIM.ASU_StartUp** as the **After startup** microflow.
 
 #### 2.1.3 Navigation
 
@@ -144,7 +151,7 @@ The SCIM module has some configuration pages targeted at the users with local ad
 Add these pages to the **Navigation** tab and assign the **Administrator** user role.
 Open [Navigation](/refguide/navigation/) tab and do the following:
 
-* Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **SCIM.IdPConfiguration_Overview** page and assign it to the **Administrator** user role.
+* Add the **Menu** item **IdPConfiguration** to the app **Navigation**. Link this item to the **Call_IdPConfOverview** page and assign it to the **Administrator** user role.
 * Add the **Menu** item **MxObjects** to the app **Navigation**. Link this item to the **MxModelReflection.MxObjects_Overview** page and assign it to the **Administrator** user role.
 
 #### 2.1.4 Setting Encryption Key
@@ -155,7 +162,7 @@ Set up the required configuration of the [Encryption](https://marketplace.mendix
 
 The SCIM module includes a default user provisioning microflow that maps user attributes from the SCIM payload to attributes in the common user objects within your Mendix app. For more details, see the [Attribute Mapping](#Attribute) section below.
 
-#### 2.1.6 Attribute Mapping {#Attribute}
+#### 2.1.6 Attribute Mapping {#attribute-mapping}
 
 For reference, the table below gives an overview of attribute mapping when using the defaults in both Entra ID and the default microflow in the SCIM module. This information may be helpful to see where a custom user provisioning flow differs from the defaults. If you wish to deviate from this default setting, you can create your own mapping. To do this, select an **IdP Attribute** (claim) and specify the **Configured Entity Attribute**. Ensure that the same configured entity attribute should not be mapped with another IdP attributes.
 

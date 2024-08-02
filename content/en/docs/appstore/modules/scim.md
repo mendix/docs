@@ -40,7 +40,7 @@ Your IdP can perform create, read, update and delete (CRUD) operations on the us
 
 * The following user attributes are supported during the creation or updating of users: first name, last name, and email address.
 
-* Update users: synchronizes changes in the user's profile in your IdP with your Mendix app, such as a change in the user’s name.
+* Update users: synchronizes changes in the user's profile in your IdP with your Mendix app, such as a change in the user’s information.
 
 * Disable (Deactivate) / Enable (activate) users: deactivates or activates users in your Mendix app when you disable or enable them in the Entra ID.
 
@@ -66,9 +66,9 @@ You need to choose the right attribute mappings to align with the user identifie
 
 The SCIM module has the following limitations:
 
-* The SCIM module does not syncing of groups (or group memberships) to your app. This means you cannot use the SCIM module to assign user roles to your app’s users. Instead, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
+* The SCIM module does not sync groups (or group memberships) to your app. This means you cannot use the SCIM module to assign user roles to your app’s users. Instead, you can assign user roles using the features offered by [SAML SSO](/appstore/modules/saml/) or [OIDC SSO](/appstore/modules/oidc/) modules.
 
-* If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a /groups endpoint, which is not yet supported.
+* If you want to do **Provision on demand** from Entra ID to test the SCIM integration of your app you cannot trigger a partial sync based on a group. This will trigger Entra ID to invoke a `/groups` endpoint, which is not yet supported.
 
 * The module does not support the development of a SCIM client application.
 
@@ -112,7 +112,7 @@ Currently, the SCIM module does not support the following features of the SCIM p
 
 It is necessary to include the following Marketplace modules in your app:
 
-* [Encryption](/appstore/modules/encryption/) module – this is required to encrypt the **API key** (Token)
+* [Encryption](https://marketplace.mendix.com/link/component/1011) module – this is required to encrypt the **API key** (Token)
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170) – see [Community Commons](/appstore/modules/community-commons-function-library/) documentation
 
@@ -128,9 +128,7 @@ Import the SCIM module from the marketplace and do the following configuration:
 
 #### 2.1.1 Configuring Roles
 
-Configure the following module roles:
-
-* **Administrator**:  able to create/delete and read/write the app configuration.
+Configure the **Administrator** module role to create/delete and read/write the app configuration.
 
 The following is a typical example of how you may want to include the SCIM module’s **Module Roles** to the **User roles** of your app.
 
@@ -175,23 +173,21 @@ For reference, the table below gives an overview of attribute mapping when using
 
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
-| externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` |
+| externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` (for example, ObjectID—configured, non default) |
 | familyName| lastname | Doe | Doe John |
 | givenName| firstname | John |  |
 | emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |
 | userName| FullName | `johndoe@companyA.com` | `johndoe@companyA.com` |
 | active| Active | true | true |
-| locale| Timezone | Newyork/America | Newyork/America |
-| preferredLanguage| Language| English,United States | English,United States |
 
 The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
 
 | **IdP** | **SSO Module** | **Remark** |
 | --- | --- | --- |
-| Okta | OIDC SSO | SCIM.externalID and OIDC.sub contains same value |
-| EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contains same value |
-| Okta | SAML | SCIM.externalID and OIDC.Use Name ID contains same value *Note: Configure  Application username to Custom with user.getInternalProperty("id"). |
-| EntraID | SAML | SCIM.externalID and OIDC.Use Name ID contains same value *Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
+| Okta | OIDC SSO | SCIM.externalID and OIDC.sub contains same value. |
+| EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contains same value. |
+| Okta | SAML | SCIM.externalID and OIDC.Use Name ID contains same value. <br> Note: Configure  Application username to Custom with user.getInternalProperty("id"). |
+| EntraID | SAML | SCIM.externalID and OIDC.Use Name ID contains same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
 
 ### 2.2 Runtime Configuration
 
@@ -219,7 +215,7 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
 
 * **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
 * **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
-* **Allow the module to create users**:this enables the module to create users based on user provisioning and attribute mapping configurations.
+* **Allow the module to create users**: this enables the module to create users based on user provisioning and attribute mapping configurations.
   * By default, the value is set to ***Yes***.
 * **Default Userrole**: the role which will be assigned to newly created users by default.
 * **User Type**: this allows you to configure end-users of your application as internal or external.
@@ -234,7 +230,7 @@ Note the following:
 * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
 * Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning using a microflow.
 
-The custm microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
+The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
 
 {{< figure src="/attachments/appstore/modules/scim/user_commons.png" class="no-border" >}}
 
@@ -247,7 +243,7 @@ Setting up connectivity with an IdP varies depending on the vendor. The followin
 #### 2.3.1 Configuration with Entra ID
 
 1. On the Microsoft Entra ID tenant, select **Enterprise Application** and create SCIM client in it.
-2. Change the **Provisioning** Mode to **Automatic**.
+2. Change the **Provisioning Mode** to **Automatic**.
 
     {{< figure src="/attachments/appstore/modules/scim/provisioning_revised.png" class="no-border" >}}
 

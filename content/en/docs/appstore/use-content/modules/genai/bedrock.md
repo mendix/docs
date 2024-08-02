@@ -8,7 +8,7 @@ description: "Describes the Amazon Bedrock GenAI service."
 
 ## 1 Introduction
 
-[Amazon Bedrock](https://aws.amazon.com/bedrock/) is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API. You can choose from various foundation models to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started and easily experiment with all kinds of generative AI functionality such as leading large language models, knowledges bases or agents. 
+[Amazon Bedrock](https://aws.amazon.com/bedrock/) is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API. You can choose from various foundation models to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started and easily experiment with all kinds of generative AI functionality such as leading large language models, knowledge bases or agents. 
 
 ## 2 Available Model Families
 

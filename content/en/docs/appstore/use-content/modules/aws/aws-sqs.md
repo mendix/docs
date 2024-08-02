@@ -80,7 +80,7 @@ To help you work with the Amazon SQS connector, the following sections of this d
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations and specializations. Thes generalizations are reused by the different models for the specific microflow activities or for storing connection details.
+The entities in the table below describe all generalizations and specializations. These generalizations are reused by the different models for the specific microflow activities or for storing connection details.
 
 The entities are non-persistent. Because of that, you do not need remove the resulting objects after download.
 

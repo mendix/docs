@@ -548,7 +548,7 @@ Apps built with [Studio Pro 8](/releasenotes/studio-pro/8/) can now be tested us
 
 This lets ATS run tests on the latest browser versions, which provides improvements in both speed and stability.
 
-If you are using Browserstack or Saucelabs, ATS will automatically use the new version, and you do not have to do anything.
+If you are using BrowserStack or Sauce Labs, ATS will automatically use the new version, and you do not have to do anything.
 
 If you are using another Selenium hub, we highly recommend updating it to use Selenium version 3.141.59, as the current version will no longer be supported. You can the download Selenium version 3.141.59 [here](https://www.seleniumhq.org/download/).
 
@@ -700,29 +700,29 @@ The option to receive alerts when a scheduled test is done is a feature that rec
 
 For more details, see [Schedules](/appstore/partner-solutions/ats/rg-two-schedule/) in the *ATS 2 Reference Guide*.
 
-### Better Integration with Browserstack
+### Better Integration with BrowserStack
 
-After the great reception of the **Recording** tab in ATS, we decided to invest more time into integrating Browserstack and ATS by adding the features described below.
+After the great reception of the **Recording** tab in ATS, we decided to invest more time into integrating BrowserStack and ATS by adding the features described below.
 
-These are the new features on Browserstack side:
+These are the new features on BrowserStack side:
 
-* Different apps in ATS show up as different **Projects** in Browserstack. This is useful, if you use the same Browserstack account to test multiple apps.
-* When multiple test cases are executed in ATS as part of a test suite, they are now also grouped in Browserstack under a **Build**. The build name is a concatenation of the test suite/test case name followed by the ATS job GUID between two colons.
-* Individual test case executions in Browserstack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
-* Test case executions in Browserstack now show the result from ATS.
+* Different apps in ATS show up as different **Projects** in BrowserStack. This is useful, if you use the same BrowserStack account to test multiple apps.
+* When multiple test cases are executed in ATS as part of a test suite, they are now also grouped in BrowserStack under a **Build**. The build name is a concatenation of the test suite/test case name followed by the ATS job GUID between two colons.
+* Individual test case executions in BrowserStack (meaning, **Sessions**) now correctly display the test case name instead of the job name. For test cases with an attached dataset, the test case name is suffixed with the index of the dataset record.
+* Test case executions in BrowserStack now show the result from ATS.
 
-  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="Browserstack-ATS integration" class="no-border" >}}
+  {{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/browserstack.png" alt="BrowserStack-ATS integration" class="no-border" >}}
 
 These are the new features on the ATS side:
 
-* We added a link to the Selenium session in Browserstack for each test case that was executed in Browserstack. You can use this in case the recording video does not load in ATS or if you want to see the Browserstack logs. You can find the link under the **Recording** tab.
-* To make it easier to navigate from Browserstack to ATS, we added options to look up jobs by the job GUID as well as individual test case logs by the Browserstack session ID. Both can be found on the **Test Runs** page under the **Jobs** tab.
+* We added a link to the Selenium session in BrowserStack for each test case that was executed in BrowserStack. You can use this in case the recording video does not load in ATS or if you want to see the BrowserStack logs. You can find the link under the **Recording** tab.
+* To make it easier to navigate from BrowserStack to ATS, we added options to look up jobs by the job GUID as well as individual test case logs by the BrowserStack session ID. Both can be found on the **Test Runs** page under the **Jobs** tab.
 
-{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="Browserstack-ATS integration" class="no-border" >}}
+{{< figure src="/attachments/releasenotes/add-ons/ats/ats-2/ats-2.10/lookup.gif" alt="BrowserStack-ATS integration" class="no-border" >}}
 
 This table compares the nomenclature:
 
-| ATS              | Browserstack |
+| ATS              | BrowserStack |
 | ---------------- | ------------ |
 | App              | Project      |
 | Job              | Build        |
@@ -878,7 +878,7 @@ Mendix applications which are based on Mendix 7.13, 7.14 or 7.15, can now be tes
 
 ### Mobile Testing Improvements
 
-* In addition to testing on real devices via browserstack it is now possible to test on real devices by using Saucelabs. We have preselected some devices for Saucelabs for different Android versions.
+* In addition to testing on real devices via browserstack it is now possible to test on real devices by using Sauce Labs. We have preselected some devices for Sauce Labs for different Android versions.
 * We added support for testing on Android 8 devices.
 * When testing on mobile devices we now simulate setting drop-down values via the native dialogs for mobile, same as we do for date and time dialogs.
 
@@ -888,16 +888,16 @@ We have completely redesigned the back end for canceling jobs. You will see that
 
 ### Recording Integration
 
-It is now possible to see a video recording for test cases executed on Browserstack in ATS. When looking at the result log for a test case execution you can see the recording under the new **Recording** tab. Please note that we do not store these recordings, we only link to the recorded videos from Browserstack.
+It is now possible to see a video recording for test cases executed on BrowserStack in ATS. When looking at the result log for a test case execution you can see the recording under the new **Recording** tab. Please note that we do not store these recordings, we only link to the recorded videos from BrowserStack.
 
 ### Improvements
 
-* We have made several changes to the wait function making it more stable, especially when running on slow devices or slow selenium servers.
+* We have made several changes to the wait function making it more stable, especially when running on slow devices or slow Selenium servers.
 * We made changes to how recordings are handled internally which makes saving and cancelling a recording much faster.
 
 ### Fixes
 
-* The built-in function **Assert Condition Fails** was not working due to a bug . It is now fixed.
+* The built-in function **Assert Condition Fails** was not working due to a bug. It is now fixed.
 * The built-in function **Assert at least one not null** was not working due to a bug. It is now fixed.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
 * Coping a data-driven test case did not copy the association to the dataset. This is now fixed.
@@ -905,7 +905,7 @@ It is now possible to see a video recording for test cases executed on Browserst
 
 ### Important Change
 
-The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7 this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the functions's description accordingly.
+The built-in function **Assert not null** behavior has been changed. Up to and including ATS 2.7, this function would pass if an object is null. This was the wrong behavior which directly contradicted the expected behavior based on the function's name. Therefore, we made changes to the function so that, when a null object is asserted the function fails. We updated the function's description accordingly.
 
 **IMPORTANT:** To avoid breaking test cases which were already using this function with its past behavior, we decided to replace all past uses of the function**Assert not null** with **Assert null**. This change is done automatically and will not affect the behavior of your existing test cases.
 
@@ -919,7 +919,7 @@ The built-in function **Assert not null** behavior has been changed. Up to and i
 
 ### Mobile Testing
 
-We are happy to announce that ATS now supports mobile testing for web applications. With a Browserstack account, you can test on Android 6 and 7 on real mobile devices.
+We are happy to announce that ATS now supports mobile testing for web applications. With a BrowserStack account, you can test on Android 6 and 7 on real mobile devices.
 
 * The format of test cases and the functions that are used to test on desktop devices work the same way on mobile devices.
 * ATS functions are context-aware, meaning, they detect the device and interact accordingly. For example, when setting a date field on mobile, the native date dialog box is used. All native input elements are set by automating the native dialog boxes, with the exception of drop-down menus, which are set directly.
@@ -950,11 +950,11 @@ For all the details please refer to [results section in the ATS reference guide]
 
 #### Removed Support for Windows XP, MacOS 9, and MacOS 10
 
-These platforms were not able to work properly with the browser versions that we officially support. In some cases for example, MacOS10 in combination with Firefox browser, the selenium driver v3.8.1, which is the official selenium version that we support, is simply not supported for MacOS10. By removing support for these outdated platforms we are able to focus on the performance and stability for the platforms that are used much more in the real world.
+These platforms were not able to work properly with the browser versions that we officially support. In some cases for example, MacOS10 in combination with Firefox browser, the Selenium driver v3.8.1, which is the official Selenium version that we support, is simply not supported for MacOS10. By removing support for these outdated platforms we are able to focus on the performance and stability for the platforms that are used much more in the real world.
 
-#### Removed Support for Testingbot
+#### Removed Support for TestingBot
 
-Testingbot did not support the latest browsers versions and/or the latest selenium driver versions for some platforms. Because of this and the fact that it was almost not used in ATS we decided to drop support for it, choosing instead to focus on the other providers which support the newest versions of browsers and drivers. If you still have this provider configured as a hub, you can no longer use it to run jobs. Any schedules or job templates that are configured to use this provider will return an error when executed.
+TestingBot did not support the latest browsers versions and/or the latest Selenium driver versions for some platforms. Because of this and the fact that it was almost not used in ATS we decided to drop support for it, choosing instead to focus on the other providers which support the newest versions of browsers and drivers. If you still have this provider configured as a hub, you can no longer use it to run jobs. Any schedules or job templates that are configured to use this provider will return an error when executed.
 
 ### Integrated Function Documentation
 
@@ -969,16 +969,16 @@ The same holds for the function parameters.
 
 ### Improvements
 
-* We added the corresponding provider logos for Browserstack and Saucelabs.
+* We added the corresponding provider logos for BrowserStack and Sauce Labs.
 * We sped up the opening of the edit page for large datasets.
 * When editing a value for parameter of type number it is now possible to use the edit dialog, same as for text parameters.
-* When running from Browserstack or Saucelabs we select by default the Windows 10 platform and FullHD resolution. For MacOS the resolution UXGA is selected by default. We hope that this will save a few clicks.
+* When running from BrowserStack or Sauce Labs we select by default the Windows 10 platform and FullHD resolution. For MacOS the resolution UXGA is selected by default. We hope that this will save a few clicks.
 * We have changed the platform selection to use icons instead of a drop-down. This also enabled us to limit the choices to only those which make sense, for example you can no longer select Internet Explorer and MacOS.
 * We removed the "View" button for pre-conditions where the condition is related to a function. Since function can not be viewed this button is not needed.
 * In the search dialog there is now an indicator when multi selection is available.
 * When a test case/suite that is related to a schedule/job template is deleted the related schedule/job is also deleted.
 * We added a progress bar on the sidebar search dialog. We hope that this helps prevent error due to accidentally double-clicking the select button.
-* When running a job on Browserstack or Saucelabs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
+* When running a job on BrowserStack or Sauce Labs the job name is set as the session name in their portals. This should make it easier to correlate the provider sessions with jobs in ATS.
 
 ### Fixes
 
@@ -1029,7 +1029,7 @@ We know that the ability to generate reports is important in order to get an ove
 
 ### Upgraded Selenium Version and Support for Newer Browser Versions
 
-In order to add support for newer browser version, we upgraded the ATS selenium drivers from version 2.53.0 to version 3.8.1. For the supported providers (Browserstack, Saucelabs, and Testingbot), we set 3.8.1 as the Selenium version. However, if you have an on-premises Selenium grid, we advise you to update it to Selenium version 3.8.1. We also upgraded ATS with support for Chrome version 64 and Firefox version 58, which are now the officially supported browser versions. For more information on supported provider, platform, and browser combinations, see [Compatibility Table](/appstore/partner-solutions/ats/rg-two-provider_platform_browser_compatiblitiy_table/) in the ATS Reference Guide.
+In order to add support for newer browser version, we upgraded the ATS Selenium drivers from version 2.53.0 to version 3.8.1. For the supported providers (BrowserStack, Sauce Labs, and TestingBot), we set 3.8.1 as the Selenium version. However, if you have an on-premises Selenium grid, we advise you to update it to Selenium version 3.8.1. We also upgraded ATS with support for Chrome version 64 and Firefox version 58, which are now the officially supported browser versions. For more information on supported provider, platform, and browser combinations, see [Compatibility Table](/appstore/partner-solutions/ats/rg-two-provider_platform_browser_compatiblitiy_table/) in the ATS Reference Guide.
 
 ### Internet Explorer 11
 
@@ -1102,7 +1102,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 
 ### Known Issues
 
-* The grid that shows the jobs on the **Test Runs** page is refreshing every 3 seconds. This can result in flickering on the highlighted row . If you try to click a button in the exact moment of the refresh, it w will not work. The effect is more pronounced on slower computers that take longer to render the refreshed data.
+* The grid that shows the jobs on the **Test Runs** page is refreshing every 3 seconds. This can result in flickering on the highlighted row. If you try to click a button in the exact moment of the refresh, it will not work. The effect is more pronounced on slower computers that take longer to render the refreshed data.
 
 ## 2.4.1
 
@@ -1133,7 +1133,7 @@ This opens up a lot exciting possibilities for us as ATS developers. For example
 * Sometimes when jobs are not executed properly, they have no end date/time. As a result, they were stuck at the top of the list of jobs, which is sorted by end date. To work around this, these "broken" jobs now get a fixed end date after the application restart.
 * When adding a test case to a story, it is also possible to create a new test case. You can then select another test case as a template and select **Create & Open**. However, this opened the template instead of the new test case. We've changed this so it opens the new test case instead.
 * The scheduled deletion of jobs and logs resulted in many long-running server actions and slowed down the environment. The reason was the cascaded deletes in big jobs. We've improved this by deleting only small chunks. This doesn't impact server performance.
-* The configuration for selenium hubs allows for the addition of custom capabilities. There was a bug that custom capabilities of the Boolean type could not have the value **false**. This has been fixed.
+* The configuration for Selenium hubs allows for the addition of custom capabilities. There was a bug that custom capabilities of the Boolean type could not have the value **false**. This has been fixed.
 * In test cases and actions, you can extract multiple test steps into a new action. You define a name and description for the action, and a new step to call this action is automatically created. In the last step, we accidentally copied the description of the new action into the test step. We've removed this.
 * When a test cases/suite was deleted, we did not properly update our stored statistics. As a consequence, the dashboard showed the wrong data for test suites.
 * The **Click Widget** action didn't propagate failures properly. As a consequence, a test step that used this action was not marked as failed, even though the actual click was not successful. This has been fixed.
@@ -1224,7 +1224,7 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 * Helping new users to get on board is important. We've added instructions on some screens to help you onboard your app in ATS.
 * There is a very powerful search function in the repository. Yet, it was not possible to use the standard copy, cut, or delete buttons on the search results. These buttons are now available.
-* Configuring a Selenium provider is one of the few things you need to do before getting started. To make this step smoother, we've introduced different screens for each provider type. Whether it's Browserstack, Sauce Labs, or Testingbot, we'll explain what information is needed and where to find it.
+* Configuring a Selenium provider is one of the few things you need to do before getting started. To make this step smoother, we've introduced different screens for each provider type. Whether it's BrowserStack, Sauce Labs, or TestingBot, we'll explain what information is needed and where to find it.
 
 ### Fixes
 

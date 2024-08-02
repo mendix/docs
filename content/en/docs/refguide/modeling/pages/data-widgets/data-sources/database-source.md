@@ -8,7 +8,7 @@ weight: 10
 
 If **Database** is selected as the data source for a widget then an object or objects shown are retrieved directly from the database with a query. This data source is also supported in [offline](/refguide/offline-first/) applications in which case the data will come from the database on the mobile device.
 
-You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](/refguide/access-rules/) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules . Access rules will also be applied when executing microflows which saves you from repeating constraints.
+You can filter data shown with the help of database [constraints](#constraints). However, if you want to restrict data not for a single widget, but for several, you may want to apply [access rules](/refguide/access-rules/) for entities instead of database constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
 ## 2 Properties
 

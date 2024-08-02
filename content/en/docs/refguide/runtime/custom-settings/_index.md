@@ -96,7 +96,7 @@ Examples of the second case are OData contracts, sending mails to your organizat
 
 #### 2.1.1 Multiple External Domains
 
-Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
+Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port`, `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
 
 ## 3 Log File Settings
 
@@ -118,7 +118,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="DatabaseType" href="#DatabaseType">DatabaseType</a> | Defines the database engine which is used as the Mendix database. Valid values are `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | <a id="DatabaseUserName" href="#DatabaseUserName">DatabaseUserName</a> | Name required for authentication to the database. | |
 | <a id="DatabasePassword" href="#DatabasePassword">DatabasePassword</a> | Password for the `DatabaseUserName` supplied above. | |
-| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
+| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseJdbcUrl" href="#DatabaseJdbcUrl">DatabaseJdbcUrl</a> | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | When `true`, the connection will be made using SSL without certificate validation. If you need certificate validation, use [DatabaseJdbcUrl](#DatabaseJdbcUrl) instead.<br />When `false`, the connection will be made without SSL (this is only relevant for SQL Server, which uses SSL by default). | |
@@ -132,7 +132,7 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.2 Connection Pooling {#connection-pooling}
 
-The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/) . 
+The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 

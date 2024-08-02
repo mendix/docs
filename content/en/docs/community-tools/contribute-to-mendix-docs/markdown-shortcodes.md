@@ -55,7 +55,7 @@ This alert is indented to match the sub-list item.
 
 ```json
 {
-     "Status" :  "Stopped" ,
+     "Status" :  "Stopped",
      "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com",

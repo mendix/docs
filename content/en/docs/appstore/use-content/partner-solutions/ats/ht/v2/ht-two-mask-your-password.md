@@ -76,7 +76,7 @@ To unmask your password, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-mask-your-password/Test_steps_tab.png" class="no-border" >}}
 
-21. Click the drop-down meny for the **Username** input parameter.
+21. Click the drop-down menu for the **Username** input parameter.
 22. Select **Username [String]** below **Input values**:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-mask-your-password/Username_input_value.png" class="no-border" >}}

@@ -64,7 +64,7 @@ When Context source is selected, the **Data source** section (required) configur
 
 ##### 2.1.1.2 Database List {#database}
 
-The database source type can be used to set the value of a string or interger attribute with options fetched from an attribute with the same type.
+The database source type can be used to set the value of a string or integer attribute with options fetched from an attribute with the same type.
 
 ##### 2.1.1.3 Static Values {#static}
 

@@ -152,7 +152,7 @@ With the keyboard, the user can press <kbd>Tab</kbd> and navigate between elemen
 
 ### 5.2 Keyboard Selection
 
-Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>Shift</kbd> +<kbd>Space</kbd> and the item will be selected.
+Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>Shift</kbd> + <kbd>Space</kbd> and the item will be selected.
 
 ### 5.3 Keyboard Multi-Selection
 

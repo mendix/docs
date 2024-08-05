@@ -45,10 +45,10 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>x</kbd> | <kbd>Command</kbd> + <kbd>x</kbd> | Move the selected element to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>y</kbd> | <kbd>Command</kbd> + <kbd>y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>z</kbd> | <kbd>Command</kbd> + <kbd>z</kbd> | Undo the last action in an editor pane. |
-| <kbd>Alt</kbd> + <kbd>Shift</kbd> +&nbsp;<kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zooms in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +&nbsp;<kbd>Minus&nbsp;sign</kbd> | Not available | Zooms in or out. |
-| <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Minus&nbsp;sign</kbd> | Not available | Zooms in or out. |
+| <kbd>Shift</kbd> + Mouse&nbsp;scroll&nbsp;wheel | <kbd>Shift</kbd> + Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | Not available | Paste the widget styling onto another selected widget. |
 
@@ -58,7 +58,7 @@ The following key combinations work in the panes of Studio Pro:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd>&nbsp;+<kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
 
 ### 2.2 Dialog Boxes
 
@@ -68,7 +68,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Command</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Not available | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Tab</kbd> | Not available | Switches between tabs in a tabbed dialog box. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Not available | Switches between tabs in a tabbed dialog box. |
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
@@ -87,7 +87,7 @@ The following shortcut keys are available in the domain model editor:
 | Windows | Mac                                     | Description |
 | --- | --- | --- |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the name of the selected entity, attribute, or association. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>a</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;<kbd>a</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd> | <kbd>Command</kbd> + <kbd>a</kbd> | Selects all entities. |
 | <kbd>Ctrl</kbd> | <kbd>Command</kbd> | When pressing the <kbd>Ctrl</kbd>/<kbd>Command</kbd>, you can select additional entities components. Clicking a selected entity while holding <kbd>Ctrl</kbd>/<kbd>Command</kbd> will deselect it. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears selection. |
@@ -99,7 +99,7 @@ The following shortcut keys are available in the page editor:
 | Windows | Mac | Description |
 | --- | --- | --- |
 | Arrow keys | Arrow keys| Moves the selection box to the widget or element in the direction of the arrow key. For example, if currently a label is selected and you press the right arrow key, the text box to the right of it becomes selected. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;arrow&nbsp;keys | Not available | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
+| <kbd>Ctrl</kbd> + arrow&nbsp;keys | Not available | Moves the currently selected item up/down or left/right. This works on table columns and rows, tab pages, data grid and data view buttons, search fields, etc. |
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
@@ -113,7 +113,7 @@ The following shortcut keys are available for the debugger:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Alt</kbd>&nbsp;+&nbsp;<kbd>F5</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | **Step into** – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
+| <kbd>Alt</kbd> + <kbd>F5</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | **Step into** – moves the debugger into the sub-microflow/sub-nanoflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F6</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F6</kbd> | **Step over** – moves the debugger to the next step in the same workflow/microflow/nanoflow. |
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F7</kbd> | **Step out** – instructs the debugger to leave the sub-microflow/sub-nanoflow or loop. |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F8</kbd> | **Continue** – instructs the debugger to continue until it reaches another breakpoint. |
@@ -146,7 +146,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens advanced search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>f</kbd> | Displays usages of the selected object. |
 | <kbd>Ctrl</kbd> + <kbd>g</kbd> | <kbd>Command</kbd> + <kbd>g</kbd> | Goes to any document or domain model element. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>l</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>l</kbd> | Cycles through the configured languages. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> | Cycles through the configured languages. |
 | <kbd>Ctrl</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>n</kbd> | Creates a new document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | Creates a new app. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens an existing app or app package. |

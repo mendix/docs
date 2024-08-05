@@ -334,7 +334,7 @@ An object passed to a microflow will not be committed automatically. If you want
 
 If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
 
-#### 6.3.1 Retrieving Associated Objects
+#### 6.3.1 Retrieving Associated Objects {#retrieve-associated-objects}
 
 If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. 
 In order to do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).

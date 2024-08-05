@@ -225,7 +225,7 @@ This entity is the generalization of all request entities of the S3 Connector. I
 | --- | --- |
 | `PathStyleAccessEnabled` | The PathStyleAccessEnabled attribute specifies whether the S3 resources are accessed using the path-style hosting or its default virtual hosting. |
 
-[Read more about these hosting styles | AWS Documentation ](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
+[Read more about these hosting styles | AWS Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/VirtualHosting.html)
 
 #### 4.1.19 AbstractPresignConfig {#abstractpresignconfig}
 

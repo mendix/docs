@@ -7,7 +7,7 @@ url: /refguide7/import-project-package-dialog/
 
 To create a new app from a Mendix project package (*.mpk*) file, you need to import an app package. The new app can either be stored in a version control server or locally on disk.
 
-To open this dialog box,  go to **File > Import App Package**, browse to the *.mpk* file, and then open it.
+To open this dialog box, go to **File > Import App Package**, browse to the *.mpk* file, and then open it.
 
 {{< figure src="/attachments/refguide7/desktop-modeler/dialogs/import-project-package-dialog/import-project-package.png" class="no-border" >}}
 

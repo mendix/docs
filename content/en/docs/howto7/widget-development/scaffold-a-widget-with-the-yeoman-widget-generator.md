@@ -38,7 +38,7 @@ In the same window, install these dependencies by typing `npm install yo grunt-c
 
 This will usually take a minute or two. Warnings can be ignored. Node Package Manager (NPM) will tell you if it is having problems installing them by marking errors in red. If you have problems, see [Troubleshooting](#Troubleshooting).
 
-Now the dependecies are installed globally, which means you can use them from any folder in your command-line window.
+Now the dependencies are installed globally, which means you can use them from any folder in your command-line window.
 
 ## 3 Run the Generator
 
@@ -56,7 +56,7 @@ After you have entered the options, the system will install all the dependencies
 
 ## 4 Use Grunt
 
-Grunt is a powerfull task-runner that will speed up your widget development. In the previous steps you installed the Grunt client (`grunt-cli`), and now you are going to use it.
+Grunt is a powerful task-runner that will speed up your widget development. In the previous steps you installed the Grunt client (`grunt-cli`), and now you are going to use it.
 
 ### 4.1 Start the Modeler (Test App)
 
@@ -72,16 +72,16 @@ You can watch for any changes in your *src* folder by using the default watch ta
 
 {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398842.png" class="no-border" >}}
 
-Now, everytime you make changes in your *src* folder, it will automatically build a new *.mpk* file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
+Now, every time you make changes in your *src* folder, it will automatically build a new *.mpk* file and put this in your */test/widgets/* folder. It will also copy the changes to the */test/deployment/web/widgets/* folder.
 
 #### 4.2.1 Why and How to Use Grunt Watch
 
-The watch task has the advantage that you do not have to restart your test app everytime you make changes to any JavaScript file. There are two exceptions:
+The watch task has the advantage that you do not have to restart your test app every time you make changes to any JavaScript file. There are two exceptions:
 
 * Changes to CSS are not automatically picked up
     * These are built when you run the app
 * Changes to XML are not automatically picked up
-    * Everytime you make changes to your *Widget.xml* inside your *src/Widget/* folder, you need to update the widget in the Modeler
+    * Every time you make changes to your *Widget.xml* inside your *src/Widget/* folder, you need to update the widget in the Modeler
 
 To update the widget, press **F4** in the Modeler or select **Project** > **Synchronize Project Directory**:
 

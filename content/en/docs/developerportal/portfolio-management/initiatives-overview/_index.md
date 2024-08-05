@@ -208,7 +208,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 
 ### 3.1 Kanban View {#kanban-view}
 
-In Kanban view, all the initiatives are represented by initiative cards and are categorized in different columns. A column indicates the stage that an initiative is currently in. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details. To move an initiative to a different stage, hover over the initiative card, and then click **Move Left** ({{% icon name="chevron-left" %}}) or **Move Right** ({{% icon name="chevron-right" %}}) on the left or right side of the card.
+In Kanban view, all the initiatives are represented by initiative cards and are categorized in different columns. A column indicates the stage that an initiative is currently in. You can drag an initiative card to a different column to change its stage. You can also drag initiative cards around within a column to change their sequence. Newly created initiatives are placed at the bottom of the column. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details.
 
 {{% alert type="info" %}}A Portfolio Manager can set up custom stages for initiatives on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 

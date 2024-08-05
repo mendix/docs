@@ -9,7 +9,7 @@ description: "Describes the configuration and usage of the Label Selector widget
 
 The [Label Selector](https://marketplace.mendix.com/link/component/292/) widget enables easily creating objects, assigning objects to other objects, and removing objects (for example, labels) from other objects.
 
-It features both an input box for searching and creating objects and a drop-down menu for selecting objects that already exist . The implementation is based on the [Tag-it library](https://aehlke.github.io/tag-it/).
+It features both an input box for searching and creating objects and a drop-down menu for selecting objects that already exist. The implementation is based on the [Tag-it library](https://aehlke.github.io/tag-it/).
 
 You configure background colors for labels and how the text contrasts with a label background via the `text-normal` or `text-contrast` class.
 

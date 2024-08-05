@@ -138,8 +138,8 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/component-details/).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
-4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
-5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
+4. Go to the **Releases** tab and **Download** the desired version. Mendix recommends using the latest version of the component if possible.
+5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded:
 
     {{< figure src="/attachments/appstore/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" class="no-border" >}}
 
@@ -250,7 +250,7 @@ A module downloaded from the Marketplace has a light blue icon to differentiate 
 
 #### 3.2.1 Updating the Module to a Newer Version {#update-module}
 
-To update the module in your app to a newer version, follow these steps::
+To update the module in your app to a newer version, follow these steps:
 
 1. Before downloading the newer version, remove all the Java libraries that are only used by this module from the **userlib** folder in your app directory. Java libraries are accompanied by a blank *[Module].RequiredLib* file. This will help you identify by which module the Java libraries are used. Doing this prevents you from ending up with having conflicting Java libraries which cause unexpected issues. 
 

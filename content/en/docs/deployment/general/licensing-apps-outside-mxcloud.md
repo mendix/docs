@@ -2,7 +2,7 @@
 title: "Licensing Apps"
 url: /developerportal/deploy/licensing-apps-outside-mxcloud/
 weight: 50
-description: "How to apply licenses to apps which are outside Mendix Cloud"
+description: "How to obtain and activate a Mendix license for apps on various clouds"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
@@ -11,7 +11,7 @@ description: "How to apply licenses to apps which are outside Mendix Cloud"
 
 On Mendix Cloud, you can build [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app), which let you try things out and build and test apps using all the functionality of Mendix.
 
-You can also deploy apps without a license to another public or private cloud of your choice, such as SAP Business Technology Platform (SAP BTP). This gives you the opportunity to try things out and to build and test apps using both the functionality of Mendix and your target cloud.
+You can also deploy apps without a license to another public or private cloud of your choice, such as SAP Business Technology Platform (SAP BTP). This gives you the opportunity to try things out and to build and test apps using the functionality of Mendix as well as your target cloud.
 
 Unlicensed apps, running outside Mendix Cloud, have some restrictions. These restrictions are listed in the table below.
 
@@ -33,34 +33,34 @@ The app checks for a license each time it is started. If the license expires whi
 
 ## 2 Obtaining a Mendix License{#get-license}
 
-You can obtain a Mendix license from Mendix support. 
-
+{{% alert color="info" %}}
 If you want to create a new licensed node in Mendix Cloud but your contract does not allow for more licensed nodes, contact your Customer Success Manager (CSM) first.
+{{% /alert %}}
 
-For all other license requests and **Subscription Secrets** to deploy to SAP BTP and Mendix for Private Cloud, do the following:
+You can obtain a Mendix license from Mendix Support, as described below. If you want to deploy to SAP BTP or Mendix for Private Cloud, you can also use this process to obtain a subscription secret. Follow these steps:
 
-1. Open the [Request New App Node](https://newnode.mendix.com/) app.
+1. Open the [Request New App Node](https://newnode.mendix.com/) app and use the form to fill in the basic information, such as the app name and hosting type. Click **Next**.
 
-2. Fill in the basic information, such as app name and hosting type.
+1. Depending on the hosting type you select, you may need to provide additional information about your app. For example, if you are deploying the app locally on a virtual machine, you need to provide the server ID. If prompted, fill in the requested information and click **Next**.
 
-3. Provide additional information about your app, if required by the type of hosting. For example, you need to provide the server ID if you are deploying the app locally on a Virtual Machine.
-
-4. Save the app details.
+1. Click **Save** to submit your request.
 
 Mendix Support will contact the Technical Contact via a ticket in the Support Portal.
 
-If you are hosting your app somewhere else, such as on Cloud Foundry, Mendix Support will provide you with two parts to your key:
+If you are hosting your app somewhere else, such as on Cloud Foundry, Mendix Support will provide the following license credentials:
 
 * **LicenseId** – a unique identifier for your license, based on where it is being deployed
-* **LicenseKey** – a base64 string
+* **LicenseKey** – a Base64 string
 
-An example **LicenseId** is `aab8a0a1-1370-467e-918d-3a243b0ae160`. The **LicenseKey** is a very long base64 string.
+An example **LicenseId** is `aab8a0a1-1370-467e-918d-3a243b0ae160`. The **LicenseKey** is a very long Base64 string.
 
-## 3 Activating a Mendix License
+## 3 Activating a Mendix License {#activate-mendix-license}
+
+Once you have obtained a new Mendix license, link it to your app as described below. The specific steps depend on where you deploy your app.
 
 ### 3.1 Mendix Cloud
 
-For Mendix apps to run in production on Mendix Cloud, they must be linked to a licensed node in Mendix Cloud. This process is described in [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
+For a Mendix app to run in production on Mendix Cloud, it must be linked to a licensed node in Mendix Cloud. This process is described in [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
 ### 3.2 SAP BTP
 
@@ -135,7 +135,7 @@ For full instructions on how to do this, see [Activate a Mendix License on Micro
 
 ### 3.9 Unix-Like Server
 
-To license a Mendix app on Linux, or another Unix-like operating system, follow these steps:
+To license a Mendix app on Linux or another Unix-like operating system, follow these steps:
 
 1. Open the interactive m2ee console.
 2. Use the command `show_license_information` to obtain your server ID.
@@ -143,7 +143,3 @@ To license a Mendix app on Linux, or another Unix-like operating system, follow 
 4. Activate your license on the server, using the m2ee command `activate_license`.
 
 For more instructions on how to do this, see [Unix-Like Deployment](/developerportal/deploy/unix-like/).
-
-## 4 Read More
-
-* [Submit a Support Request](/support/submit-support-request/)

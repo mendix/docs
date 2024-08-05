@@ -22,7 +22,7 @@ If you have an Apple Mac available, see the Apple developer documentation on [ce
 
 ### 2.2 On Other Platforms
 
-If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utilty. 
+If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utility. 
 
 {{% alert color="warning" %}}
 **Do not use OpenSSL version 3.x on Windows**

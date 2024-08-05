@@ -21,7 +21,7 @@ The following diagram outlines the available integration options:
 
 ### 2.1 Building Mendix Apps on Top of Snowflake
 
-Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) or the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). Both of these connectors enable you to perform the following tasks:
+Mendix provides real-time interaction with Snowflake through the [External Database connector](https://marketplace.mendix.com/link/component/219862) and the [REST SQL connector](https://marketplace.mendix.com/link/component/225717). These connectors can enable you to perform the following tasks:
 
 * Read, write, and use data from Snowflake in your application.
 * Execute Java [stored procedures](https://docs.snowflake.com/en/developer-guide/stored-procedure/stored-procedures-overview).
@@ -33,13 +33,13 @@ For a comparison of the functions of the connectors, refer to the sections below
 
 The [External Database connector](https://marketplace.mendix.com/link/component/219862) is the recommended option that you can use to integrate your Mendix app with Snowflake. It offers a premium developer experience where you can test connections and queries during design time by using a view of all schemas and objects to which you can connect. It makes use of the JDBC protocol and the usage of Python stored procedures in addition to Java. 
 
-The External Database connector only supports system-level authentication. That is, it authenticates in Snowflake by using the username and password of a single Snowflake user. Because of that, the connector does not support role-based access control (RBAC) per end user.
+The External Database connector only supports system-level authentication. It can authenticate in Snowflake by using the username and password of a single Snowflake user. It also offers key-pair authentication with a private key. The connector does not support role-based access control (RBAC) per end user.
 
-The Snowflake support for the External Database connector is currently in a public Beta version. It is available only for Mendix 10.
+The External Database connector has GA support for Snowflake from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/) (Beta versions are available from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/)). Some Cortex functionalities are currently limited when using the External Database connector, but they are on the roadmap.
 
 #### 2.1.2 REST SQL Connector
 
-The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), available from the Mendix Marketplace, supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard.
+The [REST SQL connector](https://marketplace.mendix.com/link/component/225717), available from the Mendix Marketplace, supports the 9.24 LTS version of Mendix. It offers key-pair authentication with a private key file according to PKCS #8 standard and OAuth.
 
 With the REST SQL connector, authentication can be done either on system or on end-user level, and the connector supports role-based access control (RBAC) per end user as well.
 

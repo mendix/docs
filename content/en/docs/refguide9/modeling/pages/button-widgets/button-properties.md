@@ -93,7 +93,7 @@ To add parameters, do the following:
     {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/button-properties/new-parameter.png" alt="Adding New Parameter" class="no-border" >}}
 
 4. In the **Edit Template Parameter** dialog box, click **Select**, choose an attribute and confirm your choice.
-5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer , you need to use indexes {1} for the *Name* attribute:  
+5. In the **Caption** setting, write the text you would like to display and type **Index** of the parameter you would like to include. In the example below, to include a name of your customer, you need to use indexes {1} for the *Name* attribute:  
 
     {{< figure src="/attachments/refguide9/modeling/pages/button-widgets/button-properties/button-parameter-example.png" alt="Parameter Example" class="no-border" >}}
 

@@ -1,7 +1,7 @@
 ---
 title: "Translation Generator"
 url: /refguide/translation-generator/
-weight: 30
+weight: 80
 description: "Describes the features in Translation Generator."
 ---
 
@@ -28,6 +28,10 @@ After clicking **Generate Translations...**, you will be asked to confirm your c
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/confirmation.png" max-width=80% >}}
 
 Once translations are generated, you need to Click **Translate** to save the changes. You can then go to the next language to translate further.
+
+{{% alert color="warning" %}}
+Currently, if you encounter an error after clicking **Generate Translations...**, try to sign out and sign in to Studio Pro again.
+{{% /alert %}}
 
 ## 3 Read More
 

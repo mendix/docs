@@ -16,6 +16,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### July 16, 2024
+
+#### Improvements
+
+* We changed the [Database Freeable Memory alert thresholds](/developerportal/operate/monitoring-application-health/#dbase-freeable-memory) for the following cloud resource packs:
+    * XS21: The critical alert threshold changed from 10% to 5% freeable memory.
+    * XS20 (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * S (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * Strato (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+
 ### July 4, 2024
 
 #### Pipelines New Features
@@ -947,7 +957,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-{{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+{{% alert color="warning" %}}You may see a large increase in the size of the unused Java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
 ### June 17, 2020
 
@@ -1220,7 +1230,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fixes
 
 * We addressed and fixed an issue that caused some Mendix Cloud v4 backups to be duplicated.
-* We fixed a problem on Mendix Cloud v3 thath prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We fixed a problem on Mendix Cloud v3 that prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem that meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)

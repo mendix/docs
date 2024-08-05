@@ -44,21 +44,43 @@ Once a database and mapping have been defined, you can use the **importByMapping
 
 You can create new database connections from the **Databases** page. Each connection has a few basic properties. After creating a database connection, you should synchronize the table information using the button on the overview. This makes sure the connection information is correct, and that the replication module has all the table information from your database.
 
-#### 2.1.1 Type
+On this page you must select the database type before filling in the connection details. Available database parameters vary depending on database type.
 
-This is the type of database you want to import. Available database parameters vary per database type.
+#### 2.1.1 Common Parameters
 
-#### 2.1.2 Host and Port
+The following parameters are available to most database types:
 
-This is the host name and port number of the server on which your database is running.
+* Host
+* Port
+* Username
+* Password
+* Database time zone
 
-#### 2.1.3 Name and Instance Name
+Depending on the database, some of the following parameters may be available:
 
-This is the name and instance name of the database to connect to. The **Instance name** is optional.
+* Database name
+* Instance name
+* Service name (exclusive to Oracle)
+* SID (exclusive to Oracle)
+* Use Integrated Security (for example, to connect to SQL Server using the your Windows user credentials)
 
-#### 2.1.4 Username and Password
+##### 2.1.1.1 Database time zone {#database-timezone}
 
-These are the credentials necessary to sign in to the database.
+By default, the module assumes that time zone of the source database is the same as Mendix application server time zone. Starting with module version 8.2.0, it is possible to configure source database time zone. If the setting is defined, the module will convert imported datetime values from specified database time zone to UTC. If the setting is not defined, the module will assume that database time zone is the same as application server time zone and will convert imported datetime values from server time zone to UTC.
+
+#### 2.1.2 Custom Connection Parameters
+
+If your database type is not listed, it may still be possible to connect using a JDBC compatible driver and the **Custom** connection option. You need to obtain the drivers and place them inside the `userlib` directory and then configure the connection parameters:
+
+* Username and Password: The credentials given to the driver to connect to the database server.
+* Connection string: A fully formed JDBC URL string (for example, `jdbc:postgresql://localhost:5432/database` for a PostgreSQL database).
+* Open/Close escape character: Characters used to quote table and column names (for example, `"` in PostgreSQL or `[` and `]` in SQL Server).
+* Driver class: The full name of the driver to be loaded (for example, `org.postgresql.Driver` for PostgreSQL).
+* Escape column names: Checkbox indicating if column names must be quoted using the escape characters when querying the database.
+* Escape table names: Checkbox indicating if table names must be quoted using the escape characters when querying the database.
+* Escape the schema and table name separately: Checkbox indicating schema and table names should be quoted together (for example, `"public_schema.table_name"`) or separately (for example, `"public_schema"."table_name"`).
+* Allow AS token for tables: Checkbox indicating if `AS` is necessary when aliasing table names (for example, `SELECT * FROM table AS A` vs `SELECT * FROM table A`).
+* Close connection after query: Checkbox indicating if the connection to the database must be closed after every query.
 
 ### 2.2 Mapping Properties
 
@@ -226,6 +248,16 @@ Setting this to advanced reveals more options. These should only be modified by 
 * **Reset empty associations** – this means that if there is an empty value found for the associations, the reference should be reset
 * **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
 * **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
+
+### 7.5 Final Microflow
+
+This setting allows specifying a microflow that will be executed after the import is completed. The microflow can have 2 optional parameters: `TableMapping` and `ReplicationStatus`. `TableMapping` is the instance that has just been executed. `ReplicationStatus` (not committed) contains the statistics that are also printed in the log.
+
+### 7.6 Time Zone of Datetime Values in the Database
+
+This setting specifies the time zone in which datetime values are stored in the source database. If the setting is defined, all imported datetime values are converted from database time zone to UTC and stored in UTC in resulting Mendix objects. If the setting is not defined, it defaults to [database time zone](#database-timezone).
+
+In most of the cases, there is no need to change this setting unless you know that datetime values in this particular table are stored in a time zone that is different from the rest of the database.
 
 ## 8 Configuring an Import Call {#import-call}
 

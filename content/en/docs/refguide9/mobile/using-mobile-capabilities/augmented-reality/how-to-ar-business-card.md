@@ -50,7 +50,7 @@ Next you will add a virtual image of your business card to overlap the physical 
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/square-added.png" alt="Square added"   width="400"  class="no-border" >}}
 
-1. Double click the **Square (AR)** widget.
+1. Double-click the **Square (AR)** widget.
 1. Select the **Material** tab.
 1. Select **Material type** > **Texture**.
 1. Select the image of your business card for the **Texture**. This should be the same image as you selected for your **Image Tracker (AR)**. When finished your dialog box will look like this:
@@ -83,7 +83,7 @@ The following settings correctly place them underneath our business card (since 
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object" width="400" class="no-border" >}}
 
-You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
+You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and LinkedIn has #0A66C2:
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-material-dialogue.png" alt="twitter material"   width="400"  class="no-border" >}}
 

@@ -22,7 +22,7 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 {{% /alert %}}
 
-To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/) how-to's.
+To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/) how-tos.
 
 ## 2 General Settings
 
@@ -89,7 +89,7 @@ The return parameter type determines the type of data a JavaScript action return
 
 #### 2.3.2 Variable Name
 
-This setting allows you to give a name to the Javascript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
+This setting allows you to give a name to the JavaScript action's return value if a return type is selected. This name is used when you drag the action into a nanoflow. The default value is set to **ReturnValueName**.
 
 {{% alert color="info" %}}
 The ability to name return variables was added in Mendix version 9.23.0

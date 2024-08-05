@@ -306,6 +306,10 @@ In this section you can select an action to be executed **On change** by the fil
 When a drop-down filter is used in conjunction with an Association Filter data grid configuration, only **Automatic options** are supported. Any custom options will be ignored. To enable association filtering, see the [Association Filter](#association-filter) section.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+{{% /alert %}}
+
 When adding a new option, the following properties are required:
 
 * **Caption** — The text being rendered for each option in the drop-down.
@@ -332,10 +336,6 @@ If **Multiselect** is enabled you must select a String attribute containing `Unl
 #### 7.2.2 Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
-
-{{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, **Default value**, and **On change** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
-{{% /alert %}}
 
 ### 7.3 Number Filter
 
@@ -481,7 +481,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 10 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those versions use [Filtering APIs](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
 
 ## 11 Troubleshooting
 
@@ -531,11 +531,11 @@ The setting for action triggers is related to the selection method and can somet
 | Selection method | Action trigger          | Selection trigger                                | Supported |
 | ---------------- | ----------------------- | ------------------------------------------------ | --------- |
 | Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
-| Checkbox         | Double click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Double-click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
 | Row              | Single click on the row |                                                  | No        |
-| Row              | Double click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+| Row              | Double-click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
 
-To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way user may select a row by double clicking on it.
+To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 
 ## 13 Keyboard Support {#keyboard-support}
 

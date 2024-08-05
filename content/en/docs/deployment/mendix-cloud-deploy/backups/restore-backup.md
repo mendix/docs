@@ -42,15 +42,15 @@ If you want to restore a backup to a different cloud node, or have your backup s
 1. Use the navigation panel to go to your app's **Backups** page.
 1. In the upper-right corner of the screen, select the environment to which the backup should be restored (for example, **Acceptance**).
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/environment.png" width=25% class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/environment.png" max-width=25%  class="no-border" >}}
 
 1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/backupoptions.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/backupoptions.png" alt="" class="no-border" >}}
 
 1. Confirm the backup restore by clicking **Restore Backup**.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/restore-backup.png" alt="" width=60% class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/restore-backup.png" alt="" max-width=60% >}}
 
 {{% alert color="info" %}}
 If the app is still running, you have to stop it by clicking **Stop Application**. Then click **Restore Backup** again.
@@ -81,7 +81,7 @@ However, the app previously deployed to the node does not need to have had the s
 
 {{% alert color="info" %}}For a Free App, you can only restore available backups that are made from the app and held in the cloud. It is not possible to upload a backup that was created or stored elsewhere. It also is not possible to manually create a backup.{{% /alert %}}
 
-1. 1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
+1. From [Apps](https://sprintr.home.mendix.com), open your Free App.
 1. Use the navigation panel to go to your app's **Backups** page.
 1. Select the environment to which the backup should be restored (for example, **Acceptance**).
 1. On the backup you want to restore, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) and select **Restore** from the drop-down list.
@@ -107,11 +107,11 @@ Contact [Mendix Support](https://support.mendix.com/) if you need further assist
 
 You may want to restore a backup that has been created on another platform (for example, an on-premises deployment). In this case, you will have to construct a backup file that Mendix Cloud will recognize. It is possible to upload a **Database Only** or **Full Snapshot** backup file.
 
-### 7.1 Database Only Format
+### 7.1 Database Only Format{#database-only}
 
 A **Database Only** backup file is a *.backup* file (for example, *database-fc9e126f-201811210121.backup*).
 
-### 7.2 Full Snapshot Format
+### 7.2 Full Snapshot Format{#full-snapshot}
 
 #### 7.2.1 .tar.gz Archive
 

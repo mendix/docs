@@ -7,7 +7,7 @@ url: /appstore/partner-solutions/ats/rg-one-open-groupbox/
 
 Opens a groupbox by its given name.
 
-## 2 Supported widgtes
+## 2 Supported Widgets
 
 * GroupBox
 

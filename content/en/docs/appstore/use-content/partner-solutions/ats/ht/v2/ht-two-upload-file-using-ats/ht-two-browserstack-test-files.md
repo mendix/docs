@@ -1,5 +1,5 @@
 ---
-title: "Browserstack Test Files"
+title: "BrowserStack Test Files"
 url: /appstore/partner-solutions/ats/ht-two-browserstack-test-files/
 ---
 

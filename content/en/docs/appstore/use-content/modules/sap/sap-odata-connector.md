@@ -177,7 +177,7 @@ If you receive a 401 error code from your OData call, it could be for one of the
 
 Check that the correct username and password are set on the ‘Add basic authentication’ activity when using request params in the microflow.
 
-#### 4.2.2 Destination service is not setup correctly
+#### 4.2.2 Destination service is not set up correctly
 
 Destination services are defined in SAP BTP. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
 

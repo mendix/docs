@@ -32,7 +32,7 @@ In the current version of ATS, test steps without an action lead to failing test
 
 ### 2.3 Running an Empty Test Case or Test Suite
 
-Empty test cases run and lead to a successfull test results.
+Empty test cases run and lead to a successful test results.
 
 Empty test suites run and are shown in the pending tests overview, but the result is not saved.
 

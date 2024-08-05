@@ -111,7 +111,7 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 * **Role** – This is the access role that was requested by the user.
 * **Date** – This is the date when the request was made.
 * **Reject** – Clicking this rejects the request.
-* **Approve** – Clicking this approves the request and gives the user access to the portfolio.
+* **Approve** – Clicking this opens a dialog box where you can approve the access request and give the user access to the portfolio. In the dialog box, you also have the option to assign the user an access role different from the one they requested.
 
 ## 4 Pending Invites {#pending-invites}
 

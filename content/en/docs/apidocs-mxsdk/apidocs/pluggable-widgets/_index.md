@@ -129,7 +129,7 @@ This section is generated based on options chosen while running the Mendix Plugg
 
 ### 4.2 Widget Description {#widget-description}
 
-The presentation of the widget in Studio pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
+The presentation of the widget in Studio Pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
 
 * `name` — The display name of the widget.
 * `description` — A short written description of the widget.

@@ -45,7 +45,7 @@ The microflow uses the [Insights Hub Application Credentials](#app-creds) functi
 
 2. Developer Tenant:
 
-    The following cloud foundry environment variables must be set for the app:
+    The following Cloud Foundry environment variables must be set for the app:
 
     | Developer Tenant | Description |
     | ----- | ----- |
@@ -146,14 +146,15 @@ The *ClientID* is built from the combination of:
 ```*Host tenant*-*Cockpit application name*-*Cockpit application version*```
 
 Ensure you have filled these constants correctly.
-If everything is setup correctly the form is auto filled and submitted.
+
+If everything is set up correctly, the form is auto filled and submitted.
 
 Don't forget to restart Studio Pro after you change / add the environment variable.
 {{% /alert %}}
 
 To create the app credentials:
 
-1. Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below . See also, [Insights Hub Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Insights Hub – deployment*.
+1. Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below. See also, [Insights Hub Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Insights Hub – deployment*.
 2. Go to the **App Credentials** page in the *Authorization Management* tab of the Insights Hub Developer Cockpit.
 3. Choose your app.
 4. Click **Issue access** to obtain a token.

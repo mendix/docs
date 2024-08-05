@@ -69,7 +69,7 @@ Flows form the connection between elements.
 
 ## 6 Gateways {#gateways}
 
-Gateways deal with making choices and merging different paths again..
+Gateways deal with making choices and merging different paths again.
 
 | Graphic | Name | Description |
 | --- | --- | --- |

@@ -124,7 +124,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 | mouse scroll | Scroll up/down. |
 | <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
 | <kbd>Space</kbd> + mouse button | Drag screen.  |
-| <kbd>Ctrl</kbd> + <kbd>Plus sign</kbd>/<kbd>Minus sign</kbd> | Zoom in/out.  |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in/out.  |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 | <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
 

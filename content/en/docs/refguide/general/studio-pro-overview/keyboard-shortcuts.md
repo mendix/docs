@@ -21,7 +21,7 @@ These keys are active within the [Dockable Panes](#panes) and editors, such as t
 
 #### 2.1.1 All Panes and Editors {#panes}
 
-You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + (<kbd>Shift</kbd>) + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
+You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
 {{< figure src="/attachments/refguide/studio-pro-overview/ctrl-tab-navigation.png" class="no-border" >}}
 
@@ -30,7 +30,7 @@ There are alternative ways to navigate between tabs within panes:
 | Windows | Mac | Description |
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>1</kbd> - <kbd>0</kbd> | Not available | Switch to tab at selected tab position in the current window. |
-| <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> / <kbd>PgDn</kbd> | Not available | Switch to next/previous tab in active pane. |
+| <kbd>Ctrl</kbd> + <kbd>Page&nbsp;up</kbd> / <kbd>Page&nbsp;down</kbd> | Not available | Switch to next/previous tab in active pane. |
 
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and are listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
@@ -45,9 +45,9 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>x</kbd> | <kbd>Command</kbd> + <kbd>x</kbd> | Move the selected element to the clipboard. |
 | <kbd>Ctrl</kbd> + <kbd>y</kbd> | <kbd>Command</kbd> + <kbd>y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>z</kbd> | <kbd>Command</kbd> + <kbd>z</kbd> | Undo the last action in an editor pane. |
-| <kbd>Alt</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
+| <kbd>Alt</kbd> + <kbd>Shift</kbd> +&nbsp;<kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
 | <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zooms in or out. |
-| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)+&nbsp;<kbd>-</kbd> | Not available | Zooms in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +&nbsp;<kbd>Minus&nbsp;sign</kbd> | Not available | Zooms in or out. |
 | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | <kbd>Shift</kbd>&nbsp;+&nbsp;Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> | Not available | Paste the widget styling onto another selected widget. |
@@ -58,7 +58,7 @@ The following key combinations work in the panes of Studio Pro:
 
 | Windows | Mac | Description |
 | --- | --- | --- |
-| <kbd>Ctrl</kbd>+(<kbd>Shift</kbd>)&nbsp;+<kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd>&nbsp;+<kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
 
 ### 2.2 Dialog Boxes
 
@@ -68,7 +68,7 @@ In most dialog boxes for editing properties, the following shortcut keys can be 
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | <kbd>Command</kbd> + <kbd>Enter</kbd> | Confirms all changes and closes the dialog box. Works as if the **OK** button was clicked. This is especially useful if the focus is on a multi-line text box; otherwise, pressing <kbd>Enter</kbd> will have the same effect. |
 | <kbd>Esc</kbd> | Not available | Cancels all changes and closes the dialog box. Works as if the **Cancel** button was clicked. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>Tab</kbd> | Not available | Switches between tabs in a tabbed dialog box. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>Tab</kbd> | Not available | Switches between tabs in a tabbed dialog box. |
 
 In most edit grids (such as the list of attributes in the entity properties), the following shortcut keys can be used:
 
@@ -129,7 +129,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>F3</kbd> | <kbd>Fn</kbd> + <kbd>F3</kbd> | Highlights the next find result in the **Find Results** pane and open it in an editor. |
 | <kbd>Shift</kbd> + <kbd>F3</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F3</kbd> | Highlights the previous find result in the **Find Results** pane and open it in an editor. |
 | <kbd>F4</kbd> | <kbd>Fn</kbd> + <kbd>F4</kbd> | Synchronizes the app directory. |
-| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | <kbd>Command</kbd> + <kbd>Q</kbd> | Exits. |
+| <kbd>Ctrl</kbd> + <kbd>F4</kbd> | <kbd>Command</kbd> + <kbd>q</kbd> | Exits. |
 | <kbd>F5</kbd> | <kbd>Fn</kbd> + <kbd>F5</kbd> | Runs the app locally so you can view the app. |
 | <kbd>Shift</kbd> + <kbd>F5</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | Stops the currently running app. |
 | <kbd>Ctrl</kbd> + <kbd>F5</kbd> | <kbd>Ctrl</kbd> + <kbd>Fn</kbd> + <kbd>F5</kbd> | Deploys to licensed cloud node. |
@@ -144,16 +144,16 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Shift</kbd> + <kbd>F11</kbd> | <kbd>Shift</kbd> + <kbd>Fn</kbd> + <kbd>F11</kbd> | Enables and disable distraction free mode. |
 | <kbd>Ctrl</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>f</kbd> | Opens search dialog box. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens advanced search dialog box. |
-| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Option</kbd>+ <kbd>f</kbd> | Displays usages of the selected object. |
+| <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>f</kbd> | <kbd>Command</kbd> + <kbd>Option</kbd> + <kbd>f</kbd> | Displays usages of the selected object. |
 | <kbd>Ctrl</kbd> + <kbd>g</kbd> | <kbd>Command</kbd> + <kbd>g</kbd> | Goes to any document or domain model element. |
-| <kbd>Ctrl</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>l</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;(<kbd>Shift</kbd>)&nbsp;+&nbsp;<kbd>l</kbd> | Cycles through the configured languages. |
+| <kbd>Ctrl</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>l</kbd> | <kbd>Command</kbd>&nbsp;+&nbsp;<kbd>Shift</kbd>&nbsp;+&nbsp;<kbd>l</kbd> | Cycles through the configured languages. |
 | <kbd>Ctrl</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>n</kbd> | Creates a new document. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>n</kbd> | Creates a new app. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens an existing app or app package. |
-| <kbd>Ctrl</kbd> + <kbd>S</kbd> | <kbd>Command</kbd> + <kbd>S</kbd> | Saves the changes in the currently active document tab. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Saves the changes in all open documents. |
-| <kbd>Ctrl</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>W</kbd> | Closes the current document. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd> | Opens an existing app or app package. |
+| <kbd>Ctrl</kbd> + <kbd>s</kbd> | <kbd>Command</kbd> + <kbd>s</kbd> | Saves the changes in the currently active document tab. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>s</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>s</kbd> | Saves the changes in all open documents. |
+| <kbd>Ctrl</kbd> + <kbd>w</kbd> | <kbd>Command</kbd> + <kbd>w</kbd> | Closes the current document. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>w</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected element. |
 
 ## 8 Read More

@@ -36,7 +36,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>y</kbd> – redo
     * <kbd>Ctrl</kbd> + <kbd>c</kbd> – copy
     * <kbd>Ctrl</kbd> + <kbd>v</kbd> – paste
-    * <kbd>Minus sign</kbd> + <kbd>Space</kbd> – starts a list
+    * <kbd>Minus&nbsp;sign</kbd> + <kbd>Space</kbd> – starts a list
     * <kbd>Tab</kbd> – moves the focus to the next element
 
 ## 2 Configuration

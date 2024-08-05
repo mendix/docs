@@ -146,7 +146,7 @@ For the keyboard navigation and keyboard selection to work, the user must open t
 
 ### 5.1 Keyboard Navigation
 
-Using the keyboard arrow keys (<kbd>{↑}</kbd>, <kbd>{↓}</kbd>, <kbd>{←}</kbd>, <kbd>{→}</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>{Home}</kbd>, <kbd>{End}</kbd>, <kbd>{Pageup}</kbd>, and <kbd>{Pagedown}</kbd>.
+Using the keyboard arrow keys (<kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Page&nbsp;up<</kbd>, and <kbd>Page&nbsp;down</kbd>.
 
 With the keyboard, the user can press <kbd>Tab</kbd> and navigate between elements to reach the Gallery items.
 

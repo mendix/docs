@@ -84,7 +84,7 @@ For operations that do not depend on the GenAICommons, you can take a different 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
-4. In the **Toolboxr** find the **ListFoundationModels** activity , in the **Amazon Bedrock (other)** section,.
+4. In the **Toolbox**, in the in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.

@@ -139,11 +139,12 @@ deploy:
   - provider: script
     script:
       - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-    skip_cleanup: true
     on:
       branch:
         - production
         - development
+  # ⋮
+  - edge: true
 
 after_deploy:
 ############# Skipped

@@ -42,7 +42,7 @@ For details on the widget lifecycle, reference this documentation:
 
 ### 3.3 Widget Scaffolding
 
-In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.JS tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator.
+In the past we created widgets using Brackets and a plugin. With the new JavaScript/Node.js tools that have recently come out, we deprecated this way of creating widgets. The new way of creating widgets is done using Yeoman and a generator.
 
 For a quick tutorial on using the widget generator, see [How to Scaffold a Widget with the Yeoman Widget Generator](/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/).
 

@@ -31,7 +31,7 @@ External entities have some limitations compared to persistable entities:
 * There are certain limitations on XPath constraints for external entities (for instance, you cannot filter on an association between a persistable entity and an external entity)
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints/) in the access rules of external entities cannot be set
-* Creatable / updatable external entities cannot be *saved* like persistable entities. Instead, in order to create or update these objects, you need to use a microflow with a [Send External Object](/refguide/send-external-object) activity
+* Creatable and updatable external entities cannot be saved like persistable entities. Instead, in order to create or update these objects, you need to use a microflow with a [Send External Object](/refguide/send-external-object) activity
 * Similarly, deletable entities cannot be used in a Delete activity. For this you can use the [Delete external object](/refguide/delete-external-object) activity
 
 Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are published.

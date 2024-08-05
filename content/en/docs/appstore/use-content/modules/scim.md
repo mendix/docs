@@ -8,7 +8,7 @@ description: "Describes the configuration and usage of the SCIM module, which is
 
 ## 1 Introduction
 
-The SCIM module facilitates integration with your IdP to create (pre-provision) selected users in your application as soon as they are created in the IdP, and deactivates them when they are removed or deactivated in the IdP.
+The [SCIM](https://marketplace.mendix.com/link/component/229630) module facilitates integration with your IdP to create (pre-provision) selected users in your application as soon as they are created in the IdP, and deactivates them when they are removed or deactivated in the IdP.
 
 SCIM is an abbreviation for System for Cross-domain Identity Management; a protocol that is supported by most major IdP technologies, such as Entra ID (formerly known as Azure AD), Okta, Auth0, etc. For more information, see the [SCIM protocol](https://scim.cloud/).
 

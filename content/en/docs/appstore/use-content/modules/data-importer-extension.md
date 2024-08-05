@@ -46,11 +46,7 @@ Download the [Data Importer](https://marketplace.mendix.com/link/component/21983
 
 ### 2.1 Creating a Data Importer Document {#create-document}
 
-To import data, right-click on the module and click **Add other** > **Data Importer**.
-
-{{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/data-importer-menu.png" class="no-border" >}}
-
-Name the document, click **OK**, and the new Data Importer document opens. 
+To import data, right-click on the module and click **Add other** > **Data Importer**. Name the document, click **OK**, and the new Data Importer document opens. 
 
 ### 2.2 Previewing Data {#preview-data}
 

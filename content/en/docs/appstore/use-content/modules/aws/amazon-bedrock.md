@@ -67,7 +67,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### 3.3 Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. Inside the `USE_ME` folder you will find several subfolders containing operations that depend on the GenAICommons module. The following example microflows have been created for each of these inside the `ExampleImplementations` folder:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The **USE_ME** folder contains several subfolders containing operations that depend on the GenAICommons module. The following example microflows have been created for each of these inside the **ExampleImplementations** folder:
 
 * EXAMPLE_ChatCompletions_FunctionCalling
 * EXAMPLE_ChatCompletions_Vision

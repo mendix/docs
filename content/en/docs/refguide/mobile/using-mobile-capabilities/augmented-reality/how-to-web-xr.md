@@ -103,7 +103,7 @@ These are widgets that show a 3D Object, either predetermined (like **Cube (XR)*
 
 ### 4.1 Shared Properties
 
-These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)** ,**Text (XR)**) as well as the **Node (XR)** widget.
+These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)**, **Text (XR)**) as well as the **Node (XR)** widget.
 
 #### 4.1.1 General Tab
 

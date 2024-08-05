@@ -43,7 +43,7 @@ In the repository, you use the **Actions** drop-down menu to perform the followi
 
 * Create a **New Folder**
 * Create a **New Test Case** (for details on creating a test case, see [Test Case](/appstore/partner-solutions/ats/rg-two-test-case/))
-* Create a **New Test Suite** (for detailson creating a test suite, see [Test Suite](/appstore/partner-solutions/ats/rg-two-test-suite/))
+* Create a **New Test Suite** (for details on creating a test suite, see [Test Suite](/appstore/partner-solutions/ats/rg-two-test-suite/))
 * Create a **New Action** (for details on creating an action, see [Action](/appstore/partner-solutions/ats/rg-two-action/))
 * Create a **New Drop-Down** (for details on creating a drop-down menu, see [Drop-Down](/appstore/partner-solutions/ats/rg-two-drop-down/))
 * **Import** items into the repository

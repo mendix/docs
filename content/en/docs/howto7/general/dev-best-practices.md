@@ -101,7 +101,7 @@ Every app has documents that are needed for specific entities. Think of overview
 
 ### 3.4 Microflows
 
-Generally, [microflow](/refguide7/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide7/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example, **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 

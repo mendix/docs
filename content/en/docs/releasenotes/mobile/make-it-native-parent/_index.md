@@ -11,7 +11,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ## 2 Make It Native Versions
 
-We currently provide 3 different versions of the Make It Native App. You can find the release notes for these versions in the following list:
+We currently provide 3 different versions of the Make It Native App. These are their release notes:
 
 1. [Make It Native 10](/releasenotes/mobile/make-it-native-10/)
 1. [Make It Native 9](/releasenotes/mobile/make-it-native-9/)

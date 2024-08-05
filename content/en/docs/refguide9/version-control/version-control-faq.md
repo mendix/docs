@@ -46,7 +46,7 @@ This may be caused by the way the storage format of Git interacts with the way t
 
 You can run `git gc` in the command line to mitigate this. `git gc` runs a number of housekeeping tasks, but primarily pack files are created. Pack files store just the changes to the files, which reduces the amount of data which needs to be stored. 
 
-We already do these housekeeping operations automatically on the Team Server, so you can also check out a fresh copy as an alternative . We are working to improve this in Studio Pro in an upcoming versions.
+We already do these housekeeping operations automatically on the Team Server, so you can also check out a fresh copy as an alternative. We are working to improve this in Studio Pro in an upcoming versions.
 
 ## 8 Can I Keep Using the Subversion Version of the Team Server?
 

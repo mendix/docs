@@ -41,7 +41,7 @@ Login behavior can be customized by implementing a custom Java action and regist
     }
     ```
 
-1. Create a new java action that replaces the `LoginAction` with our custom one:
+1. Create a new Java action that replaces the `LoginAction` with our custom one:
 
     ```Java {linenos=false}
     public java.lang.Void executeAction() throws Exception

@@ -39,7 +39,7 @@ You would like to open a page with opportunity contact list and its details from
 2. Navigate to **Toolbox** > **Widgets**.
 3. Search for **Open page button** and drag it onto the page.
 4. In the **Select web page** dialog box, click **New** to create a page.
-5. In the **Create Page** dialog box,  type *OpportunityContact* as the **Page name**.
+5. In the **Create Page** dialog box, type *OpportunityContact* as the **Page name**.
 6. Navigate to **Lists**, select **List MasterDetail** as the page template, and click **OK**.
 
 You just created a new page. A list (list view) is displayed on the left and list item details (data view) are displayed on the right:

@@ -83,7 +83,7 @@ The following settings correctly place them underneath our business card (since 
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object" width="400" class="no-border" >}}
 
-You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
+You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and LinkedIn has #0A66C2:
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-material-dialogue.png" alt="twitter material"   width="400"  class="no-border" >}}
 

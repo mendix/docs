@@ -54,7 +54,7 @@ If you are hosting your app somewhere else, such as on Cloud Foundry, Mendix Sup
 
 An example **LicenseId** is `aab8a0a1-1370-467e-918d-3a243b0ae160`. The **LicenseKey** is a very long Base64 string.
 
-## 3 Activating a Mendix License
+## 3 Activating a Mendix License {#activate-mendix-license}
 
 Once you have obtained a new Mendix license, link it to your app as described below. The specific steps depend on where you deploy your app.
 

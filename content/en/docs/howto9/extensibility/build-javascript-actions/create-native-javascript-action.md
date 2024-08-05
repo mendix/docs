@@ -20,7 +20,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the latest version of Mendix Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
-* Install npm's [node js](https://nodejs.org)
+* Install npm's [Node.js](https://nodejs.org)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Own a mobile device with NFC capabilities
 

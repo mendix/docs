@@ -9,7 +9,7 @@ weight: 50
 
 ## 1 Introduction
 
-With report widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example , total sales per customer). 
+With report widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example, total sales per customer). 
 
 The **Report widgets** category contains the following widgets:
 

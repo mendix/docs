@@ -31,10 +31,14 @@ When you publish a microflow that has object, list, or enumeration parameters or
 
 ### 2.2 Edit a Published Microflow{#edit-microflow}
 
-Either select the microflow and click **Edit**, or double-click the microflow to open its properties. In the [Edit published microflow](#pub-odata-mflow-parameters) dialog box, you can change the **Exposed name** and the **Microflow**. Below that, in the **Example of location** field, you can find the URI where the action will be located when the app is running.
+Either select the microflow and click **Edit**, or double-click the microflow to open its properties. In the **Edit published microflow** dialog box, you can change the **Exposed name** and the **Microflow**. 
+
+Below that, in the **Example of location** field, you can find the URI where the action will be located when the app is running.
+
+You can also choose to specify an **Alternative name (in URL)**. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the microflow will be available on two different URLs: one that uses the exposed name, and one that uses the alternative name. Use an alternative name when you require the microflow to be available on a URL that would be invalid in OData but valid in OpenAPI, such as `my-first-microflow`.
 
 {{% alert color="info" %}}
-The resulting location must be unique. This means a published microflow cannot have the same exposed name as another published microflow or published entity.
+The resulting location must be unique. This means a published microflow cannot have the same exposed name or alternative name as another published microflow or published entity.
 {{% /alert %}}
 
 In the **Public documentation** tab, you can add a short **Summary** and a longer **Description** to describe the behavior of the action.

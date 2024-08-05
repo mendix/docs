@@ -91,13 +91,13 @@ Open your *android/app/src/main/AndroidManifest.xml* file and find the section w
 
 To run iOS Fastlane script containing an API key, define the variable `GOOGLE_MAPS_API_KEY` before beta lane. If you run it manually in Xcode, change the API key in the *ApiKeys.xcconfig* file.
 
-## 2 Building your Application
+## 2 Installing Fastlane
 
-Once you have completed the additional setup requirements, you can proceed with building your applications. You can use Fastlane to build the apps.
+Once you have completed the additional setup requirements, you can proceed with building your applications. If you are building an iOS app, you must install Fastlane first. 
 
-### 2.1 Installing Fastlane
+If you are not building an iOS app, you can skip ahead to the [Android app building instructions](#build-android).
 
-Fastlane is an all in one CI tool that automates the process of building and deploying apps. To install it, do the following:
+Fastlane is an all in one CI tool that automates the process of building and deploying apps. To install Fastlane, do the following:
 
 1. Install fastlane by gem
    * `sudo gem install fastlane -NV`
@@ -110,13 +110,13 @@ Fastlane is an all in one CI tool that automates the process of building and dep
 
 ## 3 Building
 
-For building iOS apps, Mendix uses Fastlane. Fastlane is an all in one continuous integration tool that automates building and deploying.
+For [building iOS apps](#build-ios), Mendix uses Fastlane. Fastlane is an all in one continuous integration tool that automates building and deploying. Before proceeding, be sure to install Fastlane using the instructions above.
 
-For building Android apps, the process is still manual.
+For [building Android apps](#build-android), the process is manual.
 
-### 3.1 iOS
+### 3.1 iOS {#build-ios}
 
-iOS builds are produced via Fastlane.
+For Mendix apps, iOS builds are produced via Fastlane.
 
 The configuration for Fastlane resides in `/ios/fastlane/Fastlane`. Currently three lanes are configured internal, build, and release:
 
@@ -156,7 +156,7 @@ Change the VERSION_NUMBER in the `Fastlane` config file to the new version, then
 
 The script will take considerable amount of time as it also waits for processing to finish, to release a TestFlight beta test.
 
-### 3.2 Android
+### 3.2 Android {#build-android}
 
 Android builds are made via Android Studio:
 

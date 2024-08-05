@@ -155,7 +155,7 @@ pre[class*="language-"].line-numbers > code {
 .line-numbers .line-numbers-rows {
 	position: absolute;
 	pointer-events: none;
-	top: 0.3em; /* NK - to accomodate moving toolbar buttons left */
+	top: 0.3em; /* NK - to accommodate moving toolbar buttons left */
 	font-size: 100%;
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */

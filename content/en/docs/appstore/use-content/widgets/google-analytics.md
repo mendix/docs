@@ -29,7 +29,7 @@ All the widgets in this package (except for [EventTrackerButton](#eventtrackerbu
 
 * **Category** – the name you supply for the group of objects you want to track
 * **Action** – a string that is uniquely paired with each category, and commonly used to define the type of user interaction for the web object
-* **Labe** – an optional string to provide additional dimensions to the event data
+* **Label** – an optional string to provide additional dimensions to the event data
 * **Value** – an integer you can use to provide numerical data about the user event
 
 For more information, see [Event Tracking - Web Tracking (ga.js)](https://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).

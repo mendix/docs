@@ -530,10 +530,10 @@ The setting for action triggers is related to the selection method and can somet
 
 | Selection method | Action trigger          | Selection trigger                                | Supported |
 | ---------------- | ----------------------- | ------------------------------------------------ | --------- |
-| Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
-| Checkbox         | Double-click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Single click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
+| Checkbox         | Double-click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
 | Row              | Single click on the row |                                                  | No        |
-| Row              | Double-click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+| Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                    | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 
@@ -541,21 +541,21 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 | Key                      | Function                                                     |
 | ------------------------ | ------------------------------------------------------------ |
-| Right Arrow              | Moves focus one cell to the right.                           |
-| Left Arrow               | Moves focus one cell to the left.                            |
-| Down Arrow               | Moves focus one cell down.                                   |
-| Up Arrow                 | Moves focus one cell up.                                     |
-| Page Up                  | Moves focus one page up.                                     |
-| Page Down                | Moves focus once page down.                                  |
-| Home                     | Moves focus to the first cell in the row.                    |
-| End                      | Moves focus to the last cell in the row.                     |
-| Ctrl + Home              | Moves focus to the first cell in grid.                       |
-| Ctrl + End               | Moves focus to the last cell in grid.                        |
-| Shift + Space            | Selects current row. (1)                                     |
-| Ctrl/Cmd + A             | Select all visible rows. (1)(2)                              |
-| Shift + {Down, Up} Arrow | Moves focus and selects current and row above/below. (1)(2)  |
-| Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
-| Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
+| <kbd>→</kbd>              | Moves focus one cell to the right.                           |
+| <kbd>←</kbd>               | Moves focus one cell to the left.                            |
+| <kbd>↓</kbd>               | Moves focus one cell down.                                   |
+| <kbd>↑</kbd>                 | Moves focus one cell up.                                     |
+| <kbd>Page&nbsp;up</kbd>                  | Moves focus one page up.                                     |
+| <kbd>Page&nbsp;down</kbd>                | Moves focus once page down.                                  |
+| <kbd>Home</kbd>                     | Moves focus to the first cell in the row.                    |
+| <kbd>End</kbd>                      | Moves focus to the last cell in the row.                     |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd>              | Moves focus to the first cell in grid.                       |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>               | Moves focus to the last cell in grid.                        |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>            | Selects current row. (1)                                     |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd>             | Select all visible rows. (1)(2)                              |
+| <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd> | Moves focus and selects current and row above/below. (1)(2)  |
+| <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd>  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
+| <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>         | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
 
 Legend:
 

@@ -205,7 +205,7 @@ Define the structure and default style of the group box widget with these steps:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/2-header-caption-mobile.png" alt="basic app" class="no-border" >}}
 
-    {{% alert color="info" %}}If you encounter an error with the widget in Studio Pro, you might have to update the widget by right clicking on it or synchronize the project directory by pressing F4 to fix it.
+    {{% alert color="info" %}}If you encounter an error with the widget in Studio Pro, you might have to update the widget by right clicking on it or synchronize the project directory by pressing <kbd>F4</kbd> to fix it.
     {{% /alert %}}
 
 The UI of your widget does not look like a group box yet. Apply a default style to make it look like one with the following steps:

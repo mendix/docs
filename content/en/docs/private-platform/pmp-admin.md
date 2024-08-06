@@ -49,7 +49,7 @@ As the administrator, you can perform the following actions:
 
 ## 4 Users
 
-In the **User Management** section, administrators can manage user accounts and user groups.
+In the **Users** section, administrators can manage user accounts and user groups.
 
 {{< figure src="/attachments/private-platform/pmp-admin3.png" class="no-border" >}}
 
@@ -65,3 +65,7 @@ As the administrator, you can perform the following actions:
     * Delete a user account
 
 In the **Group Management** tab, you can create and edit user groups. These groups typically reflect your organization's structure. You can also use the **Automation Settings** option to automatically assign users to groups based on their profile attributes.
+
+## 5 Platform
+
+In the **Platform** section, administrators can view logs and statistics, upload licenses, and configure webhooks.

@@ -29,7 +29,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 * Supports spelling and grammar checker in the editor
 * Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
 * Supports the following keyboard shortcuts in the editor:
-    * <kbd>Ctrl</kbd> + <kbd>b/kbd> – bold
+    * <kbd>Ctrl</kbd> + <kbd>B</kbd> – bold
     * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
     * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
     * <kbd>Ctrl</kbd> + <kbd>Z</kbd> – undo

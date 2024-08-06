@@ -86,6 +86,14 @@ To install the OIDC Provider service in your IAM broker app, you need to import 
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
 * [Administration](https://marketplace.mendix.com/link/component/23513)
 
+{{% alert color="info" %}}
+To develop your IAM broker app more quickly, consider using the Access Provider Template. This template facilitates the setup and integration of OIDC Provider and OIDC SSO modules, including all necessary dependencies. For more information, refer to the documentation tab of the Access Provider Template Marketplace module.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Starting from version 3.0.0, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
+{{% /alert %}}
+
 The service then needs to be configured as described below.
 
 ## 3 Configuring IAM Broker
@@ -219,10 +227,6 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 #### 3.3.2 Manual Client Registration
 
 If you cannot use automatic registration, you can register the client manually.
-
-{{% alert color="info" %}}
-Starting from version 3.0.0, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
-{{% /alert %}}
 
 1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
 

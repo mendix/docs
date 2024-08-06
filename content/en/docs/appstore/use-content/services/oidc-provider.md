@@ -86,6 +86,10 @@ To install the OIDC Provider service in your IAM broker app, you need to import 
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
 * [Administration](https://marketplace.mendix.com/link/component/23513)
 
+{{% alert color="info" %}}
+To develop your IAM broker app more quickly, consider using the [Access Provider] template. This template facilitates the setup and integration of OIDC Provider and OIDC SSO modules, including all necessary dependencies. For more information, refer to the documentation tab of the Access Provider Template Marketplace module.
+{{% /alert %}}
+
 The service then needs to be configured as described below.
 
 ## 3 Configuring IAM Broker

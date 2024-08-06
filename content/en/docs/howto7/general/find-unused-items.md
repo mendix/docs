@@ -12,7 +12,7 @@ During the development of your application it might occur that specific function
 
 In this how-to, you will learn how you can find unused items within your model.
 
-1. In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>.
+1. In the top toolbar of the Desktop Modeler, click **Edit** > **Find** Advanced (or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>.
 2. Select **Unused items** as **search for** option
 
     {{< figure src="/attachments/howto7/general/find-unused-items/18581609.png" class="no-border" >}}

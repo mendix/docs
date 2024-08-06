@@ -1462,7 +1462,7 @@ Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste*
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image35.png" class="no-border" >}}
 
-You can now copy and paste with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>c</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>v</kbd> in the terminal.
+You can now copy and paste with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> in the terminal.
 
 ### 9.2.2 Unable to Click a Button
 
@@ -1472,7 +1472,7 @@ If you highlight a button instead of clicking the button, you may need to disabl
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image37.png" class="no-border" >}}
 
-After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with <kbd>Ctrl</kbd> + <kbd>c</kbd> and reopening the tool with the installation command.
+After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with <kbd>Ctrl</kbd> + <kbd>C</kbd> and reopening the tool with the installation command.
 
 ## 10 Containerized Mendix App Architecture  {#containerized-architecture}
 

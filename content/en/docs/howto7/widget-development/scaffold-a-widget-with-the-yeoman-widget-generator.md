@@ -23,7 +23,7 @@ Yeoman and Grunt both run on Node.JS, so you need to install this by following t
 
 1. Go to [https://nodejs.org](https://nodejs.org).
 2. Download the latest stable release (LTS) and install it.
-3. Open the command line and press <kbd>Windows</kbd> + <kbd>r</kbd>.
+3. Open the command line and press <kbd>Windows</kbd> + <kbd>R</kbd>.
 4. Type "cmd" and press <kbd>Enter</kbd>:
 
     {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398836.png" class="no-border" >}}

@@ -55,7 +55,7 @@ In the how-to [Exposing a web service](/howto7/integration/expose-a-web-service/
 In this chapter you will create a new SOAP project.
 
 1. Open **SoapUI**.
-2. Press <kbd>Ctrl</kbd> + <kbd>n</kbd> to create a new SOAP project.
+2. Press <kbd>Ctrl</kbd> + <kbd>N</kbd> to create a new SOAP project.
     {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580339.png" class="no-border" >}}
 3. Run the project locally in the **Mendix Desktop Modeler**.
 4. Go to `http://localhost:8080/ws-doc/`.
@@ -70,10 +70,10 @@ In this chapter you will create a new SOAP project.
 
 In this chapter you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
 
-1. In SoapUI, press <kbd>Ctrl</kbd> + <kbd>t</kbd> to create a new TestSuite.
+1. In SoapUI, press <kbd>Ctrl</kbd> + <kbd>T</kbd> to create a new TestSuite.
     {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580332.png" class="no-border" >}}
 2. Click **OK**.
-3. Select TestSuite 1 and press <kbd>Ctrl</kbd> + <kbd>n</kbd> to create a new TestCase.
+3. Select TestSuite 1 and press <kbd>Ctrl</kbd> + <kbd>N</kbd> to create a new TestCase.
     {{< figure src="/attachments/howto7/testing/testing-web-services-using-soapui/18580331.png" class="no-border" >}}
 4. Click **OK**.
 5. Expand Testuite 1 and TestCase 1.

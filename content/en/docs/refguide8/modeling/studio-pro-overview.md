@@ -105,7 +105,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>n</kbd> | Creates a new item. |
+| <kbd>Ctrl</kbd> + <kbd>N</kbd> | Creates a new item. |
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
@@ -116,7 +116,7 @@ The following shortcut keys are available in the domain model editor:
 | Key | Description |
 | --- | --- |
 | <kbd>F2</kbd> | Edits the name of the selected element. |
-| <kbd>Ctrl</kbd> + <kbd>a</kbd> | Selects all entities. |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
 ### 7.3 Page Editor Shortcut Keys
@@ -162,8 +162,8 @@ The following shortcut keys control the currently selected language:
 
 | Key | Description |
 | --- | --- |
-| <kbd>Ctrl</kbd> + <kbd>l</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
+| <kbd>Ctrl</kbd> + <kbd>L</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
 
 ## 8 Read More
 

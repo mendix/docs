@@ -29,10 +29,10 @@ Before starting this how-to, make sure you have completed the following prerequi
 1. Open Eclipse and locate the app in the **Package Explorer**.
 2. Double-click **ReverseCustomerName.java**:
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18581041.png" class="no-border" >}}
-3. Place the cursor on the line that needs debugging, hold down <kbd>Ctrl</kbd> + <kbd>Shift</kbd>, and press <kbd>b</kbd> to enable a breakpoint. A blue dot in front of the line will appear: 
+3. Place the cursor on the line that needs debugging, hold down <kbd>Ctrl</kbd> + <kbd>Shift</kbd>, and press <kbd>B</kbd> to enable a breakpoint. A blue dot in front of the line will appear: 
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18580059.png" class="no-border" >}}
 {{% alert color="info" %}}
-You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>b</kbd> to disable a breakpoint.
+You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
 {{% /alert %}}
 
 ## 4 Debugging in Eclipse

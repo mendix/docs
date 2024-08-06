@@ -114,7 +114,7 @@ To create a variable to be used for the WebDriver, follow these steps:
     public WebDriver driver;
     ```
 
-3. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> to organize the imports. This will import the missing statements and remove the unused import statements. The following statement will be imported:
+3. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> to organize the imports. This will import the missing statements and remove the unused import statements. The following statement will be imported:
 
     ```java {linenos=false}
     import org.openqa.selenium.WebDriver;
@@ -143,7 +143,7 @@ The `@BeforeTest` annotation is used to state that the method under it will be e
 
     This creates a new instance of the Firefox driver and opens the Firefox browser.
 
-2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd>. The following statement will be imported:
+2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>. The following statement will be imported:
 
     ```java {linenos=false}
     import org.openqa.selenium.firefox.FirefoxDriver;
@@ -451,7 +451,7 @@ The test you created is now run on Firefox only. If you want to make sure the fu
 
     In this section, *chromedriver.exe* is stored in the *C://Selenium* folder. Be sure to use the right path in this code.
 
-4. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd>, and the following statements will be imported:
+4. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>, and the following statements will be imported:
 
     ```java
     import org.openqa.selenium.chrome.ChromeDriver;

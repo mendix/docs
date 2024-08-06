@@ -67,7 +67,7 @@ The selected element is added.
 
 ### 3.5 Cutting/Coping/Pasting Elements in a Workflow
 
-To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>x</kbd> /  <kbd>Ctrl</kbd> + <kbd>c</kbd> / <kbd>Ctrl</kbd> + <kbd>v</kbd> or  <kbd>Command</kbd> + <kbd>x</kbd> /  <kbd>Command</kbd> + <kbd>c</kbd> / <kbd>Command</kbd> + <kbd>v</kbd>.
+To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Command</kbd> + <kbd>X</kbd> /  <kbd>Command</kbd> + <kbd>C</kbd> / <kbd>Command</kbd> + <kbd>V</kbd>.
 
 When using cut/copy/paste, note the following:
 

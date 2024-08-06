@@ -28,7 +28,7 @@ When you have multiple languages set up in your app, you can choose a language t
 
 * selecting it from the **Language > Current Language** menu
 * using the drop-down in the lower-right corner of Studio Pro's main window
-* using the <kbd>Ctrl</kbd> + <kbd>l</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> keyboard shortcut combinations, which cycle through the configured languages
+* using the <kbd>Ctrl</kbd> + <kbd>L</kbd> or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> keyboard shortcut combinations, which cycle through the configured languages
 
 When working in a language which is not the default, you can identify texts that have not been translated yet. These show the text in the default language between angle brackets. For example, `<Name>`. You can replace the text with the appropriate translation, and it will be replaced for the currently selected language.
 
@@ -57,8 +57,8 @@ The **Language** menu items are described in the table below:
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
 | **Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
-| **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>l</kbd> |
-| **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>l</kbd> |
+| **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
+| **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
 | [Language Settings…](/refguide/language-settings/) | Choose which languages are supported by the app and configure date and time settings. | *None* |
 | [Batch Replace…](/refguide/batch-replace/) | Change all occurrences of chosen translatable texts in the current language where they are identical. | *None* |
 | [Batch Translate…](/refguide/batch-translate/) | Add and edit translations from a selected source language to a selected target language | *None* |

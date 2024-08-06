@@ -79,7 +79,7 @@ This property is only available for add-on and solution modules. For more inform
 
 #### 2.3.1 Mark as Used
 
-You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
+You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
 
 By enabling the property **Mark as used**, you explicitly specify that the microflow is used and Studio Pro will no longer list it when searching for unused items.
 

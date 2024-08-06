@@ -30,12 +30,12 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 * Supports code highlight, which enables the user to insert code fragments and have a live preview with highlighted syntax
 * Supports the following keyboard shortcuts in the editor:
     * <kbd>Ctrl</kbd> + <kbd>b/kbd> – bold
-    * <kbd>Ctrl</kbd> + <kbd>i</kbd>– italicize
-    * <kbd>Ctrl</kbd> + <kbd>u</kbd> – underline
-    * <kbd>Ctrl</kbd> + <kbd>z</kbd> – undo
-    * <kbd>Ctrl</kbd> + <kbd>y</kbd> – redo
-    * <kbd>Ctrl</kbd> + <kbd>c</kbd> – copy
-    * <kbd>Ctrl</kbd> + <kbd>v</kbd> – paste
+    * <kbd>Ctrl</kbd> + <kbd>I</kbd>– italicize
+    * <kbd>Ctrl</kbd> + <kbd>U</kbd> – underline
+    * <kbd>Ctrl</kbd> + <kbd>Z</kbd> – undo
+    * <kbd>Ctrl</kbd> + <kbd>Y</kbd> – redo
+    * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
+    * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
     * <kbd>Minus&nbsp;sign</kbd> + <kbd>Space</kbd> – starts a list
     * <kbd>Tab</kbd> – moves the focus to the next element
 

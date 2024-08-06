@@ -87,7 +87,7 @@ When the request state exceeds the configured threshold, you can look at the fol
 * Too many objects are associated with the current session or user
 * Non-persistable objects are associated with an object shown in a widget in a layout (meaning that this object stays in use as long as this layout is shown, usually a long time)
 
-In order to find the root cause of this state size, you need to press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>g</kbd> to make a state overview dump using the developer tools in the client. The results are shown in the browser console. This allows you to see the objects that are in the state and why they are not garbage collected.
+In order to find the root cause of this state size, you need to press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> to make a state overview dump using the developer tools in the client. The results are shown in the browser console. This allows you to see the objects that are in the state and why they are not garbage collected.
 
 ## 5 Server-Side Memory Management
 

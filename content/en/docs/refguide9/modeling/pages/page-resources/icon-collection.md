@@ -25,7 +25,7 @@ You can perform the following actions within icon collections using the buttons 
 
 {{< figure src="/attachments/refguide9/modeling/pages/page-resources/icon-collection/actions.png" alt="Icon collection actions" class="no-border" >}}
 
-Some of the actions can be applied to multiple icons. You can select all icons using <kbd>Ctrl</kbd> + <kbd>a</kbd>, or select multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
+Some of the actions can be applied to multiple icons. You can select all icons using <kbd>Ctrl</kbd> + <kbd>A</kbd>, or select multiple icons by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>
 
 ### 3.1 Import Font File
 

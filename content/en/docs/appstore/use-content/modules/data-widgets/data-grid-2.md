@@ -552,7 +552,7 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 | <kbd>Ctrl</kbd> + <kbd>Home</kbd>              | Moves focus to the first cell in grid.                       |
 | <kbd>Ctrl</kbd> + <kbd>End</kbd>               | Moves focus to the last cell in grid.                        |
 | <kbd>Shift</kbd> + <kbd>Space</kbd>            | Selects current row. (1)                                     |
-| <kbd>Ctrl</kbd> + <kbd>a</kbd>             | Select all visible rows. (1)(2)                              |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd>             | Select all visible rows. (1)(2)                              |
 | <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd> | Moves focus and selects current and row above/below. (1)(2)  |
 | <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd>  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
 | <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>         | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |

@@ -82,7 +82,7 @@ For the first conflict, you can inspect changes and decide which version to appl
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
 {{% alert color="info" %}}
-To use keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>z</kbd> and <kbd>Ctrl</kbd> + <kbd>y</kbd> to undo your choice, click the document to focus it first.
+To use keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>Z</kbd> and <kbd>Ctrl</kbd> + <kbd>Y</kbd> to undo your choice, click the document to focus it first.
 {{% /alert %}}
 
 There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose any side to resolve the conflict and will keep things the way they were in the original. Neither of the new text changes will be applied.

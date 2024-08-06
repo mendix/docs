@@ -9,17 +9,17 @@ tags: ["OPC-UA", "Integration", "IIOT", "low-code"]
 # 1 Introduction
 
 [OPC](opcfoundation.org) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries.
-You can use the OPC-UA connector with your Mendix app to communicate with OPC-UA server.
+You can use the OPC-UA connector with your Mendix app to communicate with an OPC-UA server.
 
 The OPC-UA connector is based on [Eclipse Milo](https://github.com/eclipse/milo) client SDK, an open-source implementation of OPC.
 
 ## 1.1 Features
 
 The OPC-UA connector consists of microflow that enable you to do the following:
-* Connect to OPC-UA server
-* Browse OPC-UA server nodes
+* Connect to an OPC-UA server
+* Browse nodes on an OPC-UA server
 * Read and write OPC-UA node attributes
-* Subscribe to OPC-UA data change
+* Subscribe to OPC-UA data changes
 
 ## 1.2 License
 
@@ -40,7 +40,7 @@ You must have these Marketplace modules installed:
 * Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
 
 ## 2.1 Configuration
-* Add NAV Configuration to your navigation
+* Add NAV_Configuration microflow to your navigation
 * Assign the CanConfigure module role to a user role that will configure the connections to your server.
 * Login as a user that can configure the connection and go to the configuration page
 * If you want to connect to a server with a Message security mode Sign or Sign&Encrypt, add your client certificate on the top right
@@ -86,7 +86,7 @@ A connection to an OPC-UA server may be encrypted to provide security. The serve
 * The private key must be an Encrypted PKCS8 or PKCS1 formatted PEM file.
 
 ### 3.2.3 Server Certificate
-A connection between an OPC-UA server and OPC-UA client (The Mendix Application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (GetEndpoints>EndpointDescription>ServerCertificate), then use "Get Endpoints - Server Certificate" and then use "Trust certificate".
+A connection between an OPC-UA server and OPC-UA client (The Mendix Application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (GetEndpoints>EndpointDescription>ServerCertificate), then use "Get Endpoints - Server Certificate" and then use "Trust certificate". Alternatively the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
 
@@ -108,7 +108,7 @@ The BrowseDescription contains the following fields:
 * Include subtypes. Indicates whether subtypes of the ReferenceType should be included.
 * Node Class Mask. Specifies which NodeClasses will be returned. If no value is provided, no filter will be applied.
 
-This is an integer attribute, while the interpretation is a set of bits as described follow:
+This is an integer attribute, while the interpretation is a set of bits as described in the table below:
  
 | Bit | Node class | Value |
 | --- | ---------- | -----  |
@@ -121,11 +121,11 @@ This is an integer attribute, while the interpretation is a set of bits as descr
 | 6 | DataType | 64 |
 | 7 | View | 128 |
 
-Sum up the value to create the mask. Example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] which has to be setup as 1 + 2 + 128 = 131 for the integer value.
+Sum up the Values to create the mask. For example: Browsing only Objects, Variables and View is binary represented by [1,1,0,0,0,0,0,1] which has to be setup as 1 + 2 + 128 = 131 for the integer value.
 
 * Result Mask. Specifies the fields in the reference description structure that should be returned. 
 
-This is an integer attribute, while the interpretation is a set of bits as described follow:
+This is an integer attribute, while the interpretation is a set of bits as described in the table below:
 
 | Bit | Node class | Value |
 | --- | ---------- | -----  |
@@ -136,7 +136,7 @@ This is an integer attribute, while the interpretation is a set of bits as descr
 | 4 | DisplayName | 16 |
 | 5 | TypeDefinition | 32 |
 
-Sum up the value to create the mask. Example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
+Sum up the Values to create the mask. For example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
 
 The response of the Browse action returns a browse response object. 
 There is a StatusCode associated to the response,which represents the status of the call.
@@ -147,11 +147,11 @@ A browse node contains the following fields:
 * Browse name. Browse name of the referenced node.
 * Display name. Display name of the referenced node.
 * Node class. Node class of the referenced node.
-If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references.
+If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references. (not supported yet)
 
 ## 3.4 Attribute services
 The attribute services let a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
-These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA server. 
+These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
 The data model of an OPC-UA server consists of a set of Nodes. These nodes can have one of the following nodeClasses: DataType, Method, Object, ObjectType, ReferenceType, Variable, VariableType and View. Each of these has their own set of properties. For the purpose of each and the set of properties we refer to the documentation in the domain model of the specializations of Node entities.
 To make it easier to get the information on a node, there is a GetNodeDetails action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
 

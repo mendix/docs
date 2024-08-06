@@ -539,7 +539,7 @@ Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com
 
 When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-id).
 
-## 6 Changing the type of a design property
+## 6 Changing the Type of a Design Property
 
 As this document outlined, each of the design property types is designed to fulfill a certain use case. However, sometimes you might not know beforehand which type best fits your needs. In those cases, you might have to change the type of a design property. This is possible in the following cases:
 

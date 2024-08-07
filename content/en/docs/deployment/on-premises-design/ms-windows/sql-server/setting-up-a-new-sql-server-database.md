@@ -42,13 +42,13 @@ You only need to follow these steps if the database user used by the Mendix Runt
 The database schema needs to be configured so that the **Read Committed Snapshot** and **Snapshot Isolation** features are enabled. To enable them, run the following commands on the database:
 
 ```sql
-ALTER DATABASE [MySchema] SET READ_COMMITTED_SNAPSHOT ON;
+ALTER DATABASE {MySchema} SET READ_COMMITTED_SNAPSHOT ON;
 
-ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
+ALTER DATABASE {MySchema} SET ALLOW_SNAPSHOT_ISOLATION ON;
 ```
 
 {{% alert color="info" %}}
-When you run the commands above, replace `[MySchema]` with the name of your schema.
+When you run the commands above, replace `{MySchema}` with the name of your schema.
 {{% /alert %}}
 
 ## 4 Read More

@@ -54,7 +54,7 @@ Custom domains can be added only to licensed apps. You cannot add custom domains
 
 Before configuring your custom domain in Mendix Cloud, you need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
 
-Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cname.mendix.net.`. For example, if your custom domain is `myapp.mycompany.com`, create a CNAME record pointing to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can direct your custom domain to your Mendix app.
+Create a Canonical Name (CNAME) record and point it to `{your-custom-domain}.cname.mendix.net.`. For example, if your custom domain is `myapp.mycompany.com`, create a CNAME record pointing to `myapp.mycompany.com.cname.mendix.net.` so that Mendix can direct your custom domain to your Mendix app.
 
 {{% alert color="info" %}}
 It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain, redirect it to a subdomain (for example, `subdomain.mycompany.com`) and create a CNAME for the subdomain instead.

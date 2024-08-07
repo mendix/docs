@@ -293,7 +293,7 @@ For parameters whose type is an entity with the **Readable** capability, you can
 
 If the referenced object cannot be found, the action will fail. 
 
-It is also possible to pass associated objects in the same request, by specifying the exposed name of the association and the corresponding value. For an 1-1 or a \*-1 association, the value is a single object. For a 1-\* or a \*-\* association the value is an array of objects. For example:
+It is also possible to pass associated objects in the same request by specifying the exposed name of the association and the corresponding value. For an 1-1 or a \*-1 association, the value is a single object. For a 1-\* or a \*-\* association, the value is an array of objects. For example:
 
 ```json
 {
@@ -324,7 +324,7 @@ It is also possible to pass associated objects in the same request, by specifyin
 }
 ```
 
-When you pass a value for an attribute that is not writable—such as AutoNumber, Binary attributes, calculated attributes, and system attributes—the value is ignored and the object is passed to the microflow with the default value (for new objects) or the previous value (for existing objects). If it is an attribute that is writable but the current user does not have write rights for that member, the request will fail.
+When you pass a value for an attribute that is not writable (such as autonumber and binary attributes, calculated attributes, and system attributes), the value is ignored and the object is passed to the microflow with the default value (for new objects) or the previous value (for existing objects). If it is an attribute that is writable but the current user does not have write rights for that member, the request will fail.
 
 {{% alert type="info" %}}
 An object passed to a microflow will not be committed automatically. If you want the passed object to be saved, you must implement this in the microflow.
@@ -336,10 +336,9 @@ If the action returns a value, it will always be contained in a JSON object with
 
 #### 6.3.1 Retrieving Associated Objects {#retrieve-associated-objects}
 
-If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. 
-In order to do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).
+If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. To do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).
 
-For example, imagine your microflow **FindEmployee** returning an entity **Employee**, that has an association to **Address**. Then you could retrieve the associated Address object by passing `/odata/myservice/v1/FindEmployee?$expand=Address`.
+For example, imagine your microflow **FindEmployee** returning an entity **Employee**, that has an association to **Address**. You could retrieve the associated Address object by passing `/odata/myservice/v1/FindEmployee?$expand=Address`.
 
 {{% alert type="info" %}}
 The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).

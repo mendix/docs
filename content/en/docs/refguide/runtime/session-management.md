@@ -80,8 +80,13 @@ This diagram illustrates the interaction between the client and the runtime to i
 
 ### 3.4 Session Deletion
 
-Sessions are deleted in two cases:
-- On application startup, when there is a database upgrade (for example if there's a model change or if the database is new)
-- Expired sessions will be cleaned up periodically. How often this is done can be configured using the [ClusterManagerActionInterval](refguide/custom-settings/#ClusterManagerActionInterval) runtime setting. When a session is considered expired can be configured using the [SessionTimeout](refguide/custom-settings/#SessionTimeout) runtime setting.
+Sessions are deleted under two circumstances:
+
+* When there is a database upgrade on application startup ‒ for example if there is a model change or if the database is new.
+* During periodic cleanup of expired sessions.
+
+    You can configure how often expired sessions are cleaned up using the [ClusterManagerActionInterval](refguide/custom-settings/#ClusterManagerActionInterval) runtime setting.
+
+    You can configure when a session is considered expired using the [SessionTimeout](refguide/custom-settings/#SessionTimeout) runtime setting.
 
 When an anonymous session is deleted the associated anonymous user is deleted as well.

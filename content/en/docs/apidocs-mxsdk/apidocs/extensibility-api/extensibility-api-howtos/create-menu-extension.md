@@ -16,12 +16,13 @@ You can download the example in this how-to in [this GitHub repository](https://
 2. Choose a name for the project. Use a format similar to `MyCompany.MyProject.MendixExtension`, but it is not a hard requirement.
 3. Choose `.NET 8.0` Framework.
 4. Add `Mendix.StudioPro.ExtensionsAPI` NuGet package to the project references. Pick the version that does not exceed the Studio Pro version you installed. To do so, perform the following steps:
+
     1. Include a reference to the Extensions API [NuGet package](https://www.nuget.org/packages/Mendix.StudioPro.ExtensionsAPI): 
     2. Add new file named `manifest.json` to your project. Put the following content into it:
 
-    ```json
-    { "mx_extensions": [ "<name_of_your_project>.dll" ] }
-    ```
+        ```json
+        { "mx_extensions": [ "<name_of_your_project>.dll" ] }
+        ```
 
     3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 

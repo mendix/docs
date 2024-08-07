@@ -16,13 +16,15 @@ Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component 
 
 The header for a component presents the following details:
 
-* Labels (if there is any)
+* Labels (if there are any)
+
     * **Partner**: If the header contains this label, it means that the component is partner-supported.
         * These components can have a **Contact Us** button for setting up your subscription with the partner.
         * If you already have an active subscription or trial, click **View status** to go to the [Company Subscriptions](/appstore/overview/#company-subscriptions) page.
     * **Mendix**: If the header contains this label, it means that the component is platform-supported.
     * **Siemens**: If the header contains this label, it means that the component is Siemens-supported.
     * **Recommended**: If the header contains this label, it means that the component meets your company's policies and guidelines, and therefore is recommended by your Mendix Admins.
+    
 * The name of the component
 * The review average (in stars) and the number of reviews
 * The number of times the component has been downloaded

@@ -366,7 +366,6 @@ It returns the presigned url as a String. The input and output for this service 
 | Input | Output | 
 | --- | --- | 
 | `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
-=======
 
 #### 4.3.11 HeadBucket {#headbucket}
 

@@ -60,7 +60,7 @@ To create an app using your own data, do the following:
 
 3. When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 
-   {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/drag-and-drop.jpg"  width="650"  class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/drag-and-drop.jpg"  width="650"  class="no-border" >}}
 
     {{% alert color="info" %}}If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later.{{% /alert %}}
 

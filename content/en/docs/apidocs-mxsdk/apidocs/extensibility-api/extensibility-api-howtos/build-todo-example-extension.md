@@ -20,7 +20,7 @@ This document covers the following topics:
 
 Before you start the procedure, make sure that you have installed the following tools on your local development environment:
 
-* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or Jetbrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
+* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or JetBrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
 * Studio Pro version 10.6 or higher
 
 ## 3 Creating the Project and Configuring It as an Extension
@@ -558,29 +558,29 @@ In this section, you will add a menu item to the toolbar that will allow you to 
     ```csharp
     using System.Collections.Generic;
 
-using System.ComponentModel.Composition;
-using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
-using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
-using Mendix.StudioPro.ExtensionsAPI.UI.Services;
+    using System.ComponentModel.Composition;
+    using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
+    using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
+    using Mendix.StudioPro.ExtensionsAPI.UI.Services;
 
-namespace Mendix.ToDoExtension;
+    namespace Mendix.ToDoExtension;
 
-[Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
-public class ToDoListMenuBarExtension : MenuExtension
-{
-    private readonly IDockingWindowService _dockingWindowService;
-
-    [ImportingConstructor]
-    public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
+    [Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
+    public class ToDoListMenuBarExtension : MenuExtension
     {
-        _dockingWindowService = dockingWindowService;
-    }
+        private readonly IDockingWindowService _dockingWindowService;
 
-    public override IEnumerable<MenuViewModel> GetMenus()
-    {
-        yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+        [ImportingConstructor]
+        public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
+        {
+            _dockingWindowService = dockingWindowService;
+        }
+
+        public override IEnumerable<MenuViewModel> GetMenus()
+        {
+            yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+        }
     }
-}
     ```
 
 ## 9 Adding a Web-based User Interface
@@ -716,7 +716,7 @@ Up to now you have been adding all the logic that will allow your extension to r
 
 ### 9.1 Explanation
 
-This HTML page is self-explanatory, as you are providing a very simple interface with some added css styling provided by Tailwind CSS.
+This HTML page is self-explanatory, as you are providing a very simple interface with some added CSS styling provided by Tailwind CSS.
 
 Within the JavaScript file, you need to add some logic so that the web view can communicate with your extension logic correctly.
 

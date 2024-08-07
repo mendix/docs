@@ -46,7 +46,7 @@ Attributes of type **Binary** cannot be exported through OData services except f
 
 {{% /alert %}}
 
-Entities that are published with the **Readable** capability do not allow including associations to entities that _do not_ have the **Readable** capability. Associations from the other direction, from non-readable to readable entities, _are_ supported.
+Entities that are published with the **Readable** capability do not allow including associations to entities that do not have the **Readable** capability. Associations from the other directions, from non-readable to readable entities, are supported.
 
 ### 3.1 Required Validation Rules for Published Attributes
 

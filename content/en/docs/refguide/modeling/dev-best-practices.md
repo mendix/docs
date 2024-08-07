@@ -416,17 +416,17 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 * The name consists of a noun + verb (for example, *EmployeeOnboarding*)
 * The name reflects what the process is about, what the goal of the process is
 
-### 4.4 Excluded and Unused Documents
+### 4.4 Warnings 
+
+No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
+
+### 4.5 Excluded and Unused Documents
 
 Excluded documents are documents that are in a project but excluded from deployment. These documents can be kept in your app for reference, but Studio Pro will act as if they do not exist. 
 
 Unused documents are documents that are still being considered while being deployed that can be used if you want to replace a document with another document. 
 
 Unused and excluded documents should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
-
-### 4.5 Warnings 
-
-No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 
 ### 4.6 XPath
 

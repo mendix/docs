@@ -75,7 +75,7 @@ Next, you are going to create the UI for your native app:
 5. Search for and select your **Picture** entity, and when prompted to automatically fill the contents of the widget, click **Yes**.
 6. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 7. Click the **Edit** button next to **Caption**.
-8. In the new dialog box, replace the caption with the place holder *{1}*. 
+8. In the new dialog box, replace the caption with the placeholder *{1}*. 
 9. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/native-mobile-app/add-title-param.png" width="400px" alt="Configure edit button" class="no-border" >}}

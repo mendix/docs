@@ -32,6 +32,10 @@ In the **Public documentation** tab, you can provide a summary and a description
 
 ## 3 Selecting Published Attributes and Associations {#exatass}
 
+{{% alert type="info" %}}
+Support for publishing associations to and from entities that do not have the **Readable** capability was introduced in Studio Pro [10.11.0](/releasenotes/studio-pro/10.11/).
+{{% /alert %}}
+
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete, and move these attributes and associations.
 
 Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
@@ -43,10 +47,6 @@ Attributes of type **Binary** cannot be exported through OData services except f
 {{% /alert %}}
 
 Entities that are published with the **Readable** capability do not allow including associations to entities that _do not_ have the **Readable** capability. Associations from the other direction, from non-readable to readable entities, _are_ supported.
-
-{{% alert type="info" %}}
-Support for publishing associations to and from entities that don't have the **Readable** capability, was introduced in Studio Pro [10.11.0](/releasenotes/studio-pro/10.11/).
-{{% /alert %}}
 
 ### 3.1 Required Validation Rules for Published Attributes
 

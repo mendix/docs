@@ -30,7 +30,7 @@ Another way of publishing a microflow is from the microflow itself. You can do o
 When you publish a microflow that has object, list, enumeration parameters, or return types, these entities and enumerations must also be published. To enable consumers of your service to send or retrieve associated objects, you must publish these associations and the associated entities as well.
 
 {{% alert color="warning" %}}
-If an entity is used as the return type and this entity has exposed associations, the associated objects that are present in the microflow context [can also be retrieved](/refguide/supported-odata-operations#retrieve-associated-objects/) by the client. 
+If an entity is used as the return type and this entity has exposed associations, the associated objects that are present in the microflow context [can also be retrieved](/refguide/supported-odata-operations/#231-retrieving-associated-objects) by the client. 
 {{% /alert %}}
 
 ### 2.2 Edit a Published Microflow{#edit-microflow}

@@ -365,7 +365,7 @@ It returns the presigned url as a String. The input and output for this service 
 | Input | Output | 
 | --- | --- | 
 | `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
-=======
+
 #### 4.3.11 HeadBucket {#headbucket}
 
 The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
@@ -373,4 +373,3 @@ The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucke
 | Input | Output | 
 | --- | --- | 
 | `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |
-

@@ -84,7 +84,7 @@ Do the following to add your app to FCM:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/add_app.png"   width="350"  class="no-border" >}}
 
-2. Fill in the bundle_id (only for iOS and Android), an app nickname of your choice, and skip the rest of the steps:
+1. Fill in the bundle_id (only for iOS and Android), an app nickname of your choice, and skip the rest of the steps:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/setting-up-google-firebase-cloud-messaging-server/android_setup.png"   width="350"  class="no-border" >}}
 

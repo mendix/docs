@@ -47,15 +47,10 @@ Your IdP can perform create, read, update and delete (CRUD) operations on the us
 The SCIM module also has the following features:
 
 * It has been tested with Entra ID and Okta.
-* It has been tested in combination with SAML and OIDC SSO module.
-
-    | **IdP** | **SAML** | **OIDC SSO** |
-    | --- | --- | --- |
-    | Entra ID | Verified | Verified |
-    | Okta| Verified | Verified |
+* It has been tested in combination with SAML and OIDC SSO module using Entra ID and Okta as an IdP.
 
     {{% alert color="info" %}}
-You need to choose the right attribute mappings to align with the user identifiers. For more information, see the [Attribute Mapping](#attribute-mapping) section below.
+If you are using the SCIM module in combination with Entra ID and OIDC SSO, you need to choose the correct attribute mapping. For more information, see the [Attribute Mapping](#attribute-mapping) section below.
     {{% /alert %}}
 
 * Your IdP allows the selection of users that sync with your Mendix app, meaning your IdP controls which users are created and active in your app.
@@ -179,6 +174,10 @@ For reference, the table below gives an overview of attribute mapping when using
 | emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |
 | userName| FullName | `johndoe@companyA.com` | `johndoe@companyA.com` |
 | active| Active | true | true |
+
+{{% alert color="info" %}}
+ In the SCIM protocol, you can configure the `object-id` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the User Identifiers in the OIDC and SCIM Protocols section of the *OIDC SSO*.
+{{% /alert %}}
 
 The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
 

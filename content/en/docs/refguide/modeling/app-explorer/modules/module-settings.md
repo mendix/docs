@@ -41,7 +41,7 @@ There are three types of modules, and the choice of type depends on the purpose 
 * [Add-on module](#add-on-module)
 * [Solution Module](#solution-module)
 
-{{% alert color="warning" %}} If for some reason you switch the add-on and solution module to an app module or from an app module to a solution or add-on module their module data is lost once they upload a new version of this module to their app. {{% /alert %}}
+{{% alert color="warning" %}} If for some reason you switch from an add-on or solution module to an app module or from an app module to a solution or add-on module the module data is lost once the new version of the app is deployed. Switching from add-on to solution module and from solution to add-on module is possible without loss of data. {{% /alert %}}
 
 #### 3.1.1 App Module {#app-module}
 

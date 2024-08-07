@@ -85,8 +85,8 @@ Sessions are deleted under two circumstances:
 * When there is a database upgrade on application startup ‒ for example if there is a model change or if the database is new.
 * During periodic cleanup of expired sessions.
 
-    You can configure how often expired sessions are cleaned up using the [ClusterManagerActionInterval](refguide/custom-settings/#ClusterManagerActionInterval) runtime setting.
+    You can configure how often expired sessions are cleaned up using the [ClusterManagerActionInterval](/refguide/custom-settings/#ClusterManagerActionInterval) runtime setting.
 
-    You can configure when a session is considered expired using the [SessionTimeout](refguide/custom-settings/#SessionTimeout) runtime setting.
+    You can configure when a session is considered expired using the [SessionTimeout](/refguide/custom-settings/#SessionTimeout) runtime setting.
 
 When an anonymous session is deleted the associated anonymous user is deleted as well.

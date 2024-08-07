@@ -424,7 +424,7 @@ Unused documents are documents that are still being considered while being deplo
 
 Unused and excluded documents should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
 
-### 4.5 Warnings and Studio Pro Feedback
+### 4.5 Warnings 
 
 No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 

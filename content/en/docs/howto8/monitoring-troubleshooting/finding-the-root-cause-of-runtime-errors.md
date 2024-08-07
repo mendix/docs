@@ -18,7 +18,7 @@ If the application is deployed from Studio Pro, the information is located in th
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" class="no-border" >}}
 
-When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **VIew Log Line Details** pop-up window:
+When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **View Log Line Details** pop-up window:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" class="no-border" >}}
 

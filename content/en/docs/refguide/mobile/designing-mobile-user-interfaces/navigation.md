@@ -35,7 +35,7 @@ Pop-ups can be very useful when asking for input in certain contexts. For exampl
 
 Native layouts have helpful properties that enable the most common patterns used in native apps.
 
-### 3.1 Header
+### 3.1 Header{#header}
 
 A layout that has the header property enabled will always show a bar at the top of the screen. A header consists of three parts: 
 
@@ -71,7 +71,7 @@ Then, decide which screen in your project will have a **Sidebar** and apply the 
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/selectsidebarlayout.png" alt="Select a sidebar layout" >}}
 
-After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](/refguide/mobile/designing-mobile-user-interfaces/navigation/#31-header)):
+After that, you will see the **Sidebar** appear on your screen. You can place any content inside of it, and you can see it using **Sidebar Toggle** button (which will appear in the left part of your [Header](#header)):
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/sidebarlayout.png" alt="Sidebar layout" >}}
 
@@ -133,13 +133,13 @@ In addition, you can configure the Open page action to **Clear history** when na
 
 In order to add more flexibility and customization to mobile apps, Mendix offers different options for how an app's opening screen or popup animation can look.
 
-You can find and customize these options in [Navigation Profile](/refguide/navigation/#1-introduction):
+You can find and customize these options in [Navigation Profile](/refguide/navigation/):
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-navigation/navigationtransition.png" >}}
 
 By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
 
-Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both sperating systems.
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both operating systems.
 
 For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. Once you select this option, any popups options will be disabled and dismissed.
 

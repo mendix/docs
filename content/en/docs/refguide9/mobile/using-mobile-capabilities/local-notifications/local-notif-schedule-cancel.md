@@ -66,7 +66,7 @@ If your app is targeting devices with Android 14 (API levels 34 and above), you 
 
 If you are familiar with setting precise alarms on Android devices, you might notice recent changes introduced in Android 14. Specifically, the **SCHEDULE_EXACT_ALARM** permission (crucial for scheduling exact alarms) is no longer automatically granted to most newly installed apps targeting Android 13 and higher. 
 
-This means that for scheduling notifications on such devices, the end-user must give an explicit approval to that permission. We have updated our [Native Mobile Resources](/appstore/modules/native-mobile-resources/#37-native-mobile-category), so that you can easily implement these permission exchanges. 
+This means that for scheduling notifications on such devices, the end-user must give an explicit approval to that permission. We have updated our [Native Mobile Resources](/appstore/modules/native-mobile-resources/#native-mobile-category), so that you can easily implement these permission exchanges. 
 
 Using **Check generic permission** you can first check if a **SCHEDULE_EXACT_ALARM** is granted to an end-user's device. To achieve that, you must select **SCHEDULE_EXACT_ALARM_ANDROID** from **Permissions Enum**:
 

@@ -17,7 +17,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Create overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto7/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create menu items (see [How to Set Up the Navigation Structure](/howto7/general/setting-up-the-navigation-structure/))
 * Create microflows (see [How to Create Your First Microflow: Hello World!](/howto7/logic-business-rules/create-your-first-microflow-hello-world/)
-* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/overview/use-content/))
+* Add Marketplace content to your app (see [Using Marketplace Content](/appstore/use-content/))
 * Secure your applications (see [How to Create a Secure App](/howto7/security/create-a-secure-app/))
 
 ## 3 Preparing the Data Structure, GUI, and Modules
@@ -132,7 +132,7 @@ Based on the structure of the file you want to import, you will setup your templ
 
     {{< figure src="/attachments/howto7/integration/importing-excel-documents/18581961.png" class="no-border" >}}
 
-17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are discribed below.
+17. After creating all the mappings for the **Customer** object attributes, also create mappings for the **Order** object attributes by repeating steps 9 to 11. Because the **Order** object is associated to the **Customer** object, the mapping setup will be slightly different. The additional steps are described below.
 18. Choose **Reference** instead of **Attribute** as a type.
 19. Click on the arrow next to the **Reference** box, here you will select over which association the Order is linked to the Customer.
 

@@ -89,9 +89,9 @@ Before installing, make sure you have completed the following prerequisites:
 * Have a Mac OSX machine
 * Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
-* Install the latest XCode version
+* Install the latest Xcode version
 
-Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on Xcode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
@@ -115,7 +115,7 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/how-to-devapps/ios-folder.png" alt="iOS folder structure" class="no-border" >}}
 
-8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8. In Xcode select the **Dev** target and the emulator you want to build your developer app for:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/how-to-devapps/xcode-target-selection.png" alt="Dev target selection" class="no-border" >}}
 
@@ -123,6 +123,6 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
 #### 4.2.2 Distributing the Custom Developer App to the Apple App Store
 
-To run your custom developer app on a device which is not registered as a test device on the Apple Developer Portal, you will have to sign the developer app with your certificates manually and distibrute it via TestFlight.
+To run your custom developer app on a device which is not registered as a test device on the Apple Mendix Portal, you will have to sign the developer app with your certificates manually and distribute it via TestFlight.
 
 Read more on TestFlight in the [official documentation](https://testflight.apple.com/).

@@ -25,7 +25,7 @@ The scheme below shows that the data source of the list view has been set to **D
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" class="no-border" >}}
 
-The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
+The table below describes the most common errors which can occur when configuring a list view, the causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -42,7 +42,7 @@ For example, you have selected **Listen to widget** as the data source, but you 
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" class="no-border" >}}
 
-The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors you can come across when configuring a data view, causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

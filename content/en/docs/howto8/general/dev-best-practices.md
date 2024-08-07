@@ -94,7 +94,7 @@ If you have multiple associations between the same entities Mendix recommends ex
 
 When an association already exists between entities and you change the name on one or both of the entities, Mendix will rename the association automatically. 
 
-With models built in lower versions of Mendix, however, you will need to manually rename the assocation to keep your model consistent and up-to-date.
+With models built in lower versions of Mendix, however, you will need to manually rename the association to keep your model consistent and up-to-date.
 
 ### 3.3 Folders
 
@@ -112,7 +112,7 @@ Every project has documents that are needed for specific entities. Think of over
 
 ### 3.4 Microflows
 
-Generally, [microflow](/refguide8/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example,  **Act_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide8/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{Prefix}\_{Entity}\_{Operation}**. For example, **Act_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 

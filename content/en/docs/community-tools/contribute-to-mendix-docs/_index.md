@@ -50,7 +50,7 @@ You can create and edit files online within GitHub. If you want to work outside 
 
 To edit existing documentation, follow these steps:
 
-1. Click **View on GitHub** on the upper-right corner of the specific Mendix documentation page that you want to work on.
+1. Click **View on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/view-on-github.png">}}
 

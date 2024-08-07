@@ -6,7 +6,7 @@ weight: 30
 
 ## 1 Introduction
 
-Demo users are a demonstration of each [user role](/refguide9/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 
+Demo users are a demonstration of each [user role](/refguide9/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section). 
 
 When the application is started for the first time, the specified demo users are created automatically.
 
@@ -29,7 +29,7 @@ After they are created automatically, demo users do not differ in any way from o
 
 ## 3 Demo User Properties
 
-Double click the demo user to open its properties:
+Double-click the demo user to open its properties:
 
 {{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/demo-users/demo-user-properties.png" class="no-border" >}}
 

@@ -29,6 +29,7 @@ These are the available [app commands](/refguide/mx-command-line-tool/app/):
 | [convert](/refguide/mx-command-line-tool/app/#convert) | Converts the Mendix app. |
 | [create-project](/refguide/mx-command-line-tool/app/#create-project) | Creates a new Mendix app. |
 | [show-version](/refguide/mx-command-line-tool/app/#show-version) | Shows the Studio Pro version that was last used to edit the app. |
+| [show-java-version](/refguide/mx-command-line-tool/app/#show-java-version) | Show the configured Java version of the app. |
 
 ### 3.2 Adaptable Solutions Commands
 

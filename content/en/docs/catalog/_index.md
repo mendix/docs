@@ -1,18 +1,22 @@
 ---
-title: "Catalog Guide"
+title: "Catalog"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
 weight: 41
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Catalog Guide"
+    - content_type: "Catalog"
     - mendix_version: 10
 aliases:
     - /data-hub/data-catalog/index.html
     - /data-hub/
     - /data-hub/data-hub-catalog/
 ---
+
+{{% alert color="info" %}}
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
+{{% /alert %}}
 
 ## 1 Introduction
 

@@ -23,7 +23,7 @@ This how-to teaches you how to do the following:
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
-1. Open your app in the Modele and go to **Project** > **Settings**.
+1. Open your app in the Modeler and go to **Project** > **Settings**.
 2. Click **Edit** to open the **Edit Configuration** dialog box, and select the **Custom** tab.
 3. Add two custom settings to specify the paths to the certificates (ClientCertificates) and matching passwords (ClientCertificatePasswords). Also, add a third setting (ClientCertificateUsages) to specify which service should use which certificate if you use more than one certificate in your app.
 
@@ -67,7 +67,7 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 
-1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.

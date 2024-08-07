@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This how-to teaches you how to send test push notifications to multiple devices.
+This guide teaches you how to send test push notifications to multiple devices.
 
 {{% alert color="info" %}}
 Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.

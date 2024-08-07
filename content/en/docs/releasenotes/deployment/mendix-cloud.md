@@ -1,5 +1,6 @@
 ---
-title: "Mendix Cloud"
+title: "Mendix Cloud Release Notes"
+linktitle: "Mendix Cloud"
 url: /releasenotes/developer-portal/mendix-cloud/
 weight: 10
 description: "Release notes for deployment to Mendix Cloud"
@@ -15,13 +16,38 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### July 16, 2024
+
+#### Improvements
+
+* We changed the [Database Freeable Memory alert thresholds](/developerportal/operate/monitoring-application-health/#dbase-freeable-memory) for the following cloud resource packs:
+    * XS21: The critical alert threshold changed from 10% to 5% freeable memory.
+    * XS20 (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * S (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * Strato (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+
+### July 4, 2024
+
+#### Pipelines New Features
+
+* We added two new pipeline steps:
+    * You can use the Start Environment step to start a selected environment.
+    * You can use the Promote Package step to move a deployment package from a specified source environment to a specified target environment.
+* It is now possible to trigger pipelines manually. To use this new trigger type in your pipeline, select **Manual** as the **Trigger** in the Start Pipeline step of your pipeline design.
+* We will be launching a mini survey for Pipelines soon, asking you some questions about what you like and dislike.
+
+#### Pipelines Improvements
+
+* Pipeline names are no longer editable while a pipeline is active. If you want to edit a pipeline name, deactivate the pipeline first.
+* We implemented deep links for all three tabs on the Pipelines page. This facilitates easy sharing of record-specific details on the **Runs**, **Designs**, and **Settings** tabs; you can simply copy and paste the URL.
+
 ### May 14, 2024
 
 #### New Features
 
 * We now use Arm-based AWS Graviton 2 processors for databases of new environments on all plans in Mendix Public Cloud for best performance. Graviton 2 processors can provide significant performance improvements over previous generation instances. For database operations, this means faster processing of queries and better handling of concurrent requests.
 
-    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared or downsized.
+    Existing environments will not automatically use Graviton 2 processors for their databases. Graviton 2 processors will be used for new environments and those which are cleared, downsized, or resized.
 
 ### May 9, 2024
 
@@ -931,7 +957,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-{{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+{{% alert color="warning" %}}You may see a large increase in the size of the unused Java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
 ### June 17, 2020
 
@@ -1204,7 +1230,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fixes
 
 * We addressed and fixed an issue that caused some Mendix Cloud v4 backups to be duplicated.
-* We fixed a problem on Mendix Cloud v3 thath prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We fixed a problem on Mendix Cloud v3 that prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem that meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)

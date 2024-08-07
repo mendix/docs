@@ -41,7 +41,7 @@ For more information on building native mobile apps, see the [Build a Native Mob
 
 To start a new app based on a template, follow these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Blank Native Mobile App**.
 2. Click **Use this starting point**.
 3. Click **Create app** to close the dialog box.
 4. Click **Run Locally** ({{% icon name="controls-play" %}}) to see the app in action. Please note that starting a native mobile app for the first time can take a bit longer (about one minute total) than subsequent instances.
@@ -52,13 +52,8 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 ### 3.2 Downloading and Installing the Make It Native App {#download-min}
 
-#### 3.2.1 Downloading for Android
+Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
-To view your app on an Android device (or emulator), you must download and install the Make It Native 10 app from the [Google Play store](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10).
-
-#### 3.2.2 Downloading for iOS {#downloading-for-ios}
-
-To view your app on an iOS device, you must download and install the Make It Native 10 app from the [Apple App Store](https://apps.apple.com/us/app/make-it-native-10/id6450037464).
 
 ### 3.3 Viewing Your App on Your Testing Device
 

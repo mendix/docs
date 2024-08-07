@@ -2,10 +2,10 @@
 title: "Use the Charts Widgets"
 url: /howto8/front-end/charts-tutorials/
 weight: 20
-description: "These how-to's will guide you in using charts in Mendix apps."
+description: "These how-tos will guide you in using charts in Mendix apps."
 ---
 
-The following how-to's are available here:
+The following how-tos are available here:
 
 * [Create a Basic Chart](/howto8/front-end/charts-basic-create/)
 * [Use Any Chart](/howto8/front-end/charts-any-usage/)

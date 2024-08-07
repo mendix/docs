@@ -63,7 +63,7 @@ To create logic to call the web service, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-simple-web-service/18582076.png" class="no-border" >}}
 
-10. In the **Location** section for this operation , check the **Override location** box to override the location and use the secure location of the web service.
+10. In the **Location** section for this operation, check the **Override location** box to override the location and use the secure location of the web service.
 11. Click **Edit** and change `http` to `https` for the URL in the **Location** editor and click **OK**.
 12. In the **SOAP Request Body** tab of the **Call Web Service** properties editor, double-click the **Celsius (optional)** input parameter and enter `toString($TemperatureInCelsius)` for the expression. The web service operation expects a string value, which is why you need to use the `toString` function. Then click **OK**.
 

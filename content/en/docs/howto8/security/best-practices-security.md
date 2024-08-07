@@ -23,7 +23,7 @@ When designing an application, a developer can specify access rules on an entity
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
-* Attributes determined by the system (like the status of an order) should never be writeable
+* Attributes determined by the system (like the status of an order) should never be writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules and visibility constraints in page components (grids, list views, data views)
@@ -39,7 +39,7 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
 * Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
@@ -50,7 +50,7 @@ These are the common cases and best practices:
 
 A Mendix app offers various endpoints that can be used to obtain information about offered services. The paths used by these endpoints end in `-doc`. By default, access to these endpoints is disabled when deploying to a cloud node.
 
-Access restrictions can be configured within the Developer Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
+Access restrictions can be configured within the Mendix Portal. They can be found in the **Environment details** of your cloud node. This is an example of this overview showing the default settings after deploying to a new environment:
 
 {{< figure src="/attachments/howto8/security/best-practices-security/default-access-restrictions.png" alt="Mendix Cloud Access Restrictions Overview" class="no-border" >}}
 
@@ -58,7 +58,7 @@ Examples are the `ws-doc` or `rest-doc` endpoints that enumerate all the publish
 
 You can take the following preventative measures:
 
-* Disable unused endpoints within the Mendix Developer Portal completely by applying a **deny all access** preset on them
+* Disable unused endpoints within the Mendix Portal completely by applying a **deny all access** preset on them
 * Apply IP filtering or client certificate authentication to restrict access
 
 Keep the following in mind:
@@ -144,7 +144,7 @@ HTTP headers can add an additional layer of security and help you detect certain
 
 An example of an attack is when an application is embedded in an iframe. Applications that can be embedded within an iframe can be misused by attackers. By using an overlay, it could trick users into clicking buttons and make them perform actions within the application on their behalf without knowing it. This approach is called [clickjacking](https://www.owasp.org/index.php/Clickjacking).
 
-By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within the Mendix Developer Portal. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
+By sending a header to the user’s browser, it can block the use of the Mendix application within an iframe and avoid this type of attack. The header is set by default to block embedding within an iframe, but can be configured using [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) in your node’s environment details within **Apps**. If you change this value, you will also need to ensure that *SameSite* cookies are set to the correct value. See [Iframes and Running Apps](/developerportal/deploy/running-in-iframe/) for more information.
 
 ## 12 Maintaining a High Level of Project Hygiene
 
@@ -174,4 +174,4 @@ Security in Mendix does not include scanning files that end-users upload or down
 To scan uploaded files for malicious content, do one of the following:
 
 * Create a custom module and configure the functionality yourself.
-* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [Using Marketplace Content](/appstore/overview/use-content/).
+* Check available modules in the [Mendix Marketplace](https://marketplace.mendix.com/). For more information on how to use the Mendix Marketplace content, see [Using Marketplace Content](/appstore/use-content/).

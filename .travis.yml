@@ -78,7 +78,7 @@ install:
 before_script:
 ##############
   - pyenv versions # list python versions supported by pyenv in case version in next command is removed
-  - pyenv global 3.7.13 # this version needs to be already installed in the travis build
+  - pyenv global 3.8 # this version needs to be already installed in the travis build
   - python -V
 
 script:
@@ -136,14 +136,14 @@ deploy:
 #
 # Need to decide where to deploy to, so need to do the actual deployment in a script https://docs.travis-ci.com/user/job-lifecycle#complex-build-commands
 #  - aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
-  - provider: script
-    script:
-      - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-    skip_cleanup: true
-    on:
-      branch:
-        - production
-        - development
+  provider: script
+  # ⋮
+  edge: true
+  script: $TRAVIS_BUILD_DIR/_scripts/deploy.sh
+  on:
+    branch:
+      - production
+      - development
 
 after_deploy:
 ############# Skipped

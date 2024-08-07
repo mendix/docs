@@ -10,7 +10,7 @@ aliases:
 
 ## 1 Introduction
 
-This section will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
+This guide will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/).
 
 ## 2 Implementing the Encryption Module
 
@@ -34,7 +34,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 
 ## 4 Implementing the Nanoflow Commons Module
 
-Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
+Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Nanoflow commons*.
@@ -44,7 +44,7 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 
 ## 5 Implementing the Native Mobile Resources Module
 
-Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app, or if you do not plan on using using local or native push notifications. Implement this module by doing the following:
+Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app. This module is required even for progressive web apps. Implement this module by doing the following:
 
 1. Open up the Marketplace from Studio Pro.
 1. Search for *Native mobile resources*.

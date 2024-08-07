@@ -173,7 +173,7 @@ For reference, the table below gives an overview of attribute mapping when using
 
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
-| externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` (for example, ObjectID—configured, non default) |
+| externalID | Name | 00ctc4pufr85d7 | ObjectID (configured, non default) For example, `550e8400-e29b-41d4-a716-446655440000` |
 | familyName| lastname | Doe | Doe John |
 | givenName| firstname | John |  |
 | emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |

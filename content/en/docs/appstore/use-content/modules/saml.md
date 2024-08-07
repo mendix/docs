@@ -670,7 +670,7 @@ End-users can access your app through the following endpoints when using the SAM
     * **idp_id** – this indicates which idp will be used to sign the end-user in if you connect your app using multiple SAML IdPs
     * **action=verify** – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
     * **on={contextname}** – this gives context to the initiation of in-session authentication, (see [In-session Authentication](#in-session) for more information)
-* **/SSO/login/SSO/** or **/SSO/login/SSO?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.
+* **/SSO/login** or **/SSO/login?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.
 
 Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
 

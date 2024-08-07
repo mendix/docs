@@ -36,5 +36,4 @@ Additionally, there are additional features that provide access to the following
 
 ### 2.2 Studio Pro and MxBuild Extensions
 
-* [ConsistencyCheckExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.ConsistencyCheck/ConsistencyCheckExtension-1.md) – This allows injecting custom logic into
-  the [Consistency check](https://docs.mendix.com/refguide/consistency-errors/) process.
+* [ConsistencyCheckExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.ConsistencyCheck/ConsistencyCheckExtension-1.md) – This allows injecting custom logic into the [Consistency check](/refguide/consistency-errors/) process.

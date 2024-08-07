@@ -69,3 +69,4 @@ In the **Group Management** tab, you can create and edit user groups. These grou
 ## 5 Platform
 
 In the **Platform** section, administrators can view logs and statistics, upload licenses, and configure webhooks.
+

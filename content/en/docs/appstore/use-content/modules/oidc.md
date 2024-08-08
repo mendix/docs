@@ -83,10 +83,10 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
-  * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
-  * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
-    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
+    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published `jwks` endpoint.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP
@@ -379,8 +379,8 @@ SSO configurations created using constants will be shown as read only on the **I
 
 The following error messages will be displayed when you try to edit/delete.
 
-* error at edit:  You cannot modify as it is created from deployment.
-* error at delete:  You cannot delete as it is created from deployment.
+* error at edit: You cannot modify as it is created from deployment.
+* error at delete: You cannot delete as it is created from deployment.
 {{% /alert %}}
 
 ##### 5.3.1.1 Customizing Default Deploy-time Configuration
@@ -576,6 +576,30 @@ You can set up custom user provisioning once your app is running using the `OIDC
 Review the custom microflow `evaluateMultipleUserMatches` in the **USE_ME** folder. The module tries to find the user corresponding to the given username. This microflow is triggered when multiple matching `System.User` records are found.
 
 You can customize this microflow to determine the correct user. The resulted user instance will be signed in to the application and passed on to any other microflow. However, Mendix recommends using provided unique entity attribute only. For example, `System.User.Name`.
+
+### 6.4 User Identifiers in the OIDC and SCIM Protocols
+
+This section provides an overview and general guidance on User Identifiers, essential for understanding how they function in the OIDC and SCIM protocols. It is particularly relevant for Entra ID customers to ensure proper implementation and alignment of User Identifiers.
+
+#### 6.4.1 Overview of User Identifier
+
+When using OIDC SSO with Entra ID, user identifiers need to be configured correctly to ensure forward compatibility, especially if you plan to introduce the SCIM module in your application. If you are using OIDC SSO with Entra ID, you can refer to the [Microsoft documentation on attribute mapping](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/customize-application-attributes).
+
+Entra ID uses two immutable identifiers for a user:
+
+* The user’s object ID: The user's object ID uniquely identifies a user, making it ideal for crosslinking users across different applications. For example, B2E application used across the company can use the object ID as a unique identifier.
+* The user’s pairwise unique identifier: It is also known as a locally unique identifier and is derived from the combination of the user's object ID and the application's identifier. This means it cannot be used to crosslink a user across different applications. For example, applications that need additional privacy can use locally unique identifiers to avoid cross linking of users.
+
+Role of user identifiers in OIDC and SCIM protocols:
+
+* OIDC protocol can use both types of identifiers based on use case:
+
+  * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
+  * The ID-token also contains an `oid` claim, which includes the user’s object ID.
+  
+* SCIM:
+
+  * In the SCIM protocol, Microsoft by default uses the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
 
 ## 7 API Authentication {#api-authentication}
 

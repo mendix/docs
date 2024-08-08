@@ -308,12 +308,11 @@ You can import and export table mappings to an XML file using the **Table mappin
 
 ## 11 Data types
  
-Database specific data types are converted to a java type with the jdbc driver, which is then attempted to be parsed using the defined mendix primitive type. This step also performs implicit conversions between types.
+Database-specific data types are converted to a Java type with the JDBC driver. The module then converts these Java types into a Mendix primitive type. This step also performs implicit conversions between types.
 
 [Mendix primitive types](https://apidocs.rnd.mendix.com/9/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with _X_):
 
-
-| Mendix type <br>/ Java Type | Boolean | DateTime | Integer | AutoNumber /<br>Long | Decimal | HashString /<br>String / Enum | Binary |
+| Mendix Type / Java Type | Boolean | DateTime | Integer | AutoNumber / Long | Decimal | HashString / String / Enum | Binary |
 |:---------------------------:|:-------:|:--------:|:-------:|:--------------------:|:-------:|:-----------------------------:|:------:|
 |           Boolean           |    X    |          |         |                      |         |                               |        |
 |          util.Date          |         |    X     |         |          X           |         |               X               |        |
@@ -323,7 +322,13 @@ Database specific data types are converted to a java type with the jdbc driver, 
 |         BigDecimal          |    X    |          |    X    |          X           |    X    |                               |        |
 |           String            |    X    |    X     |    X    |          X           |    X    |               X               |        |
 
-Note that CLOBs (of java type `java.sql.clob`) are not supported. Boolean mapping treats numeric positive/negative values as true/false, string values supported: "yes", "1", "true", "ja", "no", "0", "false", "nee". Decimal mapping supports currency format strings. 
+{{% alert color="info" %}}
+CLOBs (of java type `java.sql.clob`) are not supported.
+
+Boolean mapping treats numeric positive/negative values as true/false and supports the following string values: "yes", "1", "true", "ja", "no", "0", "false", "nee".
+
+Decimal mapping supports currency format strings.
+{{% /alert %}} 
 
 ## 12 Troubleshooting
 

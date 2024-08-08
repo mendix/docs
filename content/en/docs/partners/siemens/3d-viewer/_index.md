@@ -232,6 +232,10 @@ On the **General** tab, the following options are available:
 
 * **Expand all** – determines if the model's product structure tree should be fully expanded at the initial load
 * **Show search** – use to toggle a search bar that enables the end-user to enter a part name and search for the part in the widget
+* **Show search options** – determines whether to display all node search results in the drop-down list
+  
+{{< figure src="/attachments/partners/siemens/3d-viewer/pstree-showsearchoptions.jpg" alt="pstree-showsearchoptions" class="no-border" >}}
+
 * **Show leaf structure** – determines if the sub-part data should be displayed in the widget
 
 ##### 4.6.2.2 PS Tree Table
@@ -273,6 +277,10 @@ On **Event** tab, by binding a Boolean attribute to the **Save** property, the s
 This widget enables performing measurements on 3D models, including measuring distance, angle, line length, radius, and area.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to perform measurements on the model. 
+
+You can set the language of the measurement result in the **General** tab, the default language is English.
+
+{{< figure src="/attachments/partners/siemens/3d-viewer/Measurement-language.jpg" alt="measurement-language" class="no-border" >}}
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 

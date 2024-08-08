@@ -610,6 +610,14 @@ The default behavior for the OIDC SSO module is to persist the value of the `sub
 * For existing applications that do not need to use SCIM, you can continue to use default `sub` claim value or any other claim such as `preferred_username`.
 * For existing applications where you want to introduce SCIM, you will need to define a migration strategy for the identifiers.
 
+#### 6.4.3 Configuring `oid` Claim in the OIDC SSO
+
+By default, `WellKnownendpoint` (Automatic configuration URL) does not include `oid` claim in metadata. You will need to manually configure the `oid` claim in **UserProvisioning** tab of OIDC SSO configuration using below steps:
+
+1. Go to **Attribute Mapping** and click **New**
+2. Select **Search**  and click **New**
+3. Create `oid` claim and map it to the Entity Attribute.
+
 ## 7 API Authentication {#api-authentication}
 
 You can create your own APIs within your Mendix app and secure the end point over OIDC using a custom authentication microflow. To do this:

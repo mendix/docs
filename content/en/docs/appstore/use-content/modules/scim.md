@@ -176,8 +176,14 @@ For reference, the table below gives an overview of attribute mapping when using
 | active| Active | true | true |
 
 {{% alert color="info" %}}
- In the SCIM protocol, you can configure the `object-id` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the User Identifiers in the OIDC and SCIM Protocols section of the *OIDC SSO*.
+ In the SCIM protocol, you can configure the `object ID` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the User Identifiers in the OIDC and SCIM Protocols section of the *OIDC SSO*.
 {{% /alert %}}
+
+You can configure the `objectId` in SCIM using the steps below:
+
+1. In the Azure portal, select the application which is integrated with the SCIM module.
+2. Edit the attribute mapping.
+3. For `externalId`, change the **Source attribute** to `objectId`.
 
 The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
 

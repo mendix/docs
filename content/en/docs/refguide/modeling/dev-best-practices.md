@@ -103,21 +103,29 @@ With models built in lower versions of Mendix, however, you will need to manuall
 
 ### 3.3 Folders
 
+#### Folder Names
+
+Mendix recommends to use unique folder names that clearly identify their contents. You can use any combination of letters and symbols to identify a folder. For example, when adding a Published OData Service to your app, you could name the folder holding the service *ODataAPIs* or *OData_APIs* to reflect its function. 
+
+Keep in mind that folders do not affect the full path of the resource. For example, when referencing the folder **ODataAPIs** in MyFirstModule, the path name would be *MyFirstModule.ODataAPIs*. 
+
+#### Folder Structure
+
 The structure for your documents starts with a clear separation of folders. By using a good folder structure you will improve the maintainability of your application; you will be able to find required documents faster and therefore will be able to develop and fix faster. 
 
 The optimal grouping of your documents into folders depends on the circumstances and on the functionality of your application. Mendix recommends combining the guidelines below in a way that fits your app.
 
-#### 3.3.1 Process-Related Sources
+##### 3.3.1 Process-Related Sources
 
 Every app consists of processes. Structure your documents for these processes into folders that reflect individual processes and their steps.
 
-#### 3.3.2 Entity-Related Sources
+##### 3.3.2 Entity-Related Sources
 
 Every app has documents that are needed for specific entities. Think of overview pages for maintenance, validation microflows that prevent commits, or other event triggers. These types of document should be structured into one folder that is named after the entity. Optionally, sub-folders could be used to organize, for example, **events** and **pages**.
 
 ### 3.4 Microflows {#microflow-naming-conventions}
 
-Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example,  **ACT_Vendor_StartWorkflow**.
+Generally, [microflow](/refguide/microflows/) names should include the type of event which triggers them, the name of the main entity being processed, and the operation being performed: **{PREFIX}\_{Entity}\_{Operation}**. For example, **ACT_Vendor_StartWorkflow**.
 
 There are exceptions, such as where there is no main entity, or there is another reason to use a different name to improve understandability. The important thing is to make sure the name of the microflow clearly indicates its purpose.
 
@@ -408,27 +416,33 @@ Guidelines below can help you choose a short yet meaningful name for your workfl
 * The name consists of a noun + verb (for example, *EmployeeOnboarding*)
 * The name reflects what the process is about, what the goal of the process is
 
-### 4.4 Warnings and Studio Pro Feedback
+### 4.4 Warnings 
 
 No warnings should be visible in Studio Pro, unless explicitly documented with a reason. Warnings can indicate many issues, including maintainability and security risks, which must be resolved.
 
-Unused and excluded items should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
+### 4.5 Excluded and Unused Documents
 
-### 4.5 XPath
+Excluded documents are documents that are in a project but excluded from deployment. These documents can be kept in your app for reference, but Studio Pro will act as if they do not exist. 
+
+Unused documents are documents that are still being considered while being deployed that can be used if you want to replace a document with another document. 
+
+Unused and excluded documents should be removed from the model when they are no longer needed. When a version of the application is prepared for a release, all these items should be cleaned up. Make sure to check whether items that appear unused are not actually called from a Java action before removing them. Studio Pro provides the possibility to mark such items as used to override warnings about this.
+
+### 4.6 XPath
 
 [XPath](/refguide/xpath/) constraints in any part of the model should be kept as simple as possible. As a general rule, XPaths must not appear when the **Find advanced > XPath** option in Studio Pro is used with all options enabled.
 
-### 4.6 Security
+### 4.7 Security
 
 The [security](/howto/security/) overview in Studio Pro must not show any incomplete (yellow) parts. All entity, microflow, and page access must be configured completely.
 
 Assigning default rights to new members when defining entity access is NOT recommended. This will ensure that access is only granted after a conscious decision.
 
-### 4.7 Mendix Version
+### 4.8 Mendix Version
 
 Apps should keep up with new Mendix releases as much as possible.
 
-### 4.8 Marketplace Content
+### 4.9 Marketplace Content
 
 When introducing a new [Mendix Marketplace](https://marketplace.mendix.com/) component to an app, carefully consider the support level of the component. Using components that are community supported introduces a maintainability and upgrade risk.
 

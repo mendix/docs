@@ -21,7 +21,7 @@ At the top of the dialog box you will see the branch which you are committing. T
 
 ## 3 Message
 
-Enter a message describing the changes you have made. This message may contain multiple lines. If you want to make the commit using the keyboard you can press <kbd>Ctrl</kbd>+<kbd>Enter</kbd>.
+Enter a message describing the changes you have made. This message may contain multiple lines. If you want to make the commit using the keyboard you can press <kbd>Ctrl</kbd> + <kbd>Enter</kbd>.
 
 ## 4 Commit Tabs
 

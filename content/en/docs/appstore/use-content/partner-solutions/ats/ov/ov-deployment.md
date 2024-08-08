@@ -125,7 +125,7 @@ ATS does not support the uploading of files in every situation. This table prese
 | :-------------- | :---------------------- | :--------------- | :------------------ |
 | Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/grey.png" class="no-border" >}} Limited<sup>1</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes |
 | BrowserStack (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes |
-| SauceLabs (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No |
+| Sauce Labs (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/red.png" class="no-border" >}} No |
 | Selenium SaaS Agent | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/grey.png" class="no-border" >}} Limited<sup>2</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/green.png" class="no-border" >}} Yes |
 
 <small><sup>1</sup> This is only possible when you prepare your own files on that server.<br />
@@ -151,45 +151,45 @@ To test your application for desktops and mobile, you need **automated browser t
 
 ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/)). The solutions of these providers are discussed in the next sections.
 
-### 5.2 Browserstack Solutions/Products
+### 5.2 BrowserStack Solutions/Products
 
 {{% alert color="warning" %}}
-Browserstack is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
+BrowserStack is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
 {{% /alert %}}
 
-These Browserstack solutions are compatible with ATS:
+These BrowserStack solutions are compatible with ATS:
 
 * **Automate Pro** – unlimited automated browser testing for desktop sites
     * If you only want to test your application on desktop browsers, you should select this option
-    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+    * For more information, see [BrowserStack Automate](https://www.browserstack.com/automate)
 * **Automate Mobile** – unlimited automated browser testing for desktop and mobile sites
     * If you want to test your application on desktop and mobile browsers, you should select this option
-    * For more information, see [Browserstack Automate](https://www.browserstack.com/automate)
+    * For more information, see [BrowserStack Automate](https://www.browserstack.com/automate)
 * **Enterprise** – personalized pricing
 
-For more information on pricing, see [Browserstack Pricing](https://www.browserstack.com/pricing).
+For more information on pricing, see [BrowserStack Pricing](https://www.browserstack.com/pricing).
 
-### 5.3 SauceLabs Solutions/Products
+### 5.3 Sauce Labs Solutions/Products
 
 {{% alert color="warning" %}}
-SauceLabs is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
+Sauce Labs is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
 {{% /alert %}}
 
-These SauceLabs solutions are compatible with ATS:
+These Sauce Labs solutions are compatible with ATS:
 
 * **Automated** – limited browser testing for desktop and mobile sites
     * If you want to test your application on desktop and mobile browsers, you should select this option
-    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+    * For more information, see [Sauce Labs Automated](https://saucelabs.com/products/web-testing)
 * **Unlimited Automated** – unlimited browser testing for desktop and mobile sites
     * If you want to test your application on unlimited desktop and mobile browsers, you should select this option
-    * For more information, see [SauceLabs Automated](https://saucelabs.com/products/web-testing)
+    * For more information, see [Sauce Labs Automated](https://saucelabs.com/products/web-testing)
 * **Enterprise** – personalized pricing
 
 {{% alert color="info" %}}
 There is also a difference between virtual machines and real devices, which does not matter for ATS.
 {{% /alert %}}
 
-For more information on pricing, see [SauceLabs Pricing](https://saucelabs.com/pricing).
+For more information on pricing, see [Sauce Labs Pricing](https://saucelabs.com/pricing).
 
 ## 6 Setup Instructions
 
@@ -216,7 +216,7 @@ The setup of the agents depends on your provider.
 Selenium Service | Agent Name          | Setup Instructions
 ---------------- | ------------------- | ------------------
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
-SauceLabs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Sauce+Connect+Proxy)
+Sauce Labs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Sauce+Connect+Proxy)
 
 ### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
 
@@ -280,7 +280,7 @@ Before you start, make sure that your server has internet access to download the
     docker-compose up -d
     ```
 
-6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easiliy scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
+6. You now have a grid running on `http://myserver:4444/wd/hub`. Attached to this grid are two nodes: one for Chrome and one for Firefox. You can easily scale by starting new nodes with a simple command. This example will start up a second node for both Firefox and Chrome:
 
     ```shell
     docker-compose scale firefoxnode=2 chromenode=2

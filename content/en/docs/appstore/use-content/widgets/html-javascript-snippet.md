@@ -45,7 +45,7 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
 * **Refresh on context change** – determines whether the widget should refresh when the context changes
 * **Refresh on context update** – determines whether the widget should refresh when the context updates (works only when **Refresh on context change** is set to **Yes**)
 * **Enclose HTML with DIV** – determines whether the widget will wrap HTML with a DIV when HTML is added
-    * If this is set to false, it will just replace the content of the widge 
+    * If this is set to false, it will just replace the content of the widget 
     * For compatibility purposes, this is set to **Yes** on default
 
 ## 3 Strict CSP Compatibility

@@ -17,7 +17,7 @@ In this tutorial, you will learn to use a native mobile navigation profile. Apps
 
 ### 1.1 Getting to Know Mendix Native Mobile
 
-Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance,  advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
+Mendix native mobile apps are based on React Native. These apps use native UI elements, which means faster performance, advanced features like gesture functionality (swiping, multi-tap, and more), and improved access to device functionalities like geolocation and the camera. 
 
 Native mobile apps are offline first and only fetch data from the server when programmed to do so. This tutorial will familiarize you with the following Mendix native mobile concepts:
 
@@ -43,7 +43,7 @@ Before starting this tutorial, make sure you have completed the following prereq
 
 ## 3 Building the Native Mobile Picture App
 
-Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>CTRL</kbd> + <kbd>G</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
+Starting in Studio Pro, open the **Home_Native** page by double-clicking it in the **App Explorer**. You can also press <kbd>Ctrl</kbd> + <kbd>G</kbd> to open the **Go to** menu and search for the page (the **Go to** menu is used for quick navigation in the app; for more Mendix shortcuts, see [Edit Menu](/refguide/edit-menu/#overview)).
 
 {{% alert type="info" %}}
 The **Home_Native** page has a different icon than the **Home_Web** page. Mendix uses these icons to help you develop the right aspect of your app.
@@ -75,7 +75,7 @@ Next, you are going to create the UI for your native app:
 5. Search for and select your **Picture** entity, and when prompted to automatically fill the contents of the widget, click **Yes**.
 6. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 7. Click the **Edit** button next to **Caption**.
-8. In the new dialog box, replace the caption with the place holder *{1}*. 
+8. In the new dialog box, replace the caption with the placeholder *{1}*. 
 9. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/native-mobile-app/add-title-param.png" width="400px" alt="Configure edit button" class="no-border" >}}

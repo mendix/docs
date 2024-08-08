@@ -4,6 +4,13 @@ url: /releasenotes/sdk/model-sdk-4/
 weight: 97
 ---
 
+## 4.89.0 {#489}
+
+**Release date: July 16th, 2024**
+
+* We added support for Mendix [10.13.0](/releasenotes/studio-pro/10.13/).
+* We added support for Mendix Metamodel [10.13.0](/releasenotes/sdk/metamodel-10.13/).
+
 ## 4.88.0 {#488}
 
 **Release date: June 20th, 2024**
@@ -472,7 +479,7 @@ weight: 97
 * We added support for Mendix 7.21.0.
 * We added new working copy lock type `commit`.
 * We fixed the duplicate processing of events.
-* We upgraded to Node.JS version 10.
+* We upgraded to Node.js version 10.
 
 ## 4.16.0
 

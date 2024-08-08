@@ -27,7 +27,7 @@ Set time when event is first run
 
 **Every**
 
-Set the intervall for the event to repeat
+Set the interval for the event to repeat
 
 **Application**
 

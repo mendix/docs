@@ -86,6 +86,7 @@ In this more advanced example, you will see the `IMicroflowExpressionService.Cre
     transaction.Commit();
  }
 ```
+
 The `IMicroflowService.CreateMicroflow` method is a bit easier to use than the `IMicroflowService.Initialize` method because it doesn't require manually creating the microflow with `IModel.Create<IMicroflow>` and then manually adding it to the `IFolderBase` container. It can do everything behind the scenes as long as everything is supplied to it. For a comprehensive example on how to create microflows, see [Create Microflows for Calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
 
 ## 4 `TryInsertAfterStart` and `TryInsertBeforeActivity`

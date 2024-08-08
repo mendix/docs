@@ -352,7 +352,7 @@ This is currently not supported.
 
     In short: mind the growth of memory usage with very complex model outputs. 
 
-    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]` , will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
+    Another potential cause of crashing is if there is an inconsistency between the architecture of the ML model and the data injected into it, especially with complex operations in models that accepts complex calculations such as neural networks. For example, if your model has a `Convolution` layer of shape `16x16x1`, injecting a tensor of a shape whose algebraic division results in an integer result smaller than 1 (such as an input of `[1,3,15,15]`), will have unpredictable consequences. This might include Studio Pro crashing. Verify that the implementation of your model in Studio Pro matches, in shape and type of the data being sent into the component, the ML model architecture, or the ML model documentation if you obtained from third-party sources such as the ONNX Model Zoo.
 
 4. I have an exception when executing the ML model or running it. 
   

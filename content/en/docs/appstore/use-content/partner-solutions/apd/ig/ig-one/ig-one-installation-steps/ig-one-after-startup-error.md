@@ -3,8 +3,7 @@ title: "After Startup Error?"
 url: /appstore/partner-solutions/apd/ig-one-after-startup-error/
 ---
 
-Sometimes after startup, an error in Java occurs when Mendix generates a different parameter name in a different Mendix version. If this happens, let me know via apmtool@clevr.com, so CLEVR can rename the Java action parameter that causes this.
-
+Sometimes after startup an error in Java occurs when Mendix generates a different parameter name in a different Mendix version. If this happens, let me know via apmtool@clevr.com, so CLEVR can rename the Java action parameter that causes this.
 You can solve this the following way. First you open the project folder:
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/ig/ig-one/ig-one-installation-steps/ig-one-after-startup-error/Show_Project_Dir.png" class="no-border" >}}
 

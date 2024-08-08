@@ -218,7 +218,7 @@ To post an exchange in the Mendix Community, follow these steps:
     * The post **Description** (add all the details about your exchange to make it searchable and so other users can comment on it; consider including steps to reproduce the issue)
     * The **Tags** that reflect the post topic (users can filter the list of exchanges by tag)
 3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
-5. To publish the exchange, click **Post Exchange**.
+4. To publish the exchange, click **Post Exchange**.
 
 ### 3.3 Ideas {#ideas-tab}
 
@@ -331,7 +331,7 @@ To submit your own idea to the Mendix Community, follow these steps:
     * The idea **Description** (add all the details about your idea to make it searchable and so other users can can vote and comment on it)
     * The **Tags** that reflect the idea topic (users can filter the list of ideas by tag)
 3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
-5. To publish the idea, click **Share Idea**.
+4. To publish the idea, click **Share Idea**.
 
 Mendix looks forward to hearing your ideas!
 

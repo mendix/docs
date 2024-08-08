@@ -96,3 +96,4 @@ The entity `Order` is stored in the table `module$order` which is shown below. I
 ## 4 Read More
 
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
+* [Maia Domain Model Generator](/refguide/domain-model-generator/)

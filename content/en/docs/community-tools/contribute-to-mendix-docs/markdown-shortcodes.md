@@ -55,7 +55,7 @@ This alert is indented to match the sub-list item.
 
 ```json
 {
-     "Status" :  "Stopped" ,
+     "Status" :  "Stopped",
      "EnvironmentId" :  "cd5fc610-edb0-43c5-a374-0439a6411ace",
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com",
@@ -315,7 +315,7 @@ For code snippets that are not part of a sentence or that span multiple lines, u
 Use HTML `<kbd>` tags to refer to keyboard keys:
 
 * Press <kbd>Enter</kbd> to select the highlighted item.
-* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Links
 

@@ -81,7 +81,7 @@ In this section, you will create a new Java action and deploy the app for Eclips
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/add.png" width="500" class="no-border" >}}
 
 4. Change the **Type** in the **Return** section of the Java action to **String**, change the **Variable name** to *ReversedName*.
-5. Click <kbd>ctrl</kbd> + <kbd>s</kbd> to save the Java action.
+5. Press <kbd>Ctrl</kbd> + <kbd>S</kbd> to save the Java action.
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/return.png" width="500" >}}
 

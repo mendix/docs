@@ -52,7 +52,7 @@ For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) 
 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see the following:
 
-* [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem , .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
+* [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem, .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
 * [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}

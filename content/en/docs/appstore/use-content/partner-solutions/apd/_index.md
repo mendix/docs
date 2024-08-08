@@ -11,6 +11,10 @@ aliases:
 
 ## 1 Introduction
 
+{{% alert color="warning" %}}
+Mendix is no longer selling new licenses for APD. It is still a supported product for existing customers with active contracts.
+{{% /alert %}}
+
 This section contains all the documentation for versions 1 and 2 of Application Performance Monitor (APM) and version 3 of Application Performance Diagnostics (APD).
 
 {{% alert color="info" %}}

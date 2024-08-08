@@ -24,7 +24,7 @@ The scheme below shows that the data source of the list view has been set to **D
 
 {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" class="no-border" >}}
 
-The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
+The table below describes the most common errors which can occur when configuring a list view, the causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -41,7 +41,7 @@ For example, you have selected **Listen to widget** as the data source, but you 
 
 {{< figure src="/attachments/refguide9/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" class="no-border" >}}
 
-The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors you can come across when configuring a data view, causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -262,7 +262,7 @@ Changing the domain model can result in other errors. To avoid changing the doma
 
 ## 7 Images, Videos and Files Consistency Errors
 
-Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide9/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files, see [Images, Videos, and Files](/refguide9/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

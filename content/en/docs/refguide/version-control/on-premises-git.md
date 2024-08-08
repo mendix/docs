@@ -22,7 +22,7 @@ This document does not describe how to set up a Git server from scratch; typical
 
 * Publishing and deploying to Mendix Cloud directly from Studio Pro
 * Building deployment packages on the Mendix Portal directly from the Team Server
-* Using integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* Using integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/){{% /alert %}}
 
 ## 2 Prerequisites
@@ -86,7 +86,7 @@ Once the app is created, you can upload it to your private Git repository. For m
 ### 4.4 Downloading from a Private Repository
 
 {{% alert color="info" %}}
-Please note that the libraries Mendix uses to operate Git do not support <kbd>{Space}</kbd> characters in Git repo URLs.
+Please note that the libraries Mendix uses to operate Git do not support <kbd>Space</kbd> characters in Git repo URLs.
 {{% /alert %}}
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:

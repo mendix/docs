@@ -2278,7 +2278,7 @@ To create the required storage plans, do the following steps:
       * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic` to use an entry-level tier. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
       * **Maximum Size** - Specifies the database maximum size, for example `1 GB`.
 
-{{% alert color="warning" %}}To avoid unexpected costs associated with the default Azure SQL database tier, set **Edition** and **Service Objective** to `Basic`. If a higher database tier is needed later, the Azure Portal allows to change the database tier of any database.{{% /alert %}}
+    {{% alert color="warning" %}}To avoid unexpected costs associated with the default Azure SQL database tier, set **Edition** and **Service Objective** to `Basic`. If a higher database tier is needed later, the Azure Portal allows to change the database tier of any database.{{% /alert %}}
 
 4. In the **Storage Plan** configuration tab, select `azure-blob` as the storage type, and provide the following details:
 

@@ -25,7 +25,7 @@ The merge button
 
 Tables can be selected by clicking the white square in the upper-left corner.
 
-Tables allow for a number of keyboard interactions. Examples include navigating between rows and columns with the cursor keys and copy(ctrl+c)/pasting(ctrl+v) rows and cells.
+Tables allow for a number of keyboard interactions. Examples include navigating between rows and columns with the cursor keys and copy (<kbd>Ctrl</kbd> + <kbd>C</kbd>)-pasting(<kbd>Ctrl</kbd> + <kbd>V</kbd>) rows and cells.
 
 ## Common properties
 

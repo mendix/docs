@@ -45,11 +45,11 @@ If additional connection properties are required to connect, you can alternative
 
 2. Select the database you want to connect to and add the connection details the Database Connection wizard.
 
-    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" class="no-border" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/1.png" >}}
 
 3. Click **“Test Connection”** to validate the connection to the external database.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/2.png" >}}
 
 Click **Save** to save the connection details, which are stored in 3 constants:
 
@@ -65,7 +65,7 @@ For example: `*Database*_DBsource.`
 
 When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 
 ### 3.3 Create and Validate SQL Queries with Parameters
 
@@ -82,7 +82,13 @@ For example, the query below retrieves a list of RequestedProductRequirement whe
 SQL Query:
 `Select requestedProductRequirement from productlines where productLine = {productLine}`
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
+
+### 3.4 Typecast Parameter Data Type
+
+You can typecast `String` into UUID as shown below:
+
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/13.png" >}}
 
 ## 4 Save Query
 
@@ -94,7 +100,7 @@ SQL Query:
 
 3. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
 ### 4.2 Save DML Query
 
@@ -104,23 +110,59 @@ SQL Query:
 
 2. Click **Save Query**.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
 ## 5 Call Stored Procedure
 
-{{% alert color="info" %}} Calling stored procedures with no parameters is supported in Studio Pro 10.9 and above.  {{% /alert %}}
+{{% alert color="info" %}} Calling stored procedures with parameters is supported for Studio Pro 10.13 and above. {{% /alert %}}
 
-To call a stored procedure, do the following: 
+To call a stored procedure, do the following:
 
-1. Enter the following syntax: `Call latest_schema.InsertDataIntoTable1()`
+1. Select the **Stored procedure** checkbox.
 
-2. If the stored procedure returns a result set, click U**se Response** > **Save Query & Create Entity** to save the query and the newly-created entity in the domain model.
+2. Enter the query to call a stored procedure. Use the syntax: `Call latest_schema.InsertDataIntoTable1({1},{2})`
 
-3. If the stored procedure contains DML Queries, **Number of affected rows** will be displayed as a response. Click **Save Query** to save the query.
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/9.png" >}}
 
-    {{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
+3. Create **IN**, **OUT**, and **INOUT** parameters for all parameters present in the stored procedure. Make sure the **Name in DB** is the same as the name of parameter in the stored procedure.
+   
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/10.png" >}}
+
+4. Click **Run Query**. This returns an entity with the number of affected rows and all INOUT and OUT parameters. If the stored procedure returns a **Result set**, an associated entity is created.
+
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/11.png" >}}
+
+5. Click **Use Response** > **Save Query & Create Entity** to save the query and the newly-created entities in the domain model.
+   
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/12.png" >}}
+
+{{% alert color="info" %}}DML commands within a stored procedure are rolled back if they are not committed by a stored procedure, but DDL commands are not.{{% /alert %}}
+
+{{% alert color="info" %}}Only stored procedures with primitive datatype parameters are supported.{{% /alert %}}
+
+For Postgres, Mendix supports the following parameters:
+
+* Decimal/numeric
+* Real
+* Double Precision
+* Big Serial
+* Small Serial
+* Serial
+* Bpchar
+* Char
+* Varchar
+* Text
+* Integer
+* Smallint
+* Bigint
+* Timestamp with timezone
+* Date only
+* Time without timezone
+* Time with timezone
+
+For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off. 
 
 ## 6 Use the Query External Database Activity
 
@@ -134,7 +176,7 @@ To call a stored procedure, do the following:
 
 5. Output details for the selected query auto-populate.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" class="no-border" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
 
 You are now ready to use data from an external database in your Mendix App.
 

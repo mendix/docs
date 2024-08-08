@@ -18,7 +18,7 @@ When you log in as an administrator the *Projects* page is shown:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-administration/startpage.png" alt="Projects page when logged in as administrator" class="no-border" >}}
 
-On this page you can see all the projects that exist on this ATS instance. Here you can create new *Projects* and *Action Libraries*. Also as an admin user you have the rights to delete projects and libraries from the system. When creating a new library you can choose to *Include by default in new projects* , so this library is included by default in any project that is created on the system. For more information on project/library creation see the ReferenceGuide_Projects page of the reference guide.
+On this page you can see all the projects that exist on this ATS instance. Here you can create new *Projects* and *Action Libraries*. Also as an admin user you have the rights to delete projects and libraries from the system. When creating a new library you can choose to *Include by default in new projects*, so this library is included by default in any project that is created on the system. For more information on project/library creation see the ReferenceGuide_Projects page of the reference guide.
 
 {{% alert color="info" %}}
 When creating a new library on the *Projects* page, the created library is empty at first and you can import action libraries into it or include available libraries.

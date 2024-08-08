@@ -124,4 +124,4 @@ All the screenshots ATS takes during the test run are available under **Screensh
 
 ### 2.6 Recording
 
-The **Recording** tab plays a video recording of the test case execution. It is only available if the test has been executed on Browserstack. Please note that we do not store these recording, but we only link to the recorded videos from the respective selenium provider.
+The **Recording** tab plays a video recording of the test case execution. It is only available if the test has been executed on BrowserStack. Please note that we do not store these recording, but we only link to the recorded videos from the respective Selenium provider.

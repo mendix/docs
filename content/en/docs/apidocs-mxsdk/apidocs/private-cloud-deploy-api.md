@@ -51,25 +51,25 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 
 #### 2.1.2 Scopes explanation
 
-| Operation                   | Scopes                                       	|
+| Operation                   | Scopes                                           |
 |-----------------------------|-------------------------------------------------|
-| Get namespace manifest      | `mx:deployment:read`  or `mx:deployment:write`	|
-| Get namespaces manifest     | `mx:deployment:read`  or `mx:deployment:write`	|
-| Get cluster manifest        | `mx:deployment:read`  or `mx:deployment:write`	|
-| Get clusters manifest       | `mx:deployment:read`  or `mx:deployment:write`	|
-| Create cluster              | `mx:deployment:write`                        	|
-| Update cluster              | `mx:deployment:write`                        	|
-| Delete cluster              | `mx:deployment:write`                        	|
-| Create namespace            | `mx:deployment:write`                        	|
-| Update namespace            | `mx:deployment:write`                        	|
-| Delete namespace            | `mx:deployment:write`                        	|
-| Get environment manifest    | `mx:deployment:read`  or `mx:deployment:write`	|
-| Create environment          | `mx:deployment:write`                        	|
+| Get namespace manifest      | `mx:deployment:read`  or `mx:deployment:write`    |
+| Get namespaces manifest     | `mx:deployment:read`  or `mx:deployment:write`    |
+| Get cluster manifest        | `mx:deployment:read`  or `mx:deployment:write`    |
+| Get clusters manifest       | `mx:deployment:read`  or `mx:deployment:write`    |
+| Create cluster              | `mx:deployment:write`                            |
+| Update cluster              | `mx:deployment:write`                            |
+| Delete cluster              | `mx:deployment:write`                            |
+| Create namespace            | `mx:deployment:write`                            |
+| Update namespace            | `mx:deployment:write`                            |
+| Delete namespace            | `mx:deployment:write`                            |
+| Get environment manifest    | `mx:deployment:read`  or `mx:deployment:write`    |
+| Create environment          | `mx:deployment:write`                            |
 | Update environment          | `mx:deployment:write`                           |
 | Delete environment          | `mx:deployment:write`                           |
 | Get Apps manifest           | `mx:deployment:write` and `mx:app:metadata:read`|                        
-| Get App manifest.           | `mx:deployment:write` and `mx:app:metadata:read`|                          	
-| Get Job                     | `mx:deployment:read`  and `mx:deployment:write`	|
+| Get App manifest.           | `mx:deployment:write` and `mx:app:metadata:read`|                              
+| Get Job                     | `mx:deployment:read`  and `mx:deployment:write`    |
 
 #### 2.1.3 Using the PAT
 
@@ -112,7 +112,7 @@ The following steps will create a cluster, register and install a namespace, add
     Once the installer has run, the namespace is ready to use (namespace installed, agent connected, database and store plans configured, ingress configured, registry configured).
 11. Call `GET /clusters` to retrieve all the clusters that have been created. Copy the `clusterId` from the response of this call.
 12. Make an API call `POST /clusters/{clusterId}` to add/update the cluster member. You can get the manifest for this update request from `GET /clusters/{clusterId}`.
-13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true . You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
+13. Make an API call `POST /clusters/{namespaceId}` to update the namespace development mode and set `enableDevelopmentMode` to true. You can get the manifest for this update request from `GET /clusters/{namespaceId}`.
 
 {{% alert color="info" %}}
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.

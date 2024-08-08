@@ -1,7 +1,7 @@
 ---
 title: "Set Up a Local Docker Selenium Hub"
 url: /appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/
-description: "Describes the options to set up a local selenium solution."
+description: "Describes the options to set up a local Selenium solution."
 ---
 
 ## 1 Introduction

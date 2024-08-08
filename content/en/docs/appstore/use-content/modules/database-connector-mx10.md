@@ -9,14 +9,10 @@ aliases:
 
 ## 1 Introduction
 
-Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake (GA support from [Studio Pro 10.12](/releasenotes/studio-pro/10.12/)) databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+Connect to Microsoft SQL, MySQL, PostgreSQL, Oracle, and Snowflake databases with the [External Database Connector](https://marketplace.mendix.com/link/component/219862). The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 
 {{% alert color="info" %}}
-If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The External Database Connector is supported for [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
+If you are using Studio Pro 10.12, make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 {{% /alert %}}
 
 ### 1.1 Typical Use Cases
@@ -43,14 +39,14 @@ This connector supports the following statements:
 * `INSERT` 
 * `UPDATE`
 * `DELETE`
+* `Stored Procedure`
 
 ### 1.3 Limitations 
 
-* `SELECT` queries can be saved only if they are successfully executed and a response structure is created
-* The connector supports columns with primitive data types only
+* `SELECT` queries and `Stored Procedure` can be saved only if they are successfully executed and a response structure is created
+* The connector supports columns and stored procedure parameters with primitive data types only
 * If column names contain special characters, use an alias for the column name
 * Parameters are only supported for filter values (prepared statements)
-* Stored procedures with no parameters are only supported in [Studio Pro 10.9 and above](/releasenotes/studio-pro/10.9/).
 
 ### 1.4 Prerequisites
 
@@ -151,4 +147,5 @@ You can now use the microflow in your app. Below is an example of a configured m
 
 {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/example-microflow.png" class="no-border" >}}
 
-See the [Integration Activities](/refguide/integration-activities/) entry in the Studio Pro guide for further explanation of the properties in this activity.
+See the [Integration Activities](/refguide/integration-activities/) section of the *Studio Pro Guide* for further explanation of the properties in this activity.
+See the [Call Stored Procedure](/howto/integration/use-the-external-database-connector/) section of *Use the External Database Connector* for more information on how to call a stored procedure.

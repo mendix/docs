@@ -50,7 +50,7 @@ To prepare the data structure, GUI, and example data, follow these steps:
 
     {{< figure src="/attachments/howto7/logic-business-rules/define-access-rules-using-xpath/18581002.png" class="no-border" >}}
 
-## 3 Defining the Access Rules on the Order Entity Using XPAth
+## 3 Defining the Access Rules on the Order Entity Using XPath
 
 In the previous section, you set up a basic data structure and created some sample data. In this section, you you will define the access rules on the Order entity so that orders can only be viewed by a financial administrator if the payment status of the order is set to "Complete." You will do this by adding an XPath constraint to the Order entity for the FinancialAdministrator module role.
 

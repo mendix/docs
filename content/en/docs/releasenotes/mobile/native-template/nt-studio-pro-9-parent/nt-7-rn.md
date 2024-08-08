@@ -11,7 +11,7 @@ description: "Native Template 7 release notes."
 
 ### Improvements
 
-* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
 
 ## 7.0.14 {#714}
 

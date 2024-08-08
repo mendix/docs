@@ -436,7 +436,7 @@ The following constants are optional:
 
 * **SessionEndPoint** – the end session endpoint
 
-* **ACRValues** – selected ACRvalues — the selected scopes with multiple values separated by a space  
+* **ACRValues** – selected ACRvalues — the selected Acr with multiple values separated by a space  
 
     Example: `acr1 acr2`
 
@@ -502,7 +502,7 @@ If you connect multiple IdPs to your Mendix app, you can use separate custom use
 
 #### 6.2.1 Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
 
-Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `Administration.Account` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
+Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 

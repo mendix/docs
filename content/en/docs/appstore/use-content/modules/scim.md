@@ -50,7 +50,7 @@ The SCIM module also has the following features:
 * It has been tested in combination with SAML and OIDC SSO module using Entra ID and Okta as an IdP.
 
     {{% alert color="info" %}}
-If you are using the SCIM module in combination with Entra ID and OIDC SSO, you need to choose the correct attribute mapping. For more information, see the [Attribute Mapping](#attribute-mapping) section below.
+If you are using the SCIM module in combination with Entra ID and OIDC SSO, you need to choose the correct attribute mapping. For more information, see the [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier) section of the *OIDC SSO* and [Attribute Mapping](#attribute-mapping) section below.
     {{% /alert %}}
 
 * Your IdP allows the selection of users that sync with your Mendix app, meaning your IdP controls which users are created and active in your app.
@@ -176,7 +176,7 @@ For reference, the table below gives an overview of attribute mapping when using
 | active| Active | true | true |
 
 {{% alert color="info" %}}
- In the SCIM protocol, you can configure the `object ID` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the User Identifiers in the OIDC and SCIM Protocols section of the *OIDC SSO*.
+ In the SCIM protocol, you can configure the `object ID` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier) section of the *OIDC SSO*.
 {{% /alert %}}
 
 You can configure the `objectId` in SCIM using the steps below:

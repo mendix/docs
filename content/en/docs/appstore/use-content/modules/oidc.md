@@ -599,9 +599,9 @@ Role of user identifiers in OIDC and SCIM protocols:
 
 * SCIM:
 
-  * In the SCIM protocol, Microsoft by default uses the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
+  * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
 
-#### 6.4.2 Guidance on User Identifier
+#### 6.4.2 Guidance on User Identifier{#guidance-user-identifier}
 
 The default behavior for the OIDC SSO module is to persist the value of the `sub` claim in the system.user.name attribute. This is not forward compatible with the introduction of SCIM. Therefore, for B2E applications connected with Entra ID for SSO, Mendix recommends the following:
 

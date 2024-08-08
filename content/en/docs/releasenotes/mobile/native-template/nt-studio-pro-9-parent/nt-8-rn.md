@@ -5,7 +5,23 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
-## 8.2.5 {#814}
+## 8.2.6 {#815}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.0.14 {#814}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.2.5 {#813}
 
 **Release date: July 5, 2024**
 

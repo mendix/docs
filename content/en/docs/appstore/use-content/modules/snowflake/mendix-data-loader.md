@@ -18,7 +18,7 @@ The Mendix Data Loader supports a range of data ingestion tasks, enabling organi
 
 To use the Mendix Data Loader, you must have the following:
 
-* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
+* A Mendix application with a [published OData service](/refguide/published-odata-services/) that includes exposed entities. 
 * A Snowflake environment.
 
 ### 1.3 Licensing and Cost
@@ -147,7 +147,7 @@ A bug in the published OData service resource in Mendix Studio Pro 10.10 where t
 
 ##### 5.2.1.2 Solution
 
-This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](https://docs.mendix.com/developerportal/deploy/custom-domains/#use-custom-url).
+This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
 
 ### 5.3 Contact Information
 

@@ -84,7 +84,15 @@ To install the OIDC Provider service in your IAM broker app, you need to import 
 * [OIDC Provider](https://marketplace.mendix.com/link/component/214681)
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 * [Mx Model reflection](https://marketplace.mendix.com/link/component/69)
-* [Administration](https://marketplace.mendix.com/link/component/23513)
+* [Administration](https://marketplace.mendix.com/link/component/23513) – Version 3.0.0 and below
+
+{{% alert color="info" %}}
+To develop your IAM broker app more quickly, consider using the Access Provider Template. This template facilitates the setup and integration of OIDC Provider and OIDC SSO modules, including all necessary dependencies. For more information, refer to the documentation tab of the Access Provider Template Marketplace module.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+Starting from version 3.0.0, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
+{{% /alert %}}
 
 The service then needs to be configured as described below.
 
@@ -220,10 +228,6 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
 If you cannot use automatic registration, you can register the client manually.
 
-{{% alert color="info" %}}
-Starting from version 3.0.0, the length of the `client_id` and `client_secret` attributes has been reduced from unlimited to 255 characters. Before upgrading the module, make sure to migrate your data.
-{{% /alert %}}
-
 1. Select **Manual Registration**. There are below two options **To support different types of grant-type**.
 
     * Allow Client-Credentials grant type
@@ -268,18 +272,15 @@ To return requested scopes to your client app, you need to perform the following
         The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.
 
     If your client app consumes APIs and wants to get access using the Access Token from the OIDC Provider, you may want to configure additional scope values, as required by those APIs.
-
-    {{% alert color="warning" %}}
-
-Do not to create scopes with the same name as standard scopes (as defined in the [OIDC specs](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)), for example:
+{{% alert color="warning" %}}
+Do not create scopes with the same name as standard scopes (as defined in the [OIDC specs](https://openid.net/specs/openid-connect-core-1_0.html#ScopeClaims)), for example:
 
 * openid - apps will use this scope value to request identity propagation from the OIDC Provider by means of an ID-token.
 * email
 * profile
 * phone
 {{% /alert %}}
-
-    {{% alert color="info" %}}
+{{% alert color="info" %}}
 The scopes you configure are not added automatically to the "scopes_supported" attribute on the OIDC Provider’s well-known endpoint. You must manually configure the scope value in your client app to be able to request it.
 {{% /alert %}}
 

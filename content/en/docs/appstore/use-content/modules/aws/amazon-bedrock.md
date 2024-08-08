@@ -55,7 +55,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### 3.1.1 Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programmatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
 
 ### 3.2 Configuring AWS Authentication
 
@@ -90,33 +90,33 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 
 A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
 
-For an overview of supported models and model-specifc capabilities and limitations, see [Amazon Bedrock Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.
+For an overview of supported models and model-specific capabilities and limitations, see [Amazon Bedrock Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.
 
 To build a simple microflow that uses the ChatCompletions operation to send a single message to the Anthropic Claude 3.5 Sonnet model and show the response on a page, perform the following steps:
 
 1. Create a new microflow and name it, for example, *AmazonBedrockChatCompletions*.
 2. In the **Toolbox**, search for the **Chat Completions (without history)** activity in the *Amazon Bedrock (Operations)* and drag it onto your microflow.
-4. Double click on the activity to see its parameters.
+3. Double click on the activity to see its parameters.
     1. The **Request** and **FileCollection** parameters are not needed for this example, so you can set them to **empty**.
     2. For the **UserPrompt** parameter, enter a string of your choice, for example *Hi, Claude!*. 
     3. CLick **OK**. The input for the **Connection** parameter will be created in the next step.
-5. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag it to the beginning of your microflow.
-6. Double-click it to configure its parameters.
+4. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag it to the beginning of your microflow.
+5. Double-click it to configure its parameters.
     1. For the **ENUM_Region** parameter, enter a value of the `AWSAuthentication.ENUM_Region` enumeration. Choose the region where you have access to Amazon Bedrock. For example, *AWSAuthentication.ENUM_Region.us_east_1*.
     2. For the **ModelId** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
     3. For the **UseStaticCredentials** parameter, enter *true* if you have configured static AWS Credentials, and *false* if you have configured temporary AWS Credentials.
     4. Click **OK**.
-5. Double-click the **ChatCompletion** operation and, for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
-6. In the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category, and drag it to the end of your microflow.
-7. Double-click on it and pass the **Response** from the ChatCompletions operation as parameter. The **Get Model Response Text** will return the response from Claude as a string.
-8. Add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
-9. Add a button that calls this microflow, run your project, and verify the results.
+6. Double-click the **ChatCompletion** operation and, for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
+7. In the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category, and drag it to the end of your microflow.
+8. Double-click on it and pass the **Response** from the ChatCompletions operation as parameter. The **Get Model Response Text** will return the response from Claude as a string.
+9. Add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
+10. Add a button that calls this microflow, run your project, and verify the results.
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
 
 ### 3.5 Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
 Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
@@ -181,7 +181,7 @@ The domain model is a data model that describes the information in your applicat
 
 ##### 4.1.1.1 AmazonBedrockConnection {#amazon-bedrock-connection}
 
-This entity holds the necessary information to perform Bedrock operations such as the `invokeModel` action. It is a specialization of the `Connection` entity of the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/).
+This entity holds the necessary information to perform Bedrock operations such as the `invokeModel` action. It is a specialization of the `Connection` entity of the [GenAICommons](/appstore/modules/genai/).
 
 | Attribute | Description |
 | --- | --- |
@@ -252,7 +252,6 @@ This entity inherits from the GenAICommons.Response entity. An object of this ty
 | Attribute | Description |
 | --- | --- |
 | `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
-
 
 ##### 4.1.1.9 RequestedResponseField {#requested-response-field}
 
@@ -360,7 +359,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 
 | Attribute | Description |
 | --- | --- |
-| `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
+| `Normalize` | This Boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
 
 ##### 4.1.1.15 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
 
@@ -1079,7 +1078,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
 
-For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
 Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
 
@@ -1102,7 +1101,6 @@ Use this microflow to create a new [Amazon Bedrock Connection](#amazon-bedrock-c
 This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
-
 
 ##### 4.2.2.2 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
@@ -1214,7 +1212,7 @@ This operation corresponds to the **Request_CreateAdditionalRequestParameter** m
 | --- | --- |
 | `GenAICommons.Request (object)`, `Key (string)`, `StringValue (string)`, `DecimalValue (decimal)`, `IntegerValue (integer)` | `none` |
 
-You need to provide a value using either the *StringValue*, *DecimalValue* or *IntegerValue* parameters. For example, if you providing a *StringValue* as value of the parameter, *DecimalValue* and *IntgerValue* should be left **empty**.
+You need to provide a value using either the *StringValue*, *DecimalValue* or *IntegerValue* parameters. For example, if you providing a *StringValue* as value of the parameter, *DecimalValue* and *IntegerValue* should be left **empty**.
 
 ##### 4.2.2.11 Request: Add Additional Response Field {#add-response-field}
 
@@ -1277,7 +1275,6 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
-
 
 ##### 4.2.3.5 StartIngestionJob {#start-ingestion-job}
 

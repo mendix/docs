@@ -31,6 +31,8 @@ External entities have some limitations compared to persistable entities:
 * There are certain limitations on XPath constraints for external entities (for instance, you cannot filter on an association between a persistable entity and an external entity)
 * External entities cannot be used in datasets
 * [XPath constraints](/refguide/xpath-constraints/) in the access rules of external entities cannot be set
+* Creatable and updatable external entities cannot be saved like persistable entities. Instead, you need to use a microflow with a [Send External Object](/refguide/send-external-object/) activity
+* Deletable entities cannot be used in a **Delete** activity. For this, use the [Delete external object](/refguide/delete-external-object/) activity
 
 Associations between external entities (as defined in the originating app) are shown in the domain model. You can only use the associations where both sides are published.
 
@@ -53,13 +55,13 @@ When the consumed OData service is deleted from your project, Studio Pro allows 
 
 ### 2.2 External Actions {#external-actions}
 
-External actions allow you to execute actions published by the OData service. An action can take parameters and may return a value. This is defined in the OData service contract.
+External actions allow you to execute actions published by the OData service. An action can take parameters and may return a value. This is defined in the OData service contract. These actions can be called from a microflow by using a [Call external action](/refguide/call-external-action/) activity.
 
 There are some limitations on which actions can be consumed. These are described in the [Requirements on Actions](/refguide/consumed-odata-service-requirements/#actions) section of *Consumed OData Service Requirements*.
 
 ### 2.3 Consumed OData Service
 
-When an external entity is dragged into the domain model, the  **Consumed OData** document that is added to the model displays the values of the metadata contract from the service endpoint.
+When an external entity is dragged into the domain model, or when an external action is used in a microflow, the  **Consumed OData service** document that is added to the model displays the values of the metadata contract from the service endpoint.
 
 In the [Integration pane](/refguide/integration-pane/), the service and the entity are shown as consumed both in the search results pane and also in the **Used in your App** section.
 

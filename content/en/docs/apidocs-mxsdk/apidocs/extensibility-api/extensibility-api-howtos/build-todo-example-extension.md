@@ -20,7 +20,7 @@ This document covers the following topics:
 
 Before you start the procedure, make sure that you have installed the following tools on your local development environment:
 
-* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or Jetbrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
+* Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or JetBrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
 * Studio Pro version 10.6 or higher
 
 ## 3 Creating the Project and Configuring It as an Extension
@@ -35,11 +35,11 @@ In order for your extension to be loaded correctly as an extension in Studio Pro
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-one.png" >}}
 
 3. Name the project *Mendix.ToDoExtension*.
-4.  Choose a location to store your extension, and click **Next**.
+4. Choose a location to store your extension, and click **Next**.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-two.png" >}}
 
-5.  Set **Framework** to *.NET 8.0 (Long Term Support)* and click **Create**.
+5. Set **Framework** to *.NET 8.0 (Long Term Support)* and click **Create**.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-three.png" max-width=80%  >}}
 
@@ -56,15 +56,15 @@ The details of each step are described below.
 
 #### 3.2.1 Referencing the Extensibility API NuGet Package
 
-1.  In Visual Studio, go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
+1. In Visual Studio, go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-four.png" >}}
 
-2.  On the **Browse** tab, search for **Mendix ExtensionsAPI**.
+2. On the **Browse** tab, search for **Mendix ExtensionsAPI**.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-five.png" max-width=50% >}}
 
-3.  Select the NuGet package and click **Install**.
+3. Select the NuGet package and click **Install**.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-six.png"  max-width=50%  >}}
 
@@ -76,7 +76,7 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
 2. Right-click in the Solution Explorer and add a new file called *manifest.json*.
 3. Right-click in the Solution Explorer and select **Properties**.
 4. Ensure that you set the **Copy to Output Directory** property to **Copy always** to ensure that this file is included in your extensions output files.
-5.  Replace the contents of your manifest.json file with the following code:
+5. Replace the contents of your manifest.json file with the following code:
 
     ```json
     {
@@ -98,7 +98,7 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
 In this section, you will host a dockable pane within Studio Pro. This will provide you with a window where you can render the User Interface of the extension.
 
 1. Add a new file to the solution called `ToDoListDockablePaneExtension.cs`.
-2.  Replace the contents of the file with the following code:
+2. Replace the contents of the file with the following code:
 
     ```csharp
     using System.ComponentModel.Composition;
@@ -399,7 +399,7 @@ Now, create the methods responsible for performing the logic:
 In order to store the information to disk, add some model classes that will be able to store the Todo information.
 
 1. Add a new class that will host the To do information itself. Call the file `ToDoModel.cs`
-2.  Replace the contents of the file with the following code:
+2. Replace the contents of the file with the following code:
 
     ```csharp
     using System.Text.Json.Serialization;
@@ -430,7 +430,7 @@ In order to store the information to disk, add some model classes that will be a
     You will also need a model class that will store a list of all the todos that you have available.
 
 3. Add another class and name it `ToDoListModel.cs`.
-4.  Replace the contents of this file with the following code:
+4. Replace the contents of this file with the following code:
 
     ```csharp
     using System.Text.Json.Serialization;
@@ -454,7 +454,7 @@ In order to store the information to disk, add some model classes that will be a
 With the models created, you can now create a storage handler that will manage storing these models to disk.
 
 1. Add a new class file and call it `ToDoStorage.cs`.
-2.  Replace the contents of the file with the following code: 
+2. Replace the contents of the file with the following code: 
 
     ```csharp
     using System.Text;
@@ -553,33 +553,34 @@ In this section, you will add a menu item to the toolbar that will allow you to 
 
 1. Create a `MenuExtension`.
 2. Add another class and call it `ToDoListMenuExtension.cs`.
-3.  Replace the contents of the file with the following code:
+3. Replace the contents of the file with the following code:
 
     ```csharp
     using System.Collections.Generic;
-using System.ComponentModel.Composition;
-using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
-using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
-using Mendix.StudioPro.ExtensionsAPI.UI.Services;
 
-namespace Mendix.ToDoExtension;
+    using System.ComponentModel.Composition;
+    using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
+    using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
+    using Mendix.StudioPro.ExtensionsAPI.UI.Services;
 
-[Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
-public class ToDoListMenuBarExtension : MenuExtension
-{
-    private readonly IDockingWindowService _dockingWindowService;
+    namespace Mendix.ToDoExtension;
 
-    [ImportingConstructor]
-    public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
+    [Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
+    public class ToDoListMenuBarExtension : MenuExtension
     {
-        _dockingWindowService = dockingWindowService;
-    }
+        private readonly IDockingWindowService _dockingWindowService;
 
-    public override IEnumerable<MenuViewModel> GetMenus()
-    {
-        yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+        [ImportingConstructor]
+        public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
+        {
+            _dockingWindowService = dockingWindowService;
+        }
+
+        public override IEnumerable<MenuViewModel> GetMenus()
+        {
+            yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));
+        }
     }
-}
     ```
 
 ## 9 Adding a Web-based User Interface
@@ -595,7 +596,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     * A JavaScript file that contains the client side logic for the user interface. Call it `main.js`
 
 3. Open `index.html`.
-4.  Replace its contents with the following:
+4. Replace its contents with the following:
 
     ```html
     <html lang="en">
@@ -641,7 +642,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     </html>
     ```
 
-5.  Open `main.js` and add the JavaScript logic by replacing the contents of the file with the following:
+5. Open `main.js` and add the JavaScript logic by replacing the contents of the file with the following:
 
     ```js
     function postMessage(message, data) {
@@ -715,7 +716,7 @@ Up to now you have been adding all the logic that will allow your extension to r
 
 ### 9.1 Explanation
 
-This HTML page is self-explanatory, as you are providing a very simple interface with some added css styling provided by Tailwind CSS.
+This HTML page is self-explanatory, as you are providing a very simple interface with some added CSS styling provided by Tailwind CSS.
 
 Within the JavaScript file, you need to add some logic so that the web view can communicate with your extension logic correctly.
 
@@ -750,7 +751,7 @@ It is important to set these two `index.html` and `main.js` files to *Copy alway
 So far you have configured the extension to be usable in Studio Pro. You added support for storing the to do items. You also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web-based JavaScript logic.
 
 1. Start with adding a utility class to help simplify the way you interact with web responses. Call the file `HttpListenerResponseUtils.cs`.
-2.  Replace the contents of the file with the following:
+2. Replace the contents of the file with the following:
 
     ```csharp
     using System.Net;

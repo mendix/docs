@@ -94,4 +94,3 @@ Partner-supported content is created and maintained by partners as part of the [
 | ---------------- | -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | **Siemens**      | N/A                              | Siemens supports.                                            | Content in this category is provided and supported by the Siemens team. Siemens supports this content as-is when you are equipped with an SLA with Siemens. |
 | **Community**    | Mendix community supports        | Options: No support from partner, or Mendix community supports | Content is provided as-is by members of the Mendix community, and support depends on the availability and effort of the owner. |
-

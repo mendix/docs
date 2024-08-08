@@ -77,3 +77,16 @@ https://www.plantuml.com/plantuml/uml/bPB1Rjim44Jl-efjV7M3n4Lww2687TSd5oZgzbOWeA
 {{< figure src="/attachments/refguide/runtime/session.png" alt="The Session Management Flow between client and the runtime." class="no-border" >}}
 
 This diagram illustrates the interaction between the client and the runtime to initialize or retrieve the session.
+
+### 3.4 Session Deletion
+
+Sessions are deleted under two circumstances:
+
+* When there is a database upgrade on application startup ‒ for example if there is a model change or if the database is new.
+* During periodic cleanup of expired sessions.
+
+    You can configure how often expired sessions are cleaned up using the [ClusterManagerActionInterval](/refguide/custom-settings/#ClusterManagerActionInterval) runtime setting.
+
+    You can configure when a session is considered expired using the [SessionTimeout](/refguide/custom-settings/#SessionTimeout) runtime setting.
+
+When an anonymous session is deleted the associated anonymous user is deleted as well.

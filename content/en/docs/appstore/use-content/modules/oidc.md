@@ -83,8 +83,8 @@ For readers with more knowledge of the OAuth and OIDC protocol:
 * Uses the Proof Key for Code Exchange (PKCE – pronounced “pixie") security enhancement as per RFC 7636. If your IdP’s well-known endpoint indicates “S256” as value for “code_challenge_methods_supported”, the OIDC Module will automatically apply the PKCE feature. PKCE can be seen as a security add-on to the original OAuth protocol. It is generally recommended to use this feature to be better protected against hackers who try to get access to your app.
 * When authenticating APIs, it validates access tokens in one of two ways:
 
-  * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
-  * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
+    * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
+    * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
     For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
 
@@ -110,7 +110,7 @@ The OIDC SSO module also has the following limitations:
 * If an end-user accesses your app via a deeplink, the end-user is not already signed in, and you have configured multiple IdPs, only one IdP can be used to sign the end-user in.
 * If you use both the [SAML](/appstore/modules/saml/) module and the OIDC SSO module in the same app, each end-user can only authenticate using one IdP.
 * If OIDC SSO is used for API security, it does not validate the value of the "aud" claim, as suggested by [RFC 9068](https://datatracker.ietf.org/doc/html/rfc9068#section-4). Customers should prevent cross-JWT confusion by using unique scope values.
-* The Admin screens have separate tabs for configuring clients that use the Client Credential gant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
+* The Admin screens have separate tabs for configuring clients that use the Client Credential grant for API security and for situations where your app is used for both SSO and API security. If the first version of your app uses only OIDC SSO for API security and you want to introduce SSO in a later version, the IdP configuration needs to be re-entered on the other tab.
 
 ## 2 Dependencies
 
@@ -187,7 +187,7 @@ This section provides an overview of updates for the OIDC SSO module across diff
 | Mendix Version | OIDC SSO Module Version | Important Migration Changes | Additional Information|
 | --- | --- | --- | --- |
 | 9.24.2 and above | 3.0.0 (migrating to 3.0.0 and above) | -Include [UserCommons](https://marketplace.mendix.com/link/component/223053) module as a dependency <br> -Set `OIDC.Startup` microflow as part of the after-startup microflow | -New UserCommons module <br> -Assign UserProvisioning for existing IdP configurations |
-| 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic ` snippet removed from module |
+| 9.24.2 and above | 3.0.1 | Use `Snip_Login_Button` snippet instead of `Snip_Login_Automatic` | `Snip_Login_Automatic` snippet removed from module |
 | 9.24.2 and above | 3.1.0 | Set `OIDC.ASU_OIDC_Startup` microflow as part of the after-startup microflow | `OIDC.Startup` microflow renamed to `OIDC.ASU_OIDC_Startup` |
 
 ## 4 Design-time App Configuration{#app-configuration}
@@ -676,7 +676,7 @@ If you are just delegating authentication for your app to the IdP you will not n
 If you want to use the information in an access token which is a JWT, you need to parse the access token in a microflow. For example, you may want to assign user roles in your app based on the contents of the access token JWT.
 
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
-  * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
+    * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
 
         ```json {linenos=false}
         "sws.samauth.role.name": [
@@ -684,7 +684,7 @@ If you want to use the information in an access token which is a JWT, you need t
         ]
         ```
 
-  * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
+    * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
         ```json {linenos=false}
         "roles": [
@@ -896,12 +896,12 @@ The `/authorize` endpoint logs the end-user in through the browser.
 
 The `/authorize` endpoint may reply with an error-response, for example when the end-user enters a wrong password but also other situations may occur.  The `Error` level response can be retrieved from the OIDC log node.
 
-    ```log
+```log
 handleAuthorization: Authorization code missing
 StatusCode = 200
 error = access_denied
 error_description = user is not assigned to the client application.
-    ```
+```
 
 Section 4.1.2.1 of [RFC6749](https://datatracker.ietf.org/doc/html/rfc6749) and section 3.1.2.6 of [OIDC specifications](https://openid.net/specs/openid-connect-core-1_0.html#AuthError), indicate all error codes that may be returned.
 
@@ -911,7 +911,7 @@ The `/token` endpoint is a back-end call to get an access token.
 
 The error “Unable to get access token” indicates that the OAuth **/token** endpoint at your IdP has returned an error response. Often this error occurs when your client_id and client_secret are not correct. The `Error` level response can be retrieved from the OIDC log node.
 
-    ```log
+```log
 401: Unauthorized
     at OIDC.handleAuthorizationCode (CallRest : 'Call REST (POST)')
     at OIDC.webCallback (SubMicroflow : 'handleAuthorizationCode')
@@ -922,7 +922,7 @@ latestHttpResponse:
 StatusCode - 401
 ReasonPhrase - Unauthorized
 Content - {"error":"invalid_client","error_description":"client authentication failed"}
-    ```
+```
 
 [Section 5.2 of RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749#section-5.2) indicates and clarifies all the possible error codes that may be returned.
 

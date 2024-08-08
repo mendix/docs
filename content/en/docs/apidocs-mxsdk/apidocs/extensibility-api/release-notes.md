@@ -4,8 +4,6 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/release-notes/
 weight: 6
 ---
 
-# Release Notes
-
 These release notes cover changes to the Extensibility API.
 
 ## Version 10.13.0

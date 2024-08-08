@@ -479,7 +479,7 @@ weight: 97
 * We added support for Mendix 7.21.0.
 * We added new working copy lock type `commit`.
 * We fixed the duplicate processing of events.
-* We upgraded to Node.JS version 10.
+* We upgraded to Node.js version 10.
 
 ## 4.16.0
 

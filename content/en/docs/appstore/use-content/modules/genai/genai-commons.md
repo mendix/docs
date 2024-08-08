@@ -617,7 +617,6 @@ This microflow has no input parameters.
 |--- |--- |--- |
 | `ChunkCollection` | [ChunkCollection](#chunkcollection) | The newly created ChunkCollection object. |
 
-
 ##### 4.3.4.2 Chunk: Add Chunk to ChunkCollection{#chunkcollection-add-chunk}
 
 This microflow adds a new [Chunk](#chunk-entity) to the [ChunkCollection](#chunkcollection).
@@ -671,7 +670,6 @@ This microflow creates new [EmbeddingsOptions](#embeddingsoptions-entity).
 |--- |--- |--- |
 | `EmbeddingsOptions` | [EmbeddingsOptions](#embeddingsoptions-entity) | The newly created EmbeddingsOptions object. |
 
-
 ##### 4.3.4.5 Embeddings: Get First Vector from Response {#embeddings-get-first-vector}
 
 This microflow gets the first embedding vector from the response of an embeddings operation.
@@ -687,7 +685,6 @@ This microflow gets the first embedding vector from the response of an embedding
 | Name | Type | Description |
 |--- |--- |--- |
 | `Vector` | String | The first vector from the response. |
-
 
 ##### 4.3.4.6 Knowledge Base: Initialize MetadataCollection with Metadata {#knowledgebase-initialize-metadatacollection}
 
@@ -705,7 +702,6 @@ This microflow creates a new [MetadataCollection](#metadatacollection-entity) an
 | Name | Type | Description |
 |--- |--- |--- |
 | `MetadataCollection` | [MetadataCollection](#metadatacollection-entity) | The newly created MetadataCollection object. |
-
 
 ##### 4.3.4.7 Knowledge Base: Add Metadata to MetadataCollection {#knowledgebase-add-metadata}
 

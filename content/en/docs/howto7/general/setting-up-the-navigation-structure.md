@@ -83,7 +83,7 @@ Now that you've created a menu structure it's time to start using it on pages.
 
     {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581316.png" class="no-border" >}}
 
-3. Click once in an empty place holder on the page to insert the widget.
+3. Click once in an empty placeholder on the page to insert the widget.
 
     {{< figure src="/attachments/howto7/general/setting-up-the-navigation-structure/18581315.png" class="no-border" >}}
 

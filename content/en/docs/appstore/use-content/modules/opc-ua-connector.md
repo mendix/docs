@@ -57,6 +57,8 @@ You must have these Marketplace modules installed:
 ## 3.1 Connecting to an OPC-UA server (Session Services)
 The connector provides a simple wizard to set up your own connection to an OPC-UA server. However, if you wish to have your own custom business logic to connect to a server you are free to do so. 
 
+ {{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/menu-tab.png" >}}
+
 To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
 For each of these parts see the sections below.
 
@@ -160,6 +162,8 @@ In this section we give an example on how to Read specific attribute values of n
 Lets say we want to read the "AccessLevel" on variable nodes we just received from the Browse Response. Note that this is a property that is only on the VariableNode entity and is therefore specific to a Variable. Therefore we need to filter out all other types of Nodes. Then we Need to create a ReadNodeRequest. Since we are not interested when the last moment is the AccessLevel is changed, nor at what moment we read the value, we set the MaxAge attribute to 0 and the TimestampsToReturn attribute to Neither. Now we need to specify what values we want to read. Create for each BrowseNode object a ReadNodeReadValueID object, with the same NodeID as the BrowseNode, AttributeID set to AccessLevel and numeric range to empty and attach this list to the ReadNodeRequest. Supply the ServerConfiguration for the connection and use the ReadNode action to make the request. 
 The response consists of a list of DataValues that match the order of the requests. The DataValue object has a Value propery that contains as a string the integer that resembles the accessLevel. 
 
+{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/menu-tab.png" >}}
+
 #Note: Do we want to make it easier by providing a js action for the conversion?
 #Note: Needs images of the constructed microflow 
 
@@ -199,6 +203,8 @@ To receive a notification from a monitored item we need two artifacts.
 
 1. We need to instruct our Mendix application what needs to happen when we receive a notification
 2. We need to instruct the server to what information needs to be checked on the server
+
+{{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/menu-tab.png" >}}
 
 ### 3.5.1 Instruct Mendix
 When a notification comes in a microflow will be triggered. An Example microflow, called EXAMPLE_MonitoredItem_LogDefaultMessage, is provided in the USE_ME > 12.MonitoredItems_service_set folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a MessageMonitoredItem, a MessageMonitoredItemReadValueId and a MessageDataValue. These are the only parameters that are allowed for a microflow to be called on a notification but not all are required.

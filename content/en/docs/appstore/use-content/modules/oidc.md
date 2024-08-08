@@ -86,7 +86,7 @@ For readers with more knowledge of the OAuth and OIDC protocol:
     * If the IdP supports token introspection, exposing the `/introspect` endpoint of the IdP, the OIDC module will introspect the access token to see if it is valid.
     * If the IdP does not support token introspection, the OIDC module will assume the access token is a JWT and will validate its signature using the IdP's public key that is published on the `/jwks` endpoint of the IdP.
 
-    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published jwks endpoint.
+    For signing into the app, the OIDC SSO module will not use token introspection and will always validate against the published `jwks` endpoint.
 
 * Stores an access token for each end-user that can be used to make API calls on their behalf
 * Can be configured to use either client_secret_post or client_secret_basic as the client authentication method. Both make use of the client-id and client-secret as configured at the IdP
@@ -379,8 +379,8 @@ SSO configurations created using constants will be shown as read only on the **I
 
 The following error messages will be displayed when you try to edit/delete.
 
-* error at edit:  You cannot modify as it is created from deployment.
-* error at delete:  You cannot delete as it is created from deployment.
+* error at edit: You cannot modify as it is created from deployment.
+* error at delete: You cannot delete as it is created from deployment.
 {{% /alert %}}
 
 ##### 5.3.1.1 Customizing Default Deploy-time Configuration
@@ -436,7 +436,7 @@ The following constants are optional:
 
 * **SessionEndPoint** – the end session endpoint
 
-* **ACRValues** – selected ACRvalues — the selected scopes with multiple values separated by a space  
+* **ACRValues** – selected ACRvalues — the selected Acr with multiple values separated by a space  
 
     Example: `acr1 acr2`
 
@@ -502,7 +502,7 @@ If you connect multiple IdPs to your Mendix app, you can use separate custom use
 
 #### 6.2.1 Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
 
-Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `Administration.Account` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
+Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 
 Make a single call from `CUSTOM_UserProvisioning` to your own module where you implement the provisioning flow you need. This way, it will be easy to install new versions of the OIDC SSO module over time without overwriting your custom provisioning.
 
@@ -576,6 +576,47 @@ You can set up custom user provisioning once your app is running using the `OIDC
 Review the custom microflow `evaluateMultipleUserMatches` in the **USE_ME** folder. The module tries to find the user corresponding to the given username. This microflow is triggered when multiple matching `System.User` records are found.
 
 You can customize this microflow to determine the correct user. The resulted user instance will be signed in to the application and passed on to any other microflow. However, Mendix recommends using provided unique entity attribute only. For example, `System.User.Name`.
+
+### 6.4 User Identifiers in the OIDC and SCIM Protocols
+
+This section provides an overview and general guidance on User Identifiers, essential for understanding how they function in the OIDC and SCIM protocols. It is particularly relevant for Entra ID customers to ensure proper implementation and alignment of User Identifiers.
+
+#### 6.4.1 Overview of User Identifier
+
+When using OIDC SSO with Entra ID, user identifiers need to be configured correctly to ensure forward compatibility, especially if you plan to introduce the SCIM module in your application. If you are using OIDC SSO with Entra ID, you can refer to the [Microsoft documentation on attribute mapping](https://learn.microsoft.com/en-us/entra/identity/app-provisioning/customize-application-attributes).
+
+Entra ID uses two immutable identifiers for a user:
+
+* The user’s object ID: The user's object ID uniquely identifies a user, making it ideal for crosslinking users across different applications. For example, B2E application used across the company can use the object ID as a unique identifier.
+* The user’s pairwise unique identifier: It is also known as a locally unique identifier and is derived from the combination of the user's object ID and the application's identifier. This means it cannot be used to crosslink a user across different applications. For example, applications that need additional privacy can use locally unique identifiers to avoid cross linking of users.
+
+Role of user identifiers in OIDC and SCIM protocols:
+
+* OIDC protocol can use both types of identifiers based on use case:
+
+  * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
+  * The ID-token also contains an `oid` claim, which includes the user’s object ID.
+
+* SCIM:
+
+  * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
+
+#### 6.4.2 Guidance on User Identifier{#guidance-user-identifier}
+
+The default behavior for the OIDC SSO module is to persist the value of the `sub` claim in the system.user.name attribute. This is not forward compatible with the introduction of SCIM. Therefore, for B2E applications connected with Entra ID for SSO, Mendix recommends the following:
+
+* For any new application, use the `oid` claim as user identifier by modifying the user provisioning flow. This will allow you to introduce SCIM.
+* For existing applications that do not persist user-specific application data (other than system.user or administration.account), modify the user provisioning flow to use the `oid` claim instead of the `sub` claim. Delete all system.user and administration.account records to remove old user data. This will re-provision the users, allowing you to introduce SCIM.
+* For existing applications that do not need to use SCIM, you can continue to use default `sub` claim value or any other claim such as `preferred_username`.
+* For existing applications where you want to introduce SCIM, you will need to define a migration strategy for the identifiers.
+
+#### 6.4.3 Configuring `oid` Claim in the OIDC SSO
+
+By default, the `WellKnownendpoint` (Automatic configuration URL) does not include the `oid` claim in its metadata. You will need to manually configure the `oid` claim in the **UserProvisioning** tab of the OIDC SSO configuration using the steps below:
+
+1. Go to **Attribute Mapping** and click **New**.
+2. Select **Search**  and click **New**.
+3. Create `oid` claim and map it to the Entity Attribute.
 
 ## 7 API Authentication {#api-authentication}
 

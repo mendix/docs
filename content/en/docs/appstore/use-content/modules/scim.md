@@ -185,7 +185,7 @@ You can configure the `objectId` in SCIM using the steps below:
 2. Edit the attribute mapping.
 3. For `externalId`, change the **Source attribute** to `objectId`.
 
-The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
+The table below compares the primary user-identifying attribute used by SCIM (i.e., the External ID) with the identifying claims used by SSO modules.
 
 | **IdP** | **SSO Module** | **Remark** |
 | --- | --- | --- |

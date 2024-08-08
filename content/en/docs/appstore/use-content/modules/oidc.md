@@ -612,10 +612,10 @@ The default behavior for the OIDC SSO module is to persist the value of the `sub
 
 #### 6.4.3 Configuring `oid` Claim in the OIDC SSO
 
-By default, `WellKnownendpoint` (Automatic configuration URL) does not include `oid` claim in metadata. You will need to manually configure the `oid` claim in **UserProvisioning** tab of OIDC SSO configuration using below steps:
+By default, the `WellKnownendpoint` (Automatic configuration URL) does not include the `oid` claim in its metadata. You will need to manually configure the `oid` claim in the **UserProvisioning** tab of the OIDC SSO configuration using the steps below:
 
-1. Go to **Attribute Mapping** and click **New**
-2. Select **Search**  and click **New**
+1. Go to **Attribute Mapping** and click **New**.
+2. Select **Search**  and click **New**.
 3. Create `oid` claim and map it to the Entity Attribute.
 
 ## 7 API Authentication {#api-authentication}

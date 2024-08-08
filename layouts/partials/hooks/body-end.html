@@ -9,17 +9,8 @@
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-QJG4');</script>{{- end -}}
 <!-- To make images clickable and zoomable as pop-ups -->
-<!-- The MIT License (https://github.com/francoischalifour/medium-zoom?tab=MIT-1-ov-file): 
-  Copyright (c) 2016-present François Chalifour
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software. -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.7/medium-zoom.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src='{{ "js/medium-zoom.js" | relURL }}'></script>
 
 <script>
   const images = Array.from(document.querySelectorAll(".td-content img"));

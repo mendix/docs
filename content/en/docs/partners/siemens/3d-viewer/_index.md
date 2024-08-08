@@ -280,7 +280,7 @@ Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#vi
 
 You can set the language of the measurement result in the **General** tab, the default language is English.
 
-{{< figure src="/attachments/partners/siemens/3d-viewer/Measurement-language.jpg" alt="measurement-language" class="no-border" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/measurement-language.jpg" alt="measurement-language" class="no-border" >}}
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 

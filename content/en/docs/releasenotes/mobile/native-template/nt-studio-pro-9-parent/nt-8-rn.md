@@ -11,7 +11,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* Upgraded buildToolsVersion, compileSdkVersion, and targetSdkVersion to 34 for Android.
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
 
 ## 8.0.14 {#814}
 

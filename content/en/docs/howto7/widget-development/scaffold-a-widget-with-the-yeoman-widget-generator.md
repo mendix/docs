@@ -23,12 +23,12 @@ Yeoman and Grunt both run on Node.js, so you need to install this by following t
 
 1. Go to [https://nodejs.org](https://nodejs.org).
 2. Download the latest stable release (LTS) and install it.
-3. Open the command line and press **Windows**+**R**.
-4. Type "cmd" and press **Enter**:
+3. Open the command line and press <kbd>Windows</kbd> + <kbd>R</kbd>.
+4. Type `cmd` and press <kbd>Enter</kbd>:
 
     {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398836.png" class="no-border" >}}
 
-5. Check if Node.js is properly installed by entering `node -v` and press **enter**. If Node.js is properly installed, it will show you the version that is installed.
+5. Check if Node.js is installed by entering `node -v` and pressing <kbd>Enter</kbd>. If Node.js is properly installed, it will show you the version that is installed.
 
 ### 2.2 Install Yeoman, Widget Generator, and Grunt
 
@@ -83,7 +83,7 @@ The watch task has the advantage that you do not have to restart your test app e
 * Changes to XML are not automatically picked up
     * Every time you make changes to your *Widget.xml* inside your *src/Widget/* folder, you need to update the widget in the Modeler
 
-To update the widget, press **F4** in the Modeler or select **Project** > **Synchronize Project Directory**:
+To update the widget, press <kbd>F4</kbd> in the Modeler or select **Project** > **Synchronize Project Directory**:
 
 {{< figure src="/attachments/howto7/widget-development/scaffold-a-widget-with-the-yeoman-widget-generator/19398843.png" class="no-border" >}}
 

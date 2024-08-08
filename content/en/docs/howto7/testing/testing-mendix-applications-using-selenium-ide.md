@@ -97,7 +97,7 @@ Selenium IDE can be used to record tests scripts, but these scripts usually need
 
 You need to find the right locator, which will tell Selenium IDE which GUI elements (for example, buttons, text boxes, and data grids) it needs to operate on. To make it easier to create a locator for Mendix elements, `mx-name` is added to the class of an element. When the position of an element in the form changes, there is no need to rewrite the script.
 
-1. Press <kbd>CTRL</kbd> + <kbd>N</kbd> to create a new test case in Selenium IDE.
+1. Press <kbd>Ctrl</kbd> + <kbd>N</kbd> to create a new test case in Selenium IDE.
 2. Click the record icon.
 3. Enter the following login details on the Mendix login screen:
 

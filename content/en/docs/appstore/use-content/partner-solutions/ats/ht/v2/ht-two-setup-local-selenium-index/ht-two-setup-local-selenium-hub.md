@@ -40,7 +40,7 @@ The following steps describe how to download the latest Chrome and Gecko (Firefo
 
 The following steps describe how to start the Selenium hub: 
 
-1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
+1. Go to the folder and open a command box (<kbd>Shift<kbd> + right-click and choose the **Open command** window here)
 2. Start your Selenium hub (version number can be different):
 
     ```powershell {linenos=false}

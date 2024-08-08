@@ -38,7 +38,7 @@ It is handy to have an app where the extension is used for the testing purposes.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`
 
-Now if you build your extension project, (usually you can do this by pressing  <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> ) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd> ), the latest version of your extension will be loaded.
+Now if you build your extension project, (usually you can do this by pressing  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> ) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd> ), the latest version of your extension will be loaded.
 
 ## 4 Creating Your First Extension
 
@@ -89,7 +89,7 @@ public class MyMenuExtension() : MenuExtension
 
 1. Make sure that the current version of the extension code is loaded in Studio Pro.
 2. Attach to Studio Pro process in Visual Studio debugger as follows:
-   1. On the **Debug** menu, open the **Attach to Process** dialog box  (or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>).
+   1. On the **Debug** menu, open the **Attach to Process** dialog box  (or press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd>).
    2. Search for `studiopro.exe` among the processes.
    3. Select the only found process (or the one with correct title, if you have many) and select **Attach**.
 

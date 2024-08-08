@@ -315,7 +315,7 @@ For code snippets that are not part of a sentence or that span multiple lines, u
 Use HTML `<kbd>` tags to refer to keyboard keys:
 
 * Press <kbd>Enter</kbd> to select the highlighted item.
-* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+* Stop the log capturing in your command-line tool by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
 ### Links
 

@@ -36,7 +36,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
     * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
     * <kbd>Ctrl</kbd> + <kbd>K</kbd> – insert link
-    * <kbd>tab</kbd> – moves the focus to the next element
+    * <kbd>Tab</kbd> – moves the focus to the next element
 
 For more details, click the **Help** button on the toolbar.
 

@@ -73,7 +73,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
   
     For the `ListWorkspaces` activity, you must make a **ListWorkspaceRequest**, as well as specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
 12. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+13. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions" class="no-border" >}}

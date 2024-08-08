@@ -132,7 +132,7 @@ Create a test case by following these steps:
 6. Open **Home_Native** page.
 7. Delete all widgets from the page.
 8. Edit the page properties and set all Spacing properties to Inner medium.
-9. Search in Toolbox for the **Group Box** widget. If you cannot find it press **F4** to refresh the project widgets.
+9. Search in Toolbox for the **Group Box** widget. If you cannot find it, press <kbd>F4</kbd> to refresh the project widgets.
 . Drag the widget into the empty container:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/initial-widget.png" alt="initial widget" class="no-border" >}}
@@ -205,7 +205,7 @@ Define the structure and default style of the group box widget with these steps:
 
     {{< figure src="/attachments/howto8/extensibility/build-native-widget/2-header-caption-mobile.png" alt="basic app" class="no-border" >}}
 
-    {{% alert color="info" %}}If you encounter an error with the widget in Studio Pro, you might have to update the widget by right clicking on it or synchronize the project directory by pressing F4 to fix it.
+    {{% alert color="info" %}}If you encounter an error with the widget in Studio Pro, you might have to update the widget by right clicking on it or synchronize the project directory by pressing <kbd>F4</kbd> to fix it.
     {{% /alert %}}
 
 The UI of your widget does not look like a group box yet. Apply a default style to make it look like one with the following steps:
@@ -1413,7 +1413,7 @@ The developer needs to have the class names memorized to apply a certain group b
 
     Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
 
-3. In Studio Pro click <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
+3. In Studio Pro, press <kbd>F4</kbd> or select **Project > Synchronize Project Directory** to bring your application in sync with the changes you made to the previous two files.
 
 4. Double-click the group box widget and navigate to the **Appearance** tab.
 

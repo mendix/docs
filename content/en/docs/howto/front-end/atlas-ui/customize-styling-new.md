@@ -307,7 +307,7 @@ With the modular structure of the styling of Mendix app, the styling files are p
 Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
 {{% alert color="info" %}}
-The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to the Team Server. 
+The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>F4</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to the Team Server. 
 {{% /alert %}}
 
 If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.

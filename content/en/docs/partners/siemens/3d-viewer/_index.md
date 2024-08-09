@@ -235,7 +235,7 @@ On the **General** tab, the following options are available:
 * **Show search options** – determines whether to display all node search results in the drop-down list
   
 
-{{< figure src="/attachments/partners/siemens/3d-viewer/pstree-showsearchoptions.jpg" alt="show search options in PS Tree" >}}
+{{< figure src="/attachments/partners/siemens/3d-viewer/pstree-showsearchoptions.jpg" max-width=50% alt="show search options in PS Tree" >}}
 
 * **Show leaf structure** – determines if the sub-part data should be displayed in the widget
 

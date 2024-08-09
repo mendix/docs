@@ -82,8 +82,8 @@ Preconfigured microflows help you assigning user tasks, and one allows you to ab
 You can find the following microflows in Workflow Commons:
 
 * **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
-* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters. This microflow can be used for user tasks and multi-user tasks.
-* **ACT_UserTask_AssignToUsers** – Assigns a user task to a specified list of users, both passed as parameters. This microflow can only be used for multi-user tasks.
+* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters. This microflow can be used for [user tasks](/refguide/user-task/) and [multi-user tasks](/refguide/multi-user-task/).
+* **ACT_UserTask_AssignToUsers** – Assigns a user task to a specified list of users, both passed as parameters. This microflow can only be used for [multi-user tasks](/refguide/multi-user-task/).
 * **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 * **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
 * **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.

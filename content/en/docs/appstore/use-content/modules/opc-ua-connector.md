@@ -57,8 +57,8 @@ You must have these Marketplace modules installed:
 ## 3.1 Connecting to an OPC-UA server (Session Services)
 The connector provides a simple wizard to set up your own connection to an OPC-UA server. However, if you wish to have your own custom business logic to connect to a server you are free to do so. 
 
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/NewConfigurationOverview.png" >}}
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/NewConfigurationStep1.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png" >}}
 
 To make the connection a ServerConfiguration, associated IdentityToken and (usually) ClientCertificate needs to be provided. In addition, the server certificate needs to be trusted.
 For each of these parts see the sections below.
@@ -112,7 +112,7 @@ The BrowseDescription contains the following fields:
 * Node Class Mask. Specifies which NodeClasses will be returned. If no value is provided, no filter will be applied.
 
 This is an integer attribute, while the interpretation is a set of bits as described in the table below:
- 
+
 | Bit | Node class | Value |
 | --- | ---------- | -----  |
 | 0 | Object | 1 |
@@ -163,7 +163,7 @@ In this section we give an example on how to Read specific attribute values of n
 Lets say we want to read the "AccessLevel" on variable nodes we just received from the Browse Response. Note that this is a property that is only on the VariableNode entity and is therefore specific to a Variable. Therefore we need to filter out all other types of Nodes. Then we Need to create a ReadNodeRequest. Since we are not interested when the last moment is the AccessLevel is changed, nor at what moment we read the value, we set the MaxAge attribute to 0 and the TimestampsToReturn attribute to Neither. Now we need to specify what values we want to read. Create for each BrowseNode object a ReadNodeReadValueID object, with the same NodeID as the BrowseNode, AttributeID set to AccessLevel and numeric range to empty and attach this list to the ReadNodeRequest. Supply the ServerConfiguration for the connection and use the ReadNode action to make the request. 
 The response consists of a list of DataValues that match the order of the requests. The DataValue object has a Value propery that contains as a string the integer that resembles the accessLevel. 
 
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/ReadAccessRight.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png" >}}
 
 ### 3.4.2 Example 2. Reading the value of a Variable Node.
 Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you will read from the VariableNode. To make reading the value of a Variable easier we included a default action that takes ony the node ID as an input. For the default variable types that must be supported by any OPC-UA server the responses will look like the Read column in the table below. 
@@ -202,8 +202,8 @@ To receive a notification from a monitored item we need two artifacts.
 1. We need to instruct our Mendix application what needs to happen when we receive a notification
 2. We need to instruct the server to what information needs to be checked on the server
 
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/CreateMonitoredItemMicroflow.png" >}}
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/CreateMonitoredItemMicroflowConfiguration.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png" >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png" >}}
 
 ### 3.5.1 Instruct Mendix
 When a notification comes in a microflow will be triggered. An Example microflow, called EXAMPLE_MonitoredItem_LogDefaultMessage, is provided in the USE_ME > 12.MonitoredItems_service_set folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a MessageMonitoredItem, a MessageMonitoredItemReadValueId and a MessageDataValue. These are the only parameters that are allowed for a microflow to be called on a notification but not all are required.

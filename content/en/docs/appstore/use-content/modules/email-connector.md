@@ -166,7 +166,7 @@ When modeling your app in Studio Pro, use the **CreateEmailFromTemplate** Java a
 The input parameters are the following:
 
 * **DataObject** – This is an entity object from which you want to extract the placeholder tokens. If you want to retrieve from multiple objects, create a [non-persistable entity](/refguide/persistability/#non-persistable).
-  {{% alert color="info" %}} [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module needs to be added and configured in your App before creating placeholder tokens.{{% /alert %}}
+  {{% alert color="info" %}} [Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module needs to be added and configured in your app before creating placeholder tokens.{{% /alert %}}
 * **EmailTemplate** – This is an email template from which an **EmailMessage** object is created and sent.
 * **Queued** – When **true**, the email message is stored in the **EmailMessage** entity with its status as **Queued**. In this case, you can send it later using a scheduled event. You can use the microflow **SE_SendQueuedEmails** to create scheduled events. You can also create a [task queue](/refguide/task-queue/) and run this microflow in that task queue to minimize system resource usage. Using a task queue, you can set the number of threads, node or cluster-wide scope, time intervals, and other parameters.
 
@@ -185,7 +185,7 @@ Refer to the sample microflow **Sample_ACT_SendEmailWithTemplate**. To use **To*
 
 #### 4.3.4 Exporting Email Template
 
-{{% alert color="info" %}}[Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module needs to be added and configured in your App before exporting and importing Email templates containing placeholder tokens.{{% /alert %}}
+{{% alert color="info" %}}[Mx Model Reflection](https://docs.mendix.com/appstore/modules/model-reflection/) module needs to be added and configured in your app before exporting and importing email templates containing placeholder tokens.{{% /alert %}}
 
 Email connector now supports the export and import of email templates. This feature reduces the manual work required to recreate templates in various development, acceptance, and/or production environments.
 

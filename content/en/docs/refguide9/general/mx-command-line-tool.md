@@ -212,7 +212,7 @@ Return codes are described in the table below:
 | --- | --- |
 | 0 | The command ran successfully. |
 
-### 3.5 mx show-java-version Command [version 9.24.26+]
+### 3.5 mx show-java-version Command [version 9.24.26+]{#show-java-version}
 
 The `mx show-java-version` command reports what the configured Java version of the app is.
 

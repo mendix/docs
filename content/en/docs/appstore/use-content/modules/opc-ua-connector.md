@@ -42,11 +42,13 @@ You must have the following Marketplace module installed:
 
 2. Assign the **CanConfigure** module role to a user role that will configure the connections to your server.
 
-3. Log in as a user that can configure the connection and go to the configuration page.
+3. Log in as a user that can configure the connection.
 
-4. If you want to connect to a server with a message security mode **Sign** or **Sign&Encrypt**, add your client certificate in the upper-right corner.
+4. Go to the configuration page.
 
-5. Click **New configuration** and follow the steps to set up your connection. Once the configuration is saved, the APIs can be used in your application.
+5. If you want to connect to a server with a message security mode **Sign** or **Sign&Encrypt**, add your client certificate in the upper-right corner.
+
+6. Click **New configuration** and follow the steps to set up your connection. Once the configuration is saved, the APIs can be used in your application.
 
 {{% todo %}}Where is the configuration page? Add the image to step 4? The style of a message security mode Sign or sign&encrypt?{{% /todo %}}
 
@@ -66,9 +68,10 @@ The OPC-UA connector provides a simple wizard to set up your own connection to a
 
 However, if you wish to have your own custom business logic to connect to a server, you can also make your own configuration. 
 
-To do so, click **New configuration**.
+To do so, do as follows:
 
-{{% todo %}}Where to find this page{{% /todo %}}
+1. Go to the **Configurations** page.
+2. Click **New configuration** in the upper-right corner.
 
 {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" max-width=100% >}}
 
@@ -82,19 +85,22 @@ The core information of the configuration to connect to an OPC-UA server must be
 
 The configuration contains the following attributes:
 
-* **Configuration Name** – the name to identify the configuration
-* **Endpoint URL**: the URL of the endpoint of the OPC-UA server
-* **Session Timeout** – requested maximum number of milliseconds a session should remain open without activity.
-* **Request Timeout** – requested maximum number of milliseconds a request should remain open without response.
-* **Message security mode** – the type of security to apply to messages
+* **ConfigurationName** – the name to identify the configuration
+* **EndpointURL**: the URL of the endpoint of the OPC-UA server
+* **IsManualConfiguration**
+* **SessionTimeout** – requested maximum number of milliseconds a session should remain open without activity.
+* **RequestTimeout** – requested maximum number of milliseconds a request should remain open without response.
+* **MessageSecurityMode** – the type of security to apply to messages
   
   * If it is **None** – messages are encrypted
-  * If it is **Sign** – messages are signed by the Client Certificate
+  * If it is **Sign** – messages are signed by the client certificate
   * If it is **Sign&Encrypt** – messages are signed and encrypted by the client certificate.
   
-* **Security Policy URI** – to determine what algorithm to use to encrypt and sign the data
+* **SecurityPolicyURI** – to determine what algorithm to use to encrypt and sign the data
 
     {{% alert color="info" %}}You can be find this value in **GetEndpoints **> **UserIdentityToken** > **SecurityPolicyURI**.{{% /alert %}}
+    
+* **_IsConnected**:
 
 ### 3.2.1 Identity Token
 
@@ -187,22 +193,25 @@ The attribute services let a client access data on a server. In particular, the 
 
 These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
 
-The data model of an OPC-UA server consists of a set of Nodes. These nodes can have one of the following nodeClasses: DataType, Method, Object, ObjectType, ReferenceType, Variable, VariableType and View. Each of these has their own set of properties. For the purpose of each and the set of properties we refer to the documentation in the domain model of the specializations of Node entities.
+The data model of an OPC-UA server consists of a set of **Node** objects. These nodes can have one of the following values for their **NodeClasses** attribute: **DataType**, **Method**, **Object**, **ObjectType**, **ReferenceType**, **Variable**, **VariableType** and **View**. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the **Node** entities.
 
-To make it easier to get the information on a node, there is a GetNodeDetails action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
+To make it easier to get the information on a node, there is a **GetNodeDetails** action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
 
 ### 3.4.1 Example 1: Reading a Property of a Node
 
-In this section we give an example on how to Read specific attribute values of nodes by an example. For the specifics on how to read the value of a variable see section (). 
+This section shows an example on how to read specific attribute values of nodes by an example. For the specifics on how to read the value of a variable see section (). 
 
-Lets say we want to read the "AccessLevel" on variable nodes we just received from the Browse Response. Note that this is a property that is only on the VariableNode entity and is therefore specific to a Variable. Therefore we need to filter out all other types of Nodes. Then we Need to create a ReadNodeRequest. Since we are not interested when the last moment is the AccessLevel is changed, nor at what moment we read the value, we set the MaxAge attribute to 0 and the TimestampsToReturn attribute to Neither. Now we need to specify what values we want to read. Create for each BrowseNode object a ReadNodeReadValueID object, with the same NodeID as the BrowseNode, AttributeID set to AccessLevel and numeric range to empty and attach this list to the ReadNodeRequest. Supply the ServerConfiguration for the connection and use the ReadNode action to make the request. 
-The response consists of a list of DataValues that match the order of the requests. The DataValue object has a Value propery that contains as a string the integer that resembles the accessLevel. 
+{{% todo %}}Which section?{{% /todo %}}
+
+In this example, you will read the **AccessLevel** on variable nodes that you just received from the **BrowseResponse**. Note that this is a property that is only on the **VariableNode** entity and is therefore specific to a **Variable**. Therefore, you need to filter out all other types of the **Node** objects. Then you need to create a **ReadNodeRequest**. Since it is not important for you when the last moment is the **AccessLevel** is changed, nor at what moment you read the value, set the **MaxAge** attribute to *0* and the **TimestampsToReturn** attribute to *Neither*. Now, you need to specify what values you want to read. Create for each **BrowseNode** object a **ReadNodeReadValueID** object, with the same **NodeID** as the **BrowseNode**, **AttributeID** set to **AccessLevel** and numeric range to empty and attach this list to the **ReadNodeRequest**. Supply the **ServerConfiguration** for the connection and use the **ReadNode** action to make the request. 
+
+The response consists of a list of **DataValues** that match the order of the requests. The **DataValue** object has a **Value** property that contains as a string the integer that resembles the **accessLevel**. 
 
 {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  max-width=100% >}}
 
 ### 3.4.2 Example 2. Reading the Value of a Variable Node
 
-Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you will read from the VariableNode. To make reading the value of a Variable easier we included a default action that takes ony the node ID as an input. For the default variable types that must be supported by any OPC-UA server the responses will look like the Read column in the table below. 
+Each **VariableNode** has a data type node as you can see in the domain model. This associated **DataTypeNode** is a node that defines what type of value you will read from the **VariableNode**. To make reading the value of a **Variable** easier, a default action is included that takes only the node ID as an input. For the default variable types that must be supported by any OPC-UA server, the responses will look like the **Read** column in the table below. 
 
 Expected Read and write formats for attribute services
 
@@ -258,17 +267,19 @@ To create your custom implementation, create a microflow that has one or more of
 
 ### 3.5.2 Instruct Server
 
-Now the server needs to know when to send a notification and what the notification should be about. To do so, create a MonitoredItem object. You need to provide the subscription created at this chapter {3.5}, the NodeID of which you want to read an attribute and the name of the microflow created in {3.5.1} in the format MODULENAME.MICROFLOWNAME.
-By default the AttributeID is set to VALUE, which will read the VALUE of a VariableNode, if you want to read another attribute or if you node is not a VariableNode, set the AttributeIDso the Attribute you want to read. For examle, if you wish to read changes to the description of a Node, set the AttributeID to DESCRIPTION.
-For additional options, check the documentation on the attributes of the MonitoredItem entity in the domain model.
+Now the server needs to know when to send a notification and what the notification should be about. To do so, create a **MonitoredItem** object. You need to provide the subscription created at this chapter {3.5}, the NodeID of which you want to read an attribute and the name of the microflow created in {3.5.1} in the format MODULENAME.MICROFLOWNAME.
+
+By default the **AttributeID** is set to **VALUE**, which will read the **VALUE** of a **VariableNode**. If you want to read another attribute or if you node is not a **VariableNode**, set the **AttributeIDso** the attribute you want to read. For example, if you wish to read changes to the description of a node, set the **AttributeID** to **DESCRIPTION**.
+
+For additional options, check the documentation on the attributes of the **MonitoredItem** entity in the domain model.
 
 ### 3.5.3 Start Monitoring
 
-When you've created the MonitoredItems you want to be notified about, use the Commit MonitoredItem(s) action from the Toolbox and the monitoring begins.
+When you have created the **MonitoredItems** you want to be notified about, use the **Commit MonitoredItem(s)** action from the Toolbox and the monitoring begins.
 
 ### 3.5.4 Stop Monitoring
 
-To stop receiving notifications, call the Delete MonitoredItem(s) action from the toolbox.
+To stop receiving notifications, call the **Delete MonitoredItem(s)** action from the Toolbox.
 
 # 4 Usage
 

@@ -195,9 +195,13 @@ The input mechanism is the method through which the end-user provides informatio
 
 ### 7.3 Example
 
-* Provide input options via command buttons as well as free text.
+* Provide input option via command buttons.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
+
+* Do not limit users to provide input via free text.
+
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/free-text.png" max-width="320px" alt="Suggested free input text" >}}
 
 ## 8 Prompting{#prompting}
 
@@ -209,7 +213,7 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 * **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This  allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
 
-* **Shielding end-user data**: Strive for proactive protection; move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
+* **Shielding end-user data**: Strive for proactive protection and move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
 
 * **Input character handling**: Set clear and realistic expectations for end-user input. Communicate limitations on character count or format to avoid end-user frustration while ensuring efficient data processing by the AI system.
 

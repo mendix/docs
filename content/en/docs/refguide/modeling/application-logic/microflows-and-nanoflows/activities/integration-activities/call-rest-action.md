@@ -83,7 +83,7 @@ Default value: *300 seconds*
 
 ### 4.5 Proxy Configuration
 
-In almost all cases, you can ignore this setting. **Use app settings** is a good default value.
+In almost all cases, you can ignore this setting. **Use app settings** is a good default value. For more information about app settings, see the *Proxy Settings* section of [Runtime Customization](/refguide/custom-settings/#proxy-settings).
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 

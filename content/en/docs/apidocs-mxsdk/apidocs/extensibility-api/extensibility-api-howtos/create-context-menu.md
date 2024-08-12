@@ -16,7 +16,7 @@ You can download the example in this how-to in [this GitHub repository](https://
 
 1. Open the project that you previously created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new class to the project and name it `MyEntityContextMenuExtension.cs`.
-3.  Replace the code in the file with the following code:
+3. Replace the code in the file with the following code:
 
     ```csharp
     namespace MyCompany.MyProject.MendixExtension;

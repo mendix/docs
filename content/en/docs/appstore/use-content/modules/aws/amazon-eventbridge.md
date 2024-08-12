@@ -77,7 +77,7 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
     {{< figure src="/attachments/appstore/use-content/modules/aws-eventbridge/eventbridge_put_events_actions.png" class="no-border" >}}
 
 6. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
-7. In the expression builder, type *ENUM_Region*, and then press **Ctrl+Space** to open the autocomplete dialog. 
+7. In the expression builder, type *ENUM_Region*, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to open the autocomplete dialog. 
 8. From the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-eventbridge/eventbridge_put_events_choose_aws_region.png" class="no-border" >}}
@@ -116,7 +116,7 @@ To configure your Mendix app to receive events, perform the following steps:
     {{< figure src="/attachments/appstore/use-content/modules/aws-eventbridge/eventbridge_register_credentials.png" class="no-border" >}}
 
 7. In the **Edit parameters** section, edit the **ENUM_Region** parameter and change **Type** to **Expression**. 
-8. In the expression builder, type *ENUM_Region* and then press **Ctrl+Space** to open the autocomplete dialog. 
+8. In the expression builder, type *ENUM_Region* and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd> to open the autocomplete dialog. 
 9. From this autocomplete dialog, select **AWSAuthentication.ENUM_Region**, and then type “**.**” to get the enumeration values and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-eventbridge/eventbridge_register_choose_aws_region.png" class="no-border" >}}

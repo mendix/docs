@@ -184,6 +184,7 @@ Example 2
 * `protocol` – the protocol of the connection.
 * `enabled` – set to `true` to enable the registry. This means you can switch the meter on and off while keeping the settings in the configuration.
   
+
 Example 1
 
 ```json
@@ -374,7 +375,7 @@ The following deprecated usages will be removed in the future releases,
 
 Metering-related log messages are sent to the `Metering` log node. If a registry is enabled, they will be reported with severity `debug`.
 
-## 7 List of Metrics
+## 7 List of Metrics {#list-of-metrics}
 
 The Runtime Server produces various metrics. Some of these metrics are controlled by Mendix: these are prefixed with `mx`.
 

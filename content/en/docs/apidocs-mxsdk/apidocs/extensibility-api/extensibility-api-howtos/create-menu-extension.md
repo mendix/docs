@@ -15,13 +15,14 @@ You can download the example in this how-to in [this GitHub repository](https://
 1. Create a new project in Visual Studio based on `C# Class Library` template.
 2. Choose a name for the project. Use a format similar to `MyCompany.MyProject.MendixExtension`, but it is not a hard requirement.
 3. Choose `.NET 8.0` Framework.
-4.  Add `Mendix.StudioPro.ExtensionsAPI` NuGet package to the project references. Pick the version that does not exceed the Studio Pro version you installed. To do so, perform the following steps:
+4. Add `Mendix.StudioPro.ExtensionsAPI` NuGet package to the project references. Pick the version that does not exceed the Studio Pro version you installed. To do so, perform the following steps:
+
     1. Include a reference to the Extensions API [NuGet package](https://www.nuget.org/packages/Mendix.StudioPro.ExtensionsAPI): 
     2. Add new file named `manifest.json` to your project. Put the following content into it:
 
-    ```json
-    { "mx_extensions": [ "<name_of_your_project>.dll" ] }
-    ```
+        ```json
+        { "mx_extensions": [ "<name_of_your_project>.dll" ] }
+        ```
 
     3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
@@ -37,7 +38,7 @@ It is handy to have an app where the extension is used for the testing purposes.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`
 
-Now if you build your extension project, (usually you can do this by pressing  <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> ) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd> ), the latest version of your extension will be loaded.
+Now if you build your extension project, (usually you can do this by pressing  <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> ) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd> ), the latest version of your extension will be loaded.
 
 ## 4 Creating Your First Extension
 
@@ -88,7 +89,7 @@ public class MyMenuExtension() : MenuExtension
 
 1. Make sure that the current version of the extension code is loaded in Studio Pro.
 2. Attach to Studio Pro process in Visual Studio debugger as follows:
-   1. On the **Debug** menu, open the **Attach to Process** dialog box  (or press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>P</kbd>).
+   1. On the **Debug** menu, open the **Attach to Process** dialog box  (or press <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>P</kbd>).
    2. Search for `studiopro.exe` among the processes.
    3. Select the only found process (or the one with correct title, if you have many) and select **Attach**.
 

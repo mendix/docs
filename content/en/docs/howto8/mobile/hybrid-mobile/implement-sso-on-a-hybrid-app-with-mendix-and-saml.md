@@ -141,7 +141,7 @@ To use the hybrid app package, follow these steps:
     This package you just downloaded is a customizable hybrid app package for your specific Mendix app. You can make changes to it, build a new PhoneGap Build package, and then upload it to PhoneGap Build to create the binaries (for example, APK for Android and IPA for iOS). To better understand the structure of what you just downloaded, see the **Folder Structure** section in the [Mendix PhoneGap Build App Template documentation](https://github.com/mendix/hybrid-app-template#folder-structure).
 
 4. Unzip the hybrid app package.
-5. Edit the *Entry.js* file (under `src\www\scripts`). The file should look like this:
+5. Edit the *Entry.js* file (under `phonegap/package/src/www/scripts/`). The file should look like this:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/entry.js.png" class="no-border" >}}
 

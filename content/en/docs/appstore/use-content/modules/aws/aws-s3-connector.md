@@ -61,7 +61,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
 4. Drag the **CreateBucket** activity onto the microflow you are working on.
 5. Double-click the **CreateBucket** activity and configure the **AWS_Region** parameter by doing the following steps:
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/use-content/modules/aws-s3-connector/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
@@ -365,7 +365,7 @@ It returns the presigned url as a String. The input and output for this service 
 | Input | Output | 
 | --- | --- | 
 | `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
-=======
+
 #### 4.3.11 HeadBucket {#headbucket}
 
 The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
@@ -373,4 +373,3 @@ The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucke
 | Input | Output | 
 | --- | --- | 
 | `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |
-

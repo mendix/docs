@@ -54,7 +54,6 @@ At this point you have a running native mobile app. To view your app on a mobile
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
-
 ### 3.3 Viewing Your App on Your Testing Device
 
 Viewing your app on a mobile device will allow you to test native features and other aspects of your app. This section is written for mobile devices, but you may use an Android emulator mentioned in the [Prerequisites](#prerequisites) section above. To view your app, follow these steps:

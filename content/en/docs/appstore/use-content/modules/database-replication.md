@@ -306,13 +306,37 @@ Each import action is executed in a single transaction, which means it is able t
 
 You can import and export table mappings to an XML file using the **Table mapping** tab.
 
-## 11 Troubleshooting
+## 11 Data types
+ 
+Database-specific data types are converted to a Java type with the JDBC driver. The module then converts these Java types into a Mendix primitive type. This step also performs implicit conversions between types.
 
-### 11.1 A Table Alias Is Selected but the Column Name Field Does Not Show Anything
+[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with _X_):
+
+| Mendix Type / Java Type | Boolean | DateTime | Integer | AutoNumber / Long | Decimal | HashString / String / Enum | Binary |
+|:---------------------------:|:-------:|:--------:|:-------:|:--------------------:|:-------:|:-----------------------------:|:------:|
+|           Boolean           |    X    |          |         |                      |         |                               |        |
+|          util.Date          |         |    X     |         |          X           |         |               X               |        |
+|           Integer           |    X    |    X     |    X    |                      |    X    |                               |        |
+|            Long             |    X    |    X     |    X    |          X           |    X    |                               |        |
+|           Double            |    X    |          |    X    |          X           |    X    |                               |        |
+|         BigDecimal          |    X    |          |    X    |          X           |    X    |                               |        |
+|           String            |    X    |    X     |    X    |          X           |    X    |               X               |        |
+
+{{% alert color="info" %}}
+CLOBs (of java type `java.sql.clob`) are not supported.
+
+Boolean mapping treats numeric positive/negative values as true/false and supports the following string values: "yes", "1", "true", "ja", "no", "0", "false", "nee".
+
+Decimal mapping supports currency format strings.
+{{% /alert %}} 
+
+## 12 Troubleshooting
+
+### 12.1 A Table Alias Is Selected but the Column Name Field Does Not Show Anything
 
 This is a limitation. The workaround is to select the blank option in the table alias selector, and then select your desired table again. This should repopulate the column selector.
 
-### 11.2 No Automatic Mapping Inheritance 
+### 12.2 No Automatic Mapping Inheritance 
 
 An example of mapping inheritance would be creating a different sub-type of a generalization based on a value in a column.
 

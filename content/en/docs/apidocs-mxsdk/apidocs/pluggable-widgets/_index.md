@@ -168,7 +168,7 @@ When your widget is published in Marketplace and is assigned a special toolbox c
 
 #### 4.2.2 Help Page {#help}
 
-You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
+You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>F1</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 

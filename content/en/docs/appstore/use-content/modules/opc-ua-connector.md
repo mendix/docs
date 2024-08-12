@@ -209,7 +209,7 @@ The response consists of a list of **DataValues** that match the order of the re
 
 {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  max-width=100% >}}
 
-### 3.4.2 Example 2. Reading the Value of a Variable Node
+### 3.4.2 Example 2: Reading the Value of a Variable Node {#example-2}
 
 Each **VariableNode** has a data type node as you can see in the domain model. This associated **DataTypeNode** is a node that defines what type of value you will read from the **VariableNode**. To make reading the value of a **Variable** easier, a default action is included that takes only the node ID as an input. For the default variable types that must be supported by any OPC-UA server, the responses will look like the **Read** column in the table below. 
 
@@ -234,8 +234,7 @@ Expected Read and write formats for attribute services
 
 ### 3.4.3 Writing a value to a Variable Node
 
-Each variableNode has a dataType node as can be seen in the domain model. This associated DataTypeNode is a node that defines what type of value you can write to the VariableNode. To make writing the value to a Variable easier we included a default action that 
-takes the NodeID, a payload and a DefaultVariantType as an input. The latter is recommended to use. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently not all default types are supported and no custom type is supported. For example payloads see the table above.
+Each **VariableNode** has a data type node as can be seen in the domain model. This associated **DataTypeNode** is a node that defines what type of value you can write to the **VariableNode**. To make writing the value to a **Variable** easier, a default action is included that takes the **NodeID**, a payload and a **DefaultVariantType** as an input. The latter is recommended to use. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently, not all default types are supported and no custom type is supported, for example, payloads. See the table in the [Example 2: Reading the Value of a Variable Node](#example-2).
 
 
 ## 3.5 Monitoring Items
@@ -256,14 +255,16 @@ To receive a notification from a monitored item we need two artifacts.
 
 ### 3.5.1 Instruct Mendix
 
-When a notification comes in a microflow will be triggered. An Example microflow, called EXAMPLE_MonitoredItem_LogDefaultMessage, is provided in the USE_ME > 12.MonitoredItems_service_set folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a MessageMonitoredItem, a MessageMonitoredItemReadValueId and a MessageDataValue. These are the only parameters that are allowed for a microflow to be called on a notification but not all are required.
+When a notification comes in, a microflow will be triggered. An example microflow, called **EXAMPLE_MonitoredItem_LogDefaultMessage**, is provided in the **USE_ME** > **12.MonitoredItems_service_set** folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a **MessageMonitoredItem**, a **MessageMonitoredItemReadValueId** and a **MessageDataValue**. These are the only parameters that are allowed for a microflow to be called on a notification but not all are required.
 
-* A messageMonitoredItem parameter contains the monitoredItem information, that is, how the notification was generated.
-* A messageMonitoredItemReadValueID contains the information on what node and attribute was read.
-* A messageDataValue contains the information on the actual read value on the 'Value' attribute.
+* A **messageMonitoredItem** parameter contains the monitoredItem information, that is, how the notification was generated.
+* A **messageMonitoredItemReadValueID** contains the information on what node and attribute was read.
+* A **messageDataValue** contains the information on the actual read value on the **Value** attribute.
 
-To create your custom implementation, create a microflow that has one or more of these input parameters. Make sure to use each type only once and don't add any other type of parameters here because the microflow will be called in the background and only fill these type of parameters. ( I think these are too many words for what I'm trying to say... )
-@Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?
+To create your custom implementation, create a microflow that has one or more of these input parameters. Make sure to use each type only once and do not add any other type of parameters here because the microflow will be called in the background and only fill these type of parameters.
+
+{{% todo %}}( I think these are too many words for what I'm trying to say... )
+@Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?{{% /todo %}}
 
 ### 3.5.2 Instruct Server
 

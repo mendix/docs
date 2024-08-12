@@ -1,7 +1,7 @@
 ---
 title: "Conversational AI Design Checklist"
 url: /howto/front-end/conversation-checklist/
-linktitle: "Conversation Checklist"
+linktitle: "Conversational Design Checklist"
 weight: 70
 description: "Describes best practices for designing Conversational AI Bots."
 ---

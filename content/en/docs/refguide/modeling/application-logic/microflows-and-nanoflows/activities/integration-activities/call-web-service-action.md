@@ -2,7 +2,7 @@
 title: "Call Web Service"
 url: /refguide/call-web-service-action/
 weight: 20
-alias:
+aliases:
     - /refguide/using-a-proxy-to-call-a-webservice/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---

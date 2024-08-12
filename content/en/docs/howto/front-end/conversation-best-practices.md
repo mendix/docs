@@ -156,7 +156,7 @@ Users seek trust and assurance that their personal information is handled secure
 
 ### 6.1 Why It Matters
 
-Local control allows end-users to adapt the AI's suggestions or outputs to their situation. 
+Local control allows end-users to adapt the AI's suggestions or outputs to their situation.
 
 Additionally, people are more motivated and engaged when they believe they can influence outcomes (self-efficiency). Offering end-user control options reinforces a end-user's sense of self-efficacy and motivates them to interact with the AI system.
 

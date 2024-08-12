@@ -282,7 +282,7 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to |   |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter |   |
 
-## 10 Proxy Settings
+## 10 Proxy Settings {#proxy-settings}
 
 The settings below allow you to use a proxy. 
 

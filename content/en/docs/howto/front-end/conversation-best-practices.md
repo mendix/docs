@@ -199,7 +199,7 @@ The input mechanism is the method through which the end-user provides informatio
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
-* Do not limit users to provide input via free text.
+* Do not limit users to provide free text input.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/free-text.png" max-width="320px" alt="Suggested free input text" >}}
 
@@ -277,13 +277,9 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 ### 10.3 Examples
 
-* When text is highlighted, the **Modify selected text** icon ({{% icon name="pencil-filled" %}}) appears, signaling an opportunity for further interaction.
+* When text is highlighted, the **Reply** icon ({{% icon name="blockquote-filled" %}}) appears, signaling an opportunity for further interaction.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-icon.png" max-width="320px" alt="Modify icon appears near highlighted response from Bot" >}}
-
-* After clicking the **Modify selected text** icon, the end-user can discover modification options.
-
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-options.png" max-width="320px" alt="Some standard modify options (Regenerate, Make Shorter, Remove) are given next to Bot's response" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
@@ -298,7 +294,7 @@ Transparent error messages tell end-users exactly what went wrong, preventing co
 ### 11.2 How We Do It
 
 * **Use precise language**: Instead of "An error occurred," pinpoint the issue. For example, "We couldn't find a profile with that email address. Please check your spelling and try again."
-* **Offer context**: Briefly explain why the error happened. For instance, "The password you entered doesn't meet our security requirements. It must be at least 8 characters long and contain a combination of uppercase and lowercase letters, numbers, and symbols."
+* **Offer context**: Briefly explain why the error happened. For instance, "It looks like the image might be a bit too large. We have a 5 MB limit for uploads. If you try resizing it or picking a smaller one, it should work just fine!"
 * **Provide solutions**: Offer actionable steps that end-users can take to fix the problem. This could be suggesting alternative actions, linking to relevant help articles, or offering to reset a password.
 * **Maintain a positive tone**: Even when reporting an error, use polite and helpful language. For example, "We encountered a problem processing your request. Let's try again!"
 

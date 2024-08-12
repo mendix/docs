@@ -88,7 +88,7 @@ Bundle ID must be matching with your package ID. Make sure to repeat this step f
 
 ## 5 Configuring APNs Credentials (Optional) {#configuring}
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials:
+If you wish to send push notifications to iOS devices through FCM (for native mobile apps), you will need to configure your APNs credentials:
 
 1. Click in the upper-left corner of the screen and select **Project settings**.
 1. Navigate to the **Cloud messaging** tab:

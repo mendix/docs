@@ -57,7 +57,7 @@ Click **Create new project** and fill in the project name and region for your ap
 
 ## 4 Configuring APNs Credentials (Optional) {#configuring}
 
-If you wish to send push notifications to iOS devices through FCM, you will need to configure your APNs credentials. To do so, click in the upper-left corner of the screen and select **Project settings**.
+If you wish to send push notifications to iOS devices through FCM (for native mobile apps), you will need to configure your APNs credentials. To do so, click in the upper-left corner of the screen and select **Project settings**.
 
 Navigate to the **Cloud messaging** tab.
 

@@ -2,6 +2,8 @@
 title: "Call Web Service"
 url: /refguide/call-web-service-action/
 weight: 20
+aliases:
+    - /refguide/using-a-proxy-to-call-a-webservice/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -100,7 +102,7 @@ Default: *No*
 
 ### 4.7 Proxy Configuration
 
-In almost all cases, you can ignore this setting. **Use app settings** is a good default value.
+In almost all cases, you can ignore this setting. **Use app settings** is a good default value. For more information about app settings, see the *Proxy Settings* section of [Runtime Customization](/refguide/custom-settings/#proxy-settings).
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 

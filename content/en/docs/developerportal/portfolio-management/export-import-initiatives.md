@@ -78,6 +78,7 @@ All the details of an initiative are exported, except the data of the following 
    | **Name**              | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                           | If an initiative with the same name already exists in the portfolio, a duplicate will be created. |`My first initiative`|
    | **Stage**             | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                            | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
    | **Status**             | {{< icon name="remove-circle-filled" color="red" >}} | String                      |  Only one of the three statuses can be filled in: `On Track`, `At Risk`, or `Off Track`.  |                                       |`On Track`|
+    | **PercentageCompleted**             | {{< icon name="remove-circle-filled" color="red" >}} | Integer                      |  A number between 0-100   |
    | **Tags**              | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
    | **Description**       | {{< icon name="remove-circle-filled" color="red" >}} | String                       |                                                              |                               |`A description of the initiative.`|
    | **Department**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
@@ -96,8 +97,8 @@ All the details of an initiative are exported, except the data of the following 
    | **WSJFRiskReduction** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
    | **WSJFJobSize**     | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-4. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+5. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-5. Click **Import**.
+6. Click **Import**.
 
 All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 

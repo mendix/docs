@@ -56,20 +56,15 @@ You must have the following Marketplace module installed:
 
 6. If you want to connect to a server with a message security mode **Sign** or **Sign&Encrypt**, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
 
-{{% todo %}}Is this correct?{{% /todo %}}
+{{% todo %}}Is the description above correct?{{% /todo %}}
 
-7. Click **New configuration** in the upper-right corner of the page and follow the instructions in the wizard to set up your connection to an OPC-UA server.
+7. Click **New configuration** in the upper-right corner of the page.
 
-8. If you wish to have your own custom business logic to connect to a server, you can also make your own configuration. 
+    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" >}}
 
-   To do so, do as follows:
+8. Follow the instructions in the wizard to set up your connection to an OPC-UA server. If you wish to have your own custom business logic to connect to a server, you can also make your own configuration. 
 
-   1. Go to the **Configurations** page.
-   2. Click **New configuration** in the upper-right corner.
-
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" max-width=50% >}}
-
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  max-width=50% >}}
+    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  >}}
 
 Once the configuration is saved, the APIs can be used in your application.
 
@@ -99,7 +94,7 @@ Once the configuration is saved, the APIs can be used in your application.
 
 ### 4.1 Connecting to an OPC-UA Server (Session Services)
 
-To connect to the OPC-UA server, you must provide a **ServerConfiguration** and the associated **IdentityToken**. Usually, a **ClientCertificate** is also needed. In addition, you must trust the server certificate. For each of these parts, see the sections below.
+To connect to the OPC-UA server, you must provide a **ServerConfiguration** and an associated **IdentityToken**. Usually, a **ClientCertificate** is also needed. Additionally, you must trust the server certificate. For details, see the sections below.
 
 ### 4.2 ServerConfiguration
 
@@ -108,10 +103,10 @@ The core information of the configuration to connect to an OPC-UA server must be
 The configuration contains the following attributes:
 
 * **ConfigurationName** – the name to identify the configuration
-
 * **EndpointURL**: the URL of the endpoint of the OPC-UA server
-
 * **IsManualConfiguration**
+
+{{% todo %}}What is the description{{% /todo %}}
 
 * **SessionTimeout** – requested maximum number of milliseconds a session should remain open without activity.
 
@@ -125,13 +120,19 @@ The configuration contains the following attributes:
 
 * **SecurityPolicyURI** – to determine what algorithm to use to encrypt and sign the data
 
-  {{% alert color="info" %}}You can be find this value in **GetEndpoints**> **UserIdentityToken** > **SecurityPolicyURI**.{{% /alert %}}
+  {{% alert color="info" %}}You can be find this value in **GetEndpoints** > **UserIdentityToken** > **SecurityPolicyURI**.{{% /alert %}}
+
+  {{% todo %}}Is this in the USE_ME folder? Cannot find it.{{% /todo %}}
 
 * **_IsConnected**:
+
+  {{% todo %}}What is the description{{% /todo %}}
 
 #### 4.2.1 Identity Token
 
 A connection to an OPC-UA server is made using an **IdentityToken**, similar to a user role in Mendix. The server will dictate which types of identify token it will support, based on the response in **GetEndpoints** > **UserIdentityToken** > **TokenType**.
+
+{{% todo %}}Where can users find the GetEndpoints folder?{{% /todo %}}
 
 The three options are as follows:
 
@@ -141,7 +142,9 @@ The three options are as follows:
 
 #### 4.2.2 Client Certificate
 
-A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection, in **GetEndpoints** > **EndpointDescription** > **SecurityMode**. 
+A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection, in **GetEndpoints** > **EndpointDescription** > **SecurityMode**.
+
+{{% todo %}}Where can users find the GetEndpoints folder?{{% /todo %}}
 
 If the message security mode is set to **Sign** or **Sign&Encrypt**, the **ServerConfiguration** object requires a **ClientCertificateHolder** with **ClientCertificate** and **ClientCertificatePrivateKey** objects.
 
@@ -150,11 +153,15 @@ If the message security mode is set to **Sign** or **Sign&Encrypt**, the **Serve
 
 #### 4.2.3 Server Certificate
 
-A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the Client should trust the certificate of the server. This can be done by retrieving the certificate from the server (**GetEndpoints**> **EndpointDescription** > **ServerCertificate**), then use "Get Endpoints - Server Certificate" and then use "Trust certificate". Alternatively the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
+A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the client should trust the certificate of the server. This can be done by retrieving the certificate from the server (**GetEndpoints**> **EndpointDescription** > **ServerCertificate**), then use **Get Endpoints - Server Certificate** and then use **Trust certificate**. Alternatively, the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
+
+{{% todo %}}Where can users find the GetEndpoints folder?{{% /todo %}}
 
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 
-If you ever want to reject a certificate from the server, the "untrust certificate" action will remove the certificate from the list to trusted certificates.
+If you ever want to reject a certificate from the server, you can use the **untrust certificate** action to remove the certificate from the list to trusted certificates.
+
+{{% todo %}}Where is the untrust certificate action?{{% /todo %}}
 
 ### 4.3 View Services
 
@@ -164,23 +171,23 @@ Browsing lets you navigate the content of the server. There are three implementa
 * **Get Children** – This retrieves the sub level node for a given node.
 * **Get Parent** – This retrieve the parent node for a given node.
 
+{{% todo %}}How to access these three implementations?{{% /todo %}}
+
 #### 4.3.1 The Browse Action
 
-The browse action lets you traverse from one node to others.  The request object for the action is a **BrowseDescription**. 
-
-The **BrowseDescription** contains the following fields:
+The browse action lets you traverse from one node to others.  The request object for the action is a **BrowseDescription**, which contains the following fields:
 
 * **Node ID** – This is the node ID of the node from where you want to browse.
 
 * **Browse directions** – This specifies in which direction to traverse.
 
-* **Node ID reference type** – This specifies the Node ID of the reference type to follow. If left empty, returns all references.
+* **Node ID reference type** – This specifies the Node ID of the reference type to follow. If left empty, all references are returned.
 
-* **Include subtypes** – This indicates whether subtypes of the ReferenceType should be included.
+* **Include subtypes** – This indicates whether subtypes of the **ReferenceType** should be included.
 
 * **Node Class Mask** – This specifies which **NodeClasses** will be returned. If no value is provided, no filter will be applied.
 
-  This is an integer attribute, while the interpretation is a set of bits as described in the table below:
+  This is an integer attribute. The interpretation is a set of bits as described in the table below:
 
   | Bit  | Node class    | Value |
   | ---- | ------------- | ----- |
@@ -193,11 +200,11 @@ The **BrowseDescription** contains the following fields:
   | 6    | DataType      | 64    |
   | 7    | View          | 128   |
 
-  Sum up the values to create the mask. For example: browsing only **object**, **variable** and **view** is binary represented by `[1,1,0,0,0,0,0,1]` which has to be setup as 1 + 2 + 128 = 131 for the integer value.
+  Sum up the values to create the mask. For example: browsing only **object**, **variable** and **view** is binary represented by `[1,1,0,0,0,0,0,1]`, which has to be set up as 1 + 2 + 128 = 131 for the integer value.
 
 * **Result Mask** – This specifies the fields in the reference description structure that should be returned. 
 
-  This is an integer attribute, while the interpretation is a set of bits as described in the table below:
+  This is an integer attribute. The interpretation is a set of bits as described in the table below:
 
   | Bit  | Node class     | Value |
   | ---- | -------------- | ----- |
@@ -208,24 +215,29 @@ The **BrowseDescription** contains the following fields:
   | 4    | DisplayName    | 16    |
   | 5    | TypeDefinition | 32    |
 
-  Sum up the Values to create the mask. For example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
+  Sum up the values to create the mask. For example: requesting only the field **DisplayName** is binary represented by `[0,0,0,0,1,0]`, which has to be set up as 16 for the integer value.
 
-The response of the **Browse** action returns a browse response object. There is a **StatusCode** associated to the response, which represents the status of the call. The response may contain one or more **BrowseNodes**, these are the references from the response.
+The response of the **Browse** action returns a browse response object. There is a **StatusCode** associated to the response, which represents the status of the call. The response may contain one or more **BrowseNodes**. These are the references from the response.
 
 A browse node contains the following fields:
 
 * **Node ID** – This is the Identifier of the referenced node.
+
 * **Browse name** – This is the browse name of the referenced node.
+
 * **Display name** – This is the display name of the referenced node.
+
 * **Node class** – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references. (not supported yet)
+
+  {{% todo %}}What is exactly not supported? When will it be supported?{{% /todo %}}
 
 ### 4.4 Attribute Services
 
 The attribute services let a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
-These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
+These exposed actions deserve some additional guidance, as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
 
-The data model of an OPC-UA server consists of a set of **Node** objects. These nodes can have one of the following values for their **NodeClasses** attribute: **DataType**, **Method**, **Object**, **ObjectType**, **ReferenceType**, **Variable**, **VariableType** and **View**. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the **Node** entities.
+The data model of an OPC-UA server consists of a set of **Node** objects. These nodes can have one of the following values for their **NodeClasses** attribute: **DataType**, **Method**, **Object**, **ObjectType**, **ReferenceType**, **Variable**, **VariableType**, and **View**. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the **Node** entities.
 
 To make it easier to get the information on a node, there is a **GetNodeDetails** action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
 
@@ -239,7 +251,7 @@ In this example, you will read the **AccessLevel** on variable nodes that you ju
 
 The response consists of a list of **DataValues** that match the order of the requests. The **DataValue** object has a **Value** property that contains as a string the integer that resembles the **accessLevel**. 
 
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  max-width=50% >}}
+{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  >}}
 
 #### 4.4.2 Example 2: Reading the Value of a Variable Node {#example-2}
 
@@ -273,14 +285,14 @@ In order to get notifications upon a change of a value, do as follows:
 
 1. Create a subscription first. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. To create a subscription, simply call the **CreateSubscription** action from the Toolbox in Studio Pro. The requested publishing interval is how often at most you will receive a notification. You can set this value, but it can be overwritten if the server deems the publishing interval not feasible. 
 
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png"  max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png"  >}}
 
 2. Define to what and how to listen to any change of a value via **MonitoredItems**. To receive a notification from a monitored item you need two artifacts:
 
    1. You must instruct your Mendix application what needs to happen when you receive a notification
    2. You must instruct the server to what information needs to be checked on the server
 
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  >}}
 
 
 #### 4.5.1 Instructing Mendix {#instruct-mendix}

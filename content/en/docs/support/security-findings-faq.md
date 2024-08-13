@@ -192,7 +192,7 @@ In Mendix 7, Bootstrap is flagged by security scans mainly because of the Bootst
 
 We cannot remove these files from Mendix 7 as some customers might have included them in their custom theme, which would break these projects. Neither can we simply update to a new major Bootstrap version as this is not always a match for the current DOM structure of the Mendix widgets, nor is it backward compatible which results in broken styling for many projects.
 
-Support for Mendix 7 will be ending with the release of Mendix 10 in the summer of 2023. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
+Support for Mendix 7 has ended. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
 
 #### 8.4.1 Bootstrap Vulnerabilities in Mendix 8 and Above
 

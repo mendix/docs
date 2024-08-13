@@ -116,7 +116,7 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
-    * For Mendix 7 and 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
+    * For Mendix 8, you should use the latest published versions in the **2.x** range, unless otherwise indicated in the **Documentation** tab. 
     * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
@@ -237,9 +237,6 @@ The following settings control user provisioning:
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
-
-    {{% alert color="info" %}}In Mendix 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
-
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 * **User Action** – The module will always search for the user, based on the **Identifying Assertion**. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. 
@@ -256,7 +253,6 @@ These settings are only available in the following versions of the module (depen
 
 * v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
-* v1.16.4 and above for Mendix 7
 {{% /alert %}}
 
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
@@ -324,8 +320,6 @@ You also need to define where the user account will be stored within your app. P
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 
-In Mendix 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
-
 ### 4.2 Provisioning
 
 On the **Provisioning** tab, the following settings can be used to control user provisioning:
@@ -354,7 +348,6 @@ These settings are only available in the following versions of the module (depen
 
 * v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
-* v1.16.4 and above for Mendix 7
 
 #### 4.2.4 Just in Time Provisioning
 

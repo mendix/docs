@@ -88,7 +88,7 @@ The ingested data is stored in the target schema of the target database specifie
 
 When using OAuth authentication with the Mendix Data Loader, it is crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
 
-{{% alert color="info" %}} If your organization already has an established solution for token verification, you can implement the Mendix Data Loader using OAuth as the authentication method without additional steps. However, if you do not have an existing solution, note that the platform-supported [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) has this feature on its roadmap. {{% /alert %}}
+The [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) in the Mendix Marketplace can be used to authenticate the access token. To find out more please refer to the [OIDC SSO documentation](https://docs.mendix.com/appstore/modules/oidc/#client-credential-grant).
 
 ### 4.1 Token Verification Process
 
@@ -133,42 +133,52 @@ You can download a copy of the technical reference documentation for later use. 
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-export.png" class="no-border" >}}
 
-## 6 Current Limitations
+## 6 Setting up the app client in your OAuth provider
+
+When setting up the OAuth provider to be able to use it with the Mendix Data Loader, the correct **redirect URL** must be input in order for the authorization server to redirect the user back to the application. The redirect URL fro your Snowflake environment will be as follows:
+
+```
+https://apps-api.c1.<cloud_region_id>.<cloud>.app.snowflake.com/oauth/complete-secret
+```
+
+The *cloud_region_id* and the *cloud* in the URL will depend on the configurations of your Snowflake account. You can check out [Supported Cloud Regions](https://docs.snowflake.com/en/user-guide/intro-regions) and [Supported Cloud Platforms](https://docs.snowflake.com/en/user-guide/intro-cloud-platforms) to see what these values will be according to the region and cloud platform your account is in.
+
+## 7 Current Limitations
 
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
 * The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
 
-## 7 Troubleshooting
+## 8 Troubleshooting
 
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-### 7.1 Error Parsing JSON: Document Is Too Large
+### 8.1 Error Parsing JSON: Document Is Too Large
 
 When ingesting data, the Mendix Data Loader shows an error similar to the following: `net.snowflake.client.jdbc.SnowflakeSQLException: Error parsing JSON: document is too large, max size 16777216 bytes`.
 
-#### 7.1.1 Cause
+#### 8.1.1 Cause
 
 The amount of data being ingested is so large that the JSON file has become too large to parse.
 
-#### 7.1.2 Solution
+#### 8.1.2 Solution
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-### 7.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
+### 8.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
 
 In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
 
-#### 7.2.1 Cause
+#### 8.2.1 Cause
 
 A bug in the published OData service resource in Mendix Studio Pro 10.10 where the application root url is set incorrectly causes no data to be returned.
 
-#### 7.2.2 Solution
+#### 8.2.2 Solution
 
 This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
 
-## 8 Contact Information
+## 9 Contact Information
 
 For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

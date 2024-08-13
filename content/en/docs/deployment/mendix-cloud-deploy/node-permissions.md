@@ -24,7 +24,7 @@ You will see a list of all your licensed nodes:
 
 To go to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node, click **Environments** on that node.
 
-## 3 Permissions
+## 3 Permissions{#permissions-tab}
 
 In the **Permissions** tab of the **Environments** page, you can manage access to your environments for each team member.
 

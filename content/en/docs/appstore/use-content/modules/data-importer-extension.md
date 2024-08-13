@@ -72,6 +72,14 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/preview-data-and-entity.png" class="no-border" >}}
 
+##### 2.2.1.1 Header and data row numbering
+
+The empty rows before the start of actual header and data row(s) are trimmed in the preview. This means the preview will be skewed if the provided header row value is >1. To avoid this, you can remove the empty rows yourself before uploading the file and assign the header row as 1, or make sure the rows before the header row contain some data and keep the header row value as its actual value. 
+
+For example, the below file will result in a confusing preview if **Header Row No.** is 2 and **Read Data From** is 3. In this scenario, the first row (which is empty) should be removed from the input Excel file. Then, **Header Row No.** should be set as 1 and **Read Data From** as 2. Otherwise, a static test should be given in any column of first row to continue with **Header Row No.** as 2.
+
+{{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/empty-row-before-header.png" class="no-border" >}}
+
 #### 2.2.2 Previewing CSV Data {#preview-data-csv}
 
 Select or drop the CSV file in the **Select Source File** window. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.

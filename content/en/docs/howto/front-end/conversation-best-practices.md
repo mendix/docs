@@ -169,7 +169,7 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 * Make it easy for the end-user to edit and update a previous prompt to generate a new response.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-update-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
 
 * Provide a way to stop or pause the AI interaction.
 

@@ -2,6 +2,7 @@
 title: "OPC-UA Connector"
 url: /appstore/modules/opc-ua-connector/
 description: "Describes the configuration and usage of the OPC-UA connector, which is available in the Mendix Marketplace."
+
 ---
 
 ## 1 Introduction
@@ -11,6 +12,7 @@ description: "Describes the configuration and usage of the OPC-UA connector, whi
 ### 1.1 Features
 
 The OPC-UA connector consists of microflows that enable you to do the following:
+
 * Connect to an OPC-UA server
 * Browse nodes on an OPC-UA server
 * Read and write OPC-UA node attributes
@@ -28,6 +30,7 @@ The OPC-UA connector is licensed under the [EPL2.0 License](https://www.eclipse.
 ### 1.4 Dependencies
 
 You must have the following Marketplace module installed:
+
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 
 ## 2 Installation
@@ -49,24 +52,24 @@ You must have the following Marketplace module installed:
 
 5. Go to the configuration page.
 
-    {{% todo %}}Where is the configuration page?{{% /todo %}}
+{{% todo %}}Where is the configuration page?{{% /todo %}}
 
 6. If you want to connect to a server with a message security mode **Sign** or **Sign&Encrypt**, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
 
-    {{% todo %}}Is this correct?{{% /todo %}}
+{{% todo %}}Is this correct?{{% /todo %}}
 
 7. Click **New configuration** in the upper-right corner of the page and follow the instructions in the wizard to set up your connection to an OPC-UA server.
 
 8. If you wish to have your own custom business logic to connect to a server, you can also make your own configuration. 
 
-    To do so, do as follows:
+   To do so, do as follows:
 
-    1. Go to the **Configurations** page.
-    2. Click **New configuration** in the upper-right corner.
+   1. Go to the **Configurations** page.
+   2. Click **New configuration** in the upper-right corner.
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" max-width=50% >}}
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  max-width=50% >}}
 
 Once the configuration is saved, the APIs can be used in your application.
 
@@ -82,15 +85,15 @@ Once the configuration is saved, the APIs can be used in your application.
 
 4. Go to the configuration page.
 
-    {{% todo %}}Where is the configuration page?{{% /todo %}}
+{{% todo %}}Where is the configuration page?{{% /todo %}}
 
 5. Follow the configuration menu item.
 
-    {{% todo %}}Which item? Is there a screenshot{{% /todo %}}
+{{% todo %}}Which item? Is there a screenshot{{% /todo %}}
 
 6. Click **Browse** and see what data is available on the server.
 
-    {{% todo %}}Where is the Browse button?Is there a screenshot{{% /todo %}}
+{{% todo %}}Where is the Browse button?Is there a screenshot{{% /todo %}}
 
 ## 4 Using the OPC-UA Connector
 
@@ -105,20 +108,25 @@ The core information of the configuration to connect to an OPC-UA server must be
 The configuration contains the following attributes:
 
 * **ConfigurationName** – the name to identify the configuration
+
 * **EndpointURL**: the URL of the endpoint of the OPC-UA server
+
 * **IsManualConfiguration**
+
 * **SessionTimeout** – requested maximum number of milliseconds a session should remain open without activity.
-* **RequestTimeout** – requested maximum number of milliseconds a request should remain open without response.
+
+* **RequestTimeout** – requested maximum number of milliseconds a request should remain open without response.
+
 * **MessageSecurityMode** – the type of security to apply to messages
-  
+
   * If it is **None** – messages are encrypted
   * If it is **Sign** – messages are signed by the client certificate
   * If it is **Sign&Encrypt** – messages are signed and encrypted by the client certificate.
-  
+
 * **SecurityPolicyURI** – to determine what algorithm to use to encrypt and sign the data
 
-    {{% alert color="info" %}}You can be find this value in **GetEndpoints**> **UserIdentityToken** > **SecurityPolicyURI**.{{% /alert %}}
-    
+  {{% alert color="info" %}}You can be find this value in **GetEndpoints**> **UserIdentityToken** > **SecurityPolicyURI**.{{% /alert %}}
+
 * **_IsConnected**:
 
 #### 4.2.1 Identity Token
@@ -163,51 +171,56 @@ The browse action lets you traverse from one node to others.  The request object
 The **BrowseDescription** contains the following fields:
 
 * **Node ID** – This is the node ID of the node from where you want to browse.
+
 * **Browse directions** – This specifies in which direction to traverse.
+
 * **Node ID reference type** – This specifies the Node ID of the reference type to follow. If left empty, returns all references.
+
 * **Include subtypes** – This indicates whether subtypes of the ReferenceType should be included.
 
 * **Node Class Mask** – This specifies which **NodeClasses** will be returned. If no value is provided, no filter will be applied.
 
-    This is an integer attribute, while the interpretation is a set of bits as described in the table below:
+  This is an integer attribute, while the interpretation is a set of bits as described in the table below:
 
-    | Bit | Node class | Value |
-    | --- | ---------- | -----  |
-    | 0 | Object | 1 |
-    | 1 | Variable | 2 |
-    | 2 | Method | 4 |
-    | 3 | ObjectType | 8 |
-    | 4 | VariableType | 16 |
-    | 5 | ReferenceType | 32 |
-    | 6 | DataType | 64 |
-    | 7 | View | 128 |
+  | Bit  | Node class    | Value |
+  | ---- | ------------- | ----- |
+  | 0    | Object        | 1     |
+  | 1    | Variable      | 2     |
+  | 2    | Method        | 4     |
+  | 3    | ObjectType    | 8     |
+  | 4    | VariableType  | 16    |
+  | 5    | ReferenceType | 32    |
+  | 6    | DataType      | 64    |
+  | 7    | View          | 128   |
 
-    Sum up the values to create the mask. For example: browsing only **object**, **variable** and **view** is binary represented by `[1,1,0,0,0,0,0,1]` which has to be setup as 1 + 2 + 128 = 131 for the integer value.
+  Sum up the values to create the mask. For example: browsing only **object**, **variable** and **view** is binary represented by `[1,1,0,0,0,0,0,1]` which has to be setup as 1 + 2 + 128 = 131 for the integer value.
 
 * **Result Mask** – This specifies the fields in the reference description structure that should be returned. 
 
-    This is an integer attribute, while the interpretation is a set of bits as described in the table below:
+  This is an integer attribute, while the interpretation is a set of bits as described in the table below:
 
-    | Bit | Node class | Value |
-    | --- | ---------- | -----  |
-    | 0 | ReferenceType | 1 |
-    | 1 | IsForward | 2 |
-    | 2 | NodeClass | 4 |
-    | 3 | BrowseName | 8 |
-    | 4 | DisplayName | 16 |
-    | 5 | TypeDefinition | 32 |
+  | Bit  | Node class     | Value |
+  | ---- | -------------- | ----- |
+  | 0    | ReferenceType  | 1     |
+  | 1    | IsForward      | 2     |
+  | 2    | NodeClass      | 4     |
+  | 3    | BrowseName     | 8     |
+  | 4    | DisplayName    | 16    |
+  | 5    | TypeDefinition | 32    |
 
-    Sum up the Values to create the mask. For example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
+  Sum up the Values to create the mask. For example: Requesting only the field DisplayName is binary represented by [0,0,0,0,1,0] which has to be setup as 16 for the integer value.
 
 The response of the **Browse** action returns a browse response object. There is a **StatusCode** associated to the response, which represents the status of the call. The response may contain one or more **BrowseNodes**, these are the references from the response.
 
 A browse node contains the following fields:
+
 * **Node ID** – This is the Identifier of the referenced node.
 * **Browse name** – This is the browse name of the referenced node.
 * **Display name** – This is the display name of the referenced node.
 * **Node class** – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references. (not supported yet)
 
 ### 4.4 Attribute Services
+
 The attribute services let a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
 These exposed actions deserve some additional guidance as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
@@ -232,22 +245,22 @@ The response consists of a list of **DataValues** that match the order of the re
 
 Each **VariableNode** has a data type node as you can see in the domain model. This associated **DataTypeNode** is a node that defines what type of value you will read from the **VariableNode**. To make reading the value of a **Variable** easier, a default action is included that takes only the node ID as an input. For the default variable types that must be supported by any OPC-UA server, see the table below with the expected read and write formats for attribute services.
 
-| Data type | Example read response | Example write request | Conversion | 
-| --------- | ------------- | -- | - |
-| Boolean | {"value":true} | "true" | |
-| SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1} | "1" ||
-| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"value" : { "value" : 1}} |  "1" | |
-| Float <br> Double | {"value" : 1.0} | "1.0" or "3.0E20" |  |
-| String | {"value" : "string" } | "string" | |
-| DateTime | {"value" : {"utcTime" : 11335116845776939}} | "2007-12-03T10:15:30" | CommunityCommons.LongToDateTime |
-| Guid | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"} | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" | |
-| ByteString | {"value" : {"bytes":[-1]}} | "0xFF" | |
-| XMLElement | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | \<price\>30.00\</price\> | CommunityCommons.HTMLToPlainText |
-| NodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"|
-| ExpandedNodeID | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}, "serverIndex" : {"value" : 0}} | not supported | |
-| StatusCode | {"value" : {"value" : 0}} | "0" | Use the _Value attribute on StatusCode |
-| QualifiedName | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}}| not supported | |
-| LocalizedText | {"value" : {"locale" : "en", "text": "hello"}} | "hello"|  Currently always writes in "en" locale |
+| Data type                                | Example read response                                        | Example write request                  | Conversion                             |
+| ---------------------------------------- | ------------------------------------------------------------ | -------------------------------------- | -------------------------------------- |
+| Boolean                                  | {"value":true}                                               | "true"                                 |                                        |
+| SByte <br> Int16 <br> Int32 <br> Int64   | {"value": 1}                                                 | "1"                                    |                                        |
+| Byte <br> UInt16 <br> UInt32 <br> UInt64 | {"value" : { "value" : 1}}                                   | "1"                                    |                                        |
+| Float <br> Double                        | {"value" : 1.0}                                              | "1.0" or "3.0E20"                      |                                        |
+| String                                   | {"value" : "string" }                                        | "string"                               |                                        |
+| DateTime                                 | {"value" : {"utcTime" : 11335116845776939}}                  | "2007-12-03T10:15:30"                  | CommunityCommons.LongToDateTime        |
+| Guid                                     | {"value": "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4"}            | "cd1fdbc3-1f45-4fe8-9bff-b4927d5401c4" |                                        |
+| ByteString                               | {"value" : {"bytes":[-1]}}                                   | "0xFF"                                 |                                        |
+| XMLElement                               | {"value" : { "fragment" : "\u003cprice\u003e29.99\u003c/price\u003e"}} | \<price\>30.00\</price\>               | CommunityCommons.HTMLToPlainText       |
+| NodeID                                   | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}} | "ns=1;i=1000"                          |                                        |
+| ExpandedNodeID                           | {"value" : {"namespaceIndex": {"value": 1}, "identifier":"1"}, "serverIndex" : {"value" : 0}} | not supported                          |                                        |
+| StatusCode                               | {"value" : {"value" : 0}}                                    | "0"                                    | Use the _Value attribute on StatusCode |
+| QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
+| LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
 #### 4.4.3 Writing a value to a Variable Node
 
@@ -260,14 +273,14 @@ In order to get notifications upon a change of a value, do as follows:
 
 1. Create a subscription first. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. To create a subscription, simply call the **CreateSubscription** action from the Toolbox in Studio Pro. The requested publishing interval is how often at most you will receive a notification. You can set this value, but it can be overwritten if the server deems the publishing interval not feasible. 
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png"  max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png"  max-width=50% >}}
 
 2. Define to what and how to listen to any change of a value via **MonitoredItems**. To receive a notification from a monitored item you need two artifacts:
 
-    1. You must instruct your Mendix application what needs to happen when you receive a notification
-    2. You must instruct the server to what information needs to be checked on the server
+   1. You must instruct your Mendix application what needs to happen when you receive a notification
+   2. You must instruct the server to what information needs to be checked on the server
 
-    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  max-width=50% >}}
+   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  max-width=50% >}}
 
 
 #### 4.5.1 Instructing Mendix {#instruct-mendix}

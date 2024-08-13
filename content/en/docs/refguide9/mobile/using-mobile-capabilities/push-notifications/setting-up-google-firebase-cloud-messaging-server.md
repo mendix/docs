@@ -119,7 +119,7 @@ The list at the bottom shows the Android and iOS applications that you have conf
 Only create an iOS application in your Firebase project when you plan on using FCM for sending push notifications to iOS devices. If you plan to keep using APNS to send push notifications to iOS devices, you do not have to create an iOS application in your Firebase project, and you do not have to download a *GoogleService-Info.plist* config file.
 {{% /alert %}}
 
-## 8 Copy the PWA Configuration
+## 8 Copy the PWA Configuration {#copy-pwa-config}
 
 For progressive web apps, a configuration object is required to set up notifications in the web client. You can skip this step for native mobile apps. To obtain the configuration, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **General** tab and click on **Config**:
 
@@ -127,7 +127,7 @@ For progressive web apps, a configuration object is required to set up notificat
 
 Copy the text that is highlighted in the screenshot above and store it somewhere safe. You will need this text in a later step.
 
-## 9 Set up Web Push Certificate
+## 9 Set up Web Push Certificate {#set-web-push}
 
 For progressive web apps, an additional certificate is needed. You can skip this step for native mobile apps. To generate the certificate and obtain its public key, again click the cogwheel on the upper-left side of the screen and select **Project settings**. Then navigate to the **Cloud Messaging** tab and click on **Generate Key Pair**:
 

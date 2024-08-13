@@ -51,13 +51,15 @@ To add general information to your initiative, follow these steps:
 
 1. In the **Edit Initiative** side pane, select the status of your initiative: **On Track**, **At Risk**, or **Off Track**.
 
-2. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
+2. Enter **Percentage Completed** if this is an ongoing initiative. You can enter a value between 0-100 to indicate how much of progress has been made for this initiative.
+
+3. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
 
    {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
-3. Enter the **Description** of the initiative.
+4. Enter the **Description** of the initiative.
 
-4. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
+5. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
@@ -65,13 +67,13 @@ To add general information to your initiative, follow these steps:
 
    3. Repeat the two steps above to link more apps if you want to link more than one app.
 
-5. Set the **Owner** for the initiative.
+6. Set the **Owner** for the initiative.
 
-6. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
+7. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
 
    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Location**, **Country**, and **Use Case** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
-7. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+8. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
 Now you can proceed to [link Epics to your initiative](#link-epics).
 

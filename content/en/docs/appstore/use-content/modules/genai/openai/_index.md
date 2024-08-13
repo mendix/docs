@@ -178,7 +178,7 @@ Functionally, the prompt strings can be written in a specific way and can be tai
 
 Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
-For technical details, see the [Technical Reference](#chat-completions-without-history-technical) section.
+For technical details, see the [Technical Reference](#technical-reference) section.
 
 #### 3.2.2 Chat Completions (with History) {#chatcompletions-with-with-history}
 
@@ -186,7 +186,7 @@ The microflow activity `Chat completions (with history)` supports more complex u
 
 Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
-For technical details, see the [Technical Reference](#chat-completions-with-history-technical) section.
+For technical details, see the [Technical Reference](#technical-reference) section.
 
 #### 3.2.3 Function Calling {#chatcompletions-functioncalling}
 
@@ -228,7 +228,7 @@ In order to implement image generations into your Mendix application, you can us
 
 The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
 
-For technical details, see the [Technical Reference](#image-generations-technical) section.
+For technical details, see the [Technical Reference](#technical-reference) section.
 
 * For an OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -246,7 +246,7 @@ These microflows require a specialized [Connection](/appstore/modules/genai/comm
 
 The microflow activity `Embeddings (String)` supports scenarios where the vector embedding of a single string must be generated, e.g. to perform a nearest neighbor search across an existing knowledge base. This input string can be passed directly as the `TextInput` parameter of this microflow. Note that the parameter [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) is optional. Use the exposed microflow [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) to retrieve the generated embeddings vector.
 
-For technical details, see the [Technical Reference](#embeddings-string-technical) section.
+For technical details, see the [Technical Reference](#technical-reference) section.
 
 #### 3.4.2 Embeddings (ChunkCollection) {#embeddings-chunkcollection}
 
@@ -254,7 +254,7 @@ The microflow activity `Embeddings (ChunkCollection)` supports the more complex 
 
 In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterwards directly be used to populate the knowledge base with.
 
-For technical details, see the [Technical Reference](#embeddings-chunkcollection-technical) section.
+For technical details, see the [Technical Reference](#technical-reference) section.
 
 ### 3.5 Exposed Microflows {#exposed-microflows}
 

@@ -111,44 +111,64 @@ Additionally, you may need to verify custom claims specific to your OAuth provid
 
 {{% alert color="info" %}} The exact properties and verification process may vary depending on your OAuth provider and security requirements. Always refer to your provider's documentation and your organization's security policies when implementing token verification. {{% /alert %}}
 
-## 5 Technical Reference
+## 5 Technical Reference {#technical-reference}
 
-### 5.1 Current Limitations
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
+
+### 5.1 Using the Documentation Pane
+
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
+
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click on the element for which you want to view the documentation.
+
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+### 5.2 Downloading a Local Copy of the Documentation
+
+You can download a copy of the technical reference documentation for later use. Keep in mind that the documentation is regularly updated by the development team, which may cause your local copy to become outdated.
+
+1. In the App Explorer, right-click on the name of your app.
+2. Click **Export documentation**.
+
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-export.png" class="no-border" >}}
+
+## 6 Current Limitations
 
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
 * The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
 
-### 5.2 Troubleshooting
+## 7 Troubleshooting
 
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-#### 5.2.1 Error Parsing JSON: Document Is Too Large
+### 7.1 Error Parsing JSON: Document Is Too Large
 
 When ingesting data, the Mendix Data Loader shows an error similar to the following: `net.snowflake.client.jdbc.SnowflakeSQLException: Error parsing JSON: document is too large, max size 16777216 bytes`.
 
-##### 5.2.1.1 Cause
+#### 7.1.1 Cause
 
 The amount of data being ingested is so large that the JSON file has become too large to parse.
 
-##### 5.2.1.2 Solution
+#### 7.1.2 Solution
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-#### 5.2.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
+### 7.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
 
 In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
 
-##### 5.2.2.1 Cause
+#### 7.2.1 Cause
 
 A bug in the published OData service resource in Mendix Studio Pro 10.10 where the application root url is set incorrectly causes no data to be returned.
 
-##### 5.2.1.2 Solution
+#### 7.2.2 Solution
 
 This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
 
-### 5.3 Contact Information
+## 8 Contact Information
 
 For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

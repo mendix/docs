@@ -54,69 +54,24 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-## 4 Technical Reference
+## 4 Technical Reference {#technical-reference}
 
-To help you work with the Amazon Translate connector, the following sections of this document list the available entities, enumerations, and actions that you can use in your application.
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
 
-### 4.1 Domain model {#domain-model}
+### 4.1 Using the Documentation Pane
 
-The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/). 
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
 
-#### 4.1.1 ListLanguagesRequest {#list-languages-request}
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click on the element for which you want to view the documentation.
 
-| Attribute | Description |
-| --- | --- |
-| N/A | The entity does not contain any attributes. |
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
-#### 4.1.2 ListLanguagesResponse {#list-languages-response}
+### 4.2 Downloading a Local Copy of the Documentation
 
-| Attribute | Description |
-| --- | --- |
-| N/A | The entity does not contain any attributes, but it contains a list of [Language](#language) objects. |
+You can download a copy of the technical reference documentation for later use. Keep in mind that the documentation is regularly updated by the development team, which may cause your local copy to become outdated.
 
-#### 4.1.3 Language {#language}
+1. In the App Explorer, right-click on the name of your app.
+2. Click **Export documentation**.
 
-| Attribute | Description |
-| --- | --- |
-| `LanguageName` | The language name, equivalent to the locale name (string)|
-| `LanguageCode` | The [language code](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) that assigns letters or numbers as identifiers or classifiers for languages / minimum length: 2, maximum length: 5 (string) |
-
-#### 4.1.4 TranslateTextRequest {#translate-text-request}
-
-| Attribute | Description |
-| --- | --- |
-| `SourceLanguageCode` | The language code of the input text (string) |
-| `TargetLanguageCode` | The language code of the desired output text (string) |
-| `InputText` | The input text (string) |
-
-#### 4.1.5 TranslateTextResponse {#translate-text-response}
-
-| Attribute | Description |
-| --- | --- |
-| `SourceLanguageCode` | The language code of the input text (string) |
-| `TargetLanguageCode` | The language code of the desired output text (string) |
-| `InputText` | The input text (string) |
-
-### 4.2 Activities {#activities}
-
-Activities define the actions that are executed in a microflow or a nanoflow.
-
-#### 4.2.1 ListLanguages {#list-languages}
-
-The `ListLanguages` Amazon Translate action allow you to retrieve a list of supported languages that can used for translation. It requires a valid `ENUM_Region` and `Credentials` object, as well as a `ListLanguagesRequest` object and returns a `ListLanguagesResponse` object. The input and output for this service are shown in the table below: 
-
-| Input | Output | 
-| --- | --- | 
-| `ListLanguagesRequest`, `ENUM_Region`, `Credentials` | `ListLanguagesResponse` |
-
-{{% alert color="info" %}}
-For more information about the language codes, see the [list of supported languages](https://docs.aws.amazon.com/translate/latest/dg/what-is-languages.html) in the AWS documentation.
-{{% /alert %}}
-
-#### 4.2.2 TranslateText {#translate-text}
-
-The `TranslateText` Amazon Translate action allow you to retrieve the translation of the input text. It requires a valid `ENUM_Region` and `Credentials` object, as well as a `TranslateTextRequest` object and returns a `TranslateTextResponse` object. The input and output for this service are shown in the table below: 
-
-| Input | Output | 
-| --- | --- | 
-| `TranslateTextRequest`, `ENUM_Region`, `Credentials` | `TranslateTextResponse` |
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-export.png" class="no-border" >}}

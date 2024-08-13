@@ -88,7 +88,7 @@ The ingested data is stored in the target schema of the target database specifie
 
 When using OAuth authentication with the Mendix Data Loader, it is crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
 
-{{% alert color="info" %}} If your organization already has an established solution for token verification, you can implement the Mendix Data Loader using OAuth as the authentication method without additional steps. However, if you do not have an existing solution, note that the platform-supported [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) has this feature on its roadmap. {{% /alert %}}
+The [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) in the Mendix Marketplace can be used to authenticate the access token. To find out more please refer to the [OIDC SSO documentation](https://docs.mendix.com/appstore/modules/oidc/#client-credential-grant).
 
 ### 4.1 Token Verification Process
 

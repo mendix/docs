@@ -13,14 +13,12 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### August 15th, 2024
 
-* We now allows rounding off model constants value with decimal type to 10 decimal digits.
-* We fixed an issue where customer failed to retrieve the build status (Ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896))
-
+* We now allow rounding off model constants value with decimal type to 10 decimal digits.
+* We have fixed an issue where the build status failed to be retrieved (ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
 
 #### Portal Enhancements
 
 * We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
-
 
 ### July 18th, 2024
 

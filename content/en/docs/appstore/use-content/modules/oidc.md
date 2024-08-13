@@ -988,3 +988,11 @@ This error indicates that new parameters must be synced with the microflow.
 To resolve this issue, either open the microflow used for the OIDC SSO module or refresh it before deploying your Mendix app again.
 
 {{< figure src="/attachments/appstore/use-content/modules/oidc/Community Commons error.png" class="no-border" >}}
+
+### 9.6 Endless Redirect Loop and Runtime Error (Mendix 10.9 to 10.12.2)
+
+When using the OIDC SSO module with Mendix version 10.9 to 10.12.2, you may encounter an endless redirect loop to the login page or you can see a "Runtime operation failed" error message in the UI. This issue is related to the session cookie handling in these versions. To resolve these redirect loop and runtime error, Mendix recommends upgrading to Mendix version 10.12.3 or above.
+
+{{< figure src="/attachments/appstore/use-content/modules/oidc/runtime-failed.png" class="no-border" >}}
+
+If a user logs in on one tab and then attempts to log in on another tab, a `401` error may initially appear. However, after the browser reloads, the error will be resolved as the session is validated and synchronized.

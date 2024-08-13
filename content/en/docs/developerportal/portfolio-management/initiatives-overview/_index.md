@@ -260,6 +260,8 @@ The list contains the following information:
 
 * **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
+* **Completed** – This shows how much progress has been made for this initiative. It can be be a value between 0-100 and shown as percentage.
+
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
@@ -365,6 +367,7 @@ The view contains the following information:
 * Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
+    * **Completed** – This shows how much progress has been made for this initiative.
 * Today indicator (the vertical blue line) – This indicates the date of today.
 * **Today** – Clicking **Today** on the lower-right corner brings the view back to today.
 * **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.

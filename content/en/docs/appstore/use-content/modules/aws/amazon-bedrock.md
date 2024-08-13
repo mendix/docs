@@ -171,7 +171,7 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
 
 ## 4 Technical Reference {#technical-reference}
 
-The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download the full documentation available for your app locally for reference.
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
 
 ### 4.1 Using the Documentation Pane
 

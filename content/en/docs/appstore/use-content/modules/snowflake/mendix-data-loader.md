@@ -113,7 +113,7 @@ Additionally, you may need to verify custom claims specific to your OAuth provid
 
 ## 5 Technical Reference
 
-### 5.1 Setting up the OAuth Provider
+### 5.1 Setting up the app client in your OAuth provider
 
 When setting up the OAuth provider to be able to use it with the Mendix Data Loader, the correct **redirect URL** must be input in order for the authorization server to redirect the user back to the application. The redirect URL fro your Snowflake environment will be as follows:
 

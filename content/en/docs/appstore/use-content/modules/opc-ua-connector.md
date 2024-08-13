@@ -62,7 +62,7 @@ You must have the following Marketplace module installed:
 
     {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-overview.png" >}}
 
-8. Follow the instructions in the wizard to set up your connection to an OPC-UA server. If you wish to have your own custom business logic to connect to a server, you can also make your own configuration. 
+8. Follow the instructions in the wizard to set up your connection to an OPC-UA server. If you wish to have your own custom business logic to connect to a server, you can also make your own configuration. It is recommended to use the wizard whenever possible. However, it can be the case that the server is not discoverable. In that case you need to create your own microflow that manually sets all the fields on a server configuration object. For more information, see [Connecting to an OPC-UA Server (Session Services)](#connect-to-a-server) section 
 
     {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  >}}
 
@@ -96,7 +96,7 @@ Once the configuration is saved, the APIs can be used in your application.
 
 To connect to the OPC-UA server, you must provide a **ServerConfiguration** and an associated **IdentityToken**. Usually, a **ClientCertificate** is also needed. Additionally, you must trust the server certificate. For details, see the sections below.
 
-### 4.2 ServerConfiguration
+#### 4.1.1 ServerConfiguration {#connect-to-a-server}
 
 The core information of the configuration to connect to an OPC-UA server must be stored as **ServerConfiguration** objects.
 
@@ -128,7 +128,7 @@ The configuration contains the following attributes:
 
   {{% todo %}}What is the description{{% /todo %}}
 
-#### 4.2.1 Identity Token
+#### 4.1.2 Identity Token
 
 A connection to an OPC-UA server is made using an **IdentityToken**, similar to a user role in Mendix. The server will dictate which types of identify token it will support, based on the response in **GetEndpoints** > **UserIdentityToken** > **TokenType**.
 
@@ -140,7 +140,7 @@ The three options are as follows:
 * **Username Identity Token** – This is the identity token based on a username and password combination.
 * **Certificate Identity Token** – This is the identity token based on a certificate. The certificate must be trusted by the OPC-UA server before it can be used.
 
-#### 4.2.2 Client Certificate
+#### 4.1.3 Client Certificate
 
 A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection, in **GetEndpoints** > **EndpointDescription** > **SecurityMode**.
 
@@ -151,7 +151,7 @@ If the message security mode is set to **Sign** or **Sign&Encrypt**, the **Serve
 * The client certificate must be an X509 formatted PEM file.
 * The private key must be an encrypted PKCS8 or PKCS1 formatted PEM file.
 
-#### 4.2.3 Server Certificate
+#### 4.1.4 Server Certificate
 
 A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the client should trust the certificate of the server. This can be done by retrieving the certificate from the server (**GetEndpoints**> **EndpointDescription** > **ServerCertificate**), then use **Get Endpoints - Server Certificate** and then use **Trust certificate**. Alternatively, the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
 
@@ -163,7 +163,7 @@ If you ever want to reject a certificate from the server, you can use the **untr
 
 {{% todo %}}Where is the untrust certificate action?{{% /todo %}}
 
-### 4.3 View Services
+### 4.2 View Services
 
 Browsing lets you navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. See below:
 
@@ -173,7 +173,7 @@ Browsing lets you navigate the content of the server. There are three implementa
 
 {{% todo %}}How to access these three implementations?{{% /todo %}}
 
-#### 4.3.1 The Browse Action
+#### 4.2.1 The Browse Action
 
 The browse action lets you traverse from one node to others.  The request object for the action is a **BrowseDescription**, which contains the following fields:
 
@@ -231,7 +231,7 @@ A browse node contains the following fields:
 
   {{% todo %}}What is exactly not supported? When will it be supported?{{% /todo %}}
 
-### 4.4 Attribute Services
+### 4.3 Attribute Services
 
 The attribute services let a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
@@ -241,7 +241,7 @@ The data model of an OPC-UA server consists of a set of **Node** objects. These 
 
 To make it easier to get the information on a node, there is a **GetNodeDetails** action provided that will read all properties of the node and put them in the correct specialization of the Node Entity. 
 
-#### 4.4.1 Example 1: Reading a Property of a Node
+#### 4.3.1 Example 1: Reading a Property of a Node
 
 This section shows an example on how to read specific attribute values of nodes by an example. For the specifics on how to read the value of a variable see section (). 
 
@@ -253,7 +253,7 @@ The response consists of a list of **DataValues** that match the order of the re
 
 {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  >}}
 
-#### 4.4.2 Example 2: Reading the Value of a Variable Node {#example-2}
+#### 4.3.2 Example 2: Reading the Value of a Variable Node {#example-2}
 
 Each **VariableNode** has a data type node as you can see in the domain model. This associated **DataTypeNode** is a node that defines what type of value you will read from the **VariableNode**. To make reading the value of a **Variable** easier, a default action is included that takes only the node ID as an input. For the default variable types that must be supported by any OPC-UA server, see the table below with the expected read and write formats for attribute services.
 
@@ -274,12 +274,12 @@ Each **VariableNode** has a data type node as you can see in the domain model. T
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-#### 4.4.3 Writing a value to a Variable Node
+#### 4.3.3 Writing a value to a Variable Node
 
 Each **VariableNode** has a data type node as shown in the domain model. This associated **DataTypeNode** is a node that defines what type of value you can write to the **VariableNode**. To make writing the value to a **Variable** easier, a default action is included that takes the **NodeID**, a payload, and a **DefaultVariantType** as an input. It is recommended to use **DefaultVariantType**. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently, not all default types are supported and no custom type is supported, for example, payloads. For more information, see the table in the [Example 2: Reading the Value of a Variable Node](#example-2).
 
 
-### 4.5 Monitoring Items {#monitor-items}
+### 4.4 Monitoring Items {#monitor-items}
 
 In order to get notifications upon a change of a value, do as follows:
 
@@ -295,7 +295,7 @@ In order to get notifications upon a change of a value, do as follows:
    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  >}}
 
 
-#### 4.5.1 Instructing Mendix {#instruct-mendix}
+#### 4.4.1 Instructing Mendix {#instruct-mendix}
 
 When a notification comes in, a microflow will be triggered. An example microflow, called **EXAMPLE_MonitoredItem_LogDefaultMessage**, is provided in the **USE_ME** > **12.MonitoredItems_service_set** folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a **MessageMonitoredItem**, a **MessageMonitoredItemReadValueId**, and a **MessageDataValue**. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required.
 
@@ -308,7 +308,7 @@ To create your custom implementation, create a microflow that has one or more of
 {{% todo %}}( I think these are too many words for what I'm trying to say... )
 @Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?{{% /todo %}}
 
-#### 4.5.2 Instructing Server
+#### 4.4.2 Instructing Server
 
 Now the server needs to know when to send a notification and what the notification should be about. To do so, create a **MonitoredItem** object. You need to provide the subscription that you created in the [Monitoring Items](#monitor-items) section. The **NodeID** of which you want to read an attribute and the name of the microflow created in the [Instructing Mendix](#instruct-mendix) section in the format `MODULENAME.MICROFLOWNAME`.
 
@@ -316,11 +316,11 @@ By default the **AttributeID** is set to **VALUE**, which will read the **VALUE*
 
 For additional options, check the documentation on the attributes of the **MonitoredItem** entity in the domain model.
 
-#### 4.5.3 Starting Monitoring
+#### 4.4.3 Starting Monitoring
 
 When you have created the **MonitoredItems** you want to be notified about, use the **Commit MonitoredItem(s)** action from the Toolbox and the monitoring begins.
 
-#### 4.5.4 Stoping Monitoring
+#### 4.4.4 Stoping Monitoring
 
 To stop receiving notifications, call the **Delete MonitoredItem(s)** action from the Toolbox.
 

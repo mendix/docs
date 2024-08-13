@@ -30,9 +30,28 @@ Each call also requires the parameters 'username' and 'password'. These are the 
 
 {{% /alert %}}
 
-## 2 API Calls
+## 2 Authentication
 
-### 2.1 AcceptFeedback
+The Feedback API requires authentication via API keys that are bound to your Mendix account.
+
+### 2.1 Obtaining an API Key
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### 2.2 Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### 2.3 Configuring Permissions
+
+To perform an action via the Feedback API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+
+## 3 API Calls
+
+### 3.1 AcceptFeedback
 
 This call **accepts** the specified feedback item. This means that the app team has accepted the feedback and added this feedback as a story to the Sprint.
 
@@ -44,7 +63,7 @@ This call **accepts** the specified feedback item. This means that the app team 
 
 * Return value – Boolean
 
-### 2.2 AddFeedback
+### 3.2 AddFeedback
 
 This call **adds a new feedback item** to the app and returns the ID of the new feedback item.
 
@@ -60,7 +79,7 @@ This call **adds a new feedback item** to the app and returns the ID of the new 
 
 * Return value – Integer/Long
 
-### 2.3 CloseFeedback
+### 3.3 CloseFeedback
 
 This call **closes** the specified feedback item.
 
@@ -73,7 +92,7 @@ This call **closes** the specified feedback item.
 
 * Return value – Enumeration IssueState (see below for possible values)
 
-### 2.4 DeleteFeedback
+### 3.4 DeleteFeedback
 
 This call **deletes** the specified feedback item.
 
@@ -85,7 +104,7 @@ This call **deletes** the specified feedback item.
 
 * Return value – Boolean
 
-### 2.5 GetFeedbackItems
+### 3.5 GetFeedbackItems
 
 This call **retrieves a list of all feedback items** for the app which satisfy the IssueState filter.
 
@@ -97,7 +116,7 @@ This call **retrieves a list of all feedback items** for the app which satisfy t
 
 * Return value – List of Issue
 
-### 2.6 GetSingleFeedbackItem
+### 3.6 GetSingleFeedbackItem
 
 This call **retrieves a single feedback item** by ID.
 

@@ -11,13 +11,32 @@ The Build API only works for apps which are deployed to the Mendix Cloud.
 
 ## 1 Introduction
 
-The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls. You will also need to provide authentication for each call; this is described in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls.
 
 You can use webhooks to trigger CI/CD pipelines which use this API. These are described in [Webhooks](/developerportal/deploy/webhooks/).
 
 The image below provides a domain model representation of the concepts discussed below and how these are related:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
+
+## 2 Authentication
+
+The Build API requires authentication via API keys that are bound to your Mendix account.
+
+### 2.1 Obtaining an API Key
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### 2.2 Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### 2.3 Configuring Permissions
+
+To perform an action via the Build API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## 2 API Calls
 

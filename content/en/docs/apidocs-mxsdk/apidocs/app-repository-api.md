@@ -34,13 +34,15 @@ Authentication for the App Repository API uses a personal access token (PAT).
 
 ### 4.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
+
+* `mx:modelrepository:repo:read`.
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud App Repository API calls.
 
 ### 4.2 Using the PAT
 
-Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http {linenos=false}
 GET /repositories/d92064a5-b1fd-4be4-97db-53fc90201d1c/info HTTP/1.1

@@ -17,18 +17,18 @@ Authentication for the Feedback API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT {#generate}
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
-Select the following as **App Insights** scopes:
+Select at least the following as **App Insights** scopes:
 
 * `mx:feedback:read` – to perform `GET` operations
 * `mx:feedback:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
-Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud Deploy API calls.
+Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Feedback API calls.
 
 ### 2.2 Using the PAT
 
-Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http {linenos=false}
 GET /feedback-api.mendix.com/v2/feedback-items HTTP/1.1

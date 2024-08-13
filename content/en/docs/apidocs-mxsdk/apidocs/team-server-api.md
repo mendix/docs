@@ -12,17 +12,34 @@ The Team Server API is deprecated. Please use the [App Repository API](/apidocs-
 
 ## 1 Introduction
 
-The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
+The Team Server API allows you to retrieve the information (branches, revisions) of application models stored in our Team Server. You always access an application model via the context of an application (for more information about retrieving applications and application identifiers, see [the Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/)).
+
 The image below provides a domain model representation of the concepts discussed below and how these are related:
+
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/team-server-api/425989.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
-The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+The Team Server API is only available to *licensed* apps which are running in a Mendix Cloud.
 {{% /alert %}}
 
 ## 2 Authentication
 
-The team server API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+The Teamserver API requires authentication via API keys that are bound to your Mendix account.
+
+### 2.1 Obtaining an API Key
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### 2.2 Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### 2.3 Configuring Permissions
+
+To perform an action via the Team Server API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## 3 API Calls
 

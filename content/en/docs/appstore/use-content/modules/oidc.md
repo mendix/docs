@@ -861,6 +861,9 @@ To allow the end users to navigate to the desired page:
 The Page and Microflow URLs fully support multiple IdPs, allowing users to trigger the login and choose the IdP on the OIDC login page.
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 
+Starting from Studio Pro 10.9.0, use the primitive parameters as **Query string** parameters. Check the checkbox in the parameter table to configure a microflow parameter to use as a **Query string** parameter.
+For more information, see the [URL](/refguide/microflow/#url) section of the *Microflow Properties*.
+
 #### 8.3.2 Using Deep Link Module{#using-deep-link}
 
 To use OIDC SSO module in conjunction with the Deep Link module (for Mendix 8 and 9), you can choose between the following methods of selecting an IdP:

@@ -69,7 +69,7 @@ Don’t just jump right in. Say "Hello."
 
 * Welcome the end-user. Greet the end-user briefly, for example with a simple "Welcome" or "Hi."
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi1.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
 ## 3 Tailoring Greetings{#greeting}
 
@@ -146,7 +146,7 @@ Users seek trust and assurance that their personal information is handled secure
 
 * Proactively protect end-users' personal and corporate data. Make sure to also indicate to the end-user that their data is protected.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
 
 * Allow the end-user to delete records of previous conversations and control whether conversation history is stored.
 
@@ -195,7 +195,7 @@ The input mechanism is the method through which the end-user provides informatio
 
 ### 7.3 Example
 
-* Provide input option via command buttons.
+* Provide both inputs of command buttons and free text inputs for the user to navigate the conversation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 
@@ -283,7 +283,7 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/show-hide-draft.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## 11 Reporting Errors{#errors}
 

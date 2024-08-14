@@ -283,7 +283,7 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/show-hide-draft.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## 11 Reporting Errors{#errors}
 

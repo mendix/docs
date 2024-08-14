@@ -42,7 +42,7 @@ To authenticate calls when using the Open API specification below, click **Autho
 
 ## 3 Examples
 
-### 3.1 Using the API to retrieve user's UUIDs
+### 3.1 Using the API to Retrieve User UUIDs
 
 {{% alert color="info" %}}Only Mendix Admins from the company have the authority to retrieve user UUIDs.{{% /alert %}}
 

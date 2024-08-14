@@ -49,7 +49,7 @@ For operations related to deployment packages (such as Create, Upload, Delete, a
  
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
-#### 2.1.2 Scopes explanation
+#### 2.1.2 Scopes Explanation
 
 | Operation                   | Scopes                                           |
 |-----------------------------|-------------------------------------------------|

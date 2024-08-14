@@ -49,9 +49,9 @@ GET /repositories/d92064a5-b1fd-4be4-97db-53fc90201d1c/info HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
-## 5 Error response
+## 5 Error Response
 
-### 5.1 Error response format {#error-response-format}
+### 5.1 Error Response Format {#error-response-format}
 
 This is the generic error response format. The payload example format applies to any error as listed per request.
 

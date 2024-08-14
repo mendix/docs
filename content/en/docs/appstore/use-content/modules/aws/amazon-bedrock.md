@@ -1378,7 +1378,7 @@ Currently, there are operations available to sync metadata about:
 The syncing process works the same for all of these operations. 
 1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
 2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
-3. On a subsequent syncing process the available data is extended and updated. But no data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
+3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
 
 The available operations are described in the following section. 
 

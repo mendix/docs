@@ -114,7 +114,7 @@ The configuration contains the following attributes:
 
 * `ConfigurationName` – the name to identify the configuration
 * `EndpointURL`: the URL of the endpoint of the OPC-UA server
-* `IsManualConfiguration` – Whether the configuration is manually set up without the help of the wizard
+* `IsManualConfiguration` – Whether the configuration is manually set up without the help of the configuration wizard
 
 {{% todo %}}Is the description of IsManualConfiguration correct?{{% /todo %}}
 
@@ -140,7 +140,7 @@ The configuration contains the following attributes:
 
 A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support, based on the response in **GetEndpoints** > **UserIdentityToken** > **TokenType**.
 
-{{% todo %}}Where can users find the GetEndpoints > UserIdentityToken > TokenType? Is there a screenshot?{{% /todo %}}
+{{% todo %}}Where can users find the GetEndpoints > UserIdentityToken > TokenType?{{% /todo %}}
 
 The three options are as follows:
 
@@ -169,13 +169,13 @@ For the client side, this means the client should trust the certificate of the s
 
 Alternatively, the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
 
-{{% todo %}}Should we tell users how to add the server certificate in Studio Pro?{{% /todo %}}
+{{% todo %}}Should we also explain a bit how to add the server certificate in the settings of Studio Pro? {{% /todo %}}
 
 The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
 
 If you ever want to reject a certificate from the server, you can use the `untrust certificate` action to remove the certificate from the list to trusted certificates.
 
-{{% todo %}}Should this be the ServerCertificate_Untrust microflow?{{% /todo %}}
+{{% todo %}}Is the action exactly named "untrustworthy certificate"?{{% /todo %}}
 
 ### 4.2 View Services
 
@@ -195,7 +195,7 @@ The browse action lets you traverse from one node to others.  The request object
 * `IncludeSubTypes` – This indicates whether subtypes of the `ReferenceType` should be included.
 * `NodeClassMask` – This specifies which `NodeClasses` will be returned. If no value is provided, no filter will be applied. This is an integer attribute. The interpretation is a set of bits as described in the table below. You need to sum up the values to create the mask. For example: browsing only `object`, `variable`, and `view` is binary represented by `[1,1,0,0,0,0,0,1]`, which has to be set up as 1 + 2 + 128 = 131 for the integer value. 
 
-{{% todo %}}In the domain model, NodeClassMask has the Long datatype, not integer{{% /todo %}}
+{{% todo %}}In the domain model, NodeClassMask has the long datatype, not integer{{% /todo %}}
     
   | Bit  | Node class    | Value |
   | ---- | ------------- | ----- |
@@ -210,7 +210,7 @@ The browse action lets you traverse from one node to others.  The request object
 
 * `ResultMask` – This specifies the fields in the reference description structure that should be returned.   This is an integer attribute. The interpretation is a set of bits as described in the table below.  You need to sum up the values to create the mask. For example: requesting only the field `DisplayName` is binary represented by `[0,0,0,0,1,0]`, which has to be set up as 16 for the integer value.
 
-{{% todo %}}In the domain model, ResultMask has the Long datatype, not integer{{% /todo %}}
+{{% todo %}}In the domain model, ResultMask has the long datatype, not integer{{% /todo %}}
 
   | Bit  | Node class     | Value |
   | ---- | -------------- | ----- |
@@ -233,7 +233,7 @@ The response of the `Browse` action returns a browse response object. There is a
 
 * `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references. (not supported yet)
 
-{{% todo %}}What is exactly not supported? And is there a plan to make it supported?{{% /todo %}}
+{{% todo %}}What is exactly not supported yet here? And is there a plan to make it supported?{{% /todo %}}
 
 ### 4.3 Attribute Services
 
@@ -241,7 +241,7 @@ The attribute services enable you a client access data on a server. In particula
 
 These exposed actions deserve some additional guidance, as the data a client receives and the data the server requires can differ quite a bit between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
 
-{{% todo %}}Where can users find the additional guidance?{{% /todo %}}
+{{% todo %}}Where can users find the additional guidance for these exposed actions?{{% /todo %}}
 
 The data model of an OPC-UA server consists of a set of `Node` objects. These nodes can have one of the following values for their `NodeClasses` attribute: `DataType`, `Method`, `Object`, `ObjectType`, `ReferenceType`, `Variable`, `VariableType`, and `View`. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the `Node` entities.
 
@@ -317,13 +317,17 @@ When a notification comes in, a microflow will be triggered. You can check out t
 
 To create your custom implementation, create a microflow that has one or more of these input parameters. Make sure to use each type only once and do not add other type of parameters other than the three parameters listed above, because the microflow will be called in the background and only accept these type of parameters.
 
-{{% todo %}}Do you want to resolve your comment? ( I think these are too many words for what I'm trying to say... )@Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?{{% /todo %}}
+{{% todo %}}
+Would you like to resolve your comment? 
+
+( I think these are too many words for what I'm trying to say... )@Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?
+{{% /todo %}}
 
 #### 4.4.2 Instructing Server
 
 To get notifications upon a change of a value, the OPC-UA server needs to know when to send a notification and what the notification should be about. To do so, create a `MonitoredItem` object. You need to provide the subscription that you created in the [Monitoring Items](#monitor-items) section. 
 
-The `NodeID` of which you want to read is an attribute, and is the name of the microflow created in the [Instructing Mendix](#instruct-mendix) section in the format `MODULENAME.MICROFLOWNAME`.
+The `NodeID` of which you want to read is an attribute. The value of `NodeID` is the name of the microflow created in the [Instructing Mendix](#instruct-mendix) section in the format `MODULENAME.MICROFLOWNAME`.
 
 {{% todo %}}Is the description above correct?{{% /todo %}}
 

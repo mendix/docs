@@ -41,7 +41,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 3. In the App Explorer, expand the **App {App name}** node, and then click **Settings**.
 4. On the **Runtime** tab of the **App settings** dialog box, select the **After startup** microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/select-after-startup-microflow.png" alt="Selecting the After startup microflow" max-width=90% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/select-after-startup-microflow.png" alt="Selecting the After startup microflow" max-width=80% >}}
 
 5. Click **Marketplace modules** > **UnitTesting** > **_USE ME** > **Microflows** > **Startup**.
 6. Click **Select** and then **OK**.
@@ -50,7 +50,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 9. In the **Caption** field, enter *UnitTestOverview*.
 10. In the **On click** field, select **Call a microflow**, and then select the **UnitTestOverview** microflow.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/select-UnitTestOverview-microflow.png" alt="Selecting the UnitTestOverview microflow" max-width=65% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/select-UnitTestOverview-microflow.png" alt="Selecting the UnitTestOverview microflow" max-width=60% >}}
 
 11. Click **OK**.
 12. Run the app locally.
@@ -71,7 +71,7 @@ To set up the unit testing module and run the example tests, follow these steps:
 
     The color of the test case changes to red if the test fails, and to green if it passes.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/example-passed-test.png" alt="An example of a passed test case" max-width=70% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/example-passed-test.png" alt="An example of a passed test case" max-width=60% >}}
 
 17. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
 
@@ -89,20 +89,20 @@ To create a sample microflow for testing, follow these steps:
     * **Name** – *Level*
     * **Enumeration values** – *Junior*, *Medior*, and *Senior*.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/create-level-enumeration.png" alt="Enumeration with three values" max-width=80% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/create-level-enumeration.png" alt="Enumeration with three values" max-width=70% >}}
 
 2. Open the domain model of **MyFirstModule**.
 3. Create a new [entity](/refguide/configuring-a-domain-model/#create-entity) with the following properties:
     * **Name** – *Employee*
     * **Attributes** – *Name* (of the **String** type) and *Level* ( of the  **Enumeration** > **Level** type).
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/employee-entity.png" alt="A view of the Employee entity used by the sample microflow" max-width=85% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/employee-entity.png" alt="A view of the Employee entity used by the sample microflow" max-width=80% >}}
 
 4. Create a microflow called **Promote** that changes the **Level** attribute of the **Employee** entity based on the enumeration value:
     * For the **Change Employee's level to Medior** activity, set the **Level** value to *MyFirstModule.Level.Medior*
     * For the **Change Employee's level to Senior** activity, set the **Level** value to *MyFirstModule.Level.Senior*
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-microflow.png" alt="A view of the sample Promote microflow" max-width=90% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-microflow.png" alt="A view of the sample Promote microflow" max-width=80% >}}
 
 ### 4.2 Creating a Unit Test Microflow
 
@@ -135,7 +135,7 @@ To create a sample test microflow, follow these steps:
     * **Parameter** – **Employee**
     * **Argument** –*$NewEmployee*
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/call-promote-microflow.png" alt="A microflow call activity with Employee as the parameter" max-width=80% >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/call-promote-microflow.png" alt="A microflow call activity with Employee as the parameter" max-width=70% >}}
 
 10. To test if the employee is promoted to the right level by adding a **Microflow Call** activity with the following properties:
     * **Microflow** – **UnitTesting.AssertTrue1**

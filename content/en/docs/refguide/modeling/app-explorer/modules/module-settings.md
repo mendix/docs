@@ -41,6 +41,10 @@ There are three types of modules, and the choice of type depends on the purpose 
 * [Add-on module](#add-on-module)
 * [Solution Module](#solution-module)
 
+{{% alert color="warning" %}}
+If for some reason you switch from an add-on or solution module to an app module, or from an app module to a solution or an add-on module, the module data is lost once the new version of the app is deployed. Switching from an add-on to a solution module and from a solution to an add-on module is possible without loss of data. 
+{{% /alert %}}
+
 #### 3.1.1 App Module {#app-module}
 
 An app module is a standard way of structuring your app. Use app modules to distinguish between functional domains: create an app module for each relevant domain and put all pages, microflows, entities, and other documents in one place.

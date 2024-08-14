@@ -916,7 +916,7 @@ The slider widget simply allows you to change a number value using a slider. Thi
 
 {{< figure src="/attachments/refguide8/mobile/native-mobile/native-styling-refguide/slider.png" alt="slider"   width="300"  class="no-border" >}}
 
-This widget supports the same style properties as the [range slider] (#range-slider) widget above.
+This widget supports the same style properties as the [range slider](#range-slider) widget above.
 
 The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
 

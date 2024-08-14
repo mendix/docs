@@ -141,9 +141,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
  
 ## 4 Technical Reference {#technical-reference}
 
-The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
-
-### 4.1 Using the Documentation Pane
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 
 The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
 
@@ -151,12 +149,3 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
-
-### 4.2 Downloading a Local Copy of the Documentation
-
-You can download a copy of the technical reference documentation for later use. Keep in mind that the documentation is regularly updated by the development team, which may cause your local copy to become outdated.
-
-1. In the App Explorer, right-click on the name of your app.
-2. Click **Export documentation**.
-
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-export.png" class="no-border" >}}

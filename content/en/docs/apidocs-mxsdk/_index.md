@@ -5,6 +5,9 @@ description: "Presents the Mendix API documentation and the Mendix SDK documenta
 weight: 55
 no_list: false
 description_list: true
+aliases:
+    - /apidocs/
+    - /apidocs/index.html
 cascade:
     - content_type: "APIs and SDK"
     - mendix_version: 10

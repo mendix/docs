@@ -69,7 +69,7 @@ Don’t just jump right in. Say "Hello."
 
 * Welcome the end-user. Greet the end-user briefly, for example with a simple "Welcome" or "Hi."
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi1.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
 ## 3 Tailoring Greetings{#greeting}
 

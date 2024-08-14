@@ -146,7 +146,7 @@ Users seek trust and assurance that their personal information is handled secure
 
 * Proactively protect end-users' personal and corporate data. Make sure to also indicate to the end-user that their data is protected.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-protected.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
 
 * Allow the end-user to delete records of previous conversations and control whether conversation history is stored.
 

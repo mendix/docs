@@ -98,7 +98,7 @@ The list shows the following information:
 
 ## 4 Apps with License Keys {#apps-license-keys}
 
-The **Apps with License Keys** tab provides an overview of all apps for which license keys have been issued to their respective key contacts. You can find the latest version of license keys for these app environments here. This includes all your apps deployed on Mendix for Private Cloud Standalone, docker/cloud foundry buildpack or On-Premises. 
+The **Apps with License Keys** tab provides an overview of all apps for which license keys have been issued to their respective key contacts. You can find the latest version of license keys for these app environments here. This includes all your apps deployed on Mendix for Private Cloud Standalone, Docker, Cloud Foundry buildpack, and on-premises environments. 
 
 License keys here are aligned with your contracts with Mendix and need to  be applied by you to each individual app. Each app environment (such as  test, acceptance, and production) needs its own license key. Any changes to licenses require the Technical Contacts to reapply  license keys to their respective app environments. For example, when  contracts are created or renewed, new license keys are automatically  generated. Then these new license keys must be applied to the  environments of the app for which the contract was changed. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*.
 

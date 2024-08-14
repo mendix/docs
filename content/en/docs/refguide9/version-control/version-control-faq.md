@@ -15,7 +15,7 @@ Mendix Team Server is based on proven technology. Initially it was based only on
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
 
-Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
+Mendix 8 only has support for Team Server SVN, and as long as this major version is available, support for Team Server SVN will be maintained.
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 

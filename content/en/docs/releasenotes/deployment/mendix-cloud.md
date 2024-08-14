@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### August 15, 2024
+
+#### Improvements
+
+* We added a Pipeline ID column to the **Designs** tab of the **Pipelines** page.
+
 ### July 16, 2024
 
 #### Improvements

@@ -22,7 +22,7 @@ The v2 Deploy API only supports the endpoints listed here. For all other deploym
 Mendix recommends using calls from the same version of the API where possible. This is because the naming varies across versions. For example, the `{appId}` in the version 4 API is retrieved as the `{ProjectId}` from the version 1 API.
 {{% /alert %}}
 
-The Deploy API requires authentication via API keys that are bound to your Mendix account.
+The Deploy API v2 requires authentication via API keys that are bound to your Mendix account.
 
 ### 2.1 Obtaining an API Key
 

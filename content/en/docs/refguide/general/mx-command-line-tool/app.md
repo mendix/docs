@@ -92,7 +92,7 @@ These are the return codes:
 | --- | --- |
 | `0` | The command ran successfully. |
 
-## 4 mx show-java-version Command [version 10.12.2+]{#show-java-version}
+## 4 mx show-java-version Command [MTS versions 10.6.12+ and 10.12.2+]{#show-java-version}
 
 The `mx show-java-version` command reports what the configured Java version of the app is.
 

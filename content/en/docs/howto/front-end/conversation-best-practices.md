@@ -195,7 +195,7 @@ The input mechanism is the method through which the end-user provides informatio
 
 ### 7.3 Example
 
-* Provide input option via command buttons.
+* Provide both inputs of command buttons and free text inputs for the user to navigate the conversation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
 

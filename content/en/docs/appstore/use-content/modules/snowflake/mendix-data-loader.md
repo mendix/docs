@@ -111,18 +111,7 @@ Additionally, you may need to verify custom claims specific to your OAuth provid
 
 {{% alert color="info" %}} The exact properties and verification process may vary depending on your OAuth provider and security requirements. Always refer to your provider's documentation and your organization's security policies when implementing token verification. {{% /alert %}}
 
-## 5 Technical Reference {#technical-reference}
-
-The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
-
-The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
-
-1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
-2. Click on the element for which you want to view the documentation.
-
-    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
-
-## 6 Setting up the app client in your OAuth provider
+## 5 Setting up the app client in your OAuth provider
 
 When setting up the OAuth provider to be able to use it with the Mendix Data Loader, the correct **redirect URL** must be input in order for the authorization server to redirect the user back to the application. The redirect URL fro your Snowflake environment will be as follows:
 
@@ -132,11 +121,22 @@ https://apps-api.c1.<cloud_region_id>.<cloud>.app.snowflake.com/oauth/complete-s
 
 The *cloud_region_id* and the *cloud* in the URL will depend on the configurations of your Snowflake account. You can check out [Supported Cloud Regions](https://docs.snowflake.com/en/user-guide/intro-regions) and [Supported Cloud Platforms](https://docs.snowflake.com/en/user-guide/intro-cloud-platforms) to see what these values will be according to the region and cloud platform your account is in.
 
-## 7 Current Limitations
+## 6 Current Limitations
 
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
-* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
+* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side.
+
+## 7 Technical Reference {#technical-reference}
+
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
+
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
+
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click on the element for which you want to view the documentation.
+
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
 ## 8 Troubleshooting
 

@@ -4,6 +4,7 @@ linktitle: "User Identifiers API"
 url: /apidocs-mxsdk/apidocs/user-identifiers-api/
 type: swagger
 description: "User Identifiers API allows Mendix Admins to perform operations related to user identifiers belonging to their company."
+restapi: true
 weight: 112
 ---
 

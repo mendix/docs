@@ -4,6 +4,7 @@ url: /apidocs-mxsdk/apidocs/projects-api/
 type: swagger
 description: "This API allows you to manage your projects and their teams."
 weight: 100
+restapi: true
 beta: true
 ---
 

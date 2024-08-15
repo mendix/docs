@@ -3,6 +3,7 @@ title: "Private Mendix Platform User API"
 url: /apidocs-mxsdk/apidocs/private-platform-user-api/
 type: swagger
 description: "This API allows you to manage users in Private Mendix Platform."
+restapi: true
 weight: 60
 ---
 

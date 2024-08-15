@@ -3,6 +3,7 @@ title: "Backups API – Version 2"
 linktitle: "Backups API v2"
 url: /apidocs-mxsdk/apidocs/backups-api/
 description: "An API to allow the triggering of backups creation, restore, download and to get information about existing snapshots."
+restapi: true
 aliases:
    - /apidocs-mxsdk/apidocs/backups-api-v1/
 weight: 17

@@ -3,6 +3,7 @@ title: "Mendix for Private Cloud Deploy API"
 url: /apidocs-mxsdk/apidocs/private-cloud-deploy-api/
 type: swagger
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
+restapi: true
 weight: 72
 ---
 
@@ -46,7 +47,7 @@ Select the following as scopes:
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)
 
 For operations related to deployment packages (such as Create, Upload, Delete, and Retrieve), you need to create PAT tokens as specified in [Mendix for Private Cloud Build API: Using the PAT](/apidocs-mxsdk/apidocs/private-cloud-build-api/#using-the-pat).
- 
+
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
 #### 2.1.2 Scopes Explanation

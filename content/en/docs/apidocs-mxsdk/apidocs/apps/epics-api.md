@@ -2,6 +2,7 @@
 title: "Epics API"
 url: /apidocs-mxsdk/apidocs/epics-api/
 type: swagger
+restapi: true
 description: "Use this API to extend the requirements and project management capabilities of the Mendix Platform or connect third-party service management and project management tools."
 weight: 55
 ---

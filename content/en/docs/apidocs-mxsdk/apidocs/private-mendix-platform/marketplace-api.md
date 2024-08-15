@@ -3,6 +3,7 @@ title: "Private Mendix Platform Marketplace API"
 url: /apidocs-mxsdk/apidocs/private-platform-marketplace-api/
 type: swagger
 description: "This API allows you to manage the Marketplace in Private Mendix Platform."
+restapi: true
 weight: 60
 ---
 

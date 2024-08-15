@@ -4,6 +4,7 @@ linktitle: "Feedback API v2"
 url: /apidocs-mxsdk/apidocs/feedback-api-v2/
 type: swagger
 description: "Describes how to use Feedback API version 2, which allows you to retrieve, add, and manage feedback for your Mendix apps."
+restapi: true
 weight: 62
 ---
 

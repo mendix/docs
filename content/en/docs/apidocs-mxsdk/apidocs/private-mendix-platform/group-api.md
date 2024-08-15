@@ -3,6 +3,7 @@ title: "Private Mendix Platform Group API"
 url: /apidocs-mxsdk/apidocs/private-platform-group-api/
 type: swagger
 description: "This API allows you to manage user groups in Private Mendix Platform."
+restapi: true
 weight: 60
 ---
 

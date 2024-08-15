@@ -4,6 +4,7 @@ url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
 weight: 120
 description: "Use this API to manage webhooks."
+restapi: true
 ---
 
 ## 1 Introduction

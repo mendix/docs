@@ -40,6 +40,10 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" >}}
 
+Currently we keep PAT using operating system supported solutions.
+* In case of Windows we use credential locker mechanism, accessible to users by using Credential Manager.
+* In case of MacOs we keychains, accessible to users by using Keychain Access.
+
 ## 4 Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.

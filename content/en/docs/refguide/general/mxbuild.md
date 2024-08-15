@@ -66,6 +66,7 @@ Command-line options are described in the table below:
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
 | `--generate-sbom` | Generate a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format. |
 | `--sbom-output-path=VALUE` | File path to generate bill of material file (Default value: `deployment\sbom.json`). |
+| `--gradle-home` | 
 
 ### 2.2 Options When Creating a Package
 

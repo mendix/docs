@@ -43,7 +43,7 @@ In this case, the object 'person' is described with the corresponding values for
 XML can be used in Studio Pro for serialization and de-serialization in order to export and import data.
 
 * See [XML Schemas](/refguide/xml-schemas/) for further information on importing XSDs into your application.
-* See  [Import Mappings](/refguide/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide/export-mappings/) for further information on exporting domain entities as XML.
+* See [Import Mappings](/refguide/import-mappings/) for further information on mapping XML documents to domain model entities and [Export Mappings](/refguide/export-mappings/) for further information on exporting domain entities as XML.
 
 ## 4 SOAP {#soap}
 

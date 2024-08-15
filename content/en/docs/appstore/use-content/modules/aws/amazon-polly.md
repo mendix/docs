@@ -105,7 +105,7 @@ The `AbstractVoice` entity is a representation of an Amazon Polly voice. It cont
 
 #### 4.1.2 DescribeVoicesRequest
 
-The `DescribeVoicesRequest` is the request object used for the  [DescribeVoices](#describe-voices) action. It inherits from the `AbstractRequest` entity (AWSAuthentication v.3.0.0).
+The `DescribeVoicesRequest` is the request object used for the [DescribeVoices](#describe-voices) action. It inherits from the `AbstractRequest` entity (AWSAuthentication v.3.0.0).
 
 #### 4.1.3 DescribeVoicesResponse
 

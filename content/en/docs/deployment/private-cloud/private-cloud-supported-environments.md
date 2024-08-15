@@ -158,7 +158,7 @@ Mendix Operator supports registry authentication with [workload identity](https:
 
 [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
 
-When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
+When used together with an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
 
 ## 4 Databases{#databases}
 

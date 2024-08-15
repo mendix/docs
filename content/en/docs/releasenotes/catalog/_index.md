@@ -1152,7 +1152,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
+* In the Data Hub **Catalog** search pane, we now show the number of [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
 
 ### October 29, 2020
 

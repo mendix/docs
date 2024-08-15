@@ -199,7 +199,7 @@ The rule of thumb for button design is that, when the end-user moves forward in 
 
 However, this can get confusing with “destructive tasks,” such as when the end-user wants to cancel a subscription. In this scenario, you would need to consider whether the button label should be “Cancel” or “Cancel subscription."
 
-For more information, see  [The Microcopyist: Cancellation, Confirmation, Conflagration](https://uxdesign.cc/the-microcopyist-cancellation-confirmation-conflagration-8a6047a4cf9).
+For more information, see [The Microcopyist: Cancellation, Confirmation, Conflagration](https://uxdesign.cc/the-microcopyist-cancellation-confirmation-conflagration-8a6047a4cf9).
 
 ## 10 Quick Summary
 

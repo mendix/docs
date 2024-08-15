@@ -15,13 +15,15 @@ The Mendix Projects API allows you to create, edit or delete your projects.
 
 ## 2 Authentication {#authentication}
 
-Authentication for the API uses a personal access token (PAT).
+Authentication for the Projects API uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT {#generate}
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
 
-Select the appropriate scopes, depending on the endpoints that need to be invoked. Refer to the API Reference for more information on which scopes to use in which endpoints.
+Select the appropriate scopes, depending on the endpoints that need to be invoked. Refer to the [API Reference](#api-reference) for more information on which scopes to use in which endpoints.
+
+Store the generated value somewhere safe so you can use it to authorize your API calls.
 
 ### 2.2 Using the PAT
 
@@ -32,7 +34,7 @@ GET /projects HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
-## 3 API Reference
+## 3 API Reference{#api-reference}
 
 {{% alert color="warning" %}}
 You cannot call endpoints in the Swagger UI below on this page.

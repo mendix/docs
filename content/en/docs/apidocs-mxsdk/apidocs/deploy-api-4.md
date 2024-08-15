@@ -31,9 +31,9 @@ Authentication for the Deploy API v4 uses a personal access token (PAT).
 
 ### 2.1 Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
-Select the following as **Deployment Mendix Cloud** scopes:
+Select at least the following as **Deployment Mendix Cloud** scopes:
 
 * `mx:deployment:read` – to perform `GET` operations
 * `mx:deployment:write` – to perform all operations (`GET`, `POST`, `PUT`, and `DELETE`)

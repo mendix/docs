@@ -599,7 +599,7 @@ Here is an example of a **Toggle** property that was renamed from a **Dropdown**
 
 The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
 
-### 7.2 Renaming multiple Toggle properties to a multi-select ToggleButtonGroup Property
+### 7.2 Renaming Multiple Toggle properties to a Multi-Select ToggleButtonGroup Property
 
 You can rename several **Toggle** properties to a multi-select **ToggleButtonGroup** property. To do this, use the `oldNames` field of an option to refer to the name of the corresponding **Toggle**. Make sure to set the `multiSelect` field of the **ToggleButtonGroup** to **true**.
 
@@ -633,7 +633,7 @@ Here is an example of a **ToggleButtonGroup** property that was renamed from sev
 
 The design property above is a replacement for the removed properties **Bold text**, **Italic text** and **Underline text**. An option will be turned on if that **Toggle** was previously turned on. The value of **Toggle** will then be turned off if that design property still exists.
 
-### 7.3 Renaming a Dropdown option to a Spacing option
+### 7.3 Renaming a Dropdown Option to a Spacing Option
 
 You can rename options of a **Dropdown** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the original property to still exist — it may have been removed entirely.
 
@@ -692,7 +692,7 @@ In your apps theme, you can create CSS classes as such:
 }
 ```
 
-### 8.2 CSS variables
+### 8.2 CSS Variables
 
 When using CSS variables, you should keep a few things in mind:
 

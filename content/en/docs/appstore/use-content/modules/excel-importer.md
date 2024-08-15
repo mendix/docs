@@ -100,7 +100,7 @@ This property specifies what is going to be processed, which is the value of a s
 The following options are available:
 
 * **Cell value** – processes the value of a specific cell
-* **Document property – row number** –  uses the row number (this value is set in each instance that is created)
+* **Document property – row number** – uses the row number (this value is set in each instance that is created)
 * **Document property – sheet number** – uses the sheet number (this value is set in each instance that is created)
 
 #### 4.2.2 Number and Caption

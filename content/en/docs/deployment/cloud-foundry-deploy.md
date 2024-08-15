@@ -141,8 +141,8 @@ To add a database service to your app, follow these steps:
 5. Configure the database by setting the following:
 
     * **Name** – the name which you want to give the database. It is recommended that this includes the name of the app to which you are going to bind it. Then you can easily select the correct database if you have deployed several in the same space.
-    * **Space**  – the space to which you want to add the instance
-    * **App**  – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
+    * **Space** – the space to which you want to add the instance
+    * **App** – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
 
     {{< figure src="/attachments/deployment/cloud-foundry-deploy/db-configure.png" class="no-border" >}}
 
@@ -179,7 +179,7 @@ The Mendix app will now be deployed to the configured Cloud Foundry app and star
 After deploying an app from Studio Pro, two variables will be added automatically to the application environment.
 
 * **ADMIN_PASSWORD** – the password of the default admin of your Mendix app. Note that if you haven't changed it in Studio Pro, you will be unable to deploy your app until you change it to something more secure
-* **DEVELOPMENT_MODE**  – *true* by default; this allows the app to be run in the cloud without security being turned on: change it to false to run the app in production 
+* **DEVELOPMENT_MODE** – *true* by default; this allows the app to be run in the cloud without security being turned on: change it to false to run the app in production 
 
 {{< figure src="/attachments/deployment/cloud-foundry-deploy/app-variables.png" class="no-border" >}}
 

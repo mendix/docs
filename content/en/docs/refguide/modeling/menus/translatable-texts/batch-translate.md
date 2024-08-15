@@ -73,9 +73,9 @@ The file will be in the format shown below:
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 
-**Row 2**  – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
+**Row 2** – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
 
-**Rows 3+**  – show the current texts
+**Rows 3+** – show the current texts
 
 You can make changes in column B which will be processed if the file is imported.
 

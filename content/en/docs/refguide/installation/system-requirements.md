@@ -85,7 +85,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – 4GB
-* **Display Resolution** –  1080p (1920x1080)
+* **Display Resolution** – 1080p (1920x1080)
 
 Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
 

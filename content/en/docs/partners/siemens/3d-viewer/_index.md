@@ -204,9 +204,9 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-    * **Viewer ID**  – sets the id for the widget — this can be used later to get the viewer instance 
-    * **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
-    * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
+    * **Viewer ID** – sets the id for the widget — this can be used later to get the viewer instance 
+    * **Show coordinate system** – determines if a coordinate system will appear at the lower-left corner of the viewer 
+    * **Show navigation cube** – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
     * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. Please see [Advanced Configuration](#advance_configuration), below, for details.
@@ -526,12 +526,12 @@ The sections below present operations within the Section View widget.
 
 * **Add** – Use this to add a section plane. First, select the axis along which you would like to section the model, then click **Add**. You will see a section plane of the desired axis added to the scene. The default position of the newly added section plane is in the middle of the bounding box of the direction selected.
 * **Delete** – Use this to delete a selected section plane. Click the edge of the section plane to select it (when selected, the section plane edges are highlighted in yellow color). Then, click **Delete**.
-* **Clear** –  Use this to clear all the section planes added to the scene.
+* **Clear** – Use this to clear all the section planes added to the scene.
 
 #### 5.7.2 Direction
 
-* **X Direction** –  sets the X axis of the default coordinate system as the reference
-* **Y Direction** –  sets the Y axis of the default coordinate system as the reference
+* **X Direction** – sets the X axis of the default coordinate system as the reference
+* **Y Direction** – sets the Y axis of the default coordinate system as the reference
 * **Z Direction** – sets the Z axis of the default coordinate system as the reference
 
 For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
@@ -540,10 +540,10 @@ For example, if you select **Y Direction**, then the cross section is created on
 
 When a section plane is selected (and highlighted in yellow), you can choose which part of the model you would like to clip away by selecting a clipping option:
 
-* **Off** –  do not clip
+* **Off** – do not clip
 * **Both** – clip both sides, showing the 2D intersecting curve on the section plane
 * **Near** – clip away the positive side (toward the **Direction**)
-* **Far** –  clip away the negative side (away from the **Direction**)
+* **Far** – clip away the negative side (away from the **Direction**)
 
 #### 5.7.4 Position
 

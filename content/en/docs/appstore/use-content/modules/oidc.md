@@ -545,7 +545,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 4. Set up the following information:
 
     * **Custom user Entity (extension of System.User)** – the Mendix entity in which you will store and look up the user account. If you are using the [Administration module](https://marketplace.mendix.com/link/component/23513), this would be `Administration.Account`.
-    * **The attribute where the user principal is stored** –  unique identifier associated with an authenticated user.
+    * **The attribute where the user principal is stored** – unique identifier associated with an authenticated user.
     * **Allow the module to create users** – this enables the module to create users based on user provisioning and attribute mapping configurations. When disabled, it will still update existing users. However, for new users, it will display an exception message stating that the login action was successful but no user has been configured.
         * By default, the value is set to ***Yes***.
     * **User role** – the role which will be assigned to newly created users. You can select one default user role. If you need additional user roles, use Access Token Parsing microflow to assign multiple roles.

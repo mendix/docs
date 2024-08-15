@@ -126,7 +126,7 @@ Based on the structure of the file you want to import, you need to manually set 
     1. Add the column number that corresponds to the column number from the Excel file you want to map.
     2. Define the Excel column header as the **Caption** value.
     3. Choose **Reference** for the type.
-    4. Click the arrow next to the **Reference** box, where you can select the association over which the order is linked to the customer –  which in this case should **Order_Customer**.
+    4. Click the arrow next to the **Reference** box, where you can select the association over which the order is linked to the customer – which in this case should **Order_Customer**.
     5. Click the arrow next to the **Attribute** box and double-click the **Attribute** to which you want to map the Excel value.
     6. For the mapping of attribute **Number**, set the **Key** value to **Yes, only for the associated object** in order to prevent orders being duplicated.
     7. Click **Save**.

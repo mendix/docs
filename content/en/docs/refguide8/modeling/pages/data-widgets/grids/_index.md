@@ -10,9 +10,9 @@ Grids show a list a objects and include a [data grid](/refguide8/data-grid/) and
 
 Grids have the following components in common:
 
-* [Search bar](/refguide8/search-bar/) –  allows end-users to search for objects in the grid 
-* [Sort bar](/refguide8/sort-bar/) –  allows end-users to sort items in the grid 
-* [Control bar](/refguide8/control-bar/) –  allows end-users to control the objects displayed in the grid by means of buttons 
+* [Search bar](/refguide8/search-bar/) – allows end-users to search for objects in the grid 
+* [Sort bar](/refguide8/sort-bar/) – allows end-users to sort items in the grid 
+* [Control bar](/refguide8/control-bar/) – allows end-users to control the objects displayed in the grid by means of buttons 
 
 ## 2 Read More
 

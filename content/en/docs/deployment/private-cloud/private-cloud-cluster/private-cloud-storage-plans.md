@@ -160,7 +160,7 @@ To create a new database, do the following steps:
 1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
     * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
-    * **Connection validation** –  Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
+    * **Connection validation** – Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" class="no-border" >}}
 

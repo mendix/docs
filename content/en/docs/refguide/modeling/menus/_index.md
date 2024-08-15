@@ -19,7 +19,7 @@ The top-bar of Studio Pro contains the following menus:
 * [Run](#run) – contains actions for deploying and monitoring your app 
 * [Version Control](#version-control) – contains setting for version control
 * [Language](#language) – contains language and translation settings
-* [Help](#help)  – allows you to view documentation, the [Mendix Community](https://community.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
+* [Help](#help) – allows you to view documentation, the [Mendix Community](https://community.mendix.com/p/questions), open log file directory, or view information on  the current information of Studio Pro
 
 ## 2 Global Navigation Menu {#global-navigation-menu}
 

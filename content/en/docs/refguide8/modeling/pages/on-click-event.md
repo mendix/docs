@@ -201,7 +201,7 @@ The **Open link** event triggers an action based on a link type, some of which a
 
 * **Link Type** – the type of action triggered when pressing the button. For information on available link types, see the [Link Types](#on-click-link-type) section below. 
 * **Address** – usage of the address property depends on the chosen link type and whether you want to use a literal or to use the value of an attribute.
-    * **Use literal value**  – allows you to enter a fixed address.
+    * **Use literal value** – allows you to enter a fixed address.
     * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
 
 #### 3.5.1 Link Types {#on-click-link-type}
@@ -231,7 +231,7 @@ The **Create object** event creates a new object. The following properties are s
 The **Save changes** event commits all changes made on the page. The following properties are specific for this event:
 
 * **Close page** – specifies whether the current page should be closed.
-* **Auto-synchronize** –  specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide8/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide8/offline-first/#synchronization).
+* **Auto-synchronize** – specifies whether synchronization should happen when the save button is clicked for a Mendix application running in an offline profile. When an object is saved in a Mendix application running in an offline profile it is stored in a local database until it can be synchronized with the server (for more information on the capabilities of offline apps, see [Offline First](/refguide8/offline-first/). In practice, this means that uploading a new object to the server requires two distinct actions: saving the object and [syncing it](/refguide8/offline-first/#synchronization).
 
 ### 3.8 Cancel Changes {#cancel-changes}
 

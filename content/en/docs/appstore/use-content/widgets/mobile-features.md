@@ -25,10 +25,10 @@ This widget includes the following features that can be used in a Mendix hybrid 
 * **Transitions** – transition between pages using transitions
 * **Numeric input** – set an input field to numeric, which triggers the numeric keyboard on mobile devices
 * **Dialog boxes** – info, warning, and error messages are shown using native dialog boxes
-* **Spinner**  – instead of the Mendix default loading dots, use the native loading spinners for your device
-* **Status bar**  – set the text color and background of the status bar
+* **Spinner** – instead of the Mendix default loading dots, use the native loading spinners for your device
+* **Status bar** – set the text color and background of the status bar
 * **Custom body classes**:
-    * **Online/offline**  – when the app goes offline, a configurable class is added to the body of the page
+    * **Online/offline** – when the app goes offline, a configurable class is added to the body of the page
     * **Android and iOS** – depending on the platform, a configurable class is added to the body of the page (used for styling per platform)
 
 ### 1.3 Dependencies
@@ -79,8 +79,8 @@ This feature can override the normal Mendix dialog box with a native mobile one.
 * **Set transition** – the transitions used in the **Transition classes** tab are usually set to **On navigation**, which works well in an online app
     * In offline mode, the transition should be set **On view change**
         * Set it to this option if you experience problems with the transitions (for example, titles showing up before the transition)
-* **On pause timeout** –  set a timeout (in ms) to cancel the transition after the app is paused (only change this setting when needed)
+* **On pause timeout** – set a timeout (in ms) to cancel the transition after the app is paused (only change this setting when needed)
     * When pausing the app (suspending, without quitting), transitions should be canceled to prevent unwanted behavior in older Android versions 
-* **Disable on logout** –  makes sure the widget is completely disabled on logout
+* **Disable on logout** – makes sure the widget is completely disabled on logout
     * This widget might encounter problems with the spinner when the login page does not have a layout with the Mobile Features widget
     * If you do use this widget in the layout that is part of the login page, you can switch this off

@@ -67,7 +67,7 @@ To configure this widget, follow these steps:
     {{% alert color="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
 
     * **Rich text** – if selected, only text is shown
-    * **Bordered** –  if selected, text is shown in a frame
+    * **Bordered** – if selected, text is shown in a frame
     * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
 * **Editable** – determines when user can edit content in the editor and when it is read-only
 

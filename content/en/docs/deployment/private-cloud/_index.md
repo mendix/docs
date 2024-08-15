@@ -74,7 +74,7 @@ The table below shows the differences between the capabilities for apps deployed
 | Remote debugging | Mendix Portal + Studio Pro | Mendix Portal + Studio Pro | Not supported |
 
 {{% alert color="info" %}}
-¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own  solution, dependent on your choice of database, file storage, and cloud platform.
+¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own solution, dependent on your choice of database, file storage, and cloud platform.
 {{% /alert %}}
 
 ## 4 Memory Allocation

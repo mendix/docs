@@ -540,7 +540,7 @@ If your app is using Mendix 10.10 (or a later version) consider using the [Azure
 ##### 2.5.1.2 Limitations
 
 * Passwords can only be rotated manually.
-* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not  affect performance of other databases on the same server.
+* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not affect performance of other databases on the same server.
 * NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 

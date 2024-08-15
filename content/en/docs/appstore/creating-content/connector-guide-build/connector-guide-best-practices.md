@@ -420,7 +420,7 @@ The Java unit test reference has been tested up to and including Studio Pro [9.1
 
 When writing Java code, try to use as much Mendix-independent logic as possible. This helps with testability, so you do not have to mock Mendix Core to unit test the Java code. 
 
-If you code the bulk of the behavior in generic Java classes that can run without Mendix, development and testing becomes a lot simpler and faster. There is no need to run your Mendix app to test, and you can also rely on  Java JUnit tests for testing.
+If you code the bulk of the behavior in generic Java classes that can run without Mendix, development and testing becomes a lot simpler and faster. There is no need to run your Mendix app to test, and you can also rely on Java JUnit tests for testing.
 
 For another example of a Java unit test, see the [Slack Connector test](https://Github.com/ako/SlackConnector/blob/master/javasource/testslackconnector/tests/TestSlackConnector.java).
 

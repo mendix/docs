@@ -29,7 +29,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 | -----|---------|-------- |
 | .myClass | Class Selector | Selects every element with class **myClass** |
 | #myID | ID Selector | Selects every element with ID **myID** |
-| E[foo="bar"] | Attribute Selector | Selects every element E  whose "**foo**" attribute value is equal to "**bar**" |
+| E[foo="bar"] | Attribute Selector | Selects every element E whose "**foo**" attribute value is equal to "**bar**" |
 | :nth-child(n) | Nth-child pseudo-class | Selects the **n-th** child of its parent |
 | :first-child | First-Child pseudo-class | Selects the **first** child of its parent |
 | :last-child | Last-Child pseudo-class | Selects the **last** child of its parent |

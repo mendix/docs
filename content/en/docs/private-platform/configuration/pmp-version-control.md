@@ -170,7 +170,7 @@ For the web callback URL, enter a URL in the following format: `YOUR_APP_ROOT/oa
 
 ### 5.2 Azure DevOps Configuration
 
-In Azure DevOps, you must create an organization and a PAT for the admin user. You must also create the users that  will use the Azure DevOps with Private Mendix Platform, and assign them Basic access level.
+In Azure DevOps, you must create an organization and a PAT for the admin user. You must also create the users that will use the Azure DevOps with Private Mendix Platform, and assign them Basic access level.
 
 ### 5.3 DevOps Settings
 

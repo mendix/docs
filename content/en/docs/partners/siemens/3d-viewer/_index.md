@@ -213,7 +213,7 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
-    * **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
+    * **On progress change** – by binding a String attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
     * **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
 3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](/partners/siemens/3d-viewer-api/).
@@ -627,7 +627,7 @@ You can set the following configuration options:
 
 #### 6.1.1 enableCache
 
-This  enables the edge / segment / vertex cache when loading JT files. When opening the same JT files, it will load directly from the browser cache to improve performance.
+This enables the edge / segment / vertex cache when loading JT files. When opening the same JT files, it will load directly from the browser cache to improve performance.
 
 * Type – Boolean
 * Default value – *false*

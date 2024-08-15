@@ -96,7 +96,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to version 10.7 or above.
 
 ### February 29, 2024
 

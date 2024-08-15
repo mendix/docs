@@ -56,7 +56,7 @@ To execute and test the query in Studio Pro, follow these steps:
         , round((AVG_OF__DAILY_AVG_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgAvgTempCelsius"
         , round((AVG_OF__DAILY_MIN_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMinTempCelsius"
         , round((AVG_OF__DAILY_MAX_TEMPERATURE_AIR_F - 32) * (5 / 9), 1) as "AvgMaxTempCelsius"
-    from  CLIMATOLOGY_DAY
+    from CLIMATOLOGY_DAY
     where postal_code = {postal_code} 
     and   ((doy_std + 365) - dayofyear (current_date)) % 365 <=10
     order by doy_std asc
@@ -169,7 +169,7 @@ To define, test and execute the query in Studio Pro, follow these steps:
     ,      max(avg_temperature_air_2m_f) as max_temp_f
     ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
     from   STANDARD_TILE.HISTORY_DAY
-    group  by date_valid_std
+    group by date_valid_std
     order by DATE_VALID_STD asc
     ```
 
@@ -209,7 +209,7 @@ with days as (
     ,      max(avg_temperature_air_2m_f) as max_temp_f
     ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
     from   STANDARD_TILE.HISTORY_DAY
-    group  by date_valid_std
+    group by date_valid_std
     order by DATE_VALID_STD asc
 )
 select d1.DATE_VALID_STD
@@ -256,7 +256,7 @@ To execute and test the query in Studio Pro, follow these steps:
         ,      round((fd.MIN_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as min_temp_c
         ,      round((fd.MAX_TEMPERATURE_AIR_2M_F -32) * (5/9),1) as max_temp_c
         from   STANDARD_TILE.FORECAST_DAY fd
-        where  fd.DATE_VALID_STD = current_date
+        where fd.DATE_VALID_STD = current_date
     ), ztoday as (
         select f.zipcode || '-' || f.country as id
         ,      f.zipcode, f.country
@@ -308,7 +308,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
     ```sql
     select snowflake.cortex.sentiment({text}) as "Sentiment"
-    from   dual  as sentiment_result
+    from   dual as sentiment_result
     ```
 
 4. Click **Run Query**.

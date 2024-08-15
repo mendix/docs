@@ -15,7 +15,7 @@ For example, if you have an employee they will work for one company. A company c
 
 {{< figure src="/attachments/refguide9/modeling/pages/input-widgets/reference-selector/reference-selector-domain-model.png" class="no-border" >}}
 
-In the reference selector, the name of the attribute of the associated objects which will be  displayed is shown inside the reference selector, between square brackets, and colored blue.
+In the reference selector, the name of the attribute of the associated objects which will be displayed is shown inside the reference selector, between square brackets, and colored blue.
 
 For example, the following reference allows the end-user to see, and set, the association **Employee_Company** by selecting the **CompanyName** for the current **Employee**.
 

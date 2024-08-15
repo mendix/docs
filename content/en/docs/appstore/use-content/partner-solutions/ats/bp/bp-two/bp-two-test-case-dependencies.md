@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/ats/bp-two-test-case-dependencies/
 
 ## 1 Introduction
 
-This document describes what a test case dependency is  and explains the best way of handling test case dependencies within ATS.
+This document describes what a test case dependency is and explains the best way of handling test case dependencies within ATS.
 
 ## 2 What Is a Test Case Dependency?
 

@@ -141,7 +141,7 @@ Model SDK API docs
 
 Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The *Studio Pro Guide* describes inheritance on the [Entities](/refguide/entities/) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
-The Metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the Mendix Metamodel for inheritance is structured.
+The Metamodel in the reference guide contains a section 'Generalization relationships' with a diagram that shows how the Mendix Metamodel for inheritance is structured.
 
 In the Model SDK, the [`Entity.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 

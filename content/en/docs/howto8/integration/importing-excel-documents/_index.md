@@ -64,7 +64,7 @@ In order to set up import templates for importing data, your application model m
 2. Click **View** to open your application in the browser.
 3. **Log in** as an Administrator.
 4. Click on the menu item for the **MxObjects_Overview** in your navigation.
-5. Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case  is **MyFirstModule**:
+5. Select the module that contains the objects you want to use in your client by checking the box to the left of it – which in this case is **MyFirstModule**:
 
     {{< figure src="/attachments/howto8/integration/importing-excel-documents/18581937.png" class="no-border" >}}
 

@@ -224,7 +224,7 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 ### 3.8 Hardening the Code {#hardening-nfc-action-code}
 
-Now you have a working NFC scanner. However, you can  improve it for both Android and iOS.
+Now you have a working NFC scanner. However, you can improve it for both Android and iOS.
 
 **On Android** — NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
 

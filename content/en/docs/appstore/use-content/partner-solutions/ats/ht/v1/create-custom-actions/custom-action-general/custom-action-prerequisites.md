@@ -20,7 +20,7 @@ You must be signed in to the Mendix Platform to see the above learning path.
 
 ## 3 Guidelines for Building a Custom Action
 
-[Guidelines for Building a Custom Action](/appstore/partner-solutions/ats/ht-one-guidelines-custom-action/) is a best practice document that describes the guidelines  you must follow when building custom actions. These guidelines deliver the best results.
+[Guidelines for Building a Custom Action](/appstore/partner-solutions/ats/ht-one-guidelines-custom-action/) is a best practice document that describes the guidelines you must follow when building custom actions. These guidelines deliver the best results.
 
 ## 4 Google Chrome and Chrome DevTools Basics
 

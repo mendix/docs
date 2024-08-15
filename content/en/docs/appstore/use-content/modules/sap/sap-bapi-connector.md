@@ -302,8 +302,8 @@ For example, consider the domain model for **BAPI_QUOTATION_CREATEFROMDATA2**, s
 
 The entities in this domain model are as follows:
 
-* **BAPI_QUOTATION_CREATEFROMDATA2_Request** – A specialization of  BAPIConnector.BAPIRequest. Objects of this entity will be used as the BAPIRequest for the CallBAPI action
-* **BAPI_QUOTATION_CREATEFROMDATA2_Response** – A specialization of  BAPIConnector.BAPIResponse. Objects of this entity will be returned from a CallBAPI action.
+* **BAPI_QUOTATION_CREATEFROMDATA2_Request** – A specialization of BAPIConnector.BAPIRequest. Objects of this entity will be used as the BAPIRequest for the CallBAPI action
+* **BAPI_QUOTATION_CREATEFROMDATA2_Response** – A specialization of BAPIConnector.BAPIResponse. Objects of this entity will be returned from a CallBAPI action.
 * **QUOTATION_HEADER_IN** – A specialization of BAPIComplexType. Objects of this entity contain attributes used as import parameters of BAPI.
 * **QUOTATION_PARTNERS** and QUOTATION_ITEMS_IN – Specializations of BAPITable. Objects of this entity contain attributes corresponding to table parameters of BAPI_QUOTATION_CREATEFROMDATA2. As the Table parameters can be part of a BAPI request or response, entities of BAPITable have associations with both request and response entities. Here they are associated with BAPI_QUOTATION_CREATEFROMDATA2_Request and BAPI_QUOTATION_CREATEFROMDATA2_Response.
 
@@ -330,7 +330,7 @@ This example shows setting of below properties to GetJCoDestination action:
 * jco.pool.maxconn
 * jco.pool.maxpoolsize
 
-{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/configure-jcodestination-properties-mf.png" alt="Configuring  Additional  Properties – JCoDestination" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/configure-jcodestination-properties-mf.png" alt="Configuring Additional Properties – JCoDestination" class="no-border" >}}
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/getjcodestination-additional.properties.png" alt="Additional properties for the GetJCoDestination action" class="no-border" >}}
 

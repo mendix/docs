@@ -132,7 +132,7 @@ We made the following improvements to the browser agent:
     With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
 * There is now the **NONE** option for statistics and trap collection, with which you effectively turn off the tools.
 * There is now a hard-coded maximum of messages that the APM agent and APM Manager can accept from a Mendix log thread for both the message and stack trace.
-* There is now  a maximum message length in `MendixMessage` via an advanced setting.
+* There is now a maximum message length in `MendixMessage` via an advanced setting.
 * `excludenodes=<node:level,node:level,...>` can now be used to not subscribe to certain nodes above the specified level. This feature can be used exclude log nodes (for example, as a workaround for a Mendix 6 web service and Mendix 7 bugs).
 * There is now a load tool bug fix for recording and processing query IDs.
 * The load tool loads XML pages on need, since the [create object](/refguide/create-object/) button action has no `open_form` in the Client API.

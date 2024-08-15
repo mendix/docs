@@ -80,7 +80,7 @@ To edit existing documentation, follow these steps:
 
 8. Click **Create pull request**.
 
-The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and  you will be able to see the changes on the Mendix Docs site!
+The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
 
 ## 4 Leaving Feedback on the Documentation
 

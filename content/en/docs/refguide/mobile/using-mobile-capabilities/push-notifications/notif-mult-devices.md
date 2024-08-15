@@ -91,7 +91,7 @@ These Java actions have the following parameters:
 
 ### 4.3 SendMessageToUsers and SendMessageToUser Java Actions
 
-Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use  the **SendMessageToUser** Java action.
+Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use the **SendMessageToUser** Java action.
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 

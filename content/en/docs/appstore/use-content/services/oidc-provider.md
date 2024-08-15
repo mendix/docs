@@ -524,7 +524,7 @@ In this case, accounts which can be used by OIDC provider are synced from your I
 
 This means that the access token will contain a "sub" claim which gets value from the `MendixUserID` attribute of the `AccountDetail` entity.
 
-#### 7.3.2 Using the AccountDetail Page of the  OIDC Provider service
+#### 7.3.2 Using the AccountDetail Page of the OIDC Provider service
 
 This is the case where the OIDC Provider service can be used separately as an IDP without building an IAM structure.
 

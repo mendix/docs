@@ -23,7 +23,7 @@ The key features of Logic Recommender are the following:
 
 * **Next best action suggestion** – it recommends the next best activities out of more than 40 different options with accuracy of 95%. 
 * **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.
-* **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
+* **Contextual suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
 * **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
 ## 2 Using Logic Recommender

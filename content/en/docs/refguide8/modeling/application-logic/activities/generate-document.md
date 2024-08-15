@@ -78,7 +78,7 @@ Depending on the selected document, you will see a list of its arguments in a ta
 
 #### 3.5.1 Widget
 
-The name of the widget in the document template that needs arguments to be passed to it. This property  is read-only.
+The name of the widget in the document template that needs arguments to be passed to it. This property is read-only.
 
 #### 3.5.2 Type
 

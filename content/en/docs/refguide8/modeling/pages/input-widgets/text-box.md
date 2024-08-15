@@ -112,7 +112,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 #### 2.6.5 On Enter Key Press Event
 
-The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
+The on enter key press event property specifies an action that will be executed when the focus is inside the widget and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 

@@ -174,7 +174,7 @@ The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets
 
-Structure  widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](/refguide/structure-widgets/).
+Structure widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](/refguide/structure-widgets/).
 
 ### 5.1 Layout Grid
 

@@ -61,7 +61,7 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 
 ### 3.3 Sidebar
 
-You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep  useful links and application settings there.
+You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep useful links and application settings there.
 
 There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
 

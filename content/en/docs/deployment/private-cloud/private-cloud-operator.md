@@ -25,7 +25,7 @@ Alternatively, you can create a connected cluster and use the Mendix Portal to d
 
 ## 3 Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 

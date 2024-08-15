@@ -23,7 +23,7 @@ When the workflow is locked, it is the workflow definition that is locked. It me
 
 {{% /alert %}}
 
-This microflow activity allows developers to build a function for the workflow administration that stops the workflow execution. The Lock  workflow activity can be used when the workflow definition contains errors and you have to prevent further damage to the process execution or data that will be difficult to undo/revert.
+This microflow activity allows developers to build a function for the workflow administration that stops the workflow execution. The Lock workflow activity can be used when the workflow definition contains errors and you have to prevent further damage to the process execution or data that will be difficult to undo/revert.
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/workflow-activities/lock-workflow/lock-workflow.jpg" class="no-border" >}}
 

@@ -161,7 +161,7 @@ The inline styling is used in this example. That is because the inline styling w
 
 ### 5.1 Seeing Your Changes
 
-When you add, remove, or change something in Studio Pro, you need to save your changes and run the app  locally to see your styling changes in the browser.
+When you add, remove, or change something in Studio Pro, you need to save your changes and run the app locally to see your styling changes in the browser.
 
 For example, when you set a color for your title and subtitle, click **Run Locally** then **View**. When browser automatically opens, you will see the following URL:
 

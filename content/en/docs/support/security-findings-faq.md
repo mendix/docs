@@ -72,7 +72,7 @@ The `/xas/` request handler is not a RESTful API, so the conventions that you wo
 
 ### 2.6 Example
 
-For example, the layout of every page in the application is visible to anyone, as the page  layout is stored as a publicly available static XML page. If a page has a button that is conditionally visible for certain user roles, you can make this button visible by faking your user role. However, when you click this button, security will be applied to data retrieval and logic. If the button triggers a microflow, you will get an error if your original user role doesn't have access to the microflow.
+For example, the layout of every page in the application is visible to anyone, as the page layout is stored as a publicly available static XML page. If a page has a button that is conditionally visible for certain user roles, you can make this button visible by faking your user role. However, when you click this button, security will be applied to data retrieval and logic. If the button triggers a microflow, you will get an error if your original user role doesn't have access to the microflow.
 
 If a microflow is available for your original user role, but the button to trigger this was not visible, you will now be able to run the microflow. However, you could have done this by faking an `xas` request using your original user role. So, in this case, faking the user role doesn't provide any additional functionality. If an end-user is able to see data, or trigger logic, that they aren't supposed to, this means the application security isn't configured correctly, or completely.
 

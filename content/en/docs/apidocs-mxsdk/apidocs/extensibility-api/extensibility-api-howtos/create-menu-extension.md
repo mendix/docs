@@ -38,7 +38,7 @@ It is handy to have an app where the extension is used for the testing purposes.
 6. Add the `Post-build event` script below to your extension project [Build > Events configuration](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-specify-build-events-csharp?view=vs-2022):
    `xcopy /y /s /i "$(TargetDir)" "<path_to_folder>"`
 
-Now if you build your extension project (usually you can do this by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>) and clicking [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or pressing <kbd>F4</kbd>), the latest version of your extension will be loaded.
+Now if you build your extension project (usually you can do this by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>) and click [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd>), the latest version of your extension will be loaded.
 
 ## 4 Creating Your First Extension
 

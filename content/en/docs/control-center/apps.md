@@ -129,7 +129,7 @@ The description of the items that you can select are as follows:
 
 * **Namespace**: the Kubernetes namespace
 
-    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/create-cluster-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#create-cluster-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 
 * **Database Name**: the name of the database
 

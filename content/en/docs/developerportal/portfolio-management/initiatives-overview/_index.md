@@ -51,7 +51,7 @@ To add general information to your initiative, follow these steps:
 
 1. In the **Edit Initiative** side pane, select the status of your initiative: **On Track**, **At Risk**, or **Off Track**.
 
-2. Enter **Percentage Completed** if this is an ongoing initiative. You can enter a value between 0-100 to indicate how much of progress has been made for this initiative.
+2. Enter **Percentage Completed** if this is an ongoing initiative. You can enter a value between 0–100 to indicate how much of progress has been made for this initiative.
 
 3. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
 
@@ -260,7 +260,7 @@ The list contains the following information:
 
 * **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
-* **Completed** – This shows how much progress has been made for this initiative. It can be be a value between 0-100 and shown as percentage.
+* **Completed** – This shows how much progress has been made for this initiative. It can be be a value between 0–100 and shown as percentage.
 
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 

@@ -126,7 +126,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-test-case/three-set-value-actions.png" class="no-border" >}}
 
-22. Use the ATS Helper on the **Amount** field in the Company Expenses app. Open test step 5 in your test case by clicking the test step, filling in a test step description, entering the **Widget Name**, and entering  the **Value**.
+22. Use the ATS Helper on the **Amount** field in the Company Expenses app. Open test step 5 in your test case by clicking the test step, filling in a test step description, entering the **Widget Name**, and entering the **Value**.
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-test-case/set-value-amount-field.png" class="no-border" >}}
 

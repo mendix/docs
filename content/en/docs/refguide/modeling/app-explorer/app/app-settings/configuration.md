@@ -13,7 +13,7 @@ You can define any number of configurations. The active configuration, as in, th
 You can use configurations to have different database settings for different people working on your app. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 
 {{% alert color="warning" %}}
-When you are deploying your application to a server or Mendix Cloud, you will have to configure settings  there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+When you are deploying your application to a server or Mendix Cloud, you will have to configure settings there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
 ## 2 Configuration Settings 
@@ -45,7 +45,7 @@ The **Server** tab has the following settings:
 * **Runtime port** – in this setting you can fill in the HTTP port through which a browser accesses the server on which your application is running. Multiple concurrently running servers on the same computer should use different HTTP port numbers. Default: *8080*
 * **Runtime port security** – determines whether the runtime HTTP port will be open to other machines or just to the current machine (localhost).
 * **Admin port** – this port number is used to communicate with the server. Multiple concurrently running servers on the same computer should use different server admin port numbers. Default: *8090*
-* **Admin port security** –  determines whether the admin port will be open to other machines or just to the current machine (localhost).
+* **Admin port security** – determines whether the admin port will be open to other machines or just to the current machine (localhost).
 * **Java heap** – in this setting you can specify the maximum Java heap memory size. There following options are available:
     * **Default** – use the default heap memory size of the installed Java virtual machine.
     * **Custom** – use the value of the **Maximum size (in MB)** setting.

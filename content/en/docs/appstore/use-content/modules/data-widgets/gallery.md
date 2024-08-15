@@ -133,7 +133,7 @@ The Drop-Down Sort widget has two options you can set:
 
 ## 5 Keyboard Navigation and Selection
 
-In the Gallery widget it is possible to navigate and select items using  the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.
+In the Gallery widget it is possible to navigate and select items using the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.
 
 To improve user experience, it is possible to detect which item has keyboard focus. Visually, you can see which item has keyboard focus by spotting the thin blue border.
 

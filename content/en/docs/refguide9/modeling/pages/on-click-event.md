@@ -216,7 +216,7 @@ The **Open link** event triggers an action based on a link type, some of which a
 
 * **Link Type** – the type of action triggered when pressing the button. For information on available link types, see the [Link Types](#on-click-link-type) section below. 
 * **Address** – usage of the address property depends on the chosen link type and whether you want to use a literal or to use the value of an attribute.
-    * **Use literal value**  – allows you to enter a fixed address.
+    * **Use literal value** – allows you to enter a fixed address.
     * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
 
 #### 3.5.1 Link Types {#on-click-link-type}
@@ -311,7 +311,7 @@ The following properties are specific for this event:
 * **Who can open** – Specifies who is able to open the user task page when a user has already been assigned to it. 
 
     * **Assigned user** *(default)* – Only the user who is currently assigned to the task is able to open the user task page. 
-    * **Users with access**  – All users who have access to the [user task](/refguide9/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
+    * **Users with access** – All users who have access to the [user task](/refguide9/user-task/) can open the user task page. This option means that multiple users can open the page at the same time. Only the assigned user is able to complete the task, however, other users can make changes to the page, and the data will not be saved unless you add a Save button. This button saves data, but does not complete the task. Take into account that when two users have the task page open simultaneously, data from the user who saves changes the last is stored and this will overwrite data from the other user.
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide9/workflows/#workflow-entities) section in *Workflows*. 
 

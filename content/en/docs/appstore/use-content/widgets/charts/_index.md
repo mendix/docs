@@ -185,7 +185,7 @@ This setting controls the bar format. In the **group** format, bars go one below
 ##### 5.3.1.1 General
 
 * **Bubble Size Attribute** – This attribute controls bubble size for a given item in series.
-* **Auto Scale**  – If **Yes** then bubble size and proportions will be computed automatically (otherwise the value from **Scale factor** will be used).
+* **Auto Scale** – If **Yes** then bubble size and proportions will be computed automatically (otherwise the value from **Scale factor** will be used).
 * **Scale Factor** – This controls the scale factor of bubbles on a chart. This value will be used to determine the final bubble size by multiplying current scale factor value and value from the bubble size attribute.
 
 ##### 5.3.1.2 Appearance

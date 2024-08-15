@@ -96,7 +96,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to version 10.7 or above.
 
 ### February 29, 2024
 
@@ -1036,8 +1036,8 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register/register-data/)  Mendix OData v3 contracts.
-* Data sources that are [validated](/catalog/manage/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register/register-data/) Mendix OData v3 contracts.
+* Data sources that are [validated](/catalog/manage/curate/#discoverability) are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
 * The [discoverability](/catalog/manage/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the metadata panel.
 
 ### March 11, 2021
@@ -1152,7 +1152,7 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
+* In the Data Hub **Catalog** search pane, we now show the number of [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
 
 ### October 29, 2020
 

@@ -52,7 +52,7 @@ Building blocks are single-purpose user interface elements comprised of multiple
 
 Every page can contain building blocks by grouping widgets together. In our example, we have a building block that consists of a container, title, text, and a button. This is a simple building block that is often used in apps.
 
-Go to a page and select a group of widgets that can be used as a building block. Right-click  the container or parent widget that includes the widgets, then select **Create building block**:
+Go to a page and select a group of widgets that can be used as a building block. Right-click the container or parent widget that includes the widgets, then select **Create building block**:
 
 {{< figure src="/attachments/howto8/front-end/atlas-ui/create-company-atlas-ui-resources/creating_bb.png" class="no-border" >}}
 

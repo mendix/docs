@@ -504,7 +504,7 @@ The Runtime Server can run as a single process, or it can be horizontally scaled
 
 #### 5.4.1 Single Instance
 
-Within a single instance, the Scala Akka actor model is used to handle all processing in the Runtime Server efficiently. Using an actor model for concurrency has this benefit:  The number of concurrent users that can be processed is not limited by the number of threads available, as threads are not allocated per request, but rather by processing responsibility
+Within a single instance, the Scala Akka actor model is used to handle all processing in the Runtime Server efficiently. Using an actor model for concurrency has this benefit: The number of concurrent users that can be processed is not limited by the number of threads available, as threads are not allocated per request, but rather by processing responsibility
 
 To process Mendix Client requests received by the Runtime Server, the actions required are dispatched to an Akka actor. This actor has a dedicated thread pool. Every (microflow) action is handled by a separate message to the action dispatcher actor. This optimizes usage of threads for blocking actions. For example, if an action part of a microflow calls an external web service and is blocked waiting for a response, this only impacts the threadpool for the action dispatcher, not for the HTTP request handler.
 

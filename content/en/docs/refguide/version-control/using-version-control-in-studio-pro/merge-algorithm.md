@@ -295,7 +295,7 @@ This has no effect on changes committed to the server, only your local work.
 
 #### 5.1.2 Show Conflicts
 
-The **Show conflicts** button is only visible when there are conflicts in your application, for example conflicting changes to domain models or  microflows.
+The **Show conflicts** button is only visible when there are conflicts in your application, for example conflicting changes to domain models or microflows.
 
 Click this button to bring the **Changes** pane into the view, as this is the place where you can resolve this type of conflict.
 

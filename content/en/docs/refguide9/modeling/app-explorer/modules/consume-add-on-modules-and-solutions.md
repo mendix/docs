@@ -28,7 +28,7 @@ You can also add an add-on module to your app not through the Marketplace. For m
 
 ## 4 Importing a Solution Package 
 
-A solution package is imported to your app as any other app package. For more information, see  the [Importing App Packages](/refguide9/import-and-export/#import-app-package) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
+A solution package is imported to your app as any other app package. For more information, see the [Importing App Packages](/refguide9/import-and-export/#import-app-package) section in *Importing and Exporting Apps, Modules, Widgets, and Documents*. 
 
 ## 5 Working with Add-on Modules and Solutions in Your App
 

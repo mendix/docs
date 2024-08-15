@@ -28,7 +28,7 @@ Install the dependency *.jar* files:
 $ gradle prepareDeps
 ```
 
-Note that all app `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following  required modules from the Marketplace:
+Note that all app `test/userlib` content is cleared, including the *.jar* files of the other modules. You need to re-download the following required modules from the Marketplace:
 
 * [Community Commons Function Library](/appstore/modules/community-commons-function-library/)
 * [Encryption](/appstore/modules/encryption/)

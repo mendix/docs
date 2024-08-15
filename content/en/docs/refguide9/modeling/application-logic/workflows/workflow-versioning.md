@@ -30,7 +30,7 @@ Any of the following changes are interpreted as non-conflicting:
 
 * Adding activities in the paths that have not been executed by the current workflow yet
 * Removing activities in the path that is being executed by the current workflow
-* Reordering activities in  the path that is being executed by the current workflow
+* Reordering activities in the path that is being executed by the current workflow
 * Changing properties of activities or outcomes:
     * Changing names, captions, and titles
     * Changing a referenced microflow in the **Call microflow** activity, or a referenced workflow in the **Workflow call** activity

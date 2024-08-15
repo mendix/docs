@@ -186,7 +186,7 @@ After you download a component, you can use the component in your app. For detai
 
 After you [install](#install) the widget from the Marketplace in your app, there are two ways to add the widget from the Marketplace via Studio Pro.
 
-To add a widget  from the **Toolbox**, follow these steps:
+To add a widget from the **Toolbox**, follow these steps:
 
 1. Open the page where you want to add the widget.
 2. In the **Toolbox**, search for the name of the widget (for example, *Rating* to find the widget):

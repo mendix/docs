@@ -9,7 +9,7 @@ aliases:
 
 ## 1 Introduction
 
-As a user with Administrator access rights, you can perform the business-as-usual administrator tasks such as  app management and user management. You can also manage Marketplace-related settings for your company.
+As a user with Administrator access rights, you can perform the business-as-usual administrator tasks such as app management and user management. You can also manage Marketplace-related settings for your company.
 
 ## 2 App Management
 

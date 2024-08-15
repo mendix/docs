@@ -150,7 +150,7 @@ Specify your email for Git to use it in commit messages and make them more infor
 
 #### 6.2.4 Clone {#clone}
 
-Select a  [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
+Select a [Clone type](/refguide/clone-type/) to use for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting does not affect apps that you have already downloaded.
 
 #### 6.2.5 Combine Local and Remote Changes
 

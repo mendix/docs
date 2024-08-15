@@ -87,7 +87,7 @@ Mendix Admins can change the default discoverability status of the published dat
 The default value of this setting is **On**.
 
 {{% alert color="info" %}}
-This setting does not work in retrospect, it will only apply to the  OData resources published after changing the setting.
+This setting does not work in retrospect, it will only apply to the OData resources published after changing the setting.
 {{% /alert %}}
 
 {{% alert color="info" %}}

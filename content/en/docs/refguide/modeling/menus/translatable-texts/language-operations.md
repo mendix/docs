@@ -35,7 +35,7 @@ Click **Apply** to apply the selected language operation.
 
 **Move** moves the source language to the destination language, which overwrites all the texts in the destination language with those in the source language and removes the texts in the source.
 
-Select the **Source language** and the **Destination language** from the  drop-down menus.
+Select the **Source language** and the **Destination language** from the drop-down menus.
 
 {{% alert color="info" %}}
 
@@ -47,7 +47,7 @@ Select the **Source language** and the **Destination language** from the  drop-d
 
 **Copy** copies the source language to the destination language, which overwrites all the texts in the destination language with those in the source language. Texts are not deleted from the source language.
 
-Select the **Source language** and the **Destination language** from the  drop-down menus.
+Select the **Source language** and the **Destination language** from the drop-down menus.
 
 {{% alert color="info" %}}
 Texts that are absent in the source language will be absent in the destination language – any original text will be removed
@@ -57,7 +57,7 @@ Texts that are absent in the source language will be absent in the destination l
 
 **Swap** replaces the source language with the destination language, and the destination language with the source language.
 
-Select the **Source language** and the **Destination language** from the  drop-down menus.
+Select the **Source language** and the **Destination language** from the drop-down menus.
 
 ### 3.4 Delete {#delete}
 

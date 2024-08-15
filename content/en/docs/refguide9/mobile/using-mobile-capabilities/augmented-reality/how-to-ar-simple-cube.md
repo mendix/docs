@@ -196,7 +196,7 @@ The **Material** tab contains properties for configuring appearance:
 * **Dragging** – allows a user to move an object by moving their phone (the object will follow on the floor, desk, or other surface in the middle of the screen). 
 * **Enable dragging** - dictates if the dragging behavior is enabled. For example, you could enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
 * **Dragging type** – specifies the type of dragging behavior:
-    * **Fixed  Distance**: makes the object follow you at always the same distance as it started
+    * **Fixed Distance**: makes the object follow you at always the same distance as it started
     * **Fixed to world**: makes the object stick to the world, for example objects like floors, desks, and walls 
 * **On drag** – an event that is triggered when the object is has started or stopped moving through dragging:
 

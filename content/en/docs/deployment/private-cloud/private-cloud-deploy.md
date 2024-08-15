@@ -173,7 +173,7 @@ The word **Licensed** shows that the Operator managing that environment is licen
 You can also deploy an existing deployment package to an environment without having to create a new one. This also allows you to specify constant values and control scheduled events before the app is started.
 
 {{% alert color="info" %}}
-Deployment packages which are not deployed to any environment will be removed if they were created from the Teamserver or uploaded over two months ago. You can  [recreate the deployment package](#create-deployment-package) if you need to use it again.
+Deployment packages which are not deployed to any environment will be removed if they were created from the Teamserver or uploaded over two months ago. You can [recreate the deployment package](#create-deployment-package) if you need to use it again.
 {{% /alert %}}
 
 If creation of the environment fails, then contact your cluster manager. If they cannot solve the problem, contact Mendix Support for help.

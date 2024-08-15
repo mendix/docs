@@ -47,7 +47,7 @@ For encryption of SAML messages the following options are supported:
 
 * No Encryption
 * 1024 or 2048 bit encryption
-* SHA1 or  SHA256 algorithms
+* SHA1 or SHA256 algorithms
 
 For easy configurability, the SAML module offers the following:
 
@@ -363,7 +363,7 @@ By default, the module does not allow for unsolicited requests. That means that 
 
 #### 4.3.2 Enable Force Authentication
 
-Checking this box will force the SAML IdP  to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
+Checking this box will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
 
 #### 4.3.3 Enable Mobile Authentication Token
 

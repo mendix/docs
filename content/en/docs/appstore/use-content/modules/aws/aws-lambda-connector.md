@@ -83,7 +83,7 @@ The domain model is a data model that describes the information in your applicat
 
 ### 4.2 Activities {#activities}
 
-Activities define the actions that are executed in a microflow or a nanoflow. For the AWS Lambda connector, they represent the actions that can be performed  with Lambda functions.
+Activities define the actions that are executed in a microflow or a nanoflow. For the AWS Lambda connector, they represent the actions that can be performed with Lambda functions.
 
 #### 4.2.1 ListFunctions
 

@@ -136,7 +136,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`find`](/refguide9/string-function-calls/) – gets a sub-string position
 * [`findLast`](/refguide9/string-function-calls/) – gets the last sub-string position
 * [`contains`](/refguide9/string-function-calls/) – contains the sub-string
-* [`startsWith`](/refguide9/string-function-calls/)  – determines whether a string starts with the specified sub-string
+* [`startsWith`](/refguide9/string-function-calls/) – determines whether a string starts with the specified sub-string
 * [`endsWith`](/refguide9/string-function-calls/) – determines whether a string ends with the specified sub-string
 * [`trim`](/refguide9/string-function-calls/) – removes the leading and trailing whitespace
 * [`isMatch`](/refguide9/string-function-calls/) – matches a regular expression
@@ -203,7 +203,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`subtractDaysUTC`](/refguide9/subtract-date-function-calls/) – subtracts days from a date using the UTC calendar
 * [`subtractWeeks`](/refguide9/subtract-date-function-calls/) – subtracts weeks from a date
 * [`subtractWeeksUTC`](/refguide9/subtract-date-function-calls/) – subtracts weeks from a date using the UTC calendar
-* [`subtractMonths`](/refguide9/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractMonths`](/refguide9/subtract-date-function-calls/) – subtracts months from a date
 * [`subtractMonthsUTC`](/refguide9/subtract-date-function-calls/) – subtracts months from a date using the UTC calendar
 * [`subtractQuarters`](/refguide9/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractQuartersUTC`](/refguide9/subtract-date-function-calls/) – subtracts quarters from a date using the UTC calendar

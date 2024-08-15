@@ -67,7 +67,7 @@ A simple JSON object is contained in curly braces (between '{' and '}'). It cont
 Each JSON property is composed of a key ("name") and a value ("John"). If the value is between double quotes ("  "), it is considered a string, otherwise the type is derived from the value. The following JSON values are supported:
 
 * `"string"` – converted into an attribute of type String
-* `123` –  converted into an attribute of type Integer
+* `123` – converted into an attribute of type Integer
 * `true` or `false` – converted into an attribute of type Boolean
 * `"1985-04-12T23:20:50.52Z"` – converted into an attribute of type **Date and time**
 * `12.50` – converted into an attribute of type Decimal

@@ -127,7 +127,7 @@ Default: *False*
 
 #### 3.4.7 Default Button Trigger {#default-button-trigger}
 
-The default button can be triggered by a single or a double-click  on a row.
+The default button can be triggered by a single or a double-click on a row.
 
 | Value | Description |
 | --- | --- |

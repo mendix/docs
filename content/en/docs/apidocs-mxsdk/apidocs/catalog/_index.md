@@ -1,8 +1,8 @@
 ---
-title: "Catalog APIs"
+title: "APIs for Catalog"
 url: /apidocs-mxsdk/apidocs/catalog-apis/
 description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
-weight: 25
+weight: 35
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---

@@ -1,8 +1,8 @@
 ---
-title: "Private Mendix Platform API Documentation"
+title: "APIs for Private Mendix Platform"
 url: /apidocs-mxsdk/apidocs/private-platform/
 description: "Presents an overview of the Private Mendix Platform API documentation, such as Group, User, Marketplace, and Project."
-weight: 95
+weight: 40
 no_list: false 
 description_list: true
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

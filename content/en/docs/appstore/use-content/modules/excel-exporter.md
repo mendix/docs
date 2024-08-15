@@ -130,7 +130,7 @@ On the **Static data** tab, there are the following items:
 
 * **Search**: enables searching for a template using one or more of the following properties:
     * **Column place**: the column in which the static data are shown
-    * **Row place**:  the row in which the static data are shown
+    * **Row place**: the row in which the static data are shown
     * **Static type**: the type of the static data
     * **Name**: the name of the cell where the static data are placed
 * **New**: opens the **New static data** dialog box that contains the following items:

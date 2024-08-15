@@ -71,9 +71,9 @@ The description of the items that you can select are as follows:
 
 * **Cloud Location**: the location of the environment
 
-* **App RAM**:  the size of the RAM allocated for running the app
+* **App RAM**: the size of the RAM allocated for running the app
 
-* **DB RAM**:  the size the RAM allocation for database operations
+* **DB RAM**: the size the RAM allocation for database operations
 
 * **DB Storage**: the size of the database storage
 

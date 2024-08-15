@@ -64,7 +64,7 @@ You have a REST service in Petstore version 1.0.0 in production. You want to add
 
 #### 3.2.2 Solution
 
-Since this change is backwards-compatible, there are two solutions to this problem:  create a new minor version, or add the operation to the current version.
+Since this change is backwards-compatible, there are two solutions to this problem: create a new minor version, or add the operation to the current version.
 
 To create a new minor version, do the following:
 

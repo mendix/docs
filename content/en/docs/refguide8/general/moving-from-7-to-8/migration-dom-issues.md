@@ -385,7 +385,7 @@ Because the calendar pop-up window is no longer implemented using the Dojo frame
 * The `<td>` elements, which represent the days in the calendar view, get the following classes:
     * `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next`: depending on whether the day falls in the current, previous, or next month
     * `mx-calendar-day-selected`: if the day is currently selected in the date picker for which the calendar was opened
-    * `mx-calendar-day-active`:  if the day currently has the focus
+    * `mx-calendar-day-active`: if the day currently has the focus
 * The `<span>` elements inside the `<td>` and `<th>` elements have been removed
 
 The month header now has the following structure:

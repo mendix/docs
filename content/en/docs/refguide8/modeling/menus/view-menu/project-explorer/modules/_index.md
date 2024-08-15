@@ -30,7 +30,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 | [Images](/refguide8/images/) | Images can be used to brighten up your application. Navigation items and the various kinds of buttons have small images (icons) to left of their captions. |
 | [Layouts](/refguide8/layout/) | Layouts specify what comes where. Each  [page](/refguide8/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout.  |
 | [Menus](/refguide8/menu/) | A menu document defines a navigation menu that can be used by a  [menu widget](/refguide8/menu-widgets/). |
-| [Snippets](/refguide8/snippet/) | Snippets define reusable interface parts. They can be used on  [pages](/refguide8/page/) and  [layouts](/refguide8/layout/) . |
+| [Snippets](/refguide8/snippet/) | Snippets define reusable interface parts. They can be used on  [pages](/refguide8/page/) and  [layouts](/refguide8/layout/). |
 
 ## 4 Resources
 

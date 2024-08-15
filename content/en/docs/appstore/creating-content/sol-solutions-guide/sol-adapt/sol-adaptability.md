@@ -64,7 +64,7 @@ The same patterns that can be used for microflows can be used for making pages (
 | --- | --- | --- | 
 | **Page** | Adaptable pages. | Core pages can be hidden and called through microflows and nanoflows. |
 | **Snippet** | Making (parts) of the UI adaptable. | Core snippets can be hidden as long as it is for reuse in hidden core pages. |
-| **Layout** | Main layout for the application. Use a solution-specific [master layout](/refguide/layout/#master-layout) to eanble changing the layout of all (adaptable and hidden) pages by the customer. | Core layouts can be hidden and use an adaptable master layout. |
+| **Layout** | Main layout for the application. Use a solution-specific [master layout](/refguide/layout/#master-layout) to enable changing the layout of all (adaptable and hidden) pages by the customer. | Core layouts can be hidden and use an adaptable master layout. |
 | **Building block** | Building blocks that are supposed to be used during adaptation need to reside in an open module. | Building blocks that are used during development of the core solution can be hidden. |
 | **SASS files** | Define the theme and look and feel of your app. | No SASS definition support. Usage of existing theme and design properties as well as additional styling can be done through inline styling only. |
 

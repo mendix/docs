@@ -42,7 +42,7 @@ In this example, the error handling in **Microflow 2** is the default: **Rollbac
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/error-handling-in-microflows/default-roll-back.png" width="600px" class="no-border" >}}
 
-When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**,  the default error handling is to roll back all changes to the state of this savepoint (so all changes are reverted), the microflow is aborted, the error is logged, and a system error message is shown to the end-user.
+When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, the default error handling is to roll back all changes to the state of this savepoint (so all changes are reverted), the microflow is aborted, the error is logged, and a system error message is shown to the end-user.
 
 ### 2.2 Error Handling - Custom with Rollback
 

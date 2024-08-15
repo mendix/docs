@@ -116,7 +116,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     {{< figure src="/attachments/refguide9/java-programming/extending-your-application-with-custom-java/call1.png"   width="500"  class="no-border" >}}
 
-9. Press and hold the <kbd>Ctrl</kbd> key and then press the <kbd>spacebar</kbd> to open the code completion editor.
+9. Press and hold the <kbd>Ctrl</kbd> key and then press <kbd>Space</kbd> to open the code completion editor.
 10. Select **$Asset (AssetManager.Asset)**.
 
     {{< figure src="/attachments/refguide9/java-programming/extending-your-application-with-custom-java/argument.png"   width="500"  class="no-border" >}}

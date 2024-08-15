@@ -22,7 +22,22 @@ This API focuses on working with snapshots and archives asynchronously, because 
 
 ## 2 Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
+The Backups API requires authentication via API keys that are bound to your Mendix account.
+
+### 2.1 Obtaining an API Key
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### 2.2 Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### 2.3 Configuring Permissions
+
+To perform an action via the Backups API, you need **Access to Backups** and **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## 3 Examples
 

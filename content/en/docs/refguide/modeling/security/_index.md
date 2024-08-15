@@ -10,7 +10,7 @@ Security in Mendix has several aspects which are all covered on this page.
 
 Firstly, you may be working as a team to create the app. You will want to control who is on the team and what each member can do. This is managed in [Apps](https://sprintr.home.mendix.com/). For more information, see [Building an App as a Team](#team) section below. 
 
-Secondly, you will want to control who can access your app once it is running. You will want to prevent unauthorized access to your running application. You may also want different end-users to see different parts of the app , so access to individual pages, data, and microflows can be limited to specific end-users. This is managed from within Studio Pro. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
+Secondly, you will want to control who can access your app once it is running. You will want to prevent unauthorized access to your running application. You may also want different end-users to see different parts of the app, so access to individual pages, data, and microflows can be limited to specific end-users. This is managed from within Studio Pro. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
 
 There are different ways in which you can set up app authentication, including local authentication and using a federated IdP to provide single sign-on (SSO). For more information, see the [App Authentication](#authentication) section below. 
 

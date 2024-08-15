@@ -138,8 +138,8 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 1. Go to the [Marketplace](https://marketplace.mendix.com/) and sign in with your Mendix credentials.
 2. Search in the online Marketplace for the component you want to download and open the [component details page](/appstore/component-details/).
 3. Check **Usage** > **Version** to see the required Studio Pro version for the component. Do not download a component that requires a higher version than the one you are using.
-4. Click **Download** to download the latest version of the component. Or, if you want to download an older component version, go to the **Releases** tab and **Download** the desired version.
-5. In the **App Explorer**, right-click the app, then click **Import module package**, and  select the component  you downloaded:
+4. Go to the **Releases** tab and **Download** the desired version. Mendix recommends using the latest version of the component if possible.
+5. In the **App Explorer**, right-click the app, then click **Import module package**, and select the component you downloaded:
 
     {{< figure src="/attachments/appstore/use-content/import-module-in-app-explorer.png" alt="import-module-in-app-explorer" class="no-border" >}}
 

@@ -233,7 +233,7 @@ To start, replace the static image with the image the app end-user uploads to th
 
 3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 4. Click the **Edit** button next to **Caption**.
-5. In the new dialog box, replace the caption with the place holder *{1}*. 
+5. In the new dialog box, replace the caption with the placeholder *{1}*. 
 6. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/6-addattributes7.png" width="400px" alt="Add attributes" class="no-border" >}}

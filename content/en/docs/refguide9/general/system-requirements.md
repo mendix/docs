@@ -121,7 +121,7 @@ You need `repo` permissions for your token.
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
-To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
+To get a PAT for your user account, see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
 
 You need `write_repository` permission for the token.
 
@@ -248,7 +248,7 @@ Internet Explorer is no longer supported in Studio Pro 9. As the market is movin
 <br />
 As of Studio Pro 9, app end-users still using IE will be shown an **Unsupported Browser** message stating that upgrading to a modern browser is required. You can [customize this message](/howto9/front-end/customize-styling-new/#customize-unsupported-browsers) to meet your needs.<br />
 <br />
-If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) and [7](/releasenotes/studio-pro/7.23/) will continue supporting IE11. Mendix recommends using Studio Pro 8 or 7 until your app end-users have upgraded their browsers.
+If you still need to support IE11, note that Studio Pro [8](/releasenotes/studio-pro/8.18/) will continue supporting IE11. Mendix recommends using Studio Pro 8 until your app end-users have upgraded their browsers.
 {{% /alert %}}
 
 ## 10 Mobile Operating Systems {#mobileos}

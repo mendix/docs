@@ -57,7 +57,7 @@ To interact with Snowflake, you must configure your Mendix app to execute SQL qu
            FROM EXAMPLE_RBAC;
     ```
 
-3. Fill out the **Timeout**,  **Database**, **Schema**, and **Warehouse** fields as required.
+3. Fill out the **Timeout**, **Database**, **Schema**, and **Warehouse** fields as required.
 4. In the **Role** field, specify the Snowflake user role to be used for executing the query, or leave the field blank if you want the statement to be executed with the user's default role in Snowflake. Keep in mind that the user only has access to the warehouse, schema, database, and data granted to their assigned user role.
 5. Add a **Retrieve Objects** action after the **Statement** object.
 6. In the **XPath constraint** field, enter the following XPath: `[SnowflakeRESTSQL.ConnectionDetails_Account = $currentUser]`

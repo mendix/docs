@@ -133,7 +133,7 @@ Once you publish the connector and someone imports it in their Mendix app, all o
 Distribute the module to whomever wants to use it (share the file or upload to Marketplace) by following these steps: 
 
 1. Keep the release notes ready.
-2. Deploy to GITHub by doing the following:
+2. Deploy to GitHub by doing the following:
     * Commit code to GitHub (if you have not already made this a Git project)
     * Create new release
 3. Create the release in Marketplace using the release from GitHub.

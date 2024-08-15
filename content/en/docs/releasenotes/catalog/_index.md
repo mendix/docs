@@ -12,6 +12,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### August 01, 2024
+
+#### Fixes
+
+* We fixed a bug where notifications about newly-registered endpoints were not showing the correct number.
+
 ### July 18, 2024
 
 #### Fixes

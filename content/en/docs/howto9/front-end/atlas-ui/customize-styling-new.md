@@ -290,13 +290,13 @@ The bullets below describe the file structure for the theme folder and for modul
         * **web** — This folder (and subfolders) contain the web resources for the standard Mendix supported widgets.
         * **native** — This folder (and subfolders) contain the native mobile resources for the standard Mendix supported widgets.
     * **{MODULE_NAME}** — Per module a folder is created which can contain styling resources for (progressive) web apps and native mobile apps.
-        * **web** — This folder contains re-useable web resources
+        * **web** — This folder contains re-usable web resources
             * *main.scss* — This file is the starting point for the module web based styling.
             * *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **native** — This folder contains re-useable native mobile resources.
+        * **native** — This folder contains re-usable native mobile resources.
             * *main.js* — This file is the starting point for the module native mobile based styling.
             * *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
-        * **public** — This folder can contain other re-useable resources like a custom *login.html* page or images and fonts used from your web styling.
+        * **public** — This folder can contain other re-usable resources like a custom *login.html* page or images and fonts used from your web styling.
 
 ## 7 Styling output {#styling-output}
 
@@ -307,7 +307,7 @@ With the modular structure of the styling of Mendix app, the styling files are p
 Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
 {{% alert color="info" %}}
-The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>{F4}</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. 
+The content of this folder is regenerated regularly (for example when opening the app or pressing <kbd>F4</kbd>) and therefore should not be changed manually. Also note, that the **theme-cache** folder is included when uploading your app to Team Server. 
 {{% /alert %}}
 
 If a module contains styling, such as a design system module, it is generally best practice to mark the module as a UI resources module. This will make it possible to explicitly set a compilation order in the theme settings. For more information, see the [Create a Theme Module](#create-theme-mod) section above.
@@ -565,13 +565,13 @@ By default, Mendix generates the *index.html* (the page that is loaded to start 
 
 Cache busting is where a browser is told by the web server to re-download page resources (such as images, stylesheets, or JavaScript) because of changes in those resources. Mendix automatically takes care of this by adding dynamic query parameters on top of the resources in *login.html* and *index.html*. Here is an example of the auto-generated cachebust query parameters in a line from */deployment/web/index.html*:
 
-```html {lineos=false}
+```html {linenos=false}
 <script src="mxclientsystem/mxui/mxui.js?638184496048312490"></script>
 ```
 
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
-```html {lineos=false}
+```html {linenos=false}
 <script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
 ```
 

@@ -253,7 +253,7 @@ There are 50 targeted users and 10 of them are required to participate in the ta
 | Votes    | 3   | 5   | 1   |
 
 * In case the next participant votes outcome A or C, the remaining votes will never reach the threshold of `60%`. As a result, the task will complete with the fallback outcome.
-* In case the last two participants vote for outcome B, the task will be completed with outcome B , as it is the first outcome that reaches the threshold of `60%`.
+* In case the last two participants vote for outcome B, the task will be completed with outcome B, as it is the first outcome that reaches the threshold of `60%`.
 * In case the next participant votes for outcome B and the last participant votes for either outcome A or C, none of the outcomes reaches the threshold of `60%`. As a result, the task will complete with the fallback outcome.
 
 You can refer to the following properties settings for this example:

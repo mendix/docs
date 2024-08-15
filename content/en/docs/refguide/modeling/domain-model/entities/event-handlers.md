@@ -18,7 +18,7 @@ When events are triggered from microflows you can choose to bypass the event han
 {{% /alert %}}
 
 {{% alert color="info" %}}
-If the specified event is applied to a list of objects (if, for example, you are committing a list of objects), the handler will be triggered for all the objects first, and then the event will be applied to the list. In the given example,  the handler will run on all the objects first and then all the objects in the list will be committed.
+If the specified event is applied to a list of objects (if, for example, you are committing a list of objects), the handler will be triggered for all the objects first, and then the event will be applied to the list. In the given example, the handler will run on all the objects first and then all the objects in the list will be committed.
 
 If your handler relies on the event having already been applied to another object in a list, you should loop through the list and apply the event to each object in turn.
 {{% /alert %}}

@@ -52,7 +52,7 @@ The following custom settings can be configured:
 | <a id="commendixcoreSessionIdCookieName" href="#commendixcoreSessionIdCookieName">com.<wbr>mendix.<wbr>core.<wbr>SessionIdCookieName</a> | Defines the name of the cookie value which represents the session ID. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | <a id="commendixcoreStorageService" href="#commendixcoreStorageService">com.<wbr>mendix.<wbr>core.<wbr>StorageService</a> | Defines which storage service module will be used. The storage service module takes care of storing the actual files associated with `System.FileDocument` objects, such as uploaded files. Possible values are `com.mendix.storage. localfilesystem`, `com.mendix.storage.s3`, and `com.mendix.storage.azure`. | com.<wbr>mendix.<wbr>storage.<wbr>localfilesystem |
 | <a id="commendixcoreUseMimeDecoderForBase64" href="#commendixcoreUseMimeDecoderForBase64">com.<wbr>mendix.<wbr>core.<wbr>UseMimeDecoderForBase64</a> | The setting defines whether to use the Basic decoder ([RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648)) or MIME decoder ([RFC 2045](https://datatracker.ietf.org/doc/html/rfc2045)) when decoding base64 binary data. The Basic decoder is recommended due to its strictness in not accepting any character outside the Base64 specification, see [Security Considerations](https://datatracker.ietf.org/doc/html/rfc4648#section-12). This setting exists for reasons of backward compatibility. <br/>{{% alert color="warning" %}}Using the MIME decoder is deprecated and the option will be removed in future versions.{{% /alert %}} | false |
-| <a id="commendixstoragePerformDeleteFromStorage" href="#commendixstoragePerformDeleteFromStorage">com.<wbr>mendix.<wbr>storage.<wbr>PerformDeleteFromStorage</a> | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. | true |
+| <a id="commendixstoragePerformDeleteFromStorage" href="#commendixstoragePerformDeleteFromStorage">com.<wbr>mendix.<wbr>storage.<wbr>PerformDeleteFromStorage</a> | Defines whether a delete of a Mendix file document should result in an actual delete in the storage service. A reason to not perform an actual delete in the storage service can be when it is also used as a backup service. The options are: <ul><li>`AllFiles` – Deletes files from file storage</li><li>`TemporaryFiles` – Deletes files which were created during a transaction but not referenced by any file document from file storage </li><li>`NoFiles` – No files are deleted from file storage.</ul>Additionally, we have legacy options `true` (same as `AllFiles`) and `false` (same as `TemporaryFiles`) which will be deprecated in the future. | true |
 | <a id="commendixcoreProcessedTasksCleanupAge" href="#commendixcoreProcessedTasksCleanupAge">com.<wbr>mendix.<wbr>core.<wbr>ProcessedTasksCleanupAge</a> | This setting specifies (in milliseconds) how old objects in the System.<wbr>ProcessedQueueTask have to be before they are removed from the database. See [Task Queue](/refguide/task-queue/#cleanup) for more details. | 365 days for projects migrated from Mendix 9 and 7 days for new projects or projects with an empty database. |
 | <a id="commendixcoreProcessedTasksCleanupBatchSize" href="#commendixcoreProcessedTasksCleanupBatchSize">com.<wbr>mendix.<wbr>core.<wbr>ProcessedTasksCleanupBatchSize</a> | This setting specifies how many System.<wbr>ProcessedQueueTask objects will be removed from the database each time the ProcessedTask cleanup action runs. See [Task Queue](/refguide/task-queue/#cleanup) for more details. <br />*This setting was introduced in Mendix version 10.9.0* | 10000 |
 | <a id="EnableApacheCommonsLogging" href="#EnableApacheCommonsLogging">EnableApacheCommonsLogging</a> | Some libraries used by the Mendix runtime use [Apache Commons](https://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. | false |
@@ -96,7 +96,7 @@ Examples of the second case are OData contracts, sending mails to your organizat
 
 #### 2.1.1 Multiple External Domains
 
-Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port` ,  `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
+Mendix systems like OData that generate content based on a http request to the server, will use the headers passed (for example, by a proxy) to generate content. These headers are `X-Forwarded-Proto`, `X-Forwarded-Scheme`, `X-Forwarded-Host`, `X-Forwarded-Port`, `X-Forwarded-Prefix` and `Host`. For Mendix 10 and above, `ApplicationRootUrl` will take precedence over these headers. If you host a single application on two or more domains, you will have to choose one of the domains to represent the public-facing URL.
 
 ## 3 Log File Settings
 
@@ -118,7 +118,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="DatabaseType" href="#DatabaseType">DatabaseType</a> | Defines the database engine which is used as the Mendix database. Valid values are `HSQLDB`, `MYSQL`, `ORACLE`, `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | <a id="DatabaseUserName" href="#DatabaseUserName">DatabaseUserName</a> | Name required for authentication to the database. | |
 | <a id="DatabasePassword" href="#DatabasePassword">DatabasePassword</a> | Password for the `DatabaseUserName` supplied above. | |
-| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
+| <a id="DatabaseHost" href="#DatabaseHost">DatabaseHost</a> | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseName" href="#DatabaseName">DatabaseName</a> | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply [DatabaseJdbcUrl](#DatabaseJdbcUrl). | |
 | <a id="DatabaseJdbcUrl" href="#DatabaseJdbcUrl">DatabaseJdbcUrl</a> | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | <a id="DatabaseUseSsl" href="#DatabaseUseSsl">DatabaseUseSsl</a> | When `true`, the connection will be made using SSL without certificate validation. If you need certificate validation, use [DatabaseJdbcUrl](#DatabaseJdbcUrl) instead.<br />When `false`, the connection will be made without SSL (this is only relevant for SQL Server, which uses SSL by default). | |
@@ -132,7 +132,7 @@ The settings below influence the behavior of the log files. These settings can o
 
 ### 4.2 Connection Pooling {#connection-pooling}
 
-The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/) . 
+The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/pool/). 
 
 These settings are configured *per runtime instance*. If you have [scaled your application](/developerportal/deploy/scale-environment/), the number of connections on the database side will be multiplied by the number of runtime instances. For example, if you set `ConnectionPoolingMaxIdle` to `50` and scale your app to 2 runtime instances, each runtime instance will create at most 50 connections, but on the database side this will lead to a maximum of 100 connections.
 
@@ -282,7 +282,7 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to |   |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter |   |
 
-## 10 Proxy Settings
+## 10 Proxy Settings {#proxy-settings}
 
 The settings below allow you to use a proxy. 
 
@@ -294,5 +294,11 @@ These settings have to be set as JVM properties, not as custom Runtime settings.
 | --- | --- | --- |
 | <a id="httpproxyHost" href="#httpproxyHost">http.proxyHost</a> | Defines the hostname of the HTTP proxy server. |  |
 | <a id="httpproxyPort" href="#httpproxyPort">http.proxyPort</a> | Defines the port number of the HTTP proxy server. |  |
+| <a id="httpproxyUser" href="#httpproxyUser">http.proxyUser</a> | Defines the user of the HTTP proxy server. | | 
+| <a id="httpproxyPassword" href="#httpproxyPassword">http.proxyPassword</a> | Defines the password of the HTTP proxy server. | | 
 | <a id="httpsproxyHost" href="#httpsproxyHost">https.proxyHost</a> | Defines the hostname of the HTTPS proxy server. |  |
 | <a id="httpsproxyPort" href="#httpsproxyPort">https.proxyPort</a> | Defines the port number of the HTTPS proxy server. |  |
+| <a id="httpsproxyUser" href="#httpsproxyUser">https.proxyUser</a> | Defines the user of the HTTPS proxy server. | | 
+| <a id="httpsproxyPassword" href="#httpsproxyPassword">https.proxyPassword</a> | Defines the password of the HTTPS proxy server. | | 
+
+{{% alert color="info" %}} `http.nonProxyHosts` only affects the license server. {{% /alert %}}

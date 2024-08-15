@@ -42,7 +42,7 @@ When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. 
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/show-test-settings.png" class="no-border" >}}
 
-You are now on the **Settings** page. Here you add environments and selenium hubs.
+You are now on the **Settings** page. Here you add environments and Selenium hubs.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/settings-page.png" class="no-border" >}}
 
@@ -83,7 +83,7 @@ To add a new Selenium hub, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/new-selenium-hub.png" class="no-border" >}}
 
-    This opens the **Select Provider** dialog box. Here you select one of the three supported selenium providers or a custom selenium hub. ATS creates the URL needed to access your selenium provider when you select a supported selenium provider. When you select custom, you must provide the URL yourself. 
+    This opens the **Select Provider** dialog box. Here you select one of the three supported Selenium providers or a custom Selenium hub. ATS creates the URL needed to access your Selenium provider when you select a supported Selenium provider. When you select custom, you must provide the URL yourself. 
 
 2. Click the provider you use.
 3. Set the following parameters:
@@ -91,8 +91,8 @@ To add a new Selenium hub, follow these steps:
     | Field | Description |
     | :--- | :--- |
     | **Name** | The name of the Selenium hub. You can give it any name. |
-    | **Username** | The username of your selenium provider account. This can be different from your login name. |
-    | **Access Key** | The access key for your selenium provider account. |
+    | **Username** | The username of your Selenium provider account. This can be different from your login name. |
+    | **Access Key** | The access key for your Selenium provider account. |
     | **Custom Capabilities** | Can be used to set the Selenium desired capabilities. |
 
 4. Click **Save** to save the settings.
@@ -225,7 +225,7 @@ To create a test suite, follow these steps:
 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
-    * **Parallel** - executes the test steps at same time, depending on your selenium settings.
+    * **Parallel** - executes the test steps at same time, depending on your Selenium settings.
     * **Sequential** - executes the test steps one at a time, like a test case.
     * **Run** – brings you to the **Job Configuration** page.
     * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment).
@@ -270,7 +270,7 @@ Here, you can select your Environment and Selenium hub for ATS to use.
 | **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
 | **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
-When you select a supported selenium provider like Browserstack additional options appear, the **Platform Settings**.
+When you select a supported Selenium provider like BrowserStack additional options appear, the **Platform Settings**.
 
 | Field | Description |
 | --- | --- |

@@ -98,7 +98,7 @@ To set up a template, follow these steps:
 
 6. Configure the **Input Object** to be the file document entity that is associated to your entity to be exported.
 
-    {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifiying **Row Object** in the worksheet definition.{{% /alert %}}
+    {{% alert color="info" %}}The **Input Object** is not mandatory. You can still export required entities by specifying **Row Object** in the worksheet definition.{{% /alert %}}
     
 7. Provide a **Description** for identifying and documenting what this template is for:
 

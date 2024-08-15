@@ -387,6 +387,17 @@ main img {
     border-style: solid;
 }
 
+// Yiyun - Adjust the stack order so that the clickable images set in body-end.html are not overridden by the left sidebar.
+
+img {
+    z-index: 10;
+}
+
+.medium-zoom-overlay{
+    z-index:10;
+    opacity: 0.5 !important;
+}
+
 // DB – custom edit, optional class for preventing borders around images
 .no-border{
     border-style: none;
@@ -803,6 +814,11 @@ nav.foldable-nav {
 .badge-recommended {
     border: solid 1px $success-9;
     color: $success-9;
+}
+
+.badge-react {
+    background-color: $info-1;
+    color: $info-7;
 }
 
 // Swagger styling

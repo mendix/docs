@@ -179,7 +179,7 @@ To access the history of the alerts from your app, follow these steps:
 2. Select the environment that you wish to see alert history for.
 3. You will see an overview of all alerts that have been sent for this application.
 
-    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alerts-history.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/alerts-history.png" >}}
 
     The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 

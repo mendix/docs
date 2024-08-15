@@ -17,7 +17,7 @@ Quick summary:
 | :-------------- | :---------------------- | :--------------- | :------------------ |
 | Local Selenium Server (Docker) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>1</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
 | BrowserStack (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes |
-| SauceLabs (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
+| Sauce Labs (SaaS) | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
 | Selenium SaaS Agent | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/grey.png" class="no-border" >}} Limited<sup>2</sup> | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/red.png" class="no-border" >}} No |
 
 <small><sup>1</sup> This only possible when you prepare your own files on that server. <br>
@@ -34,7 +34,7 @@ This how-to teaches you how to do the following:
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/)
-* Know your Selenium setup (a provider like Browserstack, local server, etc.)
+* Know your Selenium setup (a provider like BrowserStack, local server, etc.)
 
 ## 3 Uploading a File
 
@@ -44,7 +44,7 @@ To upload a file in your app, ATS must have access to that file. Selenium simula
 
 The first situation is that you use Selenium on a local server. This means Selenium has no access to your local files. But you can add these files to the server or create a set of generic test files for that server.
 
-The second situation is that you use Selenium SaaS. This means selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. In the quick summary in [1 Introduction](#introduction) chapter you see which selenium SaaS provides these files.
+The second situation is that you use Selenium SaaS. This means Selenium has no access to your local files unless you use an agent. When you use the agent, situation 1 applies. If you do not use an agent the Selenium SaaS creates a VM session for each test case you run. This means there are no constant values like on your local Selenium server. Some Selenium SaaS providers upload a generic set of test files into each VM session that you can use in your test case. In the quick summary in [1 Introduction](#introduction) chapter you see which Selenium SaaS provides these files.
 
 The third situation is that you use a Selenium SaaS agent. ATS executes the test on the machine on which you installed the agent. In most cases this is a server inside your network. ATS can find all the files on this machine.
 

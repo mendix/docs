@@ -37,7 +37,7 @@ Configure the following options in the **New CI/CD Template** dialog box:
 | Selenium Hub | The Selenium hub where the test is completed. |
 | Browser | The browser that is used for the test: Firefox or Chrome.|
 
-For supported Selenium hubs, like Browserstack, further options are available. For more details, see [Supported Selenium Hub Provider](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
+For supported Selenium hubs, like BrowserStack, further options are available. For more details, see [Supported Selenium Hub Provider](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
 
 ## 3 API {#api}
 

@@ -468,7 +468,7 @@ To set the **Metrics** and **Logs** links:
 ## 5 Generating Metrics{#generating}
 
 {{% alert color="info" %}}It is possible to configure metrics in Mendix Operator v2.4.0 or a later version.
-Older versionso of the Mendix Operator generate metrics in [compatibility mode](#metrics-generation-modes) and do not have any options to configure metrics.{{% /alert %}}
+Older versions of the Mendix Operator generate metrics in [compatibility mode](#metrics-generation-modes) and do not have any options to configure metrics.{{% /alert %}}
 
 It is possible to specify a default metrics configuration for the namespace in [Advanced Operator Configuration](/developerportal/deploy/private-cloud-cluster/#customize-runtime-metrics).
 For each attribute, an environment can provide a custom value; this value will be used instead of the namespace default value.
@@ -516,7 +516,7 @@ This way, upgrading an older Mendix Operator will not change the way it generate
 To enable `compatibility` metrics mode, set the `mode` attribute to `compatibility`.
 In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
-#### 5.1.1 Enable Compability Metrics in Connected Mode
+#### 5.1.1 Enable Compatibility Metrics in Connected Mode
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 2. Go to the **Environments** page.

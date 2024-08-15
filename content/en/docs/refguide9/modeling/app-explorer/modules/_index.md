@@ -48,7 +48,7 @@ There are the following type of modules:
 | [Images](/refguide9/images/) | Images can be used to brighten up your application. Navigation items and the various kinds of buttons have small images (icons) to left of their captions. |
 | [Layouts](/refguide9/layout/) | Layouts specify what comes where. Each  [page](/refguide9/page/) is based on a layout. The layout contains widgets and structures that return on every page based on that layout.  |
 | [Menus](/refguide9/menu/) | A menu document defines a navigation menu that can be used by a  [menu widget](/refguide9/menu-widgets/). |
-| [Snippets](/refguide9/snippet/) | Snippets define reusable interface parts. They can be used on  [pages](/refguide9/page/) and  [layouts](/refguide9/layout/) . |
+| [Snippets](/refguide9/snippet/) | Snippets define reusable interface parts. They can be used on  [pages](/refguide9/page/) and  [layouts](/refguide9/layout/). |
 
 ## 5 Resources
 

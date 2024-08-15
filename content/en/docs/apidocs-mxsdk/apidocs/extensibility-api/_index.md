@@ -23,7 +23,7 @@ If you need to add your own custom UI to Studio Pro, you can achieve this using 
 
 ## 3 Getting Started
 
-For detailed explanation on how to get started with extensions you can check out the [Getting Started Guide](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/).
+For detailed explanation on how to get started with extensions, check out [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/).
 
 You can also check out our examples and [API reference documentation](https://github.com/mendix/ExtensionAPI-Samples).
 

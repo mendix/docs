@@ -258,9 +258,13 @@ When a published entity has the [Deletable](/refguide/published-odata-entity/#de
 
 ## 6 Calling Microflows {#actions}
 
+### 6.1 Request
+
 To call microflows that are published in your OData service, send a `POST` request to the action's endpoint URL (for example, `POST /odata/myservice/v1/OnboardNewEmployee`).
 
 The endpoint URL is defined by the base URL of the OData service and the exposed name of the microflow. To find an example URL, you can open the [Edit published microflow](/refguide/published-odata-microflow/#edit-microflow) dialog box and look at the **Example of location** property.
+
+### 6.2 Passing Arguments in the Request Body
 
 The request body is always a JSON object, with a property for each parameter that is defined in the published microflow. Here is an example:
 
@@ -289,15 +293,55 @@ For parameters whose type is an entity with the **Readable** capability, you can
 
 If the referenced object cannot be found, the action will fail. 
 
-When you pass a value for an attribute that is not writable—such as AutoNumber, Binary attributes, calculated attributes, and system attributes—the value is ignored and the object is passed to the microflow with the default value (for new objects) or the previous value (for existing objects). If it is an attribute that is writable but the current user does not have write rights for that member, the request will fail.
+It is also possible to pass associated objects in the same request by specifying the exposed name of the association and the corresponding value. For an 1-1 or a \*-1 association, the value is a single object. For a 1-\* or a \*-\* association, the value is an array of objects. For example:
 
-If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
+```json
+{
+  "Customer": {
+    "Name": "Lato Bike Services",
+    "Addresses": [
+      {
+        "Type": "SHIPPING",
+        "AddressLine 1": "123 Regent Street",
+        "City": "London",
+        "PostalCode": "W1B 5TG",
+        "Country": "UK"
+      },
+      {
+        "Type": "BILLING",
+        "AddressLine 1": "456 Oxford Street",
+        "City": "London",
+        "PostalCode": "W1D 1BP",
+        "Country": "UK"
+      }
+    ],
+    "PrimaryContact": {
+      "FullName": "John Doe",
+      "Email": "john.doe@latobikes.com",
+      "Phone": "+442092572091"
+    }
+  }
+}
+```
+
+When you pass a value for an attribute that is not writable (such as autonumber and binary attributes, calculated attributes, and system attributes), the value is ignored and the object is passed to the microflow with the default value (for new objects) or the previous value (for existing objects). If it is an attribute that is writable but the current user does not have write rights for that member, the request will fail.
 
 {{% alert type="info" %}}
 An object passed to a microflow will not be committed automatically. If you want the passed object to be saved, you must implement this in the microflow.
 {{% /alert %}}
 
+### 6.3 Response
+
+If the action returns a value, it will always be contained in a JSON object with a single property named `value`.
+
+#### 6.3.1 Retrieving Associated Objects {#retrieve-associated-objects}
+
+If the return value is an entity or a list of entities, it is possible to retrieve objects that are associated to this return entity. To do so, pass the `$expand` query parameter when sending the request. Note that this can only be included in the URI, and not in the request body (as is the case for retrieving objects).
+
+For example, imagine your microflow **FindEmployee** returning an entity **Employee**, that has an association to **Address**. You could retrieve the associated Address object by passing `/odata/myservice/v1/FindEmployee?$expand=Address`.
+
 {{% alert type="info" %}}
 The functionality for [publishing microflows in your OData service](/refguide/published-odata-microflow/) was introduced in Studio Pro [10.2.0](/releasenotes/studio-pro/10.2/).
 Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
+Retrieving associated objects using the `$expand` query parameter is supported in Studio Pro [10.12.0](/releasenotes/studio-pro/10.12/) and later.
 {{% /alert %}}

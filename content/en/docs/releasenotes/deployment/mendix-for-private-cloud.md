@@ -11,6 +11,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### August 15th, 2024
+
+* We now allow rounding off model constants value with decimal type to 10 decimal digits.
+* We have fixed an issue where the build status failed to be retrieved (ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+
 ### July 18th, 2024
 
 #### License Manage CLI v0.8.0
@@ -604,7 +613,7 @@ Your build may fail if you try to deploy the same deployment package more than o
 * We fixed an issue where deployment with spaces in the branch lines triggered an error. (Ticket 167448 and 167577)
 * We have added a new status on the environment details page when environment is attached to a service account.
 * The Cluster Manager can enable and disable development mode in cluster manager page. This will allow the developers to create app in development mode.
-* We added activity log entries whan development mode is enabled or disabled in a Namespace.
+* We added activity log entries when development mode is enabled or disabled in a Namespace.
 
 ### November 14, 2022
 

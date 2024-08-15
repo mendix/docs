@@ -183,7 +183,7 @@ Add tags to categorize a registered service and provide additional means for fin
 
     {{< figure src="/attachments/catalog/curate/service-metadata-tags.png" alt="tags" class="no-border" >}}
 
-3. To add or edit the tags, enter a tag string and press **Enter** or select one from the list of existing tags that are used in the Catalog. To separate multiple tags, use spaces.
+3. To add or edit the tags, enter a tag string and press <kbd>Enter</kbd> or select one from the list of existing tags that are used in the Catalog. To separate multiple tags, use spaces.
 
     {{% alert color="info" %}}Tags can only contain lower-case letters, numbers, and underscores. They must have a minimum of 2 characters. If you use capital letters when typing the tag string, they will be converted to lower-case. {{% /alert %}}
 

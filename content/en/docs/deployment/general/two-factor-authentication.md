@@ -28,7 +28,7 @@ You can set up either [authentication via SMS](#sms-authentication) or [authenti
 
 Once 2FA is set up, whenever you perform an action that requires 2FA, you will receive an authentication code via the authentication method you have configured. You can then provide this code in the Mendix Portal to authenticate yourself.
 
-Whenever you authenticate yourself using 2FA, your browser session will be authorized to complete sensitive operations for the next eight hours.
+Whenever you authenticate yourself using 2FA, your browser session will be authorized to complete sensitive operations for the next eight hours. You will need to reauthenticate after eight hours or if you start a new browser session. Logging out, switching browsers, or switching machines starts a new session.
 
 ### 2.1 Authenticating with SMS{#sms-authentication}
 

@@ -98,7 +98,7 @@ Instead of relying on the model to come up with the best strategy to solve a pro
 
 Provide the model with instructions on the steps to solve the problem. This is normally done by providing one or more examples. This encourages the model to follow those instructions. As an end result, the quality of the output will be higher compared to asking the LLM to come up with the answer right away.
 
-When you want the model to respond in a specific manner or syntax that is hard to describe, it can be particularly useful to provide examples. This technique is known as *One-Shot-Prompting* (1 example) or *Few-Shot-Prompting* (mulitple examples).
+When you want the model to respond in a specific manner or syntax that is hard to describe, it can be particularly useful to provide examples. This technique is known as *One-Shot-Prompting* (1 example) or *Few-Shot-Prompting* (multiple examples).
 
 ```text  {linenos=false}
 You are an classification assistant.

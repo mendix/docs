@@ -161,7 +161,7 @@ To import widgets, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/import-and-export/synchronize-app-directory.png" class="no-border" >}}
 
-    {{% alert color="info" %}}You can also press **F4** to synchronize your app directory.{{% /alert %}}
+    {{% alert color="info" %}}You can also press <kbd>F4</kbd> to synchronize your app directory.{{% /alert %}}
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
 
@@ -203,7 +203,7 @@ Select **Find usages of other user modules** to view the references, or click **
 
 Here you can select files you would like to include in your package. This list includes any files in the **userlib** or **resources** folders in your app directory, as well as widgets that are used in the module you are exporting. If you do not want to include these files, you can uncheck the boxes.
 
-{{% alert color="info" %}}To uncheck all the files quickly, press **<kbd>Ctrl</kbd>+<kbd>A</kbd>** to select all of the items then press the <kbd>spacebar</kbd> to uncheck all the elements.
+{{% alert color="info" %}}To uncheck all the files quickly, press <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all of the items then press <kbd>Space</kbd> to uncheck all the elements.
 {{% /alert %}}
 
 ### 3.3 Exporting Widgets

@@ -139,7 +139,7 @@ You can find and customize these options in [Navigation Profile](/refguide/navig
 
 By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
 
-Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both sperating systems.
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both operating systems.
 
 For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. Once you select this option, any popups options will be disabled and dismissed.
 

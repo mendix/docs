@@ -187,13 +187,9 @@ If the tab pane contains code with an asterisk (`*`) in it, the linter rule for 
 
 ### Videos
 
-#### Vidyard Video
+Mendix videos are hosted on Vidyard. For more information, see [the Videos section of the Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+Icons+and+Videos#Videos).
 
 {{< vidyard "GwE17mzGma5NAvDnXrVdFA" >}}
-
-#### YouTube Video
-
-{{< youtube 5tznw5ZUQgk >}}
 
 ## Other Markdown and HTML Guidelines
 

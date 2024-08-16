@@ -89,7 +89,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be available.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 

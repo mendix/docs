@@ -171,7 +171,7 @@ You can now finish configuring your SAML module in your app by reviewing/updatin
 
 ### 3.1 Configuring Service Provider{#configure-sp}
 
-Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be available in the IdP for the reference of the IdP administrator.
 
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.

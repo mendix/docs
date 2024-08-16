@@ -25,7 +25,7 @@ Before every update it is recommended that you create a backup of your data and 
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/updating-a-mendix-application/2_click_update.png" alt="Step 2, Start the update process" class="no-border" >}}
 
-3. The **Update App** popup that appears shows you information about the current active app. The **App version** shows the release number of the deployment package that is currently running on this server. The **Mendix server version** shows the version of the server distribution being used by the app — this is the same as the Studio Pro version which which the deployment package was created.
+3. The **Update App** popup that appears shows you information about the current active app. The **App version** shows the release number of the deployment package that is currently running on this server. The **Mendix server version** shows the version of the server distribution being used by the app — this is the same as the Studio Pro version with which the deployment package was created.
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/updating-a-mendix-application/3_update_app.png" alt="Step 3, Release details and overview of all server versions" class="no-border" >}}
 

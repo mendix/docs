@@ -244,7 +244,7 @@ This mode only applies to attributes of type Decimal.
 
 If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the [Decimal precision](#decimal-precision) property. The value will be rounded using the method defined in the [Rounding](/refguide/app-settings/#rounding) section of **App Settings**.
 
-If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be displayed if the attribute value is an integer.
 
 Default: *Fixed*
 

@@ -298,7 +298,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
 ## 7 Using Cortex AI functions
 
-Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to to analyze the sentiment of a piece of text.
+Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to analyze the sentiment of a piece of text.
 
 To execute and test the query in Studio Pro, follow these steps:
 

@@ -182,7 +182,7 @@ The [GNU General Public License (GPL), version 3](https://www.gnu.org/licenses/g
 
 You can configure your own proprietary license for your company’s content. The license can be used for multiple components, and it can be used by everyone within your organization. 
 
-This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/sharing-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it it for other components.
+This license can be created for a new **Public Marketplace (all Mendix users)** component by requesting a new license and submitting it alongside the component. The license needs to be [approved by Mendix](/appstore/sharing-content/#guidelines) after you have created and submitted it the first time. Once it has been submitted for approval, you and the people within your organization can also use it for other components.
 
 Follow these steps to configure a proprietary license for a new public component:
 

@@ -196,7 +196,7 @@ Open the *(YourMendixApp)/myPluggableWidgets/textBox* folder in your IDE of choi
     }
     ```
 
-    Unlike the Container component, the Preview component receives mocked values for the the widget attributes. In this case `textAttribute` always receives a string. Thanks to this it is not necessary to deal with a possible `undefined` value.
+    Unlike the Container component, the Preview component receives mocked values for the widget attributes. In this case `textAttribute` always receives a string. Thanks to this it is not necessary to deal with a possible `undefined` value.
 
 7. Once the watcher is done building your widget, go to Studio Pro and **synchronize** your project with <kbd>F4</kbd>. Synchronizing from the file system is a required step after changing the widget definition file. For other changes this is not necessary.  
 

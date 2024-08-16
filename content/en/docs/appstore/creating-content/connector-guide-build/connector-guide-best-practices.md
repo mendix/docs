@@ -108,7 +108,7 @@ All modules have their *.jar* files in the **userlib** folder. In order to speci
 
 4. After implementation libraries are placed into the **userlib** folder, they are available in the Mendix application classpath so they can be used in a Java action in your connector module.
 
-You can also also extend your app with Gradle and add the **Implementation** project as a sub-module. In this case, your implementation project becomes part of your Mendix app. You can use it in Java actions without having to copy the *.jar* files to the **userlib** folder. 
+You can also extend your app with Gradle and add the **Implementation** project as a sub-module. In this case, your implementation project becomes part of your Mendix app. You can use it in Java actions without having to copy the *.jar* files to the **userlib** folder. 
 
 {{% alert color="warning" %}}
 You must have the *.jar* file placed in the  **userlib** folder before exporting the connector module. Otherwise, **Implementation** *.jar* files will not be packaged with the module.

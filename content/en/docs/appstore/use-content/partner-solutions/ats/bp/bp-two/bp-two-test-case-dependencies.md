@@ -143,4 +143,4 @@ Because TC.02 depends on the result of TC.01, ATS must execute TC.01 first. To e
 
 ATS will then execute the contents of the test suite based on the order they are in.
 
-The consequences of option 3 are the same as as those described in [2 Why You Must Not Use Test Case Dependencies](#why).
+The consequences of option 3 are the same as those described in [2 Why You Must Not Use Test Case Dependencies](#why).

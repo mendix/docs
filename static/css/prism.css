@@ -6,9 +6,13 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
+ /* DB - Colors modified for accessibility
+ * Based on https://github.com/ericwbailey/a11y-syntax-highlighting/blob/main/dist/prism/a11y-light.css
+ */
+
  code[class*="language-"],
  pre[class*="language-"] {
-	 color: black;
+	 color: #545454; /* DB - a11y color */ 
 	 background: none;
 	 text-shadow: 0 1px white;
 	 font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -58,7 +62,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  
  :not(pre) > code[class*="language-"],
  pre[class*="language-"] {
-	 background: #f5f2f0;
+	 background: #fefefe; /* DB - a11y color */ 
  }
  
  /* Inline code */
@@ -72,11 +76,11 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  .token.prolog,
  .token.doctype,
  .token.cdata {
-	 color: slategray;
+	 color: #696969; /* DB - a11y color */ 
  }
  
  .token.punctuation {
-	 color: #999;
+	 color: #545454; /* DB - a11y color */ 
  }
  
  .token.namespace {
@@ -90,7 +94,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  .token.constant,
  .token.symbol,
  .token.deleted {
-	 color: #905;
+	 color: #7928a1; /* DB - a11y color */ 
  }
  
  .token.selector,
@@ -99,7 +103,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  .token.char,
  .token.builtin,
  .token.inserted {
-	 color: #690;
+	 color: #008000; /* DB - a11y color */ 
  }
  
  .token.operator,
@@ -107,26 +111,24 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  .token.url,
  .language-css .token.string,
  .style .token.string {
-	 color: #9a6e3a;
-	 /* This background color was intended by the author of this theme. */
-	 background: hsla(0, 0%, 100%, .5);
+	 color: #aa5d00; /* DB - a11y color */ 
  }
  
  .token.atrule,
  .token.attr-value,
  .token.keyword {
-	 color: #07a;
+	 color: #007faa; /* DB - a11y color */ 
  }
  
  .token.function,
  .token.class-name {
-	 color: #DD4A68;
+	 color: #d91e18; /* DB - a11y color */ 
  }
  
  .token.regex,
  .token.important,
  .token.variable {
-	 color: #e90;
+	 color: #aa5d00; /* DB - a11y color */ 
  }
  
  .token.important,
@@ -160,7 +162,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
 	 left: -3.8em;
 	 width: 3em; /* works for line-numbers below 1000 lines */
 	 letter-spacing: -1px;
-	 border-right: 1px solid #999;
+	 border-right: 1px solid #696969; /* DB - a11y color */ 
  
 	 -webkit-user-select: none;
 	 -moz-user-select: none;
@@ -176,7 +178,7 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  
 		 .line-numbers-rows > span:before {
 			 content: counter(linenumber);
-			 color: #999;
+			 color: #696969; /* DB - a11y color */ 
 			 display: block;
 			 padding-right: 0.8em;
 			 text-align: right;

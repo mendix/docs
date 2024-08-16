@@ -188,6 +188,7 @@ By default, end-users are allowed to have multiple sessions simultaneously. This
 
 ### 8.4 Bootstrap Vulnerabilities 
 
+<!--Can we remove this section?-->
 In Mendix 7, Bootstrap is flagged by security scans mainly because of the Bootstrap JavaScript files. Although these files are shipped with the product, they are not used in the Mendix Client, which reduces the attack chance to zero.
 
 We cannot remove these files from Mendix 7 as some customers might have included them in their custom theme, which would break these projects. Neither can we simply update to a new major Bootstrap version as this is not always a match for the current DOM structure of the Mendix widgets, nor is it backward compatible which results in broken styling for many projects.

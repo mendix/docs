@@ -44,7 +44,7 @@ In the **General settings** section, you must provide the following information:
 
 ### 2.2 Profile Settings
 
-If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
+If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets. <!--Should we rewrite this?-->
 
 Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro.
 

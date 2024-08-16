@@ -182,6 +182,6 @@ If your application's navigation bar does not fill the entire screen, you are li
 
 JavaScript actions should be mostly unaffected by React. Problems arise only if you use outdated actions or make extensive use of our [Client API](/apidocs-mxsdk/apidocs/client-api/).
 
-Problems in JavaScript actions are not captured by the consistency checker. To validate that JavaScript actions work with the React client, the checker should be executed with the React client active. Any errors reported by the **Browser Console** (Press F12 to access it) will help identify the problem.
+Problems in JavaScript actions are not captured by the consistency checker. To validate that JavaScript actions work with the React client, the checker should be executed with the React client active. Any errors reported by the **Browser Console** (Press <kbd>F12</kbd> to access it) will help identify the problem.
 
 If you encounter problems with platform-supported JavaScript actions (for example from the [Nanoflow Commons](/appstore/modules/nanoflow-commons/) module) make sure to update the module containing the action from the Marketplace. In most cases, this will resolve the issue. If it is not resolved, reach out to the maintainer of the module and let them know of the issue.

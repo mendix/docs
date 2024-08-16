@@ -40,7 +40,7 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
-## 3 Creating a Cluster and Namespace
+## 3 Creating a Cluster and Namespace {#create-cluster-namespace}
 
 ### 3.1 Creating a Cluster {#create-cluster}
 
@@ -64,7 +64,7 @@ Should you consider using a connected environment, the following URLs should be 
 
 7. Enter the following information:
 
-    * **Installation Type**  – Choose **Global Installation** if you want a single Operator namespace to manage multiple namespaces, or **Namespace Installation** if you want the Operator to only manage one namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
+    * **Installation Type** – Choose **Global Installation** if you want a single Operator namespace to manage multiple namespaces, or **Namespace Installation** if you want the Operator to only manage one namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
     * **Cluster Name** – The name that you want to give the cluster which you are creating.
     * **Cluster Type** – Choose the correct type for your cluster. For more information, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
     * **Description** – An optional description of the cluster which will be displayed under the cluster name in the Cluster Manager.
@@ -502,10 +502,10 @@ spec:
 The following fields can be configured:
 
 * `liveness`, `readiness`, and `terminationGracePeriodSeconds` – these are used for all Mendix app deployments in the namespace; any changes made in the deployments will be discarded and overwritten with values from the `OperatorConfiguration` resource
-* `sidecarResources` –  this is used for all `m2ee-sidecar` containers in the namespace
+* `sidecarResources` – this is used for all `m2ee-sidecar` containers in the namespace
 * `metricsSidecarResources` – this is used for all `m2ee-metrics` containers in the namespace
 * `runtimeResources` – this is used for `mendix-runtime` containers in the namespace (but this is overwritten if the Mendix app CRD has a resources block)
-* `buildResources`  – this is used for the main container in `*-build` pods
+* `buildResources` – this is used for the main container in `*-build` pods
 
 {{% alert color="info" %}}
 Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck of the Mendix Runtime.
@@ -1462,7 +1462,7 @@ Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste*
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image35.png" class="no-border" >}}
 
-You can now copy and paste with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>V</kbd> in the terminal.
+You can now copy and paste with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> in the terminal.
 
 ### 9.2.2 Unable to Click a Button
 
@@ -1472,7 +1472,7 @@ If you highlight a button instead of clicking the button, you may need to disabl
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image37.png" class="no-border" >}}
 
-After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with **<kbd>Ctrl</kbd>+<kbd>C</kbd>** and reopening the tool with the installation command.
+After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with <kbd>Ctrl</kbd> + <kbd>C</kbd> and reopening the tool with the installation command.
 
 ## 10 Containerized Mendix App Architecture  {#containerized-architecture}
 

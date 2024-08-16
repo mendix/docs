@@ -22,9 +22,24 @@ The v2 Deploy API only supports the endpoints listed here. For all other deploym
 Mendix recommends using calls from the same version of the API where possible. This is because the naming varies across versions. For example, the `{appId}` in the version 4 API is retrieved as the `{ProjectId}` from the version 1 API.
 {{% /alert %}}
 
-## 2 Authentication{#authentication}
+The Deploy API v2 requires authentication via API keys that are bound to your Mendix account.
 
-The Deploy API requires authentication via API keys, as discussed in the [Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication) section of *Deploy API v1*.
+### 2.1 Obtaining an API Key
+
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### 2.2 Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### 2.3 Configuring Permissions
+
+Because APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, API access must be explicitly allowed for team members who want to use the Deploy API.
+
+To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Rights** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
 ## 3 API Calls
 

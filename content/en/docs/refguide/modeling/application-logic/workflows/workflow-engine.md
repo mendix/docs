@@ -24,7 +24,7 @@ The Workflow Engine stores the state of the workflow instances in the database. 
 
 ### 2.1 Definition-Related Entities {#definition}
 
-Objects of definition-related entities are created automatically  by the Workflow Engine when the app is started and are based on the app’s model. The following entities are definition-related:
+Objects of definition-related entities are created automatically by the Workflow Engine when the app is started and are based on the app’s model. The following entities are definition-related:
 
 * **System.WorkflowDefinition** – It represents your workflow in the database. This entity gets one object per workflow as defined in your app in Studio Pro. 
 * **System.WorkflowUserTaskDefinition** – It represents your [user tasks](/refguide/user-task/) and [system activities](/refguide/call-microflow/) in the database. This entity gets one object per user task/system activity inside a workflow as defined in the app in Studio Pro. 

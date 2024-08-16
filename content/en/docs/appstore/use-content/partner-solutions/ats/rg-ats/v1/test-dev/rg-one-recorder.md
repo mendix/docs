@@ -22,7 +22,7 @@ Some recorded test steps offer you multiple actions to choose from, for example 
 Current limitations on recording:
 
 * Clicking the datagrid search button is only recorded on Mendix >=5.19
-* Multi-select in grids via CTRL + click not recorded
+* Multi-select in grids via <kbd>Ctrl</kbd> + click not recorded
 * Switching between browser tabs/windows not recorded
 * Assertions cannot be recorded yet
 * Generating nice descriptions with labels only works if you use the new label function in Mendix

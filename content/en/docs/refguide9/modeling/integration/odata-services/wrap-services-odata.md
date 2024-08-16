@@ -68,7 +68,7 @@ This feature is only available for published OData services that use OData v4.
 Inside a published OData service, you can expose entities as published resources and select how GET requests are handled. Do the following:
 
 1. Open the published service, and in the **Entities** field, click **Add**.
-2. Choose an entity to add to to the published service and click **OK**.
+2. Choose an entity to add to the published service and click **OK**.
 3. Highlight the selected entity, and under the **Entities** field, click **Edit**.
 4. Under **Readable**, choose to **Call a Microflow**.
 5. Click **Select** and create a new microflow to handle the GET request.

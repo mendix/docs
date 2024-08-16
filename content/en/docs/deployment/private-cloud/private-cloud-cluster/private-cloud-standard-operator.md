@@ -78,7 +78,7 @@ You can do this as follows:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image11.png" class="no-border" >}}
 
-6. Paste the command into your command line terminal and press Enter.
+6. Paste the command into your command line terminal and press <kbd>Enter</kbd>.
 
 ## 4 Running the Configuration Tool {#running-the-tool}
 

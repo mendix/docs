@@ -169,7 +169,7 @@ To define, test and execute the query in Studio Pro, follow these steps:
     ,      max(avg_temperature_air_2m_f) as max_temp_f
     ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
     from   STANDARD_TILE.HISTORY_DAY
-    group  by date_valid_std
+    group by date_valid_std
     order by DATE_VALID_STD asc
     ```
 
@@ -209,7 +209,7 @@ with days as (
     ,      max(avg_temperature_air_2m_f) as max_temp_f
     ,      round(max((avg_temperature_air_2m_f - 21) * (5/9)),1) as max_temp_c
     from   STANDARD_TILE.HISTORY_DAY
-    group  by date_valid_std
+    group by date_valid_std
     order by DATE_VALID_STD asc
 )
 select d1.DATE_VALID_STD
@@ -298,7 +298,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
 ## 7 Using Cortex AI functions
 
-Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to to analyze the sentiment of a piece of text.
+Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to analyze the sentiment of a piece of text.
 
 To execute and test the query in Studio Pro, follow these steps:
 

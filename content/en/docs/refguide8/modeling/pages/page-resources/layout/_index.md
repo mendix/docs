@@ -15,7 +15,7 @@ Layouts can be based on other layouts, in which case the generic layout is refer
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/16843991.png" class="no-border" >}}
 
-This chain can be as long as is necessary, with a generic layout used throughout the project  as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
+This chain can be as long as is necessary, with a generic layout used throughout the project as a primary layout for a more specific data input layout which is, in turn, used as a primary layout for a specialized edit user layout. 
 
 When opening a new page in the browser, the content found in the layouts is not reloaded if the layout is re-used by the new page. That is, if a user transitions from page A to page B, both of which use layout X, the placeholder content is refreshed, but the layout content is unaffected. This allows for navigation between pages without losing valuable input or performing a costly refresh on elements that do not require one. Example scenarios include a tab container that does not require the user to select the correct tab every time a new page is opened, or a sidebar menu with user input that should not be cleared after every single refresh. 
 

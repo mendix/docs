@@ -25,7 +25,7 @@ For more information, see [Cloud Connector](https://help.sap.com/viewer/cca91383
 
 ## 2 Setup
 
-As is shown in the diagram above, a Mendix Application will automatically bind to a connectivity service after deployment on SAP BTP. This service contains the secure credentials of the SAP Cloud Connector. With this configuration, it becomes possible  for the OData Connector for SAP solutions to get access to an on-premises SAP system.
+As is shown in the diagram above, a Mendix Application will automatically bind to a connectivity service after deployment on SAP BTP. This service contains the secure credentials of the SAP Cloud Connector. With this configuration, it becomes possible for the OData Connector for SAP solutions to get access to an on-premises SAP system.
 
 An important dependency for the SAP Cloud Connector is the JWT token received from the SAP XSUAA service. This means that a Mendix app can only get access to the SAP Cloud Connector if the app has a XSUAA-authenticated user.
 

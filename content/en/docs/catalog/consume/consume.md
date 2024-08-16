@@ -13,7 +13,7 @@ The Catalog is a catalog of OData services exposing datasets that you can use in
 
 ## 2 Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 
@@ -29,7 +29,7 @@ It is good practice for publishers of a service to deprecate a service version i
 
 ### 2.2 Consumed External Entities
 
-When you use an external entity from a published OData service through the [Integration Pane](/refguide/integration-pane/) in Studio Pro, you are consuming the dataset from the service  deployed to a specific environment. 
+When you use an external entity from a published OData service through the [Integration Pane](/refguide/integration-pane/) in Studio Pro, you are consuming the dataset from the service deployed to a specific environment. 
 
 When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/catalog/security/)).
 

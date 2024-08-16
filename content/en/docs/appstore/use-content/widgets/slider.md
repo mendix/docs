@@ -66,7 +66,7 @@ To configure this widget, follow these steps:
                 * **Tooltip** – defines the custom tooltip
     * **No** – if selected, no tooltip is shown
 * **Tooltip always visible**
-    * **Yes** –  if selected, the tooltip is always visible
+    * **Yes** – if selected, the tooltip is always visible
     * **No** (default) – if selected, the tooltip is only shown when the user clicks or moves the slider handle
 * **Show label** 
     * **Yes** – if selected, you can define the label caption

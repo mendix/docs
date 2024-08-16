@@ -98,7 +98,7 @@ It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (muc
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
 * A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
-    * In this case, it  will also be likely you can find long running queries in your application log
+    * In this case, it will also be likely you can find long running queries in your application log
 * Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why three users constantly use 50 parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:

@@ -763,7 +763,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 4. Add yourself (or your Entra group) as an [Entra Admin user](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-powershell#azure-portal-1) in the Azure SQL database.
    Azure SQL can only have one Entra Admin, and to add multiple users you'll need to do grant access through an Entra group.
 5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
-   (replace `<managed-identity-name>` with  the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
+   (replace `<managed-identity-name>` with the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
 
    ```sql {linenos=false}
    DROP USER [<static-database-username>];

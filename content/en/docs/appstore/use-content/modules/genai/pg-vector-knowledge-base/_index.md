@@ -201,7 +201,6 @@ This non-persistent entity, a specialization of [Connection](/appstore/modules/g
 | --------- | ---------------------------------------------------- |
 | `KnowledgeBaseName` | This is the name of the knowledge base |
 
-
 ### 4.2 Activities {#activities}
 
 Activities define the actions that are executed from a microflow or nanoflow. In this module, activities can be found in the form of microflows or Java actions in the **USE_ME > Operations** and the **USE_ME > Configuration** folders.

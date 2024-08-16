@@ -47,15 +47,10 @@ Your IdP can perform create, read, update and delete (CRUD) operations on the us
 The SCIM module also has the following features:
 
 * It has been tested with Entra ID and Okta.
-* It has been tested in combination with SAML and OIDC SSO module.
-
-    | **IdP** | **SAML** | **OIDC SSO** |
-    | --- | --- | --- |
-    | Entra ID | Verified | Verified |
-    | Okta| Verified | Verified |
+* It has been tested in combination with SAML and OIDC SSO module using Entra ID and Okta as an IdP.
 
     {{% alert color="info" %}}
-You need to choose the right attribute mappings to align with the user identifiers. For more information, see the [Attribute Mapping](#attribute-mapping) section below.
+If you are using the SCIM module in combination with Entra ID and OIDC SSO, you need to choose the correct attribute mapping. For more information, see the [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier) section of the *OIDC SSO* and [Attribute Mapping](#attribute-mapping) section below.
     {{% /alert %}}
 
 * Your IdP allows the selection of users that sync with your Mendix app, meaning your IdP controls which users are created and active in your app.
@@ -173,20 +168,30 @@ For reference, the table below gives an overview of attribute mapping when using
 
 | **SCIM payload** (IdP Attribute) | **Configured Entity Attribute** | **Typical value with Okta** (IdP Attribute) | **Typical value with EntraID** (IdP Attribute) |
 | --- | --- | --- | --- |
-| externalID | Name | 00ctc4pufr85d7 | `550e8400-e29b-41d4-a716-446655440000` (for example, ObjectID—configured, non default) |
+| externalID | Name | 00ctc4pufr85d7 | ObjectID (configured, non default) For example, `550e8400-e29b-41d4-a716-446655440000` |
 | familyName| lastname | Doe | Doe John |
 | givenName| firstname | John |  |
 | emails| Email | `john.doe@companyA.com` | `johndoe@companyA.com` |
 | userName| FullName | `johndoe@companyA.com` | `johndoe@companyA.com` |
 | active| Active | true | true |
 
-The table below compares the primary user-identifying attribute used by SCIM (i.e. the External ID) with the identifying claims used by SSO modules.
+{{% alert color="info" %}}
+ In the SCIM protocol, you can configure the `object ID` to identify a user for Microsoft. It is used as the value for the `externalID` claim in SCIM payloads by default. That means, use the `oid` claim as user identifier to introduce SCIM. For more information, see the [Guidance on User Identifier](/appstore/modules/oidc/#guidance-user-identifier) section of the *OIDC SSO*.
+{{% /alert %}}
+
+You can configure the `objectId` in SCIM using the steps below:
+
+1. In the Azure portal, select the application which is integrated with the SCIM module.
+2. Edit the attribute mapping.
+3. For `externalId`, change the **Source attribute** to `objectId`.
+
+The table below compares the primary user-identifying attribute used by SCIM (i.e., the External ID) with the identifying claims used by SSO modules.
 
 | **IdP** | **SSO Module** | **Remark** |
 | --- | --- | --- |
 | Okta | OIDC SSO | SCIM.externalID and OIDC.sub contains same value. |
 | EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contains same value. |
-| Okta | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Configure  Application username to Custom with user.getInternalProperty("id"). |
+| Okta | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Configure Application username to Custom with user.getInternalProperty("id"). |
 | EntraID | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
 
 ### 2.2 Runtime Configuration

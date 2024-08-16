@@ -160,7 +160,7 @@ To create a new database, do the following steps:
 1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
     * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
-    * **Connection validation** –  Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
+    * **Connection validation** – Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" class="no-border" >}}
 
@@ -540,7 +540,7 @@ If your app is using Mendix 10.10 (or a later version) consider using the [Azure
 ##### 2.5.1.2 Limitations
 
 * Passwords can only be rotated manually.
-* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not  affect performance of other databases on the same server.
+* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not affect performance of other databases on the same server.
 * NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 
@@ -2278,7 +2278,7 @@ To create the required storage plans, do the following steps:
       * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic` to use an entry-level tier. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
       * **Maximum Size** - Specifies the database maximum size, for example `1 GB`.
 
-{{% alert color="warning" %}}To avoid unexpected costs associated with the default Azure SQL database tier, set **Edition** and **Service Objective** to `Basic`. If a higher database tier is needed later, the Azure Portal allows to change the database tier of any database.{{% /alert %}}
+    {{% alert color="warning" %}}To avoid unexpected costs associated with the default Azure SQL database tier, set **Edition** and **Service Objective** to `Basic`. If a higher database tier is needed later, the Azure Portal allows to change the database tier of any database.{{% /alert %}}
 
 4. In the **Storage Plan** configuration tab, select `azure-blob` as the storage type, and provide the following details:
 

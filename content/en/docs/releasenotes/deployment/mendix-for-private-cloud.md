@@ -11,6 +11,15 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### August 15th, 2024
+
+* We now allow rounding off model constants value with decimal type to 10 decimal digits.
+* We have fixed an issue where the build status failed to be retrieved (ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
+
 ### July 18th, 2024
 
 #### License Manage CLI v0.8.0
@@ -836,7 +845,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 
 #### Portal Improvements
 
-* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to  deploy a Mendix 7 or Mendix 8 app.
+* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to deploy a Mendix 7 or Mendix 8 app.
 
 ### September 27, 2021
 

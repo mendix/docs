@@ -31,7 +31,7 @@ You can perform the following actions within image collections using the icons a
 
 {{< figure src="/attachments/refguide9/modeling/pages/page-resources/image-collection/actions.png" alt="Image collection actions" class="no-border" >}}
 
-Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd>+<kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
+Some of the actions can be applied to multiple images. You can select all images with <kbd>Ctrl</kbd> + <kbd>A</kbd>, or multiple images by combining your click with <kbd>Ctrl</kbd> or <kbd>Shift</kbd>.
 
 ### 3.1 Add
 
@@ -39,7 +39,7 @@ The **Add** button allows you to add a new image from a file to your image colle
 
 The following image formats are supported: *png*, *jpeg*, *gif*, *bmp*, and *svg*.
 
-You can also add an image to your collection using <kbd>Ctrl</kbd>+<kbd>N</kbd>.
+You can also add an image to your collection using <kbd>Ctrl</kbd> + <kbd>N</kbd>.
 
 ### 3.2 Rename
 

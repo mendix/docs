@@ -119,7 +119,7 @@ Clicking **Save** adds the test suite to the list of scheduled items. Click **Ed
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testsuite-g.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-In case repeat is set to **Yes**, ATS will run the test until you mark it as inactive or remove the repeat settings. An active test is marked green and an inactive test is marked grey. An example can can be seen in the image above.
+In case repeat is set to **Yes**, ATS will run the test until you mark it as inactive or remove the repeat settings. An active test is marked green and an inactive test is marked grey. An example can be seen in the image above.
 {{% /alert %}}
 
 {{% alert color="info" %}}

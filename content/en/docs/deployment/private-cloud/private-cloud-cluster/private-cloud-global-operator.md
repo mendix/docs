@@ -144,7 +144,6 @@ You can convert a namespace which currently uses the standard operator to be a G
 Once all the standard namespaces within a cluster created on portal side are converted to Global Operator Managed namespace, then the status of the cluster would be changed to **Conversion Finalized**, otherwise it will show **Conversion in Progress** if not all the namespaces within that cluster are converted.
 {{% /alert %}}
 
-
 ## 4 Licensing
 
 ### 4.1 Installing Private Cloud License Manager

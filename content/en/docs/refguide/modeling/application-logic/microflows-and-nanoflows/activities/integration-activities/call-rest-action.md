@@ -2,6 +2,8 @@
 title: "Call REST Service"
 url: /refguide/call-rest-action/
 weight: 10
+aliases:
+    - /refguide/using-a-proxy-to-call-a-rest-service/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
@@ -81,7 +83,7 @@ Default value: *300 seconds*
 
 ### 4.5 Proxy Configuration
 
-In almost all cases, you can ignore this setting. **Use app settings** is a good default value.
+In almost all cases, you can ignore this setting. **Use app settings** is a good default value. For more information about app settings, see the *Proxy Settings* section of [Runtime Customization](/refguide/custom-settings/#proxy-settings).
 
 If desired, you can configure whether to use a proxy for the request. These are the choices:
 
@@ -175,7 +177,7 @@ This option allows you to send binary data (for example, the contents of a FileD
 
 This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
 
-FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
+FileDocuments and images are also supported for this option when used as variables in microflow expressions.
 
 For each part, you can specify the HTTP headers. For each part, by default, the **Content-Disposition**  (for file documents and images) and **Content-Type** (for all parts) headers are added. You can specify different values for these headers, or add other headers.
 

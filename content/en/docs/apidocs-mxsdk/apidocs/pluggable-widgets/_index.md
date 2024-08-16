@@ -1,7 +1,7 @@
 ---
 title: "Pluggable Widgets API"
 url: /apidocs-mxsdk/apidocs/pluggable-widgets/
-description: "This API helps you to understand pluggable widgets, how they extend app  functionality, and how they can be built to interact with Mendix's APIs in Mx10."
+description: "This API helps you to understand pluggable widgets, how they extend app functionality, and how they can be built to interact with Mendix's APIs in Mx10."
 no_list: false
 description_list: true
 weight: 90
@@ -9,7 +9,7 @@ weight: 90
 
 ## 1 Introduction
 
-Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more  advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
+Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
 
 * [Mendix 9](/apidocs-mxsdk/apidocs/pluggable-parent-9/)
 * [Mendix 8](/apidocs-mxsdk/apidocs/pluggable-parent-8/)
@@ -52,7 +52,7 @@ The above interface could be used this way: a component uses a `canExecute` flag
 
 ## 3 Widget Package {#widget-package}
 
-A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your app's `widgets` directory. Mendix Studio Pro discovers all widgets in your app when you open your app, add a widget through the Marketplace, or  click **App** > **Synchronize App Directory**.
+A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your app's `widgets` directory. Mendix Studio Pro discovers all widgets in your app when you open your app, add a widget through the Marketplace, or click **App** > **Synchronize App Directory**.
 
 Manually building a widget package can be difficult, so Mendix recommends you use scripts provided by the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget). For more information on how to use a generator, see [How To Build a Text Box Pluggable Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/).
 
@@ -168,7 +168,7 @@ When your widget is published in Marketplace and is assigned a special toolbox c
 
 #### 4.2.2 Help Page {#help}
 
-You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>{F1}</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
+You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>F1</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/widget-dialog-help-button.png" alt="basic widget" class="no-border" >}}
 

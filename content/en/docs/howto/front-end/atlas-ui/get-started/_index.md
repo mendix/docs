@@ -52,4 +52,4 @@ Mendix apps come out of the box with the default Atlas look and feel, which can 
 
 ## 6 Re-Using Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in  [Create a Company Design System](/howto/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/) or to group certain UI functionality together.

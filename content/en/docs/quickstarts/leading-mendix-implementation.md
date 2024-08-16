@@ -998,7 +998,7 @@ A sample agenda for a successful project kickoff might include:
 
 ### 6.2 Create Your Project and Make Sure Everyone Has Access
 
-Anyone can sign up to the Mendix platform using their business email address, so there is no need to on-board a specific list of users. All they need to do is go to [signup.mendix.com](http://signup.mendix.com) and use the relevant company email domain (any from the list you have added in section 5.2). 
+Anyone can sign up to the Mendix platform using their business email address, so there is no need to on-board a specific list of users. All they need to do is go to [signup.mendix.com](https://signup.mendix.com) and use the relevant company email domain (any from the list you have added in section 5.2). 
 
 If you are working with implementation partners, you need to decide **how to give those team members access to your app projects**.
 

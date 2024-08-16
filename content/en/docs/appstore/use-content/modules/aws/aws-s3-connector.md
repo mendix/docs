@@ -61,7 +61,7 @@ After you configure the authentication profile for Amazon S3, you can implement 
 4. Drag the **CreateBucket** activity onto the microflow you are working on.
 5. Double-click the **CreateBucket** activity and configure the **AWS_Region** parameter by doing the following steps:
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/use-content/modules/aws-s3-connector/awsregions.png" alt="The list of AWS regions" class="no-border" >}}
@@ -165,7 +165,7 @@ The entities in the table below describe all generalizations. These are reused b
 | --- | --- |
 | `BucketName` | Describes the name of the bucket that includes the desired list of the objects |
 | `Delimiter` | Describes a character you use to group keys |
-| `MaxKeys` | Describes  the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
+| `MaxKeys` | Describes the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
 | `Prefix` | Describes the prefix that can be used to limit the response to keys that begin with the specified prefix |
 | `ContinuationToken` | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
 | `StartAfter` | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. `StartAfter` can be any key in the bucket |
@@ -175,7 +175,7 @@ The entities in the table below describe all generalizations. These are reused b
 | Attribute | Description | 
 | --- | --- |
 | `IsTruncated` | Describes whether all results were returned. If all are returned, this value is set to **true**, otherwise it is set to **false** |
-| `KeyCount` | Describes the number of keys returned with this request. `KeyCount` will always be less than or equal to the `MaxKeys` field  of the `ListObjectsRequest`. For example, if you ask for 50 keys, your result will include 50 keys or fewer |
+| `KeyCount` | Describes the number of keys returned with this request. `KeyCount` will always be less than or equal to the `MaxKeys` field of the `ListObjectsRequest`. For example, if you ask for 50 keys, your result will include 50 keys or fewer |
 | `NextContinuationToken` | Describes whether there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this `NextContinuationToken`. `NextContinuationToken` is obfuscated and is not a real key |
 
 #### 4.1.12 ListedObject {#listedobject}
@@ -365,7 +365,7 @@ It returns the presigned url as a String. The input and output for this service 
 | Input | Output | 
 | --- | --- | 
 | `AbstractS3Request`, `AWS_Region`, `Credentials` | `String` |
-=======
+
 #### 4.3.11 HeadBucket {#headbucket}
 
 The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucket is located, check if the bucket exists, and verify if you have access to the bucket. Furthermore it determines if the bucket name used in the request is an access point alias. It requires a valid `AWS_Region` parameter, `Credentials`, and a `HeadBucketRequest` object, and it returns a `HeadBucketResponse` object. The input and output for this service are shown in the table below: 
@@ -373,4 +373,3 @@ The `HeadBucket` operation allows you to retrieve the `AWS_Region` where a bucke
 | Input | Output | 
 | --- | --- | 
 | `HeadBucketRequest`, `AWS_Region`, `Credentials` | `HeadBucketResponse` |
-

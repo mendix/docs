@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the Data Widgets module, 
 
 ## 1 Introduction
 
-[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing  widgets that show data in a specific structure.
+[Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing widgets that show data in a specific structure.
 
 This module contains the following widgets:
 

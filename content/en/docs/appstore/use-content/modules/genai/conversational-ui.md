@@ -72,7 +72,7 @@ To help you work with the Conversational UI module, the following sections of th
 
 ### 4.1 Module Roles {#module-roles}
 
-Make sure that the module role `User` is part of the the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
+Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
 
 | Module role | Description |
 | --- | --- |
@@ -125,7 +125,7 @@ The **Create ProviderConfig for ChatContext** toolbox action adds a new `Provide
 
 #### 4.3.1 Action Microflow {#action-microflow}
 
-The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. An example for each  are provided in The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
+The `Action Microflow` is executed by clicking the **Send** button. It handles the interaction between the LLM connectors and the Conversational UI entities. An example for each are provided in The **USE_ME** folder included in the Conversational UI module contains example action microflows for both [OpenAI](/appstore/modules/genai/openai/) and [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can copy these microflows and modify them for your use cases, or use them directly for test purposes.
 
 ##### 4.3.1.1 Using the Action Microflow {#set-action-microflow}
 
@@ -133,7 +133,7 @@ Add the action microflow to an existing `ProviderConfig` by using the **Set Acti
 
 ##### 4.3.1.2 Creating a Custom Action Microflow
 
-If you want to create your own custom action microflow, keep the following considerations in in mind:
+If you want to create your own custom action microflow, keep the following considerations in mind:
 
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` Boolean.

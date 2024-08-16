@@ -56,7 +56,6 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server.
     * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci)).
 
-
 ## 7 Release Notes
 
 {{% alert color="info" %}}

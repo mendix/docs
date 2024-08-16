@@ -54,7 +54,7 @@ The Excel Importer module has many different properties. The sections below pres
 
 These properties control the global behavior of the import.
 
-#### 4.1.1 Autonumber, Name  and Description
+#### 4.1.1 Autonumber, Name and Description
 
 These fields are intended to make it easier for you to see what the import does. There are no special restrictions or validations for these fields.
 
@@ -100,7 +100,7 @@ This property specifies what is going to be processed, which is the value of a s
 The following options are available:
 
 * **Cell value** – processes the value of a specific cell
-* **Document property – row number** –  uses the row number (this value is set in each instance that is created)
+* **Document property – row number** – uses the row number (this value is set in each instance that is created)
 * **Document property – sheet number** – uses the sheet number (this value is set in each instance that is created)
 
 #### 4.2.2 Number and Caption

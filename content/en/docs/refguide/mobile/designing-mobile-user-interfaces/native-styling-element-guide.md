@@ -174,7 +174,7 @@ The default class to style all page titles is named `PageTitle`.
 
 ## 5 Structure Widgets
 
-Structure  widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](/refguide/structure-widgets/).
+Structure widgets are a set of tools that allow you to provide structure for your page’s content. There is also a specific widget called container widget detailed below. For more information on these widgets, see [Structure](/refguide/structure-widgets/).
 
 ### 5.1 Layout Grid
 
@@ -1312,7 +1312,7 @@ The slider widget simply allows you to change a number value using a slider. Thi
 
 {{< figure src="/attachments/refguide/mobile/native-mobile/native-styling-refguide/slider.png" alt="slider"   width="300"  class="no-border" >}}
 
-This widget supports the same style properties as the [range slider] (#range-slider) widget above.
+This widget supports the same style properties as the [range slider](#range-slider) widget above.
 
 The default class to style all slider inputs is named `com_mendix_widget_native_slider_Slider`.
 

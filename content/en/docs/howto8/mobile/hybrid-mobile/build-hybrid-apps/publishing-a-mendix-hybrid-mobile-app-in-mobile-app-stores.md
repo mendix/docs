@@ -119,7 +119,7 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/yellow-lock.png" alt="yellow lock" class="no-border" >}}
 
-6. Click **Apps** at the top of the page to go to an overview showing your apps. Click  your app's name or logo to see the app's details.
+6. Click **Apps** at the top of the page to go to an overview showing your apps. Click your app's name or logo to see the app's details.
 7. Select the correct key for your app. Next to the text **iOS**, there is a drop-down menu with the **No key selected** option. From the drop-down menu, select the newly uploaded key which should be listed under **unlocked**.
 
 Your PhoneGap Build account is now ready and you can continue the packaging process.

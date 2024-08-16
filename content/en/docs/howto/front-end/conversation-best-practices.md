@@ -1,7 +1,7 @@
 ---
 title: "Conversational AI Design Checklist"
 url: /howto/front-end/conversation-checklist/
-linktitle: "Conversation Checklist"
+linktitle: "Conversational Design Checklist"
 weight: 70
 description: "Describes best practices for designing Conversational AI Bots."
 ---
@@ -69,7 +69,7 @@ Don’t just jump right in. Say "Hello."
 
 * Welcome the end-user. Greet the end-user briefly, for example with a simple "Welcome" or "Hi."
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/say-hi1.png" max-width="320px" alt="Hello Ana, How can I help you today?" >}}
 
 ## 3 Tailoring Greetings{#greeting}
 
@@ -146,7 +146,7 @@ Users seek trust and assurance that their personal information is handled secure
 
 * Proactively protect end-users' personal and corporate data. Make sure to also indicate to the end-user that their data is protected.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/protection-and-examples.png" max-width="320px" alt="Use a Protected badge to indicate that data is protected" >}}
 
 * Allow the end-user to delete records of previous conversations and control whether conversation history is stored.
 
@@ -156,7 +156,7 @@ Users seek trust and assurance that their personal information is handled secure
 
 ### 6.1 Why It Matters
 
-Local control allows end-users to adapt the AI's suggestions or outputs to their situation. 
+Local control allows end-users to adapt the AI's suggestions or outputs to their situation.
 
 Additionally, people are more motivated and engaged when they believe they can influence outcomes (self-efficiency). Offering end-user control options reinforces a end-user's sense of self-efficacy and motivates them to interact with the AI system.
 
@@ -169,7 +169,7 @@ Additionally, people are more motivated and engaged when they believe they can i
 
 * Make it easy for the end-user to edit and update a previous prompt to generate a new response.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/cancel-update-button.png" max-width="320px" alt="Show a button to allow end-user to edit a prompt" >}}
 
 * Provide a way to stop or pause the AI interaction.
 
@@ -195,9 +195,13 @@ The input mechanism is the method through which the end-user provides informatio
 
 ### 7.3 Example
 
-* Provide input options via command buttons as well as free text.
+* Provide both inputs of command buttons and free text inputs for the user to navigate the conversation.
 
     {{< figure src="/attachments/howto/front-end/conversation-best-practices/buttons-and-prompts.png" max-width="320px" alt="Suggested questions on buttons and also a text input field" >}}
+
+* Do not limit users to provide free text input.
+
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/free-text.png" max-width="320px" alt="Suggested free input text" >}}
 
 ## 8 Prompting{#prompting}
 
@@ -207,9 +211,9 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 ### 8.2 How We Do It
 
-* **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This  allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
+* **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
 
-* **Shielding end-user data**: Strive for proactive protection; move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
+* **Shielding end-user data**: Strive for proactive protection and move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
 
 * **Input character handling**: Set clear and realistic expectations for end-user input. Communicate limitations on character count or format to avoid end-user frustration while ensuring efficient data processing by the AI system.
 
@@ -273,17 +277,13 @@ Provide a clear motivation for any action you want the end-user to take. Tell th
 
 ### 10.3 Examples
 
-* When text is highlighted, the **Modify selected text** icon ({{% icon name="pencil-filled" %}}) appears, signaling an opportunity for further interaction.
+* When text is highlighted, the **Reply** icon ({{% icon name="blockquote-filled" %}}) appears, signaling an opportunity for further interaction.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-icon.png" max-width="320px" alt="Modify icon appears near highlighted response from Bot" >}}
-
-* After clicking the **Modify selected text** icon, the end-user can discover modification options.
-
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/modify-options.png" max-width="320px" alt="Some standard modify options (Regenerate, Make Shorter, Remove) are given next to Bot's response" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/reply-quote-icon.png" max-width="320px" alt="Showing an icon in the Bot response to indicate that selected text can be replied to directly" >}}
 
 * The end-user can discover options to show or hide various drafts of the generated text and then select their preferred version.
 
-    {{< figure src="/attachments/howto/front-end/conversation-best-practices/data-is-protected.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
+    {{< figure src="/attachments/howto/front-end/conversation-best-practices/show-hide-draft.png" max-width="320px" alt="Option is given to create multiple drafts of response from Bot with option to show or hide the Bot's responses" >}}
 
 ## 11 Reporting Errors{#errors}
 
@@ -294,7 +294,7 @@ Transparent error messages tell end-users exactly what went wrong, preventing co
 ### 11.2 How We Do It
 
 * **Use precise language**: Instead of "An error occurred," pinpoint the issue. For example, "We couldn't find a profile with that email address. Please check your spelling and try again."
-* **Offer context**: Briefly explain why the error happened. For instance, "The password you entered doesn't meet our security requirements. It must be at least 8 characters long and contain a combination of uppercase and lowercase letters, numbers, and symbols."
+* **Offer context**: Briefly explain why the error happened. For instance, "It looks like the image might be a bit too large. We have a 5 MB limit for uploads. If you try resizing it or picking a smaller one, it should work just fine!"
 * **Provide solutions**: Offer actionable steps that end-users can take to fix the problem. This could be suggesting alternative actions, linking to relevant help articles, or offering to reset a password.
 * **Maintain a positive tone**: Even when reporting an error, use polite and helpful language. For example, "We encountered a problem processing your request. Let's try again!"
 

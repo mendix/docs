@@ -40,7 +40,7 @@ The following steps describe how to download the latest Chrome and Gecko (Firefo
 
 The following steps describe how to start the Selenium hub: 
 
-1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
+1. Go to the folder and open a command box (<kbd>Shift<kbd> + right-click and choose the **Open command** window here)
 2. Start your Selenium hub (version number can be different):
 
     ```powershell {linenos=false}
@@ -212,7 +212,7 @@ The following steps describe how to create a batch file to start up everything a
     ```batch
     start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
     timeout /t 10
-    start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar  C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
+    start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
     exit
     ```
 

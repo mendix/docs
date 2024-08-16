@@ -47,7 +47,9 @@ Make It Native, just like any other native apps, relies on third party dependenc
    ```bash
    npm install
    ```
+
 1. Install pods (only for iOS):
+
    ```bash
    cd ios && pod install && cd ..
    ```
@@ -209,8 +211,8 @@ To enable remote debugging, do the following:
 1. Select **Enable dev mode checkbox/switch**.
 1. When the app loads, open the app menu:
    * If you are running on a physical device: use a 3-tap long press or shake your device.
-   * If you are running on an iOS emulator: press <kbd>{CTRL}</kbd> + <kbd>{CMD}</kbd> + <kbd>{Z}</kbd>.
-   * If you are running on an Android emulator on Mac: press <kbd>{CMD}</kbd> + <kbd>{M}</kbd>.
+   * If you are running on an iOS emulator: press <kbd>Ctrl</kbd> + <kbd>Command</kbd> + <kbd>Z</kbd>.
+   * If you are running on an Android emulator on Mac: press <kbd>Command</kbd> + <kbd>M</kbd>.
 1. Select **Enable remote debugging** from the menu.
 1. After the Chrome screen pops up, change its URL to *localhost:8083/debugger-ui/*.
 

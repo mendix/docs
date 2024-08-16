@@ -20,7 +20,7 @@ Follow the high level steps in the next paragraphs to create your own design sys
 
 Create a new app. You can give this a name to your liking, for example MyCompany Design System.
 
-For advice on how to design an app, consult the  [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website. This website contains pages which showcase key components, often-used patterns, as well as possible design variations and principles of use.
+For advice on how to design an app, consult the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website. This website contains pages which showcase key components, often-used patterns, as well as possible design variations and principles of use.
 
 ## 3 Adding a Company Theme Module
 

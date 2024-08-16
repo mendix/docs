@@ -18,23 +18,19 @@ If you have Marketplace content, this API can help you get the following informa
 
 ## 2 Authentication {#authentication}
 
-Authentication for the Content API uses a personal access token (PAT).
-
 ### 2.1 Generating a PAT
 
-For details on how to generate a PAT, see the [Creating a PAT](/community-tools/mendix-profile/user-settings/#create-pat) section in *Mendix Profile*.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
 
-Select the following : 
+Select at least the following as the **Marketplace** scope:
 
-Select **mx:marketplace-content:read** as the **Marketplace** scope in order to perform `GET` operations.
+* `mx:marketplace-content:read` – to perform `GET` operations
 
-Copy and store the generated value (`{GENERATED_PAT}`) somewhere safe so you can use it to authorize your API calls.
+Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Content API calls.
 
 ### 2.2 Using the PAT
 
-Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
-
-Here is an example:
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
 ```http {linenos=false}
 GET /content HTTP/1.1

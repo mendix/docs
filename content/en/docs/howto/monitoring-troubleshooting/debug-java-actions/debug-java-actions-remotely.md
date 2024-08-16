@@ -18,8 +18,6 @@ This how-to teaches you how to do the following:
 
 ## 2 Editing the Server Configuration with Extra JVM Parameters
 
-In this section, you will learn how to configure the security at the [Prototype / demo](/howto/security/create-a-secure-app/#prototype) level. Be aware that this level of security is only applicable for development/demo purposes. This level is available for the quick development of demo applications. It simulates security without the more complex configuration of data access. When deploying to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), setting [Production](/howto/security/create-a-secure-app/#production) security is mandatory.
-
 To edit the server configuration with extra JVM parameters, follow these steps:
 
 1. Open the [App Settings](/refguide/app-settings/).
@@ -36,13 +34,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 In your Java IDE, you need to configure remote debugging.
 
-To configure IntelliJ, follow these steps:
-
-1. Start the **Debugger**.
-2. Place some breakpoints in your Java code.
-3. Start debugging.
-
-{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/intellij_rundebug_configurations.png" class="no-border" >}}
+{{< figure src="/attachments/howto/monitoring-troubleshooting/debug-java-actions/debug-java-actions-remotely/eclipse-debug.png" class="no-border" >}}
 
 To configure Eclipse, follow these steps:
 

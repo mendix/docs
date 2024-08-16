@@ -98,23 +98,23 @@ The list shows the following information:
 
 ## 4 Apps with License Keys {#apps-license-keys}
 
-The **Apps with License Keys** tab provides an overview of all apps for which license keys have been issued. You can find the latest version of these keys for all environments here, including Mendix for Private Cloud Standalone and other server-based setups.  This tab also allows you to manage license keys for all on-premises deployed apps.
+The **Apps with License Keys** tab provides an overview of all apps for which license keys have been issued to their respective key contacts. You can find the latest version of license keys for these app environments here. This includes all your apps deployed on Mendix for Private Cloud Standalone, Docker, Cloud Foundry buildpack, and on-premises environments. 
 
-License keys here are aligned with your contracts with Mendix and need to  be applied by you to each individual app. Each app environment (such as  test, acceptance, and production) needs its own license key. Any changes to licenses require the Technical Contacts to reapply  license keys to their respective app environments. For example, when  contracts are created or renewed, new license keys are automatically  generated. Then these new license keys must be applied to the  environments of the app for which the contract was changed. For details on how to apply license keys, see the [Activating a Mendix License](http://localhost:1313/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*.
+License keys here are aligned with your contracts with Mendix and need to be applied by you to each individual app. Each app environment (such as test, acceptance, and production) needs its own license key. Any changes to licenses require the Technical Contacts to reapply license keys to their respective app environments. For example, when contracts are created or renewed, new license keys are automatically generated. Then these new license keys must be applied to the environments of the app for which the contract was changed. For details on how to apply license keys, see the [Activating a Mendix License](/developerportal/deploy/licensing-apps-outside-mxcloud/#activate-mendix-license) section in *Licensing Apps*.
 
 On the **Apps with License Keys** tab, you can do the following:
 
-- View your apps with issued license keys.
-- See active license keys for all environments of an app.
-- Delete license keys for environments that are no longer in use.
-- Resend licenses to the Technical Contacts of your on-premises deployed apps or download all licenses to your local device.
-- Quickly change Technical Contacts for these apps and resend keys as needed.
+* View your apps with issued license keys.
+* See active license keys for all environments of an app.
+* Delete license keys for environments that are no longer in use.
+* Resend licenses to the Technical Contacts of your on-premises deployed apps or download all licenses to your local device.
+* Quickly change Technical Contacts for these apps and resend keys as needed.
 
 You can download all the license keys by clicking {{% icon name="download-bottom" %}} **Download all keys** on the right side above the list.
 
 The list shows the following information:
 
-*  **App Name** – This is the name of the app. To view [app environment details](#apps-license-keys-app-environment), click the app name.
+* **App Name** – This is the name of the app. To view [app environment details](#apps-license-keys-app-environment), click the app name.
 
     {{% alert color="info" %}}The app name shown here is the name that was initially given to the app when the license keys were generated. Your current app name may be different.{{% /alert %}}
 
@@ -123,8 +123,8 @@ The list shows the following information:
 * **Created Date** – This is the date on which the app was originally created.
 
 * **Actions** – You can carry out actions with the following icons:
-  * {{% icon name="email" %}} – Clicking this emails the license keys of the app to the registered Technical Contact. 
-  * {{% icon name="download-bottom" %}} – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
+    * {{% icon name="email" %}} – Clicking this emails the license keys of the app to the registered Technical Contact. 
+    * {{% icon name="download-bottom" %}} – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created. 
 
 ### 4.1 App Environment Details {#apps-license-keys-app-environment}
 
@@ -136,7 +136,7 @@ To quickly change the Technical Contact for your app, click the edit icon ({{% i
 
 On the right side above the list, you can see the following buttons:
 
-*  {{% icon name="email" %}} **Email Keys** – Clicking this emails the license keys of the app to the registered Technical Contact. 
+* {{% icon name="email" %}} **Email Keys** – Clicking this emails the license keys of the app to the registered Technical Contact. 
 
 * {{% icon name="download-bottom" %}} **Download Keys** – Clicking this downloads the license keys to your local computer. The license keys can then be applied to the app for which they were created.
 
@@ -147,7 +147,7 @@ The list below show the details of the environments with the following columns:
 * **LicenseID** – This shows the ID of the license that was emailed to the Technical Contact when the license keys were generated. This unique identifier allows you to reference and manage your licenses, ensuring they align with the licenses in your various environments.
 * **Start Date** and **End Date** – Your license keys are valid between these two dates. An app needs an active contract with a future end date to keep working.
 * **Actions** – You can carry out an action with the following icon:
-  * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app is offboarded, the app is automatically offboarded and will no longer show up on the **Apps with License Keys** tab.
+    * {{% icon name="trash-can" %}} – Clicking this offboards that license from the database. Before the action is completed, a dialog box opens to ask for your confirmation. When the last license of an app is offboarded, the app is automatically offboarded and will no longer show up on the **Apps with License Keys** tab.
 
 ### 4.2 Frequent Asked Questions {#license-keys-faq}
 

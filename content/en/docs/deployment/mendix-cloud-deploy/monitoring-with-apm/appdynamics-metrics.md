@@ -26,7 +26,7 @@ For more information on the data you can send to AppDynamics, see [Monitoring Yo
 
 To use AppDynamics and send data to AppDynamics from your Mendix app, you need the following:
 
-* Access to a  cloud- or self-hosted AppDynamics controller
+* Access to a cloud- or self-hosted AppDynamics controller
 * The following information about AppDynamics
     * The account name and access key for your AppDynamics account
     * The hostname or IP address of your AppDynamics controller

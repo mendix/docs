@@ -71,7 +71,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 5. Double-click the **Subscribe** activity and configure the **AWS_Region** parameter by doing the following steps:
 
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
@@ -111,7 +111,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 5. Double-click the **PublishBatch** activity y and configure the **ENUM_Region** parameter by doing the following steps:
 
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}

@@ -18,7 +18,7 @@ The Docker Buildpack simplifies the creation of Docker images locally, but it fa
 Mendix suggests that, if you are planning to deploy to your own cloud platform at scale, a better solution for production apps is to use [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). This provides you with structured and tested solutions for integrating with your own cloud infrastructure using comprehensive, automated, native functions, avoiding the need to create your own processes from scratch.
 {{% /alert %}}
 
-This page explains how to build a Docker image from your Mendix App. Every time you make changes to your app, you must create a new  Docker image that can be pushed through the different stages of your application pipeline.
+This page explains how to build a Docker image from your Mendix App. Every time you make changes to your app, you must create a new Docker image that can be pushed through the different stages of your application pipeline.
 
 This how-to teaches you how to do the following:
 

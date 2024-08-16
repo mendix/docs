@@ -26,11 +26,11 @@ The Mendix Portal is the online platform of Mendix. It includes Apps, [Control C
 
 To create a new app and start collaborating, you can perform the following procedure.
 
-1.  In Apps, click **Create App** in the upper-right corner. A screen opens to guide you through the process.
+1. In Apps, click **Create App** in the upper-right corner. A screen opens to guide you through the process.
 
     {{< figure src="/attachments/developerportal/create-app-step-1.png" alt="Create App Step One" >}}
 
-2.  Enter the following information for your app:
+2. Enter the following information for your app:
 
     * **App name** – Every app must have a name.
 
@@ -40,8 +40,7 @@ To create a new app and start collaborating, you can perform the following proce
     
     * **App icon** – Mendix has generated an icon for your app. You can change the color of the icon if you like. You can upload a custom icon in the [App Settings](/developerportal/collaborate/general-settings/#general) page after you created the app.
 
-
-3.  Click **Next** in the lower-right corner to go to step 2.
+3. Click **Next** in the lower-right corner to go to step 2.
 
     {{< figure src="/attachments/developerportal/create-app-step-2.png" alt="Create App Step Two" >}}
 
@@ -93,7 +92,7 @@ The features in the navigation pane can also be accessed via APIs, enabling thir
 If you are invited to collaborate on an app, the invitation will appear at the top of the **My Apps** page. You can accept or decline the invitation.
 
 {{% alert color="info" %}}
-You  get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+You get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
 {{% /alert %}}
 
 ## 4 Company Apps {#my-company-apps}

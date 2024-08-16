@@ -47,8 +47,8 @@ The data view supports the following types of data source: context, microflow, n
 | Data Source Type | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | Context          | A data source determining that wherever you are opening the page from, you are passing the selected object. For example, when you add the **Show Page** activity in the microflow, you select the page and the object to pass. (For more information on the microflows, see [Microflows](/refguide8/microflows/).) That means that when the page is opened in the microflow, the object of this type is provided and will be shown in the data view on the page. <br />If a data view is nested inside another data widget, you can specify an entity path that starts in the context object and follows one or more associations. For more information on the context source, see [Context Source](/refguide8/context-source/).<br /> |
-| Microflow        | A data source that runs a selected microflow and displays a return value. For more  information on the microflow source, see [Microflow Source](/refguide8/microflow-source/). |
-| Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more  information on the nanoflow source, see [Nanoflow Source](/refguide8/nanoflow-source/). |
+| Microflow        | A data source that runs a selected microflow and displays a return value. For more information on the microflow source, see [Microflow Source](/refguide8/microflow-source/). |
+| Nanoflow         | A data source that runs a selected nanoflow and displays a return value. For more information on the nanoflow source, see [Nanoflow Source](/refguide8/nanoflow-source/). |
 | Listen to widget | A data source that allows a data view to display detailed information on an object in the list widget on the same page. For more information on listen to widget source, see [Listen To Widget Source](/refguide8/microflow-source/). |
 
 ### 3.3 Design Properties Section{#design-properties}
@@ -116,8 +116,8 @@ Default: *empty*
 
 To perform actions on a data view, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
-* **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
-* **Go to data source** **microflow**– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to entity** – opens a domain model and highlights an entity that is used as the data source 
+* **Go to data source microflow** – this action is only displayed when a microflow is set as the data source and opens this microflow 
 * **Go to data source nanoflow** – this action is only displayed when a nanoflow is set as the data source and opens this nanoflow
 
 ## 5 Read More

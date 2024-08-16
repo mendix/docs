@@ -22,7 +22,7 @@ The events widget offers the following features:
 
 ## 2 Configurations
 
-With  the [Events](https://marketplace.mendix.com/link/component/224259) widget, you can execute [actions](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) based on the selected event type.
+With the [Events](https://marketplace.mendix.com/link/component/224259) widget, you can execute [actions](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) based on the selected event type.
 
 ### 2.1 Events Tab {#general}
 

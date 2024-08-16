@@ -15,7 +15,7 @@ Mendix Team Server is based on proven technology. Initially it was based only on
 
 Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. 
 
-Mendix 7 and 8 only have support for Team Server SVN, and as long as these major versions are available, support for Team Server SVN will be maintained.
+Mendix 8 only has support for Team Server SVN, and as long as this major version is available, support for Team Server SVN will be maintained.
 
 ## 3 How Much Storage Space Is Provided with Team Server?
 
@@ -51,7 +51,7 @@ We already do these housekeeping operations automatically on the Team Server, so
 ## 8 Can I Keep Using the Subversion Version of the Team Server?
 
 Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
-Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
+Mendix is focusing on improving Team Server Git support and migrating customers to Team Server Git.
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 
@@ -68,7 +68,7 @@ Yes, it is possible to connect to a third-party Subversion or Git version contro
 However, in this case the following products and capabilities are not available:
 
 * Deployment using the Mendix Portal directly from the Team Server
-* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), [Permissions API](/apidocs-mxsdk/apidocs/permissions-api/), [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
+* Integrated platform APIs such as the [App repository API](/apidocs-mxsdk/apidocs/app-repository-api/), [Build API](/apidocs-mxsdk/apidocs/build-api/), [Platform SDK](/apidocs-mxsdk/mxsdk/), Permissions API, [Projects API](/apidocs-mxsdk/apidocs/projects-api/), [Epics API](/apidocs-mxsdk/apidocs/epics-api/), and [User management API](/apidocs-mxsdk/apidocs/user-management-api/)
 * [AQM](/addons/aqm-addon/) 
 
 {{% alert color="info" %}}

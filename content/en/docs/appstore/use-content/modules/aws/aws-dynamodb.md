@@ -87,7 +87,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     For the `ListTables` activity, you must specify the region for which you want to retrieve the tables from, a `Credentials` object and a `ListTablesRequest` object. Other activities may have different required parameters.
     
 12. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `ENUM_Region`, and then press **Ctrl+Space**.
+13. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 15. Click **OK**, and then click **OK** again.
 16. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.
@@ -577,7 +577,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.3.5 DeleteItem
 
-The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
+The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
 
 Optionally, you can include a condition expression. The delete activity is then only performed when the condition returns true. Additionally, you can include an expression attribute list to escape reserved words.
 

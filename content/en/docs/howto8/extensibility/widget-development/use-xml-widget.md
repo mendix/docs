@@ -195,7 +195,7 @@ The form property lets you pass a form to the widget. If needsEntityContext is s
 ```
 
 {{% alert color="info" %}}
-For forms containing a data view, remember that calling a form  with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
+For forms containing a data view, remember that calling a form with a dataview, if needsEntityContext is set to "false" in your widget, still requires an object to work.
 {{% /alert %}}
 
 ### 5.2.5 Image

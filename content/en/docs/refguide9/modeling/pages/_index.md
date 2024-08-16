@@ -47,7 +47,7 @@ Widgets are grouped into the following categories:
 
 * [Data containers](/refguide9/data-widgets/) are central to building forms in Mendix; with these widgets, you can view and edit the data in the application
 * [Text widgets](/refguide9/text-widgets/) are used to display textual information to the end-user
-* [Structure  widgets](/refguide9/structure-widgets/) can contain other widgets 
+* [Structure widgets](/refguide9/structure-widgets/) can contain other widgets 
 * [Input elements](/refguide9/input-widgets/) make it possible to show and edit the values of attributes and associations
 * [Images, Videos, and Files](/refguide9/image-and-file-widgets/) allow you to work with files, images, and videos 
 * [Buttons](/refguide9/button-widgets/) are buttons that trigger actions

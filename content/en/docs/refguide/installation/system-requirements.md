@@ -85,7 +85,7 @@ Mendix Studio Pro will run on any machine which can run the [minimum requirement
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
 * **RAM** – 4GB
-* **Display Resolution** –  1080p (1920x1080)
+* **Display Resolution** – 1080p (1920x1080)
 
 Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
 
@@ -286,7 +286,7 @@ For native and progressive web apps built with Mendix, the following operating s
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
 
 Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 

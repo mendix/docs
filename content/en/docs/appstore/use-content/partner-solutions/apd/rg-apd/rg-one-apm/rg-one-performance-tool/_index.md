@@ -43,7 +43,7 @@ During processing of recorded data SQL statements are linked to actions or if th
 
 ## 3 Filter {#filter}
 
-The following screenshot shows the filter options of the Performance Tool when the performance tool is  running:
+The following screenshot shows the filter options of the Performance Tool when the performance tool is running:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/Filter_Running.png" class="no-border" >}}
 
@@ -53,7 +53,7 @@ You can see what has been recorded in memory with the **Show recorded** button (
 
 The option **Include sub-microflows** can be used to keep sub-microflows called from a long running microflow in memory.
 
-When **Record SQL statements** is enabled SQL statements are recorded by the Mendix profiler and the  runtime requests the profiler outputs are filtered with the microflow threshold. The SQL statements are  filtered by the SQL statement threshold.
+When **Record SQL statements** is enabled SQL statements are recorded by the Mendix profiler and the runtime requests the profiler outputs are filtered with the microflow threshold. The SQL statements are filtered by the SQL statement threshold.
 
 Changes to the options are applied to the Performance Tool if the button **Save, apply filter & close**
 is used.

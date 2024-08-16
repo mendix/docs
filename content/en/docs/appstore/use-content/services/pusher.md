@@ -11,7 +11,7 @@ aliases:
 
 The [Pusher](https://marketplace.mendix.com/link/component/107957/) service allows you to trigger a microflow or nanoflow directly from the server on non-native client apps. This means it is triggered from the other session, without waiting for end-users to interact with the page.
 
-In the standard situation, updates in the client are triggered by a user interaction, by timed actions, or by data-grid refresh time. For information not created by the same user session that needs to be updated immediately in the client app, the Mendix core product does not support a viable option to accomplish this. As an alternative, you need need to refresh the page constantly with timers or constant clicking. This is not user-friendly, and it is not preferred when scaling.
+In the standard situation, updates in the client are triggered by a user interaction, by timed actions, or by data-grid refresh time. For information not created by the same user session that needs to be updated immediately in the client app, the Mendix core product does not support a viable option to accomplish this. As an alternative, you need to refresh the page constantly with timers or constant clicking. This is not user-friendly, and it is not preferred when scaling.
 
 With this service, you can create a notify event on the server that directly causes an action in the client application. The event is based on a persistable object that is available in the server and the client page. From a microflow, the notify action will send a message to every listening widget that is listening to the same object and the action name.
 

@@ -174,7 +174,7 @@ This option allows you to send binary data (for example, the contents of a FileD
 
 This option allows you to generate a multipart/form-data request for multiple parts. Each part is a pair with a key and a value (microflow expression). 
 
-FileDocuments and images are are also supported for this option when used as variables in microflow expressions.
+FileDocuments and images are also supported for this option when used as variables in microflow expressions.
 
 #### 6.3.1 Content Type
 

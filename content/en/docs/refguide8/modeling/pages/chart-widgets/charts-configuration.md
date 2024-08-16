@@ -50,7 +50,7 @@ Add series and configure their properties, each series represents a dataset. For
 
 1. Data source<a id="data-source"></a>
 
-    The data for each each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
+    The data for each series can originate from a different data source. You can add additional data series in the **Chart properties** tab.
 
     {{< figure src="/attachments/refguide8/modeling/pages/chart-widgets/charts-configuration/series-item-data-source.png" alt="Edit series Data source tab" class="no-border" >}}
 

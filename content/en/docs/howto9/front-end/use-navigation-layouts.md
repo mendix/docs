@@ -39,7 +39,7 @@ The navigation menu of Atlas Default is a toggled menu. Options for this toggled
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif"   width="350"  class="no-border" >}}
 
-* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not not start shrunk, but will shrink when sidebar is toggled:
+* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not start shrunk, but will shrink when sidebar is toggled:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  class="no-border" >}}
 

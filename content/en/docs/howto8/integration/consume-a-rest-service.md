@@ -124,7 +124,7 @@ To call the REST service in a microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/microflow.png" class="no-border" >}}
 
-You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that yoyu can see the REST call in action.
+You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that you can see the REST call in action.
 
 ## 6 Creating a Page
 

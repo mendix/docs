@@ -158,7 +158,7 @@ Now you will add a button to the Product_NewEdit page which uses a microflow to 
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/show-message.png" class="no-border" >}}
 
-12. Click **OK** to save the **Show message** activity. The microflow will be similar to this this:
+12. Click **OK** to save the **Show message** activity. The microflow will be similar to this:
 
     {{< figure src="/attachments/refguide/java-programming/extending-your-application-with-custom-java/microflow4.png"  >}}
 

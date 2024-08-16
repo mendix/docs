@@ -29,7 +29,7 @@ The **System.WorkflowCurrentActivity** reflects the current activities of the wo
 For the workflow to jump to other activities, you need to update the **System.WorkflowCurrentActivity** object members. You need to do the following:
 
 * Set the **Action** enumeration attribute to *JumpTo*
-* Set the **System.WorkflowCurrentActivity_JumpToTarget** association to refer to to the **System.WorkflowActivityDetails** object
+* Set the **System.WorkflowCurrentActivity_JumpToTarget** association to refer to the **System.WorkflowActivityDetails** object
 
 The **Action** attribute on the **System.WorkflowCurrentActivity** object is an enumeration consisting of two options:
 

@@ -193,7 +193,7 @@ When a change in the contract at a consumed endpoint is detected (possibly due t
 
 #### 4.3.1. Update
 
-The **Update** option is available when Studio Pro detects that that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
+The **Update** option is available when Studio Pro detects that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
 
 See the [Limitations](/refguide9/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 

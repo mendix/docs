@@ -149,7 +149,7 @@ Do the following:
 2. Make sure the microflow has a necessary parameter with the workflow context.
 3. In the **Toolbox**, find **Call workflow** activity and drag it into the microflow.
 4. Double-click the activity to open its properties.
-5. Set **Workflow** to to the workflow you would like to trigger.
+5. Set **Workflow** to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500" class="no-border" >}}

@@ -97,7 +97,7 @@ The Mendix Cloud environment only uses PostgreSQL as a database server. Therefor
 
 The source database is the database with the data that you want to migrate to the cloud. The target database should be a completely empty PostgreSQL database; it should not contain any tables. You can either create a new database for this or [clear an existing one](/developerportal/deploy/environments-details/#clear-environment).
 
-In the Mendix app, the active configuration in **Settings** should point to the target database. Add the **Custom configuration settings** for the source database as explained above in the [overview](#overview). Once you have configured the Mendix app, run the application locally. That automatically migrates the database schema and all the data from the source database to the target database. Validate that the the target database is functioning as expected by viewing the application in a browser.
+In the Mendix app, the active configuration in **Settings** should point to the target database. Add the **Custom configuration settings** for the source database as explained above in the [overview](#overview). Once you have configured the Mendix app, run the application locally. That automatically migrates the database schema and all the data from the source database to the target database. Validate that the target database is functioning as expected by viewing the application in a browser.
 
 ### 4.2 Step 2: Exporting a PostgreSQL Database
 

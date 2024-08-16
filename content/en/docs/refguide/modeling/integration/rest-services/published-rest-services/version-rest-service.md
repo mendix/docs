@@ -32,7 +32,7 @@ Instead of changing a published service, you should duplicate the service and gi
 
 Change the location of the new version to include the new version (for example, **rest/myservice/v1.1**). It is customary to omit the **.0** or **.0.0** in the URL.
 
-The new version of the service reuses all microflows, mappings, and message definitions from the previous version that that did not change in the new version.
+The new version of the service reuses all microflows, mappings, and message definitions from the previous version that did not change in the new version.
 
 The rest of this how-to gives some examples of typical changes that occur and how to handle the versioning of your service in those cases.
 

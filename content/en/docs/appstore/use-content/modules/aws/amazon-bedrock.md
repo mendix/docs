@@ -336,7 +336,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 
 ##### 4.1.1.12 CohereEmbedResponse {#cohere-embed-response}
 
-This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
+This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
 
 | Attribute | Description |
 | --- | --- |

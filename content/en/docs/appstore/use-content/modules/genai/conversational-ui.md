@@ -72,7 +72,7 @@ To help you work with the Conversational UI module, the following sections of th
 
 ### 4.1 Module Roles {#module-roles}
 
-Make sure that the module role `User` is part of the the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
+Make sure that the module role `User` is part of the user roles that are intended to chat with the model. Optionally, you can grant the `_addOn_ReadAll` role to admin roles, so that users with that role can read all messages.
 
 | Module role | Description |
 | --- | --- |
@@ -133,7 +133,7 @@ Add the action microflow to an existing `ProviderConfig` by using the **Set Acti
 
 ##### 4.3.1.2 Creating a Custom Action Microflow
 
-If you want to create your own custom action microflow, keep the following considerations in in mind:
+If you want to create your own custom action microflow, keep the following considerations in mind:
 
 * Only one input parameter of [ChatContext](#chat-context) is accepted.
 * The return type needs to be a `Success` Boolean.

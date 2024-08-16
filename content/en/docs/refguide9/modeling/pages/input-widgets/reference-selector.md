@@ -85,7 +85,7 @@ The formatting section applies only to the way that numeric attributes are displ
 
 {{% alert color="warning" %}}The **Select using** property is not shown for native mobile pages. Native mobile pages only support the **Drop-down** method of selection{{% /alert %}}
 
-The reference selector allows the end-user to select objects by using either a drop-down menu or a pop-up page. If you choose to to use a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a page selection pop-up window.
+The reference selector allows the end-user to select objects by using either a drop-down menu or a pop-up page. If you choose to use a page, the drop-down functionality will be replaced with a button to the right of the widget that will open a page selection pop-up window.
 
 | Value | Description |
 | --- | --- |
@@ -216,7 +216,7 @@ Imagine you have an ordering system where the products are sorted into categorie
 *Example Domain model*
 {{< figure src="/attachments/refguide9/modeling/pages/input-widgets/reference-selector/orderline-domain-model.png" class="no-border" >}}
 
-In the domain model the order line has one-to-many associations to both category and product. These associations can be be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
+In the domain model the order line has one-to-many associations to both category and product. These associations can be edited using reference selectors. A third association, from product to category, describes the relation between those two entities – that is, that every product has an associated category.
 
 {{% alert color="info" %}}
 Such a triangle-shaped part of the domain model is what makes using **constrained by** possible.

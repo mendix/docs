@@ -14,7 +14,7 @@ aliases:
 
 ## 1 Introduction
 
-When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Mendix Portal, you can inspect your application's health in Mendix Cloud. 
+When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Mendix Portal, you can inspect your application's health in Mendix Cloud.
 
 {{% alert color="info" %}}This page describes alerts for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud.<br><br>If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit.{{% /alert %}}
 
@@ -31,7 +31,10 @@ This document explains how to access the application status page, what the infor
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
 1. From [Apps](https://sprintr.home.mendix.com), open the app that you want to monitor.
+
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
+
+    {{% alert color="info" %}}To directly visit the **Alerts** page, you can also use this link: `https://cloud.home.mendix.com/link/monitor/<appID>`, with `{app ID}` replaced by your app ID. </br></br>To directly check the alerts for an environment, use this link: `https://cloud.home.mendix.com/link/monitor/<appID>/<envID>`, with `{app ID}` replaced by your app ID. {{% /alert %}}
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/application-status.png" class="no-border" >}}
 

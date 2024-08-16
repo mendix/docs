@@ -96,8 +96,6 @@ To upload a certificate authority, follow these steps:
 
 4. Upload a certificate authority in the PEM format.
 
-If you run into any problems installing a client certificate or certificate authority, file a ticket at [https://support.mendix.com](https://support.mendix.com).
-
 ## 5 Read More
 
 * [Transport_Layer_Security](http://en.wikipedia.org/wiki/Transport_Layer_Security)

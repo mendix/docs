@@ -179,7 +179,7 @@ During configuration, the import mapping page will build up a preview of the Men
 In Teamcenter Extension, the import mapping consists of the following steps:
 
 1. Object mapping: As Teamcenter works with many layers of specializations of its business objects, in the import mapping page, you need to configure which object type you want to retrieve from Teamcenter and what Mendix objects need to be created, when retrieving these business objects. This is called object mapping.
-2. Selection of properties, references, and relations: Configure  which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
+2. Selection of properties, references, and relations: Configure which properties, references, and relations you want to retrieve from Teamcenter and include in your Mendix model .
 
 {{< figure src="/attachments/appstore/use-content/modules/teamcenter-extension/domain-model.png" max-width=80% >}}
 

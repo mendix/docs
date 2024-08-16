@@ -335,7 +335,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description |
 | --- | --- |
-| N/A | This has no attributes but holds a `SearchPlaceIndexForPositionSummary` object and and an associated list of `SearchForPositionResult` objects. |
+| N/A | This has no attributes but holds a `SearchPlaceIndexForPositionSummary` object and an associated list of `SearchForPositionResult` objects. |
 
 #### 4.1.36 SearchForPositionResult
 

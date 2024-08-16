@@ -11,7 +11,7 @@ description: "Overview of the External Database Connector in Studio Pro"
 Use the [External Database Connector](https://marketplace.mendix.com/link/component/219862) to connect, retrieve, and insert data into your Mendix app.
 
 {{% alert color="info" %}}
-If you are using Studio Pro 10.12, please make sure to use the  latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
+If you are using Studio Pro 10.12, please make sure to use the latest version 3.0.0 [External Database Connector](https://marketplace.mendix.com/link/component/219862).
 {{% /alert %}}
 
 The External Database Connector supports connections to the following databases:

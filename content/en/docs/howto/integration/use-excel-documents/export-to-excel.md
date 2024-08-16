@@ -195,7 +195,7 @@ To configure the dynamic column data, follow these steps:
 
 4. Specify the **Retrieve type** to identify if this column will be an attribute or a reference.
 5. Specify the **Select attribute** to identify the attribute of the row object which will be stored in this column.
-6. Specify if the column should result in an aggregate. Note that  only types of decimal, integer, and long can be aggregated.
+6. Specify if the column should result in an aggregate. Note that only types of decimal, integer, and long can be aggregated.
 
 ### 6.5 Configuring Static Data in the Sheet {#static-data}
 

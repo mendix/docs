@@ -99,7 +99,7 @@ When importing data records all existing records in the dataset will be removed
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When importing data from from Excel, ATS will try to convert data that doesn't match the expected data type. In case a conversion is not possible (for example, from a string to an integer) the resulting value will be empty. Always check your data after import to be sure all data was completely imported.
+When importing data from Excel, ATS will try to convert data that doesn't match the expected data type. In case a conversion is not possible (for example, from a string to an integer) the resulting value will be empty. Always check your data after import to be sure all data was completely imported.
 {{% /alert %}}
 
 You can simply export a dataset by clicking the **Export to Excel** button.

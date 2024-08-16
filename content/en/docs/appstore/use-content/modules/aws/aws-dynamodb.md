@@ -577,7 +577,7 @@ The input and output for this service are shown in the table below:
 
 #### 4.3.5 DeleteItem
 
-The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
+The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
 
 Optionally, you can include a condition expression. The delete activity is then only performed when the condition returns true. Additionally, you can include an expression attribute list to escape reserved words.
 

@@ -211,7 +211,7 @@ A helpful prompt guide bridges the gap between what end-users want and what the 
 
 ### 8.2 How We Do It
 
-* **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This  allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
+* **AI response temperature**: Empower end-users with adjustable temperature settings for AI responses. This allows end-users to customize the level of detail and personality they desire, which could range from factual and concise to creative and elaborate.
 
 * **Shielding end-user data**: Strive for proactive protection and move beyond reactive measures. Design systems that prioritize end-user privacy from the outset. Implement robust data encryption and access controls to safeguard end-user information.
 

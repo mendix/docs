@@ -33,7 +33,7 @@ To improve security of your app, it is recommended that you delete the AccessTok
 
 ### 2.1 Authorizing Insights Hub REST Calls from within Scheduled Events
 
-The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the  right side:
+The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the right side:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png" alt="DS_GetAccessTokenForScheduledEvents" >}}
 

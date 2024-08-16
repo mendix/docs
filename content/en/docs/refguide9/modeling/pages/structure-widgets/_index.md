@@ -6,7 +6,7 @@ weight: 25
 
 ## 1 Introduction
 
-Structure  widgets provide structure to your page's content.
+Structure widgets provide structure to your page's content.
 
 * [Layout grid](/refguide9/layout-grid/) – gives structure to your pages, has a built-in behavior to show how a page will look like on different devices:
 

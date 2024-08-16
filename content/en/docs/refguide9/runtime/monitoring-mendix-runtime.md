@@ -260,7 +260,7 @@ The "memorypools" section contains an ordered list of all the memory pools exact
 
 * "usage" – returns an estimate of the memory usage of this memory pool (in bytes)
 * "is_heap" – is this memory pool part of the heap or not?
-* "name" – the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or  garbage collection options
+* "name" – the description of the memory pool as received by the JVM. These names can be different depending on for example JDK,memory manager or garbage collection options
 * "index" – the index in the JSON Array. This field is not strictly needed as the pools are returned in a list so you can, and should, rely on the order of the list in case you are processing them in a program
 
 {{% alert color="info" %}}

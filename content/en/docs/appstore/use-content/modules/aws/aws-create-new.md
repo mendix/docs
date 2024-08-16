@@ -199,7 +199,7 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 * What are the required and optional input parameters for the microflow action?
 * Example:
 
-    *The DeleteItem Amazon DynamoDB action allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, DeleteItemRequest object with an Item object associated to it. If the given table has only a partition key, the Item object should have a KeyValue object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the Item object must have two KeyValue objects.*
+    *The DeleteItem Amazon DynamoDB action allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, DeleteItemRequest object with an Item object associated to it. If the given table has only a partition key, the Item object should have a KeyValue object that refers to the row that to be deleted. If the given table has both a partition and sort key, the Item object must have two KeyValue objects.*
 
     *Optionally, a condition expression can be included. The delete action is then only performed when the condition returns true. Additionally, an expression attribute list can be included to escape reserved words.*
 

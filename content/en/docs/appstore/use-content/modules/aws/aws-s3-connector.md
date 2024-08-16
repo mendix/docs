@@ -165,7 +165,7 @@ The entities in the table below describe all generalizations. These are reused b
 | --- | --- |
 | `BucketName` | Describes the name of the bucket that includes the desired list of the objects |
 | `Delimiter` | Describes a character you use to group keys |
-| `MaxKeys` | Describes  the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
+| `MaxKeys` | Describes the maximum number of keys returned in the response. By default the action returns up to 1,000 key names. The response might contain fewer keys but will never contain more |
 | `Prefix` | Describes the prefix that can be used to limit the response to keys that begin with the specified prefix |
 | `ContinuationToken` | Describes to the Amazon S3 service that the list is being continued on this bucket with a token |
 | `StartAfter` | Describes where you want Amazon S3 to start listing from. Amazon S3 starts listing after this specified key. `StartAfter` can be any key in the bucket |
@@ -175,7 +175,7 @@ The entities in the table below describe all generalizations. These are reused b
 | Attribute | Description | 
 | --- | --- |
 | `IsTruncated` | Describes whether all results were returned. If all are returned, this value is set to **true**, otherwise it is set to **false** |
-| `KeyCount` | Describes the number of keys returned with this request. `KeyCount` will always be less than or equal to the `MaxKeys` field  of the `ListObjectsRequest`. For example, if you ask for 50 keys, your result will include 50 keys or fewer |
+| `KeyCount` | Describes the number of keys returned with this request. `KeyCount` will always be less than or equal to the `MaxKeys` field of the `ListObjectsRequest`. For example, if you ask for 50 keys, your result will include 50 keys or fewer |
 | `NextContinuationToken` | Describes whether there are more keys in the bucket that can be listed. The next list requests to Amazon S3 can be continued with this `NextContinuationToken`. `NextContinuationToken` is obfuscated and is not a real key |
 
 #### 4.1.12 ListedObject {#listedobject}

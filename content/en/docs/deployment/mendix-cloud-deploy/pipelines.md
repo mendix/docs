@@ -80,16 +80,19 @@ On the **Designs** tab, you can see all existing pipeline designs.
 
 For each design, you can view the following information:
 
-* Pipeline Name
-* Trigger
-* Branch
-* Last modified by
-* Last modified date/time
-* Status
+* Pipeline Name – The name of the pipeline design
+* Trigger – The trigger type for the design
+* Branch – The branch, if **Teamserver push (Git)** is set as the design's trigger
+* Last modified by – The user who last modified the design
+* Last modified date/time – The date and time the design was last modified
+* Status – Whether the pipeline is active or inactive
+* Design ID – The unique identifier of the pipeline design
 
-Click **Details** ({{% icon name="paper-clipboard" %}}) on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Editing a Pipeline](#edit-pipeline), below.
+Click **Copy ID** ({{% icon name="copy" %}}) on a pipeline design to copy the design ID.
 
-Click **Delete** ({{% icon name="trash-can" %}}) to delete a pipeline design.
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Edit** on a pipeline design to go to its **Details** page. From there, you can view and edit the pipeline details, as described in [Editing a Pipeline](#edit-pipeline), below.
+
+Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) > **Delete** to delete a pipeline design.
 
 {{% alert color="warning" %}}
 If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.

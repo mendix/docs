@@ -51,7 +51,7 @@ We already do these housekeeping operations automatically on the Team Server, so
 ## 8 Can I Keep Using the Subversion Version of the Team Server?
 
 Yes, as we are introducing Team Server Git, we will maintain support for Team Server SVN. As we improve our offering for Team Server Git, we will introduce options to migrate your apps to Team Server Git from Team Server SVN.
-Mendix  is focusing on improving Team Server Git support and migrating customers to Team Server Git.
+Mendix is focusing on improving Team Server Git support and migrating customers to Team Server Git.
 
 ## 9 Can I Migrate from Team Server SVN to Git?
 

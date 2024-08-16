@@ -135,7 +135,7 @@ In the previous section you retrieved a list of orders with the status 'Processi
 In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will create a variable, which will be changed for every iteration in the loop.  
 
 1. Add a new microflow button to your order data grid with the following details:</br>
-    1. **Caption** of the button:  Calculate Total Order Price
+    1. **Caption** of the button: Calculate Total Order Price
     1. **Name** of the microflow: IVK_CalculateTotalPriceOrders
 2. In the new microflow, add a **Retrieve** activity for **Orders** and a loop for this list to the microflow.
 

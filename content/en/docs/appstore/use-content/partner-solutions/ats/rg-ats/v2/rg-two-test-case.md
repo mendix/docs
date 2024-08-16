@@ -57,7 +57,7 @@ The details of a test step open by clicking the test step. For more information,
 
 To add a new step above or below an existing test step, click **Add above** or **Add below**, or click the red record icon, to add a new step by using the recorder. These buttons appear if you hover over an existing test step.
 
-### 3.1 Copying, Pasting, Deleting, and  Extracting an Action
+### 3.1 Copying, Pasting, Deleting, and Extracting an Action
 
 You can **Copy/Paste** or **Delete** one or more test steps at a time by checking the box in front of the test step.
 

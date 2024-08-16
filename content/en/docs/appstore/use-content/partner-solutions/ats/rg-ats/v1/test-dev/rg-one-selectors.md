@@ -6,7 +6,7 @@ weight: 7
 
 ## 1 Introduction
 
-For the [Find Widget Child Node action](/appstore/partner-solutions/ats/rg-one-find-widget-child-node/)  or as part of a script for [Execute JavaScript Integer](/appstore/partner-solutions/ats/rg-one-execute-javascript-integer/), [Execute JavaScript String](/appstore/partner-solutions/ats/rg-one-execute-javascript-string/) and [Execute JavaScript WebElement](/appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
+For the [Find Widget Child Node action](/appstore/partner-solutions/ats/rg-one-find-widget-child-node/) or as part of a script for [Execute JavaScript Integer](/appstore/partner-solutions/ats/rg-one-execute-javascript-integer/), [Execute JavaScript String](/appstore/partner-solutions/ats/rg-one-execute-javascript-string/) and [Execute JavaScript WebElement](/appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
 
 ## 2 ATS Selectors
 
@@ -29,7 +29,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 | -----|---------|-------- |
 | .myClass | Class Selector | Selects every element with class **myClass** |
 | #myID | ID Selector | Selects every element with ID **myID** |
-| E[foo="bar"] | Attribute Selector | Selects every element E  whose "**foo**" attribute value is equal to "**bar**" |
+| E[foo="bar"] | Attribute Selector | Selects every element E whose "**foo**" attribute value is equal to "**bar**" |
 | :nth-child(n) | Nth-child pseudo-class | Selects the **n-th** child of its parent |
 | :first-child | First-Child pseudo-class | Selects the **first** child of its parent |
 | :last-child | Last-Child pseudo-class | Selects the **last** child of its parent |

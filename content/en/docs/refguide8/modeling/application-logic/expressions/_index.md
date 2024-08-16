@@ -96,7 +96,7 @@ if $package/weight < 1.00 then 0.00 else 5.00`
 * [`find`](/refguide8/string-function-calls/) – gets a sub-string position
 * [`findLast`](/refguide8/string-function-calls/) – gets the last sub-string position
 * [`contains`](/refguide8/string-function-calls/) – contains the sub-string
-* [`startsWith`](/refguide8/string-function-calls/)  – determines whether a string starts with the specified sub-string
+* [`startsWith`](/refguide8/string-function-calls/) – determines whether a string starts with the specified sub-string
 * [`endsWith`](/refguide8/string-function-calls/) – determines whether a string ends with the specified sub-string
 * [`trim`](/refguide8/string-function-calls/) – removes the leading and trailing whitespace
 * [`isMatch`](/refguide8/string-function-calls/) – matches a regular expression

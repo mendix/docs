@@ -47,7 +47,7 @@ For encryption of SAML messages the following options are supported:
 
 * No Encryption
 * 1024 or 2048 bit encryption
-* SHA1 or  SHA256 algorithms
+* SHA1 or SHA256 algorithms
 
 For easy configurability, the SAML module offers the following:
 
@@ -171,7 +171,7 @@ You can now finish configuring your SAML module in your app by reviewing/updatin
 
 ### 3.1 Configuring Service Provider{#configure-sp}
 
-Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be available in the IdP for the reference of the IdP administrator.
 
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
@@ -363,7 +363,7 @@ By default, the module does not allow for unsolicited requests. That means that 
 
 #### 4.3.2 Enable Force Authentication
 
-Checking this box will force the SAML IdP  to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
+Checking this box will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
 
 #### 4.3.3 Enable Mobile Authentication Token
 

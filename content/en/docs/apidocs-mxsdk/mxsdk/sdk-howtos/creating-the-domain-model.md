@@ -36,7 +36,7 @@ First, you start with creation of the two entities, `Customer` and `Invoice`. En
 
 The relevant concept in the app model can be found in the Mendix Metamodel reference guide. In this case, you are working on the domain model, so the [Domain Model](/apidocs-mxsdk/mxsdk/domain-model-metamodel/) page is the starting point. In the Overview section, `Entity` is visible, which is the likely candidate for creation of new domain model entities.
 
-So how do you set these properties with the SDK? The Model SDK API docs provide us with this information. On the [`domainmodels.Entity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) page, you can find everything that is configurable for domain model entities, including the properties  [`name`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name)  and [`documentation`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation). They are of type `string`, which means that you can directly set their value to any `string` value.
+So how do you set these properties with the SDK? The Model SDK API docs provide us with this information. On the [`domainmodels.Entity`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html) page, you can find everything that is configurable for domain model entities, including the properties [`name`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#name) and [`documentation`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#documentation). They are of type `string`, which means that you can directly set their value to any `string` value.
 
 To create a new `Customer` entity, you create a single entity instance in a domain model and then set its name.
 
@@ -45,7 +45,7 @@ const customer = domainmodels.Entity.createIn(domainModel);
 customer.name = `Customer`;
 ```
 
-An `Entity` also has a [`location`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)  property, which defines where the entity is shown in the domain model editor in Studio Pro. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
+An `Entity` also has a [`location`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location) property, which defines where the entity is shown in the domain model editor in Studio Pro. This property needs to be set for each entity, so that the entities do not overlap each other in the domain model editor. To do this, set the property with a JSON object with `x` and `y` properties for coordinates:
 
 ```ts
 customer.location = { x: 100, y: 100 };
@@ -141,9 +141,9 @@ Model SDK API docs
 
 Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The *Studio Pro Guide* describes inheritance on the [Entities](/refguide/entities/) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
-The Metamodel in the  reference guide contains a section 'Generalization relationships' with a diagram that shows how the Mendix Metamodel for inheritance is structured.
+The Metamodel in the reference guide contains a section 'Generalization relationships' with a diagram that shows how the Mendix Metamodel for inheritance is structured.
 
-In the Model SDK, the [`Entity.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization)  property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)  instance, the entity is a specialization of the entity that is set with the  [`Generalization.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
+In the Model SDK, the [`Entity.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#generalization) property is used to configure this behavior. When it is set to a [`NoGeneralization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html) instance, the entity does not have a generalization. When it is set to a [`Generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html) instance, the entity is a specialization of the entity that is set with the [`Generalization.generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization) property.
 
 So, to set up entity `Customer` as a specialization of entity `Administration.Account`, you first need to look up the `Account` entity which [can be done in several ways](/apidocs-mxsdk/mxsdk/finding-things-in-the-model/). The following snippet looks up the `Account` entity in the `Administration` domain model, using the `findEntityByQualifiedName` function:
 
@@ -181,7 +181,7 @@ Metamodel reference guide
 Model SDK API docs
 
 * [Generalization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html)
-* Property  [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
+* Property [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
 * [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
 
 ## 5 Conclusion

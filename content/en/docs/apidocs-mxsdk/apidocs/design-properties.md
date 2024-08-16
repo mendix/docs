@@ -37,7 +37,7 @@ The Design Properties API is designed to allow you to choose between CSS classes
 
 There are several types of design properties: **Toggle**, **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing**. They are intended to cover various use cases, allowing you to choose the design property type that best fits your need. Not all versions of Studio Pro support the same design property types.
 
-* The **Toggle** type can be be turned on or off by the user. It can only be used with CSS classes, which will be applied if the toggle is turned on.
+* The **Toggle** type can be turned on or off by the user. It can only be used with CSS classes, which will be applied if the toggle is turned on.
 * A **Dropdown** allows you to define a set of related options. Only a single option can be selected at a single time.
 
 The following types have been introduced with Studio Pro 10.0.0:

@@ -129,7 +129,7 @@ Do the following:
 2. Make sure the microflow has a necessary parameter with the workflow context.
 3. In the **Toolbox**, find **Call workflow** activity and drag it into the microflow.
 4. Double-click the activity to open its properties.
-5. Set **Workflow** to to the workflow you would like to trigger.
+5. Set **Workflow** to the workflow you would like to trigger.
 6. Set **Context object** to the workflow context:
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/workflows/call-workflow-example.png" alt="Call Workflow Example" width="500" class="no-border" >}}
@@ -140,7 +140,7 @@ Now when you run this microflow, it will trigger the selected workflow.
 
 ## 4 Workflow Entities in the System Module {#workflow-entities}
 
-There are several workflow-related entities in the System module of your app, some of which can be used in in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
+There are several workflow-related entities in the System module of your app, some of which can be used in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
 
 You can find the following workflow-related entities in the System module: 
 

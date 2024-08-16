@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-one-statistics-tool/
 
 ## 1 Introduction
 
-This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as the first step in gaining insight into what a system is doing when it doesn’t perform  optimally. The tool is also used to determine potential performance issues by looking at the trends.
+This chapter gives an overview of the statistics tool, which measures the durations of microflows and browser-client requests and gathers statistics like number of executions as well as the, minimum, maximum and average durations. The statistics tool is used as the first step in gaining insight into what a system is doing when it doesn’t perform optimally. The tool is also used to determine potential performance issues by looking at the trends.
 
 ## 2 Statistics
 
@@ -41,7 +41,7 @@ This section will give a real-time overview of running actions and microflows. T
 
 ## 6 Stored Snapshot
 
-A stored snapshot is a collection of statistics saved to the database. This section provides an overview  of all the stored snapshots.
+A stored snapshot is a collection of statistics saved to the database. This section provides an overview of all the stored snapshots.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-statistics-tool/Snapshots.png" class="no-border" >}}
 

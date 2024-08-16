@@ -365,7 +365,7 @@ The view contains the following information:
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
 * Today indicator (the vertical blue line) – This indicates the date of today.
 * **Today** – Clicking **Today** on the lower-right corner brings the view back to today.
-* **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.
+* **Weeks**, **Months**, and **Quarters** – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.
 
 ## 4 Viewing Initiative Details {#view-initiative}
 

@@ -62,7 +62,7 @@ Parameters have the following settings:
 
 To add a parameter to the **Task name** or the **Task description**, do the following:
 
-1. Click the ellipsis icon next to the **Task  name** or the **Task description**.
+1. Click the ellipsis icon next to the **Task name** or the **Task description**.
 
 2. In the **Edit task name/description** dialog box > **Parameters** section, click the **New** button. 
 

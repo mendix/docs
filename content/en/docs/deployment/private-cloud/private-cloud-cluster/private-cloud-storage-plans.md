@@ -160,7 +160,7 @@ To create a new database, do the following steps:
 1. Give your plan a **Name** and choose the **Database Type**. See the information below for more help in setting up plans for the different types of database which are supported by Mendix for Private Cloud.
 2. Apply two validation checks by clicking the **Validate** and **Connection Validation** buttons:
     * **Validate** – Checks that you have provided all the required values and that they are in the correct format.
-    * **Connection validation** –  Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
+    * **Connection validation** – Checks whether the specified storage plan has been successfully created. This does not guarantee that the storage instance will be created successfully when the configuration is applied, so to fully test a database plan, you will need to test it by [creating a temporary test environment](#typical-workflow).
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/database-plan-config.png" alt="Database Plan Configuration" class="no-border" >}}
 
@@ -540,7 +540,7 @@ If your app is using Mendix 10.10 (or a later version) consider using the [Azure
 ##### 2.5.1.2 Limitations
 
 * Passwords can only be rotated manually.
-* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not  affect performance of other databases on the same server.
+* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not affect performance of other databases on the same server.
 * NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 

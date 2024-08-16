@@ -71,9 +71,9 @@ The description of the items that you can select are as follows:
 
 * **Cloud Location**: the location of the environment
 
-* **App RAM**:  the size of the RAM allocated for running the app
+* **App RAM**: the size of the RAM allocated for running the app
 
-* **DB RAM**:  the size the RAM allocation for database operations
+* **DB RAM**: the size the RAM allocation for database operations
 
 * **DB Storage**: the size of the database storage
 
@@ -129,7 +129,7 @@ The description of the items that you can select are as follows:
 
 * **Namespace**: the Kubernetes namespace
 
-    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#3-creating-a-cluster-and-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
+    {{% alert color="info" %}}For more information, see [How to Create a Cluster and Namespace](/developerportal/deploy/private-cloud-cluster/#create-cluster-namespace) in *Creating a Private Cloud Cluster*.{{% /alert %}}
 
 * **Database Name**: the name of the database
 

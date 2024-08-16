@@ -89,7 +89,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be available.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
@@ -244,7 +244,7 @@ Here is an example of dropzones for filters in **Structure mode**:
 
 ### 7.1 Date Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of default Date filter look and feel" class="no-border" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
@@ -502,7 +502,7 @@ In-memory selection was introduced in Data Widgets v2.7.0.
 
 Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default, and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
 
-Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can  only select items that are currently visible.
+Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can only select items that are currently visible.
 
 ### 12.1 Selection Mode
 

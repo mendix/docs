@@ -85,7 +85,7 @@ native-builder.exe prepare --project-name CoolApp --java-home "C:\Program Files\
 To be valid, the `app-identifier` needs to be lower-case with no special characters.
 {{% /alert %}}
 
-The `prepare` command  does the following:
+The `prepare` command does the following:
 
 * Generates a private GitHub repository which will house the project's source code and configurations
 * Generates two different projects on App Center for Android and iOS respectively

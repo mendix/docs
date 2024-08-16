@@ -39,7 +39,7 @@ Click **View** to display the asset details. You can then perform curate actions
 
 ## 3 Curate Page {#curation-option}
 
-Curation is performed on the Edit Data Source screen. If you are a curator or  owner of an asset, you will see the option to **Edit** the selected item.
+Curation is performed on the Edit Data Source screen. If you are a curator or owner of an asset, you will see the option to **Edit** the selected item.
 
 {{% alert color="info" %}}
 Owners of registered assets can only curate their services.

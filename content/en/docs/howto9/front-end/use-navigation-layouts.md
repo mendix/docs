@@ -39,7 +39,7 @@ The navigation menu of Atlas Default is a toggled menu. Options for this toggled
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentopenoption.gif"   width="350"  class="no-border" >}}
 
-* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not not start shrunk, but will shrink when sidebar is toggled:
+* **Shrink content (initially closed)** — the navigation menu will initially start closed at its minimum width displaying just the menu item's icon. When toggled it will move to its maximum width and display both the menu item's icon and description. The page's content (center region) does not start shrunk, but will shrink when sidebar is toggled:
 
     {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  class="no-border" >}}
 
@@ -50,7 +50,7 @@ across web, tablet and mobile devices:
 
 {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.2_atlastopbar.png"   width="350"  class="no-border" >}}
 
-It has three regions: top, left, and center. The top region contains both the brand logo and the navigation menu. The left region does contain a navigation menu, but it is only visible at phone screen size. At that screen size the navigation menu in the top region will be hidden and replaced with a hamburger toggle which triggers the  opening and closing of the left region. The center region houses the dynamic content of your app:
+It has three regions: top, left, and center. The top region contains both the brand logo and the navigation menu. The left region does contain a navigation menu, but it is only visible at phone screen size. At that screen size the navigation menu in the top region will be hidden and replaced with a hamburger toggle which triggers the opening and closing of the left region. The center region houses the dynamic content of your app:
 
 {{< figure src="/attachments/howto9/front-end/use-navigation-layouts/2.2_atlastopbarregions.png"   width="350"  class="no-border" >}}
 
@@ -82,7 +82,7 @@ Top navigation conserves more vertical page space than left navigation. With lef
 
 #### 2.3.3 Item Priority
 
-Items in top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in  left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
+Items in top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
 #### 2.3.4 Visibility
 

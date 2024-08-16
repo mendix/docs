@@ -91,7 +91,7 @@ The result of the microflow is the result of the operation and can include the f
 
 If the microflow throws an unhandled exception, the response is **500: Internal server error**.
 
-When security is enabled, then then microflow needs to have at least one role configured to be accessible.
+When security is enabled, then the microflow needs to have at least one role configured to be accessible.
 
 #### 2.1.5 Deprecated
 

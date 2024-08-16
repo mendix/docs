@@ -24,7 +24,7 @@ Best Practice Recommender is built using statistical analysis of thousands of an
 
 It consists of a three-level assistance:
 
-1. **Detection** –  it inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
+1. **Detection** – it inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
 2. **Recommendation** – it explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a dedicated step-by-step guideline of how to fix the issue.
 3. **Auto-fixing** – it can automatically implement the best practice and fix the issue.
 

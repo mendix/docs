@@ -31,9 +31,7 @@ If you meet the above conditions, you can find the graphs by following these ste
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com).
 
-1. In the navigation pane, click **Metrics**
-
-    {{% alert color="info" %}}You can also visit the **Metrics** page using this link: `https://cloud.home.mendix.com/link/metrics/<appID>`, with `{app ID}` replaced by your app ID.{{% /alert %}}
+1. In the navigation pane, click **Metrics**.
 
 1. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
 

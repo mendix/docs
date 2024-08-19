@@ -93,7 +93,7 @@ If you already have the database, such as a test database in the cloud, you can 
 
 The Mendix Cloud environment only uses PostgreSQL as a database server. Therefore, it is recommended to migrate your existing on-premises non-PostgreSQL source database to an on-premises PostgreSQL target database. Then you can export it and upload it to Mendix Cloud. The migration, export, and upload steps are described below.
 
-### Step 1: Migrating a Non-PostgreSQL Database to a PostgreSQL Database
+### 4.1 Step 1: Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
 The source database is the database with the data that you want to migrate to the cloud. The target database should be a completely empty PostgreSQL database; it should not contain any tables. You can either create a new database for this or [clear an existing one](/developerportal/deploy/environments-details/#clear-environment).
 

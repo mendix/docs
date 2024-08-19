@@ -897,8 +897,9 @@ nav.foldable-nav {
     counter-increment: h2; 
     content: var(--base-section-num,"") counter(h2) " ";
   }
-  
-  h3[id]::before {
+
+  // DB - Exclude headers in Swagger reference
+  h3[id]:not(.opblock-tag)::before {
     display: inline;
     visibility: visible;
     counter-increment: h3; 

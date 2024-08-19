@@ -2,6 +2,7 @@
 title: "Security Advisories"
 url: /releasenotes/security-advisories/
 weight: 50
+numberless_headings: true
 #layout: wide
 ---
 

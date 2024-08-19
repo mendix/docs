@@ -4,6 +4,8 @@ linktitle: "Deployment"
 url: /releasenotes/developer-portal/deployment/
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 weight: 25
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
 ---
 

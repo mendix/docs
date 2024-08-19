@@ -186,7 +186,7 @@ The table below provides a detailed comparison between the Advanced Audit Trail 
 | List commit handling | Optimized | Not optimized |
 | Saving action stack upon change (e.g. showing related changes and triggering microflow)| Yes | No |
 | Standard overview screen searchable per entity | Yes | No |
-| Ability to show custom attribute value when viewing associations in an audit trail  snapshot| Yes | No |
+| Ability to show custom attribute value when viewing associations in an audit trail snapshot| Yes | No |
 | Developer can delete audit trail data unnoticed | No | Yes |
 | Guaranteed completeness of audit trail in case of disaster| Yes | No |
 | Additional custom data can be added to an audit trail snapshot (e.g. "on behalf of" in case of REST service)| Yes | No |

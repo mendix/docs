@@ -138,7 +138,7 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the Siemens Insights Hub Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings** dialog box accessed through the **App Explorer**.
+If you are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings** dialog box accessed through the **App Explorer**.
 
 {{< figure src="/attachments/deployment/deploying-to-mindsphere/image4.png" alt="App settings dialog" class="no-border" >}}
 

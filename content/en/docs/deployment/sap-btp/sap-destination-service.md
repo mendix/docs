@@ -152,7 +152,7 @@ By providing the OData Connector for SAP solutions actions (*Get list* for examp
 
 The attributes in the **Destination** entity which are used for *Principal Propagation* are:
 
-* Url –  the *Location* of the service
+* Url – the *Location* of the service
 * ProxyHost – the *Host* of the service
 * ProxyPort - the *Port* of the service
 * SapConnectivityProxyCredentials – the *Username* of the user accessing the service (Password is *empty*)

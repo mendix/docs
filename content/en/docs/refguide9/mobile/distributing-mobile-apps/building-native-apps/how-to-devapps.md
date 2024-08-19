@@ -76,7 +76,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide9/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in [Distributing Native Apps](/refguide9/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 

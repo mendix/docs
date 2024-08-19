@@ -59,7 +59,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
     
     * **Cluster Name** - Specify a name for the cluster.
     * **API Server** - Specify your Kubernetes API server.
-    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and  then get the service account's token. For reference, see the following shell script:
+    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and then get the service account's token. For reference, see the following shell script:
 
         ```text
         # create ServiceAccount, ClusterRole, and ClusterRoleBinding

@@ -131,7 +131,7 @@ This section provides an example of how to set up RBAC in Snowflake for two test
     ALTER USER TESTUSER2 SET DEFAULT_ROLE = ROLETESTB;
     ```
 
-6. Create an example  database. The following statement creates  a test database named `Example_RBAC`, a schema named `RBAC_Schema`, and a table named `Example RBAC`. It also adds data to the table.
+6. Create an example database. The following statement creates a test database named `Example_RBAC`, a schema named `RBAC_Schema`, and a table named `Example RBAC`. It also adds data to the table.
 
     ```SQL
     Create Database Example_RBAC;

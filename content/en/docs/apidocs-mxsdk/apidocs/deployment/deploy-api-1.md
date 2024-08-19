@@ -1101,7 +1101,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 | HTTP Status | Error code | Description                                                  |
 | ----------- | ---------- | ------------------------------------------------------------ |
-| 204         | No Content | The tag has been removed  or the response is empty or Tag not found |
+| 204         | No Content | The tag has been removed or the response is empty or Tag not found |
 
 ##### 3.18.3.2 Error Code
 

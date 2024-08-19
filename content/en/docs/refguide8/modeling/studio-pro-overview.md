@@ -44,7 +44,7 @@ You can deploy your app by clicking the **Run** or **Run locally** buttons. To v
 
 For more information on deployment in Mendix, see [Deployment](/deployment/).
 
-For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links to Apps and Marketplace {#links}
 
@@ -90,7 +90,7 @@ On the right is the currently selected language. If you have set up multiple lan
 
 ### 7.1 General Shortcut Keys
 
-In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](/refguide8/menus/).
+In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in [Menus](/refguide8/menus/).
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 

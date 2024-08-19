@@ -20,7 +20,7 @@ To publish your app in an app store, Mendix recommends building native iOS apps 
 
 ## 2 Downloading the Local Build Package {#download-local-package}
 
-To download the local build  package, publish your app for mobile app stores through the Mendix Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
+To download the local build package, publish your app for mobile app stores through the Mendix Portal. At the **Build Mobile App Store Packages** page, under **How should the device packages be built?**, choose the non-default option **I will manage the build process manually myself**. Click the green button to download the local build package. 
 
 ## 3 Customizing the Local Build Package
 

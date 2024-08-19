@@ -92,7 +92,7 @@ The features in the navigation pane can also be accessed via APIs, enabling thir
 If you are invited to collaborate on an app, the invitation will appear at the top of the **My Apps** page. You can accept or decline the invitation.
 
 {{% alert color="info" %}}
-You  get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
+You get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
 {{% /alert %}}
 
 ## 4 Company Apps {#my-company-apps}

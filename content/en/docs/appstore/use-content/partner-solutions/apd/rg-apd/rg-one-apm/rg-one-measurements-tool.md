@@ -41,12 +41,12 @@ The **Measurement configuration** tab allows you to do the following:
 * **Calculate with expression**
     * If yes, the **Expression** field appears (see below for the expression details)
     * If yes, the **Parameter** field appears (this parameter can be used in the expression)
-* Set the **Frequency (s)** that the measurement is run in in seconds
+* Set the **Frequency (s)** that the measurement is run in seconds
 * **Store in database** stores the measurement in the database
 * You can only measure for triggers; for charts you need the database to be stored in the database
 * The **Remove data after (days)** configures the automatic cleanup (purge) of the data
 * Measurements will automatically be removed after a certain amount of days
-* For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management consoles – this is only useful for query measurements, since JVM Browser measurements are already available  there
+* For a query measurement, the **Expose query results to JMX** makes the query results visible in other Java management consoles – this is only useful for query measurements, since JVM Browser measurements are already available there
 * If a query has multiple results, you can configure using the first column a part of the name via **Use first result column in name**
 
 ### 3.2 Triggers Tab

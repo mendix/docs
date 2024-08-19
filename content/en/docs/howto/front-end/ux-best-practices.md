@@ -190,7 +190,7 @@ However, consistency in button design is important for enabling the user to prog
 
 ### 9.1 Plan the Position, Color, and Label
 
-The most common button examples that raise questions are "Accept" and "Cancel." As a UX Designer, you must decide  which one you put on the left and the right, in order to establish a relationship between them that the end-user can easily understand. You also need to consider the button colors and labels.
+The most common button examples that raise questions are "Accept" and "Cancel." As a UX Designer, you must decide which one you put on the left and the right, in order to establish a relationship between them that the end-user can easily understand. You also need to consider the button colors and labels.
 
 The rule of thumb for button design is that, when the end-user moves forward in an app flow, that button should be designed in the following way:
 
@@ -200,7 +200,7 @@ The rule of thumb for button design is that, when the end-user moves forward in 
 
 However, this can get confusing with “destructive tasks,” such as when the end-user wants to cancel a subscription. In this scenario, you would need to consider whether the button label should be “Cancel” or “Cancel subscription."
 
-For more information, see  [The Microcopyist: Cancellation, Confirmation, Conflagration](https://uxdesign.cc/the-microcopyist-cancellation-confirmation-conflagration-8a6047a4cf9).
+For more information, see [The Microcopyist: Cancellation, Confirmation, Conflagration](https://uxdesign.cc/the-microcopyist-cancellation-confirmation-conflagration-8a6047a4cf9).
 
 ## 10 Quick Summary
 

@@ -96,7 +96,7 @@ Where you need to supply the following parameters
 This creates the following resources:
 
 * `mendix-pclm` – the deployment CR of the server
-* `mendix-pclm`  – a secret containing the credentials to access the Database
+* `mendix-pclm` – a secret containing the credentials to access the Database
 * `mx-private-cloud-mx-privatecloud-license-manager` – the service name of the PCLM server
 
 ## 4 Reaching the HTTP REST API of the PCLM Server

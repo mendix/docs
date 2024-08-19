@@ -87,7 +87,7 @@ To publish a microflow, follow these steps:
 3. You should now see the **Operation Operation** properties editor. Take note of the following tab details:
 
     * On the **General** tab, you can change the **Name** and **Documentation**.
-    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (needed when adding  [parameters](/refguide/parameter/) during the [creating the functionality to expose](#expose) step)
+    * On the **Parameters** tab, you can mark the input parameters as **Optional** and **Nillable** (needed when adding [parameters](/refguide/parameter/) during the [creating the functionality to expose](#expose) step)
     * On the **Return type** tab, you can configure the return type.
 
 4. Click **Select...** to select which attributes and associations of the return object **Customer** you want to expose:

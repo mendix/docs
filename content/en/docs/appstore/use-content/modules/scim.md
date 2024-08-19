@@ -191,7 +191,7 @@ The table below compares the primary user-identifying attribute used by SCIM (i.
 | --- | --- | --- |
 | Okta | OIDC SSO | SCIM.externalID and OIDC.sub contains same value. |
 | EntraID | OIDC SSO | SCIM.externalID and OIDC.oid contains same value. |
-| Okta | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Configure  Application username to Custom with user.getInternalProperty("id"). |
+| Okta | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Configure Application username to Custom with user.getInternalProperty("id"). |
 | EntraID | SAML | SCIM.externalID and SAML.Use Name ID contains same value. <br> Note: Map Unique User Identifier as user.objectid in SSO Configuration. |
 
 ### 2.2 Runtime Configuration

@@ -12,7 +12,7 @@ The **Password text box** is a widget that provides a password for authenticatio
 
 {{< figure src="/attachments/refguide/modeling/pages/authentication-widgets/password-text-box/password-text-box.png" alt="Password Text Box" class="no-border" >}}
 
-The **Password text box** should be placed on a page together with  with a [Login ID text box](/refguide/login-id-text-box/) and a [Sign-in button](/refguide/sign-in-button/).
+The **Password text box** should be placed on a page together with a [Login ID text box](/refguide/login-id-text-box/) and a [Sign-in button](/refguide/sign-in-button/).
 
 ## 2 Properties
 

@@ -34,7 +34,7 @@ When migrating from Mendix 7 to Mendix 8, you must integrate **theme_old** into 
 
 ### 2.1 Working with HTML Files
 
-If you have altered  your HTML files, consult the instructions below. If you have not, you may ignore this subsection.
+If you have altered your HTML files, consult the instructions below. If you have not, you may ignore this subsection.
 
 If you changed any **index\*.html** files, make sure to do the following:
 

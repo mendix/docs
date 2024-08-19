@@ -33,7 +33,7 @@ To retrieve a single object, pass the object identifier in the URI (for example,
 
 ### 2.3 Query Options {#query-options}
 
-#### 2.3.1 Retrieving Associated Objects
+#### 2.3.1 Retrieving Associated Objects {#retrieving-associated-objects}
 
 To retrieve associated objects, pass the `$expand` query parameter.
 

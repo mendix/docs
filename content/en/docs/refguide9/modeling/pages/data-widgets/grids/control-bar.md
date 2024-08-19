@@ -143,7 +143,7 @@ The **Maximum number of rows** property indicates the maximum number of rows tha
 
 The **Date export format** property defines the format dates will be exported. The possible options are the following ones:
 
-* **Date value** *(default)*  – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
+* **Date value** *(default)* – date values are exported as real dates, so that it is possible to use Excel date functions like sorting
 * **Text** – date values are exported exactly as shown in the data grid
 
 {{% alert color="warning" %}}

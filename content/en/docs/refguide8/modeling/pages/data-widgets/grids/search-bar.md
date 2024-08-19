@@ -26,7 +26,7 @@ There are three different types of search fields that can be used for different 
 
 * **Comparison** – Search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: AutoNumber, Date and Time, Integer, Long, String, Decimal.
 * **Drop-down** – Search results are filtered by comparing them to the given search term. If the search value matches the attribute value, this object will be a part of the search result. Possible attribute types: Boolean, Enumerations, Associations.
-* **Range** –  This will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal.
+* **Range** – This will apply a filter based on whether the search term falls between the values of two selected attributes. Possible attribute types: AutoNumber, Date and Time, Integer, Long, Decimal.
 
 {{% alert color="info" %}}
 You cannot change the type of a search field, you will need to delete it and then add a new one of a different type.
@@ -108,7 +108,7 @@ The value entered by the end user (or the default value in the case of hidden an
 | Smaller          | Is the attribute value smaller than the entered value?       | Text, Date                              | < date                    |
 
 {{% alert color="info" %}}
-For **Drop-down** search fields:  there is no limit on the number of drop-down selection options, thus a selected attribute can have an unlimited amount of unique values. However, having thousands of options which must be retrieved from the server will slow page loading considerably on older browsers. Initially hiding the search bar which contains the drop-down search field can improve page loading performance on first load. 
+For **Drop-down** search fields: there is no limit on the number of drop-down selection options, thus a selected attribute can have an unlimited amount of unique values. However, having thousands of options which must be retrieved from the server will slow page loading considerably on older browsers. Initially hiding the search bar which contains the drop-down search field can improve page loading performance on first load. 
 {{% /alert %}}
 
 **Date comparisons and the influence of the default value**

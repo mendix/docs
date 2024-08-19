@@ -128,7 +128,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
 5. Open the **Toolbox** and search for a **File Manager**, drag it to the list view. 
 
-6. Open the **File Manager** properties  and do the following: 
+6. Open the **File Manager** properties and do the following: 
 
     1. Set the **Type** to **Download**.
     2. Set the **Show label** property to **No**.

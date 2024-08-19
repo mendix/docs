@@ -49,7 +49,7 @@ Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize y
 
 | Operation                    | Scopes                                                        |
 |-----------------------------|---------------------------------------------------------------|
-| Build  deployment package   | `mx:privatecloud-build:write` and `mx:modelrepository:write`  |
+| Build deployment package   | `mx:privatecloud-build:write` and `mx:modelrepository:write`  |
 | Upload deployment package   | `mx:privatecloud-build:write`                                 |
 | Delete deployment package   | `mx:privatecloud-build:write`                                 |
 | Get deployment package      | `mx:privatecloud-build:read` or `mx:privatecloud-build:write` |

@@ -262,7 +262,7 @@ You can use the following OpenAI-specific exposed microflows to construct reques
 
 #### 3.5.1 `Create OpenAI Connection` {#create-openai-connection}
 
-This microflow can be used to create the [OpenAIConnection](#openaiconnection) object that is required for the chat completions operations. A [Configuration](#configuration) object is required for the input. For OpenAI  configurations (but not Azure OpenAI configurations), the model name is mandatory too.
+This microflow can be used to create the [OpenAIConnection](#openaiconnection) object that is required for the chat completions operations. A [Configuration](#configuration) object is required for the input. For OpenAI configurations (but not Azure OpenAI configurations), the model name is mandatory too.
 
 #### 3.5.2 `Chat: Set Response Format` {#set-responseformat-chat}
 

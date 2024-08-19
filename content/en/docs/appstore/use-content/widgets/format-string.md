@@ -37,7 +37,7 @@ When you create a new attribute via the **Edit Attributes Item** dialog box, you
 
 * **Data source**
     * **Variable name**<a id="variable-name"></a> – identifies the attribute value; this name should be used in [Display string](#display-string) property
-    * **Attribute**<a id="attribute"></a> –  the value of this attribute will be used to replace `${your_Variable_Name}`, defined in the [Display string](#display-string) property
+    * **Attribute**<a id="attribute"></a> – the value of this attribute will be used to replace `${your_Variable_Name}`, defined in the [Display string](#display-string) property
     * **Empty value replacement** – this string will be used when an attribute returns empty; note that this string is interpreted as HTML
 * **Behavior**
     * **Date format** – shows the date and/or time according to your locale; **Relative** is time relative to the current date-time

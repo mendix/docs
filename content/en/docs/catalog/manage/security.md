@@ -22,8 +22,8 @@ Access to data is determined by the identification protocols of the organization
 
 Registered data sources have the following classifications that apply to the visibility and accessibility of the data source in the Catalog:
 
-* **Public**  – the data source is visible to all internal and external users of the Catalog
-* **Internal**  – the data source is restricted to the members of the organization
+* **Public** – the data source is visible to all internal and external users of the Catalog
+* **Internal** – the data source is restricted to the members of the organization
 
 The **Access Level** of the asset indicates the runtime security on the data source and what users can see and use when consuming datasets in their app development.
 

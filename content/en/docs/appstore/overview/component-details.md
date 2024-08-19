@@ -36,7 +36,7 @@ The header for a component presents the following details:
     * **Download** for other content types – Click this to download the component.
     * **Contact Us** – Click this to contact Mendix or the community supplier.
 
-<a id="usage"></a>The **Usage** section presents  the following information (depending on the type of component):
+<a id="usage"></a>The **Usage** section presents the following information (depending on the type of component):
 
 * The latest **Version** number of the component
 * The Studio Pro version that the component **Requires** to work

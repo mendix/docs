@@ -93,7 +93,7 @@ Studio Pro shows all usages of this entity in the **Find Results** pane.
 
 Double-click an item in the **Find Results** pane to open the corresponding document. 
 
-Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to  keep several search results.
+Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to keep several search results.
 
 ## 5 Read More
 

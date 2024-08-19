@@ -32,7 +32,7 @@ If you want to make use of the **Realistic** lighting option which can make your
 
 Create a new app by following these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Blank Native Mobile App**.
 1. Click **Use this starting point.**
 1. Name your app *Hello World* and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the intro screen widget and other containers.
@@ -103,7 +103,7 @@ Here is a cube with the **Left** orientation:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/left-cube.png" alt="Cube on tracker with Left orientation"   width="400"  class="no-border" >}}
 
-**Physical marker size** - this is where you put the physical size of your tracker, and how AR determains how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
+**Physical marker size** - this is where you put the physical size of your tracker, and how AR determines how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
 
 ## 4 Configuring Your Cube (AR) Widget
 
@@ -161,7 +161,7 @@ The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/material-tab.png" alt="Material"   width="400"  class="no-border" >}}
 
-* **Material type** - can be either **Texture** or **Color**. **Material type** determains what will be put onto the cube, an image or a solid color.
+* **Material type** - can be either **Texture** or **Color**. **Material type** determines what will be put onto the cube, an image or a solid color.
 
 * **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
@@ -196,7 +196,7 @@ The **Material** tab contains properties for configuring appearance:
 * **Dragging** – allows a user to move an object by moving their phone (the object will follow on the floor, desk, or other surface in the middle of the screen). 
 * **Enable dragging** - dictates if the dragging behavior is enabled. For example, you could enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
 * **Dragging type** – specifies the type of dragging behavior:
-    * **Fixed  Distance**: makes the object follow you at always the same distance as it started
+    * **Fixed Distance**: makes the object follow you at always the same distance as it started
     * **Fixed to world**: makes the object stick to the world, for example objects like floors, desks, and walls 
 * **On drag** – an event that is triggered when the object is has started or stopped moving through dragging:
 

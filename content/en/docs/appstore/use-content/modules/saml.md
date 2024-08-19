@@ -47,7 +47,7 @@ For encryption of SAML messages the following options are supported:
 
 * No Encryption
 * 1024 or 2048 bit encryption
-* SHA1 or  SHA256 algorithms
+* SHA1 or SHA256 algorithms
 
 For easy configurability, the SAML module offers the following:
 
@@ -72,7 +72,7 @@ The Mendix SAML SSO module does not support the following:
 * Enhanced Client/Proxy SSO profile
 * HTTP artifact binding for SAML requests
 
-When using SSO connections with multiple IdP's, the SAML EntityID for your app will be shared with all connected IdPs. The SAML module does not allow you to configure different EntityID's for each of your connected IdPs.
+When using SSO connections with multiple IdPs, the SAML EntityID for your app will be shared with all connected IdPs. The SAML module does not allow you to configure different EntityID's for each of your connected IdPs.
 
 Some SAML services, such as eHerkenning and DigID in the Netherlands, use optional features of SAML which are not yet supported by the Mendix SAML SSO module. These include:
 
@@ -116,7 +116,7 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
-    * For Mendix 7 and 8, you should use the latest published versions in the **1.x** and **2.x** range, respectively, unless otherwise indicated in the **Documentation** tab. 
+    * For Mendix 8, you should use the latest published versions in the **2.x** range, unless otherwise indicated in the **Documentation** tab. 
     * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
     
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
@@ -171,7 +171,7 @@ You can now finish configuring your SAML module in your app by reviewing/updatin
 
 ### 3.1 Configuring Service Provider{#configure-sp}
 
-Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be be available in the IdP for the reference of the IdP administrator.
+Before any IdP can be configured, you need to configure the SP, which is your current application. The SP configuration allows you to configure some basic information for the SP metadata file. This information will be available in the IdP for the reference of the IdP administrator.
 
 {{% alert color="info" %}}
 The base URL used for the links in your SP metadata is determined by the **Application Root URL** [custom runtime setting](/refguide/custom-settings/#general) of your app. Change the value for this runtime setting to change the base URL of the links in your SP metadata. After changing the **Application Root URL** setting, you have to import the SP metadata into your IdP again.
@@ -237,9 +237,6 @@ The following settings control user provisioning:
 
 * **Uses InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes. When following the InCommon standard, a fixed set of assertion attributes will be available to choose from later.
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
-
-    {{% alert color="info" %}}In Mendix 7,  all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.{{% /alert %}}
-
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 * **User Action** – The module will always search for the user, based on the **Identifying Assertion**. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. 
@@ -256,7 +253,6 @@ These settings are only available in the following versions of the module (depen
 
 * v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
-* v1.16.4 and above for Mendix 7
 {{% /alert %}}
 
 * **Use custom logic for user provisioning** and **Use custom after sign-in logic**
@@ -324,8 +320,6 @@ You also need to define where the user account will be stored within your app. P
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
 
-In Mendix 7, all user names passing through the SAML module are converted to lower-case before login and creation. We strongly advise you to convert all existing and new user names to lower-case as well.
-
 ### 4.2 Provisioning
 
 On the **Provisioning** tab, the following settings can be used to control user provisioning:
@@ -354,7 +348,6 @@ These settings are only available in the following versions of the module (depen
 
 * v3.1.8/v3.1.9 and above for Mendix 9 and 10
 * v2.2.0 and above for Mendix 8
-* v1.16.4 and above for Mendix 7
 
 #### 4.2.4 Just in Time Provisioning
 
@@ -370,7 +363,7 @@ By default, the module does not allow for unsolicited requests. That means that 
 
 #### 4.3.2 Enable Force Authentication
 
-Checking this box will force the SAML IdP  to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
+Checking this box will force the SAML IdP to (re)authenticate end-users, even if they are already signed in at the SAML IdP. Only check this box if stronger security for your app is more important than the convenience of having single sign-on for your end-users.
 
 #### 4.3.3 Enable Mobile Authentication Token
 
@@ -669,8 +662,8 @@ End-users can access your app through the following endpoints when using the SAM
     The (optional) parameters for this end point are as follows:
     * **idp_id** – this indicates which idp will be used to sign the end-user in if you connect your app using multiple SAML IdPs
     * **action=verify** – indicates that in-session authentication is being requested (see [In-session Authentication](#in-session) for more information)
-    * **on={contextname}** – this gives context to the initiation of in-session authentication,  (see [In-session Authentication](#in-session) for more information)
-* **/SSO/login/SSO/** or **/SSO/login/SSO?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.
+    * **on={contextname}** – this gives context to the initiation of in-session authentication, (see [In-session Authentication](#in-session) for more information)
+* **/SSO/login** or **/SSO/login?action=verify&on={contextname}** – If you have only one active IdP, opening these URLs will automatically try to log you in using the active IdP. In the case of multiple active IdPs and discovery enabled, the user will be redirected to the discovery page.  If discovery is not allowed, the user will receive an error message. The optional parameters work as described above.
 
 Your SAML IdP can consume the following endpoints at your app. Typically the SP-metadata is used to communicate the URLs to your SAML IdP. As a Low-Code Developer you don’t have to consider these endpoints. This information is included here for completeness and as a reference when questions arise around integration with your SAML IdP.
 

@@ -61,7 +61,7 @@ Pages without a bottom bar are created in a separate stack. If you navigate from
 
 ### 3.3 Sidebar
 
-You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep  useful links and application settings there.
+You can use the **Sidebar** in your native projects' navigation systems. It is a common pattern in mobile applications to use the **Drawer** from left side to navigate between screens IT is also common to keep useful links and application settings there.
 
 There are only a few steps needed to be done to create a **Sidebar** in your native project. First of all, you need to include **NativePhone_SideMenu**, which you can find under **Phone Layouts** in **Atlas Core**:
 
@@ -139,7 +139,7 @@ You can find and customize these options in [Navigation Profile](/refguide/navig
 
 By default, all screens and popups will inherit the appropriate behavior of their operating system (either iOS or Android). 
 
-Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both sperating systems.
+Among the available options for screen transitions, you can choose between **"Slide from right"** or **"Scale from center"**. For popups, we have **"Modal Presentation"** and **"Bottom Sheet"** as well. Once you select these options, they will apply to the native mobile app on both operating systems.
 
 For specific cases, we also offer an option **"Apply screen options also for popups"**. You can use it if you need your popups to look and behave the same as usual screens. Once you select this option, any popups options will be disabled and dismissed.
 

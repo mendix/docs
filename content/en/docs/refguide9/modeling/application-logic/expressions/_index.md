@@ -13,7 +13,7 @@ aliases:
 
 Expressions change a value based on a function or combination of functions. 
 
-Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example,  `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
+Named items (for example, objects, lists, or variables) can be called in an expression by inserting the name of the item and adding a dollar sign (for example, `$customer` could refer to an object named `customer`). Expressions can also include Mendix system items which contain information about the current user session. See [System Items](#system-items), below.
 
 Attributes and associations of objects are accessed using a slash (for example, the **Name** attribute of the customer object is referred to as `$customer/Name`, and the **CRM.Customer_Order** association of the customer object is referred to as `$customer/CRM.Customer_Order`).
 
@@ -136,7 +136,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`find`](/refguide9/string-function-calls/) – gets a sub-string position
 * [`findLast`](/refguide9/string-function-calls/) – gets the last sub-string position
 * [`contains`](/refguide9/string-function-calls/) – contains the sub-string
-* [`startsWith`](/refguide9/string-function-calls/)  – determines whether a string starts with the specified sub-string
+* [`startsWith`](/refguide9/string-function-calls/) – determines whether a string starts with the specified sub-string
 * [`endsWith`](/refguide9/string-function-calls/) – determines whether a string ends with the specified sub-string
 * [`trim`](/refguide9/string-function-calls/) – removes the leading and trailing whitespace
 * [`isMatch`](/refguide9/string-function-calls/) – matches a regular expression
@@ -203,7 +203,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`subtractDaysUTC`](/refguide9/subtract-date-function-calls/) – subtracts days from a date using the UTC calendar
 * [`subtractWeeks`](/refguide9/subtract-date-function-calls/) – subtracts weeks from a date
 * [`subtractWeeksUTC`](/refguide9/subtract-date-function-calls/) – subtracts weeks from a date using the UTC calendar
-* [`subtractMonths`](/refguide9/subtract-date-function-calls/)  – subtracts months from a date
+* [`subtractMonths`](/refguide9/subtract-date-function-calls/) – subtracts months from a date
 * [`subtractMonthsUTC`](/refguide9/subtract-date-function-calls/) – subtracts months from a date using the UTC calendar
 * [`subtractQuarters`](/refguide9/subtract-date-function-calls/) – subtracts quarters from a date
 * [`subtractQuartersUTC`](/refguide9/subtract-date-function-calls/) – subtracts quarters from a date using the UTC calendar

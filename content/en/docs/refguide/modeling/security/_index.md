@@ -10,7 +10,7 @@ Security in Mendix has several aspects which are all covered on this page.
 
 Firstly, you may be working as a team to create the app. You will want to control who is on the team and what each member can do. This is managed in [Apps](https://sprintr.home.mendix.com/). For more information, see [Building an App as a Team](#team) section below. 
 
-Secondly, you will want to control who can access your app once it is running. You will want to prevent unauthorized access to your running application. You may also want different end-users to see different parts of the app , so access to individual pages, data, and microflows can be limited to specific end-users. This is managed from within Studio Pro. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
+Secondly, you will want to control who can access your app once it is running. You will want to prevent unauthorized access to your running application. You may also want different end-users to see different parts of the app, so access to individual pages, data, and microflows can be limited to specific end-users. This is managed from within Studio Pro. For more information, see [App Security Set Up in Studio Pro](#security-in-studio-pro) section below.
 
 There are different ways in which you can set up app authentication, including local authentication and using a federated IdP to provide single sign-on (SSO). For more information, see the [App Authentication](#authentication) section below. 
 
@@ -40,7 +40,7 @@ Next to this, each module defines its own set of module roles and you only have 
 
 A user role is a combination of module roles. An end-user that signs into the system gets the access rights of all of their user roles and indirectly to the module roles that are configured for those user roles.
 
-Say, for example, you have an app with two modules: ProjectManagement and System. The ProjectManagement module has two module roles: TeamLeader, TeamMember; and the System module contains User and Administrator module roles. In this case, you would like to to define two app user roles, the team leaders and team members so you only need two user roles. You define those two user roles at app level and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
+Say, for example, you have an app with two modules: ProjectManagement and System. The ProjectManagement module has two module roles: TeamLeader, TeamMember; and the System module contains User and Administrator module roles. In this case, you would like to define two app user roles, the team leaders and team members so you only need two user roles. You define those two user roles at app level and assign module roles to them. The table below shows which module roles are contained within the user roles. Note that you always need at least the User role in the System module.
 
 | Module Roles for User Role 'TeamMember' | Module Roles for User Role 'TeamLeader' |
 | --------------------------------------- | --------------------------------------- |

@@ -313,7 +313,7 @@ To add a list of allowed continuation URLs, do the following:
 
 1. Click **Add** for **Custom Environment Variables**.
 1. Select **MendixSSO_AllowedContinuationURLs**.
-1. Set **Value** to  the list of URLs separated by a comma (",").
+1. Set **Value** to the list of URLs separated by a comma (",").
 1. Click **Save** to save the variable.
 1. Restart your application to apply the changes.
 

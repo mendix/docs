@@ -17,7 +17,7 @@ The widget does the following:
 
 ## 2 Usage
 
-The Progress Bar widget requires three values: a **Minimum value** and **Maximum value** to describe the full range of  progress as well as a **Current value** to indicate the progression on that range. 
+The Progress Bar widget requires three values: a **Minimum value** and **Maximum value** to describe the full range of progress as well as a **Current value** to indicate the progression on that range. 
 
 These values can be provided in three different ways: as a **Static** integer value, a **Dynamic** integer value, or an **Expression**. An On Click Action can be set onto the progress bar to trigger custom logic during click interactions.
 
@@ -35,7 +35,7 @@ Configuring the label on the progress bar can be done on the **Progress Label** 
 
 Under the **Appearance** tab, the following styling properties can be adjusted for the progress bar:
 
-* Striped  bar: whether the bar should be striped or plain
+* Striped bar: whether the bar should be striped or plain
 * Bar color based on brand styling
 * Size (small, medium, and large)
     * Note that when the size is configured to small no label will be shown due to limited space, and text labels will be included as a tooltip that shows on hover

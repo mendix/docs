@@ -33,7 +33,7 @@ To improve security of your app, it is recommended that you delete the AccessTok
 
 ### 2.1 Authorizing Insights Hub REST Calls from within Scheduled Events
 
-The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the  right side:
+The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the right side:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/DS_GetAccessTokenForScheduledEvents.png" alt="DS_GetAccessTokenForScheduledEvents" >}}
 
@@ -154,7 +154,7 @@ Don't forget to restart Studio Pro after you change / add the environment variab
 
 To create the app credentials:
 
-1. Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below . See also, [Insights Hub Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Insights Hub – deployment*.
+1. Register this application using the identical application name as that set in the constant **CockpitApplicationName**, and a valid version number which is the same as the one you set in *CockpitApplicationVersion*, below. See also, [Insights Hub Launchpad Setup](/developerportal/deploy/deploying-to-mindsphere/#launchpad) in *Siemens Insights Hub – deployment*.
 2. Go to the **App Credentials** page in the *Authorization Management* tab of the Insights Hub Developer Cockpit.
 3. Choose your app.
 4. Click **Issue access** to obtain a token.

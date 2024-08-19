@@ -89,4 +89,4 @@ The following quantifiers can be used:
 ## 4 Read More
 
 * [Class Pattern](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/regex/Pattern.html#matches(java.lang.String,java.lang.CharSequence)) – information from the Oracle Java SE documentation
-* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html)  – information about regular expressions in Java from the *Regular-Expressions.info* website
+* [Using Regular Expressions in Java](https://www.regular-expressions.info/java.html) – information about regular expressions in Java from the *Regular-Expressions.info* website

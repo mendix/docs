@@ -14,7 +14,7 @@ In this document, we describe data sources of data widgets.
 
 A data view supports the following data sources:
 
-* [Context](/refguide8/context-source/) – the data view gets its object from the context:  either from a page parameter or a surrounding data container
+* [Context](/refguide8/context-source/) – the data view gets its object from the context: either from a page parameter or a surrounding data container
 * [Microflow](/refguide8/microflow-source/) – the data view object is determined by the result of calling the selected microflow. The microflow can take objects in the context as parameter and needs to return a single object.
 * [Nanoflow](/refguide8/nanoflow-source/) – objects retrieved are determined by the result of calling the selected nanoflow. The nanoflow can take objects in the context as a parameter and needs to return a single object. 
 * [Listen to widget](/refguide8/listen-to-grid-source/) – the data view object depends on the selection in a list widget (a data grid, template grid, or list view)

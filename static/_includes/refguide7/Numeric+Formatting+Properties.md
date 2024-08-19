@@ -14,7 +14,7 @@ This mode only applies to the Decimal, Float (deprecated), and Currency (depreca
 
 If set to *Fixed*, the decimal part always will be displayed with the number of places specified in the **Decimal precision** property. The value will be rounded to the nearest decimal if the length of the decimal part in the attribute value exceeds the number of decimal places.
 
-If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be be displayed if the attribute value is an integer.
+If set to *Auto*, the whole decimal part of the attribute value will be displayed. No decimal part will be displayed if the attribute value is an integer.
 
 *Default value:* Fixed
 

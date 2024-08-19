@@ -54,7 +54,7 @@ In the how-to [Exposing a web service](/howto8/integration/expose-a-web-service/
 In this chapter you will create a new SOAP project.
 
 1. Open **SoapUI**.
-2. Press **CTRL+N** to create a new SOAP project.
+2. Press <kbd>Ctrl</kbd> + <kbd>N</kbd> to create a new SOAP project.
     {{< figure src="/attachments/howto8/integration/testing-web-services-using-soapui/18580339.png" class="no-border" >}}
 3. Run the project locally in Studio Pro.
 4. Go to `http://localhost:8080/ws-doc/`.
@@ -69,10 +69,10 @@ In this chapter you will create a new SOAP project.
 
 In this chapter you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
 
-1. In SoapUI, press **CTRL+T** to create a new TestSuite.
+1. In SoapUI, press <kbd>Ctrl</kbd> + <kbd>T</kbd> to create a new TestSuite.
     {{< figure src="/attachments/howto8/integration/testing-web-services-using-soapui/18580332.png" class="no-border" >}}
 2. Click **OK**.
-3. Select TestSuite 1 and press **CTRL+N** to create a new TestCase.
+3. Select TestSuite 1 and press <kbd>Ctrl</kbd> + <kbd>N</kbd> to create a new TestCase.
     {{< figure src="/attachments/howto8/integration/testing-web-services-using-soapui/18580331.png" class="no-border" >}}
 4. Click **OK**.
 5. Expand TestSuite 1 and TestCase 1.
@@ -102,7 +102,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
     <PageSize>10</PageSize>
     ```
 
-14. Press **ALT+Enter** to submit the request. The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
+14. Press <kbd>Alt</kbd> + <kbd>Enter</kbd> to submit the request. The customers you created in the previous how-to will be shown in the response. The response will look like the code below:
 
     ```xml
     <soap:Envelope xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://www.example.com/">

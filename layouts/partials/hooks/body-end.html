@@ -8,3 +8,20 @@
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-QJG4');</script>{{- end -}}
+<!-- To make images clickable and zoomable as pop-ups -->
+
+<script src='{{ "js/medium-zoom.js" | relURL }}'></script>
+
+<script>
+  const images = Array.from(document.querySelectorAll(".td-content img"));
+  images.forEach(img => {
+
+    mediumZoom(img, {
+      margin: 10, /* The space outside the zoomed image */
+      background: "black", /* The background of the zoomed image */
+      scrollOffset: 0, /* The number of pixels to scroll to close the zoom */
+      container: null, /* The viewport to render the zoom in */
+      template: null /* The template element to display on zoom */
+    });
+  });
+  </script>

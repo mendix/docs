@@ -154,7 +154,7 @@ To create a mini survey, follow these steps:
      * **Target User Group (Optional)** – Describe the target user group you would like to reach. Leaving the text box empty means you would like to reach all users.
      * **Attachments (Optional)** – Add attachments if needed. Supported formats are Microsoft Office files, .*pdf*, .*text*, .*png*, and .*jpeg*.
    * **Settings** – The settings in this section take effect immediately. You do not need to implement these settings later in Studio Pro.
-     * **Runtime** –  Set the start and end time of the mini survey.
+     * **Runtime** – Set the start and end time of the mini survey.
      * **Toaster Placement** – Set on which corner of the page the mini survey appears.
    * **Questions** – Set up to three questions per mini survey.
 

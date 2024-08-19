@@ -46,7 +46,7 @@ If you select **Use connection string**, enter the following:
     * **Microsoft SQL** — `jdbc:sqlserver://myHostName:myPortNumber;databasename=myDatabaseName`
     * **MySQL** — `jdbc:mysql://myHostName:myPortNumber/myDatabaseName`
     * **Oracle** — `jdbc:oracle:thin:@//myHostName:myPortName/myDatabaseName`
-    * **PostgresSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
+    * **PostgreSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
     * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
 ### 2.3 Password Security

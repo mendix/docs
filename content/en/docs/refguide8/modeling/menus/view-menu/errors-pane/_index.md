@@ -54,8 +54,8 @@ To enable you to find your errors, deprecations, and warnings quickly, each mess
 
 * Icon – indicates the [type of the message](#message-types)
 * Index number – an index number assigned to each message 
-* **Error Code** – a unique code that is specific for the errors only; warning and deprecation do not have  error codes
-* **Message** –  description/explanation of the check failure
+* **Error Code** – a unique code that is specific for the errors only; warning and deprecation do not have error codes
+* **Message** – description/explanation of the check failure
 * **Element** – an element causing the check failure
 * **Document** – the place where the element is
 * **Module** – the module where the document is

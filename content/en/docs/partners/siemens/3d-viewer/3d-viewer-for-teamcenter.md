@@ -23,7 +23,7 @@ This module enables doing the following:
 * Logging in to a Teamcenter instance
 * Searching models from Teamcenter by setting revision rules
 * Getting a model associated with item revision 
-* Visualizing and inspecting  a model when used with the 3D Viewer app service
+* Visualizing and inspecting a model when used with the 3D Viewer app service
 
 ### 1.3 Dependencies
 

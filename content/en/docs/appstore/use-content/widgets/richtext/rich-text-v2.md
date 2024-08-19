@@ -36,15 +36,15 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Ctrl</kbd> + <kbd>Y</kbd> – redo
     * <kbd>Ctrl</kbd> + <kbd>C</kbd> – copy
     * <kbd>Ctrl</kbd> + <kbd>V</kbd> – paste
-    * <kbd>-</kbd> + <kbd>space</kbd> – starts a list
-    * <kbd>tab</kbd> – moves the focus to the next element
+    * <kbd>Minus&nbsp;sign</kbd> + <kbd>Space</kbd> – starts a list
+    * <kbd>Tab</kbd> – moves the focus to the next element
 
 ## 2 Configuration
 
 To configure this widget, follow these steps:
 
 1. Place the Rich Text widget in a Data View, a List View, or a Template Grid with a data source that has a String attribute to store the rich-text content.
-2. Double-click the Rich Text  widget to open the **Edit Rich Text** dialog box.
+2. Double-click the Rich Text widget to open the **Edit Rich Text** dialog box.
 3. Configure the widget using the properties described in the sections below.
 
 ### 2.1 General Tab
@@ -67,7 +67,7 @@ To configure this widget, follow these steps:
     {{% alert color="info" %}}The editor becomes read-only when the **Editable** property is set to **Never** or **Condition** returns `false`.{{% /alert %}}
 
     * **Rich text** – if selected, only text is shown
-    * **Bordered** –  if selected, text is shown in a frame
+    * **Bordered** – if selected, text is shown in a frame
     * **Bordered toolbar** – if selected, text is shown in a frame and the toolbar is also visible, but the user cannot make any changes
 * **Editable** – determines when user can edit content in the editor and when it is read-only
 

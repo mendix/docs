@@ -72,7 +72,7 @@ The `/xas/` request handler is not a RESTful API, so the conventions that you wo
 
 ### 2.6 Example
 
-For example, the layout of every page in the application is visible to anyone, as the page  layout is stored as a publicly available static XML page. If a page has a button that is conditionally visible for certain user roles, you can make this button visible by faking your user role. However, when you click this button, security will be applied to data retrieval and logic. If the button triggers a microflow, you will get an error if your original user role doesn't have access to the microflow.
+For example, the layout of every page in the application is visible to anyone, as the page layout is stored as a publicly available static XML page. If a page has a button that is conditionally visible for certain user roles, you can make this button visible by faking your user role. However, when you click this button, security will be applied to data retrieval and logic. If the button triggers a microflow, you will get an error if your original user role doesn't have access to the microflow.
 
 If a microflow is available for your original user role, but the button to trigger this was not visible, you will now be able to run the microflow. However, you could have done this by faking an `xas` request using your original user role. So, in this case, faking the user role doesn't provide any additional functionality. If an end-user is able to see data, or trigger logic, that they aren't supposed to, this means the application security isn't configured correctly, or completely.
 
@@ -192,7 +192,7 @@ In Mendix 7, Bootstrap is flagged by security scans mainly because of the Bootst
 
 We cannot remove these files from Mendix 7 as some customers might have included them in their custom theme, which would break these projects. Neither can we simply update to a new major Bootstrap version as this is not always a match for the current DOM structure of the Mendix widgets, nor is it backward compatible which results in broken styling for many projects.
 
-Support for Mendix 7 will be ending with the release of Mendix 10 in the summer of 2023. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
+Support for Mendix 7 has ended. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
 
 #### 8.4.1 Bootstrap Vulnerabilities in Mendix 8 and Above
 

@@ -11,7 +11,7 @@ Mobile applications have unique properties that must be taken into consideration
 
 * Mobile apps are used in changing environments, for example while commuting between various locations
 * The primary way to interact with mobile apps is to directly touch a small screen
-* Mobile users frequently switch between multiple apps and use each  for short amounts of time
+* Mobile users frequently switch between multiple apps and use each for short amounts of time
 
 These documents guide you through the process of shaping great mobile user experiences both from a design and an implementation perspective:
 

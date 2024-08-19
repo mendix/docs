@@ -14,6 +14,7 @@ Studio Pro also contains a built-in web server that can be used to serve the web
 In addition, there is a two-way message passing mechanism for direct communication between the web content and the C# part of your extension.
 
 ## 2 Showing a Web View in the UI
+
 There are a number of places where the Studio Pro Extensibility API allows you to add custom UI.
 
 Typically, the Extensibility API requires you to return a view model for your UI, and for every view model type, there is a corresponding base class for showing the UI in a web view.
@@ -36,4 +37,5 @@ In this method, you can tell the web view to navigate to the (local) URL that co
 In addition, the view model class can be used to house the logic for communicating with the web view.
 
 ## 3 Serving Content to the Web View
+
 For serving content to the web view and communicating both ways with it, see [Build a Todo Example Extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/).

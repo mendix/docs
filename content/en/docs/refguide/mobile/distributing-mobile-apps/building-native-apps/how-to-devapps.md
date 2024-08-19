@@ -76,7 +76,7 @@ There are various ways install an app on a device. Installing using a USB is det
 
 ### 4.2 iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in [Distributing Native Apps](/refguide/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
@@ -123,6 +123,6 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
 #### 4.2.2 Distributing the Custom Developer App to the Apple App Store
 
-To run your custom developer app on a device which is not registered as a test device on the Apple Mendix Portal, you will have to sign the developer app with your certificates manually and distibrute it via TestFlight.
+To run your custom developer app on a device which is not registered as a test device on the Apple Mendix Portal, you will have to sign the developer app with your certificates manually and distribute it via TestFlight.
 
 Read more on TestFlight in the [official documentation](https://testflight.apple.com/).

@@ -83,8 +83,8 @@ To add a new Selenium hub, follow these steps:
 
       Field | Description
       --- | ---
-      **Name** | The name of the Selenium hub.  If you have your own selenium access URL you can give it your name.
-      **URL** | The URL of your selenium server. This depends on what type of Selenium hub you are using. Please note that BrowserStack has a different type of URL than a local Selenium server. Most Selenium hosts use a combination of username and an access key.
+      **Name** | The name of the Selenium hub.  If you have your own Selenium access URL you can give it your name.
+      **URL** | The URL of your Selenium server. This depends on what type of Selenium hub you are using. Please note that BrowserStack has a different type of URL than a local Selenium server. Most Selenium hosts use a combination of username and an access key.
       **Parallel Sessions** | The number of test cases ATS that can run parallel on the Selenium hub.
       **Proxy URL** | The URL of an optional proxy server. Please note that this is no longer needed.
       **Custom Capabilities** | Can be used to set the Selenium desired capabilities.

@@ -45,4 +45,4 @@ You can enter a custom **Description** for this deployment package. It is purely
 
 For both versioned and non-versioned deployment packages, you will need to know where the deployment package will be saved. This is shown in the **File name** field. This not editable.
 
-All packages are placed in a directory **releases** inside your project directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (using the  the Studio Pro version you originally used) so there is no need to put them on the Team Server.
+All packages are placed in a directory **releases** inside your project directory. This directory is automatically ignored so that these packages will not be committed to the repository. You can always recreate a deployment package (using the Studio Pro version you originally used) so there is no need to put them on the Team Server.

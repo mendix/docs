@@ -23,7 +23,7 @@ When designing an application, a developer can specify access rules on an entity
 
 While the data that should be viewable and editable in which role is application-specific, the following best practices are key:
 
-* Attributes determined by the system (like the status of an order) should never be writeable
+* Attributes determined by the system (like the status of an order) should never be writable
 * If an anonymous user is allowed to create objects, constrain these objects to the owner (an anonymous user is actually a **System.User** object created on the fly)
 * Do not set a default rule for read-and-write access – this forces you to think about each attribute that is added to an entity
 * Security constraints should be formed as entity access rules and visibility constraints in page components (grids, list views, data views)
@@ -39,7 +39,7 @@ When you are building an application, you may use [Mendix Marketplace](https://m
 
 These are the common cases and best practices:
 
-* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string,  or an email client – these are the ways to avoid this abuse:
+* HTML content, usually derived from an HTML editor and displayed using an HTML viewer, format string, or an email client – these are the ways to avoid this abuse:
     * Use the XSSSanitize action from the [CommunityCommons Function Library](/appstore/modules/community-commons-function-library/) module to strip malicious code from the entered HTML
     * Display the value of an attribute as HTML or using the HTMLEncode function from the [Community Commons Function Library](/appstore/modules/community-commons-function-library/) module
 * Database connections (for example, using the [Database Connector](/appstore/modules/database-connector/)), where user input is being used within constraints – these are the ways to avoid this abuse:
@@ -114,11 +114,11 @@ The password policy can be set by via the guidelines described in [Password Poli
 
 Each application requires power users who should be able to administer technical functions (like configuring SSO). By default, the user who has these capabilities is called **MxAdmin** and has the **Administrator** role.
 
-This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for  about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
+This information can be exploited by an attacker (for example, by trying to guess the password). Even though Mendix will block the user for about 5 minutes after three unsuccessful login attempts, renaming the default MxAdmin user is recommended.
 
 The user name of the administrator can be changed in 's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in  and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.

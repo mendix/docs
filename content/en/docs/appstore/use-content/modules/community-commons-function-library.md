@@ -65,7 +65,7 @@ The module contains one constant: `CommunityCommons.MergeMultiplePdfs_MaxAtOnce`
 * `executeMicroflowAsUser` – This executes the given microflow as if the `$currentuser` is the provided user (delegation).
 * `RunMicroflowAsyncInQueue` – This runs a microflow asynchronously (meaning, this function immediately returns and schedules the microflow to be run in the near future). The queue guarantees a first-come-first-serve order of the microflows, and only one action is served at a time. The microflow is run with system rights in its own transaction. This is very useful for running heavy microflows in the background.
 * `executeMicroflowInBackground` – This is similar to `RunMicroflowAsyncInQueue`, but it accepts one argument as parameter.
-* `executeMicroflowInBatches`  – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
+* `executeMicroflowInBatches` – This performs a batch operation on a large dataset by invoking the microflow on small sub-sets of the data, each with its own database transaction.
 * `recommitInBatches` – This recommits (with events) all the s returned by an XPath query. This is recommended for migration scenarios.
 
 ### 3.7 ORM

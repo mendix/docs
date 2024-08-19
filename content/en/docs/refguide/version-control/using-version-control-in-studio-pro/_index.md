@@ -50,7 +50,7 @@ You can **update/pull** your working copy with changes committed by others.
 
 You can also see a **history** of all the changes that have been committed, no matter who committed them.
 
-### 4.1 Status
+### 4.1 Status {#status}
 
 The status of your app is a summary of all the changes in your working copy when compared with the original (the original version is the version you pulled from the remote repository before making your changes (or the newly created app if you have not pulled anything yet). Studio Pro shows the status both in the **App Explorer** and in the **Changes** pane.
 

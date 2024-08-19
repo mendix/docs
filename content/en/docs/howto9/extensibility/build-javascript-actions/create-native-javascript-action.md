@@ -20,7 +20,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the latest version of Mendix Studio Pro from the [Marketplace](https://marketplace.mendix.com/link/studiopro/)
-* Install npm's [node js](https://nodejs.org)
+* Install npm's [Node.js](https://nodejs.org)
 * Have a fiscal [NFC NDEF](https://www.dummies.com/consumer-electronics/nfc-data-exchange-format-ndef/) tag for testing
 * Own a mobile device with NFC capabilities
 
@@ -224,7 +224,7 @@ Congratulations for completing this NFC tutorial! To go beyond the lessons you h
 
 ### 3.8 Hardening the Code {#hardening-nfc-action-code}
 
-Now you have a working NFC scanner. However, you can  improve it for both Android and iOS.
+Now you have a working NFC scanner. However, you can improve it for both Android and iOS.
 
 **On Android** — NFC scanning can be switched off. Also, scanning should be canceled if the back button is clicked.
 

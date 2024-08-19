@@ -130,7 +130,7 @@ The actions to delete an expense are always the same, but the value of the descr
     You now created a new input parameter. The next step is to link the input parameter to the correct test step. 
 
 14. Click the **Test steps** tab.
-15. Open the **Click DatGrid Row** action.
+15. Open the **Click DataGrid Row** action.
 16. Change the input parameter to **Column Value** below **Input values**.
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-extracted-actions/change-input-parameter.png" class="no-border" >}}

@@ -67,7 +67,7 @@ The monthly backup occurs on the first Sunday of the month. If the first nightly
 
 The **Backups** page presents options for managing your backups. These are described below.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/backup-controls.png" alt="" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/backup-controls.png" alt="" >}}
 
 ### 3.1 Create Backup
 

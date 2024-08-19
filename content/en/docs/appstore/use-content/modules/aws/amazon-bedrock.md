@@ -55,18 +55,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### 3.1.1 Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state.
-
-#### 3.1.2 Server-Side Validation
-
-Amazon Bedrock has server-side validation for specific models. For example, the Completion API for older Claude models requires all prompts to be in the following format:
-
-```text
-Human: <PROMPT>
-Assistant:
-```
-
-For more information, see [Inference parameters for foundation models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html).
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programmatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
 
 ### 3.2 Configuring AWS Authentication
 
@@ -97,13 +86,41 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.4 Invoking Specific Models by Using the InvokeModel Operation
+### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
 
-These examples can be used as a reference together with the documentation found on this page, in the Bedrock console, and offered by the provider of the model.   
+For an overview of supported models and model-specific capabilities and limitations, see [Amazon Bedrock Converse API](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.
 
-To invoke a specific model, perform the following steps:
+To build a simple microflow that uses the ChatCompletions operation to send a single message to the Anthropic Claude 3.5 Sonnet model and show the response on a page, perform the following steps:
+
+1. Create a new microflow and name it, for example, *AmazonBedrockChatCompletions*.
+2. In the **Toolbox**, search for the **Chat Completions (without history)** activity in the *Amazon Bedrock (Operations)* and drag it onto your microflow.
+3. Double click on the activity to see its parameters.
+    1. The **Request** and **FileCollection** parameters are not needed for this example, so you can set them to **empty**.
+    2. For the **UserPrompt** parameter, enter a string of your choice, for example *Hi, Claude!*. 
+    3. CLick **OK**. The input for the **Connection** parameter will be created in the next step.
+4. In the **Toolbox**, search for the **Create Amazon Bedrock Connection** operation and drag it to the beginning of your microflow.
+5. Double-click it to configure its parameters.
+    1. For the **ENUM_Region** parameter, enter a value of the `AWSAuthentication.ENUM_Region` enumeration. Choose the region where you have access to Amazon Bedrock. For example, *AWSAuthentication.ENUM_Region.us_east_1*.
+    2. For the **ModelId** parameter, enter the model id of the LLM you want to send a message to. The model id of Claude 3.5 Sonnet is *anthropic.claude-3-5-sonnet-20240620-v1:0*.
+    3. For the **UseStaticCredentials** parameter, enter *true* if you have configured static AWS Credentials, and *false* if you have configured temporary AWS Credentials.
+    4. Click **OK**.
+6. Double-click the **ChatCompletion** operation and, for the **Connection** parameter, pass the newly created **AmazonBedrockConnection** object.
+7. In the **Toolbox**, search for the **Get Model Response Text** operation from the *GenAI Commons (Text & Files - Response)* category, and drag it to the end of your microflow.
+8. Double-click on it and pass the **Response** from the ChatCompletions operation as parameter. The **Get Model Response Text** will return the response from Claude as a string.
+9. Add a **Show Message** activity to the end of the microflow and configure it to show the returned response string.
+10. Add a button that calls this microflow, run your project, and verify the results.
+
+{{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
+
+### 3.5 Invoking Specific Models by Using the InvokeModel Operation
+
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+
+Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
+
+To invoke a specific model that is not covered by the ChatCompletions operation, perform the following steps:
 
 1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
@@ -129,7 +146,7 @@ To invoke a specific model, perform the following steps:
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
-### 3.5 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
+### 3.6 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
 Agents in Amazon Bedrock can perform certain automated tasks such as API calls and data source interactions. For more information, see [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html).
 
@@ -164,7 +181,7 @@ The domain model is a data model that describes the information in your applicat
 
 ##### 4.1.1.1 AmazonBedrockConnection {#amazon-bedrock-connection}
 
-This entity holds the necessary information to perform Bedrock operations such as the `invokeModel` action. It is a specialization of the `Connection` entity of the [GenAICommons](https://docs.mendix.com/appstore/modules/genai/).
+This entity holds the necessary information to perform Bedrock operations such as the `invokeModel` action. It is a specialization of the `Connection` entity of the [GenAICommons](/appstore/modules/genai/).
 
 | Attribute | Description |
 | --- | --- |
@@ -172,39 +189,82 @@ This entity holds the necessary information to perform Bedrock operations such a
 | `UseStaticCredentials` | This Boolean specifies whether static or non-static credentials (temporary) shall be used. |
 | `ModelFamily` | This enumeration specifies the model family of the large language model to use. |
 
-##### 4.1.1.2 AnthropicClaudeRequest_Extension {#anthropic-claude-request-extension}
+##### 4.1.1.2 ChatCompletionsRequest_Extension {#chatcompletions-request-extension}
 
-This entity extends the GenAICommons.Request with attributes specific to Anthropic Claude Messages API. 
+This entity extends the GenAICommons.Request with further options for the `ChatCompletions` operation. 
 
-| Attribute | Description |
-| --- | --- |
-| `Version` | This attribute specifies the anthropic version. |
-| `Top_k` | The Top_k attribute can be used to reduce repetitiveness of generated tokens. The higher the value, the stronger a penalty is applied to previously present tokens, proportional to how many times they have already appeared in the prompt or prior generation. |
+It can be used to add model-specific request parameters as well as requesting model specific response fields. This can be done by associating the following entities to a ChatCompletionsRequest_Extension.
 
-##### 4.1.1.3 AnthropicClaudeResponse {#anthropic-claude-response}
+##### 4.1.1.3 AbstractRequestParameter {#abstract-request-parameter}
 
-This entity is a specialization of the GenAICommons.Response entity and contains additional attributes that are specific to the Anthropic Claude Messages API.
+This is an abstract entity. **Do not use this entity directly. Instead, please use one of its specializations.**
 
-| Attribute | Description |
-| --- | --- |
-| `ResponseID` | A unique identifier of the response.  |
-| `StopSequence` | A stop sequence that was specified for the request and then generated by the model. |
-
-##### 4.1.1.4 AnthropicClaudeMappingHelper {#anthropic-claude-mapping-helper}
-
-This helper entity solely serves the purpose to create a flat entity to produce the correct export mapping.
+The specializations of this entity can be used to add additional model-specific request parameters to the request. 
 
 | Attribute | Description |
 | --- | --- |
-| `Version` | See `Version` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopK` | See `Top_k` of the `AnthropicClaudeRequest_Extension` entity |
-| `TopP` | See `TopP` of the `GenAICommons.Request` entity |
-| `Temperature` | See `Temperature` of the `GenAICommons.Request` entity |
-| `MaxTokens` | See `MaxTokens` of the `GenAICommons.Request` entity |
-| `SystemPrompt` | See `SystemPrompt` of the `GenAICommons.Request` entity |
-| `ToolChoice` | See `ToolChoice` of the `GenAICommons.Request` entity |
+| `Key` | The Key attribute holds the identifier of the additional model-specific request parameter. |
 
-##### 4.1.1.5 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
+##### 4.1.1.4 StringRequestParameter {#string-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with a string value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.5 DecimalRequestParameter {#decimal-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with a decimal value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The Value attribute holds the value of the additional model-specific request parameter. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.6 IntegerRequestParameter {#int-request-parameter}
+
+This entity can be used to add an additional model-specific request parameter with an integer value to the request. 
+
+| Attribute | Description |
+| --- | --- |
+| `Value` | The FieldName attribute holds the name of the additional response field that should be returned.  |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Request Parameter](#add-request-parameter) operation.
+
+##### 4.1.1.7 ResponseFieldRequest {#response-field-request}
+
+This entity can be used to request an additional model-specific response field to be returned. 
+
+| Attribute | Description |
+| --- | --- |
+| `FieldName` | The FieldName attribute describes the name of the additional response field that should be returned. |
+
+It can be added to the GenAICommons.Request using the [Request: Add Additional Response Field](#add-response-field) operation.
+
+##### 4.1.1.8 ChatCompletionsResponse {#chatcompletions-response}
+
+This entity inherits from the GenAICommons.Response entity. An object of this type is returned by the [ChatCompletions (with history)](#chat-completions-with-history) and [ChatCompletions (without history)](#chat-completions-without-history) operations.
+
+| Attribute | Description |
+| --- | --- |
+| `LatencyMs` | The LatencyMs attribute describes the latency of the API call in milliseconds. |
+
+##### 4.1.1.9 RequestedResponseField {#requested-response-field}
+
+This entity holds information about additional model-specific response fields. If valid additional response fields were requested during the request a list of this entity will be returned as part of the response.
+
+| Attribute | Description |
+| --- | --- |
+| `Key` | The Key attribute describes the identifier of the requested additional model-specific response field. |
+| `Value` | The Value attribute describes the value of the requested additional model-specific response field. |
+
+All returned `RequestedResponseField` objects can be retrieved using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+
+##### 4.1.1.10 RetrieveAndGenerateRequest_Extension {#retrieve-and-generate-request-extension}
 
 This helper entity extends the GenAICommons.Request entity with attributes specific to the 'RetrieveAndGenerate' operation. It inherits from the `AWSAuthentication.AbstractRequest` entity.
 
@@ -216,7 +276,7 @@ This helper entity extends the GenAICommons.Request entity with attributes speci
 
 It can be added to the request using the [Request: Add Retrieve And Generate Request Extension](#add-rag-extension) operation.
 
-##### 4.1.1.6 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
+##### 4.1.1.11 RetrieveAndGenerateResponse {#retrieve-and-generate-response}
 
 This entity extends the GenAICommons.Response entity with attributes specific to `RetrieveAndGenerate`.
 
@@ -224,7 +284,7 @@ This entity extends the GenAICommons.Response entity with attributes specific to
 | --- | --- |
 | `SessionId` | See `RetrieveAndGenerateRequest_Extension.SessionId`. |
 
-##### 4.1.1.7 KnowledgeBaseTool {#knowledge-base-tool}
+##### 4.1.1.12 KnowledgeBaseTool {#knowledge-base-tool}
 
 This entity extends the GenAICommons.Tool entity and holds information about the specified knowledge base. A KnowledgeBaseTool object must be used to specify the knowledge base to use for the Retrieve And Generate operation. 
 
@@ -276,7 +336,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 
 ##### 4.1.1.12 CohereEmbedResponse {#cohere-embed-response}
 
-This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
+This entity inherits from and extends the `GenAICommons.EmbeddingsResponse` entity with attributes specific to the `Embeddings_SingleString` and `Embeddings_ChunkCollection` operations for the Cohere Embed model family.
 
 | Attribute | Description |
 | --- | --- |
@@ -299,7 +359,7 @@ This entity extends the GenAICommons.EmbeddingsOptions entity with attributes sp
 
 | Attribute | Description |
 | --- | --- |
-| `Normalize` | This boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
+| `Normalize` | This Boolean attribute specifies whether to normalize the output embeddings to unit vectors. It defaults to true. |
 
 ##### 4.1.1.15 TitanEmbeddingsMappingHelper {#titan-embeddings-mapping-helper}
 
@@ -923,7 +983,9 @@ Activities define the actions that are executed in a microflow or a nanoflow. Fo
 
 ##### 4.2.1.1 ChatCompletions (Without History) {#chat-completions-without-history}
 
-The `ChatCompletions (without history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+The `ChatCompletions (without history)` activity can be used for any conversations with a variety of supported LLMs. There is no option to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithoutHistory_AmazonBedrock** microflow.
+
+This operation leverages the Amazon Bedrock Converse API. For a full overview of supported models and model capabilities, please refer to the [AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 The input and output for this service are shown in the table below:
 
@@ -935,7 +997,9 @@ The input and output for this service are shown in the table below:
 
 ##### 4.2.1.2 ChatCompletions (With History) {#chat-completions-with-history}
 
-The `ChatCompletions (with history)` activity can be used for any conversations with Anthropic Claude or Amazon Titan. It is possible for it to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithHistory_AmazonBedrock** microflow.
+The `ChatCompletions (with history)` activity can be used for any conversations with a variety of supported LLMs. It is possible for it to keep the conversation history in mind. This operation corresponds to the **ChatCompletions_WithHistory_AmazonBedrock** microflow.
+
+This operation leverages the Amazon Bedrock Converse API. For a full overview of supported models and model capabilities, please refer to the [AWS Documentation](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 The input and output for this service are shown in the table below:
 
@@ -943,13 +1007,13 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.Request`, `AmazonBedrockConnection`| `GenAICommons.Response`|
 
-For Anthropic Claude, the request must be associated to an AnthropicClaudeRequest_Extension object which can be created with the [Request: Add Anthropic Claude Request Extension](#add-claude-extension) operation. In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+In order to pass a conversation history to the flow, the list of previous messages must be associated to the input request. This operation can easily be replaced or combined with the ChatCompletions (with history) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
-Some capabilities of the chat completions operations are currently only available when using Anthropic Claude version 3 models:
+Some capabilities of the chat completions operations are currently only available for specific models:
 
-* **Function Calling** - This operation supports the *function calling* (or *tool use*) capability of Anthropic Claude version 3 models using the [Claude Messages API](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html). You can use function calling in all chat completions operations using Anthropic Claude version 3 models by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
+* **Function Calling** - You can use function calling in all chat completions operations using a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
 
-* **Vision** - This operation supports the *vision* capability of Anthropic Claude version 3 models. With vision, you can send image prompts to Claude, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation.
+* **Vision** - This operation supports the *vision* capability of [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation.
 
 ##### 4.2.1.3 RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -1014,7 +1078,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `GenAICommons.ChunkCollection`, `AmazonBedrockConnection`, `GenAICommons.EmbeddingsOptions (optional)` | `GenAICommons.EmbeddingsResponse`|
 
-For each model family, the request can be associated to an extension of the EmbeddingsOptiond object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
+For each model family, the request can be associated to an extension of the EmbeddingsOptions object which can be created with either the [Embeddings Options: Add Cohere Embed Extension](#add-cohere-embed-extension) or the [Embeddings Options: Add Titan Embeddings Extension](#add-titan-embeddings-extension) operation. Through this extension, it is possible to tailor the operation to more specific needs. This operation can easily be replaced or combined with the Embeddings (chunk collection) operation inside of the [OpenAI connector](https://marketplace.mendix.com/link/component/220472). 
 
 Currently, embeddings are available for the Cohere Embed family and Titan Embeddings v2.
 
@@ -1038,19 +1102,7 @@ This operation corresponds to the **AmazonBedrockConnection_Create** microflow.
 
 | `ENUM_Region (enumeration)`, `UseStaticCredentials (Boolean)`, `ModelId (string)` | `AmazonBedrockConnection (object)`|
 
-##### 4.2.2.2 Request: Add Anthropic Claude Request Extension {#add-claude-extension}
-
-Use this microflow to add a new [AnthropicClaudeRequest_Extension](#anthropic-claude-request-extension) object to your request. This is useful to include parameters that are unique to Anthropic Claude models.
-
-This operation corresponds to the **AnthropicClaudeRequest_Extension_Create** microflow.
-
-| Input | Output |
-| --- | --- |
-| `GenAICommons.Request (object)`, `Version (string, optional)`, `Top_K (Integer, optional)` | `AnthropicClaudeRequest_Extension (object)`|
-
-`Version` and `Top_K` can be empty, in which case they are not sent to the Bedrock API
-
-##### 4.2.2.3 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
+##### 4.2.2.2 Request: Add Knowledge Base Tool to Collection {#add-knowledge-base-tool}
 
 Use this microflow to add a new [KnowledgeBaseTool](#knowledge-base-tool) object to your request. This is useful for adding additional parameters when using the [Retrieve And Generate](#retrieve-and-generate) operation.
 
@@ -1060,7 +1112,7 @@ This operation corresponds to the **RetrieveAndGenerateRequest_Extension_Create*
 | --- | --- |
 | `GenAICommons.Request (object)`, `KnowledgeBaseId (string)` | *none* |
 
-##### 4.2.2.4 Request: Add Retrieve And Generate Request Extension {#add-rag-extension}
+##### 4.2.2.3 Request: Add Retrieve And Generate Request Extension {#add-rag-extension}
 
 Use this microflow to add a new [RetrieveAndGenerateRequest_Extension](#retrieve-and-generate-request-extension) object to your request. This is required in order to use the [Retrieve And Generate](#retrieve-and-generate) operation successfully.
 
@@ -1072,7 +1124,7 @@ This operation corresponds to the **Request_AddKnowledgeBaseTool** microflow.
 
 `KmsKeyARN`, `SessionId`, and `Enum_RetrieveAndGenerateType` can be empty, in which case they are not sent to the Bedrock API.
 
-##### 4.2.2.5 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
+##### 4.2.2.4 Image Generation: Add Titan Image Extension {#add-titan-image-extension}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1086,7 +1138,7 @@ This operation corresponds to the **TitanImageOptions_Extension_Create** microfl
 | --- | --- |
 | `GenAICommons.ImageOptions (object)`, `NegativeText (string)` | `TitanImageOptions_Extension (object)` |
 
-##### 4.2.2.6 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
+##### 4.2.2.5 Image Generation: Set Image Size (Titan Image) {#set-titan-image-size}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1100,7 +1152,7 @@ This operation corresponds to the **ImageOptions_SetImageSize_TitanImage** micro
 | --- | --- |
 | `GenAICommons.ImageOptions (object)`, `ENUM_ImageSize_TitanImage (enumeration)` | `none` |
 
-##### 4.2.2.7 Image Generation: Set Randomness {#set-randomness}
+##### 4.2.2.6 Image Generation: Set Randomness {#set-randomness}
 
 {{% alert color="info" %}}
 This microflow was introduced in Amazon Bedrock Connector version 3.1.0.
@@ -1118,7 +1170,7 @@ This operation corresponds to the **ImageOptions_SetRandomness** microflow.
 
 `Seed` and `GfgScale` can be empty, in which case they are not sent to the Bedrock API.
 
-##### 4.2.2.5 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
+##### 4.2.2.7 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
 
 Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
 
@@ -1128,7 +1180,7 @@ This operation corresponds to the **CohereEmbedOptions_Extension_Create** microf
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `InputType (enumeration)`, `EmbeddingTypes (enumeration, optional)`, `Truncate (enumeration, optional)` | `CohereEmbedOptions_Extension (object)`|
 
-##### 4.2.2.6 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
+##### 4.2.2.8 Embeddings Options: Add Titan Embeddings Extension {#add-titan-embeddings-extension}
 
 Use this microflow to add a new [TitanEmbeddingsOptions_Extension](#titan-embeddings-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Titan Embeddings models.
 
@@ -1138,7 +1190,7 @@ This operation corresponds to the **TitanEmbeddingsOptions_Extension_Create** mi
 | --- | --- |
 | `GenAICommons.EmbeddingsOptions (object)`, `Normalize (boolean)`| `TitanEmbeddingsOptions_Extension (object)`|
 
-##### 4.2.2.7  Request: Add Retrieve Request Extension {#add-r-extension}
+##### 4.2.2.9  Request: Add Retrieve Request Extension {#add-r-extension}
 
 Use this microflow to add a new [RetrieveRequest_Extension](#retrieve-request-extension) object to your request. This is required in order to use the [Retrieve](#retrieve) activity. It requires `Connection`, and `RetrieveRequest` as input parameters.
 
@@ -1149,6 +1201,44 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `RetrieveRequest (object)` | `RetrieveResponse (object)` |
+
+##### 4.2.2.10 Request: Add Additional Request Parameter {#add-request-parameter}
+
+Use this microflow to add an additional model-specific request parameter to your request. Please follow this link to find available additional request parameters: [Inference parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/inference-parameters.html)
+
+This operation corresponds to the **Request_CreateAdditionalRequestParameter** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `Key (string)`, `StringValue (string)`, `DecimalValue (decimal)`, `IntegerValue (integer)` | `none` |
+
+You need to provide a value using either the *StringValue*, *DecimalValue* or *IntegerValue* parameters. For example, if you providing a *StringValue* as value of the parameter, *DecimalValue* and *IntegerValue* should be left **empty**.
+
+##### 4.2.2.11 Request: Add Additional Response Field {#add-response-field}
+
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. Use this microflow to add an additional model-specific response field to your request. 
+
+You can retrieve the additional requested response fields using the [Response: Get Requested Response Fields](#get-response-fields) operation.
+
+This operation corresponds to the **Request_CreateResponseFieldRequest** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Request (object)`, `FieldName (string)`| `none` |
+
+If the used model supports that response field, it will be returned as a [ChatCompletionsResponse](#chatcompletions-response) object as part of the response.
+
+##### 4.2.2.12 Response: Get Requested Response Fields {#get-response-fields}
+
+Use this microflow to retrieve all requested model-specific response fields from the response. 
+
+Some models can return additional information that is not part of the `GenAICommons.Response` entity. You can request additional request parameters using the [Request: Add Additional Response Fields](#add-response-field) operation. 
+
+This operation corresponds to the **Response_GetRequestedResponseFields** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
 
 #### 4.2.3 Other Operations
 
@@ -1185,7 +1275,6 @@ The input and output for this service are shown in the table below:
 | Input | Output |
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `ListKnowledgeBasesRequest (object)` | `ListKnowledgeBasesResponse (object)` |
-
 
 ##### 4.2.3.5 StartIngestionJob {#start-ingestion-job}
 

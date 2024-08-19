@@ -63,7 +63,7 @@ This command uses the common format exit codes described above for all app-versi
 
 This table shows the return codes and their description:
 
-| Return  Code | Description |
+| Return Code | Description |
 | --- | --- |
 | `0` | No errors. |
 | `315` | If `-b` was specified, but the app is not based on a solution.  |

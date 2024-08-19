@@ -68,7 +68,7 @@ To add an input entity to the domain model, follow these steps:
 3. From the **Toolbox**, drag an entity into the domain model. 
 4. Double-click the entity and enter *Input* for the **Name**.
 5. For **Persistable**, select **No**.
-6. On the **Attributes** tab, click **New** to add a string attribute,  name it *Title*, then click **OK**.
+6. On the **Attributes** tab, click **New** to add a string attribute, name it *Title*, then click **OK**.
 7. Drag an association from **Input** to **Summary**.
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-rest-service/domain-model.png" class="no-border" >}}
@@ -135,7 +135,7 @@ To create a page for this app, follow these steps:
 8. Delete the **Summary** field.
 9. From the **App Explorer**, drag a **Call Microflow button** into the right column.
 10. In the **Select Microflow** dialog box, expand **RESTconsume** and select **Microflow**. This is the microflow you created in the [Calling the REST Service in a Microflow](#call-microflow) section above.
-11. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for button  caption.
+11. Double-click the **Microflow** button and in the **Edit Action Button** dialog box, enter *Get summary* for button caption.
 12. Add a **Data view** below the table (inside the other data view).
 13. From the **Connector**, drag the **Summary** entity onto the **[Unknown]** bar and click **OK**.
 14. From this data view, delete all the fields except **Extract**.

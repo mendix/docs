@@ -89,7 +89,7 @@ This option is only visible if the **Function** is **Reduce**. The expression yo
 
 ### 3.7 Expression
 
-The expression you enter in the **Expression** field is evaluated for each item in the list of objects and its result is used for the aggregation. For **Average**, **Minimum**, **Maximum** and **Sum**, its type must be numeric (**Long**, **Integer**, or **Decimal**) . For **Any** and **All**, the type of this expression must be a **Boolean**. For **Reduce**, its type is the same as the type that is defined in **Return type**.
+The expression you enter in the **Expression** field is evaluated for each item in the list of objects and its result is used for the aggregation. For **Average**, **Minimum**, **Maximum** and **Sum**, its type must be numeric (**Long**, **Integer**, or **Decimal**). For **Any** and **All**, the type of this expression must be a **Boolean**. For **Reduce**, its type is the same as the type that is defined in **Return type**.
 
 In this expression, the variable `$currentObject` contains the item of the list of objects that is currently being processed. If the function is **Reduce**, the variable `$currentResult` contains the latest accumulated result (the resulting value of this expression is the next value of `$currentResult`).
 

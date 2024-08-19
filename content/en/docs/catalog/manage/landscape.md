@@ -46,7 +46,7 @@ By default, the **Search** pane is on the left of the Landscape screen. When a s
 
 When you click any of the nodes or connections, the metadata pane on the right displays further details.
 
-You can pan around the landscape and and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
+You can pan around the landscape and zoom using the mouse. You can also collapse both the search pane and the metadata pane so that the full screen area is available for viewing.
 
 ### 2.3 Nodes
 

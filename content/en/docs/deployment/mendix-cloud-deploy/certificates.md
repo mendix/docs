@@ -52,7 +52,7 @@ For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) 
 
 Virtually all certificate formats can be converted to the PKCS12 format. For more information, see the following:
 
-* [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem , .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
+* [Create a pkcs12 (.pfx or .p12) from OpenSSL files (.pem, .cer, .crt, ...)](https://www.tbs-certificates.co.uk/FAQ/en/288.html)
 * [openssl](https://www.openssl.org/docs/manmaster/man1/openssl.html)
 
 {{% alert color="warning" %}}
@@ -94,8 +94,6 @@ To upload a certificate authority, follow these steps:
 1. Below **Outgoing Connections Certificates**, click **Add Authority**.
 
 1. Upload a certificate authority in the PEM format.
-
-If you run into any problems installing a client certificate or certificate authority, file a ticket with [Mendix Support](https://support.mendix.com).
 
 ## 5 Read More
 

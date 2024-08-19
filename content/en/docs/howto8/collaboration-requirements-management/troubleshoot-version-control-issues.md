@@ -75,12 +75,12 @@ Follow these steps:
 3. Right-click the white background of the project folder.
 4. Select **TortoiseSVN** > **Properties**.
 5. Double-click the `svn:ignore` property.
-6. Copy all text via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>C</kbd>.
+6. Copy all text via <kbd>Ctrl</kbd> + <kbd>A</kbd> followed by <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 7. Paste the text into a new document in Notepad++ (or another editor that understands newline conventions).
 8. In the bottom right, click `CRLF` and select `LF` instead (this will replace `CRLF` with `LF`).
 9. Copy all text again.
 10. Go back to the window showing the `svn:ignore` property.
-11. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+11. Replace the current content by pasting from the clipboard via <kbd>Ctrl</kbd> + <kbd>A</kbd> followed by <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 12. Click **OK** to close the `svn:ignore` property dialog box.
 13. Click **OK** to close the `properties` dialog box.
 14. Restart Studio Pro.
@@ -91,7 +91,7 @@ You can now commit your app.
 
 When merging or updating branches, a conflict is sometimes reported on the app folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
-In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on  Team Server.
+In the `svn:ignore` property, Subversion records which files should be ignored. These are files that are on disk but should not be on Team Server.
 
 For example, the `deployment` directory is necessary for running your project, but it should not be on the Team Server. Each user has their own version of the `deployment` folder on their hard disk.
 
@@ -153,7 +153,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 4. Copy all the lines starting with `modeler-merge-marker` to the clipboard. 
 5. Click **Manually edit property**.
 6. Double-click the `svn:ignore` line in the grid.
-7. Paste the previously copied lines via <kbd>Ctrl</kbd>+<kbd>A</kbd> followed by <kbd>Ctrl</kbd>+<kbd>V</kbd>.
+7. Paste the previously copied lines via <kbd>Ctrl</kbd> + <kbd>A</kbd> followed by <kbd>Ctrl</kbd> + <kbd>V</kbd>.
 8. Remove the special lines that start with `<<<<<<<`, `=======`, and `>>>>>>>`. For this example, we end up with the following combined ignore list:
 
     {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/combinedignorelist.png" class="no-border" >}}

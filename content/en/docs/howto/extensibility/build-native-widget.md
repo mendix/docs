@@ -1363,7 +1363,7 @@ The developer needs to have the class names memorized to apply a certain group b
 
     Note that the property name must be the same as the widget ID. This will ensure this design property can be configured for your group box widget in Studio Pro.
 
-3. In Studio Pro click <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes you made to the previous two files.
+3. In Studio Pro, press <kbd>F4</kbd> or select **App** > **Synchronize App Directory** to bring your application in sync with the changes you made to the previous two files.
 4. Double-click the group box widget and navigate to the **Appearance** tab.
 5. Verify that there is a design property called **Group box style**.
 6. Select the **Success** style and click **OK**:

@@ -52,7 +52,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### New Features  {#spaces-ga-release}
 
-* We releases Spaces in the Mendix Forum  for GA.
+* We releases Spaces in the Mendix Forum for GA.
 
 ### March 23, 2023
 

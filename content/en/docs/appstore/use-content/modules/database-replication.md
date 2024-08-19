@@ -54,6 +54,7 @@ The following parameters are available to most database types:
 * Port
 * Username
 * Password
+* Database time zone
 
 Depending on the database, some of the following parameters may be available:
 
@@ -62,6 +63,10 @@ Depending on the database, some of the following parameters may be available:
 * Service name (exclusive to Oracle)
 * SID (exclusive to Oracle)
 * Use Integrated Security (for example, to connect to SQL Server using the your Windows user credentials)
+
+##### 2.1.1.1 Database time zone {#database-timezone}
+
+By default, the module assumes that time zone of the source database is the same as Mendix application server time zone. Starting with module version 8.2.0, it is possible to configure source database time zone. If the setting is defined, the module will convert imported datetime values from specified database time zone to UTC. If the setting is not defined, the module will assume that database time zone is the same as application server time zone and will convert imported datetime values from server time zone to UTC.
 
 #### 2.1.2 Custom Connection Parameters
 
@@ -244,6 +249,16 @@ Setting this to advanced reveals more options. These should only be modified by 
 * **Commit unchanged objects** – even if there are no changes to the object, this still commits the objects in order to execute the events
 * **Print not found messages for main object** – keeps track of all the object keys that could not be found; please note that this consumes a lot of memory, since all the values need to be remembered (this only works in combination with the "find ignore" sync option)
 
+### 7.5 Final Microflow
+
+This setting allows specifying a microflow that will be executed after the import is completed. The microflow can have 2 optional parameters: `TableMapping` and `ReplicationStatus`. `TableMapping` is the instance that has just been executed. `ReplicationStatus` (not committed) contains the statistics that are also printed in the log.
+
+### 7.6 Time Zone of Datetime Values in the Database
+
+This setting specifies the time zone in which datetime values are stored in the source database. If the setting is defined, all imported datetime values are converted from database time zone to UTC and stored in UTC in resulting Mendix objects. If the setting is not defined, it defaults to [database time zone](#database-timezone).
+
+In most of the cases, there is no need to change this setting unless you know that datetime values in this particular table are stored in a time zone that is different from the rest of the database.
+
 ## 8 Configuring an Import Call {#import-call}
 
 With an import call, you can easily configure both static constraints (meaning, every call with the same value) and dynamic constraints (meaning, based on a value from an attribute).
@@ -291,13 +306,37 @@ Each import action is executed in a single transaction, which means it is able t
 
 You can import and export table mappings to an XML file using the **Table mapping** tab.
 
-## 11 Troubleshooting
+## 11 Data types
+ 
+Database-specific data types are converted to a Java type with the JDBC driver. The module then converts these Java types into a Mendix primitive type. This step also performs implicit conversions between types.
 
-### 11.1 A Table Alias Is Selected but the Column Name Field Does Not Show Anything
+[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with _X_):
+
+| Mendix Type / Java Type | Boolean | DateTime | Integer | AutoNumber / Long | Decimal | HashString / String / Enum | Binary |
+|:---------------------------:|:-------:|:--------:|:-------:|:--------------------:|:-------:|:-----------------------------:|:------:|
+|           Boolean           |    X    |          |         |                      |         |                               |        |
+|          util.Date          |         |    X     |         |          X           |         |               X               |        |
+|           Integer           |    X    |    X     |    X    |                      |    X    |                               |        |
+|            Long             |    X    |    X     |    X    |          X           |    X    |                               |        |
+|           Double            |    X    |          |    X    |          X           |    X    |                               |        |
+|         BigDecimal          |    X    |          |    X    |          X           |    X    |                               |        |
+|           String            |    X    |    X     |    X    |          X           |    X    |               X               |        |
+
+{{% alert color="info" %}}
+CLOBs (of java type `java.sql.clob`) are not supported.
+
+Boolean mapping treats numeric positive/negative values as true/false and supports the following string values: "yes", "1", "true", "ja", "no", "0", "false", "nee".
+
+Decimal mapping supports currency format strings.
+{{% /alert %}} 
+
+## 12 Troubleshooting
+
+### 12.1 A Table Alias Is Selected but the Column Name Field Does Not Show Anything
 
 This is a limitation. The workaround is to select the blank option in the table alias selector, and then select your desired table again. This should repopulate the column selector.
 
-### 11.2 No Automatic Mapping Inheritance 
+### 12.2 No Automatic Mapping Inheritance 
 
 An example of mapping inheritance would be creating a different sub-type of a generalization based on a value in a column.
 

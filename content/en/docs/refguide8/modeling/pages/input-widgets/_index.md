@@ -45,7 +45,7 @@ There are several different input widgets, these are used for different [data ty
 
     {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-selector.png" alt="Reference selector showing company name attribute of associated company" class="no-border" >}}
 
-* [Reference Set Selector](/refguide8/reference-set-selector/) –  lists with one or more attributes and, optionally, allows the end-user to add and remove associated objects linked via a *many-to-many* association:
+* [Reference Set Selector](/refguide8/reference-set-selector/) – lists with one or more attributes and, optionally, allows the end-user to add and remove associated objects linked via a *many-to-many* association:
 
     {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/reference-set-selector.png" alt="Reference set selector showing details of associated products" class="no-border" >}}
 

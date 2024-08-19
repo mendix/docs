@@ -18,7 +18,7 @@ To start a new app with version control do the following:
 1. In the **Open App** dialog box, click **Create New App**, or select **File** > **New App**. 
 2. Select the starting point – an app template.
 3. In the **App Settings** dialog box, set **Enable online services** to *Yes*. This option creates a Team Server repository and a Mendix Portal app.
-4. Choose **Repository type**  – SVN or Git. 
+4. Choose **Repository type** – SVN or Git. 
 5. Change the **App directory**, or leave the default suggested by Studio Pro.
 6. Click **Create app**.
 
@@ -133,7 +133,7 @@ Changes you receive from the repository when updating/pulling are combined with 
 
 For example, if the last time you updated/pulled you received all changes up to and including revision N, this means that the original for your working copy is revision 40. Since you started making changes to your working copy, other people on your team have made another four commits (X, Y, and Z). If you now update/pull, you will receive those changes and Z will be the new *original* to which your changes are compared.
 
-Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the  [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
+Usually, combining your changes with the latest revision from the repository will be done automatically. For example, one person may add a page while you are changing a microflow. If the changes are too close, however, a conflict can arise. For example, if one of your team has changed the properties of the same data view which you have also changed. You will have to resolve such conflicts before you can commit. See the [Dealing With Conflicts](#conflicts) section, below, for information on how to do this.
 
 If your team is committing often you will have to update/pull often. Frequent updating/pulling has the benefit that you receive fewer changes with each update/pull, so integrating those changes with your work is easier.
 

@@ -19,7 +19,7 @@ Native apps are separated into two parts: a wrapper that is basically a native i
 OTA updates are bound to a specific app version and build number. Therefore, you can target specific updates to specific versions of your app. For example, you can push an update for version 1.0.0 as a legacy version that supports older devices, and also push an update for the 2.0.0 version of your app which includes more features.
 
 {{% alert color="info" %}}
-Currently OTA  does not update your app while the app is open or minimized.
+Currently OTA does not update your app while the app is open or minimized.
 {{% /alert %}}
 
 This how-to teaches you how to do the following:

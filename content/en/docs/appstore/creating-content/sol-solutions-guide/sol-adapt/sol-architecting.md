@@ -34,7 +34,7 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 
 ### 3.2 Configuration and Adaptation
 
-As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-adapt/#lifecycle) section of *Introduction to Adaptable Solutions*,  the solution can be tailored to the customer’s need. 
+As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-adapt/#lifecycle) section of *Introduction to Adaptable Solutions*, the solution can be tailored to the customer’s need. 
 
 Mendix recommends using the following:
 

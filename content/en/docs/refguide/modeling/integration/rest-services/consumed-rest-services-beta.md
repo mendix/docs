@@ -36,11 +36,11 @@ You can use this Consumed REST Service document to do the following:
 ### 1.3 Prerequisites 
 
 * [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above
-* Familiarity with [HTTP request methods]( https://www.w3schools.com/tags/ref_httpmethods.asp)
+* Familiarity with [HTTP request methods](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
 ## 2 Add the Consumed REST Service Document {#installation}
 
-Download [Studio Pro]( https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
+Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
 
 1. Right-click the module you want to add the Consumed REST Service document to.
 2. Select **Add other** > **Consumed REST service**. 

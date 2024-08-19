@@ -29,7 +29,7 @@ There is one big problem with this second solution: you loose the ability to tra
 
 ## 3 Translating Validation Rules
 
-If you have to translate multiple validation rules, it it worth it to develop a more advanced validation module which supports you in your maintenance of all these rules and messages.
+If you have to translate multiple validation rules, it is worth it to develop a more advanced validation module which supports you in your maintenance of all these rules and messages.
 
 Prepare a validation entity in the domain model:
 

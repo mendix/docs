@@ -263,7 +263,7 @@ helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
 | `triggerType` | supported types - `gitlabwebhook` (as used in this section) and `generic` (see previous section) |
 | `buildPipelineName` | name of the pipeline to trigger. `build-pipeline` is the default pipeline name from the pipeline chart |
 | `gitlabwebhook.operatorNamespace` | name of Kubernetes namespace where Mendix Operator runs |
-| `gitlabwebhook. mendixEnvironmentInernalName` | Mendix environment internal name. You can get the all internal environment names using the  command `kubectl get mendixapps -n $namespace_name` |
+| `gitlabwebhook. mendixEnvironmentInernalName` | Mendix environment internal name. You can get the all internal environment names using the command `kubectl get mendixapps -n $namespace_name` |
 | `gitlabwebhook.protocol` | Git protocol. Available options: `http` or `ssh` |
 | `gitlabwebhook. scheduledEventsMode` | `manual` – throws an error if scheduled events listed in `myScheduledEvents` do not exist<br/>`auto` – removes scheduled events listed in `myScheduledEvents` if they do not exist |
 | `gitlabwebhook.constantsMode` | `manual` – throws an error if constants set by the operator side are different from those in the .mda file<br/>`auto` – adds or removes constants which are missing in the operator |
@@ -656,7 +656,7 @@ curl -X POST \
 | Parameter | Explanation                                                                                                                                     |
 | --- |-------------------------------------------------------------------------------------------------------------------------------------------------|
 | `namespace` | name of the Kubernetes namespace where the Mendix Operator runs                                                                                 |
-| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names  using the command `kubectl get mendixapps -n $namespace_name` |
+| `env-internal-name` | Mendix environment internal name. You can get all the internal environment names using the command `kubectl get mendixapps -n $namespace_name` |
 | `X-GitLab-Token: SomeLongSecureToken42` | token from [7.2 section](#authentication). You can remove this field if authentication is disabled.                         |
 
 ## 10 Troubleshooting {#troubleshooting}

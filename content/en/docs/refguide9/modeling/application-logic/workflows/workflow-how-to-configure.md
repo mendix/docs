@@ -123,7 +123,7 @@ You need to create demo users for the newly created app roles to be able to test
 1. In the App Explorer, open **App** > **Security** > the **Demo users** tab. 
 2. Click **New**.
 3. In the **Add Demo User** dialog box, set the **User name** to **demo_facilities**.
-4. Set the same entity you selected for the **User entity** setting in  [App Settings](/refguide9/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
+4. Set the same entity you selected for the **User entity** setting in [App Settings](/refguide9/app-settings/#workflows) > **Workflows** tab: set **Entity** to **Administration.Account**.
 5. Assign the corresponding user role in the **User roles** section: select the **Facilities** role and click **OK**.
 6. Repeat steps 2-5 to add the **demo_manager** demo user.
 7. Repeat steps 2-5 to add the **demo_hr** demo user.

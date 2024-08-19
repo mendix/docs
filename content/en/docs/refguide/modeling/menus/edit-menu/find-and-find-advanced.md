@@ -1,5 +1,5 @@
 ---
-title: "Find, Find Advanced and Find Usages"
+title: "Find, Find Advanced, and Find Usages"
 url: /refguide/find-and-find-advanced/
 description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pro."
 weight: 10
@@ -15,7 +15,7 @@ You can search for changes or usages of different elements, documents, XPaths, c
 
 You can find various elements in your app via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
 
-1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>F</kbd>.
+1. Click **Edit** > **Find** in the top-bar or press <kbd>Ctrl</kbd> + <kbd>F</kbd>.
 2. In the **Find** dialog box, leave **Match case** and **Match the whole word** unselected. This way you will search for all instances of the word "Employee" including such instances as "employee", Employees", or "Department_Employee":
 3. In the **Look in** section unselect items in your app where you do not want to search in:  
 
@@ -33,7 +33,7 @@ With the **Find Advanced** option you can set advanced criteria and find specifi
 
 You can search for microflows that have object activities in them. Do the following:
 
-1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1. Click **Edit** > **Find** **Advanced** in the top-bar or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>.
     The **Find Advanced** dialog box will open:
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/find-advanced-dialog-box.png" class="no-border" width="400" >}}
 2. In the **Search for** option, select **Microflow actions**:
@@ -48,7 +48,7 @@ While you develop your app, it might occur that specific functionality (for exam
 
 To find the unused items, do the following:
 
-1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>.
+1. In the top-bar of Studio Pro, click **Edit** > **Find Advanced** or press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>.
 2. In the **Find Advanced** dialog box, select **Unused items** in the **Search for** option:
 
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/find-and-find-advanced/search-for-unused-items.png" class="no-border" width="400" >}}
@@ -93,7 +93,7 @@ Studio Pro shows all usages of this entity in the **Find Results** pane.
 
 Double-click an item in the **Find Results** pane to open the corresponding document. 
 
-Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to  keep several search results.
+Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to keep several search results.
 
 ## 5 Read More
 

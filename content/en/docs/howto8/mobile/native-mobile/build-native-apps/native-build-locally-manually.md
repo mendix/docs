@@ -21,9 +21,9 @@ To understand the local build process, it is important to grasp a few basic conc
 * The JS code and static assets need to be bundled together for RN to use
 * The bundled code and assets are put into a React Native Template that represents an iOS and Android app
 
-In a similar fashion, MXBuild and the Mendix Native Template follow these rules:
+In a similar fashion, MxBuild and the Mendix Native Template follow these rules:
 
-* When using MXBuild, the JS code and static assets are bundled together
+* When using MxBuild, the JS code and static assets are bundled together
 * The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
 
 ## 2 Prerequisites {#prerequisites}
@@ -113,7 +113,7 @@ For bundling your resources, Mendix Studio Pro comes with a helpfull tool called
 
 The bundles will be generated relatively to the `project-directory\deployment\native\bundles`
 
-1. Run MXBuild against your project to generate the required bundle and assets.
+1. Run MxBuild against your project to generate the required bundle and assets.
 
 When completed there should be a folder under the project's deployment folder `project-directory\deployment\native\bundles` with two folders. One named `ios`, and one named `android`:
 
@@ -154,7 +154,7 @@ To build an Android app with Android Studio, do the following:
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Variants"   width="350"  class="no-border" >}}
 
 1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 

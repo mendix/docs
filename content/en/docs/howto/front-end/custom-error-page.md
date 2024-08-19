@@ -116,7 +116,7 @@ To create a custom error page inside your theme module, do the following:
 
    {{< figure src="/attachments/howto/front-end/custom-error-page/offline.png" class="no-border" >}}
 
-Now you have a custom error page inside a re-useable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
+Now you have a custom error page inside a re-usable theme module! When this module is imported into other apps, its custom error pages will automatically become available.
 
 This can also be used in a [company design system](/howto/front-end/create-a-company-design-system/).
 

@@ -38,11 +38,11 @@ For the JVM Browser and measurements based on JMX the following permissions are 
 * `permission javax.management.MBeanTrustPermission "*";`
 * `permission java.lang.management.ManagementPermission "monitor";`
 
-To reroute Java console output and errors, the following permission is needed
+To reroute Java console output and errors, the following permission is needed:
 
 * `permission java.lang.RuntimePermission "setIO"; // for java console`
 
-To reroute Java util logging, the following permission is needed
+To reroute Java util logging, the following permission is needed:
 
 * `permission java.util.logging.LoggingPermission "control"; // for java util`
 
@@ -50,7 +50,7 @@ To use explain plan, to run JDBC queries and to use measurements based on JDBC q
 
 * `permission java.net.SocketPermission "<server>:<port>", "connect"; // for JDBC`
 
-To use the hostname in the license check
+To use the hostname in the license check:
 
 * `permission java.net.SocketPermission "<mx server>", "resolve"; // for license by hostname`
 

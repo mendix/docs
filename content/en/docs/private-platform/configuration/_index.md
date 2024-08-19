@@ -23,7 +23,7 @@ Some of the settings that you configure here are initially set by the [Private P
 
 ## 2 Configuring General Settings
 
-General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status. The settings in this section are largely configured  when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
+General configuration settings allow you to manage the basic aspects of your Private Mendix Platform, such as the platform name and branding, toggling certain capabilities on or off, and viewing the licensing status. The settings in this section are largely configured when you run the initial configuration wizard, but you can still review and adjust them later during the implementation process.
 
 ### 2.1 General
 
@@ -185,7 +185,7 @@ In this section, you can configure SSO authentication for your users logging in 
 
 ### 6.1 IdP Integration (OIDC)
 
-You can configure SSO authentication with the OIDC protocol. For more information, see [OIDC Client Configuration](/appstore/modules/oidc/#client-configuration).
+You can configure SSO authentication with the OIDC protocol. For more information, see [Runtime Configuration of Your IdP at Your App](/appstore/modules/oidc/#runtime-idp-app).
 
 ### 6.2 IdP Integration (SAML)
 

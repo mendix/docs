@@ -26,7 +26,7 @@ The following are the workflow activities you can use in your microflow:
 * [Show workflow admin page](/refguide/show-workflow-page/) – opens a workflow overview page
 * [Lock workflow](/refguide/lock-workflow/) – locks the selected workflow
 * [Unlock workflow](/refguide/unlock-workflow/) – unlocks the selected workflow
-* [Notify workflow](/refguide/notify-workflow/) – notifies the  workflow that is suspended on the [Wait for notification](/refguide/wait-for-notification/) activity
+* [Notify workflow](/refguide/notify-workflow/) – notifies the workflow that is suspended on the [Wait for notification](/refguide/wait-for-notification/) activity
 
 ## 2 Read More
 

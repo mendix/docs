@@ -89,7 +89,7 @@ In the new data grid we offer two types of pagination: **Paging Buttons** and **
 
 ### 3.1 Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be available.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
@@ -244,7 +244,7 @@ Here is an example of dropzones for filters in **Structure mode**:
 
 ### 7.1 Date Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of default Date filter look and feel" class="no-border" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
@@ -481,7 +481,7 @@ Here is an example of a configuration containing an On change action:
 
 ## 10 Performance
 
-The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those version use [Filtering Apis](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
+The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those versions use [Filtering APIs](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
 
 ## 11 Troubleshooting
 
@@ -502,7 +502,7 @@ In-memory selection was introduced in Data Widgets v2.7.0.
 
 Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default, and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
 
-Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can  only select items that are currently visible.
+Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can only select items that are currently visible.
 
 ### 12.1 Selection Mode
 
@@ -530,10 +530,10 @@ The setting for action triggers is related to the selection method and can somet
 
 | Selection method | Action trigger          | Selection trigger                                | Supported |
 | ---------------- | ----------------------- | ------------------------------------------------ | --------- |
-| Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
-| Checkbox         | Double-click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Single click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
+| Checkbox         | Double-click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
 | Row              | Single click on the row |                                                  | No        |
-| Row              | Double-click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+| Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                    | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 
@@ -541,21 +541,21 @@ To achieve this behavior, set the **On click trigger** to **Double click**. When
 
 | Key                      | Function                                                     |
 | ------------------------ | ------------------------------------------------------------ |
-| Right Arrow              | Moves focus one cell to the right.                           |
-| Left Arrow               | Moves focus one cell to the left.                            |
-| Down Arrow               | Moves focus one cell down.                                   |
-| Up Arrow                 | Moves focus one cell up.                                     |
-| Page Up                  | Moves focus one page up.                                     |
-| Page Down                | Moves focus once page down.                                  |
-| Home                     | Moves focus to the first cell in the row.                    |
-| End                      | Moves focus to the last cell in the row.                     |
-| Ctrl + Home              | Moves focus to the first cell in grid.                       |
-| Ctrl + End               | Moves focus to the last cell in grid.                        |
-| Shift + Space            | Selects current row. (1)                                     |
-| Ctrl/Cmd + A             | Select all visible rows. (1)(2)                              |
-| Shift + {Down, Up} Arrow | Moves focus and selects current and row above/below. (1)(2)  |
-| Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
-| Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
+| <kbd>→</kbd>              | Moves focus one cell to the right.                           |
+| <kbd>←</kbd>               | Moves focus one cell to the left.                            |
+| <kbd>↓</kbd>               | Moves focus one cell down.                                   |
+| <kbd>↑</kbd>                 | Moves focus one cell up.                                     |
+| <kbd>Page&nbsp;up</kbd>                  | Moves focus one page up.                                     |
+| <kbd>Page&nbsp;down</kbd>                | Moves focus once page down.                                  |
+| <kbd>Home</kbd>                     | Moves focus to the first cell in the row.                    |
+| <kbd>End</kbd>                      | Moves focus to the last cell in the row.                     |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd>              | Moves focus to the first cell in grid.                       |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>               | Moves focus to the last cell in grid.                        |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>            | Selects current row. (1)                                     |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd>             | Select all visible rows. (1)(2)                              |
+| <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd> | Moves focus and selects current and row above/below. (1)(2)  |
+| <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd>  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
+| <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>         | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
 
 Legend:
 

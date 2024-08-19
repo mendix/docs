@@ -58,7 +58,7 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 8. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
 9. Double-click the **List Queues** activity to configure the required parameter.
 10. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-11. In the expression builder, type *ENUM_Region*, and then press **Ctrl+Space**.
+11. In the expression builder, type *ENUM_Region*, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
 12. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type **.** and select your AWS region from the list and click **OK**.
 13. Double-click the **List Queues** activity to configure the required parameters.
 14. Set the value of the **Region** parameter in the same way as for the **GetStaticCredentials** or **GetTemporaryCredentials** activity.
@@ -80,7 +80,7 @@ To help you work with the Amazon SQS connector, the following sections of this d
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-The entities in the table below describe all generalizations and specializations. Thes generalizations are reused by the different models for the specific microflow activities or for storing connection details.
+The entities in the table below describe all generalizations and specializations. These generalizations are reused by the different models for the specific microflow activities or for storing connection details.
 
 The entities are non-persistent. Because of that, you do not need remove the resulting objects after download.
 

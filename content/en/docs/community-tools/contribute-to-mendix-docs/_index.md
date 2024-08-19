@@ -43,7 +43,7 @@ Before starting with this how-to, make sure you have completed the following pre
 
 You can create and edit files online within GitHub. If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>.</kbd> after opening your fork of the **mendix / docs** repository)
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
 ## 3 Editing the Documentation in GitHub {#editing}
@@ -80,7 +80,7 @@ To edit existing documentation, follow these steps:
 
 8. Click **Create pull request**.
 
-The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and  you will be able to see the changes on the Mendix Docs site!
+The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
 
 ## 4 Leaving Feedback on the Documentation
 

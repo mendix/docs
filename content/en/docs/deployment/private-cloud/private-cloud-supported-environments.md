@@ -158,7 +158,7 @@ Mendix Operator supports registry authentication with [workload identity](https:
 
 [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
 
-When used together with an  [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
+When used together with an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
 
 ## 4 Databases{#databases}
 
@@ -359,7 +359,7 @@ Mendix for Private Cloud will use the existing ingress controller.
 We strongly recommend using the [NGINX Ingress Controller](https://kubernetes.github.io/ingress-nginx/), even if other Ingress controllers or OpenShift Routes are available. You may need to check which of the [several versions of the NGINX Ingress Controller](https://www.nginx.com/blog/guide-to-choosing-ingress-controller-part-4-nginx-ingress-controller-options/#NGINX-vs.-Kubernetes-Community-Ingress-Controller) is installed in your cluster. Mendix recommends the "community version".
 
 NGINX Ingress can be used to deny access to sensitive URLs, add HTTP headers, enable compression, and cache static content.
-NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller  and the Pod running a Mendix app.
+NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/), removing the need to manually manage TLS certificates. In addition, NGINX Ingress can use a [Linkerd](https://linkerd.io/) Service Mesh to encrypt network traffic between the Ingress Controller and the Pod running a Mendix app.
 
 These features will likely be required once your application is ready for production.
 {{% /alert %}}

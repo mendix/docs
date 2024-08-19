@@ -155,7 +155,7 @@ To create a new environment, perform the following steps:
 
 7. Set **Development Mode** to Yes if you want the application to run with the Mendix security level of Prototype/demo, or Off (no security). This is not recommended for acceptance or production environments.
 
-8. Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP BTP](#databases), below, for for important information on selecting the correct database for your app.
+8. Select the database you would like to use. Be aware that even if a specific database is part of the Marketplace it could still be unavailable because of limitations imposed by the quota of your Organization. See [Databases in SAP BTP](#databases), below, for important information on selecting the correct database for your app.
 
     If you choose **Custom database** you will need to enter a name for the database and the plan.
 

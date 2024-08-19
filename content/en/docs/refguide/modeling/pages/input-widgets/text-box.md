@@ -60,7 +60,7 @@ Attributes of the data type `String` or `Hashed string` can have their value hid
 | Value | Description |
 | --- | --- |
 | False *(default)*| Normal text box |
-| True | Typed characters are not shown to the end-user , instead an asterisk is shown for every typed character |
+| True | Typed characters are not shown to the end-user, instead an asterisk is shown for every typed character |
 
 #### 3.1.2 Input Mask
 
@@ -166,7 +166,7 @@ This differs from the [On change](#on-change) property in that the event will al
 
 #### 3.9.4 On Enter Key Press Event
 
-The on enter key press event property specifies an action that will be executed when the focus is inside the widget  and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
+The on enter key press event property specifies an action that will be executed when the focus is inside the widget and the <kbd>Enter</kbd> key is pressed. In a web application the widget will keep focus after the action gets executed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 

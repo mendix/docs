@@ -35,7 +35,7 @@ If you already had an **App events** widget on your home page, follow these step
     * If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow.<br />
 1. In **App resume**, select **Call a nanoflow** from the **On Resume** drop-down list. 
 1. For **Nanoflow**, click and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module: <br />
-    * If you already have a nanoflow selected, make a **Call nanoflow** activity to the  nanoflow in that existing nanoflow. <br /> 
+    * If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow. <br /> 
 
 ## 3 Notifications Widget
 

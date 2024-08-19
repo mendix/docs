@@ -7,7 +7,7 @@ description: "This document explains the updated DOM structure for Mendix 8, and
 
 ## 1 Introduction
 
-Among other improvements to the client in Mendix 8,  the HTML of Mendix applications has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
+Among other improvements to the client in Mendix 8, the HTML of Mendix applications has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
 However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' Document Object Model structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 
@@ -26,7 +26,7 @@ For this case, Mendix provides legacy **mxui.css** and Bootstrap files with defa
 Things differ from case to case, but in general when migrating from Mendix 7 to 8 you will probably need to add the **mxui.css** file into Mendix 7's `theme` folder. If your app uses Bootstrap CSS through its custom theme, also add those files to the `theme` folder. To finish up, include the **mxui.css** and Bootstrap files in your **index.html** file.
 
 {{% alert color="info" %}}
-If you get an error message `CE6103: We detected that you are not using Atlas UI for your theme. Please check 'Troubleshooting DOM  Changes' to ensure your theme is fully compliant with Mendix 8. Right-click to see more options`, you can clear the message by right-clicking it and selecting **Mark as Resolved**.
+If you get an error message `CE6103: We detected that you are not using Atlas UI for your theme. Please check 'Troubleshooting DOM Changes' to ensure your theme is fully compliant with Mendix 8. Right-click to see more options`, you can clear the message by right-clicking it and selecting **Mark as Resolved**.
 {{% /alert %}}
 
 ## 4 Focus-Specific Class Removed
@@ -128,7 +128,7 @@ The markup for list view widgets has also been changed. To simplify the styling,
 * `mx-listview-search-input` 
 * `mx-listview-clear-button`
 
-For list views that are not in a select page for a reference or reference set selector,  the list view's `mx-listview-selectable` has been removed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
+For list views that are not in a select page for a reference or reference set selector, the list view's `mx-listview-selectable` has been removed. The unneeded `div` elements with class `mx-listview-content` around the contents of each list view item have also been removed.
 
 The order of the list view search bar's DOM elements has been corrected to be consistent with the visual order. The `div` element around the search input field has been removed.
 
@@ -385,7 +385,7 @@ Because the calendar pop-up window is no longer implemented using the Dojo frame
 * The `<td>` elements, which represent the days in the calendar view, get the following classes:
     * `mx-calendar-day-month-current`, `mx-calendar-day-month-previous` or `mx-calendar-day-month-next`: depending on whether the day falls in the current, previous, or next month
     * `mx-calendar-day-selected`: if the day is currently selected in the date picker for which the calendar was opened
-    * `mx-calendar-day-active`:  if the day currently has the focus
+    * `mx-calendar-day-active`: if the day currently has the focus
 * The `<span>` elements inside the `<td>` and `<th>` elements have been removed
 
 The month header now has the following structure:

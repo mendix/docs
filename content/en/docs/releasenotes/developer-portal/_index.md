@@ -16,6 +16,29 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### August 1, 2024
+
+#### New features
+
+* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the same stage.
+
+#### Improvements
+
+* In Portfolio Management, when a Portfolio Manager approves the [access request](/developerportal/portfolio-management/access-management/#access-requests) of a user, now they can assign an access role different than the one the user requested.
+
+### July 31, 2024
+
+#### Fixes
+
+* We fixed a bug that caused story points in your [Epics](/developerportal/project-management/epics/board/) to reset to zero when you changed the status of the story in the [Stories Pane](/refguide/stories-pane/).
+
+### July 28, 2024
+
+#### Improvements
+
+* We have greatly simplified the process of [creating an app](/developerportal/#create-app) from Apps, making it easier and quicker to start working on your new app.
+* When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page.
+
 ### June 30, 2024
 
 #### New features
@@ -34,13 +57,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
 
-### Improvements
+#### Improvements
 
 * To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 
-### Improvements
+#### Improvements
 
 * When you open the Developer Portal, you can now see these tabs: **My Apps**, **Company Apps**, and **Pending Invites**. For details, see [Developer Portal](/developerportal/).
 * On the top bar of some pages in the Developer Portal, you now see **Apps** instead of **Developer Portal**. This way the presentation of our information architecture is more consistent. 
@@ -999,7 +1022,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version 7.23.14 or below. Please update your templates to 7.23.15 or above before creating apps based on those templates.
 
 ### May 17, 2021
 
@@ -1470,7 +1493,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Fixes
 
-* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210, 68386)
 
 ### June 26, 2018
 

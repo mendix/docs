@@ -48,7 +48,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 
 \* A Portfolio Manager can add users to the portfolio on the [Access Management](/developerportal/portfolio-management/access-management/#add-users) page.
 
-** A user can apply to join the portfolio by clicking the **Request to Join** on the  portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
+** A user can apply to join the portfolio by clicking the **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
 \*** If the toggle on the [Privacy Requests](/control-center/portfolios/#privacy-requests) tab is turned on in Control Center, a Mendix Admin needs to approve the creation of a restricted or open portfolio. In that case, a Mendix Admin will receive a notification about the request and can approve or reject the request from the [Control Center](/control-center/portfolios/#privacy-requests). The **Privacy Settings** of the portfolio will be **Private** until a Mendix Admin approves the request.
 

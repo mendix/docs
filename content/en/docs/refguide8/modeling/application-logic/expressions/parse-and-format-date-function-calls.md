@@ -21,7 +21,7 @@ The input parameters are described in the table below:
 
 | Value                        | Type                                                         |
 | ---------------------------- | ------------------------------------------------------------ |
-| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy` , `mm/dd/yyyy`, etc. |
+| Date                         | A string which contains the textual representation of a date, meaning, `dd/mm/yyyy`, `mm/dd/yyyy`, etc. |
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 
@@ -46,7 +46,7 @@ The examples below illustrate which value the expression returns:
     the output is:
 
     ```java
-    The date May 21, 2015\. The time will be 12 o'clock at night  because it is not specified.
+    The date May 21, 2015\. The time will be 12 o'clock at night because it is not specified.
     ```
     
 * If you use the following input:

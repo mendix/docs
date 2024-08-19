@@ -92,7 +92,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Attribute | Description |
 | --- | --- |
-| `ARN` | The ARN (Amazon Resource Name)  of the asset model |
+| `ARN` | The ARN (Amazon Resource Name) of the asset model |
 | `CreationDate` | The creation date of the asset model |
 | `Description` | The description of the asset model |
 | `AssetModelID` | The asset model ID of the asset model |
@@ -927,4 +927,4 @@ The [GetAssetPropertyValueHistory](#get-asset-property-value-history), [GetAsset
 
 | Input | Output | 
 | --- | --- | 
-| `DateTime` , `FindType` | Date and time value |
+| `DateTime`, `FindType` | Date and time value |

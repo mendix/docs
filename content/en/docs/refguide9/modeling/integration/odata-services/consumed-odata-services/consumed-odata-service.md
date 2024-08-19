@@ -165,7 +165,7 @@ Mendix recommends using a strict versioning system (for example, semantic number
 
 #### 4.2.1 Minor Service Updates
 
-*Minor* service updates are, for example,  additional fields added to the service or new operations included which would not break any apps that consume the previous versions.
+*Minor* service updates are, for example, additional fields added to the service or new operations included which would not break any apps that consume the previous versions.
 
 If semantic numbering is used then a minor/non-breaking change to a service can be indicated by an increase in the decimal part of the version number. For example, 1.0.11, 1.0.12, 1.1, 1.2.
 
@@ -175,7 +175,7 @@ Minor service updates can be deployed to the same service endpoints, thereby ens
 
 *Major* service updates are for example, when entities or attributes are removed, or input parameters are required, which would be incompatible for the consuming apps and result in the consuming app "breaking".
 
-When a major change has been made to a published service, Mendix recommends that the service is deployed to a different endpoint with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase  of a whole number.
+When a major change has been made to a published service, Mendix recommends that the service is deployed to a different endpoint with the new service version number clearly indicating that there has been a major change—with semantic numbering this would be an incremental increase of a whole number.
 
 In this case the new service should be registered in the Catalog as a different service, and show up in the catalog as a separate asset. In the following example, there are 4 registered occurrences of the **OrderManagementService**:
 
@@ -193,7 +193,7 @@ When a change in the contract at a consumed endpoint is detected (possibly due t
 
 #### 4.3.1. Update
 
-The **Update** option is available when Studio Pro detects that that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
+The **Update** option is available when Studio Pro detects that the contract at the Catalog endpoint is different to the one currently consumed in the app. If the **Update** option is selected, the new contract will be loaded in the App.
 
 See the [Limitations](/refguide9/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 
@@ -225,7 +225,7 @@ In the example given in the [Consuming from Service Endpoints](#consume-service-
 
 A published OData services that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) will be shown as separate items in the search results of the **Data Hub** pane.
 
-In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However,  the same service is deployed to the **Acceptance** environment:
+In the following example, the consumed **Orders** version **1.0.0** deployed to **Test** environment is consumed in the app. However, the same service is deployed to the **Acceptance** environment:
 
 {{< figure src="/attachments/refguide9/modeling/integration/consumed-odata-services/consumed-odata-service/consume-major-service-update.png" alt="major change environment" class="no-border" >}}
 

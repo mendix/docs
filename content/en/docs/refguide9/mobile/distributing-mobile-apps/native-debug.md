@@ -71,7 +71,7 @@ To use the Make It Native app with React Developer Tools, do the following:
 1. Connect your mobile device to your laptop with a USB cord.
 2. Run `adb devices` to ensure your device is listed.
 3. Start your native app on your device with **Enable dev mode** selected.
-4. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact  with your device`.
+4. Run `adb reverse tcp:8097 tcp:8097` to allow the applet to interact with your device`.
 5. Run `npx react-devtools@^3`.
 6. React Developer Tools will launch and connect to your device. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
@@ -81,8 +81,8 @@ To use the Make It Native app with React Developer Tools, do the following:
 
 With the Make It Native app, you can examine your styling and the structure of your pages. This makes it easier to debug, test, and inspect styling. Inspect and debug your styling by doing the following:
 
-1. Install the LTS of [node.js](https://nodejs.org/en/).
-2. Open your command line interface (CLI).
+1. Install the LTS of [Node.js](https://nodejs.org/en/).
+2. Open your command-line interface (CLI).
 3. Run `npm i -g react-devtools@3` to install the React developer tools.
 4. Run `react-devtools`.
 

@@ -102,7 +102,7 @@ To build an Android app with Android Studio, do the following:
 
 1. Choose the **appstoreDebug** variant to be able to build and test your app on an emulator or connected device:
 
-    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Varients"   width="350"  class="no-border" >}}
+    {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/native-build-locally-manually/as-build-variants.png" alt="Android Build Variants"   width="350"  class="no-border" >}}
 
 1. After a short time the app should be synchronized and **Run Locally** ({{% icon name="controls-play" %}}) should be selectable. Select a device or create a device from the drop-down menu and click **Run Locally** to build and install your app on the device:
 

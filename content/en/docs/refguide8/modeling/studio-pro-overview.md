@@ -44,7 +44,7 @@ You can deploy your app by clicking the **Run** or **Run locally** buttons. To v
 
 For more information on deployment in Mendix, see [Deployment](/deployment/).
 
-For more information on deploying your app and versioning it, see  the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
+For more information on deploying your app and versioning it, see the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
 
 ### 2.3 Links to Apps and Marketplace {#links}
 
@@ -90,7 +90,7 @@ On the right is the currently selected language. If you have set up multiple lan
 
 ### 7.1 General Shortcut Keys
 
-In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in  [Menus](/refguide8/menus/).
+In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in [Menus](/refguide8/menus/).
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 
@@ -142,7 +142,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>F2</kbd> | Edits the name of the return value of the currently selected activity. This shortcut will not function on activities that do not return a result. |
 | <kbd>Home</kbd> | Highlights and focus on the start event of the current microflow. |
 | <kbd>End</kbd> | Highlights and focus on an end event in the current microflow. If there are multiple end events, clicking **End** multiple times will toggle between the different events. |
-| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd> , the microflow component will stay centered at its current position and will expand equally in all directions. |
+| <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd>, the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
 ### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}

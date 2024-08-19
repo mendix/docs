@@ -24,7 +24,7 @@ The scheme below shows that the data source of the list view has been set to **D
 
 {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/list-view-error.png" alt="Data Source Consistency Error Scheme" class="no-border" >}}
 
-The table below describes the most common errors which can occur when configuring a list view,  the causes of these errors, and ways to fix them. 
+The table below describes the most common errors which can occur when configuring a list view, the causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -41,7 +41,7 @@ For example, you have selected **Listen to widget** as the data source, but you 
 
 {{< figure src="/attachments/refguide/modeling/consistency-errors/consistency-errors-pages/data-view-no-list-widget.png" alt="Data View With no List Widget Configured" class="no-border" >}}
 
-The table below describes the most common errors you can come across when configuring a data view,  causes of these errors, and ways to fix them. 
+The table below describes the most common errors you can come across when configuring a data view, causes of these errors, and ways to fix them. 
 
 | Error Code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -231,11 +231,11 @@ You have changed the association multiplicity and fixed the error.
 
 ## 7 Images, Videos and Files Consistency Errors
 
-Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos and files , see [Images, Videos, and Files](/refguide/image-and-file-widgets/). 
+Images, videos and files should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place these widgets in a snippet and configure the snippet. For more information on images, videos, and files, see [Images, Videos, and Files](/refguide/image-and-file-widgets/). 
 
 | Error code | Message in the Error Pane                                    | Cause of the Error                                           | Way to Fix                                                   |
 | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|            | A [file manager](/refguide/file-manager/) must be placed in a data view or  snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: either set System.FileDocument (or its specialization) as an entity for this snippet or place the snippet in a data container. |
+|            | A [file manager](/refguide/file-manager/) must be placed in a data view or snippet that is connected to the entity ‘System.FileDocument’ or a specialization. | You have added a file manager to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: either set System.FileDocument (or its specialization) as an entity for this snippet or place the snippet in a data container. |
 |            | An [image uploader](/refguide/image-uploader/) must be placed in a data view or snippet that is connected to the entity ‘System.Image’ or a specialization. | You have added an image uploader to a page, but it is not inside a data view or a snippet that is configured properly. | Place this widget into a data container. If you want to place it into a snippet, mind that you need to configure it properly: set System.Image (or its specialization) as an entity for this snippet or place the snippet in a data container. |
 |            | Move this widget into a data container, for example a data view or list view. | You have added a [dynamic image](/refguide/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | CE0489     | Select an entity for the data source of this [dynamic image](/refguide/image-viewer/). | You have added a dynamic image to a page, it is placed inside a data view or a list view, but an entity for the dynamic image is not specified. | Open dynamic image properties > the **Data source** section and select an entity in the **Entity (path)** field. |

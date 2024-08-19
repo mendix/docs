@@ -80,7 +80,7 @@ The signed output of iOS build is an *IPA* file. If correctly signed, *IPA* file
 Before installing, make sure you have completed the following prerequisites:
 
 * Have a Mac OSX machine
-* Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
+* Install LTS builds of Node.js and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
 * Install the latest Xcode version
 

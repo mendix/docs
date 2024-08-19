@@ -5,7 +5,7 @@ Description: "</br>This document provides resources about JavaScript and TypeScr
 weight: 2
 ---
 
-## 1 What Is TypeScript?
+## What Is TypeScript?
 
 As a developer who works with the Mendix Platform, you may be familiar with implementing custom user actions using Java.
 
@@ -15,19 +15,19 @@ To help you find your way in this new and exciting TypeScript universe, we've co
 
 If you have any additional useful resources, feel free to mention them in the comments field below.
 
-## 2 Books
+## Books
 
 * [TypeScript Deep Dive](https://basarat.gitbooks.io/typescript/content/index.html) – available in a web version as well as e-book formats.
 * [Pro TypeScript](https://www.stevefenton.co.uk/publications/pro-typescript/) by Steve Fenton
 * [JavaScript: The Good Parts](https://shop.oreilly.com/product/9780596517748.do) by Douglas Crockford, O'Reilly
 
-## 3 Websites
+## Websites
 
 * [Official TypeScript website](https://www.typescriptlang.org/Handbook) – tutorial, handbook, and samples
 * [Definitive Guide to TypeScript](https://www.sitepen.com/blog/2013/12/31/definitive-guide-to-typescript/) – covers TypeScript 1.5 (slightly older than the current release, but still useful)
 * [Editing TypeScript](https://code.visualstudio.com/docs/languages/typescript) with Visual Studio Code
 * Debugging your app with [Node Inspector](https://www.npmjs.com/package/node-inspector)
 
-## 4 Other
+## Other
 
 * [Node.js refcard](https://dzone.com/refcardz/nodejs) – Node.js is the JavaScript engine Mendix uses to run our scripts

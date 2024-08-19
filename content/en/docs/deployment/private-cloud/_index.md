@@ -6,7 +6,7 @@ weight: 48
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 **Mendix for Private Cloud** allows you to deploy and manage your Mendix apps in a Kubernetes private cloud cluster. It automates operations, such as database provisioning, that you would have to perform manually if you used the Mendix Docker buildpack. It also provides options for monitoring and logging through third-party tools. 
 
@@ -22,13 +22,13 @@ There are two steps required to achieve this, listed below.
 Mendix for Private Cloud is a premium offering from Mendix, and there are additional licensing and cost implications if you want to use it for applications in production. See [Licensing Mendix for Private Cloud](#licensing), below, for more information.
 {{% /alert %}}
 
-### 1.1 Registering Your Cluster and Namespace
+### Registering Your Cluster and Namespace
 
 The first step is to register your private cloud cluster in the Mendix Portal. For more information see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/).
 
 This activity needs to be done by a systems administrator who has administration rights to the platform where the cluster is being created.
 
-### 1.2 Deploying Your App
+### Deploying Your App
 
 To deploy your app, you have two options:
 
@@ -37,7 +37,7 @@ To deploy your app, you have two options:
 
 When you deploy through the Mendix Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
 
-## 2 Connected and Standalone Clusters{#connected-standalone}
+## Connected and Standalone Clusters{#connected-standalone}
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
 If you have chosen a *connected* cluster, the **Mendix Gateway Agent** will also be deployed.
@@ -45,7 +45,7 @@ Once the Mendix Operator is deployed to your cluster, you can use it to configur
 
 You then have two options, depending on whether you have chosen to create a *connected* cluster or a *standalone* cluster.
 
-### 2.1 Connected Architecture
+### Connected Architecture
 
 If you have chosen to register a connected cluster, the Mendix Gateway Agent will create a link to the **Environments** pages of your Mendix app through the **Interactor**. This is a secure bi-directional communication channel which is initiated from the Mendix Gateway Agent running on the cluster.
 
@@ -53,13 +53,13 @@ Using this channel, any Mendix user who has been given the correct authority can
 
 {{< figure src="/attachments/deployment/private-cloud/mx4pc-architecture.png" class="no-border" >}}
 
-### 2.2 Standalone Architecture
+### Standalone Architecture
 
 If you have chosen to register a standalone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
 
 {{< figure src="/attachments/deployment/private-cloud/mx4pc-standalone-architecture.png" class="no-border" >}}
 
-## 3 Product Capability Comparison
+## Product Capability Comparison
 
 The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
 
@@ -77,7 +77,7 @@ The table below shows the differences between the capabilities for apps deployed
 ¹ No backup or restore functionality is installed automatically with Mendix for Private Cloud. You will need to choose and deploy your own solution, dependent on your choice of database, file storage, and cloud platform.
 {{% /alert %}}
 
-## 4 Memory Allocation
+## Memory Allocation
 
 Each Mendix app or environment pod has the following containers:
 
@@ -100,9 +100,9 @@ When a user sets CPU and memory limits, the JVM (JRE 8u191+) will automatically 
 However, by default, the JVM will limit the heap memory to 25% of the container's memory limit. Mx4PC just sets the container limits, but does not go further into configuring the JVM. 
 This percentage can be adjusted by providing a custom value in Custom JVM Options in the [Runtime tab](/developerportal/deploy/private-cloud-deploy/#runtime-tab) in the Private Cloud Portal, for example: *-XX:MaxRAMPercentage=75.0*.
 
-## 5 Licensing Mendix for Private Cloud{#licensing}
+## Licensing Mendix for Private Cloud{#licensing}
 
-### 5.1 Operator License
+### Operator License
 
 Mendix for Private Cloud is a premium offering from Mendix, and you will need an additional license to use it for your applications. This **Operator license** allows you to manage Mendix apps in your cluster through the Mendix Operator and, optionally, the Mendix Gateway Agent.
 
@@ -129,7 +129,7 @@ You will receive your Operator license (or licenses) from Mendix Support, togeth
 
 You can run the Mendix Operator in trial mode for evaluation purposes. When the Operator is running in trial mode, it will stop managing an environment ninety days (thirty days for Mendix Operator versions 1.12.0 and earlier) after the environment was created. In this case you will be unable to stop or start your app, or deploy an app to this environment. The only action you can take is to delete the environment. 
 
-### 5.2 Runtime License
+### Runtime License
 
 A runtime license per environment is required. In addition to that, the Operator license is independent of a Mendix Runtime license. The Mendix Runtime license removes [trial restrictions](/developerportal/deploy/licensing-apps-outside-mxcloud/) from a Mendix App itself. You need both types of licenses to manage and run an application through Mendix for Private Cloud.
 
@@ -152,7 +152,7 @@ You can request a Runtime license by doing the following:
 
 You will receive your Runtime license (or licenses) from Mendix Support. See [Online Private Cloud Apps](#activate-online) and [Offline Private Cloud Apps](#activate-offline), below, for instructions on how to configure them.
 
-### 5.3 Request Both Operator and Runtime License
+### Request Both Operator and Runtime License
 
 You can also request for both the Operator and Runtime license within the same request following the steps below:
 
@@ -169,18 +169,18 @@ You can also request for both the Operator and Runtime license within the same r
     * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace (or namespaces) for which you want to request an Operator license
 
-### 5.4 Activating Your License (or Licenses)
+### Activating Your License (or Licenses)
 
-#### 5.4.1 Online Private Cloud Apps{#activate-online}
+#### Online Private Cloud Apps{#activate-online}
 
 If your app is able to connect to the internet to contact the Mendix license server, you will receive a **Subscription Secret** from Mendix Support.
 
 If your app is **Connected** to the Mendix Portal, you can enter the subscription secret [in the Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
-#### 5.4.2 Standalone & Offline Private Cloud Apps{#activate-offline}
+#### Standalone & Offline Private Cloud Apps{#activate-offline}
 
 If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 
-#### 5.4.3 Private Cloud Licensing Manager
+#### Private Cloud Licensing Manager
 
 With Mendix Operator version 2.11.0 and above, you can start using the Private Cloud Licensing Manager to import a license bundle consisting of Operator and Runtime licenses. Private Cloud Licensing Manager automatically retrieves the licenses from the license bundle, so that you do not need to apply the license per environment. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).

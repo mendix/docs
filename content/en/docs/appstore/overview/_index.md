@@ -17,7 +17,7 @@ aliases:
 For more information about content support, see [Marketplace Content Support](/appstore/marketplace-content-support/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Mendix Marketplace](https://marketplace.mendix.com/) is a vibrant marketplace containing complete sample apps that can be used right away as well as various components (connectors, modules, widgets, and more) that can be used to build your apps more quickly. In the Mendix Marketplace, you can browse all the content, get what you need, and share the content you have created.
 
@@ -46,14 +46,14 @@ On the right side of the page, you can see the filters such as **Content Types**
 
 For details on finding and installing Marketplace content in Studio Pro, see the [Finding and Downloading Content in Studio Pro](/appstore/use-content/#downloading) section of *Using Marketplace Content*.
 
-## 2 Explore {#explore}
+## Explore {#explore}
 
 The **Explore** category contains the following items:
 
 * Create Content: to [share new Marketplace content](/appstore/sharing-content/) you have developed.
 * Get Studio Pro: to get the latest version of [Studio Pro](/releasenotes/studio-pro/)
 
-## 3 Personal {#personal}
+## Personal {#personal}
 
 The **Personal** category contains the following items:
 
@@ -66,7 +66,7 @@ The **Personal** category contains the following items:
 
 These items are described in the sections below.
 
-### 3.1 My Drafts {#my-drafts}
+### My Drafts {#my-drafts}
 
 On this page, you can see and manage the drafts for all the Marketplace content you have started.
 
@@ -88,7 +88,7 @@ On this page, click **More Options** ({{% icon name="three-dots-menu-horizontal"
 * **Withdraw Draft** – Click this to withdraw content from the review process after you have submitted it for approval, which will return the content to the draft state
 * **Delete** – Click this to delete the draft
 
-### 3.2 My Content {#my-content}
+### My Content {#my-content}
 
 On this page, you can see the Marketplace content for which you have created at least one version. 
 
@@ -113,7 +113,7 @@ You may see the **Private** label on a component, which means it is your company
 
 In addition, you may see a label on a component name for the [content group](#content-groups) to which the component is assigned as group [group content](#group-content).
 
-### 3.3 My Subscriptions {#my-subscriptions}
+### My Subscriptions {#my-subscriptions}
 
 You can see all the Marketplace content you have trials for on this page:
 
@@ -123,11 +123,11 @@ The table presents the **Names** of products you have trials for.
 
 The table also presents the **Plan** and its **Status**, and the **Expires On** date for the subscription. 
 
-### 3.4 Shared with Me {#shared-with-me}
+### Shared with Me {#shared-with-me}
 
 This page contains private content shared with you by other companies who have marked you as a [guest](#guests).
 
-### 3.5 Saved Content {#saved-components}
+### Saved Content {#saved-components}
 
 This page presents the Marketplace content you have [saved](/appstore/component-details/#saved). 
 
@@ -140,11 +140,11 @@ Click the context menu to access various options for managing this content:
 * **Receive/Stop Email Notifications** – click this to start receiving email notifications or to stop the notifications if you already have them enabled
 * **Unsave** – click this to remove the component from your saved content
 
-### 3.6 My Reviews {#my-reviews}
+### My Reviews {#my-reviews}
 
 This page contains reviews of [My Content](#my-content) by other users as well as **My reviews** that you have written of other content.
 
-## 4 Company {#company}
+## Company {#company}
 
 The **Company** category contains the following items:
 
@@ -154,7 +154,7 @@ The **Company** category contains the following items:
 
 These items are described in the sections below.
 
-### 4.1 Company Content {#company-content}
+### Company Content {#company-content}
 
 On this page, you can see all the content your company has published as a private Marketplace.
 
@@ -166,7 +166,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. However, the **Edit a Version** and **Unpublish a Version** options are only available for your own versions of company content.
 
-### 4.2 Company Subscriptions {#company-subscriptions}
+### Company Subscriptions {#company-subscriptions}
 
 You can see all the content shared within your organization on this page, which includes previously purchased products, trial subscriptions, paid subscriptions, or company-level services:
 
@@ -178,7 +178,7 @@ The table also presents the **Technical Owner** of the company subscription. Whe
 
 Finally, the table presents the plan's **Status**, the subscription **Plan**, and the **Expires On** date for the plan.
 
-### 4.3 Content Groups {#content-groups}
+### Content Groups {#content-groups}
 
 The **Content Groups** menu item and page are visible to all users. However, only [Mendix Admins](/control-center/company-settings/) can create and delete content groups. Both [Group Admins](#members) and Mendix Admins can manage content group members. 
 
@@ -194,7 +194,7 @@ This table breaks down the roles and permissions for content groups:
 | Organization member (not part of any group) | ✘                               | ✘                    | ✘                       | ✘                                                  | ✔                             | ✔               |
 | Guest                                       | ✘                               | ✘                    | ✘                       | ✘                                                  | ✔                             | ✘               |
 
-#### 4.3.1 Content Tab {#group-content}
+#### Content Tab {#group-content}
 
 On this tab, you can assign content to this content group that can only be managed by members of this group. To assign a component to a content group, click **Assign Content** and select a company Marketplace component from the dialog box:
 
@@ -210,7 +210,7 @@ Click the context menu to access various options for managing this content:
 
 The options in this menu are the same as described for the context menu for the [My Content](#my-content) section above. The **Unassign from Group** button is only available for [Group Admins](#members) and can be used to remove content from the content group.
 
-#### 4.3.2 Members Tab {#members}
+#### Members Tab {#members}
 
 On this tab, you can enter the email address of a Mendix Platform user from your company and click **Add Member** to add them as a content group member. Content group members can manage the [content](#group-content) assigned to the group.
 
@@ -218,7 +218,7 @@ Once a member is added, you can select their permission level: **Group Member** 
 
 To remove a member, click **Remove** next to their name.
 
-#### 4.3.3 Guests Tab {#guests}
+#### Guests Tab {#guests}
 
 A guest is a Mendix Platform user from outside your organization who can download the selected private [Content](#group-content) of this group. To add a guest, enter their email address in the box and click **Add Guest**:
 
@@ -230,7 +230,7 @@ The guest must be a registered Mendix Platform user; otherwise, they will not be
 
 To remove a guest, click **Remove**.
 
-#### 4.3.4 Settings Tab {#settings}
+#### Settings Tab {#settings}
 
 {{% alert color="info" %}}
 This tab is only accessible to [Group Admins](#members) and [Mendix Admins](/control-center/company-settings/).
@@ -240,7 +240,7 @@ On this tab, you can enter a **Group Name** and a **Group Description**.
 
 To delete a content group, a Group Admin or Mendix Admin can click **Delete Group**.
 
-## 5 Data {#data}
+## Data {#data}
 
 The **Data** category contains the following items:
 

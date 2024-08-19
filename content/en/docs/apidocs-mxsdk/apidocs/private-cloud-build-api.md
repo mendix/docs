@@ -10,7 +10,7 @@ weight: 70
 This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For Private Mendix Platform API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Mendix for Private Cloud Build API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud. You can use the API to do the following:
 
@@ -24,15 +24,15 @@ The Mendix for Private Cloud Build API allows you to manage deployment packages 
 The Mendix for Private Cloud Build API is available only for connected private cloud clusters.
 {{% /alert %}}
 
-## 2 Using the API
+## Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, and how to manage asynchronous API calls.
 
-### 2.1 Authentication
+### Authentication
 
 Authentication for the API uses a personal access token (PAT).
 
-#### 2.1.1 Generating a PAT
+#### Generating a PAT
 
 You can generate a PAT in the **Developer Settings** section of your Mendix Profile. For details, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
@@ -44,7 +44,7 @@ Select the following as scopes:
 
 Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
-#### 2.1.2 Scopes Explanation
+#### Scopes Explanation
 
 | Operation                    | Scopes                                                        |
 |-----------------------------|---------------------------------------------------------------|
@@ -55,7 +55,7 @@ Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize y
 | Get deployment package list | `mx:privatecloud-build:read` or `mx:privatecloud-build:write` |
 | Get Job                     | `mx:privatecloud-build:read` or `mx:privatecloud-build:write` |
 
-#### 2.1.3 Using the PAT {#using-the-pat}
+#### Using the PAT {#using-the-pat}
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
@@ -63,7 +63,7 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-### 2.2 Managing Asynchronous Jobs {#async-jobs}
+### Managing Asynchronous Jobs {#async-jobs}
 
 All resource manipulation API calls are processed asynchronously. In the response, there is an `id` which you can use with the `GET /jobs/…` call to get the status of the asynchronous job.
 
@@ -71,7 +71,7 @@ Each asynchronous call will also return a `Location` header that references the 
 
 Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished"`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, when updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
 
-## 3 Examples
+## Examples
 
 The following sections of this document contain sample usage scenarios for the API.
 
@@ -79,7 +79,7 @@ The following sections of this document contain sample usage scenarios for the A
 Please note that the attribute values in API requests are case-sensitive. Make sure that the input requests are entered correctly according to the specification file.
 {{% /alert %}}
 
-### 3.1 Using the API to Build, Download and Delete a Deployment Package
+### Using the API to Build, Download and Delete a Deployment Package
 
 The following steps will create a deployment package, retrieve it, refresh its `URL`, download it, delete it and, in the end, list all available deployment packages of an application.
 
@@ -101,7 +101,7 @@ The following steps will create a deployment package, retrieve it, refresh its `
 If you are trying to build a deployment package for the `Main line` and the build operation fails, try setting the branch to `trunk` in the JSON request body for the Build Deployment Package endpoint.
 {{% /alert %}}
 
-### 3.2 Using the API to Upload a Deployment Package
+### Using the API to Upload a Deployment Package
 
 Follow the steps below to upload a deployment package by using the API.
 
@@ -112,6 +112,6 @@ Follow the steps below to upload a deployment package by using the API.
 5. Once the previous job is successful, you will see a `id` in the response. You can then call `GET /apps/{appId}/packages/{id}` to get the deployment package details and verify the uploaded file.
     You can use the same `id` when deploying an app through the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/#api-deploy).
 
-## 4 API Reference
+## API Reference
 
 {{< swaggerui src="/openapi-spec/private-cloud-build-api.yaml"  >}}

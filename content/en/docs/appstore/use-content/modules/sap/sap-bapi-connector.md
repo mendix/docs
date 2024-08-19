@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [BAPI Connector for SAP Solutions](https://marketplace.mendix.com/link/component/119810) is a connector allowing Mendix apps to integrate using the SAP Business API (SAP BAPI) available with SAP Business Suite, SAP S/4HANA, and SAP S/4HANA Cloud. The BAPI Connector module allows you to discover, select, and call an SAP BAPI from your Mendix application.
 
@@ -23,7 +23,7 @@ This connector allows you to do the following:
 * Call BAPIs or BAPI sequences
 * Use the BAPI response in your application
 
-### 1.1 Installation Paths
+### Installation Paths
 
 The BAPI Connector can connect to the SAP backend system with or without the SAP Cloud Connector. The prerequisites and some aspects of configuring the BAPI Connector are different depending on whether you use the SAP Cloud Connector. The following sections make a note of those differences where relevant.
 
@@ -35,7 +35,7 @@ The following diagram shows the architecture of the SAP BAPI connector with the 
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/diagram.png" alt="A diagram showing the architecture of the SAP BAPI connector" class="no-border" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 To use the BAPI Connector for SAP Solutions, you need the following:
 
@@ -45,17 +45,17 @@ To use the BAPI Connector for SAP Solutions, you need the following:
 
 Depending on whether you plan to use the SAP Cloud Connector, you also need the following prerequisites:
 
-### 2.1 Required Only When Using the SAP Cloud Connector
+### Required Only When Using the SAP Cloud Connector
 
 If you are using the SAP Cloud Connector to facilitate connection to the SAP backend system, you must install the *bapi-service* microservice component. The component minimizes the network complexity and helps make your application is compliant with the recommended SAP security standards.
 
 You can download the *bapi-service* component from the [Mendix Content Delivery Network](https://cdn.mendix.com/mcdep/bapi-service/bapi-service-1.0.2.zip), and then use the extracted manifest file to deploy the *bapi-service.war* file to SAP BTP. To use the component, you must also define an RFC-type destination in SAP BTP.
 
-### 2.2 Required Only When Not Using the SAP Cloud Connector
+### Required Only When Not Using the SAP Cloud Connector
 
 If you are connecting to the SAP backend without using the SAP Cloud Connector, you must ensure access to the SAP System over the network from where the Mendix application is deployed.
 
-## 3 Developing Using the BAPI Connector for SAP Solutions
+## Developing Using the BAPI Connector for SAP Solutions
 
 To use BAPI Connector for SAP Solutions in your Mendix application to call the BAPI of your choice, you need to perform the following steps:
 
@@ -95,7 +95,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
 
     For more information about the microflow actions included in this connector, see the [Microflow Actions](#microflow-actions) section.
 
-## 4 Setting Up the Developer Environment {#setup-environment}
+## Setting Up the Developer Environment {#setup-environment}
 
 To use the BAPI Connector, you have to first set up your environment and configure the connection details by doing the following.
 
@@ -118,7 +118,7 @@ To use the BAPI Connector, you have to first set up your environment and configu
     * [Configuring the Connection Details for the SAP Cloud Connector](#sap-cloud-connector-details)
     * [Configuring the Connection Details for Direct Connections to the SAP Backend System](#sap-connection-details)
 
-### 4.1 Configuring the Connection Details for the SAP Cloud Connector {#sap-cloud-connector-details}
+### Configuring the Connection Details for the SAP Cloud Connector {#sap-cloud-connector-details}
 
 If you are using the SAP Cloud Connector to connect to your SAP backend system, configure the connection details by doing the following steps:
 
@@ -129,11 +129,11 @@ If you are using the SAP Cloud Connector to connect to your SAP backend system, 
     * **BAPIServiceURL** - Specify the URL of the *bapi-service* deployed on SAP BTP.
     * **UseRFCDestination** - Set to **true**.
 
-### 4.2 Configuring the Connection Details for Direct Connections to the SAP Backend System {#sap-connection-details}
+### Configuring the Connection Details for Direct Connections to the SAP Backend System {#sap-connection-details}
 
 If you are connecting to SAP without using the SAP Cloud Connector, you must set the connection details to tell the BAPI Connector how it can connect to your chosen BAPI destination. You can do this in two ways: by setting the *JCo* properties in the app, or by using an SNC connection.
 
-#### 4.2.1 Connecting Using App Constants
+#### Connecting Using App Constants
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/jcodestination-properties.png" alt="Properties to Set for JCoDestination" class="no-border" >}}
 
@@ -153,14 +153,14 @@ The following JCo Properties map directly to these constants in the module:
 | SystemNumber  | jco.client.sysnr  |
 | RouterAddress | jco.client.saprouter |
 
-##### 4.2.1.1 Additional JCoProperties{#jco-properties}
+##### Additional JCoProperties{#jco-properties}
 
 If you need to set additional JCoProperties for which a constant is not available, you can create a list of objects of the `Property` entity (see the domain model section, below) and use the [GetJCoDestination](#get-jco-destination) action. You need to set the following attributes in the `Property` object:
 
 * Name – the JCoProperty key — for example to set maximum pool size, Name would be `jco.pool.maxpoolsize`
 * Value – the value to be assigned to this property
 
-#### 4.1.2 Connecting Using an SNC Connection
+#### Connecting Using an SNC Connection
 
 Alternatively, you can configure **GetJCoDestination** to use an SNC connection by setting up the properties listed below (using the method described in [Additional JCoProperties](#jco-properties), above), and then passing the list of properties using the [GetJCoDestination](#get-jco-destination) action.
 
@@ -176,7 +176,7 @@ The values for the properties can be found in the **Connection Properties** of t
 | jco.client.mshost | Message Server | System Tab |
 | jco.client.r3name | System | System Tab  |
 
-## 5 Configuring XSUAA Security When Using the SAP Cloud Connector
+## Configuring XSUAA Security When Using the SAP Cloud Connector
 
 If you are using the SAP Cloud Connector to connect to your SAP backend system, you can secure access to the *bapi-service* microservice component by using the SAP XSUAA service. The service supports both user-based authentication with a user access token obtained from the SAP XSUAA service, and application-based authentication with an access token obtained from the SAP XSUAA service bindings.
 
@@ -184,13 +184,13 @@ If you are using the SAP Cloud Connector to connect to your SAP backend system, 
 To help you implement the XSUAA service for your app, Mendix provides the platform-supported XSUAA Connector for SAP BTP. After installing the connector, you can use the [XSUAA Configurator](/appstore/modules/sap/sap-xsuaa-connector/#configurator) to create the required XSUAA service configuration.
 {{% /alert %}}
 
-### 5.1 Trust Configuration
+### Trust Configuration
 
 For the XSUAA authentication to work between the *bapi-service* component and your Mendix app, you must configure separate XSUAA service instances for both applications. The *bapi-service* component and your Mendix app must both be deployed in the same sub-account in SAP BTP.
 
 The following sections show how you can configure the required settings in the *xs-security.json* file of the XSUAA service.
 
-#### 5.1.2 Application-to-Application Authentication
+#### Application-to-Application Authentication
 
 To configure application-to-application authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
 
@@ -208,7 +208,7 @@ Also, include the following line in the *xs-security.json* file of the XSUAA ser
 In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
 {{% /alert %}}
 
-#### 5.1.3 User Authentication 
+#### User Authentication 
 
 To configure user authentication, include the following line in the *xs-security.json* file of the XSUAA service instance bound with *bapi-service*:
 
@@ -270,11 +270,11 @@ The following sample shows a configuration of the *xs-security.json* file for yo
 In this example, *bapiAuth* is the scope for the provider app defined on in the *xs-security.json* file for *bapi-service*. You can replace it with the name of your choice.
 {{% /alert %}}
 
-## 6 Domain Models
+## Domain Models
 
 This section describes two different domain models. The domain model in the `SAPBAPIConnector` module is used to control how your app communicates with an SAP BAPI. The domain model in a Mendix BAPI module describes a specific SAP BAPI which you want to use in your app.
 
-### 6.1 SAP BAPI Connector Domain Model{#bapi-connector-domain-model}
+### SAP BAPI Connector Domain Model{#bapi-connector-domain-model}
 
 This is part of the `SAPBAPIConnector` module and contains the entities which are used by the BAPI Connector to create objects required for calling a BAPI
 
@@ -287,7 +287,7 @@ This is part of the `SAPBAPIConnector` module and contains the entities which ar
 * **BAPIMetadata** – This holds all the attributes which represent the metadata of an SAP BAPI. It is used to generate a metadata.json file which is used in the Model Creator for SAP Integrations to create a domain model for a Mendix BAPI module.
 * **Destination** – This entity holds the JCo Destination name and properties.
 
-### 6.2 Mendix BAPI Module Domain Model
+### Mendix BAPI Module Domain Model
 
 This is the domain model which represents a specific BAPI. You can have one or more of these modules in your Mendix application, each defining a single BAPI.
 The microflow actions of the BAPI Connector for SAP solutions make use of the domain model representing an SAP BAPI. The entities in the domain model have attributes which define import, export, and table parameters of an SAP BAPI.
@@ -309,7 +309,7 @@ The entities in this domain model are as follows:
 
 BAPI parameters which are reserved words in Mendix will be prefixed with `mxbapi_`. For example, mxbapi_RETURN in the above domain model.
 
-## 7 Microflow Actions {#microflow-actions}
+## Microflow Actions {#microflow-actions}
 
 The BAPI Connector provides the following microflow actions. These can be used as activities in your microflows to consume the BAPIs available in the SAP system for which you have imported Mendix BAPI modules.
 
@@ -317,7 +317,7 @@ The BAPI Connector provides the following microflow actions. These can be used a
 
 The microflow actions are described in the following sections.
 
-### 7.1 GetJCoDestination {#get-jco-destination}
+### GetJCoDestination {#get-jco-destination}
 
 The action `GetJCoDestination`, is used to get the JCoDestination. Assign the values from the *JCO_Constants* described in [SAP System Connection Details](#sap-connection-details), above. The action returns a `Destination` object which is used when making calls to a BAPI.
 
@@ -334,13 +334,13 @@ This example shows setting of below properties to GetJCoDestination action:
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/getjcodestination-additional.properties.png" alt="Additional properties for the GetJCoDestination action" class="no-border" >}}
 
-### 7.2 Create_BAPIExplorer
+### Create_BAPIExplorer
 
 This microflow opens the BAPI explorer page to allow you to find all the BAPIs available at your JCo destination.
 
 For more information on how to use this microflow, see [BAPI Schema for Model Creator](#bapi-schema), below.
 
-### 7.3 CallBAPI
+### CallBAPI
 
 This microflow action is used to call a BAPI function.
 
@@ -353,7 +353,7 @@ This microflow action is used to call a BAPI function.
 | Response type | Type of the `BAPIResponseObject` having export parameters set.<br>The entity type is defined in your BAPI module domain model. |
 | Commit transaction  | Setting this `true` will call `BAPI_COMMIT_TRANSACTION` to commit changes. Not required for Get calls. |
 
-### 7.4 CallBAPISequence
+### CallBAPISequence
 
 Use this microflow action when you want to call more than one BAPI in a given order. This microflow action is only required when you want to call more than one BAPI in a single [JCoContext](https://javadoc.io/doc/com.sap.cloud/neo-java-web-api/2.35.9/com/sap/conn/jco/JCoContext.html). After the calls have been made, this executes an additional call to `BAPI_COMMIT_TRANSACTION` to commit all the changes made in this JCOContext.
 
@@ -365,7 +365,7 @@ Use this microflow action when you want to call more than one BAPI in a given or
 | List of BAPI requests | A list of `BAPIRequest` objects.   |
 | Output | A Boolean indicating the success or failure of the BAPI call sequence. If you use the return value, the result will be returned as `Variable name`. |
 
-### 7.5 GetBAPIResponse
+### GetBAPIResponse
 
 This microflow action is used together with `CallBAPISequence`. It returns the response for one of the BAPIRequest objects which was in the list supplied to a `CallBAPISequence` action. You need to add this action to your microflow for every `BAPIRequest` object for which you need the response.
 
@@ -377,7 +377,7 @@ This microflow action is used together with `CallBAPISequence`. It returns the r
 | Return entity type | The `BAPIResponse` specialization entity associated with the `BAPIRequest` entity given in request. <br>This entity will be defined in your BAPI module domain model. |
 | Output | An object of the entity type mentioned in **Return entity type** |
 
-### 7.6 TestDestinationConnection {#test-connection}
+### TestDestinationConnection {#test-connection}
 
 This action can be found in the **Internal > microflows** folder of the `SAPBAPIConnector` module.
 
@@ -385,7 +385,7 @@ This action is used to verify whether your application is able to reach your SAP
 
 This can be done by calling the internal microflow `TestConnection`, provided. On successful connection, a success dialog is displayed.
 
-## 8 BAPI Schema for Model Creator {#bapi-schema}
+## BAPI Schema for Model Creator {#bapi-schema}
 
 The BAPI Connector for SAP Solutions contains the microflow **Create_BAPIExplorer**.
 
@@ -411,11 +411,11 @@ Once you find the BAPI you need, select it and click **Next** to generate the BA
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-bapi-connector/bapi-explorer-download-schema.png" alt="BAPI Explorer – Download schema" class="no-border" >}}
 
-## 9 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
+## Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
 See [Model Creator for SAP Integrations](/appstore/services/use-sap-model-creator/) for information on how to use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
-## 10 Limitations
+## Limitations
 
 1. The BAPI Connector for SAP Solutions provides a short description of the SAP BAPI contained in your SAP Business Suite or S/4HANA system. For detailed documentation of an SAP BAPI, please refer to standard SAP BAPI documentation.
 2. The entity description provided by the BAPI is not visible in the Model Creator for SAP Integrations.

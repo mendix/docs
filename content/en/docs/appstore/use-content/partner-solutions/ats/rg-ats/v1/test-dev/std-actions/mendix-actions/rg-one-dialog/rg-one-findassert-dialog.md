@@ -3,21 +3,21 @@ title: "Find/Assert Dialog"
 url: /appstore/partner-solutions/ats/rg-one-findassert-dialog/
 ---
 
-## 1 Description
+## Description
 
 Finds/Asserts a Dialog by title or type.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Window
 * DialogMessage
 * ConfirmationDialog
 
-## 3 Usage
+## Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to find. Otherwise this action will return the first found active dialog.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
@@ -25,7 +25,7 @@ Dialog Title | String | no | The title of the dialog you want to cancel
 Dialog Type | Enumeration | no | The type of the dialog you want to cancel
 Message Text | String | no | The message text of the dialog
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 --- | --- | ---

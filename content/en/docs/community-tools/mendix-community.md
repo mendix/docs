@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Mendix Community](https://community.mendix.com/) is where Mendix community members come together to help each other with questions and answers, exchange information, and propose ideas for improving the Mendix Platform.
 
@@ -16,15 +16,15 @@ The Mendix Community is closely integrated with the [Mendix Profile](/community-
 
 Click **Create a Post** to ask a question, start an exchange with the community, or share an idea.
 
-## 2 Personal
+## Personal
 
 Under **PERSONAL**, you can find [Community Feed](#community-feed), [Bookmarks](#bookmarks), and [Posts](#posts).
 
-### 2.1 Community Feed {#community-feed}
+### Community Feed {#community-feed}
 
 Clicking **PERSONAL** > **Community Feed** brings you back to the home page of the Mendix Community.
 
-### 2.2 Bookmarks {#bookmarks}
+### Bookmarks {#bookmarks}
 
 In **PERSONAL** > **Bookmarks**, the following tabs are available:
 
@@ -32,7 +32,7 @@ In **PERSONAL** > **Bookmarks**, the following tabs are available:
 * **Exchanges** – the exchanges you have bookmarked
 * **Ideas** – the ideas you have bookmarked
 
-### 2.3 Posts {#posts}
+### Posts {#posts}
 
 In **PERSONAL** > **Posts**, the following tabs are available:
 
@@ -41,9 +41,9 @@ In **PERSONAL** > **Posts**, the following tabs are available:
 * **Commented** – the questions, exchanges, and ideas that you have commented on
 * **Drafts** – the post drafts you have started
 
-## 3 General
+## General
 
-### 3.1 Questions {#questions-tab}
+### Questions {#questions-tab}
 
 In **GENERAL** > **Questions**, you can see an overview of the questions that have been asked. Here is an example question:
 
@@ -69,7 +69,7 @@ Each question has the following details:
 Hover over the Mendix user name to see the profile card with their Mendix points. Click the Mendix user name on the card to go to their Mendix Profile.
 {{% /alert %}}
 
-#### 3.1.1 Searching and Filtering Questions
+#### Searching and Filtering Questions
 
 To search for a question, enter your keywords in the **Search** text box.
 
@@ -81,7 +81,7 @@ To filter the searching results, you can use the following filters:
 * **Type in a Tag** – the tags set when the question was asked
 * **Version** – the Mendix version to which the question is related
 
-#### 3.1.2 Question Details {#question-details}
+#### Question Details {#question-details}
 
 Clicking the title of a question brings you to the question details page.
 
@@ -119,7 +119,7 @@ In the **Your Answer** section, you can contribute to the Mendix Community by wr
 
 {{< figure src="/attachments/community-tools/mendix-community/your-answer.png"  width="50%" >}}
 
-#### 3.1.3 Asking Your Question {#asking-question}
+#### Asking Your Question {#asking-question}
 
 {{% alert color="info" %}}
 It has never been easier to ask a question in the Mendix Community. But before you submit a new question, be sure to search the Mendix Community for similar questions that have already been asked. There may be someone else who has already posted the same question!
@@ -142,7 +142,7 @@ To ask your own question in the Mendix Community, follow these steps:
 
 Once a question you have asked receives several answers, you can accept an answer by clicking the check mark next to the answer. You should accept the answer that properly and accurately responds to your question in the best way possible.
 
-### 3.2 Exchanges {#exchanges-tab}
+### Exchanges {#exchanges-tab}
 
 In **GENERAL** > **Exchanges**, there is an overview of the exchanges that have been posted. Here is an example exchange:
 
@@ -164,7 +164,7 @@ Each exchange has the following details:
 9. The name, avatar, and [points level](/community-tools/mendix-profile/#level) of the Mendix community member who posted the exchange
 10. The avatars of the Mendix community members who have commented
 
-#### 3.2.1 Searching and Filtering Exchanges
+#### Searching and Filtering Exchanges
 
 To search for an exchange, enter your keywords in the **Search** text box.
 
@@ -174,7 +174,7 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the exchange was posted
 * **Type in a Tag** – the tags set when the exchange was posted
 
-#### 3.2.2 Exchange Details {#exchange-details}
+#### Exchange Details {#exchange-details}
 
 Clicking the title of an exchange brings you to the exchange details page.
 
@@ -206,7 +206,7 @@ Below the exchange details are comments on the exchange.
 
 In the **Your Comment** section, you can contribute to the Mendix Community by writing your comment in the editor and then clicking **Submit Comment**.
 
-#### 3.2.3 Posting an Exchange {#posting-exchange}
+#### Posting an Exchange {#posting-exchange}
 
 To post an exchange in the Mendix Community, follow these steps:
 
@@ -220,7 +220,7 @@ To post an exchange in the Mendix Community, follow these steps:
 3. To save the post as a draft, click **Save as Draft**. To check your draft, go to [Posts](#posts) > **Drafts**.
 4. To publish the exchange, click **Post Exchange**.
 
-### 3.3 Ideas {#ideas-tab}
+### Ideas {#ideas-tab}
 
 In **GENERAL** > **Ideas**, you can see an overview of the ideas and feature requests for improving the Mendix Platform that have been submitted by Mendix community members. Here is an example idea:
 
@@ -266,7 +266,7 @@ Each idea has the following details:
 
 12. The avatars of the Mendix community members who have commented
 
-#### 3.3.1 Searching and Filtering Ideas
+#### Searching and Filtering Ideas
 
 To search for an idea, enter your keywords in the **Search** text box.
 
@@ -277,7 +277,7 @@ To filter the searching results, you can use the following filters:
 * **Spaces** – the space set when the idea was posted
 * **Type in a Tag** – the tags set when the idea was posted
 
-#### 3.3.2 Idea Details {#idea-details}
+#### Idea Details {#idea-details}
 
 Clicking the title of an idea brings you to the idea details page.
 
@@ -315,7 +315,7 @@ Below the ideas details are the comments on the idea.
 
 In the **Your Comment** section, you can contribute to the Mendix Community by writing your idea in the editor and then clicking **Submit Comment**.
 
-#### 3.3.3 Posting an Idea {#posting-idea}
+#### Posting an Idea {#posting-idea}
 
 {{% alert color="info" %}}
 If you have a great idea that you would like to see implemented on the Mendix Platform, we want to hear it. But please make sure you search the Mendix Community for similar ideas before submitting a new idea. There may be someone else who has already posted the same idea!
@@ -335,7 +335,7 @@ To submit your own idea to the Mendix Community, follow these steps:
 
 Mendix looks forward to hearing your ideas!
 
-## 4 Spaces
+## Spaces
 
 In spaces in the Mendix Community, you can have discussions around the topics that interest you the most. The spaces that you have joined are shown under **SPACES** on the left navigation menu.
 
@@ -343,6 +343,6 @@ Clicking **Explore Spaces** shows all the public spaces. Public spaces are visib
 
 Moreover, it is possible to have a private space for members within your organization. While you explore spaces, click **Learn More** at the bottom to check this out.
 
-## 5 Read More
+## Read More
 
 * [How to Contribute to Mendix Documentation](/community-tools/contribute-to-mendix-docs/)

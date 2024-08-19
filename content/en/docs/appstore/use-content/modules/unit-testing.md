@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Unit Testing module, 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Use the [Unit Testing](https://marketplace.mendix.com/link/component/390/) module to run Mendix and JUnit unit tests inside your app.
 
-### 1.1 Dependencies
+### Dependencies
 
 * *junit-4.13.1.jar*
 * *commons-io-2.11.0.jar*
@@ -26,7 +26,7 @@ For module version 9.1.0, the [Community Commons](/appstore/modules/community-co
 For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-handling/) module is required as a dependency.
 {{% /alert %}}
 
-## 2 Installation
+## Installation
 
 1. Import the Unit Testing module into your app.
 
@@ -41,7 +41,7 @@ For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-
         * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
         * When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
 
-## 3 Usage
+## Usage
 
 To run a unit test, first navigate to the test suite overview on the left side of the page. A test suite reflects all the unit tests that are available in a module of your app. When you select a test suite, all the unit tests inside the suite are displayed, including their last result, if applicable.
 
@@ -51,9 +51,9 @@ You can also run a test individually by clicking **Run test**. If a JUnit test c
 
 When a unit test has been run, additional details about the test result will appear (for example, success, failure, and exception stack traces).
 
-## 4 Creating Unit Tests
+## Creating Unit Tests
 
-### 4.1 Creating Microflow Unit Tests
+### Creating Microflow Unit Tests
 
 To create a new microflow test in a module, just add a microflow with a name that starts with **TEST_** or **UT_** (case-insensitive). A test microflow should have no input arguments and either no result type, a Boolean result type, or a string result type. For string results, a non-empty string is interpreted as an error message. A microflow without a return type is considered to be successful as long as no exceptions are thrown.
 
@@ -61,7 +61,7 @@ In addition, it is possible to create a **Setup** and **TearDown** microflow per
 
 The Unit Testing module publishes a **reportStep** microflow that can be used inside your test microflow to track the progress inside a test. The last step successfully reached in a unit test is reported back in the test result. This makes it easier to inspect where things go wrong (although using the [microflow/nanoflow debugger](/refguide/debug-microflows-and-nanoflows/) is usually more insightful).
 
-### 4.2 Creating a Java Unit Tests (with JUNit)
+### Creating a Java Unit Tests (with JUNit)
 
 The Java unit test runner is driven by [JUnit](https://junit.org/junit5/) and requires a general understanding of JUnit version 4. A JUnit test method is run if it exists somewhere in the module name space (that is, it is stored as a Java class that lives somewhere in the *javasource/yourmodulename* folder). A Java function is recognized as a test if it is public, non-static, parameter-less, and annotated with the `org.junit.Test` annotation. Multiple tests can exists in a single class, but JUnit does not guarantee the execution order of the tests.
 
@@ -69,7 +69,7 @@ For some example JUnit unit tests, see the *src/javasource/unittesting/Unittesti
 
 You can base unit test classes on the **AbstractUnitTest** class. This class provides some time measurement functions (for example, to ignore `setup` and `teardown` in the time measure) and the `reportStep` function (which is otherwise accessible through `TestManager.instance().reportStep`).
 
-## 5 Running Unit Tests Through the Remote API
+## Running Unit Tests Through the Remote API
 
 A new test run through the remote JSON REST API can be started by using the endpoint `unittests/start`. Here is an example:
 
@@ -109,6 +109,6 @@ This is an example response:
 The completed flag will be `false` as long as the test run is not finished. The `runtime` flag will return the total runtime of the suite in milliseconds after the test run has finished.
 {{% /alert %}}
 
-## 6 Read More
+## Read More
 
 * [How to Test Microflows Using the UnitTesting Module](/refguide/testing-microflows-with-unit-testing-module/)

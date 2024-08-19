@@ -8,7 +8,7 @@ aliases:
     - /data-hub/data-hub-catalog/manage-data-sources/curate/
 ---
 
-## 1 Introduction
+## Introduction
 
 Curators, owners of data sources, and Mendix Admins can curate registered assets. Curation in the Catalog is the process of enriching the metadata and providing further information about the exposed data sources, datasets and attributes, and deleting irrelevant or outdated data sources. You can add custom application icons, Catalog-specific descriptions, and tags to supplement the registered metadata. Curate functions in the Catalog include setting the [Discoverability](#discoverability) of data sources, indicating whether the data source is [validated](#validated), and specifying the [Business and Technical Owners](#custom-owner).
 
@@ -23,7 +23,7 @@ Owners and Curators can also get an overview of the registered assets they own a
 Information that is added or changed during curation is stored in the Catalog for that item. It will not be added to the service contract, metadata files, or affect any of the values in the metadata files associated with the service or the data associated with the exposed datasets.
 {{% /alert %}}
 
-## 2 Curate List {#curatelist}
+## Curate List {#curatelist}
 
 Owners and curators of registered assets can click **Curate** from the Catalog home page to see the curation list screen. This page provides an overview of all the registered assets you can curate as an owner under the **My Assets** tab. Curators will also see the **Company Assets** tab that lists all the registered assets:
 
@@ -37,7 +37,7 @@ The list can be sorted by any of the columns by clicking on the column header.
 
 Click **View** to display the asset details. You can then perform curate actions to add Catalog-specific information to the asset metadata.
 
-## 3 Curate Page {#curation-option}
+## Curate Page {#curation-option}
 
 Curation is performed on the Edit Data Source screen. If you are a curator or owner of an asset, you will see the option to **Edit** the selected item.
 
@@ -59,7 +59,7 @@ When a dataset is selected, click **Edit the dataset** to do the following:
 * Set the dataset as **Validated**
 * Search for and add descriptions of the attributes
 
-## 4 Editing the Metadata of an App {#curate-application}
+## Editing the Metadata of an App {#curate-application}
 
 The curate functions that are available for a selected data source are to change **Data source**, **Application**, and **Authentication** details This section describes the application details that can be changed: changing owners or changing the application icon.
 
@@ -73,7 +73,7 @@ You can curate Application details from the **Application** tab as follows:
 
     {{< figure src="/attachments/catalog/curate/edit-application.png" alt="app edit screen" >}}
 
-### 4.1 Changing Owners of an App {#changing-owners}
+### Changing Owners of an App {#changing-owners}
 
 The **Business Owner** and **Technical Owner** are displayed as a link in the **Application** tab so users can contact them through the provided email.
 
@@ -86,13 +86,13 @@ By default, the **Technical Owner** for a registered asset is the user who regis
 Curators and Mendix Admins can manage the lists of custom owners as part of their administration functions. For more information, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog Administration*.
 {{% /alert %}}
 
-#### 4.1.1 Changing the Business and Technical Owners of an App {#changing-owner}
+#### Changing the Business and Technical Owners of an App {#changing-owner}
 
 To change the **Business Owner** or **Technical Owner** from the **Application** tab, click in the name field of the **Business** or **Technical** owner. You can start typing or select a name from the drop-down list. Mendix Platform users will be displayed with their avatar and custom owners will be shown with an avatar that displays their initials.
 
 The **Technical Owner** can only be changed in **Control Center**, not within the Catalog. For more information, see the [Owners](/control-center/catalog-admin/#custom-owners) section of *Catalog*.
 
-#### 4.1.2 Adding a Custom Owner {#custom-owner}
+#### Adding a Custom Owner {#custom-owner}
 
 When curating the owners of an application, you can specify an owner who is not a registered Mendix user but is the technical contact point for the application (the **Technical Owner**) or the owner of the data that is made available in the app (the **Business Owner**). The name and the contact email must be provided.
 
@@ -108,7 +108,7 @@ To add a custom **Business Owner**, follow these steps:
 
 1. Click **Save** to return to the **Application** tab. Click **Save** to return to the Data Source details page where the changes will be displayed in the right-hand metadata pane.
 
-### 4.2 Changing the App Icon {#application-icon}
+### Changing the App Icon {#application-icon}
 
 You can change the icon that is displayed for the app and data source by uploading your own custom application icon or selecting one from the icon library. The selected icon will be displayed for all endpoints of the application and data source, such as the Catalog search results and in the Mendix Studio Pro [Integration pane](/refguide/integration-pane/).
 
@@ -116,7 +116,7 @@ When you change an application icon, all data sources that are registered in the
 
 Currently, by default, the application icon is determined by the application type when the data source is registered. For example, for Mendix apps the Mendix icon is displayed which identifies the technology of the source app.
 
-#### 4.2.1 Uploading a Custom Icon Image File
+#### Uploading a Custom Icon Image File
 
 When you want to upload a custom icon or image, the following apply:
 
@@ -149,15 +149,15 @@ To **Upload a different icon** for the app, follow these steps:
 
 6. Click **Save** to return to the Data Source details page. The custom icon will be stored in the **Icon Library**.
 
-#### 4.2.2 Selecting an Icon from the Library
+#### Selecting an Icon from the Library
 
 An alternative to uploading an icon is to use an existing icon by clicking **select one from your library**. The icons for your Catalog will be shown and you can select one and click **Change Icon**.
 
-## 5 Editing the Metadata of a Data Source {#service-details}
+## Editing the Metadata of a Data Source {#service-details}
 
 You can curate data sources to add a Catalog description and add tags.
 
-### 5.1 Adding or Editing a Catalog Description
+### Adding or Editing a Catalog Description
 
 If a description was included in the contract, it will be displayed in the Data Source details page for the selected data source. You can add a description or edit an existing description for the Catalog. They are included in searches.
 
@@ -174,7 +174,7 @@ To edit the asset metadata, follow these steps:
 3. Add a description. This will be stored with the service details in the Catalog.
 4. Click **Save** to save the changes and return to the Data Source details page, which will now display the selected description.
 
-### 5.2 Adding or Editing Tags to a Service {#tags}
+### Adding or Editing Tags to a Service {#tags}
 
 Add tags to categorize a registered service and provide additional means for finding the service. Tags that are specified for a service also apply to the datasets and attributes that are exposed in the service. Specify tags for the selected service by following these steps:
 
@@ -191,17 +191,17 @@ Add tags to categorize a registered service and provide additional means for fin
 
 5. When you are finished specifying the tags, click **Save** to register the changes. The tags will be shown on the Data Source details page.
 
-### 5.3 Adding Authentication to a Service {#authentication}
+### Adding Authentication to a Service {#authentication}
 
 Publishers of a data source can let consuming developers know what they will need to identify themselves when consuming a data source. Add this later if not configured during the registration step.
 
 For a description of supported authentication methods, see the [Selecting an Authentication Method](/catalog/register/register-data/#authentication) section of *Register Resources in the Catalog*.
 
-## 6 Discoverable and Validated {#discoverability}
+## Discoverable and Validated {#discoverability}
 
 The discoverable and validated properties of registered assets can be set from the Edit Data Source page for the selected asset.
 
-### 6.1 Discoverable
+### Discoverable
 
 The discoverability is set at a data source level. When a data source is registered in the Catalog, **Discoverable** is set to the company's default value, which is configured by the Mendix Admin in [Control Center](/control-center/catalog-admin/#settings). If **Discoverable** is on for a data source, all users can find the asset and see the details. The **Discoverable** setting will apply to all datasets that are exposed in the data source.
 
@@ -219,13 +219,13 @@ To change the discoverability of a service, follow these steps:
 
 A message is displayed to indicate the discoverability of the asset and the discoverability icon is updated in the search results and Data Source details page.
 
-### 6.2 Validated {#validated}
+### Validated {#validated}
 
 The **Validated** property can be assigned to a data source or a dataset to indicate, for example, that it has been qualified and is a reliable asset. You can turn it on and off by clicking the **Validated** toggle. A validated data source or dataset is indicated by the validation shield on the Data Source details page and in the search results pane.
 
 Setting an asset as **Validated** contributes to the weighting of the asset in the search results. This means that **Validated** assets will be listed before unvalidated assets in the results.
 
-## 7 Deleting a Data Source {#delete-data-source}
+## Deleting a Data Source {#delete-data-source}
 
 Owners of a data source can delete their own data sources. Anyone with curation rights (Mendix Admins or curators) can delete any data sources within the company. This ensures that their Catalog is free of outdated or irrelevant data sources.
 

@@ -6,7 +6,7 @@ description: "How to install and configure Mendix in an HA setup on servers runn
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 This document has been created as an example of setting up a high availability Mendix Runtime Server environment on Windows, using the Microsoft Azure cloud platform. You will probably need to adapt this to your situation, as this guide is meant to illustrate what Mendix system and settings to take into account, and is not a complete guide or a supported 'best practice' for deploying a Mendix hosting environment.
 It describes the installation and configuration of the Mendix software on multiple systems running Microsoft Windows on the Microsoft Azure cloud platform and covers:
@@ -17,7 +17,7 @@ It describes the installation and configuration of the Mendix software on multip
 
 * Configuring Azure Blob Storage as shared storage
 
-## 2 Prerequisites {#Prerequisites}
+## Prerequisites {#Prerequisites}
 
 * Basic knowledge of administering Microsoft Azure and Windows servers
 
@@ -33,7 +33,7 @@ It describes the installation and configuration of the Mendix software on multip
 
     * Storage accounts
 
-## 3 Configure Cluster Slave Nodes
+## Configure Cluster Slave Nodes
 
 In a clustered environment there are some tasks (for example, cleaning up expired user sessions from the database) that should only be handled by one of the cluster members. By default, each Mendix app server will execute these tasks, which can lead to issues. Ensure that only one server executes these tasks by adding the Custom Mendix setting *com.mendix.core.isClusterSlave* and setting it to *true* for all servers **except one**. So if you have a two server cluster, add this setting for one server and if you have five servers in your cluster, add it for four of them.
 
@@ -53,12 +53,12 @@ In a clustered environment there are some tasks (for example, cleaning up expire
 
 More information on the cluster leader and slave roles can be found in the [Cluster Leader and Cluster Slaves](/refguide/clustered-mendix-runtime/#cluster-leader-follower) section of *Clustered Mendix Runtime*.
 
-## 4 Configuring the Azure Load Balancer
+## Configuring the Azure Load Balancer
 
 The exact configuration details of the load balancer will depend on your network environment and availability demands. The Mendix Runtime does not require sticky sessions. Make sure you have configured health probes for HTTP (port 80) and HTTPS (port 443), a back-end pool containing all your Mendix application servers, and load balancing rules to forward ports 80 and 443 to the servers in the back-end pool using the corresponding health probe.
 More information regarding the configuration of Azure Load Balancers is available in [the Microsoft Azure documentation](https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal?tabs=option-1-create-load-balancer-standard).
 
-## 5 Configuring Azure Blob Storage as Shared Storage
+## Configuring Azure Blob Storage as Shared Storage
 
 Go to the Azure Portal to retrieve the Azure Storage account name and an access key:
 
@@ -85,12 +85,12 @@ If you do not want to enable this setting, make sure you have a restore strategy
 These settings have to be configured on *all* servers in the cluster.
 {{% /alert %}}
 
-## 6 Database
+## Database
 
 Please note that, when using an Azure SQL database for your deployment, it is recommended you use either Premium (DTU-based model) or Business Critical (vCore-based model). Otherwise, the latency of the database affect the performance of your application.
 Also, keep in mind that each published application needs its own database! More information on database requirements can be found here: [Databases](/refguide/system-requirements/#databases)
 
-## 7 Read More
+## Read More
 
 * [Mendix deployment on Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
 * [Clustered Mendix Runtime](/refguide/clustered-mendix-runtime/)

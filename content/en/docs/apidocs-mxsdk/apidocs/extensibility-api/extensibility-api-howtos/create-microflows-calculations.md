@@ -4,13 +4,13 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations
 weight: 8
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can create microflows which perform some calculations and return the result.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 2 Creating an Extension Class that Creates Microflows
+## Creating an Extension Class that Creates Microflows
 
 1. Open the project that you previously created when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new folder *MicroflowTutorial* to your solution.
@@ -44,7 +44,7 @@ You can download the example in this how-to in [this GitHub repository](https://
 
     As you can see, the `GetMenus` method is overridden to add your own menus to Studio Pro. The class `CalculationsMicroflowCreator` (which you will add shortly) will be called from the action of your menu. You can see that this class has been injected in the constructor of your menu extension.
 
-## 3. Microflow Creator
+## Microflow Creator
 
 In this section, you will add the class `CalculationsMicroflowCreator.cs`, which will be injected into your menu extension so that it can be called from your menu action. Make sure to add the `Export` attribute to the class; otherwise, it will not be injected into your menu extension. The `ImportingConstructor` attribute on the constructor is also very important, as this allows the class to receive any required services via dependency injection.
 
@@ -190,7 +190,7 @@ Next, `QualifiedName` of the microflow, which is to be called by this activity, 
 
 Finally, you can set `OutputVariableName` on `IActionActivity`, which is what the calling microflow will read from the called microflow.
 
-## 4 Passing Parameters
+## Passing Parameters
 
 It is also possible to pass a set of parameters to the action activity, which will be the inputs for the called microflow. This set of parameters is a simple `Tuple` of a name and an expression. In the example, these parameters are the two integers for the multiplication microflow and the two decimals for the addition microflow.
 
@@ -252,7 +252,7 @@ The calling microflow looks as follows:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/main-microflow.png" >}}
 
-## 5 Java Actions
+## Java Actions
 
 Outside of this calculation examples, you might want to create a microflow activity that calls a Java action file. See below for how to add an activity, and action and a call to the microflow to achieve that. Same as in the previous examples, you have to do this inside a transaction (`IModel.StartTransaction`).
 

@@ -6,13 +6,13 @@ description: "Describes the steps required to use Amazon Cognito with the OIDC S
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 [Amazon Cognito](https://aws.amazon.com/pm/cognito/) is a secure, scalable customer identity and access management platform. The [OpenID Connect (OIDC) SSO](/appstore/modules/oidc/) module allows end-users of your Mendix app to login via Single Sign-on (SSO) using the OIDC protocol.
 
 This how-to describes the steps required to enable your app to use the OIDC SSO module with Amazon Cognito as the identity provider.
 
-## 2 Configuring Amazon Cognito {#cognito-provider}
+## Configuring Amazon Cognito {#cognito-provider}
 
 To configure Amazon Cognito for the OIDC SSO module, follow these steps:
 
@@ -65,7 +65,7 @@ To configure Amazon Cognito for the OIDC SSO module, follow these steps:
     7. Go back to the user pool that you created.
     8. On the **App integration** tab, in the **Domain** section, copy the **Cognito domain** and save it in a secure location.
 
-## 3 Configuring the Required Settings in Your Mendix App {#cognito}
+## Configuring the Required Settings in Your Mendix App {#cognito}
 
 After you configure the necessary settings in Amazon Cognito, you must add the endpoint URLs to your Mendix app, and then add a button to sign in with Amazon Cognito.
 

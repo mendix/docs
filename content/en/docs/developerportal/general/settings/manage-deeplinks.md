@@ -8,13 +8,13 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 To go directly to the desired element of your app in [Apps](https://sprintr.home.mendix.com/), you can use deep links.
 
 This how-to teaches you how to find the app ID and environment ID, and create deep links.
 
-## 2 Getting the App ID and Environment ID
+## Getting the App ID and Environment ID
 
 To get the app ID, do as follows:
 
@@ -29,7 +29,7 @@ To get the environment ID, do as follows:
 
 2. On the navigation pane, go to **Environments**, and then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view. You can find the environment ID on the **General** tab.
 
-## 3 Creating a Deep Link in Apps
+## Creating a Deep Link in Apps
 
 If you want to provide links directly to a specific element in your app in [Apps](https://sprintr.home.mendix.com/), use the following links, with the specific app ID or environment ID added, as instructed:
 
@@ -63,6 +63,6 @@ If you want to provide links directly to a specific element in your app in [Apps
 
 * Logs for app: `https://cloud.home.mendix.com/link/logs/<appID>`
 
-## 4 Read More
+## Read More
 
 * [How to Manage General App Settings](/developerportal/collaborate/general-settings/)

@@ -3,19 +3,19 @@ title: "Sort DataGrid"
 url: /appstore/partner-solutions/ats/rg-one-sort-datagrid/
 ---
 
-## 1 Description
+## Description
 
 Sorts a DataGrid by the specified column.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * DataGrid
 
-## 3 Usage
+## Usage
 
 You have to pass the DataGrid and the column name to determine the DataGrid widget and the sorting.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

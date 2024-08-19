@@ -5,11 +5,11 @@ weight: 5
 description: "Describes how to set up import templates and import data into your app using the Excel Importer module."
 ---
 
-## 1 Introduction
+## Introduction
 
 Adding large amounts of data to your application (for example, reference data or data from an external application) can be very time-consuming. In order to save time and effort, this process can be automated using the [Excel Importer](/appstore/modules/excel-importer/) from the Mendix Marketplace. In this how-to, you will set up import templates and import data into your app using this module.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you know how to do the following:
 
@@ -20,7 +20,7 @@ Before starting this how-to, make sure you know how to do the following:
 * Add Marketplace content to your app (see [Using Marketplace Content](/appstore/use-content/))
 * Secure your applications (see [How to Create a Secure App](/howto9/security/create-a-secure-app/))
 
-## 3 Preparing the Data Structure, GUI and Modules
+## Preparing the Data Structure, GUI and Modules
 
 Before you can start importing data into your application, you first need to set up the data structure and GUI by following these these steps:
 
@@ -37,7 +37,7 @@ Before you can start importing data into your application, you first need to set
 5. Create menu items for the **ExcelImportOverview** and the **MxObjects_Overview** pages (these pages already exist in the **_USE_ME** folders of the downloaded modules).
 6. Configure the **Administrator** user role to have the **Configurator** module role for the **ExcelImporter** module, and the **ModelAdministrator** module role for the **Mx Model Reflection** module.
 
-## 4 Preparing the Logic for Data Import {#preparing}
+## Preparing the Logic for Data Import {#preparing}
 
 Because an enumeration is used for the **OrderStatus** attribute, you need to create a microflow to determine the enumeration value of the attribute based on the input from the Excel file.
 
@@ -56,7 +56,7 @@ Because an enumeration is used for the **OrderStatus** attribute, you need to cr
 
 3. **Save** the microflow.
 
-## 5 Using Application Model Metadata in the Client
+## Using Application Model Metadata in the Client
 
 In order to set up import templates for importing data, your application model metadata should be reflected in the client. This can be achieved by using the [Mx Model Reflection](/appstore/modules/model-reflection/) module. In this section, you will learn how to do this by following these steps:
 
@@ -70,7 +70,7 @@ In order to set up import templates for importing data, your application model m
 
 6. Click the button next to **Synchronize all entities and microflows of checked modules on the left**. Now the two objects and the parse microflow from the **MyFirstModule** module can be seen and used in the client.
 
-## 6 Manually Creating an Import Template {#creating}
+## Manually Creating an Import Template {#creating}
 
 Before you can import data from an Excel File into your application, you have to set up an import template. In this template, you will configure the objects to which the data should be mapped, if an object is associated to another object, from which row of the Excel file the import should start, and which columns should be imported.
 
@@ -139,7 +139,7 @@ Based on the structure of the file you want to import, you need to manually set 
 
 18. Save the import template.
 
-### 6.1 Importing an Excel File
+### Importing an Excel File
 
 Now that the template is set up, you can start importing data from an Excel file into your application. You can use the example file you downloaded in the [Creating the Import Template](#creating) section above.
 
@@ -162,7 +162,7 @@ Follow these steps to import the Excel file:
 
 7. Click **OK** when the import has finished.
 
-## 7 Automatically Creating an Import Template via an Excel File
+## Automatically Creating an Import Template via an Excel File
 
 In the previous steps, you manually added all the columns to your import template. In this section, you will create the same Excel template in an automated way, which you can do this via the specific **New template by excelfile** button. You can use this same Excel file example:
 
@@ -198,7 +198,7 @@ Follow these steps to create the import template via the Excel file:
 
     {{% alert color="info" %}}Remember that you have to set a key attribute for the **Customer** object as well as the **Order** object.{{% /alert %}}
 
-## 8 Exporting and Importing a Template
+## Exporting and Importing a Template
 
 Once you have completed an Excel template, you can export the template (for example, from a test environment) and import it (for example, into an acceptance environment). When exporting and importing a template, the exact template will be uploaded, which means that columns are generated, the Mendix object is selected, the attributes are connected, and the parse microflows are selected.
 
@@ -217,7 +217,7 @@ You have now imported a complete import template.
 
 {{% alert color="info" %}}You will have a duplicate import template in your app, but in a working scenario, you would import this template in a different environment/database where the template had not already been created.{{% /alert %}}
 
-## 9 Read More
+## Read More
 
 * [Export XML Documents](/howto9/integration/export-xml-documents/)
 * [Import XML Documents](/howto9/integration/importing-xml-documents/)

@@ -3,19 +3,19 @@ title: "Toggle Simple Checkbox Set Selector Value"
 url: /appstore/partner-solutions/ats/rg-one-toggle-simple-checkbox-set-selector-value/
 ---
 
-## 1 Description
+## Description
 
 Inverts the value of the checkbox found by the given value connected to the checkbox.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Simple Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value connected to the checkbox.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

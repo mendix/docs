@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Microflow Timer widge
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Microflow Timer](https://marketplace.mendix.com/link/component/27/) widget can be used to time and execute a microflow or nanoflow as long as a certain page is open. The microflow or nanoflow can be executed once or repeatedly, in which case it will not stop until it returns false or until the page is closed. 
 
@@ -13,19 +13,19 @@ The [Microflow Timer](https://marketplace.mendix.com/link/component/27/) widget 
 In offline apps, you cannot use microflows, but you can use nanoflows.
 {{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 * Update a grid or object after a certain amount of time (for example, a message inbox)
 * Close a page with a message automatically after 10 seconds
 * Automatically make backup copies while the user is still editing an object
 * Open a page and directly trigger validation errors (to achieve this, set **Interval (in ms)** to *0*, **Execute once** to **Yes**, and **Start at once** to **Yes** – see [Configuration](#configuration) below)
 
-### 1.2 Features
+### Features
 
 * Add timed behavior to your application
 * Run a microflow or nanoflow
 
-## 2 Configuration {#configuration}
+## Configuration {#configuration}
 
 To configure this widget, follow these steps:
 

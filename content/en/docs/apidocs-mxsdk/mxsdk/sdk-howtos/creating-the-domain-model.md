@@ -5,7 +5,7 @@ weight: 30
 description: "Explains how to create a domain model with inheritance and what the relation is between the Mendix Metamodel and the SDK."
 ---
 
-## 1 Introduction
+## Introduction
 
 You now have your first script up and running, which creates a new app with a single entity. This how-to guides you through the process of creating a more extensive domain model. At the end of this how-to you will have a domain model with two entities: `Customer` and `Invoice`. These entities should be associated with a one-to-many association. The `Customer` entity should become a specialization of the `Administration.Account` entity (and indirectly `System.User`), so that customers can log into the app.
 
@@ -30,7 +30,7 @@ The *Studio Pro Guide* gives an overview of what can be configured for different
 
 This how-to will guide you through the collection of the necessary information from these sources to create the domain model. At the same time, it will explain the general concepts and structure of the SDK documentation. This will enable you to find the information that you need to manipulate other parts of the app model as well.
 
-## 2 Creating Entities
+## Creating Entities
 
 First, you start with creation of the two entities, `Customer` and `Invoice`. Entities have some basic properties, such as their `name` and `documentation`. You can see these in Studio Pro in the Properties pane when you have selected an entity. These properties are documented in the *Studio Pro Guide* under the [Entities](/refguide/entities/) topic.
 
@@ -64,7 +64,7 @@ invoice.name = `Invoice`;
 invoice.location = { x: 400, y: 100 };
 ```
 
-### 2.1 Resources
+### Resources
 
 *Studio Pro Guide*
 
@@ -84,7 +84,7 @@ Model SDK API docs
 
 * [Entity.location](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.entity.html#location)
 
-## 3 Creating an Association
+## Creating an Association
 
 The next step is to create an association between the `Customer` and `Invoice` entities to define their relationship: a `Customer` can have zero or more `Invoices`.
 
@@ -122,7 +122,7 @@ invoices.childConnection = { "x": 100, "y": 30 };
 invoices.parentConnection = { "x": 0, "y": 30 };
 ```
 
-### 3.1 Resources
+### Resources
 
 *Studio Pro Guide*
 
@@ -137,7 +137,7 @@ Model SDK API docs
 * [Association.parent](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#parent)
 * [Association.child](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.association.html#child)
 
-## 4 Configuring a Generalization
+## Configuring a Generalization
 
 Finally, you want to configure the `Customer` entity to be a specialization of `Administration.Account`, so that customers can log into the app. The *Studio Pro Guide* describes inheritance on the [Entities](/refguide/entities/) page. Entities that are a specialization of another entity inherit all its properties and behavior.
 
@@ -170,7 +170,7 @@ const systemUser = workingCopy.model().findEntityByQualifiedName(`Administration
 generalization.generalization = systemUser;
 ```
 
-### 4.1 Resources
+### Resources
 
 *Studio Pro Guide*
 
@@ -184,6 +184,6 @@ Model SDK API docs
 * Property [`generalization`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.generalization.html#generalization)
 * [NoGeneralization](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/domainmodels.nogeneralization.html)
 
-## 5 Conclusion
+## Conclusion
 
 This completes the script. Compile and execute it as described in the previous section. Open the app in Studio Pro to inspect the results!

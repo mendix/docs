@@ -7,7 +7,7 @@ description_list: true
 weight: 90
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix comes with a wide variety of [Widgets](/refguide/pages/#widgets-categories), but sometimes your app requires a widget outside of this set. To support a more advanced UI pattern or create app-specific interactions, you will need to make your own pluggable widget. This documentation will help you achieve that in Studio Pro 10. See these links for other versions' documentation:
 
@@ -30,7 +30,7 @@ For information on how to update Pluggable Widgets Tools to a newer version, see
 Using [System Texts](/refguide/system-texts/) to translate languages is not available for use with the Pluggable Widgets API.
 {{% /alert %}}
 
-## 2 Client Component {#client-component}
+## Client Component {#client-component}
 
 The essential part of a pluggable widget is its client component: a React component rendered inside the end-user’s app. Creating this component requires some basic React knowledge. Read [React's tutorial](https://reactjs.org/tutorial/tutorial.html) if you have not worked with React before. Note that if you are building a widget for [native mobile](/refguide/mobile/) apps, you should use [React Native](https://facebook.github.io/react-native/) instead of React.
 
@@ -50,7 +50,7 @@ A prop value is often not just a primitive value, but an object whose structure 
 
 The above interface could be used this way: a component uses a `canExecute` flag to decide whether it should be enabled, uses an `isExecuting`  flag to show an inline progress indicator, and triggers `execute()` method in a reaction to user click. Normally, after `execute()` has been triggered, the component will be re-rendered with a new value that has the `isExecuting` flag set, and when an action, for example a microflow, completes, the component is re-rendered again without `isExecuting`.
 
-## 3 Widget Package {#widget-package}
+## Widget Package {#widget-package}
 
 A pluggable widget is distributed as single widget package file with an *.mpk* extension. This file should be placed in your app's `widgets` directory. Mendix Studio Pro discovers all widgets in your app when you open your app, add a widget through the Marketplace, or click **App** > **Synchronize App Directory**.
 
@@ -87,7 +87,7 @@ The *package.xml* file has the following structure:
 
 Both `packageName` and `packageVersion` should be aligned with the app's information in the Marketplace if you wish to publish the package. It is best practice to use the widget ID as a `packageName`.
 
-## 4 Widget Definition XML File {#widget-definition}
+## Widget Definition XML File {#widget-definition}
 
 The widget definition XML file is an essential part of a widget because it describes that widget's basic information and capabilities, such as if that widget can function offline. This file also contains a defined list of properties configurable in the widget. If you use the Mendix Pluggable Widget Generator, the contents of this file will be scaffolded for you.
 
@@ -106,7 +106,7 @@ A simple widget XML file might look like this:
 
 A widget XML file consists of three sections: widget attributes, widget description, and widget properties definition.
 
-### 4.1 Widget Attributes
+### Widget Attributes
 
 Here is an example of a widget’s attributes section:
 
@@ -127,7 +127,7 @@ This section is generated based on options chosen while running the Mendix Plugg
 * `offlineCapable` — This shows if a widget can work while an app is offline. For more information on offline apps, see the [Offline-First](/refguide/offline-first/) guide. A widget that fetches information from a third-party API, for example a widget that fetches airline ticket prices, could not function without an internet connection. If a widget cannot work offline, Mendix Studio Pro will forbid its use on pages that must be available offline.
 * `supportedPlatform` — This shows the platforms a widget is compatible with.  `Web` describes widgets that are only compatible with web and hybrid mobile apps. `Native` describes widgets that are compatible with native mobile apps.
 
-### 4.2 Widget Description {#widget-description}
+### Widget Description {#widget-description}
 
 The presentation of the widget in Studio Pro is determined by the first set of elements inside the widget tag. The order of these descriptive tags is important, and is demonstrated in the list below. Only the name and description tags are mandatory — the others are optional. The description can be omitted with a self-closing tag: `<description />`: 
 
@@ -148,7 +148,7 @@ In Mendix Studio Pro, the widget described above would look like this:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/basic-widget-progress-card.png" alt="basic progress card in structure mode" >}}
 
-#### 4.2.1 Toolbox Category {#toolbox-category}
+#### Toolbox Category {#toolbox-category}
 
 To provide more clarity for Studio Pro users you can specify a toolbox category for your widgets. When provided, it determines a toolbox category for a widget in Studio Pro. It is possible to specify existing built-in categories such as **Data** or **Input** as well as new arbitrary categories like **Maps**. 
 
@@ -166,7 +166,7 @@ In the example above, a widget would be placed under **Open Street Maps widgets*
 When your widget is published in Marketplace and is assigned a special toolbox category by the Marketplace team, that special toolbox category always takes precedence over a developer-configured category.
 {{% /alert %}}
 
-#### 4.2.2 Help Page {#help}
+#### Help Page {#help}
 
 You can provide additional help information to widget users by using a help page. If you do so, a widgets configuration screen will get a **Help** button, assigned to the <kbd>F1</kbd> shortcut key, that opens a specified page. This button is positioned in the lower-left corner of the popup dialog:
 
@@ -184,7 +184,7 @@ For more complex help pages you can link to a markdown page. For security reason
 * Host name must end with *.mendix.com* or *github.com*
 * If host name is *github.com* the full URL must end with *.md*
 
-#### 4.2.3 Icon {#icon}
+#### Icon {#icon}
 
 The `<icon>` element accepts a base64 encoded image that is displayed as the widget icon in Studio Pro. The element is optional and can be omitted. When no icon is provided, Studio Pro will display a fallback icon.
 
@@ -196,7 +196,7 @@ The `<icon>` element accepts a base64 encoded image that is displayed as the wid
 Bundling the icon in the [widget package](#widget-package) is our recommended approach. The files are easier to work with and allow for more customization.
 {{% /alert %}}
 
-### 4.3 Widget Properties Definition {#properties-definition}
+### Widget Properties Definition {#properties-definition}
 
 This section is represented by the `properties` tag in the widget XML file. It describes widget properties used in Studio Pro to configure the widget. Here is an example of a properties definition section for a widget which shows a progress card for a dashboard:
 
@@ -249,7 +249,7 @@ This section is represented by the `properties` tag in the widget XML file. It d
     </properties>
 ```
 
-## 5 Property Groups {#property-groups}
+## Property Groups {#property-groups}
 
 Before examining properties themselves, it is useful to understand property groups. Property groups are formed by properties wrapped in a `propertyGroup` tag. Studio Pro uses the property groups to render how the widget configuration UI appears in Studio Pro. Grouping can be used to help the modeling developer understand the configuration of a more complex widget. It is best practice to both use property groups and group properties based on their purposes. The property groups from the code in [Widget Properties Definition](#properties-definition) above forms the following structure:
 
@@ -283,7 +283,7 @@ When properties are shown in a dialog box, first-level groups (**General** and *
 
 Note that the **Common** and **Appearance** tabs are added to your widget configuration automatically. These tabs contain properties applicable to all widgets: [Name](/refguide/common-widget-properties/#name), [Class](/refguide/common-widget-properties/#class), [Style](/refguide/common-widget-properties/#style), and [Design Properties](/apidocs-mxsdk/apidocs/design-properties/).
 
-## 6 Widget Property
+## Widget Property
 
 This section will explain the shape of the widget property. For more detailed information on widget properties, see [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/). Every `property` tag in the Widget Properties Definition has a shape similar to this:
 
@@ -307,4 +307,4 @@ Here is how a caption and description look in Studio Pro:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" class="no-border" >}}
 
-## 7 Documents in this Section
+## Documents in this Section

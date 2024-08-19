@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/
 description: "Describes how you can use ATS 2.0 in your CI/CD pipeline."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains the basics of a CI/CD pipeline, how ATS fits in and an example is shown on how-to implement ATS into your CI/CD pipeline in Jenkins.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Prepare your test case in ATS for CI/CD
 * Implement your ATS test case into your CI/CD pipeline in Jenkins
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 * Complete Mendix Rapid App Developer course
 
-## 3 CI/CD Basics
+## CI/CD Basics
 
 In this chapter the three components of CI/CD are described. There are two possible combinations:
 
@@ -31,34 +31,34 @@ In this chapter the three components of CI/CD are described. There are two possi
 
 The difference is in the final phase either manually deploy to the customer or use Continuous Deployment to do it automatically.
 
-### 3.1 Continuous Integration
+### Continuous Integration
 
 Developers practicing continuous integration merge their changes back to the main branch as often as possible. The developer's changes are validated by creating a build and running automated tests against the build. By doing so, you avoid the integration hell that usually happens when people wait for release day to merge their changes into the release branch.
 
 Continuous integration puts a great emphasis on testing automation to check that the application is not broken whenever new commits are integrated into the main branch.
 
-### 3.2 Continuous Delivery
+### Continuous Delivery
 
 Continuous delivery is an extension of continuous integration. Continuous delivery focuses on making sure that you can release new changes to your customers in a quick and sustainable way. This means that on top of having automated your testing, you also have automated your release process and you can deploy your application at any point in time by clicking on a button.
 
 In theory, with continuous delivery, you can decide to release daily, weekly, fortnightly, or whatever suits your business requirements. However, if you want to get the full benefit of continuous delivery, you should deploy to production as early as possible to make sure that you release small batches, that are easy to troubleshoot in case of a problem.
 
-### 3.3 Continuous Deployment
+### Continuous Deployment
 
 Continuous deployment goes one step further than continuous delivery. With this practice, every change that passes all stages of your production pipeline is released to your customers. There's no human intervention, and only a failed test will prevent a new change to be deployed to production.
 
 Continuous deployment is an excellent way to accelerate the feedback loop with your customers and take pressure off the team as there isn't a Release Day anymore. Developers can focus on building software, and they see their work go live minutes after they've finished working on it.
 
-### 3.4 Conclusion
+### Conclusion
 
 The CI/CD process ensures that everything committed is tested and deployed. An example:
 A Mendix developer commits a change into their team server branch. The branch is then automatically deployed into the test environment and tested. If the tests passes, the branch is deployed into the acceptance environment and also tested. You can even use Continuous Deployment to directly deploy to production and perform a regression test.
 
-## 4 ATS and CI/CD {#ats-and-ci-cd}
+## ATS and CI/CD {#ats-and-ci-cd}
 
 ATS can do the testing of your Mendix app in the CI/CD pipeline. In ATS 2.0 a CI/CD API is added, so that customers can access their test cases or test suites from outside ATS. This way you can use a CI/CD tool to execute your test cases and test suites in ATS and retrieve the results. To access those specific test cases and test suites you must generate a CI/CD API key. This chapter explains how to generate a CI/CD API key for accessing ATS and how to generate a CI/CD template for a test case or test suite. The CI/CD template is a pre-configured test case or test suite with a set run configuration which can be fired from a CI/CD pipeline.
 
-### 4.1 CI/CD Access API
+### CI/CD Access API
 
 To generate a CI/CD API key follow these steps:
 
@@ -90,7 +90,7 @@ Keep your API key at hand, you need it later on.
 
 You now generated the CI/CD API key, you need this to gain access to your app in ATS. Next, the CI/CD template is explained.
 
-### 4.2 CI/CD Template
+### CI/CD Template
 
 To create a CI/CD template follow these steps:
 
@@ -118,15 +118,15 @@ Keep the unique ID at hand for later on.
 
 You now created a CI/CD template which you can execute using a CI/CD pipeline.
 
-### 4.3 CI/CD Web Service User
+### CI/CD Web Service User
 
 The CI/CD in ATS is using a webservice with authentication. Please use the standard username which is ATSAPIUser and the standard password which is ATSAPIUser.
 
-## 5 Configure ATS in Your Pipeline (Example)
+## Configure ATS in Your Pipeline (Example)
 
 Using the CI/CD API key and the unique ID of the CI/CD template you can execute a test case from your CI/CD pipeline. In this section, you find an example for Jenkins.
 
-### 5.1 Prerequisites
+### Prerequisites
 
 * Have some Jenkins experience
 * Know how to configure CI/CD in ATS:
@@ -134,7 +134,7 @@ Using the CI/CD API key and the unique ID of the CI/CD template you can execute 
     * Create the CI/CD API key in ATS
     * Find your AppID in the Mendix Portal
 
-### 5.2 Adding an Extra Step in Jenkins on a Linux Server
+### Adding an Extra Step in Jenkins on a Linux Server
 
 This is only an example for Jenkins on Linux in shell scripting and can be written in another scripting language of your choice like for example Powershell (for Windows) or Groovy.
 
@@ -183,7 +183,7 @@ echo EMAILTEXT="Test Run Status is ${RESULT}" >> email.txt
 
 The last API call results in a "Passed" or "Failed", you can email this result or for example use the outcome in a conditional step for continuing deploying on different environments or failing this build. 
 
-### 5.3 Adding an Extra Step in Jenkins on a Windows Server
+### Adding an Extra Step in Jenkins on a Windows Server
 
 This is only a PowerShell example for Jenkins on Windows, and it can be written in another scripting language of your choice.
 

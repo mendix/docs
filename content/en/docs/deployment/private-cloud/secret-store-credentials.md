@@ -5,7 +5,7 @@ description: "Describes the process for using external secret stores for Kuberne
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 You can increase the security of your environment by implementing an external secrets store to manage your Kubernetes secrets.
 Environments running Mendix for Private Cloud can be granted read-only access to a secrets store by using a [Kubernetes Secrets Store CSI Driver](https://secrets-store-csi-driver.sigs.k8s.io/). This document outlines the high-level process, and provides example implementations for HashiCorp Vault and AWS Secrets Manager.
@@ -17,7 +17,7 @@ Environments running Mendix for Private Cloud can be granted read-only access to
 Using a secret storage incorrectly may reduce the security of your app. This document describes a simplified approach to setting up Vault and should not be used for production environments. Consult with your secrets store provider to ensure that it is set up securely for your production environment.
 {{% /alert %}}
 
-### 1.1 Supported Stores
+### Supported Stores
 
 Mendix apps currently support the following secret stores:
 
@@ -25,7 +25,7 @@ Mendix apps currently support the following secret stores:
 * HashiCorp Vault
 * Azure Key Vault
 
-## 2 Configuring Your Environment
+## Configuring Your Environment
 
 To implement an external secret store, you must configure the required settings by following these steps:
 
@@ -42,7 +42,7 @@ To implement an external secret store, you must configure the required settings 
 5. Configure permissions to read secrets specified in the `SecretProviderClass`.
     The specific configuration requirements depend on your secret store provider. It usually involves allowing the Kubernetes `ServiceAccount` to access specific keys in Vault or in AWS console.
 
-### 2.1 `SecretProviderClass` Keys {#keys}
+### `SecretProviderClass` Keys {#keys}
 
 The following table lists the properties used as keys for database and storage-related data. Use the following values when configuring the mapping rules in your `SecretProviderClass`.
 
@@ -124,11 +124,11 @@ To load app constants (`mx-const-*` keys) and Mendix Runtime custom settings (`m
 To load Mendix Debugger password (`mx-debugger-password`) from CSI Secrets Storage, upgrade to Mendix Operator version 2.15.0 or above.
 {{% /alert %}}
 
-## 3 Sample Implementations
+## Sample Implementations
 
 The following sections outline the process of implementing an external secret store with Vault and with AWS. You can refer to them as an example, and to help you troubleshoot your own implementation.
 
-### 3.1 Configuring a Secret Store with Vault
+### Configuring a Secret Store with Vault
 
 To enable your environment to use Vault as external secret storage, follow these steps:
 
@@ -318,7 +318,7 @@ To enable your environment to use Vault as external secret storage, follow these
 
 {{% alert color="warning" %}}These examples are provided for [KV Secrets Engine - Version 2](https://developer.hashicorp.com/vault/docs/secrets/kv/kv-v2). When setting policies or reading keys from the Vault `kv-v2` keystore, paths should be prefixed with `secrets/data/`. Please refer to the [Hashicorp Vault documentation](https://developer.hashicorp.com/vault/docs) for more information.{{% /alert %}}
 
-### 3.2 Configuring a Secret Store with AWS Secrets Manager {#configure-using-aws-secrets-manager}
+### Configuring a Secret Store with AWS Secrets Manager {#configure-using-aws-secrets-manager}
 
 To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/blogs/security/how-to-use-aws-secrets-configuration-provider-with-kubernetes-secrets-store-csi-driver/) as external secret storage, follow these steps:
 
@@ -485,7 +485,7 @@ If your app is created in Mendix 9.20 or above, you can remove `storage-access-k
 
 This means that the app authenticates with the AWS S3 API using AWS IRSA instead of static credentials.
 
-#### 3.2.1 Using IAM authentication for AWS RDS databases {#configure-using-rds-iam}
+#### Using IAM authentication for AWS RDS databases {#configure-using-rds-iam}
 
 AWS RDS Postgres databases can use [IAM database authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html) instead of regular passwords.
 
@@ -540,7 +540,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 When using IAM authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached IAM role to request a new Postgres password every 10 minutes from the [RDS API](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.Connecting.Go.html). These passwords expire after 15 minutes.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
-### 3.3 Configuring a Secret Store with Azure Key Vault {#configure-using-azure-key-vault}
+### Configuring a Secret Store with Azure Key Vault {#configure-using-azure-key-vault}
 
 To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/en-us/azure/aks/csi-secrets-store-driver) as external secret storage, follow these steps:
 
@@ -707,7 +707,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
 For more information, see the [Azure Key Vault Provider](https://azure.github.io/secrets-store-csi-driver-provider-azure/docs/getting-started/usage/#create-your-own-secretproviderclass-object) example in the Azure Key Vault documentation.
 
-#### 3.3.1 Using Managed Identity Authentication for Postgres Databases {#configure-using-azwi-postgres}
+#### Using Managed Identity Authentication for Postgres Databases {#configure-using-azwi-postgres}
 
 [Azure Postgres (Flexible Server)](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/service-overview) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-connect-with-managed-identity) instead of regular passwords.
 
@@ -744,7 +744,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 When using managed identity authentication, the Mendix app's environment (`m2ee-sidecar` container) uses that app's attached Managed Identity role to request a new Postgres password a few minutes before it expires using the [identity API](https://learn.microsoft.com/en-us/azure/service-connector/tutorial-passwordless?tabs=user%2Cgo%2Csql-me-id-dotnet%2Cappservice&pivots=postgresql#connect-to-a-database-with-microsoft-entra-authentication). These password have an expiration time between a few minutes and a few hours.
 Passwords are only checked when opening a new connection, so an expired password does not cancel any existing connections or interrupt any running database transactions and queries.
 
-#### 3.3.2 Using Managed Identity Authentication for Azure SQL Databases {#configure-using-azwi-sql}
+#### Using Managed Identity Authentication for Azure SQL Databases {#configure-using-azwi-sql}
 
 [Azure SQL](https://learn.microsoft.com/en-us/azure/azure-sql/database/) databases can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview) instead of regular passwords.
 
@@ -775,7 +775,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 
 Azure SQL database drivers have built-in support for Managed Identity authentication and use their local environment's Managed Identity.
 
-#### 3.3.3 Using Managed Identity Authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
+#### Using Managed Identity Authentication for Azure Blob Storage {#configure-using-azwi-blobstorage}
 
 [Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/common/storage-account-overview) accounts can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/storage/blobs/authorize-access-azure-active-directory) instead of static access keys.
 
@@ -795,7 +795,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 3. Open the environment's Blob Storage Account Container in the Azure portal, and [assign a Storage Blob Data Contributor role](https://learn.microsoft.com/en-us/azure/storage/blobs/assign-azure-role-data-access) to the environment's managed identity.
 4. Restart the Mendix app environment.
 
-## 4 Additional Considerations {#additional-considerations}
+## Additional Considerations {#additional-considerations}
 
 When implementing a secret store, keep in mind the following considerations:
 

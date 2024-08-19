@@ -41,7 +41,7 @@ Before you start experimenting with the end-to-end process, make sure that you h
 
 You have access to a (remote) PostgreSQL database with the [pgvector](https://github.com/pgvector/pgvector) extension available.
 
-{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#rds-database) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
+{{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#aws-database-create) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
 
 ### 3.2 Steps {#steps}
 

@@ -16,7 +16,9 @@ This page describes how a PostgreSQL vector database can be set up to explore us
 This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query embedding vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case.
 {{% /alert %}}
 
-## 2 Creating a PostgreSQL Database with Amazon RDS {#rds-database}
+## 2 Managing a PostgreSQL Database with Amazon RDS {#aws-database}
+
+### 2.1 Creating a PostgreSQL Database with Amazon RDS {#aws-database-create}
 
 {{% alert color="info" %}}
 For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in the *AWS Documentation*. You can check out the following sections in the AWS Documentation for preliminary background knowledge:
@@ -70,9 +72,56 @@ You can use the values in the steps below for experimental purposes:
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 
-## 3 Deleting Resources in AWS {#deleting-aws-resources}
+### 2.2 Deleting Resources in AWS {#aws-database-delete}
 
 If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
+
+## 3 Managing a PostgreSQL Database with Microsoft Azure {#azure-database}
+
+### 3.1 Creating a PostgreSQL Database with Microsoft Azure {#azure-database-create}
+
+{{% alert color="info" %}}
+For detailed steps for creating a PostgreSQL Database with Azure and enabling the *pgVector* extension, see [Quickstart: Create an Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-server-portal) and [How to enable and use pgvector on Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector) in the *Azure Documentation*.
+{{% /alert %}}
+
+You can use the values in the steps below for experimental purposes:
+
+1. Create a new resource from the home page of the Azure Portal. 
+
+2. Search and select **Azure Database for PostgreSQL Flexible Server**.
+
+3. Click **Create** and use the following specifications in the **Basics** tab:
+   1. Select a **Subscription** and **Resource**.
+   2. Enter a **Server name**. The name needs to be unique.
+   3. Choose a **region** that best fits your requirements.
+   4. Select a **PostgreSQL version**.
+   5. If your main purpose of the database is development and testing, choose **Development** for **Workload type** that will reduce the estimated costs.
+   6. At the bottom, choose an **Authentication method**:
+      1. For **PostgreSQL authentication**, make sure that you store username and password securely.
+      2. For **Microsoft Entra authentication**, select an admin.
+   
+4. Continue with the **Networking** configurations in the next tab.
+   1. Based on your requirements, decide how the database server can be accessed (for testing purposes, it is recommended to use *Public Access*):
+      1. **Public access**: firewall rules need to be added for the IP addresses that are allowed to access the server. Use **Add current client IP address** to add your own IP when running the application locally. For apps running in the Mendix cloud, add the IP of that environment, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario. Alternatively, you can use **Add 0.0.0.0 - 255.255.255.255** so that no IP addresses are blocked. Use this carefully and make sure that this aligns with your security requirements.
+      2. **Private Access**: the server can only be accessed from a **Virtual Network** that needs to be selected (or created). Make sure that your Mendix App is running in the same network.
+   
+    {{% alert color="info" %}}For experimental purposes, you do not need to configure anything in the **Security** or **Tags** tabs to get the server running.{{% /alert %}}
+   
+5. On the last tab **Review + create**, review your settings and estimated costs. **Create** the resource if there is nothing you need to change.
+
+6. Wait for the database to be created. This can take some time. You may already navigate to the newly created resource by searching for the name you chose.
+
+8. Once the server is running, you can add the pgVector extension to the allowed extensions list (see [How to enable and use pgvector on Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector) in the *Azure documentation*) or see the following steps:
+   1. Search for **Server parameters** in the search bar on the left. A list of parameters is loaded.
+   2. Search for **azure.extensions**.
+   3. In the column *VALUE*, search in the dropdown for **VECTOR** (note that in Azure the extension is not called *pgVector* but just *Vector*).
+   4. Save the changes.
+   
+9. Search for **Databases** in the search bar on the left. Verify that there is already a database that you can use. Alternatively, create a new database by clicking **Add** at the top.
+
+### 3.2 Deleting Resources in Azure {#azure-database-delete}
+
+If no action is taken, resources on Azure will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from Azure, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required.
 
 ## 4 Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
@@ -86,27 +135,35 @@ If no action is taken, resources in AWS will stay around indefinitely. Make sure
 
 5. Edit the configuration details as follows:
    1. Format the Jdbc URL in the following way:
-      `jdbc:postgresql://{endpoint-from-the-AWS-console}:5432/{vectorDatabaseName}`.
+      `jdbc:postgresql://{endpoint}:5432/{vectorDatabaseName}`.
 
-      To find the endpoint in the AWS console: 
+       {{% alert color="info" %}}The default port for PostrgreSQL databases is `5432`. If you manually chose another port, then change this in the URL as well.{{% /alert %}}
+
+      To find the endpoint in the **AWS console**: 
 
       1. Go to Amazon RDS and make sure the right region in which the RDS database was created is selected at the top.
 
       2. Under **Databases**, click your new database to view the details.
 
       3. On the **Connectivity & Security** tab, you can find the endpoint.
+   
+         The value for `{vectorDatabaseName}` in the URL is the initial database name you set when you [created the PostgreSQL database with Amazon RDS](#aws-database-create).
 
-         The value for `{vectorDatabaseName}` in the URL is the initial database name you set when you [created the PostgreSQL database with Amazon RDS](#rds-database).
+      To find the endpoint in the **Azure portal**:
 
-      4. `5432` is the default port for PostgreSQL databases. If you manually chose another port, then change this in the URL as well.
+      1. Search for your resource that was newly created.
 
-   2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#rds-database) as your username and password.
+      2. On the **Overview** page, copy the value next to **Server name**, for example *my-servername.postgres.database.azure.com* as the `{endpoint}` in the URL.
+
+      3. In the search bar on the left, search for **Databases**. In the search result, there is a list of possible databases that can be used for `{vectorDatabaseName}` in the URL. Only use a database with *schema type* "User".
+
+   2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#aws-database-create) or for the admin user in the [Azure Portal](#azure-database-create) as your username and password.
 
    3. Save and test the configuration.
 
 ## 5 Setup Alternatives {#setup-alternatives}
 
-Setting up an AWS RDS database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
+Setting up a cloud database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
 ### 5.1 Running a PostgreSQL Database Locally {#local-database}
 

@@ -137,6 +137,8 @@ If no action is taken, resources on Azure will stay around indefinitely. Make su
    1. Format the Jdbc URL in the following way:
       `jdbc:postgresql://{endpoint}:5432/{vectorDatabaseName}`.
 
+       {{% alert color="info" %}}The default port for PostrgreSQL databases is `5432`. If you manually chose another port, then change this in the URL as well.{{% /alert %}}
+
       To find the endpoint in the **AWS console**: 
 
       1. Go to Amazon RDS and make sure the right region in which the RDS database was created is selected at the top.
@@ -144,18 +146,16 @@ If no action is taken, resources on Azure will stay around indefinitely. Make su
       2. Under **Databases**, click your new database to view the details.
 
       3. On the **Connectivity & Security** tab, you can find the endpoint.
-
+   
          The value for `{vectorDatabaseName}` in the URL is the initial database name you set when you [created the PostgreSQL database with Amazon RDS](#aws-database-create).
-      
+
       To find the endpoint in the **Azure portal**:
 
-      1. Search for your (newly created) resource.
+      1. Search for your resource that was newly created.
 
       2. On the **Overview** page, copy the value next to **Server name**, for example *my-servername.postgres.database.azure.com* as the `{endpoint}` in the URL.
 
       3. In the search bar on the left, search for **Databases**. In the search result, there is a list of possible databases that can be used for `{vectorDatabaseName}` in the URL. Only use a database with *schema type* "User".
-
-      The default port for PostrgreSQL databases is `5432`. If you manually chose another port, then change this in the URL as well.
 
    2. Use the master username and master password that you set in the **Settings** when you [created the PostgreSQL Database with Amazon RDS](#aws-database-create) or for the admin user in the [Azure Portal](#azure-database-create) as your username and password.
 

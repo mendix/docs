@@ -260,7 +260,7 @@ The list contains the following information:
 
 * **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
-* **Completed** – This shows how much progress has been made for this initiative. It can be be a value between 0–100 and shown as percentage.
+* **Completed** – This shows how much progress has been made for this initiative. It is a value between 0–100 and shown as percentage.
 
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 

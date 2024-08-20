@@ -54,31 +54,31 @@ To edit existing documentation, follow these steps:
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/view-on-github.png">}}
 
-    The file of this doc opens on GitHub.
+    The following page opens and shows that you need to fork the repository to propose changes.
 
-2. Click the **Edit this file** icon in the upper-right corner.
+2. Click **Fork the repository**. The file opens in GitHub web editor.
 
-    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/edit-file.png">}}
-
-3. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
-4. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
-5. Enter a commit message, select **Create a new branch for this commit and start a pull request**, enter the name for your branch, and then click **Propose changes**.
+   {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/file-in-editor.png">}}
+   
+4. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
+5. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
+6. Enter a commit message, select **Create a new branch for this commit and start a pull request**, enter the name for your branch, and then click **Propose changes**.
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" max-width=50% >}}
 
     The **Open a pull request** page opens. 
     
-6. Make sure the pull request uses our **development** branch as the base.
+7. Make sure the pull request uses our **development** branch as the base.
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/base-development.png">}}
 
      For more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/) and [GitHub Standard Fork and Pull Request Workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962).
 
-7. Add a title for the pull request.
+8. Add a title for the pull request.
 
     {{% alert color="warning" %}}If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately.{{% /alert %}}
 
-8. Click **Create pull request**.
+9. Click **Create pull request**.
 
 The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
 

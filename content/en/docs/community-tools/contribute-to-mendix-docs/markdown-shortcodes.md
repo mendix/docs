@@ -65,16 +65,22 @@ This alert is indented to match the sub-list item.
 }
 ```
 
-#### HTTP Code Block with Line Numbers Disabled
+#### Diff Code Block
 
-```http {linenos=false}
-GET /projects/d92064a5-b1fd-4be4-97db-53fc90201d1c/epics HTTP/1.1
-Authorization: MxToken 7LJE…vk
+```diff
+public class Hello1
+{
+   public static void Main()
+   {
+-      System.Console.WriteLine("Hello, World!");
++      System.Console.WriteLine("Rock all night long!");
+   }
+}
 ```
 
-#### Java Code Block with Lines 4-6 Highlighted, and Line Numbering Starting at 33
+#### Java Code Block with Lines 4-6 Highlighted
 
-```java {hl_lines=["4-6"], linenostart=33}
+```java {hl_lines=["4-6"]}
 @java.lang.Override
 public java.lang.String executeAction() throws Exception
 {
@@ -84,17 +90,11 @@ public java.lang.String executeAction() throws Exception
 }
 ```
 
-#### Plain Text Code Block
+#### OQL Code Block
 
-```text
+```sql
 ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
 CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
-```
-
-#### Plain Text Code Block Missing the "text" Parameter
-
-```
-If you don't specify any programming language, the code block looks a bit different. To keep the code blocks consistent throughout the docs, use "text" (as shown in the example above) if you aren't sure what programming language to specify.
 ```
 
 #### Code Block Indented in List

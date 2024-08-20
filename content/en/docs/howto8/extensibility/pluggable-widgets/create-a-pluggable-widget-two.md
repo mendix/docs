@@ -443,7 +443,7 @@ To make the input widget more accessible for people using screen readers, you wi
     }
     ```
 
-2. In *components/Alert.tsx*, add the `id` and `alert`properties:
+2. In *components/Alert.tsx*, add the `id` and `alert` properties:
 
     ```tsx
     import { FunctionComponent, createElement } from "react";

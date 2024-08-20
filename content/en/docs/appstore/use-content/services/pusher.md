@@ -47,7 +47,7 @@ To set up the necessary Pusher app, follow these steps:
 3. On the **Channels Apps** page, select the new app. The keys are shown in **App Keys**.
 4. Copy the key information into the following **Pusher** service constants:
     * `app_id` – `Pusher_App_ID`
-    * `key` –`Pusher_Key`
+    * `key` – `Pusher_Key`
     * `secret` – `Pusher_Secret`
     * `cluster` – `Pusher_Cluster`
 

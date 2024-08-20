@@ -1172,7 +1172,7 @@ This operation corresponds to the **ImageOptions_SetRandomness** microflow.
 
 ##### 4.2.2.7 Embeddings Options: Add Cohere Embed Extension {#add-cohere-embed-extension}
 
-Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions`object. You can use it to include parameters that are unique to Cohere Embed models.
+Use this microflow to add a new [CohereEmbedOptions_Extension](#cohere-embed-options-extension) object to your `EmbeddingsOptions` object. You can use it to include parameters that are unique to Cohere Embed models.
 
 This operation corresponds to the **CohereEmbedOptions_Extension_Create** microflow.
 

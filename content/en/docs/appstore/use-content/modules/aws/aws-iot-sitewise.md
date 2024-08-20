@@ -211,7 +211,7 @@ The domain model is a data model that describes the information in your applicat
 | --- | --- |
 | `NextToken` | Describes the token to be used for the next set of paginated results. |
 | `MaxResults` | Describes the maximum number of results to return for each request. The default value is 50. |
-| `AssetModelID` | Describes the ID of the asset model by which to filter the list of assets. This attribute is required if you choose `ALL`or `(empty)` for Filter attribute. |
+| `AssetModelID` | Describes the ID of the asset model by which to filter the list of assets. This attribute is required if you choose `ALL` or `(empty)` for Filter attribute. |
 | `Filter` | The Filter attribute describes the filter for the requested list of assets. Choose one of the following options: **ALL** – The list includes all assets for a given asset model ID. The `assetModelID` attribute is required if you filter by ALL. **TOP_LEVEL** – The list includes only top-level assets in the asset hierarchy tree.<p>The default value for this attribute is ALL, not selecting either option will result in the ALL filter to be applied to your request. |
 
 ### 4.1.19 ListAssetsResponse {#list-assets-response}

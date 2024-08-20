@@ -85,13 +85,13 @@ This is an optional collection of files that is part of a Message. It is used fo
 
 #### 4.1.5 `FileContent` {#filecontent}
 
-This is a file in a collection of files that belongs to a message. Each instance represents a single file. Currently only files of the type *image* are supported.
+This is a file in a collection of files that belongs to a message. Each instance represents a single file. Currently only files of the type *image* and *document* are supported.
 
 | Attribute | Description |
 | --- | --- |
 | `FileContent` | Depending on the `ContentType`, this is either a URL or the base64-encoded file data. |
 | `ContentType` | This describes the type of file data. Supported content types are either URL or base64-encoded file data. For more information, see the [ENUM_FileContentType](#enum-filecontenttype) section.
-| `FileType` | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype) section.
+| `FileType` | Currently only images and documents are supported file types. In general, not all file types might be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype).
 | `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
 | `MediaType` | This is a combination of FileType and the extension of the file, for example, *image/png*. | 
 
@@ -206,11 +206,12 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### 4.2.4 `ENUM_FileType` {#enum-filetype}
 
-`ENUM_FileType` provides a list of file types. Currently only *image* is a supported file type. Not all file types might be supported by all AI providers or models.
+`ENUM_FileType` provides a list of file types. Currently only *image* and *document* is a supported file type. Not all file types might be supported by all AI providers or models.
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `image` | **Image** | The file represents an image (e.g. a *.png* file). | 
+| `document` | **Document** | The file represents a document (e.g. a *.pdf* file). | 
 
 #### 4.2.5 `ENUM_ToolChoice` {#enum-toolchoice}
 
@@ -318,8 +319,8 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `FileCollection` | [FileCollection](#filecollection) | Yes | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
-| `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. Either provide a System.FileDocument object or a file URL String. |
-| `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents need to be sent with a message. Either provide a System.FileDocument object or an Image URL String. |
+| `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. |
+| `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | Yes | This is the type of the file. |
 | `TextContent` | String | Yes | An optional text content describing the file content or giving it a specific name. |
 

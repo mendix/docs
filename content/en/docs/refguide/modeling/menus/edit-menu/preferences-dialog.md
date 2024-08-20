@@ -246,12 +246,6 @@ In Studio Pro 10.12.0, Translation Generator was introduced as an experimental f
 
 This setting allows you to set the beta version as the default editor.
 
-### Page Editor
-
-In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
-
-For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
-
 ### System Texts Editor
 
 In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 

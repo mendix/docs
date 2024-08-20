@@ -878,7 +878,7 @@ const filterCondition = or(
 );
 ```
 
-#### 4.4.3 Not
+#### Not
 
 The `not` helper inverts a condition. It takes one argument.
 

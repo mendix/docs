@@ -5,7 +5,7 @@ weight: 50
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This widget displays a page title of the current page that is set in [page properties](/refguide/page-properties/#title).
 
@@ -15,7 +15,7 @@ This widget displays a page title of the current page that is set in [page prope
 The page title widget makes it possible to embed the page title in a [layout](/refguide/layout/), as it will show the title of the page that uses the layout.
 {{% /alert %}}
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Page title properties consist of the following sections:
 
@@ -29,27 +29,27 @@ Styling
 * [Design Properties](#design-properties)
 * [Common](#common-styling)
 
-## 3 Properties
+## Properties
 
-### 2.3 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 4 Styling
+## Styling
 
-### 4.1 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 4.2 Common Section {#common-styling}
+### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Text Widgets](/refguide/text-widgets/)

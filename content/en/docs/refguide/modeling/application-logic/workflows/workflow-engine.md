@@ -4,11 +4,11 @@ url: /refguide/workflow-engine/
 weight: 35
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Workflow Engine is the Mendix Runtime engine to execute workflows. This document describes how the engine works, how you can interact with the engine, and what information it stores. This gives you a better understanding on how you can develop with Mendix workflows.
 
-## 2 Workflow Data in the Mendix Database
+## Workflow Data in the Mendix Database
 
 In the domain model of the System module, there are several Workflow Engine-related entities:
 
@@ -22,7 +22,7 @@ These entities are populated by the Workflow Engine, some on the start of the ap
 
 The Workflow Engine stores the state of the workflow instances in the database. It also uses a couple of internal, hidden entities to store the details about the workflow execution progress. These entities are not described in this document, but can be seen when exploring the tables in the database. These entities are hidden intentionally as they should not be used outside the Workflow Engine, for example, to be displayed in pages or used in microflows. 
 
-### 2.1 Definition-Related Entities {#definition}
+### Definition-Related Entities {#definition}
 
 Objects of definition-related entities are created automatically by the Workflow Engine when the app is started and are based on the app’s model. The following entities are definition-related:
 
@@ -39,11 +39,11 @@ Mendix does not provide out-of-the-box ways to automatically clean up definition
 
 Security-wise, only users with the **Administrator** role can access definition-related entities.
 
-### 2.2 Instance-Related Entities {#instance}
+### Instance-Related Entities {#instance}
 
 The Workflow Engine stores execution data in regular entities. The purpose of these entities is to store the state during workflow execution. Only users who are involved in the workflow process have access to these entities. The main purpose of the workflow data is to handle the tasks and process execution and it is unaware of the business context it is running in. All workflow data is aimed at supporting the Workflow Engine. Business context can be added by a developer via the context entity.
 
-#### 2.2.1 System.Workflow {#system-workflow}
+#### System.Workflow {#system-workflow}
 
 It represents a running workflow, that is, a workflow instance. As soon as the workflow is initiated (using the **Call workflow** activity in microflows, a client action, or using the corresponding Java API), an object of this entity is created. 
 
@@ -59,7 +59,7 @@ Security-wise, users with the **Administrator** role can access all instances. O
 For an app developer, it is allowed to change the **Name**, **Description**, and **DueDate** attributes of **System.Workflow** instances. Other attributes or outgoing associations should not be changed.
 {{% /alert %}}
 
-#### 2.2.2 System.WorkflowUserTask {#system-workflow-user-task}
+#### System.WorkflowUserTask {#system-workflow-user-task}
 
 When the workflow runs a user task activity, an instance of **System.WorkflowUserTask** is created. 
 
@@ -79,19 +79,19 @@ Security-wise, users with the **Administrator** role can access all instances. O
 As an app developer you can change the **Name**, **Description**, **DueDate**, **System.WorkflowUserTask_TargetUsers**, and **System.WorkflowUserTask_Assignee** members of **System.WorkflowUserTask** instances. Other attributes or outgoing associations should not be changed.
 {{% /alert %}}
 
-#### 2.2.3 System.WorkflowUserTaskOutcome
+#### System.WorkflowUserTaskOutcome
 
 When a user selects an outcome for a user task, this information is stored as an object in the **System.WorkflowUserTaskOutcome** entity. The user selecting an outcome is stored in the **System.WorkflowUserTaskOutcome_User** association, the user task is stored in the **System.WorkflowUserTaskOutcome_WorkflowUserTask** association, and the outcome and the time are stored in the attributes of **System.WorkflowUserTaskOutcome**.
 
 Security-wise, users with the **Administrator** role can access all instances. Other users can access them only when they are an assigned or a targeted user of the associated user task. If other users need to access the **System.Workflow** data, the app developer needs to set state-change events in [App Settings](/refguide/app-settings/#events) or in [workflow properties](/refguide/workflow-properties/#events) to copy the data to other entities with more specific security constraints. 
 
-### 2.3 Action-Related Entities {#action}
+### Action-Related Entities {#action}
 
 Action-related entities are entities that refer to jumping to different activities in a workflow. For more information, see [Jumping to Different Activities in a Workflow](/refguide/jump-to/).
 
-## 3 Workflow Execution {#execution}
+## Workflow Execution {#execution}
 
-### 3.1 Instantiation
+### Instantiation
 
 Workflow execution uses the Task Queue mechanism in Mendix to run a process. A workflow is instantiated in the Mendix Runtime server using the **Call Workflow** microflow activity, a client action or the corresponding Java API. Upon instantiation, the System.Workflow object is created and persisted and a workflow execution task is queued to run the workflow instance. As the execution is asynchronous, it does not start directly, it starts after the current transaction is successfully completed. Therefore, the microflow activity, the client action or Java API call will return instantly, before the workflow execution has actually started. 
 
@@ -99,7 +99,7 @@ Upon instantiation, the **Start** activity of the workflow becomes the current a
 
 As the Workflow Engine executes tasks asynchronously, you cannot have it present the first task page of the workflow for the current user. Instead, ensure that all data is put into the context entity before instantiating the workflow.
 
-### 3.2 Execution
+### Execution
 
 The user running the workflow is the System user. That is the reason why you cannot use `[%CurrentUser%]` in XPath constraints in workflows. This is also the reason why you cannot have user interactions (such as **Show Page** microflow activity or **Show Message** microflow activity) in microflows called from workflows. 
 
@@ -111,7 +111,7 @@ Before execution, the Workflow Engine verifies whether a workflow is compatible 
 
 Only workflow instances with the **State** attribute being **InProgress** are executed.
 
-#### 3.2.1 When Are Workflows Queued for Execution?
+#### When Are Workflows Queued for Execution?
 
 The Workflow Engine queues workflow instances for execution automatically. This happens at the following stages:
 
@@ -122,7 +122,7 @@ The Workflow Engine queues workflow instances for execution automatically. This 
 * After redeployment of a change in the workflow model
 * After a workflow activity in microflows (such as [Change workflow state](/refguide/change-workflow-state/) or [Generate jump-to options](/refguide/generate-jump-to-options/))
 
-#### 3.2.2 Task Queues {#workflow-task-queue}
+#### Task Queues {#workflow-task-queue}
 
 The Workflow Engine uses two different task queues. They can be configured in the **App Settings** > the **Workflows** tab > the **Optimization** section. There is one task queue for workflow execution (the **Workflow instance threads** setting) and one task queue for the execution of all microflows that are executed by the workflow (the **Microflow threads** setting)
 
@@ -130,17 +130,17 @@ The microflows executed on the **Microflow threads** queue include: event handle
 
 When one of these workflow-related tasks fails (the workflow execution fails or the microflow execution fails), the task queue task still succeeds. However, the result is always reflected in the workflow instance (it gets the state **Failed** with an exception in the **Reason** attribute), except for failures with [event handlers](/refguide/workflow-properties/#event-handlers). You can handle the failures from the Workflow administration pages or automate them using event handlers. For more information on possible actions that an administrator can take, see the [Workflow States](#workflow-states) section below.
 
-#### 3.2.3 Microflow Executions and Transaction Scopes
+#### Microflow Executions and Transaction Scopes
 
 All microflows that are run as part of the workflow are executed as an asynchronous microflow via the task queue. Therefore, microflow execution does not have an impact on the workflow (except that when it finishes successfully, the workflow can continue with the next activity and when it fails, the workflow is marked as failed). This also means that the transaction scope of such microflows only encompass the microflow execution itself.
 
 Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
 
-#### 3.2.4 Measures Against Endless Loops
+#### Measures Against Endless Loops
 
 The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to another activity of the same workflow. Jumping back to an earlier activity can create endless loops if defined incorrectly. To prevent endless loops occupying the Workflow Engine, the Workflow Engine executes only a limited amount of activities in the workflow (default number is 50, but it can be changed using the custom Runtime Server setting `com.mendix.workflow.MaxActivityExecutions`). When the limit is reached, the workflow execution stops and the workflow instance is queued for re-execution (which means that it is put at the end of the queue). This queuing mechanism allows other workflow instances to proceed. 
 
-#### 3.2.5 Workflow States {#workflow-states}
+#### Workflow States {#workflow-states}
 
 The workflow states are stored in the **State** attribute of the **System.Workflow** entity. This attribute uses the System.WorkflowState enumeration to have a fixed set of states. These states represent different technical states a workflow instance can have. 
 In the picture below, you see two yellow boxes with outgoing and incoming arrows. The yellow boxes are not concrete states, they mean that any state inside the box can transition following the outgoing arrow and can transition back into the previous state by following the incoming arrow.
@@ -162,11 +162,11 @@ In case you want the workflow to store different functional states depending on 
 
 It is advised to not leave **Failed** or **Incompatible** workflows as **Failed** or **Incompatible**. Either solve the problem for those workflows or abort them to ensure that the data in the system stays up-to-date and the tables in the database remain smaller as user tasks will stay in the **System.WorkflowUserTask** table while the workflow instance is **Failed** or **Incompatible**.
 
-### 4 User Tasks in Workflows
+### User Tasks in Workflows
 
 User task activities represent actions that have to be completed by a user. Therefore, user tasks can only be completed by named users in Mendix. User tasks are shown in a Task Inbox page from which they can be completed.
 
-#### 4.1 Task Inbox
+#### Task Inbox
 
 The Task Inbox page shows objects from the **System.WorkflowUserTask** entity. The access rules allow to select only `InProgress` user tasks that either target the current user (the current user is part of the **System.WorkflowUserTask_TargetUsers** association) or are assigned to the current user (the current user is set in the **System.WorkflowUserTask_Assignee** association). For more information, see the access rules of the **System.WorkflowUserTask** entity.
 
@@ -177,7 +177,7 @@ In case you want to show specific information from the **Workflow Context** obje
 
 The **Show user task page** microflow activity can be used to open the user task page that is configured in the user task activity of the workflow of the given **System.WorkflowUserTask** object.
 
-#### 4.2 User Task States
+#### User Task States
 
 The user task states are stored in the **State** attribute of the **System.WorkflowUserTask** entity. This attribute uses the System.WorkflowUserTaskState enumeration to have a fixed set of states. These states represent the different technical states a user task can have. 
 
@@ -209,7 +209,7 @@ When no user task state change microflow is configured, the user task instance i
 There will be no user task state change microflow executed for the **Created** state. It will only be executed for all other state changes.
 {{% /alert %}}
 
-#### 4.2 Mitigation Options for Failed User Tasks
+#### Mitigation Options for Failed User Tasks
 
 The most common reason for a user task to fail is because the user targeting resulted in no users. As user task instances are no longer deleted when they are failed they can be corrected and then retried by retrying the workflow. A failing user targeting can be corrected by adding users to the **System.WorkflowUserTask_TargetUsers** association. In Workflow Commons this is implemented in the Admin Dashboard where administrators to assign users to a user task.
 

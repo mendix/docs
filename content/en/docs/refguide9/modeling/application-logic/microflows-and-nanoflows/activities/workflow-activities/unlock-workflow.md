@@ -12,7 +12,7 @@ This activity can only be used in **Microflows**.
 This activity was introduced in Studio Pro [9.23.0](/releasenotes/studio-pro/9.23/#9230).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Unlock workflow** activity can be used to unlock a [workflow](/refguide9/workflows/), i.e. a workflow definition. 
 If the workflow is unlocked, new instances of the workflow can be created.
@@ -27,7 +27,7 @@ When you try the unlock the workflow which is not locked, it will result in a Ru
 
 For information on locking the workflow, see the [Lock Workflow](/refguide9/lock-workflow/).
 
-## 2 Properties
+## Properties
 
 An example of Unlock workflow properties is represented in the image below:
 
@@ -40,7 +40,7 @@ The **Unlock workflow** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -48,17 +48,17 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### Workflow {#workflow}
 
 The workflow that is unlocked by this activity. 
 
-### 3.2 Unpause Instances {#workflow}
+### Unpause Instances {#workflow}
 
 With this option, all paused running workflow instances are reverted to their previous state. Workflow instances that are not currently paused are not impacted.
 For more information on workflow state transitions, see the [Workflow State Transitions Upon Locking and Unlocking](/refguide9/lock-workflow/#workflow-state-transitions) section in *Lock Workflow*.
 
 This option is enabled by default.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

@@ -3,7 +3,7 @@ title: "OQL"
 url: /refguide8/oql/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Object Query Language (OQL) is a relational query language just like [SQL](https://en.wikipedia.org/wiki/Sql). The major advantage of OQL is that it uses entity and association names instead of actual database table names.
 
@@ -21,7 +21,7 @@ OQL queries do not take security into account out-of-the-box. This means that yo
 
 Try your OQL example online with the [OQL Playground](https://mydemoversion8-sandbox.mxapps.io/p/OQL) demo app. 
 
-## 2 Query Components
+## Query Components
 
 An OQL query can use these components:
 

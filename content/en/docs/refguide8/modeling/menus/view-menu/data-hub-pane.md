@@ -5,7 +5,7 @@ weight: 15
 description: "Describes the Data Hub pane in Mendix Studio Pro."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 [Mendix Data Hub](/data-hub/) enables integration of available data sources from the different applications in an organization into your Mendix apps. This means that new apps can be created using shared datasets that are registered in the [Catalog](/catalog/). In Studio Pro, this is possible using the integrated functionality of Catalog through the **Data Hub** pane.
 
@@ -19,11 +19,11 @@ To display the **Data Hub** pane, click **View** > **Data Hub**:
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-empty.png" alt="data-hub-pane"   width="300"  class="no-border" >}}
 
-## 2 Data Hub Pane in the Domain Model
+## Data Hub Pane in the Domain Model
 
 The Data Hub pane is used to search the Catalog for entities that can be dragged and used in your app and also display the external entities and the associated services that are consumed in your current model
 
-### 2.1 Data Hub Search
+### Data Hub Search
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane.png"   width="300"  class="no-border" >}}
 
@@ -39,7 +39,7 @@ The following functionality is available in the pane:
 
 Services and the entities that are currently being used in the current domain model are indicated with a green check-mark in the search results.
 
-### 2.2 Data Hub Project Pane
+### Data Hub Project Pane
 
 When no search string has been specified in the **Data Hub** pane, the **Project** pane is displayed. This shows the consumed services and the external entities used in the current project. The list of entities, associations and attributes for the consumed services are shown as for the search results:
 
@@ -47,11 +47,11 @@ When no search string has been specified in the **Data Hub** pane, the **Project
 
 To add entities to your project model, see [Adding an External Entity to a Project](/refguide8/external-entities/#adding-external-entities).
 
-## 3 Searching the Catalog {#search}
+## Searching the Catalog {#search}
 
 As you enter a search term, all the items in the Catalog satisfying the search string are listed in the search results. This will include words in the service, entity and attribute descriptions which are not displayed in the Data Hub pane. Further information see the [Catalog asset details](/catalog/manage/search/#search-details).
 
-### 3.1 Wildcard Search
+### Wildcard Search
 
 You can perform a wildcard search by entering `*` in the search area.
 
@@ -59,7 +59,7 @@ You can perform a wildcard search by entering `*` in the search area.
 The search strings must be a minimum of 3 alphanumeric characters. Punctuation cannot be used as part of the search term except for the wildcard character `*` to perform an "empty" search in the Catalog. You cannot use the wildcard in combination with other characters. For further details, see [How to Search for Registered Assets](/catalog/search/).
 {{% /alert %}}
 
-### 3.2 Service Environments
+### Service Environments
 
 By default, the search will be performed on assets in the **Production** environment. To include all other environments such as **Test**, **Acceptance**, and the Mendix Free App environment, **Sandbox** in the search, click the **Filter** icon and check **Show development environments**:
 
@@ -69,11 +69,11 @@ By default, the search will be performed on assets in the **Production** environ
 When the **Show development environments** is checked, all subsequent searches results will also include those in non-production environments.
 {{% /alert %}}
 
-## 4 Information in Search Results and Project Pane {#viewing}
+## Information in Search Results and Project Pane {#viewing}
 
 The following information is displayed.
 
-### 4.1 Services
+### Services
 
 The search results and Project pane will show the following at a service level:
 
@@ -106,7 +106,7 @@ The search results and Project pane will show the following at a service level:
 
     {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/data-hub-pane-info.png" alt="Data Hub Pane Information"   width="250"  class="no-border" >}}
 
-### 4.2 Entities, Attributes, and Associations {#association-attributes}
+### Entities, Attributes, and Associations {#association-attributes}
 
 Entities, attributes and associations that satisfy the search string are listed in the search results.
 
@@ -116,13 +116,13 @@ For any service in the list, you can click **:Show details** to see the full lis
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/expand-service-list.png" alt="Data Hub Pane Information"   width="250"  class="no-border" >}}
 
-### 4.2.1 Entity
+### Entity
 
 If you right-click an entity and select **View in Catalog**, it will take you to the entity details page in the [Catalog](/catalog/).
 
 If you right-click a consumed entity and **Go to entity**, it will take you to the entity in the domain model.
 
-### 4.2.2 Associations
+### Associations
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
@@ -132,7 +132,7 @@ In the following example the entity **Customer** has multiple associations with 
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/multiple-assocs.png" alt="multiple associations"   width="250"  class="no-border" >}}
 
-### 4.2.3 Attributes
+### Attributes
 
 Attributes for a service are listed in alphabetical order. If you right-click an attribute of a consumed entity and **Go to attribute**, it will take you to the attribute in the domain model.
 
@@ -140,7 +140,7 @@ In the above example, there are two attributes, **Addresses** and **FavoriteColo
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/data-hub-pane/unsupported-attributes.png" alt="multiple associations"   width="300"  class="no-border" >}}
 
-## 5 Read More
+## Read More
 
 * [Catalog](/catalog/)
 * [External Entities](/refguide8/external-entities/)

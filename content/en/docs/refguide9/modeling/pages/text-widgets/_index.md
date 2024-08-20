@@ -4,7 +4,7 @@ url: /refguide9/text-widgets/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Text widgets category are used to display textual information to the end-user. This category contains the following widgets:
 
@@ -17,11 +17,11 @@ Text widgets category are used to display textual information to the end-user. T
 
     {{< figure src="/attachments/refguide9/modeling/pages/text-widgets/page-title-design-properties-example.png" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Pages](/refguide9/pages/)

@@ -7,7 +7,7 @@ aliases:
     - /howto/integration/consume-a-complex-web-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and reuse functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Studio Pro, calling a web service is done in a microflow using the call web service action.
 
@@ -16,7 +16,7 @@ This how-to teaches you how to do the following:
 * Directly import a web service document into your app
 * Configure a web service call
 
-## 2 Importing a Web Service
+## Importing a Web Service
 
 You can import a web service document into your app. For more information, see [Consumed Web Services](/refguide/consumed-web-services/).
 
@@ -34,7 +34,7 @@ To import a web service directly, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-complex-web-service/consumed-web-service-doc.png" class="no-border" width="700" >}}  
 
-## 3 Configuring the Web Service Call
+## Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
@@ -77,7 +77,7 @@ To configure the web service call, follow these steps:
 
 Your imported web service is now ready to be used in your application.
 
-## 4 Read More
+## Read More
 
 * [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)
 * [Export XML Documents](/howto/integration/export-xml-documents/)

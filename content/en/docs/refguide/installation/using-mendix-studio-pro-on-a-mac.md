@@ -8,7 +8,7 @@ aliases:
     - /howto/general/using-mendix-studio-pro-on-a-mac/
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 From Mendix 10.7.0 and above, you can run Mendix Studio Pro natively on macOS. This means you no longer need to follow the guide below to get started on Mac. If you are using versions of Studio Pro below 10.7.0, follow the guide to get started.
@@ -31,7 +31,7 @@ For a deep-dive look into installing Studio Pro on a Mac, check out this video:
 
 {{< vidyard "nJ9Tz8VnHPPKPrtSBgHv3U" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Make sure you have completed the following prerequisites:
 
@@ -42,7 +42,7 @@ Make sure you have completed the following prerequisites:
 Use the default browser installed in the Windows VM as the default browser for the Parallels VM, or configure your Windows virtual machine. Using the Windows VM browser or configuring it ensures your ability to sign in.
 {{% /alert %}}
 
-## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro {#configuring}
+## Configuring Your Windows Virtual Machine for Mendix Studio Pro {#configuring}
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 
@@ -83,7 +83,7 @@ Congratulations! You have successfully configured port forwarding to enable test
 Make sure your Windows VM Firewall is active and properly configured.
 {{% /alert %}}
 
-## 4 Checking Network Drive
+## Checking Network Drive
 
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
@@ -101,7 +101,7 @@ Read the tips below to check the network drive before viewing your app on your t
 
     {{< figure src="/attachments/refguide/installation/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  class="no-border" >}}
     
-## 5 Viewing Your App on Your Testing Device
+## Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:
 
@@ -123,18 +123,18 @@ Congratulations! You have successfully viewed your app on a test device.
 If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information on resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/refguide/mobile/getting-started-with-mobile/prerequisites/#unable-load-script) section of *Prerequisites*
 {{% /alert %}}
 
-## 6 Viewing Changes to Your App on Your Testing Device
+## Viewing Changes to Your App on Your Testing Device
 
 For information on how to change to your app and then see the change on your device, see the [Viewing Changes to Your App on Your Testing Device](/refguide/mobile/getting-started-with-mobile/#viewingchanges) section in *Getting Started with Mobile*.
 
-## 7 Improving Performance {#performance}
+## Improving Performance {#performance}
 
 To improve the performance, you can do the following: 
 
 * Run Parallels in full-screen mode in a window instead of in **Coherence** mode
 * Store your apps in the virtual machine (VM) on local disk *C:\\*
 
-### 7.1 Increasing Network Speed {#increase-network-speed}
+### Increasing Network Speed {#increase-network-speed}
 
 When using Parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. Try the following approach, which can increase the upload speed significantly:
 
@@ -145,6 +145,6 @@ When using Parallels, some users might experience slow network speed. For instan
 
 For more information, see [Parallels Forum](https://forum.parallels.com/threads/horribly-slow-upload-download-speeds.264819/).
 
-## 8 Read More
+## Read More
 
 * [Getting Started with Mobile](/refguide/mobile/getting-started-with-mobile/)

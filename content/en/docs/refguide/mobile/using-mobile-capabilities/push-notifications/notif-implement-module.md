@@ -8,11 +8,11 @@ aliases:
     - /howto/mobile/notif-implement-module/
 ---
 
-## 1 Introduction
+## Introduction
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
-## 2 Downloading From Marketplace
+## Downloading From Marketplace
 
 If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
@@ -21,7 +21,7 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
-## 3 Configuring Your App {#config}
+## Configuring Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 

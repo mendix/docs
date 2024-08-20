@@ -1,6 +1,7 @@
 ---
 title: "Published OData Entity"
 url: /refguide/published-odata-entity/
+weight: 10
 alias:
     - /refguide/published-odata-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
@@ -136,7 +137,7 @@ When **Readable** is enabled, you can configure how data is queried in the [expo
 Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
-## 6.2.1 Query Options {#query-options}
+#### 6.2.1 Query Options {#query-options}
 
 Select the options to include for the **Readable** OData capability:
 

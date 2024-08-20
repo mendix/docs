@@ -228,7 +228,11 @@ For more information, see [Defining Access Rules Using the New Editor](/refguide
 
 The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
-### 9.3 Maia
+### 9.3 GraphQL {#graphql}
+
+Publishing data as a GraphQL service is available since Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+
+### 9.4 Maia
 
 #### 9.3.1 Enable Domain Model Generator (Experimental)
 
@@ -238,17 +242,17 @@ In Studio Pro 10.13.0, Domain Model Generator was introduced as an experimental 
 
 In Studio Pro 10.12.0, Translation Generator was introduced as an experimental feature. Enable this option to help you translate your model to different languages through **Batch translate** under the **Language** menu. For more information, see [Translation Generator](/refguide/translation-generator/).
 
-### 9.4 Mapping Editor
+### 9.5 Mapping Editor
 
 This setting allows you to set the beta version as the default editor.
 
-### 9.4 Page Editor
+### 9.6 Page Editor
 
 In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
 
 For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 
-### 9.5 Toolbox
+### 9.7 Toolbox
 
 Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.
 

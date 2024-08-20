@@ -83,7 +83,7 @@ This list is currently incomplete and is being updated.
 | Module | Logs messages for modules that are loaded on-demand in the core runtime like the microflow-engine. |
 | ObjectManagement | Logs errors relating to attempts to make associations to non-existent object |
 | ODataConsume | Logs messages related to consumed OData services. |
-| OData Publish | Logs messages related to published OData services. |
+| OData Publish | Logs messages related to published OData/GraphQL services. |
 | QueryParser | Logs messages related to the parsing or interpretation of XPath and OQL queries. |
 | Queue | All actions related to Task Queues |
 | REST Consume | Logs messages related to the Call REST service activity. |

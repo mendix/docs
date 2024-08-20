@@ -32,7 +32,7 @@ Examples of the use of the SAML module include the following:
 The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf) profiles for your Mendix app acting as a Service Provider (SP):
 
 * Web browser SSO profile using one of the following bindings
-    * HTTP redirect, 
+    * HTTP redirect
     * HTTP POST bindings
     * Artifact binding for SAML responses (Mendix 8 and above)
 * Single Logout profile
@@ -116,11 +116,11 @@ There are different versions of the SAML module, depending on which version of M
 1. In Mendix Marketplace, search for the [SAML module](https://marketplace.mendix.com/link/component/1174/).
 2. In the **Documentation** tab, the *compatibility guidance* section indicates the latest recommended version for your LTS/MTS Mendix release. These guidelines are updated with each release of the SAML module, and you should refer to them to choose the version of the module that is compatible with your app. For additional information, some general considerations are listed below:
     
-    * For Mendix 8, you should use the latest published versions in the **2.x** range, unless otherwise indicated in the **Documentation** tab. 
-    * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses: 
+    * For Mendix 8, you should use the latest published versions in the **2.x** range, unless otherwise indicated in the **Documentation** tab.
+    * For Mendix 9, there are odd- and even-numbered patch releases that contain the same changes and require the same Mendix version, but differ based on the version of Atlas UI that your app uses:
     
         * The even-numbered releases (for example, 3.6.2) are intended for apps that use the 2.0 version of Atlas UI, that is, apps which were originally built on a version of Mendix below 9.0.0, and then upgraded to Mendix 9.
-        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix 9 and are using version 3.0 of Atlas UI. 
+        * The odd-numbered releases (for example, 3.6.3) are for new apps that are built using Mendix 9 and are using version 3.0 of Atlas UI.
 
     * For Mendix 10, you should use the latest versions of the module that is compatible with the 3.0 version of Atlas UI (that is, the version for apps newly built on Mendix 9 or newer). These are currently the same as the odd-numbered releases mentioned above for Mendix 9; in future releases of the SAML module, there will be separate versions of the module dedicated for Mendix 10.
 
@@ -193,7 +193,7 @@ The SP metadata that you supply to the IdP is only available after you have conf
 
 ### 3.2 Creating the IdP-Specific Settings{#idp-specific-settings}
 
-Each IdP (entity descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration. 
+Each IdP (entity descriptor) should have its own configuration set. Every IdP can be configured and enabled separately. All changes made in the configuration are immediately applied when you save the configuration.
 
 #### 3.2.1 Creating a New IdP Configuration
 
@@ -226,7 +226,7 @@ The following settings are for the IdP metadata:
 * **Metadata Overview** – This overview shows all the information that has been found in the IdP metadata information. It is usually not necessary to do anything here, but it can be useful in order to review the possible IdP and SP configuration options.
 
 {{% alert color="info" %}}
-If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **\_USE ME** > **Scheduled Events** folder of the SAML module.
+If you want to automatically synchronize the IdP metadata, make sure the **SE_SynchronizeIdPMetadata** [scheduled event](/refguide/scheduled-events/) is enabled. This is in the **_USE ME** > **Scheduled Events** folder of the SAML module.
 {{% /alert %}}
 
 If you need to change your identity provider metadata you can find more information in the [Response Protocol Binding](#saml-binding) section.
@@ -239,10 +239,10 @@ The following settings control user provisioning:
 * **Identifying Assertion** (aka "Principal Key") – Specifies which of the assertion attributes identifies the user name.
 * **User Entity** – The Mendix entity in which you will store and look up the user account. Most often something like `Administration.Account`.
 * **Attribute On** – Determines the attribute on which you want to do the lookup. This attribute will be compared against the passed **Identifying Assertion** (see above).
-* **User Action** – The module will always search for the user, based on the **Identifying Assertion**. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured. 
+* **User Action** – The module will always search for the user, based on the **Identifying Assertion**. You can allow the module to create users with a predefined user role. If you allow the module to create users, it will automatically create a new user account if the user cannot be found.  If the module is not allowed to create users, it will present a message to the user stating that the login action was successful but no user has been configured.
 * **Default User Role** – This role will be assigned to newly created users.
 * **Use Custom Logic in User Provisioning** – If you want to add your own logic to the user provisioning, enable this function and use [CustomUserProvisioning](#customuserprovisioning) to point to your custom logic. This microflow will be executed after the user has been created, or it will be updated through the default user provisioning provided by the module (using the settings above).
-* **Just in Time Provisioning** – During the login process, all fields from the assertions can be copied into the user account entity. All the **Claim** fields from the assertion will be copied into the selected **Mx User Attribute**. 
+* **Just in Time Provisioning** – During the login process, all fields from the assertions can be copied into the user account entity. All the **Claim** fields from the assertion will be copied into the selected **Mx User Attribute**.
     * **Claim**
     * **Mx User attribute**
 
@@ -275,7 +275,7 @@ The following settings set the authentication context:
 * **Preferred Entity Descriptor** – The IdP metadata can contain references to many different IdPs or SPs. This option allows you to select which of the IdPs ought to be used when a user tries to login using this IdP configuration.
 * **IdP Authentication Properties** – When sending out requests, this option has to be configured according to the specification of the IdP server: **Authentication context comparison**.
 * **Disable Name ID Policy** – Check this box to disable the use of a name ID policy. This means you will use another attribute or claim to identify users.
-* **Preferred Name ID** – If using a name ID policy, it is mandatory to specify the name ID method. Every IdP is supposed to support transient, but that does not have to guarantee a fixed user name. It is up to the IdP and your user provisioning implementation what the best solution is here. 
+* **Preferred Name ID** – If using a name ID policy, it is mandatory to specify the name ID method. Every IdP is supposed to support transient, but that does not have to guarantee a fixed user name. It is up to the IdP and your user provisioning implementation what the best solution is here.
 * **Authentication Context Classes** – This passes the allowed authentication methods. This has to be whatever the IdP requests, as there are no requirements within this module and all options are available. For the SAML protocol, the SP is required to pass in the authentication context. However, passing all options is not recommended, since that leads to significantly bigger (and slower) message exchange.
 * **Allow Idp Initiated Authentication** – By default, the module does not allow for unsolicited request. That means that every login has to be initiated from the Mendix application, and all the messages have to be exchanged using the same RequestID and RelayState. Some IdPs do not allow for the RelayState to be passed, or the authentication could be initiated by the IdP instead of at the SP. For all situations where the RelayState is not being generated or passed from the original login action at Mendix, this option should be enabled. By default, it does not allow for unsolicited requests, because that would be considered less secure.
 
@@ -300,7 +300,7 @@ Additional settings must be configured in the page tabs.
 When you add a new configuration or change an existing one, you should restart your app. This ensures that the correct configuration is used.
 {{% /alert %}}
 
-### 4.1  Mapping 
+### 4.1  Mapping
 
 There are two tabs within the **Mapping** tab.
 
@@ -308,7 +308,7 @@ There are two tabs within the **Mapping** tab.
 
 In this tab you need to provide the attribute which contains the user name which uniquely identifies the user. This is the **Identifying Assertion Type**, also known as the “Principal Key” and you can choose from the following:
 
-* **IdP Provided** - 
+* **IdP Provided** -
 * **InCommon Federation Standard** – IdPs that use the InCommon standard often do not specify the assertion attributes.
 * **Use Name ID** - use the Name ID attribute
 * **Custom** - use the attribute identified by its formal name (URN)
@@ -332,7 +332,7 @@ The module will always search for the user, based on the **Identifying Assertion
 
 This role will be assigned to newly created users.
 
-#### 4.2.3 Use Custom Logic for User Provisioning and Use Custom after Sign-In Logic 
+#### 4.2.3 Use Custom Logic for User Provisioning and Use Custom after Sign-In Logic
 
 These two settings allow you to add your own logic to the user provisioning.
 
@@ -399,15 +399,15 @@ Usage of the in-session authentication changes the user roles that apply to the 
 
 This flow can be initiated by using the URL `https://{app-url}/sso/login?action=verify`
 
-To enable in-session authentication, you need to use the `OpenConfiguration` microflow to configure two microflows in the SAML SSO module: 
+To enable in-session authentication, you need to use the `OpenConfiguration` microflow to configure two microflows in the SAML SSO module:
 
-##### 4.3.5.1 Custom Prepare In-Session Authentication Microflow 
+##### 4.3.5.1 Custom Prepare In-Session Authentication Microflow
 
 Set **Custom Prepare In-Session Authentication microflow** to `CustomPrepareInSessionAuthentication`.
 
 The `CustomPrepareInSessionAuthentication` microflow sets up specific data in the current user session so that it can be recovered after the SAML in-session authentication flow returns to the app. The microflow can use the context information that is passed via the `on` query parameter.
 
-##### 4.3.5.2 Custom Evaluate In-Session Authentication Microflow 
+##### 4.3.5.2 Custom Evaluate In-Session Authentication Microflow
 
 Set **Custom Evaluate In-Session Authentication microflow** to `CustomEvaluateInSessionAuthentication`.
 
@@ -427,15 +427,15 @@ The IdP metadata can contain references to many different IdPs or SPs. Use **Pre
 
 If you check this box, you will not be able to set **Preferred name id**.
 
-#### 4.3.9 Authentication Context Comparison 
+#### 4.3.9 Authentication Context Comparison
 
 You can configure the comparison method used to evaluate the requested context classes or statements, one of "exact", "minimum", "maximum", or "better". See section 3.3.2.2.1 of the [Core SAML specifications](https://www.oasis-open.org/committees/download.php/56776/sstc-saml-core-errata-2.0-wd-07.pdf).
 
-#### 4.3.10 Authentication Context Classes 
+#### 4.3.10 Authentication Context Classes
 
 This passes the allowed authentication methods. This has to be whatever the IdP requests, as there are no requirements within this module and all options are available. You should only pass the options which are needed as passing all options leads to significantly bigger (and slower) message exchange.
 
-### 4.4 Identity Provider Metadata 
+### 4.4 Identity Provider Metadata
 
 You may need to choose a different SAML binding to match your IdP. You can configure the SAML binding in the **Identity Provider Metadata** tab of the `OpenConfiguration` microflow.
 
@@ -461,7 +461,7 @@ In most cases (for example, with AzureAD), you don’t want to use the Assertion
 * If **Use AssertionConsumerService Concept** is set to `Yes…` then Auth-Request contains only the ‘`AssertionConsumerServiceIndex`’ attribute.
 
     Set **Assertion consumer service index** to the value you want to use for `AssertionConsumerServiceIndex` in both the Auth-Request and also in the SP-Metadata.
-    The configured binding will be included in the SP metadata, as indicated in the [URLs](#urls} section.
+    The configured binding will be included in the SP metadata, as indicated in the [URLs](#urls) section.
 
 #### 4.4.3 Read IDP metadata from URL
 
@@ -510,7 +510,7 @@ Requesting user attributes at the SAML IdP is only available in the following ve
 
 SAML implements encryption and signing using asymmetric keys. If encryption is enabled, all the certificates required for encryption are stored in the key store. When you choose **Enable better security for app** (or **Use encryption**) a key store is automatically created using the URL of the application, or the custom EntityID. Below version 3.5.0 it is shown as the **Key store alias**.
 
-The key-pair (or pairs) for your app (as an SP) can be self-generated by the SAML module or you can upload keypair certificate (or certificates) provided by your IdP. 
+The key-pair (or pairs) for your app (as an SP) can be self-generated by the SAML module or you can upload keypair certificate (or certificates) provided by your IdP.
 
 {{% alert color="warning" %}}
 For version 3.5.0 and above, there are separate key pairs generated for each IdP, for versions below that, the self-generated key pairs are used for all IdPs, if your app is configured to use multiple IdPs.
@@ -630,12 +630,12 @@ When enabling the log node SSO to show trace messages, you can find detailed inf
 ### 7.1 Error Messages
 
 * **"The application hasn't been properly configured to support single sign-on."** – This message indicates an incomplete IdP configuration. In more detailed error messages (via the log file), you are able to see which property in the IdP configuration has not been configured.
-* **"Unable to complete the request"** – A message has been received that does not have a RelayState/RequestID that matches any of the previously generated IDs (or the message has been answered already). If you get this message, you should validate the message communication and confirm that you are not using unsolicited requests. Or, you can enable that check the box to allow for IdP initiated authentication. 
+* **"Unable to complete the request"** – A message has been received that does not have a RelayState/RequestID that matches any of the previously generated IDs (or the message has been answered already). If you get this message, you should validate the message communication and confirm that you are not using unsolicited requests. Or, you can enable that check the box to allow for IdP initiated authentication.
 * **"The authentication was successful, but there is no account available in this application."** – There is no account that matches the identifying assertion, by downloading the SAMLResponse message, you can see the assertion attributes in the XML file to validate which user name has been sent.
 * **"Your account hasn't been configured to access this application."** – There is a user account available in the application that matches the identifying assertion, but the user does not have user roles or the user is not active. 
 * **"An unexpected error occurred while creating a session"** – An uncaught exception occurred, which could be a configuration error or situation that has not been supported by the module. More information should be available in the stack trace.
 * **"The response from the identity provider isn't valid."** – The response from the IdP does not contain any assertion attributes.
-* **"No valid SSO Configuration could be found for entity Id: [IdP Alias]"** – Either the specified IdP configuration has not been activated, or an error occurred when reloading the configuration. The error message when reloading the configuration should give more information about the exact problem. The configuration is loaded on startup, when (de-)activating the configuration or when saving an active configuration. 
+* **"No valid SSO Configuration could be found for entity Id: [IdP Alias]"** – Either the specified IdP configuration has not been activated, or an error occurred when reloading the configuration. The error message when reloading the configuration should give more information about the exact problem. The configuration is loaded on startup, when (de-)activating the configuration or when saving an active configuration.
 * **"Unsupported action: [action], only ....."** – The URL is incorrect. Validate that the URL is correctly structured as *action: login, assertion, metadata, discovery*.
 * **“MSIS7046: The SAML protocol parameter ‘RelayState’ was not found or not valid.”** – This error can be shown on the ADFS server, most likely when you are using Mac OSX and a Safari browser. Setting the `BindingURI_Redirect` constant to true might help resolve the issue. By default, Mendix favors the `Post` binding, as the maximum size exceeds that of a `Redirect` binding due to its use of cookies and post information instead of URL parameters. The size can be a factor when using encryption.
 * **"Unable to validate Response, see SAMLRequest overview for detailed response. Error: An error occurred while committing user: p:'johndoe@company.com'/u:'JoHnDoE@CoMpAnY.CoM'"** – All user names passing through the SAML module are converted to lower-case, so make sure all the existing user names and new user names are also converted to lower-case. This is because certain systems are not case-sensitive (for example, Active Directory).
@@ -648,6 +648,10 @@ When using the [SAML](/appstore/modules/saml/) module for SSO in Mendix 9 and 10
 To avoid this issue, make sure your IdP (identity provider) and your app are in the same domain, and thus on the same site. For example, if your app is on `app.domain.com` and you open the deep link `app.domain.com/link/test`, then you are redirected to your IdP to sign in on `idp.domain.com/SSO`. After you sign in successfully, you are sent back to `app.domain.com/SSO/assertion`. Finally, you are forwarded to `app.domain.com/link/test`. Since your requests always stay on the same site, the cookie can be forwarded each time.
 
 If it is not an option to have the IdP and the app in the same domain, set the value for the SameSite cookies to `"None"` or`"Lax"` to solve the problem. See also [Runtime Customization](/refguide/custom-settings/).
+
+### 7.3 Troubleshooting an Endless Redirect Loop to the Login Page (Mendix 10.9 to 10.12.2)
+
+When using the SAML module with Mendix version 10.9 to 10.12.2, you may encounter an endless redirect loop to the login page. This issue is related to the session cookie handling in these versions. To resolve this redirect loop, Mendix recommends upgrading to Mendix version 10.12.3 or above. If a user logs in on one tab and then attempts to log in on another tab, a `401` error may initially appear. However, after the browser reloads, the error will be resolved as the session is validated and synchronized.
 
 ## 8 URLs{#urls}
 

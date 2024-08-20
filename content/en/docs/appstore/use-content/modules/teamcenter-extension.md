@@ -70,7 +70,7 @@ The `Get ItemRevision` action allows you to generate the domain model and microf
 
 #### 3.1.2 Get Workspace Objects {#getworkspaceobjects}
 
-The `Get Workspace Objects` action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamenter
+The `Get Workspace Objects` action allows you to configure and generate the domain model and microflow to search for and retrieve Workspace Objects or their specialization from Teamcenter. This action implements the saved query `General..` from Teamcenter
 
 #### 3.1.3 Create Item and Item Revision {#createitem-and-itemrevision}
 

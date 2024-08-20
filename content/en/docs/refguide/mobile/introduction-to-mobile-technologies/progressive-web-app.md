@@ -14,6 +14,7 @@ Due to web browsers changing what they support, offline-first progressive web ap
 * Mendix 9.24.18 and higher patch versions
 * Mendix 10.6.6 and higher patch versions
 * Mendix 10.9.0 and above
+
 Offline-first progressive web apps build with other versions of Mendix will not work in most web browsers.
 {{% /alert %}}
 

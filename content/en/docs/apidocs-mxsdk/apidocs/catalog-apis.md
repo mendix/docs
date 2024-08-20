@@ -33,7 +33,7 @@ Curation rights apply to some API activities.
 
 ## Search API {#search}
 
-The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v4.html) enables users to search and retrieve assets that are registered in the Catalog that satisfy the specified search criteria.
+The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v5.html) enables users to search and retrieve assets that are registered in the Catalog that satisfy the specified search criteria.
 
 You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
 
@@ -41,7 +41,7 @@ For step-by-step instructions and an example API call, see the [Search via the A
 
 ## Registration API {#registration}
 
-The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) can be used to register applications, environments, and services or data sources. 
+The [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html) can be used to register applications, environments, and services or data sources. 
 
 The API includes the following:
 
@@ -55,4 +55,4 @@ For step-by-step instructions, see the [Registering a Service Through the Catalo
 
 Mendix users who deploy to *non-Mendix clouds* can make use of the [Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/transform.html) to generate the request body for the Registration API. The Transform API reconfigures information from the *dependencies.json* file into the correct fields. For an example API, see the [Preparing Your Service Details Using the Transform API](/catalog/register/register-data/#transform-api) section of *Register Resources in the Catalog*.
 
-The v4 compatibility for the **Transform API** is accessible via the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v4.html) under the **Endpoints** section.
+The v5 compatibility for the **Transform API** is accessible via the [Registration API](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html) under the **Endpoints** section.

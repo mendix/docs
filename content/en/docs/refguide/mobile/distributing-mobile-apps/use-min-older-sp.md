@@ -54,7 +54,7 @@ Make It Native, just like any other native apps, relies on third party dependenc
    cd ios && pod install && cd ..
    ```
 
-If either command fails, make sure you have [NodeJS](https://nodejs.org/en) and [CocoaPods](https://cocoapods.org) installed. To build Make It Native for Apple devices, you need an Apple computer.
+If either command fails, make sure you have [Node.js](https://nodejs.org/en) and [CocoaPods](https://cocoapods.org) installed. To build Make It Native for Apple devices, you need an Apple computer.
 
 ### 1.2 Additional Setup Requirements
 

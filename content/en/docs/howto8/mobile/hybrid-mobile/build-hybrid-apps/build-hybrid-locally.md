@@ -19,7 +19,7 @@ This document describes how to build your hybrid apps locally.
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
+* Install [Node.js 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp/#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
 * Install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
@@ -113,7 +113,7 @@ Using Xcode can be easier than the Cordova CLI due to Xcode's friendly visual in
 **Prerequisites:**
 
 * Install [AndroidStudio](https://developer.android.com/studio)
-* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
+* Install [Node.js 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Install JDK 1.8
 * Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys/#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages/#download-local-package) from Cloud Portal and unzip it in a known location

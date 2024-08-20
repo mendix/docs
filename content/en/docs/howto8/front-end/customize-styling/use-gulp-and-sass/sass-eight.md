@@ -222,7 +222,7 @@ Other issues might occur with SVN and possible rewriting of *Gulpfile.js*. To fi
 
 * Remove *node_modules*, *package.json*, *package-lock.json* and *Gulpfile.js*, then replace them with a fresh copy downloaded from Mendix's [ux-theming repository](https://github.com/mendix/ux-theming/)
 * Ignore not only *node_modules* but also *Gulpfile.js* — this means you will have to add the *Gulpfile* to the project if you download it again or someone in your team is working on it
-* Make sure you are using the most recent LTS version of [NodeJS](https://nodejs.org/en/)
+* Make sure you are using the most recent LTS version of [Node.js](https://nodejs.org/en/)
 
 ## Read More
 

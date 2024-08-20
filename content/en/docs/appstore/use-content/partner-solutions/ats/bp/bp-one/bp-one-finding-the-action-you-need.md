@@ -30,7 +30,7 @@ In ATS there are many actions for finding a widget. From finding a widget to fin
 
 ### 2.1 Generic Action
 
-When you want to find a widget the main choice is always the [*Find/Assert Widget*](/appstore/partner-solutions/ats/rg-one-findassert-widget/) action. It finds the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to find a widget the main choice is always the [*Find/Assert Widget*](/appstore/partner-solutions/ats/rg-one-findassert-widget/) action. It finds the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
@@ -74,7 +74,7 @@ In ATS there are many actions for clicking a widget. From clicking a widget to c
 
 ### 3.1 Generic Action
 
-When you want to click a widget the main choice is always the [*Click Widget*](/appstore/partner-solutions/ats/rg-one-click-widget/) action. It clicks the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to click a widget the main choice is always the [*Click Widget*](/appstore/partner-solutions/ats/rg-one-click-widget/) action. It clicks the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
@@ -168,7 +168,7 @@ In ATS there are several actions for getting a value from a widget. The first ch
 
 ### 5.1 Generic Action
 
-When you want to get a value from a widget the main choice is always the [Get Value](/appstore/partner-solutions/ats/rg-one-get-value/) action. It retrieves the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to get a value from a widget the main choice is always the [Get Value](/appstore/partner-solutions/ats/rg-one-get-value/) action. It retrieves the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 
@@ -212,7 +212,7 @@ In ATS there are several actions for asserting values. The first chapter explain
 
 ### 6.1 Generic Action
 
-When you want to assert a value inside a widget the main choice is always the [*Assert Value*](/appstore/partner-solutions/ats/rg-one-assert-value/) action. It asserts the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of  `mx-name`.
+When you want to assert a value inside a widget the main choice is always the [*Assert Value*](/appstore/partner-solutions/ats/rg-one-assert-value/) action. It asserts the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
 The **Widget Name** is found using the ATS Helper, the value is the **Widget Name**:
 

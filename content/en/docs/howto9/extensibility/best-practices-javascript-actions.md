@@ -384,7 +384,7 @@ For error handling, there are couple of options:
 When using promise functions, be aware of the following:
 
 * Currently, JavaScript actions always expect a return type – if an action does not have a relevant returning value, choose return type `String` (the implemented return or promise can be `undefined`) 
-* When using a JavaScript action in a nanoflow, set the output  `Use return variable` to `No` 
+* When using a JavaScript action in a nanoflow, set the output `Use return variable` to `No` 
 * Return type Boolean should never be returned with an `undefined` value (this will cause an error if the returned variable is accidentally used in the nanoflow)
 * It is recommended to return early so no code is executed if it can or should be skipped – for example, when validating input
 * Uncaught errors in JavaScript will throw an error in microflows – currently, there is no way to add an error handler in nanoflows like you can in microflows
@@ -406,7 +406,7 @@ With well-designed APIs, JavaScript actions will become easier to reuse. Please 
 * Document the action, parameters, defaults, return values, errors, and compatibility – for more information, see the [Documenting JavaScript Actions](#document) section of this document below
 * Only expose the most generic functionality – libraries with fewer exposed functions are easier to understand, use, maintain, and test (new features can always be added later)
 * Design an API that is independent from the used library (this makes it possible to change the implementation or replace the library without changing the API) 
-* Use language that is familiar to developers – for example, the function name should not include implementation details;  `OpenPhoneGapCamera` should be `OpenCamera`
+* Use language that is familiar to developers – for example, the function name should not include implementation details; `OpenPhoneGapCamera` should be `OpenCamera`
 
 Consider these additional technical suggestions for best API practices:
 
@@ -478,7 +478,7 @@ Not all capabilities are recommended for use. Consider the side effects that an 
 * Permanent rendering should be done using pluggable widgets – the new Mendix Client will render the page at will and remove your changes (for example, when you are rendering DOM, work on a DOM node of the `index.html`)
 * Changes to the DOM might be lost due to the Mendix Client which can render the DOM at will (for example, when you add a CSS class to another component the Mendix Client will render the page at will and remove your changes) – you can create and change DOM elements that are placed outside `<div id="content"></div>`
 * Avoid using deprecated libraries – do not use Dojo or Dijit as they are deprecated (jQuery should also no longer be used)
-* Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is  `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)
+* Avoid using Boolean actions that return `undefined`– the Boolean variable is the only variable that requires a value, is the only acceptable state is `true` or `false`(other variables could be set to `undefined` and can be checked in Mendix Studio Pro as `$variable != empty`)
 
 ## 7 Read More
 

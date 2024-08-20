@@ -143,7 +143,7 @@ void CreateMultiplicationMicroflow(IModel currentApp, IFolderBase folder, IMicro
 
  {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/multiplication-microflow.png" >}}
 
-To create a microflow that performs an addition between two decimal values, you can use the code below. Just like the multiplication microflow example above, you can see that the String `addition1` and the String  `addition2` match the parameters used in the expression for the return value. You can also see that their `DataType` is decimal.
+To create a microflow that performs an addition between two decimal values, you can use the code below. Just like the multiplication microflow example above, you can see that the String `addition1` and the String `addition2` match the parameters used in the expression for the return value. You can also see that their `DataType` is decimal.
 
 ```csharp
 void CreateAdditionMicroflow(IModel currentApp, IFolderBase folder, IMicroflow callingMicroflow, string outputVariableName)

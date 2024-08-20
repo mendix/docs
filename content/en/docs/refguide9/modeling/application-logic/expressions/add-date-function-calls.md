@@ -189,7 +189,7 @@ The output is:
 
 ## 7 addWeeks[UTC]
 
-The `addWeeksUTC` function adds a number of weeks to a date using the UTC calendar as opposed to  `addWeeks` which uses the server's one. 
+The `addWeeksUTC` function adds a number of weeks to a date using the UTC calendar as opposed to `addWeeks` which uses the server's one. 
 
 ### 7.1 Input Parameters
 
@@ -224,7 +224,7 @@ The output is:
 
 ## 8 addMonths[UTC]
 
-The `addMonthsUTC` function adds a number of months to a date using the UTC calendar as opposed to  `addMonths` which uses the server's one.
+The `addMonthsUTC` function adds a number of months to a date using the UTC calendar as opposed to `addMonths` which uses the server's one.
 
 ### 8.1 Input Parameters
 
@@ -259,7 +259,7 @@ The output is:
 
 ## 9 addQuarters[UTC]
 
-The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to  `addQuarters` which uses the server's one.
+The `addQuartersUTC` function adds a number of quarters to a date using the UTC calendar as opposed to `addQuarters` which uses the server's one.
 
 ### 9.1 Input Parameters
 
@@ -294,7 +294,7 @@ Mon Apr 01 01:01:01 CET 2007
 
 ## 10 addYears[UTC]
 
-The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to  `addYears` which uses the server's one.
+The `addYearsUTC` function adds a number of years to a date using the UTC calendar as opposed to `addYears` which uses the server's one.
 
 ### 10.1 Input Parameters
 

@@ -15,7 +15,7 @@ After setting up all the prerequisites, you can start writing a first script tha
 1. In VS Code, create a file named `script.ts` in the same directory as where your other files live.
 
     The following script creates a new app, adds a new entity to the domain model, and commits the changes to the Team Server.
-2. Copy the following code to the  `script.ts` file:
+2. Copy the following code to the `script.ts` file:
 
     ```ts
     import { domainmodels } from "mendixmodelsdk";

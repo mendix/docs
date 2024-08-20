@@ -223,13 +223,13 @@ Mendix tries to support the most recent and patched database server versions fro
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11
+* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11, 11.4
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
-* [MySQL](/refguide/mysql/): 8.0
+* [MySQL](/refguide/mysql/): 8.0, 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c
 * PostgreSQL: 12, 13, 14, 15, 16
-* [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
+* [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.

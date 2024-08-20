@@ -7,25 +7,25 @@ title: "Enter the title of the document"
 #draft: Set to true if page should not appear in production
 ---
 
-## 1 Introduction
+## Introduction
 
 {Describe what this page will cover and what the user will learn.}
 
-## 2 {Title of the User Interface Element Being Described}
+## {Title of the User Interface Element Being Described}
 
 {Describe the UI elements (for example, pages, widgets). Describe all the properties and features for each UI element.}
 
 {{< figure src="/attachments/rest-of-image-path/image-name-and-extension" >}}
 
-### 2.1 {Title of Sub-Section}
+### {Title of Sub-Section}
 
 {Use sub-sections for more detail.}
 
-## 3 {Example Usage Scenarios}
+## {Example Usage Scenarios}
 
 {Describe some example usage scenarios that can be referenced when using these features.}
 
-## 4 Read More
+## Read More
 
 * {Link 1}
 * {Link2} – {an explanation when necessary especially if this is a third-party link}

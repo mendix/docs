@@ -16,7 +16,7 @@ The Model API service is hosted in the European Union.
 
 ### 1.3 How Long Do Online Working Copies Exist?
 
-Online working copies are automatically removed 24 hours after they have been created. It is not possible to extend their lifetime - you need to create a new online working copy.
+Online working copies are automatically removed 24 hours after they have been created. It is not possible to extend their lifetime—you need to create a new online working copy.
 
 ### 1.4 What Are the Limits on App Size?
 

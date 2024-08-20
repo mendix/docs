@@ -40,7 +40,7 @@ References are a particular type of property. References can either be **by id**
 
 ## 4 Interfaces
 
-When you open a model using the Model SDK, not the entire model is downloaded: models can be very large, and in general it's not necessary to "know" the entire model to be able to work with it - even analysis can typically be done on a unit-per-unit basis. So, to save on bandwidth and memory consumption, we initially only send back the *interfaces* of all units. The interface of a unit consists of the part of the unit which we define to be *public* and this is typically very small in comparison to the full unit contents. All pieces of information which can be referred to by *other* model units will be public, such as names.
+When you open a model using the Model SDK, not the entire model is downloaded: models can be very large, and in general it's not necessary to "know" the entire model to be able to work with it—even analysis can typically be done on a unit-per-unit basis. So, to save on bandwidth and memory consumption, we initially only send back the *interfaces* of all units. The interface of a unit consists of the part of the unit which we define to be *public* and this is typically very small in comparison to the full unit contents. All pieces of information which can be referred to by *other* model units will be public, such as names.
 
 As an example, for a domain model the following things are public and therefore part of the unit interface:
 

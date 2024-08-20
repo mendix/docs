@@ -35,7 +35,7 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 1. Add the following **Custom Environment Variables**.
     | Variable | Required? | Description | Details |
     | --- | --- | --- | --- |
-    | `DT_SAAS_URL` | Yes | The URL of Dynatrace environment | The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`. If you are using a Dynatrace managed environment, just provide the full URL of the Dynatrace domain, like  `https://<your-dynatrace-domain>`. |
+    | `DT_SAAS_URL` | Yes | The URL of Dynatrace environment | The format when using the Dynatrace SaaS environment is similar to `https://<your-environment-id>.live.dynatrace.com`. If you are using a Dynatrace managed environment, just provide the full URL of the Dynatrace domain, like `https://<your-dynatrace-domain>`. |
     | `DT_TENANT` | Yes | The Dynatrace Environment ID | For more information, see the [Environment ID](https://www.dynatrace.com/support/help/get-started/monitoring-environment/environment-id) Dynatrace documentation. |
     | `DT_PAAS_TOKEN` | Yes | The access token for integrating your Mendix app with Dynatrace | Create this on the Dynatrace environment. For more information, see [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token). The token must include the `PaaS integration - Installer download` and `Ingest metrics` scopes. |
     | `DT_IS_MANAGED` | No | Set this to `true` if you are using Dynatrace Managed. The default is assumed to be Dynatrace SaaS and set to `false`. | This variable is only needed for custom application metrics ingestion. |

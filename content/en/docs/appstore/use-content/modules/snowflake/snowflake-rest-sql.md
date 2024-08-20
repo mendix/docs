@@ -151,7 +151,7 @@ The domain model is a data model that describes the information in your applicat
 
 | Name | Description |
 | --- | --- |
-| `RowCoun`t | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
+| `RowCount` | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
 
 ### 4.2 Activities {#activities}
 

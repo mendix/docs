@@ -373,7 +373,7 @@ The `OpenAIImageOptions_Extension` object can be used to add OpenAI-specific con
 | Attribute        | Description                                                  |
 | ---------------- | ------------------------------------------------------------ |
 | `Quality`        | This is the requested quality of the generated images. This attribute is optional and only supported for `dall-e-3`. It defaults to `standard`.<br />For more information, see the [ENUM_Quality](#enum-quality) section. |
-| `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional. The default value is  `url`. <br />For more information, see the [ENUM_ResponseFormat_Image](#enum-responseformat-image) section. |
+| `ResponseFormat` | This is a parameter used to specify the technical format of the returned generated images by the API. This attribute is optional. The default value is `url`. <br />For more information, see the [ENUM_ResponseFormat_Image](#enum-responseformat-image) section. |
 | `Style`          | This is the style of the generated images. This attribute is optional. Its default value is `vivid`.<br />For more information, see the [ENUM_Style](#enum-style) section. |
 | `User`           | This is a unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse. This attribute is optional. |
 

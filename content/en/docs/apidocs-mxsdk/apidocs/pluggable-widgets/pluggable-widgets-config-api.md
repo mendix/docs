@@ -53,7 +53,7 @@ The expected property configuration structure is as follows:
     * Optionally, a `description` field can be returned with a description of the property
     * If the property is of type `object` it requires a more complex configuration
         * The `objects` array field of the `Property` object contains the sub-objects’ properties (each sub-object will require an entry as an `ObjectProperties` object in this array)
-            * The  `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
+            * The `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
             * The object grid can be customized by using the property's `objectHeaders` and the object's `captions` array field (for more information, see the [Customizing Object Grids](#customize-object-grids) section)
 
 ```typescript

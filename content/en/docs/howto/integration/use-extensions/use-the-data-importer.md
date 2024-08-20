@@ -158,7 +158,7 @@ The **Output** section includes:
 
 ### 4.2 Build the Pages
 
-The **Import data from file** custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument`is uploaded and fed to the custom activity.
+The **Import data from file** custom activity needs an input file to import data from. The example below builds a page where a `System.FileDocument` is uploaded and fed to the custom activity.
 
 1. Open the home page and add a button and name it *Upload Customer Data*.
 2. Double-click the button and in the **Events** field under the **On click** drop-down, select **Create object** to create a `System.FileDocument` entity.

@@ -60,11 +60,21 @@ To edit existing documentation, follow these steps:
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/edit-file.png">}}
 
-3. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
+    * If you already have a fork of the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository, the doc opens in a web editor.
+    
+    If you do not have a fork yet, the following page opens and tells you need to fork the repository to propose changes. Click **Fork this repository**.
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/fork-this-repository.png">}}
+
+    The doc opens in a web editor.
+
+4. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
+
 4. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
+
 5. Enter a commit message, select **Create a new branch for this commit and start a pull request**, enter the name for your branch, and then click **Propose changes**.
 
-    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" max-width=50% >}}
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" >}}
 
     The **Open a pull request** page opens. 
     

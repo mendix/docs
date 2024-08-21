@@ -39,7 +39,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSLambdaConnector** section. The connector provides a [domain model](#domain-model) and several [microflows](#activities) which you can use to quickly configure the Lambda connector for your use case. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSLambdaConnector** section. The connector provides a [domain model and several activities](#technical-reference) which you can use to quickly configure the Lambda connector for your use case. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -56,7 +56,7 @@ To quickly configure the connection to AWS Lambda by configuring a microflow, pe
 1. In the App Explorer, in **App** > **Marketplace modules** > **AWSAuthentication** > **ConnectionDetails**, configure the required authentication credentials.
     For more information about the difference between static and temporary credentials, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 2. Create a new microflow.   
-3. In **AWSLambdaConnector** > **Operations**, find the microflow activity for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Activities](#activities).
+3. In **AWSLambdaConnector** > **Operations**, find the microflow activity for the operation you want to perform. For example, if you want to get the list of available Lambda functions, find the **ListFunctions** activity and drag it to your microflow. For more information about the activities that the microflows can perform, see [Technical Reference](#technical-reference).
 4. Configure the required parameters:
    
     1. For the **ListFunctionsRequest** parameter, create a new `ListFunctionsRequest` object at the start of the microflow and pass it to the **ListFunctions** activity.

@@ -43,7 +43,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
  
 ## Configuration
  
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonSNSConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon SNS. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonSNSConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon SNS. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
  
 ### Configuring AWS Authentication
  
@@ -59,7 +59,7 @@ After you configure the authentication profile for Amazon SNS, you can implement
 
 #### Subscribing to a Topic
 
-To subscribe to a topic in your AWS environment and receive email notifications from it, implement the [Subscribe](#subscribe) activity by performing the following steps:
+To subscribe to a topic in your AWS environment and receive email notifications from it, implement the **Subscribe** activity by performing the following steps:
 
 1. In the **App Explorer**, right-click the name of your module, and then click **Add microflow**.
 
@@ -71,7 +71,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
 5. Double-click the **Subscribe** activity and configure the **AWS_Region** parameter by doing the following steps:
 
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_subscribe_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}
@@ -99,7 +99,7 @@ To subscribe to a topic in your AWS environment and receive email notifications 
  
 #### Sending Messages to a Topic
 
-To be able to send a message to a topic so that all endpoints subscribed to that topic will receive the message, implement the [PublishBatch](#publish-batch) activity by performing the following steps:
+To be able to send a message to a topic so that all endpoints subscribed to that topic will receive the message, implement the **PublishBatch** activity by performing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 
@@ -111,7 +111,7 @@ To be able to send a message to a topic so that all endpoints subscribed to that
 5. Double-click the **PublishBatch** activity y and configure the **ENUM_Region** parameter by doing the following steps:
 
     1. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-    2. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+    2. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
     3. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
         {{< figure src="/attachments/appstore/use-content/modules/aws-sns/sns_publishbatch_aws_region.png" alt="Selecting the AWS region" class="no-border" >}}

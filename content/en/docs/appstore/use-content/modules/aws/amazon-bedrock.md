@@ -47,7 +47,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Using Amazon Bedrock Models
 
@@ -55,7 +55,7 @@ To use Amazon Bedrock models, keep in mind some specific requirements, as listed
 
 #### Model Lifecycle
 
-Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programmatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
+Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programmatically get information about available models and their lifecycle status, you can use the **ListFoundationModels** operation.
 
 ### Configuring AWS Authentication
 
@@ -67,7 +67,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the **List Foundation Models** activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
@@ -83,7 +83,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 9. The `ListFoundationModelsResponse` object is returned by the **ListFoundationModels** activity.
 10. From the **Toolbox**, drag a **Retrieve** activity to your microflow and place it after the **ListFoundationModels** activity.
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
-12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
+12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type **FoundationModelSummary**.
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
 ### Chatting with Large Language Models using the ChatCompletions Operation
@@ -116,13 +116,13 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
 
 ### Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the **Invoke Model** instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
 Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 To invoke a specific model that is not covered by the ChatCompletions operation, perform the following steps:
 
-1. Choose the model with which you want to interact by using the [Invoke Model](#invoke-model) operation.
+1. Choose the model with which you want to interact by using the **Invoke Model** operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
 3. Create your domain model inspired by the JSON structures that you found. You can use a tool to visualize Json structures if needed, such as [JSON Crack](https://jsoncrack.com/editor).
 4. In Mendix Studio Pro, create a JSON structure by doing the following steps:
@@ -134,7 +134,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
     6. Paste the request or response JSON into the created structure.
     7. Click **OK**.
 5. Generate export and import mappings for the request and response JSON structures.
-    The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelRequest` object provided as input parameter to the [Invoke Model](#invoke-model) operation. The import mapping maps the response returned by the [Invoke Model](#invoke-model) operation to your model-specific response objects. To create import or export mappings, perform the following steps:
+    The export mapping creates a JSON from the request-related objects (specific to the model that you want to invoke). The JSON must be added as the request body of the `InvokeModelRequest` object provided as input parameter to the **Invoke Model** operation. The import mapping maps the response returned by the **Invoke Model** operation to your model-specific response objects. To create import or export mappings, perform the following steps:
     1. Right-click the target folder.
     2. Click **Add other** > **Import/Export mapping**.
     3. In the dialogue window, select the **Schema source**.
@@ -142,7 +142,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
     5. Select the relevant schema elements.
     6. Click **OK**.
     7. Map the relevant elements to the correct attributes by double-clicking the shown entities and choosing the correct entity attributes for the correct elements.
-6. Create a microflow that invokes a specific model using the [Invoke Model](#invoke-model) operation, such as in the following figure (for Claude v. 2.1):
+6. Create a microflow that invokes a specific model using the **Invoke Model** operation, such as in the following figure (for Claude v. 2.1):
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
@@ -260,10 +260,10 @@ After a knowledge base has been set up, information from your app can be added i
 
 Amazon Bedrock only processes the information that existed during the last sync, so the data source must be synchronized whenever a new file is added to your S3 bucket or the existing files are changed. For more information, see [Sync to ingest your data sources into the knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-ingest.html). 
 
-The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console, or by using the [StartIngestionJob](#start-ingestion-job) action in the Amazon Bedrock Connector.
+The sync can be done from the information page of your knowledge base in the Amazon Bedrock Console, or by using the **StartIngestionJob** action in the Amazon Bedrock Connector.
 
 {{% alert color="info" %}}
-The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
+The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the **GetIngestionJob** action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
 
 ### Safeguards

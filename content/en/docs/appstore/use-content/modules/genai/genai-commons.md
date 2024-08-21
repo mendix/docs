@@ -339,7 +339,7 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 | `Request` | [Request](#request) | Yes | The request to add the function to. |
 | `ToolName` | String | Yes | The name of the tool to use/call. |
 | `ToolDescription` | String | No | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| `FunctionMicroflow` | Microflow | Yes | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
+| `FunctionMicroflow` | Microflow | Yes | The microflow that is called within this function. A function microflow can only have a single string input parameter or no input parameter and returns a string. |
 
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.

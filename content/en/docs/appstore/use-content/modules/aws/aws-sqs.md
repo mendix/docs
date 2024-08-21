@@ -32,7 +32,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonSQSConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon SQS. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonSQSConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon SQS. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -45,7 +45,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 ### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon SQS, you can implement the functions of the connector by using the provided activities in microflows.
-For example, to list all existing Amazon SQS subscriptions, implement the [List Queues](#list-queues) activity by doing the following steps:
+For example, to list all existing Amazon SQS subscriptions, implement the **List Queues** activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListQueues*, and then click **OK**.
@@ -55,10 +55,10 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 5. Drag the **List Queues** activity onto the work area of your microflow.
 6. In the **App Explorer**, in the **AWSAuthentication** > **Operations** section, find either the **GetStaticCredentials** or the **GetTemporaryCredentials** action and place it at the beginning of your Microflow.
 7. In the **Toolbox** pane, search for the **Create object** activity and place it before the **List Queues** activity in the microflow.
-8. Double-click the **Create object** activity and select the [*ListQueuesRequest*](#listqueuesrequest) entity.
+8. Double-click the **Create object** activity and select the **ListQueuesRequest** entity.
 9. Double-click the **List Queues** activity to configure the required parameter.
 10. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-11. In the expression builder, type *ENUM_Region*, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+11. In the expression builder, type *ENUM_Region*, and then press **Ctrl** + **Space**.
 12. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type **.** and select your AWS region from the list and click **OK**.
 13. Double-click the **List Queues** activity to configure the required parameters.
 14. Set the value of the **Region** parameter in the same way as for the **GetStaticCredentials** or **GetTemporaryCredentials** activity.

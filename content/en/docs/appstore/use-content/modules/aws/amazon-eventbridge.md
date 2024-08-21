@@ -45,7 +45,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonEventBridgeConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonEventBridgeConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication {#authentication}
 
@@ -61,7 +61,7 @@ After you configure the authentication profile for Amazon EventBridge, you can i
  
 #### Sending Events to an Event Bus
 
-To send events to an event bus in your AWS environment, implement the [PutEvents](#put-events) activity by performing the following steps:
+To send events to an event bus in your AWS environment, implement the **PutEvents** activity by performing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 

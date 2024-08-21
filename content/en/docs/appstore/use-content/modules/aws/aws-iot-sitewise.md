@@ -38,7 +38,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSIoTSiteWiseConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to AWS IoT SiteWise. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSIoTSiteWiseConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to AWS IoT SiteWise. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -50,7 +50,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
    
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve a list of asset models, implement the [ListAssetModels](#list-assets) activity by doing the following steps:
+After you configure the authentication profile for AWS IoT SiteWise, you can implement the functions of the connector by using the provided activities in microflows. For example, to retrieve a list of asset models, implement the **ListAssetModels** activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListAssetModels*, and then click **OK**.

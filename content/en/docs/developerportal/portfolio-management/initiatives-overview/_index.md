@@ -364,10 +364,10 @@ The view contains the following information:
 * Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
+* Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows the following information in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
-    * **Completed** – This shows how much progress has been made for this initiative.
+    * **Completed** – This shows how much progress has been made for this initiative. This is also reflected in the color shading of the bar representing each initiative. The darker shade indicates the percentage completed, while the lighter shade shows the percentage that remains unfinished.
 * Today indicator (the vertical blue line) – This indicates the date of today.
 * **Today** – Clicking **Today** on the lower-right corner brings the view back to today.
 * **Weeks**, **Months**, and **Quarters**  – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.

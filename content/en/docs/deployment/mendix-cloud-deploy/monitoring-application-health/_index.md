@@ -34,7 +34,7 @@ Mendix Cloud automatically monitors the health and status of apps that are deplo
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Alerts**. This displays the status of your app node in various categories.
 
-    {{% alert color="info" %}}To directly visit the **Alerts** page, you can also use this link: `https://cloud.home.mendix.com/link/monitor/{appID}`, with `{app ID}` replaced by your app ID. </br></br>To directly check the alerts for an environment, use this link: `https://cloud.home.mendix.com/link/monitor/{appID}/{envID}`, with `{app ID}` replaced by your app ID. {{% /alert %}}
+    {{% alert color="info" %}}To directly visit the **Alerts** page, you can also use this link: `https://cloud.home.mendix.com/link/monitor/{appID}`, with `{app ID}` replaced by your app ID.{{% /alert %}}
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/monitoring-application-health/application-status.png" class="no-border" >}}
 

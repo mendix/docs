@@ -11,7 +11,7 @@ description: "Describes the features in Translation Generator."
 Translation Generator is currently an experimental feature introduced in Studio Pro 10.12.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-Translation Generator is an AI-powered translation tool that you can use for [Batch translate](/refguide/batch-translate/). In Studio Pro 10.14.0 and above, you can also use it to translate [system texts](/refguide/system-texts/).
+Translation Generator is an AI-powered translation tool available in Mendix Studio Pro. You can use it for [batch translate](/refguide/batch-translate/). In Studio Pro 10.14.0 and above, you can also use it to translate [system texts](/refguide/system-texts/).
 
 For more information on how to enable and use it, see the sections below.
 
@@ -21,7 +21,7 @@ To enable Translation Generator, go to **Preferences** > the **New Features** ta
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/enable-translation-generator.png" max-width=100% >}}
 
-### Generating Translation in Batch Translate {#batch-translate}
+### Generating Translation for Batch Translate {#batch-translate}
 
 Once enabled, you will find the **Generate Translations...** option in **Language** > **Batch translate**. 
 
@@ -49,7 +49,7 @@ After enabling the new editor and Translation Generator, make sure to restart St
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/translate-system-text.png" max-width=80% >}}
 
-It generates translation for the system texts based on what the [current language](/refguide/translatable-texts/#current-language) is set for app end-users. 
+It generates translation for the system texts based on what the [current language](/refguide/translatable-texts/#current-language) is for app end-users. 
 
 ## Read More
 

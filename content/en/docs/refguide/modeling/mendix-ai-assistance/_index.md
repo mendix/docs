@@ -34,7 +34,7 @@ Recommenders:
 Generators:
 
 * **Domain Model Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.13.0) - an AI-powered tool that you can use for generating a [domain model](/refguide/domain-model/). It helps you to generate entities and associations based on text input. It currently only works for empty domain models. For more information, see [Domain Model Generator](/refguide/domain-model-generator/).
-* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool available in Mendix Studio Pro. Currently, it can be used for [Batch Translate](/refguide/translation-generator/#batch-translate) and [translating system texts](#translate-system-text) in the new web-based system text editor (in Studio Pro 10.14.0 and above). For more information, see [Translation Generator](/refguide/translation-generator/).
+* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool available in Mendix Studio Pro. Currently, it can be used for [batch translate](/refguide/translation-generator/#batch-translate) and [translating system texts](#translate-system-text) in the new web-based system texts editor (in Studio Pro 10.14.0 and above). For more information, see [Translation Generator](/refguide/translation-generator/).
 
 ## Maia in Mendix Portal
 

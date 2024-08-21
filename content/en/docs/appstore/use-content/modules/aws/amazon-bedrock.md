@@ -1243,6 +1243,28 @@ This operation corresponds to the **Response_GetRequestedResponseFields** microf
 | --- | --- |
 | `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
 
+##### 4.2.2.13 Response: Get NextToken {#get-next-token}
+
+Use this microflow to retrieve the NextToken from the response after using the `Retrieve` operation. 
+
+This operation corresponds to the **Response_GetNextToken** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `NextToken (string)` |
+
+##### 4.2.2.14 Response: Cast RetrieveAndGenerateResponse {#cast-rag-response}
+
+Use this microflow to get the RetrieveAndGenerateResponse object from the GenAiCommons.Response that is returned by the `RetrieveAndGenerate` operation.
+
+The RetrieveAndGenerateResponse object contains the SessionID of the current Session that can be used in a subsequent request to chat within the same session.
+
+This operation corresponds to the **Response_Cast_RetrieveAndGenerateResponse** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `RetrieveAndGenerateResponse (object)` |
+
 #### 4.2.3 Other Operations
 
 ##### 4.2.3.1 ListFoundationModels {#list-foundation-models}

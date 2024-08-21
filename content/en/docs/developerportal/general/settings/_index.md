@@ -172,4 +172,3 @@ Mendix will keep this data until October 1, 2024. Until then, you will be able t
 ## 9 Read More
 
 * [Leave and Delete an App](/developerportal/general/leave-delete-app/)
-* [Manage Deep Links](/developerportal/general/manage-deeplinks/)

@@ -154,11 +154,10 @@ To create a sample test microflow, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-to-medior.png" alt="A view of the sample unit test microflow" max-width=100% >}}
 
-15. In the left-side navigation pane, in the **UnitTests** folder, duplicate the **Test_PromoteEmployeeToMedior** two times, and then
-rename the new microflows in the following way:
+15. In the left-side navigation pane, in the **UnitTests** folder, duplicate the **Test_PromoteEmployeeToMedior** twice, and then rename the new microflows in the following way:
     * *Test_PromoteEmployeeToSenior*
     * *Test_EmployeeStillSenior*
-16. In the **Test_PromoteEmployeeToSenior** microflow:
+16. In each of the new microflows, make edits to reflect the employee level for that microflow. In the **Test_PromoteEmployeeToSenior** microflow:
     * Set the value of the **Level** member to *MyFirstModule.Level.Medior* for the **Create Employee** activity.
     * Set the following values for the **Promoted to Medior?** activity: 
         * **Caption** – *Promoted to Senior?*

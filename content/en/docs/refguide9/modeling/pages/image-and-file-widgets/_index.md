@@ -4,7 +4,7 @@ url: /refguide9/image-and-file-widgets/
 weight: 35
 ---
 
-## 1 Introduction
+## Introduction
 
 Images, videos and files allow end-users to upload, download, and display files, images, and videos. 
 
@@ -24,11 +24,11 @@ Images, videos and files allow end-users to upload, download, and display files,
 
     {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/image-uploader-example.png" alt="Image Uploader Example" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Pages](/refguide9/pages/)

@@ -4,7 +4,7 @@ url: /refguide/batch-translate/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 **Batch translate** allows you to enter texts in one language which correspond to texts in another language.
 
@@ -12,13 +12,13 @@ Usually you will want to translate from the default language to a second languag
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-translate/batch-translate.png" width="600" >}}
 
-## 2 Using Batch Translate
+## Using Batch Translate
 
 Batch translate translates between two languages. When you select batch translate you will be asked to select the two languages you wish to use, a **Source language** to use as a reference, and a **Destination language** which is the one you want to update.
 
 {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/batch-translate/batch-translate-languages.png" alt="Select source and destination languages" width="600" >}}
 
-### 2.1 Documents/Modules
+### Documents/Modules
 
 You can select one or more modules you want to use for batch translate. For example, you may have already got translations for imported and system modules and want to concentrate on translating your own modules.
 
@@ -28,7 +28,7 @@ Click **Select…** and check the modules you want to work on.
 
 The default is to work on all modules in the app.
 
-### 2.2 Search
+### Search
 
 To search for a particular phrase in the source language text, type what you want to search for. It is not possible to search for text in the destination language.
 
@@ -45,7 +45,7 @@ If you select a line, you can look in the **Show occurrence** section to see the
 Tip: move the dialog box to one side to get a better look at the document.
 {{% /alert %}}
 
-### 2.3 Translation
+### Translation
 
 {{% alert color="info" %}}
 Alternatively, you can use the AI-powered translation tool [Translation Generator](/refguide/translation-generator/) to generate translations for you. It is currently an experimental feature introduced in Studio Pro 10.12. You can enable it via **Preferences** > the **New Features** tab > the **Maia** section.
@@ -57,13 +57,13 @@ In **Translation**, type new text that you want to use instead of the existing t
 
 If you have two texts which are identical in the source language but different in the translation language, you will have to review and change these individually. This is not very common but imagine, for example, you have used `Order Lines` to both *describe the lines on an order* and to *label a button which sorts some lines*. See [Working in the Currently Selected Language](/refguide/translatable-texts/#selected-language) in *Language Menu* to find how to change individual texts.
 
-## 3 Exporting and Importing Text {#export-import}
+## Exporting and Importing Text {#export-import}
 
 If you want to translate a language outside Studio Pro, you can export the translatable texts to the Microsoft Excel (*.xlsx*) format, make changes, and then import the changes from the updated Excel file.
 
 This is particularly useful if you are working on multiple apps and you want to apply your translations to a different app.
 
-### 3.1 Export to Excel {#export}
+### Export to Excel {#export}
 
 Click **Export to Excel…** to export the currently displayed text items to a Microsoft Excel (*.xlsx*) format file.
 
@@ -73,13 +73,13 @@ The file will be in the format shown below:
 
 **Row 1** – *Filter:* indicates the modules which are included in the exported file.
 
-**Row 2**  – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
+**Row 2** – indicates the source and translation language. The first column represents the current text, the second column the *translation* text.
 
-**Rows 3+**  – show the current texts
+**Rows 3+** – show the current texts
 
 You can make changes in column B which will be processed if the file is imported.
 
-### 3.2 Import from Excel {#import}
+### Import from Excel {#import}
 
 Click **Import from Excel…** to import a correctly-constructed Microsoft Excel (*.xlsx*) format file.
 
@@ -96,7 +96,7 @@ Changes will only be made if you click **Translate**.
 The formats of the Excel files for batch translate and batch replace are similar. You will be warned if you try to import a batch replace file or a batch translate file with the incorrect languages but you can still import it if you ignore the warning.
 {{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [Translation Generator](/refguide/translation-generator/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

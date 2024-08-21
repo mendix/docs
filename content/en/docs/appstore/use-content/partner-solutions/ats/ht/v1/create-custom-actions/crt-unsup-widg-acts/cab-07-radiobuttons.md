@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-one-cab-07-radiobuttons/
 description: "Explains step by step how to create an Unsupported Widget action for the Mendix Radio Buttons widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create an Unsupported Widget action for the Radio Buttons widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
@@ -17,13 +17,13 @@ This how-to teaches you how to do the following:
 * Approach a radio button option that ATS must click
 * Create the custom action to click the radio button option
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
  
 * Read [Custom Action General Section](/appstore/partner-solutions/ats/ht-one-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget isn’t important. What is important is how you interact with it.
 
@@ -39,7 +39,7 @@ This is a radio button selected:
 
 The radio button is an input element with the type radio.
 
-## 4 Creating the Action Structure
+## Creating the Action Structure
 
 In the previous step, you wrote down the user approach for the radio buttons widget. Now you will create this approach in ATS with actions. 
 
@@ -94,7 +94,7 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/crt-unsup-widg-acts/cab-07-radiobuttons/radiobuttons-clickdoubleclick-action.png" class="no-border" >}}
 
-## 5 Action Parameters
+## Action Parameters
 
 Next, you need to add the action input parameters.
 
@@ -132,7 +132,7 @@ To add the action parameters, follow these steps:
 
 There is no need to add logic to this custom action. It only involves clicking a radio button.
 
-## 6 Final Check
+## Final Check
 
 Now check for the following:
 

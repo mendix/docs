@@ -3,25 +3,25 @@ title: "Get CKEditor Value"
 url: /appstore/partner-solutions/ats/rg-one-get-ckeditor-value/
 ---
 
-## 1 Description
+## Description
 
 Returns the CKEditor value as HTML code.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * CKEditor
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget you want to get the value from.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

@@ -3,6 +3,8 @@ title: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of Apps"
 weight: 20
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -975,7 +977,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
-* We implemented [context deep links](/developerportal/general/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
+* We implemented context deep links to all main app pages on the Developer Portal so you can easily share references.
 * We increased the performance of opening the [My Apps page](/developerportal/#my-apps)
 
 #### Fixes
@@ -1028,7 +1030,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version 7.23.14 or below. Please update your templates to 7.23.15 or above before creating apps based on those templates.
 
 ### May 17, 2021
 

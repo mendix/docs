@@ -9,11 +9,11 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 If you have a licensed app deployed to Mendix Cloud, you can set a preferred maintenance window for each of your app's environments. In other words, you can specify a weekly time range for system maintenance. Then, whenever Mendix has environment maintenance operations planned, they run within your preferred maintenance window.
 
-### 1.1 Preferred Maintenance Window
+### Preferred Maintenance Window
 
 The preferred maintenance window is a three-hour time range that you can set to specify what time and day of the week you prefer for system maintenance. For example, you could set the following maintenance window: Friday 12:00-15:00 UTC.
 
@@ -21,23 +21,23 @@ The preferred maintenance window is a three-hour time range that you can set to 
 
 The preferred maintenance window is used only when environment maintenance is scheduled. Mendix will always inform you about any upcoming maintenance operations in accordance with your SLA.
 
-### 1.2 Environment Maintenance
+### Environment Maintenance
 
 Environment maintenance is a maintenance operation that will be (or has been) carried out for an application environment running on Mendix Cloud. It is shown in local time, with the offset from Coordinated Universal Time noted. For example, if you are in a time zone two hours ahead of Coordinated Universal Time, you might see the following environment maintenance message: "Maintenance will be executed between Fri 09/08/2023, 14:00 +0200 and Fri 09/08/2023, 17:00 +0200."
 
 Whenever possible, environment maintenance is carried out within your preferred maintenance window.
 
-### 1.3 Mendix Cloud Maintenance
+### Mendix Cloud Maintenance
 
 Mendix Cloud must be updated regularly too. Platform infrastructure maintenance requires an update to an entire Mendix Cloud region at once, so it may occur outside of your preferred maintenance window.
 
 This infrastructure maintenance uses rolling updates, so multi-instance applications continue to be available. However, applications with a single instance see brief downtime (~1-2 minutes) when their instance is restarted.
 
-## 2 Prerequisites
+## Prerequisites
 
 To view maintenance windows, you need to have access to monitor or back up your Mendix app. To configure maintenance windows, you need to have transport rights to your app. For details on how to configure access, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 3 Configuring Maintenance for Your Application {#configuring}
+## Configuring Maintenance for Your Application {#configuring}
 
 {{% alert color="warning" %}}
 Maintenance windows and planned maintenance are defined in Coordinated Universal Time. When selecting a time period, remember to convert to Coordinated Universal Time from your local time.
@@ -61,7 +61,7 @@ Follow the instructions below to configure a maintenance window.
 
 1. Click **Save** to confirm your new preferred maintenance window.
 
-### 3.1 Configuring Maintenance Window in a Week with Planned Maintenance
+### Configuring Maintenance Window in a Week with Planned Maintenance
 
 If environment maintenance is already scheduled for the current week, it will be completed within the current week. So, if you move your maintenance window to before the current time and day of the week, the current week's planned maintenance will not be rescheduled. If you move your maintenance window to after the current time and day of the week, the week's planned maintenance will be rescheduled to your maintenance window.
 
@@ -70,6 +70,6 @@ For example, consider this scenario: today is Tuesday, your maintenance window i
 * If you change the maintenance window to Friday, the planned maintenance will move to Friday. This is because the maintenance can still be completed within the week.
 * If you change the maintenance window to Monday, the planned maintenance remains on Thursday. This is because the maintenance needs to be done within the week, and your next maintenance window is next week.
 
-## 4 Read More
+## Read More
 
 * [App Roles](/developerportal/general/app-roles/)

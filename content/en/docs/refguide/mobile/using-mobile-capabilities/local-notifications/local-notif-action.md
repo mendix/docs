@@ -5,7 +5,7 @@ weight: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
 ---
 
-## 1 Introduction
+## Introduction
 
 Several apps which use push notifications will also need actions to trigger after a user taps a notification. This step-by-step guide teaches you how to make a tapped notification show a specific page.
 
@@ -13,7 +13,7 @@ Several apps which use push notifications will also need actions to trigger afte
 The Make It Native app is currently experiencing limitations which interfere with notifications. We are currently fixing those limitations. To test your local notification actions, please use a native release app installed on a mobile testing device instead of the Make It Native app. To build a native release app, please complete [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/) and use that app to test local notification actions.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -21,7 +21,7 @@ Before starting this guide, make sure you have completed the following prerequis
 * Install the [Make It Native](/refguide/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/refguide/mobile/using-mobile-capabilities/local-notifications/) series
 
-## 3 Setting an Action for When a Notification is Tapped
+## Setting an Action for When a Notification is Tapped
 
 In this section you will learn to show a page when a user taps a notification.
 
@@ -74,6 +74,6 @@ Great job setting up your notification. Now you can test it:
 
 Now you can show pages after notifications are tapped. Next, in [Use Local Notifications Part 4: Data](/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-data/), you will learn to pass data to such pages.
 
-## 4 Read More
+## Read More
 
 * [Build JavaScript Actions](/howto/extensibility/build-javascript-actions/)

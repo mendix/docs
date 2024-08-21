@@ -9,15 +9,15 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon DynamoDB](https://marketplace.mendix.com/link/component/204872) connector provides a way for you to increase the security, scalability, and performance of your Mendix app by implementing [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon DynamoDB helps improve your app by giving you the tools to build scalable, performant applications on a flexible, serverless database. You can use it to develop high-traffic online platforms and applications for a variety of modern industries, such as content streaming, electronic commerce, or gaming.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon DynamoDB connector requires Mendix Studio Pro 9.18.0 or above.
 
@@ -26,7 +26,7 @@ To use the Amazon DynamoDB connector, you must also install and configure the fo
 * [AWS Authentication connector version 2.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon DynamoDB connector to function correctly. If you are using the Amazon DynamoDB connector version 2.0 or higher, it requires the AWS Authentication connector version 3.0 or higher. It is crucial for the Amazon S3 connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is required to parse the `creationDateTime` attribute as returned by the `DescribeTable` activity.
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
@@ -36,15 +36,15 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Amazon DynamoDB connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonDynamoDBConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon DynamoDB. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Configuring AWS Authentication
+### Configuring AWS Authentication
 
 In order to use the Amazon DynamoDB service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -52,7 +52,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon DynamoDB, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all Amazon DynamoDB tables for a specific region, implement the [ListTables](#list-tables) activity by doing the following steps:
 
@@ -188,15 +188,15 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     
 61. Click **Run Locally** ({{% icon name="controls-play" %}}) to preview your app and validate your results. For more information, see [Studio Pro Overview: Run and View App](/refguide/studio-pro-overview/#menus).
 
-## 4 Technical Reference
+## Technical Reference
 
 To help you work with the Amazon DynamoDB connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
-### 4.1 Domain Model {#domain-model}
+### Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 AbstractItem
+#### AbstractItem
 
 This generalization entity holds information of items inside Amazon DynamoDB. Each item represents a row in a table. Each item at least has one KeyValue object.
 
@@ -204,43 +204,43 @@ This generalization entity holds information of items inside Amazon DynamoDB. Ea
 | --- |  --- |
 | N/A | The `AbstractItem` entity has no attributes. |
 
-#### 4.1.2 AbstractKey
+#### AbstractKey
   
 | Name | Documentation |
 | --- |  --- |
 | `Key` | |
 
-#### 4.1.3 KeyValueString
+#### KeyValueString
   
 | Name | Documentation |
 | --- | --- |
 | `StringValue` | The `StringValue` attribute describes an attribute of type String. |
 
-#### 4.1.4 KeyValueLong
+#### KeyValueLong
   
 | Name | Documentation |
 | --- | --- |
 | `LongValue` | The `LongValue` attribute describes an attribute of type Long. |
 
-#### 4.1.5 KeyValueDecimal
+#### KeyValueDecimal
 
 | Name | Documentation |
 | --- | --- |
 | `DecimalValue` | The DecimalValue attribute describes an attribute of type Decimal. |
 
-#### 4.1.6 KeyValueBoolean
+#### KeyValueBoolean
   
 | Name | Documentation |
 | --- | --- |
 | `BooleanValue` | The `BooleanValue` attribute describes an attribute of type boolean. |
 
-#### 4.1.7 DescribeTableRequest
+#### DescribeTableRequest
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
-#### 4.1.8 DescribeTableResponse
+#### DescribeTableResponse
   
 | Name | Documentation |
 | --- | --- |
@@ -251,100 +251,100 @@ This generalization entity holds information of items inside Amazon DynamoDB. Ea
 | `TableStatus` | The `TableStatus` attribute describes the current state of the table. |
 | `TableName` | The `TableName` attribute describes the table name. |
 
-#### 4.1.9 AttributeDefinition
+#### AttributeDefinition
 
 | Name | Documentation |
 | --- | --- |
 | `AttributeType` | The `AttributeType` attribute describes the data type for the attribute. |
 
-#### 4.1.10 KeySchemaElement
+#### KeySchemaElement
   
 | Name | Documentation |
 | --- | --- |
 | `KeyType` | The `KeyType` attribute describes the role of the attribute. |
 
-#### 4.1.11 DeleteItemRequest
+#### DeleteItemRequest
   
 | Name | Description |
 | ---  | --- |
 | `ConditionExpression` |  The `ConditionExpression` attribute describes a condition that must be satisfied in order for a conditional `DeleteItem` to succeed. |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
-#### 4.1.12 DeleteItem
+#### DeleteItem
 
 | Name | Description |
 | ---  | --- |
 | N/A |  Entity `DeleteItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.13 ExpressionAttributeName
+#### ExpressionAttributeName
   
 | Name | Documentation |
 | --- | --- |
 | Placeholder | N/A |
 
-#### 4.1.14 DeleteItemResponse
+#### DeleteItemResponse
 
 | Name | Description |
 | ---  | --- |
 | N/A |  Entity `DeleteItemResponse` has no attributes. |
 
-#### 4.1.15 ListTablesRequest
+#### ListTablesRequest
   
 | Name | Documentation |
 | --- | --- |
 | `ExclusiveStartTableName` | The `ExclusiveStartTableName` attribute describes the first table name that this operation will evaluate. Use the value that was returned for `LastEvaluatedTableName` in a previous operation, so that you can obtain the next page of results. |
 | `Limit` | The `Limit` attribute describes a maximum number of table names to return. If this parameter is not specified, the limit is 100. |
 
-#### 4.1.16 ListTablesResponse
+#### ListTablesResponse
   
 | Name | Documentation |
 | --- | --- |
 | `LastEvaluatedTableName` | The `LastEvaluatedTableName` attribute describes the name of the last table in the current page of results. Use this value as the `ExclusiveStartTableName` in a new request to obtain the next page of results, until all the table names are returned. |
 
-#### 4.1.17 Table
+#### Table
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name. |
 
-#### 4.1.18 BatchGetItemRequest
+#### BatchGetItemRequest
   
 | Name | Documentation |
 | --- | --- |
 | `isConsistentRead` | The `isConsistentRead` attribute describes the consistency of a read operation. If set to true, then a strongly consistent read is used; otherwise, an eventually consistent read is used. |
 
-#### 4.1.19 RequestTable
+#### RequestTable
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 | `ProjectionExpression` | The `ProjectionExpression` attribute describes a string that identifies one or more attributes to retrieve from the table. These attributes can include scalars, sets, or elements of a JSON document. The attributes in the `ProjectionExpression` must be separated by commas. |
 
-#### 4.1.20 BatchGetRequestedItem
+#### BatchGetRequestedItem
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `BatchGetRequestedItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.21 BatchGetItemResponse
+#### BatchGetItemResponse
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `BatchGetItemResponse` has no attributes. |
 
-#### 4.1.22 ResponseTable
+#### ResponseTable
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name. |
 
-#### 4.1.23 BatchGetResponseItem
+#### BatchGetResponseItem
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `BatchGetResponseItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.24 ScanRequest
+#### ScanRequest
   
 | Name | Documentation |
 | --- | --- |
@@ -352,133 +352,133 @@ This generalization entity holds information of items inside Amazon DynamoDB. Ea
 | `IndexName` | The `IndexName` attribute describes the name of a secondary index to scan. This index can be any local secondary index or global secondary index. Note that if you use the IndexName parameter, you must also provide TableName. |
 | `TableName` | The `TableName` attribute describes the name of the table containing the requested items; or, if you provide the `IndexName`, the name of the table to which that index belongs and is a required parameter. |
 
-#### 4.1.25 Condition
+#### Condition
   
 | Name  | Documentation |
 | --- | --- |
 | `ComparisonOperator` | The `ComparisonOperator` attribute describes a comparator for evaluating attributes. For example, equals, greater than, less than, etc. and is a required parameter. |
 
-#### 4.1.26 ScanTableValueString
+#### ScanTableValueString
   
 | Name | Documentation |
 | --- | --- |
 | `StringValue` | The StringValue attribute describes an attribute of type String. |
 
-#### 4.1.27 ScanTableValueDecimal
+#### ScanTableValueDecimal
 
 | Name |  Documentation |
 | --- | --- |
 | `DecimalValue` | The `DecimalValue` attribute describes an attribute of type Decimal. |
 
-#### 4.1.28 ScanTableValueLong
+#### ScanTableValueLong
 
 | Name | Documentation |
 | --- | --- |
 | `LongValue` | The LongValue attribute describes an attribute of type Long. |
 
-#### 4.1.29 ScanTableValueBoolean
+#### ScanTableValueBoolean
   
 | Name | Documentation |
 | --- | --- |
 | `BooleanValue` | The `BooleanValue` attribute describes an attribute of type Boolean. |
 
-#### 4.1.30 ScanResponse
+#### ScanResponse
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name. |
 
-#### 4.1.31 ScanItem
+#### ScanItem
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `ScanItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.32 BatchWriteItemRequest
+#### BatchWriteItemRequest
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `BatchWriteItemRequest` has no attributes. |
 
-#### 4.1.33 TableWithItemsToAdd
+#### TableWithItemsToAdd
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
-#### 4.1.34 ItemToAdd
+#### ItemToAdd
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `ItemToAdd` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.35 TableWithItemsToDelete
+#### TableWithItemsToDelete
   
 | Name |  Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
-#### 4.1.36 ItemToDelete
+#### ItemToDelete
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `ItemToDelete` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.37 BatchWriteItemResponse
+#### BatchWriteItemResponse
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `BatchWriteItemResponse` has no attributes. |
 
-#### 4.1.38 GetItemRequest
+#### GetItemRequest
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 | `isConsistentRead` | The `isConsistentRead` attribute describes the read consistency model. If set to true, then the operation uses strongly consistent reads; otherwise, the operation uses eventually consistent reads. |
 
-#### 4.1.39 GetItem
+#### GetItem
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `GetItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.40 GetItemResponse
+#### GetItemResponse
 
 | Name | Documentation |
 | --- | --- |
 | N/A | Entity `GetItemResponse` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.41 PutItemRequest
+#### PutItemRequest
   
 | Name | Documentation |
 | --- | --- |
 | `TableName` | The `TableName` attribute describes the table name and is a required parameter. |
 
-#### 4.1.42 PutItem
+#### PutItem
 
  Name | Documentation |
 | --- | --- |
 | N/A | Entity `PutItem` has no attributes, it inherits from `AbstractItem`. |
 
-#### 4.1.43 PutItemResponse
+#### PutItemResponse
 
  Name | Documentation |
 | --- | --- |
 | N/A | Entity `PutItemResponse` has no attributes. |
 
-### 4.2 Enumerations
+### Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon DynamoDB connector, enumerations list values such as the status of database tables.
 
-#### 4.2.1 `ENUM_BooleanValue`
+#### `ENUM_BooleanValue`
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `_TRUE` | **TRUE** | The enumeration element if a key-value pair is of the type Boolean and is set to true |
 | `_FALSE` | **FALSE** | The enumeration element if a key-value pair is of the type Boolean and is set to false |
 
-#### 4.2.2 `ENUM_TableStatus`
+#### `ENUM_TableStatus`
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -488,7 +488,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `ACTIVE` | **ACTIVE** | The enumeration element that shows the status of a table that is active |
 | `INACCESSIBLE_ENCRYPTION_CREDENTIALS` | **INACCESSIBLE_ENCRYPTION_CREDENTIALS** | The enumeration element that shows the status of a table that has an inaccessible AWS KMS key. Table operations may fail due to this |
 
-#### 4.2.3 `ENUM_KEY`
+#### `ENUM_KEY`
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -496,7 +496,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `RANGE` | **RANGE (sort)** | The enumeration element that reflects the sort key of a table |
 | `UNKNOWN_TO_SDK_VERSION` | **UNKNOWN_TO_SDK_VERSION** | The enumeration element that reflects an unknown key schema element |
 
-#### 4.2.4 `ENUM_AttributeType`
+#### `ENUM_AttributeType`
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -504,7 +504,7 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | `Number` | **Number** | The enumeration element that reflects native data type of a number (decimal or long) |
 | `Binary` | **Binary** | The enumeration element that reflects native data type of a binary file expressed as a string |
 
-#### 4.2.5 `ENUM_ComparisonOperator`
+#### `ENUM_ComparisonOperator`
 
 For more information on using comparison operators, please visit [Amazon DynamoDB docs](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Condition.html).
 | Name | Caption | Description |
@@ -523,11 +523,11 @@ For more information on using comparison operators, please visit [Amazon DynamoD
 | `NOT_NULL` | **NOT_NULL** | The enumeration element that evaluates whether items are not null. This comparison operator supports all data types, including lists and maps |
 | `_NULL` | **NULL** | The enumeration element that evaluates whether items have the attribute. This comparison operator supports all data types, including lists and maps |
 
-### 4.3 Activities {#activities}
+### Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. For the Amazon DynamoDB connector, they represent the actions that can be performed on DynamoDB database tables.
 
-#### 4.3.1 BatchGetItem
+#### BatchGetItem
 
 The `BatchGetItem` Amazon DynamoDB activity allows you to get multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `Credentials` object and a `BatchGetItemRequest` object that contains the tables from which the item must be fetched. You must also specify whether the activity should perform a consistent read, and provide a list of keys to query from.
 
@@ -539,7 +539,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.2 ListTables {#list-tables}
+#### ListTables {#list-tables}
 
 The `ListTables` Amazon DynamoDB activity allows you to retrieve a list of `Table` objects for a given region, which contains the table's name. It requires a valid AWS Region, a `Credentials` object and a `ListTablesRequest` object.
 
@@ -551,7 +551,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.3 DescribeTable
+#### DescribeTable
 
 The `DescribeTable` Amazon DynamoDB activity allows you to get a description from a given table inside DynamoDB. It requires a valid AWS Region, a `Credentials` object and a `DescribeTableRequest` object. It returns a `DescribeTableResponse` object which includes the `Name`, `ItemCount`, `CreationDateTime`, `TableARN`, `TableId` and `TableStatus`, as well as a list of `AttributeDefinitions` and `KeySchemaElements`.
 
@@ -563,7 +563,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.4 BatchWriteItem
+#### BatchWriteItem
 
 The `BatchWriteItem` Amazon DynamoDB activity allows you to put or delete multiple items from DynamoDB in a single call. It requires a valid AWS Region, a `Credentials` object and a `BatchWriteItemRequest` object containing the tables from which the item needs to be put or deleted.
 
@@ -575,9 +575,9 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.5 DeleteItem
+#### DeleteItem
 
-The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
+The `DeleteItem` Amazon DynamoDB activity allows you to delete an item from a given table from your DynamoDB environment. It requires a valid AWS region, a `Credentials` object and a `DeleteItemRequest` object with a `DeleteItem` object associated to it. If the given table has only a partition key, the `DeleteItem` object should have a `KeyValue` object that refers to the row that to be deleted. If the given table has both a partition and sort key, the `DeleteItem` object must have two `KeyValue` objects.
 
 Optionally, you can include a condition expression. The delete activity is then only performed when the condition returns true. Additionally, you can include an expression attribute list to escape reserved words.
 
@@ -589,7 +589,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.6 ScanTable
+#### ScanTable
 
 The `ScanTable` Amazon DynamoDB activity allows you to retrieve items from an Amazon DynamoDB table. It requires a valid AWS Region, a `Credentials` object and a `ScanTableRequest` object. Optional parameters (attributes within `ScanTableRequest`) are the limit (how much data is retrieved in each batch), as well as the index name (the name of the secondary global index of the given table). This activity returns a `ScanTableResponse` object with a list of items associated with it.
 
@@ -601,7 +601,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.7 PutItem
+#### PutItem
 
 The `PutItem` Amazon DynamoDB activity allows you to put and update an item in DynamoDB. It requires a valid AWS Region, `Credentials` object, and an `PutItemRequest` object with a `PutItem` object associated to it. If the table has only a partition key, then only one `KeyValue` object is required inside the `PutItem` object. If the table has both a partition and sort key, then two `KeyValue` objects are required.
 
@@ -613,7 +613,7 @@ The input and output for this service are shown in the table below:
 | `Region` (Enumeration) | |
 | `Credentials` (Object) | |
 
-#### 4.3.8 GetItem
+#### GetItem
 
 The `GetItem` Amazon DynamoDB activity allows you to get an item from DynamoDB. It requires a valid AWS Region, a `Credentials` object, and a `GetItemRequest` with a `GetItem` object associated to it.
 

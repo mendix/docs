@@ -5,19 +5,19 @@ weight: 40
 description: "Introduces the cluster functionality of the Mendix Runtime, which allows you to set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture."
 ---
 
-## 1 Introduction
+## Introduction
 
 This page describes the behavior and impact of running Mendix Runtime as a cluster. Using the cluster functionality, you can set up your Mendix application to run behind a load balancer to enable a failover and/or high availability architecture.
 
 The main feature enabling clustering is Mendix's stateless runtime architecture. This means that the dirty state (the non-persistable entity instances and not-yet-persisted changes) are stored on the client and not on the server. This enables much easier scaling of the Mendix Runtime, as each cluster node can handle any request from the client. The stateless runtime architecture also allows for better dirty state maintainability and better insight in application state.
 
-## 2 Clustering Support
+## Clustering Support
 
 Clustering support is built natively into our Cloud Foundry buildpack implementation. This means that you can simply scale up using Cloud Foundry. The buildpack ensures that your system automatically starts behaving as a cluster.
 
 Clustering is also supported on Kubernetes, but you will have to use a *StatefulSet*. There is more information on this in the [Some Notes on Scaling](/developerportal/deploy/run-mendix-on-kubernetes/#scaling) section of *Use Docker with Minikube*.
 
-## 3 Cluster Infrastructure
+## Cluster Infrastructure
 
 The Mendix Runtime cluster requires the following infrastructure:
 
@@ -25,7 +25,7 @@ The Mendix Runtime cluster requires the following infrastructure:
 
 This means that a Mendix cluster requires a load balancer to distribute the load of the clients over the available Runtime cluster nodes. It also means that all the nodes need to connect to the same Mendix database, and the files need to be stored on S3 (for details, see the [File Storage](#file-storage) section below). The number of nodes in your cluster depends on the application, the high availability requirements, and its usage.
 
-## 4 Cluster Leader and Cluster Slaves{#cluster-leader-follower}
+## Cluster Leader and Cluster Slaves{#cluster-leader-follower}
 
 Mendix Runtime has the concept of a cluster leader. This is a single node within a Mendix Runtime cluster that performs cluster management activities. These are the activities:
 
@@ -43,7 +43,7 @@ These activities are only performed by the cluster leader. If the cluster leader
 
 The Cloud Foundry Buildpack determines which cluster node becomes the cluster leader and which become cluster slaves.
 
-## 5 Cluster Startup
+## Cluster Startup
 
 Individual nodes in a cluster can be started and stopped with no impact on the uptime of the app. However, when you deploy a new version of the app the whole cluster is restarted and the cluster leader determines whether database synchronization is required. This means that there will be some downtime when the app is deployed while this is done.
 
@@ -51,23 +51,23 @@ If database synchronization is required, all the cluster slaves will wait until 
 
 If no database synchronization is required, all the cluster nodes will become fully functional directly after startup.
 
-## 6 File Storage {#file-storage}
+## File Storage {#file-storage}
 
 Uploaded files should be stored in a shared file storage facility, as every Mendix Runtime node should access the same files. Either the local storage facility is shared or the files are stored in a central storage facility such as an Amazon S3 file storage, Microsoft Azure Blob storage, or IBM Bluemix Object Storage. 
 
 For more information about configuring the Mendix Runtime to store files on these storage facilities, see [Runtime Customization](/refguide9/custom-settings/).
 
-## 7 After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
+## After-Startup and Before-Shutdown Microflows {#startup-shutdown-microflows}
 
 It is possible to configure `After-Startup` and `Before-Shutdown` microflows in Mendix. In a Mendix cluster, this means that those microflows are called per node. This lets you register request handlers and other activities. However, doing database maintenance during these microflows is strongly discouraged, because it might impact other nodes of the same cluster. There is no possibility to run a microflow on cluster startup or shutdown.
 
-## 8 Cluster Limitations
+## Cluster Limitations
 
-### 8.1 Microflow Debugging
+### Microflow Debugging
 
 While running a multi-node cluster, you cannot predict the node on which a microflow will be executed. Therefore, it is not possible to debug such a microflow execution in a cluster from Mendix Studio Pro. However, you can still debug a microflow while running a single instance of the Mendix Runtime.
 
-### 8.2 Cluster-Wide Locking (Guaranteed Single Execution)
+### Cluster-Wide Locking (Guaranteed Single Execution)
 
 Some apps require a guaranteed single execution of a certain activity at a given point in time. In a single node Mendix Runtime, this could be guaranteed by using JVM locks. However, in a distributed scenario, those JVMs run on different machines, so there is no locking system available. Mendix does not support cluster-wide locking, either. If this cannot be circumvented, you might need to resort to an external distributed lock manager. However, keep in mind that locking in a distributed system is complex and prone to failure (for example, via lock starvation or lock expiration.).
 
@@ -75,7 +75,7 @@ Some apps require a guaranteed single execution of a certain activity at a given
 For the reason described above, the **Disallow concurrent execution** property of a microflow only applies to a single node.
 {{% /alert %}}
 
-## 9 Dirty State in a Cluster
+## Dirty State in a Cluster
 
 When a user signs in to a Mendix application and starts going through a certain application flow, the system can temporarily retain some data while not persisting it yet in the database. The data is retained in the Mendix Client memory and communicated on behalf of the user to a Mendix Runtime node.
 
@@ -111,7 +111,7 @@ To reduce the performance impact of large requests and responses, an app develop
 To make sure the dirty state does not become too big when the above scenarios apply to your app, it's recommended to explicitly delete objects when they are no longer necessary, so that they are not part of the state anymore. This frees up memory for the Mendix Runtime nodes to handle requests and improves performance.
 {{% /alert %}}
 
-## 10 Associating Entities with `System.Session` or `System.User`
+## Associating Entities with `System.Session` or `System.User`
 
 The `$currentSession` *Session* object is available in microflows so that a reference to the current session can easily be obtained. When an object needs to be stored, its association can be set to `$currentSession`, and when the object needs to be retrieved again, `$currentSession` can be used as a starting point from which the desired object can be retrieved by association. The associated object can be designed so that it meets the desired needs. This same pattern applies to entities associated with `System.User`. In that case, you can use the `$currentUser` *User* object.
 
@@ -129,7 +129,7 @@ The `Value` values can easily be obtained by performing a find on the `Key` valu
 When data is associated to the current user or current session, it cannot be automatically garbage-collected. As such, this data will be sent with every request to the server and returned by the responses of those requests. Therefore, associating entity instances with the current user and current session should be done when no other solutions are possible to retain this temporary data.
 {{% /alert %}}
 
-## 11 Sessions Are Always Persistent
+## Sessions Are Always Persistent
 
 To support seamless clustering, sessions are always persisted in the database. In previous versions, this was a known performance bottleneck. Mendix now contains optimizations to mitigate this performance hit.
 

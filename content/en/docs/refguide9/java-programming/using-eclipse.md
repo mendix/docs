@@ -5,11 +5,11 @@ weight: 2
 description: "Describes how to set up Eclipse, and how to add a Mendix application to Eclipse and launch it."
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use Eclipse to write and debug Java actions in your Mendix app. When the Mendix model is deployed, an Eclipse project file, classpath file, and launch configuration are generated.
 
-## 2 Setting Up Eclipse
+## Setting Up Eclipse
 
 In Mendix, all text is saved in UTF-8 encoding. To make sure your source code is also saved in UTF-8, do the following:
 
@@ -25,7 +25,7 @@ You should also have a Java Development Kit (JDK) installed and selected.
 
 Make sure to add a JDK and select it as the default in Eclipse.
 
-## 3 Adding a Mendix App
+## Adding a Mendix App
 
 To add a Mendix app to Eclipse, do the following:
 
@@ -38,7 +38,7 @@ To add a Mendix app to Eclipse, do the following:
 
     {{< figure src="/attachments/refguide9/java-programming/using-eclipse/import-eclipse-project.png" alt="Select root directory" class="no-border" >}}
 
-## 4 Launching a Mendix App
+## Launching a Mendix App
 
 To launch the app, do the following:
 

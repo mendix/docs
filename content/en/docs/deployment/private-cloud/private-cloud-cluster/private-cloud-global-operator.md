@@ -9,7 +9,7 @@ weight: 30
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 When running the Mendix Operator in Global mode, one installation of the Mendix Operator and Agent is sufficient to manage applications across multiple namespaces. This Operator mode is recommended for new customers, or customers that want to streamline and simplify their deployments and operations. For existing customers, and for use cases that require having a separate Operator instance for every namespace, the [Standard mode](/developerportal/deploy/standard-operator/) is still available and supported.
 
@@ -17,7 +17,7 @@ When running the Mendix Operator in Global mode, one installation of the Mendix 
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.
 {{% /alert %}}
 
-## 2 Installing the Global Operator
+## Installing the Global Operator
 
 While installing the Mendix Operator in Global mode, you must first deploy the Mendix Operator and Agent within the *Global Operator namespace*. A Global Operator namespace comprises the Operator itself, the Agent, and the configuration that instructs the Operator on the namespaces it should oversee.
 
@@ -96,7 +96,7 @@ To install and configure the Global Operator, perform the following steps:
 
 17. [Configure any remaining namespace settings](/developerportal/deploy/standard-operator/#configure-namespace) and apply the configuration.
 
-### 2.1 Results
+### Results
 
 After you configure the managed namespace, the Agent and Operator pod are restarted automatically, so that the Global Operator namespace can process the newly added managed namespace. The managed namespace is added to the Operator configuration for the Global Operator namespace, and the required storage plans are created in the managed namespace.
 
@@ -110,11 +110,11 @@ Once the managed namespace is configured, you can find the list with all the nam
 If the managed namespaces are deleted from the portal, the namespaces will not be deleted from the cluster. The managed namespaces needs to be manually deleted from the cluster. Additionally, you also need to remove the managed namespace from the list of managed namespaces in the Operator configuration of the main namespace.
 {{% /alert %}}
 
-### 2.2 Next Steps
+### Next Steps
 
 After everything is configured, you can deploy the application. For more information, see [Deploy Application](/developerportal/deploy/private-cloud-deploy/).
 
-## 3 Convert Namespace from Standard to Global Operator {#convert-standard-operator-to-global-operator}
+## Convert Namespace from Standard to Global Operator {#convert-standard-operator-to-global-operator}
 
 You can convert a namespace which currently uses the standard operator to be a Global Operator managed namespace by completing the following steps.
 
@@ -144,9 +144,9 @@ You can convert a namespace which currently uses the standard operator to be a G
 Once all the standard namespaces within a cluster created on portal side are converted to Global Operator Managed namespace, then the status of the cluster would be changed to **Conversion Finalized**, otherwise it will show **Conversion in Progress** if not all the namespaces within that cluster are converted.
 {{% /alert %}}
 
-## 4 Licensing
+## Licensing
 
-### 4.1 Installing Private Cloud License Manager
+### Installing Private Cloud License Manager
 
 Configure Private Cloud License Management (PCLM) in the Global Operator namespace. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 
@@ -162,10 +162,10 @@ Licenses imported in the PCLM Server appear in the PCLM Statistics section of th
 
 Claimed licenses are visible in the PCLM Statistics section of the Managed namespace.
 
-### 4.2 Licensing application via Subscription Secret and manual operator license
+### Licensing application via Subscription Secret and manual operator license
 
 If you wish to apply a Runtime license using a subscription secret, it must be applied manually for each managed namespace. The same process must be performed when applying an Operator license to all managed namespaces.
 
-## 5 Upgrading Managed Namespaces
+## Upgrading Managed Namespaces
 
 Currently, the upgrade procedure is not available for managed namespaces.

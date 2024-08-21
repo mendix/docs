@@ -3,7 +3,7 @@ title: "XPath Min"
 url: /refguide8/xpath-min/
 ---
 
-## 1 Overview
+## Overview
 
 The `min()` function returns the minimum value of its argument.
 
@@ -13,7 +13,7 @@ The function must specify a column in the query to aggregate.
 
 The query must specify an attribute that has a numeric type.
 
-## 2 Examples
+## Examples
 
 This query returns the lowest total price found in any object:
 

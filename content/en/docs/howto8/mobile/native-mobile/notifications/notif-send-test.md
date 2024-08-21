@@ -5,11 +5,11 @@ weight: 64
 description: Tutorial for testing your push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 After [configuring the Push Notifications module](/howto8/mobile/notif-config-push/) and [building your native app](/howto8/mobile/notif-build-native/) it is now time to send your first test push notification.
 
-## 2 Send the Test Notification
+## Send the Test Notification
 
 To send your first test notification, do the following:
 
@@ -31,7 +31,7 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshoot Notification Issues {#troubleshoot}
+## Troubleshoot Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|

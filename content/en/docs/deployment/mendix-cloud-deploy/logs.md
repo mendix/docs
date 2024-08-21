@@ -6,7 +6,7 @@ description: "Describes how to see the logs from your app."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 From the **Logs** page, you can access the logs produced by your app. What you see depends on the environment to which your app is deployed.
 
@@ -26,7 +26,7 @@ Use the drop-down menu in the upper-right corner to select the environment you w
 To view logs, you must have **Access to Monitoring** permission. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 {{% /alert %}}
 
-## 2 Apps Deployed to Mendix Cloud
+## Apps Deployed to Mendix Cloud
 
 When your app is deployed to Mendix Cloud, it automatically creates daily app and access logs. On the **Logs** page, you can view archived logs, view the live log, and view log access activity.
 
@@ -38,7 +38,7 @@ For apps deployed to Mendix Cloud, you can select which environment you want log
 Logging for apps deployed to Mendix Cloud is limited to 500 loglines per second. Any loglines above this limit are suppressed; they do not appear in the log files or live log. If loglines are suppressed because of this rate limit, the log displays a notification with the number of loglines that were suppressed.
 {{% /alert %}}
 
-### 2.1 Archived App and Access Logs
+### Archived App and Access Logs
 
 {{% alert color="info" %}}For apps deployed to Mendix Cloud, logs are rotated and archived every day. They are retained for six months.{{% /alert %}}
 
@@ -50,7 +50,7 @@ By default, archived logs are sorted by date; the current log is the first one l
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/logs-filter.png" alt="" class="no-border" >}}
 
-### 2.2 Live Log
+### Live Log
 
 Click **View Live Log** to access your app's log in real time. You can use the drop-down menus to adjust the log sources and log levels that appear in the live log.
 
@@ -60,7 +60,7 @@ Click **View Live Log** to access your app's log in real time. You can use the d
 The live log displays in the local time of the browser. All other logs have timestamps in UTC.
 {{% /alert %}}
 
-### 2.3 Activity Log
+### Activity Log
 
 At the bottom of the **Logs** page, there is an activity log. This section reports data on who has viewed or downloaded the logs. You can see which log was interacted with, by whom, and when. If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can download the activity log data as a CSV file.
 
@@ -70,7 +70,7 @@ The activity log records access by team members as well as members of Mendix Sup
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/activity-log.png" alt="Activity log" >}}
 
-## 3 Free App
+## Free App
 
 Archived logs are not available for Free Apps. The **Logs** page displays sample data instead of archived data for your app.
 

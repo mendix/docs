@@ -10,7 +10,7 @@ weight: 72
 This document is about [Private Cloud](/developerportal/deploy/private-cloud/) API. For [Private Mendix Platform](/private-mendix-platform/) API, see [Private Mendix Platform API Documentation](/apidocs-mxsdk/apidocs/private-platform/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Mendix for Private Cloud Deploy API allows you to manage application environments deployed to your private cloud using the Mendix Operator. You can use the API to do the following:
 
@@ -28,15 +28,15 @@ The Mendix for Private Cloud Deploy API is for connected private cloud clusters 
 The Standard Operator conversion to Global Operator managed namespace is not yet available in Deploy API.
 {{% /alert %}}
 
-## 2 Using the API
+## Using the API
 
 To help you work with the Mendix for Private Cloud Build API, the following sections of this document describe how to authenticate for the API, how to manage asynchronous API calls, and what to keep in mind when assigning unique IDs for the resources.
 
-### 2.1 Authentication
+### Authentication
 
 Authentication for the API uses a personal access token (PAT).
 
-#### 2.1.1 Generating a PAT
+#### Generating a PAT
 
 To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *Mendix Profile*.
 
@@ -49,7 +49,7 @@ For operations related to deployment packages (such as Create, Upload, Delete, a
  
 Store the `{GENERATED_PAT}` value in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 
-#### 2.1.2 Scopes Explanation
+#### Scopes Explanation
 
 | Operation                   | Scopes                                           |
 |-----------------------------|-------------------------------------------------|
@@ -71,7 +71,7 @@ Store the `{GENERATED_PAT}` value in a safe location, so you can use it to autho
 | Get App manifest.           | `mx:deployment:write` and `mx:app:metadata:read`|                              
 | Get Job                     | `mx:deployment:read`  and `mx:deployment:write`    |
 
-#### 2.1.3 Using the PAT
+#### Using the PAT
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`.
 
@@ -79,7 +79,7 @@ Each request must contain an `Authorization` header with the value `MxToken {GEN
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-### 2.2 Managing Asynchronous Jobs {#async-jobs}
+### Managing Asynchronous Jobs {#async-jobs}
 
 All resource manipulation API calls are processed asynchronously. In the response, there is an `id` which you can use with the `GET /jobs/…` call to get the status of the asynchronous job.
 
@@ -87,15 +87,15 @@ Each asynchronous call will also return a `Location` header that references the 
 
 Once `GET /jobs/…` or the equivalent HTTP call returns a response with `"status": "finished"`, you can verify the manifest for the resource by using a `GET {RESOURCE}` API call. For example, when updating a cluster, you can use `GET /clusters/{clusterId}` to verify the cluster manifest.
 
-### 2.3 Assigning IDs
+### Assigning IDs
 
 The API does not generate unique UUIDs for the resources. You must generate your own IDs, which must be unique. If the IDs are not unique, the asynchronous job which creates the resource will fail.
 
-## 3 Examples
+## Examples
 
 The following sections of this document contain sample usage scenarios for the API.
 
-### 3.1 Using the API to Update the Cluster and Namespace
+### Using the API to Update the Cluster and Namespace
 
 The following steps will create a cluster, register and install a namespace, add or update a cluster member, and enable development mode for the namespace.
 
@@ -118,7 +118,7 @@ The following steps will create a cluster, register and install a namespace, add
 If required, the invitation for the cluster/namespace member can be auto-accepted by setting `autoAcceptInvite` to true in the update cluster/namespace API request.
 {{% /alert %}}
 
-### 3.2 Using the API to Restart an App {#restart}
+### Using the API to Restart an App {#restart}
 
 The following steps will restart an app by setting the number of instances to zero and then setting it back to the number of instances required.
 
@@ -135,7 +135,7 @@ The following steps will restart an app by setting the number of instances to ze
 
     Your app is available once more.
 
-### 3.3 Using the API to Deploy an App {#api-deploy}
+### Using the API to Deploy an App {#api-deploy}
 
 The following steps will create a cluster, create a namespace, and create an environment with a running app.
 
@@ -162,7 +162,7 @@ The following steps will create a cluster, create a namespace, and create an env
 Please note that there is a limited support for Custom permissions in Deploy APIs.
 {{% /alert %}}
 
-## 4 API Reference
+## API Reference
 
 {{% alert color="info" %}}
 Please note that the fields marked as non-editable in the OpenAPI .yaml file are used for read-only purposes. Any modifications made to the values of these fields will be ignored.

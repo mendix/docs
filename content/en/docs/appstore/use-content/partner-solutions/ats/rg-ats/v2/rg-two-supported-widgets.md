@@ -3,7 +3,7 @@ title: "Supported Widgets"
 url: /appstore/partner-solutions/ats/rg-two-supported-widgets/
 ---
 
-## 1 Introduction
+## Introduction
 
 The following table shows an overview of all the supported widgets in ATS.
 
@@ -11,7 +11,7 @@ The following table shows an overview of all the supported widgets in ATS.
 ATS does not support customized versions of Mendix Marketplace widgets. Also, ATS does not support using JavaScript that changes the behavior or appearance of standard or Marketplace widgets.
 {{% /alert %}}
 
-## 2 Standard Widgets
+## Standard Widgets
 
 We support all the widgets that are included in Mendix Studio Pro:
 
@@ -43,7 +43,7 @@ We support all the widgets that are included in Mendix Studio Pro:
 | TextBox | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-supported-widgets/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-supported-widgets/green.png" class="no-border" >}} Yes |
 | Window | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-supported-widgets/green.png" class="no-border" >}} Yes | {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-supported-widgets/green.png" class="no-border" >}} Yes |
 
-## 3 Marketplace Widgets
+## Marketplace Widgets
 
 Besides the default widgets, ATS supports the most commonly used widgets from the Mendix Marketplace:
 

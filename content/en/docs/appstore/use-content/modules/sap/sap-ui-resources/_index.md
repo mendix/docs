@@ -12,7 +12,7 @@ Should we have a section on the "Shell Bar"?
 
 -->
 
-## 1 Introduction
+## Introduction
 
 The SAP Fiori user experience creates a consistent UI across SAP products. SAP Fiori is SAP’s new target design system for all SAP products in the *Intelligent Suite*. The [Web UI Package for SAP Fiori theme](https://marketplace.mendix.com/link/component/116359) module in the Mendix Marketplace allows you to create the same user experience in your Mendix apps.
 
@@ -35,7 +35,7 @@ More information on using SAP Fiori design in your Mendix app is available in th
 * [Page Templates](#page-templates) – readily-available page templates which are already styled ready for you to use in your Mendix app
 * [Theme Selector](#theme-selector) – switch between different theme — for example *light* and *dark*
 
-## 2 Widgets{#widgets}
+## Widgets{#widgets}
 
 The majority of Mendix widgets have been styled to match SAP Fiori styles by default. Examples are shown below.
 
@@ -43,13 +43,13 @@ There are a couple of cases where you will need to apply some extra CSS classes 
 
 Some SAP Fiori components are not yet supported by Mendix core widgets. These are listed in [Unsupported SAP Fiori Components](#unsupported-components), below.
 
-### 2.1 Examples of Mendix Core Widget Styling
+### Examples of Mendix Core Widget Styling
 
 You can see examples of the SAP Fiori styling of the Mendix Core Widgets by going to the **Mendix_Core_Elements** page of the Web UI Package for SAP Fiori theme Marketplace Module.
 
 Most widgets work the same way as they do in other Mendix styles based on Atlas UI, but there are some changes which are listed in the sections below.
 
-#### 2.1.1 Buttons
+#### Buttons
 
 You can choose different types of button by setting the appropriate **Button style**. The SAP Fiori styles are mapped as follows:
 
@@ -66,7 +66,7 @@ You can choose different types of button by setting the appropriate **Button sty
 
 For the **Link button**, see [Applying CSS Classes Manually](#apply-css), below*.
 
-#### 2.1.2 Container Count Badge
+#### Container Count Badge
 
 The **container count badge** allows you to add a count badge to containers on Mendix pages as shown in the following example.
 
@@ -84,11 +84,11 @@ You can specify the appearance of the count badge in the **Appearance** tab of t
 
 {{< figure src="/attachments/appstore/use-content/modules/ui-resources/sap-fiori-3-0/count-badge-appearance.png" alt="SAP Fiori Count Badge appearance" class="no-border" >}}
 
-#### 2.1.3 List Views
+#### List Views
 
 Standard Mendix **List view** widgets can be used on your pages. However, these cannot be borderless. You can add a borderless list from a building block.
 
-### 2.2 Applying CSS Classes Manually{#apply-css}
+### Applying CSS Classes Manually{#apply-css}
 
 Some SAP Fiori styling requires you to add some additional CSS classes manually for the styles to be implemented correctly. These cases are described in the following tables.
 
@@ -100,7 +100,7 @@ Some SAP Fiori styling requires you to add some additional CSS classes manually 
 | Right Icon Link | link right icon |
 | Left Icon Link | *this is the default* |
 
-### 2.3 Unsupported SAP Fiori Components{#unsupported-components}
+### Unsupported SAP Fiori Components{#unsupported-components}
 
 * Avatar – you can mimic this using a **List 3** building block
 * Message Strip – Mendix suggests you use one of the **Notifications** building blocks 
@@ -123,11 +123,11 @@ In addition, there are some limitations on supporting other components:
     * icons with a counter
     * only icons
 
-## 3 Building Blocks{#building-blocks}
+## Building Blocks{#building-blocks}
 
 You can see examples of the SAP Fiori building blocks by going to the **Building Blocks** page of the Web UI Package for SAP Fiori theme Marketplace Module. The building blocks are categorized by type.
 
-## 4 Layouts{#layouts}
+## Layouts{#layouts}
 
 You can see examples of the SAP Fiori navigation layouts by going to the **Layout** page of the Web UI Package for SAP Fiori theme Marketplace Module. These layouts are designed for use in *Responsive (Web)* applications, designed to run in any modern web browser, on any device.
 
@@ -154,13 +154,13 @@ Here is a list of the layouts you can use.
 * SAP_MasterDetail_Letterbox (SAP_Fiori_Web_UI_Resources)
 * SAP_MasterDetail (SAP_Fiori_Web_UI_Resources) 
 
-## 5 Page Templates{#page-templates}
+## Page Templates{#page-templates}
 
 You can use one of the available page templates to rapidly create a consistent UI for your app pages. The templates provide you with the building blocks and widgets already arranged to provide an SAP Fiori-style page.
 
 Note that these pages work best when combined with the appropriate **Navigation layout**. For example, the **Fiori Launchpad** page template works best with the *SAP_Launchpad (SAP_Fiori_Web_UI_Resources)* **Navigation Layout**.
 
-## 6 Theme Selector {#theme-selector}
+## Theme Selector {#theme-selector}
 
 In order to select the theme for your app, specify it in the *index.html* page as `html class="name-of-theme"`, for example, `html class="theme-horizon-morning"`. The following themes are available:
 
@@ -169,11 +169,11 @@ In order to select the theme for your app, specify it in the *index.html* page a
 * **theme-quartz-light**
 * **theme-quartz-dark**
 
-## 7 Demo Apps
+## Demo Apps
 
 On the [Mendix Marketplace](https://marketplace.mendix.com), you can find a number of [community-supported](/appstore/marketplace-content-support/#category) demo apps, which you can review or use to help you develop your own apps.
 
-## 8 Add Fiori to Your App{#add-fiori}
+## Add Fiori to Your App{#add-fiori}
 
 If you want to include the Web UI Package for SAP Fiori theme in an existing app perform the following steps:
 

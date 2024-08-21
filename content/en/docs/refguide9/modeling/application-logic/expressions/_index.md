@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Expressions change a value based on a function or combination of functions. 
 
@@ -27,7 +27,7 @@ $CurrentPrice/Price - (($CurrentPrice/Price **div** 100) * $OrderLine/Discount)
 
 Arithmetic functions (subtraction, dividing, and multiplying) are being combined here.
 
-### 1.1 Examples
+### Examples
 
 For example, you have an object called **package** with two attributes: `weight` (decimal) and `shippingCosts` (decimal). If the weight of a package is less than one kilogram, there are no shipping costs. Otherwise, the shipping costs are €5.00. The expression for changing the `shippingCosts` attribute is:
 
@@ -55,15 +55,15 @@ $emptyObject = empty or $emptyObject/attribute != $validObject/attribute
 
 This way the first statement gets evaluated.
 
-### 1.2 Regular Expressions
+### Regular Expressions
 
 [Regular Expression](/refguide9/regular-expressions/) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings is the same as the ones described in the [Expression](/refguide9/regular-expressions/#expression) section of *Regular Expressions*.
 
-## 2 System Items{#system-items}
+## System Items{#system-items}
 
 Mendix provides you with a number of system items which describe the current user's session. You can use these in the same way as any other named item.
 
-### 2.1 $currentUser
+### $currentUser
 
 This is an object of type `System.User` which contains the attributes for the currently signed-in user.
 
@@ -71,7 +71,7 @@ This is an object of type `System.User` which contains the attributes for the cu
 For performance reasons, this information is cached. If you need the current value of attributes which might have changed during the session, you should retrieve the latest data from the database.
 {{% /alert %}}
 
-### 2.2 $currentSession
+### $currentSession
 
 This is an object of type `System.Session` which contains the attributes for the current user session.
 
@@ -79,11 +79,11 @@ This is an object of type `System.Session` which contains the attributes for the
 For performance reasons, this information is cached. If you need the current value of attributes which might have changed during the session, you should retrieve the latest data from the database.
 {{% /alert %}}
 
-## 3 Unary Expressions
+## Unary Expressions
 
 * [Unary minus ( - )](/refguide9/unary-expressions/)
 
-## 4 Arithmetic Expressions
+## Arithmetic Expressions
 
 * [Multiplication ( * )](/refguide9/arithmetic-expressions/)
 * [Division ( div or : )](/refguide9/arithmetic-expressions/)
@@ -91,7 +91,7 @@ For performance reasons, this information is cached. If you need the current val
 * [Addition ( + )](/refguide9/arithmetic-expressions/)
 * [Subtraction ( - )](/refguide9/arithmetic-expressions/)
 
-## 5 Relational Expressions
+## Relational Expressions
 
 * [Less than ( < )](/refguide9/relational-expressions/)
 * [Greater than ( > )](/refguide9/relational-expressions/)
@@ -100,23 +100,23 @@ For performance reasons, this information is cached. If you need the current val
 * [Is equal to ( = )](/refguide9/relational-expressions/)
 * [Is not equal to ( != )](/refguide9/relational-expressions/)
 
-## 6 Special Checks
+## Special Checks
 
 * [Checking for an empty object](/refguide9/special-checks/)
 * [Checking for an empty object member](/refguide9/special-checks/)
 * [`isNew`](/refguide9/special-checks/) – checks whether an object is new
 
-## 7 Boolean Expressions
+## Boolean Expressions
 
 * [and](/refguide9/boolean-expressions/)
 * [or](/refguide9/boolean-expressions/)
 * [not](/refguide9/boolean-expressions/)
 
-## 8 If Expressions
+## If Expressions
 
 * [if](/refguide9/if-expressions/) – performs a conditional action
 
-## 9 Mathematical Function Calls
+## Mathematical Function Calls
 
 * [`max`](/refguide9/mathematical-function-calls/) – the maximum of a list of numbers
 * [`min`](/refguide9/mathematical-function-calls/) – the minimum of a list of numbers
@@ -127,7 +127,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`pow`](/refguide9/mathematical-function-calls/) – the exponentiation
 * [`abs`](/refguide9/mathematical-function-calls/) – the absolute value
 
-## 10 String Function Calls
+## String Function Calls
 
 * [`toUpperCase`](/refguide9/string-function-calls/) – converts the string to upper-case
 * [`toLowerCase`](/refguide9/string-function-calls/) – converts the string to lower-case
@@ -146,26 +146,26 @@ For performance reasons, this information is cached. If you need the current val
 * [`urlEncode`](/refguide9/string-function-calls/) – converts a string to be used in a URL
 * [`urlDecode`](/refguide9/string-function-calls/) – converts a string back from a URL
 
-## 11 Date Creation
+## Date Creation
 
 * [`dateTime`](/refguide9/date-creation/) – creating a date value using the server's calendar
 * [`dateTimeUTC`](/refguide9/date-creation/) – creating a date value using the UTC calendar
 
-## 11 Begin-of Date Function Calls
+## Begin-of Date Function Calls
 
 * [`BeginOfDay`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
 * [`BeginOfWeek`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
 * [`BeginOfMonth`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
 * [`BeginOfYear`](/refguide9/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
 
-## 12 End-of Date Function Calls
+## End-of Date Function Calls
 
 * [`EndOfDay`](/refguide9/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
 * [`EndOfWeek`](/refguide9/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
 * [`EndOfMonth`](/refguide9/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
 * [`EndOfYear`](/refguide9/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
 
-## 13 Between Date Function Calls
+## Between Date Function Calls
 
 * [`millisecondsBetween`](/refguide9/between-date-function-calls/) – the milliseconds between two dates
 * [`secondsBetween`](/refguide9/between-date-function-calls/) – the seconds between two dates
@@ -176,7 +176,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`calendarMonthsBetween`](/refguide9/between-date-function-calls/) - the months between two dates
 * [`calendarYearsBetween`](/refguide9/between-date-function-calls/) - the years between two dates
 
-## 14 Add Date Function Calls
+## Add Date Function Calls
 
 * [`addMilliseconds`](/refguide9/add-date-function-calls/) – adds milliseconds to a date
 * [`addSeconds`](/refguide9/add-date-function-calls/) – adds seconds to a date
@@ -193,7 +193,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`addYears`](/refguide9/add-date-function-calls/) – adds years to a date
 * [`addYearsUTC`](/refguide9/add-date-function-calls/) – adds years to a date using the UTC calendar
 
-## 15 Subtract Date Function Calls
+## Subtract Date Function Calls
 
 * [`subtractMilliseconds`](/refguide9/subtract-date-function-calls/) – subtracts milliseconds from a date
 * [`subtractSeconds`](/refguide9/subtract-date-function-calls/) – subtracts seconds from a date
@@ -210,7 +210,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`subtractYears`](/refguide9/subtract-date-function-calls/) – subtracts years from a date
 * [`subtractYearsUTC`](/refguide9/subtract-date-function-calls/) – subtracts years from a date using the UTC calendar
 
-## 16 Trim to Date
+## Trim to Date
 
 * [`trimToSeconds`](/refguide9/trim-to-date/) – trims to seconds
 * [`trimToMinutes`](/refguide9/trim-to-date/) – trims to minutes
@@ -223,20 +223,20 @@ For performance reasons, this information is cached. If you need the current val
 * [`trimToYears`](/refguide9/trim-to-date/) – trims to years
 * [`trimToYearsUTC`](/refguide9/trim-to-date/) – trims to years using the UTC calendar
 
-## 17 To String
+## To String
 
 See [To String](/refguide9/to-string/) for details.
 
-## 18 Parse Integer
+## Parse Integer
 
 See [Parse Integer](/refguide9/parse-integer/) for details.
 
-## 19 Parse & Format Decimal Function Calls {#expressions-formatter-functions}
+## Parse & Format Decimal Function Calls {#expressions-formatter-functions}
 
 * [`parseDecimal`](/refguide9/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide9/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## 20 Parse & Format Date Function Calls
+## Parse & Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide9/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide9/parse-and-format-date-function-calls/) – converts a date value to a string
@@ -245,7 +245,7 @@ See [Parse Integer](/refguide9/parse-integer/) for details.
 * [`dateTimeToEpoch`](/refguide9/parse-and-format-date-function-calls/) – converts a date to a long
 * [`epochToDateTime`](/refguide9/parse-and-format-date-function-calls/) – converts a long to a date
 
-## 21 Enumerations in Expressions
+## Enumerations in Expressions
 
 * [`getCaption`](/refguide9/enumerations-in-expressions/) – gets the caption of an enumeration value in current language
 * [`getKey`](/refguide9/enumerations-in-expressions/) – gets the technical name of an enumeration value

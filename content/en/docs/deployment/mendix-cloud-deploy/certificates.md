@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Certificates are used to authenticate users to apps. They can be used on both incoming and outgoing connections.
 
@@ -17,20 +17,20 @@ Certificates are used to authenticate users to apps. They can be used on both in
 Custom certificates cannot be configured for Free Apps.
 {{% /alert %}}
 
-### 1.1 Incoming Connections
+### Incoming Connections
 
 To connect to your Mendix Cloud application from the internet, Mendix provides a `.mendixcloud.com` or `.mxapps.io` domain. The certificate for this is managed by Mendix. If you want to set up your own domain name for a licensed app, you can configure [custom domains](/developerportal/deploy/custom-domains/).
 
 In addition, you can restrict incoming traffic by requiring client certificates signed by a certificate authority of your choice. For more details on how to set this up, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-### 1.2 Outgoing Connections
+### Outgoing Connections
 
 You may need to use certificates to set up connections from your Mendix Cloud application to third parties that require SSL/TLS. There are two possible scenarios for this:
 
 * A third party may require authentication via certificates (client certificates)
 * A third party may use a certificate that is signed by their own authority (certificate authorities)
 
-## 2 Incoming – Certificates
+## Incoming – Certificates
 
 Certificates for `.mendixcloud.com` and `.mxapps.io` are managed by Mendix and are automatically updated on a regular basis and without notice. This is part of Mendix's regular operations and security posture. 
 
@@ -42,7 +42,7 @@ Do not pin these certificates in your solutions.<br><br>Doing so can interrupt y
 
 For situations where pinning is required, you can set up a custom domain where you are in full control of updating the certificate.
 
-## 3 Outgoing – Client Certificates {#outgoing-client-certificates}
+## Outgoing – Client Certificates {#outgoing-client-certificates}
 
 For client certificates, only the Public-Key Cryptography Standard #12 (PKCS12) format is supported. Certificates are uploaded as a PKCS container that includes the following:
 
@@ -80,7 +80,7 @@ Changes to certificate settings do not go into effect until you restart the app.
 
 In the section **Pin Client Certificate to Web Services**, you can specify host names (for example, `hello-there.com`) or web service document names (for example, *MyFirstModule.ConsumedWebService*), indicating that this certificate should be used when contacting that host or calling that web service.
 
-## 4 Outgoing – Certificate Authorities
+## Outgoing – Certificate Authorities
 
 Loading certificate authorities works much the same way, although they do not require authentication because they are public certificates.
 
@@ -95,7 +95,7 @@ To upload a certificate authority, follow these steps:
 
 1. Upload a certificate authority in the PEM format.
 
-## 5 Read More
+## Read More
 
 * [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 * [How Encryption Works](https://computer.howstuffworks.com/encryption.htm)

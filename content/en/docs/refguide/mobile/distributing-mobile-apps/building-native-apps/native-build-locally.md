@@ -7,11 +7,11 @@ aliases:
     - /howto/mobile/native-build-locally/
 ---
 
-## 1 Introduction
+## Introduction
 
 Follow the sections below through [Building Your Native App](#building-app-project) to complete your builds. To go beyond those instructions, see [Adding Dependencies](#adding-dependencies) and [Removing Dependencies](#removing-dependencies) sections below. These sections will allow you to further customize your local builds.
 
-## 2 Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -29,7 +29,7 @@ For Android Builds:
         * Installs a default set of the Android SDK (allowing you to accept important licenses) 
         * Helps you set up an emulator
 
-## 3 Using Mendix Native Mobile Builder to Set Up Your Local App
+## Using Mendix Native Mobile Builder to Set Up Your Local App
 
 To set up your local app, do the following:
 
@@ -71,13 +71,13 @@ To set up your local app, do the following:
 
     * Commit the whole local copy to the app's repository
 
-## 4 Building your Native Mobile App {#building-app-project}
+## Building your Native Mobile App {#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your app you can open the app with Android Studio or Xcode for the Android and iOS app respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
 In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
-### 4.1 Building an Android App with Android Studio
+### Building an Android App with Android Studio
 
 {{% alert color="warning" %}}
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
@@ -111,7 +111,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally/avd-manager.png" alt="AVD Manager"   width="250"  class="no-border" >}}
 
-### 4.2 Building an iOS App with Xcode
+### Building an iOS App with Xcode
 
 To build an iOS app with Xcode, do the following:
 
@@ -139,7 +139,7 @@ If you encounter the following error while executing CocoaPods on an M1, reinsta
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
-## 5 Adding Dependencies{#adding-dependencies}
+## Adding Dependencies{#adding-dependencies}
 
 Mendix Studio Pro supports a modern format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
@@ -147,32 +147,32 @@ In some cases though, like when a dependency is not derivable by its use case (s
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 
-### 5.1 Adding Dependencies Which Support Auto-Linking
+### Adding Dependencies Which Support Auto-Linking
 
 Mendix supports RN and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native apps. To add dependencies do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) is run it will automatically add itself correctly to the Android and iOS apps. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 5.2 Adding Dependencies Which Do Not Support Auto-Linking
+### Adding Dependencies Which Do Not Support Auto-Linking
 
 If a dependency does not support auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
 
-## 6 Removing Dependencies{#removing-dependencies}
+## Removing Dependencies{#removing-dependencies}
 
 As the requirements of an app might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
-### 6.1 Removing Dependencies Which Support Auto-Linking
+### Removing Dependencies Which Support Auto-Linking
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 6.2 Removing Dependencies Which Do Not Support Auto-Linking
+### Removing Dependencies Which Do Not Support Auto-Linking
 
 To remove dependencies which do not support auto-linking, revert the steps you applied when adding the dependency.
 
-## 7 Read More
+## Read More
 
 * [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/)

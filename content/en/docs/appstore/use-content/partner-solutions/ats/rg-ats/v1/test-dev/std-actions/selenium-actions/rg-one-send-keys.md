@@ -3,15 +3,15 @@ title: "Send Keys"
 url: /appstore/partner-solutions/ats/rg-one-send-keys/
 ---
 
-## 1 Description
+## Description
 
 Simulates typing text into the provided WebElement.
 
-## 2 Usage
+## Usage
 
 Pass the text and the WebElement you want to insert the text into as parameter for this action. To get the WebElement, use an action like Find/Assert Widget which returns a WebElement.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

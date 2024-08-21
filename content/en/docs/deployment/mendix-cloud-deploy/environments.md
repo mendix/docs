@@ -6,7 +6,7 @@ description: "Lists the environments in which your app is deployed. Also the sta
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link:  `https://cloud.home.mendix.com/link/deploy/{appID}`, with `{app ID}` replaced by your app ID.
 
@@ -17,12 +17,12 @@ The **Environments** page has the following tabs:
 * **Access Restriction Profiles**
 * **Permissions**
 * **Services**
-
-## 2 Deploy
+    
+## Deploy
 
 In the **Deploy** tab, you can view information about your environments. You can also create, upload, delete, and deploy packages.
 
-### 2.1 Deployment Package Repository{#package-repository}
+### Deployment Package Repository{#package-repository}
 
 The **Deployment Package Repository** section has an overview of your deployment packages.
 
@@ -55,11 +55,11 @@ If you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) o
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments/deployment-package-options.png" alt="More Options" >}}
 
-### 2.2 Environments
+### Environments
 
 The **Environments** section has an overview of all the available environments. The contents of the **Environments** section differ based on whether or not your node supports flexible environments.
 
-#### 2.2.1 Standard Environments
+#### Standard Environments
 
 For standard plans, your node has production and acceptance environments. It can also include an optional test environment.
 
@@ -86,7 +86,7 @@ You can perform the following actions in this section:
 
 * Set up deployment – If you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact), you will see a **Setup Studio Pro Deployment** button. You can use this to set the target environment to which apps are deployed from Studio Pro; for more information, see [Studio Pro Deployment Settings](/developerportal/deploy/studio-deployment-settings/).
 
-#### 2.2.2 Flexible Environments{#flexible-environments}
+#### Flexible Environments{#flexible-environments}
 
 If your Mendix license supports flexible environments, you can define the number and type of environments on your node. You must define at least two environments, one of which must be a production environment. The other environment (or environments) may be designated according to your requirements. For example, you can have a production environment and multiple staging environments if your deployment process requires it.
 
@@ -117,7 +117,7 @@ You can perform the following actions in this section:
 
     {{% alert color="info" %}}The button to transport an environment is not available when flexible environments are enabled. This is because you must choose your deployment target each time you deploy when you have flexible environments. To deploy, click **Deploy** ({{% icon name="deploy" %}}) in the [Deployment Package Repository](/developerportal/deploy/environments/#package-repository) section, as described above.{{% /alert %}}
 
-### 2.3 Activity
+### Activity
 
 In the **Activity** section, you can view a log of deployment activities performed on your environments.
 
@@ -133,33 +133,33 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 2. Select the period for which you want to download log entries.
 3. Click **Download**.
 
-## 3 Custom Domains
+## Custom Domains
 
 In the **Custom Domains** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
 
 When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This enables your Mendix app to be accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
 
-## 4 Access Restriction Profiles{#asp}
+## Access Restriction Profiles{#asp}
 
 In the **Access Restriction Profiles** tab, you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, so that any match on either the IP range or the client certificate will grant access. You can apply access restriction profiles to path-based access restrictions in specific environments of the application.
 
 For details on setting up access restriction profiles, see [Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-## 5 Permissions{#permissions}
+## Permissions{#permissions}
 
 In the **Permissions** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) and other team members who have **Manage Permissions** enabled can manage various permissions to the environments for each team member. Team members who have a role with **Cloud Access** can view the permissions.
 
 For details on managing node permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 6 Services{#services}
+## Services{#services}
 
 In the **Services** tab, the Technical Contact can determine which custom services can be used in the app's environments.
 
-### 6.1 Available Services
+### Available Services
 
 One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
-### 6.2 Enabling Custom Services
+### Enabling Custom Services
 
 The Technical Contact can only see services that have been licensed for their company. If the Technical Contact cannot enable the service, this means that the service has previously been licensed, but the license has expired.
 
@@ -167,7 +167,7 @@ Team members who have a role with **Cloud Access** can see which services are en
 
 Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
 
-## 7 Read More
+## Read More
 
 * [Deployment](/deployment/)
 * [Environment Details](/developerportal/deploy/environments-details/)

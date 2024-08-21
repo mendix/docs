@@ -4,7 +4,7 @@ url: /howto8/logic-business-rules/trigger-microflow-from-menu-item/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix uses visual models called microflows to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This how-to explains how you can create a very simple "Hello World" microflow.
 
@@ -13,13 +13,13 @@ This how-to teaches you how to do the following:
 * Create a menu item
 * Create and edit a microflow
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Familiarize yourself with microflow terms. For more information, see [Microflows](/refguide8/microflows/). 
 
-## 2 Creating a Menu Item {#creating-menu-item}
+## Creating a Menu Item {#creating-menu-item}
 
 You will create a menu item that will trigger a microflow and show the **Hello World** message to the end-users. 
 
@@ -49,7 +49,7 @@ To create a menu item, follow these steps:
 
 You have created the menu item that will trigger the **Hello World** microflow. 
 
-## 3 Editing the New Microflow
+## Editing the New Microflow
 
 The new microflow is now empty and needs to be configured to show the message to the end-users.
 
@@ -83,7 +83,7 @@ To edit the new microflow, follow these steps:
 
 Congratulations! You have created the menu item that triggers the microflow and shows the **Hello World** message to your end-users! 
 
-## 4 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/)

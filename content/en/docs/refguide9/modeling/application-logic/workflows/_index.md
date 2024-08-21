@@ -5,15 +5,15 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Workflow is a visual language in Mendix Studio Pro that allows you to build extendable processes. It is fully integrated with other visual languages, such as the microflow editor and page editor. 
 
-## 2 Workflow Elements
+## Workflow Elements
 
 A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide9/workflow-elements/). 
 
-## 3 Performing Basic Functions
+## Performing Basic Functions
 
 You can perform the following basic functions when working on workflows:
 
@@ -23,7 +23,7 @@ You can perform the following basic functions when working on workflows:
 * Add elements to a workflow
 * View element properties 
 
-### 3.1 Opening a Workflow
+### Opening a Workflow
 
 To open a workflow in Studio Pro, do the following:
 
@@ -32,7 +32,7 @@ To open a workflow in Studio Pro, do the following:
 
 The selected workflow is opened.
 
-### 3.2 Adding a Workflow
+### Adding a Workflow
 
 To add a workflow to your app, do the following:
 
@@ -43,7 +43,7 @@ To add a workflow to your app, do the following:
 
 The workflow is created and the **WorkflowInstance** entity is added to the domain model. For more information on the **WorkflowInstance** entity, see [Workflow Parameters](/refguide9/workflow-parameters/).
 
-### 3.3 Deleting a Workflow
+### Deleting a Workflow
 
 To delete a workflow, do the following:
 
@@ -56,7 +56,7 @@ The selected workflow is deleted.
 The **WorkflowInstance** entity that was generated when the workflow was created remains in the domain model, you have to delete it manually.
 {{% /alert %}}
 
-### 3.4 Adding Elements to a Workflow 
+### Adding Elements to a Workflow 
 
 To add an element to a workflow, do the following:
 
@@ -65,7 +65,7 @@ To add an element to a workflow, do the following:
 
 The selected element is added.
 
-### 3.5 Cutting/Coping/Pasting Elements in a Workflow
+### Cutting/Coping/Pasting Elements in a Workflow
 
 To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Command</kbd> + <kbd>X</kbd> /  <kbd>Command</kbd> + <kbd>C</kbd> / <kbd>Command</kbd> + <kbd>V</kbd>.
 
@@ -82,7 +82,7 @@ When using cut/copy/paste, note the following:
 * Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
 * Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
 
-#### 3.5.1 Elements that Cannot be Cut, Copied or Pasted
+#### Elements that Cannot be Cut, Copied or Pasted
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
@@ -92,7 +92,7 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 * End activity (the final **End activity** which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
 
-### 3.6 Viewing Element Properties 
+### Viewing Element Properties 
 
 To view properties of an element, do one of the following:
 
@@ -100,11 +100,11 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 3.7 Triggering a Workflow
+### Triggering a Workflow
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-#### 3.7.1 Triggering a Workflow from a Page {#trigger-page}
+#### Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide9/on-click-event/).
 
@@ -119,7 +119,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-#### 3.7.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+#### Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Workflow Call](/refguide9/workflow-call/).  
 
@@ -138,7 +138,7 @@ Do the following:
 
 Now when you run this microflow, it will trigger the selected workflow. 
 
-## 4 Workflow Entities in the System Module {#workflow-entities}
+## Workflow Entities in the System Module {#workflow-entities}
 
 There are several workflow-related entities in the System module of your app, some of which can be used in an XPath and expressions, and some are there as basic entities that are internally only (for example, by the Runtime). 
 
@@ -157,7 +157,7 @@ You can find the following workflow-related entities in the System module:
 * **WorkflowCurrentActivity** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action and contains information on the current activity of the workflow instance.
 * **WorkflowActivityDetails** – This non-persistent entity represents data generated by the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action and contains information on activities of the workflow instance.
 
-## 5 Workflow Variables
+## Workflow Variables
 
 Workflows have dedicated variables that can be used in an XPath and Expressions inside the Workflow editor. 
 
@@ -170,21 +170,21 @@ For more information on workflow-related entities in the System module, see the 
 
 For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide9/user-task/). 
 
-## 6 Workflow-Specific Activities in Microflows
+## Workflow-Specific Activities in Microflows
 
 You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](/refguide9/workflow-activities/). 
 
-## 7 Workflow-Specific On-Click Events on Pages
+## Workflow-Specific On-Click Events on Pages
 
 You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event and Events Section](/refguide9/on-click-event/).
 
-## 8 Workflow Commons Module
+## Workflow Commons Module
 
 The **Workflow Commons** module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Apps](https://sprintr.home.mendix.com/). These templates already contain the **Workflows Commons** module.
 
 For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/).
 
-## 9 Read More
+## Read More
 
 * [Adding a Workflow to an Existing App with Workflow Commons](/refguide9/workflow-setting-up-app/)
 * [Jumping to Different Activities in a Workflow](/refguide9/jump-to/)

@@ -6,11 +6,11 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon Location Service](https://marketplace.mendix.com/link/component/209124) connector enables you to add location data to your Mendix app by connecting it to [Amazon Location Service](https://aws.amazon.com/location/).
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon Location Service is a location-based service that developers can use to add geospatial data and location functionality to applications. Customers can visualize data on a map, recommend routes, use geocoding to convert plain text addresses into geographic coordinates, use reverse geocoding to convert latitude and longitude coordinates into addresses, and monitor and track assets such as fleets of vehicles. Typical use cases include the following:
 
@@ -18,13 +18,13 @@ Amazon Location Service is a location-based service that developers can use to a
 * Optimizing dispatch efficiency and delivery routes
 * Visualizing data on a map
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon Location Service connector requires Mendix Studio Pro version 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Location Service connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
@@ -34,15 +34,15 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Amazon Location Service connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonLocationServiceConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Location Service. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Configuring AWS Authentication
+### Configuring AWS Authentication
 
 In order to use the Amazon Location service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -50,7 +50,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/connectors/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Location Service, you can implement the functions of the connector by using the provided activities in microflows. For example, to calculate a route between to sets of coordinates, implement the [CalculateRoute](#calculate-route) activity by performing the following steps:
 
@@ -81,35 +81,35 @@ After you configure the authentication profile for Amazon Location Service, you 
 7. Configure a method to trigger the `ACT_CalculateRoute` activity. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
-## 4 Technical Reference
+## Technical Reference
 
 To help you work with the Amazon Location Service connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
-### 4.1 Domain Model {#domain-model}
+### Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 Position
+#### Position
 
 | Name | Description |
 | --- | --- |
 | `Longitude` | The `Longitude` attribute is used to specify the longitude of the coordinate set of a specific location. |
 | `Latitude` | The `Latitude` attribute is used to specify the latitude of the coordinate set of a specific location. |
 
-#### 4.1.2 TravelModeOptions
+#### TravelModeOptions
 
 | Name | Description |
 | --- | --- |
 | `AvoidFerries` | The `AvoidFerries` attribute can be used to avoid ferries. |
 | `AvoidTolls` | The `AvoidTolls` attribute can be used to avoid tolls. |
 
-#### 4.1.3 Result
+#### Result
 
 | Name | Description |
 | --- | --- |
 | `Distance` | The `Distance` attribute holds the distance from the bias position of the `SearchPlaceIndexForText` operation and the distance from the index position of the `SearchPlaceIndexForPosition` operation. |
 
-#### 4.1.4 Place
+#### Place
 
 | Name | Description |
 | --- | --- |
@@ -124,38 +124,38 @@ The domain model is a data model that describes the information in your applicat
 | `Street` | The `Street` attribute holds the name for a street or a road to identify a location. For example, Main Street. |
 | `SubRegion` | The `SubRegion` attribute holds a county, or an area that's part of a larger region. For example, Metro Vancouver. |
 
-#### 4.1.5 TimeZone
+#### TimeZone
 
 | Name | Description |
 | --- | --- |
 | `Name` | The `Name` attribute holds the name of the time zone, following the IANA time zone standard. For example, America/Los_Angeles. |
 | `Offset` | The `Offset` attribute holds the time zone's offset, in seconds, from UTC. |
 
-#### 4.1.6 GeometryPoint
+#### GeometryPoint
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.7 BoundingBox
+#### BoundingBox
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a generalization for the `FilterBBox` and `RouteBBox` entities and has no additional attributes. |
 
-#### 4.1.8 SouthWestPosition
+#### SouthWestPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.9 NorthEastPosition
+#### NorthEastPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.10 SearchPlaceIndexForTextRequest
+#### SearchPlaceIndexForTextRequest
 
 | Name | Description |
 | --- | --- |
@@ -164,37 +164,37 @@ The domain model is a data model that describes the information in your applicat
 | `Text` | The `Text` attribute is used to specify the address, name, city, or region to be used in the search in free-form text format. For example, 123 Any Street. |
 | `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search. |
 
-#### 4.1.11 FilterCountry
+#### FilterCountry
 
 | Name | Description |
 | --- | --- |
 | `Value` | The `Value` attribute is used if one wants to limit the search results by returning only places that are in a specified list of countries. |
 
-#### 4.1.12 FilterBBox
+#### FilterBBox
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes. |
 
-#### 4.1.13 BiasPosition
+#### BiasPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.14 SearchPlaceIndexForTextResponse
+#### SearchPlaceIndexForTextResponse
 
 | Name | Description |
 | --- | --- |
 | N/A | This has no attributes but holds a list of results via an associated list of `SearchForTextResult` objects. |
 
-#### 4.1.15 SearchForTextResult
+#### SearchForTextResult
 
 | Name | Description |
 | --- | --- |
 | `Relevance` | The `Relevance` attribute is holds the relative confidence in the match for a result among the results returned. For example, if more fields for an address match (including house number, street, city, country/region, and postal code), the relevance score is closer to 1. |
 
-#### 4.1.16 CalculateRouteRequest
+#### CalculateRouteRequest
 
 | Name | Description |
 | --- | --- |
@@ -205,44 +205,44 @@ The domain model is a data model that describes the information in your applicat
 | `IncludeLegGeometry` | The `IncludeLegGeometry` attribute sets if to include the geometry details in the result for each path between a pair of positions. |
 | `TravelMode` | The `TravelMode` attribute specifies the mode of transport when calculating a route. Used in estimating the speed of travel and road compatibility. You can choose Car, Truck, Walking, Bicycle or Motorcycle as options for the TravelMode. |
 
-#### 4.1.17 DeparturePosition
+#### DeparturePosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.18 DestinationPosition
+#### DestinationPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.19 WaypointPosition
+#### WaypointPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.20 CarModeOptions
+#### CarModeOptions
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes. |
 
-#### 4.1.20 TruckModeOptions
+#### TruckModeOptions
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `TravelModeOptions` entity and has no additional attributes. |
 
-#### 4.1.21 TruckWeight
+#### TruckWeight
 
 | Name | Description |
 | --- | --- |
 | `Total` | The `Total` attribute specifies the total weight of the truck. |
 | `VehicleWeightUnit` | The `VehicleWeightUnit` attribute specifies the unit of measurement to use for the truck weight. |
 
-#### 4.1.22 TruckDimensions
+#### TruckDimensions
 
 | Name | Description |
 | --- | --- |
@@ -251,13 +251,13 @@ The domain model is a data model that describes the information in your applicat
 | `DimensionUnit` | The `DimensionUnit` attribute is used to specify the unit of measurement for the truck dimensions. |
 | `Width` | The `IndexName` attribute is used to specify the width of the truck. |
 
-#### 4.1.23 CalculateRouteResponse
+#### CalculateRouteResponse
 
 | Name | Description |
 | --- | --- |
 | N/A | This has no attributes but holds a `CalculateRouteSummary` object and a list of results via an associated list of `Leg` objects. |
 
-#### 4.1.24 CalculateRouteSummary
+#### CalculateRouteSummary
 
 | Name | Description |
 | --- | --- |
@@ -266,13 +266,13 @@ The domain model is a data model that describes the information in your applicat
 | `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
 | `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
-#### 4.1.25 RouteBBox
+#### RouteBBox
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `BoundingBox` entity and has no additional attributes. |
 
-#### 4.1.26 Step
+#### Step
 
 | Name | Description |
 | --- | --- |
@@ -280,44 +280,44 @@ The domain model is a data model that describes the information in your applicat
 | `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
 | `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
-#### 4.1.27 Leg
+#### Leg
 
 | Name | Description |
 | --- | --- |
 | `Distance` | The `DepartureTime` attribute specifies the total distance covered by the route. The sum of the distance travelled between every stop on the route. |
 | `DurationSeconds` | The `DurationSeconds` attribute specifies the total travel time for the route measured in seconds. The sum of the travel time between every stop on the route. |
 
-#### 4.1.28 StepStartPosition
+#### StepStartPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.29 StepEndPosition
+#### StepEndPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.30 GeometryLineString
+#### GeometryLineString
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.31 LegStartPosition
+#### LegStartPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.32 LegEndPosition
+#### LegEndPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.33 SearchPlaceIndexForPositionRequest
+#### SearchPlaceIndexForPositionRequest
 
 | Name | Description |
 | --- | --- |
@@ -325,25 +325,25 @@ The domain model is a data model that describes the information in your applicat
 | `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request. |
 | `IndexName` | The `IndexName` attribute is used to specify the name of the place index resource you want to use for the search. |
 
-#### 4.1.34 SearchPlaceIndexForPositionPosition
+#### SearchPlaceIndexForPositionPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-#### 4.1.35 SearchPlaceIndexForPositionResponse
+#### SearchPlaceIndexForPositionResponse
 
 | Name | Description |
 | --- | --- |
 | N/A | This has no attributes but holds a `SearchPlaceIndexForPositionSummary` object and an associated list of `SearchForPositionResult` objects. |
 
-#### 4.1.36 SearchForPositionResult
+#### SearchForPositionResult
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `result` entity and has no additional attributes. |
 
-#### 4.1.37 SearchPlaceIndexForPositionSummary
+#### SearchPlaceIndexForPositionSummary
 
 | Name | Description |
 | --- | --- |
@@ -351,31 +351,31 @@ The domain model is a data model that describes the information in your applicat
 | `MaxResults` | The `MaxResults` attribute is used to specify the maximum number of results returned per request. |
 | `DataSource` | The `DataSource` attribute specifies the data provider of traffic and road network data used. Indicates one of the available providers: Esri, Grab or Here. |
 
-#### 4.1.38 SearchPlaceIndexForPositionSummaryPosition
+#### SearchPlaceIndexForPositionSummaryPosition
 
 | Name | Description |
 | --- | --- |
 | N/A | This is a specialization of the `Position` entity and has no additional attributes. |
 
-### 4.2 Enumerations
+### Enumerations
 
 An enumeration is a predefined list of values that can be used as an attribute type. For the Amazon Location Service connector, enumerations list values such as {AS REQUIRED}.
 
-#### 4.2.1 `ENUM_DimensionUnit`
+#### `ENUM_DimensionUnit`
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | Meters | Meters | Specifies that the distance units are meters. |
 | Feet | Feet | Specifies that the distance units are feet. |
 
-#### 4.2.2 `ENUM_DistanceUnit`
+#### `ENUM_DistanceUnit`
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | Kilometers | Kilometers | Specifies that the distance units are kilometers. |
 | Miles | Miles | Specifies that the distance units are miles. |
 
-#### 4.2.3 `ENUM_TravelMode`
+#### `ENUM_TravelMode`
 
 | Name | Caption | Description |
 | --- | --- | --- |
@@ -385,18 +385,18 @@ An enumeration is a predefined list of values that can be used as an attribute t
 | Bicycle | Bicycle | Specifies that mode of travel is by bicycle. |
 | Motorcycle | Motorcycle | Specifies that mode of travel is by motorcycle. |
 
-#### 4.2.4 `ENUM_VehicleWeightUnit`
+#### `ENUM_VehicleWeightUnit`
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | Kilograms | Kilograms | Specifies that the weight of the vehicle is expressed in kilograms. |
 | Pounds | Pounds | Specifies that the weight of the vehicle is expressed in pounds. |
 
-### 4.3 Activities {#activities}
+### Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
-#### 4.3.1 CalculateRoute {#calculate-route}
+#### CalculateRoute {#calculate-route}
 
 The `CalculateRoute` activity allows you to calculate a route between multiple points and returns the distance and duration of the proposed routes. It requires a `Credentials` object, a `CalculateRouteRequest` object containing the required information and the AWS_Region in which the Location service should be called.
 
@@ -421,7 +421,7 @@ This activity returns a `CalculateRouteResponse` object with objects from the fo
 | `LegStartPosition` | `Position` | This entity contains the starting position of the leg. |
 | `LegEndPosition` | `Position` | This entity contains the terminating position of the leg. |
 
-#### 4.3.2 SearchPlaceIndexForPosition
+#### SearchPlaceIndexForPosition
 
 The `SearchPlaceIndexForPosition` activity takes a set of coordinates and returns the nearest points of interest. It requires a `Credentials` object, a `SearchPlaceIndexForPositionRequest` object containing the required information and the AWS_Region in which the Location service should be called.
 
@@ -440,7 +440,7 @@ This activity returns a `SearchPlaceIndexForPositionResponse` object with object
 | `SearchPlaceIndexForPositionSummary` |  | This entity holds a summary of the request sent by using SearchPlaceIndexForPosition. |
 | `SearchPlaceIndexForPositionSummaryPosition` | `Position` | This entity contains the position specified in the request. |
 
-#### 4.3.3 SearchPlaceIndexForText
+#### SearchPlaceIndexForText
 
 The `SearchPlaceIndexForText` activity geocodes free-form text, such as an address, name, city, or region to allow you to search for places or points of interest. It requires a `Credentials` object, a `SearchPlaceIndexForTextRequest` object containing the required information and the AWS_Region in which the Location service should be called.
 

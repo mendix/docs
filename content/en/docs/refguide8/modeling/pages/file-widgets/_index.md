@@ -4,7 +4,7 @@ url: /refguide8/file-widgets/
 weight: 35
 ---
 
-## 1 Introduction
+## Introduction
 
 File widgets allow end-users to upload, download, and display files and images. 
 
@@ -20,11 +20,11 @@ File widgets allow end-users to upload, download, and display files and images.
 
     {{< figure src="/attachments/refguide8/modeling/pages/file-widgets/image-viewer-example.png" alt="Image Viewer Example" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

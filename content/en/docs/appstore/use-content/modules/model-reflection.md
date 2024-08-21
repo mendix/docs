@@ -5,15 +5,15 @@ description: "Describes the configuration and usage of the Mx Model Reflection m
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Mx Model Reflection](https://marketplace.mendix.com/link/component/69/) module allows you to access information about the domain model and about microflows of your app from your app. For example, you can loop through all the attribute names of an entity type in a microflow.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The typical usage scenario is selecting and showing entities from your domain model to use for another configuration. 
 
-## 2 Configuration {#configuration}
+## Configuration {#configuration}
 
 After importing the module, add **\_USE_ME** > **MxObjects** to one of your pages (you can directly use **\_USE_ME** > **MxObjects_Overview** which contains **MxObjects**, and add the page to the navigation of your app). Run your application for the synchronization. You are able to enable synchronization for each module. For both security and performance purposes, you do not want your entire domain model structure available in your app.
 
@@ -23,7 +23,7 @@ If you have a large app, the synchronization will take much longer.
 
 If you want the synchronization to get triggered automatically after your app starts up, use the microflow **ASu_CheckMetamodel** from the **Private** > **Event flows** folder as your after startup microflow, or make sure this microflow gets triggered from your own after startup microflow.
 
-### 2.1 Token Configuration
+### Token Configuration
 
 The display pattern in the token is optional. If you do not specify a value, the module will use the original behavior. 
 
@@ -35,7 +35,7 @@ For all other attributes, the functions from *java.util.Formatter* are used (for
 
 All the patterns use the locale from the context. Based on the user's language, the pattern will change its behavior if necessary.
 
-### 2.2 Display Pattern Example (Using En_US Language)
+### Display Pattern Example (Using En_US Language)
 
 * Long attribute with a thousand separator:
     * Pattern:  `%,8d%n`
@@ -50,7 +50,7 @@ All the patterns use the locale from the context. Based on the user's language, 
     * Value: `12345,678`
     * Result: `12,345.68`
 
-## 3 Read More
+## Read More
 
 * [How to Export to Excel](/howto/integration/using-the-excel-exporter/)
 * [How to Import Excel Documents](/howto/integration/importing-excel-documents/)

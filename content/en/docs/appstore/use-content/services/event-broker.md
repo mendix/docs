@@ -6,7 +6,7 @@ description: "Mendix Event Broker"
 aliases:
 ---
 
-## 1 Introduction
+## Introduction
 
 Based on [Apache Kafka](https://kafka.apache.org/), the Mendix Event Broker is single-tenant and can only be used by apps running on nodes provisioned for your company.
 
@@ -14,13 +14,13 @@ Events are published to a Kafka topic. Apps are subscribed to a Kafka topic to r
 
 There is a single Kafka broker for Free Apps that your company Free Apps can connect to. All Free Apps in your company publish and consume from the same Kafka broker. Events are published to one shared Kafka topic, and any Free App in your company can receive these events.
 
-## 2 Mendix Event Broker License {#event-broker-license}
+## Mendix Event Broker License {#event-broker-license}
 
 Purchase a license to the Mendix Event Broker to deploy unlimited apps on production environments in the Mendix Cloud. Ask your Customer Success Manager or Account Manager to reach out to purchase a license. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details.
 
 A license for the Mendix Event Broker is available for any Mendix region, but once selected, you can only run on a single region (no multi-region support). This license is available for all customers. You can also run business events on [your own Kafka cluster](/appstore/services/business-events/#byok).
 
-### 2.1 Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
+### Enabling the Mendix Event Broker Service {#enable-mx-event-broker}
 
 Once a license is purchased, a Technical Contact must enable the Event Broker Service on the [Mendix Portal](/developerportal/) for the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) in the following places:
 
@@ -29,11 +29,11 @@ Once a license is purchased, a Technical Contact must enable the Event Broker Se
 
 The Event Broker must be enabled on both the app and specific environment levels in order to use the Event Broker services.
 
-### 2.2 Managing the Mendix Event Broker {#manage-mx-broker}
+### Managing the Mendix Event Broker {#manage-mx-broker}
 
 Technical Contacts with a license to the Mendix Event Broker can manage its features on the [Event Broker Manager](https://broker.mendix.com/) page.
 
-#### 2.2.1 Users for Event Broker Manager 
+#### Users for Event Broker Manager 
 
 Users within the company's email domain that have a Mendix login can participate in the administration of the Mendix Event Broker as either a View or Admin user. They can also be blocked from participation.
 
@@ -45,7 +45,7 @@ Users that are not part of the customer organization (not within the email domai
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_external_user.png">}}
 
-#### 2.2.2 Environments and Spaces
+#### Environments and Spaces
 
 **Space** define which applications can exchange events with each other. When Business Events is enabled for an environment, it is placed in an Event Broker **Space** based on the environment name. This enables apps deployed under the same **Space** to publish and consume events. For example, apps in acceptance environment can only exchange events with other apps' acceptance environments. You can check the **Space** of an app's environment on the [Event Broker Manager](https://broker.mendix.com/) page.
 
@@ -53,13 +53,13 @@ Spaces are created and assigned based on the app environment name and allow isol
 
 See [Enabling the Mendix Event Broker Service](#enable-mx-event-broker) for more information.
 
-#### 2.2.3 Topics and Channels {#topics-channels}
+#### Topics and Channels {#topics-channels}
 
 Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
 Events published by Free Apps are published to one shared company channel on a multi-tenant free Event Broker. Events published by apps running on licensed nodes are published to their own channels on the company Event Broker. These channels, implemented as topics on Kafka, are automatically created upon deployment of the app publishing the events.
 
-#### 2.2.4 Event Access Control {#access-control}
+#### Event Access Control {#access-control}
 
 The Mendix Event Broker allows for access control to be applied down to the event level. Each application can be granted or denied access to events using the [Event Broker Manager](https://broker.mendix.com/).
 
@@ -87,7 +87,7 @@ From here, you can manage the default access settings:
 * **An app can access events defined in it** – allows newly-deployed applications to always have access to any events defined within that application (see [Creating a New Business Event Service](/appstore/services/business-events/#two-way-be-create) for more information)
 * **For other events, in all environments, the app can:** – allows administrators to turn on or off the default assigning of event access 
 
-## 3 Mendix Event Broker Bridges {#manage-mx-broker-bridge}
+## Mendix Event Broker Bridges {#manage-mx-broker-bridge}
 
 {{% alert color="warn" %}}
 This feature is currently in [Private Beta](/releasenotes/beta-features/). Contact your Customer Success Manager or Account Manager for further assistance.
@@ -97,7 +97,7 @@ Mendix Event Broker Bridges allow for the integration of the Mendix Event Broker
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_bridges.png" class="no-border" >}}
 
-### 3.1 Standard Message Format
+### Standard Message Format
 
 To move an event from SQS to Mendix Event Broker, a message must contain the following message attributes and start with `ce_`:
 
@@ -108,7 +108,7 @@ To move an event from SQS to Mendix Event Broker, a message must contain the fol
 
 See [CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md#required-attributes) for more information on required attributes.
 
-### 3.2 Configuring a Bridge with AWS SQS
+### Configuring a Bridge with AWS SQS
 
 Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
@@ -116,19 +116,19 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
 
 The creation process contains three steps on the Mendix side and policies that need to be implemented on the AWS side.
 
-### 3.3 Select a Service to Configure
+### Select a Service to Configure
 
 Within the scope of the current Public Beta for this feature, Mendix Event Broker Bridges can transport events between the Mendix Event Broker and AWS SQS.  Other options in the list are currently not available for use.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_bridges_create_2.png" class="no-border" >}}
 
-### 3.4 Configuration Details
+### Configuration Details
 
 The next step of configuration is to select a [Space](#manage-mx-broker), Name, and Region for the bridge to operate in.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_bridges_create_3.png" class="no-border" >}}
 
-### 3.5 Choose the Business Events to Integrate
+### Choose the Business Events to Integrate
 
 The user must select events from the Event Broker landscape of events to send to or receive from AWS SQS. To do this, do the following:
 
@@ -155,7 +155,7 @@ Once the Mendix Event Broker Bridge has been successfully deployed, its configur
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_bridges_overview.png" class="no-border" >}}
 
-### 3.6 Configure AWS Access Policy for Sending Messages to Mendix
+### Configure AWS Access Policy for Sending Messages to Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is sending messages to Mendix.
 
@@ -175,7 +175,7 @@ Add this object to your Access Policy of the AWS SQS queue if it is sending mess
 }
 ```
 
-### 3.7 Configure AWS Access Policy for Receiving Messages from Mendix
+### Configure AWS Access Policy for Receiving Messages from Mendix
 
 Add this object to your Access Policy of the AWS SQS queue if it is receiving messages from Mendix.
 

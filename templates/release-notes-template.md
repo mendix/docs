@@ -1,5 +1,6 @@
 ---
 title: "Enter the title of the document"
+numberless_headings: true #Prevent automatic heading numbering when this page renders
 #url: Set the relative URL of the document; after the name of the main directory/product the document is in, use the document title; example for document titled my-new-page.md, in refguide directory: /refguide/my-new-page/
 #weight: Enter the position of the document compared to other 'child' documents at the same level; number by 10 (for first), 20, 30, etc. for easy ordering of other documents in the future if necessary; don't add brackets or quotation marks
 #description: "The release notes for _____ version ____ with details on new features, bug fixes, and known issues."

@@ -6,8 +6,8 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 Before you start testing, read [Compatibility](/appstore/partner-solutions/ats/ov-compatibility/) and [Deployment Options](/appstore/partner-solutions/ats/ov-deployment/) for setting up ATS.
 
-## 2 Documents in this Section
+## Documents in this Section

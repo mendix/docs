@@ -3,21 +3,21 @@ title: "Get Selected Option Index"
 url: /appstore/partner-solutions/ats/rg-one-get-selected-option-index/
 ---
 
-## 1 Description
+## Description
 
 Returns the index of the currently selected item of a WebElement, for example, select
 
-## 2 Usage
+## Usage
 
 Pass the parent WebElement of which you want to get the currently selected option's index from.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Select Element | WebElement | yes | The parent WebElement, for example, select
 
-## 4 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

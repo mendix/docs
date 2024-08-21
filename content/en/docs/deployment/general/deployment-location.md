@@ -5,7 +5,7 @@ weight: 50
 description: "URL considerations for deploying Mendix"
 ---
 
-## 1 Introduction
+## Introduction
 
 When you deploy your app outside Mendix Cloud, you can choose the URL that points to your app. However, there are some restrictions on where you should deploy your app.
 
@@ -15,7 +15,7 @@ In this document, `domain` is used to identify the domain registered to you thro
 
 For apps deployed to Mendix Cloud, you can customize a URL by adding [custom domains](/developerportal/deploy/custom-domains/).
 
-## 2 Paths
+## Paths
 
 If you specify an app URL location on a (sub)path, the Mendix runtime needs to know the public URL of your application. This can be done by setting the [custom runtime setting](/refguide/custom-settings/#applicationrooturl-section) `ApplicationRootUrl`.
 
@@ -25,7 +25,7 @@ Routing based on a subpath is possible as of Studio Pro 10.3 (for details, see t
 If you want to deploy several apps on the same domain, use different subdomains to identify the app. For example, use `https://appA.apps.mydomain.com/`, not `https://mydomain.com/apps/appA`.
 {{% /alert %}}
 
-## 3 Main Domain Name
+## Main Domain Name
 
 Do not deploy your app directly at the apex domain (`https://domain/`).
 

@@ -5,7 +5,7 @@ weight: 20
 description: "Describes the adaptable solution-related commands for the mx command-line tool."
 ---
 
-## 1 Introduction
+## Introduction
 
 The commands in this group are related to [adaptable solutions](/appstore/creating-content/sol-adapt/). 
 
@@ -29,11 +29,11 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 For exit code examples, refer to the specific commands below.
 
-## 2 mx show-app-version Command {#show-app-version}
+## mx show-app-version Command {#show-app-version}
 
 The `mx show-app-version` command enables seeing the [publisher-side](/appstore/creating-content/sol-solutions-guide/) version of your solution (the version of the solution that you develop) and the [consumer-side](/appstore/creating-content/sol-solutions-impl/) version of the solution package that your app is based on (the version of the solution package when you consumed the solution).
 
-### 2.1 Usage
+### Usage
 
 Use the following command pattern for `mx show-app-version`:
 
@@ -50,14 +50,14 @@ For `MPR-FILE`, enter an *.mpr* file.
 
 The `--based-on` version is a version of a solution package (*.mxsolution*) that the current app is based on.
 
-### 2.2 Examples
+### Examples
 
 Here are two examples:
 
 * `mx show-app-version C:\MyApp\MyApp.mpr`
 * `mx show-app-version C:\MyApp\MyApp.mpr -b`
 
-### 2.3 Return Codes
+### Return Codes
 
 This command uses the common format exit codes described above for all app-version related commands.
 
@@ -69,11 +69,11 @@ This table shows the return codes and their description:
 | `315` | If `-b` was specified, but the app is not based on a solution.  |
 | `313` | If `-b` was not specified, but distribution as a solution is not enabled for the app. |
 
-## 3 mx set-app-version Command {#set-app-version}
+## mx set-app-version Command {#set-app-version}
 
 The `mx set-app-version` command enables setting the version of your [solution](/appstore/creating-content/sol-solutions-guide/) when building it.
 
-### 3.1 Usage
+### Usage
 
 Use the following command pattern for `mx set-app-version`:
 
@@ -89,13 +89,13 @@ For `MPR-FILE`, enter an *.mpr* file.
 
 For `VERSION`, enter a version in the [SemVer](https://semver.org) format.
 
-### 3.2 Examples
+### Examples
 
 Here is an example:
 
 `mx set-app-version C:\MyApp\MyApp.mpr 1.2.3`
 
-### 3.3 Return Codes
+### Return Codes
 
 This command uses the common format exit codes described above for all app-version related commands.
 

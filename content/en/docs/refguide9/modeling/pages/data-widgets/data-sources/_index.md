@@ -5,13 +5,13 @@ weight: 40
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Widgets that display information stored in entities require you to assign a method by which to retrieve the relevant data. Such methods are collectively known as data sources. Widgets that require a data source include all [data containers](/refguide9/data-widgets/) and [input elements](/refguide9/input-widgets/). [Pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) can also use data sources.
 
 In this document, we describe data sources of data containers. 
 
-## 2 Data View
+## Data View
 
 A data view supports the following data sources:
 
@@ -24,7 +24,7 @@ A data view supports the following data sources:
 The **Microflow** source is not supported in offline applications because it implies a call to the server.
 {{% /alert %}}
 
-## 3 List Widgets {#list-widgets}
+## List Widgets {#list-widgets}
 
 A data grid, template grid, and list view are list widgets. Also some [pluggable widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/) may behave as list widgets and use data sources. Supported data sources are listed below:
 
@@ -40,6 +40,6 @@ The data source also determines which features of the widget are enabled. For ex
 Database and nanoflow data sources are the only data sources supported offline. If a list widget has a database data source in an offline application, the data will come from the database that is situated on the device. This database can be synced with a [button](/refguide9/button-properties/) widget for creating a new object.
 {{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [Data Containers](/refguide9/data-widgets/)

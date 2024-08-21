@@ -3,7 +3,7 @@ title: "Finding the Action You Need"
 url: /appstore/partner-solutions/ats/bp-one-finding-the-action-you-need/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains the best way for finding the action you need in ATS. This is done by using six main categories for what you are trying to achieve. Each category explains the generic solution and the widget specific solutions using examples.
 
@@ -24,11 +24,11 @@ When the ATS Recorder does not record any steps, you can use this best practice 
 
 {{% /alert %}}
 
-## 2 Finding a Widget
+## Finding a Widget
 
 In ATS there are many actions for finding a widget. From finding a widget to finding a specific datagrid row. The first chapter explains the generic action for finding a widget. The second chapter explains the actions that conduct a more specific search. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can find something is "Find".
 
-### 2.1 Generic Action
+### Generic Action
 
 When you want to find a widget the main choice is always the [*Find/Assert Widget*](/appstore/partner-solutions/ats/rg-one-findassert-widget/) action. It finds the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
@@ -44,7 +44,7 @@ The *Find/Assert Widget* action works on every widget that has a `mx-name`.
 
 If the generic action does not work check if there is a specific one.
 
-### 2.2 Specific Action
+### Specific Action
 
 When you are looking for a specific widget or content of that widget, use the widget name in the search. 
 
@@ -60,7 +60,7 @@ When you are looking for a specific widget or content of that widget, use the wi
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/find-dialog-example-1.png" class="no-border" >}}
 
-### 2.3 Summary
+### Summary
 
 When you want to find a widget always use the *Find/Assert Widget* action if possible. 
 
@@ -68,11 +68,11 @@ If you want to find something more specific inside a widget or the widget does n
 
 In case you cannot find a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-## 3 Clicking a Widget
+## Clicking a Widget
 
 In ATS there are many actions for clicking a widget. From clicking a widget to clicking a specific datagrid row. The first chapter explains the generic action for clicking a widget. The second chapter explains the actions that conduct a more specific click. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can click something is "Click".
 
-### 3.1 Generic Action
+### Generic Action
 
 When you want to click a widget the main choice is always the [*Click Widget*](/appstore/partner-solutions/ats/rg-one-click-widget/) action. It clicks the widget you need using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
@@ -88,7 +88,7 @@ The *Click Widget* action works on every widget that has a `mx-name`.
 
 If the generic action does not work check if there is a specific one.
 
-### 3.2 Specific Action
+### Specific Action
 
 ATS also has a few specific click actions. To find these use the search term, "Click" in combination with the widget name. 
 
@@ -106,7 +106,7 @@ You cannot use the *Click Widget* action because the menu item does not have its
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/clickdoubleclick-action-search-1.png" class="no-border" >}}
 
-### 3.3 Summary
+### Summary
 
 When you want to click a widget always use the *Click Widget* action if possible. 
 
@@ -114,11 +114,11 @@ If you want to click something more specific inside a widget or the widget does 
 
 In case you cannot click a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-## 4 Set an input widget
+## Set an input widget
 
 In ATS there are several actions for setting an input widget. From a simple action that covers most situations to checkboxes inside tables. The first chapter explains the generic action for setting an input widget. The second chapter explains the actions that set a more specific input widget. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can handle an input widget is "Set".
 
-### 4.1 Generic Action
+### Generic Action
 
 When you want to set an input widget the main choice is always the [*Set Value*](/appstore/partner-solutions/ats/rg-one-set-value/) action. It sets the input widget using the `mx-name` of the widget and the value to set. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
@@ -134,7 +134,7 @@ The *Set Value* action works on almost every widget that is an input widget.
 
 If the generic action does not work check if there is a specific one.
 
-### 4.2 Specific Action
+### Specific Action
 
 ATS also has a few specific actions for setting an input widget. To find these use the search term, "Set" in combination with the widget name.
 
@@ -154,7 +154,7 @@ ATS also has a few specific actions for setting an input widget. To find these u
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/set-inputreferenceselector-value-action-search-1.png" class="no-border" >}}
 
-### 4.3 Summary
+### Summary
 
 When you want to set an input widget always use the *Set Value* action if possible. 
 
@@ -162,11 +162,11 @@ If you want to set a special input widget or the widget does not have a `mx-name
 
 In case you cannot set an input widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-## 5 Retrieving a value from a widget
+## Retrieving a value from a widget
 
 In ATS there are several actions for getting a value from a widget. The first chapter explains the generic action for getting a value from a widget. The second chapter explains the actions that get a specific value from a widget. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can get a value is "Get".
 
-### 5.1 Generic Action
+### Generic Action
 
 When you want to get a value from a widget the main choice is always the [Get Value](/appstore/partner-solutions/ats/rg-one-get-value/) action. It retrieves the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
@@ -182,7 +182,7 @@ The *Get Value* action works on almost every widget that is an input widget.
 
 If the generic action does not work check if there is a specific one.
 
-### 5.2 Specific Action
+### Specific Action
 
 ATS also has a few specific actions for getting a value from an widget. To find these use the search term, "Get" in combination with the widget name.
 
@@ -198,7 +198,7 @@ ATS also has a few specific actions for getting a value from an widget. To find 
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-dialog-message-text-action-search-1.png" class="no-border" >}}
 
-### 5.3 Summary
+### Summary
 
 When you want to get a value from a widget always use the *Get Value* action if possible. 
 
@@ -206,11 +206,11 @@ If you want to get the value from a specific widget or the widget does not have 
 
 In case you cannot get the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-## 6 Asserting values/information
+## Asserting values/information
 
 In ATS there are several actions for asserting values. The first chapter explains the generic action for asserting a value inside your app. The second chapter explains the actions that assert specific values inside your app or inside ATS. The last chapter provides a summary of the first two chapters. The magic word while searching for an action that can assert a value is "Assert".
 
-### 6.1 Generic Action
+### Generic Action
 
 When you want to assert a value inside a widget the main choice is always the [*Assert Value*](/appstore/partner-solutions/ats/rg-one-assert-value/) action. It asserts the value of a widget using the `mx-name` of the widget. ATS uses the **Widget Name** parameter instead of `mx-name`.
 
@@ -226,7 +226,7 @@ The *Assert Value* action works on almost every widget that is an input widget.
 
 If the generic action does not work check if there is a specific one.
 
-### 6.2 Specific Action
+### Specific Action
 
 ATS also has a few specific actions for asserting values in a widget or inside ATS. To find these use the search term "Assert" in combination with the name of the widget or in combination with what you want to assert.
 
@@ -244,7 +244,7 @@ ATS also has a few specific actions for asserting values in a widget or inside A
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/assert-not-equals-action-search-1.png" class="no-border" >}}
 
-### 6.3 Summary
+### Summary
 
 When you want to assert a value from a widget always use the *Assert Value* action if possible.
 
@@ -252,11 +252,11 @@ If you want to assert a value from a specific widget or the widget does not have
 
 In case you cannot assert the value from a widget due to no unique name or because it is not supported, go to [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/).
 
-## 7 Generating values/information
+## Generating values/information
 
 In ATS there are several actions for generating random or present time values. The first chapter explains a generic action that makes a reusable string. The second chapter explains the actions that perform more specific tasks. The last chapter provides a summary of the first two chapters. In this case, there is no magic word to find the actions you need.
 
-### 7.1 Generic Action
+### Generic Action
 
 In some test cases, you want to enter the same value a few times. Instead of entering the same value every time you can use the [*Concatenate String*](/appstore/partner-solutions/ats/rg-one-concatenate-string/). The *Concatenate String* action combines the text you enter and returns it so that you can reuse that value in different actions.
 
@@ -266,7 +266,7 @@ It is also used for creating variable selectors.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/concatenate-string-action-search-1.png" class="no-border" >}}
 
-### 7.2 Specific Action
+### Specific Action
 
 ATS also has a few specific actions for generating values to use in your test case. Search terms used to find these are, "Random" or "Current".
 
@@ -282,11 +282,11 @@ ATS also has a few specific actions for generating values to use in your test ca
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-one/bp-one-finding-the-action-you-need/get-current-datetime-string-action-search-1.png" class="no-border" >}}
 
-### 7.3 Summary
+### Summary
 
 For generating values or information you should follow the first two sections of this chapter. There is no generic solution regarding this. Only a constant provider like the *Concatenate String* action.
 
-## 8 Summary
+## Summary
 
 It all comes down to following certain steps to achieve the right result. 
 

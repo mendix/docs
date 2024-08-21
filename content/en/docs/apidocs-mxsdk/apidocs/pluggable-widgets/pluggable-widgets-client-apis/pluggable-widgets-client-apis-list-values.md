@@ -4,11 +4,11 @@ url: /apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/
 description: A guide to understanding the list of objects for the datasource property in Mx10.
 ---
 
-## 1 Introduction
+## Introduction
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property. Corresponding list item values represent properties of different types linked to a [datasource](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property.
 
-## 2 ListValue {#listvalue}
+## ListValue {#listvalue}
 
 When a [`datasource`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#datasource) property with `isList="true"` is configured for a widget, the client component gets a list of objects represented as a `ListValue`. This type allows detailed access and control over the data source.
 
@@ -36,7 +36,7 @@ export interface ListValue {
 }
 ```
 
-### 2.1 Pagination {#listvalue-pagination}
+### Pagination {#listvalue-pagination}
 
 The `offset` and `limit` properties specify the range of objects retrieved from the datasource. The `offset` is the starting index and the `limit` is the number of requested items. By default, the `offset` is *0* and the `limit` is `undefined` which means all the datasource's items are requested. You can control these properties with the `setOffset` and `setLimit` methods. This allows a widget to not show all data at once. Instead it can show only a single page when you set the proper offset and limit, or the widget will load additional data whenever it is needed if you increase the limit.
 
@@ -126,7 +126,7 @@ export default class PagedWidget extends Component<PagedWidgetProps> {
 
 The `setOffset` and `setLimit` are supported on all [data sources](/refguide/data-sources/#list-widgets). For the `XPath` and `Database` data sources, only the requested page is returned to the client. For other data sources the full set is returned to the client, but the widget will only receive the requested page in the `items` property.
 
-### 2.3 Sorting {#listvalue-sorting}
+### Sorting {#listvalue-sorting}
 
 It is possible to set a specific sort order for items in the list using `setSortOrder` method and get the current sort order via `sortOrder` field. When a new sort order is set, widget will receive new results on next re-render.
 
@@ -189,7 +189,7 @@ this.props.myDataSource.setSortOrder(undefined);
 
 The `setSort` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the sorting is done by the back end. For all the other data sources the sorting is done by the client.
 
-### 2.4 Filtering {#listvalue-filtering}
+### Filtering {#listvalue-filtering}
 
 It is possible to set filtering conditions for items of a datasource. `setFilter()` method accepts filter conditions and applies filtering. `filter` field represents the current filter condition.
 
@@ -213,7 +213,7 @@ interface MyListWidgetsProps {
 
 The `setFilter` method is supported for all [data sources](/refguide/data-sources/#list-widgets). For `Database` and `XPath` data sources the filtering is done by the back end. For all the other data sources the filtering is done by the client. In both cases the widget will receive the filtered items in the `items` property.
 
-#### 2.4.1 Simple Filtering {#simple-filtering}
+#### Simple Filtering {#simple-filtering}
 
 To apply a simple filter based on the value of an attribute represented by `myAttributeString` property the following code may be used:
 
@@ -283,7 +283,7 @@ The following code sample shows how to remove the current filtering condition:
 this.props.myDataSource.setFilter(undefined);
 ```
 
-#### 2.4.2 Advanced Filtering {#advanced-filtering}
+#### Advanced Filtering {#advanced-filtering}
 
 In some use cases it is necessary to apply more complex filtering conditions. For example if a use case requires fetching only items where `myAttributeString` starts with `"B"` and `myAttributeBoolean` is set to `true`, or items where `myAttributeNumber` is greater than `10` and `myAssociationReference` is associated with another object while `myAssociationReferenceSet` is not associated with any other objects. In order to construct such a condition, special filter builders `and` and `or` have to be used. The following code sample shows how to use them. Note that checks for the `filterable` flag have been omitted for simplicity. Real widgets should always take the `filterable` flag into account.
 
@@ -309,15 +309,15 @@ if (/* check that all properties are filterable */) {
 }
 ```
 
-### 2.5 Reloading {#listvalue-reload}
+### Reloading {#listvalue-reload}
 
 It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`, `limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
 
-### 2.6 Working With Actual Data
+### Working With Actual Data
 
 The `items` property contains all the requested data items of the datasource. However, it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute), [`action`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action), or [`widgets`](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets). See the next section for detailed information about working with different property types in combination with `ListValue`.
 
-### 2.7 View State {#view-state}
+### View State {#view-state}
 
 View state is a mechanism of storing the current state of a page when user navigates away from the page and restoring that state when user navigates back to the page. For example user has some sorting order applied in a DataGrid widget on an overview page and navigates away to a detail page. When user gets back to the overview page, the DataGrid widget will be initialized with previously used sorting order.
 
@@ -329,7 +329,7 @@ The following information of a `ListView` is getting automatically stored and re
 * Sorting state (`sortOrder` field)
 * Filtering state (`filter` field)
 
-### 2.8 Status of the List Value Items {#status-of-the-list-value-items}
+### Status of the List Value Items {#status-of-the-list-value-items}
 
 The `status` property provides the component with additional information about the state of the items and how the component should handle them:
 
@@ -361,9 +361,9 @@ More specifically, the `status` property functions as follows:
     * If the list value was previously in a `ValueStatus.Available` state, then the previous `items` array is still returned. This allows a component to keep showing the previous items if it does not need to handle the `Loading` state explicitly, which prevents flickering.
     * In other cases, the `items` is `undefined`. This happens if a page is still being loaded or if the previous state was `ValueStatus.Unavailable`.
 
-## 3 Linked Property Values {#linked-values}
+## Linked Property Values {#linked-values}
 
-### 3.1 ListActionValue {#listactionvalue}
+### ListActionValue {#listactionvalue}
 
 `ListActionValue` represents action that may be applied to items from `ListValue`. The `ListActionValue` is an object and its definition is as follows:
 
@@ -392,7 +392,7 @@ actionOnFirstItem.execute();
 
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See the [ActionValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#actionvalue) for more information about the usage of `ActionValue`.
 
-### 3.2 ListAttributeValue {#listattributevalue}
+### ListAttributeValue {#listattributevalue}
 
 `ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) that is linked to a data source.
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is an object and its definition is as follows:
@@ -412,7 +412,7 @@ export interface ListAttributeValue<T extends AttributeValue> {
 }
 ```
 
-#### 3.2.1 Obtaining Attribute Value {#obtaining-attribute-value}
+#### Obtaining Attribute Value {#obtaining-attribute-value}
 
 {{% alert color="warning" %}}
 Due to a technical limitation it is not yet possible to edit attributes obtained via `ListAttributeValue`. `EditableValue`s returned by `ListAttributeValue` are always **readonly**.
@@ -437,13 +437,13 @@ const attributeValue = this.props.myAttributeOnDatasource.get(this.props.myDataS
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value) for more information about usage of `EditableValue`.
 
-#### 3.2.2 Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
+#### Attribute ID, Sortable and Filterable Flags {#listattributevalue-id-sortable-filterable}
 
 `id` field of type `ListAttributeId` represents the unique randomly generated string identifier of an attribute. That identifier could be used when applying sorting and filtering on a linked data source property to identify which attribute should be used for sorting and/or filtering. For more information, see the [Sorting](#listvalue-sorting) and [Filtering](#listvalue-filtering) sections.
 
 Fields `sortable` and `filterable` specify if the attribute could be used for sorting and/or filtering. Those flags have to be checked before a widget applies filtering or sorting on a data source property. Any attempt to filter on a non-filterable attribute or sort on a non-sortable attribute leads to an error during the execution time.
 
-#### 3.2.3 Attribute Type
+#### Attribute Type
 
 The [attribute](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#attribute) property defines which attribute types can be configured for that property. For example, an attribute property may be configured to allow attributes of type `String` and `Integer` in order to present progress. While this is convenient for users, it may require additional work for developers by processing different data types.
 
@@ -459,13 +459,13 @@ if (this.props.myAttributeOnDatasource.type === "String") {
 }
 ```
 
-#### 3.2.4 Formatter and Universe
+#### Formatter and Universe
 
 The `formatter` field represents the default formatter used on values obtained by the `get` function.
 
 The optional `universe` field represents an array of possible values for an attribute. For more information, see the `universe` field of [EditableValue](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value).
 
-### 3.3 ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
+### ListReferenceValue and ListReferenceSetValue {#listassociationvalue}
 
 `ListReferenceValue` and `ListReferenceSetValue` are both used to represent an [association property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) that is linked to a data source. This allows the client component to access associated values of individual items from a `ListValue`. `ListReferenceValue` and `ListReferenceSetValue` are both objects and their definitions are as follows:
 
@@ -482,7 +482,7 @@ export interface ListAssociationValue<T extends ObjectItem | ObjectItem[]> {
 }
 ```
 
-#### 3.3.1 Obtaining Association Values
+#### Obtaining Association Values
 
 In order to work with an object or objects that are associated with a particular item returned by `ListValue`, first an instance of `DynamicValue<ObjectItem>` (for `ListReferenceValue`) or `DynamicValue<ObjectItem[]>` (for `ListReferenceSetValue`) should be obtained by calling `get` with the item. 
 
@@ -509,13 +509,13 @@ This will return an `ObjectItem` representing the associated object, because in 
 
 Please note these code samples omit checks of `myDataSource` status and availability of items for simplicity. See [DynamicValue section](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#dynamic-value) for more information on the usages of `DynamicValue`.
 
-#### 3.3.2 Association ID and Filterable Flags {#listassociationvalue-id-filterable}
+#### Association ID and Filterable Flags {#listassociationvalue-id-filterable}
 
 The `id` field of type `ListAssociationId` represents the unique randomly-generated string identifier of an association. That identifier can be used when applying filtering on a linked data source property to identify which association should be used for filtering. For more information, see the [Filtering](#listvalue-filtering) section.
 
 THe `filterable` field specifies if the association can be used for filtering. This flag has to be checked before a widget applies filtering on a data source property. An attempt to filter on a non-filterable association leads to an error during the execution time.
 
-#### 3.3.3 Association Type {#association-type}
+#### Association Type {#association-type}
 
 The [association](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#association) property determines which association types could be configured for that property. For example, an association property may be configured to allow associations of type `Reference` and not `ReferenceSet`.
 
@@ -530,7 +530,7 @@ if (this.props.myAssociationOnDatasource.type === "Reference") {
 }
 ```
 
-### 3.4 ListWidgetValue {#listwidgetvalue}
+### ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets) that is linked to a data source. This allows the client component to render child widgets with items from a `ListValue`.
 `ListWidgetValue` is an object and its definition is as follows:
@@ -558,7 +558,7 @@ this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 
 When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above `myWidgets`).
 
-### 3.5 ListExpressionValue {#listexpressionvalue}
+### ListExpressionValue {#listexpressionvalue}
 
 `ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#expression) or [text template property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is an object and its definition is as follows:
 
@@ -586,13 +586,13 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource.get(this.props.myDataSource.item[0]);
 ```
 
-## 4 Filter Helpers{#filter-helpers}
+## Filter Helpers{#filter-helpers}
 
-### 4.1 Value Helpers {#filter-value-helpers}
+### Value Helpers {#filter-value-helpers}
 
 Two basic helpers that allow to represent attributes and literal values in filter conditions are `attribute` and `literal` helpers. When creating a filter condition, every attribute or literal value has to be wrapped with a corresponding helper.
 
-#### 4.1.1 Attribute
+#### Attribute
 
 The `attribute` helper takes one argument of type `ListAttributeId`. See [ListAttributeValue](#listattributevalue).
 
@@ -622,7 +622,7 @@ Attribute types **not** available for filtering:
 * `ObjectReference`
 * `ObjectReferenceSet`
 
-#### 4.1.2 Literal
+#### Literal
 
 The `literal` helper takes one argument. Accepted argument types are:
 
@@ -642,9 +642,9 @@ const now = literal(new Date()); // for DateTime
 const undef = literal(undefined);
 ```
 
-### 4.2 Basic Helpers
+### Basic Helpers
 
-#### 4.2.1 Equals
+#### Equals
 
 The `equals` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Accepts attributes and literals of any type.
@@ -659,7 +659,7 @@ const name = literal("Bob");
 const filterCondition = equals(attrA, name);
 ```
 
-#### 4.2.2 NotEqual
+#### NotEqual
 
 The `notEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Accepts attributes and literals of any type.
@@ -674,7 +674,7 @@ const name = literal("Bob");
 const filterCondition = notEqual(attrA, name);
 ```
 
-#### 4.2.3 GreaterThan
+#### GreaterThan
 
 The `greaterThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
@@ -689,7 +689,7 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = greaterThan(attr, meaningOfLife);
 ```
 
-#### 4.2.4 LessThan
+#### LessThan
 
 The `lessThan` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
@@ -704,7 +704,7 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = lessThan(attr, meaningOfLife); 
 ```
 
-#### 4.2.5 GreaterThanOrEqual
+#### GreaterThanOrEqual
 
 The `greaterThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
@@ -719,7 +719,7 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = greaterThanOrEqual(attr, meaningOfLife); 
 ```
 
-#### 4.2.6 LessThanOrEqual
+#### LessThanOrEqual
 
 The `lessThanOrEqual` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `HashString`, `Enumeration`, `AutoNumber`, `Integer`, `Long` `Decimal`, `DateTime` attributes and their corresponding literals.
@@ -734,9 +734,9 @@ const meaningOfLife = literal(new BigJS(42));
 const filterCondition = lessThanOrEqual(attr, meaningOfLife); 
 ```
 
-### 4.3 String Conditions
+### String Conditions
 
-#### 4.3.1 Contains
+#### Contains
 
 The `contains` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
@@ -760,7 +760,7 @@ const subNum = literal("1337");
 const filterCondition2 = contains(attrNum, substrNum);
 ```
 
-#### 4.3.2 StartsWith
+#### StartsWith
 
 The `startsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
@@ -784,7 +784,7 @@ const subNum = literal("1337");
 const filterCondition2 = startsWith(attrNum, substrNum);
 ```
 
-#### 4.3.3 EndsWith
+#### EndsWith
 
 The `endsWith` helper takes two arguments produced by [Value helpers](#filter-value-helpers).
 Allows only `String`, `Integer`, `Long`, `Decimal` attributes and `String` literals.
@@ -808,9 +808,9 @@ const subNum = literal("1337");
 const filterCondition2 = startsWith(attrNum, substrNum);
 ```
 
-### 4.4 Logic Conditions
+### Logic Conditions
 
-#### 4.4.1 And
+#### And
 
 The `and` helper is used to combine other conditions in *logical and* operation. Takes 2 or more arguments.
 
@@ -824,7 +824,7 @@ const filterCondition = and(
 );
 ```
 
-#### 4.4.2 Or
+#### Or
 
 The `or` helper is used to combine other conditions in *logical or* operation. Takes 2 or more arguments.
 
@@ -838,7 +838,7 @@ const filterCondition = or(
 );
 ```
 
-#### 4.4.3 Not
+#### Not
 
 The `not` helper inverts a condition. It takes one argument.
 

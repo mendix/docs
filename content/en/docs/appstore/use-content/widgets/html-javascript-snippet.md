@@ -5,23 +5,23 @@ description: "Describes the configuration and usage of the TML/JavaScript Snippe
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/) widget is useful for adding a piece of HTML or JavaScript to a page (for example, to embed a YouTube or Flash object). In addition, it can be used to enhance styling by adding arbitrary HTML elements.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 * Display a predefined HTML document
 * Load a Java applet
 * Manipulate app styling using JavaScript rather than theming
 
-### 1.2 Features
+### Features
 
 * Embed raw HTML
 * Embed raw JavaScript
 * Load external HTML/JS files
 
-## 2 Properties
+## Properties
 
 * **Content Type** – select how the snippet should be rendered:
 
@@ -48,6 +48,6 @@ The [HTML/JavaScript Snippet](https://marketplace.mendix.com/link/component/56/)
     * If this is set to false, it will just replace the content of the widget 
     * For compatibility purposes, this is set to **Yes** on default
 
-## 3 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.

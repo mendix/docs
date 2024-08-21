@@ -6,7 +6,7 @@ description: "How to configure Mendix Cloud to enable monitoring and analysis wi
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 [Dynatrace](https://www.dynatrace.com/) is a monitoring and analysis tool for cloud applications. It is a SaaS-based data analytics platform that provides monitoring for servers, databases, tools, and services. This document explains how to configure your Mendix Cloud app to send data to Dynatrace to provide additional monitoring.
 
@@ -14,7 +14,7 @@ For Dynatrace monitoring, [Dynatrace OneAgent](https://www.dynatrace.com/platfor
 
 In addition to auto-instrumented built-in metrics collected by OneAgent, Mendix apps can also collect custom application metrics. Custom application metrics are supported in Mendix 9.7 and above. For more information on the custom metrics you can send to Dynatrace, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
-## 2 Prerequisites
+## Prerequisites
 
 To use Dynatrace and send data to Dynatrace from your Mendix app, you need the following:
 
@@ -25,7 +25,7 @@ To use Dynatrace and send data to Dynatrace from your Mendix app, you need the f
     * An access token for integrating your Dynatrace environment with your Mendix app; for details on how to obtain this, see Dynatrace's [Generate an Access Token](https://www.dynatrace.com/support/help/get-started/access-tokens#create-api-token) documentation
 * A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
-## 3 Connect Node to Dynatrace {#connect-node}
+## Connect Node to Dynatrace {#connect-node}
 
 To start sending your Mendix app's metrics to Dynatrace, you need to set some environment variables in the Mendix Portal. Follow these steps:
 
@@ -44,9 +44,9 @@ To start sending your Mendix app's metrics to Dynatrace, you need to set some en
 
 1. Return to the **General** tab and restart your environment.
 
-## 4 Additional Information {#additional-info}
+## Additional Information {#additional-info}
 
-### 4.1 Dimensions (Only Valid for Custom Metrics)
+### Dimensions (Only Valid for Custom Metrics)
 
 If you use Dynatrace to monitor more than one app and environment, you need some dimensions to be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Dynatrace, Mendix provides some default dimensions. You can also add extra dimensions.
 
@@ -54,14 +54,14 @@ If you use Dynatrace to monitor more than one app and environment, you need some
 What Dynatrace calls "dimensions," other monitoring tools call "tags." The Mendix Portal therefore refers to a "tag" when it is setting up a Dynatrace "dimension."
 {{% /alert %}}
 
-#### 4.1.1 Default Dimensions
+#### Default Dimensions
 
 For metrics that are pushed to Dynatrace, Mendix attaches these default dimensions:
 
 * `app` – The environment ID of your Mendix environment
 * `instance_index` – Instance index that the metrics belong to
 
-#### 4.1.2 Extra Dimensions
+#### Extra Dimensions
 
 You can set extra dimensions as tags in the Mendix Portal. Mendix recommends at least setting an `env:{environment_name}` tag (for example, `env:accp`). This tag enables you to identify metrics sent from a particular environment so you can separate out production metrics from test metrics. 
 
@@ -75,10 +75,10 @@ To set this tag, do the following:
 
 Setting this value for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `env:accp`.
 
-### 4.2 Dynatrace Issues
+### Dynatrace Issues
 
 If you have any issues related to accessing Dynatrace, contact their support at [Dynatrace Support](https://one.dynatrace.com/hc/en-us/requests). You need a Dynatrace account to request their support.
 
-## 5 Read More
+## Read More
 
 * [Metrics](/developerportal/operate/metrics/)

@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-context-menu/
 weight: 6
 ---
 
-## 1 Introduction
+## Introduction
 
 It is possible to add a context menu to an `IEntity` in Studio Pro or to a `IDocument`, such as microflows and pages, etc. Context menus will be placed under a menu named after the extension that contains them (e.g. `MyExtension`) and context menus can modify those items they relate to. You can achieve this simple by specifying the type when creating the extension.
 
@@ -12,7 +12,7 @@ This how-to describes how you can add a context menu to an entity. Before you st
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 2 Creating an Entity Context Menu Extension Class
+## Creating an Entity Context Menu Extension Class
 
 1. Open the project that you previously created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new class to the project and name it `MyEntityContextMenuExtension.cs`.
@@ -95,7 +95,7 @@ In the code above, you can see a few context menus that can perform changes on t
 
 It is also possible to add menus that are disabled until some action is performed.
 
-## 3 Adding a Context Menu to a Document
+## Adding a Context Menu to a Document
 
 You can also add a context menu to a document. All you have to do is specify the type `IDocument` in the context menu extension.
 

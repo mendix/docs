@@ -5,22 +5,22 @@ description: "Describes the configuration and usage of the Calendar widget, whic
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Calendar](https://marketplace.mendix.com/link/component/107954/) widget can be used to display and manage calendar events.
 
-### 1.1 Features
+### Features
 
 * Add and edit calendar events
 * Drag and drop calendar events
 * Change calendar event colors
 * Retrieve events based on selected date ranges
 
-## 2 Basic Configuration
+## Basic Configuration
 
 Drag the widget into a data view which provides a calendar entity (containing calendar config attributes) as context. Next, use the configuration properties described in the following sections.
 
-### 2.1 Data Source Tab
+### Data Source Tab
 
 * **Data source** – determines retrieval of the calendar events via context, database, microflow, or nanoflow
     * Default: **Context**
@@ -50,7 +50,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **View start attribute** – the DateTime attribute that indicates the lower date and time boundary of events displayed on the calendar
 * **View end attribute** – the DateTime attribute that indicates the upper date and time boundary of events displayed on the calendar
 
-### 2.2 View Tab
+### View Tab
 
 * **View** – determines the calendar's views:
     * **Standard** – day, week, and month view only
@@ -107,7 +107,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **Enable create** – determines whether the calendar allows creation of new events by clicking on and dragging over date and time slots
     * Default: **Yes**
 
-### 2.3 Events Tab
+### Events Tab
 
 * **On click** – determines the type of the executed action triggered when clicking a calendar event or day slot
     * default: **Do nothing** 
@@ -129,7 +129,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 * **On change nanoflow** – the nanoflow executed when moving (by dragging) or resizing an event
     * Configurable when **On change** is set to **Call a nanoflow**
 
-### 2.4 Size Tab
+### Size Tab
 
 * **Width unit** (default: **Percentage**) – determines whether the unit of the **Width** value is a percentage or a pixel amount
 * **Width** (default: **100**) – the width value of the calendar
@@ -138,7 +138,7 @@ Drag the widget into a data view which provides a calendar entity (containing ca
 
     {{< figure src="/attachments/appstore/use-content/widgets/calendar/calendar2.gif" class="no-border" >}}
 
-## 3 Example Configuration
+## Example Configuration
 
 To configure an example Calendar widget in a basic way, follow these steps:
 

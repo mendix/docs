@@ -7,7 +7,7 @@ aliases:
   - /howto/collaboration-requirements-management/sharing-the-development-database/
 ---
 
-## 1 Introduction
+## Introduction
 
 All Mendix applications need a database running in the background. While developing an application it is advised to use the standard built-in database that is supplied with Mendix Studio Pro. This how-to teaches you how to open and manage the data stored inside the built-in database.
 
@@ -15,7 +15,7 @@ All Mendix applications need a database running in the background. While develop
 This document is about sharing a database between developers working on **the same app**. It is not possible to share one database between different apps. If you need to copy data to another app, use the [Database Replication](/appstore/modules/database-replication/) module.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 To get the most out of the built-in database, make sure you have completed the following prerequisites:
 
@@ -24,7 +24,7 @@ To get the most out of the built-in database, make sure you have completed the f
 * Have a running application
 * Have some data in the database to commit SQL queries to
 
-## 3 Type of the Database
+## Type of the Database
 
 The built-in database is a flatfile database called HSQLDB (HyperSQL DataBase). This is the leading SQL relational database software written in Java. It offers a small, fast, multithreaded, and transactional database engine with in-memory and disk-based tables and supports embedded and server modes. It includes a powerful command line SQL tool and simple GUI query tools.
 
@@ -32,7 +32,7 @@ HSQLDB has been constantly developed over 12 years and is used as a database and
 
 Therefore, this type of database is excellent to use while developing and running applications in Mendix Studio Pro on a local machine. Thanks to this built-in functionality, the developer does not have to run a local database engine and management tools.
 
-## 4 Selecting the Preferred Database
+## Selecting the Preferred Database
 
 One application can make use of many different databases. Take the following steps to select the preferred database (if there is more than one configured):
 
@@ -43,7 +43,7 @@ One application can make use of many different databases. Take the following ste
 
 3. Click **OK** to confirm your choice. 
 
-## 5 Starting the Database Viewer
+## Starting the Database Viewer
 
 To start the built-in database viewer, follow these steps:
 
@@ -61,7 +61,7 @@ To start the built-in database viewer, follow these steps:
 
 On the left pane, all tables from all modules in the running application are shown. On the upper-right pane, it is possible to enter SQL queries and on the lower-right pane, the results from the entered SQL query will be shown.
 
-## 6 Executing the Queries
+## Executing the Queries
 
 You can execute queries in two ways:
 
@@ -86,7 +86,7 @@ To execute queries from the explorer (the left pane) in the **Database Manager**
 
 On the lower-right pane, the results are shown and a total of 50 rows is retrieved from the database. From the standard actions, it is also possible to delete, update, and insert records. The standard actions can also be customized to retrieve, update, or delete specific data. Advanced knowledge about the SQL language is needed to get the desired results.
 
-## 7 Committing the Data Snapshot
+## Committing the Data Snapshot
 
 The built-in database can easily be shared with other members of the team. It is possible to commit a snapshot of the database to the Team Server. To do this, take the following steps:
 
@@ -99,7 +99,7 @@ The built-in database can easily be shared with other members of the team. It is
 
 The data is now committed to the Team Server and can be used by other team members.
 
-## 8 Updating the Data Snapshot
+## Updating the Data Snapshot
 
 To import a data snapshot into the model, the app has to be updated since the last database snapshot has been committed by another team member. To get the data from the committed database snapshot, follow these steps:
 
@@ -117,7 +117,7 @@ To import a data snapshot into the model, the app has to be updated since the la
 Make sure the names of the databases are not the same or make a copy of your own database first so it will not be overwritten.
 {{% /alert %}}
 
-## 9 Read More
+## Read More
 
 * [Epics](/developerportal/project-management/epics/)
 * [Version Control](/refguide/version-control/)

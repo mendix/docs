@@ -4,11 +4,11 @@ url: /apidocs-mxsdk/mxsdk/creating-your-first-script/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/setting-up-your-development-environment/) and [How to Set Up Your Personal Access Token](/apidocs-mxsdk/mxsdk/set-up-your-pat/), you set up all the development tools and security settings. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
-## 2 Writing a First Script
+## Writing a First Script
 
 After setting up all the prerequisites, you can start writing a first script that will use the Mendix Platform SDK.
 
@@ -47,7 +47,7 @@ After setting up all the prerequisites, you can start writing a first script tha
 
 Don't forget to [set up your personal access token](/apidocs-mxsdk/mxsdk/set-up-your-pat/) before executing the script.
 
-### 2.1 Code Explanation
+### Code Explanation
 
 Here are some explanations about the script:
 
@@ -86,7 +86,7 @@ await workingCopy.commitToRepository("main");
 
 Once you are done with the model changes, you can flush the changes to make sure they have been sent, and then commit the working copy back to the Team Server by calling `workingCopy.commitToRepository()`.
 
-## 3 Compiling and Running the Script
+## Compiling and Running the Script
 
 1. Compile the script with the TypeScript compiler into JavaScript using the following command:
 
@@ -116,6 +116,6 @@ Once you are done with the model changes, you can flush the changes to make sure
 
 Note that the steps for app creation and committing to the Team Server can take some time, so please be patient.
 
-## 4 Next Step
+## Next Step
 
 Continue with [How to Create the Domain Model](/apidocs-mxsdk/mxsdk/creating-the-domain-model/).

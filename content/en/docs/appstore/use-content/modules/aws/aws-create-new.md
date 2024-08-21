@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes the process of developing an AWS connector. It teaches you the following:
 
@@ -17,7 +17,7 @@ This how-to describes the process of developing an AWS connector. It teaches you
 * Best practices for structuring the domain model, naming elements within the connector, and structuring the documentation
 * Best practices for publishing your connector to the Mendix Marketplace
 
-### 1.1 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -28,7 +28,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Prepare an AWS account
 * Know how to pass custom HTTP headers to a Call REST API activity
 
-## 2 Advantages of REST API-based Development
+## Advantages of REST API-based Development
 
 When developing AWS connectors, you can choose between integration by means of a REST API or an SDK. Although an SDK-based integration means that the implementation is alike across all AWS services, using a REST API is more suitable when the focus is on using standard Mendix capabilities. In addition, using a REST API does not require any Java-based development. Because of that, this how-to focuses on developing AWS connectors with the REST API.
 
@@ -36,11 +36,11 @@ When developing AWS connectors, you can choose between integration by means of a
 The platform-supported [Amazon Rekognition connector](/appstore/modules/aws/amazon-rekognition/) was built using the REST API. If required, you can use it as reference when building your own connector.
 {{% /alert %}}
 
-## 3 Building a REST API-based AWS Connector
+## Building a REST API-based AWS Connector
 
 The process of building an AWS connector consists of several stages. Refer to the following sections for a step-by-step description of the process, based on the steps used by Mendix to create the platform-supported [Amazon Polly connector](/appstore/modules/aws/amazon-polly/).
 
-### 3.1. Initiating the Project {#initiate}
+### Initiating the Project {#initiate}
 
 To start creating your connector, do the following steps:
 
@@ -54,7 +54,7 @@ To start creating your connector, do the following steps:
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-create-new/samplefolders.png" alt="The folder structure for the platform-supported Amazon Polly connector" class="no-border" >}}
 
-### 3.2 Retrieving a Sample API Response
+### Retrieving a Sample API Response
 
 To retrieve a sample REST API response, do the following steps:
 
@@ -75,7 +75,7 @@ To retrieve a sample REST API response, do the following steps:
 9. Click **Send**.
 10. Copy the entire API response.
 
-### 3.3 Modeling the Response
+### Modeling the Response
 
 After you have obtained an API response, you can use it to model the service in your Mendix app.
 
@@ -103,11 +103,11 @@ After you have obtained an API response, you can use it to model the service in 
 
 11. Rename the entities according to the [best-practice naming conventions](#naming).
 
-### 3.4 Modeling the Request
+### Modeling the Request
 
 Since the update of the AWS Authentication connector to version 3.0.0 it is a best practice to use a request entity that inherits from the AWSAuthentication.AbstractRequest entity even when there is no payload. The reason behind this is that it keeps all AWS connectors compatible. You can create it using an import mapping as explained in the section above and then export it with an export mapping to get the required JSON request body for the REST call. This might be relevant for you, when you intend to publish the connector on the marketplace. If you don't intend to do that, you can also just create the JSON request manually and hardcode the timeout value. 
 
-### 3.5 Creating a Microflow Action
+### Creating a Microflow Action
 
 After modeling the API response, you can create the corresponding action to use in your microflows.
 
@@ -126,7 +126,7 @@ The signing of headers may differ across AWS services, for example:
 * For Amazon Rekognition, in order to generate the endpoint URL, the **Path** attribute in the **SigV4Builder** object must have the string value `/`, and the **x-amz-target** header must be set to `RekognitionService.{ActionName}`.
 * For Amazon Polly, the **Path** attribute in the **SigV4Builder** object must have the string value `/v1/voices`. The **x-amz-target** is not required.
 
-### 3.5 Exposing the API Microflow
+### Exposing the API Microflow
 
 After you create a microflow that connects to an AWS service, expose it as a microflow action. In this way, you can then use it as a building block for other, more complex microflows.
 
@@ -138,11 +138,11 @@ After you create a microflow that connects to an AWS service, expose it as a mic
 
 For more information, see [Microflow Properties: Expose as Microflow Action](/refguide/microflow/#expose-as-microflow).
 
-## 4 Best Practices
+## Best Practices
 
 The following sections of this document contain additional suggestions and best practices related to several aspects of AWS connector development.
 
-### 4.1 Domain Model Structure
+### Domain Model Structure
 
 When building the domain model for your connector, keep the following considerations in mind:
 
@@ -154,7 +154,7 @@ When building the domain model for your connector, keep the following considerat
     * An association's multiplicity (`1-1`, `1-*`, or `*-*`)
     * An association's name
 
-### 4.2 Naming Conventions for Elements within the Connector {#naming}
+### Naming Conventions for Elements within the Connector {#naming}
 
 To ensure that the naming conventions for your connector are easy to parse for the end user, refer to the table below for a list of best practices by element type:
 
@@ -167,19 +167,19 @@ To ensure that the naming conventions for your connector are easy to parse for t
 | Response entity | Use the `{Action name}Response` format, for example, `ListFunctionsResponse` |
 | Attribute | Match the AWS attribute naming, except where it is not possible due to the reserved keywords in Mendix, or where the name would not be easily understood by the end-user |
 
-### 4.3 Documentation Structure
+### Documentation Structure
 
 To help users implement and use your connector, you should provide documentation on Mendix Marketplace, as well as clearly describe your entities and activities within the connector itself.
 
-#### 4.3.1 Marketplace Documentation
+#### Marketplace Documentation
 
 When you publish a connector on Mendix Marketplace, you should include documentation to help fellow developers use your software. The documentation should help Mendix developers understand the product, its interfaces, capabilities, and ability to achieve a goal. For an example of what information may be relevant to your end-users, refer to the [documentation template used by platform-supported connectors](https://github.com/mendix/docs/blob/development/templates/marketplace-component-page-template.md).
 
-#### 4.3.2 Documentation Inside the Connector
+#### Documentation Inside the Connector
 
 In the Mendix project, document the exposed microflow actions, as well as the entities in your domain model. The documentation should answer most of the questions below.
 
-##### 4.3.2.1 Entity
+##### Entity
 
 * What purpose does the entity serve?
     * Is this object returned (response)?
@@ -193,7 +193,7 @@ In the Mendix project, document the exposed microflow actions, as well as the en
     
     *This entity is the response for the Amazon Textract AnalyzeExpense action. The attribute it contains is PageCount which describes the number of pages that are detected in the document. Additionally, it is associated with multiple ExpenseDocuments.*
 
-##### 4.3.2.1 Exposed Microflow Action
+##### Exposed Microflow Action
 
 * What operation does the microflow action perform?
 * What are the required and optional input parameters for the microflow action?
@@ -203,6 +203,6 @@ In the Mendix project, document the exposed microflow actions, as well as the en
 
     *Optionally, a condition expression can be included. The delete action is then only performed when the condition returns true. Additionally, an expression attribute list can be included to escape reserved words.*
 
-## 5 Publishing to the Mendix Marketplace
+## Publishing to the Mendix Marketplace
 
 If you want to share your connector with the Mendix community, read [How to Share Marketplace Content](/appstore/sharing-content/).

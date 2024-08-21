@@ -3,7 +3,7 @@ title: "Environments"
 url: /appstore/partner-solutions/apd/rg-two-environments/
 ---
 
-## 1 Environments Overview
+## Environments Overview
 
 After selecting an app from the [Apps overview](/appstore/partner-solutions/apd/rg-two-apps/), an overview of available environments for that app is displayed. It is possible to select an existing environment or add a new environment.
 
@@ -17,7 +17,7 @@ When an environment is marked as red instead of green, that means the APM agent 
 * The APM agent is not (yet) installed
 * The APM agent is not properly configured
 
-## 2 Adding a New Environment
+## Adding a New Environment
 
 In order to add a new environment, click **New environment** in the **Environments** overview.
 

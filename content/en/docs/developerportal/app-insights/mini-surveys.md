@@ -5,7 +5,7 @@ weight: 6
 description: "The app development team can utilize Mendix's user-friendly [Mini Surveys](/appstore/modules/mendix-mini-surveys/) module to integrate surveys into their applications. This empowers the Product Owner (PO), Scrum Master, or the development team to craft surveys with personalized customizations, including survey goals, duration, and questionnaire types. After configuring the survey, end-users can conveniently submit their responses. Subsequently, the Product Owner, Scrum Master, or the team can analyze the survey results, extracting valuable insights."
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mini Surveys feature is part of the Mendix App Insights collection of tools designed to help you collect and aggregate feedback from your customers. 
 
@@ -19,9 +19,9 @@ You begin by creating a mini survey from the **Mini Survey** page in the navigat
 
 This document first describes all the pages in Mini Surveys in **Apps**, and then it describes the procedure for running a mini survey.
 
-## 2 Mendix Mini Survey Configuration 
+## Mendix Mini Survey Configuration 
 
-### 2.1 Survey Overview {#survey-overview}
+### Survey Overview {#survey-overview}
 
 When you click **Mini Surveys** in the [navigation pane](/developerportal/#navigation-pane) for an app that already has existing mini surveys, the **Survey Overview** page opens first.
 
@@ -31,7 +31,7 @@ The tabs of the **Survey Overview** page are described below.
 
 {{< figure src="/attachments/developerportal/app-insights/mini-surveys/survey-overview.png" class="no-border" >}}
 
-#### 2.1.1 Active Tab {#active}
+#### Active Tab {#active}
 
 The **Active** tab shows all the mini surveys that are active for the app with the following details:
 
@@ -44,7 +44,7 @@ The **Active** tab shows all the mini surveys that are active for the app with t
 
 Click the mini survey in a row on the list to see its [survey details](#survey-details) page.
 
-##### 2.1.1.1 Statuses of Mini Surveys {#survey-status}
+##### Statuses of Mini Surveys {#survey-status}
 
 A mini survey can have different statuses. You can check the status of a mini survey on the [Active](#active) tab.
 
@@ -57,7 +57,7 @@ Along its lifecycle, a mini survey can have the following statuses:
 
 {{% alert color="info" %}}When a mini survey has the status of **Draft**, you can still edit everything in the survey. When a mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey.{{% /alert %}}
 
-#### 2.1.2 Archived Tab {#archived}
+#### Archived Tab {#archived}
 
 The **Archived** tab shows all the mini surveys that you are archived for the app. 
 
@@ -71,7 +71,7 @@ The list on this tab contains the following information:
 
 Clicking the mini survey in a row on the list shows its [survey details](#survey-details) page.
 
-#### 2.1.3 Settings Tab {#settings}
+#### Settings Tab {#settings}
 
 On the **Settings** tab of **Survey Overview**, you can enable the test mode, and view or generate API keys.
 
@@ -90,7 +90,7 @@ On the **Settings** tab of **Survey Overview**, you can enable the test mode, an
     * To generate an API key, click **Generate API Key** here.
     * To view an existing API key, click the eye icon ({{% icon name="view-off" %}}) in the **View** column in the table.
 
-### 2.2 Survey Details {#survey-details}
+### Survey Details {#survey-details}
 
 When you click a mini survey on the [Survey Overview](#survey-overview) page, the survey details page of the mini survey opens.
 
@@ -104,23 +104,23 @@ On the upper-right corner, you can find the following buttons:
 
 Depending on the [status](#survey-status) of the mini survey, the survey details page may contain some or all of the following tabs: **Settings**, **Implementation**, **Responses**, and **Test data**.
 
-#### 2.2.1 Settings Tab {#survey-details-settings}
+#### Settings Tab {#survey-details-settings}
 
 This tab is available for mini surveys with all the statuses. It gives an overview of the survey details, including **Survey ID**.
 
-#### 2.2.2 Implementation Tab {#survey-details-implementation}
+#### Implementation Tab {#survey-details-implementation}
 
 This tab is available for mini surveys with the status of **Draft**, **Ready for Implement**, or **Running**.
 
 On this tab, you can find information about how to implement the mini survey in Studio Pro. For a more detailed procedure, see the [Implement a Mini Survey](#implement-survey) section.
 
-#### 2.2.3 Responses Tab {#responses}
+#### Responses Tab {#responses}
 
 This tab is available for mini surveys with the status of **Running** or **Evaluating Responses**. 
 
 On this tab, you can view all the responses that have been collected for the mini survey.
 
-#### 2.2.4 Test Data Tab {#test-data}
+#### Test Data Tab {#test-data}
 
 This tab is available for mini surveys with the status of **Ready for Implement** or **Running**.
 
@@ -131,9 +131,9 @@ You can collect test data using two methods:
 * Change the value of the **TEST_MODE** constant in the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module. This will show **[TEST_MODE]** on the survey widget UI.
 * Select the **Enable Mendix SSO test users"** checkbox on the **Settings** tab of **Survey Overview**, which marks the app team members as testers. Note that if an app team member is not authenticated through Mendix SSO, this setting does not work for them. The survey widget will not show **[TEST_MODE]** on the UI.
 
-## 3 Running a Mini Survey
+## Running a Mini Survey
 
-### 3.1 Creating a Mini Survey {#create-survey}
+### Creating a Mini Survey {#create-survey}
 
 To create a mini survey, follow these steps:
 
@@ -164,7 +164,7 @@ To create a mini survey, follow these steps:
 
 Now you can [implement the mini survey](#implement-survey).
 
-### 3.2 Editing a Mini Survey {#edit-survey}
+### Editing a Mini Survey {#edit-survey}
 
 To edit a mini survey, perform the following steps:
 
@@ -177,11 +177,11 @@ To edit a mini survey, perform the following steps:
    * If the mini survey has the status of **Draft**, you can edit everything in the mini survey. To edit the mini survey, click **Edit Draft** on the upper-right corner of the page, and then make changes.
    * If the mini survey has the status of **Ready to Implement**, **Running**, or **Evaluate Responses**, you can only edit the **Settings** section (for **Runtime** and **Toaster Placement**) in the survey. Click **Edit Settings** and then make the changes.
 
-### 3.3 Implementing a Mini Survey {#implement-survey}
+### Implementing a Mini Survey {#implement-survey}
 
 Before the start time of the mini survey is reached, you should implement the survey in Studio Pro. Otherwise, users will not actually receive the mini survey, even if it has the [Status](#survey-status) of **Running** on the **Survey Overview** page. You can [reset the start time in the Settings section](#edit-survey) if you need more time to implement the survey in Studio Pro.
 
-#### 3.3.1 Obtaining an API Key {#obtain-api-key}
+#### Obtaining an API Key {#obtain-api-key}
 
 To obtain an API key for the implementation, follow these steps:
 
@@ -195,7 +195,7 @@ To obtain an API key for the implementation, follow these steps:
         2. In the **Confirmation dialog** box, click **Proceed**. The **Generated Token** pop-up window opens and shows the new API key.
         3. Copy the new API key and save it for later use.
 
-#### 3.3.2 Installing and Configuring the Module
+#### Installing and Configuring the Module
 
 To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) module, follow these steps:
 
@@ -203,7 +203,7 @@ To install the [Mendix Mini Surveys](/appstore/modules/mendix-mini-surveys/) mod
 2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the module into your app.
 3. Follow the instructions in the [Configuration](/appstore/modules/mendix-mini-surveys/#configuration) section in *Mendix Mini Surveys* to complete the implementation of the mini survey in Studio Pro.
 
-### 3.4 Viewing/Exporting Responses {#view-export-responses}
+### Viewing/Exporting Responses {#view-export-responses}
 
 When the start time that you set for the mini survey is reached, the survey will start running automatically. Then you get [notifications](/developerportal/global-navigation/#notifications) on how many responses have been collected.
 
@@ -221,7 +221,7 @@ To check the responses that have been collected, follow these steps:
 
 5. To export the responses to an XLSX file, click **Export Responses** on the upper-right corner of the page.
 
-### 3.5 Survey Opt-out Rules
+### Survey Opt-out Rules
 
 A mini survey has the following opt-out rules: 
 
@@ -234,10 +234,10 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 
-### 3.6 Unfinished Surveys
+### Unfinished Surveys
 
 If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in **Apps**. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
-## 4 Troubleshooting & FAQ
+## Troubleshooting & FAQ
 
 For troubleshooting information and FAQ, see the [Troubleshooting](/appstore/modules/mendix-mini-surveys/#troubleshooting) section and the [FAQ](/appstore/modules/mendix-mini-surveys/#faq) section in *Mendix Mini Surveys*.

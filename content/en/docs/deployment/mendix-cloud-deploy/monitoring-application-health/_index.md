@@ -12,7 +12,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 When your application has reached production status, it is important to keep track of its status and health. When you click **Alerts** in the Mendix Portal, you can inspect your application's health in Mendix Cloud.
 
@@ -26,7 +26,7 @@ If you have status alerts set up (for details, see [Receive Environment Status A
 
 This document explains how to access the application status page, what the information on this page means, and how to look at the alerts for your app.
 
-## 2 Application Status
+## Application Status
 
 Mendix Cloud automatically monitors the health and status of apps that are deployed on cloud nodes. To access the information gathered in this way, follow these steps:
 
@@ -46,13 +46,13 @@ You may be able to use this information to resolve the issue yourself; otherwise
 
 Any status that could cause your app to stop functioning results in an alert. For example, the monitoring information from the image above shows that one of the status indicators was **Critical**. If this happens to one of your nodes, all users who are subscribed to alerts receive an email alert.
 
-## 3 Mendix Cloud Alerting Categories and Thresholds
+## Mendix Cloud Alerting Categories and Thresholds
 
 The status overview has several categories, which are related to various technical parts of your application environment. Each category indicates a different part of the app infrastructure that is monitored.
 
 Any category that does not display as *OK* needs to be investigated. Some alerts listed in the tables below appear only when the alert is triggered. Therefore, if an alert is not present in the overview, that is the same as the alert having an *OK* status.
 
-### 3.1 Application Status {#app-status}
+### Application Status {#app-status}
 
 Application Status | |
 :---|:---|
@@ -62,7 +62,7 @@ Warning Threshold | Not used.                                              |
 Critical Threshold | If the runtime heartbeat of the application has not been received for 5 minutes, a critical alert will be generated.
 First actions to take | Check the application logs for issues. Also check [Mendix Platform Status](https://status.mendix.com/) for any planned maintenance.                         |
 
-### 3.2 Application Container Disk Percentage {#app-container-disk-pct}
+### Application Container Disk Percentage {#app-container-disk-pct}
 
 Application Container Disk Percentage | |
 :---|:---|
@@ -73,7 +73,7 @@ Warning Threshold | Disk utilization is between 75% and 85%. |
 Critical Threshold | Disk utilization is higher than 85%.
 First actions to take | Inspect the metrics for **Disk usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
-### 3.3 Application Container Memory Percentage {#app-container-memory-pct}
+### Application Container Memory Percentage {#app-container-memory-pct}
 
 Application Container Memory Percentage | |
 :---|:---|
@@ -84,7 +84,7 @@ Warning Threshold | Memory utilization is between 90% and 95%. |
 Critical Threshold | Memory utilization is higher than 95%.
 First actions to take | Inspect the metrics for **Memory usage** combined with all **Application Statistics** for anomalies and correlate those with application behavior. |
 
-### 3.4 Critical Logs {#critical-logs}
+### Critical Logs {#critical-logs}
 
 Critical Logs | |
 :---|:---|
@@ -94,7 +94,7 @@ Warning Threshold | Not used.
 Critical Threshold | If any logging is done on the CRITICAL level, the alerts status always directly switches to Critical. The critical log message counter will only be reset when restarting the application process.
 First actions to take | Inspect the application log file and look up the CRITICAL error messages. Restart the application as soon as possible in case of stability issues.
 
-### 3.5 Database CPU Utilization {#dbase-cpu-pct}
+### Database CPU Utilization {#dbase-cpu-pct}
 
 Database CPU Utilization | |
 :---|:---|
@@ -104,7 +104,7 @@ Warning Threshold | Not used.
 Critical Threshold | CPU utilization is higher than 90%. 
 First actions to take | Inspect the metrics for **CPU utilization of the database** combined with **Database throughput** for anomalies, and correlate those with application behavior.
 
-### 3.6 Database Free Space {#dbase-free-space}
+### Database Free Space {#dbase-free-space}
 
 Database Free Space | |
 :---|:---|
@@ -114,7 +114,7 @@ Warning Threshold | Database has less than 25% and more than 10% free space avai
 Critical Threshold | Database has less than 10% free space available.
 First actions to take | Check if there is a sudden increase or a slow increase over time. Resolve by either stopping a runaway process, removing old data, or upgrading the cloud resource pack (for example, by ordering more storage).
 
-### 3.7 Database Freeable Memory {#dbase-freeable-memory}
+### Database Freeable Memory {#dbase-freeable-memory}
 
 Database Freeable Memory | |
 :---|:---|
@@ -124,7 +124,7 @@ Warning Threshold | Not used.
 Critical Threshold | Database has 5% freeable memory for XS21, XS20, S, and Strato [cloud resource packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack). Database has 10% freeable memory for all other cloud resource packs.
 First actions to take | Inspect the metrics graph **Database memory** for anomalies and correlate those with application behavior. Resolve by identifying and optimizing long-running database queries, or upgrading the cloud resource pack (for example, by ordering more memory).
 
-### 3.9 Database IOPS Burst Balance {#dbase-iops}
+### Database IOPS Burst Balance {#dbase-iops}
 
 Database IOPS Burst Balance | |
 :---|:---|
@@ -134,7 +134,7 @@ Warning Threshold | Not used.
 Critical Threshold | Database has 20% IOPS burst balance.
 First actions to take | Inspect the metrics graph **Database IOPS Burst Balance** for anomalies and correlate those with application behavior.
 
-### 3.10 Health Check {#health-check}
+### Health Check {#health-check}
 
 Health Check | |
 :---|:---|
@@ -144,7 +144,7 @@ Warning Threshold | If the health check microflow returns a non-empty string val
 Critical Threshold | If the health check microflow itself experiences an error, a CRITICAL alert is generated. This will also happen when no database connection can be established.
 First actions to take | Because the health check microflow is specific to your application, Mendix cannot generically advise actions to take.
 
-### 3.11 Virtual Machine Error {#virtual-machine-error}
+### Virtual Machine Error {#virtual-machine-error}
 
 Virtual Machine Error | |
 :---|:---|
@@ -154,7 +154,7 @@ Warning Threshold | Not used.
 Critical Threshold | If the JVM process has experienced a fatal (non-recoverable) error and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the error.
 
-### 3.12 Virtual Machine Out Of Memory {#virtual-machine-memory}
+### Virtual Machine Out Of Memory {#virtual-machine-memory}
 
 Virtual Machine Out Of Memory | |
 :---|:---|
@@ -164,9 +164,9 @@ Warning Threshold | Not used.
 Critical Threshold | If the JVM process has run out of memory and the application's JVM crashed.
 First actions to take | Check the log files and application metrics for a possible cause of the crash.
 
-## 4 Basic License
+## Basic License
 
-### 4.1 Database Errors In the Log
+### Database Errors In the Log
 
 You might see database connection errors in your app logs. For example, you might see something like "ERROR - ConnectionBus: Error occurred on rollback database transaction. This connection has been closed." You do not have to do anything; your app will continue to work as expected.
 
@@ -174,7 +174,7 @@ The reason you receive a message is that when you are using a [basic license](/d
 
 The autoscaling might occur when your app does not have high resource usage because of the way shared databases are managed. More resources may be required by an app using another schema on the shared database. This is a known phenomenon, which AWS terms a [noisy neighbor](https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/noisy-neighbor.html).
 
-## 5 Alerts History
+## Alerts History
 
 To access the history of the alerts from your app, follow these steps:
 
@@ -186,7 +186,7 @@ To access the history of the alerts from your app, follow these steps:
 
     The overview shows alert types and details, including date and time. The alert types provide a broad indication of the type of error that occurred, such as critical log messages or failures of the health check microflow. Recovery notifications are also shown here.
 
-## 6 Read More
+## Read More
 
 * [Metrics](/developerportal/operate/metrics/)
 * [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/)

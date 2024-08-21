@@ -6,7 +6,7 @@ url: /refguide9/password-text-box/
 
 {{% alert color="warning" %}}The **Password text box** widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Password text box** is a widget that provides a password for authentication:
 
@@ -14,7 +14,7 @@ The **Password text box** is a widget that provides a password for authenticatio
 
 The **Password text box** should be placed on a page together with a [Login ID text box](/refguide9/login-id-text-box/) and a [Sign-in button](/refguide9/sign-in-button/).
 
-## 2 Properties
+## Properties
 
 An example of password text box properties is represented in the image below:
 
@@ -27,25 +27,25 @@ Password text box properties consist of the following sections:
 * [General](#general)
 * [Label](#label)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}}
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Placeholder
+#### Placeholder
 
 A **Placeholder** shows a text when an end-user has not entered any text yet. It can be used to give a hint to the end-user on what information should be entered in the field.
 
-### 2.4 Label Section {#label}
+### Label Section {#label}
 
 {{% snippet file="/static/_includes/refguide9/label-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Login ID Text Box](/refguide9/login-id-text-box/)

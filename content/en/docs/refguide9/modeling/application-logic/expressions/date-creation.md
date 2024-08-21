@@ -4,13 +4,13 @@ url: /refguide9/date-creation/
 weight: 90
 ---
 
-## 1 Introduction
+## Introduction
 
 Dates can be created with the `dateTime` and `dateTimeUTC` functions. The difference between them is that `dateTime` uses the calendar of the session used in the function call, and `dateTimeUTC` uses the UTC calendar. The system session runs as UTC by default, except for scheduled events, which can be configured in the [Scheduled Event Time Zone](/refguide9/app-settings/#scheduled) section of **App Settings**.
 
 This function does not accept variable or attribute parameters, only fixed values. To create a date using parameters, use the [parseDateTime](/refguide9/parse-and-format-date-function-calls/#parsedatetime-utc) function.
 
-## 2 Values
+## Values
 
 These functions take between one and six input values in the following order:
 
@@ -21,7 +21,7 @@ These functions take between one and six input values in the following order:
 5. minutes (type: integer, between 0 and 59)
 6. seconds (type: integer, between 0 and 59)
 
-## 3 Examples
+## Examples
 
 The examples below illustrate which value the expression returns:
 

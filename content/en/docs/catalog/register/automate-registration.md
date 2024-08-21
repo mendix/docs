@@ -40,9 +40,9 @@ For this section, you will need:
 * Endpoint location `Name` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **Name**)
 * Endpoint location `Value` (found in the *metadata.json* file for your exposed service, in an array called **Constants**, under **DefaultValue**)
 
-Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [register the application](#5-register-the-application).
+Follow the steps in [Registering an environment through the Catalog Registration API](/catalog/register/register-data/#register-environment) to prepare your service details. When finished, [register the application](#register-the-application).
 
-## Register the Application
+## Register the Application{#register-the-application}
 
 To register the application, you need: 
 

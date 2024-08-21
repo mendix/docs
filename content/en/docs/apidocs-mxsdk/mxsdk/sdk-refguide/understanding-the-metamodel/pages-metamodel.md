@@ -139,18 +139,18 @@ The ActionButton implementation determines what to do based on the ClientAction 
 
 ## Data Widgets
 
-Data widgets display data that they retrieve from a [Data Source](#7-data-sources).
+Data widgets display data that they retrieve from a [Data Source](data-sources).
 
-A [DataView](#61-dataview) is used to show or edit content from a single object. [ListView](#62-listview) is used to show
+A [DataView](#dataview) is used to show or edit content from a single object. [ListView](#listview) is used to show
 a list of objects.
 
-There are also a couple of grid widgets, with [DataGrid](#63-datagrid) showing data based on configured columns.
-[ReferenceSetSelector](#64-referencesetselector) allows displaying or selecting the values of many-to-many associations.
-[TemplateGrid](#65-templategrid) shows a list of objects in a tile view, where the number of columns can be configured.
+There are also a couple of grid widgets, with [DataGrid](#datagrid) showing data based on configured columns.
+[ReferenceSetSelector](#referencesetselector) allows displaying or selecting the values of many-to-many associations.
+[TemplateGrid](#templategrid) shows a list of objects in a tile view, where the number of columns can be configured.
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-refguide/understanding-the-metamodel/pages-metamodel/DataWidgets.svg" class="no-border" >}}
 
-### DataView
+### DataView{#dataview}
 
 The data view is a central component in Mendix applications. The data view typically contains input widgets, like text
 boxes with labels. In more complex screens, a data view can contain tab controls per topic, and data views and data
@@ -168,7 +168,7 @@ can only be used for data views that are not nested inside other data widgets.
 | [Data View](/refguide/data-view/)              | [DataView](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataView.html) |
 | [Language Menu](/refguide/translatable-texts/) | [Text](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/texts.Text.html)         |
 
-### ListView
+### ListView{#listview}
 
 The list view widget shows a list of objects using a template. The default template is configured through the `widgets` property.
 It is also possible to add specialized templates by adding a ListViewTemplate for a specialization of the base data source entity.
@@ -181,7 +181,7 @@ The `clickAction` ClientAction is the action that is performed when a list view 
 | [Entity Generalization](/refguide/entities/#generalization) | [ListViewTemplate](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ListViewTemplate.html) |
 | [List View Templates](/refguide/list-view/#templates)       | [ClientAction](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.ClientAction.html)         |
 
-### DataGrid
+### DataGrid{#datagrid}
 
 A data grid shows a list of objects in a table format. The configured columns determine which attributes are shown.
 It contains a control bar in which buttons can be added to create a new object, or show/edit an existing one.
@@ -192,7 +192,7 @@ It contains a control bar in which buttons can be added to create a new object, 
 | [Grid Columns](/refguide/columns/)         | [GridColumn](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridColumn.html)         |
 | [Grid Control Bar](/refguide/control-bar/) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridControlBar.html) |
 
-### ReferenceSetSelector
+### ReferenceSetSelector{#referencesetselector}
 
 A reference set selector displays a grid of objects from a many-to-many association. By adding a DataGridAddButton and DataGridRemoveButton
 to the control bar, the grid can be used to edit the linked objects.
@@ -205,7 +205,7 @@ to the control bar, the grid can be used to edit the linked objects.
 |                                                             | [DataGridAddButton](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataGridAddButton.html)       |
 |                                                             | [DataGridRemoveButton](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.DataGridRemoveButton.html) |
 
-### TemplateGrid
+### TemplateGrid{#templategrid}
 
 A template grid shows a list of objects in a tile view using a template. This template is configured in the TemplateGridContents.
 
@@ -217,7 +217,7 @@ The number of columns to show can be set with the `numberOfColumns` property, th
 |                                            | [TemplateGridContents](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.TemplateGridContents.html) |
 | [Grid Control Bar](/refguide/control-bar/) | [GridControlBar](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.GridControlBar.html)             |
 
-## Data Sources
+## Data Sources{#data-sources}
 
 Input widgets, such as a text box, will derive their content from their context.
 The data widgets themselves get this data from their configured data source.

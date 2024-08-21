@@ -17,7 +17,7 @@ When you upgrade to Mendix 8, DOM structure changes will also alter the correlat
 
 ## Streamlined Custom Themes
 
-Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
+Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to Atlas UI. Now, building your own theme from scratch requires significantly less work.
 
 If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. 
 

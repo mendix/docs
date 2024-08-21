@@ -196,7 +196,7 @@ Support for Mendix 7 has ended. If you are still concerned about this report, yo
 
 #### Bootstrap Vulnerabilities in Mendix 8 and Above
 
-In Mendix 8 and above, the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix AtlasUI themes.
+In Mendix 8 and above, the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix Atlas UI themes.
 
 If there still is a security finding in the your project, you may be using the Bootstrap library in your custom theme.
 We would therefore suggest that you do one of the following:

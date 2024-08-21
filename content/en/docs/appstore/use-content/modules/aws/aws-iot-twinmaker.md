@@ -38,7 +38,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AWSTwinMakerConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to AWS IoT TwinMaker. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AWSTwinMakerConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to AWS IoT TwinMaker. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -50,7 +50,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for AWS IoT TwinMaker, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all workspaces, implement the [ListWorkspace](#list-workspace) activity by doing the following steps:
+After you configure the authentication profile for AWS IoT TwinMaker, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all workspaces, implement the **ListWorkspace** activity by doing the following steps:
 
 1. In the **App Explorer**, find and open the domain model for your app.
 2. Right-click on the working area of the domain model, and then click **Add entity**.
@@ -73,7 +73,7 @@ After you configure the authentication profile for AWS IoT TwinMaker, you can im
   
     For the `ListWorkspaces` activity, you must make a **ListWorkspaceRequest**, as well as specify the region for which you want to retrieve the tables. Other activities may have different required parameters.
 12. Click **Edit parameter value**, edit the **AWS_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+13. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-iot-twinmaker/awsregions.png" alt="The list of AWS regions" class="no-border" >}}

@@ -6,13 +6,13 @@ aliases:
     - /refguide/consumed-odata-service-properties
 ---
 
-## 1 Introduction
+## Introduction
 
 A consumed OData service contains the connection information for OData external entities and actions.
 
 You can create a consumed OData service and specify its metadata in a file or a URL. Alternatively, you can search using the [Integration pane](/refguide/integration-pane/) and drag an entity to the domain model to have Studio Pro create a consumed OData service for you.
 
-## 2 Consumed OData Service screen
+## Consumed OData Service screen
 
 The **Consumed OData Service** document contains the following information:
 
@@ -29,7 +29,7 @@ The **Consumed OData Service** document contains the following information:
 
     {{% alert color="info" %}}In the [Integration pane](/refguide/integration-pane/), consumed services display an **Update** icon (a blue arrow) if there is an update available.{{% /alert %}}
 
-### 2.1 Configuration
+### Configuration
 
 There are three ways to specify the service URL, headers, and proxy settings: **Constants only**, **Configuration microflow**, and **Headers microflow**.
 
@@ -37,7 +37,7 @@ There are three ways to specify the service URL, headers, and proxy settings: **
 * **Configuration microflow** – specify the service URL, proxy settings, and headers using a microflow that returns a **System.ConsumedODataConfiguration** (this option was introduced in Studio Pro 10.12.0)
 * **Headers microflow** – specify headers using a microflow that returns a list of **System.HttpHeader** and specify the service URL and proxy settings using constants
 
-### 2.2 Configuration/headers microflow
+### Configuration/headers microflow
 
 Choose a microflow that returns one of the following options:
 
@@ -50,7 +50,7 @@ This microflow may take a parameter of type **System.HttpResponse**. The microfl
 Custom authentication can be done with the microflow where the authentication value is retrieved (such as SSO). For more information on access and authentication, see [Using Custom HTTP Header Validation for Published Entities](/refguide/security-shared-datasets/#http-header-validation) in *Security and Shared Datasets*.
 {{% /alert %}}
 
-#### 2.2.1 Authenticating with Mendix SSO {#authenticate-mendix-sso}
+#### Authenticating with Mendix SSO {#authenticate-mendix-sso}
 
 Publishers can set up [custom authentication](/refguide/published-odata-services/#authentication-microflow) using [Mendix SSO](/appstore/modules/mendix-sso/) module. For more information, see the [Mendix SSO](/refguide/published-odata-services/#authentication-mendix-sso) section of *Published OData Services*. 
 
@@ -60,7 +60,7 @@ To learn more about how to publish an OData service with authentication (Mendix 
 
 To learn more about using external entities with security enabled (in production environments), see the [Authentication](/refguide/external-entities/#authentication) section of *External Entities*.
 
-### 2.3 Service URL {#service-url}
+### Service URL {#service-url}
 
 The **Service URL** displays constant that specifies the URL of the service endpoint:
 
@@ -69,13 +69,13 @@ The **Service URL** displays constant that specifies the URL of the service endp
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/service-url.png" class="no-border" >}}
 
-### 2.4 Timeout
+### Timeout
 
 **Timeout** is the response time for fetching data from the service endpoint. If the endpoint has not responded after the number of seconds in **Timeout (s)**, an exception will occur. If this happens during a microflow activity, the microflow will roll back or go into your custom [error handling](/refguide/error-handling-in-microflows/).
 
 Default value: 300 seconds
 
-### 2.5 Proxy Configuration
+### Proxy Configuration
 
 **Proxy configuration** allows you to configure a proxy for the request:
 
@@ -87,7 +87,7 @@ Default value: 300 seconds
 In most cases, this setting can be ignored and the default **Use app settings** can be used.
 {{% /alert %}}
 
-### 2.6 Authentication {#authentication}
+### Authentication {#authentication}
 
 The **Use HTTP authentication** checkbox specifies if basic authentication should be used. If selected, specify the following details:
 
@@ -98,13 +98,13 @@ Input these as a string with single quotes.
 
 In addition to basic authentication, you can also use custom authentication. For more information, see the [HTTP Headers](#http-headers) section below.
 
-### 2.7 HTTP Headers {#http-headers}
+### HTTP Headers {#http-headers}
 
 You can specify additional HTTP request headers to be passed to the endpoint in this list by clicking **Add**, **Edit**, or **Delete** for custom HTTP headers for authentication. Each custom header is a pair with a key and a value.
 
 If the service uses a configuration microflow or a headers microflow that specifies a different value for the header, then that value overrides the value specified in this list.
 
-### 2.8 Error Handling Microflow
+### Error Handling Microflow
 
 When a call to the OData service fails, users see a generic error message. Create an [error-handling microflow](/refguide/error-handling-in-microflows/) to change this message.
 
@@ -116,7 +116,7 @@ The microflow must return a `String` containing the error message. If it returns
 
 Note for developers of Java actions: the message returned by the error handling microflow can be caught as a [UserException](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/UserException.html).
 
-### 2.9 Metadata
+### Metadata
 
 When you create a consumed OData service, the metadata editor allows you to open an OData contract from a file or URL. If you have already consumed a contract, you can click **Update** to update the existing contract with a new version from a file or URL.
 
@@ -140,7 +140,7 @@ This information is not stored, so if you download the metadata from the same se
 
 When you import the metadata, you can add external entities and actions from the consumed OData service in the [Integration pane](/refguide/integration-pane/).
 
-### 2.10 Properties
+### Properties
 
 Click the **Properties** tab for the consumed OData service which displays the properties that were defined for the OData service document and the following additional properties:
 
@@ -155,15 +155,15 @@ Click the **Properties** tab for the consumed OData service which displays the p
 * **Metadata** – the contents of the metadata file defining the service
 * **OData version** – the OData version (can be v3 or v4)
 
-#### 2.10.1 Using QuerySegment
+#### Using QuerySegment
 
 When set to `No`, the application retrieves data using a `GET HTTP` method and places data query arguments in the URL's query string. 
 
 When set to `Yes`, a `POST HTTP` method is used, `/$query` is appended to the resource path of the URL and the query string is provided as the request body. This enables limiting the length of the URL and avoiding potential problems with the systems involved. This feature is not available for OData v3 or if the consumed service explicitly indicates that it is not supported. For details, see [Passing Query Options in the Request Body](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_PassingQueryOptionsintheRequestBody) in the OData specification. 
 
-## 3 Updating or Switching a Consumed OData Service {#updating}
+## Updating or Switching a Consumed OData Service {#updating}
 
-### 3.1 Consuming from Service Endpoints{#consume-service-endpoints}
+### Consuming from Service Endpoints{#consume-service-endpoints}
 
 When you add an external entity to your app, you are consuming the entity from a specific version of a service (the service endpoint), deployed to a given environment. The metadata file or contract for the service is located at this endpoint.
 
@@ -173,13 +173,13 @@ The same service deployed to a different environment will be to a different serv
 
 When you drag the **Customer** entity from **CustomerApi version 1.0.0** deployed to the **Acceptance** environment into your app, Studio Pro retrieves the information it requires from the contract that is at that endpoint.
 
-### 3.2 Semantic Numbering for Service Versions {#semantic}
+### Semantic Numbering for Service Versions {#semantic}
 
 It is important the publishers of the services adopt a strict revision process for any changes they make to their published OData services that are consumed by other users.
 
 It is recommended to use a strict versioning system, such as semantic numbering, when issuing updates to services. The service version should clearly indicate the level and severity of the changes that have been made when a service is updated and deployed according to the following guidelines.
 
-#### 3.2.1 Minor Service Updates
+#### Minor Service Updates
 
 Minor service updates are, for example, additional fields added to the service or new operations that would not break any apps that consume the previous versions.
 
@@ -187,7 +187,7 @@ If semantic numbering is used, then a minor/non-breaking change to a service can
 
 Minor service updates can be deployed to the same service endpoints, which ensures that all consuming apps consume the latest version of the service.
 
-#### 3.2.2 Major Service Updates
+#### Major Service Updates
 
 Major service updates are, for example, when entities or attributes are removed, or input parameters are required. Such updates would be incompatible for the consuming apps and result in the consuming app "breaking."
 
@@ -203,17 +203,17 @@ There is a major service update indicated by the change in the version number fr
 Entities of non-Mendix OData services are identified with a key of one or more fields. If the key fields are changed in a service update, this will also be seen as a breaking change.
 {{% /alert %}}
 
-### 3.3 Update or Switch {#update-switch}
+### Update or Switch {#update-switch}
 
 When a change in the contract at a consumed endpoint is detected (possibly due to a minor change), or if the same named service is deployed with a major version number but to a different endpoint, the following options are available in the **Consumed OData Service** screen.
 
-#### 3.3.1. Update
+#### Update
 
 The **Update** option is available when Studio Pro detects that the contract at the Catalog endpoint is different than the one currently consumed in the app. If **Update** is selected, the new contract will be loaded in the app.
 
 See the [Limitations](/refguide/consumed-odata-services/#consumed-odata-service-limitations) section of *Consumed OData Services* to read about known update limitations.
 
-##### 3.3.1.1 Integration Pane
+##### Integration Pane
 
 In the [Integration pane](/refguide/integration-pane/), search results, and in the **Used in your App** section, an update arrow indicates if there is a different contract at the Catalog endpoint.
 
@@ -223,7 +223,7 @@ In the [Integration pane](/refguide/integration-pane/), search results, and in t
 * Blue **Update** - click to open the **Update Service** box and update the contract. Studio Pro will retrieve the new contract at the Catalog endpoint, which will be loaded in the app.
 * The list of entities in this new version in the Catalog are shown, including the locally consumed entities that are marked with a green check mark. These entities are, however, greyed out to indicate that they cannot be dragged into the domain model because the contract for the previous version is currently being consumed. The only option is to click **Update** to retrieve the updated OData Service.
 
-##### 3.3.1.2 Update Service Dialog Box
+##### Update Service Dialog Box
 
 When you click **Update** on the **Consumed OData Service** document or the update icon in the **Mendix Connect** and **App** sections, the **Update** dialog box is displayed.
 
@@ -231,13 +231,13 @@ When you click **Update** on the **Consumed OData Service** document or the upda
 
 The consumed OData service that is currently consumed in the app (**1.0.0**) is shown on the left. Click **Update** to retrieve the new contract from Mendix Connect (**2.0.0**).
 
-#### 3.3.2. Switch
+#### Switch
 
 When an OData service is published to a different endpoint or environment, it will be registered as a different asset in the Catalog.
 
 In the example in the [Consuming from Service Endpoints](#consume-service-endpoints) section above, if you are consuming the service from the **Acceptance** environment, the Consumed OData service screen will display the **Switch** button to enable you to consume the same service from the **Production**.
 
-#### 3.3.3 Switching Consumed Services
+#### Switching Consumed Services
 
 A published OData service that is deployed to multiple environments or is published with major service updates (and therefore deployed to a different endpoint) is shown as separate items in the search results of the [Integration pane](/refguide/integration-pane/).
 
@@ -259,7 +259,7 @@ To consume the service deployed to the **Acceptance environment**, follow these 
 
     {{< figure src="/attachments/refguide/modeling/integration/consumed-odata-services/consumed-odata-service/integration-pane-2.png" width="350" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Integration Pane](/refguide/integration-pane/)
 * [Consumed OData Services](/refguide/consumed-odata-services/)

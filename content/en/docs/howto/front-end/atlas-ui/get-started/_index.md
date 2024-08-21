@@ -4,7 +4,7 @@ url: /howto/front-end/get-started/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 This section explains Atlas and how developers can get started with the Atlas UI framework.
 
@@ -12,7 +12,7 @@ The Atlas UI framework enables all types of developers to build consistent and b
 
 Atlas 2 corresponds with Mendix 8. If you need information on Atlas 2, see the Mendix 8 how-to documentation for [Atlas 2](/howto8/front-end/atlas-ui/).
 
-## 2 Design Principles
+## Design Principles
 
 Atlas UI has a philosophy based on the core principles described below. These principles guide all our design decisions at Mendix, and we encourage every Mendix user to adopt them when building their own apps.
 
@@ -22,7 +22,7 @@ Atlas UI has a philosophy based on the core principles described below. These pr
 
 **Flexibility** — Design apps that look good and scale in all situations without losing an intuitive and consistent experience.
 
-## 3 Design Elements
+## Design Elements
 
 Our UI library is fully integrated into Mendix Studio Pro. After creating a page and selecting a layout in Mendix Studio Pro, you can find building blocks, and widgets directly in your Toolbox. These UI elements form the foundation of your app.
 
@@ -38,7 +38,7 @@ Our UI library is fully integrated into Mendix Studio Pro. After creating a page
 
 5. **Design Properties** — You can further customize widgets by changing their design properties. Colors, text, and many other variables can be altered to make the widget what you need it to be.
 
-## 4 Default Look and Feel
+## Default Look and Feel
 
 Mendix apps contain a default look which is part of the [Atlas Core module](https://marketplace.mendix.com/link/component/117187). This offers the default look (styling and design properties) and feel for all the platform-supported widgets and forms the basis for Mendix app designs. To view these styling elements for yourself, see the [Atlas Design System](https://atlasdesignsystem.mendixcloud.com/) website.
 
@@ -46,10 +46,10 @@ Next to that, for both web and native mobile Mendix offers respectively [Atlas W
 
 When Mendix releases a new version of these modules, these can be updated as regular modules.
 
-## 5 Customizing Default Look and Feel
+## Customizing Default Look and Feel
 
 Mendix apps come out of the box with the default Atlas look and feel, which can be customized by [changing the theme settings](/howto/front-end/customize-styling-new/) and by [adding custom styling](/howto/front-end/customize-styling-new/). Next to that, it is possible to implement your own Design System or UI Kit as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
-## 6 Re-Using Designs Across Apps
+## Re-Using Designs Across Apps
 
-To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in  [Create a Company Design System](/howto/front-end/create-a-company-design-system/) or to group certain UI functionality together.
+To enable re-use and consistency it is possible to create UI modules that contain styling, design properties, page templates, building blocks and layouts. This can be used to implement the company brand as a re-usable module as described in [Create a Company Design System](/howto/front-end/create-a-company-design-system/) or to group certain UI functionality together.

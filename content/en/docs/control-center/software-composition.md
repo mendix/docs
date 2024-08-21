@@ -11,7 +11,7 @@ beta: true
 This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). 
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A Mendix app can consist of the Mendix Model (which includes pages, domain model, microflows, etc.), custom Java, and JavaScript. Additionally, it can use reusable components such as standard marketplace modules, widgets, Java libraries, npm packages, and the runtime version. These reusable components are dependencies, namely, components you are dependent on for your Mendix app to run.  
 
@@ -19,11 +19,11 @@ Over time, these dependencies can become deprecated, outdated. or vulnerable. En
 
 To enable this, the **Software Composition** page in Control Center provides visibility into the component dependencies in each app environment. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
-### 1.1 Known Issues
+### Known Issues
 
 After the creation of a deployment package, it may take up to a day for the **Software Composition** page to become visible. Mendix is working to improve the performance on this front.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
@@ -37,7 +37,7 @@ To be able to see the software composition information, make sure that you meet 
 
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
 
-### 1.3 Software Composition Generation {#software-composition-generation}
+### Software Composition Generation {#software-composition-generation}
 
 Components are identified in the following manner:
 
@@ -45,7 +45,7 @@ First, when a new deployment package is created via the Mendix Portal with the c
 
 The component dependencies for each non-expired, deployment package are available in the [Software Composition](/developerportal/deploy/software-composition/) page in **Apps**. 
 
-## 2 Overview {#overview}
+## Overview {#overview}
 
 On the **Overview** tab, you can see a list of all the deployed apps and their environments, if applicable.
 
@@ -65,7 +65,7 @@ The list contains the following information:
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
-### 2.1 Component Summary {#component-summary}
+### Component Summary {#component-summary}
 
 On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. This page shows the components of the selected app environment for your easy visual consumption.
 
@@ -75,13 +75,13 @@ On the top of the page, you can find the app name, the environment name, the Men
 
 For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
 
-#### 2.1.1 Downloading the Software Bill of Materials
+#### Downloading the Software Bill of Materials
 
 A software bill of materials (SBOM) is a *.json* file in the CycloneDX format. It contains a description about the Mendix app and the components (dependencies) put into it. For more information, see [SBOM Generation](/refguide/sbom-generation/).
 
 On the upper-right corner of the **Component Summary** page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). Different versions of Studio Pro support different component dependencies. For details on component dependencies supported per version, see the [Supported Features](/refguide/sbom-generation/#supported-features) section in *SBOM Generation*.
 
-## 3 All Components {#all-components}
+## All Components {#all-components}
 
 The **All Components** tab gives an overview of all the unique components used across your app landscape. 
 
@@ -116,7 +116,7 @@ The list shows the following information about the component:
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
-### 3.1 Component Usage {#component-usage}
+### Component Usage {#component-usage}
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the apps and the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius.
 

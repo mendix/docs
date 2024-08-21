@@ -5,7 +5,7 @@ weight: 11
 description: "Describes the best practices for versioning REST services in Mendix"
 ---
 
-## 1 Introduction
+## Introduction
 
 You can have different versions of the same REST service published at the same time.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Utilize best practices on when and how to use different versions of the same REST service published at the same time
 * Deprecate old versions
 
-## 2 Numbering the Versions
+## Numbering the Versions
 
 Give each service a version number following the `MAJOR.MINOR.PATCH` format:
 
@@ -32,19 +32,19 @@ Instead of changing a published service, you should duplicate the service and gi
 
 Change the location of the new version to include the new version, for example, **rest/myservice/v1.1**. It is customary to omit the **.0** or **.0.0** in the URL.
 
-The new version of the service reuses all microflows, mappings, and message definitions from the previous version that that did not change in the new version.
+The new version of the service reuses all microflows, mappings, and message definitions from the previous version that did not change in the new version.
 
 The rest of this how-to gives some examples of typical changes that occur and how to handle the versioning of your service in those cases.
 
-## 3 Examples
+## Examples
 
-### 3.1 Fixing a Bug in a Microflow
+### Fixing a Bug in a Microflow
 
-#### 3.1.1 Scenario
+#### Scenario
 
 You have a REST service in Petstore version 1.0.0 in production. You find out that you need a small change to the GetPet microflow. When the incoming `pet_id` is empty, it is giving an error that results in "500 Internal Server Error," but it should be "400 Bad Request."
 
-#### 3.1.2 Solution
+#### Solution
 
 Since this is a non-breaking change, there are two solutions to this problem. One is to create a separate patch version, and the other is to just fix the bug in the current version.
 
@@ -56,13 +56,13 @@ To create a patch version, do the following:
 4. Update the **PetStore_1_0_1** service, making the GET operation refer to **GetPet_1_0_1**.
 5. Change the **GetPet_1_0_1** microflow to fix the behavior.
 
-### 3.2 Adding an Operation to a Resource
+### Adding an Operation to a Resource
 
-#### 3.2.1 Scenario
+#### Scenario
 
 You have a REST service in Petstore version 1.0.0 in production. You want to add an operation to retrieve pets by status.
 
-#### 3.2 Solution
+#### Solution
 
 Since this change is backwards-compatible, there are two solutions to this problem. One is to create a new minor version, and the other is to just add the operation to the current version.
 
@@ -72,15 +72,15 @@ To create a new minor version, do the following:
 2. Duplicate the PetStore service. Call it **PetStore_1_1_0** and move it to the **PetStore_1_1_0** folder.
 3. Add the **GetPetByStatus** operation to the **PetStore_1_1_0** service.
 
-### 3.3 Changing the Type of an Attribute
+### Changing the Type of an Attribute
 
-#### 3.3.1 Scenario
+#### Scenario
 
 You have a REST service in Petstore version 1.0.0 in production. The **GET /pet** operation returns a pet's year of birth of as an integer. You have a message definition called **Pet** that is based on the **Pet** entity. The **ExportPet** export mapping maps the entity to the message definition.
 
 You want to change the year of birth to date of birth.
 
-#### 3.3.2 Solution
+#### Solution
 
 Note that this is a breaking change (because it is not backwards compatible), so you must create a new version if you do not want to get complaints from existing users of your service.
 
@@ -91,7 +91,7 @@ Note that this is a breaking change (because it is not backwards compatible), so
 5. Duplicate the **PetStore** service. Call it **PetStore_2_0_0** and move it to the **PetStore_2_0_0** folder.
 6. Update the **GET /pet** operation in the **PetStore_2_0_0** service, choosing the **ExportPet_2_0_0** export mapping.
 
-## 4 Deprecation
+## Deprecation
 
 After you have created a new version of your service, you should mark the old version as deprecated.
 

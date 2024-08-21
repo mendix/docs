@@ -8,11 +8,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon Bedrock](https://marketplace.mendix.com/link/component/215042) connector enables you to enrich your Mendix app with generative AI capabilities by connecting it to [Amazon Bedrock](https://aws.amazon.com/bedrock/).
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon Bedrock is a fully managed service that makes foundation models (FMs) from Amazon and leading AI startups available through an API, so you can choose from various FMs to find the model that is best suited for your use case. With the Amazon Bedrock serverless experience, you can quickly get started, easily experiment with FMs, and seamlessly integrate and deploy them into your applications using AWS tools and capabilities. Typical use cases include the following:
 
@@ -21,7 +21,7 @@ Amazon Bedrock is a fully managed service that makes foundation models (FMs) fro
 * Generating images based on text prompts and displaying them in the Mendix app.
 * Generating embedding vectors for text inputs.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
@@ -29,7 +29,7 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 
 You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
@@ -41,23 +41,23 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Amazon Bedrock connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Using Amazon Bedrock Models
+### Using Amazon Bedrock Models
 
 To use Amazon Bedrock models, keep in mind some specific requirements, as listed below.
 
-#### 3.1.1 Model Lifecycle
+#### Model Lifecycle
 
 Amazon Bedrock models have a lifecycle that consists of the Active, Legacy, and EOL stages. For more information, see [Model lifecycle](https://docs.aws.amazon.com/bedrock/latest/userguide/model-lifecycle.html). Models are no longer available for use after they reach the EOL state. To ensure that your application functions as intended, make sure that you regularly monitor the state of the model that you are using. For example, you may want to use an API call to retrieve the status of the model and alert you once it reaches the Legacy state. To programmatically get information about available models and their lifecycle status, you can use the [ListFoundationModels](#list-foundation-models) operation.
 
-### 3.2 Configuring AWS Authentication
+### Configuring AWS Authentication
 
 In order to use the Amazon Bedrock service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -65,7 +65,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-### 3.3 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
@@ -86,7 +86,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
 
-### 3.4 Chatting with Large Language Models using the ChatCompletions Operation
+### Chatting with Large Language Models using the ChatCompletions Operation
 
 A common use case of the Amazon Bedrock Connector is the development of chatbots and chat solutions. The **ChatCompletions (without history / with history)** operations offer an easy way to connect to most of the text-generation models available on Amazon Bedrock. The ChatCompletions operations are built on top of Bedrock's Converse API, allowing you to talk to different models without the need of a model-specific implementation. 
 
@@ -114,7 +114,7 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
 
-### 3.5 Invoking Specific Models by Using the InvokeModel Operation
+### Invoking Specific Models by Using the InvokeModel Operation
 
 Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the [Invoke Model](#invoke-model) instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
 
@@ -146,7 +146,7 @@ To invoke a specific model that is not covered by the ChatCompletions operation,
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/microflow.png" class="no-border" >}}
 
-### 3.6 Invoking an Agent with the InvokeAgent Operation {#invokeagent}
+### Invoking an Agent with the InvokeAgent Operation {#invokeagent}
 
 Agents in Amazon Bedrock can perform certain automated tasks such as API calls and data source interactions. For more information, see [Agents in Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html).
 
@@ -169,7 +169,7 @@ To invoke a Bedrock agent for your Mendix app, do the following steps:
 7. Select a microflow that takes an **AmazonBedrockConnector.InvokeAgentResponse** object as an input and handles that response.
     This is necessary because InvokeAgent is an asynchronous operation which means that it will not necessarily finish when the process that it was invoked from finishes. By giving the operation a handler microflow, the response can be handled as soon as it arrives. For an example handler microflow, see **AmazonBedrockConnector.InvokeAgentResponse_Handle** in the connector module. This microflow logs the response, so you can also use it just to investigate the response.
 
-## 4 Technical Reference {#technical-reference}
+## Technical Reference {#technical-reference}
 
 The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 
@@ -180,19 +180,19 @@ The **Documentation** pane displays the documentation for the currently selected
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
-## 5 Troubleshooting
+## Troubleshooting
 
 If you encounter any issues while using the Amazon Bedrock connector, use the following troubleshooting tips to help you solve them.
 
-### 5.1 Error Code 400 - Bad Request
+### Error Code 400 - Bad Request
 
 The service returns the error code *400 - Bad Request*.
 
-#### 5.1.1 Cause
+#### Cause
 
 Your AWS organization may not have been granted access to the model which you are trying to invoke.
 
-#### 5.1.2 Solution
+#### Solution
 
 To solve this issue, follow these steps:
 
@@ -204,47 +204,47 @@ To solve this issue, follow these steps:
 
 After the status of the models changes to **Access Granted**, you can use it with the Amazon Bedrock connector.
 
-### 5.2 Error code 403 - AccessDeniedException
+### Error code 403 - AccessDeniedException
 
 When invoking a model, the error code *403 - Access denied* indicates that you do not have access to the targeted resource.
 
-#### 5.2.1 Cause
+#### Cause
 
 Possible root causes for this error include the following:
 
 * You do not have access to the model in the specified AWS region.
 
-#### 5.2.2 Solution
+#### Solution
 
 To solve this issue, ensure that you have selected an AWS Region where you have model access. You can see an overview of the models accessible to you in the AWS Management Console, in the [Model Access](https://us-west-2.console.aws.amazon.com/bedrock/home?#/modelaccess) section of your Amazon Bedrock environment.
 
-### 5.3 Error code 404 - ResourceNotFoundException
+### Error code 404 - ResourceNotFoundException
 
 When invoking a model, the error code *404 - Resource not found* indicates that the targeted resource was not found.
 
-#### 5.3.1 Cause
+#### Cause
 
 Possible root causes for this error include the following:
 
 * The model which you are trying to invoke is not available in your specified AWS region.
 * The model which you are trying to invoke is deprecated.
 
-#### 5.3.2 Solution
+#### Solution
 
 To solve this issue, verify the following:
 
 1. Ensure that you have selected an AWS Region where the targeted model exists. You can see an overview of the models accessible to you in the AWS Management Console, on the [Overview page](https://us-west-2.console.aws.amazon.com/bedrock/home?#/overview) of your Amazon Bedrock environment. Make sure the region specified in the AWS Console matches the region you have configured in Mendix. 
 2. Ensure that the model that you have selected is not deprecated and that the *model-id* is currently available in Amazon Bedrock.
 
-## 6 Appendix
+## Appendix
 
-### 6.1 Knowledge Base {#knowledge-base}
+### Knowledge Base {#knowledge-base}
 
 In Bedrock, a *knowledge base* denotes a substantial storehouse of data and information. This serves as a foundational resource, enabling the AI system to glean insights and effectively comprehend and respond to natural language queries.
 
 For more information about knowledge bases, see [Knowledge Base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html) in the Amazon Bedrock documentation.
 
-#### 6.1.1 Creating a Knowledge Base
+#### Creating a Knowledge Base
 
 Setting up knowledge bases is usually a one-time configuration, which can be done with the AWS Console. In order to get the best results, you should consider whether you want to use one of the chunking strategies available on AWS when creating the knowledge base, or whether you want to pre-process the data beforehand. 
 
@@ -254,7 +254,7 @@ For example, when building a chatbot that gives restaurant recommendations, you 
 
 For more information about creating the knowledge base, including a list of the available chunking strategies, see [Create a knowledge base](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-create.html). 
 
-#### 6.1.2 Adding Data from Your App
+#### Adding Data from Your App
 
 After a knowledge base has been set up, information from your app can be added in a file to the relevant S3 bucket, and then used during subsequent inquiries. Which information is used and how that information is exported depends on the customer's use case and is up to the Mendix developer to implement. For more information, see [Set up your data for ingestion](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup.html).
 
@@ -266,7 +266,7 @@ The sync can be done from the information page of your knowledge base in the Ama
 The sync can take up to a few minutes and the calls to your knowledge base during this process cannot be handled accurately. To make sure the sync process has ended, you can use the [GetIngestionJob](#get-ingestion-job) action in the Amazon Bedrock Connector to retrieve the status of the ingestion job, along with other details.
 {{% /alert %}}
 
-### 6.2 Safeguards
+### Safeguards
 
 AWS has introduced safeguards for Bedrock (currently in preview). When available, there will be two features: Guardrails and Watermark detection. 
 
@@ -280,7 +280,7 @@ The watermark detection feature will make it possible to tell if an image has be
 
 More information about guardrails can be found in this [AWS blogpost](https://aws.amazon.com/blogs/aws/guardrails-for-amazon-bedrock-helps-implement-safeguards-customized-to-your-use-cases-and-responsible-ai-policies-preview/) and in the [AWS documentation](https://aws.amazon.com/en/bedrock/guardrails/).
 
-### 6.3 Advanced Prompts for Agents
+### Advanced Prompts for Agents
 
 By default, an agent is configured with the following base prompt templates, one for each step in the agent sequence:
 

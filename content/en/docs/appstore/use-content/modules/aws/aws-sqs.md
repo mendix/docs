@@ -8,15 +8,15 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon SQS connector](https://marketplace.mendix.com/link/component/214699) enables your app to connect to other microservices by implementing [Amazon Simple Queue Service (SQS)](https://aws.amazon.com/sqs/). Amazon SQS lets you send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon SQS helps improve your app by providing a queue service to send messages to other components or microservices in your infrastructure. Implement the Amazon SQS connector if you want your app to have the ability to communicate with other components at scale, for example, to send queue items to a work queue.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon SQS connector requires Mendix Studio Pro 9.18.0 or above.
 
@@ -26,15 +26,15 @@ To authenticate with Amazon Web Service (AWS), you must also install and configu
 Ensure that the AWS user account used for authentication has the appropriate permissions to access the SQS service in AWS.
 {{% /alert %}}
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Amazon SQS connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonSQSConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon SQS. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Configuring AWS Authentication
+### Configuring AWS Authentication
 
 In order to use the Amazon SQS service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -42,7 +42,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon SQS, you can implement the functions of the connector by using the provided activities in microflows.
 For example, to list all existing Amazon SQS subscriptions, implement the [List Queues](#list-queues) activity by doing the following steps:
@@ -72,7 +72,7 @@ For example, to list all existing Amazon SQS subscriptions, implement the [List 
 22. Configure a method for triggering the **ACT_ListQueues** microflow.
     For example, you can trigger a microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Create a Custom Save Button](/howto/logic-business-rules/create-a-custom-save-button/).
 
-## 4 Technical Reference {#technical-reference}
+## Technical Reference {#technical-reference}
 
 The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 

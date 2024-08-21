@@ -7,11 +7,11 @@ aliases:
     - /appstore/connectors/aws/amazon-eventbridge/
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon EventBridge](https://marketplace.mendix.com/link/component/208548) connector enables you to connect your app to [Amazon EventBridge](https://aws.amazon.com/eventbridge/) and easily build event-driven applications.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon EventBridge is a serverless service that uses events to connect application components together, making it easier for you to build scalable event-driven applications. Use it to route events from sources such as home-grown applications, AWS services, and third-party software to consumer applications across your organization. Amazon EventBridge provides a simple and consistent way to ingest, filter, transform, and deliver events so you can build new applications quickly. Some typical use cases of Amazon EventBridge are:
 
@@ -20,7 +20,7 @@ Amazon EventBridge is a serverless service that uses events to connect applicati
 * Building event-driven workflows - Amazon EventBridge can be used to build event-driven workflows where you can orchestrate multiple AWS services and SaaS applications using events.
 * Integrating third-party services - Amazon EventBridge enables you to integrate with third-party SaaS applications and services. You can use Amazon EventBridge to receive events from these services and take actions based on them.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon EventBridge connector requires Mendix Studio Pro 9.18.0 or above.
 
@@ -29,7 +29,7 @@ To use the Amazon EventBridge connector, you must also install and configure the
 * [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333) - This connector is required to authenticate with Amazon Web Services (AWS). It is crucial for the Amazon EventBridge connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 * [Community Commons module](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Amazon EventBridge connector.
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
@@ -39,15 +39,15 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Amazon EventBridge connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonEventBridgeConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon EventBridge. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
-### 3.1 Configuring AWS Authentication {#authentication}
+### Configuring AWS Authentication {#authentication}
 
 In order to use the Amazon EventBridge service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -55,11 +55,11 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon EventBridge, you can implement the functions of the connector by using the provided activities in microflows.
  
-#### 3.2.1 Sending Events to an Event Bus
+#### Sending Events to an Event Bus
 
 To send events to an event bus in your AWS environment, implement the [PutEvents](#put-events) activity by performing the following steps:
 
@@ -88,7 +88,7 @@ To send events to an event bus in your AWS environment, implement the [PutEvents
 12. Configure a method to trigger the *ACT_ PutEvents* microflow. 
     For example, you can associate the activity with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
  
-#### 3.2.2 Receiving Events in your Mendix App
+#### Receiving Events in your Mendix App
 
 To be able to receive events to your Mendix app, you first need to add your Mendix app as an API destination in your AWS console. To create an API destination, you need a connection in your AWS console that defines the authorization type and credentials to use for authorization with the HTTP endpoint of your API destination. With the Amazon Eventbridge Connector, you can use the **RegisterMyMendixApp** microflow to create or update a connection or an API destination through your application's URL.
 
@@ -143,7 +143,7 @@ To configure your Mendix app to receive events, perform the following steps:
 
 14. Ensure that the Event Bus which you are using contains a Rule that propagates an event to your Mendix app's API destination. You can configure the relevant settings in the settings of your Event Bus in the AWS console.
 
-## 4 Technical Reference {#technical-reference}
+## Technical Reference {#technical-reference}
 
 The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 

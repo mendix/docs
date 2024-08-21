@@ -8,11 +8,11 @@ aliases:
     - /howto/mobile/notif-send-test/
 ---
 
-## 1 Introduction
+## Introduction
 
 After [configuring the Push Notifications module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-config-push/) and [implementing push notifications in your native app](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-native/#build-native-app) or your [progressive web app](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-pwa/) it is now time to send your first test push notification.
 
-## 2 Sending the Test Notification
+## Sending the Test Notification
 
 To send your first test notification, do the following:
 
@@ -36,7 +36,7 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshooting Notification Issues {#troubleshoot}
+## Troubleshooting Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|

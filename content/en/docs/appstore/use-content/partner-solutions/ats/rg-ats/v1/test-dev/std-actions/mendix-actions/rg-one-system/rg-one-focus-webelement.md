@@ -3,19 +3,19 @@ title: "Focus WebElement"
 url: /appstore/partner-solutions/ats/rg-one-focus-webelement/
 ---
 
-## 1 Description
+## Description
 
 Focuses a WebElement and performs a Mendix wait afterwards.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * All WebElements
 
-## 3 Usage
+## Usage
 
 Pass the WebElement you want to focus as parameter for the action. To get the WebElement, use an action like Find/Assert Widget.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

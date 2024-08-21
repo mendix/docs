@@ -3,11 +3,11 @@ title: "Set Value"
 url: /appstore/partner-solutions/ats/rg-one-set-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enum Selector.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * TextBox
 * TextArea
@@ -20,12 +20,12 @@ Sets the text value of a Textbox, Textarea, Dateinput, Reference Selector or Enu
 * Label
 * OnChangeInputbox
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to set.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

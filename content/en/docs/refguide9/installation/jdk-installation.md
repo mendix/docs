@@ -5,13 +5,13 @@ weight: 45
 description: "Describes how to install the JDK for Studio Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 Some versions of Studio Pro support multiple versions of the Java Development Kit (JDK).
 During the installation of Studio Pro one version of the JDK will be downloaded and installed.
 If you would like to use a different version of the JDK than the one installed during the installation of Studio Pro, then you can follow the instructions described in this document.
 
-## 2 Downloading and Installing the JDK
+## Downloading and Installing the JDK
 
 You can download the Eclipse Temurin JDK from the [adoptium.net](https://adoptium.net/) website using one of the following links:
 
@@ -21,6 +21,6 @@ You can download the Eclipse Temurin JDK from the [adoptium.net](https://adoptiu
 
 After downloading execute the downloaded installation executable and follow the instructions.
 
-## 3 Configuring Studio Pro
+## Configuring Studio Pro
 
 After the JDK is installed you can configure it in Studio Pro in the [Preferences](/refguide9/preferences-dialog/#jdk).

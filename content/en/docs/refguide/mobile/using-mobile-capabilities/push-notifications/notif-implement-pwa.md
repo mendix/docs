@@ -6,11 +6,11 @@ weight: 70
 description: Tutorial for implementing push notifications in a progressive web app.
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide will help you set up your progressive web app to handle push notifications.
 
-## 2 Initialize Firebase
+## Initialize Firebase
 
 Push notifications in progressive web apps require Firebase to be set up as early as possible. To do so, you need to create a custom index.html and initialize Firebase there:
 

@@ -3,11 +3,11 @@ title: "ATS Helper"
 url: /appstore/partner-solutions/ats/rg-two-ats-helper/
 ---
 
-## 1 Introduction
+## Introduction
 
 The ATS Helper is an inspection tool that provides the information needed to create test steps in your test cases or actions. With the ATS Helper, you identify widgets in the running application, and it determines the `mx-name` of the widget. This saves you from diving into the HTML source code or the application model.
 
-## 2 Installation
+## Installation
 
 Install the ATS Helper by creating a bookmark in your browser. This bookmark loads the latest version of the ATS Helper from ATS and starts it.
 
@@ -28,13 +28,13 @@ Follow these steps to set the bookmark:
     * Drag the link into your browser's bookmark bar
     * Right-click the link and select **Add bookmark for this link**
 
-### 2.1 Compatibility
+### Compatibility
 
 The ATS Helper works in Firefox, Chrome, Edge, and Internet Explorer 11.
 
-## 3 Usage
+## Usage
 
-### 3.1 Starting the ATS Helper
+### Starting the ATS Helper
 
 Use the ATS Helper within the application under test. Follow these steps to load the helper in your application:
 
@@ -45,7 +45,7 @@ The following dialog box will appear on top of your application's UI:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-ats-helper/loaded.png" class="no-border" >}}
 
-### 3.2 Inspecting Widgets
+### Inspecting Widgets
 
 To inspect a widget, press and hold <kbd>Ctrl</kbd> while moving your mouse pointer to a UI element.
 
@@ -62,6 +62,6 @@ The properties shown by the ATS Helper are the following
 | MxName          | The name of the widget. Required input for many actions |
 | MxName Selector | The full CSS selector for the widget. Used for advanced test steps or custom actions. |
 
-### 3.3 Moving and Closing
+### Moving and Closing
 
 You can drag and drop this dialog box with your mouse. To close the helper, press the ({{% icon name="remove" %}}) icon in the upper-right corner of the screen.

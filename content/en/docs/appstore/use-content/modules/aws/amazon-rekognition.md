@@ -9,11 +9,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Amazon Rekognition](https://marketplace.mendix.com/link/component/204717) connector provides a way for you to enrich your Mendix app with AI image analysis capabilities by implementing [Amazon Rekognition](https://aws.amazon.com/rekognition/).
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Amazon Rekognition allows your app to analyze images by using machine learning. You can use it to address use cases such as the following:
 
@@ -23,17 +23,17 @@ Amazon Rekognition allows your app to analyze images by using machine learning. 
 * Identify custom labels like a logo in images
 * Identify if a person in an image is wearing protective equipment
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Amazon Rekognition connector requires Mendix Studio Pro 9.18.0 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-### 1.3 Example
+### Example
 
 {{< youtube h_R1mMtkfd8 >}}
 
-### 1.4 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the AWS service to which is connects may incur a usage cost. For more information, refer to AWS documentation.
 
@@ -43,15 +43,15 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Amazon Rekognition connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **AmazonRekognitionConnector** section. The connector provides a [domain model](#domain-model) and [activities](#activities) that you can use to connect your app to Amazon Rekognition. Each activity can be implemented by using it in a microflow.
 
-### 3.1 Configuring AWS Authentication
+### Configuring AWS Authentication
 
 In order to use the Amazon Rekognition service, you must authenticate with AWS. To do so, you must set up a configuration profile in your Mendix app. After you set up the configuration profile, the connector module handles the authentication internally.
 
@@ -59,7 +59,7 @@ As of version 3.0.0 of the [AWS Authentication Connector](https://marketplace.me
 
 The AWS Authentication Connector supports both **static credentials** and **temporary credentials**. For more information and detailed instructions please refer to the [AWS Authentication Connector documentation page](/appstore/modules/aws/aws-authentication/).
 
-### 3.2 Configuring a Microflow for an AWS Service
+### Configuring a Microflow for an AWS Service
 
 After you configure the authentication profile for Amazon Rekognition, you can implement the functions of the connector by using the provided activities in microflows. For example, to detect labels for a given image, implement the **DetectLabels** activity by performing the following steps:
 
@@ -81,7 +81,7 @@ After you configure the authentication profile for Amazon Rekognition, you can i
 13. Click **OK**.
 14. Configure a method for triggering the **ACT_DetectLabels** microflow. For example, you can trigger a Microflow by associating it with a custom button on a page in your app. For an example of how this can be implemented, see [Creating a Custom Save Button with a Microflow](/refguide/creating-a-custom-save-button/).
 
-## 4 Technical Reference {#technical-reference}
+## Technical Reference {#technical-reference}
 
 The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
 

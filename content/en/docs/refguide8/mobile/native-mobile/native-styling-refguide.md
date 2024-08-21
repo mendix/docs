@@ -518,7 +518,7 @@ File widgets help your user app manage images and other files. For more informat
 
 An image viewer can be used to display an image. This widget supports the same style properties and structure as the [Image](#image) widget above.
 
-The default class to style all image viewers is named  `ImageViewer`.
+The default class to style all image viewers is named `ImageViewer`.
 
 ## Button Widgets
 
@@ -614,7 +614,7 @@ The navigation style properties are as follows:
 | `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |
 | `progressOverlay` | `text` | This has all TextStyle properties. |
 
-The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
+The default class to style the navigation is named `navigationStyle`. There is no support for custom class styling on navigation.
 
 ## Add-On Widgets
 

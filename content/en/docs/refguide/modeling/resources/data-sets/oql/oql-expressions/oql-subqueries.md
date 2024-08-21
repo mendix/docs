@@ -65,7 +65,7 @@ In contrast with a subquery in a `SELECT` clause, a subquery in a `FROM` clause 
 
 ## Subquery in WHERE
 
-There are two ways to use a subquery in a `WHERE`clause—as a value and as a collection.
+There are two ways to use a subquery in a `WHERE` clause—as a value and as a collection.
 
 ### Value Subqueries
 

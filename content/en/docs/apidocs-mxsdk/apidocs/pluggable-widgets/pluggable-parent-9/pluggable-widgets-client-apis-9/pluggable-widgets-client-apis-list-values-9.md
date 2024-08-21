@@ -319,7 +319,7 @@ if (/* check that all properties are filterable */) {
 
 ### Reloading {#listvalue-reload}
 
-It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`,`limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
+It is possible to reload items of a datasource. The `reload()` method triggers a new fetch from the underlying data source, preserving existing `filter`, `offset`, `limit`, `requestTotalCount`, and `sortOrder` properties. The `reload()` method accepts no arguments.
 
 ### Working With Actual Data
 
@@ -580,7 +580,7 @@ Because of the above configurations, the client component may render every insta
 this.props.myDataSource.items.map(i => this.props.myWidgets.get(i));
 ```
 
-When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above`myWidgets`).
+When the `widgets` property is not required, there may not be any child widgets configured. In that case the value of the widgets property will be `undefined` (as in the example above `myWidgets`).
 
 {{% alert color="info" %}}
 The `get` method was introduced in Mendix Studio Pro 9.0.

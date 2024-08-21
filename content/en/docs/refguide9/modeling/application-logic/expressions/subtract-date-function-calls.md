@@ -189,7 +189,7 @@ Mon Jan 01 01:01:01 CET 2007
 
 ## subtractWeeks[UTC]
 
-The `subtractWeeksUTC` function subtracts a number of weeks from a date using the UTC calendar as opposed to  `subtractWeeks` which uses the server's one. 
+The `subtractWeeksUTC` function subtracts a number of weeks from a date using the UTC calendar as opposed to `subtractWeeks` which uses the server's one. 
 
 ### Input Parameters
 
@@ -224,7 +224,7 @@ Mon Jan 01 01:01:01 CET 2007
 
 ## subtractMonths[UTC]
 
-The `subtractMonthsUTC` function subtracts a number of months from a date using the UTC calendar as opposed to  `subtractMonths` which uses the server's one.
+The `subtractMonthsUTC` function subtracts a number of months from a date using the UTC calendar as opposed to `subtractMonths` which uses the server's one.
 
 ### Input Parameters
 
@@ -259,7 +259,7 @@ Mon Jan 01 01:01:01 CET 2007
 
 ## subtractQuarters[UTC]
 
-The `subtractQuartersUTC` function subtracts a number of quarters from a date using the UTC calendar as opposed to  `subtractQuarters` which uses the server's one.
+The `subtractQuartersUTC` function subtracts a number of quarters from a date using the UTC calendar as opposed to `subtractQuarters` which uses the server's one.
 
 ### Input Parameters
 
@@ -294,7 +294,7 @@ Mon Jan 01 01:01:01 CET 2007
 
 ## subtractYears[UTC]
 
-The `subtractYearsUTC` function subtracts a number of years from a date using the UTC calendar as opposed to  `subtractYears` which uses the server's one.
+The `subtractYearsUTC` function subtracts a number of years from a date using the UTC calendar as opposed to `subtractYears` which uses the server's one.
 
 ### Input Parameters
 

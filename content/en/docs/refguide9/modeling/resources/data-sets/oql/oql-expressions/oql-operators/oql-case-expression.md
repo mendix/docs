@@ -31,7 +31,7 @@ or extended:
 
 ### input_expression
 
-`input_expression` will be compared to `when_expression`. If  `input_expression` matches  `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
+`input_expression` will be compared to `when_expression`. If `input_expression` matches `when_expression`, the result of the whole `CASE` expression will be `result_expression` given after `THEN`.
 
 ### when_expression
 

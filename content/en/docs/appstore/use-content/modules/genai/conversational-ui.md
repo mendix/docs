@@ -93,7 +93,7 @@ The following operations can be found in the toolbox for processing the [ChatCon
 * `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `Create ChatContext & Set ProviderConfig (List)` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
 * `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for [chat with history within Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate-with-history).
-* `Set Topic` sets the `Topic`of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
+* `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
 #### Request Operations {#request-operations}
 

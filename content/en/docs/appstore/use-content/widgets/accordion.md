@@ -122,10 +122,10 @@ These are the design properties shipped with Atlas UI for this widget:
 
 The following brand styles (and their associated class names) are shipped with Atlas UI as helper classes:
 
-* Primary –`widget-accordion-brand-primary`
+* Primary – `widget-accordion-brand-primary`
 * Secondary – `widget-accordion-brand-secondary`
 * Success – `widget-accordion-brand-success`
 * Warning – `widget-accordion-brand-warning`
-* Danger –`widget-accordion-brand-danger`
+* Danger – `widget-accordion-brand-danger`
 
 These helper classes should be applied to individual groups using the widget's [Dynamic class](#general) property.

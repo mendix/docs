@@ -148,9 +148,9 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
     {{< figure src="/attachments/appstore/use-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
-3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities.
+3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration**, **UserCommons**, and **System** modules, in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning. From version 3.1.0, the startup microflow (`OIDC.ASU_OIDC_Startup`) automatically handles this process.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/refresh-model.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/select-refresh-modules.png" class="no-border" >}}
 
 ### Migrating from Community Edition to Platform Edition{#migration}
 

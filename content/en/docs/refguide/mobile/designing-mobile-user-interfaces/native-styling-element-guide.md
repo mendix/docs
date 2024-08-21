@@ -703,7 +703,7 @@ The default class to style all static image styles is named `Image`. Please note
 
 A dynamic image can be used to display an image. This widget supports the same style properties and structure as the [Static Image](#image) widget above.
 
-The default class to style all dynamic images is named  `NativeDynamicImage`.
+The default class to style all dynamic images is named `NativeDynamicImage`.
 
 ## Buttons
 
@@ -854,7 +854,7 @@ export const navigationStyle = {
 | `progressOverlay` | `activityIndicator` | This is the same as the [activity indicator](#activity-indicator) widget. |
 | `progressOverlay` | `text` | This has all TextStyle properties. |
 
-The default class to style the navigation is named  `navigationStyle`. There is no support for custom class styling on navigation.
+The default class to style the navigation is named `navigationStyle`. There is no support for custom class styling on navigation.
 
 ## Add-Ons
 

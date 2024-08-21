@@ -85,7 +85,7 @@ To use BAPI Connector for SAP Solutions in your Mendix application to call the B
         * **Commit transaction** - Select **false**
         * **Return type** - Enter `BAPI_MATERIAL_GETALL.BAPI_MATERIALGETALL_Response`
         * **Use return value** - Select **Yes**
-        * **Object name** - Enter  `materialResponse`
+        * **Object name** - Enter `materialResponse`
     
         This will call the BAPI and map the response to the entity given in the **Response type** parameter.
 

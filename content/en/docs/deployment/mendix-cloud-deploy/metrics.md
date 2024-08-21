@@ -30,8 +30,11 @@ To access the graphs on the **Metrics** page, you must have **Access to Monitori
 If you meet the above conditions, you can find the graphs by following these steps:
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com).
+
 1. In the navigation pane, click **Metrics**.
+
 1. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
+
 1. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/metrics-selection.png" >}}

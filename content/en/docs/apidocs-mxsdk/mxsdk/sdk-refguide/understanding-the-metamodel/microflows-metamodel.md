@@ -212,10 +212,10 @@ An HTTP configuration has an optional custom endpoint location, authentication c
 
 A web service operation request needs to be mapped from Mendix app concepts to the specifics of the web service operation. There are four different ways in which request handling can be configured. Each has its own specific configuration options.
 
-1. Export Mapping - The recommended option whenever you are sending complex XML objects (non-primitives) to a third party.
-2. Simple Parameter Mapping - Use this option when you are just sending primitive values to a third party. The argument can be any MicroflowExpression producing a value compatible with the parameter type. The ElementPath is a string representing the place in the element tree of the parameter in the XML message.
-3. Advanced Parameter Mapping - This is a combination of the above two mappings, starting one level deeper in the XML hierarchy than a regular export mapping. Use a MicroflowExpression for a primitive value and an ExportMapping for a complex one.
-4. Custom mapping - Specify the XML to be sent manually. Powerful yet dangerous.
+1. Export Mapping – The recommended option whenever you are sending complex XML objects (non-primitives) to a third party.
+2. Simple Parameter Mapping – Use this option when you are just sending primitive values to a third party. The argument can be any MicroflowExpression producing a value compatible with the parameter type. The ElementPath is a string representing the place in the element tree of the parameter in the XML message.
+3. Advanced Parameter Mapping – This is a combination of the above two mappings, starting one level deeper in the XML hierarchy than a regular export mapping. Use a MicroflowExpression for a primitive value and an ExportMapping for a complex one.
+4. Custom mapping – Specify the XML to be sent manually. Powerful yet dangerous.
 
 #### Graphical Overview
 

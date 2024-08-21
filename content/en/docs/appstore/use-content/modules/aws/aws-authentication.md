@@ -257,7 +257,7 @@ The following microflow shows an example implementation of signature version 4 h
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/sigv4microflow.png" class="no-border" >}}
 
-In this example, a `SigV4Builder` object and a  `Credentials` object are passed as input parameters. In the microflow, two lists of the type `SigV4Parameter` are created, one for the request headers, and one for the query parameters.
+In this example, a `SigV4Builder` object and a `Credentials` object are passed as input parameters. In the microflow, two lists of the type `SigV4Parameter` are created, one for the request headers, and one for the query parameters.
 
 These entities are used as input for the `GetSigV4Headers` microflow action, which returns a response in the form of a `SigV4Header` entity.
 

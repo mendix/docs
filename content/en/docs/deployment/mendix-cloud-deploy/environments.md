@@ -8,7 +8,7 @@ description: "Lists the environments in which your app is deployed. Also the sta
 
 ## Introduction
 
-You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app.
+You can use the **Environments** page to access information about your environments, deploy packages, manage certificates and access restrictions, and more. To access your app's **Environments** page, go to [Apps](https://sprintr.home.mendix.com/) and click **Environments** on your app. You can also directly visit the **Environments** page using this link:  `https://cloud.home.mendix.com/link/deploy/{appID}`, with `{app ID}` replaced by your app ID.
 
 The **Environments** page has the following tabs:
 

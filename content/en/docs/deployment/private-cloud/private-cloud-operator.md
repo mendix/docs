@@ -303,7 +303,7 @@ kubectl apply -f {File containing the CR} -n {namespace where app is being deplo
 To build and deploy your app using the OpenShift CLI, do the following:
 
 1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/standard-operator/#openshift-signin) section of *Creating a Private Cloud Cluster*.
-2. Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
+2. Switch to the project where you've deployed the Mendix Operator using the command `oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3. Paste the following command into your command line terminal:
 
 ```shell {linenos=false}

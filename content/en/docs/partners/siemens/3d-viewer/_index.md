@@ -464,7 +464,7 @@ By selecting one attribute to set **Selection**, you can get information on the 
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselectionchange-result.jpg" alt="viewer-onselectionchange-result" class="no-border" >}}
 
-Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET`APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID`in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
+Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET` APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID` in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselect-sample.jpg" alt="viewer-onselect-sample" class="no-border" >}}
 
@@ -650,7 +650,7 @@ If you set enableSectionHandle to true for a [section view](#section-view), it w
 
 #### sectionHandle
 
-Defines the style of sectionHandle. `arrowRadius`and `handleRadius` are measured in pixels.
+Defines the style of sectionHandle. `arrowRadius` and `handleRadius` are measured in pixels.
 
 * Type – object
 * Default value –

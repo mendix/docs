@@ -884,7 +884,7 @@ In this section, you will add a web server extension. This extension type allows
 
 This class is the web container that allows Studio Pro to interact with your user interface. Within this class you will serve the web content to your extension logic.
 
-Note that you inherit from `WebServerExtension`.  `WebServerExtension`serves web content to Studio Pro.
+Note that you inherit from `WebServerExtension`.  `WebServerExtension` serves web content to Studio Pro.
 
 Additionally, you override the `InitializeWebServer` method. Studio Pro will call this method during startup, and you should place all your initialization logic in here. This implementation adds three web routes. These web routes are the locations where your user interface can be accessed from.
 

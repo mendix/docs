@@ -66,7 +66,7 @@ Go to the Azure Portal to retrieve the Azure Storage account name and an access 
 
 Then select your application, click **Configuration** and then **Advanced...**. In the **Advanced Settings** screen, add the following **Custom Mendix settings**:
 
-* **Name**: *com.mendix.core.StorageService*, **Value**:`com.mendix.storage.azure`
+* **Name**: *com.mendix.core.StorageService*, **Value**: `com.mendix.storage.azure`
 
 * **Name**: *com.mendix.storage.azure.AccountName*, **Value**: `<your Azure Storage account name>`
 

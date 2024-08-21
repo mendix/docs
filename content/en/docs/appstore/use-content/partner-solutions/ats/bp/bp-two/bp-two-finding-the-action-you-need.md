@@ -32,7 +32,7 @@ In ATS there are many actions for finding a widget, from generically finding a w
 
 When you want to find a widget, the main choice is always the [Find/Assert Widget](/appstore/partner-solutions/ats/rg-one-findassert-widget/) action. It finds the widget you need using the `mx-name` of the widget. 
 
-ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 
@@ -216,7 +216,7 @@ In ATS, there are several actions for getting a value from a widget. The first p
 
 When you want to get a value from a widget, the main choice is always the [Get Value](/appstore/partner-solutions/ats/rg-one-get-value/) action. It retrieves the value of a widget using the `mx-name` of the widget.
 
-ATS uses the `widget name` parameter instead of  `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
+ATS uses the `widget name` parameter instead of `mx-name`. The widget name is found using the ATS Helper, and the value is the `widget name`:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/mx-name-ats-helper-cp.png" class="no-border" >}}
 

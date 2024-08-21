@@ -566,7 +566,7 @@ For more information, see [OrderBy](https://docs.aws.amazon.com/iot-twinmaker/la
 
 ##### Associations
 
-The `OrderBy`entity does not have any associations.
+The `OrderBy` entity does not have any associations.
 
 #### TabularConditionPropertyFilter
 
@@ -878,7 +878,7 @@ For more information, see [EntitySummary](https://docs.aws.amazon.com/iot-twinma
 
 | Name | Connected to | Multiplicity | Description |
 | --- | --- | --- | --- |
-| `EntitySummary_EntityStatu`s | `AWSTwinMakerConnector.EntityStatus` | OneToMany | |
+| `EntitySummary_EntityStatus` | `AWSTwinMakerConnector.EntityStatus` | OneToMany | |
 
 #### EntityStatus
 

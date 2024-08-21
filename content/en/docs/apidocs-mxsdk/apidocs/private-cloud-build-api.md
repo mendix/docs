@@ -40,7 +40,7 @@ Select the following as scopes:
 
 * `mx:privatecloud-build:read` – to perform `GET` operations
 * `mx:privatecloud-build:write` – to perform all operations (`GET`, `POST` and `DELETE`)
-* `mx:modelrepository:write` – under `Model Repository` - to perform build package operation 
+* `mx:modelrepository:write` – under `Model Repository` – to perform build package operation 
 
 Store the `{GENERATED_PAT}` in a safe location, so you can use it to authorize your Mendix for Private Cloud API calls.
 

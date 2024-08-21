@@ -40,7 +40,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonTranslateConnector** section. The connector provides the [domain model](#domain-model) and [activities](#activities) that you can use to implement automatic translation for your app.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonTranslateConnector** section. The connector provides the [domain model and activities](#technical-reference) that you can use to implement automatic translation for your app.
 
 {{% alert color="info" %}}
 The artifacts that you need are contained in the **AmazonTranslateConnector** > **Operations** folder. The content in the **Translation** > **Private** folder is for internal use. In most cases, you will not need to use it directly.

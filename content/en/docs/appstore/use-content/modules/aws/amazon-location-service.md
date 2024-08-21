@@ -40,7 +40,7 @@ Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appst
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonLocationServiceConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Location Service. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonLocationServiceConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon Location Service. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -52,7 +52,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Location Service, you can implement the functions of the connector by using the provided activities in microflows. For example, to calculate a route between to sets of coordinates, implement the [CalculateRoute](#calculate-route) activity by performing the following steps:
+After you configure the authentication profile for Amazon Location Service, you can implement the functions of the connector by using the provided activities in microflows. For example, to calculate a route between to sets of coordinates, implement the **CalculateRoute** activity by performing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_CalculateRoute*, and then click **OK**.

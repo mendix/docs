@@ -38,7 +38,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonTextractConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon Textract. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonTextractConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon Textract. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -50,7 +50,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
     
 ### Configuring a Microflow for an AWS Service
 
-After setting up the authentication, to analyze a document, implement the [AnalyzeDocument](#analyzedocument) activity by doing the following steps:
+After setting up the authentication, to analyze a document, implement the **AnalyzeDocument** activity by doing the following steps:
 
 1. In the **Domain Model**, right-click on the work area, and then click **Add entity**.
 2. Enter a name for your entity, for example, *Document*, and then click **OK**.

@@ -7,7 +7,7 @@ weight: 30
 
 ## 1 Introduction
 
-The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData service.
+The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData/GraphQL service.
 
 {{< figure src="/attachments/refguide/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." class="no-border" >}}
 

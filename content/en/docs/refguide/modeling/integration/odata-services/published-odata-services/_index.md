@@ -28,7 +28,7 @@ If you want the published service to be a GraphQL service as well, you can indic
 
 ## 2 General {#general}
 
-To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData/GraphQL service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
+To create a Published OData/GraphQL Service, right-click on the module in your app and choose **Add other** > **Published OData/GraphQL service**. You can also edit an existing published OData/GraphQL service by double-clicking on it, or right-clicking on it and selecting **Open**.
 
 ### 2.1 Service Name {#service-name}
 
@@ -48,7 +48,7 @@ Once a version is released to production, any further changes should be made to 
 This is because changes to a particular version of a published OData/GraphQL service will be reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
-### 2.3 Location
+### 2.3 Location {#location}
 
 The location denotes where the service will be available. It is recommended to include the service name and the major version in the location (for example, `svc/products/v1/`).
 
@@ -142,7 +142,7 @@ The GraphQL schema describes the queries and types exposed by this GraphQL servi
 
 ### 3.3 Security {#security}
 
-You can configure security for the OData service when [App Security](/refguide/app-security/) is enabled.
+You can configure security for the OData/GraphQL service when [App Security](/refguide/app-security/) is enabled.
 
 #### 3.3.1 Requires Authentication {#authentication}
 
@@ -151,7 +151,7 @@ Select whether clients need to authenticate or not. Select **No** to allow acces
 Even when you choose **Yes**, you can still expose the service to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 {{% alert color="info" %}}
-The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+The **Authentication** section of a published OData/GraphQL service is only visible when you have enabled [app security](/refguide/app-security/).
 {{% /alert %}}
 
 #### 3.3.2 Authentication Methods {#authentication-methods}
@@ -205,19 +205,19 @@ There are three possible outcomes of the authentication microflow:
 
 ###### 3.3.2.3.1 Mendix SSO {#authentication-mendix-sso}
 
-You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
+You can configure a published OData/GraphQL service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
 
 To set up authentication with Mendix SSO, do the following:
 
 1. Ensure the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
-2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
+2. In the published OData/GraphQL service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### 3.3.3 Allowed Roles
 
 The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 {{% alert color="warning" %}}
-Web service users cannot access OData services.
+Web service users cannot access OData/GraphQL services.
 {{% /alert %}}
 
 ## 4 Public Documentation
@@ -230,7 +230,7 @@ In the **OpenAPI Documentation** pane, you can see a preview of the API document
 
 ## 6 Properties
 
-In the Properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
+In the Properties pane when an OData/GraphQL service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
@@ -300,8 +300,8 @@ The following modeling options are limited in the GraphQL service:
 * Entities without a [key](/refguide/published-odata-entity/#key) are not part of the GraphQL service.
 * The [Use paging](/refguide/published-odata-entity/#paging) setting has no effect.
 * Published `ID` attributes are ignored.
-* Published `owner` and `changedBy` system associations  are ignored.
+* Published `owner` and `changedBy` system associations are ignored.
 * Enumerations [exposed as](/refguide/published-odata-attribute/#exposed-as) a string are ignored.
-* Binary attributes are ignored .
+* Binary attributes are ignored.
 * A published OData service that publishes associations as an associated object ID cannot support GraphQL.
-* GraphQL exposed names are the same as the OData exposed names, but uses a lowercase first character.
+* The GraphQL endpoint is omitted from the OpenAPI document.  

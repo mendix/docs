@@ -13,7 +13,11 @@ This is a list of supported operations for GraphQL services.
 Mendix currently supports only the operations described here.
 {{% /alert %}}
 
-A client can request an operation of a GraphQL service by sending a `POST` request to the location of the service. The service supports request content types `application/graphql` and `application/json`. We use `application/graphql` for the examples in this document.
+A client can request an operation of a GraphQL service by sending a `POST` request to the [location](/refguide/published-odata-services/#location) of the service. The service supports request content types `application/graphql` and `application/json`. We use `application/graphql` for the examples in this document.
+
+For each published entity, Mendix publishes 2 queries: one to retrieve all objects, the other to retrieve a single object by key. Note that GraphQL exposed names are the same as the OData exposed names, but use a lowercase first character.
+
+Besides these queries, it supports introspection queries.
 
 ## 2 Retrieving All Objects
 

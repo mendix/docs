@@ -139,7 +139,7 @@ The ActionButton implementation determines what to do based on the ClientAction 
 
 ## Data Widgets
 
-Data widgets display data that they retrieve from a [Data Source](data-sources).
+Data widgets display data that they retrieve from a [Data Source](#data-sources).
 
 A [DataView](#dataview) is used to show or edit content from a single object. [ListView](#listview) is used to show
 a list of objects.

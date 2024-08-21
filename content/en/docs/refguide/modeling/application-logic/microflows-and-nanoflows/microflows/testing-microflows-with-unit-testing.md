@@ -108,7 +108,7 @@ To create a sample microflow for testing, follow these steps:
 
 This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](#sample-microflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
 
-* The test microflow name must start with *Test*, for example *Test_RegisterTrainee*.
+* The test microflow name must start with *Test_* or *UT_* (case-insensitive), for example *Test_RegisterTrainee*.
 * The microflow should have no input arguments.
 * The result type must be set to one of the following types:
     * **Boolean** – For this result type, a *true* result means that the test succeeded, while a *false* result means that the test failed.
@@ -137,7 +137,7 @@ To create a sample test microflow, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/call-promote-microflow.png" alt="A microflow call activity with Employee as the parameter" max-width=70% >}}
 
-10. To test if the employee is promoted to the right level by adding a **Microflow Call** activity with the following properties:
+10. To test if the employee is promoted to the right level, add a **Microflow Call** activity with the following properties:
     * **Microflow** – **UnitTesting.AssertTrue1**
     * **Parameter** – **ValueToAssert**
     * **Argument** –*$NewEmployee/Level = MyFirstModule.Level.Medior*
@@ -150,22 +150,28 @@ To create a sample test microflow, follow these steps:
     4. Add a new **Microflow call** activity between **Promote** and **Promoted to Medior?**.
     5. Select **UnitTesting.ReportStep** as the microflow.
     6. Set the argument of the **Message** parameter to string *'Employee promoted'*.
-14. Double-click the **End event**, and then specify the following properties:
-    * **Return type** – **Boolean**
-    * **Return value** –   *true*
-15. Connect the activities, as shown in the following figure:
+14. Connect the activities, as shown in the following figure:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote-to-medior.png" alt="A view of the sample unit test microflow" max-width=100% >}}
 
-16. In the left-side navigation pane, in the **UnitTests** folder, duplicate the **Test_PromoteEmployeeToMedior** and then rename the new microflow *Test_PromoteEmployeeToSenior*.
-17. In the **Test_PromoteEmployeeToSenior** microflow, change the value of the **Level** member to *MyFirstModule.Level.Medior* for the **Create Employee** activity.
-18. In the **Test_PromoteEmployeeToSenior** microflow, set the following values for the **Promoted to Medior?** activity:
-    * **Caption** – *Promoted to Senior?*
-    * **Argument** – *$NewEmployee/Level = MyFirstModule.Level.Senior*
-19. Run the app locally and view it. 
-20. In the left-side navigation pane, click **UnitTestOverview > MyFirstModule**.
-21. Verify that the **Rollback microflow tests after execution** checkbox is selected.
-22. Click **Run all module tests** and verify that all the test cases pass.
+15. In the left-side navigation pane, in the **UnitTests** folder, duplicate the **Test_PromoteEmployeeToMedior** two times, and then
+rename the new microflows in the following way:
+    * *Test_PromoteEmployeeToSenior*
+    * *Test_EmployeeStillSenior*
+16. In the **Test_PromoteEmployeeToSenior** microflow:
+    * Set the value of the **Level** member to *MyFirstModule.Level.Medior* for the **Create Employee** activity.
+    * Set the following values for the **Promoted to Medior?** activity: 
+        * **Caption** – *Promoted to Senior?*
+        * **Argument** – *$NewEmployee/Level = MyFirstModule.Level.Senior*
+17. In the **Test_EmployeeStillSenior** microflow:
+    * Set the value of the **Level** member to *MyFirstModule.Level.Senior* for the **Create Employee** activity.
+    * Set the following values for the **Promoted to Medior?** activity: 
+        * **Caption** – *Employee still Senior?*
+        * **Argument** – *$NewEmployee/Level = MyFirstModule.Level.Senior*
+18. Run the app locally and view it. 
+19. In the left-side navigation pane, click **UnitTestOverview > MyFirstModule**.
+20. Verify that the **Rollback microflow tests after execution** checkbox is selected.
+21. Click **Run all module tests** and verify that all the test cases pass.
 
 ## 5 Read More
 

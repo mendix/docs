@@ -7,11 +7,11 @@ aliases:
     - /private-mendix-platform-administration/
 ---
 
-## 1 Introduction
+## Introduction
 
 As a user with Administrator access rights, you can perform the business-as-usual administrator tasks such as app management and user management. You can also manage Marketplace-related settings for your company.
 
-## 2 App Management
+## App Management
 
 On the **App Management** page, administrators can manage their apps.
 
@@ -35,7 +35,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
     
     You will be warned of the consequences and asked for confirmation before the app is archived.
 
-## 3 Marketplace
+## Marketplace
 
 In the **Marketplace** section, administrators can manage various settings related to the content available on the Private Platform Marketplace. The Private Platform Marketplace is a local version of the [Mendix Marketplace](/appstore/overview/), enclosed entirely within the Private Platform. Developers in your organization can also create their own modules, connectors, and sample apps, and share them on the Private Platform Marketplace to make them available to other users.
 
@@ -47,7 +47,7 @@ As the administrator, you can perform the following actions:
 * In the **Taxonomy Management** tab, you can configure the supported Studio Pro versions and sub-categories that your users can select when creating Marketplace content. You can also view and edit the available licenses.
 * In the **Content Import** tab, you can view the contents available in your Private Marketplace. You can also download and import the modules in bulk.
 
-## 4 Users
+## Users
 
 In the **User Management** section, administrators can manage user accounts and user groups.
 

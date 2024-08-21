@@ -6,13 +6,13 @@ no_list: false
 description_list: true
 description: "Presents information on the component details page."
 ---
-## 1 Introduction
+## Introduction
 
 Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component brings you to its details page with the sections described below.
 
 {{< figure src="/attachments/appstore/overview/component-details/component-details.png" >}}
 
-## 2 Header {#header}
+## Header {#header}
 
 The header for a component presents the following details:
 
@@ -48,7 +48,7 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
-## 3 Tabs
+## Tabs
 
 The component details page also presents the following tabs:
 

@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Pusher](https://marketplace.mendix.com/link/component/107957/) service allows you to trigger a microflow or nanoflow directly from the server on non-native client apps. This means it is triggered from the other session, without waiting for end-users to interact with the page.
 
@@ -19,13 +19,13 @@ With this service, you can create a notify event on the server that directly cau
 The listening widget can only listen when the page is active, so the widget cannot be used to send a notification when the user has navigated away.
 {{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 * Asynchronous refreshes
 * Notifications
 * Chat function
 
-### 1.2 Dependencies
+### Dependencies
 
 * External service [Pusher](https://pusher.com/) – the service is built around the Pusher [Channels](https://pusher.com/channels) product; Pusher is a paid service, but there is a generous [free Sandbox plan](https://pusher.com/channels/pricing):
 
@@ -38,7 +38,7 @@ The listening widget can only listen when the page is active, so the widget cann
     | Support | Limited |
     | Protection | SSL |
 
-## 2 Setting Up the Pusher App
+## Setting Up the Pusher App
 
 To set up the necessary Pusher app, follow these steps:
 
@@ -55,7 +55,7 @@ To set up the necessary Pusher app, follow these steps:
 Make sure you have different apps (keys) created for each app and environment (development, acceptance, and production). When the credentials are shared, messages could go across environments and have unwanted side effects. The configuration can also be set per developer via **App Settings** > **Edit** configuration > [Constants](/refguide/configuration/#constants).
 {{% /alert %}}
 
-## 3 Configuration
+## Configuration
 
 To use this service after importing it from the Marketplace, follow these steps:
 
@@ -73,7 +73,7 @@ This diagram describes updating an object via the Notify action:
 
 {{< figure src="/attachments/appstore/use-content/services/pusher/SequenceDiagramUpdateObject.png" alt="update object via notify listen" class="no-border" >}}
 
-### 3.1 Refresh Microflow
+### Refresh Microflow
 
 You can use a microflow to retrieve data that is changed by other users as long is it committed and the transaction has finished.
 
@@ -81,7 +81,7 @@ The `$Message` variable contains the object in the session state. With the `[id 
 
 {{< figure src="/attachments/appstore/use-content/services/pusher/RefreshMicroflowSample.png" alt="refresh microflow" class="no-border" >}}
 
-### 3.2  Security 
+### Security 
 
 The notify messages are sent to anybody who is listening. 
 
@@ -89,6 +89,6 @@ A message will contain limited data (entity name, ID, changed date, notifier use
 
 An addition authentication request is made to the Mendix REST server via `<host>/rest/pusher/key` and `<host>/rest/pusher/auth`. Only when successful is the user allowed to access the lists. The service will only allow a logged-in user with the **NotifyListen.User** module role to listen when the user has entity access to the object of the data in which the widget is placed.
 
-## 4 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This service requires additional configuration to be compliant with strict content security policy (CSP). The Pusher service makes use of an external service for its functionalities. To make this service work, you need to configure the CSP headers to allow resources from that domain.

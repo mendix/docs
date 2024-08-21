@@ -3,13 +3,13 @@ title: "Trap Tool"
 url: /appstore/partner-solutions/apd/rg-one-trap-tool/
 ---
 
-## 1 Introduction
+## Introduction
 
 This chapter gives an overview of the trap tool, which can be used to collect the latest series of messages before an error, a warning, or a critical message occurs and to store those messages in the database when they do occur. No more asking the customer to turn on logging, waiting for things to happen, turning on even more logging, generating huge files, and spending a lot of time catching the event. Simply use the trap tool.
 
-## 2 Traps
+## Traps
 
-### 2.1 Overview
+### Overview
 
 The trap tool shows the traps that are stored.
 
@@ -19,7 +19,7 @@ You can send the trap message to the performance tool when the performance tool 
 
 If you mark a trap to be kept, make sure this trap is not deleted with the periodic cleanup of data, with a manual delete all, or when the protection mechanism removes the oldest traps to prevent the database from growing.
 
-### 2.2 Trap Details
+### Trap Details
 
 When you select a trap, you get to see all the messages in that trap.
 
@@ -29,7 +29,7 @@ The search parameters to include or exclude **Connection Bus** messages and **Mi
 
 Also, a list of selected records can be sent to the performance tool. If the performance tool is already running, you will get a warning that you can only send a trap to the performance tool if it is not running.
 
-## 3 Manual Trap
+## Manual Trap
 
 You can manually send a trap and get logging output. This can be useful when there might be a microflow hanging or if an issue occurs but no error is generated.
 
@@ -39,7 +39,7 @@ This is the **Output Queue Size** counter.
 
 When a trap occurs, all the messages to be written to disk are stored in a queue. A separate thread handles this queue. The trap tool has a counter to indicate the number of messages in the output queue. When the trap tool is disabled or stopped, the output is interrupted and cancelled in the middle of processing the output queue.
 
-## 4 Trap Tool Options
+## Trap Tool Options
 
 This is the **Trap Tool Options** dialog box:
 
@@ -49,7 +49,7 @@ The trap tool can be configured to trap on warnings. Error and critical messages
 
 The trap tool can be configured to remember messages recorded during a certain amount of time that precedes a trap. So in the screenshot example of the options dialog box, you store per trap at most 15,000 records and at most messages from 10,000ms (10 seconds) before the trap.
 
-### 4.1 Protections Tab
+### Protections Tab
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Protections.png" class="no-border" >}}
 
@@ -65,7 +65,7 @@ The trap tool has a **Max Processing Delay (ms)** protection to stop the tool if
 
 Traps are automatically deleted after a certain amount of days, as configured in **Remove trap log after (days)**. If you want to keep a trap for future reference, you can keep the trap using the **Keep** button above the traps grid.
 
-### 4.2 Exclusions Tab
+### Exclusions Tab
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-trap-tool/Options_Exclusions.png" class="no-border" >}}
 
@@ -76,7 +76,7 @@ a warning, or a critical message in either the log tool or the trap tool, viewin
 
 The regular expression can be tested against the traps and log messages in the database, so if the tool currently records a message that needs to be excluded the next time it occurs, then the test button should give a result.
 
-### 4.3 Triggers Tab
+### Triggers Tab
 
 On the **Triggers** tab, you can define message triggers that fire on messages of level INFO and above. 
 
@@ -84,6 +84,6 @@ On the **Triggers** tab, you can define message triggers that fire on messages o
 
 See the description of [Triggers](/appstore/partner-solutions/apd/rg-one-triggers/) for how to configure triggers.
 
-### 4.4 Save & Apply
+### Save & Apply
 
 Changes to the options are applied to the trap tool if the button **Save & apply** is used.

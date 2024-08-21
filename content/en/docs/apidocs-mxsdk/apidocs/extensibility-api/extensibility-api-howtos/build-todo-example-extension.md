@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-tod
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes how to build an example extension that adds a simple todo list extension to Studio Pro. With this example extension, you can add new todo items to a list. The example extension will be added to the main menu of Studio Pro and you will add a user interface for the example extension by using a dockable pane and some web content. 
 
@@ -16,16 +16,16 @@ This document covers the following topics:
 * How to interact with the Mendix metamodel
 * How to host your user interface within the Studio Pro IDE
 
-## 2 Prerequisites
+## Prerequisites
 
 Before you start the procedure, make sure that you have installed the following tools on your local development environment:
 
 * Microsoft Visual Studio 2022 or another equivalent development environment, such as visual studio code or JetBrains Rider. This example will assume that you are using Microsoft Visual Studio 2022.
 * Studio Pro version 10.6 or higher
 
-## 3 Creating the Project and Configuring It as an Extension
+## Creating the Project and Configuring It as an Extension
 
-### 3.1 Creating the Project
+### Creating the Project
 
 In order for your extension to be loaded correctly as an extension in Studio Pro, you will first need to create a project:
 
@@ -45,7 +45,7 @@ In order for your extension to be loaded correctly as an extension in Studio Pro
 
 Now you have an empty project.
 
-### 3.2 Installing Extensions API NuGet Package
+### Installing Extensions API NuGet Package
 
 You must do the following steps to configure the project so that it can be used as an extension in Studio Pro:
 
@@ -54,7 +54,7 @@ You must do the following steps to configure the project so that it can be used 
 
 The details of each step are described below.
 
-#### 3.2.1 Referencing the Extensibility API NuGet Package
+#### Referencing the Extensibility API NuGet Package
 
 1. In Visual Studio, go to **Tools** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
@@ -68,7 +68,7 @@ The details of each step are described below.
 
     {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/step-six.png"  max-width=50%  >}}
 
-#### 3.2.2 Adding a `manifest.json` File
+#### Adding a `manifest.json` File
 
 You now have a class library that can be loaded as an extension by Studio Pro. However, Studio Pro still needs some help in determining how to load the assemblies of your class library. Studio Pro reads a special file called *manifest.json*. This file instructs Studio Pro on which assemblies to load into each execution context.
 
@@ -93,7 +93,7 @@ You now have a class library that can be loaded as an extension by Studio Pro. H
 
 6. Remove the `Class1.cs` file, as you will not need it anymore.
 
-## 4 Adding a Dockable Pane to Host Your User Interface
+## Adding a Dockable Pane to Host Your User Interface
 
 In this section, you will host a dockable pane within Studio Pro. This will provide you with a window where you can render the User Interface of the extension.
 
@@ -132,7 +132,7 @@ In this section, you will host a dockable pane within Studio Pro. This will prov
 You are expected to get an error at this point around the `ToDoListDockablePaneViewModel`.
 {{% /alert %}}
 
-### 4.1 Explanation
+### Explanation
 
 There are a few notable features of the class in the code above:
 First, the top of the class is decorated with an `Export` attribute:
@@ -184,7 +184,7 @@ In summary, in this section you performed the following:
 4. Inject the `ILogService`.
 5. Return a valid view model from the open method.
 
-## 5 Creating a View Model to Host Your View Data
+## Creating a View Model to Host Your View Data
 
 In this section, you will add a view model to store our view data:
 
@@ -275,7 +275,7 @@ In this section, you will add a view model to store our view data:
     }
     ```
 
-### 5.1 Explanation
+### Explanation
 
 The first important thing to note about this view model class is that you do not decorate this class with the export attribute. This means that the extension will be responsible for instantiating this type within the extension. This also means that you can specify any type you like within the constructor. You already set up the instantiation of this class in the previous section. The important bit here is that you pass in the `baseUri`, `getCurrentApp` lambda expression and an instance of the logging class.
 
@@ -394,7 +394,7 @@ Now, create the methods responsible for performing the logic:
     }
 ```
 
-## 6 Creating a Model to Store the Todo Information
+## Creating a Model to Store the Todo Information
 
 In order to store the information to disk, add some model classes that will be able to store the Todo information.
 
@@ -449,7 +449,7 @@ In order to store the information to disk, add some model classes that will be a
     }
     ```
 
-## 7 Creating a Storage Handler to Store the Todo Information
+## Creating a Storage Handler to Store the Todo Information
 
 With the models created, you can now create a storage handler that will manage storing these models to disk.
 
@@ -504,7 +504,7 @@ With the models created, you can now create a storage handler that will manage s
     }
     ```
 
-### 7.1 Explanation
+### Explanation
 
 The `ToDoStorage` class will be responsible for storing the todo information to disk. In order to store the file in the correct path, you need to request the path from the `CurrentApp` instance. 
 
@@ -547,7 +547,7 @@ You also need to handle loading and saving of the todo data.
     }
 ```
 
-## 8 Adding a Menu Item to Open the Extension from the Main Menu
+## Adding a Menu Item to Open the Extension from the Main Menu
 
 In this section, you will add a menu item to the toolbar that will allow you to select the ToDo list from a menu item.
 
@@ -583,7 +583,7 @@ In this section, you will add a menu item to the toolbar that will allow you to 
     }
     ```
 
-## 9 Adding a Web-based User Interface
+## Adding a Web-based User Interface
 
 Up to now you have been adding all the logic that will allow your extension to run inside Studio Pro. In this section, you will add a user interface for the extension. In Studio Pro, you need to load your user interface elements as web content. This web content is then rendered from within an isolated web view in Studio Pro.
 
@@ -714,7 +714,7 @@ Up to now you have been adding all the logic that will allow your extension to r
     await refreshToDos();
     ```
 
-### 9.1 Explanation
+### Explanation
 
 This HTML page is self-explanatory, as you are providing a very simple interface with some added CSS styling provided by Tailwind CSS.
 
@@ -746,7 +746,7 @@ async function handleMessage(event) {
 
 It is important to set these two `index.html` and `main.js` files to *Copy always* or *Copy if newer* in their **Copy to Output Directory** property; otherwise, they will not be present in the build output folder when you are ready to start using the extension.
 
-## 10 Setting up Communication Between the User Interface and Extension {#set-up-communication}
+## Setting up Communication Between the User Interface and Extension {#set-up-communication}
 
 So far you have configured the extension to be usable in Studio Pro. You added support for storing the to do items. You also added a user interface that users can interact with. The last step in this process is to link the extension c# logic with the web-based JavaScript logic.
 
@@ -805,7 +805,7 @@ So far you have configured the extension to be usable in Studio Pro. You added s
     }
     ```
 
-### 10.1 Explanation
+### Explanation
 
 Your web-based user interface is hosted inside Studio Pro in an isolated web container. As such to communicate with it you are adding some utility functionality to help you improve the code.
 
@@ -817,7 +817,7 @@ After that you add `SendNoBodyAndClose`. This sends an empty response with just 
 
 The final method `AddDefaultHeaders` is a utility method that adds some default http headers to the requests.
 
-## 11 Next Steps
+## Next Steps
 
 In this section, you will add a web server extension. This extension type allows you to serve web content easily within extensions.
 
@@ -890,7 +890,7 @@ Additionally, you override the `InitializeWebServer` method. Studio Pro will cal
 
 `ServeIndex`, `ServeMainJs`, and `ServeToDos` serve the contents of the 3 routes to your extension logic.
 
-## 12 Hosting the Extension in Studio Pro
+## Hosting the Extension in Studio Pro
 
 All the code you need should now be complete. The last step in the process is building your solution and adding your binary output as an extension inside your app.
 

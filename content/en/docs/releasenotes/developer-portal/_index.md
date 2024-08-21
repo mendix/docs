@@ -3,6 +3,8 @@ title: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of Apps"
 weight: 20
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -969,7 +971,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
-* We implemented [context deep links](/developerportal/general/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
+* We implemented context deep links to all main app pages on the Developer Portal so you can easily share references.
 * We increased the performance of opening the [My Apps page](/developerportal/#my-apps)
 
 #### Fixes

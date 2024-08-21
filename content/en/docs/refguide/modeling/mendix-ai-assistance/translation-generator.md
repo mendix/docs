@@ -5,7 +5,7 @@ weight: 80
 description: "Describes the features in Translation Generator."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 {{% alert color="info" %}}
 Translation Generator is currently an experimental feature introduced in Studio Pro 10.12.0. For more information on experimental features, see [Beta and Experimental Releases](/releasenotes/beta-features/).
@@ -13,7 +13,7 @@ Translation Generator is currently an experimental feature introduced in Studio 
 
 Translation Generator is an AI-powered translation tool that you can use for [Batch translate](/refguide/batch-translate/). It helps you to translate your model to different languages for which you may not have a translation. It gives translations for the languages that you have selected, using parameters in the way that works specifically for the selected languages.
 
-## 2 Modeling Using Translation Generator
+## Modeling Using Translation Generator
 
 To enable Translation Generator, go to **Preferences** > the **New Features** tab > the **Maia** section.
 
@@ -33,7 +33,7 @@ Once translations are generated, you need to Click **Translate** to save the cha
 Currently, if you encounter an error after clicking **Generate Translations...**, try to sign out and sign in to Studio Pro again.
 {{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [Batch Translate](/refguide/batch-translate/)
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)

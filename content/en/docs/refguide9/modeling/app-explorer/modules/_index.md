@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide9/ui-resources-package/), one or more user-defined **app modules**, [Marketplace modules](/appstore/modules/), [add-on modules](/refguide9/configure-add-on-and-solution-modules/), and [solution modules](/refguide9/configure-add-on-and-solution-modules/). Modules are a way to split the functionality of your application into separate parts. For example, a web shop can put order management in a different module than customer and product management. Studio Pro does not enforce any kind of module structure; it is up to you to choose logical modules for your application. Some modules are part of your app by default, while others you can download in the [Mendix Marketplace](https://marketplace.mendix.com/) to add functionality to app.
 
@@ -19,7 +19,7 @@ Furthermore, a module can contain many different types of documents. Each type o
 Mendix Modules are distinct from React Native modules. Mendix modules are portions of your app which can include a data model, logic, and UI with a portable security model. React Native modules expose native Java/Objective-C and C++ objects allowing for React Native apps (in Mendix apps, you can leverage these modules via widgets or JavaScript actions to use device sensors or capabilities).
 {{% /alert %}}
 
-## 2 Module Types {#module-types}
+## Module Types {#module-types}
 
 {{% alert color="info" %}}
 In Studio Pro 9, add-on modules and solution modules were previously available in preview for select customers and partners as part of an early access program. In Studio Pro 10, this functionality is generally available for all users. For more information, see this page in the [Studio Pro 10 Guide](/refguide/modules/).
@@ -33,7 +33,7 @@ There are the following type of modules:
 * [Add-on modules](/refguide9/module-settings/#add-on-module) 
 * [Solution modules](/refguide9/module-settings/#solution-module)
 
-## 3 Common
+## Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ There are the following type of modules:
 | [Microflows](/refguide9/microflows/) | [Activities](/refguide9/activities/), [Sequence Flow](/refguide9/sequence-flow/) | Microflows describe the logic of your application. They are composed of activities that manipulate objects, interact with the client etcetera. |
 | [Enumerations](/refguide9/enumerations/) |   | An enumeration is a set of predefined values, for example: in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
-## 4 Page Resources
+## Page Resources
 
 | Document type | Description |
 | --- | --- |
@@ -50,7 +50,7 @@ There are the following type of modules:
 | [Menus](/refguide9/menu/) | A menu document defines a navigation menu that can be used by a [menu widget](/refguide9/menu-widgets/). |
 | [Snippets](/refguide9/snippet/) | Snippets define reusable interface parts. They can be used on [pages](/refguide9/page/) and [layouts](/refguide9/layout/). |
 
-## 5 Resources
+## Resources
 
 | Document type | Description |
 | --- | --- |
@@ -63,7 +63,7 @@ There are the following type of modules:
 | [Task Queue](/refguide9/task-queue/) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
 | [Scheduled Events](/refguide9/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
-## 6 Consumed Services
+## Consumed Services
 
 | Document type | Description |
 | --- | --- |
@@ -72,7 +72,7 @@ There are the following type of modules:
 |  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](/refguide9/xml-schemas/) | An XML schema is defined in an XML Schema Definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
-## 7 Published Services
+## Published Services
 
 | Document type | Description |
 | --- | --- |

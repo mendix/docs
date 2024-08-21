@@ -3,6 +3,7 @@ title: "Marketplace"
 url: /releasenotes/marketplace/
 description: "Release notes for updates to the Mendix Marketplace"
 weight: 35
+numberless_headings: true
 aliases:
     - /releasenotes/app-store/index.html
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

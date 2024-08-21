@@ -4,17 +4,17 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/interact-with-model-api/
 weight: 11
 ---
 
-## 1 Introduction
+## Introduction
 
 After you create some basic extensions, you want to interact with the Studio Pro model in order to make changes to your app. The Model API allows you to do just that. The model representation is exposed via the [`Mendix.StudioPro.ExtensionsAPI.Model`](xref:Mendix.StudioPro.ExtensionsAPI.Model) namespace.
 
-## 2 Gaining Access to the Mendix Model SDK
+## Gaining Access to the Mendix Model SDK
 
 The easiest way to gain access to the model is by using the `CurrentApp` property of Extension class. All extension classes implement the [`Mendix.StudioPro.ExtensionsAPI.UI.UIExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md) base class which provides this access.
 
 The `CurrentApp` property exposes an implementation of [`IModel`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/IModel.md). with a `IModel` reference you can gain access to any other model elements. However, any changes that you introduce must be contained within a model transaction.
 
-## 3 Interacting with Model Elements
+## Interacting with Model Elements
 
 Any modification to the model must be done within a transaction; otherwise, a `System.InvalidOperationException` is thrown. There can be only a single active (i.e. not committed or rolled back) `ITransaction` for the whole app.
 
@@ -26,7 +26,7 @@ For your changes to reflect within the model. you must first commit the transact
 
 Alternatively. if you wish to abort or revert your changes, you can call [`ITransaction.Rollback`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.Model/ITransaction/Rollback.md).
 
-## 4 Examples
+## Examples
 
 The most common use case for changing an app is to change one or few properties synchronously.
 
@@ -55,6 +55,6 @@ using (var transaction = model.StartTransaction("add entity"))
 }
 ```
 
-## 5 Read More
+## Read More
 
 * [Understanding the Mendix Metamodel](/apidocs-mxsdk/mxsdk/mendix-metamodel/)

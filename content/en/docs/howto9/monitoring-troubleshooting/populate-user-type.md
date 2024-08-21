@@ -4,7 +4,7 @@ url: /howto9/monitoring-troubleshooting/populate-user-type/
 description: "Describes how to classify existing app end-users as either internal or external."
 ---
 
-## 1 Introduction
+## Introduction
 
 In your Mendix Pricing Plan there is a distinction between Internal and External Named Users of a Mendix App. This document helps you to set up your apps to meter External Users correctly. It describes a sample solution that can help you in External User classification for existing users of your apps.
 
@@ -16,7 +16,7 @@ In your Mendix Pricing Plan there is a distinction between Internal and External
 * *External User* – a *Named User* who is not an employee or contractor of your business, and is designated as an External User in the Mendix Platform.
 {{% /alert %}}
 
-## 2 Background
+## Background
 
 Every Mendix app has a system module containing an entity `UserReportInfo`. This entity has an attribute `UserType` that is used to classify end-users as External or Internal Users. This attribute needs to be maintained for all existing and new end-users of a Mendix app. If this attribute is not set, the end-user is classified as an Internal User.
 
@@ -24,7 +24,7 @@ The *Mendix Metering* module relies on this attribute to ascertain the end-user 
 
 {{< figure src="/attachments/howto9/monitoring-troubleshooting/populate-user-type/user-type-enumeration.png" class="no-border" >}}
 
-## 3 Approach
+## Approach
 
 {{% alert color="info" %}}
 This approach is for end-users who are already set up in your app. For new end-users who onboard into your app, you can implement a similar logic to set the UserType attribute during initial end-user creation.
@@ -32,7 +32,7 @@ This approach is for end-users who are already set up in your app. For new end-u
 
 Outlined below is an example of a module that can be used to update UserType attribute. You will need to adapt the module logic for classifying your own internal and external end-users. 
 
-### 3.1 Domain model
+### Domain model
 
 In the example below, our aim is to update UserType attribute of UserReportInfo entity. However, the entity `UserReportInfo` is protected in the System module and has no access rules. As a result, it cannot be exposed directly in the UI pages. 
 Therefore, the approach we take is to create a new non-persistable entity, `UserTypeReport`, which we will populate based on the values of `UserReportInfo` to show in the UI.
@@ -41,7 +41,7 @@ Therefore, the approach we take is to create a new non-persistable entity, `User
 
 {{< figure src="/attachments/howto9/monitoring-troubleshooting/populate-user-type/usertypereport-properties.png" class="no-border" >}}
 
-### 3.2 Populating **UserType** for Existing Users of an App
+### Populating **UserType** for Existing Users of an App
 
 1. Create a microflow `User_RetrieveOrCreateUserReportInfo` which will ensure that a `UserReportInfo` object exists for a given `User`.
 

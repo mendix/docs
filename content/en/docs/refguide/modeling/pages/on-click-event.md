@@ -10,7 +10,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Events specify actions which can be triggered when the end-user interacts with a widget. This interaction can occur in a number of ways:
 
@@ -19,9 +19,9 @@ Events specify actions which can be triggered when the end-user interacts with a
 * [On enter](#on-enter) – for input elements
 * [On leave](#on-leave) – for input elements
 
-## 2 Triggering Actions
+## Triggering Actions
 
-### 2.1 On Click {#on-click}
+### On Click {#on-click}
 
 An **On click** event specifies an event that is executed when a user clicks a widget. Often the **On click** property is a part of the **Events** section in properties. For example, you can specify that when a user clicks a customer's profile image, the page with this customer's details will open:
 
@@ -31,25 +31,25 @@ An on-click event is common for many widgets (for example, image, buttons, list 
 
 The **On click** property specifies what [action](#actions) is executed when a user click a widget.
 
-#### 2.1.1 Disabled During Action
+#### Disabled During Action
 
 This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the on-click event. Selecting **Disabled during action** disables the button until the action is completed or failed.
 
-### 2.2 On Change {#on-change}
+### On Change {#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
-### 2.3 On Enter {#on-enter}
+### On Enter {#on-enter}
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
-### 2.4 On Leave {#on-leave}
+### On Leave {#on-leave}
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
 This differs from the [On change](#on-change) property in that the event will always be triggered, even if the value has not been changed.
 
-## 3 Event Actions {#actions}
+## Event Actions {#actions}
 
 When an event is triggered, you can choose what action is triggered. Possible options are the following ones:
 
@@ -70,11 +70,11 @@ When an event is triggered, you can choose what action is triggered. Possible op
 * [Show workflow admin page](#show-workflow-page)
 * [Complete user task](#complete-task)
 
-### 3.1 Do Nothing {#do-nothing}
+### Do Nothing {#do-nothing}
 
 No action is taken. This option is useful for setting up a page without defining the underlying functionality yet.
 
-### 3.2 Show a Page {#show-page}
+### Show a Page {#show-page}
 
 The **Show a page** event opens the specified page. Select the page which opens using the options below:
 
@@ -84,7 +84,7 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 * **Page for specializations** – allows you to configure a different page for each specialization of the context object. If this action is placed inside a data view, it is possible to configure different page (or pages) for each specialization of the data view object. If this action is placed in a data grid, it is possible to configure different pages for each specialization of the data grid entity. This setting is not shown when there is not a context object or when the context object has no specializations.
 
-#### 3.2.1 Page Settings {#page-settings}
+#### Page Settings {#page-settings}
 
 **Page settings** opens a dialog box enabling you to configure the page in more detail:
 
@@ -96,11 +96,11 @@ The **Show a page** event opens the specified page. Select the page which opens 
 
 * **Page arguments** – a list of parameters of the selected page and the objects that will be passed to each of them.
 
-#### 3.2.1.1 Page Arguments
+#### Page Arguments
 
 **Page arguments** are automatically configured based on the parameters of the selected page and the available arguments. In general, arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a page is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
-### 3.3 Call a Microflow {#call-microflow}
+### Call a Microflow {#call-microflow}
 
 The **Call a microflow** event executes the specified microflow.
 
@@ -111,7 +111,7 @@ Therefore, it is not recommended to change entities/attributes on the current pa
 
 The following settings are specific for this event:
 
-#### 3.3.1 Microflow {#microflow}
+#### Microflow {#microflow}
 
 The [microflow](/refguide/microflow/) that should be executed.
 
@@ -125,23 +125,23 @@ If there is nothing to pass to the new microflow, then a dialog box is shown whe
 
 {{< figure src="/attachments/refguide/modeling/pages/on-click-event/configure-new-microflow-no-parameter.png" class="no-border" >}}
 
-#### 3.3.2 Microflow Settings {#microflow-settings}
+#### Microflow Settings {#microflow-settings}
 
 **Microflow settings** opens a dialog box enabling you to specify what parameters will be passed to the microflow and how the microflow will be run.
 
 {{< figure src="/attachments/refguide/modeling/pages/on-click-event/microflow-settings.png" alt="Microflow settings dialog" width="550px" class="no-border" >}}
 
-##### 3.3.2.1 Microflow
+##### Microflow
 
 This duplicates the [Microflow](#microflow) specified above.
 
-##### 3.3.2.2 Microflow Arguments
+##### Microflow Arguments
 
 **Microflow arguments** are automatically configured based on the parameters of the selected microflow and the available arguments. In general arguments are taken from any enclosing data widget. If the data widget enclosing the widget calling a microflow is inside another (nested) data widget, then objects from that data widget and any others in which it is nested can also be passed.
 
 If the microflow is triggered within a grid and has an object list parameter, the objects which are passed in the list depend on the selection mode of the grid. Simple multi-selection allows for either all rows or selection, and defaults to selection. This can be configured via the drop-down menu in the microflow settings page. A grid with single selection always passes all rows to the microflow.
 
-##### 3.3.2.3 Microflow Call Type
+##### Microflow Call Type
 
 **Microflow call type** specifies whether the microflow is executed synchronously or asynchronously.
 
@@ -152,7 +152,7 @@ If the microflow is triggered within a grid and has an object list parameter, th
     * The client checks the server every ten seconds to see whether the microflow is done executing
     * Only set the call type to asynchronous if you experience problems — sometimes, if a request takes too long to handle, the request will be sent again by an (impatient) proxy server
 
-##### 3.3.2.4 Show Progress Bar
+##### Show Progress Bar
 
 **Show progress bar** specifies whether a progress bar is shown during the execution of the microflow. The message shown in the progress bar can be set with the 'Progress message' property.
 
@@ -166,11 +166,11 @@ If the microflow is triggered within a grid and has an object list parameter, th
 Non-blocking progress bars are shown with a delay of half a second. If the execution of your microflow takes less than half a second, the progress bar will not be shown at all. Blocking progress bars are shown immediately.
 {{% /alert %}}
 
-##### 3.3.2.5 Progress Message
+##### Progress Message
 
 If a progress bar is shown, **Progress message** is the text which is shown next to the progress bar.
 
-##### 3.3.2.6 Ask Confirmation
+##### Ask Confirmation
 
 If **Ask Confirmation** is set to **Yes**, the end-user will be asked for confirmation before proceeding with the microflow. This is useful in cases where an operation modifies or deletes a lot of data or when it takes a lot of time to complete.
 
@@ -178,25 +178,25 @@ The user will be prompted with the text set in [Question](#question), below. The
 
 The default value is **No**.
 
-##### 3.3.2.7 Question {#question}
+##### Question {#question}
 
 If **Ask confirmation** is set to yes, **Question** is what is shown to the user. Ensure that the question asked is clear and that the captions set on the buttons are unambiguous.
 
 For example, *Are you sure you want to empty the trash can?*
 
-##### 3.3.2.8 Proceed Button Caption
+##### Proceed Button Caption
 
 If **Ask confirmation** is set to yes, this is the caption for the button that proceeds with the execution of the microflow.
 
 For example, *Empty it*.
 
-##### 3.3.2.9 Cancel Button Caption
+##### Cancel Button Caption
 
 If **Ask confirmation** is set to yes, this is the caption for the button that cancels the execution of the microflow.
 
 For example, *Do not empty*.
 
-##### 3.3.2.10 Maintain Selection After Microflow
+##### Maintain Selection After Microflow
 
 For buttons which call a microflow from inside a grid, **Maintain selection after microflow** specifies whether the current selection of rows in the grid should be maintained after executing the microflow.
 
@@ -204,7 +204,7 @@ For buttons which call a microflow from inside a grid, **Maintain selection afte
 If the data in the grid is updated, selection on the *not* visible pages is lost if the items are selected via an approach other than a **Select all** button. Therefore, consider this feature carefully when implementing it in an app with multiple pages.
 {{%/alert %}}
 
-##### 3.3.2.11 Abort on Validation Errors {#abort-on-validation-errors}
+##### Abort on Validation Errors {#abort-on-validation-errors}
 
 For microflows that are used within a data widget, setting **Abort on Validation Errors** to **Yes** forces widget validations to be performed *before* executing the microflow. If the validations fail, the microflow will not be executed.
 
@@ -214,11 +214,11 @@ For microflows that are used within a data widget, setting **Abort on Validation
 | Only for this widget | This will prevent the microflow from executing if there are validation errors in the current widget. |
 | No | The microflow will always be executed. |
 
-### 3.4 Call a Nanoflow {#call-nanoflow}
+### Call a Nanoflow {#call-nanoflow}
 
 The **Call a nanoflow** event executes the specified nanoflow. 
 
-#### 3.4.1 Nanoflow
+#### Nanoflow
 
 Set the **Nanoflow** property to specify a [nanoflow](/refguide/nanoflow/) that should be executed.
 
@@ -228,7 +228,7 @@ In Studio Pro 10.4.0 and above, when creating a new nanoflow, a dialog box is sh
 
 If there is nothing to pass to the new nanoflow, then a dialog box is shown where you can only specify the name of the nanoflow.
 
-### 3.5 Open Link {#open-link}
+### Open Link {#open-link}
 
 The **Open link** event triggers an action based on a link type, some of which are specific to mobile devices. The following properties are specific for this event:
 
@@ -237,7 +237,7 @@ The **Open link** event triggers an action based on a link type, some of which a
     * **Use literal value** – allows you to enter a fixed address.
     * **Use attribute** – allows you to select an attribute which contains the value to be used as the address. In this case, the widget must have an entity as its context (for example, it is inside a data view).
 
-#### 3.5.1 Link Types {#on-click-link-type}
+#### Link Types {#on-click-link-type}
 
 The table below described link types available for the **Open link** on click event:
 
@@ -252,7 +252,7 @@ The table below described link types available for the **Open link** on click ev
 When you Specify  **Email**, **Call**, or **Text** options, the corresponding default app will be opened on the device when the action is triggered, for example, the default email client will be opened to compose a message.
 {{%/alert %}}
 
-### 3.6 Create Object {#create-object}
+### Create Object {#create-object}
 
 The **Create object** event creates a new object. The following properties are specific for this event:
 
@@ -260,7 +260,7 @@ The **Create object** event creates a new object. The following properties are s
 * **On {event} page** – specifies which [page](/refguide/page/) should be shown to allow the end-user to enter values for the new created object. This page must accept a context parameter object (for example, a data view) with the same entity or a sub-type of the created entity. **{event}** specifies which event is being used to trigger this action (**click**, for example).
 * **Page settings** - opens a dialog box enabling you to configure the page in more detail. See the [Page Settings](#page-settings) section in **Show a page** for more information. 
 
-### 3.7 Save Changes {#save-changes}
+### Save Changes {#save-changes}
 
 The **Save changes** event commits all changes made to the objects in *Editable* widgets on the page. If a non-editable widget displays an object and it is modified by, for example, a microflow, the object is not committed. For information on editability, see the [Editability](/refguide/common-widget-properties/#editability) section in *Properties Common in the Page Editor*. 
 
@@ -271,17 +271,17 @@ The following properties are specific for this event:
 
 This event cannot be used on pages that change [external entities](/refguide/external-entities/). Use the [Send External Object](/refguide/send-external-object/) activity to save changes to external entities.
 
-### 3.8 Cancel Changes {#cancel-changes}
+### Cancel Changes {#cancel-changes}
 
 The Cancel changes event rolls back all changes made on the page. 
 
 Set the **Close page** property to indicate whether the current page should be closed.
 
-### 3.9 Close Page {#close-page}
+### Close Page {#close-page}
 
 The **Close page** event closes a pop-up window (for pop-up pages) or navigates to the previously visited page (for content pages).
 
-### 3.10 Delete object(s) {#delete-objects}
+### Delete object(s) {#delete-objects}
 
 When placed in the control bar of a [data grid](/refguide/data-grid/), [template grid](/refguide/template-grid/), or [reference set selector](/refguide/reference-set-selector/) the **Delete object(s)** event will delete the selected objects.
 
@@ -295,15 +295,15 @@ This event cannot be used to delete [external objects](/refguide/external-entiti
 
 Set the **Close page** property to indicate whether the current page should be closed.
 
-### 3.11 Synchronize {#synchronize}
+### Synchronize {#synchronize}
 
 The **Synchronize** event [synchronizes](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) the data stored locally on your device with the server database.
 
-### 3.12 Sign Out {#sign-out}
+### Sign Out {#sign-out}
 
 The **Sign out** event signs the currently signed-in user out. When no user is signed in, no action is performed.
 
-### 3.13 Call Workflow {#call-workflow}
+### Call Workflow {#call-workflow}
 
 The **Call workflow** event triggers the specified workflow. 
 
@@ -315,13 +315,13 @@ The following properties are specific for this event:
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when running a workflow. 
 
-### 3.14 Show Workflow Admin Page {#show-workflow-page}
+### Show Workflow Admin Page {#show-workflow-page}
 
 **Show workflow admin page** opens a workflow overview page. This page is typically used by a workflow administrator role to inspect status of a workflow instance and to manage the instance, for example, abort a workflow if required.
 
 An element calling this event should be placed in a data container connected to the [System.Workflow](/refguide/workflow-engine/#system-workflow) entity. For more information, see the [Instance-Related Entities](/refguide/workflow-engine/#instance) section in *Workflow Engine*. 
 
-### 3.15 Show User Task Page {#show-user-task-page}
+### Show User Task Page {#show-user-task-page}
 
 **Show user task page** opens an overview page set for the [user task](/refguide/user-task/) in properties. An element calling this event should be placed in a data container connected to the **System.WorkflowUserTask** entity. 
 
@@ -337,7 +337,7 @@ The following properties are specific for this event:
 
 For more information, see the [Instance-Related Entities](/refguide/workflow-engine/#instance) section in *Workflow Engine*.
 
-### 3.16  Complete User Task {#complete-task}
+###  Complete User Task {#complete-task}
 
 The **Complete user task** event marks the specified user task in the workflow as completed.
 
@@ -350,7 +350,7 @@ The following properties are specific for this event:
 * **Close page** – Specifies whether the current page should be closed.
 * **Commit** – Specifies whether the data container object should be committed when marking the task as completed.
 
-## 4 Read More
+## Read More
 
 * [Pages](/refguide/pages/)
 * [Page](/refguide/page/)

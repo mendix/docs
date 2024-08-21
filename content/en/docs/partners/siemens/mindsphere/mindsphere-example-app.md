@@ -5,7 +5,7 @@ url: /partners/siemens/mindsphere-example-app/
 weight: 110
 ---
 
-## 1 Introduction
+## Introduction
 
 You can write Mendix apps which analyze data held in Insights Hub, the open, cloud-based, IoT operating system from Siemens. To help you build your app, the [Siemens Insights Hub Monitor Example](https://marketplace.mendix.com/link/component/117954) app is available in the Mendix Marketplace and can be used as the starting point for a new Mendix app.
 
@@ -13,11 +13,11 @@ This documentation provides more explanation of the Insights Hub example app. Pl
 
 You can get more detailed information on how to deploy your app to the Insights Hub Platform in [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/). If your are interested in how to develop an Insights Hub app with Mendix, visit the [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) learning path.
 
-## 2 Prerequisites
+## Prerequisites
 
 To run your app on Insights Hub, you need to complete the prerequisites described below.
 
-### 2.1 Roles
+### Roles
 
 You need an Insights Hub user account on a tenant including a Developer Cockpit - for example, a [Start for free](https://siemens.mindsphere.io/en/start) tenant. This account needs the following core roles:
 
@@ -25,7 +25,7 @@ You need an Insights Hub user account on a tenant including a Developer Cockpit 
 * mdsp:core:StandardUser
 * mdsp:core:TenantUser
 
-## 3 Opening the App in Studio Pro
+## Opening the App in Studio Pro
 
 Open Studio Pro without opening an app and follow these steps:
 
@@ -47,7 +47,7 @@ Open Studio Pro without opening an app and follow these steps:
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/app-store-download-project.png" >}}
 
-## 4 Deploy and Run the Example App
+## Deploy and Run the Example App
 
 A Mendix-based application for Insights Hub can be deployed to Mendix or to Insights Hub. Deploying to Mendix is quite easy and is the preferred option as you can then use the Auto Registration process.
 For more information about the deployment options see [Deploying to Insights Hub](/developerportal/deploy/deploying-to-mindsphere/#deploying-your-app).
@@ -62,7 +62,7 @@ Once your app is deployed to Mendix, click **View App**.
 
 Your default Browser will open and when your app starts, it will trigger the registration process.
 
-### 4.1 Auto Registration
+### Auto Registration
 
 All apps running within Insights Hub need to be registered. When you open your app for the first time, it will recognize that is currently unregistered and ask you to perform the registration. You can do this manually in the Developer Cockpit, but the easier way is the Auto Registration process we follow here.
 
@@ -128,7 +128,7 @@ All apps running within Insights Hub need to be registered. When you open your a
 
     {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-example-app/oi-home.png" alt="Choose app registration" >}}
 
-### 4.2 Scopes and Roles{#scopesroles}
+### Scopes and Roles{#scopesroles}
 
 The auto registration process has created two Insights Hub application Roles *admin* and *user*:
 
@@ -148,11 +148,11 @@ This means that an Insights Hub user who is given the **Admin Role** for the app
 
 For more information see the Insights Hub documentation [Roles and Scopes for Applications](https://developer.mindsphere.io/concepts/concept-roles-scopes.html#available-roles-of-mindsphere-apis).
 
-## 5 Run the app locally
+## Run the app locally
 
 To run and test your app locally follow the steps described in [Local Testing](/partners/siemens/mindsphere-development-considerations/#localtesting).
 
-## 6 Read More
+## Read More
 
 * [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/)
 * [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/)

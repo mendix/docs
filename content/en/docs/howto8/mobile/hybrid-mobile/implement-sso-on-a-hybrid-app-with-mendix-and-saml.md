@@ -6,7 +6,7 @@ weight: 30
 description: "Describes how to address the challenges of implementing SSO in hybrid mobile apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will describe the challenges involved in implementing SSO (single sign-on) in hybrid mobile apps, and teach you how this can be solved in Mendix app.
 
@@ -18,7 +18,7 @@ The implementation described in this how-to will not work when you have enabled 
 The implementation described in this how-to will not work when you have enabled the PIN feature for your hybrid app. Disable the PIN feature for your hybrid app to use this implementation.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -27,13 +27,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * Read [Building a Mobile App with Mendix](https://www.mendix.com/blog/building-mobile-app-mendix/)
 
-## 3 Context
+## Context
 
-### 3.1 Hybrid Apps, Cordova, and PhoneGap Build
+### Hybrid Apps, Cordova, and PhoneGap Build
 
 Hybrid Mendix apps can be viewed in mobile web browsers. However, some features of mobile devices cannot be accessed through HTML and JavaScript. Also, if you want to publish your app in the Apple App Store or Google Play Store, you have to wrap your app in a native shell. Mendix uses [Cordova](https://cordova.apache.org/) to do this. Cordova creates a native wrapper around a web application and provides access to native functionality through a JavaScript API. These apps are called hybrid apps, because they are a hybrid of a web and a native app. To create binaries of your app, Mendix leverages PhoneGap Build so that you do not need to install software (Android SDK, Xcode) for this.
 
-### 3.2 How Authentication Against an IdP Works {#how}
+### How Authentication Against an IdP Works {#how}
 
 When authenticating against an identity provider (IdP), the following steps are taken:
 
@@ -48,11 +48,11 @@ When authenticating against an identity provider (IdP), the following steps are 
 
 For more information on the authentication process, see Wikipedia's [SAML 2.0 Web Browser SSO Profile](https://en.wikipedia.org/wiki/SAML_2.0#SP_POST_Request;_IdP_POST_Response).
 
-## 4 The Problems {#problems}
+## The Problems {#problems}
 
 There are two main problems when trying to implement SSO on a hybrid app.
 
-### 4.1 The First Problem {#firstproblem}
+### The First Problem {#firstproblem}
 
 The first problem is that the JavaScript needed to start up the app mobile functionality is stored inside the Mendix hybrid app. The application is loaded from the locally stored *index.html* file.
 
@@ -60,15 +60,15 @@ This is a problem because of all the browser redirects happening when doing the 
 
 When a Mendix hybrid app is started on the mobile device, the localhost *index.html* page is loaded in order to load all the necessary JavaScript to run the app. However, to be able to authenticate the user, the user is redirected to the IdP, and then the IdP needs to redirect the user back to the app. The problem is that there is no way for the IdP to redirect to a localhost page, so there is no way to start the app while still including the right Cordova JavaScript.
 
-### 4.2 The Second Problem {#secondproblem}
+### The Second Problem {#secondproblem}
 
 The second problem is that Cordova does not store cookies permanently. And since Cordova does not store (authentication) cookies, when an app is closed, the IdP cannot recognize a returning user, so it will always ask the user for authentication.
 
-## 5 The Solution
+## The Solution
 
 Mendix has created a standard approach to support SSO via the SAML module in a Mendix hybrid app. This approach contains reusable JavaScript code which can be added to the PhoneGap Build package that is used to build the app binaries. It also requires a simple configuration change on the SAML module. These components can be used by Mendix developers to make mobile apps compatible with SAML. However, care must always be taken to ensure the solution fits the requirements for specific apps.
 
-### 5.1 The JavaScript {#javascript}
+### The JavaScript {#javascript}
 
 The JavaScript code below will address the two problems described above.
 
@@ -125,7 +125,7 @@ MxApp.onConfigReady(function(config) {
 
 To address the [second problem](#secondproblem), after a successful authentication against the IdP, Mendix stores a token in the device’s local storage. The system will use that token from that moment on to create a new session for the user. The session is created in Mendix only, so a new authentication against the IdP will not be performed again. This token is a TokenInformation (part of the System module) object, and it can be accessed/edited in microflows. By default, this local token will never expire, but this can be overridden by changing the `com.mendix.webui.HybridAppLoginTimeOut` [Runtime customization setting](/refguide8/custom-settings/). The downside of this approach is that access rights will not be updated upon login, since no interaction is done with the IdP. However, in most systems using SSO, user and role provisioning is handled separately from the authentication, so this might not be an issue.
 
-### 5.2 The Hybrid App Package
+### The Hybrid App Package
 
 To use the hybrid app package, follow these steps:
 
@@ -157,7 +157,7 @@ To use the hybrid app package, follow these steps:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" class="no-border" >}}
 
-### 5.3 The SAML Module 
+### The SAML Module 
 
 {{% alert color="warning" %}}
 Not all versions of the SAML module will work correctly when implementing SSO for your hybrid app. Please make sure you use a version of the SAML module that is capable of creating mobile app tokens (that is, version 1.9.3 or above). Mendix recommends updating the SAML module to the latest version available, and if needed, updating the Mendix version of your application.
@@ -184,7 +184,7 @@ The last thing to do is to check the **Enable mobile authentication token** box 
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/saml-module.png" class="no-border" >}}
 
-## 6 Read More
+## Read More
 
 * [Deploy Your First Hybrid Mobile App](/howto8/mobile/deploy-your-first-hybrid-mobile-app/)
 * [Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

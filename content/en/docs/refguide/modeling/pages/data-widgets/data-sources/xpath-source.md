@@ -4,7 +4,7 @@ url: /refguide/xpath-source/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 In Mendix version 10.5 and above there is no separate XPath source. If you want to use an XPath in these versions, use the **Database** source.
@@ -21,9 +21,9 @@ The data retrieved can also be limited by the following factors:
 
 If you want to restrict data not for a single widget, but for several, you may want to apply [access rules](/refguide/access-rules/) for entities instead of XPath constraints. This way you know that the objects will always be constrained by these rules. Access rules will also be applied when executing microflows which saves you from repeating constraints.
 
-## 2 Properties
+## Properties
 
-### 2.1 Entity (Path) {#entity-path}
+### Entity (Path) {#entity-path}
 
 The **Entity (path)** property specifies the target of the database query. If you have a top-level data widget, **Entity (path)** will get objects of the selected entity directly. If you have a nested data widget, you can also select an entity of a parent data container. In this case objects are retrieved following the association path and the association is parsed as an extra constraint in the database query. 
 
@@ -33,7 +33,7 @@ The **Entity (path)** property specifies the target of the database query. If yo
 This differs from the [association data source](/refguide/association-source/) when objects are retrieved from the memory, not database.
 {{% /alert %}}
 
-### 2.2 Show Search Bar {#show-search-bar}
+### Show Search Bar {#show-search-bar}
 
 **Show search bar** is only available for data grids. You can select if and when the [Search bar](/refguide/search-bar/) of the data grid is shown.
 
@@ -44,7 +44,7 @@ This differs from the [association data source](/refguide/association-source/) w
 | With button (initially closed)  *(default)* | The user can open and close the search bar using the search button; the search bar is initially closed. |
 | Always                         | The search bar is always visible and cannot be close, nor is there a search button. |
 
-### 2.3 Wait for Search
+### Wait for Search
 
 The **Wait for search** property is available if [Show search bar](#show-search-bar) is set to *With button (initially open)* or to *Always*. 
 
@@ -52,7 +52,7 @@ When **Wait for search** is set to *Yes*, the grid will remain empty of contents
 
 Default: *false*
 
-### 2.4 XPath Constraint {#xpath-constraints}
+### XPath Constraint {#xpath-constraints}
 
 The [XPath constraint](/refguide/xpath-constraints/) allows for custom, hard-coded limitations on the data displayed. This constraint will be appended to the constraints (if any) already applied through security and context.
 
@@ -76,11 +76,11 @@ The feature to use objects and attributes from surrounding data containers was i
 The feature to use objects and attributes can be used for [List view](/refguide/list-view/) widgets, [Data Grid 2](/appstore/modules/data-grid-2/) modules, and many other widgets. However, it cannot be used for [Data Grid](/refguide/data-grid/) and [Template Grid](/refguide/template-grid/) containers.
 {{% /alert %}}
 
-#### 2.4.1 Known Errors
+#### Known Errors
 
 Currently, Studio Pro does not support database retrievals using XPath constraints that walk through both regular databases and [external entities](/refguide/external-entities/). This results in the `Mixed source retrieval is currently not supported` error. If you experience this error, use Data Grid 2 instead of Data Grid, then disable sorting and remove the option to search on external entity attributes.
 
-## 3 Read More
+## Read More
 
 * [Data Containers](/refguide/data-widgets/)
 * [Data Grid](/refguide/data-grid/)

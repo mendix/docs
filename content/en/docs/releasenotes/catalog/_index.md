@@ -3,6 +3,7 @@ title: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 weight: 36
+numberless_headings: true
 aliases:
     - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.

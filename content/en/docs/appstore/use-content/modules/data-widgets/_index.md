@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Data Widgets module, 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 [Data Widgets](https://marketplace.mendix.com/link/component/116540) is a module containing widgets that show data in a specific structure.
 
@@ -18,7 +18,7 @@ This module contains the following widgets:
 * [Gallery](/appstore/modules/gallery/)
 * [Tree node](/appstore/modules/tree-node/)
 
-## 2 Migration
+## Migration
 
 If you were previously using the Data Grid 2 module, you must follow these steps before updating it to the new [Data Widgets](https://marketplace.mendix.com/link/component/116540) module:
 

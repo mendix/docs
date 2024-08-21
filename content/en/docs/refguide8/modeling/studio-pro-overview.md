@@ -10,7 +10,7 @@ aliases:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications. A Mendix app is called a [project](/refguide8/project/) in Studio Pro.  
 
@@ -24,7 +24,7 @@ This document describes the user interface of Mendix Studio Pro:
 
 {{< figure src="/attachments/refguide8/modeling/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
-## 2 Top Bar
+## Top Bar
 
 The Studio Pro top bar contains the following items:
 
@@ -32,13 +32,13 @@ The Studio Pro top bar contains the following items:
 * [Buttons to run and view your app](#run-and-view)
 * [Links to Apps and Marketplace](#links) 
 
-### 2.1 Menus {#menus}
+### Menus {#menus}
 
 In the Studio Pro top bar, you can see several menus, such as [Edit](/refguide8/edit-menu/), [View](/refguide8/view-menu/), and [Version Control](/refguide8/version-control-menu/). Each menu contains menu items that allow you to perform various actions, for example, to [create a deployment package](/refguide8/create-deployment-package-dialog/), set [preferences](/refguide8/preferences-dialog/), or view the [Errors](/refguide8/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide8/menus/). 
 
-### 2.2 Run and View App {#run-and-view}
+### Run and View App {#run-and-view}
 
 You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
 
@@ -46,21 +46,21 @@ For more information on deployment in Mendix, see [Deployment](/deployment/).
 
 For more information on deploying your app and versioning it, see the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links to Apps and Marketplace {#links}
+### Links to Apps and Marketplace {#links}
 
 You can find links to [Apps](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your account is displayed next to these buttons if you are signed in. Click the account name to navigate to your apps, your profile, or to sign out. 
 
-## 3 Project Structure
+## Project Structure
 
 A project consists of individual files (*documents*) and settings that are grouped in folders and [modules](/refguide8/modules/). The complete structure of your project can be viewed in the [Project Explorer](/refguide8/project-explorer/). 
 
-## 4 Working Area
+## Working Area
 
 A working area is a current document tab that you work in. The working area and its settings differs depending on an editor (for example, pages, microflows, domain model editors) and type of the document.  
 
-### 4.1 Document Tabs {#documents}
+### Document Tabs {#documents}
 
 The documents you view and edit are shown in tabs. 
 
@@ -74,11 +74,11 @@ You can have a number of tabs open, just like in a modern web browser. They can 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 5 Dockable Panes
+## Dockable Panes
 
 Dockable panes can be positioned around the working area and contain various elements and settings. For example, you can view list of errors, configure properties of a specific document or an element, view toolbox. Panes are opened via [Menus](/refguide8/menus/).
 
-## 6 Status Bar
+## Status Bar
 
 At the bottom of the Studio Pro main window pane is a status bar.
 
@@ -86,9 +86,9 @@ On the left is the current status of Studio Pro.
 
 On the right is the currently selected language. If you have set up multiple languages in your app you can change the currently selected language by clicking here. For more information see [Language Menu](/refguide8/translatable-texts/).
 
-## 7 Shortcut Keys
+## Shortcut Keys
 
-### 7.1 General Shortcut Keys
+### General Shortcut Keys
 
 In the main window pane, <kbd>Ctrl</kbd> + <kbd>Tab</kbd> can be used to navigate between all open documents. Other shortcut keys that can be used in the main window pane can be found next to their relevant menu item in [Menus](/refguide8/menus/).
 
@@ -109,7 +109,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>Enter</kbd> | Edits the currently selected item. |
 | <kbd>Delete</kbd> | Deletes the currently selected item(s). |
 
-### 7.2 Domain Model Editor Shortcut Keys
+### Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -119,7 +119,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Ctrl</kbd> + <kbd>A</kbd> | Selects all entities. |
 | <kbd>Esc</kbd> | Clears selection. |
 
-### 7.3 Page Editor Shortcut Keys
+### Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -130,7 +130,7 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | Edits the caption of a label or button inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-### 7.4 Microflow Editor Shortcut Keys
+### Microflow Editor Shortcut Keys
 
 The following shortcut keys are available in the microflow editor:
 
@@ -145,7 +145,7 @@ The following shortcut keys are available in the microflow editor:
 | <kbd>Shift</kbd> when resizing an activity | When resizing the entity, by holding <kbd>Shift</kbd>, the microflow component will stay centered at its current position and will expand equally in all directions. |
 | <kbd>Ctrl</kbd> when selecting multiple activities | When pressing the <kbd>Ctrl</kbd>, you can select additional microflow components. Clicking a selected component while holding <kbd>Ctrl</kbd> will deselect it. |
 
-### 7.5 Microflow Debugger Shortcut Keys {#debugger-shortcuts}
+### Microflow Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the microflow debugger:
 
@@ -156,7 +156,7 @@ The following shortcut keys are available for the microflow debugger:
 | <kbd>Alt</kbd> + <kbd>F7</kbd> | *Step out* – instructs the debugger to leave the sub-microflow or loop.  |
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | *Continue* – instructs the debugger to continue until it reaches another breakpoint. |
 
-### 7.6 Language Shortcut Keys
+### Language Shortcut Keys
 
 The following shortcut keys control the currently selected language:
 
@@ -165,7 +165,7 @@ The following shortcut keys control the currently selected language:
 | <kbd>Ctrl</kbd> + <kbd>L</kbd> | Choose the next language in the list of languages chosen in **Language Settings…**. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> | Choose the previous language in the list of languages chosen in **Language Settings…**. |
 
-## 8 Read More
+## Read More
 
 * [Project Explorer](/refguide8/project-explorer/)
 * [Menus](/refguide8/menus/)

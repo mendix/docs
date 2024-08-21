@@ -6,7 +6,7 @@ description: "Describes the process for using Velero to create and restore backu
 weight: 25
 ---
 
-## 1 Introduction
+## Introduction
 
 [Velero](https://velero.io/docs/) is a tool that you can use to back up your Kubernetes namespaces as an additional disaster recovery measure. It does not back up your database or S3 resources, so it cannot serve as your main backup method, but it can supplement the default [backup process](/developerportal/operate/backups/) for your Mendix app.
 
@@ -17,7 +17,7 @@ Velero enables you to back up and restore the following Mendix objects:
 * `builds.privatecloud.mendix.com`
 * `mendixapps.privatecloud.mendix.com`
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create a recovery cluster.
     {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your private cloud. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
 
-## 3 Creating a Velero Backup
+## Creating a Velero Backup
 
 To create a backup with Velero, follow these steps:
 
@@ -62,7 +62,7 @@ To create a backup with Velero, follow these steps:
     kubectl scale deployment mendix-operator --replicas=1
     ```
 
-## 4 Restoring a Velero Backup
+## Restoring a Velero Backup
 
 To restore a backup that you created with Velero, follow these steps:
 

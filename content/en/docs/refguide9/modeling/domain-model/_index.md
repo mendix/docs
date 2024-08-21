@@ -6,7 +6,7 @@ description: "Introduces the domain model in Studio Pro."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **domain model** is a model that describes the information (or *data*) used by your application in an abstract way. It is central to the architecture of your application. Each [module](/refguide9/modules/) has its own domain model which describes the data used in that module. All modules in an app can use data from all the domain models within the app.
 
@@ -32,7 +32,7 @@ Below is a domain model that defines customers and orders. The names of the enti
 | Attribute Type | The [type](/refguide9/attributes/#type) of data stored in this attribute |
 | Non-persistable Entity | This is an entity which is not stored in a database but only stored temporarily within the app |
 
-## 2 Implementation {#implementation}
+## Implementation {#implementation}
 
 In the database every entity is stored in a separate table and has columns for the attributes defined in Studio Pro (except those which are calculated), the system attributes, and a unique object identifier. If an entity has specializations there is also a column indicating which specialization the object belongs to. An association is stored in a junction table with the identifiers (ID) of both objects.
 
@@ -61,6 +61,6 @@ The entity 'Order' is stored in the table 'module$order' which is shown below. I
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
 
-## 3 Read More
+## Read More
 
 * [Creating a Basic Data Layer](/refguide9/create-a-basic-data-layer/)

@@ -6,7 +6,7 @@ description: "Describes the Mendix Portfolio Management app."
 #The anchor #portfolios-settings and #privacy-settings below is mapped, so it should not be removed or changed. If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Portfolio Management](https://portfolio.mendix.com) tool is available to all Mendix users. It enables staying informed about initiatives and managing them in the different development stages. It provides portfolio managers, business stakeholders, and developers with everything they need to collaborate effectively in one place and bring new initiatives to the Mendix Platform. 
 
@@ -14,11 +14,11 @@ With the Portfolio Management tool, you can manage [active initiatives](/develop
 
 To start the Portfolio Management app, open the [Global Navigation menu](/developerportal/) ({{% icon name="layout-rounded-1-filled" %}}) of the Mendix Portal, and select **Portfolio**.
 
-## 2 Portfolio Landscape Overview {#portfolio-landscape}
+## Portfolio Landscape Overview {#portfolio-landscape}
 
 When you start the Portfolio Management app for the first time, an introduction page opens. The introduction page describes the new features and gives helpful information. You can click **Get Started** to open the **Portfolio Landscape Overview** page. After that, when you start the Portfolio Management app, the **Portfolio Landscape Overview** page directly opens. You can click **Learn more about Portfolio Management** to go back to the introduction page.
 
-### 2.1 My Portfolios vs Company Portfolios {#my-porfolios-vs-company-portfolios}
+### My Portfolios vs Company Portfolios {#my-porfolios-vs-company-portfolios}
 
 The **Portfolio Landscape Overview** page contains two sections: **My Portfolios** and **Company Portfolios**. A section only appears if there is at least one [portfolio card](#portfolio-card) in that section.
 
@@ -30,11 +30,11 @@ The **Portfolio Landscape Overview** page contains two sections: **My Portfolios
     * Restricted portfolios – Clicking the portfolio card shows more details about the restricted portfolio. To join a restricted portfolio, click **Request to Join** on the portfolio card. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
     * Open portfolios – You can directly access the open portfolio by clicking the portfolio card. You will have the same access rights as the [Viewer](/developerportal/portfolio-management/access-management/#members) of the portfolio. To join an open portfolio, click **Request to Join** on the lower-left corner after opening the portfolio. A Portfolio Manager needs to approve this [access request](/developerportal/portfolio-management/access-management/#access-requests).
 
-### 2.2 Portfolio Cards {#portfolio-card}
+### Portfolio Cards {#portfolio-card}
 
 On the **Portfolio Landscape Overview** page, each card represents a portfolio. On a portfolio card, you can see the name of the portfolio, the company to which it belongs, the [privacy settings](#privacy-settings), and the avatars of Portfolio Managers (up to avatars of four Portfolio Managers).
 
-#### 2.2.1 Different Privacy Settings of a Portfolio {#privacy-settings}
+#### Different Privacy Settings of a Portfolio {#privacy-settings}
 
 {{% alert color="info" %}}A Portfolio Manager change the **Privacy Settings** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
@@ -54,7 +54,7 @@ Currently, the privacy settings of a portfolio can be private, restricted, or op
 
 {{< figure src="/attachments/developerportal/portfolio-management/opened-portfolio.png"  >}}
 
-### 2.3 Creating a New Portfolio {#create-portfolio}
+### Creating a New Portfolio {#create-portfolio}
 
 On the **Portfolio Landscape Overview** page, you can create a new portfolio as follows:
 
@@ -72,7 +72,7 @@ On the **Portfolio Landscape Overview** page, you can create a new portfolio as 
 
 The portfolio is created. You are the first Portfolio Manager of this portfolio. You can start [inviting other people](/developerportal/portfolio-management/access-management/#add-users) to the portfolio.
 
-### 2.4 Opening a Portfolio 
+### Opening a Portfolio 
 
 When you click a portfolio card to which you have access, the portfolio opens with a menu on the left side. 
 
@@ -85,7 +85,7 @@ Clicking a menu item opens the corresponding page:
 * [Access Management](/developerportal/portfolio-management/access-management/)
 * [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) (only available for Portfolio Managers)
 
-## 3 Read More
+## Read More
 
 * [Application Portfolio Management with Low-Code](https://www.mendix.com/application-portfolio-management/)
 * [Make Strategic Decisions with Portfolio Management](https://academy.mendix.com/link/paths/145/Make-Strategic-Decisions-With-Portfolio-Management)

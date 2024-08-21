@@ -3,7 +3,7 @@ title: "Data Storage"
 url: /refguide8/data-storage/
 ---
 
-## 1 Introduction
+## Introduction
 
 Data storage is the data foundation of the Mendix Runtime. Data storage does the following:
 
@@ -12,7 +12,7 @@ Data storage is the data foundation of the Mendix Runtime. Data storage does the
 * Translates XPath and OQL queries to SQL queries
 * Handles security transparently and effectively
 
-## 2 Supported Databases
+## Supported Databases
 
 For apps deployed to the Mendix Cloud, Mendix uses a PostgreSQL database for storing the data defined in the app domain model(s).
 

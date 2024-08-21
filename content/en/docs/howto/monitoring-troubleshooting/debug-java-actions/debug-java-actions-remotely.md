@@ -3,7 +3,7 @@ title: "Debug Java Actions Remotely"
 url: /howto/monitoring-troubleshooting/debug-java-actions-remotely/
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color = "warning" %}}
 It is not possible to debug Java actions remotely in Eclipse for applications that are hosted by Mendix Cloud.
@@ -16,7 +16,7 @@ This how-to teaches you how to do the following:
 * Edit the server configuration
 * Configure remote debugging
 
-## 2 Editing the Server Configuration with Extra JVM Parameters
+## Editing the Server Configuration with Extra JVM Parameters
 
 To edit the server configuration with extra JVM parameters, follow these steps:
 
@@ -30,7 +30,7 @@ To edit the server configuration with extra JVM parameters, follow these steps:
 
 4. Run your application.
 
-## 3 Configuring Remote Debugging
+## Configuring Remote Debugging
 
 In your Java IDE, you need to configure remote debugging.
 
@@ -46,7 +46,7 @@ To configure Eclipse, follow these steps:
 6. Be sure your current app is under **App**, and change the port to 5005 (view the JVM parameters).
 7. Click **Debug**.
 
-## 4 Read More
+## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto/monitoring-troubleshooting/clear-warning-messages/)

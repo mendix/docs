@@ -4,7 +4,7 @@ url: /howto8/data-models/denormalize-data-to-improve-performance/
 weight: 6
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can improve performance by denormalizing data in Mendix.
 
@@ -13,13 +13,13 @@ This how-to teaches you how to do the following:
 * Denormalize data
 * Keep denormalized data in sync
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Create a [basic data layer](/howto8/data-models/create-a-basic-data-layer/)
 
-## 3 Denormalization
+## Denormalization
 
 For an example scenario, a domain model contains two related entities called Customer and Order. The customer overview page needs to show the name of the customer and the total order amount next to each other. Showing the customer name is easy, but the total order amount needs to be calculated.
 
@@ -47,7 +47,7 @@ To enable denormalization, follow these steps:
 
 Now the application is ready to store redundant data, but you still need to keep the data in sync.
 
-## 4 Keep Denormalized Data in Sync with an After Commit Event
+## Keep Denormalized Data in Sync with an After Commit Event
 
 1. Open the domain model and double-click the Order entity to open its properties editor.
 2. On the **Event handlers** tab, click **New** to add a new event handler.
@@ -140,7 +140,7 @@ Now the application is ready to store redundant data, but you still need to keep
 
 20. Run the application and create some customers and orders. You should now see an up-to-date value for the TotalOrderAmount.
 
-## 5 Read More
+## Read More
 
 * [Work with Images and Files](/howto8/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)

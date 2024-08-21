@@ -5,7 +5,7 @@ weight: 9
 description: "Describes how to get information from a REST service."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix applications frequently need to communicate with existing systems. Whether you are creating an app to replace an older platform or a legacy system or want to integrate an existing database, the ability to integrate with existing systems is a necessary feature. In your Mendix app, you can use published REST services for this integration. 
 
@@ -20,7 +20,7 @@ This how-to teaches you how to do the following:
 Creating a published REST service on top of the system you want to integrate with is outside the scope of this how-to; for instructions on how to do this, refer to the configuration of your non-Mendix Platform.
 {{% /alert %}}
 
-## 2 Creating a JSON Structure
+## Creating a JSON Structure
 
 If the system you want to integrate into your app has the functionality for exposing its data to REST services, you can integrate it easily into your Mendix app using consume REST service. Each system has a different JSON structure based on internal data models. 
 
@@ -42,7 +42,7 @@ We will start by providing to Studio Pro an example of what the REST service ret
 
 7. Click **OK**.
 
-## 3 Creating an Import Mapping
+## Creating an Import Mapping
 
 An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates to [entities](/refguide8/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
@@ -59,7 +59,7 @@ An [import mapping](/refguide8/import-mappings/) specifies how the JSON relates 
 8. A pop-up box is displayed informing you that can **See the details for the changes that have been applied**. You can click **Details** to see details of the mapping to the entities that are generated to match the JSON structure.
 9. Click **Close** to see the entities corresponding to the JSON structure.
 
-## 4 Adding an Input Entity to the Domain Model
+## Adding an Input Entity to the Domain Model
 
 The service takes the title of the page as an input and it returns the summary of the page from Wikipedia. 
 
@@ -86,7 +86,7 @@ To add an input entity to the domain model, follow these steps:
 
 12. Click **OK**. 
 
-## 5 Calling the REST Service in a Microflow
+## Calling the REST Service in a Microflow
 
 You will now call the REST service in a [microflow](/refguide8/microflows/) to build the integration with Wikipedia. The microflow takes **Input** as the input parameter and sets the associated **Summary**.
 
@@ -126,7 +126,7 @@ To call the REST service in a microflow, follow these steps:
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that you can see the REST call in action.
 
-## 6 Creating a Page
+## Creating a Page
 
 To create a page for this app, follow these steps:
 
@@ -150,7 +150,7 @@ To create a page for this app, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/consume-a-rest-service/page.png" class="no-border" >}}
 
-## 7 Filling In the Create Input Microflow{#createinput}
+## Filling In the Create Input Microflow{#createinput}
 
 Now all that is left is to have the **CreateInput** microflow create a new **Input** object.
 
@@ -165,7 +165,7 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 8 Example
+## Example
 
 **How to consume REST with Mendix Studio Pro 8**
 
@@ -177,7 +177,7 @@ For Studio Pro v 8.15 and above, the **Call REST** dialog box has changed from w
 
 {{< youtube OhzWTa1kZ00 >}}
 
-## 9 Read More
+## Read More
 
 * [Consume a Complex Web Service](/howto8/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto8/integration/consume-a-simple-web-service/)

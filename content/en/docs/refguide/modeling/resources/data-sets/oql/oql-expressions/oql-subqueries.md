@@ -3,7 +3,7 @@ title: "OQL Subqueries"
 url: /refguide/oql-subqueries/
 ---
 
-## 1 Description
+## Description
 
 A subquery is a nested SELECT query inside certain clauses of a SELECT query. Subqueries can be used in a:
 
@@ -14,7 +14,7 @@ A subquery is a nested SELECT query inside certain clauses of a SELECT query. Su
 
 A subquery must always be placed in parentheses.
 
-## 2 Subquery in SELECT
+## Subquery in SELECT
 
 Example:
 
@@ -35,7 +35,7 @@ Other entities and subqueries in the main query's `FROM` clause can only be refe
 
 To avoid ambiguity, it is recommended to always refer to attributes with corresponding entity names in the format `<ModuleName>.<EntityName>.<AttributeName>` if there is no alias or `<Alias>.<AttributeName>` if there is an alias.
 
-## 3 Subquery in FROM
+## Subquery in FROM
 
 Example:
 
@@ -63,11 +63,11 @@ A subquery can be used in the `FROM` clause of the main query in the same manner
 
 In contrast with a subquery in a `SELECT` clause, a subquery in a `FROM` clause cannot contain references to other entities and subqueries declared in the main query's `FROM` clause.
 
-## 4 Subquery in WHERE
+## Subquery in WHERE
 
 There are two ways to use a subquery in a `WHERE` clause—as a value and as a collection.
 
-### 4.1 Value Subqueries
+### Value Subqueries
 
 A value subquery is a subquery that returns exactly one row and exactly one column. In that case, its result can be considered a value. It can be used in a `WHERE` clause with the comparison operators `=`, `!=`, `<`, `<=`, `>`, `>=`.
 
@@ -82,7 +82,7 @@ WHERE
     House.Price < (SELECT AVG(Price) FROM Module.House)
 ```
 
-### 4.2 Collection Subqueries
+### Collection Subqueries
 
 A collection subquery is a subquery that can have more than one row. If a subquery is used in a `WHERE` clause, it must always contain one column. Such a subquery can be referenced as a collection using the `IN` and `EXISTS` keywords.
 
@@ -122,7 +122,7 @@ WHERE
     )
 ```
 
-## 5 Subquery in HAVING
+## Subquery in HAVING
 
 A subquery can also be used in a `HAVING` clause in a similar way to a `WHERE` clause. The difference is that only attributes and aggregates from the query can be referred to in the `HAVING` subquery.
 

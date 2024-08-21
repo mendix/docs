@@ -42,7 +42,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonDynamoDBConnector** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to Amazon DynamoDB. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonDynamoDBConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon DynamoDB. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
 
 ### Configuring AWS Authentication
 
@@ -54,7 +54,7 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon DynamoDB, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all Amazon DynamoDB tables for a specific region, implement the [ListTables](#list-tables) activity by doing the following steps:
+After you configure the authentication profile for Amazon DynamoDB, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all Amazon DynamoDB tables for a specific region, implement the **ListTables** activity by doing the following steps:
 
 1. In the **App Explorer**, find and open the domain model for your app.
 2. Right-click on the working area of the domain model, and then click **Add entity**.
@@ -67,7 +67,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     * **Name** - A unique name for the attribute, for example, `TableName`
     * **Type** - **String**
 
-    The parameters that you need to configure depend on the contents of the response that an activity expects. The **ListTables** activity used in this example only expects the database table name as a response. Other activities require different parameters. For more information, see [Activities](#activities).
+    The parameters that you need to configure depend on the contents of the response that an activity expects. The **ListTables** activity used in this example only expects the database table name as a response. Other activities require different parameters. For more information, see [Technical Reference](#technical-reference).
 6. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
     
     {{< figure src="/attachments/appstore/use-content/modules/aws-dynamodb/addmicroflow.png" alt="Adding a microflow" class="no-border" >}}
@@ -87,7 +87,7 @@ After you configure the authentication profile for Amazon DynamoDB, you can impl
     For the `ListTables` activity, you must specify the region for which you want to retrieve the tables from, a `Credentials` object and a `ListTablesRequest` object. Other activities may have different required parameters.
     
 12. Click **Edit parameter value**, edit the **ENUM_Region** parameter, and change **Type** to **Expression**.
-13. In the expression builder, type `ENUM_Region`, and then press <kbd>Ctrl</kbd> + <kbd>Space</kbd>.
+13. In the expression builder, type `ENUM_Region`, and then press **Ctrl** + **Space**.
 14. In the autocomplete dialog, select **AWSAuthentication.ENUM_Region**, then type *.* and select your AWS region from the list.
 15. Click **OK**, and then click **OK** again.
 16. In the App Explorer, in the **AWSAuthentication > ConnectionDetails** section, find the **GetStaticCredentials** and **GetTemporaryCredentials** actions.

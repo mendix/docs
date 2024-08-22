@@ -131,7 +131,8 @@
     }
 
     // Inline code
-    p code, li > code, table code {
+    // DB – expanded selector to include all list children
+    p code, li code, table code {
         color: inherit;
         padding: 0.1em 0.1em;  // NK - made padding smaller
         margin: 0;

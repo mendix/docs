@@ -108,7 +108,7 @@ To move an event from SQS to Mendix Event Broker, a message must contain the fol
 
 See [CloudEvents](https://github.com/cloudevents/spec/blob/v1.0.1/spec.md#required-attributes) for more information on required attributes.
 
-### Configuring a Bridge with AWS SQS
+### Configuring a Bridge with AWS SQS {#bridge-with-aws-sqs}
 
 Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Event Broker Bridges** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
@@ -201,7 +201,7 @@ Add this object to your Access Policy of the AWS SQS queue if it is receiving me
 
 Externally defined events refer to events that are defined outside the Mendix application, specifically outside of Studio Pro.
 
-The Mendix Event Broker allows users to upload an AsyncAPI document for these external events. Once uploaded, users can download a new AsyncAPI document compatible with Mendix Business Events, which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
+The Mendix Event Broker allows users to upload an AsyncAPI document for these external events. Once uploaded, users can download a new AsyncAPI document compatible with [Mendix Business Events](/appstore/services/business-events/), which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
 
 ### Upload Events
 
@@ -221,7 +221,7 @@ Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If
 
 #### Verify File Information
 
-The details of the uploaded file are extracted in the **Verify** section. This allows you to confirm that all information is accurate and meets the required expectations.
+The details of the uploaded file are extracted in the Verify section. This allows you to confirm that all information is accurate and meets the required expectations.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_2.png" width="850" >}}
 
@@ -233,7 +233,7 @@ Select the spaces where the events will be used. When at least one space is sele
 
 #### Successful Page
 
-The externally defined events have been successfully uploaded and are now ready to be used in Bridges or Applications. For more information on how to use an event, see [Usages](#event-usages).
+The externally defined events have been successfully uploaded and are now ready to be used in Bridges or applications. For more information on how to use an event, see [Usages](#event-usages).
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_4.png" width="850" >}}
 
@@ -245,11 +245,11 @@ After a service is uploaded, it can be viewed on the Overview page. This page pr
 
 ### Events and Services Details
 
-From the Overview page, users can access the **Event** and **Service** details by clicking on the event or service name in the table. Each page includes a drop-down selection for a space, which allows you to manage services and events specific to that space.
+From the Overview page, users can access the Event and Service details by clicking on the event or service name in the table. Each page includes a drop-down selection for a space, which allows you to manage services and events specific to that space.
 
 #### Event Details
 
-This page provides information about the uploaded event, including the event name, Pub/Sub details, attributes, and [usages](#event-usages).
+This page provides information about the uploaded event, including the event name, PUB/SUB details, attributes, and [usages](#event-usages).
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_event_page.png" width="850" >}}
 
@@ -261,7 +261,7 @@ The services details page includes information about the uploaded services, incl
 
 ### Event Usages {#event-usages}
 
-Once an AsyncAPI contract is successfully uploaded, they can be used through Bridges or applications.
+Once an AsyncAPI contract is successfully uploaded, it can be used through Bridges or applications.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_event_usages.png" width="850" >}}
 
@@ -273,7 +273,7 @@ To use an uploaded event in a Bridge, you must configure a [Bridge with AWS SQS]
 
 #### Applications {#usages-app}
 
-To use an uploaded event in an application, download the AsyncAPI contract for Studio Pro and import it as a new business event in your Mendix application. The download button is available on the [Service](#service-details) page.
+To use an uploaded event in an application, download the AsyncAPI contract for Studio Pro and import it as a new business event in your Mendix application. The download button is available on the [Service Details](#service-details) page.
 
 After downloading the file, open your Studio Pro app and import the file as a new business event using the **Use an existing business event service** option.
 
@@ -289,19 +289,19 @@ You can delete a service on the Service Details page. Deletion is only possible 
 
 {{% alert color="info" %}}
 
-Deleting a service only removes it from the selected space. The service will remain available in other spaces if applicable.
+Deleting a service only removes it from the selected space. The service will remain available in other spaces, if applicable.
 
 {{% /alert %}}
 
 ### AsyncAPI Format {#asyncapi-format}
 
-Externally Defined Events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, will be ignored.
+Externally defined events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, will be ignored.
 
 The mandatory information required in the file includes:
 
-* **Title**: The Service Name.
-* **Message**: Represents the business events. 
-* **Payload**: The attributes that form the message.
+* **Title** - the service name.
+* **Message** - represents the business events. 
+* **Payload** - the attributes that form the message.
 
 {{% alert color="info" %}}
 

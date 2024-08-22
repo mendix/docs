@@ -211,33 +211,33 @@ Technical Contacts with a license to the Mendix Event Broker can manage this fea
 
 To begin, click **Get Started** or **Upload AsyncAPI Document**, which involves uploading a file, verifying event information, and selecting spaces.
 
-#### Upload an AsyncAPI file
+#### Upload an AsyncAPI File
 
-Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If there are any errors with the content or format of the file, an error box will display a list of the issues found.
+Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If there are any errors with the content or file format, an error box will display a list of the issues found.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_1.png">}}
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_1_errors.png">}}
 
-#### Verify file information
+#### Verify File Information
 
 The details of the uploaded file are being extracted in the Verify section, allowing you to ensure that all information is accurate and meets the required expectations.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_2.png">}}
 
-#### Choose spaces
+#### Choose Spaces
 
 Select the spaces where the events will be used. Once at least one space is selected, the **Create Service** button will be enabled, allowing the user to create the service.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_3.png">}}
 
-#### Successful page
+#### Successful Page
 
 The externally defined events have been successfully uploaded and are now ready to be used in Bridges or Applications. See [usages](#event-usages).
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_4.png">}}
 
-### Overview page
+### Overview Page
 
 After a service is uploaded, users can view it on the Overview page. This page presents a list of uploaded events along with their corresponding services and the spaces selected for the AsyncAPI.
 
@@ -259,7 +259,7 @@ Details of the uploaded services, including the service name, description, and a
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_service_page.png">}}
 
-### Event usages {#event-usages}
+### Event Usages {#event-usages}
 
 Once an AsyncAPI contract is successfully uploaded, there are two ways to use these events: through Bridges or Applications.
 
@@ -289,7 +289,7 @@ On the Service Details page, users can delete a service. Deletion is only possib
 
 Note: Deleting a service only removes it from the selected space. The service will remain available in other spaces if applicable.
 
-### AsyncAPI format {#asyncapi-format}
+### AsyncAPI Format {#asyncapi-format}
 
 Externally Defined Events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, will be ignored.
 

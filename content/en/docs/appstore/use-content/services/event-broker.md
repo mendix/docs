@@ -199,17 +199,17 @@ Add this object to your Access Policy of the AWS SQS queue if it is receiving me
 
 ## Externally Defined Events {#externally-defined-events}
 
-Externally Defined Events refer to events that are defined outside the Mendix application, specifically outside of Studio Pro.
+Externally defined events refer to events that are defined outside the Mendix application, specifically outside of Studio Pro.
 
 The Mendix Event Broker allows users to upload an AsyncAPI document for these external events. Once uploaded, users can download a new AsyncAPI document compatible with Mendix Business Events, which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
 
 ### Upload Events
 
-Technical Contacts with a license to the Mendix Event Broker can manage this feature from the Uploaded Events tab on the [Event Broker Manager](https://broker.mendix.com/) page.
+Technical Contacts with a license to the Mendix Event Broker can manage this feature from the **Uploaded Events** tab on the [Event Broker Manager](https://broker.mendix.com/) page.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_get_started.png">}}
 
-To get started, click on **Get Started** button or select **Upload AsyncAPI Document**, which involves a three-step process: uploading a file, verifying event information, and selecting spaces.
+To begin, click **Get Started** or **Upload AsyncAPI Document**, which involves uploading a file, verifying event information, and selecting spaces.
 
 #### Upload an AsyncAPI file
 

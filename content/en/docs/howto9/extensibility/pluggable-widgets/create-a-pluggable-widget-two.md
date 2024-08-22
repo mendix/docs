@@ -78,6 +78,7 @@ To add these restrictions, follow the instructions below:
     ```tsx
     import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
     import classNames from "classnames";
+
     export interface InputProps {
         value: string;
         className?: string;
@@ -87,8 +88,11 @@ To add these restrictions, follow the instructions below:
         onUpdate?: (value: string) => void;
         disabled?: boolean;
     }
+
     export class TextInput extends Component<InputProps> {
+
         private readonly handleChange = this.onChange.bind(this);
+
         render(): ReactNode {
             const className = classNames("form-control", this.props.className);
             return <input
@@ -101,6 +105,7 @@ To add these restrictions, follow the instructions below:
                 disabled={this.props.disabled}
             />;
         }
+
         private onChange(event: ChangeEvent<HTMLInputElement>) {
             if (this.props.onUpdate) {
                 this.props.onUpdate(event.target.value);
@@ -154,16 +159,19 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     ```tsx
     import { FunctionComponent, PropsWithChildren, createElement } from "react";
     import classNames from "classnames";
+
     export interface AlertProps {
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
     }
-    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
+
+    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children }) =>
         children ? (
             <div className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
                 {children}
             </div>
         ) : null;
+
     Alert.displayName = "Alert";
     Alert.defaultProps = { alertStyle: "danger" };
     ```
@@ -305,11 +313,14 @@ Until now the components did not keep any state. Each keystroke passed through t
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
+    export class TextBox extends Component<TextBoxContainerProps> {
+
         private readonly onLeaveHandle = this.onLeave.bind(this);
+
         componentDidMount(): void {
             this.props.textAttribute.setValidator(this.validator.bind(this));
         }
+
         render(): ReactNode {
             const value = this.props.textAttribute.value || "";
             const validationFeedback = this.props.textAttribute.validation;
@@ -323,15 +334,18 @@ Until now the components did not keep any state. Each keystroke passed through t
                 <Alert>{validationFeedback}</Alert>
             </Fragment>;
         }
+
         private isReadOnly(): boolean {
-        return this.props.textAttribute.readOnly;
+            return this.props.textAttribute.readOnly;
         }
+
         private onLeave(value: string, isChanged: boolean): void {
             if (!isChanged) {
                 return;
             }
             this.props.textAttribute.setValue(value);
         }
+
         private validator(value: string | undefined): string | undefined {
             const { requiredMessage } = this.props;
             if (requiredMessage && requiredMessage.value && !value) {
@@ -358,18 +372,23 @@ Until now the components did not keep any state. Each keystroke passed through t
         disabled?: boolean;
         onLeave?: (value: string, changed: boolean) => void;
     }
+
     interface InputState {
         editedValue?: string;
     }
+
     export class TextInput extends Component<InputProps, InputState> {
+
         private readonly onChangeHandle = this.onChange.bind(this);
         private readonly onBlurHandle = this.onBlur.bind(this);
         readonly state: InputState = { editedValue: undefined };
+
         componentDidUpdate(prevProps: InputProps): void {
             if (this.props.value !== prevProps.value) {
                 this.setState({ editedValue: undefined });
             }
         }
+
         render(): ReactNode {
             const className = classNames("form-control", this.props.className);
             return <input
@@ -383,14 +402,17 @@ Until now the components did not keep any state. Each keystroke passed through t
                 onBlur={this.onBlurHandle}
             />;
         }
+
         private getCurrentValue(): string {
             return this.state.editedValue !== undefined
                 ? this.state.editedValue
                 : this.props.value;
         }
+
         private onChange(event: ChangeEvent<HTMLInputElement>): void {
             this.setState({ editedValue: event.target.value });
         }
+
         private onBlur(): void {
             const inputValue = this.props.value;
             const currentValue = this.getCurrentValue();
@@ -421,6 +443,7 @@ To make the input widget more accessible for people using screen readers, you wi
         const value = this.props.textAttribute.value || "";
         const validationFeedback = this.props.textAttribute.validation;
         const required = !!(this.props.requiredMessage && this.props.requiredMessage.value);
+
         return <Fragment>
             <TextInput
                 id={this.props.id}
@@ -436,22 +459,25 @@ To make the input widget more accessible for people using screen readers, you wi
     }
     ```
 
-2. In *components/Alert.tsx*, add the `id` and `alert` properties:
+2. In *components/Alert.tsx*, add the `id` property:
 
     ```tsx
-    import { FunctionComponent, createElement } from "react";
+    import { FunctionComponent, createElement, PropsWithChildren } from "react";
     import classNames from "classnames";
+
     export interface AlertProps {
         id?: string;
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
     }
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children, id }) =>
+
+    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
         children ? (
             <div id={id} className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
                 {children}
             </div>
         ) : null;
+
     Alert.displayName = "Alert";
     Alert.defaultProps = { alertStyle: "danger" };
     ```
@@ -480,6 +506,7 @@ To make the input widget more accessible for people using screen readers, you wi
         const className = classNames("form-control", this.props.className);
         const labelledby = `${this.props.id}-label` 
             + (this.props.hasError ? ` ${this.props.id}-error` : "");
+
         return <input
             id={this.props.id}
             type="text"

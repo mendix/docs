@@ -285,9 +285,13 @@ Click **OK**. and the new business event is created and ready to be used with th
 
 ### Delete Service {#delete-service}
 
-On the Service Details page, users can delete a service. Deletion is only possible if the service is not being used in the selected space. This action is irreversible, and if the user wishes to re-upload the service to the space, they will need to go through the Upload File process again.
+You can delete a service on the Service Details page. Deletion is only possible if the service is not being used in the selected space. This action is irreversible. If you want to re-upload the service to the space, you will need to upload the file again.
 
-Note: Deleting a service only removes it from the selected space. The service will remain available in other spaces if applicable.
+{{% alert color="info" %}}
+
+Deleting a service only removes it from the selected space. The service will remain available in other spaces if applicable.
+
+{{% /alert %}}
 
 ### AsyncAPI Format {#asyncapi-format}
 
@@ -295,15 +299,19 @@ Externally Defined Events are provided to the Event Broker via an AsyncAPI docum
 
 The mandatory information required in the file includes:
 
-* **Title**: This will serve as the Service Name.
-* ***Message**: This represents the Business Events. Note: Message names must be unique.
+* **Title**: The Service Name.
+* **Message**: Represents the business events. 
 * **Payload**: The attributes that form the message.
 
-*Message names must be unique. Duplicate events can’t be uploaded even if it is deployed anywhere in the Mendix space or uploaded before.
+{{% alert color="info" %}}
+
+Message names must be unique. Duplicate events cannot be uploaded even if it is deployed anywhere in the Mendix space or uploaded before.
+
+{{% /alert %}}
 
 The supported version of AsyncAPI is 2.0.0, in accordance with [AsyncAPI documentation](https://v2.asyncapi.com/docs/reference/specification/v2.2.0).
 
-File requirements:
+The file requirements are listed below:
 
 * Size: maximum file size is 1MB.
-* Supported files: .yml - .yaml - .json
+* Supported files: *.yml*, *.yaml*, *.json*

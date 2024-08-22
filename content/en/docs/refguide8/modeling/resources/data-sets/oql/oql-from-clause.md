@@ -9,7 +9,7 @@ The `FROM` clause specifies the entities or other source from which the data mus
 
 This is an example of the full syntax:
 
-```sql
+```sql {linenos=false}
 FROM
     {
         entity_name | ( sub_oql_query )
@@ -42,7 +42,7 @@ This specifies a path to entity to join into this query. There are four differen
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
  { INNER | { { LEFT | RIGHT | FULL } [ OUTER ] } } JOIN
         entity_path [ [ AS ] from_alias ]
         [ ON <constraint> ]

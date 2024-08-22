@@ -8,7 +8,7 @@ Each expression can have an alias, which will be the name of the column in the r
 
 The syntax is as following:
 
-```sql
+```sql {linenos=false}
 SELECT [ DISTINCT ]
     {
             *

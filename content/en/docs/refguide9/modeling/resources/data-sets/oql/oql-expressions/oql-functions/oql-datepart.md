@@ -11,7 +11,7 @@ The `DATEPART` function retrieves a specified element from a date/time values. T
 
 The syntax is as follows:
 
-```sql
+```sql {linenos=false}
 DATEPART ( datepart , date_expression [, timezone ] )
 ```
 

@@ -60,6 +60,10 @@ Default: **No**
 
 Choose **Yes** to publish the entities in a GraphQL service as well. This allows clients to send GraphQL `POST` requests to the location of the service. The service responds with the requested entity data in JSON format. This option was introduced in Studio Pro 10.14.0, and is available when the [GraphQL feature](/refguide/preferences-dialog/#graphql) is enabled or when the value is **Yes**.
 
+{{% alert color="warning" %}}
+Enabling GraphQL on a service that publishes OData v3 is not supported.
+{{% /alert %}}
+
 See [Supported GraphQL Operations](/refguide/supported-graphql-operations/) for an overview of the operations of the resulting GraphQL service.
 
 Not all features that you can model in a published OData/GraphQL service are supported through GraphQL. See [GraphQL Limitations](#graphql-limitations) for more details.

@@ -4,7 +4,7 @@ url: /howto8/integration/importing-and-exporting-objects/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 In Mendix, you don't need to reinvent the wheel. You can save time by importing modules others have created and by exporting new modules for others to use. The Marketplace provides this functionality on a macro level. You can also use 's built-in import and export functions to share content between your own apps, import unofficial modules, and share entire projects.
 
@@ -20,13 +20,13 @@ This how-to teaches you how to do the following:
     * widgets
     * module documents such as pages or microflows
 
-## 2 Importing Objects
+## Importing Objects
 
 {{% alert color="warning" %}}
 Be careful when importing objects, as you can overwrite your existing work. Pay attention to prompts and warnings along the way!
 {{% /alert %}}
 
-### 2.1 Importing Project Packages
+### Importing Project Packages
 
 A Mendix package (*.mpk*) file can store a complete Mendix project.
 
@@ -48,7 +48,7 @@ To import a complete Mendix project package, follow these steps:
 
 3. Click **OK**, and your project will be loaded in .
 
-### 2.2 Importing Module Packages
+### Importing Module Packages
 
 A Mendix package (*.mpk*) file can store a Mendix project module.
 
@@ -75,7 +75,7 @@ To import module packages, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/importing-and-exporting-objects/18582109.png" class="no-border" >}}
 
-### 2.3 Importing Module Documents
+### Importing Module Documents
 
 A Mendix package (*.mpk*) file can store a Mendix module document.
 
@@ -126,7 +126,7 @@ To import module objects, follow these steps:
 
     {{% alert color="info" %}}You may need to update the new object's permissions, depending on where it was originally exported from. For consistency, be sure to check the permissions on any objects imported.{{% /alert %}}
 
-### 2.4 Importing Widgets
+### Importing Widgets
 
 A Mendix package (*.mpk*) file can store one or more widgets. You need to place the Mendix package file in your project directory to import it.
 
@@ -146,13 +146,13 @@ To import widgets, follow these steps:
 
 4. Add your newly imported widget from the **Toolbox** or the **Add Widget** context menu.
 
-### 2.5 Importing Content from the Marketplace
+### Importing Content from the Marketplace
 
 To learn more about importing content from the Marketplace, see [Using Marketplace Content](/appstore/use-content/).
 
-## 3 Exporting Objects
+## Exporting Objects
 
-### 3.1 Exporting Complete Project Packages
+### Exporting Complete Project Packages
 
 To export a project, follow these steps:
 
@@ -168,7 +168,7 @@ To export a project, follow these steps:
 
 3. Click **Export** to create the package.
 
-### 3.2 Exporting Modules
+### Exporting Modules
 
 To export a module, follow these steps:
 
@@ -188,11 +188,11 @@ To export a module, follow these steps:
 
     {{% alert color="info" %}}To uncheck all the files quickly, press <kbd>Ctrl</kbd> + <kbd>A</kbd> to select all of the items then press <kbd>Space</kbd> to uncheck all the objects.{{% /alert %}}
 
-### 3.3 Exporting Widgets
+### Exporting Widgets
 
 Widgets are automatically available in the **widgets** folder in your project directory as *.mpk* files.
 
-### 3.4 Exporting Module Documents
+### Exporting Module Documents
 
 Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
@@ -204,7 +204,7 @@ Mendix module documents can be exported as a Mendix package (*.mpk*) file.
 
 2. Enter the **Name** for your package and click **Save**.
 
-## 4 Read More
+## Read More
 
 * [Consume a Complex Web Service](/howto8/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto8/integration/consume-a-simple-web-service/)

@@ -3,7 +3,7 @@ title: "Repository"
 url: /appstore/partner-solutions/ats/rg-two-repository/
 ---
 
-## 1 Introduction
+## Introduction
 
 The repository is the heart of ATS, as it allows you to create and manage folders, test suites, test cases, drop-down menus, and actions. You can also create test data for data-driven testing. For more information on how to use data-driven testing in ATS, see [Test Data](/appstore/partner-solutions/ats/rg-two-data-driven-testing/).
 
@@ -37,7 +37,7 @@ If you want to cut, copy, or delete an item in the repository, you can do so by 
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-repository/repository-actions.png" class="no-border" >}}
 
-## 2 Actions
+## Actions
 
 In the repository, you use the **Actions** drop-down menu to perform the following actions:
 
@@ -50,7 +50,7 @@ In the repository, you use the **Actions** drop-down menu to perform the followi
 
 ATS stores all created items in the repository.
 
-## 3 Importing and Exporting
+## Importing and Exporting
 
 ATS allows you to export to and import data from an XML file. It is possible to move data between different apps or to save test definitions on your hard drive.
 
@@ -61,7 +61,7 @@ You can export the following data:
 * actions
 * parameters set in actions/test cases
 
-### 3.1 Importing
+### Importing
 
 There are two ways of using the import:
 
@@ -75,7 +75,7 @@ To import data in ATS, do the following:
 * Click **Actions** and **Import**  to open the data import form
 * On the data import form, click **Import from file** to open the import data dialog box
 
-### 3.2 Exporting
+### Exporting
 
 There are different scenarios for exporting data from ATS:
 

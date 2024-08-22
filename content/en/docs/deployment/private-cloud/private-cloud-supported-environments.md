@@ -5,14 +5,14 @@ description: "Describes which providers are supported by Mendix for Private Clou
 weight: 100
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix for Private Cloud depends on external services to deploy and run Mendix apps.
 This document covers which providers and services are officially supported by the Mendix Operator.
 
-## 2 Kubernetes Cluster Types
+## Kubernetes Cluster Types
 
-### 2.1 Supported Cluster Types{#supported-clusters}
+### Supported Cluster Types{#supported-clusters}
 
 We currently support deploying to the following Kubernetes cluster types:
 
@@ -32,7 +32,7 @@ If you want to deploy your app to Amazon EKS, consider using the Mendix for Amaz
 If deploying to Red Hat OpenShift, you need to specify that specifically when creating your deployment. All other cluster types use generic Kubernetes operations.
 {{% /alert %}}
 
-#### 2.1.1 Supported Versions{#supported-versions}
+#### Supported Versions{#supported-versions}
 
 Mendix for Private Cloud Operator `v2.*.*` is the latest version which officially supports:
 
@@ -57,7 +57,7 @@ Mendix for Private Cloud Operator `v1.12.*` is an LTS release which officially s
 * Kubernetes versions 1.13 through 1.21
 * OpenShift 3.11 through 4.7
 
-### 2.2 Cluster Requirements
+### Cluster Requirements
 
 To install the Mendix Operator, the cluster administrator will need permissions to do the following:
 
@@ -69,7 +69,7 @@ The cluster should have at least 2 CPU cores and 2 GB memory *available*. This i
 
 In OpenShift, the cluster administrator must have a `system:admin` role.
 
-#### 2.2.1 CPU requirements
+#### CPU requirements
 
 Mendix Operator runs on CPUs with the [x86-64](https://en.wikipedia.org/wiki/X86-64) architecture.
 
@@ -89,13 +89,13 @@ If the cluster is running nodes with multiple architectures (for example, *x86-6
 The image builder doesn't build multiple architecture images at the moment.
 {{% /alert %}}
 
-### 2.3 Unsupported Cluster Types
+### Unsupported Cluster Types
 
 It is not possible to use Mendix for Private Cloud in [OpenShift Online](https://www.openshift.com/products/online/) (all editions, including Starter and Pro) or [OpenShift Developer Sandbox](https://developers.redhat.com/developer-sandbox) because they don't allow the installation of Custom Resource Definitions.
 
 Kubernetes included with [Docker Desktop](https://docs.docker.com/desktop/kubernetes/) is not officially supported.
 
-## 3 Container Registries{#container-registries}
+## Container Registries{#container-registries}
 
 Mendix for Private Cloud builds container images for every app and pushes them to the registry. It needs credentials to access the registry and permissions to push images into the registry.
 
@@ -103,7 +103,7 @@ Images are pulled from the registry by Kubernetes, not by Mendix for Private Clo
 The configuration script for Mendix for Private Cloud can configure Kubernetes image pull secrets and use the same credentials it uses for pushing images (for all registries except EKS).
 For large-scale or enterprise deployments, it may be better to configure image pulls on a cluster-wide level, or to configure separate, read-only image pull credentials.
 
-### 3.1 Local Registry
+### Local Registry
 
 A local, self-hosted, registry is supported for non-production use with the following bring-your-own infrastructure clusters:
 
@@ -115,7 +115,7 @@ To use a local registry, it must be available from Kubernetes pods (for pushing 
 
 It is possible to have username/password authentication or to push without authentication.
 
-### 3.2 Externally Hosted Registry
+### Externally Hosted Registry
 
 Externally hosted [OCI compliant](https://github.com/opencontainers/distribution-spec/blob/main/spec.md) registries are supported if they allow username/password authentication. This includes:
 
@@ -127,7 +127,7 @@ Externally hosted [OCI compliant](https://github.com/opencontainers/distribution
 
 When using ACR in combination with Azure Kubernetes Service, it is possible to set up [native authentication](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration#create-a-new-aks-cluster-with-acr-integration) for pulling images from ACR.
 
-### 3.3 OpenShift Image Registry
+### OpenShift Image Registry
 
 The local image registry can be used in an OpenShift cluster. It is not possible to use an OpenShift registry in a non-OpenShift cluster.
 
@@ -140,7 +140,7 @@ The push URL should be set to `<registry ip>:5000` where `<registry ip>` can be 
 
 The OpenShift registry must be installed and enabled for use.
 
-### 3.4 Amazon Elastic Container Registry (ECR)
+### Amazon Elastic Container Registry (ECR)
 
 [Amazon ECR](https://aws.amazon.com/ecr/) can only be used together with EKS clusters.
 
@@ -148,19 +148,19 @@ To use an ECR registry, the Mendix Operator will need an AWS Identity and Access
 
 The EKS cluster should be configured so that it can [pull images from ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/ECR_on_EKS.html).
 
-### 3.5 Google Artifact Registry
+### Google Artifact Registry
 
 [Google Cloud Platform](https://cloud.google.com/) provides the [artifact registry](https://cloud.google.com/artifact-registry).
 
 Mendix Operator supports registry authentication with [workload identity](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity). The Mendix Operator will need a Kubernetes service account [bound](https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity#authenticating_to) to a [google service account](https://cloud.google.com/iam/docs/service-accounts) with permissions to authenticate to a registry.
 
-### 3.6 Azure Container Registry
+### Azure Container Registry
 
 [Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/) can be used with any cluster (if static credential authentication is used).
 
 When used together with an [Azure Kubernetes Service](https://azure.microsoft.com/en-us/products/kubernetes-service), Mendix Operator can use [managed identity authentication](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication-managed-identity) assigned to the Mendix Operator's Kubernetes service account.
 
-## 4 Databases{#databases}
+## Databases{#databases}
 
 The following databases are supported, and provide the features listed.
 
@@ -171,7 +171,7 @@ The following databases are supported, and provide the features listed.
 | Microsoft SQL Server | Yes | Yes |
 | Dedicated JDBC | Yes | No |
 
-### 4.1 Ephemeral Database
+### Ephemeral Database
 
 The ephemeral database plan uses an in-memory database running directly in a Mendix Runtime container.
 It doesn't require any external database or provider and is great for quick tests or apps that don't require any file storage.
@@ -182,7 +182,7 @@ An app using an ephemeral database will lose all data if its environment is stop
 An app with an ephemeral database cannot have more than one replica. Only the first (leader) replica will be able to start.
 {{% /alert %}}
 
-### 4.2 Standard PostgreSQL Database
+### Standard PostgreSQL Database
 
 This refers to a PostgreSQL database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
@@ -245,7 +245,7 @@ The Mendix Operator allows you to specify custom Certificate Authorities to trus
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-### 4.3 Microsoft SQL Server
+### Microsoft SQL Server
 
 This refers to a SQL Server database which is automatically provisioned by the Operator. If you are connecting to an existing database, you should use the [Dedicated JDBC database](#jdbc) option described below.
 
@@ -285,7 +285,7 @@ The Mendix Operator allows you to specify custom Certificate Authorities to trus
 Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later versions), earlier Mendix versions will fail to start when validating the TLS certificate.
 {{% /alert %}}
 
-### 4.4 Dedicated JDBC database{#jdbc}
+### Dedicated JDBC database{#jdbc}
 
 This allows you to use an existing database (schema) [database configuration parameters](/refguide/custom-settings/) directly as supported by the Mendix Runtime.
 
@@ -293,9 +293,9 @@ This allows you to use an existing database (schema) [database configuration par
 A dedicated JDBC database cannot be used by more than one Mendix app.
 {{% /alert %}}
 
-## 5 File storage{#file-storage}
+## File storage{#file-storage}
 
-### 5.1 Ephemeral File Storage
+### Ephemeral File Storage
 
 The ephemeral file storage plan will store files directly in the Mendix Runtime container.
 It doesn't require any external file storage provider and is great for quick tests or stateless apps that don't require any file storage.
@@ -304,7 +304,7 @@ It doesn't require any external file storage provider and is great for quick tes
 An app using an ephemeral file storage will lose all files if its environment is stopped or restarted.
 {{% /alert %}}
 
-### 5.2 MinIO
+### MinIO
 
 The latest version of [MinIO](https://min.io/) is supported if it is running in server mode.
 
@@ -320,14 +320,14 @@ MinIO uses etcd to store its configuration.
 Without etcd, MinIO will disable its admin API – which is required by the Mendix Operator to create new users for each environment.
 {{% /alert %}}
 
-### 5.3 Amazon S3
+### Amazon S3
 
 [Amazon S3](https://aws.amazon.com/s3/) is supported. Mendix for Private Cloud supports multiple ways of managing and accessing S3 buckets: from creating a new S3 bucket and IAM account per environment to sharing an account and bucket by all environments in a namespace.
 
 A complete list of supported S3 modes and their required IAM permissions for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan)
 configuration details.
 
-### 5.4 Azure Blob Storage
+### Azure Blob Storage
 
 [Azure Blob Storage](https://azure.microsoft.com/en-us/services/storage/blobs/) is supported.
 
@@ -338,17 +338,17 @@ Mendix Operator can perform the following tasks:
 
 A complete list of supported Azure Blob Storage modes and their required role assignments (permissions) for each one is available in [storage plan](/developerportal/deploy/standard-operator/#storage-plan) configuration details.
 
-### 5.5 Google Cloud Storage
+### Google Cloud Storage
 
 [Google Cloud Storage](https://cloud.google.com/storage) is supported with [Cloud Storage Interoperability](https://cloud.google.com/storage/docs/interoperability) mode.
 
 Mendix Operator will need the endpoint, access key, and secret key to access the storage that can be configured in the interoperability setting.
 
-### 5.6 Ceph
+### Ceph
 
 [Ceph](https://ceph.io/en/) is supported with the S3-compatible interface [Ceph Object Gateway](https://docs.ceph.com/en/mimic/radosgw/). The Mendix Operator will need the endpoint, access key, and secret key to access the storage. Please check the Ceph documentation for information on how to get the credentials.
 
-## 6 Networking
+## Networking
 
 {{% alert color="info" %}}
 DNS, load balancing and the ingress controller should be configured first for the whole Kubernetes cluster.
@@ -364,7 +364,7 @@ NGINX Ingress is fully compatible with [cert-manager](https://cert-manager.io/),
 These features will likely be required once your application is ready for production.
 {{% /alert %}}
 
-### 6.1 OpenShift Route
+### OpenShift Route
 
 OpenShift routes are supported only in OpenShift.
 
@@ -384,7 +384,7 @@ It is also possible to provide a custom TLS configuration for individual environ
 * Specify the name of an existing TLS certificate secret to use
 * Provide the TLS Certificate and Private Key values directly in the environment specification
 
-### 6.2 Ingress
+### Ingress
 
 Mendix for Private Cloud is compatible with the following ingress controllers:
 
@@ -422,7 +422,7 @@ There are multiple ways of managing TLS certificates:
 
 Starting from Mendix Operator v1.11.0, Mendix app environments can use a [Linkerd](https://linkerd.io/) Service Mesh. Linkerd can be used to monitor and re-encrypt HTTP (or HTTPs) traffic between the Ingress Controller and the Pod running a Mendix app.
 
-### 6.3 Service Only
+### Service Only
 
 Mendix for Private Cloud can create Services without an Ingress.
 In this way, the Ingress objects can be managed separately from Mendix for Private Cloud.
@@ -432,7 +432,7 @@ Mendix for Private Cloud can create Services that are compatible with:
 * [AWS Network Load Balancer](https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html)
 * AWS Classic Load Balancer
 
-### 6.4 Service Mesh Support
+### Service Mesh Support
 
 Starting with Mendix Operator v2.5.0, the following service meshes can be enabled for the entire Mendix for Private Cloud namespace:
 

@@ -11,8 +11,8 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **General** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) offers general tools and settings for your app.
 
-## 2 Documents in This Category
+## Documents in This Category

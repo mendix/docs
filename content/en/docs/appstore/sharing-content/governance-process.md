@@ -4,7 +4,7 @@ url: /appstore/sharing-content/governance-process/
 description: "Describes the Mendix processes for approving and reviewing Marketplace content."
 ---
 
-## 1 Approval Process
+## Approval Process
 
 All components that are to be listed in the [Public Marketplace](/appstore/sharing-content/#public) are subject to an approval process to ensure the quality and accuracy of the listing and that the component meets the expectations of users. Component submissions are processed in a queue and reviewed on a first-come, first-served basis within five working days after submission.
 
@@ -12,7 +12,7 @@ All components that are to be listed in the [Public Marketplace](/appstore/shari
 Mendix strongly recommends performing the checks below before you submit your component for approval. This will also speed up the approval process.
 {{% /alert %}}
 
-### 1.1 Checks
+### Checks
 
 Mendix checks the following:
 
@@ -37,7 +37,7 @@ Review and approval by Mendix is required only for the first version of a public
 [Private Marketplace](/appstore/sharing-content/#private) content does not require any review or approval.
 {{% /alert %}}
 
-## 2 Reviewing Outdated Components
+## Reviewing Outdated Components
 
 As the Mendix Marketplace grows, it is important for users to be able to find up-to-date and relevant components. In order to reduce the likelihood that users find outdated or obsolete components, we review Marketplace content and evaluate for the following points:
 

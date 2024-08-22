@@ -10,7 +10,7 @@ aliases:
     - /refguide/mobile/using-mobile-capabilities/push-notifications/notif-build-native/
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide will help you set up, build, and publish your native app to handle push notifications. Deploying your iOS or Android app allows the server to send push notifications to mobile devices which have your app installed.
 
@@ -23,7 +23,7 @@ To make setup easy, the Push Notifications Connector module includes snippets th
 1. Copy the **NativeHomepage_Snippet** snippet.
 1. Paste the snippet into your Native navigation’s home page.
 
-## 2 App Events Widget
+## App Events Widget
 
 Completing the previous section brings the **App events** widget into your app. This widget is already configured and part of a snippet, so you should not need to change it. 
 
@@ -37,13 +37,13 @@ If you already had an **App events** widget on your home page, follow these step
 1. For **Nanoflow**, click and specify the nanoflow **OnPageLoad_RegisterPushNotifications** from the **PushNotifications** module: <br />
     * If you already have a nanoflow selected, make a **Call nanoflow** activity to the nanoflow in that existing nanoflow. <br /> 
 
-## 3 Notifications Widget
+## Notifications Widget
 
 The snippet also adds the **Notifications** widget which lets users interact with the notifications the app receives.
 
 By default this widget is configured with an **Example** action. It uses a non-persistable entity ([NPE](/refguide/persistability/#non-persistable)) that stores data received from the notifications. It then uses that data in the nanoflow upon receiving or opening the notification. Use this example to make your own actions. 
 
-## 4 Customizing Offline Synchronization
+## Customizing Offline Synchronization
 
 To ensure push notification integration executes properly on your native app you must adjust the objects that are synchronized to your mobile device:
 
@@ -55,7 +55,7 @@ To ensure push notification integration executes properly on your native app you
 
 This will ensure that the correct objects are synchronized to your native apps.
 
-## 5 Building Your Native App {#build-native-app}
+## Building Your Native App {#build-native-app}
 
 Now that you have everything set up, it is time to deploy your native app:
 

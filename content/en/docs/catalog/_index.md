@@ -18,7 +18,7 @@ aliases:
 The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Catalog](https://catalog.mendix.com) is a development tool provided in the Mendix Cloud. 
 
@@ -34,7 +34,7 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 {{% alert color="info" %}}
 The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
 
-## 2 Catalog and Mendix Connect {#catalog-mx-connect}
+## Catalog and Mendix Connect {#catalog-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The [Catalog](/catalog/) is a part of the Mendix Connect ecosystem as a user-friendly way to view, share, and use data within your organization. 
 
@@ -43,7 +43,7 @@ In addition to the Catalog, Mendix Connect functionalities include:
 * [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0/)
 * Platform-supported [connectors and modules](/appstore/#marketplace-mx-connect) available in the [Mendix Marketplace](/appstore/)
 
-## 3 Catalog Home {#catalog-home}
+## Catalog Home {#catalog-home}
 
 From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
@@ -64,7 +64,7 @@ The Catalog is also integrated in Mendix Studio Pro to find and connect to share
 {{% alert color="info" %}}
 The Catalog integration is available in Studio Pro 8.14 and above. {{% /alert %}}
 
-## 4 Information Available in the Catalog {#available-info}
+## Information Available in the Catalog {#available-info}
 
 In the Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Curators](/catalog/manage/user-roles/#curator), and [Mendix Admins](/catalog/manage/user-roles/#admin).
 
@@ -82,4 +82,4 @@ The information that is registered for data sources and exposed datasets are as 
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 5 Guide Categories
+## Guide Categories

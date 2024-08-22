@@ -6,7 +6,7 @@ aliases:
     -  /appstore/modules/data-importer-extension/
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows you to import data from an Excel or comma-separated value (CSV) file. You can choose which sheet and columns to import, preview the data, and create a non-persistable entity (NPE) in your domain model that corresponds to your input. Then, you can import data into your app using the [Import Data from File](/refguide/import-data-from-file/) activity.
 
@@ -14,17 +14,17 @@ The [Data Importer](https://marketplace.mendix.com/link/component/219833) allows
 The Data Importer is available in [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 {{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The Data Importer extension allows you to import data from Excel and CSV files directly into your app. You can create a Data Importer document to define which columns to import and an NPE to hold the imported data, along with source-to-target mapping. 
 
-### 1.2 Features {#features}
+### Features {#features}
 
 This extension supports following source files:
 
 * Microsoft Excel (*.xls, .xlsx, .csv*)
 
-### 1.3 Limitations
+### Limitations
 
 This extension currently has the following limitations:
 
@@ -34,27 +34,27 @@ This extension currently has the following limitations:
 * Enumerations are not supported 
 * **String** is the default attribute type (*.csv* only)
 
-### 1.4 Prerequisites
+### Prerequisites
 
 * Studio Pro 10.6 or above
 
-### 1.5 Installation
+### Installation
 
 Download the [Data Importer](https://marketplace.mendix.com/link/component/219833) from the Marketplace and [add it into your app](/appstore/use-content/).
 
-## 2 Data Importer Document
+## Data Importer Document
 
-### 2.1 Creating a Data Importer Document {#create-document}
+### Creating a Data Importer Document {#create-document}
 
 To import data, right-click on the module and click **Add other** > **Data Importer**. Name the document, click **OK**, and the new Data Importer document opens. 
 
-### 2.2 Previewing Data {#preview-data}
+### Previewing Data {#preview-data}
 
 Once you have [created the Data Importer document](#create-document), click **Select a local file** to import an Excel file (*.xls* or *.xslx*) or CSV file (*.csv*).
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/select-file-for-preview.png" class="no-border" >}}
 
-#### 2.2.1 Previewing Excel Data {#preview-data-excel}
+#### Previewing Excel Data {#preview-data-excel}
 
 Select or drop the file in the **Select Source File** window. You can choose which sheet to import data from and specify the header row and starting data row.
 
@@ -72,7 +72,7 @@ All the columns are selected (checked) by default. You can uncheck the columns y
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/preview-data-and-entity.png" class="no-border" >}}
 
-##### 2.2.1.1 Header and data row numbering
+##### Header and data row numbering
 
 The empty rows before the start of actual header and data row(s) are trimmed in the preview. This means the preview will be skewed if the provided header row value is >1. To avoid this, you can remove the empty rows yourself before uploading the file and assign the header row as 1, or make sure the rows before the header row contain some data and keep the header row value as its actual value. 
 
@@ -80,7 +80,7 @@ For example, the below file will result in a confusing preview if **Header Row N
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/empty-row-before-header.png" class="no-border" >}}
 
-#### 2.2.2 Previewing CSV Data {#preview-data-csv}
+#### Previewing CSV Data {#preview-data-csv}
 
 Select or drop the CSV file in the **Select Source File** window. CSV import supports multiple combinations of separator/delimiter, quote, and escape characters. It also supports importing files where the header row is absent.
 
@@ -105,7 +105,7 @@ The data preview and resulting entity would be as seen below:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/preview-csv-data-and-entity.png" class="no-border" >}}
 
-### 2.3 Editing an Entity {#edit-entity}
+### Editing an Entity {#edit-entity}
 
 You can edit the entity in the **Entity Preview** section. The Data Importer supports various ways to:
 
@@ -147,7 +147,7 @@ Input Excel File
 * Runtime exceptions can occur if the input data cannot be converted into desired the target data type for various reasons (for example, invalid data, data truncation, casting, etc.)
 {{% /alert %}}
 
-### 2.4 Creating an Entity {#create-entity}
+### Creating an Entity {#create-entity}
 
 When you are done editing the entity, click **Create Entity** > **OK**. This will create the entity in your domain model.
 
@@ -157,7 +157,7 @@ When the entity is created, you can view the mapping of the source columns to th
 
 The Data Importer document creation is complete and can be used to [import data in a microflow](#import-microflow).
 
-## 3 Importing Data in a Microflow {#import-microflow}
+## Importing Data in a Microflow {#import-microflow}
 
 Use the previously created Data Importer document to import data from your input file (or files) in a microflow. The example below shows how to import data from an Excel file. The same steps are applicable to import data from CSV files.
 
@@ -177,7 +177,7 @@ The custom activity is configured and you can import data from input files.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/example-microflow.png" class="no-border" >}}
 
-## 4 Running Your App
+## Running Your App
 
 To perform testing, you can do the following actions:
 
@@ -187,8 +187,8 @@ To perform testing, you can do the following actions:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-importer-extension/local-app-run.png" class="no-border" >}}
 
-## 5 Known Issues
+## Known Issues
 
-### 5.1 Unchecked Columns
+### Unchecked Columns
 
 It is not possible to rename an attribute or change a data type if there are unchecked columns. To avoid this issue, format your Excel or CSV file in a way that does not require you to uncheck any columns after inputting to Studio Pro. 

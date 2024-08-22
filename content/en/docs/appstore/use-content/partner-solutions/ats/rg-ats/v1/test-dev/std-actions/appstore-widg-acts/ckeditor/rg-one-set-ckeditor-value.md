@@ -3,19 +3,19 @@ title: "Set CKEditor Value"
 url: /appstore/partner-solutions/ats/rg-one-set-ckeditor-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the given value as current value for the CKEditor value. The value can be formatted via HTML code.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * CKEditor
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to set.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

@@ -7,13 +7,13 @@ weight: 30
 description: "Describes the retrieval augmented generation (RAG) example implementation in the OpenAI showcase application"
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 Retrieval augmented generation (RAG) is a framework for an AI-based search with a private or external knowledge base that combines embeddings-based knowledge retrieval with a text generation model. The starting point will be a collection of data to be considered as the private knowledge base. The final goal is that an end user of the app can ask questions about the data and the assistant responses will only be based on this knowledge base. 
 
 {{% alert color="info" %}}This document describes how to set up RAG with PgVector. If you want to use the Bedrock Retrieval Augmented Generation capabilities, see [Bedrock Retrieval Augmented Generation](/appstore/modules/genai/using-gen-ai/#rag).{{% /alert %}}
 
-## 2 High-level Flow {#rag-high-level}
+## High-level Flow {#rag-high-level}
 
 The complete technical flow can be split up into the following three steps at a high level:
 
@@ -33,9 +33,9 @@ The complete technical flow can be split up into the following three steps at a 
 
 In summary, in the first step, you need to provide the private knowledge base, such as a text snippet. You need to prepare the content for RAG, which happens only once. If the content changes, you need to provide it again for RAG. The last two steps happen every time an end-user triggers the RAG flow, for example, by asking a question about the data.
 
-## 3 RAG Example in the OpenAI Showcase Application {#rag-showcase-app}
+## RAG Example in the OpenAI Showcase Application {#rag-showcase-app}
 
-### 3.1 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 Before you start experimenting with the end-to-end process, make sure that you have covered the following prerequisites:
 
@@ -43,7 +43,7 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 {{% alert color="info" %}}If you have access to an Amazon Web Services (AWS) account, Mendix recommends you use a [free-tier RDS](https://aws.amazon.com/rds/faqs/#product-faqs#amazon-rds-faqs#free-tier) setup described in the [Creating a PostgreSQL Database with Amazon RDS](/appstore/modules/genai/pgvector-setup/#aws-database-create) section. This is convenient, since PostgreSQL databases in Amazon RDS by default have the required pgvector extension available.{{% /alert %}}
 
-### 3.2 Steps {#steps}
+### Steps {#steps}
 
 1. Download, run, and login to the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475).
 
@@ -70,7 +70,7 @@ If you want to know more about RAG, embeddings, or [vector databases](/appstore/
 
 {{% /alert %}}
 
-## 4 Building Your Own RAG Setup {#build-your-own-rag-setup}
+## Building Your Own RAG Setup {#build-your-own-rag-setup}
 
 This section lists some general key points that apply regardless of which architecture you choose.
 
@@ -91,6 +91,6 @@ If you would like to build your own RAG setup, feel free to learn from the OpenA
 
 {{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) which comes automatically with OpenAI showcase application.{{% /alert %}}
 
-## 5 Read More {#read-more}
+## Read More {#read-more}
 
 * [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)

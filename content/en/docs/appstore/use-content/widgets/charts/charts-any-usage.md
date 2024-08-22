@@ -7,7 +7,7 @@ aliases:
     - /howto/front-end/charts-any-usage/
 ---
 
-## 1 Introduction
+## Introduction
 
 The basic charts provide a set of easy to configure charts such as line, bar, column, pie, and so forth. These charts can be fine tuned with the advanced options.
 
@@ -21,7 +21,7 @@ This how-to teaches you how to do the following:
 * Export data for a chart
 * Fine tune the chart with the run-time playground
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have the following prerequisites:
 
@@ -29,13 +29,13 @@ Before starting this how-to, make sure you have the following prerequisites:
 * The latest [Any Chart](/appstore/modules/any-chart/) module
 * An understanding of JSON data structures
 
-## 3 Chart Structure
+## Chart Structure
 
 An **Any Chart** widget can be configured with a JSON **Data** array and **Layout** object. The configuration can be set statically, via the **Source attribute** or with the **Sample data**.
 
 The configuration in the **Source attribute** will be merged into the static settings and will overwrite any common properties. The **Sample data** is for demo purposes at run time when there is no **Source** attribute selected or when rendering sample data in the Studio Pro preview.
 
-## 4 Creating a Chart
+## Creating a Chart
 
 To create a line chart with the **Any Chart** widget, follow these steps:
 
@@ -69,7 +69,7 @@ To create a line chart with the **Any Chart** widget, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/widgets/charts/charts-tutorials/charts-any-usage/charts-any-sample.png" alt="Any Chart result" class="no-border" >}}
 
-## 5 Exporting Data
+## Exporting Data
 
 To generate JSON data for the Charts widget, follow these steps:
 
@@ -88,7 +88,7 @@ To generate JSON data for the Charts widget, follow these steps:
 
 If need be, the layout can also be generated in the same way as the data. In most cases, a **Static** layout will suffice.
 
-## 6 Fine tuning
+## Fine tuning
 
 Editing the JSON configuration in Studio Pro can be cumbersome. With the live preview editor, developers can directly see the output of their changes. 
 
@@ -111,7 +111,7 @@ To fine tune a Charts widget configuration, follow these steps:
 6. Copy the new settings and apply them in Studio Pro.
 7. Re-run the app to confirm the changes have been applied.
 
-## 7 Read More
+## Read More
 
 * **Any Chart** properties: [Any Chart](/refguide/charts-any-configuration/)
 * The most common chart types:  [Any Chart Cheat Sheet](/refguide/charts-any-cheat-sheet/)

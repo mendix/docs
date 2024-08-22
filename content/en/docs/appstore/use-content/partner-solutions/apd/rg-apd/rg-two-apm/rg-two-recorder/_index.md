@@ -3,13 +3,13 @@ title: "Performance Recorder"
 url: /appstore/partner-solutions/apd/rg-two-recorder/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Performance Recorder enables recording each individual action within a Mendix application. There are two recording options. Recording the runtime records server actions (microflows and client API), and recording the browser (or browsers) records the user's connection to the application.
 
 Recording the runtime is useful for investigating a slow microflow or pinpointing a time-consuming action. Recording the browser shows the performance from the user's perspective as well as subsequent actions the browser performs as a result of the server responses.
 
-## 2 Recording a New Session
+## Recording a New Session
 
 A new recording session is started by clicking **Record runtime(s)**. You can provide a session name (optional) and check the box for all user browsers to be recorded. You can also choose to record the browser console.
 
@@ -21,7 +21,7 @@ When recording a browser, the user has to confirm the following message:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-recorder/Browser_agent_recording_notice.png" class="no-border" >}}
 
-## 3 Recorded Results
+## Recorded Results
 
 The results of a recording are found in the **Recorded sessions** overview. This tab displays the recordings of the runtime (or runtimes) separate from the browser recordings. 
 
@@ -35,6 +35,6 @@ A browser session is per browser window. If a user uses multiple browser instanc
 
 {{% /alert %}}
 
-### 3.1 Pinned Recording Sessions
+### Pinned Recording Sessions
 
 Recordings are automatically cleaned after a week. If desired, it is possible to pin down a recorded session to prevent automatic removal (for example, when you wish to compare the difference in performance after a deployment, but a deployment is not scheduled within a week). 

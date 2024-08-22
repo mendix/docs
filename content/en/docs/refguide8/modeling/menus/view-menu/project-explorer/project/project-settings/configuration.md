@@ -4,7 +4,7 @@ url: /refguide8/configuration/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **Project Explorer** > **Project** > **Settings** > the **Configuration** tab. 
 
@@ -16,7 +16,7 @@ You can use configurations to have different database settings for different peo
 When you are deploying your application to a server or the Mendix cloud you will have to configure settings there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
-## 2 Configuration Settings 
+## Configuration Settings 
 
 A configuration contains the following:
 
@@ -26,7 +26,7 @@ A configuration contains the following:
 * [Constants tab](#constants)
 * [Custom tab](#custom)
 
-### 2.1 Database {#database}
+### Database {#database}
 
 The **Database** tab has the following settings:
 
@@ -37,7 +37,7 @@ The **Database** tab has the following settings:
 * **User name (not for built-in database)** – the user name that is used to sign in to the database server. If you use integrated security, no user name has to be specified.
 * **Password (not for built-in database)** – the password that is used to sign in to the database server. If you use integrated security, no password has to be specified.
 
-### 2.2 Server {#server}
+### Server {#server}
 
 The **Server** tab has the following settings:
 
@@ -52,11 +52,11 @@ The **Server** tab has the following settings:
 * **Maximum size (in MB)** – when you set the Java heap setting to *Custom*, you can specify the amount of heap memory that is available for the Java virtual machine on which you deploy your application.
 * **Extra JVM parameters** – here you can enter extra parameters for the Java virtual machine on which you deploy your application. Note: use with care. If the parameters are invalid, the Java VM might not start.
 
-### 2.3 Constants {#constants}
+### Constants {#constants}
 
 Constants have a default value that you can override per configuration. You only need to add a constant here if you want a different value than the default value. An example is specifying different web service locations for different configurations.
 
-### 2.4 Custom {#custom}
+### Custom {#custom}
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.
 
@@ -68,6 +68,6 @@ Each custom setting consists of a name and a value. For example, to enable persi
 
 For settings overview, see [Runtime Customization](/refguide8/custom-settings/).
 
-## 3 Read More
+## Read More
 
 * [Project Settings](/refguide8/project-settings/)

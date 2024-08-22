@@ -3,11 +3,11 @@ title: "OQL CAST"
 url: /refguide9/oql-cast/
 ---
 
-## 1 Description
+## Description
 
 The `CAST` function converts an expression to a specific data type.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -15,11 +15,11 @@ The syntax is as follows:
 CAST ( expression AS data_type )
 ```
 
-### 2.1 expression
+### expression
 
 `expression` specifies the expression to convert.
 
-### 2.2 data_type
+### data_type
 
 `data_type` specifies the data type to convert the expression to. The data type can be one of the following:
 
@@ -30,7 +30,7 @@ CAST ( expression AS data_type )
 * `LONG`
 * `STRING`
 
-## 3 Supported Conversions
+## Supported Conversions
 
 The table below describes which `CAST` conversions are supported:
 
@@ -49,7 +49,7 @@ The table below describes which `CAST` conversions are supported:
 
 <small>[1] BOOLEAN to STRING (limited) is supported only if the resulting string length is ≥ 5. <br />[2] The conversion of DATETIME and DECIMAL to STRING (limited) is supported only if the value fully fits into the string length. The conversion can fail if the resulting string length is < 20.</small>
 
-## 4 Examples
+## Examples
 
 A frequent use case for `CAST` is to convert your date from the `DATETIME` data type to a more readable `STRING` type: 
 

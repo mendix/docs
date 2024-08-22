@@ -5,11 +5,11 @@ weight: 80
 description: "A list of static IP addresses used by Mendix Cloud"
 ---
 
-## 1 Introduction
+## Introduction
 
 An IP address is the address of a device on an internet or local network, written in a format that other devices can understand. The IP address can be used to locate, identify, and communicate with that device on the network.
 
-## 2 Definitions
+## Definitions
 
 Mendix uses one IP address when someone connects to your Mendix application (incoming IP) and a different IP address when your application connects to outside services (outgoing IP).
 
@@ -19,19 +19,19 @@ Incoming IP addresses are liable to change without notice and should not be used
 Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may change for operational reasons. At least 48 hours before any changes, Technical Contacts will be emailed and a notification will be listed on [Mendix Platform Status](https://status.mendix.com).
 {{% /alert %}}
 
-### 2.1 Incoming IP
+### Incoming IP
 
 This is the IP address of one of Mendix's front-facing web servers. It is the IP address your browser connects to when you visit your application in Mendix Cloud (for example, when you go to `yourapplication.mendixcloud.com`).
 
 You can retrieve this IP address by performing a DNS lookup for the domain. To do so, you can use a free DNS lookup service such as http://ping.eu/nslookup/.
 
-### 2.2 Outgoing IP {#outgoing}
+### Outgoing IP {#outgoing}
 
 This is the IP address other servers see when the Mendix application initiates the connection. You normally need to add it to your firewall if you want your Mendix application to contact one of your firewalled servers.
 
 Mendix uses the following static IP addresses. If you need more information, file a support ticket with Mendix Support.
 
-#### 2.2.1 Mendix Cloud
+#### Mendix Cloud
 
 | Region | Location | IP Addresses | Default URL |
 | ------ | -------- | ------------ | ----------- |
@@ -55,7 +55,7 @@ Mendix uses the following static IP addresses. If you need more information, fil
 | Mendix Cloud US | North Virginia (us-east-1) | `34.197.224.250` <br /> `52.55.243.62` <br /> `52.205.207.103` | `{app-name}.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.mendixcloud.com` |
 | Mendix Cloud US | Oregon (us-west-2) | `35.160.4.29` <br /> `44.236.131.88` <br /> `54.190.172.197` | `{app-name}.apps.us-2a.mendixcloud.com`<br/>or<br/>`{app-name}-{environment-type}.apps.us-2a.mendixcloud.com` |
 
-##### 2.2.1.1 Accessing AWS Services in Mendix Cloud
+##### Accessing AWS Services in Mendix Cloud
 
 Mendix Cloud uses [VPC endpoints](https://docs.aws.amazon.com/vpc/latest/privatelink/concepts.html) to privately access AWS services.
 
@@ -68,22 +68,22 @@ AWS API requests can, therefore, originate from the following IP ranges:
 The [aws:VpcSourceIp](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-vpcsourceip) condition
 key can be used in a policy to allow principals (Mendix apps and end-users) to make requests only from within a specified IP range. If you apply IP restrictions to your AWS IAM user or role, make sure that the IP ranges for AWS API requests (above) are allowed in your policy.
 
-## 3 Frequently Asked Questions
+## Frequently Asked Questions
 
-### 3.1 Why Does the Outgoing IP Address Need to Change?
+### Why Does the Outgoing IP Address Need to Change?
 
 Because Mendix provides a platform, the infrastructure needs to remain flexible. Mendix maintains the current outgoing IP addresses as much as possible. However, the outgoing addresses may occasionally change for operational reasons. Any changes are subject to a 48-hour notice period.
 
-### 3.2 In the Past, We Have Received the Same IP Address for Multiple Environments and Applications. How Is That Possible?
+### In the Past, We Have Received the Same IP Address for Multiple Environments and Applications. How Is That Possible?
 
 The incoming IP address is the same for multiple environments and applications because it is the IP address of a front-facing web server. The web server serves multiple applications.
 
 The outgoing IP address is the same for multiple environments and applications because Mendix uses network address translation (NAT) on its routers.
 
-### 3.3 Which IP Address Should Be Safelisted on Our Firewall?
+### Which IP Address Should Be Safelisted on Our Firewall?
 
 Usually, you configure your firewall with rules for incoming traffic to your network. Therefore, you need to use the outgoing IP address of the Mendix application.
 
-## 4 Read More
+## Read More
 
 * [Mendix Cloud Status](/developerportal/deploy/mendix-cloud-status/)

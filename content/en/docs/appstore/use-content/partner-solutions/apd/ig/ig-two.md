@@ -7,7 +7,7 @@ aliases:
     - /apm/installation-guide/
 ---
 
-## 1 Introduction
+## Introduction
 
 This is the installation guide for CLEVR APM 2.
 
@@ -16,7 +16,7 @@ Note the following:
 * Before using APM 2, create a database backup and have a backup deployment ready
 * APM 1 and 2 can be installed side-by-side (to uninstall the APM 1 module, see [Uninstall Steps](/appstore/partner-solutions/apd/ig-one-uninstall-steps/)
 
-## 2 Installation
+## Installation
 
 To install APM 2, follow these steps:
 
@@ -31,7 +31,7 @@ To install APM 2, follow these steps:
 9. Copy the widget from **USE_ME/CopyPasteAPMBrowserWidget** to the layout (or layouts) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
 10. Set the value of the **USE_ME/APMAgent.APMAPIKey** constant with the key you generated at step 6.
 
-## 3 Upgrading
+## Upgrading
 
 To upgrade an APM 2 agent follow these steps
 
@@ -39,6 +39,6 @@ To upgrade an APM 2 agent follow these steps
 2. Remove the old APM 2 agent *.jar* (*apmagent_obfuscated_merged_{version}.jar*) from your **userlib** folder.
 3. Before testing in Mendix Studio Pro, use the **Clean deployment directory** option.
 
-## 4 Security
+## Security
 
 The agent initiates all communication to the [APM 2 manager](https://apmmanager100.mendixcloud.com) in HTTPS over port 443. So for some on premise installation a firewall might need to be opened.

@@ -9,7 +9,7 @@ weight: 10
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Java action call** activity can be used to call a [Java action](/refguide9/java-actions/). 
 
@@ -17,7 +17,7 @@ The **Java action call** activity can be used to call a [Java action](/refguide9
 
 Arguments can be passed to the action and the result can be stored.
 
-## 2 Properties
+## Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
@@ -28,7 +28,7 @@ The **Java action call** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -36,11 +36,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Java Action
+### Java Action
 
 The Java action that is called by this activity.
 
-### 3.2 Arguments
+### Arguments
 
 Click **Edit** next to the parameter to fill in the arguments. 
 
@@ -50,19 +50,19 @@ The values of the arguments are defined using [expressions](/refguide9/expressio
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/action-call-activities/java-action-call/argument-edit.png" alt="argument" class="no-border" >}}
 
-### 3.3 Return Type
+### Return Type
 
 This read-only property indicates whether you will retrieve a variable, object or list. The return type is defined by the Java action. 
 
-### 3.4 Use Return Value
+### Use Return Value
 
 If **User return value** is set to *Yes* you will be asked to give the return value a name.
 
-### 3.5 Variable Name, Object Name, or List Name
+### Variable Name, Object Name, or List Name
 
 The result of the Java action will be given this name. The label indicates whether the result is a variable, object, or list. If it is an object or list, the **Return type** will indicate the entity which is being returned.
 
-### 3.6 Task Queue
+### Task Queue
 
 {{% alert color="warning" %}}
 You cannot execute Java actions in a task queue when calling them from a nanoflow.
@@ -76,6 +76,6 @@ If you want a microflow to call a Java action to run in the background using a t
 
 For more information about task queues, see [Task Queue](/refguide9/task-queue/).
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

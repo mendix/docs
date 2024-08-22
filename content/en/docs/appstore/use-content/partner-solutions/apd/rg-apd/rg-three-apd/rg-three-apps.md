@@ -3,7 +3,7 @@ title: "Apps"
 url: /appstore/partner-solutions/apd/rg-three-apps/
 ---
 
-## 1 Apps Overview
+## Apps Overview
 
 The home page of APD displays the list of licensed applications from the Mendix [Mendix Portal](/developerportal/) in alphabetical order.
 
@@ -17,7 +17,7 @@ In order to find a specific application faster, it is possible to mark it as a f
 
 In case an application is not visible in this overview, click **Can’t find your App?** in the upper-right corner.
 
-## 2 Tour Guides and Videos
+## Tour Guides and Videos
 
 APD has several tour guides and videos to help you navigate through APD to perform certain tasks. These can be accessed by clicking the documentation icon next to your profile image and selecting **Tour**:
 
@@ -33,7 +33,7 @@ When starting a tour, a tooltip will appear throughout the APD application with 
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-apps/TourStep.png" class="no-border" >}}
 
-## 3 Profile Menu and User Settings
+## Profile Menu and User Settings
 
 In the profile menu, you can see links to your [Mendix Profile](/community-tools/mendix-profile/) and also the user settings for APD:
 
@@ -56,7 +56,7 @@ These are the settings available on the **User settings** dialog box:
 
 Clicking **Delete account** deletes your account, including the [Mendix Studio Pro environments](/appstore/partner-solutions/apd/rg-three-environments/) belonging to your account. After the deletion, you will navigate to the Mendix Portal. Apps are not deleted at this time.
 
-## 4 Cleanups {#cleanups}
+## Cleanups {#cleanups}
 
 The APD manager runs automatic cleanups. These remove monitoring data automatically after a certain period of time. APD manager uses the following periods of time:
 

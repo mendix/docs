@@ -6,7 +6,7 @@ description: "Describes how to configure security for a workflow in Mendix Studi
 weight: 30
 ---
 
-## 1 Introduction 
+## Introduction 
 
 When configuring security for workflows, you need to set up the following:
 
@@ -16,13 +16,13 @@ When configuring security for workflows, you need to set up the following:
 
 A combination of entity access, page access, and targeted users help you make sure that targeted users will be able to view user tasks and their data.
 
-## 2 Configuring Entity Access {#entity-access}
+## Configuring Entity Access {#entity-access}
 
 If a user does not have an access to an entity, this means they have no access to entity data. You can allow users to **Create**, **Read**, **Write** and/or **Delete** objects of the entity. If a user should be able to only view the page with user tasks assigned to them without making any changes, the **Read** access is sufficient. If a user needs to add, change, and/or delete data, you should allow **Create**, **Write**, and **Delete** objects for the corresponding user role. You can also configure an XPath for detailed access rules. 
 
 For more information on the entity access, see the [Entity Access vs. Page Access](/refguide/security/#entity-vs-page-access) section in *Security* and the [Entity Access](/refguide/module-security/#entity-access) section in *Module Security*.
 
-## 3 Configuring Page Access {#page-access}
+## Configuring Page Access {#page-access}
 
 For each user task you set a dedicated page where users can view their **Task inbox** and interact with tasks. These task pages are called from the **Task inbox**, which should be added to the menu bar. You need to set the proper access to the task inbox pages and all the task pages.
 
@@ -30,7 +30,7 @@ The combination of entity access and page access makes sure that only dedicated 
 
 For more information on the page access, see the [Page Access](/refguide/module-security/#page-access) section in *Module Security*.
 
-## 4 Configuring Targeted Users {#target-users}
+## Configuring Targeted Users {#target-users}
 
 The **System.WorkflowUserTask** entity is used in the inbox and task pages and has two similar XPath constraints for User and Administrator roles. To view these constraints, open the **System** module > domain model > **System.WorkflowUserTask** entity properties > **Access rules** tab > **XPath constraint** tab:
 
@@ -50,7 +50,7 @@ In the user task properties, you specify what user is targeted for the task (i.e
 
 For more information on user assignment, see the [Targeted Users Section](/refguide/user-task/#users) section in *User Task*.
 
-## 5 Why the User Does Not See the User Task
+## Why the User Does Not See the User Task
 
 If the user does not see the user task, check the following:
 

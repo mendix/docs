@@ -4,11 +4,11 @@ url: /refguide/help-menu/
 description: "Describes the Help Menu in Studio-Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 In the **Help** menu, you can ask questions and find answers to common problems you may experience while using Studio Pro. 
 
-## 2 Menu Items Overview
+## Menu Items Overview
 
 The **Help** menu items are described in the table below:
 

@@ -9,7 +9,7 @@ aliases:
     - /developerportal/company-app-roles/users
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Apps** page gives an overview of all the apps belonging to your company. The page has the following tabs available: **Mendix Cloud**, **Mendix Free Cloud**, **Other Apps**, and **Deactivated Apps**.
 
@@ -17,7 +17,7 @@ The **Apps** page gives an overview of all the apps belonging to your company. T
 We will enhance this page to provide information about apps deployed on standalone private clouds. Stay tuned.
 {{% /alert %}}
 
-## 2 Mendix Cloud
+## Mendix Cloud
 
 The **Mendix Cloud** tab gives an overview of all the licensed apps that can be published on the Mendix Cloud.
 
@@ -89,7 +89,7 @@ You can filter the apps in the table. For details, see the [Filtering Apps in th
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 3 Private Cloud (Connected) {#pc-connected}
+## Private Cloud (Connected) {#pc-connected}
 
 The **Mendix Private Cloud** tab shows all the apps that are deployed on the Mendix Private Cloud Connected.
 
@@ -135,7 +135,7 @@ The description of the items that you can select are as follows:
 
 * **Storage Name**: the name of the storage
 
-## 4 Mendix Free Cloud
+## Mendix Free Cloud
 
 The **Mendix Free Cloud** tab shows all the free apps that are deployed on the Mendix Cloud.
 
@@ -179,7 +179,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 5 Other Apps
+## Other Apps
 
 The **Other Apps** tab shows the unlicensed apps that are not deployed and the apps that are deployed on a private cloud unconnected.
 
@@ -204,7 +204,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 6 Deactivated Apps
+## Deactivated Apps
 
 The **Deactivated Apps** tab shows all the deactivated apps that belong to your company.
 
@@ -230,7 +230,7 @@ When you select the apps via the checkboxes in the table, a context menu appears
 
 You can export apps to an Excel file. For details, see the [Exporting Apps to an Excel File](#export-to-excel) section.
 
-## 7 Filtering Apps in the Table {#filter-apps}
+## Filtering Apps in the Table {#filter-apps}
 
 On each tab with a table of apps, you can find filters on the top, which allows you to filter apps using different criteria. 
 
@@ -246,7 +246,7 @@ The filter shown as below allows you to filter apps by **Deployed Status**. (Thi
 
 {{< figure src="/attachments/control-center/apps/filter-mendix-cloud.png" >}}
 
-## 8 Viewing App Details {#app-details}
+## Viewing App Details {#app-details}
 
 If you click an app name on a tab, a page opens and shows the details of this app.
 
@@ -265,7 +265,7 @@ If the app is not a licensed app, you can see the action menu ({{% icon name="th
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. For the consequences of these operations, see the table in the [Deactivating and Deleting Apps](#deactivate-delete-apps) section.
 {{% /alert %}} 
 
-## 9 Deactivating and Deleting Apps {#deactivate-delete-apps}
+## Deactivating and Deleting Apps {#deactivate-delete-apps}
 
 You can delete or deactivate a single app, or deactivate (or activate) multiple apps in one go.
 
@@ -283,7 +283,7 @@ The consequences of deactivating and deleting an app are as below:
 Deleting and deactivating apps is currently not supported for licensed apps or apps that are not running on Mendix Cloud. Therefore, you do not see these options on the **Mendix Cloud** tab; and you also do not see these options on the **Other Apps** tab if you select apps that are deployed on a private cloud.
 {{% /alert %}}
 
-## 10 Exporting the Information About Apps to an Excel File {#export-to-excel}
+## Exporting the Information About Apps to an Excel File {#export-to-excel}
 
 On each tab with an overview of apps, you can export information of apps to an Excel file. To do so, select the apps in the table, and click **Selection Export** below the table. 
 

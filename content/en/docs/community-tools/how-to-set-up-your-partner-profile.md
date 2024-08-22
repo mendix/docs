@@ -7,7 +7,7 @@ aliases:
     - /developerportal/community-tools/how-to-set-up-your-partner-profile/
 ---
 
-## 1 Introduction
+## Introduction
 
 The purpose of the Partner Profile is to provide the Mendix community and customers with a transparent overview of each partner company's knowledge, skills, experience, reviews, and culture. The profile is a simple and clear way for each partner to present themselves through an aggregated view of the developers in the organization, including the number of certified developers. It is also possible to add projects, customer reviews, contact information, a company video, and a description to each profile.
 
@@ -17,13 +17,13 @@ This how-to teaches you how to do the following:
 * Add projects to the profile
 * Add developers to the profile
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Have a Mendix Profile (register [here](https://www.mendix.com/try-now/?utm_source=documentation&utm_medium=community&utm_campaign=signup) and see [Mendix Profile](/community-tools/mendix-profile/))
 
-## 3 Signing In to the Partner Profile
+## Signing In to the Partner Profile
 
 To sign in to the Partner Profile, edit it, and make it public, follow these steps:
 
@@ -45,9 +45,9 @@ To sign in to the Partner Profile, edit it, and make it public, follow these ste
 
     {{< figure src="/attachments/community-tools/how-to-set-up-your-partner-profile/close-edit.png"  width="343px" class="no-border" >}}
 
-## 4 Editing the Partner Profile Header
+## Editing the Partner Profile Header
 
-### 4.1 Header Elements
+### Header Elements
 
 The header of your Partner Profile has important contact details about your company:
 
@@ -57,7 +57,7 @@ You must complete the **Address** and **Email Address** fields before you can ma
 
 {{< figure src="/attachments/community-tools/how-to-set-up-your-partner-profile/address.png"   width="550"  class="no-border" >}}
 
-### 4.2 Capability Levels {#capability}
+### Capability Levels {#capability}
 
 The header also displays whether the company is **Authorized**, **Expert**, or **Professional**. These capability levels are defined as follows:
 
@@ -67,7 +67,7 @@ The header also displays whether the company is **Authorized**, **Expert**, or *
 
 A capability level is determined through an assessment of your company's delivery expertise, project references, and Mendix Developer Certification levels. For more information, please contact your Mendix Customer Success Manager.
 
-## 5 Editing the Overview {#editing}
+## Editing the Overview {#editing}
 
 Follow these steps to edit the most important fields on your Partner Profile:
 
@@ -103,7 +103,7 @@ Follow these steps to edit the most important fields on your Partner Profile:
 If you're missing an input option (for example, an industry or skill), click **Feedback** on the right side of the screen and let us know!
 {{% /alert %}}
 
-## 6 Adding Projects {#projects}
+## Adding Projects {#projects}
 
 To add a project to your Partner Profile, go to the **Projects** tab and click **Add Project**:
 
@@ -141,7 +141,7 @@ If you do not want to publish a project right away, click **Save as draft** in t
 
 * **Delete** – deletes the project draft
 
-## 7 Editing Team Members {#team}
+## Editing Team Members {#team}
 
 This section presents information on adding the most valuable assets of your company: your certified Mendix developers. Before you can add a developer to the Partner Profile, their Mendix Profile needs to be set to public (for details on how to do this, see the [Profile](/community-tools/mendix-profile/user-settings/#profile) section of *Mendix Profile*.
 
@@ -161,7 +161,7 @@ To add developers to the Partner Profile, follow these steps:
 Make sure you offboard and deactivate the developers who no longer work at your company through [Control Center](/control-center/).
 {{% /alert %}}
 
-## 8 Editing Testimonials
+## Editing Testimonials
 
 On the **Testimonials** tab, all the testimonials on your company and projects are available. These testimonials are approved by your company's Profile Editor before they are displayed on the profile. 
 
@@ -177,7 +177,7 @@ You can do further editing to the testimonials with the following buttons:
 Providing accurate testimonials is an important part of participating in the Mendix community, as is respecting the testimonials that have been given. So, while you are able to edit the details of a testimonial about your company, please respect the original intent of the writer of a testimonial that has already been approved by your company's Profile Editor.
 {{% /alert %}}
 
-## 9 Changing the Profile Editor {#editors}
+## Changing the Profile Editor {#editors}
 
 To make a colleague a profile editor, follow these steps:
 
@@ -185,7 +185,7 @@ To make a colleague a profile editor, follow these steps:
 2. The **Select profile editor(s)** dialog box displays all the employees of your company. Select the colleague who you want to make a profile editor.
 3. Click **Make Profile Editor**.
 
-## 10 Sorting on the Partners Overview Page
+## Sorting on the Partners Overview Page
 
 The [Meet Our Partners page](https://developerprofiles.mendix.com/link/partneroverview) is an overview that presents all the partners in the Mendix community. The sorting is based on a combination of the following KPIs:
 

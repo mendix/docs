@@ -5,7 +5,7 @@ url: /howto8/integration/execute-an-sql-statement-on-an-external-database/
 weight: 17
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Platform offers many ways to integrate with external data, but integrating with external databases has not been a seamless experience until now. The [Database Connector](/appstore/modules/database-connector/) can be used to seamlessly connect to external databases without limiting you in your choice of database or SQL dialect, thus enabling you to incorporate external data directly in your Mendix application. Two actions are available via the connector: [Execute statement](#statement) and **Execute query**.
 
@@ -32,7 +32,7 @@ This how-to teaches you how to do the following:
 * Execute SQL statements on relational external databases with the help of the Database Connector
 * Configure the **Execute statement** action
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -42,13 +42,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have the SQL statement to execute (relative to the database type; note that the SQL dialect differs for different databases)
 * Have the JDBC driver *.jar* for the database to which you want to connect
 
-## 3 Preparation
+## Preparation
 
 You must place the JDBC driver *.jar* files for the databases to which you want to connect inside the **userlib** directory of your Mendix app. 
 
 For example, if you want to connect to an Amazon RDS PostgreSQL database (for example, `jdbc:postgresql://xyz-rds-instance.ccnapcvoeosh.eu-west-1.rds.amazonaws.com:5432/postgres`), you need to place the PostgreSQL Jdbc driver *.jar* file inside the userlib folder.
 
-## 4 Using the Execute Statement Action in a Microflow {#statement}
+## Using the Execute Statement Action in a Microflow {#statement}
 
 To use an ExecuteStatement action in a microflow, follow these steps:
 

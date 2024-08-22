@@ -4,7 +4,7 @@ url: /refguide/enumerations-in-expressions/
 weight: 170
 ---
 
-## 1 Introduction
+## Introduction
 
 Enumerations are referenced by `<modulename>.<enumerationname>.<enumerationvalue>`.
 
@@ -34,15 +34,15 @@ else
   false
 ```
 
-## 2 getCaption {#get-caption}
+## getCaption {#get-caption}
 
 The `getCaption` function takes an enumeration value and returns the caption of this value. The *caption* is a translatable string and the result of this function depends on the current language.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 As an input parameter you can use an enumeration value of any enumeration.
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -50,7 +50,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The caption of the enumeration value in the current language. | String |
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
@@ -64,15 +64,15 @@ The output can be:
 Gouden
 ```
 
-## 3 getKey
+## getKey
 
 The `getKey` function takes an enumeration value and returns the key (called *Name* in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. For more information, see [Enumerations](/refguide/enumerations/).
 
-### 3.1 Input Parameters
+### Input Parameters
 
 As an input parameter you can use an enumeration value of any enumeration.
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -80,7 +80,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The key (name) of the enumeration value in the current language. | String |
 
-### 3.3 Example
+### Example
 
 If you use the following input:
 
@@ -94,6 +94,6 @@ The output can be:
 Golden
 ```
 
-## 4 Read More
+## Read More
 
 * [Enumerations](/refguide/enumerations/)

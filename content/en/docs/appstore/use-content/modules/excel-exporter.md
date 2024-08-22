@@ -5,21 +5,21 @@ description: "Describes the configuration and usage of the Excel Exporter module
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 With the [Excel Exporter](https://marketplace.mendix.com/link/component/726/) module, you can create templates that export data from your Mendix application to the Excel, macro-enabled Excel, or CSV formats. The module creates an OQL query and directly prints the result to a FileDocument system module entity in your desired format. You can add styling to your Excel to create proper headers and styling formats in order to create a complete report.
 
 The Excel Exporter is compatible with the [Excel Importer](/appstore/modules/excel-importer/) version 8.1.1 or higher and [Atlas UI Resources](/appstore/modules/atlas-ui-resources/) version 1.2.2 or higher.
 
-## 2 Prerequisites
+## Prerequisites
 
 * [Install Mx Model Reflection](/howto/integration/using-the-excel-exporter/#download-modules) version 6.1.1 or higher
 * [Add MxReflection page and Excel Exporter page to the navigation](/howto/integration/using-the-excel-exporter/#add-navigation-items)
 * [Configure Mx Model Reflection](/howto/integration/using-the-excel-exporter/#configure-mx-model-reflection)
 
-## 3 Configuration
+## Configuration
 
-### 3.1 Excel Exporter Page
+### Excel Exporter Page
 
 On the **Excel Exporter** page, there are the following items:
 
@@ -39,7 +39,7 @@ On the **Excel Exporter** page, there are the following items:
 * **Delete**: deletes the selected template
 * **Create report**: exports data to an Excel document using the selected template
 
-### 3.2 Template Details Page {#template-details}
+### Template Details Page {#template-details}
 
 On the template details page, you can define the template with the following items:
 
@@ -91,7 +91,7 @@ On the template details page, you can define the template with the following ite
     * **Delete**: deletes the selected style
     * **Style name**: the name of the style
 
-### 3.3 Sheet Details Page {#sheet-details}
+### Sheet Details Page {#sheet-details}
 
 On the sheet details page, you can define sheets with the following items:
 
@@ -124,7 +124,7 @@ On the sheet details page, you can define sheets with the following items:
     * If unselected, you can set a new default row height with the **Default column height in points** property
 * **Default header text style**: the default style of the header text
 
-#### 3.3.1 Static Data Tab {#static-data-tab}
+#### Static Data Tab {#static-data-tab}
 
 On the **Static data** tab, there are the following items:
 
@@ -159,7 +159,7 @@ On the **Static data** tab, there are the following items:
 * **Static type**: the type of the static data
 * **Style**: the style of the static data
 
-#### 3.3.2 Column Data Tab
+#### Column Data Tab
 
 On the **Column data** tab, you can define column data with the following items:
 
@@ -196,7 +196,7 @@ On the **Column data** tab, you can define column data with the following items:
 * **Function**: the type of the aggregate function added in the query
 * **Result aggregate**: if the result of the aggregate function is shown at the button of the column
 
-#### 3.3.3 Associations, Constraints and Sorting Tab
+#### Associations, Constraints and Sorting Tab
 
 On the **Associations, constraints and sorting** tab, you can define the associations, constraints, and sorting with the following items:
 
@@ -247,7 +247,7 @@ On the **Associations, constraints and sorting** tab, you can define the associa
     * **Summary**: the summary of the sorting
     * **Direction**: the direction of the sorting (**Ascending** or **Descending**)
 
-#### 3.3.4 Sheet Preferences Tab
+#### Sheet Preferences Tab
 
 On the **Sheet Preferences** tab, you can define sheet preferences with the following items:
 
@@ -286,6 +286,6 @@ On the **Sheet Preferences** tab, you can define sheet preferences with the foll
 
 {{% alert color="info" %}}While exporting output data into an Excel file having macros in it, the existing macros will neither be parsed nor removed, but will be retained as-is in the output file.{{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [How to Export to Excel](/howto/integration/using-the-excel-exporter/)

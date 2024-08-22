@@ -3,17 +3,17 @@ title: "Data Management"
 url: /appstore/partner-solutions/ats/rg-one-data-management/
 ---
 
-## 1 Repository
+## Repository
 
 The **Repository** is the heart of ATS, since it allows you to create and manage folders, test suites, test cases and actions. The folder in the ATS is equivalent to a directory in your file browser. You can create folders within other folders, and in each folder, you can store test suites, test cases and actions.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-data-management/21168203.png" alt="Repository of ATS" class="no-border" >}}
 
-## 2 Import/Export
+## Import/Export
 
 ATS allows you to export data (folders, test suites, test cases and keywords) to an XML file, and import that data into another ATS instance. This makes it possible to move data between different environments without handling database dumps.
 
-### 2.1 Data Import
+### Data Import
 
 There are two use cases when importing data: create data and update data. Create data means that you will be importing new data for the first time into your target database. Update data means that you will be importing data that will overwrite existing data, thus updating actions, test cases, test suites or folders.
 
@@ -36,7 +36,7 @@ To import data in ATS, do the following:
 
 Data is imported in ATS.
 
-### 2.2 Data Export
+### Data Export
 
 There are different scenarios on how to export data from ATS:
 
@@ -66,9 +66,9 @@ To export items from the repository, do the following:
 
 Data is exported from the repository.
 
-## 3 Test Data {#test-data}
+## Test Data {#test-data}
 
-### 3.1 Creating Datasets
+### Creating Datasets
 
 In the **Test Data** tab of the **Repository** you can create datasets by clicking the **New Data Set** button. You can name the dataset and give it a description.
 
@@ -84,7 +84,7 @@ A column of the table for specific data, for example, usernames.
 
 Line in the data table containing an integer or string value of the data
 
-### 3.2 Importing/Exporting datasets
+### Importing/Exporting datasets
 
 When creating/editing a dataset you can select the **Create/Update fields from file** option to provide a template Excel file to create or update fields and records of your dataset. The first row of your sheet will be considered the header and will be used to determine the field names. All additional rows will be considered records and will be used to determine the fields data type.
 

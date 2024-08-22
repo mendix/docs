@@ -5,7 +5,7 @@ description: "Presents reference content for using apps deployed to Insights Hub
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix Applications. There are two ways to leverage these integrations.
 

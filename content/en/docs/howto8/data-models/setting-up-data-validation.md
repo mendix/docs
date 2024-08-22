@@ -4,11 +4,11 @@ url: /howto8/data-models/setting-up-data-validation/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can set up data validation with Mendix. Before you can start with this how-to you need to set up a basic data structure, otherwise there won't be any data to validate. If you don't know how to set up a basic data structure, you can take a look at [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/).
 
-## 2 Data Validation on Entity Level
+## Data Validation on Entity Level
 
 This section will explain how you can add validation rules to the domain model of your module. Validation rules are always triggered when changes to an object are committed. Please note that validation rules can only be applied on entities that are persistable.
 
@@ -27,7 +27,7 @@ This section will explain how you can add validation rules to the domain model o
 7. Select the **rule type**.
 8. Click **OK** to save this validation rule.
 
-## 3 Required Validation on Inputs, Reference Selectors and Drop-downs
+## Required Validation on Inputs, Reference Selectors and Drop-downs
 
 The page builder of Studio Pro allows you to configure which inputs are mandatory and what message is shown to the user if the input is empty. If you don't have a detail page yet, take a look at [this](/howto8/front-end/create-your-first-two-overview-and-detail-pages/) how-to.
 
@@ -38,7 +38,7 @@ The page builder of Studio Pro allows you to configure which inputs are mandator
 
 Please note that a *required* validation rule on entity level overrules this property.
 
-## 4 Advanced Data Validation with the 'Before Commit' Event
+## Advanced Data Validation with the 'Before Commit' Event
 
 Validation rules are great for simple validations, but Mendix also offers ways to handle more complex validations. The domain model allows you to define event handlers on entity level. The 'Before Commit' and 'After Commit' events are always triggered when an object is committed to the database. The 'After Commit' is most commonly used to calculate values of de-normalized data. With the 'Before Commit' event you can execute a microflow that must return a Boolean value. If the microflow returns 'false', the entire commit is aborted otherwise the object is stored in the database. This mechanism is great for data validation. This section will explain how you can validate data by use of the 'Before Commit' event.
 
@@ -59,7 +59,7 @@ Validation rules are great for simple validations, but Mendix also offers ways t
 
 As long as this Microflow returns a Boolean value, you are free to add any logic to determine if the data is valid or not. If the Microflow returns 'false', the commit is cancelled. Returning 'true' will commit the object. If you don't know how to work with microflows, take a look at how-to.
 
-## 5 Advanced Validation with a Custom 'Save' Button
+## Advanced Validation with a Custom 'Save' Button
 
 Validating user input can also be achieved by overriding the default save button on a detail page. Start by creating an overview and detail page. If you don't know how to create overview and detail pages, take a look at [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/). Your detail page should look similar to this:
 
@@ -106,7 +106,7 @@ Validating user input can also be achieved by overriding the default save button
 15. Select for example **Name** as member.
 16. Enter an error message in the **Template** field. You can use indexes to dynamically insert parameters in the template.
 
-## 6 Validating Multiple Attributes
+## Validating Multiple Attributes
 
 If you want to validate multiple attributes, it is best to do this in a sub-microflow:
 
@@ -116,7 +116,7 @@ If you want to validate multiple attributes, it is best to do this in a sub-micr
 4. At the end of the sub-microflow, the variable should be `true` if it successfully passed all validations, and `false` when one or more validations have failed. 
 5. Add a [decision](/refguide8/decision/) that checks the return value and only allows the microflow to continue to the **Commit** event if all validations are passed. This way, you can keep the logic while performing all necessary validations at once.
 
-## 7 Read More
+## Read More
 
 * [Work with Images and Files](/howto8/data-models/working-with-images-and-files/)
 * [Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)

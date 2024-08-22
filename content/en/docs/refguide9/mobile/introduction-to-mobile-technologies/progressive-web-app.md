@@ -6,7 +6,7 @@ aliases:
     - /refguide9/progressive-web-app/
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 If you plan to build an offline-first progressive web app with Mendix, please consult [WebSQL Removal and How It Affects Your Mendix PWAs
@@ -21,7 +21,7 @@ Progressive web apps have three main characteristics:
 * **Reliable** – Using service workers, PWAs can work offline or partially offline. Mendix PWAs can work partially offline (resources like styling, pages, and images are cached) or fully offline (like hybrid offline and native mobile apps).
 * **Capable** – PWAs can leverage several device capabilities like the camera and location, and can offer support for web push notifications. Note that support for features depend on which browser is used.
 
-## 2 Enabling PWA Features
+## Enabling PWA Features
 
 As PWAs are basically web apps with additional features, Mendix offers these features as a part of web navigation profiles. Depending on your needs, you can create either a fully offline-capable PWA or a web application that requires an internet connection but still uses PWA features.
 
@@ -48,15 +48,15 @@ Within the navigation profiles the following PWA features can be configured:
 
 To be able to fully test PWA functionalities, the app needs to be deployed to the cloud. This is because the service worker is only enabled in the cloud over HTTPS.
 
-### 2.1 Publishing as a Progressive Web App
+### Publishing as a Progressive Web App
 
 When checked and deployed to the cloud, the app registers a [service worker](https://developers.google.com/web/fundamentals/primers/service-workers) that is the basis for PWAs. On offline navigation profiles, this option is always enabled. In online navigation profiles, enabling this option will also give the end-user a custom page when the device has no connection. Where desired, this page can be customized by adding an *offline.html* page to the theme folder (for example, *theme/offline.html*). Note that this page should not load any other resources over the network.
 
-### 2.2 Allowing "Add to Home Screen" Prompt
+### Allowing "Add to Home Screen" Prompt
 
 When the **Add to Home Screen** option is selected, the end-user might be actively asked to add the app to their device's home screen or desktop. The behavior can differ per browser and over time. When unselected, the app can still always be added to the home screen, but the user will not be actively asked.
 
-### 2.3 Preloading Static Resources
+### Preloading Static Resources
 
 Enabling this option will make the app pre-load static resources like pages, images, and widgets in the background. This can aid performance. This pre-loading happens when a user opens the app for the first time, or when the model has changed. This makes the app feel faster when navigating to new pages. It comes at a cost, however, as it consumes more bandwidth and device storage initially.
 
@@ -64,7 +64,7 @@ In offline profiles, this feature is automatically enabled to allow the app to f
 
 Note that all pages and images reachable in the navigation profile are loaded by the browser. This configuration can be undesirable from a security perspective, depending on your use case and requirements.
 
-## 3 Previewing or Testing a PWA
+## Previewing or Testing a PWA
 
 PWAs can be directly viewed and tested in the browser on your machine or device. Via the **View** menu you can directly open the PWA profiles in your browser:
 
@@ -80,11 +80,11 @@ Note that if you are running on a Mac with Parallels, make sure that port 8080 (
 When previewing or testing an offline-first PWA locally, an internet connection is always required to load the app. After initial loading, the app behaves fully offline, but it can not be reloaded without a connection. Once the app is deployed to the cloud, end-users can always load it without a connection after the first visit.
 {{% /alert %}}
     
-### 3.1 PWA Lighthouse Check
+### PWA Lighthouse Check
 
 To check a PWA's capabilities, you can use [Lighthouse](https://developers.google.com/web/tools/lighthouse). Lighthouse is an open-source, automated tool for improving the quality of web pages. It can check if your app meets the progressive web app requirements and can offer suggestions for improving your web app.
 
-## 4 Distributing or Sharing the PWA
+## Distributing or Sharing the PWA
 
 As PWAs are web apps, these can be shared easily by sharing the PWA's URL.
 
@@ -92,7 +92,7 @@ When opening the app on a device or browser, Mendix automatically determines the
 
 Google Chrome and Microsoft Edge (Chromium edition) fully support running offline-first apps.
 
-### 4.1 Example of Profile Selection
+### Example of Profile Selection
 
 For example, when a Phone Web Offline profile is configured and the app is opened in the browser, the following scenarios can occur:
 
@@ -115,11 +115,11 @@ Next to that, it is possible to force a profile by providing the profile name in
 
 When forcing a specific profile on a cloud deployment, it can be necessary to first clear the browser cache.
 
-## 5 Advanced Settings
+## Advanced Settings
 
 See the sections below for information on advanced settings.
 
-### 5.1 Web App Manifest
+### Web App Manifest
 
 PWAs use a web app manifest that provides information to the browser about the application. Mendix generates one automatically based on the model. It can be customized for specific needs by changing the `manifest-overrides.webmanifest` *.json* file in the **theme** folder. The `background_color` and `theme_color` properties will often be useful to customize:
 
@@ -132,13 +132,13 @@ PWAs use a web app manifest that provides information to the browser about the a
 
 For more information on the available properties in the web app manifest, read this [short introduction](https://web.dev/add-manifest/) or view [the full reference at MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 
-### 5.2 Sessions {#sessions}
+### Sessions {#sessions}
 
 Offline-first PWAs use long-lived sessions, which keep users logged in for a longer period even after their apps are closed. By default, users will be logged out after 7 days of inactivity. This can be customized using the *LongLivedSessionTimeout* runtime setting.
 
 For more information on sessions and how to customize the timeout, see the [Session Duration](/refguide9/tricky-custom-runtime-settings/#session-duration) section of the *Advanced Custom Settings in Mendix Runtime Reference Guide*.
 
-## 6 Accessing Device Features
+## Accessing Device Features
 
 Browsers offer access to device features through APIs that can be leveraged in PWAs. These device features can be used by available widgets and nanoflow actions. It is also possible to leverage additional device features by extending the platform using [JavaScript Actions](/refguide9/javascript-actions/) or [Pluggable Widgets](/howto9/extensibility/pluggable-widgets/).
 
@@ -175,9 +175,9 @@ For more information on browser support for certain device features, see the thi
 In order to test the features requiring HTTPS protocol, use [ngrok](https://ngrok.com/) to enable features in your localhost.
 {{% /alert %}}
 
-## 7 Troubleshooting
+## Troubleshooting
 
-### 7.1 Clearing the Cache
+### Clearing the Cache
 
 Progressive web apps (PWAs) cache resources such as pages, images, and their offline databases. This can interfere with local development or when updating your environment configuration, such as when adding HTTP headers. 
 
@@ -201,7 +201,7 @@ You can choose to clear the following resources:
 * **Cookies**: clears the session and sign out the user (local and session storage must be selected as well)
 * **Cache storage**: clears all cached pages, images, and client JavaScript code (this will also refresh HTTP headers sent from the Mendix deployment environment)
 
-### 7.2 Enabling WebSQL Support in Development
+### Enabling WebSQL Support in Development
 
 Offline-first PWAs make use of WebSQL to store offline data. This was deprecated by Chromium and has since been disabled in several web browsers. To enable it for production environments, please read [this guide](https://www.mendix.com/blog/websql-removal-and-how-it-affects-your-mendix-pwas/) on our blog.
 

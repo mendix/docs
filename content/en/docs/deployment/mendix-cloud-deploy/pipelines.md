@@ -10,7 +10,7 @@ beta: true
 Mendix Pipelines is in [public beta](/releasenotes/beta-features/). It is currently available for unlimited use with all licensed Mendix Cloud apps. Limitations may be put on its use in the future.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 From the **Pipelines** page, you can set up automated build and deployment pipelines for your app. Once you have designed and activated a pipeline, you can use it for automated, zero-click builds and deployments. Each pipeline runs automatically according to the trigger conditions defined in your [Start Pipeline step](#pipeline-steps).
 
@@ -24,7 +24,7 @@ If your app does not have any pipelines yet, skip to [Designing a New Pipeline](
 If you need to configure your user settings so that you can run a pipeline for the first time, skip to [Configuring User Settings](#configure-settings).
 {{% /alert %}}
 
-## 2 The Runs Tab{#runs-tab}
+## The Runs Tab{#runs-tab}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/runs-tab.png" alt="" >}}
 
@@ -36,7 +36,7 @@ For each run, you can view the following information:
 * Branch – The branch, if **Teamserver push (Git)** was used as the pipeline's trigger
 * Pipeline Name – The name of the pipeline design used for the run
 * Triggered by – The user who triggered the pipeline run
-* Last Run – The number of days since the pipeline run
+* Run – The number of days since the pipeline run
 * Duration – The time the pipeline took to complete the run
 * Trigger – The trigger type for the run
 
@@ -48,7 +48,7 @@ The search and filter options allow you to review specific run types. You can do
 * Filter by trigger: All triggers, recurring schedule, Teamserver push (Git), or manual
 * Filter by status: All statuses, pending, succeeded, in progress, or failed
 
-### 2.1 Run Results
+### Run Results
 
 To see the results of a particular run, click **Results** ({{% icon name="paper-clipboard" %}}).
 
@@ -58,7 +58,7 @@ From this page, you can view an overview of the run. You can also expand each ex
 
 At the top of the page, there are several cards that display important information, such as whether the run succeeded or failed. If it failed, it includes information about the error that caused the run failure. There are two types of errors: step-level errors and system-level errors.
 
-#### 2.1.1 Step-Level Errors
+#### Step-Level Errors
 
 Step-level errors occur when a step in the pipeline fails, either because the step itself failed or because the user had insufficient rights to run a step.
 
@@ -66,13 +66,13 @@ For example, if you do not have the [permissions](/developerportal/deploy/node-p
 
 If a step fails, that step is flagged with an error icon ({{% icon name="alert-triangle-filled" color="red" %}}). The step's logs indicate the cause of failure.
 
-#### 2.1.2 System-Level Errors
+#### System-Level Errors
 
 System-level errors occur if [user settings](#configure-settings) have not been configured or if an internal Mendix component is down.
 
 If a system-level error occurs, the card in the upper-left corner of the **Results** page identifies the error that caused the run to fail. Click **See details** on the card to view more information about the error.
  
-## 3 The Designs Tab{#designs-tab}
+## The Designs Tab{#designs-tab}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/designs-tab.png" alt="" >}}
 
@@ -98,7 +98,7 @@ Click **More Options** ({{% icon name="three-dots-menu-horizontal-filled" %}}) >
 If you delete a pipeline design in the **Designs** tab, any run history associated with that pipeline design is deleted from the **Runs** tab.
 {{% /alert %}}
 
-### 3.1 Designing a New Pipeline{#design-pipeline}
+### Designing a New Pipeline{#design-pipeline}
 
 To design a new pipeline, click **Design a Pipeline** from any tab. That launches the **Design a Pipeline** dialog box. You can choose to start from a template pipeline or an empty pipeline.
 
@@ -114,7 +114,7 @@ If you start from the template, you can still add, remove, and configure its ste
 
 Give your pipeline a name. You can use up to 40 alphanumeric characters in the name. Then click **Next** to go to your new pipeline design's **Details** page.
 
-### 3.2 Editing a Pipeline Design{#edit-pipeline}
+### Editing a Pipeline Design{#edit-pipeline}
 
 From your pipeline design's **Details** page, you can add, remove, and configure the steps in your pipeline. You can also click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) next to the pipeline name to edit the name.
 
@@ -124,7 +124,7 @@ From your pipeline design's **Details** page, you can add, remove, and configure
 Active pipelines cannot be edited; if you want to edit an existing pipeline, make sure it is deactivated.
 {{% /alert %}}
 
-#### 3.2.1 Pipeline Steps{#pipeline-steps}
+#### Pipeline Steps{#pipeline-steps}
 
 To add a step, launch the **Pipeline Steps** dialog box by clicking **Add Step** ({{% icon name="add" %}}).
 
@@ -145,7 +145,7 @@ Your pipeline can include the following steps:
 
 Expand each step to configure it, delete it, or view its outputs. You can expand or collapse any step in your pipeline by clicking the step's name.
 
-##### 3.2.1.1 Branch Expression{#branch-expression}
+##### Branch Expression{#branch-expression}
 
 If you select **Teamserver push (Git)** as the trigger in the Start Pipeline step, you need to specify the relevant branch (or branches) in the **Branch expression** field.
 
@@ -165,7 +165,7 @@ Keep the following in mind:
 * Do not use multiple asterisks in the branch expression. For example, `**Main` is an invalid expression.
 * Do not use the asterisk between two words. For example, `Main*Main` is an invalid expression.
 
-##### 3.2.1.2 Variables and Dependent Steps
+##### Variables and Dependent Steps
 
 Some steps depend on the outputs of other steps. Therefore, you must add Checkout before Build, Build before Publish, and Publish before Deploy.
 
@@ -175,13 +175,13 @@ If you try to add a dependent step without the step that creates the output it d
 
 These pipeline steps use Mendix-defined variables to reference the outputs of previous steps. Variables are indicated with a `$` sign and generally use the format `$StepName.OutputName`. For example, Publish uses the output of Build as `$Build.DeploymentPackage`. Similarly, Deploy uses `$Publish.DeploymentPackage` to deploy to the selected environment.
 
-### 3.3 Saving, Activating, and Deactivating a Pipeline
+### Saving, Activating, and Deactivating a Pipeline
 
-#### 3.3.1 Saving
+#### Saving
 
 When you are ready, click **Save**. This saves your design as a draft but does not activate it. You can continue editing your saved draft at any time.
 
-#### 3.3.2 Activating
+#### Activating
 
 When you are finished editing your pipeline design, click **Save & Activate**. This does the following:
 
@@ -192,7 +192,7 @@ When you are finished editing your pipeline design, click **Save & Activate**. T
 
 Once activated, your pipeline runs automatically according to the trigger defined in the [Start Pipeline step](#pipeline-steps).
 
-#### 3.3.3 Deactivating
+#### Deactivating
 
 To deactivate an active pipeline, click **Deactivate** in the pipeline's design. If you want to use the pipeline again, you can always click **Save & Activate** to reactivate it.
 
@@ -200,7 +200,7 @@ Note that active pipelines cannot be edited. If you want to edit an existing pip
 
 The pipeline design's status (**Active** or **Inactive**) is displayed in the overview table on the **Designs** tab.
 
-## 4 The Settings Tab{#settings-tab}
+## The Settings Tab{#settings-tab}
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/pipelines/settings-tab.png" alt="" >}}
 
@@ -214,7 +214,7 @@ Or, if the user has configured their user settings but does not have sufficient 
 You only need to add your API key and PAT once; the settings configured here apply to all future pipeline runs across all of your apps.
 {{% /alert %}}
 
-### 4.1 Configuring User Settings{#configure-settings}
+### Configuring User Settings{#configure-settings}
 
 To configure your user settings, click **Setup** on the **Settings** tab. This launches the **Setup** dialog box, where you can enter your email, API key, and PAT.
 
@@ -234,7 +234,7 @@ For security reasons, the API key and PAT values are not displayed once they are
 
 To change your API key and PAT, click **Delete** and then **Setup** to relaunch the **Setup** dialog box. Then provide your new API key and PAT values.
 
-### 4.2 Notifications
+### Notifications
 
 If the pipeline fails, it sends a notification to the user who triggered the pipeline. The notification is sent via email or the **Notifications** ({{% icon name="alarm-bell" %}}) menu in the Mendix Portal, depending on the user's [notification settings](/community-tools/mendix-profile/user-settings/#notifications).
 
@@ -242,19 +242,19 @@ If the pipeline fails, it sends a notification to the user who triggered the pip
 Pipeline failure notifications only send if the user who triggered the pipeline has previously saved a pipeline or added their API key and PAT in the **Settings** tab.
 {{% /alert %}}
 
-## 5 Additional Notes
+## Additional Notes
 
 Pipelines time out if they run for more than three hours. In other words, if the operations in your pipeline cumulatively take longer than three hours to complete, then the pipeline will fail.
 
 To trigger pipelines based on Teamserver push (Git), Mendix automatically creates a webhook on your behalf. You can see this webhook if you click **Webhooks** in the [navigation pane](/developerportal/#navigation-pane). Do not delete this webhook; deleting it would cause pipeline run failures for pipelines that rely on the Teamserver push (Git) trigger type.
 
-### 5.1 Known Issues and Limitations
+### Known Issues and Limitations
 
 Pipelines is in public beta and is undergoing optimizations. Initial stages may involve occasional slowness, leading to pipeline failures. Mendix is committed to resolving these issues swiftly and appreciates your understanding.
 
 It is not currently possible to add the same pipeline step more than once in a pipeline. This will be improved in the future.
 
-## 6 Read More
+## Read More
 
 * [Learning Path: Choose the Right Software Delivery Approach](https://academy.mendix.com/link/paths/156/Choose-the-Right-Software-Delivery-Approach) – This learning path provides a structured, hands-on introduction to Pipelines, as well as a couple of other methods for building and deploying Mendix apps.
 * [Implement a Simple CI/CD Pipeline with Mendix APIs](/howto/integration/implement-cicd-pipeline/) – This document describes how to use Mendix APIs to set up your CI/CD process; this is possible if you use Jenkins, GitLab, or another CI/CD tool.

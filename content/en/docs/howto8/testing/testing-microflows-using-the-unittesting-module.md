@@ -5,7 +5,7 @@ url: /howto8/testing/testing-microflows-using-the-unittesting-module/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 To smarten up your app with business logic you can use microflows. To verify that your microflow works as expected you can create unit tests using the Unit Testing module. The Unit Testing module provides an easy to use interface to manage and run unit tests. The module supports unit tests that are created using microflows and unit tests that are created using JUnit.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Set up the Unit Testing module
 * Create a microflow unit test
 
-## 2 Preparation
+## Preparation
 
 Before you can start with this how-to, make sure you have completed the following prerequisites:
 
@@ -29,7 +29,7 @@ Before you can start with this how-to, make sure you have completed the followin
 
     {{% alert color="warning" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images and/or names on your screen may be different than what is used in this how-to.{{% /alert %}}
 
-## 3 The Unit Testing Module
+## The Unit Testing Module
 
 In this chapter you will set up the unit testing module and run the example tests.
 
@@ -84,11 +84,11 @@ In this chapter you will set up the unit testing module and run the example test
 
     {{< figure src="/attachments/howto8/testing/testing-microflows-using-the-unittesting-module/18580340.png" class="no-border" >}}
 
-## 4 Creating a Microflow Test
+## Creating a Microflow Test
 
 In this section, you will learn how to create a microflow test. To create a new microflow test in a module, you need to add a microflow with a name that starts with *Test*. A test microflow should have no input arguments and a Boolean or string as the result type. For a Boolean result type, true means success, false means the test failed. For a string result type, any non-empty string indicates a failed test.
 
-### 4.1 Creating a Microflow
+### Creating a Microflow
 
 To create the microflow, follow these steps:
 
@@ -105,7 +105,7 @@ To create the microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/testing/testing-microflows-using-the-unittesting-module/promote.jpg" class="no-border" >}}
 
-### 4.2 Creating a Unit Test
+### Creating a Unit Test
 
 1. Add a new folder to MyFirstModule and name it *UnitTests*.
 2. Add a new microflow to the **UnitTests** folder and name it *Test_PromoteEmployeeToJunior*.
@@ -162,6 +162,6 @@ It is possible to create a "Setup" and "TearDown" microflow per module. The "Set
 Do not test everything, focus on the most used and complex microflows!
 {{% /alert %}}
 
-## 5 Read More
+## Read More
 
 * [How to Create Automated Tests with TestNG](/howto8/testing/create-automated-tests-with-testng/)

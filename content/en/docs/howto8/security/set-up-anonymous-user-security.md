@@ -4,7 +4,7 @@ url: /howto8/security/set-up-anonymous-user-security/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 When setting up anonymous access for your application, you should be careful about where you give access to users. There are some guidelines for this so that you don't make your entire application accessible to the public.
 
@@ -15,19 +15,19 @@ When creating an anonymous user role, always make sure you give it as little acc
 * Set access to a non-persistable object
 * Give anonymous users read and write access
 
-## 2 Non-Persistable Objects
+## Non-Persistable Objects
 
 When you set access to a non-persistable object, the security rules you specify should be whatever you functionally need. Non-persistable objects only live in the session cache from the user that created the object; therefore, an anonymous user is never able to access any information that wasn't created specifically for or by them. However, it is a completely different situation for a persistable object.
 
-## 3 Write Access
+## Write Access
 
 If you give an anonymous user write access on any field in the application, you must specify instance access as well. An anonymous user is hardly ever allowed to change every single record of a certain object type. The anonymous user is usually only allowed to change the record they just created; therefore, you will want to specify this access rule: `[System.Owner='[%CurrentUser%]']` That way, the anonymous user can only change the records they just created during their session. 
 
-## 4 Read Access
+## Read Access
 
 If an anonymous user needs to have access to certain primary data tables or needs the name of a user in an overview, the anonymous user needs read access on that entity. However, you should always limit this access. If the user doesn't need to have access to all fields, do not give it to them. If you see an anonymous user with full read access, always confirm that they cannot work with less access.
 
-## 5 Security Review
+## Security Review
 
 When going over an application and reviewing an anonymous user, there are three things that most often trigger a red flag (indicating the application is not secure):
 
@@ -41,7 +41,7 @@ Whenever you see any of these situations, you should carefully consider if these
 
 Any user can talk directly to the API by downloading a tool that can post messages to a URL and trying to send JSON queries to the platform. This simulates communication between the browser and the server, because the server doesn't care who sends the messages as long as they match what is allowed within the session.
 
-## 6 Best Practice 
+## Best Practice 
 
 If you have anonymous access, you need to limit the access to as few entities as possible and never give full read access to all attributes if it is just for selecting items. For example, if an anonymous user is allowed to see a project name, then only give read access to the project name and not the full entity.
 
@@ -49,6 +49,6 @@ If you need to give an anonymous user access to change an object ALWAYS apply in
 
 Limiting the navigation or page display is not the same thing as security. All data can be accessed by talking directly to the Platform APIs, and anything that is visible according to the security model is accessible by sending the correct messages to the server. Limiting data in the UI does not mean that it cannot be accessed. Only instance access rules guarantee what you can and cannot do.
 
-## 7 Read More
+## Read More
 
 * [Creating a Secure App](/howto8/security/create-a-secure-app/)

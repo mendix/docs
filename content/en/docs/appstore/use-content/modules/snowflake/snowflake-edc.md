@@ -6,13 +6,13 @@ description: "Describes the steps required to use the Mendix External Database c
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 The [External Database connector](/appstore/modules/external-database-connector/) allows you to connect to databases and select data to use in your app. You can use it to directly test connections and queries during configuration in Studio Pro (design time). For Mendix apps that use Snowflake as their database, the External Database connector is the recommended integration option for Mendix 10.
 
 This how-to describes the steps required to enable your app to use the External Database connector with Snowflake, and to model several common use cases.
 
-## 2 Configuring the Connection Between Your Mendix App and Snowflake
+## Configuring the Connection Between Your Mendix App and Snowflake
 
 To configure connect your Mendix application to Snowflake with the External Database connector, follow these steps:
 
@@ -37,7 +37,7 @@ You can use the connection constants to point your application to a different Sn
 
 You can now configure the queries that you need to run on your Snowflake database. The following sections of this document provide examples of some common queries, using data from the *Global Weather & Climate Data for BI* demo dataset available in Snowflake. For general information about creating queries, see [External Database Connector: Querying a Database](/appstore/modules/external-database-connector/#query-database) and [External Database Connector: Using Query Response](/appstore/modules/external-database-connector/#use-query-response).
 
-## 3 Configuring a Basic Query
+## Configuring a Basic Query
 
 This section provides an example of a query that determines the average minimum, maximum, and average temperature for a given postal code for the next 10 calendar days, based on the climate data in the **CLIMATOLOGY_DAY** view.
 
@@ -98,7 +98,7 @@ To execute and test the query in Studio Pro, follow these steps:
 8. Specify the microflow as the datasource for the gallery widget.
 9. Run the page, provide a valid postalcode, and validate the result of the page.
 
-## 4 Configuring a Filtered Query
+## Configuring a Filtered Query
 
 This section provides an example of a filtered query. Although you can filter, sort, and paginate data in your Mendix app by using the [Data Grid 2](/appstore/modules/data-grid-2/) widget, this widget operates mostly client-side, so as a best practice, you may want to pre-filter the data retrieved from Snowflake before using it in a grid. The following example shows how you can specify a filter based on the postal code and country in your SQL query. After running the query, you can then further limit the results with data grid filters, sorting, and pagination.
 
@@ -148,11 +148,11 @@ To execute and test the query in Studio Pro, follow these steps:
     10. Click **OK**.
 11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
-## 5 Configuring a Query to Display Data as a Chart
+## Configuring a Query to Display Data as a Chart
 
 This section provides an example of configuring a query that provides the data required to generate a chart. The chart in the example contains multiple series of historic temperatures. The query averages the minimum, maximum and average temperature in Celsius for all US locations and returns one record for each day available in the database.
 
-### 5.1 Displaying the Data in a Multi-Series Chart
+### Displaying the Data in a Multi-Series Chart
 
 To define, test and execute the query in Studio Pro, follow these steps:
 
@@ -195,7 +195,7 @@ To define, test and execute the query in Studio Pro, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source.png" >}}
 
-### 5.2 Improving the Performance by Fetching the Data in a Single Query
+### Improving the Performance by Fetching the Data in a Single Query
 
 Using a multi-series chart as in the above example can result in slower performance, because the query is executed for every series. To improve performance, you can replace the query in the previous section with the following one, which returns a row per measurement type. In this version, a single query is sufficient to fetch all data for the chart.
 
@@ -233,7 +233,7 @@ The **group by** property is used to select the column that indicates the series
 
 {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-chart-source2.png" >}}
 
-## 6 Implementing Data Replication
+## Implementing Data Replication
 
 Data replication involves copying the data from Snowflake into the database of your app. This makes the data faster to access and easier to use in your app pages. To ensure that the data in your app is up to date, the data replication process must be recurrent. For example, you can configure a query that iterates over Snowflake data (for example, the list of your customers) at a preconfigured interval, in order to find any differences compared to the last iteration and copy them over to your app database. 
 
@@ -296,7 +296,7 @@ To execute and test the query in Studio Pro, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication-grid.png" >}}
 
-## 7 Using Cortex AI functions
+## Using Cortex AI functions
 
 Snowflake comes with built in AI functionality that you can leverage in your Mendix applications. This section provides an example of a query that calls the *sentiment* function to analyze the sentiment of a piece of text.
 

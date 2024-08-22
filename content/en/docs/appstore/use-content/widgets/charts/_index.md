@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Charts widget, which 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
@@ -34,11 +34,11 @@ These are the available charts:
 * Heat chart
 * Bubble chart
 
-## 2 Common Chart Properties
+## Common Chart Properties
 
-### 2.1 Data Source
+### Data Source
 
-#### 2.1.1 Series
+#### Series
 
 The **Series** property makes it easy to configure, control, and modify a chart series:
 
@@ -67,9 +67,9 @@ Beside the **General** tab you will find 3 more tabs in the **Edit Series** dial
 * **Events** – This lists possible event triggers.
 * **Advanced** – This uses one field which will hold a JSON object with advanced configuration for this data series.
 
-### 2.2 General
+### General
 
-#### 2.2.1 Enable Developer Mode
+#### Enable Developer Mode
 
 {{% alert color="warning" %}}
 All changes made in the developer editor are temporary. To save your progress, copy the settings from the **Custom settings** area to the **Chart settings** in Studio Pro.
@@ -91,17 +91,17 @@ To see available options and useful examples, see Plotly's [JavaScript Figure Re
 
 For more information on saving custom settings for a chart, see the [Chart customization](#customization).
 
-#### 2.2.2 Show Legend
+#### Show Legend
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/chart-with-legend.png" width="450px" alt="Column chart. The legend list on right side is highlighted with red square." class="no-border" >}}
 
 This setting controls the visibility of a chart's legend block (highlighted in the picture above). If set to **no**, then the legend block is hidden.
 
-#### 2.2.3 X Axis Label and Y Axis Label
+#### X Axis Label and Y Axis Label
 
 These two properties control labels for the X and Y axis respectively.
 
-#### 2.2.4 Grid Lines
+#### Grid Lines
 
 This property controls horizontal and vertical rulers of the chart:
 
@@ -110,17 +110,17 @@ This property controls horizontal and vertical rulers of the chart:
 * **Vertical** – Only a vertical ruler is visible.
 * **Both** – Both types of rulers are visible.
 
-## 3 Dimensions
+## Dimensions
 
-### 3.1 Width Unit
+### Width Unit
 
 This property controls the unit measuring the widget (it can be **percentage** or **pixels**).
 
-### 3.2 Width
+### Width
 
 This property controls width of the widget.
 
-### 3.3 Height Unit
+### Height Unit
 
 This property controls the unit for measuring widget height:
 
@@ -128,31 +128,31 @@ This property controls the unit for measuring widget height:
 * **Pixels** – This uses pixels as height unit (a good option for most cases).
 * **Percentage of parent** – Height is measured relative to a parent **height** property (only works when parent has **height** CSS property).
 
-### 3.4 Height
+### Height
 
 This property controls height of the widget.
 
-## 4 Advanced
+## Advanced
 
-### 4.1 Enable Theme Folder Config
+### Enable Theme Folder Config
 
 If set to **Yes** this widget will try to load global chart settings specified in the *theme/web/com.mendix.charts.json* file. Before using this feature make sure this file is present in your app.
 
-### 4.2 Custom Layout
+### Custom Layout
 
 Please, find more details in [Custom Layout](#custom-layout) in customization section.
 
-### 4.3 Custom Configurations
+### Custom Configurations
 
 Please, find more details in [Custom Configurations](#custom-configurations) in customization section.
 
-## 5 Chart-Specific Settings
+## Chart-Specific Settings
 
-### 5.1 Area Chart
+### Area Chart
 
-#### 5.1.1 Edit Series Item Dialog
+#### Edit Series Item Dialog
 
-##### 5.1.1.1 Appearance
+##### Appearance
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
@@ -162,107 +162,107 @@ Please, find more details in [Custom Configurations](#custom-configurations) in 
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
-### 5.2 Bar Chart
+### Bar Chart
 
-#### 5.2.1 General
+#### General
 
-##### 5.2.1.1 Bar Format
+##### Bar Format
 
 This setting controls the bar format. In the **group** format, bars go one below the other. In the **stacked** format, bars are stacked on top of one another forming one line.
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/bar-chart-formats.png" width="450px" alt="Two bar charts. On the left bar chart lines in group go one below other. On the right chart, lines in group stacked on top of each other, forming one big line." class="no-border" >}}
 
-#### 5.2.2 Edit Series Item Dialog
+#### Edit Series Item Dialog
 
-##### 5.2.2.1 Appearance
+##### Appearance
 
 * **Bar color** – The color used to fill line for this data series.
 
-### 5.3 Bubble Chart
+### Bubble Chart
 
-#### 5.3.1 Edit Series Item Dialog
+#### Edit Series Item Dialog
 
-##### 5.3.1.1 General
+##### General
 
 * **Bubble Size Attribute** – This attribute controls bubble size for a given item in series.
 * **Auto Scale** – If **Yes** then bubble size and proportions will be computed automatically (otherwise the value from **Scale factor** will be used).
 * **Scale Factor** – This controls the scale factor of bubbles on a chart. This value will be used to determine the final bubble size by multiplying current scale factor value and value from the bubble size attribute.
 
-##### 5.3.1.2 Appearance
+##### Appearance
 
 * **Marker color** – The color used to fill marker for this data series.
 
-### 5.4 Column Chart
+### Column Chart
 
-#### 5.4.1 General
+#### General
 
-##### 5.4.1.1 Column Format
+##### Column Format
 
 This setting controls a chart's format. In the **group** format, columns go one after another. In the **stacked** format columns from each series will be stacked on top of each other. 
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/column-chart-format-grouped-vs-stacked.png" alt="Two column charts. On the left chart columns go one after another. On the right chart pairs of columns stacked on each other, each pair go one after another." title="Two format types of column chart, where group format is present on the left and stack format is present on the right." class="no-border" >}}
 
-#### 5.4.2 Edit Series Item Dialog
+#### Edit Series Item Dialog
 
-##### 5.4.2.1 Appearance
+##### Appearance
 
 * **Column color** – The color used to fill columns for this data series.
 
-### 5.5 Heat Map
+### Heat Map
 
-#### 5.5.1 Data Source
+#### Data Source
 
-##### 5.5.1.1 Value attribute
+##### Value attribute
 
 The entity attribute used to retrieve value for z axis (aka heat).
 
-#### 5.5.2 Axis
+#### Axis
 
-##### 5.5.2.1 X Axis Attribute
+##### X Axis Attribute
 
 This is a value for a chart's horizontal (x) axis.
 
-##### 5.5.2.2 X Axis Sort Attribute
+##### X Axis Sort Attribute
 
 The attribute to used when sorting items in series for horizontal axis.
 
-##### 5.5.2.3 Y Axis Attribute
+##### Y Axis Attribute
 
 This is a value for a chart's vertical (y) axis.
 
-##### 5.5.2.4 Y Axis Sort Attribute
+##### Y Axis Sort Attribute
 
 The attribute to used when sorting items in series for vertical axis.
 
-#### 5.5.3 General
+#### General
 
-##### 5.5.3.1 Show Scale
+##### Show Scale
 
 If set to **Yes** then show scale on the right side of the chart.
 
-#### 5.5.4 Scale
+#### Scale
 
-##### 5.5.4.1 Colors
+##### Colors
 
 Allow to specify list of colors to use in the heat map. Each item define color for value in percentage. At least two values needs to be specified, for 0% and 100%, else the default colors are used.
 
-##### 5.5.4.2 Smooth Color
+##### Smooth Color
 
 If set to **Yes** then show scale as smooth gradient between two colors.
 
-##### 5.5.4.3 Show Values
+##### Show Values
 
 If set to **Yes** then show value for each dot on chart.
 
-##### 5.5.4.4 Font Value Color
+##### Font Value Color
 
 The font color to display values for each dot.
 
-### 5.6 Line Chart
+### Line Chart
 
-#### 5.6.1 Edit Series Item dialog
+#### Edit Series Item dialog
 
-##### 5.6.1.1 Appearance
+##### Appearance
 
 * **Interpolation** – This determines the line shape: **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
@@ -272,11 +272,11 @@ The font color to display values for each dot.
 * **Line color** – The color used to fill line for this data series.
 * **Area fill color** – The color used to fill area for this data series.
 
-### 5.7 Pie Chart
+### Pie Chart
 
-#### 5.7.1 Data Source
+#### Data Source
 
-##### 5.7.1.1 Series Name
+##### Series Name
 
 This property allows for an expression that when evaluated will return a unique name for a single series:
 
@@ -286,35 +286,35 @@ This property allows for an expression that when evaluated will return a unique 
 This property is required. 
 {{% /alert%}}
 
-##### 5.7.1.2 Value Attribute
+##### Value Attribute
 
 The attribute used to retrieve value for an item in the series.
 
-##### 5.7.1.3 Sort Attribute
+##### Sort Attribute
 
 The attribute used to sort items in the series.
 
-##### 5.7.1.4 Slice Color
+##### Slice Color
 
 Text template used to get color value for an item. Can use attributes as parameters.
 
-#### 5.7.2 General
+#### General
 
-##### 5.7.2.1 Hole Radius
+##### Hole Radius
 
 A percentage between 0 an 100 indicating the radius of the hole in the pice chart relative to the chart itself. Defaults to 0.
 
-### 5.8 Time Series
+### Time Series
 
-#### 5.8.1 General
+#### General
 
-##### 5.8.1.1 Show Range Slider
+##### Show Range Slider
 
 If set to **Yes** then show additional range control at the bottom of chart.
 
-#### 5.8.2 Edit Series Item Dialog
+#### Edit Series Item Dialog
 
-##### 5.8.2.1 Appearance
+##### Appearance
 
 * **Interpolation** – Determines the line shape. Could be  **linear** or **curved**. In **linear** mode dots will be connected using straight lines, in **curved** they will be connected using curved lines.
 * **Line style**
@@ -325,9 +325,9 @@ If set to **Yes** then show additional range control at the bottom of chart.
 * **Fill area** – If set to **Yes** then fill area between data point and x-axis.
 * **Area fill color** – The color used to fill area for this data series.
 
-## 6 Chart Customization {#customization}
+## Chart Customization {#customization}
 
-### 6.1 Custom Series Settings
+### Custom Series Settings
 
 Our underlying graphics library has a flexible API which allows you to configure each series in a chart individually.
 
@@ -341,7 +341,7 @@ To navigate to a series' custom settings, do the following:
 
     {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-series-settings-step-2.png" width="450px" alt="Settings dialog box window with Advanced tab being active and single textarea element." class="no-border" >}}
 
-### 6.2 Custom Layout {#custom-layout}
+### Custom Layout {#custom-layout}
 
 This property allows you to save your custom **Layout** settings for this widget.
 
@@ -351,7 +351,7 @@ To save your custom settings that related to the **Layout** group, navigate to t
 
 These layout settings will be passed to the underlying Plotly JavaScript library. To see available options and their description. Visit the [Layout](https://plotly.com/javascript/reference/#layout) section of the *Plotly Reference Guide*. 
 
-### 6.3 Custom Configurations {#custom-configurations}
+### Custom Configurations {#custom-configurations}
 
 This property allows you to save your custom **Configuration** settings for this widget.
 
@@ -359,13 +359,13 @@ This object will be merged with default settings and passed to the underlying [P
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/custom-config.png" width="450px" alt="Settings dialog box with Advanced tab being active. Tab includes two text area on of which is focused." class="no-border" >}}
 
-## 7 Legacy Chart Widget Documentation {#legacy-widget-docs}
+## Legacy Chart Widget Documentation {#legacy-widget-docs}
 
 {{% alert color="warning" %}}
 This widget is experiencing rendering issues in Studio Pro's **Design mode**. The behavior is under investigation.
 {{% /alert %}}
 
-### 7.1 Introduction
+### Introduction
 
 The [Charts](https://marketplace.mendix.com/link/component/105695/) widget enables plotting and comparing your data across different charts.
 
@@ -380,9 +380,9 @@ These are the available charts:
 * Heat chart
 * Bubble chart
 
-### 7.2 Basic Configuration
+### Basic Configuration
 
-#### 7.2.1 Line Chart {#line-chart}
+#### Line Chart {#line-chart}
 
 A **Line chart** (scatter chart) should have one or more series, each displaying commonly grouped data points.
 
@@ -401,19 +401,19 @@ A series' data can be retrieved from the database, by a microflow, or from a RES
 The line chart's X-axis provides support for dates, and thus the line chart can be configured as a [time series chart](#time-series).
 {{% /alert %}}
 
-#### 7.2.2 Area Chart
+#### Area Chart
 
 The **Area chart** has data properties identical to those of the [Line chart](#line-chart).
 
-#### 7.2.3 Column Chart {#column-chart}
+#### Column Chart {#column-chart}
 
 The **Column chart** has data properties identical to those of the [Line chart](#line-chart). However, there is no support for the **Date and time** data type.
 
-#### 7.2.4 Bar Chart
+#### Bar Chart
 
 The **Bar chart** has data properties identical to those of the [Column chart](#column-chart). 
 
-#### 7.2.5 Pie Chart {#pie-chart}
+#### Pie Chart {#pie-chart}
 
 Unlike the chart types above, the **Pie chart** requires no series. 
 
@@ -427,11 +427,11 @@ These are the properties for configuring Pie chart data:
     * **Color attribute** (required) – the attribute that contains the data point colors
     * **Sort attribute** – the attribute to use for sorting the X-axis data
 
-#### 7.2.6 Time Series Chart {#time-series}
+#### Time Series Chart {#time-series}
 
 The **Time series chart** is a specialised version of the [Line chart](#line-chart), focusing on the X-axis dates. Therefore, it has data properties identical to those of the line chart.
 
-#### 7.2.7 Heat Map
+#### Heat Map
 
 The **Heat map** should be configured with required horizontal, vertical, and data attributes.
 
@@ -439,11 +439,11 @@ The sample domain model could be either of the two configurations below:
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/heat-map.png" class="no-border" >}}
 
-#### 7.2.8 Bubble chart
+#### Bubble chart
 
 The **Bubble chart** has data properties identical to those of the [Line chart](#line-chart). However, the **Bubble size data** attribute is required, as it contains and determines the size of the bubble.
 
-### 7.3 Advanced Configuration
+### Advanced Configuration
 
 The charts in this widget are based on the [mendixlabs/charts](https://github.com/mendixlabs/charts/issues) library. As such, the widget provides support for advanced users to extend or overwrite the basic settings by adding the chart properties as JSON.
 
@@ -451,7 +451,7 @@ To enable this feature, go to the **Mode** option in the **Advanced** properties
 
 The available advanced options and their usage are described below.
 
-#### 7.3.1 Layout Options for All Charts
+#### Layout Options for All Charts
 
 The layout options control the general appearance of a chart. Common options include `title`, `showlegend`, `xaxis`, and `yaxis`. 
 
@@ -465,7 +465,7 @@ The layout options control the general appearance of a chart. Common options inc
 }
 ```
 
-#### 7.3.2 Configurations Options for All Charts
+#### Configurations Options for All Charts
 
 Configuration options control the appearance of a chart beyond the layout options. Common options include `displayModeBar` and `doubleClick`.
 
@@ -479,7 +479,7 @@ Configuration options control the appearance of a chart beyond the layout option
 
 For more details, see the [Advanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
-#### 7.3.3 Data Options for the Pie Chart
+#### Data Options for the Pie Chart
 
 On the [Pie chart](#pie-chart), the data options control the appearance of the pie circle beyond the general layout options. Options include `hole`, `name`, and `marker`.
 
@@ -491,13 +491,13 @@ On the [Pie chart](#pie-chart), the data options control the appearance of the p
 
 For more details, see the [Advanced Configuration Settings](https://raw.githubusercontent.com/mendixlabs/charts/v1.4.4/AdvancedCheatSheet.md).
 
-#### 7.3.4 Series Options for the Line and Column Charts
+#### Series Options for the Line and Column Charts
 
 The series options control the appearance of a specific series on the [Line chart](#line-chart) and [Column chart](#column-chart). Options include `line color` and `line shape`.
 
 For the full Plotly API reference, see [JavaScript Figure Reference](https://plot.ly/javascript/reference/).
 
-#### 7.3.5 Theme-Based Advanced Configuration
+#### Theme-Based Advanced Configuration
 
 The settings above can also be added in a global context via the **theme** folder of your Mendix app root directory.
 
@@ -552,6 +552,6 @@ Add a *.json* file named *com.mendix.charts* to the **theme** folder. The JSON s
 Use this with caution, as the configs set up here shall be applied to every instance of the charts in your application. Only the advanced configurations set up in the widget itself have a higher precedence.
 {{% /alert %}}
 
-### 8 Read More
+### Read More
 
 * [Charts Configuration](/refguide/charts-configuration/)

@@ -3,11 +3,11 @@ title: "XPath count"
 url: /refguide9/xpath-count/
 ---
 
-## 1 Overview
+## Overview
 
 The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.
 
-## 2 Examples
+## Examples
 
 This query returns a count of all the placed orders:
 

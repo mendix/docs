@@ -4,11 +4,11 @@ url: /refguide/xpath-ends-with/
 weight: 18
 ---
 
-## 1 Overview
+## Overview
 
 The `ends-with()` function checks whether a string attribute ends with a specific string (case-insensitive) as a sub-string.
 
-## 2 Example
+## Example
 
 This query returns all customers whose name ends with the sub-string `sen`:
 

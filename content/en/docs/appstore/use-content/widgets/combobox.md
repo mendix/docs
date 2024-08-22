@@ -44,9 +44,9 @@ Styling:
 
 The following sections will describe the different available widget properties and how to configure the widget using them.
 
-### General Tab {#general}
+### Tab 'General' {#general}
 
-#### Data Source Tab
+#### Box 'Data Source'
 
 The **Source** option (required) is used is used to configure the datasource type for the widget. It supports the following data types via these properties:
 
@@ -70,7 +70,24 @@ The database source type can be used to set the value of a string or integer att
 
 The static source type can be used to set the value of a string attribute with manually configured values.
 
-#### General Tab
+#### Box 'Attribute' (visible at Context -> Association)
+
+* **Entity**
+* **Selectable objects** for the object-list to show in the combo-box drop-down. Has to be associated to an entity available in the context
+* **Caption type** and
+* **Caption** defining the text shown in each drop-down line.
+
+#### Box 'Attribute' (visible at Database)
+
+* **Value** which will get copied
+* **Attribute** where the value will get written to 
+* **Default value** which will get copied, if 'Value' is empty 
+
+#### Box 'Attribute' (visible at Static)
+* **Value** which will get copied
+* **Attribute** where the value will get written to 
+
+#### Box 'General'
 
 The **General** section allows you to configure general behavior and captions for the combo box. The following configurations are available:
 
@@ -82,9 +99,9 @@ The **General** section allows you to configure general behavior and captions fo
 * **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
     {{< figure src="/attachments/appstore/use-content/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
 
-#### Multi Selection (Reference Set)
+#### Box 'Multi Selection' (Reference Set)
 
-The **Multi selection (reference set)** section allows you to configure combo box behavior for reference set type datasource. The following configurations are available:
+The **Multi selection (reference set)** section (only visible for datasource 'Context' -> 'Association') allows you to configure combo box behavior for reference set type datasource. The following configurations are available:
 
 * **Selection Method** – configures the behavior for selecting options
     * **Checkbox** – displays a checkbox on the left side of each option. Selected items will be marked by check marks.
@@ -98,29 +115,35 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 
     {{< figure src="/attachments/appstore/use-content/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
 
-#### Label
+#### Box 'Label'
 
 The **Label** section allows you to display labels for the combo box.
 
-#### Conditional Visibility {#visibility}
+#### Box 'Conditional Visibility' {#visibility}
 
 For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
 
-#### Editability Tab {#editability}
+#### Box 'Editability' {#editability}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
-### Events Tab {#events}
+### Tab 'Events' {#events}
 
 The following configurations are available:
 
 * **On change** – executes an action when the attribute value changes
 
-### Accessibility Tab {#accessibility}
+### Tab 'Accessibility' {#accessibility}
 
 The **Accessibility** tab allows you to configure settings for combo box accessibility features.
 
-### Common Tab {#common}
+### Tab 'Advanced' {#advanced}
+
+* **Lazy loading** Set attribute Lazy loading to yes, if the combobox is used only every now-and-then, thus prevent having to wait extra for the page to complete. Set it to no, if the combobox is likely to get used often, prevent having to wait after clicking on the combo-box.
+
+* **Loading type** This defines the image shown while waiting for the dropdown-list to complete.
+
+### Tab 'Common' {#common}
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 

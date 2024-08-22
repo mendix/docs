@@ -27,7 +27,7 @@ The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
+You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make the integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by this module.
 
 ### Licensing and Cost
 
@@ -67,12 +67,24 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The **USE_ME** folder contains several subfolders containing operations that depend on the GenAICommons module. The following example microflows have been created for each of these inside the **ExampleImplementations** folder:
+
+* EXAMPLE_ChatCompletions_FunctionCalling
+* EXAMPLE_ChatCompletions_Vision
+* EXAMPLE_ChatCompletions_withHistory
+* EXAMPLE_ChatCompletions_withoutHistory
+* EXAMPLE_Embeddings_ChunkCollection
+* EXAMPLE_Embeddings_SingleString
+* EXAMPLE_Retrieve
+* EXAMPLE_RetrieveAndGenerate
+* EXAMPLE_ImageGeneration_MultipleImages
+
+For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
-4. In the **App Explorer**, in the **AmazonBedrockConnector (other)** section, find the **ListFoundationModels** activity.
+4. In the **Toolbox**, in the in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
@@ -85,6 +97,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type [FoundationModelSummary](#foundation-model-summary).
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+
+You can follow a similar approach to implement any of the other operations in **Amazon Bedrock (other)**.
 
 ### Chatting with Large Language Models using the ChatCompletions Operation
 

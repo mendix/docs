@@ -1378,6 +1378,70 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `ENUM_Region (enumeration)`, `Credentials (object)`, `GetAgentRequest (object)` | `GetAgentResponse (object)` |
 
+#### Operations to Persist Amazon Bedrock Metadata inside the Application
+
+The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
+
+This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabililties on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+
+Currently, there are operations available to sync metadata about:
+* Sync Models 
+* Sync Knowledge Bases
+* Sync Agents
+
+The syncing process works the same for all of these operations. 
+1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
+2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
+3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
+
+The available operations are described in the following section. 
+
+##### Sync Models {#sync-models}
+
+The `Sync Models` activity allows you to retrieve and store metadata about available models on Amazon Bedrock in your app's database. 
+The model information is persistent in the `AmazonBedrockModel` entity.
+
+Information about the models output and input modalities are stored as associations to the `ModelModality` entity. 
+The input modality describes which form of data can be sent to the model.
+The output modality describes which form of data the model will return. 
+
+Information about the models inference type is stored as association to the `ModelInferenceType` entity.
+The inference type describes how the model can be accessed. *ON Demand* models are accessible by default and charged by usage. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
+
+##### Sync Knowledge Bases {#sync-knowledge-bases}
+
+The `Sync Knowledge Bases` activity allows you to retrieve and store metadata about available knowledge bases on Amazon Bedrock in your app's database. 
+The knowledge base information is persistent in the `AmazonBedrockKnowledgeBase` entity.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
+
+##### Sync Agents {#sync-agents}
+
+The `Sync Agents` activity allows you to retrieve and store metadata about available agents on Amazon Bedrock in your app's database. 
+The agent information is persistent in the `AmazonBedrockAgent` entity.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
+
 ## Troubleshooting
 
 If you encounter any issues while using the Amazon Bedrock connector, use the following troubleshooting tips to help you solve them.

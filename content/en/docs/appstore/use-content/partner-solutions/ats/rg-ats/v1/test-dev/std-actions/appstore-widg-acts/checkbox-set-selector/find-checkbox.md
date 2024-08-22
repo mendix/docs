@@ -3,19 +3,19 @@ title: "Find Checkbox Set Selector (All)"
 url: /appstore/partner-solutions/ats/rg-one-find-checkbox-set-selector/
 ---
 
-## 1 Description
+## Description
 
 Finds a checkbox by given cell value and column caption. Returns the first match.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget, the column caption, and the cell value of the checkbox you want to find.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
@@ -23,7 +23,7 @@ Widget Name | String | Yes | The name of the widget.
 Column Caption | String  | Yes | The caption of the desired checkbox column.
 Value | String | Yes | The cell value of the checkbox row.
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

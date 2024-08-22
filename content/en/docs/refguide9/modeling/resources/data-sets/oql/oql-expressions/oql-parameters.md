@@ -3,11 +3,11 @@ title: "OQL Parameters"
 url: /refguide9/oql-parameters/
 ---
 
-## 1 Introduction
+## Introduction
 
 Currently, parameters are only supported within OQL queries defined in [datasets](/refguide9/data-sets/). To use a defined parameter in a query, use the `$` sign.
 
-## 2 Examples
+## Examples
 
 Examples of correct parameter names are `$weight_range`, `$age`.
 

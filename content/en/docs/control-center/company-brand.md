@@ -6,7 +6,7 @@ weight: 35
 no_list: list
 ---
 
-## 1 Introduction
+## Introduction
 
 On the **Company Brand** page, you can upload, edit, or remove a **Company Logo**. The company logo uploaded here will appear across the platform where it is used. For instance, it will be displayed on your published Marketplace content.
 

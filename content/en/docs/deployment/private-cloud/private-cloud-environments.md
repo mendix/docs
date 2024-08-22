@@ -6,7 +6,7 @@ description: "Best Practices for Private Cloud Environments"
 weight: 70
 ---
 
-## 1 Introduction
+## Introduction
 
 With Mendix for Private Cloud, you have more control over where the environments you need for your Mendix app are created. You can decide whether a cluster contains one namespace or several, whether a namespace contains one environment or several, and whether those environments are all for the same app, or for several.
 
@@ -14,7 +14,7 @@ With Mendix for Private Cloud, you have more control over where the environments
 
 This document discusses the recommended ways of configuring environments for Private Cloud clusters and the licensing requirements.
 
-## 2 Licensing Overview
+## Licensing Overview
 
 You need a copy of the Mendix Operator and (optionally) the Mendix Gateway Agent for each Namespace you create in your Private Cloud to create environments for Mendix apps. You can evaluate these without a license, but there are strict limitations on this.
 
@@ -24,7 +24,7 @@ In addition, you need a runtime license for your app, in the same way as you wou
 
 See [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) for more information on this subject.
 
-## 3 Production Environments
+## Production Environments
 
 It is recommended that production environments should always be in their own namespace. This has the following benefits:
 
@@ -34,11 +34,11 @@ It is recommended that production environments should always be in their own nam
 
 There may circumstances when you prefer a separate cluster for each production environment, not just a separate namespace.
 
-## 4 Non-production Environments
+## Non-production Environments
 
 There are two possible ways to set up your non-production (for example test and acceptance) environments:
 
-### 4.1 Minimal
+### Minimal
 
 In the minimal configuration, all non-production environments are put into a single namespace. This has the benefit of simplicity. As these are not production environments it is expected that they will not have a large volume of data or users, and that the test data does not require any special security.
 
@@ -46,7 +46,7 @@ In the minimal configuration, all non-production environments are put into a sin
 
 This approach is not recommended if you are performing stress tests on your app as it will be affected by other apps running in the same namespace.
 
-### 4.2 Fine-grained
+### Fine-grained
 
 A more fine-grained approach separates out non-production environments into different namespaces, or even namespaces in different clusters.
 

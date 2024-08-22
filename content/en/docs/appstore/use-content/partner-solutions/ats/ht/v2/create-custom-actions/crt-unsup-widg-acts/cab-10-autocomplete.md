@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-cab-10-autocomplete/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the AutoComplete widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create an Unsupported Widget action for the AutoComplete widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
@@ -17,13 +17,13 @@ This how-to teaches you how to do the following:
 * Approach an AutoComplete option that ATS must click
 * Create the custom action to click the AutoComplete option
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [General](/appstore/partner-solutions/ats/ht-two-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
@@ -45,7 +45,7 @@ This is the AutoComplete widget filled in:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-10-autocomplete/filledin.png" class="no-border" >}}
 
-## 4 Creating the Action Structure
+## Creating the Action Structure
 
 In the previous step, you wrote down the user approach for the reference selector widget. Now you will create this approach in ATS with actions.
 
@@ -162,7 +162,7 @@ To create the action structure, follow these steps:
 
 The action structure is now complete.
 
-## 5 Action Parameters
+## Action Parameters
 
 Next, you need to add these action input parameters:
 
@@ -204,7 +204,7 @@ To add the action parameters, follow these steps:
 
 There is no need to add extra logic to this action. Its only involves selecting an option in the widget.
 
-## 6 Final Check
+## Final Check
 
 Now check for the following:
 

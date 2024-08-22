@@ -3,6 +3,8 @@ title: "Private Mendix Platform"
 url: /releasenotes/private-platform/
 description: "Release notes for updates to the Private Mendix Platform"
 weight: 40
+cascade:
+    - numberless_headings: true
 ---
 
 These release notes cover changes made to the [Private Mendix Platform](/private-mendix-platform/).

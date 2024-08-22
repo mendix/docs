@@ -9,7 +9,7 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can create a new app in one click and leave the app just as easily when you are not using it anymore. However, if you are thinking about leaving an app, consider carefully whether you may want to use that app later for any reason.
 
@@ -19,7 +19,7 @@ This how-to teaches you how to do the following: as a Scrum Master:
 * Delete an app
 * Deactivate an app
 
-## 2 Prerequisites
+## Prerequisites
 
 Before you delete or deactivate an app, make sure you have completed the following prerequisites:
 
@@ -27,7 +27,7 @@ Before you delete or deactivate an app, make sure you have completed the followi
 
 {{% alert color="info" %}}If you are a [Mendix Admin](/control-center/apps/), you can delete, deactivate, and activate all the company's apps, with or without team members for the app.{{% /alert %}}
 
-## 3 Leaving, Deleting, or Deactivating an App
+## Leaving, Deleting, or Deactivating an App
 
 If you want to leave and delete your app, follow these steps:
 
@@ -45,11 +45,11 @@ If you want to leave and delete your app, follow these steps:
 
     {{% alert color="warning" %}}Only Free Apps can be deleted. App deletion cannot be undone, which means that ALL DATA WILL BE LOST, including all files on the [Team Server](/developerportal/general/team-server/) and all data in the Free App node.{{% /alert %}}
 
-## 4 Alternative Method
+## Alternative Method
 
 If you are the only team member of an app, you can also leave and delete the app directly from your list of apps. For more information, see [My Apps](/developerportal/#my-apps).
 
-## 5 Read More
+## Read More
 
 * [Settings](/developerportal/collaborate/general-settings/)
 * [App Roles](/developerportal/general/app-roles/)

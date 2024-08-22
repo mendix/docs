@@ -5,7 +5,7 @@ description: "Describes the purpose, features, and configuration of the Badge wi
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Badge](https://marketplace.mendix.com/link/component/50325/) widget shows a value inside a colored badge or label.
 
@@ -15,7 +15,7 @@ The widget does the following:
 * Becomes a fully accessible button when an On click action is configured
 * Offers brand styling with the **Style** design property
 
-## 2 Configuration
+## Configuration
 
 To configure the Badge widget, do the following:
 
@@ -28,7 +28,7 @@ Optionally, you can configure the widget further:
 * Select an On click action to convert the badge into a button, which will execute this action when clicked on or activated with an <kbd>Enter</kbd> or <kbd>Space</kbd> key press
 * Navigate to the **Appearance** tab and select a brand style with the **Style** design property to give the badge or label a suitable color
 
-## 3 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features:
 

@@ -5,7 +5,7 @@ weight: 50
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will present guidelines for setting up Mendix SQL maintenance plans.
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 * Set up notifications
 * Set up user database maintenance plans
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -27,9 +27,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Consider the amount of soft backups that need to be kept
 * Consider what email address will receive maintenance notifications
 
-## 3 SQL Basic Maintenance Plan
+## SQL Basic Maintenance Plan
 
-### 3.1 The Basics
+### The Basics
 
 Maintenance plans are created by the editor in the SQL Server Management Studio.
 
@@ -44,7 +44,7 @@ To add a task step, follow these steps:
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/sql-server/mendix-sql-maintenance-plans/18580648.jpg" class="no-border" >}}
 
-### 3.2 Notifications
+### Notifications
 
 To configure notifications, follow these steps:
 
@@ -78,7 +78,7 @@ This is the pattern for a notification:
 * Body: `<SQL instance> - <subplan name> <successful/failed>`
     * For example: *Mendix-SQL1 – database backup (full) successful*
 
-### 3.3 User Databases
+### User Databases
 
 In this section, you are going to create a new maintenance plan called **MP_USERDB** containing subplans:
 
@@ -129,7 +129,7 @@ You should adapt the times set to your desired backup retention time. The cleanu
 
 {{% /alert %}}
 
-### 3.4 System Databases
+### System Databases
 
 In this section, you are going to create a new maintenance plan called **MP_SYSDB** containing the following subplans:
 
@@ -155,7 +155,7 @@ In this section, you are going to create a new maintenance plan called **MP_SYSD
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/sql-server/mendix-sql-maintenance-plans/18580655.png" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [How to Restore an SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)
 * [How to Troubleshoot SQL Server](/developerportal/deploy/troubleshooting-sql-server/)

@@ -6,7 +6,7 @@ description: "Describes the Mendix Buzz, which is the landing page for working o
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Located in the [navigation pane](/developerportal/#navigation-pane) of **Apps**, Buzz lets you see your app activity as well as collaborate and share ideas with your team. 
 
@@ -18,6 +18,6 @@ Click **Invite someone to your team** ({{% icon name="add-circle" %}}) to invite
 
 Once you have posted a comment, you can click **Edit** to **Update Message** or **Delete**. You can also **Reply in Thread** to comments left by colleagues.
 
-## 2 Read More
+## Read More
 
 * [Team](/developerportal/general/team/)

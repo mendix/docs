@@ -5,7 +5,7 @@ url: /refguide9/testing-microflows-with-unit-testing-module/
 weight: 3
 ---
 
-## 1 Introduction
+## Introduction
 
 Verify that your [microflow](/refguide9/microflows/) works as expected by creating unit tests with the [Unit Testing](/appstore/modules/unit-testing/) module. 
 
@@ -16,7 +16,7 @@ This how-to teaches you how to do the following:
 * Set up the Unit Testing module
 * Unit-test a microflow
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -29,7 +29,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{% alert color="info" %}}All the images, names, and steps in this how-to are based on the Marketplace component versions listed above. When using later versions of this content, images or names on your screen may be different than shown in this how-to.{{% /alert %}}
 
-## 3 Setting up the Unit Testing Module
+## Setting up the Unit Testing Module
 
 To set up the unit testing module and run the example tests, follow these steps:
 
@@ -75,11 +75,11 @@ To set up the unit testing module and run the example tests, follow these steps:
 
 17. To view detailed test results, in the **UnitTesting.Test_ValidUnitTest** row, click **Details**.
 
-## 4 Unit-testing a Microflow
+## Unit-testing a Microflow
 
 In this section, you will learn how to create and run a microflow unit test.
 
-### 4.1 Creating a Sample Microflow for Testing {#sample-microflow}
+### Creating a Sample Microflow for Testing {#sample-microflow}
 
 For the purpose of this how-to, create a sample microflow that you can then test with unit testing. In a real-life scenario, the steps below may be different, depending on the microflow that you want to create.
 
@@ -102,7 +102,7 @@ To create a sample microflow for testing, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/testing/promote.jpg" alt="A view of the sample Promote microflow" class="no-border" >}}
 
-### 4.2 Creating a Unit Test Microflow
+### Creating a Unit Test Microflow
 
 This section describes how to create a microflow test for the sample microflow described in the [Creating a Sample Microflow for Testing](#sample-microflow) section above. In a real-life scenario, the steps below may be different, depending on the microflow that you want to test. If you need to adapt the microflow test to your requirements, bear in mind the following considerations:
 
@@ -168,6 +168,6 @@ To create a sample test microflow, follow these steps:
 20. Verify that the **Rollback microflow tests after execution** checkbox is selected.
 21. Click **Run all module tests** and verify that all the test cases pass.
 
-## 5 Read More
+## Read More
 
 * [Unit Testing](/appstore/modules/unit-testing/)

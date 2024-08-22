@@ -14,7 +14,7 @@ cascade:
 The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), Marketplace, [Catalog](/catalog/), and [Mendix Support](/support/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro contains a lot of core out-of-the-box widgets such as data grids and snippets. If you want to extend your application with more widgets and modules (for example, the [Forgot Password module](https://marketplace.mendix.com/link/component/1296/)), simple charts, an [Excel importer](https://marketplace.mendix.com/link/component/1296/), and other features, and make your development move even more quickly, you can use content from the [Mendix Marketplace](https://marketplace.mendix.com/), as it is a robust platform for the rapid development of apps. The Marketplace contains many useful and reusable widgets and modules created by Mendix as well as by our partners and community.
 
@@ -24,7 +24,7 @@ This documentation of **Marketplace** presents documentation on configuring and 
 
 For details on the Studio Pro version required for use and when the component was published, please see the specific component page in the Mendix Marketplace. For more information, see the [Marketplace release notes](/releasenotes/marketplace/).
 
-## 2 Types of Marketplace Components {#components-type}
+## Types of Marketplace Components {#components-type}
 
 The Marketplace offers the following content types: 
 
@@ -38,7 +38,7 @@ The Marketplace offers the following content types:
 | **Starter Template**              | Sample projects that have certain capabilities in place to provide a basis for you to start developing your own app. You do not need to create an app from a blank template, as you can use a template that already has some features configured. In addition, a template can have a personalized style that can be shared and used to enrich other apps with a specific design. |
 | **Industry Template**             | Accelerators for implementing industry-specific processes. Industry templates increase speed-to-value and time-to-market, and they are great starting points for common use cases within the relevant industry. Contrary to solutions, industry templates are starter templates intended to provide inspiration for utilizing Mendix to create apps for industry-specific processes. They usually cover around 20% of the process. |
 
-## 2 Marketplace and Mendix Connect {#marketplace-mx-connect}
+## Marketplace and Mendix Connect {#marketplace-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The following connectors and modules are part of the Mendix Connect ecosystem:
 
@@ -59,4 +59,4 @@ In addition to platform-supported connectors and modules, Mendix Connect functio
 * [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0/)
 * The [Catalog](/catalog/#catalog-mx-connect), used to register, manage, and govern data in your organization
 
-## 3 Guide Categories
+## Guide Categories

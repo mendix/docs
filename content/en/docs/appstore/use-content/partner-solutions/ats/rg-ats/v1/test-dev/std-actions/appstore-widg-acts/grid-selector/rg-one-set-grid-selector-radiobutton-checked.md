@@ -3,19 +3,19 @@ title: "Set Grid Selector RadioButton Value"
 url: /appstore/partner-solutions/ats/rg-one-set-grid-selector-radiobutton-checked/
 ---
 
-## 1 Description
+## Description
 
 Finds the radio button by column and row caption. Sets it to be checked.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Grid Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget, the column caption, and the row caption of the radio button you want to find.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------

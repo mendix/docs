@@ -8,7 +8,7 @@ aliases:
     - /refguide/create-a-basic-data-layer/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains how you can configure a domain model for your application with Mendix. Each application can have multiple [modules](/refguide/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
 
@@ -25,7 +25,7 @@ This document teaches you how to do the following:
 
 This document also presents [an example for defining the domain model](#example-domain-model) for an online shopping shop.
 
-## 2 Creating Entities and Attributes {#create-entity}
+## Creating Entities and Attributes {#create-entity}
 
 To create entities and their attributes, follow these steps:
 
@@ -54,7 +54,7 @@ To create entities and their attributes, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-one.png" class="no-border" >}}
 
-## 3 Adding Enumerations {#add-enumeration}
+## Adding Enumerations {#add-enumeration}
 
 An [enumeration](/refguide/enumerations/) is a predefined list of values that can be used as an attribute type. This allows end-users to select any of the predefined values for this attribute. A good example of an enumeration is order status (with values open, processing, and complete).
 
@@ -85,7 +85,7 @@ To extend the **Order** entity with an enumeration value-based attribute, follow
 
     {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/order-entity-two.png" width="160px" class="no-border" >}}
 
-## 4 Creating Associations
+## Creating Associations
 
 After you created the entities, you can create associations for the entities. For more information, see [Associations](/refguide/associations/).
 
@@ -93,7 +93,7 @@ To create an association, draw a line from the border of one entity to the borde
 
 {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/customer-order-association.png" class="no-border" >}}
 
-## 5 Multiplicity
+## Multiplicity
 
 This section explains how to change the [multiplicity](/refguide/association-properties/#multiplicity) of associations. 
 
@@ -111,7 +111,7 @@ If you want to change the multiplicity, double-click the **Order_Customer** asso
 
     When the association is set to a many-to-many multiplicity, the **Navigability** property is also activated. For further details, see the [Navigability](/refguide/association-properties/#navigability) section in *Association Properties*.
 
-## 6 Delete Behavior {#delete-behavior}
+## Delete Behavior {#delete-behavior}
 
 You can configure the [on delete behavior](/refguide/association-properties/#delete-behavior) for both sides of an association.
 
@@ -129,11 +129,11 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 An Example of Defining a Domain Model {#example-domain-model}
+## An Example of Defining a Domain Model {#example-domain-model}
 
 In the above sections, you learn the basics of how to configure a domain model. In this section, we present an example for how you can define the domain model for an online shopping app.
 
-### 7.1 Defining What Data to Include
+### Defining What Data to Include
 
 Understanding the typical process helps you define what data to include to your domain model. The workflow for new customers of the online shopping app looks the following way:
 
@@ -166,7 +166,7 @@ An example of the domain model for the online shopping app is shown below:
 
 {{< figure src="/attachments/refguide/modeling/domain-model/create-a-basic-data-layer/domain-model-online-shop.png" alt="Domain Model online shopping app" class="no-border" >}}
 
-### 7.2 Defining Entities
+### Defining Entities
 
  The following shows what entities you should create in your domain model for the online shopping app:
 
@@ -185,7 +185,7 @@ An example of the domain model for the online shopping app is shown below:
     * **Order_line** – items ordered, their quantity and price
     * **Order_confirmation** – confirmation that is sent to the customer that the order is placed
 
-### 7.3 Defining Associations
+### Defining Associations
 
 The following explains how each entity is associated for the online shopping app:
 
@@ -195,7 +195,7 @@ The following explains how each entity is associated for the online shopping app
 * **Order** and **Order_Line** have a one-to-many association – One order can contain multiple items (order lines) in it.
 * **Order** and **Order_Confirmation** have a one-to-one association – One order confirmation is issued per order.
 
-## 8 Read More
+## Read More
 
 * [Denormalize Data to Improve Performance](/howto/data-models/denormalize-data-to-improve-performance/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)

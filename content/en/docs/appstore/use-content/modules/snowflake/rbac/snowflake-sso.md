@@ -6,7 +6,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use Snowflake's [SSO capabilities](https://docs.snowflake.com/en/user-guide/admin-security-fed-auth-overview) to enable your Mendix app to use role-based access control (RBAC) automatically. 
 
@@ -16,11 +16,11 @@ The following diagram is a visual representation of how the Snowflake SSO can be
 
 You can integrate between Snowflake and Mendix applications by using OAUTH providers such as Azure Entra ID, Amazon Cognito, OKTA, and others. The following sections describe an example of how you can use Azure Entra ID to enable automatic role-based access control (RBAC) in a Mendix application. In the context of integration between Snowflake and Mendix, RBAC helps ensure that the data being exposed to a certain user or role within Snowflake is the same as the data presented to the same user in a Mendix app.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To enable SSO-based RBAC for your Mendix app, you must first install and configure the [OIDC SSO module](/appstore/modules/oidc/).
 
-## 2 Configuring Azure Entra ID
+## Configuring Azure Entra ID
 
 Firstly, create a resource application in Azure Entra ID. The resource application must contain the application ID URI and the scope.
 
@@ -46,7 +46,7 @@ Firstly, create a resource application in Azure Entra ID. The resource applicati
 
 9. Fill out the other mandatory fields, and then click **Add scope**.
 
-## 3 Creating a Client Application
+## Creating a Client Application
 
 After creating the resource application, create a client application. The client application must give API permissions to the resource app.
 
@@ -95,7 +95,7 @@ After creating the resource application, create a client application. The client
 
         {{< figure src="/attachments/appstore/use-content/modules/snowflake-sso/add-user.png" >}}   
 
-## 4 Configuring Snowflake Security Integration
+## Configuring Snowflake Security Integration
 
 To configure Snowflake SSO for your app, perform the following steps:
 
@@ -120,7 +120,7 @@ To configure Snowflake SSO for your app, perform the following steps:
     ALTER USER TestUser1 SET DEFAULT_ROLE = ROLETESTA;
     ```
 
-## 5 Configuring Your Mendix App
+## Configuring Your Mendix App
 
 To configure your Mendix application, perform the following steps:
 

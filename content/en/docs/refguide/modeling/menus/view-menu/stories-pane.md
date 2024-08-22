@@ -5,7 +5,7 @@ weight: 60
 description: "Describes the Stories pane in Mendix Studio Pro."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 For version control-enabled apps (apps with Team Server or other Git servers), the **Stories** pane displays the stories and tasks of the active Sprint. Stories, tasks, and Sprints are created and managed via [Epics](/developerportal/project-management/epics/) in the Mendix Portal or connected to your [Jira board](/developerportal/project-management/jira-connector/).
 
@@ -24,7 +24,7 @@ The table contains following columns:
 * **Title** – shows the title of a story or a task
 * **Status** – shows the status of a story or a task
 
-## 2 Interacting with the Stories Pane
+## Interacting with the Stories Pane
 
 You can perform the following actions in the **Stories** pane:
 
@@ -32,13 +32,13 @@ You can perform the following actions in the **Stories** pane:
 * [View stories details](#view-details)
 * [Change the status of a story or a task](#changing-status) 
 
-### 2.1 Refreshing the Stories Pane {#refresh}
+### Refreshing the Stories Pane {#refresh}
 
 The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in the Mendix Portal or Studio Pro. 
 
 If two team members change the same story, the changes done last will take effect. For example, you set the story status to *Running*, but your colleague sets it to *Done* two minutes later. The story's status will be set to *Done* when you click **Refresh**, as your colleague was the last one to implement changes. 
 
-### 2.2 Viewing Details {#view-details}
+### Viewing Details {#view-details}
 
 To view details of a story, do one of the following: 
 
@@ -57,7 +57,7 @@ When you view the details of a story, the **Story Details** pop-up window opens 
 
     {{< figure src="/attachments/refguide/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" class="no-border" >}}
 
-### 2.5 Changing the Status of a Story or a Task {#changing-status}
+### Changing the Status of a Story or a Task {#changing-status}
 
 If you use Studio Pro version 10.10 or above, you can change the status of a story on the **Stories** pane. To do so, just select a new status in the **Status** column. The list of statuses to choose from can be managed via [Epics](/developerportal/project-management/epics/) in the Mendix Portal or the connected [Jira board](/developerportal/project-management/jira-connector/).
 
@@ -66,7 +66,7 @@ To change the status of a task, select or clear the checkbox in the **Status** c
 * Clear the checkbox to set the done task in **To do**
 * Tick the checkbox to set the task to **Done**
 
-## 3 Read More
+## Read More
 
 * [Epics](/developerportal/project-management/epics/)
 * [Jira Connector](/developerportal/project-management/jira-connector/)

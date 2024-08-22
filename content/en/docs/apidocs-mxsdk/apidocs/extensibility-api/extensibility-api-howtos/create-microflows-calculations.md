@@ -4,19 +4,19 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations
 weight: 8
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can create microflows which perform some calculations and return the result.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 2 Creating an Extension Class that Creates Microflows
+## Creating an Extension Class that Creates Microflows
 
 1. Open the project that you previously created when you [created a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new folder *MicroflowTutorial* to your solution.
 3. Create a `MenuExtension` class.
 4. Add a new class to the project and call it `CreateMicroflowsMenu.cs`.
-5.  Replace the code in the file with the code below. 
+5. Replace the code in the file with the code below. 
 
     ```csharp
     using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
@@ -41,9 +41,10 @@ You can download the example in this how-to in [this GitHub repository](https://
         }
     }
     ```
+
     As you can see, the `GetMenus` method is overridden to add your own menus to Studio Pro. The class `CalculationsMicroflowCreator` (which you will add shortly) will be called from the action of your menu. You can see that this class has been injected in the constructor of your menu extension.
 
-## 3. Microflow Creator
+## Microflow Creator
 
 In this section, you will add the class `CalculationsMicroflowCreator.cs`, which will be injected into your menu extension so that it can be called from your menu action. Make sure to add the `Export` attribute to the class; otherwise, it will not be injected into your menu extension. The `ImportingConstructor` attribute on the constructor is also very important, as this allows the class to receive any required services via dependency injection.
 
@@ -139,9 +140,11 @@ void CreateMultiplicationMicroflow(IModel currentApp, IFolderBase folder, IMicro
         (multiplication2Param, "100"));
 }
 ```
+
  {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/multiplication-microflow.png" >}}
 
-To create a microflow that performs an addition between two decimal values, you can use the code below. Just like the multiplication microflow example above, you can see that the String `addition1` and the String  `addition2` match the parameters used in the expression for the return value. You can also see that their `DataType` is decimal.
+To create a microflow that performs an addition between two decimal values, you can use the code below. Just like the multiplication microflow example above, you can see that the String `addition1` and the String `addition2` match the parameters used in the expression for the return value. You can also see that their `DataType` is decimal.
+
 ```csharp
 void CreateAdditionMicroflow(IModel currentApp, IFolderBase folder, IMicroflow callingMicroflow, string outputVariableName)
 {
@@ -162,11 +165,13 @@ void CreateAdditionMicroflow(IModel currentApp, IFolderBase folder, IMicroflow c
         (addition2Param, "2.2"));
 }
 ```
+
  {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/addition-microflow.png" >}}
 
 Once a microflow is created, in order to enable this microflow to be called by other microflows, you need to add a call activity (`IActionActivity`). In the example, you have a method called `CreatMicroflowCallActivity` that can be used by both your multiplication and addition microflows.
 
 There are a few prerequisites that you must complete before a microflow can be called by another microflow. This method can be broken down into parts:
+
 ```csharp
 var microflowCallActivity = currentApp.Create<IActionActivity>();
 var microflowCallAction = currentApp.Create<IMicroflowCallAction>();
@@ -176,6 +181,7 @@ microflowCallActivity.Action = microflowCallAction;
 
 microflowCallAction.OutputVariableName = outputVariableName;
 ```
+
 In order to create `IActionActivity`, `IMicroflowCallAction` must also be created, and set as the `Action` property of the `IActionActivity`.
 
 Then, for `IMicroflowCallAction`, `IMicroflowCall` must also be created and set as the `MicroflowCall` property of the `IMicroflowCallAction`.
@@ -184,9 +190,10 @@ Next, `QualifiedName` of the microflow, which is to be called by this activity, 
 
 Finally, you can set `OutputVariableName` on `IActionActivity`, which is what the calling microflow will read from the called microflow.
 
-## 4 Passing Parameters
+## Passing Parameters
 
 It is also possible to pass a set of parameters to the action activity, which will be the inputs for the called microflow. This set of parameters is a simple `Tuple` of a name and an expression. In the example, these parameters are the two integers for the multiplication microflow and the two decimals for the addition microflow.
+
 ```csharp
 foreach (var (parameterName, expression) in parameters)
 {
@@ -228,6 +235,7 @@ void CreateMicroflowCallActivity(IModel currentApp,
 ```
 
 To create a call activity for your multiplication and addition microflows, you can use something like the code below. As you can see, the parameter names for the activity match the parameter name from the microflow and their values are also passed in for integers and decimals.
+
 ```csharp
 CreateMicroflowCallActivity(currentApp, callingMicroflow, mathMicroflow,
    outputVariableName,
@@ -244,7 +252,7 @@ The calling microflow looks as follows:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/extensibility-api/main-microflow.png" >}}
 
-## 5 Java Actions
+## Java Actions
 
 Outside of this calculation examples, you might want to create a microflow activity that calls a Java action file. See below for how to add an activity, and action and a call to the microflow to achieve that. Same as in the previous examples, you have to do this inside a transaction (`IModel.StartTransaction`).
 

@@ -2,9 +2,8 @@
 title: "Release Notes"
 url: /apidocs-mxsdk/apidocs/extensibility-api/release-notes/
 weight: 6
+numberless_headings: true
 ---
-
-# Release Notes
 
 These release notes cover changes to the Extensibility API.
 

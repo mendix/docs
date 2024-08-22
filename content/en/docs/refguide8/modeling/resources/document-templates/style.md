@@ -3,13 +3,13 @@ title: "Style"
 url: /refguide8/style/
 ---
 
-## 1 Introduction
+## Introduction
 
 In most document template widgets and components as well as on the top level document, a style can be defined. This style is designed in Cascading Style Sheets (CSS). However, many of the more common style attributes can be adjusted using the Style Editor. Depending on what type of widget you are styling, you will see different options in the Style Editor. You can also fully customize the style in the tab 'Custom Styles'.
 
-## 2 Tab Pages
+## Tab Pages
 
-### 2.1 Font
+### Font
 
 Widgets/Components for which the font tab page is visible:
 
@@ -30,7 +30,7 @@ The font tab page in the style editor.
 
 If you'd like to show text in a language with uncommon characters such as Arabic or Thai, make sure you select a font in the style editor that supports these characters.
 
-### 2.2 Cell Styling
+### Cell Styling
 
 Widgets/Components for which the cell styling tab page is visible:
 
@@ -47,7 +47,7 @@ Widgets/Components for which the cell styling tab page is visible:
 The cell styling tab page in the style editor.
 {{% /alert %}}
 
-### 2.3 Custom Styles
+### Custom Styles
 
 The custom styles tab page is always visible for widgets/components that allow styling.
 
@@ -58,7 +58,7 @@ The custom styles tab page is always visible for widgets/components that allow s
 The custom styles tab page in the style editor.
 {{% /alert %}}
 
-## 3 Custom Fonts for PDF Documents {#custom-fonts}
+## Custom Fonts for PDF Documents {#custom-fonts}
 
 You can include custom fonts in your generated documents by simply using a custom style, for example you'd include *font-family: Verdana;* in your style to make the text appear in Verdana font. However, for generating PDF documents, this requires some extra work. The following section teaches you how to do this.
 

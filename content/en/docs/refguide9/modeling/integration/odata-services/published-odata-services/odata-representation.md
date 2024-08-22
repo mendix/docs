@@ -3,11 +3,11 @@ title: "OData Representation"
 url: /refguide9/odata-representation/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes how entities are represented in a published OData service.
 
-## 2 Attributes {#attributes}
+## Attributes {#attributes}
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ This document describes how entities are represented in a published OData servic
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not exposed, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 
-### 2.1 Representation of ID {#id-representation}
+### Representation of ID {#id-representation}
 
 Each entity has an ID, which is not shown as an attribute in the domain model. This is indicated in the service's metadata.
 
@@ -38,11 +38,11 @@ In OData 4, IDs are annotated with vocabulary annotation `Com.Mendix.IsAttribute
 
 In OData 3, IDs are marked with `isAttribute="false"`, using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace.
 
-## 3 Associations {#associations}
+## Associations {#associations}
 
 In the settings of the OData service, you can choose how associations are represented. There are two options, which are described below.
 
-### 3.1 As a Link
+### As a Link
 
 When you choose to represent associations as links, each object contains a link for each of its associations. The associated object(s) can be retrieved via those links.
 
@@ -50,6 +50,6 @@ This means that you can only expose an association when the entity on the other 
 
 Using this method, you can expose both sides of the association and you can expose many-to-many associations.
 
-### 3.2 As an Associated Object ID
+### As an Associated Object ID
 
 When you choose to represent associations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you can not expose it from that side.

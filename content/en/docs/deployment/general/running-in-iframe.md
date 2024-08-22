@@ -6,7 +6,7 @@ description: "Issues to take into consideration when running apps in an iframe"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 By default, a Mendix app is blocked from running inside an iframe. This is to protect the end-user from attacks using *clickjacking*. There is more information on this in the [Adding HTTP Headers](/howto/security/best-practices-security/#adding-http-header) section of *How To Implement Best Practices for App Security*.
 
@@ -16,7 +16,7 @@ There is more information about iframes on Mendix Cloud in the [Running Your App
 
 You can also set the obsolete `X-Frame-Options` HTTP header if you need backward compatibility. 
 
-## 2 Resolving Browser Issues
+## Resolving Browser Issues
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. If your app does not have the same domain as the main page containing the iframe, it will only run if the *SameSite* cookie is set to allow this. You can find a good explanation of SameSite cookies in [SameSite cookies explained](https://web.dev/samesite-cookies-explained/) on the *web.dev* website.
 

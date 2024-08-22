@@ -7,11 +7,11 @@ aliases:
     - /private-mendix-platform-quickstart/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document provides a comprehensive guide for installing Private Mendix Platform, along with its optional components, in your own Kubernetes environment.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 Private Mendix Platform depends on Mendix for Private Cloud for the installation and deployment of Mendix apps.
 
@@ -40,7 +40,7 @@ Before starting the installation process, make sure that you have all the necess
     * An existing PostgreSQL database instance
     * A Redis instance
 
-## 2 Installing and Configuring the Mendix Operator
+## Installing and Configuring the Mendix Operator
 
 To install and configure the Mendix Operator, perform the following steps:
 
@@ -132,7 +132,7 @@ To install and configure the Mendix Operator, perform the following steps:
     
         {{< figure src="/attachments/private-platform/pmp-install5.png" class="no-border" >}}
     
-### 2.1 Installing Private Cloud License Manager {#install-pclm}
+### Installing Private Cloud License Manager {#install-pclm}
 
 Private Cloud License Manager is a required component of Private Mendix Platform. Before you install the Platform, install PCLM by doing the following steps:
 
@@ -156,7 +156,7 @@ Private Cloud License Manager is a required component of Private Mendix Platform
 
 4. Click **Install PCLM**.
 
-## 3 Optional: Installing the Svix Component {#install-svix}
+## Optional: Installing the Svix Component {#install-svix}
 
 Svix is required if you want to use webhooks. Install the Svix component by doing the following steps:
 
@@ -173,7 +173,7 @@ Svix is required if you want to use webhooks. Install the Svix component by doin
 The installer does not catch your pod's running status. In case of issues, verify that the pod is running correctly.
 {{% /alert %}}
 
-## 4 Installing the Private Mendix Platform
+## Installing the Private Mendix Platform
 
 Install the Private Mendix Platform by doing the following steps:
 
@@ -226,7 +226,7 @@ Install the Private Mendix Platform by doing the following steps:
 
 {{< figure src="/attachments/private-platform/pmp-install10.png" class="no-border" >}}
 
-### 4.1 Adding Additional Components After Installing the Private Mendix Platform
+### Adding Additional Components After Installing the Private Mendix Platform
 
 To ensure that components such as svix and PCLM work correctly, you should install them before you install the Private Mendix Platform itself. If you want to add a component after the Platform installation (for example, if you want to install svix because you decided to enable webhooks), you must perform the following steps:
 
@@ -235,7 +235,7 @@ To ensure that components such as svix and PCLM work correctly, you should insta
 
 Re-running the installation command ensures that the installer fetches the relevant information from the components that you added.
 
-## 5 Upgrading the Private Mendix Platform
+## Upgrading the Private Mendix Platform
 
 If you have installed Private Mendix Platform before, you can upgrade it by doing the following steps:
 
@@ -263,7 +263,7 @@ If you have installed Private Mendix Platform before, you can upgrade it by doin
 For the Svix component, you can use the Svix panel to upgrade directly.
 {{% /alert %}}
 
-## 6 Running the Private Platform Configuration Wizard {#wizard}
+## Running the Private Platform Configuration Wizard {#wizard}
 
 After you install Private Mendix Platform, run a one-time configuration wizard to configure the necessary settings.
 
@@ -273,25 +273,25 @@ To start the wizard, log in to your Private Mendix Platform app as an administra
 The settings that are enabled for your Private Mendix Platform depend on the service package that you have purchased. Because of that, some of the settings listed below may be disabled for your platform.
 {{% /alert %}}
 
-### 6.1 Configuring IdP Settings
+### Configuring IdP Settings
 
 In this step, you can specify whether you want to enable logging in via SSO for your users. Private Mendix Platform supports OIDC and SAML identity providers.
 
 {{< figure src="/attachments/private-platform/pmp-wizard1.png" class="no-border" >}}
 
-### 6.2 Configuring Management Settings
+### Configuring Management Settings
 
 In this step, you can specify whether you want to create and manage your app projects in Private Mendix Platform. If you enable the project management, you must also specify the Git host that will be used for the project. This option must be enabled if you want your Private Mendix Platform to support CI/CD capabilities.
 
 {{< figure src="/attachments/private-platform/pmp-wizard2.png" class="no-border" >}}
 
-### 6.3 Configuring CI/CD Settings
+### Configuring CI/CD Settings
 
 In this step, you can enable CI/CD capabilities for your app. If you enable this option, you must also specify your CI system, configure the necessary settings, and register a Kubernetes cluster.
 
 {{< figure src="/attachments/private-platform/pmp-wizard3.png" class="no-border" >}}
 
-### 6.4 Configuring Marketplace Settings
+### Configuring Marketplace Settings
 
 In this step, you can enable your app to upload and download connectors from the Marketplace.
 
@@ -301,16 +301,16 @@ The Marketplace enabled here is hosted entirely within your Private Mendix Platf
 
 {{< figure src="/attachments/private-platform/pmp-wizard4.png" class="no-border" >}}
 
-### 6.5 Configuring Custom Branding Settings
+### Configuring Custom Branding Settings
 
 In this step, you can customize the branding for your app. You may change the name that is displayed in the top bar, upload a new logo, or change the default login page image.
 
 {{< figure src="/attachments/private-platform/pmp-wizard5.png" class="no-border" >}}
 
-### 6.6 Reviewing and Confirming the Settings
+### Reviewing and Confirming the Settings
 
 After the wizard finishes running, you are logged in to your Private Mendix Platform. The settings that you previously selected are displayed on screen. You can review and update them now, or at a later point by using the **Settings** menu in the upper left corner of the screen.
 
-## 7 Next Steps
+## Next Steps
 
 After completing the installation and first-time configuration wizard, configure the remaining necessary settings. For more information, see [Configuring Private Mendix Platform](/private-mendix-platform-configuration/).

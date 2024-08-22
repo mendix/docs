@@ -22,11 +22,11 @@ weight: 96
 
 #### WebServiceCallAction (Element)
 
-* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
+* We changed the default value of the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
 #### RestCallAction (Element)
 
-* We changed the default value of  the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
+* We changed the default value of the `useRequestTimeOut`, `timeOutModel`, and `timeOutExpression` properties.
 
 ### Projects
 

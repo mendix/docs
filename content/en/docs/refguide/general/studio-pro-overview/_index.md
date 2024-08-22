@@ -10,7 +10,7 @@ aliases:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro is a tool for creating, viewing, and editing your Mendix applications.
 
@@ -24,7 +24,7 @@ This document describes the user interface of Mendix Studio Pro:
 
 {{< figure src="/attachments/refguide/studio-pro-overview/studio-pro-diagram.png" alt="Studio Pro Diagram" class="no-border" >}}
 
-## 2 Top Bar {#top-bar}
+## Top Bar {#top-bar}
 
 The Studio Pro top bar contains the following items:
 
@@ -32,13 +32,13 @@ The Studio Pro top bar contains the following items:
 * [Buttons to run and view your app](#run-and-view)
 * [Links to the Mendix Portal and Marketplace](#links) 
 
-### 2.1 Menus {#menus}
+### Menus {#menus}
 
 In the Studio Pro top bar, you can see several menus, such as **Switch-to** menu, [Edit](/refguide/edit-menu/), [View](/refguide/view-menu/), and [Version Control](/refguide/version-control-menu/). Each menu contains menu items that allow you to perform various actions, such as to [create a deployment package](/refguide/create-deployment-package-dialog/), set [preferences](/refguide/preferences-dialog/), or view the [**Errors**](/refguide/errors-pane/) pane. 
 
 For more information on menus, see [Menus](/refguide/menus/). 
 
-### 2.2 Run and View App {#run-and-view}
+### Run and View App {#run-and-view}
 
 Deploy your app by clicking the **Publish** or **Run Locally** ({{% icon name="controls-play" %}}) buttons. To view your deployed app, click **View App**. 
 
@@ -48,21 +48,21 @@ For more information on deployment in Mendix, see [Deployment](/deployment/).
 
 For more information on deploying and versioning your app, see the [Versioning an App Deployed to the Cloud](/refguide/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 
-### 2.3 Links and User Profile Menu {#links}
+### Links and User Profile Menu {#links}
 
 You can find links to the [Mendix Portal](/developerportal/) and [Marketplace](/appstore/) in the upper-right corner of Studio Pro.
 
 Your profile picture is displayed next to them if you are signed in. When you click the profile picture, the drop-down menu is displayed with your full name and email, as well as links to your user profile, My Apps screen, and the **Sign Out** option. 
 
-## 3 App Structure (App Explorer)
+## App Structure (App Explorer)
 
 An app consists of individual files (documents) and settings that are grouped in folders and [modules](/refguide/modules/). The complete structure of your app can be viewed in the [App Explorer](/refguide/app-explorer/). 
 
-## 4 Working Area {#working-area}
+## Working Area {#working-area}
 
 A working area is a current document tab that you work in. The working area and its settings differs depending on the editor (for example, pages, microflows, domain model editors) and the type of document. 
 
-### 4.1 Document Tabs {#documents}
+### Document Tabs {#documents}
 
 The documents you view and edit are shown in tabs. 
 
@@ -74,7 +74,7 @@ You can have a number of tabs open, just like in a modern web browser. They can 
 
 Each document has its own save state, history, and future, so undo and redo actions are unlimited.
 
-## 5 Dockable Panes {#panes}
+## Dockable Panes {#panes}
 
 Dockable panes can be positioned around the working area and contain various elements and settings:
 
@@ -82,7 +82,7 @@ Dockable panes can be positioned around the working area and contain various ele
 
 For example, you can view [list of errors](/refguide/errors-pane/), run [Best Practice Recommender](/refguide/best-practice-recommender/), configure properties of a specific document or an element, or view toolbox. For more information on panes and their layout, see [View Menu](/refguide/view-menu/).
 
-## 6 Status Bar {#status-bar}
+## Status Bar {#status-bar}
 
 At the bottom of the Studio Pro main window pane is a status bar. On the left is the current status of Studio Pro:
 
@@ -90,7 +90,7 @@ At the bottom of the Studio Pro main window pane is a status bar. On the left is
 
 On the right is the currently selected language. If you have set up multiple languages in your app, you can change the currently selected language by clicking here. For more information, see [Language Menu](/refguide/translatable-texts/).
 
-## 7 Read More
+## Read More
 
 * [Keyboard Shortcuts](/refguide/keyboard-shortcuts/)
 * [App Explorer](/refguide/app-explorer/)

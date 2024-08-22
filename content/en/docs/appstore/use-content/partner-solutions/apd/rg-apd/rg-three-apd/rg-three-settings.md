@@ -3,7 +3,7 @@ title: "Settings"
 url: /appstore/partner-solutions/apd/rg-three-settings/
 ---
 
-## 1 Introduction
+## Introduction
 
 The settings displayed in this screenshot are available for an environment:
 
@@ -11,7 +11,7 @@ The settings displayed in this screenshot are available for an environment:
 
 By default, the best options are already selected for the most common situations.
 
-## 2 Settings 
+## Settings 
 
 The following settings can be changed:
 

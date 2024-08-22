@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 There are two ways to edit the properties of an [association](/refguide8/associations/). This page describes the properties you can edit in the properties pane of the association in the domain model, or from opening the association properties dialog directly from the association or the association tab in the entity properties.
 
@@ -15,7 +15,7 @@ You can also edit an association directly within the association tab in the enti
 Attributes properties for associated external entities are defined in the originating app and the only local changes that can be applied to these entities is a local name and description. For further information, see the [Attributes](/refguide8/external-entities/#attributes) section of *External Entities*.
 {{% /alert %}}
 
-## 2 Association Properties
+## Association Properties
 
 An example of the association properties is represented in the image below:
 
@@ -29,15 +29,15 @@ Associations have the following properties:
 * [Navigability](#navigability)
 * [Delete Behavior](#delete-behavior)
 
-### 2.1 Name {#name}
+### Name {#name}
 
 The name used to refer to the association. For example, in forms or microflows.
 
-### 2.2 Documentation {#documentation}
+### Documentation {#documentation}
 
 You can write notes and documentation in the **Documentation** property.
 
-### 2.3 Multiplicity {#multiplicity}
+### Multiplicity {#multiplicity}
 
 Multiplicity can be of the following types:
 
@@ -49,7 +49,7 @@ Multiplicity can be of the following types:
 
 For more information about association types, see the [Type](/refguide8/association-member-properties/#type) section in *Association Tab Properties*, and for information on ownership, see the [Owner](/refguide8/association-member-properties/#owner) section in *Association Tab Properties*.
 
-### 2.4 Navigability {#navigability}
+### Navigability {#navigability}
 
 | Navigability | Meaning | Equivalent of |
 | --- | --- | --- |
@@ -60,7 +60,7 @@ This corresponds to the **Owner** property for **Reference sets**. See the [Owne
 
 Despite it's name, navigability is usually only important when adding or changing associations. Making one object owner of an association does not prevent you reading the association from the non-owner end.
 
-### 2.5 Delete Behavior {#delete-behavior}
+### Delete Behavior {#delete-behavior}
 
 | Value | Description |
 | --- | --- |
@@ -76,6 +76,6 @@ Despite it's name, navigability is usually only important when adding or changin
 
 {{< figure src="/attachments/refguide8/modeling/domain-model/associations/association-properties/association-prevent-delete.png" class="no-border" >}}
 
-## 3 Read More
+## Read More
 
 * [Associations](/refguide8/associations/)

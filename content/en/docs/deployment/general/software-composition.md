@@ -10,7 +10,7 @@ beta: true
 This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A Mendix app can consist of the Mendix Model (which includes pages, domain model, microflows, etc.), custom Java, and JavaScript. Additionally, it can use reusable components such as standard marketplace modules, widgets, Java libraries, npm packages, and the runtime version. These reusable components are dependencies, namely, components you are dependent on for your Mendix app to run.  
 
@@ -20,11 +20,11 @@ To enable this, the **Software Composition** page in **Apps** provides visibilit
 
 The **Software Composition** page is visible to all members of the Mendix app.
 
-### 1.1 Known Issues
+### Known Issues
 
 After the creation of a deployment package, it may take up to a day for the **Software Composition** page to become visible. Mendix is working to improve the performance on this front.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
@@ -38,7 +38,7 @@ To be able to see the software composition information, make sure that you meet 
 
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
 
-### 1.3 Software Composition Generation {#software-composition-generation}
+### Software Composition Generation {#software-composition-generation}
 
 Components are identified in the following manner:
 
@@ -46,7 +46,7 @@ First, when a new deployment package is created via the Mendix Portal with the c
 
 The component dependencies for each non-expired deployment package are available in the **Software Composition** page in **Apps**. 
 
-## 2 Overview {#overview}
+## Overview {#overview}
 
 On the **Overview** tab, you can see a list of all the deployed packages and their environments, if applicable.
 
@@ -63,7 +63,7 @@ The list contains the following information:
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the check boxes.
 * **View details**: Clicking this opens the [Component Summary](#component-summary) page, if it is available. The **View details** button is grayed out when an SBOM is not available for the selected deployment package. Ensure you are on a compatible runtime version and create a new deployment package in order to get component visibility here.
 
-### 2.1 Component Summary {#component-summary}
+### Component Summary {#component-summary}
 
 On the **Overview** tab, if you click **View Details** for a deployment package in the list, the **Component Summary** page opens.
 
@@ -73,13 +73,13 @@ On the top of the page, you can find the name of the deployment package, the env
 
 For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
 
-#### 2.1.1 Downloading the Software Bill of Materials {#download-software-bill-of-materials}
+#### Downloading the Software Bill of Materials {#download-software-bill-of-materials}
 
 A software bill of materials (SBOM) is a *.json* file in the CycloneDX format. It contains a description of the Mendix app and the components (dependencies) put into it. For more information, see [SBOM Generation](/refguide/sbom-generation/).
 
 In the list on the **Overview** tab, you can click the {{% icon name="download-bottom" %}} icon in the **Action** column to download the SBOM. Different versions of Studio Pro support different component dependencies. For details on component dependencies supported per version, see the [Supported Features](/refguide/sbom-generation/#supported-features) section in *SBOM Generation*.
 
-## 3 All Components {#all-components}
+## All Components {#all-components}
 
 The **All Components** tab gives an overview of all the components used across your environments.
 
@@ -95,18 +95,18 @@ The list shows the following information about the component:
 * **Version**: This is the component version.
 * **Type**: This shows the type of the component. The type could be modules, widgets, framework, Java libraries (JAR), etc. The descriptions of each type are as follows:
 
-  * **Modules** – Standard marketplace modules imported from the Marketplace, for example [Community Commons](https://marketplace.mendix.com/link/component/170)
-  * **Widgets** – User interface elements downloaded from the Marketplace, for example [Charts](https://marketplace.mendix.com/link/component/105695)
-  * **Framework** – The Mendix Runtime version, for example 10.12.0
-  * **Jars** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, for example `org.apache.commons.io`
-  * **npms** – npm libraries that are used in your [JavaScript actions](/refguide/javascript-actions/)
-  * **Unknown** – When the type of the component is none of the above and hence undetermined
+    * **Modules** – Standard marketplace modules imported from the Marketplace, for example [Community Commons](https://marketplace.mendix.com/link/component/170)
+    * **Widgets** – User interface elements downloaded from the Marketplace, for example [Charts](https://marketplace.mendix.com/link/component/105695)
+    * **Framework** – The Mendix Runtime version, for example 10.12.0
+    * **Jars** – Java libraries imported into your app using [Managed Dependencies](/refguide/managed-dependencies/), or those manually added in the **userlib** folder depending on the Studio Pro version used, for example `org.apache.commons.io`
+    * **npms** – npm libraries that are used in your [JavaScript actions](/refguide/javascript-actions/)
+    * **Unknown** – When the type of the component is none of the above and hence undetermined
 
   For more information, refer to [SBOM Generation](/refguide/sbom-generation/).
 * Column customization ({{% icon name="view" %}}): You can customize the columns of the list by clicking the {{% icon name="view" %}} icon and adjusting the selection of the checkboxes.
 * **View details**: Clicking this opens the [Component Usage](#component-usage) page.
 
-### 3.1 Component Usage {#component-usage}
+### Component Usage {#component-usage}
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the environments where the selected component is being used. If a security vulnerability is found in one of the components, then the component usage tab can be used to assess the impact radius.
 

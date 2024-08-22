@@ -10,15 +10,15 @@ cascade:
     - mendix_version: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 Private Mendix Platform provides an end-to-end Mendix developer experience to customers who need to enjoy it on their private infrastructure. It provides an environment where you can develop and deploy your applications within your own enterprise security boundary to ensure the highest levels of data security and compliance. You can integrate Private Mendix Platform with your existing IT infrastructure and adapt it to your specific business requirements.
 
-## 2 Benefits of using Private Mendix Platform
+## Benefits of using Private Mendix Platform
 
 Private Mendix Platform offers the ability to configure your development environment, infrastructure, and deployment options to align with your needs and create applications that seamlessly integrate with your existing systems and workflows. You can define precise access controls, seamlessly integrate with existing systems, and create performant applications at scale, all entirely within your own organization infrastructure.
 
-## 3 Features of Private Mendix Platform
+## Features of Private Mendix Platform
 
 Private Mendix Platform has the following features.
 
@@ -35,4 +35,4 @@ Exact feature support varies depending on chosen configuration. Please consult f
 * Operational capabilities such as basic log browsing and metrics through integrations with Loki and Grafana
 * Governance features like application landscape management, marketplace administration, user group management, as well as various developer platform feature settings and action logs
 
-## 4 Read More
+## Read More

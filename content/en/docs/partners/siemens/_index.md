@@ -8,8 +8,8 @@ description_list: true
 #layout: wide
 ---
 
-## 1 Introduction
+## Introduction
 
 This category includes reference content for integrating with Siemens products.
 
-## 2 Documents in This Category
+## Documents in This Category

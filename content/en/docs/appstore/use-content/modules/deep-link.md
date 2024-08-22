@@ -10,7 +10,7 @@ description: "Describes the configuration and usage of the Deep Link module, whi
 This module is deprecated from Studio Pro 10.6.0. It is replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url). For instructions on migrating to page and microflow URLs, see the [Migrating to Page and Microflow URLs](#migrate-page-micro) section below.<br>We will continue to actively support this module for Mendix 9.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Deep Link](https://marketplace.mendix.com/link/component/43/) module allows you to configure a mapping between a request handler and microflows. In this way, you can create additional entry points to access specific parts of your application. The Deep Link module is design- and runtime-configurable, it respects security, and it supports links for both logged-in and anonymous users.
 
@@ -29,7 +29,7 @@ If you need to access pages or set up a published REST service, the Deep Link mo
 There can be other approaches which are implemented by community-supported Marketplace modules, but these are not listed in this table.
 {{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The typical usage scenario is configuring a link to trigger a microflow, for example: 
 
@@ -38,27 +38,27 @@ The typical usage scenario is configuring a link to trigger a microflow, for exa
 * `https://myapp.com/link/resetpassword/DF6345SDF`
 * `https://myapp.com/link/allusers`
 
-### 1.2 Features
+### Features
 
 * Create persistent links to view only pages, which you can use in emails or on your website
 * Provide a colleague with a link to a certain object instead of describing the necessary navigation steps
 * Generate confirmation links that can be emailed to users
 
-### 1.3 Dependencies
+### Dependencies
 
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540): required for the Deep Link module in Studio Pro 10.0.6 and higher.
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Deep Link module into your app.
 
 {{% alert color="info" %}}After you install the Deep Link module and set up deep links, these links will not break if you upgrade from Mendix Studio Pro 9 to 10.{{% /alert %}}
 
-## 3 Configuration
+## Configuration
 
 After importing the Deep Link module into your app, you need to configure it.
 
-### 3.1 Initializing the Deep Link Module on App Startup
+### Initializing the Deep Link Module on App Startup
 
 You need to add the `/link/` path as a request handler in your app. To achieve this, add the **DeepLink.Startdeeplink** microflow to the startup microflow of your app.
 
@@ -68,17 +68,17 @@ You need to add the `/link/` path as a request handler in your app. To achieve t
     3. For **After startup**, **Select** the **DeepLink.StartDeeplink** microflow.
 * If your app has an after-startup microflow, extend it with a [sub-microflow activity](/refguide/extracting-and-using-sub-microflows/) that calls the **DeepLink.StartDeeplink** microflow
 
-### 3.2 Configuring the Microflow for the Default Home Page
+### Configuring the Microflow for the Default Home Page
 
 When a user accesses the Mendix app, the app needs to check if a deep link request is associated to the user session. To achieve this, add the **DeepLink.DeeplinkHome** microflow to a microflow that is configured for the [default home page](/refguide/navigation/#default-home-page) (via **App** > **Navigation** > **Home pages** > **Default home page**). For an example of this configuration, see the **DeepLink.Home_ResponsiveProfile** microflow.
 
-### 3.3 Configuring Security Settings
+### Configuring Security Settings
 
 Make sure that all roles—including your guest roles—which need to access your app via a deep link have the **DeepLink.User** user role. Otherwise, they will not be able to use any link, because access to objects owned by the Deep Link module will be denied.
 
 Make sure that the roles that need to change the configuration of the Deep Link module at runtime have the **DeepLink.Admin** user role (via **App** > **Security** > **User roles**).
 
-### 3.4 Adding the Configuration Overview Snippet to the Custom Admin Page
+### Adding the Configuration Overview Snippet to the Custom Admin Page
 
 To configure and manage deep links at runtime, add the **DeepLink.DeeplinkConfigurationOverview** snippet to a custom admin page, and make sure that all the users who operate the app can access this page. You need to add the **DeepLink.Admin** module role to their user roles.
 
@@ -108,11 +108,11 @@ On the **Advanced** tab, there are these settings:
 * **Alternative Index Page** – If selected, the default index location (`index.html`) and the **DeepLink.IndexPage** constant will be overridden by this value. This is useful for theme-related use cases, for example, `index-dark.html`.
 * **Track hit count** - If selected, Deeplink will track the number of hits on this link in the `HitCount` attribute. This tracking can be disabled if performance issues occur. This option is only available in Deep Link module version 9 or higher.
 
-### 3.5 Optional Configuration
+### Optional Configuration
 
 The configuration in this section is optional. Use it if it helps with your implementation.
 
-#### 3.5.1 Configuring Deep Links in After Startup Microflow
+#### Configuring Deep Links in After Startup Microflow
 
 If you configure deep links in the after-startup microflow, then the configuration is consistent for all the environments where the application is deployed.
 
@@ -123,11 +123,11 @@ To configure deep links while being in design time, use the following Java actio
 
 It is also possible to implement the example microflow **DeepLink.SetupExampleDeeplinks** in the after-startup action. This will generate example deep links in your app.
 
-#### 3.5.2  Adding the Example Snippet to a Page
+#### Adding the Example Snippet to a Page
 
 To view all the available deep link configurations and example URLs, add the **DeepLink.DeeplinkExampleOverview** snippet to a custom page.
 
-### 3.6 Configuring Constants
+### Configuring Constants
 
 * **IndexPage** – In special cases—for example, when you want to load a specific theme or bypass a certain single sign-on page—you can modify this constant to redirect to another index page like `index3.html` or `index-mytheme.html`
 * **LoginLocation** – This value is used for redirecting the user to a login page in case the user does not have the required user role to access the app. A user will be redirected to this location when the user visits a deep link while having an anonymous user session and the app is [configured to not allow anonymous users](/refguide/anonymous-users/#properties).
@@ -147,9 +147,9 @@ To view all the available deep link configurations and example URLs, add the **D
     * The SSO handler will only be requested when the user session is an anonymous user session (this is useful in situations where the SSO handler is not expected to provide users with a login page, but is supposed to redirect the anonymous user to the target location, while still having an anonymous user session).
     * When the SSO handler location ends with `=` (for example, in the case of Mendix SSO: `/openid/login?continuation=`), the original deep link location will be appended to the SSO handler location.
 
-## 4 Troubleshooting
+## Troubleshooting
 
-### 4.1 Endless Redirect Loop (Mendix 9 and Higher) 
+### Endless Redirect Loop (Mendix 9 and Higher) 
 
 When using the Deep Link module in Mendix 9 and higher, you might get stuck in an endless redirect loop.
 
@@ -159,7 +159,7 @@ To avoid this issue, make sure your IdP (identity provider) and your app are in 
 
 Additionally, there is an incompatibility between Mendix version 9.20 and higher and earlier versions of the Deep Link module which could cause this. If you are using Mendix version 9.20 or higher, you need to use version 9.0.8 or higher of the Deep Link module.
 
-### 4.2 Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
+### Deep Link Redirect Fails After Login {#deep-link-redirect-fails}
 
 If you try to visit a deep link in your browser and find out you need to log in first, it may occur that after you log in, you are redirected to the home page instead of the deep link that you hoped to visit. This happens if the app uses the default login page with the Deep Link module from version 6.0.0 to version 9.0.4. 
 
@@ -183,7 +183,7 @@ To solve this problem, you can use one of the following solutions:
      }
      ```
 
-## 5 Migrating to Page and Microflow URLs {#migrate-page-micro}
+## Migrating to Page and Microflow URLs {#migrate-page-micro}
 
 The functionality of the Deep Link module has been replaced by various built-in features of the Mendix Platform:
 

@@ -5,17 +5,17 @@ description: "Describes the configuration and usage of the Signature widget, whi
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Signature](https://marketplace.mendix.com/link/component/107984/) widget is a signature pad for capturing signatures in your app. The widget implements bezier curves and velocity for the smooth drawing of the signature.
 
-### 1.1 Features
+### Features
 
 * Record a signature
 * Customizable pen color and pen size
 * Toggle an attribute to delete the signature and reset the canvas
 
-### 1.2 Limitations
+### Limitations
 
 To store the signature image in the object, the Mendix Platform forces a commit if the object is new. This behavior might have an influence on a cancel action, so a rollback in a microflow will not roll back the creation of the signature object. In addition, the rollback will not fall back to the previous signature.
 
@@ -23,7 +23,7 @@ Previous signatures can not be edited. When the signature is captured and stored
 
 A resized signature is captured. If the canvas is resized, the strokes outside the visible canvas are not shown, but they are stored.
 
-## 2 Configuration
+## Configuration
 
 To use this widget, follow these steps:
 

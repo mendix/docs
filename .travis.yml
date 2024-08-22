@@ -136,14 +136,14 @@ deploy:
 #
 # Need to decide where to deploy to, so need to do the actual deployment in a script https://docs.travis-ci.com/user/job-lifecycle#complex-build-commands
 #  - aws s3 sync . s3://$TARGETAWSBUCKET --delete --only-show-errors
-  - provider: script
-    script:
-      - $TRAVIS_BUILD_DIR/_scripts/deploy.sh
-    skip_cleanup: true
-    on:
-      branch:
-        - production
-        - development
+  provider: script
+  # ⋮
+  edge: true
+  script: $TRAVIS_BUILD_DIR/_scripts/deploy.sh
+  on:
+    branch:
+      - production
+      - development
 
 after_deploy:
 ############# Skipped

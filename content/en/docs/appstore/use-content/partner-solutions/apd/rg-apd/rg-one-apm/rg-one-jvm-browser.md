@@ -3,7 +3,7 @@ title: "JVM Browser"
 url: /appstore/partner-solutions/apd/rg-one-jvm-browser/
 ---
 
-## 1 Introduction
+## Introduction
 
 A JVM Browser shows information similar to JConsole or JVisualVM tools provided with the Java JDK. Using the **Refresh** button refreshes an individual item.
 
@@ -15,7 +15,7 @@ Double-clicking an items drills down shows its details.
 
 You can start collecting statistics on individual items using the **Collect** button. These statistics can be viewed in the Measurements Tool.
 
-## 2 Additional JMX Exposed Statistics
+## Additional JMX Exposed Statistics
 
 The runtime statistics of the tools, measurements that expose to JMX as well as Mendix statistics are made available through JMX (when JMX is running).
 

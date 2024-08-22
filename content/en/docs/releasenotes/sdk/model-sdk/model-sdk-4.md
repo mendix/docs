@@ -265,7 +265,7 @@ weight: 97
 * We added support for Mendix Metamodel [9.4.0](/releasenotes/sdk/metamodel-9.4/).
 * We improved the performance of by-name references.
 * We improved the `getFile` documentation in the Model SDK.
-* We removed usage of NodeJS's `util` library.
+* We removed usage of Node.js's `util` library.
 
 ## 4.52.0 {#452}
 
@@ -458,7 +458,7 @@ weight: 97
 
 **Release date: February 8, 2019**
 
-* We added support for [Mendix 7.23.0](/releasenotes/studio-pro/7.23/).
+* We added support for Mendix 7.23.0.
 * It is now possible to perform operations (such as **delete working copy**) on working copies that have a newer Metamodel version than the one this Model SDK supports. This was not possible before, as we checked the Mendix Metamodel version for every operation. Now, we only check the Mendix Metamodel version when actually opening a working copy.
 
 ## 4.18.0 {#418}
@@ -479,7 +479,7 @@ weight: 97
 * We added support for Mendix 7.21.0.
 * We added new working copy lock type `commit`.
 * We fixed the duplicate processing of events.
-* We upgraded to Node.JS version 10.
+* We upgraded to Node.js version 10.
 
 ## 4.16.0
 
@@ -594,7 +594,7 @@ weight: 97
 
 | Story | Impact | Description |
 |------|-----|---|
-| MS-461 | Medium | Defined the new Metamodel for DataType. From Mendix [7.9.0](/releasenotes/studio-pro/7/) onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
+| MS-461 | Medium | Defined the new Metamodel for DataType. From Mendix 7.9.0 onwards, the new properties of the DataType type should be used instead of the old properties of the String type. |
 | MS-328 | None | Defined the new Metamodel for microflow expressions (experimental). |
 
 ## 4.4.0

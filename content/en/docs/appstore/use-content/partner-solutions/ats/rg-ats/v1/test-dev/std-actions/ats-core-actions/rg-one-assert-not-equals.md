@@ -3,15 +3,15 @@ title: "Assert Not equals"
 url: /appstore/partner-solutions/ats/rg-one-assert-not-equals/
 ---
 
-## 1 Description
+## Description
 
 Assert that two values are not equal.
 
-## 2 Usage
+## Usage
 
 Pass the two values you want to compare and assert that they are not equal.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

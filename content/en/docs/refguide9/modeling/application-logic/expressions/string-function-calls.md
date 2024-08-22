@@ -6,7 +6,7 @@ description: "Describes the functions for converting and inspecting strings in M
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes functions that are used to convert and inspect [strings](/refguide9/data-types/). Note that these functions never change the string itself, they only return a new value.
 
@@ -16,11 +16,11 @@ For a great deep-dive look into string functions call, check out this video:
 
 {{< vidyard "EpVivdyB4i1jGvc8J9yXkt" >}}
 
-## 2 toLowerCase
+## toLowerCase
 
 Converts all characters in the string to lowercase.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -28,7 +28,7 @@ The input parameters are described in the table below:
 | ----------------- | ------ |
 | String to convert | String |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -36,7 +36,7 @@ The output is described in the table below:
 | ----------------------------------- | ------ |
 | The same string, but all lowercase. | String |
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
@@ -50,11 +50,11 @@ The output is the following:
 'thisismystring'
 ```
 
-## 3 toUpperCase
+## toUpperCase
 
 Converts all characters in the string to uppercase.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -62,7 +62,7 @@ The input parameters are described in the table below:
 | ----------------- | ------ |
 | String to convert | String |
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -70,7 +70,7 @@ The output is described in the table below:
 | ----------------------------------- | ------ |
 | The same string, but all uppercase. | String |
 
-### 3.3 Example
+### Example
 
 If you use the following input:
 
@@ -84,11 +84,11 @@ The output is the following:
 'THISISMYSTRING'
 ```
 
-## 4 length
+## length
 
 Determines the length of a string.
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -96,7 +96,7 @@ The input parameters are described in the table below:
 | ----------------- | ------ |
 | String to find length of | String |
 
-### 4.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -104,7 +104,7 @@ The output is described in the table below:
 | -------------------- | ------- |
 | Length of the string | Integer |
 
-### 4.3 Examples
+### Examples
 
 | Input | Output |
 | --- | --- |
@@ -112,11 +112,11 @@ The output is described in the table below:
 | `length($MyString)` and `MyString = 'qwer'` | 4 |
 | `length($MyString)` and `MyString` is empty | 0 |
 
-## 5 substring
+## substring
 
 Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
-### 5.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -126,7 +126,7 @@ The input parameters are described in the table below:
 | Start position of the substring             | Integer |
 | Desired length of the result **(optional)** | Integer |
 
-### 5.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -141,7 +141,7 @@ The function will output an error for the following:
 * When the desired length of the result is longer than the substring
 {{% /alert %}}
 
-### 5.3 Example
+### Example
 
 If you use the following input:
 
@@ -173,11 +173,11 @@ To prevent the value of the third parameter from getting out of range, you can s
 substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
-## 6 find
+## find
 
 Finds the position of the first occurrence of the substring in the string.
 
-### 6.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -187,7 +187,7 @@ The input parameters are described in the table below:
 | Substring that you want to search for                  | String  |
 | Start location to begin the search from **(optional)** | Integer |
 
-### 6.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -195,7 +195,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The first location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
-### 6.3 Example
+### Example
 
 If you use the following input:
 
@@ -233,11 +233,11 @@ The output is:
 11
 ```
 
-## 7 findLast
+## findLast
 
 Finds the position of the last occurrence of a substring in the original string.
 
-### 7.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -247,7 +247,7 @@ The input parameters are described in the table below:
 | Substring that you want to search for                  | String  |
 | Last location to be searched **(optional)**            | Integer |
 
-### 7.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -255,7 +255,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The last location of the substring in the original string. Will return `-1` if the substring does not occur at all in the original string. | Integer |
 
-### 7.3 Example
+### Example
 
 If you use the following input:
 
@@ -295,7 +295,7 @@ The output is:
 
 As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
 
-## 8 contains
+## contains
 
 Determines whether the original string (first parameter) contains a substring (second parameter).
 
@@ -323,7 +323,7 @@ The input above will return `true`.
 This function is case-sensitive.
 {{% /alert %}}
 
-### 8.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -332,7 +332,7 @@ The input parameters are described in the table below:
 | Original string, the string that you want to search in | String |
 | Substring that you want to search for                  | String |
 
-### 8.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -340,7 +340,7 @@ The output is described in the table below:
 | --------------------------------------------------- | ------- |
 | Whether the original string contains the substring. | Boolean |
 
-### 8.3 Example
+### Example
 
 If you use the following input:
 
@@ -354,11 +354,11 @@ The output is:
 true
 ```
 
-## 9 startsWith
+## startsWith
 
 Determines whether a string starts with the specified substring.
 
-### 9.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -367,7 +367,7 @@ The input parameters are described in the table below:
 | Original string, the string that you want to search in | String |
 | Substring that you want to search for                  | String |
 
-### 9.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -375,7 +375,7 @@ The output is described in the table below:
 | ------------------------------------------------------ | ------- |
 | Whether the original string starts with the substring. | Boolean |
 
-### 9.3 Example
+### Example
 
 If you use the following input:
 
@@ -389,11 +389,11 @@ The output is:
 true
 ```
 
-## 10 endsWith
+## endsWith
 
 Determines whether a string ends with the specified substring.
 
-### 10.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -402,7 +402,7 @@ The input parameters are described in the table below:
 | Original string, the string that you want to search in | String |
 | Substring that you want to search for                  | String |
 
-### 10.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -410,7 +410,7 @@ The output is described in the table below:
 | ---------------------------------------------------- | ------- |
 | Whether the original string ends with the substring. | Boolean |
 
-### 10.3 Example
+### Example
 
 If you use the following input:
 
@@ -424,11 +424,11 @@ The output is:
 true
 ```
 
-## 11 trim {#trim}
+## trim {#trim}
 
 Removes all the whitespace at the beginning and end of a string.
 
-### 11.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -436,7 +436,7 @@ The input parameters are described in the table below:
 | -------- | ------ |
 | A string | String |
 
-### 11.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -444,7 +444,7 @@ The output is described in the table below:
 | -------------------------------------------------------- | ------ |
 | Same string, but without spaces at the beginning and end. | String |
 
-### 11.3 Example
+### Example
 
 If you use the following input:
 
@@ -458,11 +458,11 @@ The output is:
 'this is my string'
 ```
 
-## 12 isMatch
+## isMatch
 
 Checks to see if a string matches a given regular expression.
 
-### 12.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -484,7 +484,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 12.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -492,7 +492,7 @@ The output is described in the table below:
 | ---------------------------------- | ------- |
 | Whether the string matches or not. | Boolean |
 
-### 12.3 Example
+### Example
 
 This input below tests to see whether the string contains only numbers:
 
@@ -517,11 +517,11 @@ NB searching an empty string:
 
 * `isMatch('', '.*[0-9].*')` returns `false`
 
-## 13 replaceAll
+## replaceAll
 
 Replaces all occurrences of a regular expression with another string.
 
-### 13.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -544,7 +544,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 13.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -552,7 +552,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The original string, with all occurrences of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
-### 13.3 Example
+### Example
 
 If you use the following input:
 
@@ -578,11 +578,11 @@ And the output is that there are no matches for the input:
 'this is a string with no numbers thrown in'
 ```
 
-## 14 replaceFirst
+## replaceFirst
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
-### 14.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -605,7 +605,7 @@ Please note that this function call uses the regular expression language provide
 
 {{% /alert %}}
 
-### 14.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -613,7 +613,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The original string, with the first occurrence of the regular expression replaced by the replacement string. If the regular expression does not occur in the string, the original is returned. | String |
 
-### 14.3 Example
+### Example
 
 If you use the following input:
 
@@ -627,11 +627,11 @@ The output is:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## 15 String Concatenation ( + )
+## String Concatenation ( + )
 
 The `+` operator can be used to concatenate two strings or a string and a number.
 
-### 15.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -646,7 +646,7 @@ At least one of the parameters must be of type string.
 
 {{% /alert %}}
 
-### 15.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -654,7 +654,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A new string that is the literal concatenation of the two input parameters. | String |
 
-### 15.3 Example
+### Example
 
 An example of an input to combine two strings can be the following:
 
@@ -680,7 +680,7 @@ The output is:
 '4.73 kilometers'
 ```
 
-## 16 urlEncode {#urlEncode}
+## urlEncode {#urlEncode}
 
 Converts a string to be used in a URL. This function is useful when you want to use the string as part of the URL.
 
@@ -690,7 +690,7 @@ For example:
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
-### 16.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -698,7 +698,7 @@ The input parameters are described in the table below:
 | ----------------- | ------ |
 | String to convert | String |
 
-### 16.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -706,7 +706,7 @@ The output is described in the table below:
 | ------------------------ | ------ |
 | The string, URL-encoded. | String |
 
-### 16.3 Example
+### Example
 
 If you use the following input:
 
@@ -720,11 +720,11 @@ The output is:
 'Hello%2C+world%21'
 ```
 
-## 17 urlDecode
+## urlDecode
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
-### 17.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -732,7 +732,7 @@ The input parameters are described in the table below:
 | ------------------------------- | ------ |
 | A URL-encoded string to convert | String |
 
-### 17.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -740,7 +740,7 @@ The output is described in the table below:
 | ------------------------ | ------ |
 | The string, URL-decoded. | String |
 
-### 17.3 Example
+### Example
 
 If you use the following input:
 

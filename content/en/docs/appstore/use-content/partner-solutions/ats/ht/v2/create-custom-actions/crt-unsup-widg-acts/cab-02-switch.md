@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-cab-02-switch/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Switch widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create an unsupported widget action for the Mendix Switch widget. In a standard situation, the first step is to check if ATS supports the widget.
 
@@ -20,13 +20,13 @@ This how-to teaches you how to do the following:
 * Create the custom action to click the widget.
 * Add logic to your custom action.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [General](/appstore/partner-solutions/ats/ht-two-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
@@ -44,7 +44,7 @@ To define the user approach, follow these steps:
 
 2. You must determine where you must click it. After looking at the widget, you find out that you must click the actual switch to activate it.
 
-## 4 Creating the Action Structure
+## Creating the Action Structure
 
 In the previous section, you wrote down the user approach for the Mendix Switch widget. Now you must create this approach in ATS with actions. Create a new action for the next steps.
 
@@ -115,7 +115,7 @@ In the previous section, you wrote down the user approach for the Mendix Switch 
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-click-doubleclick-set-element.png" class="no-border" >}}
 
-## 5 Last Check {#LastCheck}
+## Last Check {#LastCheck}
 
 Now check for the following:
 
@@ -130,7 +130,7 @@ Congratulations! You have created your own custom action for the Mendix Switch w
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-nocondition.png" class="no-border" >}}
 
-## 6 Adding Logic to Make Your Action "Smarter" {#AddingLogic}
+## Adding Logic to Make Your Action "Smarter" {#AddingLogic}
 
 You have an action that clicks the Switch widget to alter its state, and now you will make it "smarter." Your action now clicks the Switch no matter its current state. Next, you need to add logic to set the switch to a specific state.
 
@@ -176,7 +176,7 @@ You have an action that clicks the Switch widget to alter its state, and now you
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/crt-unsup-widg-acts/cab-02-switch/mendix-switch-precondition-clickdoubleclick.png" class="no-border" >}}
 
-## 7 Final Check {#FinalCheck}
+## Final Check {#FinalCheck}
 
 Now check the following items:
 

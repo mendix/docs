@@ -3,7 +3,7 @@ title: "Create a Custom Save Button"
 url: /howto8/logic-business-rules/create-a-custom-save-button/
 weight: 3
 ---
-## 1 Introduction
+## Introduction
 
 Mendix uses visual models called microflows to define the logic of your application. A microflow is a visual way of expressing what traditionally would be written in code. This how-to explains how you can create a custom save button on a detail page using a microflow. You will replace a default save button with the save button that shows a message to end-users after they click it. 
 
@@ -12,7 +12,7 @@ This how-to teaches you how to do the following:
 * Recreate the logic of the default **Save** button
 * Create a custom **Save** button
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
@@ -20,7 +20,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Create overview and detail pages for the customer object (for details, see [How to Create Your First Two Overview and Detail Pages](/howto8/front-end/create-your-first-two-overview-and-detail-pages/))
 * Create a menu item to access the customer overview page (for details, see [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/))
 
-## 3 Replacing the Default Save Button with a Custom One
+## Replacing the Default Save Button with a Custom One
 
 To replace the default **Save** button with a custom one, follow these steps:
 
@@ -48,7 +48,7 @@ To replace the default **Save** button with a custom one, follow these steps:
 
 You have created a button that calls a microflow.
 
-## 4 Recreating the Default Save Behavior
+## Recreating the Default Save Behavior
 
 You need to recreate the default Save behavior to customize it afterwards. Do the following:
 
@@ -73,7 +73,7 @@ You need to recreate the default Save behavior to customize it afterwards. Do th
 
 You have recreated the default **Save** button logic.
 
-## 5 Extending the Microflow with Your Own Functionality
+## Extending the Microflow with Your Own Functionality
 
 To extend the logic with a custom message that will be shown when end-users click the button, do the following:
 
@@ -91,7 +91,7 @@ Congratulations! You have created a microflow and customized the **Save** button
 
 {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/microflow.png" class="no-border" >}}
 
-## 6 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Work With Lists in a Microflow](/howto8/logic-business-rules/working-with-lists-in-a-microflow/)

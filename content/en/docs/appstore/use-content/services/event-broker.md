@@ -196,3 +196,114 @@ Add this object to your Access Policy of the AWS SQS queue if it is receiving me
   "Resource": "<Tenant SQS ARN>"
 }
 ```
+
+## 4 Externally Defined Events {#externally-defined-events}
+
+Externally Defined Events refer to events that are defined outside the Mendix application, specifically outside of Studio Pro.
+
+The Mendix Event Broker allows users to upload an AsyncAPI document for these external events. Once uploaded, users can download a new AsyncAPI document compatible with Mendix Business Events, which can then be imported into Studio Pro to share the events across Mendix applications or use them in a new [Bridge](#manage-mx-broker-bridge).
+
+### 4.1 Upload Events
+
+Technical Contacts with a license to the Mendix Event Broker can manage this feature from the Uploaded Events tab on the [Event Broker Manager](https://broker.mendix.com/) page.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_get_started.png">}}
+
+To get started, click on **Get Started** button or select **Upload AsyncAPI Document**, which involves a three-step process: uploading a file, verifying event information, and selecting spaces.
+
+#### 4.1.1 Upload an AsyncAPI file
+
+Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If there are any errors with the content or format of the file, an error box will display a list of the issues found.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_1.png">}}
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_1_errors.png">}}
+
+#### 4.1.2 Verify file information
+
+The details of the uploaded file are being extracted in the Verify section, allowing you to ensure that all information is accurate and meets the required expectations.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_2.png">}}
+
+#### 4.1.3 Choose spaces
+
+Select the spaces where the events will be used. Once at least one space is selected, the **Create Service** button will be enabled, allowing the user to create the service.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_3.png">}}
+
+#### 4.1.3 Successful page
+
+The externally defined events have been successfully uploaded and are now ready to be used in Bridges or Applications. See [usages](#event-usages).
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_4.png">}}
+
+### 4.2 Overview page
+
+After a service is uploaded, users can view it on the Overview page. This page presents a list of uploaded events along with their corresponding services and the spaces selected for the AsyncAPI.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_overview.png">}}
+
+### 4.3 Events and Services Details
+
+From the Overview Page, users can access the Event and Service Details pages by clicking on the event or service name in the table. Both pages include a dropdown selection for a space, allowing users to manage services and events specific to that space.
+
+#### 4.3.1 Event Details
+
+This page provides information about the uploaded event, including the event name, Pub/Sub details, attributes, and [usages](#event-usages).
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_event_page.png">}}
+
+#### 4.3.2 Service Details {#service-details}
+
+Details of the uploaded services, including the service name, description, and associated events. Users can also delete a service within the selected space (subject to [deletion conditions](#delete-service)) and download the AsyncAPI contract for import into an existing Mendix application (see [Application Usages](#usages-app)).
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_service_page.png">}}
+
+### 4.4 Event usages {#event-usages}
+
+Once an AsyncAPI contract is successfully uploaded, there are two ways to use these events: through Bridges or Applications.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_event_usages.png">}}
+
+#### 4.4.1 Bridges
+
+To use an uploaded event in a Bridge, users must configure a [Bridge with AWS SQS](#bridge-with-aws-sqs). During the step **Choose the Business Events to Integrate**, the newly uploaded events in the selected space from previous step will be visible.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_add_bridge.png">}}
+
+#### 4.4.2 Applications {#usages-app}
+
+To use an uploaded event in an application, users need to download the AsyncAPI contract for Studio Pro and import it as a new business event in their Mendix application. The download button is available on the [Service](#service-details) page.
+
+After downloading the file, users must go to their Studio Pro app and import the file as a new business event using the "Use an existing business event service" option.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_import_file.png">}}
+
+Once the user clicks **OK**, the new business event is created and ready to be used, with the same features as any other imported event.
+
+{{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_imported_file.png">}}
+
+### 4.5 Delete service {#delete-service}
+
+On the Service Details page, users can delete a service. Deletion is only possible if the service is not being used in the selected space. This action is irreversible, and if the user wishes to re-upload the service to the space, they will need to go through the Upload File process again.
+
+Note: Deleting a service only removes it from the selected space. The service will remain available in other spaces if applicable.
+
+### 4.6 AsyncAPI format {#asyncapi-format}
+
+Externally Defined Events are provided to the Event Broker via an AsyncAPI document, which must include the service information and event definitions. Any other content within the AsyncAPI document, if provided, will be ignored.
+
+The mandatory information required in the file includes:
+
+* **Title**: This will serve as the Service Name.
+* ***Message**: This represents the Business Events. Note: Message names must be unique.
+* **Payload**: The attributes that form the message.
+
+*Message names must be unique. Duplicate events can’t be uploaded even if it is deployed anywhere in the Mendix space or uploaded before.
+
+The supported version of AsyncAPI is 2.0.0, in accordance with [AsyncAPI documentation](https://v2.asyncapi.com/docs/reference/specification/v2.2.0).
+
+File requirements:
+
+* Size: maximum file size is 1MB.
+* Supported files: .yml - .yaml - .json

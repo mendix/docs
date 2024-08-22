@@ -138,8 +138,7 @@
         font-size: $font-size-base; // NK - added to match rest of text
         word-break: normal;
         background-color: rgba($info, 0.07); // NK - changed background color
-        border-radius: $border-radius;
-        border: 1px solid rgba($info, 0.1);  // NK - added border and color
+        border-radius: 0; // DB – Removed radius
 
         br {
             display: none;

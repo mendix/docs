@@ -221,31 +221,31 @@ Upload an AsyncAPI contract based on the [AsyncAPI format](#asyncapi-format). If
 
 #### Verify File Information
 
-The details of the uploaded file are being extracted in the Verify section, allowing you to ensure that all information is accurate and meets the required expectations.
+The details of the uploaded file are extracted in the **Verify** section. This allows you to confirm that all information is accurate and meets the required expectations.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_2.png">}}
 
 #### Choose Spaces
 
-Select the spaces where the events will be used. Once at least one space is selected, the **Create Service** button will be enabled, allowing the user to create the service.
+Select the spaces where the events will be used. When at least one space is selected, the **Create Service** button will be enabled. Click **Create Service** to create the service.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_3.png">}}
 
 #### Successful Page
 
-The externally defined events have been successfully uploaded and are now ready to be used in Bridges or Applications. See [usages](#event-usages).
+The externally defined events have been successfully uploaded and are now ready to be used in Bridges or Applications. For more information on how to use an event, see [Usages](#event-usages).
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_create_4.png">}}
 
 ### Overview Page
 
-After a service is uploaded, users can view it on the Overview page. This page presents a list of uploaded events along with their corresponding services and the spaces selected for the AsyncAPI.
+After a service is uploaded, it can be viewed on the Overview page. This page presents a list of uploaded events, along with their corresponding services and the spaces selected for the AsyncAPI.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_overview.png">}}
 
 ### Events and Services Details
 
-From the Overview Page, users can access the Event and Service Details pages by clicking on the event or service name in the table. Both pages include a dropdown selection for a space, allowing users to manage services and events specific to that space.
+From the Overview page, users can access the **Event** and **Service** details by clicking on the event or service name in the table. Each page includes a drop-down selection for a space, which allows you to manage services and events specific to that space.
 
 #### Event Details
 
@@ -255,35 +255,35 @@ This page provides information about the uploaded event, including the event nam
 
 #### Service Details {#service-details}
 
-Details of the uploaded services, including the service name, description, and associated events. Users can also delete a service within the selected space (subject to [deletion conditions](#delete-service)) and download the AsyncAPI contract for import into an existing Mendix application (see [Application Usages](#usages-app)).
+The services details page includes information about the uploaded services, including the service name, description, and associated events. You can also delete a service within the selected space (subject to [deletion conditions](#delete-service)) and download the AsyncAPI contract to import into an existing Mendix application (for more information, see [Application Usages](#usages-app)).
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_service_page.png">}}
 
 ### Event Usages {#event-usages}
 
-Once an AsyncAPI contract is successfully uploaded, there are two ways to use these events: through Bridges or Applications.
+Once an AsyncAPI contract is successfully uploaded, they can be used through Bridges or applications.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_event_usages.png">}}
 
 #### Bridges
 
-To use an uploaded event in a Bridge, users must configure a [Bridge with AWS SQS](#bridge-with-aws-sqs). During the step **Choose the Business Events to Integrate**, the newly uploaded events in the selected space from previous step will be visible.
+To use an uploaded event in a Bridge, you must configure a [Bridge with AWS SQS](#bridge-with-aws-sqs). During the step **Choose business events to connect**, the newly uploaded events in the selected space from the previous step will be visible.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_add_bridge.png">}}
 
 #### Applications {#usages-app}
 
-To use an uploaded event in an application, users need to download the AsyncAPI contract for Studio Pro and import it as a new business event in their Mendix application. The download button is available on the [Service](#service-details) page.
+To use an uploaded event in an application, download the AsyncAPI contract for Studio Pro and import it as a new business event in your Mendix application. The download button is available on the [Service](#service-details) page.
 
-After downloading the file, users must go to their Studio Pro app and import the file as a new business event using the "Use an existing business event service" option.
+After downloading the file, open your Studio Pro app and import the file as a new business event using the **Use an existing business event service** option.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_import_file.png">}}
 
-Once the user clicks **OK**, the new business event is created and ready to be used, with the same features as any other imported event.
+Click **OK**. and the new business event is created and ready to be used with the same features as any other imported event.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_imported_file.png">}}
 
-### Delete service {#delete-service}
+### Delete Service {#delete-service}
 
 On the Service Details page, users can delete a service. Deletion is only possible if the service is not being used in the selected space. This action is irreversible, and if the user wishes to re-upload the service to the space, they will need to go through the Upload File process again.
 

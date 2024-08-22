@@ -57,6 +57,13 @@ The possible values for date format are shown below:
 
 If you choose **Custom** as the date format (see above), this property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally.
 
+{{% alert color="info" %}}
+When using `yyyy` custom format and typing `yy` in the date picker widget, the century guessing by proximity follows the rule of **50/50**. Specifically, it adjusts dates to be within 50 years before and 50 years after the time the date format instance is created:
+
+* `24` {{< icon name="arrow-narrow-right" >}} `2024`
+* `75` {{< icon name="arrow-narrow-right" >}} `1975`
+{{% /alert %}}
+
 {{% snippet file="/static/_includes/refguide/custom-date-format-tokens.md" %}}
 
 {{% alert color="info" %}}

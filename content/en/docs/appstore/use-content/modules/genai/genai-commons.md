@@ -94,7 +94,7 @@ This is a file in a collection of files that belongs to a message. Each instance
 | `FileType` | Currently only images and documents are supported file types. In general, not all file types might be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype).
 | `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
 | `FileExtension` | Extension of the file. | 
-F
+
 #### 4.1.6 `ToolCollection` {#toolcollection}
 
 This is an optional collection of tools to be sent along with the `Request`. Using tool call capabilities (also known as function calling) might not be supported by certain AI providers or models. This entity functions as a wrapper entity for tools and has no attributes.

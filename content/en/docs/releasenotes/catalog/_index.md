@@ -13,6 +13,19 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### August 22, 2024
+
+#### Features
+
+* We have added support for OData Actions, including:
+    * Updated relevant pages in the UI to reflect these action details.
+    * Included actions to be added to the relevant functions within the app (such as search results, filtering, editing, etc.).
+
+#### Fixes
+
+* We fixed a bug where the application filter was not displaying the results in the associated drop-down list.
+* We repositioned the **Next** button on the **Registration** page to make it visible on smaller screens.
+
 ### August 01, 2024
 
 #### Fixes

@@ -51,13 +51,15 @@ To add general information to your initiative, follow these steps:
 
 1. In the **Edit Initiative** side pane, select the status of your initiative: **On Track**, **At Risk**, or **Off Track**.
 
-2. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
+2. Enter **Percentage Completed** if this is an ongoing initiative. You can enter a value between 0–100 to indicate how much of progress has been made for this initiative.
+
+3. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
 
    {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
-3. Enter the **Description** of the initiative.
+4. Enter the **Description** of the initiative.
 
-4. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
+5. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
@@ -65,13 +67,13 @@ To add general information to your initiative, follow these steps:
 
    3. Repeat the two steps above to link more apps if you want to link more than one app.
 
-5. Set the **Owner** for the initiative.
+6. Set the **Owner** for the initiative.
 
-6. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
+7. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
 
    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Location**, **Country**, and **Use Case** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
-7. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+8. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
 Now you can proceed to [link Epics to your initiative](#link-epics).
 
@@ -258,6 +260,8 @@ The list contains the following information:
 
 * **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
+* **Completed** – This shows how much progress has been made for this initiative. It is a value between 0–100 and shown as percentage.
+
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
@@ -360,9 +364,10 @@ The view contains the following information:
 * Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
+* Timeline bar – The timeline bar indicates the start date and the go-live date of an initiative. The color shading of the bar reflects how much progress has been made for the initiative. The darker shade indicates the percentage completed, while the lighter shade shows the remaining unfinished portion. (In dark mode, the shading is reversed.) Hovering over the timeline bar shows the following information in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
+    * **Completed** – This shows how much progress has been made for this initiative.
 * Today indicator (the vertical blue line) – This indicates the date of today.
 * **Today** – Clicking **Today** on the lower-right corner brings the view back to today.
 * **Weeks**, **Months**, and **Quarters** – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.

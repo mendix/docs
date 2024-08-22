@@ -385,7 +385,7 @@ Studio Pro adds metadata on the Mendix version of your app to each revision when
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Studio Pro executes required post-processing steps when downloading a Git clone through the user interface. Using a Git commandline clone in Studio Pro is not supported.
+Studio Pro executes required post-processing steps when downloading a Git clone through the user interface. Using a Git commandline clone or a clone created by a 3rd party tool in Studio Pro is not supported.
 {{% /alert %}}
 
 ### 9.2 Authenticating to Team Server

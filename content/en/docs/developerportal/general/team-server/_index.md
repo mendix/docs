@@ -49,6 +49,10 @@ To clone/checkout your repository using the command line, you must include your 
 
 For Git, the command has the form `git clone https://pat:{USERPAT}@git.api.mendix.com/{APPID}.git`, where `{USERPAT}` is your PAT.
 
+{{% alert color="warning" %}}
+Studio Pro executes required post-processing steps when cloning through the user interface. Using a Git commandline clone in Studio Pro is not supported.
+{{% /alert %}}
+
 For SVN, the command has the form `svn checkout --revision "{REVISION}" --username "{USERNAME}" --password "{USERPAT}" https://svn.home.mendix.com/{APPID}/branches/{BRANCH}`
 
 ## 4 Revision History {#revision-history}

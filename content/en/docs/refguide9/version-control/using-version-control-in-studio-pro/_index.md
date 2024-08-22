@@ -384,6 +384,10 @@ Always use the version of TortoiseSVN which matches your app model. If you open 
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro, so the correct metadata is present again.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Studio Pro executes required post-processing steps when downloading a Git clone through the user interface. Using a Git commandline clone in Studio Pro is not supported.
+{{% /alert %}}
+
 ### 9.2 Authenticating to Team Server
 
 When using external tools, you might be asked to authenticate separately to Team Server.

@@ -304,4 +304,4 @@ The following modeling options are limited in the GraphQL service:
 * Enumerations [exposed as](/refguide/published-odata-attribute/#exposed-as) a string are ignored.
 * Binary attributes are ignored.
 * A published OData service that publishes associations as an associated object ID cannot support GraphQL.
-* The GraphQL endpoint is omitted from the OpenAPI document.  
+* The GraphQL endpoint is not part of the OpenAPI document.  

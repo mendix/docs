@@ -42,6 +42,8 @@ You must have the following Marketplace module installed:
 
 This chapter explains how to quickly configure connection to an OPC UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
+{{% todo %}}After start up and before shutdown{{% /todo %}}
+
 ### 3.1 Configuring the Connection to the OPA-UA Server
 
 1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It will allow to acces the configuration page.
@@ -82,19 +84,21 @@ Once the configuration is saved, the APIs can be used in your application.
 
 This chapter explains how to configure connection to an OPC UA server without discovery service.
 
-### 4.1 Create a microflow creating configuration objects as follow
-
+### 4.1 Create a microflow to set up a manual connection
 ADD FIGURE
+* Create the microflow.
+* The microflow should create the following objects in order. The details for each can be found in the following paragraphs
 
-* Create a `ServerConfiguration` 
+    * Create a `ServerConfiguration`
+    * Create and associate associated `IdentityToken`
+    * Provide an associated `ClientCertificate` 
+  
+* Call the ServerConfiguration_Connect microflow to connect to the server.
+    * If this microflow returns a TestConnectionResponse with isSuccess to true, the connection succeeded.
+    * If not, the error will be shown in the ErrorMessage attribute.
 
-* Create and associate associated `IdentityToken`
-
-*  Usually, also provide a `ClientCertificate` 
-
-* Trust the server certificate
-
-For details on each part, see the sections below.
+ * Trust the server certificate
+ * Call your microflow from within the application.
 
 #### 4.1.1 ServerConfiguration
 
@@ -141,7 +145,7 @@ A connection between an OPC-UA server and OPC-UA client (the Mendix application)
 For the client side, this means the client should trust the certificate of the server. 
 The server certificate must be added to the Mendix Certificate list in app settings / certificates of Studio Pro.
 
-The association between the client and the server certificates does not have to be set in the domain model.
+The association between the client and the server certificates does not need to be set in the domain model.
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 

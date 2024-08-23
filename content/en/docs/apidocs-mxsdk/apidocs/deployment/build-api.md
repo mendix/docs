@@ -1,7 +1,7 @@
 ---
 title: "Build API"
 url: /apidocs-mxsdk/apidocs/build-api/
-description: "An API that enables triggering and managing deployment package builds and getting information about existing deployment packages." 
+description: "The Build API triggers and manages deployment package builds and getting information about existing deployment packages." 
 restapi: true
 weight: 20
 ---

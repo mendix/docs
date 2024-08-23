@@ -2,7 +2,7 @@
 title: "Feedback API – Version 1"
 linktitle: "Feedback API v1"
 url: /apidocs-mxsdk/apidocs/feedback-api/
-description: "This API is deprecated. This document presents details for using this API to build on top of the feedback management functionality of the Mendix Platform and to connect your own feedback gathering tool."
+description: "This API is deprecated. The Feedback API v1 builds on top of the feedback management functionality of the Mendix Platform and connects your own feedback gathering tool."
 weight: 60
 deprecated: true
 ---

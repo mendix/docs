@@ -3,7 +3,7 @@ title: "Webhooks API"
 url: /apidocs-mxsdk/apidocs/webhooks-api/
 type: swagger
 weight: 120
-description: "Use this API to manage webhooks."
+description: "The Webhooks API manages webhooks."
 restapi: true
 ---
 

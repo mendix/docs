@@ -50,7 +50,7 @@ disableKinds = ["taxonomy", "term"]
     [markup.highlight]
         # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
         # See config options at https://gohugo.io/getting-started/configuration-markup/#highlight
-        style = "borland" # DB - Changed default style for accessibility (see https://www.ctmartin.me/blog/2019/11/print-accessible-code/)
+        style = "pygments" # DB - Changed default style for accessibility (see https://www.ctmartin.me/blog/2019/11/print-accessible-code/)
         lineNos = false # DB - Turned off line numbers
         guessSyntax = true # DB - Maintain styling when no language is specified
     # NK - set up table of contents to support correct depth for our document structure

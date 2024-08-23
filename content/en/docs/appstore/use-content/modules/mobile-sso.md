@@ -26,7 +26,7 @@ The versions of the Mobile SSO module listed below depend on the Mendix versions
 ### Typical Usage Scenarios
 
 * **B2E app:** Your app is aimed at your company’s employees, and you want these employees to sign in to your app using corporate credentials hosted by your identity provider (IdP) that supports the OIDC protocol. In this case, your app may have its own logic to assign user roles, or you may use authorization information from your IdP as provided to your app using an access token.
-* **B2C app:** Your app is aimed at your customers, which could be consumers or employees of the other companies. Consumers may have an identity at a social IdP which uses OIDC, such as Google. 
+* **B2C app:** Your app is aimed at your customers, which could be consumers or employees of the other companies. Consumers may have an identity at a social IdP which uses OIDC, such as Google.
 
 ### Features and Limitations
 
@@ -36,7 +36,7 @@ The Mobile SSO module has the following features:
 
 * Supports [native mobile apps](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/)
 * User role assignment from your IdP
-    
+
 #### Limitations
 
 This module has the following limitations:
@@ -65,11 +65,11 @@ It requires the following Marketplace modules to be included in your app:
 
 ## Installation
 
-This guide provides the step-by-step process of integrating the Mobile Single Sign-On (SSO) module into your Mendix Studio Pro application. 
+This guide provides the step-by-step process of integrating the Mobile Single Sign-On (SSO) module into your Mendix Studio Pro application.
 
 1. Add the [Mobile SSO](https://marketplace.mendix.com/link/component/223516) module to your app.
 2. Add the necessary dependencies listed above from the Marketplace, if they are not already included in your app.
-3. Follow the [OIDC SSO](/appstore/modules/oidc/) documentation to configure the app security settings for the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module. 
+3. Follow the [OIDC SSO](/appstore/modules/oidc/) documentation to configure the app security settings for the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module.
 
     {{% alert color="info" %}} From an IdP perspective, Mendix mobile apps behave as single page web apps (SPA), so specific instructions for desktop or mobile apps do not apply. {{% /alert %}}
 
@@ -92,16 +92,16 @@ Refer to the [OIDC SSO](/appstore/modules/oidc/) documentation for the configura
 
 ### Configuring Navigation
 
-In the **Native mobile (tablet & phone)** tab, configure the **Role-based home pages**. To do this, add the **Anonymous** role and set the target with the following options: 
+In the **Native mobile (tablet & phone)** tab, configure the **Role-based home pages**. To do this, add the **Anonymous** role and set the target with the following options:
 
-* Use `MobileSSO.Login_Native` when you do not want to automatically redirect to the Identity Provider (IdP) login page, especially when only one IdP is configured. This option allows end-users to sign in directly without redirection. 
-* Use `MobileSSO.Login_Native_Automatic` if you want end-users to redirect automatically to the IdP sign in page when only one IdP is configured. 
+* Use `MobileSSO.Login_Native` when you do not want to automatically redirect to the Identity Provider (IdP) login page, especially when only one IdP is configured. This option allows end-users to sign in directly without redirection.
+* Use `MobileSSO.Login_Native_Automatic` if you want end-users to redirect automatically to the IdP sign in page when only one IdP is configured.
 
 {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/configuring navigation.png" class="no-border" >}}
 
 ### Configuring Custom Login Page
 
-If you want to customize the login page, make sure to add the **App events** widget in the page and call the `MobileSSO.OL_RegisterDeeplink` nanoflow. This step helps to integrate the custom login page with Mobile SSO module. 
+If you want to customize the login page, make sure to add the **App events** widget in the page and call the `MobileSSO.OL_RegisterDeeplink` nanoflow. This step helps to integrate the custom login page with Mobile SSO module.
 
 {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Custom login.png" class="no-border" >}}
 
@@ -156,7 +156,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 1. Add the following JSON representations to the **Manifest** of the application:
     1. For the application that has been deployed using **Build Native Mobile App**
 
-        ```
+        ```json
         "replyUrlsWithType": [
          {
             "type": "Web",
@@ -171,7 +171,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 
     2. For local testing, use the JSON below in the **Manifest** of the application:
 
-        ```
+        ```json
         {
             "url": "<https://<IP_address>>/oauth/v2/callback",
             "type": "Web"
@@ -205,7 +205,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
         {{% alert color="info" %}} Use the same appname which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Okta deployed.png" max-width=80% >}}
-        
+
     2. For local testing: `http://<IP_address>/oauth/v2/callback` and `makeitnative://oauth/callback`
 
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above.{{% /alert %}}

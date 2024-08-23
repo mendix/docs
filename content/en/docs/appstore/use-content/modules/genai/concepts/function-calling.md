@@ -62,7 +62,9 @@ For models used through Azure OpenAI, feature availability is currently differen
 
 ### 3.2 Supported Amazon Bedrock models {#supported-models-bedrock}
 
-Currently, only Anthropic Claude version 3 models support function calling via the Amazon Bedrock Connector. 
+Multiple models available on Amazon Bedrock support function calling. In Bedrock documentation, function calling is often addressed as *Tool Use*, which describes the same concept.
+A detailed overview showing which models support function calling (tool use) can be found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
+ 
 
 ## 4 Use cases {#use-cases}
 

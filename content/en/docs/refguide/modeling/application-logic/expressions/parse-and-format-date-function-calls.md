@@ -66,7 +66,7 @@ When using `yy` dateformat, the century guessing by proximity follows the rule o
 * `24` {{< icon name="arrow-narrow-right" >}} `2024`
 * `75` {{< icon name="arrow-narrow-right" >}} `1975`
   
-The topic above applies when using the expression in Nanoflow. When using it in a Microflow then the rule will follow **80/20** pattern:
+The topic above applies when using the expression in Nanoflow. When using it in a Microflow then the rule will follow the rule of **80/20**:
 
 * `24` {{< icon name="arrow-narrow-right" >}} `2024`
 * `68` {{< icon name="arrow-narrow-right" >}} `1968`

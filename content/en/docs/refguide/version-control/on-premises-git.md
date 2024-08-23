@@ -44,10 +44,6 @@ Currently Mendix keeps PAT using operating system supported solutions:
 * For Windows, Mendix uses a credential locker mechanism, accessible to users by using Credential Manager.
 * For MacOs, Mendix uses keychains, accessible to users by using Keychain Access.
 
-Currently Mendix keeps PAT using operating system supported solutions:
-* For Windows, Mendix uses a credential locker mechanism, accessible to users by using Credential Manager.
-* For MacOs, Mendix uses keychains, accessible to users by using Keychain Access.
-
 ## Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.

@@ -673,7 +673,6 @@ Your SAML IdP can consume the following endpoints at your app. Typically the SP-
 
 * **/SSO/metadata/[IDP-Alias]** – This provides a point for the IdP to automatically download the metadata from this SP
 * **/SSO/assertion** – This is the endpoint where the IdP submits the SAML assertion to the so-called ‘Assertion Consumer Service’
-* **/SSO/attribute** – This is the endpoint where the SAML-IdP submits requested attributes about the authenticated user
 * **/SSO/logout** – This URL will trigger a single logout
 
 ## Read More

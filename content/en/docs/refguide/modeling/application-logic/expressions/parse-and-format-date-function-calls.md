@@ -73,8 +73,6 @@ The topic above applies when using the expression in Nanoflow. When using it in 
   
 {{% /alert %}}
 
-
-
 ### Input Parameters
 
 The input parameters are described in the table below:

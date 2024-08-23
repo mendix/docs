@@ -113,7 +113,7 @@ The following subsections show how to set up IdP for mobile or web and mobile pl
 
 #### Configuring IdP for Mobile
 
-{{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, `<appname>://oauth/callback`, where `<appname>` is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
+{{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, *`APP_NAME`*`://oauth/callback`, where *`APP_NAME`* is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
 {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Configure client information.png" class="no-border" >}}
 
@@ -126,7 +126,7 @@ If you are building SSO application, you can use the common IdP configuration fo
 To do this, follow the steps below:
 
 1. Replace the `SUB_GetCallbackURL` sub-microflow from the OIDC SSO module with the `SUB_GetMobileCallbackURL` microflow of the Mobile SSO module in the `handleAuthorizationCode` and `GetAuthorizationURL` microflows.
-1. In the Mobile SSO module, go to the **Configuration** in the **helpers** folder and add the `<appname>` in the `MobileURLScheme` constant.
+1. In the Mobile SSO module, go to the **Configuration** in the **helpers** folder and add the *`APP_NAME`* in the `MobileURLScheme` constant.
 
 ### Single Log Out
 
@@ -137,7 +137,7 @@ A standard sign out action will end an end-user’s Mendix session, but it will 
 When you are building the native mobile app using **Build Native Mobile App** option, make sure to follow the steps below:
 
 1. Turn on **Deep Link**.
-1. After turning on the **Deep Link**, add the same appname from `<appname>://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
+1. After turning on the **Deep Link**, add the same appname from *`APP_NAME`*`://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
 
 {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Deeplink.png" max-width=80% >}}
 
@@ -160,12 +160,12 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
         "replyUrlsWithType": [
          {
             "type": "Web",
-            "url": "<appname>://oauth/callback"
+            "url": "APP_NAME://oauth/callback"
          }
         ],
         ```
 
-        {{% alert color="info" %}} Use the same `<appname>` which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
+        {{% alert color="info" %}} Use the same *`APP_NAME`* which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Manifest.png" max-width=80% >}}
 
@@ -200,8 +200,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 
 1. In the **Sign-in redirect URIs** of the **LOGIN** field, add the following application URI:
 
-    1. For the application that has been deployed using **Build Native Mobile App**:
-    `<appname>://oauth/callback`
+    1. For the application that has been deployed using **Build Native Mobile App**: *`APP_NAME`*`://oauth/callback`
 
         {{% alert color="info" %}} Use the same appname which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% /alert %}}
 

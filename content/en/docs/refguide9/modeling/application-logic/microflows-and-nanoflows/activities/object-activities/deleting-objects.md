@@ -105,6 +105,10 @@ In detail, the following graph shows what happens during deletions:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" class="no-border" >}}
 
+{{% alert color="info" %}}
+The **Committing** state of the **IMendixObject** is deprecated.
+{{% /alert %}}
+
 {{% alert color="warning" %}}
 The **Delete object(s)** activity also removes the variable from the microflow. Be careful not to use the variable anymore after using it in a **Delete object(s)** activity.
 {{% /alert %}}

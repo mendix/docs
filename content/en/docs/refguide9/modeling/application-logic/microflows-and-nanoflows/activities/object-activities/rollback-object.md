@@ -96,3 +96,7 @@ Pressing a **Cancel** button or triggering a rollback object activity will initi
     * An object with the state **Instantiated** will be removed, and an object with any other state will be reverted back to the values it had during the last commit
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/during-rollback.png" class="no-border" >}}
+
+{{% alert color="info" %}}
+The **Committing** state of the **IMendixObject** is deprecated.
+{{% /alert %}}

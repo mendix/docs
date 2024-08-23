@@ -4,7 +4,7 @@ url: /refguide/system-texts/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 System texts are texts that are shown automatically to end-users by the server or the client. 
 
@@ -17,11 +17,11 @@ You can change the system texts in the following way:
 1. Go to the system texts editor: **App Explore** > **App 'AppName'** > **System texts** > **Text**.
 2. Click on the texts in the **Text** column to edit the texts.
 
-## 2 Languages
+## Languages
 
 In the [App Settings](/refguide/project-settings/), you can manage the available languages of your application. For each language, you can specify the translation of the system texts. If you do not provide a translation, the text will be shown in the default language.
 
-## 3 Parameters
+## Parameters
 
 Some system texts have parameters that can be inserted into the text. 
 

@@ -7,7 +7,7 @@ description: "Moving an existing Mendix app deployed as a Free App to a Basic Pa
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to migrate your app and its database from a Free App environment to a paid Mendix Basic node. For more information on the Mendix Basic Package, see [Mendix Basic Package](/developerportal/deploy/basic-package/).
 
@@ -17,23 +17,23 @@ You can also see these steps by watching this video:
 
 For more information on setting up any environment details as described in the video, see [Environment Details](/developerportal/deploy/environments-details/).
 
-## 2 Prerequisites 
+## Prerequisites 
 
 Before starting this how-to, make sure that the following prerequisites are met:
 
 * You have received confirmation that your Basic node is ready
 * You are the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the app
 
-## 3 Migrating to Mendix Basic
+## Migrating to Mendix Basic
 
 To migrate your Free App and its database to your Mendix Basic environment, follow the steps in the sections below.
 
-### 3.1 Open your Free App
+### Open your Free App
 
 1. Go to [Apps](https://sprintr.home.mendix.com). Sign in if prompted.
 1. Click the app that you want to migrate to a Basic Node.
 
-### 3.2 Download a Backup{#download-backup}
+### Download a Backup{#download-backup}
 
 1. In the [navigation pane](/developerportal/#navigation-pane), click **Backups**.
 1. On the backup that you want to download, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) > **Download**.
@@ -44,7 +44,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 1. Close the **Download Backup** dialog box.
 
-### 3.3 Unlink Your App From Its Node
+### Unlink Your App From Its Node
 
 1. In the navigation pane, click **Environments**.
 
@@ -62,7 +62,7 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
     {{% alert color="info" %}}Before your environment is deleted, you may be prompted to authenticate with [two-factor authentication](/developerportal/deploy/two-factor-authentication/).{{% /alert %}}
 
-### 3.4 Link Your App to the New Node{#link-app-to-node}
+### Link Your App to the New Node{#link-app-to-node}
 
 1. In the banner at the top of the **Environments** page, click **Select a node**.
 
@@ -70,18 +70,18 @@ To migrate your Free App and its database to your Mendix Basic environment, foll
 
 2. Click **Use this node** for the node you just licensed. You may have to confirm and authenticate this with two-factor authentication again.
 
-### 3.5 Configure Your Environment
+### Configure Your Environment
 
 Before your app can be deployed, you may need to configure your environment details. This is only required if you have some special configurations or you have to specify settings in order for your functionality to work. For example, if your app uses scheduled events or application constants, you can configure them at this stage. For more information about configuring your environment, see [Environment Details](/developerportal/deploy/environments-details/).
 
-### 3.6 Deploy Your App
+### Deploy Your App
 
 Now you need to deploy and start your app!
 
 1. Create a deployment package as described in the [Creating a Deployment Package](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#package-from-team-server).
 1. On the deployment package you just created, click **Deploy** ({{% icon name="deploy" %}}) and follow the steps in the resulting wizard, as described in [Deploying the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-the-app-to-an-environment). This publishes your app to the production environment and then starts it.
 
-### 3.7 Upload and Restore the Backup
+### Upload and Restore the Backup
 
 The final step is restoring your data. You must do this after you've deployed your app because this ensures that a database has been provisioned and is ready to accept your data.
 

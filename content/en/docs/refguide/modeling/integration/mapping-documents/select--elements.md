@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 For both [import](/refguide/import-mappings/) and [export mappings](/refguide/export-mappings/), you need to specify the elements structure you want to map. You do this in the **Select schema elements** window. An example of this screen is shown below:
 
@@ -23,7 +23,7 @@ Perform the following steps in the **Select schema elements** window:
 If the contents of the used schema source change, the mapping document does not match with the schema anymore and a consistency error is shown. This consistency error is easily fixed by right-clicking the consistency error and selecting **Resolve by updating from schema**. Schema contents can change by importing a changed XML schema, WSDL, or by changing a JSON structure.
 {{% /alert %}}
 
-## 2 Rules and Restrictions
+## Rules and Restrictions
 
 Keep in mind the following rules and restrictions for element selection:
 
@@ -45,7 +45,7 @@ When working on an import mapping, you can skip elements in the hierarchy but st
 You may encounter element selection checkboxes that are greyed out. If you hover the mouse over the checkbox, you see which rule or restriction prevents you from changing the checkbox value. For example, you may need to select a parent node first before you can select a child node.
 {{% /alert %}}
 
-## 3 Convenience Functions
+## Convenience Functions
 
 | Function | Description |
 | --- | --- |

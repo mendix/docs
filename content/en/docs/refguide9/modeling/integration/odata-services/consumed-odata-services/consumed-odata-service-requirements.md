@@ -10,22 +10,22 @@ description: "Requirements on OData services consumed in Mendix."
 The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide9/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide9/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide9/consumed-rest-services/) functionality.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and expected to hold. If these requirements are not met, errors may result.
 
-## 2 Requirements for a Consumed OData Service
+## Requirements for a Consumed OData Service
 
 The requirements for a consumed OData service used in a Mendix app are the following:
 
 * The OData service must be either an OData v3 service returning Atom XML, or an OData v4 service returning either Atom XML or JSON
 * It should support queries on the OData feed, including `$filter`, `$orderby`, `$top`, `$skip`, `$expand`, and `$count` (or `$inlinecount`)
 
-## 3 Requirements on the Service Entities and Attributes
+## Requirements on the Service Entities and Attributes
 
 This section describes the features of a consumed OData service that are supported in Mendix apps. These features are checked before an external entity is used in the domain model.
 
-### 3.1 Entities
+### Entities
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
@@ -57,7 +57,7 @@ This feature of using entities with keys that do not have a maximum length speci
 The list above for supported key fields does not include `Date` or `DateTime` data types.
 {{% /alert %}}
 
-### 3.2 Attributes
+### Attributes
 
 {{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
@@ -87,7 +87,7 @@ When the OData endpoint contains operations, these are not imported in the consu
 
 <small><sup>[1]</sup> In Mendix, Booleans cannot be null. If the service returns null, the value will be false in Mendix.<br /><sup>[2]</sup> Decimal values outside of the range of a [Mendix decimal](/refguide9/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.</small>
 
-### 3.3 Generalizations
+### Generalizations
 
 The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity.
 
@@ -99,13 +99,13 @@ Associations to the generalizations with other exposed entities in the published
 When a generalization and a specialized entity are exposed in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
-### 3.4 Binary Attributes
+### Binary Attributes
 
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 
 Currently, the binary data can only be accessed by Java actions.
 
-### 3.5 Associations
+### Associations
 
 An OData v3 association can only be used if it has two ends.
 
@@ -113,6 +113,6 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume the resource as an external entity.
 
-### 3.6 Enumerations
+### Enumerations
 
 Enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide9/enumerations/#name) are not supported.

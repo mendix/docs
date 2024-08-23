@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Range Slider widget, 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows the user to set a range using a slider. You need to configure a minimum value and a maximum value for the slider, which define the limits of the slider's track. The user can set a range within these limits by defining the lower bound value and the upper bound value of the range.
 
@@ -13,7 +13,7 @@ The [Range Slider](https://marketplace.mendix.com/link/component/52704/) allows 
 If the user needs to set one value, instead of a range, you should use the [Slider](/appstore/widgets/slider/) widget instead.
 {{% /alert %}}
 
-### 1.1 Features
+### Features
 
 * Configure the minimum value and the maximum value, which define the limits of the slider's track, and then the user can set the lower bound value and the upper bound value of a range within these limits:
 
@@ -27,7 +27,7 @@ If the user needs to set one value, instead of a range, you should use the [Slid
 * Show a tooltip when the user clicks or moves a slider handle
 * Render the slider with different colors
 
-## 2 Configuration
+## Configuration
 
 To configure this widget, follow these steps:
 
@@ -35,14 +35,14 @@ To configure this widget, follow these steps:
 2. Double-click the Ranger Slider widget to open the **Edit Ranger Slider** dialog box.
 3. Configure the widget using the properties described in the sections below.
 
-### 2.1 General Tab
+### General Tab
 
-#### 2.1.1 Data Source Section
+#### Data Source Section
 
 * **Lower bound attribute** – defines the attribute to store the lower bound value of the range
 * **Upper bound attribute** – defines the attribute to store the upper bound value of the range
 
-#### 2.1.2 General Section
+#### General Section
 
 * **Minimum value type** – sets the type of the value source for the **Minimum value** property
     * **Static** – if selected, the minimum value is a static value
@@ -78,19 +78,19 @@ To configure this widget, follow these steps:
         * **Label caption** – defines the label caption of the widget that is displayed on the page
     * **No** (default) – if selected, there is no label for this widget on the page
 
-#### 2.1.3 Editability Section
+#### Editability Section
 
 **Editable** – determines if the widget can be edited
 
 {{% alert color="info" %}}For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-#### 2.1.4 Visibility Section
+#### Visibility Section
 
 **Visible** – determines if the widget visible or not
 
 {{% alert color="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-### 2.2 Track Tab
+### Track Tab
 
 * **Number of markers** – sets the number of the markers that appear along the slider's track
 * **Decimal places** – sets the number of decimal places for marker values
@@ -102,17 +102,17 @@ To configure this widget, follow these steps:
             * **Pixels** – if selected, an absolute value is used to specify the height
         * **Height** – the height in pixels or percentage based on the setting of **Height unit**
 
-### 2.3 Events Tab
+### Events Tab
 
 **On change** – sets the action to execute when the slider changes its value
 
 {{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-### 2.4 Common Tab
+### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features:
 

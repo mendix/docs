@@ -4,7 +4,7 @@ url: /developerportal/project-management/epics/board/
 weight: 10
 description: "Describes the Board page in Epics. This page looks different, depending on whether you use the Scrum workflow or Kanban workflow. "
 ---
-## 1 Introduction
+## Introduction
 
 The **Board** page gives an overview of all the stories that your team is currently working on. The stories are groups in different swimlanes based on their status.
 
@@ -15,7 +15,7 @@ On the upper-right corner of the page, you can find the following items:
   
 * Search box – You can search stories based on story title, tags, epic name, assignee (including unassigned stories), and story ID. You can use the search box in combination with the filter.
 
-## 2 Swimlanes {#swimlane}
+## Swimlanes {#swimlane}
 
 The two default swimlanes are **To Do** and **Done**. 
 
@@ -35,7 +35,7 @@ However, it is not possible to do the following actions:
 
 You can move a swimlane by dragging it to the new location.
 
-### 2.1 Story Cards {#story-card}
+### Story Cards {#story-card}
 
 Each card in a swimlane represents a story:
 
@@ -61,7 +61,7 @@ You can move a card within a swimlane or across swimlanes. To do so, drag the ca
 
 You can click a story card to view the [story details](#story-details).
 
-### 2.2 Story Details {#story-details}
+### Story Details {#story-details}
 
 When you click the card of a story, the story details dialog box opens.
 
@@ -144,13 +144,13 @@ The story details dialog box shows the following items:
 
 {{% alert color="info" %}}You can also edit the story in this story details dialog box. If you make any change, click **Save Story** at the bottom to save it.{{% /alert %}}
 
-## 3 Scrum Board vs Kanban Board {#different-boards}
+## Scrum Board vs Kanban Board {#different-boards}
 
 The **Board** page offers different features to accommodate two different workflows: Scrum or Kanban. Depending on your choice of board type – Scrum or Kanban, the **Board** page looks a bit different.
 
 {{% alert color="info" %}}You can select your board type on the [Planning](/developerportal/project-management/epics/planning/#board-type) page.{{% /alert %}}
 
-### 3.1 Scrum Board
+### Scrum Board
 
 If your board style is Scrum, you can find the features below which accommodate your Scrum workflow.
 
@@ -162,7 +162,7 @@ The main area of the page gives an overview of all the stories in your current S
 
 {{% alert color="info" %}}To edit or end the current Sprint, you should go to the [Planning](/developerportal/project-management/epics/planning/#scrum-planning) page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner, and select the corresponding item.{{% /alert %}}
 
-### 3.2 Kanban Board
+### Kanban Board
 
 If your board type is Kanban, the upper-left corner of the page shows the number of stories and the total points. 
 

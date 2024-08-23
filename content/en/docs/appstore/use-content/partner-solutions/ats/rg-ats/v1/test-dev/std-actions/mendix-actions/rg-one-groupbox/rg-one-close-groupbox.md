@@ -3,20 +3,20 @@ title: "Close GroupBox"
 url: /appstore/partner-solutions/ats/rg-one-close-groupbox/
 ---
 
-## 1 Description
+## Description
 
 Closes a groupbox by its given name.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * GroupBox
 
-## 3 Usage
+## Usage
 
 Pass the name of the GroupBox you want to close as parameter for the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

@@ -5,7 +5,7 @@ description: "Describes how to create a test suite and add test cases and test s
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates and times. 
 Scheduling tests can be useful for the following:
@@ -19,13 +19,13 @@ This how-to teaches you how to do the following:
 * Schedule test cases
 * Schedule test suites
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 
-## 3 Scheduling Test Cases
+## Scheduling Test Cases
 
 The following steps explain how to schedule test cases:
 
@@ -70,7 +70,7 @@ The following steps explain how to schedule test cases:
 Clicking **Save** adds the test case to the list of scheduled items. Click **Edit** ({{% icon name="pencil" %}}) to change the settings (1). Click **Delete** ({{% icon name="remove" %}}) to delete the scheduled test case (2):
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-schedule-testcase-testsuite/scheduled-testcase.png" class="no-border" >}}
 
-## 4 Scheduling Test Suites
+## Scheduling Test Suites
 
 The following steps explain how to schedule test suites:
 
@@ -126,6 +126,6 @@ In case repeat is set to **Yes**, ATS will run the test until you mark it as ina
 Now you can schedule your own test cases and test suites. You can add as many scheduled tests as you want. However, as executing tests takes time, there is a limit to the number of tests you can schedule.
 {{% /alert %}}
 
-## 5 Next Up
+## Next Up
 
 You now learned how to schedule test cases and test suites. The next how-to is [How to Mask Your Password](/appstore/partner-solutions/ats/ht-two-mask-your-password/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

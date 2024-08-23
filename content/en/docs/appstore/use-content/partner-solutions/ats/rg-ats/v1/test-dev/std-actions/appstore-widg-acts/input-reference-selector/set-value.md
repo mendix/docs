@@ -3,19 +3,19 @@ title: "Set InputReferenceSelector Value"
 url: /appstore/partner-solutions/ats/rg-one-set-inputreferenceselector-value/
 ---
 
-## 1 Description
+## Description
 
 Set the InputReferenceSelector to the given value.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * InputReferenceSelector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to set.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

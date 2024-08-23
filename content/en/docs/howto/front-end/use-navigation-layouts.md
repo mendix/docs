@@ -5,7 +5,7 @@ weight: 12
 description: "Describes how to choose, design, and configure your navigation layouts."
 ---
 
-## 1 Introduction
+## Introduction
 
 This document will cover the basics of how you work with navigation layouts. 
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 * Understand the difference between top and left navigation
 * Configure the sidebar toggle
 
-## 2 Selecting the Correct Navigation Layout
+## Selecting the Correct Navigation Layout
 
 When building an app with Mendix, the first thing you have to decide is which navigation layout to choose. These layouts are the frames within which your dynamic pages are housed, and provide consistent structure throughout your app. 
 
@@ -23,7 +23,7 @@ Layouts specify what goes where. Each page is based on a layout. The layout cont
 
 Mendix's Atlas UI provides two distinct web layouts for you to choose from: Atlas Default and Atlas Topbar.
 
-### 2.1 Atlas Default
+### Atlas Default
 
 The default layout of Atlas is a responsive layout which can be used across web, tablet, and mobile devices:
 
@@ -43,7 +43,7 @@ The navigation menu of Atlas Default is a toggled menu. Options for this toggled
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/2.1_shrinkingcontentclosedoption.gif"   width="350"  class="no-border" >}}
 
-### 2.2 Atlas TopBar
+### Atlas TopBar
 
 The TopBar layout of Atlas a responsive layout which can be used 
 across web, tablet and mobile devices:
@@ -64,7 +64,7 @@ The options for the sidebar (unlike the Atlas Default) are only applicable at ph
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  class="no-border" >}}
 
-### 2.3 Comparing the Two Layouts
+### Comparing the Two Layouts
 
 Choosing which of the two layouts (Atlas Default and Atlas Topbar) is right for you comes down to choosing between top navigation versus left navigation, The information below will help you determine which approach better suits your users. The sections below assume your app is designed for users who read left to right, but Mendix may release more design guidance and options for other language cultures in the future.
 
@@ -72,25 +72,25 @@ When it comes down to designing for your users, context is key. A navigation tha
 
 {{< figure src="/attachments/howto/front-end/use-navigation-layouts/2.3_topvsleftnavigation.png"   width="350"  class="no-border" >}}
 
-#### 2.3.1 Scanning
+#### Scanning
 
 Left navigation is faster and more efficient for users to scan. In just three visual fixations, users scan six items in the left navigation compared to the three items scanned in the top navigation. Left navigation also facilitates a vertical scanning direction that is natural for people, while top navigation forces a horizontal scanning direction that people often use when they are reading.
 
-#### 2.3.2 Page Space
+#### Page Space
 
 Top navigation conserves more vertical page space than left navigation. With left navigation, the navigation links occupy the left column of your page. This shrinks and narrows the content area of your page, which means you will have less space for your content. Top navigation, however, uses minimal vertical space which allows you to fill your page's content area with content only.
 
-#### 2.3.3 Item Priority
+#### Item Priority
 
 Items in top navigation do not have equal weight. The leftmost items carry more visual weight than other items because of their placement in the primary visual area (top left). Items in the upper-left area get more exposure and are often seen as more important than other items. The items in left navigation, however, do have equal weight because they are all placed on the left with no other items in their opposing direction on the right. Because users read items from left to right, the priority direction for reading items is stronger horizontally than vertically.
 
-#### 2.3.4 Visibility
+#### Visibility
 
 Top navigation items are more visible because they are always above the fold and are easier to find. Left navigation items are not always above the fold; sometimes if you have too many items a few of them can get pushed below the fold. Top navigations are also easier to find because they are usually accompanied by the header and logo, both of which are visually dominant objects on a web page.
 
-## 3 Configuring the Sidebar
+## Configuring the Sidebar
 
-### 3.1 Setting Toggled Sidebar to Shrinking Content (Initially Open):
+### Setting Toggled Sidebar to Shrinking Content (Initially Open):
 
 To configure the toggled sidebar to shrinking content (initially open), follow these steps:
 
@@ -114,7 +114,7 @@ To configure the toggled sidebar to shrinking content (initially open), follow t
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.1_shrinkcontentopen.png"   width="350"  class="no-border" >}}
 
-### 3.2 Toggling the Sidebar for Shrinking Content (Initially Open)
+### Toggling the Sidebar for Shrinking Content (Initially Open)
 
 To toggle the sidebar for **Shrinking content (initially open)**, follow these steps:
 
@@ -123,7 +123,7 @@ To toggle the sidebar for **Shrinking content (initially open)**, follow these s
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.2_toggleshrinkingcontentopenoption.gif"   width="350"  class="no-border" >}}
 
-### 3.3 Setting Toggled Sidebar to Shrinking Content (Initially Closed)
+### Setting Toggled Sidebar to Shrinking Content (Initially Closed)
 
 To configure the toggled sidebar to **Shrinking content (initially closed)**, follow these steps:
 
@@ -147,14 +147,14 @@ To configure the toggled sidebar to **Shrinking content (initially closed)**, fo
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.3_shrinkcontentclosed.png"   width="350"  class="no-border" >}}
 
-### 3.4 Toggling the Sidebar for Shrinking Content (Initially Closed)
+### Toggling the Sidebar for Shrinking Content (Initially Closed)
 
 1. Click **Run Locally** ({{% icon name="controls-play" %}}) to run your app.
 2. In your browser, click the toggle button:
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.4_toggleshrinkingcontentclosedoption.gif"   width="350"  class="no-border" >}}
 
-### 3.5 Setting Toggled Sidebar to Pushing Content Aside
+### Setting Toggled Sidebar to Pushing Content Aside
 
 To configure the toggled sidebar to **Push content aside**, follow these steps:
 
@@ -182,7 +182,7 @@ To configure the toggled sidebar to **Push content aside**, follow these steps:
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  class="no-border" >}}
 
-### 3.6 Toggling the Sidebar for Pushing Content Aside
+### Toggling the Sidebar for Pushing Content Aside
 
 To toggle the sidebar for Pushing content aside, follow these steps:
 
@@ -203,7 +203,7 @@ To toggle the sidebar for Pushing content aside, follow these steps:
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/2.2_pushingcontentaside.gif"   width="350"  class="no-border" >}}
 
-### 3.7 Setting Toggled Sidebar to Slide Over Content
+### Setting Toggled Sidebar to Slide Over Content
 
 To configure the toggled sidebar to **Slide over content**, follow these steps:
 
@@ -231,7 +231,7 @@ To configure the toggled sidebar to **Slide over content**, follow these steps:
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/3.7_changewidth.png"   width="350"  class="no-border" >}}
 
-### 3.8 Toggling the Sidebar for Slide Over Content
+### Toggling the Sidebar for Slide Over Content
 
 To toggle the sidebar for **Slide over content**, follow these steps:
 
@@ -252,7 +252,7 @@ To toggle the sidebar for **Slide over content**, follow these steps:
 
     {{< figure src="/attachments/howto/front-end/use-navigation-layouts/2.2_slidingovercontent.gif"   width="350"  class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * Check the [Atlas UI](https://www.mendix.com/atlas/) page for more information on the Atlas UI framework
 * See the [Layout Examples](/howto/front-end/layouts-and-snippets/#layout-examples) section of *How to Use Layouts and Snippets* for more information on creating your own navigation layouts

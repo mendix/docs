@@ -4,21 +4,21 @@ url: /appstore/creating-content/connector-guide-best-practices/
 weight: 7
 ---
 
-## 1 Introduction
+## Introduction
 
 In [Build Connectors](/appstore/creating-content/connector-guide-build/), you learned about the background and basic steps of building connectors. This guide will go into more detail and explore recommended practices for building, testing, and distributing connectors. 
 
-## 2 App Setup {#app-setup}
+## App Setup {#app-setup}
 
 This section dives into best practices for setting up your app in Studio Pro. For the basic instructions, see the [Setting Up Your App](/appstore/creating-content/connector-guide-build/#app-setup) section of *Build Connectors*.
 
-### 2.1 Studio Pro Version
+### Studio Pro Version
 
 For people to use your connector, ensure that you are not only servicing toward end-users that have the latest version. Try to support the latest [LTS](/releasenotes/studio-pro/lts-mts/) version, or if possible even older supported versions. 
 
 The only reason to deviate from this is when your connector requires a certain platform functionality that is only available in a newer version, or requires another module that is only available on a newer version. In that case, use that newer version as your Mendix required version.
 
-### 2.2 Modules in the App
+### Modules in the App
 
 Create a Mendix app in Studio Pro with the main connector module and a testing module. You can also optionally add an example module showing some use cases.
 
@@ -26,7 +26,7 @@ Create a Mendix app in Studio Pro with the main connector module and a testing m
 * The *testing module* has microflows, pages, and Java code to test your module's functionality without having to add the test logic to the module that you will later export and publish.
 * The *example module* can be published next to the main connector module to help end-users better understand the implementation of your connector module, or to try it out without having to do too much configuration from the start.
 
-#### 2.2.1 Main Connector Module Setup {#main-setup}
+#### Main Connector Module Setup {#main-setup}
 
 Mendix recommends the *main module* for your connector include the following:
 
@@ -45,7 +45,7 @@ Your **App Explorer** should look like this after initial setup:
 This app folder structure example is based on the **Blank Web App** starter app and contains Mendix Marketplace modules that your app might not have. The important Marketplace module that is shown is the [Unit Testing](/appstore/modules/unit-testing/) module for testing purposes.
 {{% /alert %}}
 
-#### 2.2.2 App Root Setup {#root-setup}
+#### App Root Setup {#root-setup}
 
 Mendix recommends adding add additional folders to the root of your app (on disk). These include the following:
 
@@ -56,25 +56,25 @@ The app root of your **App Explorer** should look like this after root setup:
 
 {{< figure src="/attachments/appstore/creating-content/connector-guide-build/connector-guide-best-practices/app-post-setup.png" class="no-border" >}}
 
-#### 2.2.3 Importing Dependency Modules
+#### Importing Dependency Modules
 
 Use as few dependency modules as possible. When you must use one, make sure they are either maintained by your own company (when creating a company-only connector) and/or platform-supported so users are not left unsupported. Otherwise, you might end up having to maintain those public non-platform supported modules to ensure that your connector operates properly.
 
-### 2.3 Adding the App to Version Control
+### Adding the App to Version Control
 
 Add the app to [Team Server](/refguide/version-control/#team-server) (or GitHub) version control, if you have not already done so when creating the app. 
 
 Mendix recommends having a separate public Git repository next to your private Team Server Git repository, so that you can continue committing and applying changes while you only push to the public repository for a new release to the Marketplace. The automated integration with GitHub from the Marketplace makes this a good option for your public-facing Git repository.
 
-### 2.4 Working with Java-Intensive Apps
+### Working with Java-Intensive Apps
 
 For Java-intensive apps, consider creating an **Implementation** sub-module to keep core implementation separate. You can also make the module a Gradle project in order to better manage dependencies and release pipeline. Create the *gradle.build* file to manage Java library dependencies and cleanup of the **userlib** folder for export. For further information, see [Extend App Setup for Building Connectors with Java](#extend-app-java) below.
 
-## 3 Development
+## Development
 
 This section explores best practices for connector development. You can develop connectors using Java or using Mendix.
 
-### 3.1 Developing Connectors Using Java
+### Developing Connectors Using Java
 
 Implementing the bulk of the functionality in Java has the following benefits: 
 
@@ -85,7 +85,7 @@ Mendix apps should focus on solving the business requirements. Generic technical
 * End-users are less likely to change it.
 * You can use [unit tests](#unit-testing).
 
-#### 3.1.1 Extending App Setup for Building Connectors with Java {#extend-app-java}
+#### Extending App Setup for Building Connectors with Java {#extend-app-java}
 
 You can extend your app to work with Java and Gradle.
 
@@ -116,11 +116,11 @@ You must have the *.jar* file placed in the  **userlib** folder before exporting
 
 A self-contained Gradle project can do unit testing and integration testing in the same way as you would do in any other Java project. See the [Testing](#testing) section of this document for best testing practices.
 
-### 3.2 Developing Connectors with Mendix
+### Developing Connectors with Mendix
 
 While Java is likely going to be a primary choice for building your connector modules, it is not your only option. Lucky you!
 
-#### 3.2.1 Making Microflows Available as Microflow or Workflow Activities
+#### Making Microflows Available as Microflow or Workflow Activities
 
 To ensure that end-users can reuse your Mendix build logic as easily as possible, you will need to make microflows available as microflow or workflow activities (see the [Triggering a Workflow via a Microflow](/refguide/perform-workflow-basic-functions/#trigger-microflow) section of *Performing Workflow Basic Functions*).
 
@@ -132,13 +132,13 @@ After you [expose as microflow action](/refguide/java-actions/#expose-microflow-
 
 If you create functionality that requires for example REST API integrations or complex data processing, make sure you have well-documented microflows connecting your  *public* part of the module to the  *private* part. By doing this, you can shield the implementing developer from having to understand the REST API integration or complex data processing logic. 
 
-#### 3.2.2 Naming and Choice of Icon
+#### Naming and Choice of Icon
 
 Make sure the name of your category matches the name of the category for similar functionality, and that the name of the caption for your microflow or workflow exposed action does not overlap with others.
 
 The icon should give instant recognition to your function. Make sure that it square and 16 by 16 pixels. This is very small, so try not to overdo it on the details.
 
-#### 3.2.3 Structuring the Usage of Your Connector
+#### Structuring the Usage of Your Connector
 
 As stated in the [Main Connector Module Setup](#main-setup) section, each connector build will have a  **UseMe** folder where you expose the logic that users of your connector module need when implementing your module. You have the ability to expose your microflows and Java actions in the toolbox. This means that users will be able to use your microflows and Java actions as microflow activities or workflow system tasks. You can also add page templates that are reusable.
 
@@ -146,7 +146,7 @@ When exposing your microflows and Java actions, you need to ensure that end-user
 
 For page templates, make sure to use a representative image, define a category that makes sense based on your module usage, and give a name that makes the template easily recognizable.
 
-### 3.3 Logging
+### Logging
 
 When something goes wrong or the module needs to expose information that it is unable to expose via the regular outputs, logging is a good option. Make sure your connector uses one log node for all the log messages if they are logged from the Java code or the Mendix code. 
 
@@ -159,17 +159,17 @@ Do make sure that you utilize the right log levels:
 * `DEBUG` – when the user needs to determine why the connector is not working as expected
 * `TRACE` – used to determine why the implementation is not working as expected
 
-### 3.4 Data Storage
+### Data Storage
 
 Depending on your module's functionality, you might need to store data in the end-user's application. The downside is that end-users might delete your module to resolve issues such as **userlib** conflicts. We advise limiting the amount of data stored in persistable entities and passing the data via your exposed logic to the end-user's application logic instead. Then, the user may decide to store it or only use it during a process. 
 
-### 3.5 Task Queue
+### Task Queue
 
 Actions that may be batched or divided over multiple threads due to a large load or volume should be offloaded to the [task queue](/refguide/task-queue/). Using this method, you can offload multiple tasks at once to multiple instances and over multiple threads. You can also run these tasks in the background without the user request waiting for it. Make sure that the end-user is aware that something is going on by setting a certain Task Status, or maybe implementing a progress log.
 
 If you are using Studio Pro [8.18](/releasenotes/studio-pro/8.18/) or older, you can consider using the process queue. See the [Replacing Process Queue](/refguide9/task-queue/#process-queue) section of *Task Queue* for the difference between these functionalities.
 
-### 3.6 ConnectionDetails Entity
+### ConnectionDetails Entity
 
 Use a **ConnectionDetails** entity for all general connection and security settings for the call. Use a **ConnectionDetails_Get** microflow in all your Operations. This way it is easy to change all the settings in one location. The individual settings can be stored in a constant or in the database and set in the create. Using constants are recommended because this avoids a dependency on the Encryption module.  
 
@@ -177,17 +177,17 @@ Use a **ConnectionDetails** entity for all general connection and security setti
 
 If you do need to store sensitive information in the database, then always use the [Encryption](/appstore/modules/encryption/) module to encrypt and store and to retrieve and decrypt the information.
 
-### 3.7 Persistable Entities
+### Persistable Entities
 
 If possible, avoid storing persistable data into persistable entities for your connector module. Developers will remove modules when troubleshooting Java compile issues. If they add them back, data stored in persistable entities is lost. 
 
 It is better to use non-persistable entities and let the user decide how to store any data passed back from your connector in their own domain model.
 
-### 3.8 Toolbox Actions and Non-Persistable Entities (NPEs)
+### Toolbox Actions and Non-Persistable Entities (NPEs)
 
 Toolbox actions need clear naming, consistent categorization, and documentation, and NPEs should be well-organized visually.
 
-### 3.9 Attributes
+### Attributes
 
 Consider doing the following for all entity attributes:
 
@@ -195,41 +195,41 @@ Consider doing the following for all entity attributes:
 * Check all date values. If the service only returns a date (no time), then set **localize** to *No*.
 * Check all number values (decimal, integer, long), and remove the default value of 0.
 
-### 3.10 Dependencies
+### Dependencies
 
 Given that there is no dependency management between Mendix modules, try to minimize the number of dependencies your module has on other modules. If you do have to depend on other modules, make sure those modules are well-maintained by you or by Mendix themselves. Introducing another community-supported module as a dependent module might be too much of a risk for developers wanting to use your module.
 
 Any dependencies your module has should be well documented including the minimum required version to be used. It is also recommended to use the *.RequiredLib* files that Mendix uses for platform-supported modules, best handled with a build script like Gradle. To learn more about working with Gradle, see [Extending App Setup for Building Connectors with Java](#extend-app-java).
 
-### 3.11 IP Protection
+### IP Protection
 
 For members of the [Mendix Partner Program](/appstore/partner-program/) and the [Mendix Commercial Solution Partner Program](https://www.mendix.com/partners/become-a-partner/isv-program/), protecting your intellectual property (IP) or preventing end-users from changing any logic that you ship in a module using Mendix tooling is possible. For details, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
 If protecting your IP or preventing end-users from changing your logic is not a requirement, you can use all the tooling that Mendix provides to build a connector using available Mendix tools. If you want IP protection today, you need to implement the sensitive parts of the module in a hidden Java library. 
 
-### 3.12 Performance Considerations
+### Performance Considerations
 
 Assuming your connector will be processing large sets of data, be aware of how you want to have that data flow through. 
 
-#### 3.12.1 Memory Usage
+#### Memory Usage
 
 When importing large datasets into Mendix application, use streamable formats to avoid overconsumption of memory.
 
-#### 3.12.2 Pagination
+#### Pagination
 
 If using NPEs, data retrieved by the connector is loaded into memory, so it is important to avoid requesting large amounts of data from an underlying system in a single call. Limiting or paginating the size of the retrieved data will lead to better performance for the Mendix app. Use server-side pagination for search results.
 
 To provide a proper user experience, the amount of data loaded and rendered on the page needs to be limited. A typical page size of 25 objects or 100 objects is recommend, with "load more" and filter/search options for optimized navigation through the dataset.
 
-#### 3.12.3 Import Mappings (Deep Structures)
+#### Import Mappings (Deep Structures)
 
 Mendix does not support import mappings for recursive structure. Consider simplifying the connector domain model so that import mapping is possible and does not cause performance overhead when data is serialized into Mendix entities.
 
-#### 3.12.4 Caching
+#### Caching
 
 Use caching for frequently retrieved objects to reduce redundant database actions.
 
-#### 3.12.5 Domain Model
+#### Domain Model
 
 A connector exposes the data of underlying system using its domain model. Consider the following during the domain model design so that app performs well:
 
@@ -241,17 +241,17 @@ A connector exposes the data of underlying system using its domain model. Consid
 * Keep your persistable entities from growing too large. You may do this by adding a cleanup scheduled event scheduled event, which you should make configurable via constants (for example, for the batch size used to remove {x} amount of objects at a time).
 * Add a flexible but secure set of entity access rules based on the module roles that you add for access to the module. Keep in mind the use cases for your connector. If you are able to avoid any persistable data, that is recommended. 
 
-## 4 Configuration
+## Configuration
 
 Configuration should ensure that your connector can be used in different settings without changes to the module itself. This means that upon deployment or after deployment your connector can be configured to connect to the relevant services. 
 
 Using constants is the way to deal with configuration that aligns with the [Twelve-Factor Architecture](https://www.mendix.com/evaluation-guide/enterprise-capabilities/twelve-factor-architecture/) cloud-native approach.
 
-### 4.1 Simple Configuration
+### Simple Configuration
 
 When you are looking for a simple configuration, such as a URL, username, or password, you can use [constants](/refguide/constants/). Constants are ideal for simple flat configurations.
 
-#### 4.1.1 Simple Configuration with a Free App Environment
+#### Simple Configuration with a Free App Environment
 
 When using constants in combination with a Free App, you can use the settings profile to allow for different configuration.
 
@@ -281,11 +281,11 @@ When using constants in combination with a Free App, you can use the settings pr
 
 7. Save all configuration and publish your application to your free node. When you run locally, Studio Pro will now use the **Active** configuration, while the free cloud node will keep using the value you specified in the **App Explorer**.
 
-### 4.2 Complex Configuration
+### Complex Configuration
 
 You might need a more sophisticated configuration to connect to external systems, either because you will need to have dozens of constants or you want to be able to connect to multiple endpoints without having to replicate your constants each time. You will have to maintain these through configuration tables.
 
-#### 4.2.1 Disadvantages of Complex Configuration
+#### Disadvantages of Complex Configuration
 
 The following are the disadvantages of complex configuration:
 
@@ -295,7 +295,7 @@ The following are the disadvantages of complex configuration:
 
 One big risk of using the database to store configuration is something we have all seen go wrong at some point in time: test data going out to production users, or worse.
 
-#### 4.2.2 Advantages of Complex Configuration
+#### Advantages of Complex Configuration
 
 The following are the advantages of complex configuration: 
 
@@ -303,7 +303,7 @@ The following are the advantages of complex configuration:
 * Easy runtime changes of the configuration
 * Option to add wizards/helper flows to guide the user with the configuration
 
-#### 4.2.3 Setting Up Complex Configuration
+#### Setting Up Complex Configuration
 
 The following steps walk you through complex configuration: 
 
@@ -325,17 +325,17 @@ The following steps walk you through complex configuration:
 
 5. Encrypt the password and other sensitive information.
 
-##### 4.2.3.1 Further Considerations
+##### Further Considerations
 
 When possible, create a microflow to set up the default or starting configuration for your consumers. Consider adding logic so you can code the configuration in a microflow to easily configure from your code base.
 
 If possible, add an export/import option for the configuration to safely move the configuration between environments. This could be achieved via a JSON export/import of the configuration data.
 
-## 5 Security
+## Security
 
 Security for components should be set up in a generic, granular, and secure way. When choosing your module roles, think about the most granular configuration, allowing end-users maximum flexibility in setting up roles. 
 
-### 5.1 Module Security
+### Module Security
 
 The following recommendations apply to module security:
 
@@ -347,51 +347,51 @@ The following recommendations apply to module security:
 
 See [Module Security](/refguide/module-security/) for more detailed information.
 
-### 5.2 Entity Security
+### Entity Security
 
 Think about how to apply access rules and read or write to your domain model. For example, if you do not give any rights to objects, you are telling the developer to use a data transformation layer and create their own objects to build their pages, or enrich their own objects with results coming from the connector.
 
-### 5.3 Passwords and Other API keys
+### Passwords and Other API keys
 
 If you store a password or API keys for your endpoint, always encrypt the password and API keys using the [Encryption](/appstore/modules/encryption/) module.
 
-### 5.4 Typical Security Schemes
+### Typical Security Schemes
 
 There are several security schemes you might encounter when building a connector to an external application.
 
-#### 5.4.1 Client Credentials
+#### Client Credentials
 
 Security via client credentials is a very basic security method. Given that you use the login name and password, the only protection when sending it over to the service you are integrating with is an encrypted connection over SSL. If that is unavailable, make sure to never use this type of encryption. 
 
-#### 5.4.2 API Tokens
+#### API Tokens
 
 API tokens help when securing an API. But an API payload sent in plain text could still be intercepted. Only use API tokens when you have at least an SSL connection. 
 
-#### 5.4.3 OAuth
+#### OAuth
 
 OAuth comes in two types. In the first, an Authorization Code flow, the user does a login to the service providing the OAuth authentication to give access to their data on a per-user basis. The second type, with Client Credentials, provides a public and private key with access tokens for server-to-server communication. 
 
 OAuth is a secure, because the secret key is never exchanged during API requests. As long as you store the secret key safely in your own app, it will not be possible to hijack your credentials for the API provider if you are using HTTPS.
 
-#### 5.4.4 SAML
+#### SAML
 
 The [SAML](/appstore/modules/saml/) module, available on the Mendix Marketplace, can be used as a replacement or extension of your supported authentication methods.
 
-## 6 Testing {#testing}
+## Testing {#testing}
 
 You can test Mendix by calling microflows with the [Unit Testing](/appstore/modules/unit-testing/) module for whole pieces of functionality. Use unit tests for smaller, more targeted tests at the method-level of your Java code.
 
 As with any automated testing, it is a great supplement for capturing known, expected behavior. For capturing known unknowns and unknown unknowns, Mendix recommends risk-based exploratory testing.
 
-### 6.1 Testing Microflows
+### Testing Microflows
 
 Use the Mendix app where you built the module to test your module. The Unit Testing module can help call microflows and actions to aid in testing. See [Testing Microflows with the Unit Testing Module](/refguide/testing-microflows-with-unit-testing-module/) for more information.
 
-### 6.2 Java Unit Tests {#unit-testing}
+### Java Unit Tests {#unit-testing}
 
 Java unit tests are a good way to automate the testing of your Java code. This is helpful when you extend your Mendix app or connector with Java actions.
 
-#### 6.2.1 Java Unit Testing Tools
+#### Java Unit Testing Tools
 
 The following tools are part of the testing process of custom Java code in your Mendix app:
 
@@ -402,7 +402,7 @@ The following tools are part of the testing process of custom Java code in your 
 
 Gradle can handle managing Java dependencies and running [JUnit](https://junit.org) tests. Read about setting up Gradle in [Extending App Setup for Building Connectors with Java](#extend-app-java). If you have a pipeline, Mendix recommends running your tests as part of it. 
 
-#### 6.2.2 Using the Java Unit Test Reference
+#### Using the Java Unit Test Reference
 
 Mendix apps need `Core` classes, and the **Class Core** [Runtime API](/apidocs-mxsdk/apidocs/runtime-api/) allows you to do things that you usually do in a microflow, like committing an object. `CoreProxy` serves as a mockable layer between your Java logic and the **Core** API. 
 
@@ -416,7 +416,7 @@ Our [Java unit test reference](https://Github.com/mendixlabs/javaunittestreferen
 The Java unit test reference has been tested up to and including Studio Pro [9.12](/releasenotes/studio-pro/9.12/).
 {{% /alert %}}
 
-#### 6.2.3 Writing Java Code
+#### Writing Java Code
 
 When writing Java code, try to use as much Mendix-independent logic as possible. This helps with testability, so you do not have to mock Mendix Core to unit test the Java code. 
 
@@ -424,7 +424,7 @@ If you code the bulk of the behavior in generic Java classes that can run withou
 
 For another example of a Java unit test, see the [Slack Connector test](https://Github.com/ako/SlackConnector/blob/master/javasource/testslackconnector/tests/TestSlackConnector.java).
 
-## 7 REST Error Handling
+## REST Error Handling
 
 When calling a REST service, you can run into an error. This can be one of two types:
 
@@ -439,18 +439,18 @@ Any input, such as objects or path parameters might trigger an error event in th
 
 In some situations, the error response from the service has its own structure that you want to leverage. For example, when there is a bad request, you might want to pass that message back to the user instead of logging it. However, you cannot return two different objects from one microflow. In those situations, combine the response from the error message with the regular message. In all other situations, the error is unexpected, and you can return the error.
 
-## 8 Release and Versioning
+## Release and Versioning
 
 This section addresses best practices for releasing your connector and using a versioning system. For the basic instructions for releasing, versioning, and distributing your connector, see the [Exporting the Connector](/appstore/creating-content/connector-guide-build/#export) and [Distributing the Connector](/appstore/creating-content/connector-guide-build/#distribute) sections of *Build Connectors*. 
 
-### 8.1 Release
+### Release
 
 Ensure a new release includes the following:
 
 * An easy upgrade path
 * The version number of the package
 
-### 8.2 Versioning {#versioning}
+### Versioning {#versioning}
 
 The [Update Existing Marketplace Content](/appstore/sharing-content/#updating) section of *Share Marketplace Content* provides explanations of the recommended versioning system. The following points go into more detail on the versioning number system:
 
@@ -460,6 +460,6 @@ The [Update Existing Marketplace Content](/appstore/sharing-content/#updating) s
 
 * *Patch version* — This is the third digit. This number goes up when you really have to patch a bug for a specific version and it cannot be released as part of your next major or minor version. While it is allowed to add new patch versions to older major versions, you cannot add patch versions to older minor versions within the Marketplace.
 
-## 9 Licensing
+## Licensing
 
 Follow your Java Libraries and default to Mendix EULA. Also, Mendix recommends that you do not use copy-left licenses for commercially available connectors.

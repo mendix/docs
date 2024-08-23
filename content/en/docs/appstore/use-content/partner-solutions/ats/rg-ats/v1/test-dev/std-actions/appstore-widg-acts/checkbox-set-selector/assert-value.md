@@ -3,7 +3,7 @@ title: "Assert Checkbox Set Selector Value"
 url: /appstore/partner-solutions/ats/rg-one-assert-checkbox-set-selector-value/
 ---
 
-## 1 Description
+## Description
 
 Finds the checkbox by the column caption and its cell value and asserts that the checkbox is set to the given value.
 
@@ -11,11 +11,11 @@ Finds the checkbox by the column caption and its cell value and asserts that the
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget, the column caption, and the cell value of the checkbox you want to assert the value for.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-setting-up-a-local-selenium-solution
 description: "Describes the options to set up a local Selenium solution."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes a few possible local Selenium solutions and contains links to the documentation with simple examples on how to set up each solution. Before reading these documents, pay attention to the following:
 
@@ -18,34 +18,34 @@ This how-to describes a few possible local Selenium solutions and contains links
 Mendix does not deliver support for local Selenium solutions. 
 {{% /alert %}}
 
-## 2 Setting Up Local Selenium Hub (SeleniumHQ) 
+## Setting Up Local Selenium Hub (SeleniumHQ) 
 
-### 2.1 Official Website
+### Official Website
 
 The official website of the Selenium hub (SeleniumHQ) is [https://www.seleniumhq.org/](https://www.seleniumhq.org/)
 
-### 2.2 Setting Up the Selenium Solution
+### Setting Up the Selenium Solution
 
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenium Hub](/appstore/partner-solutions/ats/ht-two-setup-local-selenium-hub/)
 
-### 2.3 Characteristics of the Selenium Solution
+### Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
 
 * Live-view possible only on the machine where Selenium is installed
 * No (out-of-the-box) video recording
 
-## 3 Setting Up Local Docker Selenium Hub (Docker Selenium)
+## Setting Up Local Docker Selenium Hub (Docker Selenium)
 
-### 3.1 Official Website
+### Official Website
 
 The official GitHub page of the Docker Selenium hub (Docker Selenium) is [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
-### 3.2 Setting up the Selenium Solution
+### Setting up the Selenium Solution
 
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Docker Selenium hub](/appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/)
 
-### 3.3 Characteristics of the Selenium Solution
+### Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
 
@@ -53,17 +53,17 @@ Characteristics of the Selenium solution are the following:
 * Live-view possible with debug images and VNC (viewer)
 * No (out-of-the-box) video recording
 
-## 4 Setting Up Local Selenoid Hub (Aerokube)
+## Setting Up Local Selenoid Hub (Aerokube)
 
-### 4.1 Official Website
+### Official Website
 
 The official website of the Selenoid hub (Aerokude) is [https://aerokube.com/](https://aerokube.com/)
 
-### 4.2 Setting Up the Selenium Solution
+### Setting Up the Selenium Solution
 
 For an example of how to set up this Selenium solution, see: [How to Set Up a Local Selenoid Hub](/appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/)
 
-### 4.3 Characteristics of the Selenium Solution
+### Characteristics of the Selenium Solution
 
 Characteristics of the Selenium solution are the following:
 
@@ -73,7 +73,7 @@ Characteristics of the Selenium solution are the following:
 * Live-view with a separate to be installed portal. Works with debugging browser images and VNC.
 * It has an out-of-the-box video recording option
 
-## 5 Why You Would Prefer a SaaS-solution as Selenium Solution (Like BrowserStack or Sauce Labs)
+## Why You Would Prefer a SaaS-solution as Selenium Solution (Like BrowserStack or Sauce Labs)
 
 The following reasons describe why a SaaS-solution is preferred above a local Selenium solution:
 

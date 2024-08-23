@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/
 description: "Describes how to create data and connect this to a test case."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains data-driven testing, a functionality of ATS. With data-driven testing, you can run the same test case with different data sheets without manually entering the new information in the case. ATS executes a test case for each record in the primary dataset.
 
@@ -27,13 +27,13 @@ This how-to uses the Company Expenses app as an example. In the how-to, you will
 
 An example test case is used to illustrate how to connect the dataset to a test case.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Creating a Primary Data Set within ATS
+## Creating a Primary Data Set within ATS
 
 The following steps explain how to create a primary dataset within ATS. If you want to create a primary dataset from an Excel file, please see chapter four.
 
@@ -53,7 +53,7 @@ The following steps explain how to create a primary dataset within ATS. If you w
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-datadriven-test-case/new-data-set-dialog-new-expense.png" class="no-border" >}}
 
-### 3.1 Creating Data Set Fields
+### Creating Data Set Fields
 
 The following steps explain how to add dataset fields to your primary dataset.
 
@@ -80,7 +80,7 @@ The result will look comparable to the image below:
 
 Next, you create a record for the dataset fields.
 
-### 3.2 Creating Records
+### Creating Records
 
 To create a record for your dataset fields, follow these steps:
 
@@ -111,7 +111,7 @@ The records look like this:
 
 You can also update your records from Excel.  For details on how to do this, see [Creating a Primary Data Set with Excel](#create).
 
-## 4 Creating the Excel File {#excel}
+## Creating the Excel File {#excel}
 
 The following steps explain how to create the right Excel file and how it should look. You will need this file in [Creating a Primary Data Set with Excel](#create).
 
@@ -140,7 +140,7 @@ The following steps explain how to create the right Excel file and how it should
 
 4. Save the Excel file so that you can use it in the next section.
 
-## 5 Creating a Primary Data Set with Excel {#create}
+## Creating a Primary Data Set with Excel {#create}
 
 The following steps explain how to create and update a primary dataset from an Excel file. You will use the file you created in [4 Creating the Excel File](#excel).
 
@@ -164,7 +164,7 @@ The following steps explain how to create and update a primary dataset from an E
 
 Now you have a new primary dataset using an Excel file.
 
-## 6 Updating the Primary Data Set Using an Excel File
+## Updating the Primary Data Set Using an Excel File
 
 To update a primary dataset using an Excel file, follow these steps:
 
@@ -198,7 +198,7 @@ ATS updates the changed records:
 
 Great! You have updated the primary dataset using an Excel file.
 
-## 7 Connecting the Primary Data Set to Your Test Case
+## Connecting the Primary Data Set to Your Test Case
 
 The following steps explain how to connect the primary dataset to your test case. An example test case is used in this chapter. For more information, see [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/).
 
@@ -227,7 +227,7 @@ The following steps explain how to connect the primary dataset to your test case
 
 Repeat this process for all the dataset fields you want to connect.
 
-## 8 Data-Driven Results
+## Data-Driven Results
 
 The following steps explain how to read and understand the results of a data-driven test case. An example is used in which the data-driven test case is already run.
 
@@ -252,7 +252,7 @@ The following steps explain how to read and understand the results of a data-dri
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-datadriven-test-case/result-log-breadcrumb.png" class="no-border" >}}
 
-## 9 Conclusion
+## Conclusion
 
 You now know how to do the following:
 
@@ -263,6 +263,6 @@ You now know how to do the following:
 * Connect the primary dataset to your test case
 * Analyze the result of a data-driven test case
 
-## 10 Next Up
+## Next Up
 
 You now learned how to create a dataset and how to use that data in your test case. The next how-to is [How to Use Precondition in Test Cases](/appstore/partner-solutions/ats/ht-two-use-precondition-in-test-cases/). You find an overview of all the how-tos and the structure on the [ATS 2 How-Tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

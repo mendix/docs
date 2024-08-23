@@ -6,7 +6,7 @@ description: "Describes the purpose and functionality of 2FA in the Mendix Porta
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Cloud provides two-factor authentication (2FA) to help secure your account. 2FA requires you to identify yourself using your password as well as a second authentication mechanism.
 
@@ -16,7 +16,7 @@ This extra layer of authentication is required when you perform sensitive activi
 
 To use 2FA, you need to have access to your mobile phone and an active session in the Mendix Portal.
 
-## 2 Setting Up and Using 2FA
+## Setting Up and Using 2FA
 
 To set up 2FA, you first need to perform an action that requires 2FA. For example, on the [Environments](/developerportal/deploy/environments/) page of your app, you could click **Details** ({{% icon name="notes-paper-edit" %}}) on the production environment.
 
@@ -30,11 +30,11 @@ Once 2FA is set up, whenever you perform an action that requires 2FA, you will r
 
 Whenever you authenticate yourself using 2FA, your browser session will be authorized to complete sensitive operations for the next eight hours. You will need to reauthenticate after eight hours or if you start a new browser session. Logging out, switching browsers, or switching machines starts a new session.
 
-### 2.1 Authenticating with SMS{#sms-authentication}
+### Authenticating with SMS{#sms-authentication}
 
 For this 2FA method, you need a phone number connected to a mobile phone or other device that can receive SMS messages. 
 
-#### 2.1.1 SMS Setup
+#### SMS Setup
 
 To set up 2FA with SMS, follow this process:
 
@@ -47,7 +47,7 @@ To set up 2FA with SMS, follow this process:
 
     {{< figure src="/attachments/deployment/general/two-factor-authentication/enter-sms-code.png" max-width=70% alt="" >}}
 
-#### 2.1.2 SMS Authentication
+#### SMS Authentication
 
 Once you have 2FA configured to use SMS, you can use it to complete sensitive operations in the Mendix Portal. When you perform an operation that requires 2FA, you can send an authentication code to your mobile phone.
 
@@ -57,11 +57,11 @@ Then, authenticate yourself by entering the authentication code from the text me
 
 {{< figure src="/attachments/deployment/general/two-factor-authentication/please-authenticate.png" max-width=70% alt="" class="no-border" >}}
 
-### 2.2 Authenticating with an Authenticator App{#app-authentication}
+### Authenticating with an Authenticator App{#app-authentication}
 
 {{% alert color="info" %}}For this 2FA method, you can use [Google Authenticator](https://support.google.com/accounts/answer/1066447), [Microsoft Authenticator](https://support.microsoft.com/en-us/account-billing/download-and-install-the-microsoft-authenticator-app-351498fc-850a-45da-b7b6-27e523b8702a), or any other authenticator app that generates time-based one-time passwords.{{% /alert %}}
 
-#### 2.2.1 Authenticator App Setup
+#### Authenticator App Setup
 
 To set up 2FA with an authenticator app, follow this process:
 
@@ -77,13 +77,13 @@ To set up 2FA with an authenticator app, follow this process:
 
 Your account is now secured with 2FA and ready to use.
 
-#### 2.2.2 Authenticator App Authentication
+#### Authenticator App Authentication
 
 Once you have 2FA configured to use an authenticator app, you can use it to complete sensitive operations in the Mendix Portal. When you perform operations that require 2FA, you can use your authenticator app to get a six-digit code that is valid for 60 seconds. You will need to enter that code in the Mendix Portal to authenticate yourself.
 
 {{< figure src="/attachments/deployment/general/two-factor-authentication/enter-authenticator-code.png" max-width=70% alt="" >}}
 
-## 3 Changing Your Authentication Method{#change-2fa-method}
+## Changing Your Authentication Method{#change-2fa-method}
 
 To change your 2FA method, phone number, or authenticator app, you need to deactivate your 2FA and then set it up again with your new details.
 
@@ -101,6 +101,6 @@ Once your 2FA is deactivated, your Developer Settings will show the following me
 
 You can reactivate your 2FA by triggering any action that requires 2FA. Then, set up your new authentication method using the setup steps outlined on this page.
 
-## 4 Read More
+## Read More
 
 * [Settings](/developerportal/settings/)

@@ -27,7 +27,7 @@ For example, you can use an LLM to do:
 * **Conversational Interaction:** Powering chatbots and virtual assistants to interact naturally with users.
 * **Data Generation:** Generating Mendix objects by combining JSON generation and [Import mappings](/refguide/import-mapping-action/).
 
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/genai/openai/#chatcompletions-vision), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/appstore/modules/genai/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
 
 ### What is an LLM Not?
 
@@ -80,7 +80,7 @@ There are two approaches to including RAG in your generative AI-powered app.
 
 Some architectures provide the capabilities for the RAG pattern out of the box, which shields you from having to retrieve and augment your prompt yourself. All you need to do is ensure that your knowledge base is available to the model.
 
-For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
+For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the Retrieve And Generate operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
 
 ### PgVector Knowledge Base {#pgvectorknowledgebase}
 

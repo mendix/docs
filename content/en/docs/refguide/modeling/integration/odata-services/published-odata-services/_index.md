@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-In Studio Pro, [entities](/refguide/published-odata-entity/) and [microflows](/refguide/published-odata-microflow) by adding them to a published OData/GraphQL service. You can publish any number of related entities and microflows.
+In Studio Pro, [entities](/refguide/published-odata-entity/) and [microflows](/refguide/published-odata-microflow/) by adding them to a published OData/GraphQL service. You can publish any number of related entities and microflows.
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 

@@ -297,7 +297,7 @@ GRANT rds_iam TO db_userx;
                     "rds-db:connect"
                 ],
                 "Resource": [
-                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/<database_user>"
+                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/<database_user>"
                 ]
             }
         ]
@@ -1096,7 +1096,7 @@ If you just need instructions how to get started, the [AWS IAM-based storage wal
                 "Sid": "AllowConnectionToDatabase",
                 "Effect": "Allow",
                 "Action": "rds-db:connect",
-                "Resource": "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/${aws:PrincipalTag/privatecloud.mendix.com/database-user}"
+                "Resource": "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/${aws:PrincipalTag/privatecloud.mendix.com/database-user}"
             }
         ]
     }
@@ -1163,7 +1163,7 @@ If you just need instructions how to get started, the [AWS IAM-based storage wal
                     "rds-db:connect"
                 ],
                 "Resource": [
-                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/<database_user>"
+                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/<database_user>"
                 ]
             }
         ]

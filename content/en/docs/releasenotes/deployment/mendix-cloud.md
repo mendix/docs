@@ -16,6 +16,16 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### August 22, 2024
+
+#### Fixes
+
+* We fixed a bug that had been causing an incorrect pipeline run status to display for the first few seconds on manually triggered pipelines.
+
+#### Improvements
+
+* In the **Pipelines** page's **Runs** tab, we changed a column name from **Last Run** to **Run** because this more accurately reflects what the column shows: it indicates when a pipeline run occurred.
+
 ### August 15, 2024
 
 #### Improvements

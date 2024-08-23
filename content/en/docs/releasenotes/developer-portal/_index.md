@@ -22,11 +22,17 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* We took the first step into a complete overhaul of the [Project Buzz](/developerportal/general/buzz/) page and added some basic information to the top of the page. This information should provide you a quick and easy overview of what the app is and does, and what the latest state is on the Team Server
+* We took the first step towards a complete overhaul of the [App Buzz](/developerportal/general/buzz/) page and added some basic information to the top of the page. This information gives you a quick and clear overview of the app's features, functionality, and the latest updates on the Team Server.
 
 #### Fixes
 
-* We fixed a bug where the commit date of git enabled projects on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localised
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localized.
+
+### August 22, 2024
+
+#### New features
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now enter a value in the **Percentage Completed** field to indicate the progress made on any ongoing initiative. This field provides a clear way to track how much work has been completed. The **Percentage Completed** is visible in both the [list view](/developerportal/portfolio-management/initiatives-overview/#list-view) and the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view), giving you an easy overview of your progress at a glance.
 
 ### August 1, 2024
 

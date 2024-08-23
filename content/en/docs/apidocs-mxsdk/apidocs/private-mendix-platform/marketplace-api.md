@@ -5,6 +5,7 @@ type: swagger
 description: "This API allows you to manage the Marketplace in Private Mendix Platform."
 restapi: true
 weight: 60
+linktitle: "Marketplace API"
 ---
 
 {{% alert color="info" %}}

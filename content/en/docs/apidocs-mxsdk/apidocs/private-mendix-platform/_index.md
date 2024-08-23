@@ -5,6 +5,7 @@ description: "Presents an overview of the Private Mendix Platform API documentat
 weight: 40
 no_list: false 
 description_list: true
+linktitle: "Private Mendix Platform"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 

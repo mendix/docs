@@ -5,6 +5,7 @@ type: swagger
 description: "This API allows you to manage application environments deployed to your private cloud using the Mendix Operator."
 restapi: true
 weight: 72
+linktitle: "Private Cloud Deploy API"
 ---
 
 {{% alert color="info" %}}

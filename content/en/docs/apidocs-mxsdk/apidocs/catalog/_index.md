@@ -4,6 +4,7 @@ url: /apidocs-mxsdk/apidocs/catalog-apis/
 description: "Describes the Catalog APIs (which are for registering data sources from other business applications) and how to generate the personal access token."
 weight: 35
 restapi: true
+linktitle: "Catalog"
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---

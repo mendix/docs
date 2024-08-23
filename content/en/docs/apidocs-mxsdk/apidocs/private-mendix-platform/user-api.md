@@ -5,6 +5,7 @@ type: swagger
 description: "This API allows you to manage users in Private Mendix Platform."
 restapi: true
 weight: 60
+linktitle: "User API"
 ---
 
 {{% alert color="info" %}}

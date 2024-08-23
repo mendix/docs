@@ -5,6 +5,7 @@ type: swagger
 description: "This API allows you to manage user groups in Private Mendix Platform."
 restapi: true
 weight: 60
+linktitle: "Group API"
 ---
 
 {{% alert color="info" %}}

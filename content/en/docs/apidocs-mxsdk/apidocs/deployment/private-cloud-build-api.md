@@ -5,6 +5,7 @@ type: swagger
 description: "This API allows you to manage deployment packages which can later be used in the environments deployed in your private cloud."
 restapi: true
 weight: 70
+linktitle: "Private Cloud Build API"
 ---
 
 {{% alert color="info" %}}

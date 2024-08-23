@@ -5,7 +5,7 @@ weight: 3
 description: "Describes how to create a test case and add test steps."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create a test case, add test steps manually, and add test steps using the ATS Recorder. A test case consists of test steps that contain actions. Each action (like clicking a button) performs a task.
 
@@ -17,14 +17,14 @@ This how-to teaches you how to do the following:
 * Add test steps to your test case manually
 * Add test steps using the ATS Recorder
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Complete [How to Get Started](/appstore/partner-solutions/ats/ht-one-getting-started/)
 * Complete [How to Install the ATS Helper and ATS Recorder](/appstore/partner-solutions/ats/ht-one-install-ats-helper-recorder/)
 
-## 3 Creating a Test Case {#3}
+## Creating a Test Case {#3}
 
 To create a test case, follow these steps:
 
@@ -52,7 +52,7 @@ To create a test case, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-create-a-test-case/test-case-page.png" class="no-border" >}}
 
-## 4 Adding Test Steps Manually
+## Adding Test Steps Manually
 
 The following steps describe how to add test steps manually to your test case. You will add the steps necessary for creating a new expense in the Company Expenses app.
 
@@ -192,7 +192,7 @@ The following steps describe how to add test steps manually to your test case. Y
 
     You have now manually created your test case.
 
-## 5 Adding Test Steps Using the ATS Recorder
+## Adding Test Steps Using the ATS Recorder
 
 The following steps describe how to add test steps to your test case using the [ATS Recorder](/appstore/partner-solutions/ats/rg-one-recorder/). You add the steps necessary for creating a new expense in the Company Expenses app. Create a new test case by completing [3 Creating a Test Case](#3) before starting with this section.
 
@@ -255,7 +255,7 @@ To add test steps using the ATS Recorder, follow these steps:
 
 You have now created your test case using the ATS Recorder. 
 
-## 6 Next Up
+## Next Up
 
 You have now learned how to create a test case, so the next how-to is [How to Create a Test Suite](/appstore/partner-solutions/ats/ht-one-create-a-test-suite/).
 

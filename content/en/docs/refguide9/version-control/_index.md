@@ -9,7 +9,7 @@ description_list: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 Version Control allows you to manage your app development in two ways:
 
@@ -22,9 +22,9 @@ Version control in Mendix is built on top of either [Apache Subversion](https://
 Team Server Git was released for GA in version [9.12.0](/releasenotes/studio-pro/9.12/#team-server-git). BYO (Bring Your Own) Git was in beta from Mendix [9.6.0](/releasenotes/studio-pro/9.6/#960) and was GA in Mendix [9.24.0](/releasenotes/studio-pro/9.24/#private-git). For more details, see [Working with Git On-Premises Version Control Server](/refguide9/on-premises-git/) in the *Studio Pro Guide*. 
 {{% /alert %}}
 
-## 2 Concepts {#concepts}
+## Concepts {#concepts}
 
-### 2.1 Team Server {#team-server}
+### Team Server {#team-server}
 
 [Team Server](/developerportal/general/team-server/) is where all the committed versions of Mendix apps are stored. If you commit a revision of an app, it is stored on the Team Server.
 
@@ -32,27 +32,27 @@ To commit to the Team Server you will need to have a role in the app which allow
 
 For more information on the Team Server and technologies involved, see [Version Control FAQ](/refguide9/version-control-faq/).
 
-### 2.2 Repository {#repository}
+### Repository {#repository}
 
 Within the [Team Server](#team-server) each app is stored in a repository. This repository contains all the [committed revisions](#commit) for the [Branches](#branches) of the app.
 
-### 2.3 Revision {#revision}
+### Revision {#revision}
 
 A revision is the version of your app at a moment in time, stored on the [Team Server](#team-server).
 
 Each revision of your app is given a unique alphanumeric identifier which enables you to find it in future. A new revision is created from Studio Pro when the app is committed to the repository.
 
-### 2.4 Working Copy {#working-copy}
+### Working Copy {#working-copy}
 
 A working copy is the version of your app which is currently being worked on in Studio Pro. There is one working copy for each development line of the app. This model is held locally, on each computer where development work is taking place.
 
-### 2.5 Merge {#merge}
+### Merge {#merge}
 
 Merging is the action of taking one [revision](#revision) of an app and applying the differences which have been made in a different revision. See the [Merging Branches](#merging-branches) section for more information.
 
 If any of the differences cannot be applied, then there is a [conflict](#conflict).
 
-### 2.6 Conflict {#conflict}
+### Conflict {#conflict}
 
 A conflict occurs when two versions of the app cannot be combined automatically. This happens when the same document has been changed in a Studio Pro working copy and a committed [revision](#revision) and these changes cannot be reconciled. These are some examples:
 
@@ -61,11 +61,11 @@ A conflict occurs when two versions of the app cannot be combined automatically.
 
 When a conflict occurs, a developer has to intervene to decide how it should be resolved before it can be committed to the Team Server as a new revision.
 
-### 2.7 Update/Pull {#update}
+### Update/Pull {#update}
 
 Updating (SVN terminology) or pulling (Git terminology) is the action, invoked in Studio Pro, which gets the latest revision of the current [development line](#development-line) from the repository and merges the differences into the current working copy.
 
-### 2.8 Commit/Push {#commit}
+### Commit/Push {#commit}
 
 Committing is the action, invoked in Studio Pro, of creating a set of changes and sending/pushing all your changes to the [repository](#repository) and making a new [revision](#revision).
 
@@ -75,21 +75,21 @@ When using Git, it is possible to store the committed data in a local repository
 
 If there are no conflicts, the changes are then sent to the repository to make a new revision.
 
-### 2.9 Development Line {#development-line}
+### Development Line {#development-line}
 
 Development of an app is done in a development line where a set of related changes is made. There are two types of development lines: the [main line](#main-line) and [branch lines](#branch-line).
 
-#### 2.9.1 Main Line {#main-line}
+#### Main Line {#main-line}
 
 The main line is the initial development line for the app and is usually kept as the version which will be deployed to the production environment. Simple apps, and apps which do not require a high degree of collaboration, may only have a main line.
 
-#### 2.9.2 Branch Line {#branch-line}
+#### Branch Line {#branch-line}
 
 A branch line is a way of making an independent set of changes which can be tested away from the main line.
 
 See the [Branches](#branches) section below for more information on how branch lines can be used.
 
-### 2.10 Tag {#tag}
+### Tag {#tag}
 
 A Tag is a way of identifying a commit in addition to the [revision](#revision) number. It is specified by the developer and has four parts:
 
@@ -102,23 +102,23 @@ A Tag is a way of identifying a commit in addition to the [revision](#revision) 
 Tags are supported by Studio Pro Git ([BYO](/refguide9/branch-line-manager-dialog/#byo-server-app) and Team Server) from Mendix 9.8.0.
 {{% /alert %}}
 
-### 2.11 Repository Service
+### Repository Service
 
 The Repository Service manages communication between Studio Pro and other supporting services (for example, Team Server). The developer will not generally be aware that they are communicating via the Repository Service.
 
-## 3 Branches {#branches}
+## Branches {#branches}
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
 
 This is done using [Branch Lines](#branch-line).
 
-### 3.1 Main Line
+### Main Line
 
 All apps are developed along the main line. Here you have all development happening along a single line, with all changes built upon the previous revision:
 
 {{< figure src="/attachments/refguide9/version-control/image7.png" class="no-border" >}}
 
-### 3.2 Branch Line
+### Branch Line
 
 When you add a branch line, you take a copy of an existing [revision](#revision) and work separately on that copy. Changes made to one branch do not impact any other branches.
 
@@ -130,7 +130,7 @@ In SVN, the unique identifiers are numbers. As each commit has a unique number i
 
 {{< figure src="/attachments/refguide9/version-control/image8.png" class="no-border" >}}
 
-### 3.3 Merging Branches {#merging-branches}
+### Merging Branches {#merging-branches}
 
 You may have a branch line which will continue independently and never need to be combined with any other development lines. For example, you may create a branch for a particular release of your app and only ever use it to fix bugs in that release.
 
@@ -154,4 +154,4 @@ There may be conflicts during the merge, and these will have to be resolved befo
 
 Note that errors can be introduced by the [merge](#merge) process even if no conflicts are identified during the merge. Errors are inconsistencies which are flagged in Studio Pro and will prevent the app from being deployed. They could lead to a revision not being deployable, so it is important to check for errors after you have done a merge.
 
-## 4 Documents in This Category
+## Documents in This Category

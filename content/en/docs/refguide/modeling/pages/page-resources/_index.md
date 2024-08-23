@@ -4,7 +4,7 @@ url: /refguide/page-resources/
 weight: 12
 ---
 
-## 1 Introduction
+## Introduction
 
 The main difference between a page and page resources is that page is an independent document, while a page resource is a helping document that cannot function on its own. For example, a layout cannot function on its own, but it gives structure to a page. 
 
@@ -18,7 +18,7 @@ You can add the following page resources:
 * [Page template](/refguide/page-templates/)
 * [Icon collection](/refguide/icon-collection/)
 
-## 2 Adding Page Resources
+## Adding Page Resources
 
 To add a resource document, do the following:
 
@@ -28,6 +28,6 @@ To add a resource document, do the following:
 
 2. Select the document you would like to add to your app.
 
-## 3 Read More
+## Read More
 
 * [Pages](/refguide/pages/)

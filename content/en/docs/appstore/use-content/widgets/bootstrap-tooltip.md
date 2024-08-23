@@ -9,20 +9,20 @@ description: "Describes the configuration and usage of the Bootstrap Tooltip wid
 This widget is deprecated. For an alternative, see [Tooltip](/appstore/widgets/tooltip/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Bootstrap Tooltip](https://marketplace.mendix.com/link/component/1939/) widget adds a tooltip to a user-defined field that contains help text or extra information.
 
-### 1.1 Typical Usage Scenario
+### Typical Usage Scenario
 
 * Add help text to an input field that is visible upon focus
 * Add informative text for buttons that is visible upon hovering
 
-### 1.2 Feature
+### Feature
 
 * Based on Bootstrap's *tooltip.js*
 
-## 2 Installation
+## Installation
 
 To install, import the Bootstrap Tooltip widget into your app and add the widget on a page. Locate the widget as close to the target element as possible (preferably next to it).     
 
@@ -30,18 +30,18 @@ When an element has a tooltip attached to it and needs to be conditionally visib
 
 {{< figure src="/attachments/appstore/use-content/widgets/bootstrap-tooltip/tooltip.png" class="no-border" >}}
 
-## 3 Configuration
+## Configuration
 
 You can configure the properties below to determine how the widget will behave in your application.
 
-### 3.1 Appearance Tab
+### Appearance Tab
 
 * **Target element classname** – the class name of the field to which you want to attach the tooltip
 * **Render HTML** – selecting **Yes** renders the tooltip content as HTML
 * **Tooltip position** – the location of the tooltip relative to the field
 * **Tooltip mode** – when to show the tooltip
 
-### 3.2 Data Source Tab
+### Data Source Tab
 
 * **Default text** – the text displayed when no data source microflow is defined
 * **Tooltip source microflow** – the microflow that returns the text to be displayed in the tooltip

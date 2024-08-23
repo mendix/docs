@@ -4,11 +4,11 @@ url: /appstore/partner-solutions/apd/ig-three/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 This is the installation guide for CLEVR APD 3, the successor to [APM 2](/appstore/partner-solutions/apd/ig-two/).
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -18,7 +18,7 @@ Before starting this how-to, make sure you have completed the following prerequi
     * Use the values for **APDAgent.APIKey** and, if applicable, **APDAgent.AdvancedSettings**
 * Remove APM 1 and/or APM 2 if they are installed (for details, see [Uninstall Steps APM 1](/appstore/partner-solutions/apd/ig-one-uninstall-steps/))
 
-## 3 Installation
+## Installation
 
 To install APD 3, follow these steps:
 
@@ -33,7 +33,7 @@ To install APD 3, follow these steps:
 9. Use the snippet **USE_ME/APDBrowserAgentWidget** in the layout (or layouts) of your app. Please note that it will only be loaded once, regardless of how many times the user opens a page containing the widget.
 10. Set the value of the **USE_ME/APDAgent.APIKey** constant with the key you generated at step 6 above.
 
-## 4 Upgrading
+## Upgrading
 
 To upgrade an APD 3 agent, follow these steps:
 
@@ -42,6 +42,6 @@ To upgrade an APD 3 agent, follow these steps:
 3. Before testing in Mendix Studio Pro, use the **Clean deployment directory** option.
 4. Remove the old *Mansystems.APMBrowserAgent.mpk* from your widgets folder.
 
-## 5 Security
+## Security
 
 The agent initiates all communication to the [APD 3 manager](https://apmmanager100.mendixcloud.com) in HTTPS over port 443. So, for some on-premises installations, a firewall might need to be opened.

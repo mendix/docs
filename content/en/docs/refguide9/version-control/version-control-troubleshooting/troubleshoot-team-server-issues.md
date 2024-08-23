@@ -6,11 +6,11 @@ weight: 30
 description: "Presents a list of problems and fixes for Team Server issues."
 ---
 
-## 1 Introduction
+## Introduction
 
-Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. Team Server is a version control server. Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. This document describes permissions and settings  required to connect to the Team Server.
+Mendix Studio Pro needs to connect to the Team Server, where all your apps are stored. Team Server is a version control server. Currently, SVN is the default version control system for the Team Server, but you can choose to use Git. In the future, Git will become the default system. This document describes permissions and settings required to connect to the Team Server.
 
-## 2 Troubleshooting Team Server App Network Settings
+## Troubleshooting Team Server App Network Settings
 
 Being unable to download the Team Server app can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and the Team Server itself that is located at:
 
@@ -40,6 +40,6 @@ Mendix reserves the right to change the IP address at any time and without notif
 Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
 {{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [Version Control FAQ](/refguide9/version-control-faq/)

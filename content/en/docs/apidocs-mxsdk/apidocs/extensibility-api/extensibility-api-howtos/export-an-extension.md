@@ -5,15 +5,15 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/export-an-extension/
 weight: 22
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can export an extension so that you can publish it in the Marketplace or directly share it with other Mendix developers.
 
-## 2 Prerequisites
+## Prerequisites
 
 To be able to export extension add-on modules, you need to have the feature flag `--enable-extension-development` enabled. For more information, see [Get Started with the Extensibility API](/apidocs-mxsdk/apidocs/extensibility-api/getting-started/).
 
-## 3 Procedure
+## Procedure
 
 1. In Studio Pro, open the app that contains your development extension.
 2. Create a new module with the same name as your extension folder. For example, if your extension folder is called 'MyFirstExtension', your module must also be called 'MyFirstExtension'.

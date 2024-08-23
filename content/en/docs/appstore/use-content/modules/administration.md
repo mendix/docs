@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Administration module
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module contains the administration functionality, which allows you to manage local accounts and to view app statistics, such as runtime information, sessions, and schedules events.
 
-### 1.1 Features
+### Features
 
 * Support managing user accounts
 * Provide a read-only overview to show the following information:
@@ -18,20 +18,20 @@ The [Administration](https://marketplace.mendix.com/link/component/23513) module
     * All runtime instances
 * Support viewing runtime statistics
 
-### 1.2 Dependencies
+### Dependencies
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187): required for the Administration module versions 4.0.0 and above
 * [Combo Box](https://marketplace.mendix.com/link/component/219304): required for the Administration module versions 4.0.0 and above
 * [Atlas UI Resources](https://marketplace.mendix.com/link/component/104730): required for the Administration module versions 3.0.0 and below
 * [Mendix SSO](https://marketplace.mendix.com/link/component/111349): required for the Administration module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2)
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Administration module into your app.
 
-## 3 Usage
+## Usage
 
-### 3.1 Adding the Account Overview Page to the Navigation {#add-account-overview}
+### Adding the Account Overview Page to the Navigation {#add-account-overview}
 
 On the `Administration.Account_Overview` page, you can view and manage all the accounts in your app. To add the page to the navigation of the app, do as follows:
 
@@ -45,7 +45,7 @@ On the `Administration.Account_Overview` page, you can view and manage all the a
 
 If you run the app and log in as a user with the Administrator role, you can see the new page in the navigation.
 
-### 3.2 Adding Users as an Administrator
+### Adding Users as an Administrator
 
 1. Make sure that you [added the account overview page to the navigation](#add-account-overview).
 
@@ -65,7 +65,7 @@ If you run the app and log in as a user with the Administrator role, you can see
 
 7. Click **Save**.
 
-## 4 Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
+## Using Supporting Microflows with Mendix SSO                                                               {#use-with-mendix-sso}
 
 The [Administration](https://marketplace.mendix.com/link/component/23513) module versions 1.3.X (for example 1.3.2) and 2.1.X (for example 2.1.2) contain a set of microflows to configure Mendix SSO to use **Administration.Account** as the user entity. To use the supporting microflows with Mendix SSO, perform the following steps:
 

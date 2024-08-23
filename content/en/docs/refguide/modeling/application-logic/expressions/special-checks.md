@@ -5,15 +5,15 @@ weight: 40
 description: "Describes special checks in expressions in Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 
 
-## 2 Checking for an Empty Object
+## Checking for an Empty Object
 
 Checks if an object is empty. 
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -21,7 +21,7 @@ The input parameters are described in the table below:
 | --------- | ------------------ |
 | An object | Any type of object |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -29,7 +29,7 @@ The output is described in the table below:
 | ---------- | ------- |
 | Returns whether the object is empty | Boolean |
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
@@ -43,9 +43,9 @@ The output will be `True` if the object does not currently exist (which is possi
 
 The same holds for when $object1 is a variable (such as Integer, String, etc).
 
-## 3 Checking for an Empty Object Member
+## Checking for an Empty Object Member
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -53,7 +53,7 @@ The input parameters are described in the table below:
 | ------------------------------------------------ | ------------------ |
 | A member (attribute or association) of an object | Any type of member |
 
-### 3.2. Output
+### Output
 
 The output is described in the table below:
 
@@ -61,7 +61,7 @@ The output is described in the table below:
 | --------------------------------------- | ------- |
 | Returns whether the attribute is empty | Boolean |
 
-### 3.3 Examples
+### Examples
 
 For example, you have the following input:
 
@@ -76,11 +76,11 @@ Assuming $object1 is a domain entity that has a member called 'member1', the tab
 | $object1 has a value | false | true |
 | $object1 has no value | N/A | true |
 
-## 4 Checking Whether an Object Is New {#new}
+## Checking Whether an Object Is New {#new}
 
 Checks whether an object is new. 
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -88,7 +88,7 @@ The input parameters are described in the table below:
 | --------- | ------------------ |
 | An object | Any type of object |
 
-### 4.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -96,7 +96,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | The output depends on whether the object is new (created but not yet committed). Note this only holds when this function is called on a created object. When the object is retrieved from the database `isNew` will always be `false`. | Boolean |
 
-### 4.3 Example
+### Example
 
 An example of an input can be the following:
 
@@ -104,11 +104,11 @@ An example of an input can be the following:
 isNew($object1)
 ```
 
-## 5 Checking Whether an Object Is Synced {#synced}
+## Checking Whether an Object Is Synced {#synced}
 
 This function is available only in expressions for [conditional visibility or editability](/refguide/common-widget-properties/) and [nanoflows](/refguide/nanoflows/), as they are only evaluated on client side.
 
-### 5.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -116,7 +116,7 @@ The input parameters are described in the table below:
 | --------- | ------------------ |
 | An object | Any type of object |
 
-### 5.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -124,7 +124,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | Returns whether the changes done to the object [offline](/refguide/offline-first/) have been synchronized to the runtime database. In web profiles without offline support, this always returns `true`. | Boolean |
 
-### 5.3 Example
+### Example
 
 An example of an input can be the following:
 
@@ -132,15 +132,15 @@ An example of an input can be the following:
 isSynced($currentObject)
 ```
 
-## 6 Checking if a Synchronization is Running {#is-syncing}
+## Checking if a Synchronization is Running {#is-syncing}
 
 This function is available only in client-side expressions (expressions in [nanoflows](/refguide/nanoflows/) and [pages](/refguide/pages/)).
 
-### 6.1 Input Parameters
+### Input Parameters
 
 No input parameter is required for this check.
 
-### 6.1 Output
+### Output
 
 The output is described in the table below:
 
@@ -148,7 +148,7 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------- |
 | Returns `true` when there is a [synchronization](/refguide/synchronize/) process running, otherwise it returns `false`.| Boolean |
 
-### 6.3 Example
+### Example
 
 An example of an input can be the following:
 

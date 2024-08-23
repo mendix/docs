@@ -8,7 +8,7 @@ weight: 40
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A **Retrieve workflow context** activity can be used to retrieve the selected workflow context entity.
 
@@ -16,7 +16,7 @@ A **Retrieve workflow context** activity can be used to retrieve the selected wo
 
 It needs the System.Workflow entity as its input. The action determines the return type based on the selected workflow (the configured Context entity of that workflow). It will break at Runtime if the passed workflow object is not of the right type.
 
-## 2 Properties
+## Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right.
 
@@ -25,7 +25,7 @@ The retrieve properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 An example of retrieve workflow context properties is represented in the image below:
 
@@ -37,18 +37,18 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow
+### Workflow
 
 The workflow of which data is retrieved by this activity. 
 
-### 3.2 Workflow Object
+### Workflow Object
 
 A workflow object of the System.Workflow entity available from the microflow parameters. 
 
-### 3.3 Variable Name
+### Variable Name
 
 The name of the variable returned by the activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

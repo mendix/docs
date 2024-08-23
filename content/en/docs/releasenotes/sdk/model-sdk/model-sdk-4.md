@@ -265,7 +265,7 @@ weight: 97
 * We added support for Mendix Metamodel [9.4.0](/releasenotes/sdk/metamodel-9.4/).
 * We improved the performance of by-name references.
 * We improved the `getFile` documentation in the Model SDK.
-* We removed usage of NodeJS's `util` library.
+* We removed usage of Node.js's `util` library.
 
 ## 4.52.0 {#452}
 

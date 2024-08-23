@@ -7,8 +7,8 @@ description_list: true
 description: "Presents general information on ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 This section presents general information on ATS.
 
-## 2 Documents in This section
+## Documents in This section

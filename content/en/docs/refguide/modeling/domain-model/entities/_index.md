@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 An entity usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
 
@@ -24,7 +24,7 @@ For example, you have a collection of CDs like the one in the table below:
 
 The rows in the table are CDs. The type of the two rows is *CD* and this is the entity name. A specific CD like *How to Dismantle an Atomic Bomb* from the band *U2* is called an object of the entity *CD*. Characteristics like the title and artist are called attributes.
 
-## 2 Types of Entities {#entity-types}
+## Types of Entities {#entity-types}
 
 The entity type defines how the data is handled and there are three types:
 
@@ -41,7 +41,7 @@ The structure of Persistable and Non-persistable entities are defined within you
 
 The structure of an External entity is defined in the source system where the underlying data (objects) is stored. For more information on external entities and how to add them to your app, see [External Entities](/refguide/external-entities/).
 
-## 3 Properties {#properties}
+## Properties {#properties}
 
 An example of the entity properties is represented in the image below:
 
@@ -58,15 +58,15 @@ Entity properties consist of the following sections:
 For more information on how these properties relate to external entities, see the [Properties](/refguide/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
-### 3.1 General Section {#entities-general-properties}
+### General Section {#entities-general-properties}
 
-#### 3.1.1 Name {#name}
+#### Name {#name}
 
 The name property defines the name of the entity. This name is used to refer to the entity in forms, microflows, queries, constraints, etc.
 
 The name has to be unique only within the domain model of a module. You can have two entities with the same name, provided they are in the domain models of different modules.
 
-#### 3.1.2 Export Level 
+#### Export Level 
 
 **Export level** allows you to define access level to this document on the consumer (customer) side when developing an add-on module or a solution.
 
@@ -81,7 +81,7 @@ The name has to be unique only within the domain model of a module. You can have
 If the entity is set to **Hidden**, all attributes will be hidden automatically and cannot be set to **Usable**.
 {{% /alert %}}
 
-#### 3.1.3 Generalization {#generalization}
+#### Generalization {#generalization}
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events, and other properties of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the **Car** entity could have **Vehicle** as its generalization.
 
@@ -97,17 +97,17 @@ An example of generalization is a situation where you have entities, say a **Stu
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide/generalization-and-association/).
 
-#### 3.1.4 Image {#image}
+#### Image {#image}
 
 The image property can be used to associate an image with the entity. In the domain model this image is shown in the top-left corner of the entity. The image is also shown in other places where entities are mentioned, such as the entity selection pop-up window when selecting an entity for a data view.
 
-#### 3.1.5 Persistable
+#### Persistable
 
 Define whether instances of this entity can be stored in the database. For more information, see [Persistability](/refguide/persistability/).
 
-### 3.2 System Members Properties{#system-members}
+### System Members Properties{#system-members}
 
-#### 3.2.1 Store 'createdDate'
+#### Store 'createdDate'
 
 This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type **Date and time** that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
 
@@ -120,7 +120,7 @@ This property defines whether the entity contains the system attribute 'createdD
 Data grids do not directly display this date.
 {{% /alert %}}
 
-#### 3.2.2 Store 'changedDate'
+#### Store 'changedDate'
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
 
@@ -141,7 +141,7 @@ The 'changedDate' property is updated when a value is set. Setting an attribute 
 The `changedDate` value is not updated if you update the entity directly in Java using calls which resolve to use the [`com.mendix.systemwideinterfaces.core.IMendixObject.setValue​(IContext context, java.lang.String memberName, java.lang.Object value)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/IMendixObject.html#setValue(com.mendix.systemwideinterfaces.core.IContext,java.lang.String,java.lang.Object)) method (for example, `Entity.setValue(IContext, String)`). If you need `changedDate` to be updated when using Java, use the [`com.mendix.core.Core.change​(IContext context, IMendixObject object, java.util.Map<java.lang.String,​java.lang.String> changes)`](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/core/Core.html#change(com.mendix.systemwideinterfaces.core.IContext,com.mendix.systemwideinterfaces.core.IMendixObject,java.util.Map)) method.
 {{% /alert %}}
 
-#### 3.2.3 Store 'owner' {#store-owner}
+#### Store 'owner' {#store-owner}
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.
 
@@ -154,7 +154,7 @@ This property defines whether the entity has the system association 'owner'. Thi
 Data grids do not directly display the associated System.User entity or its specializations.
 {{% /alert %}}
 
-#### 3.2.4 Store 'changedBy' 
+#### Store 'changedBy' 
 
 This property defines whether the entity has the system association 'changedBy'. This is an association to the system entity 'User' that stores a reference to the user that most recently changed the object.
 
@@ -167,19 +167,19 @@ This property defines whether the entity has the system association 'changedBy'.
 Data grids do not directly display the associated System.User entity or its specializations.
 {{% /alert %}}
 
-### 3.3 Access Rules Section {#access-rules}
+### Access Rules Section {#access-rules}
 
-#### 3.3.1 Access Rules
+#### Access Rules
 
 For more information on access rules, see [Access Rules](/refguide/access-rules/).
 
-### 3.4 Documentation Section {#documentation}
+### Documentation Section {#documentation}
 
-#### 3.4.1 Documentation {#documentation-property}
+#### Documentation {#documentation-property}
 
 This allows you to document the entity to help you or other team members use the entity within the app.
 
-## 4 Entity Dialog Box {#dialog-box}
+## Entity Dialog Box {#dialog-box}
 
 You can also edit an entity by opening the entity properties dialog box.
 

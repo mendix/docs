@@ -7,11 +7,11 @@ aliases:
     - /howto9/mobile/how-to-ar-business-card/
 ---
 
-## 1 Introduction
+## Introduction
 
 Follow the sections below to build a demo. While doing so, you will become familiar with a whole range of augmented reality (AR) widgets, and see them in action. Upon completing this document, you will end up with an interesting demo that can easily be customized for your own purposes. 
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -33,7 +33,7 @@ When you have completed the prerequisites, your work should look like this:
 
 {{< figure src="/attachments/howto9/mobile/native-mobile/ar-parent/how-to-ar-business-card/BusinessCardRender.png" alt="Result"   width="400"  class="no-border" >}}
 
-## 3 Creating an AR Business Card Demo
+## Creating an AR Business Card Demo
 
 For this app you will need to start a new app based on the Blank Native Mobile App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
 
@@ -97,6 +97,6 @@ Now all that is left is to add a nanoflow that opens a URL to the **Events** > *
 
 Congratulations, you now have a functioning AR business card demo with custom 3D objects!
 
-## 4 Read More
+## Read More
 
 * [Native Mobile AR](/appstore/modules/native-mobile-ar/)

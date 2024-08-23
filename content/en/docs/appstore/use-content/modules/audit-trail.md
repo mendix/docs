@@ -5,22 +5,22 @@ description: "Describes the configuration and usage of the Audit Trail module, w
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Audit Trail](https://marketplace.mendix.com/link/component/138/) module creates a log history for the changes made to objects in your Mendix application.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 This module keeps keep track of what changes are made in your Mendix application as well as when, by whom, and how much.
 
-### 1.2 Features
+### Features
 
 * Keep track of objects that are created, changed, or deleted
 * Only save changes made on an object that has the `AuditTrail.AudittrailSuperClass` as a superclass and where the commit is done with an event (this could be a performance risk for apps with too many entities or records)
 * Add a commit event which analysis and save the changes
 * Log the complete state of the entity (all attributes) or only the changed attributes by modifying a constant
 
-## 2 Configuration
+## Configuration
 
 The two sections below describe the two options for configuring this module.
 
@@ -31,7 +31,7 @@ As both configuration options require changing the entity, it is not possible to
 While it is possible to add required associations and event handlers to marketplace modules, such model changes are overwritten when marketplace modules are updated. Therefore, in this scenario it is recommended to use specializations.
 {{% /alert %}} 
 
-### 2.1 Associations and Events
+### Associations and Events
 
 For this configuration option, add a reference set association from your entity to the **Log** entity or an association from the **Log** entity to the entity that needs to be audited. Add a before-commit and before-delete event to your entity that is identical to the events on the **AudittrailSuperClass**. The Java actions will automatically create the log item and all the required log lines based on the changes.
 
@@ -39,7 +39,7 @@ Next, configure the **IncludeOnlyChangedAttributes** constant for whether you wa
 
 Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
-### 2.2 Inheritance
+### Inheritance
 
 For this option, all the objects you want to log need to have the **AuditTrail.AudittrailSuperClass** as a superclass (note that this is not possible for subclasses of the **System.User** object). The module will then automatically log all the changes on the create, commit, and delete events.
 
@@ -47,7 +47,7 @@ Next, configure the **IncludeOnlyChangedAttributes** constant for whether you wa
 
 Finally, add the **LogOverviewSnippet** snippet to a page in a custom module.
 
-## 3 Changing Audit Behavior
+## Changing Audit Behavior
 
 Changing the audit behavior is easily done by altering the values of the constants below (for module version 7.6.0 and above; please note that if no value is set, the default is used) or the default values of the **Configuration** entity in the module's domain model (for module version 7.5.0 and below):
 

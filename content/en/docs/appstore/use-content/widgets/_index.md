@@ -7,13 +7,13 @@ no_list: false
 simple_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 The widgets available in the Mendix Marketplace are single user-interface elements that can be configured, such as containers, drop-down menus, and buttons.
 
 When you download these widgets, they will be available from the **Add widget** menu item on the [page editor](/refguide/page/) toolbar.
 
-### 1.1 Widget CSP Overview
+### Widget CSP Overview
 
 Currently, certain Mendix pluggable widgets are not fully compliant with strict content security policy (CSP). 
 
@@ -21,4 +21,4 @@ See the [Widget CSP Overview](/appstore/widgets/security/content-security-policy
 
 To implement a CSP for the first time, see this [Content Security Policy](/howto/security/csp/) how-to.
 
-## 2 Documents in This Category
+## Documents in This Category

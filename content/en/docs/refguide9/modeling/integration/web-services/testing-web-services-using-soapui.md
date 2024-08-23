@@ -7,7 +7,7 @@ aliases:
     - /howto9/testing/testing-web-services-using-soapui/
 ---
 
-## 1 Introduction
+## Introduction
 
 You can publish your own web services in a Mendix application. These webservices consist of operations. Other applications can then call operations of this webservice and you can return a result. This result is based on a microflow that will be executed when the web service is called. With SoapUI you can create (automated) tests for these webservices.
 
@@ -17,7 +17,7 @@ This how-to teaches you how to do the following:
 * Create assertions in SoapUI
 * Build an automated test using SoapUI
 
-## 2 Preparation
+## Preparation
 
 Before you start this how-to, make sure you have completed the following prerequisites.
 
@@ -32,7 +32,7 @@ Before you start this how-to, make sure you have completed the following prerequ
 All images, names and steps in this how-to are based on Studio Pro 9.24. When using other versions the images and/or names on your screen may be different than the images or names used in this how-to.
 {{% /alert %}}
 
-## 3 Publishing More Microflows as Web Service Operation
+## Publishing More Microflows as Web Service Operation
 
 In [Expose a Web Service](/howto/integration/expose-a-web-service/) you already published the microflow *GetCustomers* as web service operation. In this chapter you will create two more microflow and publish them as web service operation.
 
@@ -48,7 +48,7 @@ In [Expose a Web Service](/howto/integration/expose-a-web-service/) you already 
 
 5. Publish both microflows as web service operation of the **CustomerWebservice** as described in chapter 4 of [How to Expose a Web Service](/howto/integration/expose-a-web-service/).
 
-## 4 Creating a New SOAP Project
+## Creating a New SOAP Project
 
 In this chapter you will create a new SOAP project.
 
@@ -62,7 +62,7 @@ In this chapter you will create a new SOAP project.
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580334.png" class="no-border" >}}
 6. Click**OK**. This will create a new SOAP project in SoapUI.
 
-## 5 Building a TestSuite, TestCase, and TestStep
+## Building a TestSuite, TestCase, and TestStep
 
 In this chapter you will build a testsuite. A testsuite contains one or more testcases. Every testcase contains one ore more teststeps. 
 
@@ -134,7 +134,7 @@ In this chapter you will build a testsuite. A testsuite contains one or more tes
     </soap:Envelope>
     ```
 
-## 6 Assertions
+## Assertions
 
 Assertions are used to validate the message received by a TestStep during execution, usually by comparing parts of the message (or the entire message) to some expected value. In this chapter you will create an assertion that validates the number of customers.
 
@@ -150,7 +150,7 @@ Assertions are used to validate the message received by a TestStep during execut
     {{< figure src="/attachments/refguide9/modeling/integration/testing-web-services-using-soapui/18580323.png" class="no-border" >}}
 7. Click **Save**.
 
-## 7 Extending Your Test Case
+## Extending Your Test Case
 
 In this chapter you will extend your test case with multiple test steps and assertions.
 
@@ -207,7 +207,7 @@ In this chapter you will extend your test case with multiple test steps and asse
     </soapenv:Envelope>
     ```
 
-## 8 Running the Test Case
+## Running the Test Case
 
 In this chapter you will learn how to run the testcase you created in previous chapters.
 
@@ -218,7 +218,7 @@ In this chapter you will learn how to run the testcase you created in previous c
 
 Congratulations! You have just created your first automated test with SoapUI.
 
-## 9 Read More
+## Read More
 
 * [Finding the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clearing Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)

@@ -4,7 +4,7 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/extensionpoints_intro/
 weight: 9
 ---
 
-## 1 Introduction
+## Introduction
 
 Extension points allow you to hook functionality into various areas of the Studio Pro IDE. Extension point is a base class that you as an extension developer can inherit from. Your functionality will then be loaded by Studio Pro. These classes all have the `*Extension` suffix, inherit from [`ExtensionBase`](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI/ExtensionBase.md) base class, and contain a few virtual or abstract members.
 
@@ -14,9 +14,9 @@ To be injected, your class must be decorated with [ExportAttribute](https://docs
 like in the example above. This attribute is part of [Managed Extensibility Framework](https://docs.microsoft.com/en-us/dotnet/framework/mef/)
 that is employed by Studio Pro.
 
-## 2 List of Available Extension Points
+## List of Available Extension Points
 
-### 2.1 Studio Pro UI Extensions
+### Studio Pro UI Extensions
 
 * [ContextMenuExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI.Menu/ContextMenuExtension-1.md) – This allows injecting new context menu items into model elements.
 
@@ -34,6 +34,6 @@ Additionally, there are additional features that provide access to the following
 * [The currently opened app](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase/CurrentApp.md), as well as event subscription mechanism to that app
 * Events can be subscribed to by using the subscribe and unsubscribe methods exposed in [UIExtensionBase](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.UI/UIExtensionBase.md). 
 
-### 2.2 Studio Pro and MxBuild Extensions
+### Studio Pro and MxBuild Extensions
 
 * [ConsistencyCheckExtension](https://github.com/mendix/ExtensionAPI-Samples/blob/main/API%20Reference/Mendix.StudioPro.ExtensionsAPI.ConsistencyCheck/ConsistencyCheckExtension-1.md) – This allows injecting custom logic into the [Consistency check](/refguide/consistency-errors/) process.

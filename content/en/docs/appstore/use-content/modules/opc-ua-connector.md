@@ -38,11 +38,13 @@ You must have the following Marketplace module installed:
 1. Install the dependencies.
 2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
 
-## 3 Configuration
+## 3 Basic configuration
+
+This chapter explains how to quickly configure connection to an OPC UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
 ### 3.1 Configuring the Connection to the OPA-UA Server
 
-1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation.
+1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It will allow to acces the configuration page.
 
 2. Assign the `CanConfigure` module role to a user role that will configure the connections to your server.
 
@@ -50,13 +52,9 @@ You must have the following Marketplace module installed:
 
 4. Log in as a user that can configure the connection.
 
-5. Go to the configuration page.
-
-{{% todo %}}How to find the configuration page?{{% /todo %}}
+5. Go to the added configuration page.
 
 6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
-
-{{% todo %}}Is step 6 correct?{{% /todo %}}
 
 7. Click **New configuration** in the upper-right corner of the page.
 
@@ -74,31 +72,23 @@ Once the configuration is saved, the APIs can be used in your application.
 
 1. In Studio Pro, assign the `CanBrowse` module role to a user role that will browse the OPC-UA server.
 2. Run the app locally and open the app.
-
-{{% todo %}}Is step 2 correct?{{% /todo %}}
-
 3. Log in as a user that can browser the OPC-UA server.
 4. Go to the configuration page.
-
-{{% todo %}}How to find the configuration page?{{% /todo %}}
-
-6. Follow the configuration menu item.
-
-{{% todo %}}Which item? Is there a screenshot?{{% /todo %}}
-
-7. Click **Browse** and see what data is available on the server.
+5. Click **Browse** and see what data is available on the server.
 
 {{% todo %}}Where is the Browse button? Is there a screenshot?{{% /todo %}}
 
-## 4 Using the OPC-UA Connector
+## 4 Advance configuration
 
-### 4.1 Connecting to an OPC-UA Server (Session Services)  {#connect-to-a-server}
+This chapter explains how to configure connection to an OPC UA server without discovery service.
 
-To connect to the OPC-UA server, you must provide the following:
+### 4.1 Create a microflow creating configuration objects as follow
 
-* Provide a `ServerConfiguration` 
+ADD FIGURE
 
-* Provide the associated `IdentityToken`
+* Create a `ServerConfiguration` 
+
+* Create and associate associated `IdentityToken`
 
 *  Usually, also provide a `ClientCertificate` 
 
@@ -114,10 +104,7 @@ The configuration contains the following attributes:
 
 * `ConfigurationName` – the name to identify the configuration
 * `EndpointURL`: the URL of the endpoint of the OPC-UA server
-* `IsManualConfiguration` – Whether the configuration is manually set up without the help of the configuration wizard
-
-{{% todo %}}Is the description of IsManualConfiguration correct?{{% /todo %}}
-
+* `IsManualConfiguration` – set it to true to force the end point configuration 
 * `SessionTimeout` – requested maximum number of milliseconds a session should remain open without activity.
 * `RequestTimeout` – requested maximum number of milliseconds a request should remain open without response.
 * `MessageSecurityMode` – the type of security to apply to messages
@@ -127,20 +114,11 @@ The configuration contains the following attributes:
   * If it is *Sign&Encrypt* – messages are signed and encrypted by the client certificate.
 
 * `SecurityPolicyURI` – to determine what algorithm to use to encrypt and sign the data
-
-    {{% alert color="info" %}}You can be find this value in **GetEndpoints** > **UserIdentityToken** > **SecurityPolicyURI**{{% /alert %}}
-
-{{% todo %}}Where can users find GetEndpoints > UserIdentityToken > SecurityPolicyURI? Is there a screenshot?{{% /todo %}}
-
-* `_IsConnected`:
-
-{{% todo %}}What is the good description of _IsConected?{{% /todo %}}
+* `_IsConnected`: will be set to true when connection is open
 
 #### 4.1.2 Identity Token
 
-A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support, based on the response in **GetEndpoints** > **UserIdentityToken** > **TokenType**.
-
-{{% todo %}}Where can users find the GetEndpoints > UserIdentityToken > TokenType?{{% /todo %}}
+A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support.
 
 The three options are as follows:
 
@@ -150,9 +128,7 @@ The three options are as follows:
 
 #### 4.1.3 Client Certificate
 
-A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection, in **GetEndpoints** > **EndpointDescription** > **SecurityMode**.
-
-{{% todo %}}Where can users find GetEndpoints > EndpointDescription > SecurityMode?{{% /todo %}}
+A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection.
 
 If the message security mode is set to *Sign* or Sign&Encrypt, the `ServerConfiguration` object requires a `ClientCertificateHolder` with the `ClientCertificate` and `ClientCertificatePrivateKey` objects that must meet the following requirements:
 
@@ -162,20 +138,12 @@ If the message security mode is set to *Sign* or Sign&Encrypt, the `ServerConfig
 #### 4.1.4 Server Certificate
 
 A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. 
+For the client side, this means the client should trust the certificate of the server. 
+The server certificate must be added to the Mendix Certificate list in app settings / certificates of Studio Pro.
 
-For the client side, this means the client should trust the certificate of the server. This can be done by retrieving the certificate from the server (**GetEndpoints** > **EndpointDescription** > **ServerCertificate**), then use **Get Endpoints - Server Certificate** and then use **Trust certificate**. 
+The association between the client and the server certificates does not have to be set in the domain model.
 
-{{% todo %}}Where can users find the Get Endpoints - Server Certificate  and Trust certificate?{{% /todo %}}
-
-Alternatively, the server certificate can be added to the Mendix Certificate list in the settings of Studio Pro.
-
-{{% todo %}}Should we also explain a bit how to add the server certificate in the settings of Studio Pro? {{% /todo %}}
-
-The association does not have to be set in the domain model but can be used to check what server certificate was used while establishing the connection.
-
-If you ever want to reject a certificate from the server, you can use the `untrust certificate` action to remove the certificate from the list to trusted certificates.
-
-{{% todo %}}Is the action exactly named "untrustworthy certificate"?{{% /todo %}}
+If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
 ### 4.2 View Services
 

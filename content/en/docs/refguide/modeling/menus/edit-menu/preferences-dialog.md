@@ -230,7 +230,7 @@ The expression editor is modernized since Studio Pro 10.6. This setting is enabl
 
 ### GraphQL {#graphql}
 
-Publishing data as a GraphQL service is available since Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+Publishing data as a GraphQL service is available as of Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
 
 ### Maia
 

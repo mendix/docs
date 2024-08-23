@@ -18,7 +18,7 @@ A GraphQL service's response content type is `application/json` with character s
 | AutoNumber | Long (a scalar defined in the schema) |
 | Binary (not supported)  |   |
 | Boolean | Boolean |
-| Date and time | DateTime, as specified by `https://www.graphql-scalars.com/date-time` |
+| Date and time | DateTime, as specified by [GraphQL DateTime Scalar spec](https://www.graphql-scalars.com/date-time) |
 | Decimal | Decimal (a scalar defined in the schema) |
 | Enumeration | Enum (defined in the schema) |
 | Hashed string | String |

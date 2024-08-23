@@ -52,7 +52,7 @@ Click **Authorize** to continue using Mendix SSO with the app. Authorizing the a
 
 To give end-users access to your app, use the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the **Settings** page after opening your app in **Apps**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" >}}
 
 {{% alert color="warning" %}}
 Do not attempt to add or delete Mendix SSO users using administration functions within the app. User access to your app can only be changed through the Mendix Portal.

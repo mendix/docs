@@ -392,7 +392,7 @@ Add client certificates (in the PKCS12 format) or certificate authorities (in th
 
 Log levels are used to distinguish the log messages. Log levels highlight the highest-priority log messages so that they can be prioritized accordingly. 
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" >}}
 
 Custom log nodes appear in the list only after a message has been logged to them. For more information, see [Log Message](/refguide/log-message/#log-node-name).
 
@@ -429,7 +429,7 @@ For more information about log levels, see [How to Set Log Levels](/howto/monito
 
 On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" class="no-border" >}}   
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
 
 ### Custom Runtime Settings {#custom-runtime-settings}
 
@@ -492,7 +492,7 @@ To support features that are in beta, click **Add** and select **Unsupported**. 
 
 You can use the **Maintenance** tab to view information about planned maintenance. You can also configure your preferred maintenance window.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" class="no-border" >}}   
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" >}}   
 
 There are two types of maintenance:
 
@@ -513,7 +513,7 @@ When a maintenance operation is planned, it appears under **Planned Maintenance*
 
 You can set tags on your environment. Tags are arbitrary strings that are not interpreted by the Mendix Portal.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" >}}
 
 Tags serve two purposes:
 
@@ -529,6 +529,8 @@ If you want to add, edit, or delete a tag, make the change on the **Tags** tab a
 You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
 
 In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/services-tab.png" >}}
 
 ### Available Services
 

@@ -206,7 +206,7 @@ The response of the `Browse` action returns a browse response object. There is a
 
 * `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that might be used in future calls to retrieve more references. 
 
-### 4.3 Attribute Services
+### 5.2 Reading data (Attribute services)
 
 The attribute services enable you a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
@@ -218,25 +218,18 @@ The data model of an OPC-UA server consists of a set of `Node` objects. These no
 
 To make it easier to get the information on a node, there is a `GetNodeDetails` action provided, which will read all properties of the node and put them in the correct specialization of the `Node` entity. 
 
-#### 4.3.1 Reading a Property of a Node
+For more advanced cases use the provided Read action.
 
-This section shows how to read the `AccessLevel` on variable nodes that you just received from the `BrowseResponse`, as an example of how to read specific attribute values from nodes. For the specifics on how to read the value of a variable, see section (). 
+#### 5.2 The Read action
 
-{{% todo %}}See wich section?{{% /todo %}}
+The Read action lets you read specific attributes of a node.  The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
+The ReadNodeReadValueId objects describe the attributes on the nodes you want to read. 
+The `Read node` action returns a `ReadNodeResponse` object that contains a list of `ReadNodeResponseResults` which will contain in the same order as the request the value of the read attributes.
 
-1. Filter out all other types of the `Node` objects, as `AccessLevel` is an attribute that is only on the `VariableNode` entity and is therefore specific to a `Variable`. 
-2. Create a `ReadNodeRequest`. Since it is not important when the last moment is the `AccessLevel` is changed, nor at what moment you read the value, set the `MaxAge` attribute to *0* and the `TimestampsToReturn` attribute to *Neither*. 
-3. Specify what values you want to read. Create a `ReadNodeReadValueID` object for each `BrowseNode` object. Use same `NodeID` as the `BrowseNode`. Set `AttributeID` to `AccessLevel` and numeric range to *empty*. Attach this list to the `ReadNodeRequest`. 
-4. Supply the `ServerConfiguration` for the connection.
-5. Use the `ReadNode` action to make the request. 
+Each `ReadNodeResponseResult` object contains a `DataValue` attribute. This is the raw payload returned from the OPC UA Server. 
+To read the VALUE attibute on a `VariableNode`, set the NodeId on your ReadNodeReadValueId to the right node Id and the AttributeId to ENUM_AttributeId.VALUE.
+The corresponding DataValue attributes will depent on the type of the Datatype. 
 
-The response consists of a list of `DataValues` that match the order of the requests. The `DataValue` object has a `Value` attribute that stores an integer that resembles the `AccessLevel`, represented as a string.
-
-{{< figure src="/attachments/appstore/use-content/modules/opcua-connector/read-access-rights.png"  >}}
-
-#### 4.3.2 Reading the Value of a Variable Node {#read-variable-node-value}
-
-As you can see in the domain model, each `VariableNode` has a data type node. This associated `DataTypeNode` is a node that defines what type of value you will read from the `VariableNode`. To make reading the `Value` of a `Variable` easier, a default action is included that takes only the node ID as input. For the default variable types that must be supported by any OPC-UA server, see the table below with the expected read and write formats for attribute services.
 
 | Data type                                | Example read response                                        | Example write request                  | Conversion                             |
 | ---------------------------------------- | ------------------------------------------------------------ | -------------------------------------- | -------------------------------------- |
@@ -255,14 +248,27 @@ As you can see in the domain model, each `VariableNode` has a data type node. Th
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-#### 4.3.3 Writing a Value to a Variable Node
 
-As you can see in the domain model, each `VariableNode` has a data type node. This associated `DataTypeNode` is a node that defines what type of value you can write to the `VariableNode`. To make writing the `Value` to a `Variable` easier, a default action is included that takes the `NodeID`, a payload, and a `DefaultVariantType` as input. It is recommended to use `DefaultVariantType`. If it is not used, the write action will first read the latest value to determine the type before it can write to the node. Currently, not all default types are supported and no custom type is supported, for example, payloads. For more information, see the table in the [Reading the Value of a Variable Node](#read-variable-node-value) section.
+#### 5.3 The Write action
 
 
-### 4.4 Monitoring Items {#monitor-items}
+The Write action lets you write to specific attributes on a node.  The request object for the action is a `WriteNodeRequest`, which contains a list of WriteNodes.
+The WriteNode objects describe how and what to write to a node. 
+The `Write node` action returns a `WriteNodeResponse` object that contains a list of `WriteNodeStatusCode` which will contain in the same order as the request the statuses of the written attributes; These need to be checked to know whether the action succeeded.
 
-In order to get notifications upon a change of a value, do as follows:
+To write the VALUE attibute on a `VariableNode`, set the NodeId on your WriteNode to the right node Id, the AttributeId to ENUM_AttributeId.VALUE, the Payload to one based on the table above in [Reading the Value of a Variable Node](#read-variable-node-value) section and the VariantType to the correct type.
+
+ {{% alert color="info" %}} It is highly recommended to set the VariantType to avoid the action to read the Variant type before it can write. {{% /alert %}}
+
+
+### 5.5 Subscription and Monitored Item Services {#monitor-items}
+
+The Subscription and Monitored Item services enable you to receive notification upon a change of a monitored value.
+A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.
+A monitored Item corresponds to a specific attribute on a node that is monitored.
+
+#### 5.5.1 The Create Subscribe Action
+The `Create Subscribe` action lets you register a new subscription at the server. 
 
 1. Create a subscription. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. To create a subscription, simply call the `CreateSubscription` action from the Toolbox in Studio Pro. The requested publishing interval is how often at most you will receive a notification. You can set this value, but it can be overwritten if the server deems the publishing interval not feasible. 
 

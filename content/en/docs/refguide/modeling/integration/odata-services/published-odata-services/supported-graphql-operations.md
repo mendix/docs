@@ -5,7 +5,7 @@ description: "Lists the supported operations for published GraphQL services."
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 This is a list of supported operations for GraphQL services.
 
@@ -19,7 +19,7 @@ For each published entity, Mendix publishes 2 queries: one to retrieve all objec
 
 Besides these queries, it supports introspection queries.
 
-## 2 Retrieving All Objects
+## Retrieving All Objects
 
 This retrieves the names and dates of birth of all employees:
 
@@ -34,7 +34,7 @@ This retrieves the names and dates of birth of all employees:
 
 Here `employees` is the entity's [exposed set name](/refguide/published-odata-entity/#exposed-data) and `name` is the [exposed attribute name](/refguide/published-odata-attribute/#exposed-name), both with a lowercase first character.
 
-### 2.1 Ordering
+### Ordering
 
 To retrieve the objects in a certain order, use the `orderBy` parameter. This parameter should be a list of objects. Each of these objects indicates a field to order by, and a direction (ASC or ascending, DESC for descending).
 
@@ -48,7 +48,7 @@ For example, this retrieves the names of employees, ordered first by date of bir
 }
 ```
 
-### 2.2 First
+### First
 
 To limit the number of returned objects, use the `first` parameter. This limit (the number of objects to return) must be a positive integer. 
 
@@ -62,7 +62,7 @@ This retrieves the names of the first 3 employees:
 }
 ```
 
-### 2.3 Offset
+### Offset
 
 To skip a number of objects before returning the result, use the `offset` parameter. The offset (the number of objects to skip) must be a positive integer. 
 
@@ -76,7 +76,7 @@ For example, this retrieves the names of the seventh, eighth and ninth employee:
 }
 ```
 
-## 3 Retrieving a Single Object by Key
+## Retrieving a Single Object by Key
 
 This retrieves the name of the employee whose **userName** is **jdoe**:
 
@@ -90,7 +90,7 @@ This retrieves the name of the employee whose **userName** is **jdoe**:
 
 Here `employee` is the entity's [exposed name](/refguide/published-odata-entity/#exposed-data) of the entity, `name` is the [exposed attribute name](/refguide/published-odata-attribute/#exposed-name), and `userName` is the entity's string [key](/refguide/published-odata-entity/#key), all with a lowercase first character.
 
-## 4 Retrieving Associated Objects
+## Retrieving Associated Objects
 
 This retrieves the name of the employee and the car that they drive:
 
@@ -105,7 +105,7 @@ This retrieves the name of the employee and the car that they drive:
 
 Here `car` is the association's exposed name from the `Employee` side of the association, with a lowercase first character.
 
-## 5 Introspection
+## Introspection
 
 The GraphQL service supports the introspection system, so clients can ask the GraphQL schema for information about what queries it supports. 
 

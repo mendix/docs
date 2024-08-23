@@ -4,7 +4,7 @@ url: /refguide8/third-party-licenses/
 weight: 70
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix uses various third-party libraries that have their own licenses. All the licenses are available when you download the available [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/). They can be found in various sub-folders of your **Mendix** installation folder that are described below:
 

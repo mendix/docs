@@ -7,7 +7,7 @@ description: "Options to configure a published REST operation."
 # linked from DM: published rest > select resource > add operation for resource > help (integration)
 ---
 
-## 1 Introduction
+## Introduction
 
 A published REST operation is part of a [published REST resource](/refguide8/published-rest-resource/) and defines an endpoint that a client can call to GET, PUT, POST, PATCH, or DELETE items from the resource.
 
@@ -15,17 +15,17 @@ In the **Published REST Service** document you can add items to be included in t
 
 {{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/publshed-rest-service.png" alt="Published REST Service" class="no-border" >}}
 
-## 2 Operation Definition
+## Operation Definition
 
 When you **Add** or **Edit** a resource, you can define the resource in the **Operation** definition dialog box for the selected item as follows:
 
 {{< figure src="/attachments/refguide8/modeling/integration/published-rest-services/published-rest-service/published-rest-operation/operation-definition.png" alt="REST Operation" class="no-border" >}}
 
-### 2.1 General
+### General
 
 In the **General** tab, you can enter the operation details as described in this section.
 
-#### 2.1.1 Method
+#### Method
 
 The method specifies the type of operation that is performed by the microflow. From the drop-down menu you can select one of the following:
 
@@ -37,7 +37,7 @@ The method specifies the type of operation that is performed by the microflow. F
 * **HEAD** - retrieve information about the entry or entries at the specified location; this is identical to **GET**, except that a message body is not returned
 * **OPTIONS** - return information about the available communication options
 
-#### 2.1.2 Operation Path{#operation-path}
+#### Operation Path{#operation-path}
 
 The location where the operation can be reached starts with the URL of the resource and the **Operation path** specifies the remainder of the path for the operation. You can leave it empty to use the location of the resource.
 
@@ -45,11 +45,11 @@ You can use [path parameters](/refguide8/published-rest-path-parameters/) to cap
 
 The **Method** and **Operation path** define the operation that is executed for a given request URL as described in [Published Rest Routing](/refguide8/published-rest-routing/).
 
-#### 2.1.3 Example Location{#example-location}
+#### Example Location{#example-location}
 
 The **Example Location** gives an example of a URL on which the operation can be reached. 
 
-#### 2.1.4 Microflow
+#### Microflow
 
 An operation can have the following parameters:
 
@@ -91,15 +91,15 @@ If the microflow throws an unhandled exception, the response is **500: Internal 
 
 When security is enabled, then the microflow needs to have at least one role configured to be accessible.
 
-#### 2.1.5 Deprecated
+#### Deprecated
 
 Check this box to mark the operation as deprecated in the service's OpenApi (Swagger) documentation page as described in the [Documentation](/refguide8/published-rest-services/#interactive-documentation) section of [Published REST services](/refguide8/published-rest-services/). This informs clients not to use it anymore.
 
-#### 2.1.6 Parameters
+#### Parameters
 
 You can **Add**, **Update** or **Delete** the parameters of the operation which is described in [Operation Parameters for Published REST](/refguide8/published-rest-operation-parameter/).
 
-##### 2.1.6.1 Import Mapping {#import-mapping}
+##### Import Mapping {#import-mapping}
 
 For a body parameter, you can select an [import mapping](/refguide8/import-mappings/) that converts the body of the request into an object. All object and list parameters except file documents must have an import mapping selected. 
 
@@ -115,15 +115,15 @@ Valid requests must contain a *Content-Type* header. See [Recognized media types
 
 The import mapping is also used to generate object schemas for operation responses in [OpenAPI (Swagger) documentation page](/refguide8/published-rest-services/#interactive-documentation) based on [JSON Schema](/refguide8/published-rest-service-json-schema/)
 
-#### 2.1.7 Response
+#### Response
 
 This defines the response of the operation. You can specify the type of the microflow result and the export mapping applied to it (if any).
 
-##### 2.1.7.1 Type
+##### Type
 
 This shows the result type of the microflow.
 
-##### 2.1.7.2 Export Mapping
+##### Export Mapping
 
 When the microflow returns an object or a list of objects, you must specify how this result is mapped to JSON or XML. Select an export mapping that takes the result of the microflow as input.
 
@@ -149,19 +149,19 @@ If you select an export mapping that supports both XML and JSON (for example, a 
 
 The export mapping is also used to generate object schemas for operation responses in the [OpenAPI (Swagger) documentation page](/refguide8/published-rest-services/#interactive-documentation) based on the [JSON schema](/refguide8/published-rest-service-json-schema/).
 
-### 2.2 Public Documentation
+### Public Documentation
 
 In the **Public Documentation** tab you can specify the documentation that will be used in the service's [OpenAPI (Swagger) documentation page](/refguide8/published-rest-services/#interactive-documentation).
 
-#### 2.2.1 Summary {#summary}
+#### Summary {#summary}
 
 Provide a short description of what the operation does.
 
-#### 2.2.2 Description {#description}
+#### Description {#description}
 
 Enter a complete overview of what the operation does. You can use [GitHub-flavored markdown](/refguide8/gfm-syntax/) syntax to style the text.
 
-## 3 Example
+## Example
 
 **How to publish REST in Studio Pro 8**
 

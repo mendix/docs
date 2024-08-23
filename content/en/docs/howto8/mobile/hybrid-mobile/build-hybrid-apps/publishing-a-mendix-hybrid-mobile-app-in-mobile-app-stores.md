@@ -7,7 +7,7 @@ aliases:
     - /refguide8/publish-packages-to-mobile-stores.html
     - /refguide8/publish-packages-to-mobile-stores
 ---
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Because Adobe no longer maintains this service, building hybrid apps in the cloud and publishing them to app stores is no longer possible.
@@ -26,7 +26,7 @@ This how-to teaches you how to do the following:
 * Install an iOS or Android app on a mobile test device
 * Upload your app to the Apple App Store or Google Play Store
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -44,7 +44,7 @@ To publish your app in the Google Play store, do the following:
 
 * Have an Android device for testing the APK package that will be produced
 
-## 3 Starting the Packaging Process{#starting-the-packaging-process}
+## Starting the Packaging Process{#starting-the-packaging-process}
 
 To start the packaging process, follow these steps:
 
@@ -84,7 +84,7 @@ For detailed instructions, see the [hybrid-app-template GitHub repository](https
 
 For more context on building hybrid apps in the cloud, as well as other options for iOS apps, see [How to Build Hybrid Apps](/howto8/mobile/build-hybrid-apps/).
 
-## 4 Setting Up App Signing Keys
+## Setting Up App Signing Keys
 
 The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap Build website and set up the app signing keys. To set up the app signing keys, follow these steps:
 
@@ -94,14 +94,14 @@ The **PhoneGap Build: Signing Key Required** page asks you to go to the PhoneGap
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/edit-account.png" alt="edit account" class="no-border" >}}
 
-## 5 Preparing and Publishing Your App
+## Preparing and Publishing Your App
 
 For publishing to a specific platform, see the subsequent sections of this how-to:
 
 * [Preparing and Publishing for iOS](#publishing-for-ios)
 * [Preparing and Publishing for Android](#publishing-for-android)
 
-## 6 Preparing and Publishing for iOS{#publishing-for-ios}
+## Preparing and Publishing for iOS{#publishing-for-ios}
 
 Apple provides general information on [publishing an iOS app in the Apple App Store](https://developer.apple.com/programs/ios/distribute.html). Before uploading your app, make sure to check the [App Review Guidelines](https://developer.apple.com/app-store/review/) to make sure your app will be accepted. An Apple Developer Account is required. If you do not have one, [register as an Apple Developer](https://developer.apple.com/register/index.action).
 
@@ -124,7 +124,7 @@ Apple provides general information on [publishing an iOS app in the Apple App St
 
 Your PhoneGap Build account is now ready and you can continue the packaging process.
 
-### 6.1 Completing the Packaging Process
+### Completing the Packaging Process
 
 To complete the building process in the Mendix Portal, follow these steps:
 
@@ -133,7 +133,7 @@ To complete the building process in the Mendix Portal, follow these steps:
     * You will see a **Building Mobile App Store Packages** page, which will display a **Building** status while PhoneGap Build is building your app. Once your app is ready, the page's status will show **Done**.
 3. Click the **Download iOS package** button, and save the package (the *.ipa* file) to your computer.
 
-### 6.2 Installing the iOS App on Your Mobile Test Device
+### Installing the iOS App on Your Mobile Test Device
 
 You can now deploy your app to your mobile test device. You must use a Mac mobile test device for this step. An easy way to do this is with Apple iTunes.
 
@@ -151,7 +151,7 @@ To install the iOS app on your mobile test device, follow these steps:
 
 The app will now be visible on your device. Open it and sign in to the app with a regular user account. You can set one up in the Mendix app in your desktop browser if you have not done so yet.
 
-### 6.3 Uploading the iOS App to the App Store
+### Uploading the iOS App to the App Store
 
 1. Follow Apple's [Add an app to your account](https://help.apple.com/app-store-connect/#/dev2cd126805) tutorial to add an app entry to your account.
 2. After adding a new app to your account, follow Apple's [View and edit app information](https://help.apple.com/app-store-connect/#/dev97865727c) tutorial to describe your new app entry. Consult the other pages under the left menu's **Enter app information** category should they apply to your app:
@@ -161,17 +161,17 @@ The app will now be visible on your device. Open it and sign in to the app with 
 3. Follow Apple's [Uploading builds overview](https://help.apple.com/app-store-connect/#/dev82a6a9d79) to upload a build of your app to App Store Connect.
 4. Use Apple's [Choose the build before you submit to review](https://help.apple.com/app-store-connect/#/dev7cbda8c55) to select the build which you will submit to App Review.
 
-### 6.4 Testing
+### Testing
 
 Test your app per the [TestFlight beta testing overview](https://help.apple.com/app-store-connect/#/devdc42b26b8) documentation to ensure your app works the way it should. TestFlight beta testing allows you to control which users can test your app, and then collect feedback from them.
 
-### 6.5 Publishing
+### Publishing
 
 Publish your app by following Apple's [Overview of publishing an app](https://help.apple.com/app-store-connect/#/dev34e9bbb5a) and the subsequent documents in the left menu's **Publish on the App Store** category:
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/ios-publishing-an-app.png" alt="publish on the app store" class="no-border" >}}
 
-## 7 Preparing and Publishing for Android{#publishing-for-android}
+## Preparing and Publishing for Android{#publishing-for-android}
 
 If you plan on publishing an Android app, read Google's overview of [the Android app publishing process](https://developer.android.com/tools/publishing/publishing_overview.html). Before submitting your app to an app store, [review the launch checklist](https://developer.android.com/distribute/tools/launch-checklist.html).
 
@@ -179,7 +179,7 @@ If you are just testing your app, you do not need to create a keystore. You can 
 
 If you want to publish your Android app, you must first complete the [Android](/refguide8/managing-app-signing-keys/#android) section of *Managing App Signing Keys*. This section explains how to generate a keystore and upload that keystore to PhoneGap Build.
 
-### 7.1 Enabling your Mobile Test Device for an Android Binary (APK){#download-apk}
+### Enabling your Mobile Test Device for an Android Binary (APK){#download-apk}
 
 After you create your build you can download the resulting APK using a download link or a QR code. To enable APK installations:
 
@@ -190,11 +190,11 @@ After you create your build you can download the resulting APK using a download 
 5. Enable the **Allow from this source** switch or checkbox.
 6. Tap the **OK** button if prompted.
 
-### 7.2 Installing Your APK
+### Installing Your APK
 
 To install your APK, you can either download the APK file using your mobile device's web browser, or transfer the APK file to your Android device using a USB cord.
 
-#### 7.2.1 Option 1: Using Your Device's Browser
+#### Option 1: Using Your Device's Browser
 
 Go to the PhoneGap install page using your mobile test device's browser to continue installation, then follow these instructions:
 
@@ -209,7 +209,7 @@ To install an APK file directly from your Android's **Download** folder:
 3. Tap the **Allow** switch or checkbox.
 4. Tap the **OK** button if prompted.
 
-#### 7.2.2 Option 2: Using a USB Cord
+#### Option 2: Using a USB Cord
 
 The second way to install your app is by connecting your device to a machine via USB. To Install an APK from your device's file manager app this way:
 
@@ -218,19 +218,19 @@ The second way to install your app is by connecting your device to a machine via
 3. Tap the **Install** button.
 4. Tap the **Done** button when prompted. You should now be able to access your installed app via your **App Drawer**, as well as by tapping the **Open** button after the installation completes.
 
-### 7.3 Testing Your App
+### Testing Your App
 
 Using your new app, ensure all pages, buttons, and functionality work the way you intended them to. You can test your app using automatic software, such as [BrowserStack](https://www.browserstack.com/), or test your app manually. 
 
-### 7.4 Upload to Play Console
+### Upload to Play Console
 
 Upload your Mendix app to the Play Console by following the instructions on Google's [Upload your app to the Play Console](https://developer.android.com/studio/publish/upload-bundle) site. Before uploading to the Play Console you will have to complete the [signup steps](https://play.google.com/apps/publish/signup/) of signing-in with your Google account, accepting the developer agreement, paying the registration fee, and completing your account details. Once you have satisfied those requirements, you can [upload your app](https://support.google.com/googleplay/android-developer/answer/7159011) to the Play Console.
 
-### 7.5 Create, Review, and Roll Out a Release
+### Create, Review, and Roll Out a Release
 
 Follow the steps in Google's [Prepare and roll out a release](https://support.google.com/googleplay/android-developer/answer/7159011) to create, prepare, review, and roll out your app release. You can also consult Google's [Run apps on a hardware device](https://developer.android.com/studio/run/device) for detailed instructions on testing your app using a physical Android device instead of an emulator.
 
-## 8 Read More
+## Read More
 
 * [Deploy your First Hybrid Mobile App](/howto8/mobile/deploy-your-first-hybrid-mobile-app/)
 * [Debug a Hybrid Mobile App](/howto8/mobile/debug-a-mobile-app/)

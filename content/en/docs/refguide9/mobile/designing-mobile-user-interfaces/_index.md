@@ -5,7 +5,7 @@ weight: 30
 description: "These documents explain best practices for designing mobile UI with Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mobile applications have unique properties that must be taken into consideration when designing the user interface of a mobile application:
 

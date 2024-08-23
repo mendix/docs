@@ -5,7 +5,7 @@ weight: 5
 description: "Describes the Initiatives Overview page in the Mendix Portfolio Management app."
 ---
 
-## 1 Introduction
+## Introduction
 
 In the Portfolio Management app, the term "Initiative" represents a business objective or strategic goal, and could span across multiple apps. An initiative can be related to multiple apps or just one small part of a big app. For progress tracking, Mendix recommends breaking down an app into smaller initiatives whenever possible.
 
@@ -17,7 +17,7 @@ In the search box on the top, you can search for an initiative by the initiative
 
 On the upper-right corner, you can use the drop-down list to [change the view](#change-view). You can [export and import Initiatives](/developerportal/portfolio-management/export-import-initiatives/) by clicking the import or export {{% icon name="office-sheet" %}} icon. Clicking **Filters** enables you to filter initiatives and the filters remain applied when you change to a new view. You can [create a new initiative](#create-new-initiative) by clicking the **Create Initiative** button.
 
-## 2 Creating a New Initiative {#create-new-initiative}
+## Creating a New Initiative {#create-new-initiative}
 
 {{% alert type="info" %}}Both Portfolio Managers and Contributors can create new initiatives. Only Viewers cannot do this action. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
@@ -32,7 +32,7 @@ To create a new initiative and add details to it, follow the steps below. To che
 7. [Add comments.](#add-comments)
 8. [Save initiative details.](#save-details)
 
-### 2.1 Creating the Initiative {#create-initiative}
+### Creating the Initiative {#create-initiative}
 
 To create a new initiative, follow these steps:
 
@@ -43,7 +43,7 @@ To create a new initiative, follow these steps:
 
 Now you can proceed to [add general information](#add-general-information).
 
-### 2.2 Adding General Information {#add-general-information}
+### Adding General Information {#add-general-information}
 
 To add general information to your initiative, follow these steps:
 
@@ -51,13 +51,15 @@ To add general information to your initiative, follow these steps:
 
 1. In the **Edit Initiative** side pane, select the status of your initiative: **On Track**, **At Risk**, or **Off Track**.
 
-2. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
+2. Enter **Percentage Completed** if this is an ongoing initiative. You can enter a value between 0–100 to indicate how much of progress has been made for this initiative.
+
+3. Select **Tags** for the initiative. You can use tags to classify your initiatives; for example, you can classify them by type. You can select existing tags or create new tags. 
 
    {{% alert color="info" %}}For more information about how to create new tags, edit existing tags, or delete existing tags, see the [Managing Tags](#manage-tags) section.{{% /alert %}}
 
-3. Enter the **Description** of the initiative.
+4. Enter the **Description** of the initiative.
 
-4. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
+5. If any existing Mendix apps or any apps in development are related to this initiative, you can link these apps:
 
    1. In the search box below **Link Existing App**, search the app. The system displays the first 50 results.
 
@@ -65,17 +67,17 @@ To add general information to your initiative, follow these steps:
 
    3. Repeat the two steps above to link more apps if you want to link more than one app.
 
-5. Set the **Owner** for the initiative.
+6. Set the **Owner** for the initiative.
 
-6. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
+7. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
 
    {{% alert type="info" %}}A Portfolio Manager can customize the options for **Stage**, **Department**, **Location**, **Country**, and **Use Case** on the [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/) page.{{% /alert %}}
 
-7. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
+8. If you want to add attachments, click **+** to add them. Once an attachment is added, all the users can open and download it.
 
 Now you can proceed to [link Epics to your initiative](#link-epics).
 
-#### 2.2.1 Managing Tags {#manage-tags}
+#### Managing Tags {#manage-tags}
 
 While you are in the process of [adding general information](#add-general-information), you can manage tags as follows:
 
@@ -105,7 +107,7 @@ To delete an existing tag, do as follows:
 2. Click **Delete**. The **Confirmation** dialog box opens.
 3. Click **Delete Tag**.
 
-### 2.3 Linking Epics to an Initiative {#link-epics}
+### Linking Epics to an Initiative {#link-epics}
 
 {{% alert color="info" %}}
 Only Portfolio Managers and Contributors from the same company as the portfolio can link epics to an initiative. Viewers or external members cannot do this action.
@@ -137,7 +139,7 @@ To remove an existing linked epic from the initiative, hover over the row where 
 
 Now you can proceed to [add planning information](#add-planning-information).
 
-#### 2.3.1 Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
+#### Differences Among Initiatives, Apps, and Epics {#differences-initiatives-apps-epics}
 
 An initiative is usually worked upon in several epics. Initiatives are bigger projects that could span across multiple apps, systems, and services, while epics are related to a single app only and bundle user stories together. To learn more about the differences among initiatives, epics, and user stories, check out our [learning path](https://academy.mendix.com/link/modules/599/lectures/4660/2.2-The-Role-of-Portfolio-Management-in-the-Application-Lifecycle) and the examples below:
 
@@ -147,7 +149,7 @@ The following figure shows examples of three portfolios. The first portfolio is 
 
 {{< figure src="/attachments/developerportal/portfolio-management/portfolios-initatives-apps-epics-stories.png" >}}
 
-### 2.4 Adding Planning Information {#add-planning-information}
+### Adding Planning Information {#add-planning-information}
 
 In the **Edit Initiative** side pane, click **Planning** to show all the fields in this section. Set the following dates in this section:
 
@@ -157,7 +159,7 @@ In the **Edit Initiative** side pane, click **Planning** to show all the fields 
 
 Now, you can proceed to [add prioritization information](#add-prioritization-information).
 
-### 2.5 Adding Prioritization Information {#add-prioritization-information}
+### Adding Prioritization Information {#add-prioritization-information}
 
 In the **Edit Initiative** side pane, click **Prioritization** to show all the fields in this section. Set the values for the fields in this section.
 
@@ -167,7 +169,7 @@ The title of this section can be **Prioritization: WSJF Model** or **Prioritizat
 
 Now you can proceed to [add estimated value](#add-estimated-value).
 
-### 2.6 Adding Estimated Value {#add-estimated-value}
+### Adding Estimated Value {#add-estimated-value}
 
 In the **Edit Initiative** side pane, click **Estimated Value** to show all the fields in this section. These fields can solidify your business case and drive internal adoption, and help you map the realized value upon completion. Add information in the following fields in this section:
 
@@ -185,17 +187,17 @@ If the initiative creates more than one type of value, click **Add Value** to ad
 
 Now you can proceed to [add comments](#add-comments).
 
-### 2.7 Adding Comments {#add-comments}
+### Adding Comments {#add-comments}
 
 If you want to add a comment, click **Comments** in the **Edit Initiative** side pane, and then click **Post Comment** after you add the comment.
 
 Now you can proceed to [save initiative details](#save-details).
 
-### 2.8 Saving Initiative Details {#save-details}
+### Saving Initiative Details {#save-details}
 
 At the bottom of the **Edit Initiative** side pane, click **Save**. Now all the details are saved for the new initiative that you just created.
 
-## 3 Changing Your View {#change-view}
+## Changing Your View {#change-view}
 
 To change your view on the **Initiatives Overview** page, click the drop-down list on the upper-right corner, and then select one of the following views:
 
@@ -206,7 +208,7 @@ To change your view on the **Initiatives Overview** page, click the drop-down li
 * [WSJF Prioritization](#wsjf) or [RICE Prioritization](#rice) (the section you see here depends on the prioritization model selected in [Portfolio Settings](/developerportal/portfolio-management/portfolio-settings/))
 * [Planning view](#planning-view)
 
-### 3.1 Kanban View {#kanban-view}
+### Kanban View {#kanban-view}
 
 In Kanban view, all the initiatives are represented by initiative cards and are categorized in different columns. A column indicates the stage that an initiative is currently in. You can drag an initiative card to a different column to change its stage. You can also drag initiative cards around within a column to change their sequence. Newly created initiatives are placed at the bottom of the column. Clicking an initiative card opens a [side pane](#view-initiative) that shows initiative details.
 
@@ -240,7 +242,7 @@ Each initiative card shows the following information:
 
 8. Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
 
-### 3.2 List View {#list-view}
+### List View {#list-view}
 
 In the list view, initiatives are shown in a list. Clicking the header of a column sequences the initiatives using the values in that column.
 
@@ -258,6 +260,8 @@ The list contains the following information:
 
 * **Status** – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 
+* **Completed** – This shows how much progress has been made for this initiative. It is a value between 0–100 and shown as percentage.
+
 * **Intake Date** – This shows the date when the initiative is accepted based on business requirements.
 
 * **Start Date** – This shows the date when the first actions are taken to start implementation.
@@ -272,7 +276,7 @@ The list contains the following information:
 
   {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
-### 3.3 WSJF Prioritization {#wsjf}
+### WSJF Prioritization {#wsjf}
 
 {{% alert type="info" %}}For more information about WSJF and each individual component of WSJF, see the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
@@ -310,7 +314,7 @@ The list contains the following information:
 
   {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
-### 3.4 RICE Prioritization {#rice}
+### RICE Prioritization {#rice}
 
 {{% alert type="info" %}}For more information about RICE and each individual component of RICE, see the [RICE](/developerportal/portfolio-management/prioritization-models/#rice) section in *Prioritization Models Supported by Portfolio Management*.{{% /alert %}}
 
@@ -348,7 +352,7 @@ The list contains the following information:
 
   {{% alert type="info" %}}Both Portfolio Managers and Contributors can edit, archive, or delete an initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.{{% /alert %}}
 
-### 3.5 Planning View {#planning-view}
+### Planning View {#planning-view}
 
 The planning view gives you a clear visual representation of initiatives on a timeline to assist you with planning, coordination, and decision-making. Initiatives in this view are sorted by their go-live date. You can see maximum one year back and two years ahead from the current date.
 
@@ -360,14 +364,15 @@ The view contains the following information:
 * Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 * Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
-* Timeline bar - The timeline bar indicates the start date and the go-live date of an initiative. Hovering over the timeline bar shows these dates in a tooltip:
+* Timeline bar – The timeline bar indicates the start date and the go-live date of an initiative. The color shading of the bar reflects how much progress has been made for the initiative. The darker shade indicates the percentage completed, while the lighter shade shows the remaining unfinished portion. (In dark mode, the shading is reversed.) Hovering over the timeline bar shows the following information in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.
+    * **Completed** – This shows how much progress has been made for this initiative.
 * Today indicator (the vertical blue line) – This indicates the date of today.
 * **Today** – Clicking **Today** on the lower-right corner brings the view back to today.
 * **Weeks**, **Months**, and **Quarters** – Clicking one of these buttons on the lower-right corner changes the zoom level of the timeline.
 
-## 4 Viewing Initiative Details {#view-initiative}
+## Viewing Initiative Details {#view-initiative}
 
 On the **Initiatives Overview** page, if you click an initiative, a side pane opens on the right side to show initiative details.
 
@@ -381,7 +386,7 @@ Both Portfolio Managers and Contributors can edit, archive, or delete an initiat
 
 When you view initiative details, you can only post comments or link epics. You cannot change any other information. To change other information, you need to [edit the initiative](#edit-delete-initiative).
 
-## 5 Editing or Deleting an initiative {#edit-delete-initiative}
+## Editing or Deleting an initiative {#edit-delete-initiative}
 
 {{% alert type="info" %}}
 Both Portfolio Managers and Contributors can edit or delete an existing initiative. Only Viewers cannot do these actions. For more information on roles and permissions, see the [Members](/developerportal/portfolio-management/access-management/#members) section in *Access Management*.
@@ -389,7 +394,7 @@ Both Portfolio Managers and Contributors can edit or delete an existing initiati
 
 To edit or delete an initiative, go to the **Initiatives Overview** page, click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) for that initiative, and then select **Edit** or **Delete**. Alternatively, you can also click **More Options** in the [side pane](#view-initiative) where you view initiative details, and then select **Edit** or **Delete**.
 
-## 6 Archiving an Initiative {#archive-initiative}
+## Archiving an Initiative {#archive-initiative}
 
 When an initiative is finished or the initiative is not relevant for the current time being, you can archive an initiative.
 
@@ -407,6 +412,6 @@ To archive an initiative, perform the following steps:
 
 A pop-up window opens and tells you that the initiative is successfully archived. Once the initiative is archived, you can find it on the [Archive](/developerportal/portfolio-management/archive/) page.
 
-## 7 Exporting and Importing Initiatives
+## Exporting and Importing Initiatives
 
 On the **Initiatives Overview** page you can import and export initiatives. For details, see [Export and Import Initiatives](/developerportal/portfolio-management/export-import-initiatives/).

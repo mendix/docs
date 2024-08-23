@@ -5,13 +5,13 @@ description: "Describes Find, Find Advanced, and Find Usages in Mendix Studio Pr
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 You can search for changes or usages of different elements, documents, XPaths, changes to various elements, in your app.  You do it via **Find**, **Find Advanced**, and **Find Usages** options under the **Edit** menu. 
 
 {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/find-options.jpg" alt="Find Options" class="no-border" >}}
 
-## 2 Find Option
+## Find Option
 
 You can find various elements in your app via the **Find** option. For example, you would like to find elements in the domain model, page editor, and microflow editor where the word "Employee" is used: pages, entities, associations, expressions with it, etc. Do the following:
 
@@ -25,11 +25,11 @@ You can see search results in the **Find Results** pane:
 
 {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/search-results.jpg" alt="Search Results" class="no-border" >}}
 
-## 3 Find Advanced Option
+## Find Advanced Option
 
 With the **Find Advanced** option you can set advanced criteria and find specific elements in your project, such as all [object activities](#find-object-activities), or [unused elements](#find-unused-elements). 
 
-### 3.1 Finding Object Activities {#find-object-activities}
+### Finding Object Activities {#find-object-activities}
 
 You can search for microflows that have object activities in them. Do the following:
 
@@ -42,7 +42,7 @@ You can search for microflows that have object activities in them. Do the follow
 
 You can see search results in the **Find Results** pane.
 
-### 3.2 Finding Unused Elements {#find-unused-elements}
+### Finding Unused Elements {#find-unused-elements}
 
 While you develop your app, it might occur that specific functionality (for example, pages or microflows) is not applicable anymore in the final version of your application. To keep your app clear and easy to maintain, it is advised to clean any unused items up. 
 
@@ -67,7 +67,7 @@ Modules downloaded from the Marketplace might contain a lot of unused items. If 
 Any objects which are excluded from the project will not show up in the unused items list.
 {{% /alert %}}
 
-### 3.3 Marking Unused Objects as Used 
+### Marking Unused Objects as Used 
 
 Some pages and microflows are only used from Java code and will be listed as an unused item because Studio Pro cannot look into Java source code. To prevent anyone from removing these objects you can mark the page or microflow as used. Do the following:
 
@@ -77,7 +77,7 @@ Some pages and microflows are only used from Java code and will be listed as an 
 
     {{< figure src="/attachments/refguide8/modeling/menus/edit-menu/find-and-find-advanced/mark-as-used-property.png" class="no-border" >}}
 
-## 4 Find Usages Option {#find-usages}
+## Find Usages Option {#find-usages}
 
 The **Find Usages** option allows you to find where a certain element is used, for example, to find all buttons that open a certain page.
 
@@ -98,6 +98,6 @@ Double-click an item in the **Find Results** pane to open the corresponding docu
 
 Click **Lock results** in the **Find Results** pane. Now if you click **Find Usages**, the results will be shown in a second **Find Results** pane. This allows you to keep several search results.
 
-## 5 Read More
+## Read More
 
 * [Go to Option](/refguide8/go-to-option/)

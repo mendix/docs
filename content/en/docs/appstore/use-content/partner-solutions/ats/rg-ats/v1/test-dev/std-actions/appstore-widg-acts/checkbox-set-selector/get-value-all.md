@@ -3,25 +3,25 @@ title: "Get Checkbox Set Selector Value (All)"
 url: /appstore/partner-solutions/ats/rg-one-get-checkbox-set-selector-value-all/
 ---
 
-## 1 Description
+## Description
 
 Returns the "select all" checkbox value.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget you want to get the select all checkbox value from.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Widget Name | String | Yes | The name of the widget.
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

@@ -10,11 +10,11 @@ description: "Describes the configuration and usage of the Tab Swipe widget, whi
 This widget is deprecated. For an alternative, please use a [native app](/refguide/mobile/introduction-to-mobile-technologies/native-mobile/) which supports tab swipe inherently.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Tab Swipe](https://marketplace.mendix.com/link/component/78620/) widget can be used for navigating between tabs.
 
-## 2 Usage
+## Usage
 
 To use this widget, follow these steps:
 

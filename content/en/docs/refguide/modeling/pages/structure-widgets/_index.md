@@ -4,7 +4,7 @@ url: /refguide/structure-widgets/
 weight: 25
 ---
 
-## 1 Introduction
+## Introduction
 
 Structure widgets provide structure to your page's content.
 
@@ -40,11 +40,11 @@ Structure widgets provide structure to your page's content.
 
     {{< figure src="/attachments/refguide/modeling/pages/structure-widgets/snippet-call-design-mode-example.png" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Pages](/refguide/pages/)

@@ -10,31 +10,31 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Support escalation process ensures that Mendix provides customers and partners with the means to give an issue broader attention. We are committed to delivering high-quality support to all our customers and partners. If you need to escalate a case, our technical team is ready and available to help you quickly bring your issue to closure.
 
 Our efficient escalation management process is designed to keep you informed of your escalated case status at every step of the way. A lead and/or manager is assigned to every escalation to oversee the case from a holistic viewpoint. This member is responsible for evaluating the situation, facilitating the issue, and acting as an advocate on your behalf.
 
-## 2 Types of Escalation
+## Types of Escalation
 
 Escalations occur in support centers for a variety of reasons. An escalation management system allows an organization to identify, track, monitor, and manage situations that require increased awareness and swift action. Mendix provides our customers and partners with the two types of escalation described below.
 
-### 2.1 Functional Escalation
+### Functional Escalation
 
 Mendix uses this process when the Mendix Support team is unable to resolve the issue or stay within the agreed timeline (meaning, the targeted time for resolution is exceeded). We assign the issue to another team based on the skill set required to resolve the issue.
 
-### 2.2 Hierarchical Escalation
+### Hierarchical Escalation
 
 Mendix uses this process as a communicative means to inform all the parties involved in a proactive manner of a potential SLA breach.
 
 The essence of our escalation management is to bring order, structure, focused management attention, and additional resources to those customer situations which could otherwise result in a high level of customer dissatisfaction and/or damage to the service provider's reputation.
 
-## 3 Escalation Process Overview
+## Escalation Process Overview
 
 {{< figure src="/attachments/support/escalation-management-process/escalation_process_overview.png" class="no-border" >}}
 
-## 4 When Should an Escalation Be Initiated?
+## When Should an Escalation Be Initiated?
 
 For customers and partners who hold a valid support services contract, an escalation may be initiated anytime after the SLA response time. If you have worked through our standard support processes and with our teams and you are not satisfied with the level or timeliness of service you received, you can escalate accordingly. Additionally, an escalation should be initiated when there is tangible impact to your production environment, or there is high risk to the business operations.
 
@@ -48,7 +48,7 @@ Listed below are some examples of reasons to initiate an escalation:
 * Data loss or risk of potential data loss
 * Common sense
 
-## 5 What Is the Process for Escalating My Case?
+## What Is the Process for Escalating My Case?
 
 The entry point into the Mendix escalation process is through your support case. Please note that for an issue to be escalated, a support case must be created (we will not accept escalations solely based on communications via email). The reason behind this is to get multiple teams involved if need be in a consolidated manner. All communication between the engineer and case owner from the conception of the case should be documented within the case notes so all involved teams can view the progression of the issue.
 
@@ -65,9 +65,9 @@ The Support Engineer will come to a solution most of the time, sometimes after d
 
 If the gap between the customer's expectation and the Mendix Platform possibilities cannot be resolved, an escalation is started.
 
-## 6 How Can I Escalate My Case?
+## How Can I Escalate My Case?
 
-### 6.1 Via Email
+### Via Email
 
 Send an email to **escalation[at]mendix.com** (and CC your Customer Success Manager). Ensure you add the following details to your email for an effective event-based escalation process:
 
@@ -77,7 +77,7 @@ Send an email to **escalation[at]mendix.com** (and CC your Customer Success Mana
 * The affected application URL and environment
 * Documentation of the issue in its entirety (the problem, replication steps, what has been done so far, and the last status of the case from the assignee)
 
-### 6.2 Through the Support Ticket
+### Through the Support Ticket
 
 In the case notes, CC **escalation[at]mendix.com** and in the case note, do the following:
 
@@ -87,11 +87,11 @@ In the case notes, CC **escalation[at]mendix.com** and in the case note, do the 
 
 {{< figure src="/attachments/support/escalation-management-process/escalation.png" class="no-border" >}}
 
-## 7 What Can I Expect During an Escalated Status?
+## What Can I Expect During an Escalated Status?
 
 You will be contacted by the assigned Lead or Manager and we will collaborate and develop a communication plan. As needed, a technical plan of action will be co-developed to ensure resolution of the issue. The Lead or Manager will also update your account team (Customer Success Manager and/or Account Executive) of the case progression. The assigned Leads will work as advocates internally and become a virtual member of your own problem-resolution team.
 
-## 8 What Criteria Does Mendix Use to Close My Escalation?
+## What Criteria Does Mendix Use to Close My Escalation?
 
 An escalation will be considered closed if it meets one or more of the following requirements:
 
@@ -103,7 +103,7 @@ An escalation will be considered closed if it meets one or more of the following
 
 As part of our continuous improvement process, your escalation will be documented and reviewed to help Mendix determine the steps that led to the escalation and how to avoid the issue from reoccurring.
 
-## 9 De-Escalation Process
+## De-Escalation Process
 
 Once resolved to the customer’s satisfaction, the situation is monitored for an agreed-upon period. The escalation team remains on standby and available in case the problem reoccurs during the monitoring period.
 

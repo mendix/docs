@@ -3,15 +3,15 @@ title: "Assert Equals"
 url: /appstore/partner-solutions/ats/rg-one-assert-equals/
 ---
 
-## 1 Description
+## Description
 
 Assert that two values are equal.
 
-## 2 Usage
+## Usage
 
 Pass the two values you want to compare and assert that they are equal.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

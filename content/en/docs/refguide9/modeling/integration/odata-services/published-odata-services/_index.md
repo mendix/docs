@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 In Studio Pro, entities can be exposed as [OData resources](/refguide9/published-odata-resource/) by adding them to a published OData service. You can expose any number of related resources in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the resource as well. 
 
@@ -27,13 +27,13 @@ This document describes the options available to you when you create a published
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
-## 2 General
+## General
 
-### 2.1 Service Name
+### Service Name
 
 The service name uniquely identifies the published OData service within the app.
 
-### 2.2 Version
+### Version
 
 Use the **Version** field to assign a version number to the service. This number will be shown in the API documentation.
 
@@ -41,23 +41,23 @@ Use the **Version** field to assign a version number to the service. This number
 It is recommended to use [semantic versioning](https://semver.org/) for services that you publish.
 {{% /alert %}}
 
-### 2.3 Location
+### Location
 
 The location denotes where the service will be available. The part before `/odata/` may be different depending on where the app is running. You can specify the part after `/odata/` yourself. It is recommended to specify the service name and the major version in the location.
 
-### 2.4 Namespace
+### Namespace
 
 In OData, the namespace is used to refer to data types. You can customize this namespace, changing it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
-### 2.5 Entities
+### Entities
 
 This list gives an overview of all entities published as [OData resources](/refguide9/published-odata-resource/).
 
-### 2.5.1 Entity Details
+### Entity Details
 
 This list gives an overview of all published attributes and associations.
 
-### 2.6 Enumerations
+### Enumerations
 
 This list gives an overview of all [enumerations](/refguide9/enumerations/) that are published by the service (for OData v4 only). When a published entity has an attribute with an enumeration type then the enumeration appears in this list. The list does not appear when there are no published enumerations. There is no need to add enumerations yourself, because Studio Pro will add them when needed.
 
@@ -67,7 +67,7 @@ Click **Edit** to change the exposed name of the enumeration (the name as it app
 The *enumerations* feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/). In earlier versions, enumeration attributes were published as strings.
 {{% /alert %}}
 
-### 2.6.1 Enumeration Details
+### Enumeration Details
 
 This list gives an overview of the values of the published enumeration.
 
@@ -75,11 +75,11 @@ Click **Edit** to change the exposed name of the enumeration value (the name as 
 
 Use the **Refresh** button when the enumeration values have changed to update the list with the new values.
 
-## 3 Settings
+## Settings
 
-### 3.1 Configuration
+### Configuration
 
-### 3.1.1 OData Version
+### OData Version
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
@@ -87,31 +87,31 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 This setting was introduced in Studio Pro [9.4.0](/releasenotes/studio-pro/9.4/). In earlier versions, all published OData services were OData 3.
 {{% /alert %}}
 
-### 3.1.2 Associations
+### Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide9/odata-representation/#associations) section of *OData Representation*.
 
-### 3.2 Export
+### Export
 
 In this section, you can save the different representations of the service to file.
 
-#### 3.2.1 Service feed
+#### Service feed
 
 The service feed, available in XML and JSON, contains a list of the published entities.
 
-#### 3.2.2 Metadata
+#### Metadata
 
 The $metadata XML file contains the service's contract in OData's [CSDL](https://docs.oasis-open.org/odata/odata-csdl-xml/v4.01/odata-csdl-xml-v4.01.html) format.
 
-#### 3.2.3 OpenAPI {#openapi}
+#### OpenAPI {#openapi}
 
 The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format.
 
-### 3.3 Security {#security}
+### Security {#security}
 
 You can configure security for the OData service when [App Security](/refguide9/app-security/) is enabled.
 
-#### 3.3.1 Requires Authentication {#authentication}
+#### Requires Authentication {#authentication}
 
 Select whether clients need to authenticate or not. Select **No** to allow access to the resources without restrictions. Select **Yes** to be able to select which authentication methods to support.
 
@@ -121,7 +121,7 @@ Even when you choose **Yes**, you can still expose OData resources to anonymous 
 The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide9/app-security/).
 {{% /alert %}}
 
-#### 3.3.2 Authentication Methods {#authentication-methods}
+#### Authentication Methods {#authentication-methods}
 
 If authentication is required, you can select which authentication methods you would like to support.
 
@@ -131,7 +131,7 @@ If authentication is required, you can select which authentication methods you w
 
 Check more than one authentication method to have the service try each of them. It will first try **Custom** authentication, then **Username and password**, and then **Active session**.
 
-##### 3.3.2.1 Username and Password {#username-password}
+##### Username and Password {#username-password}
 
 Authentication can be done by including basic authentication in the HTTP header of the call. To do this you need to construct a header called **Authorization** and its content should be constructed as follows:
 
@@ -141,7 +141,7 @@ Authentication can be done by including basic authentication in the HTTP header 
 
 This result is a header which looks like `Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==`.
 
-##### 3.3.2.2 Active Session {#authentication-active-session}
+##### Active Session {#authentication-active-session}
 
 When you check this authentication method, the JavaScript in your app can access the REST service using the current user's session.
 
@@ -154,7 +154,7 @@ xmlHttp.setRequestHeader("X-Csrf-Token", mx.session.getConfig("csrftoken"));
 xmlHttp.send(null);
 ```
 
-##### 3.3.2.3 Custom {#authentication-microflow}
+##### Custom {#authentication-microflow}
 
 Specify which microflow to use for custom authentication.
 
@@ -170,7 +170,7 @@ There are three possible outcomes of the authentication microflow:
 * When the resulting User is not empty, the operation is executed in the context of that user
 * When the resulting User is empty, the next authentication method is attempted (when there are no other authentication methods, the result is **404 Not Found**)
 
-###### 3.3.2.3.1 Mendix SSO {#authentication-mendix-sso}
+###### Mendix SSO {#authentication-mendix-sso}
 
 You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
 
@@ -179,7 +179,7 @@ To set up authentication with Mendix SSO, do the following:
 1. Ensure that the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
 2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
-#### 3.3.3 Allowed Roles
+#### Allowed Roles
 
 The allowed roles define which [module role](/refguide9/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
@@ -187,21 +187,21 @@ The allowed roles define which [module role](/refguide9/module-security/#module-
 Web service users cannot access OData services.
 {{% /alert %}}
 
-## 4 Public Documentation
+## Public Documentation
 
 In the **Public documentation** tab, you can write a summary and a description intended for people using the service.
 
-## 5 Properties
+## Properties
 
 In the properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
-### 5.1 Documentation
+### Documentation
 
 Here you can add a description of the service. This is available to other users working on this app and is not published when the OData service is deployed.
 
-### 5.2 Replace Illegal XML Characters
+### Replace Illegal XML Characters
 
 Some special characters cannot be used in XML. If your data contains these
 characters, the client will get an error. If you set this setting to *Yes*,
@@ -214,9 +214,9 @@ version is OData 4, because OData 4 returns data in JSON format.
 
 Default value: *No*
 
-## 6 Runtime Considerations
+## Runtime Considerations
 
-### 6.1 General
+### General
 
 Once your app is published, a list of the published OData services will be available on the root URL of the app followed by `/odata-doc/`. For example, `http://localhost:8080/odata-doc/`. For each OData 4 service, there is a link to a Swagger UI page that shows an interactive documentation page on which users can interact with the service.
 
@@ -234,13 +234,13 @@ For details on how Mendix attributes are represented in OData, refer to [OData R
 
 When exposing entities through OData, the entities are retrieved from the Mendix database in a streaming fashion, to avoid out-of-memory errors in the Mendix Runtime.
 
-### 6.2 On-Premises Deployments
+### On-Premises Deployments
 
 Some on-premises servers, in particular those using Microsoft IIS, will strip the host header from requests. This means that your OData service and documentation will be published on an unexpected URL.
 
 To resolve this issue, you will need to ensure your server preserves host headers. See the section [Preserving the Host Header](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#preserve-header) in the *Microsoft Windows* deployment documentation.
 
-## 7 Runtime Status Codes {#status-codes}
+## Runtime Status Codes {#status-codes}
 
 The Mendix runtime returns status codes for OData payloads. The possible status codes are the following:
 

@@ -4,13 +4,13 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/
 weight: 4
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can create an extension that adds an item to Studio Pro menu from scratch.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 2 Creating an Extension Project
+## Creating an Extension Project
 
 1. Create a new project in Visual Studio based on `C# Class Library` template.
 2. Choose a name for the project. Use a format similar to `MyCompany.MyProject.MendixExtension`, but it is not a hard requirement.
@@ -26,7 +26,7 @@ You can download the example in this how-to in [this GitHub repository](https://
 
     3. For the `manifest.json` file, right-click **Solution Explorer** > **Properties** and change the **Copy to Output Directory** property to **Copy always**.
 
-## 3 Creating a Test Mendix App
+## Creating a Test Mendix App
 
 It is handy to have an app where the extension is used for the testing purposes. Perhaps you even want to share this app with your team by committing its code next to the extension project.
 
@@ -40,7 +40,7 @@ It is handy to have an app where the extension is used for the testing purposes.
 
 Now if you build your extension project (usually you can do this by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>) and click [Synchronize App Directory](/refguide/app-menu/#synchronize) in Studio Pro (or press <kbd>F4</kbd>), the latest version of your extension will be loaded.
 
-## 4 Creating Your First Extension
+## Creating Your First Extension
 
 To introduce a simple extension that adds a menu item to Studio Pro, add the following class:
 
@@ -85,7 +85,7 @@ public class MyMenuExtension() : MenuExtension
 }
 ```
 
-## 5 Debugging Your Extension
+## Debugging Your Extension
 
 1. Make sure that the current version of the extension code is loaded in Studio Pro.
 2. Attach to Studio Pro process in Visual Studio debugger as follows:
@@ -95,7 +95,7 @@ public class MyMenuExtension() : MenuExtension
 
 3. Add a Breakpoint inside `Action` delegate in `MyMenuExtension.GetMenus()`. It will be hit when you click **Extensions** > **MyCompany** > **Say hello** menu item.
 
-## 6 Adding a NuGet Dependency
+## Adding a NuGet Dependency
 
 You can freely use [NuGet packages](https://www.nuget.org/) from extensions to access reusable .NET libraries. The following one-time additional setup is required:
 

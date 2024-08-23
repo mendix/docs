@@ -9,7 +9,7 @@ weight: 70
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Lock workflow** activity can be used to lock a [workflow](/refguide/workflows/). 
 
@@ -27,7 +27,7 @@ If the workflow is locked, new workflow instances from the selected workflow can
 
 For information on unlocking the workflow, see the [Unlock Workflow](/refguide/unlock-workflow/).
 
-## 2 Properties
+## Properties
 
 An example of Lock workflow properties is represented in the image below:
 
@@ -40,7 +40,7 @@ The **Lock workflow** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -48,21 +48,21 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Input Type {#workflow}
+### Input Type {#workflow}
 
 This option allows you to choose between a workflow document (the one that you usually select in the **App Explorer** of your app) and a workflow object provided by the Runtime to target the workflow you want to lock.
 
-### 3.2 Workflow {#workflow}
+### Workflow {#workflow}
 
 The workflow that is locked by this activity. 
 
-### 3.3 Pause Instances 
+### Pause Instances 
 
 With this option, all existing instances of the selected workflow which are in **Incompatible** or **In Progress** state are paused. We do not pause the **Aborted** and **Completed** workflow instances because those are final states and there is no way to revert those instances. It is not possible to pause **Failed** workflow instances, because even if you unpause them by unlocking the workflow, they would not start to run automatically and you would lose data on the reason of a failure.
 
 This option is enabled by default.
 
-#### 3.3.1 Workflow State Transitions Upon Lock And Unlock {#workflow-state-transitions}
+#### Workflow State Transitions Upon Lock And Unlock {#workflow-state-transitions}
 
 The table below shows all workflow state transitions upon lock and unlock the workflow.
 
@@ -75,6 +75,6 @@ The table below shows all workflow state transitions upon lock and unlock the wo
 | Aborted | Aborted | Aborted |
 | Completed | Completed | Completed |
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

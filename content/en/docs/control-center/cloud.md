@@ -6,7 +6,7 @@ weight: 45
 no_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 This feature is not yet publicly available. Please talk to your Customer Success Manager to enable this page.
@@ -14,7 +14,7 @@ This feature is not yet publicly available. Please talk to your Customer Success
 
 The **Cloud** page shows you an overview of the paid and free environments of your company
 
-## 2 Paid Environments {#paid-environments}
+## Paid Environments {#paid-environments}
 
 The **Paid Environments** tab presents an overview of the licensed Mendix Cloud environments allocated to your company. This includes information on an environment's [Resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack) and whether the [Fallback](/developerportal/deploy/mendix-cloud-deploy/#fallback) option is included as part of a Premium plan.   
 
@@ -32,7 +32,7 @@ There are links to three other pages from this tab to allow you to [make request
 These links will open in a new browser tab.
 {{% /alert %}}
 
-## 3 Free Environments
+## Free Environments
 
 The **Free Environments** tab presents details on your company's free environments.
 

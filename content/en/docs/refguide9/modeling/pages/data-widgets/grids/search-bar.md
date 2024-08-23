@@ -12,7 +12,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The search bar contains search fields that allow the end-user to quickly find the information they need in a [data grid](/refguide9/data-grid/) or [template grid](/refguide9/template-grid/).
 
@@ -20,7 +20,7 @@ To add a search field to the search bar, right-click within the search bar in yo
 
 {{< figure src="/attachments/refguide9/modeling/pages/data-widgets/grids/search-bar/add-search-field.png" class="no-border" >}}
 
-## 2 Search Field Types {#search-field-type}
+## Search Field Types {#search-field-type}
 
 There are three different types of search fields that can be used for different kinds of information:
 
@@ -36,7 +36,7 @@ You cannot change the type of a search field, you will need to delete it and the
 When using a date type in the search field, it is only possible to apply filtering to the **date** component. Filtering cannot be applied to the **time** component or a **custom format** containing time.
 {{% /alert %}}
 
-## 3 Search Field Properties {#search-field-properties}
+## Search Field Properties {#search-field-properties}
 
 Search field properties depend on the type of the search field. 
 
@@ -49,13 +49,13 @@ Search field properties consist of the following sections:
 * [Common](#common)
 * [General](#general)
 
-### 3.1 Common Section {#common}
+### Common Section {#common}
 
 Properties as **Name**, **Caption**, and **Type** are common for most of the widgets. {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
 However, there are additional properties that are described in the sections below.
 
-#### 3.1.1 Custom Date Format
+#### Custom Date Format
 
 **Custom date format** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property. This property determines how the attribute value is formatted. The custom date format is a string that allows for any combination of symbols found in the table below. Any punctuation will be rendered literally. The **Format example** will show you a date example.
 
@@ -65,15 +65,15 @@ Search input formatting must be an exact day. Custom date formatting is not limi
 
 {{% snippet file="/static/_includes/refguide9/custom-date-format-tokens.md" %}}
 
-#### 3.1.2 Placeholder Text
+#### Placeholder Text
 
 **Placeholder text** is only available when you select an attribute of *Date and Time* type in the [**Attribute (path)**](#attribute-path) property.  
 
 The placeholder text is shown if the date attribute is empty. It can be used to give the end-user a hint as to the expected format.
 
-### 3.2 General Section {#general}
+### General Section {#general}
 
-#### 3.2.1 Attribute (Path) {#attribute-path}
+#### Attribute (Path) {#attribute-path}
 
 {{% alert color="info" %}}
 This property is available for **Comparison** and **Drop-down** search fields. 
@@ -88,7 +88,7 @@ In the first case, we say the widget is connected to an attribute, and in the se
 
 You can edit attributes presented in input elements over a path.
 
-#### 3.2.2 Comparison
+#### Comparison
 
 {{% alert color="info" %}}
 This property is available for **Comparison** and **Drop-down** search fields. 
@@ -123,7 +123,7 @@ It is possible to search on date attributes using equality. What happens with th
 | [%CurrentDateTime%]   | Search field shows the current date. Represents a 24 hour date range starting at the *current time*. |      | Search between August 4, <current time> and August 5, <current time> |
 | [%BeginOfCurrentDay%] | Search field shows the current date. Represents a 24 hour date range starting at midnight of the specified date. |      | Search between August 4, 0:00 - August 5, 0:00               |
 
-### 3.3 Allow Multi-Select
+### Allow Multi-Select
 
 {{% alert color="info" %}}
 This property is available for **Drop-down** search fields. 
@@ -131,7 +131,7 @@ This property is available for **Drop-down** search fields.
 
 If this property is set to 'Yes', the resulting drop-down allows you to select multiple values instead of just one. When searching all records match for which the corresponding attribute is equal to one of the selected values. For example, you can search for all orders with status 'Submitted' or 'In progress'.
 
-### 3.4 XPath Constraint
+### XPath Constraint
 
 {{% alert color="info" %}}
 This property is available for **Drop-down** search fields. 
@@ -144,7 +144,7 @@ Let us say you have a grid showing bicycles. In the domain model the bicycle has
 `[MyWebshop.Bicycle_Shop/MyWebshop.Shop/Country='Netherlands']`
 {{% /alert %}}
 
-### 3.5 Sort Order
+### Sort Order
 
 {{% alert color="info" %}}
 This property is available for **Drop-down** search fields. 
@@ -154,7 +154,7 @@ The sort order specifies the order in which the items in the drop-down search fi
 
 Default: *No sort order*
 
-### 3.6 Lower Bound
+### Lower Bound
 
 {{% alert color="info" %}}
 This property is available for **Range** search fields. 
@@ -162,7 +162,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the lower bound of the range.
 
-### 3.7 Lower Bound Operator
+### Lower Bound Operator
 
 {{% alert color="info" %}}
 This property is available for **Range** search fields. 
@@ -172,7 +172,7 @@ The lower bound operator determines whether the comparison with the lower bound 
 
 Default: *Greater*
 
-### 3.8 Upper Bound
+### Upper Bound
 
 {{% alert color="info" %}}
 This property is available for **Range** search fields. 
@@ -180,7 +180,7 @@ This property is available for **Range** search fields.
 
 This attribute (path) determines the upper bound of the range.
 
-### 3.9 Upper Bound Operator
+### Upper Bound Operator
 
 {{% alert color="info" %}}
 This property is available for **Range** search fields. 
@@ -190,7 +190,7 @@ The upper bound operator determines whether the comparison with the upper bound 
 
 Default: *Smaller*
 
-## 4 Read More
+## Read More
 
 * [Data Grid](/refguide9/data-grid/)
 * [Template Grid](/refguide9/template-grid/)

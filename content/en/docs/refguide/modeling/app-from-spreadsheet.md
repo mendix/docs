@@ -7,7 +7,7 @@ description: "Describes how to import an Excel spreadsheet to your app in Mendix
 #The anchor <after-import> below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can choose the **App from a spreadsheet** starting point in Studio Pro, import a Microsoft Excel spreadsheet, and build an app using your data. The data of the spreadsheet will be analyzed and converted into a domain model with entities, attributes, and associations. Also, pages and navigation items based on your data can be generated.
 
@@ -17,7 +17,7 @@ You can choose the **App from a spreadsheet** starting point in Studio Pro, impo
 
 {{% /alert %}}
 
-## 2 Preparing Your Data for Import
+## Preparing Your Data for Import
 
 Before importing your spreadsheet into the app, do the following:
 
@@ -34,7 +34,7 @@ Before importing your spreadsheet into the app, do the following:
    2. Each cell of the worksheet (a row or a column) should contain a single value or be empty.
    3. If you want to create links (associations) between two columns, make sure the conditions mentioned above for creating these links are met.
 
-## 3 Data Conversion During Import
+## Data Conversion During Import
 
 During the import process, spreadsheet data is analyzed and converted the following way:
 
@@ -48,7 +48,7 @@ During the import process, spreadsheet data is analyzed and converted the follow
 
 Download this Excel spreadsheet example to check how data is normalized there: [Spreadsheet Example](/attachments/refguide/modeling/app-from-spreadsheet/Example.xlsx). You can also import it into an app and test how this spreadsheet is converted. For more information, see the [Importing a Spreadsheet](#importing-spreadsheet) section.
 
-## 4 Starting an App from a Spreadsheet {#importing-spreadsheet}
+## Starting an App from a Spreadsheet {#importing-spreadsheet}
 
 To create an app using your own data, do the following:
 
@@ -64,11 +64,11 @@ To create an app using your own data, do the following:
 
     {{% alert color="info" %}}If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later.{{% /alert %}}
 
-### 4.1 Previewing Spreadsheet Data
+### Previewing Spreadsheet Data
 
 Once you select the spreadsheet for import, your data is analyzed and is converted to associations, entities, and attributes.
 
-#### 4.1.1 Correspondence Between Excel Data Types and Attribute Types {#excel-type-attribute-type}
+#### Correspondence Between Excel Data Types and Attribute Types {#excel-type-attribute-type}
 
 In the table below, you can see how the Excel data corresponds to the attribute types:
 
@@ -82,7 +82,7 @@ In the table below, you can see how the Excel data corresponds to the attribute 
 | Data of type Date or Time that does not contain empty cells. | Date and Time **Note** If only the date is indicated, the time is set to 00:00 in the preview |
 | All of the following conditions should be met:  <ul><li>The value is identified as a string</li><li>Values in the column are used more than once</li><li>The number of such values is less than or equals ten</li></ul>When all conditions listed above are met, the column is treated as enumeration, and the values are turned into enumeration items. Values which are identical apart from being spelled with a lowercase or an uppercase will be combined under the version which is most common, or under the first one if all values are used the same number of times. For example, the values "Test" and "test" will be combined. | Enumeration                                                  |
 
-#### 4.1.2 Previewing Associations
+#### Previewing Associations
 
 After you upload the spreadsheet, worksheets that have relations (associations) are identified.
 
@@ -105,7 +105,7 @@ For example, in the image above you can see that an association is created from 
 A column can be used to create an association **from** it once only. If an association is created to lead **from** a column, no link can be created as a link **to** it.
 {{% /alert %}}
 
-#### 4.1.3 Managing Attribute Types {#managing-attribute-types}
+#### Managing Attribute Types {#managing-attribute-types}
 
 At the bottom of each column (that will be turned into an attribute), an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
@@ -116,13 +116,13 @@ If columns have empty values, the attribute type will be identified as **String*
 * Booleans – empty values are converted to **False**
 * Long and integer – empty values are converted to **0**
 
-#### 4.1.4 The Option to Generate Pages for My Data
+#### The Option to Generate Pages for My Data
 
 You can select or unselect the **Generate pages for my data** option at the bottom of the **Data Import Preview**.
 
 If this option is selected, it generates an overview page with a data grid and an **{EntityName}__NewEdit** page for each entity. For more information, see the [Generating Pages](#generating-pages) section below.
 
-### 4.2 Your Data after the Import {#after-import}
+### Your Data after the Import {#after-import}
 
 After you have reviewed all data, click **Import Data** at the bottom of the **Data Import Preview**.
 
@@ -132,7 +132,7 @@ Open the domain model to see the created entities and attributes:
 
 You can now preview your app and test it out by clicking **Run Locally** ({{% icon name="controls-play" %}}).
 
-### 4.3 Generating Pages {#generating-pages}
+### Generating Pages {#generating-pages}
 
 If **Generate pages for my data** is selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor or in the navigation document:
 

@@ -11,15 +11,15 @@ weight: 55
 Epics is the default tool for you to manage the development process of new apps. It is a replacement of Stories, which has been deprecated on October 1, 2023.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Mendix Epics API allows you to retrieve, create, and update stories as well as get all the statuses that can be possibly assigned to stories.
 
-## 2 Authentication {#authentication}
+## Authentication {#authentication}
 
 Authentication for the Epics API uses a personal access token (PAT).
 
-### 2.1 Generating a PAT {#generate}
+### Generating a PAT {#generate}
 
 For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
@@ -30,7 +30,7 @@ Select at least the following as **Epics** scopes:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Epics API calls.
 
-### 2.2 Using the PAT
+### Using the PAT
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
@@ -41,6 +41,6 @@ Authorization: MxToken 7LJE…vk
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-## 3 API Reference
+## API Reference
 
 {{< swaggerui src="/openapi-spec/epics.yaml"  >}}

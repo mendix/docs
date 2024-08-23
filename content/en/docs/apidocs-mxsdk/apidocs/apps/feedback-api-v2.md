@@ -8,15 +8,15 @@ restapi: true
 weight: 62
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Feedback API allows you to retrieve, add, and manage feedback for your Mendix apps.
 
-## 2 Authentication {#authentication}
+## Authentication {#authentication}
 
 Authentication for the Feedback API uses a personal access token (PAT).
 
-### 2.1 Generating a PAT {#generate}
+### Generating a PAT {#generate}
 
 For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*.
 
@@ -27,7 +27,7 @@ Select at least the following as **App Insights** scopes:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Feedback API calls.
 
-### 2.2 Using the PAT
+### Using the PAT
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
@@ -38,6 +38,6 @@ Authorization: MxToken 7LJE…vk
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-## 3 API Reference
+## API Reference
 
 {{< swaggerui src="/openapi-spec/feedback-v2.yaml"  >}}

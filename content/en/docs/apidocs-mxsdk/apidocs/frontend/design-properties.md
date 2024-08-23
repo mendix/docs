@@ -5,7 +5,7 @@ description: "This API guide outlines how design properties work in Atlas UI and
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Design Properties API allows you to create or extend design properties for your Mendix apps.
 
@@ -19,13 +19,13 @@ In Studio Pro, you can see which design properties are available for a widget in
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/overview.png" alt="The Properties pane in Studio Pro" class="no-border" >}}
 
-## 2 Using Design Properties
+## Using Design Properties
 
 While styling Mendix apps, users must often apply the same set of CSS or native styling classes to widgets on different pages again and again. This work is time consuming and vulnerable to human error as you edit text fields in order to apply classes to a widget.
 
 Design properties can make this work easier and safer. By configuring your own custom design properties, a certain styling can be applied to a widget in a few clicks.
 
-### 2.1 Creating Styles for Your Design Properties
+### Creating Styles for Your Design Properties
 
 You can define the styles that correspond to your design properties as CSS classes. Starting with Studio Pro 10.0.0, you can also use design properties to apply CSS variables (also known as CSS custom properties) to specified CSS properties. This document will show examples of both ways.
 
@@ -33,7 +33,7 @@ CSS classes are the easiest and most reusable way of applying styling. However, 
 
 The Design Properties API is designed to allow you to choose between CSS classes or CSS variables depending on your use case. You may also employ both and can easily mix approaches. You can even switch between using CSS classes and CSS variables without having to manually update the styles of your widgets. You can switch from one to the other at any time. For more information on the differences between these approaches, see [CSS Classes and CSS Variables](#class-variable).
 
-## 3 Design Property Types
+## Design Property Types
 
 There are several types of design properties: **Toggle**, **Dropdown**, **Colorpicker**, **ToggleButtonGroup**, and **Spacing**. They are intended to cover various use cases, allowing you to choose the design property type that best fits your need. Not all versions of Studio Pro support the same design property types.
 
@@ -48,7 +48,7 @@ The following types have been introduced with Studio Pro 10.0.0:
 
 In some cases, it is possible to switch the type of design property you use without any impact on how you used it previously. This can be helpful when you do not know exactly what type to use.
 
-## 4 Design Properties Definitions {#design-properties-definitions}
+## Design Properties Definitions {#design-properties-definitions}
 
 Design properties are defined on a module level in **JSON** format. They are located in the module specific *themesource* folders (for more information, see the [File and Folder Structure](/howto/front-end/customize-styling-new/#file-and-folder) section of *How to Customize Styling*). Since styling works differently for web and native platforms, each platform's design properties are different and defined in two separate folders. Web styling is defined in *web/design-properties.json* file. Native styling is defined in the *native/design-properties.json* file.
 
@@ -85,7 +85,7 @@ Here is a simplified example of a design properties file:
 }
 ```
 
-### 4.1 Design Property Structure
+### Design Property Structure
 
 To better illustrate the structure, here is a simplified version of the above example:
 
@@ -109,7 +109,7 @@ As you can see, design properties are defined as a *JSON* object where the keys 
 
 Every design property in the array is also represented by a *JSON* object. The exact structure of each object is dependent on its type, as indicated by the `type` property. All types also share common fields such as `name` and `description`. Those names determine how a design property appears to a user in Mendix Studio Pro.
 
-#### 4.1.1 Common Fields
+#### Common Fields
 
 The examples above show that the fields `name` and `description` define the UI, the name of a form control in Studio Pro, and the description under it. They are required string values naming and describing a design property. 
 
@@ -119,7 +119,7 @@ Field `type` defines the type of a property and must be one of the design proper
 Name your design property and its options carefully. Those names cannot be changed easily when there are apps already using them. If you want to rename a design property which is already being used in an app, see the [Renaming Design Properties](#old-names) section below.
 {{% /alert %}}
 
-#### 4.1.2 Toggle-Specific Fields
+#### Toggle-Specific Fields
 
 Design properties of type **Toggle** have the following additional field:
 
@@ -142,7 +142,7 @@ This is how the **Toggle** design property appears:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle.png" alt="Toggle property in Studio Pro" class="no-border" >}}
 
-#### 4.1.3 Dropdown-Specific Fields
+#### Dropdown-Specific Fields
 
 Design properties of type **Dropdown** have the following additional fields:
 
@@ -213,7 +213,7 @@ This is how the **Dropdown** design property appears:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/dropdown.png" alt="Dropdown property in Studio Pro" class="no-border" >}}
 
-#### 4.1.4 Colorpicker-Specific Fields
+#### Colorpicker-Specific Fields
 
 Design properties of type **Colorpicker** have the following additional fields:
 
@@ -287,7 +287,7 @@ This is how the **Colorpicker** design property appears:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/colorpicker.png" alt="Dropdown property in Studio Pro" class="no-border" >}}
 
-#### 4.1.5 ToggleButtonGroup-Specific Fields
+#### ToggleButtonGroup-Specific Fields
 
 Design properties of type **ToggleButtonGroup** have the following additional fields:
 
@@ -363,7 +363,7 @@ This is how the **ToggleButtonGroup** design property appears when using icons f
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/toggle_button_group.png" alt="ToggleButtonGroup property in Studio Pro" class="no-border" >}}
 
-#### 4.1.5 Spacing-Specific Fields
+#### Spacing-Specific Fields
 
 For design properties of type **Spacing**, in addition to the common fields, it has the following fields:
 
@@ -501,7 +501,7 @@ This is how the **Spacing** design property appears:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/design-properties/spacing.png" alt="Spacing property in Studio Pro" class="no-border" >}}
 
-### 4.2 Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
+### Extending or Overriding Design Properties of Other Modules {#extend-existing-design-properties}
 
 Design properties can be extended or overridden in other modules. For example, you can add a custom drop-down option to an Atlas design property or override the applied CSS class of a toggle property. 
 
@@ -525,7 +525,7 @@ When merging definitions with different types, the last definition based on the 
 Note that having multiple definitions with incompatible types is an invalid configuration and will result in a failure to load any design properties.
 {{% /alert %}}
 
-## 5 Widget Types{#widget-types}
+## Widget Types{#widget-types}
 
 When defining design properties in your *JSON* file, you must specify which widget your properties apply to, as some design properties may only work with certain widgets.
 
@@ -535,11 +535,11 @@ Having a property that applies a table appearance style like **Stripped**, **Bor
 
 Widget types are types defined in the [Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/modules/pages.html) documentation. Every type which is a direct or an indirect subtype of type [`Widget`](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/pages.widget.html) can have design properties attached to it. If a property is defined on a widget, then every subtype of this widget will have that property. For example if a property is defined on a `Widget` type, which is it the highest type in the hierarchy, then every widget will have this design property available.
 
-### 5.1 Widget Types for Pluggable Widgets
+### Widget Types for Pluggable Widgets
 
 When creating design properties for [Pluggable Widgets](/apidocs-mxsdk/apidocs/pluggable-widgets/), their widget type is determined by [widget id](/apidocs-mxsdk/apidocs/pluggable-widgets/#widget-id).
 
-## 6 Changing the Type of a Design Property
+## Changing the Type of a Design Property
 
 As this document outlined, each of the design property types is designed to fulfill a certain use case. However, sometimes you might not know beforehand which type best fits your needs. In those cases, you might have to change the type of a design property. This is possible in the following cases:
 
@@ -547,7 +547,7 @@ As this document outlined, each of the design property types is designed to fulf
 
 However, not all design properties can freely change their types. In some cases, you do need more configuration, as explained in the [Renaming Design Properties](#old-names) section below.
 
-## 7 Renaming Design Properties{#old-names}
+## Renaming Design Properties{#old-names}
 
 Sometimes you must rename design properties or their options which are already in use. As design properties are identified by names internally, renaming one may be a breaking change for apps that are already using those design properties. 
 
@@ -577,7 +577,7 @@ Example of a property and options that were renamed:
 
 The design property above was renamed from **my Dropdown Propery** to **My Dropdown Property**. Also **Styling option two** was renamed twice from the old names **Stling option 2** and **Styling option 2**.
 
-### 7.1 Renaming a Dropdown Option to a Toggle Property
+### Renaming a Dropdown Option to a Toggle Property
 
 {{% alert color="info" %}}
 This feature was introduced in Mendix 9.
@@ -599,7 +599,7 @@ Here is an example of a **Toggle** property that was renamed from a **Dropdown**
 
 The design property above is a replacement for the removed option **Styling option 3** of **My Dropdown Property** and will be set to **Yes** if that option was selected. The value of **My Dropdown Property** will then be set to empty if that design property still exists.
 
-### 7.2 Renaming Multiple Toggle properties to a Multi-Select ToggleButtonGroup Property
+### Renaming Multiple Toggle properties to a Multi-Select ToggleButtonGroup Property
 
 You can rename several **Toggle** properties to a multi-select **ToggleButtonGroup** property. To do this, use the `oldNames` field of an option to refer to the name of the corresponding **Toggle**. Make sure to set the `multiSelect` field of the **ToggleButtonGroup** to **true**.
 
@@ -633,7 +633,7 @@ Here is an example of a **ToggleButtonGroup** property that was renamed from sev
 
 The design property above is a replacement for the removed properties **Bold text**, **Italic text** and **Underline text**. An option will be turned on if that **Toggle** was previously turned on. The value of **Toggle** will then be turned off if that design property still exists.
 
-### 7.3 Renaming a Dropdown Option to a Spacing Option
+### Renaming a Dropdown Option to a Spacing Option
 
 You can rename options of a **Dropdown** property to an option of a **Spacing** property. In this case, the old name of the renamed options consists of the **Dropdown** property's name and the option's name separated by two colons. It is not required for the original property to still exist — it may have been removed entirely.
 
@@ -669,9 +669,9 @@ Here is an example of a **Spacing** property that includes options that have bee
 
 The design property above is a replacement for the removed options **small** and **inner small** of the **Spacing-top**. The appropriate option will be selected, depending on the option that was previously selected. The value of **Spacing-top** will then be set to empty if that design property still exists.
 
-## 8 CSS Classes and CSS Variables{#class-variable}
+## CSS Classes and CSS Variables{#class-variable}
 
-### 8.1 CSS Classes
+### CSS Classes
 
 When using CSS classes, you should keep a few things in mind:
 
@@ -692,7 +692,7 @@ In your apps theme, you can create CSS classes as such:
 }
 ```
 
-### 8.2 CSS Variables
+### CSS Variables
 
 When using CSS variables, you should keep a few things in mind:
 
@@ -713,7 +713,7 @@ In your theme, you can create CSS variables as such:
 
 It is recommended to scope them to `:root`, like in the example, as this would make the CSS variables available for all widgets in your app.
 
-### 8.3 Using Both CSS Classes and CSS Variables
+### Using Both CSS Classes and CSS Variables
 
 Your use case might require you to gradually update your design properties from using classes to using CSS variables, or back to CSS classes. In that case, you might not be able to update all your existing styling right away. 
 
@@ -740,7 +740,7 @@ In that situation, you can combine **Dropdown**, **Colorpicker**, **ToggleButton
 
 When the **Small** option is selected, the `borderRadiusSmall` class will be applied to the widget. On the other hand, when **Large** is selected, the `--radius-large` variable will be assigned to the `border-radius` property of the widget.
 
-## 9 Read More
+## Read More
 
 * [Native Styling](/refguide/mobile/designing-mobile-user-interfaces/native-styling/)
 * [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/)

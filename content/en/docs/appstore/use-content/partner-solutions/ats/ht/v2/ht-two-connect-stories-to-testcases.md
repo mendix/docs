@@ -6,7 +6,7 @@ description: "Describes the steps for linking Test Cases and Test Suites to User
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix ATS is a testing tool designed for automated testing of Mendix applications. With your automated tests, you want to test functionalities of the application. Descriptions of those functionalities are in your User Stories. As you want to test those functionalities, ATS has the ability to retrieve User Stories from the Mendix Portal project. In ATS you can link the retrieved User Stories to test cases and test suites. This is useful for you and your team to see what can be tested automatically and which functionalities are covered by a test case. Additionally linking user stories to test cases and test suites is useful for stakeholders. By linking them, you can show that the functionalities build in the Sprint are tested.
 
@@ -18,14 +18,14 @@ This how-to teaches you how to do the following
 * Link test cases/test suites to User Stories
 * Link User Stories to test cases/test suites
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Set the Mendix API Key / Personal Access Token {#set}
+## Set the Mendix API Key / Personal Access Token {#set}
 
 The following steps describe how you can set your Mendix API Key in ATS:
 
@@ -41,7 +41,7 @@ The following steps describe how you can set your Mendix API Key in ATS:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-api-key.png" class="no-border" >}}
 
-### 3.1 Integrating with Mendix Stories
+### Integrating with Mendix Stories
 
 Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
@@ -54,7 +54,7 @@ Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 5. Copy the API key and paste it into the **Mendix API Key** field in ATS.
 6. Click **Save**.
 
-### 3.2 Integrating with Mendix Epics
+### Integrating with Mendix Epics
 
 Clicking **Set API Key** opens this **Mendix API Key** dialog box:
 
@@ -70,7 +70,7 @@ You have now set the Mendix API key or personal access token (PAT). ATS can now 
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/set-mendix-api-key.png" class="no-border" >}}
 
-## 4 Retrieve User Stories in ATS
+## Retrieve User Stories in ATS
 
 The following steps explain how to retrieve user stories from the Mendix Portal project in ATS:
 
@@ -86,7 +86,7 @@ If you filled in a correct Mendix API Key you can now see the User Stories in AT
 
 {{% alert color="danger" %}}If you are using Mendix Epics, stories that have already been archived are not shown in ATS. This is because the Epics API only returns non-archived stories as their response. Stories that have not been archived yet when retrieved via ATS are archived and shown in ATS. {{% /alert %}}
 
-## 5 Linking Test Cases/Test Suites to User Stories
+## Linking Test Cases/Test Suites to User Stories
 
 In this example, I link a test case to a user story. Follow the same steps to link a test suite to a user story.
 
@@ -105,7 +105,7 @@ The following steps describe how to link a test case to a user story:
 
 In the **Add Test Case/Suite to Story** dialog you can select to create a new test case or use an existing test case. See below for the explanation of both.
 
-### 5.1 Connecting a New Test Case to a User Story
+### Connecting a New Test Case to a User Story
 
 1. In the **Select item** Dialog box click **Create new test case**.
 
@@ -141,7 +141,7 @@ On the **Edit Story** page you can do the following:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
 
-### 5.2 Linking an Existing Test Case to a User Story
+### Linking an Existing Test Case to a User Story
 
 1. In the **Select Item** Dialog search and select the test case you want to link to the Story.
 2. Click **Select**:
@@ -164,7 +164,7 @@ On the **Edit Story** page you can do the following:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-connect-stories-to-testcases/edit-story-page-options-e.png" class="no-border" >}}
 
-## 6 Linking User Stories to Test Cases
+## Linking User Stories to Test Cases
 
 In this example, I link a user story to an existing test case. Follow the same steps to link a user story to a test suite.
 
@@ -195,6 +195,6 @@ You can go to the **Edit story** page by clicking **Open story**. You can unlink
 
 You can now link test cases to stories and link stories to test cases.
 
-## 7 Next Up
+## Next Up
 
 You now learned how to link user stories to your test cases. The next how-to is [Use ATS in Combination with CI/CD](/appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

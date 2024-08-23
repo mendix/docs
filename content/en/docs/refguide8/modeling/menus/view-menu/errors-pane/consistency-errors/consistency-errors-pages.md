@@ -5,7 +5,7 @@ description: "Describes consistency errors in Mendix Studio Pro and the way to f
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction 
+## Introduction 
 
 In this document, we explain how to solve the most common or complicated consistency errors that can occur when configuring pages in Studio Pro. An example of a consistency error on a page is when you do not specify the entity property of a data view on a page. 
 
@@ -17,7 +17,7 @@ This document does not describe *all* the errors, as there are a lot of errors t
 
 Some errors have error codes and if these errors are described in documentation, Studio Pro has a clickable link to the corresponding document. Others do not have an error code, in this case, you can manually search whether a particular error is described in documentation (you can search by a message you see in the **Errors** pane).
 
-## 2 List View Consistency Errors 
+## List View Consistency Errors 
 
 If you do not configure a [data source](/refguide8/data-sources/) for a [list view](/refguide8/list-view/) properly, you will get consistency errors. 
 
@@ -34,7 +34,7 @@ The table below describes the most common errors which can occur when configurin
 |            | No nanoflow configured for the data source of this list view. Select a nanoflow or change the data source. | The data source is set to **Nanoflow**, but no nanoflow is specified. | Do one of the following: <ul><li>Open the list view's properties > **Data source** and select a nanoflow in the **Nanoflow** field</li><li>Change the type of the data source</li></ul> |
 | CE0595     | Attribute {AttributeName} is not an attribute of entity {EntityName}. | You have changed the target entity of a list view without updating its contents. The list view is filled with attributes of another entity. | Open the widget's properties > **Data source** and select another attribute for **Attribute (path)**. |
 
-## 3 Data View Consistency Errors 
+## Data View Consistency Errors 
 
 If you do not configure a [data source](/refguide8/data-sources/) for a [data view](/refguide8/data-view/) properly, you will get consistency errors.
 
@@ -52,7 +52,7 @@ The table below describes the most common errors you can come across when config
 | CE0536     | No list widget configured for the data source of this data view. Select a widget or change the data source. | A **Listen to widget** is configured as a data source for a data view, but the list view widget specified does not exist anymore on the same page. | Do one of the following: <ul><li>Create a list view on the same page, configure it, and select it as the list widget for the data view</li><li>Change the type of the data source</li></ul> |
 | CE0558     | All data views receiving an object from the page parameter must have the same entity. | You have several data views on one page that have different entities as their data sources. | Do one of the following: <ul><li>Select the same entity for all data views using the page context</li><li>Change the data source for them</li></ul> |
 
-## 4 Context Not Available Consistency Errors
+## Context Not Available Consistency Errors
 
 The errors that you can get when a page is expecting a context that is unavailable are described in the table below. 
 
@@ -61,7 +61,7 @@ The errors that you can get when a page is expecting a context that is unavailab
 | CE1568     | The selected page {Name of the page} expects an object of type {type of object}, which is not available here. | The page has a data view that expects an object of a particular type to be passed to it. This error occurs when the page is called from another page, which does not have this object available. For a more detailed example, see the [Error Fix Example for CE1568](#error-example-1). | Make sure that the object is passed to the page that has a configured data view on it. For more information, see the [Error Fix Example for CE1568](#error-example-1). |
 | CE1569     | The selected page {Name of page} expects an object of type X, which is not compatible with the object of type Y that is available here. | You have a widget (for example, a button) that opens a page. The page has a data view that expects an object of particular type to be passed to it. However, the widget is placed inside a data container with another type of object. For a detailed example, see the [Error Fix Example for CE1569](#error-example-2) section. | Make sure that the button is placed in a data container which passes the correct type of object to the page. For more information, see the [Error Fix Example for CE1569](#error-example-2) section. |
 
-### 4.1 Error Fix Example for CE1568 {#error-example-1}
+### Error Fix Example for CE1568 {#error-example-1}
 
 When a page expects a context that is not passed to it from a calling page or a microflow, you will get consistency errors. 
 
@@ -82,7 +82,7 @@ As the **Details** button to the **Customers** page is outside a data container,
 * You want to pass a specific *Customer* object from the Customer list to the **Customer Details** page, in other words, the details of a particular customer will be displayed on the **Customer Details** page (for more information, see the [Passing a Specific Object to the Page](#passing-specific-object) section)
 * You want to create a new object of the *Customer* type and pass it to the **Customer Details** page, this means that a new customer will be created (for more information, see the [Creating a New Object and Passing it to the Page](#creating-new-object) section)
 
-#### 4.1.1 Passing a Specific Object to the Page {#passing-specific-object}
+#### Passing a Specific Object to the Page {#passing-specific-object}
 
 If you want the **Customer Details** page to open the details of a specific customer, this means you want to pass a specific object to the page. As we already have a list view with the customers list on the **Customer** page, we can fix this error the following way:
 
@@ -93,7 +93,7 @@ If you want the **Customer Details** page to open the details of a specific cust
 
 Now the button gets the object of type *Customer* from the list view on the **Customers** page, and it will be passed to the **Customer Details** page. As a result, the details of a particular customer is displayed on the **Customer Details** page. 
 
-#### 4.1.2 Creating a New Object and Passing it to the Page {#creating-new-object}
+#### Creating a New Object and Passing it to the Page {#creating-new-object}
 
 If you want to create a new customer and fill in the customer's details on the **Customers Details** page, you can do the following:
 
@@ -108,7 +108,7 @@ If you want to create a new customer and fill in the customer's details on the *
 
 Now when a user clicks this button, the **Customer Details** page will open, and the new *Customer* object will be created. 
 
-### 4.2 Error Fix Example for CE1569 {#error-example-2}
+### Error Fix Example for CE1569 {#error-example-2}
 
 If a widget opens a page and this widget is inside a data container of entity X, but the referred page expects entity Y, you will get a consistency error. 
 
@@ -133,7 +133,7 @@ To fix this error you can do one of the following:
 * Select another page for the button that will not expect any object to be passed to it, or will expect the object of type *Engineer*
 * Change the data source of the data view on the **Tasks** page to entity *Engineer*
 
-## 5 Data Consistency Errors
+## Data Consistency Errors
 
 When a widget that expects as object from its data source does not get it or gets an object from a different entity type, it causes errors in data consistency. 
 
@@ -146,7 +146,7 @@ Some of the most common errors of this type are described in the table below:
 | CE1573     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. No arguments available to {Name of the widget}. | You selected a microflow or a nanoflow as an on-click event of a widget (for example, of a button) and the microflow/nanoflow contains a parameter, but no argument (for example, an object) is available for the widget to pass to the microflow. | Place the widget in a data container and make sure that the data source of the data container matches the entity selected in **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1573](#error-fix-example-3) section. |
 | CE1574     | Parameter {Name of the parameter} of the selected microflow/nanoflow does not match available arguments. Arguments available to {Name of the widget} are {list of available arguments}. | You selected a microflow or nanoflow as the data source of a widget, but the argument (or arguments) available for this widget does not match the parameter(s) of the microflow. | Make sure that an argument (for example, an object) available for the widget matches the entity selected in the **Data type** property of the microflow/nanoflow parameter. For a detailed example and a fix for it, see the [Error Fix Example for CE1574](#error-fix-example-4) section. |
 
-### 5.1 Error Fix Example for CE1573 {#error-fix-example-3}
+### Error Fix Example for CE1573 {#error-fix-example-3}
 
 When you set a microflow or a nanoflow as an on-click event for a widget, and this microflow expects an argument (for example, an object) that is not available, this will result in an error. 
 
@@ -171,7 +171,7 @@ To fix it, do the following:
 
 Now the *Customer* object is available on the page and it matches the microflow parameter *Customer*. 
 
-### 5.2 Error Fix Example for CE1574 {#error-fix-example-4}
+### Error Fix Example for CE1574 {#error-fix-example-4}
 
 When you set a microflow or nanoflow as an on-click event for a widget, and this microflow/nanoflow expects a certain argument, but a different argument is available to the widget, this will result in an error. 
 
@@ -191,7 +191,7 @@ As the microflow has the parameter *Customer*, and the data view has the object 
 
 The best way to fix this error is to either change the microflow to accept *Photo* or put the button in a data container for a different entity.
 
-## 6 Input Widget Consistency Errors
+## Input Widget Consistency Errors
 
 The most common errors for input widgets, their causes, and ways to fix them are described in the table below. For more information on input widgets, see [Input Widgets](/refguide8/input-widgets/). 
 
@@ -203,7 +203,7 @@ The most common errors for input widgets, their causes, and ways to fix them are
 |            | Association {Name} must be a reference set (not a reference) | You have added an input reference set selector, and then you changed the association from reference set type to reference (from many-to-many to one-to-many or one-to-one). | Open your domain model, find the association you have selected for the input reference set selector, and change it to a many-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector. <br />For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) section. |
 |            | The reference set selector expects an association of type reference set that starts in the data view entity. | You have added a reference set selector, and then you changed the association from reference set type to reference (from many-to-many to one-to-many or one-to-one). | Open your domain model, find the association you have selected for the reference set selector, and change it to a many-to-many association. Note that changing the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the input reference set selector. <br />For more information on how to fix the consistency error for the reference set selector and input reference set selector, see the [Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector](#incorrect-multiplicity-reference-set) section. |
 
-### 6.1 Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
+### Incorrect Multiplicity for a Reference Selector {#incorrect-multiplicity-reference}
 
 A reference selector is a widget that is used to display and edit one-to-many or one-to-one associations. For more information on the widget, see [Reference Selector](/refguide8/reference-selector/).  
 
@@ -228,7 +228,7 @@ You have changed the association multiplicity and fixed the error.
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference selector, for example, a reference set selector or input reference set selector. 
 {{% /alert %}}
 
-### 6.2 Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
+### Incorrect Multiplicity for a Reference Set Selector and an Input Reference Set Selector {#incorrect-multiplicity-reference-set}
 
 Reference set selector and input set selector are widgets that are used to display and edit many-to-many associations. For more information on these widgets, see [Reference Set Selector](/refguide8/reference-set-selector/) and [Input Reference Set Selector](/refguide8/input-reference-set-selector/). 
 
@@ -256,7 +256,7 @@ You have changed the association multiplicity and fixed the error.
 Сhanging the domain model can result in other errors. To avoid changing the domain model, you might want to use another widget instead of the reference set selector or input reference set selector, for example, a reference selector. 
 {{% /alert %}}
 
-## 7 File Widget Consistency Errors
+## File Widget Consistency Errors
 
 File widgets should be placed in a data container, otherwise you will get consistency errors. Another way to fix consistency errors is to place a file widget in a snippet and configure the snippet. For more information on file widgets, see [File Widgets](/refguide8/file-widgets/). 
 
@@ -267,7 +267,7 @@ File widgets should be placed in a data container, otherwise you will get consis
 |            | Move this widget into a data container, for example a data view or list view. | You have added an [image viewer](/refguide8/image-viewer/) to your page, but it is not inside a data view or a list view. | Place this widget inside a data view or a list view.         |
 | CE0489     | Select an entity for the data source of this [image viewer](/refguide8/image-viewer/). | You have added an image viewer to a page, it is placed inside a data view or a list view, but an entity for the image viewer is not specified. | Open image viewer's properties > the **Data source** section and select an entity in the **Entity (path)** field. |
 
-## 8 Image Widget Consistency Errors
+## Image Widget Consistency Errors
 
 A consistency error for an image widget is described in the table below:
 
@@ -275,7 +275,7 @@ A consistency error for an image widget is described in the table below:
 | ---------- | ------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |            | No image selected         | You have added an image widget to a page, but do not select an image itself. | Open the image properties >**General** > **Image** and select an image. For more information on an image widget, see [Image](/refguide8/image/). |
 
-## 9 On Click Event Consistency Errors 
+## On Click Event Consistency Errors 
 
 You can specify an **On Click Event** for different widgets, for example, for buttons or images. 
 
@@ -285,6 +285,6 @@ To fix the consistency errors, finish configuring the on click event (for exampl
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/errors-pane/consistency-errors/consistency-errors-pages/on-click-event.png" alt="On Click Event Example" class="no-border" >}}
 
-## 10 Read More
+## Read More
 
 * [Pages](/refguide8/pages/) 

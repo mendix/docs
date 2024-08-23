@@ -4,7 +4,7 @@ url: /refguide9/unary-expressions/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 An unary minus operator is used to convert a number from negative to positive or vice versa. 
 
@@ -14,7 +14,7 @@ There is no unary plus.
 
 {{% /alert %}}
 
-## 2 Example
+## Example
 
 The example below represents the negative value of '8'.
 

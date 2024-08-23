@@ -8,7 +8,7 @@ weight: 82
 These activities can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **ML Kit** section of the [Toolbox](/refguide/view-menu/#toolbox) contains activities you can use with a machine learning model.
 

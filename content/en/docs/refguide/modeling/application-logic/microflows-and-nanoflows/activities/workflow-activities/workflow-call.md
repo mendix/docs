@@ -13,11 +13,11 @@ This activity can only be used in microflows.
 This page describes the **Call workflow** activity you can use in your [microflow](/refguide/workflow-activities/). Looking for information on the **Call workflow** activity for [workflows](/refguide/workflow-elements/) instead? See [Call workflow](/refguide/call-workflow/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Call workflow** activity in microflows can be used to call and trigger a [workflow](/refguide/workflows/). 
 
-## 2 Properties
+## Properties
 
 An example of Call workflow properties is represented in the image below:
 
@@ -30,7 +30,7 @@ The **Call workflow** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -38,22 +38,22 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow {#workflow}
+### Workflow {#workflow}
 
 The workflow that is called by this activity. 
 
-### 3.2 Context Object
+### Context Object
 
 The object which you want to use as a context. It should be of the entity type set in the [Workflow](#workflow) property.
 
-### 3.3 Use Return Value 
+### Use Return Value 
 
 This property determines if the returned value from the called workflow should be available in the rest of the current microflow. If **Use return value** is set to **Yes**, you will need to fill in the [variable name](/refguide/microflow-call/#name) of the workflow object returned by the activity.
 
-### 3.4 Variable Name {#name}
+### Variable Name {#name}
 
 The name of the variable returned by the activity.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

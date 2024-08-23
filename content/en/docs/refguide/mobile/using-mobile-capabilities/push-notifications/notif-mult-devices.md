@@ -8,7 +8,7 @@ aliases:
     - /howto/mobile/notif-mult-devices/
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide teaches you how to send test push notifications to multiple devices.
 
@@ -16,7 +16,7 @@ This guide teaches you how to send test push notifications to multiple devices.
 Push notifications only work with apps created through the Mendix Native Mobile Builder. You cannot send notifications to an app inside the Make it Native app.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this section, make sure you have completed the following prerequisite:
 
@@ -26,11 +26,11 @@ If you want to use push notifications with custom apps created with Mendix Nativ
 
 * Complete [Build a Mendix Native App Locally](/refguide/mobile/distributing-mobile-apps/building-native-apps/native-build-locally/)
 
-## 3 Sending Notifications to Multiple Devices
+## Sending Notifications to Multiple Devices
 
 What if you want to send messages to all your users' devices with a single button push, but you do not want to handle the GUID retrieval? The section below will address this scenario. Specifically, you will send a push notification containing a data object to your users' devices via the Push Notifications API.
 
-### 3.1 Creating a Microflow to Send a Data Object Push Notification 
+### Creating a Microflow to Send a Data Object Push Notification 
 
 Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
@@ -64,7 +64,7 @@ Create a microflow *ACT_SendProductToAllDevices* with the following elements:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/implementation/notifications/notif-mult-devices/sendProductToAllButton.png" alt="sendProductToAllButton"    width="400"  class="no-border" >}}
 
-### 3.2 Testing the Implementation
+### Testing the Implementation
 
 Test your new push notification capabilities by doing the following:
 
@@ -73,15 +73,15 @@ Test your new push notification capabilities by doing the following:
 
 This will send a notification to all available devices. When you tap the notification, you will be redirected to the particular product page you modeled.
 
-## 4 More Java Action Explanations
+## More Java Action Explanations
 
 For more detail on Java actions available in the Push notifications module, see the sections below.
 
-### 4.1 PrepareMessageData Microflow
+### PrepareMessageData Microflow
 
 This allows users to create their own user interfaces in order to alter and create a push notification message. 
 
-### 4.2 SendMessageToDevice and SendMessageToDevices Java Actions
+### SendMessageToDevice and SendMessageToDevices Java Actions
 
 These Java actions have the following parameters:
 
@@ -89,12 +89,12 @@ These Java actions have the following parameters:
 * **DeviceParam** (List of PushNotifications.Device or PushNotification.Device): this parameter can be used to send the same message to a list of devices
 * **ContextObject**: this parameter will allow any Mendix object to be passed to the notification
 
-### 4.3 SendMessageToUsers and SendMessageToUser Java Actions
+### SendMessageToUsers and SendMessageToUser Java Actions
 
 Every user is allowed to have more than one device. When sending push notifications to every device of a particular user, use the **SendMessageToUser** Java action.
 
 To send a push notification to all users, use the **SendMessageToUsers** Java action.
 
-## 5 Troubleshooting Notification Issues
+## Troubleshooting Notification Issues
 
 If you run into issues, see the [Troubleshoot Notification Issues](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-send-test/#troubleshoot) section of *Send Your First Test Push Notification*.

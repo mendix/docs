@@ -6,7 +6,7 @@ description: "This document presents a list of problems and fixes for version co
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro contains a version control system that supports collaborating with team members. This document presents fixes that can be used when version control problems arise.
 
@@ -15,11 +15,11 @@ For more information and general help on version control, see the following docu
 * [Version Control](/refguide8/version-control/)
 * [Using Version Control in Studio Pro](/refguide8/using-version-control-in-studio-pro/)
 
-## 2 Errors and Fixes
+## Errors and Fixes
 
 Below is a list of known errors and the steps to fix them.
 
-### 2.1 Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
+### Getting an Error Containing `SharpSvn.SvnAuthenticationException: Proxy authentication failed`
 
 {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/oopsproxy.png" alt="Error dialog with proxy authentication failed" class="no-border" >}}
 
@@ -29,11 +29,11 @@ The proxy settings can be changed in Studio Pro by selecting **Edit** > **Prefer
 
 {{< figure src="/attachments/howto8/collaboration-requirements-management/troubleshoot-version-control-issues/proxysettings.png" alt="Proxy settings" class="no-border" >}}
 
-### 2.2 Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
+### Getting an Error Containing Another `SharpSvn.SvnAuthenticationException`
 
 This should be resolved if you sign out of Studio Pro and then log back in.
 
-### 2.3 Getting an Error with the Message `Connection timed out`
+### Getting an Error with the Message `Connection timed out`
 
 Follow these steps:
 
@@ -41,7 +41,7 @@ Follow these steps:
 2. Add the text `http-timeout = 5000` under the section `[global]`.
 3. Save the file.
 
-### 2.4 Getting an Error with the Message `<project folder> is already locked`
+### Getting an Error with the Message `<project folder> is already locked`
 
 Follow these steps:
 
@@ -54,14 +54,14 @@ Follow these steps:
 2. Go to the parent directory (folder) of your app (this is the folder with the **<folder_name>** from the error message).
 3. Right-click to open the folder's context menu and select **TortoiseSVN** > **Clean up**.
 
-### 2.5 Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
+### Getting an Error with the Message `System.Security.Cryptography.CryptographicException: Key not valid for use in specified state`
 
 Follow these steps to remove your user settings and restart Studio Pro.
 
 1. Rename *\Users\<username>\AppData\Local\Mendix\Settings.sqlite* to *Settings.sqlite.old*.
 2. Restart Studio Pro.
 
-### 2.6 Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
+### Getting an Error with the Message `SharpSvn.SvnRepositoryIOException: At least one property change failed; repository is unchanged` {#error-with-message}
 
 Follow these steps:
 
@@ -87,7 +87,7 @@ Follow these steps:
 
 You can now commit your app.
 
-### 2.7 Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
+### Resolving Conflicts on the 'svn:ignore' Property {#svn-ignore}
 
 When merging or updating branches, a conflict is sometimes reported on the app folder rather than on an individual file. This usually means there is a conflict on the `svn:ignore` property.
 
@@ -97,7 +97,7 @@ For example, the `deployment` directory is necessary for running your project, b
 
 You will need to resolve the conflict before you can commit your app to Team Server.
 
-#### 2.7.1 Example
+#### Example
 
 In this example, we will focus on merging a branch into the main line. On the main line, the list of ignored files looks like this:
 
@@ -166,7 +166,7 @@ To resolve a conflict on the `svn:ignore` property, perform these steps:
 
 You have resolved the conflict and can commit from Studio Pro.
 
-### 2.8 Getting an Error with the Message `SharpSvn.SvnRepositoryIOForbiddenException: Access to '/.../!svn/rvr/1/trunk' forbidden`
+### Getting an Error with the Message `SharpSvn.SvnRepositoryIOForbiddenException: Access to '/.../!svn/rvr/1/trunk' forbidden`
 
 If you get this error, try the following options:
 
@@ -175,10 +175,10 @@ If you get this error, try the following options:
     * If they do have access, remove them from the app and add them back – this will re-sync the access rules
 * If the above does not work, make sure the [WebDAV protocol](https://en.wikipedia.org/wiki/WebDAV) is not blocked within your network – this protocol is [required](/refguide8/system-requirements/) by Studio Pro for [version control](/refguide8/version-control/) to work, but it might be blocked by your proxy server or other software like a firewall
 
-## 3 Other Problems
+## Other Problems
 
 If the solutions here do not work for your version control problems, please submit a request to [Mendix Support](https://support.mendix.com/).
 
-## 4 Read More
+## Read More
 
 * [Submit Support Requests](/support/submit-support-request/)

@@ -79,7 +79,7 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 * EXAMPLE_RetrieveAndGenerate
 * EXAMPLE_ImageGeneration_MultipleImages
 
-For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
+For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the **List Foundation Models** activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.

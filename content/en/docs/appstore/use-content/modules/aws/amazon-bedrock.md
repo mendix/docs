@@ -27,7 +27,7 @@ The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
+You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make the integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by this module.
 
 ### Licensing and Cost
 
@@ -67,12 +67,24 @@ The AWS Authentication Connector supports both **static credentials** and **temp
 
 ### Configuring a Microflow for an AWS Service
 
-After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. For example, to list all foundational models, implement the **List Foundation Models** activity by doing the following steps:
+After you configure the authentication profile for Amazon Bedrock, you can implement the functions of the connector by using the provided activities in microflows. The **USE_ME** folder contains several subfolders containing operations that depend on the GenAICommons module. The following example microflows have been created for each of these inside the **ExampleImplementations** folder:
+
+* EXAMPLE_ChatCompletions_FunctionCalling
+* EXAMPLE_ChatCompletions_Vision
+* EXAMPLE_ChatCompletions_withHistory
+* EXAMPLE_ChatCompletions_withoutHistory
+* EXAMPLE_Embeddings_ChunkCollection
+* EXAMPLE_Embeddings_SingleString
+* EXAMPLE_Retrieve
+* EXAMPLE_RetrieveAndGenerate
+* EXAMPLE_ImageGeneration_MultipleImages
+
+For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the [List Foundation Models](#list-foundation-models) activity by doing the following steps:
 
 1. In the **App Explorer**, right-click on the name of your module, and then click **Add microflow**.
 2. Enter a name for your microflow, for example, *ACT_ListFoundationModels*, and then click **OK**.
 3. From the **Toolbox**, drag a **Create Object** activity to your microflow and create an object of type `ListFoundationModelsRequest`.
-4. In the **App Explorer**, in the **AmazonBedrockConnector (other)** section, find the **ListFoundationModels** activity.
+4. In the **Toolbox**, in the in the **Amazon Bedrock (other)** section, find the **ListFoundationModels** activity.
 5. Drag the **ListFoundationModels** activity onto the work area of your microflow.
 6. Double-click the **ListFoundationModels** activity to configure the required parameters.
 7. For the **ENUM_Region** parameter, provide a value by using a variable or an expression. This must be of the type `ENUM_Region` of the AWS Authentication connector.
@@ -85,6 +97,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 11. Double-click the **Retrieve** activity and make sure **By Association** is selected.
 12. Select the **FoundationModelSummary_ListFoundationModelsResponse** association, which will return a list of the type **FoundationModelSummary**.
 13. To further use the response information, you can create an implementation module with copies of the `ListFoundationModelsResponse` and `ModelSummary` Entities. This way, you can use your custom user roles and access rules for those entities and keep them when updating the connector.
+
+You can follow a similar approach to implement any of the other operations in **Amazon Bedrock (other)**.
 
 ### Chatting with Large Language Models using the ChatCompletions Operation
 
@@ -179,6 +193,70 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click on the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+#### Operations to Persist Amazon Bedrock Metadata inside the Application
+
+The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
+
+This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabililties on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+
+Currently, there are operations available to sync metadata about:
+* Sync Models 
+* Sync Knowledge Bases
+* Sync Agents
+
+The syncing process works the same for all of these operations. 
+1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
+2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
+3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
+
+The available operations are described in the following section. 
+
+##### Sync Models {#sync-models}
+
+The `Sync Models` activity allows you to retrieve and store metadata about available models on Amazon Bedrock in your app's database. 
+The model information is persistent in the `AmazonBedrockModel` entity.
+
+Information about the models output and input modalities are stored as associations to the `ModelModality` entity. 
+The input modality describes which form of data can be sent to the model.
+The output modality describes which form of data the model will return. 
+
+Information about the models inference type is stored as association to the `ModelInferenceType` entity.
+The inference type describes how the model can be accessed. *ON Demand* models are accessible by default and charged by usage. 
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
+
+##### Sync Knowledge Bases {#sync-knowledge-bases}
+
+The `Sync Knowledge Bases` activity allows you to retrieve and store metadata about available knowledge bases on Amazon Bedrock in your app's database. 
+The knowledge base information is persistent in the `AmazonBedrockKnowledgeBase` entity.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
+
+##### Sync Agents {#sync-agents}
+
+The `Sync Agents` activity allows you to retrieve and store metadata about available agents on Amazon Bedrock in your app's database. 
+The agent information is persistent in the `AmazonBedrockAgent` entity.
+
+The input and output for this service are shown in the table below:
+
+| Input | Output |
+| --- | --- |
+| `ENUM_Region (enumeration)`, `UseStaticCredentials (boolean)` | `Count (integer)` |
+
+The operation returns an integer that indicates how many objects were created or changed during the syncing process. 
 
 ## Troubleshooting
 

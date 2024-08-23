@@ -18,6 +18,12 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### August 22, 2024
+
+#### New features
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now enter a value in the **Percentage Completed** field to indicate the progress made on any ongoing initiative. This field provides a clear way to track how much work has been completed. The **Percentage Completed** is visible in both the [list view](/developerportal/portfolio-management/initiatives-overview/#list-view) and the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view), giving you an easy overview of your progress at a glance.
+
 ### August 1, 2024
 
 #### New features

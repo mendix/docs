@@ -17,7 +17,7 @@ One implication of this is that you must use the same login email address for bo
 
 When you sign in to Mendix Studio Pro, you have the option to use SAP authentication or Mendix authentication.
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/mendix-login-page.png"  max-width=50%  >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/mendix-login-page.png"  max-width=50%  >}}
 
 {{% alert color="warning" %}}
 
@@ -35,11 +35,11 @@ Enter your **Email Address** and Mendix **Password**. Click **Log in**. This wil
 
 Click **SAP** to use your SAP credentials. These credentials are region-specific, so you need to choose a region first.
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/select-sap-region.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/select-sap-region.png" class="no-border" >}}
 
 Click **Select region** and you will be asked for your SAP credentials.
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/sap-login-screen.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/sap-login-screen.png" class="no-border" >}}
 
 Enter the correct credentials and you will be signed in to Studio Pro.
 
@@ -51,23 +51,23 @@ SAP SSO is triggered if you do not already have an active session in the SAP reg
 
 First, select a region and click **Next**
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/app-select-sap-region.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/app-select-sap-region.png" class="no-border" >}}
 
 If needed, you will be asked for credentials:
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/sap-login-screen.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/sap-login-screen.png" class="no-border" >}}
 
 Enter the correct credentials and click **SIGN IN** to continue the creation of your SAP BTP environment.
 
 ## Resolving "Go back to where you originally came from" Error
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/go-back.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/go-back.png" class="no-border" >}}
 
 This error occurs when you work with SAP environments from within the Mendix Portal. As described on the error page, it occurs when you use different email addresses for signing in to Mendix platform and SAP region which you are working on.
 
 Click **Go back to where you originally came from**, and you will see another error message. Click **OK** to clear it.
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/server-error.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/server-error.png" class="no-border" >}}
 
 There are three possible solutions, depending on why the email addresses are different. Some of these can be changed within Mendix itself, but you may also need to make changes directly on the SAP site.
 
@@ -86,7 +86,7 @@ Choose the URL for the correct region.
 
 Select the down arrow next to your email address, and this will give the option to **Sign Out**.
 
-{{< figure src="/attachments/deployment/sap-single-sign-on/where-to.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-single-sign-on/where-to.png" class="no-border" >}}
 
 Click **Sign Out** and you can then return to Mendix and sign in again with an account which has the same email address as the email address you use for Mendix.
 

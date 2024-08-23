@@ -187,7 +187,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
                     "rds-db:connect"
                 ],
                 "Resource": [
-                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/*"
+                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/*"
                 ]
             },
             {

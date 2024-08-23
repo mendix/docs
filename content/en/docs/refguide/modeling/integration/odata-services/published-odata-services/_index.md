@@ -56,9 +56,13 @@ The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot
 
 ### Supports GraphQL {#supports-graphql}
 
+{{% alert color="info" %}}
+GraphQL support was introduced in [Studio Pro 10.14.0](/releasenotes/studio-pro/10.14/).
+{{% /alert %}}
+
 Default: **No**
 
-Choose **Yes** to publish the entities in a GraphQL service as well. This allows clients to send GraphQL `POST` requests to the location of the service. The service responds with the requested entity data in JSON format. This option was introduced in Studio Pro 10.14.0, and is available when the [GraphQL feature](/refguide/preferences-dialog/#graphql) is enabled or when the value is **Yes**.
+Choose **Yes** to publish the entities in a GraphQL service. This allows clients to send GraphQL `POST` requests to the location of the service. The service responds with the requested entity data in JSON format. This option is available when the [GraphQL feature](/refguide/preferences-dialog/#graphql) is enabled or when the value is **Yes**.
 
 {{% alert color="warning" %}}
 Enabling GraphQL on a service that publishes OData v3 is not supported.
@@ -108,7 +112,7 @@ You can choose between OData 4 (recommended) and OData 3. One of the main differ
 
 #### Namespace
 
-In OData, the namespace is used to refer to data types. You can customize this namespace, changing it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
+In OData, the namespace is used to refer to data types. You can customize this namespace and change it to any value that starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
 
 #### Associations
 
@@ -140,7 +144,7 @@ The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](http
 
 When the app is running, you can also download this file from the [API documentation page](#api-documentation), under `/odata-doc/{location}/openapi.json`, where `{location}` is the location of the OData service (for instance, `odata/myservice/v1)`).
 
-#### 3.2.3 GraphQL schema
+#### GraphQL Schema
 
 The GraphQL schema describes the queries and types exposed by this GraphQL service. You can export the GraphQL schema when this service [supports GraphQL](#supports-graphql).
 
@@ -288,18 +292,18 @@ To publish an entity with full CRUD (Create, Read, Update, or Delete functionali
 
 ## Limitations
 
-### 10.1 OData Limitations
+### OData Limitations
 
 Studio Pro currently does not support publishing media entities with OData services. To learn about consuming media entities with OData, see the [Binary Attributes](/refguide/consumed-odata-service-requirements/#binary-attributes) section of *Consumed OData Service Requirements*. You can also [Publish and Retrieve Images and Files with REST](/refguide/send-receive-files-rest/).
 
-### 10.2 GraphQL Limitations {#graphql-limitations}
+### GraphQL Limitations {#graphql-limitations}
 
-A service that [supports GraphQL](#supports-graphql) does not support all of the modeling features available for OData services. See [Supported GraphQL Operations](/refguide/supported-graphql-operations) for an overview of what clients can retrieve when you publish an entity.
+A service that [supports GraphQL](#supports-graphql) does not support all of the modeling features available for OData services. See [Supported GraphQL Operations](/refguide/supported-graphql-operations/) for an overview of what clients can retrieve when you publish an entity.
 
 The following modeling options are limited in the GraphQL service:
 
 * Published microflows are ignored.
-* The insertable, updatable and deletable [capabilities](/refguide/published-odata-entity/#capabilities) values have no effect, because GraphQL services are read-only.
+* The insertable, updatable, and deletable [capabilities](/refguide/published-odata-entity/#capabilities) values have no effect, because GraphQL services are read-only.
 * Entities that are not [readable](/refguide/published-odata-entity/#readable) are not part of the GraphQL service.
 * Entities without a [key](/refguide/published-odata-entity/#key) are not part of the GraphQL service.
 * The [Use paging](/refguide/published-odata-entity/#paging) setting has no effect.

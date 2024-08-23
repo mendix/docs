@@ -308,3 +308,5 @@ Here is how a caption and description look in Studio Pro:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/card-description.png" alt="description" class="no-border" >}}
 
 ## Documents in this Section
+
+Mendix offers the following APIs for pluggable widgets:

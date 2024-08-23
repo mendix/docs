@@ -9,4 +9,4 @@ weight: 25
 linktitle: "Governance"
 ---
 
-## Documents in this Category
+Mendix offers the following APIs for governance:

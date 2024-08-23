@@ -32,3 +32,5 @@ Copy the `{GENERATED_PAT}` and store it in a safe location, so you can use it to
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/private-platform/copy-pat.png" class="no-border" >}}
 
 ## Documents in this Category
+
+Mendix offers the following APIs for the Private Mendix Platform:

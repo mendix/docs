@@ -9,4 +9,4 @@ weight: 20
 linktitle: "Deployment"
 ---
 
-## Documents in this Category
+Mendix offers the following APIs for deployment:

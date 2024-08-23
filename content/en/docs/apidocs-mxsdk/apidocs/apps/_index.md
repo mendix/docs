@@ -9,4 +9,4 @@ weight: 15
 linktitle: "Apps"
 ---
 
-## Documents in this Category
+Mendix offers the following APIs for Apps:

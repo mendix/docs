@@ -8,4 +8,4 @@ weight: 5
 linktitle: "Studio Pro"
 ---
 
-## Documents in this Category
+Mendix offers the following APIs for Studio Pro:

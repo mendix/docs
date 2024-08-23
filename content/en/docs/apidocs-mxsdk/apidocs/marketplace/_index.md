@@ -8,4 +8,4 @@ weight: 30
 linktitle: "Marketplace"
 ---
 
-## Documents in this Category
+Mendix offers the following APIs for Marketplace:

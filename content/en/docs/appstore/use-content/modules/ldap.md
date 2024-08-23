@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the LDAP module, which is
 ##If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the marketplace.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [LDAP](https://marketplace.mendix.com/link/component/210270) module is a client-side implementation of the Lightweight Directory Access Protocol (LDAP) to allow your app to communicate with an LDAP server. It can be used in a Mendix app to synchronize end-users, their group memberships, and their status from an LDAP server such as Microsoft AD.
 
@@ -13,11 +13,11 @@ You can also use the LDAP module to validate usernames and passwords for authent
 
 This document doesn’t explain LDAP in detail. We assume that, if you want to use LDAP, you have a basic understanding of LDAP concepts and how end-users are organized in your LDAP server.
 
-### 1.1 Typical Usage Scenarios
+### Typical Usage Scenarios
 
 You will typically use the LDAP module when you are building Mendix apps that you want to deploy on-premises rather than in the cloud. In the on-premises scenario, the end-users for your app may be stored in an on-prem Microsoft Active Directory or another user store that supports the LDAP protocol. This makes the LDAP module interesting for Mendix customers that are using [On-Premises](/developerportal/deploy/on-premises-design/) or [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) deployment models.
 
-#### 1.1.1 Synchronize End-Users of a Mendix App with LDAP
+#### Synchronize End-Users of a Mendix App with LDAP
 
 You may want to synchronize the end-users stored in your Mendix app with those on an LDAP server for the following reasons:
 
@@ -26,7 +26,7 @@ You may want to synchronize the end-users stored in your Mendix app with those o
 * Provisioning (new) end-users in your app before their first sign in. This could allow your app’s logic to assign tasks to end-users who have not yet signed in, or otherwise make use of data about them.
     With the OIDC SSO or SAML module alone, end-users are not provisioned in your app until their first sign in as it uses Just In Time (JIT) user provisioning.
 
-#### 1.1.2 Authentication of End-Users
+#### Authentication of End-Users
 
 When using LDAP to control authorization, in other words assigning an end-user of your app a specific user role depending on the membership of a group in your LDAP directory, you do not have to use it for authentication as well.
 
@@ -36,7 +36,7 @@ For Web SSO, Mendix recommends using the OIDC SSO and SAML modules as the most u
 
 Another alternative is to use local authentication, storing the username and password within your app.
 
-### 1.2 Features
+### Features
 
 The LDAP module has the following features for end-user synchronization:
 
@@ -52,7 +52,7 @@ The LDAP module also has the following features if SSO via SAML or OIDC is not p
 * Provision end-users into your app when they sign in for the first time (JIT user provisioning) if you are not using the user-synchronization features
 * Preventing end-users from signing in with local accounts by enabling LDAP authentication (except for end-users with the **Administrator** role or a role specified in **User roles WITHOUT LDAP authentication**)
 
-### 1.3 Dependencies
+### Dependencies
 
 This module is dependent on the following additional modules – make sure they are also present in your app and configured properly:
 
@@ -60,7 +60,7 @@ This module is dependent on the following additional modules – make sure they 
 * [Encryption](/appstore/modules/encryption/)
 * [Administration](/appstore/modules/administration/)
 
-### 1.4 Limitations
+### Limitations
 
 The LDAP module has the following limitations:
 
@@ -69,7 +69,7 @@ The LDAP module has the following limitations:
 * Occasionally, new end-users will not sync successfully the first time they are included in the synchronization process. They will be synced successfully in subsequent (scheduled) syncs.
 * In rare cases and with specific Active Directory structure, the LDAP synchronization fails with LDAP error 12.
 
-## 2 Installation
+## Installation
 
 The following instructions assume that you want the Administrator role in your app to be the administrator of the LDAP functionality. You can choose a different role if you wish to separate this role from other administration roles.
 
@@ -84,15 +84,15 @@ The following instructions assume that you want the Administrator role in your a
 1. Set the constant **EncryptionKey** in the **Encryption** module to a 32-character string. This key is used when encrypting and decrypting communication with the LDAP server.
 1. Your application is now ready to deploy. Follow the [configuration](#configuration) instructions, below, to configure LDAP further.
 
-## 3 Configuration{#configuration}
+## Configuration{#configuration}
 
-### 3.1 Regular Synchronization
+### Regular Synchronization
 
 If you want to set up regular synchronization between your app and an LDAP server, edit the **Ldap.LdapSync** scheduled event to suit your needs. For example, you can set this event to sync the user base on a nightly basis.
 
 You can also perform a manual synchronization at any time using the **Sync Users** or **Sync users for all servers** buttons.
 
-### 3.2 Basic Configuration
+### Basic Configuration
 
 After enabling LDAP in your app, you need configure it to work with your LDAP server. This is done using various pages within the app to fill in the required information.
 
@@ -116,7 +116,7 @@ Configure your app by doing the following:
 
 If you have an existing configuration, you can click **Reload configuration** which will validate the configuration against each LDAP server configuration and remove user credentials for any inactive end-user sessions.
 
-#### 3.2.1 Server Configuration {#server-configuration}
+#### Server Configuration {#server-configuration}
 
 Once you have the LDAP configuration form, fill in the following properties to match the setup of your LDAP server:
 
@@ -144,11 +144,11 @@ If LDAP is enabled for this connection (**LDAP enabled** is checked), you must f
 * **Domain suffix** – This is a concatenation of the LDAP root directory fields. It is used to authenticate users and will be concatenated to the Mendix user name to form the LDAP user name. For example, the domain suffix at Mendix is `@mendixdomain.local`.
 * **User roles WITHOUT LDAP authentication** – This property identifies which user roles are not authenticated against LDAP. End-users that have at least one of these roles will not be authenticated against LDAP, but will instead use their Mendix app password to sign in. Note that end-users with the **Administrator** user role will never be authenticated against LDAP.
 
-#### 3.2.2 LDAP Type Configurations{#ldap-type-configurations}
+#### LDAP Type Configurations{#ldap-type-configurations}
 
 Depending on the **LDAP Type** you have selected, you must add further information on one of the following tabs.
 
-##### 3.2.2.1 User Import Mapping
+##### User Import Mapping
 
 If the LDAP type is set to **Import users**, you need to configure the data mapping using the **User import mapping** tab.
 
@@ -164,7 +164,7 @@ The following settings are available:
 
 When using the LDAP module for user synchronization in combination with a separate method of authentication (for example, the SAML module), you typically want to persist a user identifier in your Mendix app (using **Custom attribute mapping**) and use that to identify the end-user that is signed in when receiving the SAML response (the Identifying Assertion). This needs alignment between the LDAP module configuration and the [SAML module configuration](/appstore/modules/saml/#user-provisioning). One option might be to use the user’s email address, but Mendix recommends using an immutable "technical" user identifier. This may be a user attribute different from the username that the user would be entering in a login screen at the IdP which supports SAML.
 
-##### 3.2.2.2 Authentication Configuration
+##### Authentication Configuration
 
 If the **LDAP type** is set to *Only authenticate users*, you must add further information on the **Authentication configuration** tab.
 
@@ -175,7 +175,7 @@ The following settings are available:
 
 End-users with the Administrator user role (which can be found under **Project** > **Security** > **Administrator** > **User role**) will never be authenticated against LDAP, regardless of the defined exceptions.
 
-##### 3.2.2.3 User Authentication Mapping{#authentication-mapping}
+##### User Authentication Mapping{#authentication-mapping}
 
 If the **LDAP type** is set to **Authenticate and create**, you must add further information on the **User authentication mapping** tab.
 
@@ -193,29 +193,29 @@ The following settings are available:
 
 * **Custom attribute mapping** – You can define the mappings for other attributes of the User entity that need to be imported from the LDAP server. For each mapping, you can specify an LDAP attribute, and the attribute in which its value will be stored. Note that you can only map to attributes of the User entity which are of type string. This mapping is the same as set up in **User Import Mapping**.
 
-### 3.3 Additional Configuration
+### Additional Configuration
 
 There are three further tabs which you can use with all LDAP connections. They are described below.
 
-#### 3.3.1 LDAP Group Mapping
+#### LDAP Group Mapping
 
 The **Group mapping** tab allows you to map LDAP group memberships to Mendix user roles. Click **Refresh** to load all available LDAP groups from the server. In the editor for a group, you can select one or more roles that will be assigned to each end-user that is a member of that group. When an end-user is removed from an LDAP group, the corresponding roles will be removed from the end-user on the synchronization.
 
-#### 3.3.2 Cached Authentication
+#### Cached Authentication
 
 The **Cached authentication** tab contains an overview of cached information for the current LDAP server. This will only be populated for those connections where the **Credentials** **validation frequency** set on the **Authentication configuration** tab specifies that end-user authentication information will be cached.
 
-#### 3.3.3 Testing & Gathering Data from AD
+#### Testing & Gathering Data from AD
 
 The **Testing & Gathering Data from AD** tab allows you to import and inspect the data your Mendix app will receive from the LDAP server. This can be used for testing purposes as the data is not persisted. You can use this tab to ensure the server is correctly configured, as described in [Server Configuration](#server-configuration), above.
 
-## 4 Testing Your LDAP Connection
+## Testing Your LDAP Connection
 
 Once you have filled in all the required properties in, click **Test connection** to test whether this connection can reach the LDAP server. The message **Connection established** will tell you that you can connect to the server and the end-user name and password have been accepted.
 
-## 5 Common Errors
+## Common Errors
 
-### 5.1 My End-users Are Not Authenticated against LDAP
+### My End-users Are Not Authenticated against LDAP
 
 To resolve this error, follow these steps:
 
@@ -223,15 +223,15 @@ To resolve this error, follow these steps:
 1. Make sure at least one LDAP server connection which is configured for authentication against the LDAP server exists and the **Enable LDAP authentication** box is checked.
 1. Make sure the end-user has no Administrator role or any other role that is defined as an exception in one of your active LDAP server connections.
 
-### 5.2 The User Entity Drop-Down Menu in the Server Configuration Form Is Empty
+### The User Entity Drop-Down Menu in the Server Configuration Form Is Empty
 
 Ensure you are viewing the **Ldap.LdapServers_Overview** page using the **Ldap.OpenLdapServersOverview** microflow in your navigation. This microflow analyzes the domain model before opening the page.
 
-### 5.3 Unknown Host Exceptions
+### Unknown Host Exceptions
 
 If you get an exception such as `java.net.UnknownHostException`, you have probably specified an incorrect LDAP root directory
 
-### 5.4 List of Active End-users Is Not as Expected
+### List of Active End-users Is Not as Expected
 
 One of the objectives of using user sync is to get the right set of active end-users in your Mendix app. You may find that the actual set of active end-users doesn’t match your expectations. Please check the following configurations:
 
@@ -243,6 +243,6 @@ One of the objectives of using user sync is to get the right set of active end-u
     
 * LDAP Group Mapping – if LDAP group mapping is set up and an end-user is not a member of a group for which a user role is mapped, the LDAP module marks the end-user as inactive
 
-#### 5.5 Invalid LDAP Credentials
+#### Invalid LDAP Credentials
 
 Every error which occurs in the LDAP module will display “Invalid LDAP credentials” to the end-user. You can view the underlying error in the app log on log node `Ldap`. If you need more information, you can set this node to TRACE level.

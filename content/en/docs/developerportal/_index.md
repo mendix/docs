@@ -16,13 +16,13 @@ cascade:
 The Mendix Portal is the online platform of Mendix. It includes Apps, [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 [Apps](https://sprintr.home.mendix.com) is one of the key components of the Mendix Portal. In **Apps**, you can create, deploy, and manage apps as well as collaborate with each other. After you open **Apps**, you will get a summary of your current apps, your company apps, and your pending invites.
 
 {{< figure src="/attachments/developerportal/apps-overview.png" alt="Apps Overview" >}}
 
-## 2 Creating an App {#create-app}
+## Creating an App {#create-app}
 
 To create a new app and start collaborating, you can perform the following procedure.
 
@@ -50,7 +50,7 @@ To create a new app and start collaborating, you can perform the following proce
 
 5. After selecting a starter app template, click **Create App**. Based on the starter app template you selected, it can take some time to set up the app, its repository, and access to the collaboration tools. After it is completed, the app is created.
 
-## 3 My Apps {#my-apps}
+## My Apps {#my-apps}
 
 The **My Apps** tab displays all the apps for which you are a [Team](/developerportal/general/team/) member.
 
@@ -58,7 +58,7 @@ If you pin an app, it stays on top.
 
 Use the drop-down menu on the right side of the page to sort the apps by **Pinned**, **Recent Activity** or in alphabetical order of **App Name**.
 
-### 3.1 App Tiles {#app-tiles}
+### App Tiles {#app-tiles}
 
 You can pin an app tile by clicking **Pin** ({{% icon name="pin" %}}). Pinned apps appear at the top of the list.
 
@@ -70,7 +70,7 @@ By clicking **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) in
 
 To go to the [licensed environments](/developerportal/deploy/environments/) of your deployed app, click **Environments** at the bottom of the app tile.
 
-### 3.2 Navigation Pane {#navigation-pane}
+### Navigation Pane {#navigation-pane}
 
 You can open an app in [Apps](https://sprintr.home.mendix.com/) by clicking the app tile. After an app is open, you can navigate between sections using the navigation pane on the left side of the screen. 
 
@@ -87,7 +87,7 @@ The navigation pane is divided into four main categories:
 The features in the navigation pane can also be accessed via APIs, enabling third-party developers to integrate their own widgets and plugins. For more information, see [API Documentation](/apidocs-mxsdk/apidocs/).
 {{% /alert %}}
 
-### 3.3 Pending Invitations {#pending-invitations}
+### Pending Invitations {#pending-invitations}
 
 If you are invited to collaborate on an app, the invitation will appear at the top of the **My Apps** page. You can accept or decline the invitation.
 
@@ -95,7 +95,7 @@ If you are invited to collaborate on an app, the invitation will appear at the t
 You get an invitation only when someone invites you to an app from a different company. If someone invites you to an app from your company, you will be added automatically.
 {{% /alert %}}
 
-## 4 Company Apps {#my-company-apps}
+## Company Apps {#my-company-apps}
 
 The **Company Apps** tab displays all the apps created by members of your [company](/control-center/company-settings/).
 
@@ -103,6 +103,6 @@ There are also details on the app's [Target Cloud](/deployment/), and the [Total
 
 You can also sort the order of the apps here by **Updated Date**, **Last Created**, **App Name**, **App Name, descending**, **Oldest Updated**, or **Oldest Created**.
 
-## 6 Guide Categories
+## Guide Categories
 
 The documentation of **Apps** is divided into the following categories:

@@ -6,7 +6,7 @@ description: "Overview of the External Database Connector in Studio Pro"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Use the [External Database Connector](https://marketplace.mendix.com/link/component/219862) to connect, retrieve, and insert data into your Mendix app.
 
@@ -28,7 +28,7 @@ This how-to teaches you how to do the following:
 * Create and validate SQL Queries
 * Use created queries in the **Query External Database** activity
 
-## 2 Prerequisites
+## Prerequisites
 
 Download the [External Database Connector](https://marketplace.mendix.com/link/component/219862) into your app. Make sure you have the following details for your external connection:  
 
@@ -37,9 +37,9 @@ Download the [External Database Connector](https://marketplace.mendix.com/link/c
 
 If additional connection properties are required to connect, you can alternatively use **JDBC Connection String**.
 
-## 3 Connect to the External Database
+## Connect to the External Database
 
-### 3.1 Establish Connection Between the External Database and Mendix App
+### Establish Connection Between the External Database and Mendix App
 
 1. Right-click the module you want to add the external database document to and click **Add other** > **External database connection**.
 
@@ -61,13 +61,13 @@ For example: `*Database*_DBsource.`
 
 {{% alert color="info" %}}Values for these constants are stored in the Active configuration of the user, the password is stored as a private value.{{% /alert %}}
 
-### 3.2 Explore Schemas of a Connected Database
+### Explore Schemas of a Connected Database
 
 When the connection is successful and saved, you can search the **Browse database** tab for Tables, Views, Procedures, and Functions.
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/3.png" >}}
 
-### 3.3 Create and Validate SQL Queries with Parameters
+### Create and Validate SQL Queries with Parameters
 
 1. Create a new query by entering an SQL query in the **SQL query** field.
 
@@ -84,15 +84,15 @@ SQL Query:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/4.png" >}}
 
-### 3.4 Typecast Parameter Data Type
+### Typecast Parameter Data Type
 
 You can typecast `String` into UUID as shown below:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/13.png" >}}
 
-## 4 Save Query
+## Save Query
 
-### 4.1 Save Query to Retrieve Data
+### Save Query to Retrieve Data
 
 1. Click **Use Response** to view the response data and mapping.
 
@@ -102,7 +102,7 @@ You can typecast `String` into UUID as shown below:
 
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
-### 4.2 Save DML Query
+### Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
    
@@ -114,7 +114,7 @@ You can typecast `String` into UUID as shown below:
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
-## 5 Call Stored Procedure
+## Call Stored Procedure
 
 {{% alert color="info" %}} Calling stored procedures with parameters is supported for Studio Pro 10.13 and above. {{% /alert %}}
 
@@ -164,7 +164,7 @@ For Postgres, Mendix supports the following parameters:
 
 For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in design time) are rounded off. 
 
-## 6 Use the Query External Database Activity
+## Use the Query External Database Activity
 
 1. Add the **Query external database** activity into your microflow.
 

@@ -6,7 +6,7 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 Building hybrid apps in the cloud uses the PhoneGap Build service from Adobe. Unfortunately, Adobe no longer maintains this service. PhoneGap does not allow you to create iOS 13 builds, but the Apple App Store requires builds be iOS 13 or higher. As a result, as of April 30 2020, hybrid iOS apps built using the PhoneGap Build service are not being accepted on Apple's App Store. 
@@ -16,4 +16,4 @@ Hybrid apps are built by using PhoneGap to wrap a web app in a native wrapper. H
 
 The documents in this section focus on publishing hybrid apps in the Apple and Google app stores. For more details on platform-specific installation packages see [Mobile App](/developerportal/deploy/mobileapp/).
 
-## 2 Documents in This Section
+## Documents in This Section

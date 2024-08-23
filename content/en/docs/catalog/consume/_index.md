@@ -6,7 +6,7 @@ aliases:
     - /data-hub/data-hub-catalog/consume-data-sources/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Catalog makes it easy to consume data sources within your company's ecosystem.
 

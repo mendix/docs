@@ -6,7 +6,7 @@ description: "Describes how to configure image uploader in Mendix Studio Pro."
 weight: 60
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to explains how you can enable your end-users to attach images. They will be able to attach images from different devices: phone, tablet, or desktop; or they can take a new image on their phone camera. 
 
@@ -24,7 +24,7 @@ You would like to add a new functionality: when creating a reimbursement report,
 
 You also would like to display attached images in a list below the report and to enable your end-users delete images from the list if needed.  
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -40,7 +40,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/attach-images/form-example.png"   class="no-border" >}}
 
-## 3 Creating a Specialization of System.Image
+## Creating a Specialization of System.Image
 
 First of all, to be able to attach and upload images you need to add an entity that is a specialization of the System.Image entity. For more information, see the [Generalization](/refguide9/entities/#generalization) section in *Entities*.
 
@@ -68,7 +68,7 @@ Good job! You have created the **Receipt** entity, which is a specialization of 
 
 {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/attach-images/domain-model-configured.png"  class="no-border" >}}
 
-## 4 Adding an Image Uploader
+## Adding an Image Uploader
 
 An **Image Uploader** is a widget that allows your end-users to attach images. However, it can only function inside a data container (a list view or data view) and can only have an entity that is a specialization of System.Image or that is connected to it as its data source. If you just drag the image uploader into your report form, it will not work correctly, because your current data view has the **Report** entity as its data source:
 
@@ -120,7 +120,7 @@ You have created a pop-up page that will allow employees to attach images to the
 
 {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/attach-images/attach-images-pop-up-page.png"   class="no-border" >}}
 
-## 5 Displaying Attached Images
+## Displaying Attached Images
 
 After users attach the images, it would be nice to display their attachments and give them an opportunity to delete the ones they do not need. To do so, you need to add a list with dynamic images:
 

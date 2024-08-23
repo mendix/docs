@@ -5,13 +5,13 @@ description: "Describes the configuration and usage of the events widget, which 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Events](https://marketplace.mendix.com/link/component/224259) widget allows you to execute an [action](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) when a component loads or when the context is changed.
 
 For example, you can show a welcome message on page load, execute custom JavaScript (using a nanoflow) when your data grid has finished loading, or trigger a validation microflow when an attribute has been changed. This widget also supports triggering an action with a delay, or executing an action repeatedly using an interval timer.
 
-### 1.1 Features
+### Features
 
 The events widget offers the following features:
 
@@ -20,13 +20,13 @@ The events widget offers the following features:
     * Attribute change
 * Supports execution delay and repetition
 
-## 2 Configurations
+## Configurations
 
 With the [Events](https://marketplace.mendix.com/link/component/224259) widget, you can execute [actions](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#action) based on the selected event type.
 
-### 2.1 Events Tab {#general}
+### Events Tab {#general}
 
-#### 2.1.1 Component Load
+#### Component Load
 
 Using this property, you can configure an action to be executed when the event widget loads. The placement of this widget in design mode will be taken into consideration for load event to be triggered. 
 
@@ -42,7 +42,7 @@ Property configurations:
 * **Repeat** – Selecting **Yes** will repeat the event execution based on the repeat delay timer.
     * **Delay** – Time interval between repeated action executions. The value is in milliseconds.
 
-#### 2.1.2 On Change
+#### On Change
 
 Using this property, you can configure an action to be executed when a selected attribute is changed. You can place the widget inside a data view, datagrid, or another component to find the correct attribute you want the events widget to listen to.
 

@@ -4,11 +4,11 @@ url: /partners/siemens/3d-viewer-for-teamcenter/
 description: "3D Viewer for Teamcenter is an add-on module for the 3D Viewer app service. It adds additional functionality to enable fetching a JT model from a Teamcenter instance and visualize it using existing 3D Viewer widgets."
 ---
 
-## 1 Introduction
+## Introduction
 
 The [3D Viewer for Teamcenter](https://marketplace.mendix.com/link/component/118608) module lets you connect, search, and fetch JT models from a Teamcenter instance with the help of the [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627). This is an add-on module to the [3D Viewer](/partners/siemens/3d-viewer/) app service that provides easy-to-use nanoflows and microflows that help you work with 3D models.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 You can use this module to search and fetch JT models that are stored in a Teamcenter instance and use [3D Viewer](/partners/siemens/3d-viewer/) widgets to visualize the fetched models. Once a model is fetched, you can perform some basic operations, such as navigating the model product structure tree and PMI tree, sectioning, and many more operations enabled by the 3D Viewer out-of-the-box tools. 
 
@@ -16,7 +16,7 @@ You can use this module to search and fetch JT models that are stored in a Teamc
 Using this module alone will not be enough to visualize a 3D model.
 {{% /alert %}}
 
-### 1.2 Features
+### Features
 
 This module enables doing the following:
 
@@ -25,18 +25,18 @@ This module enables doing the following:
 * Getting a model associated with item revision 
 * Visualizing and inspecting a model when used with the 3D Viewer app service
 
-### 1.3 Dependencies
+### Dependencies
 
 If you want to visualize models stored in a Teamcenter instance, you also need to import the following components into your app:
 
 * [3D Viewer](https://marketplace.mendix.com/link/component/118345) app service – this provides out-of-the-box widgets and the domain model entities needed to visualize a JT model
 * [Teamcenter Connector](https://marketplace.mendix.com/link/component/111627) – this is required for the 3D Viewer app service to connect and load the model from Teamcenter
 
-### 1.4 Limitations
+### Limitations
 
 To visualize a model from Teamcenter, the limitations are similar to those of 3D Viewer. For details, see the [Limitations](/partners/siemens/3d-viewer/#limitations) section of *3D Viewer*.
 
-## 2 Prerequisites
+## Prerequisites
 
 Make sure you have the following prerequisites in place:
 
@@ -44,7 +44,7 @@ Make sure you have the following prerequisites in place:
 * A living Teamcenter instance (you need the **Teamcenter Host Address** and **Teamcenter FMS URL** to configure the Teamcenter instance – for more information, see the [Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data](#reusing) section below)
 * A Teamcenter account (it is best to have both an admin user account and a non-admin user account)
 
-## 3 Installation
+## Installation
 
 To visualize a model fetched from a Teamcenter instance, you need to import the components below into your app (follow the instructions in [Using Marketplace Content](/appstore/use-content/) as necessary):
 
@@ -54,7 +54,7 @@ To visualize a model fetched from a Teamcenter instance, you need to import the 
 
 After downloading and importing, you need to map the **Administrator** and **User** [module roles](/refguide/module-security/#module-role) of the installed components to the applicable [user roles](/refguide/user-roles/) in your app.
 
-## 4 Initializing on App Startup
+## Initializing on App Startup
 
 To automatically start this module, follow these steps:
 
@@ -65,7 +65,7 @@ To automatically start this module, follow these steps:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-startupflow.jpg" alt="teamcenter-startupflow" class="no-border" >}}
 
-## 5 Usage
+## Usage
 
 The 3D Viewer app service provides a set of widgets to visualize JT models as well as a set of nanoflows and Java actions to bring in the data stored in Mendix file storage. Meanwhile, the Teamcenter connector module provides full-scale APIs for you to interact with a Teamcenter instance.  
 
@@ -73,7 +73,7 @@ The 3D Viewer for Teamcenter module acts as an intermediate layer between the tw
 
 To visualize and operate on the JT model from Teamcenter, use the 3D widgets that are included in the 3D Viewer app service to visualize the data obtained from the 3D Viewer for Teamcenter.
 
-### 5.1 Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data {#reusing}
+### Reusing Teamcenter Login APIs to Get Access to Teamcenter Instance Data {#reusing}
 
 To get data from Teamcenter, the end-user of your app needs to be authenticated and authorized. The Teamcenter connector provides both admin and user login logic in the **Marketplace Modules** > **TcConnector** > **Published** > **APIs** > **Login** folder. Since you are building an app to enable the end-user to fetch data from Teamcenter and visualize it in the app, you will need to build a login for the end-user so that they can enter their Teamcenter user name and password to access Teamcenter data.
 
@@ -93,7 +93,7 @@ Follow these steps to build this login:
 The above is an example Teamcenter login flow included in the **Viewer3D_TC** module. There are other Teamcenter login APIs provided in **TcConnector** > **Published** > **APIs** > **Login**, and you can choose how to use them based on your needs.
 {{% /alert %}}
 
-### 5.2 Getting a List of Corresponding Models from Teamcenter
+### Getting a List of Corresponding Models from Teamcenter
 
 The **SearchTC** nanoflow in the 3D Viewer For Teamcenter module enables setting search criteria (for example, for searching by item name, item ID, or revision ID ）and fetching a model list. This nanoflow will first check if an active Teamcenter user session is alive and then perform the search, so logging in is essential before performing the model search. A list of ModelDocument objects will be returned as a result of this nanoflow, which means this nanoflow can be set as the data source of a list view widget. Additionally, by using **Viewer3D_TC** > **USER_ME** > **ShowBOMLineQueryPopUp**, you can apply specific revision rules to the search and get different model data returned.
 
@@ -124,7 +124,7 @@ Follow these steps to get the list:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-samplesearch.jpg" alt="teamcenter-samplesearch" class="no-border" >}}
 
-### 5.3 Opening a Model from the Model list
+### Opening a Model from the Model list
 
 Now that you can get a list of models from calling the SearchTC nanoflow, you may want to visualize these models. The SearchTC nanoflow returns a list of ModelDocument objects, and for the models to be visualized, it is necessary to use the 3D widgets that are part of 3D Viewer. **Model ID** and **Model Source Type** are the unique identifiers for every JT model, and with these two properties, you can access and operate JT models. The ModelDocument object contains attributes (most importantly, the model ID and model source type) that are needed to identify and visualize a JT model in the 3D widgets. As the 3D Viewer needs the model ID and model source type to visualize a model, you will need to pass the ModelDocument object to the 3D Viewer widget.
 
@@ -157,7 +157,7 @@ Since you built a model list pop-up page, one scenario is to select a list item 
 There are other ways to visualize a model. The key idea is to pass a valid model ID and model source type to the 3D Viewer widget.
 {{% /alert %}}
 
-### 5.4 Search with Custom BOMLine Query 
+### Search with Custom BOMLine Query 
 
 Other than searching Teamcenter server to get a list of ModelDocument objects with a default BOMLine query, **Viewer_3D** also provides you with a **ShowBOMLineQueryPopUp** page that can enable you to set custom queries. 
 
@@ -178,10 +178,10 @@ Follow these steps to set custom revision rules:
 
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-for-teamcenter/teamcenter-setrevisionpage.jpg" alt="teamcenter-setrevisionpage" class="no-border" >}}
 
-### 5.5 Create a ModelDocument from an Item Revision
+### Create a ModelDocument from an Item Revision
 
 A **ModelDocument** entity type object is the unique identifier defined across 3D Viewer to visualize a model. In addition to getting a list of ModelDocument returned from the **SearchTC** nanoflow, **Viewer3D_TC** also contains the **GetModelDocumentByTCItemRevision** microflow for you to construct a legal ModelDocument directly from an item revision. This adds more flexibility for getting your model in Teamcenter visualized. 
 
-## 6 Read More
+## Read More
 
 * [3D Viewer](/partners/siemens/3d-viewer/)

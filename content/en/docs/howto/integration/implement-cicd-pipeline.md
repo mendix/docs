@@ -5,13 +5,13 @@ url: /howto/integration/implement-cicd-pipeline/
 description: "Describes how you can use the available Mendix APIs with any mainline orchestrators to build a simple CI/CD pipeline."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how to use the available Mendix APIs with any mainline orchestrators (Jenkins, Visual Studio Team Services, etc.) to build a simple CI/CD pipeline.
 
 This is not meant to be a step-by-step guide. Its purpose is to indicate which APIs to use and to provide some examples of how to use them. The tool used in the examples is [Postman](https://www.getpostman.com/).
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you are familiar with the following:
 
@@ -20,27 +20,27 @@ Before starting this how-to, make sure you are familiar with the following:
 * [Unit Testing](/appstore/modules/unit-testing/) (if used in your application)
 * [Application Test Suite](/appstore/partner-solutions/ats/) (if used in your application)
 
-## 3 Building The Pipeline
+## Building The Pipeline
 
 The basic process for building a CI/CD pipeline is described below. The process involves setting up API keys and rights, building the deployment package, and deploying to the next environment. In most cases, it also involves running tests once the package is deployed and the environment is restarted.
 
-### 3.1 Setting Up API Keys and Rights
+### Setting Up API Keys and Rights
 
-#### 3.1.1 User API Key{#user-API-key}
+#### User API Key{#user-API-key}
 
 For access to Mendix Cloud environments, an authorized user is needed when executing the APIs. With Mendix APIs, this is achieved via API keys. To create a Mendix API key and set the required authentication headers, follow the steps in [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
-#### 3.1.2 Mendix API Rights
+#### Mendix API Rights
 
 To be able to use the Mendix APIs to access your environment, the user who is going to access the APIs needs API rights.
 
 To grant API rights, open your app in [Apps](https://sprintr.home.mendix.com/), then go to the **Permissions** tab of the app's **Environments** page and select the **API Rights** option for the user for whom you created an API key in the [User API Key](#user-API-key) step, above. For more details on how to configure permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-### 3.2 Building the Deployment Package
+### Building the Deployment Package
 
 To build the deployment package, use the [Team Server API](/apidocs-mxsdk/apidocs/team-server-api/) and the [Build API](/apidocs-mxsdk/apidocs/build-api/). In this example, a package will be built for the latest revision, but you can use whatever version you wish.
 
-#### 3.2.1 Getting the Latest Revision
+#### Getting the Latest Revision
 
 To get the latest revision, use the [Retrieve Branch](/apidocs-mxsdk/apidocs/team-server-api/#retrieve-branch) API call to get the `LatestRevisionNumber` from the output.
 
@@ -48,7 +48,7 @@ An example of how to do this call is below. Be aware that `<AppId>` is not a GUI
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/02GetLatestRevision.png" class="no-border" >}}
 
-#### 3.2.2 Building the Package{#BuildPackage}
+#### Building the Package{#BuildPackage}
 
 After getting the version you want to build the package for, you need to build the package. To do this, use the [Start Building a Deployment Package](/apidocs-mxsdk/apidocs/build-api/#start-building-deployment-package) API call.
 
@@ -60,21 +60,21 @@ Before proceeding to the next step, you need to wait for the build of the deploy
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/04RetrievePackageStatus.png" class="no-border" >}}
 
-### 3.3 Deploying to the Next Environment {#deploying-to-the-next-environment}
+### Deploying to the Next Environment {#deploying-to-the-next-environment}
 
 After building the deployment package, you can deploy the new package to the next environment (such as Test or Acceptance). To do this, use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/).
 
-#### 3.3.1 Getting the Environment Status
+#### Getting the Environment Status
 
 First, check if the environment to which you want to deploy is running. To do this, use the [Retrieve Environment](/apidocs-mxsdk/apidocs/deploy-api/#retrieve-environment) API call and check the status.
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/05GetEnvironment.png" class="no-border" >}}
 
-#### 3.3.2 Stopping the Environment
+#### Stopping the Environment
 
 If the environment is running, you need to stop it before deploying the new deployment package to it. To do this, use the [Stop Environment](/apidocs-mxsdk/apidocs/deploy-api/#stop-environment) API call.
 
-#### 3.3.3 Deploying/Transporting the Package
+#### Deploying/Transporting the Package
 
 To deploy/transport a package to the environment, use the [Transport a Deployment Package to an Environment](/apidocs-mxsdk/apidocs/deploy-api/#transport-deployment-package) API call.
 
@@ -82,7 +82,7 @@ For this action, you need the `PackageId` from the [Building the Package](#Build
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/06TransportDeploymentPackageToEnvironment.png" class="no-border" >}}
 
-#### 3.3.4 Starting the Environment
+#### Starting the Environment
 
 After a successful deployment, the next step is starting the environment. Use the [Start Environment](/apidocs-mxsdk/apidocs/deploy-api/#start-environment) API call to do this.
 
@@ -92,13 +92,13 @@ Before proceeding to any next steps, confirm that the environment has started. T
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/08StartEnvironmentStatusStarting.png" class="no-border" >}}
 
-### 3.4 Running Tests
+### Running Tests
 
 After deploying the package to the environment and starting it, you are ready to run tests. This is not a mandatory step in a CI/CD pipeline, but it is usually part of it.
 
 The sections below show you how to execute unit and ATS (UI) tests remotely. There can also be other tests (for example, load tests), but these are not covered in this how-to.
 
-#### 3.4.1 Unit Tests
+#### Unit Tests
 
 One way of doing unit tests in a Mendix app is by using the [Unit Testing](/appstore/modules/unit-testing/) module available from the Mendix Marketplace. This module already exposes an API to execute remote calls.
 
@@ -114,19 +114,19 @@ When the tests are completed (check the status for when completed is `true`), yo
 You can also (manually) create a web service that exposes the standard unit structure from the data available in the Unit Testing module.
 {{% /alert %}}
 
-#### 3.4.2 Mendix Application Test Suite (ATS) Tests
+#### Mendix Application Test Suite (ATS) Tests
 
 ATS has its own [API for CI/CD](/appstore/partner-solutions/ats/rg-two-cicd-api/#api). To use this ATS API, follow the steps in the [ATS and CI/CD](/appstore/partner-solutions/ats/ht-two-ats-and-ci-cd/#ats-and-ci-cd) section of *How to Use ATS in Combination with CI/CD*.
 
-### 3.5 Next Steps
+### Next Steps
 
 If you need to promote to another environment, repeat the steps in the [Deploying to the Next Environment](#deploying-to-the-next-environment) section.
 
-## 4 Jenkins/VSTS Examples
+## Jenkins/VSTS Examples
 
 The sections below present examples of how to call a Mendix API with Jenkins (using a Groovy script) and Visual Studio Team Services (VSTS).
 
-### 4.1 Jenkins
+### Jenkins
 
 To call a REST service with Jenkins (using a Groovy script), install the [HTTP Request Plugin](https://wiki.jenkins.io/display/JENKINS/HTTP+Request+Plugin). If you also want to bind credentials to variables (see `withCredentials` in the code snippet below), install the [Credentials Binding Plugin](https://jenkins.io/doc/pipeline/steps/credentials-binding/). The `Mendix-Username` and `Mendix-ApiKey` will be set in a `customHeaders` array.
 
@@ -134,7 +134,7 @@ This code snippet example gets the latest revision number so it can be used when
 
 {{< figure src="/attachments/howto/integration/implement-cicd-pipeline/12Jenkins.png" class="no-border" >}}
 
-### 4.2 VSTS
+### VSTS
 
 To call a REST service with VSTS, use the [Invoke REST API task](https://docs.microsoft.com/en-us/vsts/build-release/tasks/utility/http-rest-api). Use it in an agentless phase, and set up a **Generic endpoint** first. The `Mendix-Username` and `Mendix-ApiKey` go in the **Headers** section. You can set **Success criteria** (under the **Advanced** section) to define what makes the task successful.
 

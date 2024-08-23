@@ -5,7 +5,7 @@ weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to manually set up a new SQL Server database.
 
@@ -15,7 +15,7 @@ You only need to follow these steps if the database user used by Mendix does not
 Some of these steps are only required for specific versions of SQL Server or Mendix.
 {{% /alert %}}
 
-## 2 Setting Up a New Database
+## Setting Up a New Database
 
 When setting up a new database for Mendix, you can leave most of the settings to the default configuration. When looking at the general settings, you only need to set up the database name. Set up the database files according to the [Microsoft SQL Server best practices](https://www.mssqltips.com/sqlservertip/4891/sql-server-installation-best-practices/).
 
@@ -31,7 +31,7 @@ Mendix recommends using the **Simple** recovery model option. Mendix does not us
 
 After the database is created, the Mendix Runtime can initiate the initial setup and prepare all the tables and functions for usage by the platform. Some of these queries require `sysadmin` privileges. The `sysadmin` role can be temporarily assigned to the user, or these queries can be executed by the administrator. Other queries need privileges that are implicitly assigned to the `db_owner` role. If the user used by the Mendix Runtime does not have enough permissions for any of these queries, you can run them manually – see below for more information.
 
-## 3 Enabling Read Committed Snapshot Isolation Level and Snapshot Isolation
+## Enabling Read Committed Snapshot Isolation Level and Snapshot Isolation
 
 Mendix apps using SQL Server use both **Read Committed Snapshot** and **Snapshot Isolation** features for their database. This allows read operations to continue even if the record has been updated by a concurrent transaction, improving concurrency. For more information, see the [Transaction Locking and Row Versioning Guide](https://docs.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide?view=sql-server-ver15).
 
@@ -51,7 +51,7 @@ ALTER DATABASE [MySchema] SET ALLOW_SNAPSHOT_ISOLATION ON;
 When you run the commands above, replace `[MySchema]` with the name of your schema.
 {{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [How to Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/)
 * [How to Set Up the Database User](/developerportal/deploy/setting-up-the-database-user/)

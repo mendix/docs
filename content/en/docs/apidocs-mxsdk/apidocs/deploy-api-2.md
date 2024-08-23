@@ -10,7 +10,7 @@ weight: 42
 The Deploy API only works for apps that are deployed to Mendix Cloud.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Deploy API allows you to manage application environments in Mendix Cloud. Version 2 introduces improved APIs for some actions.
 
@@ -24,28 +24,28 @@ Mendix recommends using calls from the same version of the API where possible. T
 
 The Deploy API v2 requires authentication via API keys that are bound to your Mendix account.
 
-### 2.1 Obtaining an API Key
+### Obtaining an API Key
 
 To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
-### 2.2 Using Authentication Headers
+### Using Authentication Headers
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
-### 2.3 Configuring Permissions
+### Configuring Permissions
 
 Because APIs are designed for automated systems, the Deploy API does not require two-factor authentication, which is normally required to make changes to production environments. This is a potential security risk. Therefore, API access must be explicitly allowed for team members who want to use the Deploy API.
 
 To perform an action via the Deploy API, such as transporting a new deployment package, you need **API Rights** and **Transport Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
-## 3 API Calls
+## API Calls
 
-### 3.1 Upload Package{#upload-package}
+### Upload Package{#upload-package}
 
-#### 3.1.1 Description
+#### Description
 
 Uploads a deployment package from the local system to a specific app. This package can then be transported to a specific environment for deployment.
 
@@ -58,15 +58,15 @@ URL: https://deploy.mendix.com/api/v2/apps/<AppId>/packages/upload?name=<Package
 For apps on Mendix Cloud, it is not possible to upload files bigger than 1 GB to your app. 
 {{% /alert %}}
 
-#### 3.1.2 Request
+#### Request
 
-##### 3.1.2.1 Request Parameters
+##### Request Parameters
 
 * *AppId* (String): Subdomain name of an app
 * *PackageName* (String): the name given to the package (MDA) when it is uploaded — if this is omitted, it will be given the name *default.mda*
 * *file* (File): Deployment package as multipart/form-data (see [IETF RFC 7578: Returning Values from Forms: multipart/form-data](https://tools.ietf.org/html/rfc7578))
 
-##### 3.1.2.2 Example Request
+##### Example Request
 
 <!--Check this is correct -->
 
@@ -91,7 +91,7 @@ curl example:
 curl -v -F "file=@%USERPROFILE%/Documents/Mendix/calc-main/releases/calc_1.0.0.45.mda"  -X POST -H "Mendix-Username: richard.ford51@example.com" -H "Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6" "https://deploy.mendix.com/api/v2/apps/calc/packages/upload?name=calc_1.0.0.45.mda"
 ```
 
-#### 3.1.3 Output
+#### Output
 
 The API call returns the following JSON:
 
@@ -107,9 +107,9 @@ Where:
 * `<packageID>` is the ID of the package which will be created by the API
 * `<JobID>` is the ID of the job that is creating the package — the status of the job can be interrogated with the [Job Status](#job-status) API
 
-### 3.2 Job Status{#job-status}
+### Job Status{#job-status}
 
-#### 3.2.1 Description
+#### Description
 
 Find the status of a job using the `JobID` returned from an API call.
 
@@ -118,14 +118,14 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<AppId>/jobs/<JobId>
 ```
 
-#### 3.2.2 Request
+#### Request
 
-##### 3.2.2.1 Request Parameters
+##### Request Parameters
 
 * *AppId* (String): Subdomain name of an app
 * *JobID* (String): the ID of a job that was triggered by a previous API call
 
-##### 3.2.2.2 Example Request
+##### Example Request
 
 ```bash
 GET /api/v2/apps/calc/jobs/66046953-ecf7-4550-a889-4b7e9f1e1705
@@ -135,7 +135,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.2.3 Output
+#### Output
 
 The API call returns the following JSON:
 

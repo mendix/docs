@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-create-a-test-suite/
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 ---
 
-## 1 Introduction
+## Introduction
 
 A test suite enables the user to execute test cases and test suites in a specific order. You can add test steps to your test suite and link a test case or another test suite to that test step. ATS executes the test steps in the same way as a test case.
 
@@ -15,14 +15,14 @@ This how-to teaches you how to do the following:
 * Create a test suite
 * Add test cases and test suites to a test suite
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Creating a Test Suite
+## Creating a Test Suite
 
 To create a test suite, follow these steps:
 
@@ -45,7 +45,7 @@ The **Test Suite** page opens after you click **Create**. ATS displays the **Nam
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-create-a-test-suite/test-suite-page.png" class="no-border" >}}
 
-## 4 Adding Test Cases and Test Suites to a Test Suite
+## Adding Test Cases and Test Suites to a Test Suite
 
 To add a test case or another test suite to a test suite, follow these steps:
 
@@ -73,6 +73,6 @@ Repeat this process for the Recorder test case to complete your test suite.
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
 
-## 5 Next Up
+## Next Up
 
 You now learned how to create a test suite. The next how-to is [How to Create a Data-Driven Test Case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

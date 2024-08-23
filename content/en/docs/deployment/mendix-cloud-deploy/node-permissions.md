@@ -6,7 +6,7 @@ description: "The permission settings for your node."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Fine-grained access management for your Mendix Cloud environments is handled in the **Permissions** tab of your app's [Environments](/developerportal/deploy/environments/) page.
 
@@ -14,7 +14,7 @@ On this tab, the [Technical Contact](/developerportal/general/app-roles/#technic
 
 Team members who have a role with **Cloud Access** can view the permissions. For more information, see [App Roles](/developerportal/general/app-roles/).
 
-## 2 Viewing Your Nodes{#nodes}
+## Viewing Your Nodes{#nodes}
 
 To find a list of all Mendix Cloud licensed nodes that you have access to, open the [Global Navigation menu](/developerportal/global-navigation/) and click **Deployment**.
 
@@ -24,11 +24,11 @@ You will see a list of all your licensed nodes:
 
 To go to the [Environments](/developerportal/deploy/environments/) page for the app that is deployed to a node, click **Environments** on that node.
 
-## 3 Permissions{#permissions-tab}
+## Permissions{#permissions-tab}
 
 In the **Permissions** tab of the **Environments** page, you can manage access to your environments for each team member.
 
-### 3.1 User Roles for Managing Permissions
+### User Roles for Managing Permissions
 
 The Technical Contact and any team members with **Manage Permissions** enabled can manage the permission settings for the cloud node.
 
@@ -44,7 +44,7 @@ Team members with a user role that includes **Cloud Access** can view the permis
 Team members with a user role that includes **Cloud Access** are listed in the **Permissions** tab. This tab also shows deactivated users who have been given these permissions, even though these users no longer have access to your project.<br><br>You can change user roles for team members in [Team](/developerportal/general/team/).
 {{% /alert %}}
 
-### 3.2 Accessing Node Permissions
+### Accessing Node Permissions
 
 To access the node permissions, do the following:
 
@@ -59,13 +59,13 @@ To access the node permissions, do the following:
 
 4. If prompted, complete two-factor authentication.
 
-### 3.3 Permissions
+### Permissions
 
 The Technical Contact can enable and disable **Manage Permissions** for the other team members. Any team members with **Manage Permissions** enabled can set the following node permissions: **Transport Rights**, **Access to Backups**, **Receive Alerts**, **API Rights**, and **Access to Monitoring**.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/node-permissions/node-permission.png" alt="Node permissions dashboard" class="no-border" >}}
 
-#### 3.3.1 Manage Permissions
+#### Manage Permissions
 
 Team members with **Manage Permissions** permissions can change the permissions granted to team members. Only the Technical Contact has this enabled by default.
 
@@ -73,19 +73,19 @@ Team members with **Manage Permissions** permissions can change the permissions 
 Only the Technical Contact can grant this permission to other team members.
 {{% /alert %}}
 
-#### 3.3.2 Transport Rights{#transport-rights}
+#### Transport Rights{#transport-rights}
 
 Team members with **Transport Rights** permissions can deploy new versions of the application to the node. They can also create new deployment packages, stop and start the environment, and change configuration settings such as constants and scheduled events.
 
 For more information about deployment, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 
-#### 3.3.3 Access to Backups
+#### Access to Backups
 
 Team members with **Access to Backups** permissions can access the backups of the environment. They can view, [create](/developerportal/operate/create-backup/), [download](/developerportal/operate/download-backup/), and [restore](/developerportal/operate/restore-backup/) backups.
 
 For more information, see [Backups](/developerportal/operate/backups/).
 
-#### 3.3.4 Receive Alerts
+#### Receive Alerts
 
 Team members with **Receive Alerts** permissions will receive an email whenever an alert is triggered.
 
@@ -96,7 +96,7 @@ Alerts are triggered by any of the following circumstances:
 * The health check fails
 * An infrastructure problem occurs
 
-#### 3.3.5 API Rights
+#### API Rights
 
 Team members with **API Rights** permissions can use the [Deploy API](/apidocs-mxsdk/apidocs/deploy-api/) to get programmatic access to the environment.
 
@@ -106,13 +106,13 @@ Because the API does not require two-factor authentication, it is disabled for t
 Other permissions are needed in addition to **API Rights**. For example, to access backups via the API, you need **Access to Backups** in addition to **API Rights**.
 {{% /alert %}}
 
-#### 3.3.6 Access to Monitoring
+#### Access to Monitoring
 
 Team members with **Access to Monitoring** permissions can view the application metrics, logs, and alerts in [Apps](https://sprintr.home.mendix.com). This allows them to successfully operate your Mendix Cloud environments.
 
 For more information, see [Metrics](/developerportal/operate/metrics/), [Logs](/developerportal/operate/logs/), and [Alerts](/developerportal/operate/monitoring-application-health/).
 
-## 4 Downloading Node Permissions
+## Downloading Node Permissions
 
 You may want to have a complete list of node permissions for audit purposes. The Technical Contact can download a list of permissions as a CSV by clicking **Download to CSV**. This button is shown only to Technical Contacts.
 
@@ -120,7 +120,7 @@ The CSV file contains a list of environments, users, and their respective permis
 
 In addition, all changes to node permissions are logged on the activity log.
 
-## 5 The Technical Contact
+## The Technical Contact
 
 A cloud node has a single Technical Contact. The Technical Contact manages the cloud node and can control whether the other team members have access to **Manage Permissions**.
 
@@ -132,6 +132,6 @@ For full details on this role, see the [Technical Contact](/developerportal/gene
 Mendix Admins can also give the Technical Contact role to another team member using the Deploy API v4. For more information, see [Deploy API – Version 4](/apidocs-mxsdk/apidocs/deploy-api-4/).
 {{% /alert %}}
 
-## 6 Read More
+## Read More
 
 * [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/)

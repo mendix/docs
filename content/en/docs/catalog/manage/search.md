@@ -8,11 +8,11 @@ aliases:
     - /catalog/search/
 ---
 
-## 1 Introduction
+## Introduction
 
 Finding the right data to use in your app development is made easier using the search functionality in the Catalog. The details of registered data assets can be accessed using the [Search API](/apidocs-mxsdk/apidocs/catalog-apis/), or viewed in the [Asset details](#search-details) screen of the Catalog or the [Integration pane](/refguide/integration-pane/) in Studio Pro.  This document describes how you can search in Catalog.
 
-## 2 Search Using the API {#search-api}
+## Search Using the API {#search-api}
 
 To use the Catalog Search API, you need the following:
 
@@ -270,19 +270,19 @@ A successful `GET` call results in a `200` status code and a JSON response body 
 
 </details>
 
-## 3 Search in the Catalog {#search-catalog}
+## Search in the Catalog {#search-catalog}
 
-### 3.1 Details of Registered Assets
+### Details of Registered Assets
 
 You can start searching from the [Home](#data-hub-home) page, or click the [Catalog](#search-tab) tab to go to the **Search** pane and **Asset Details** screen. This section describes important properties of registered assets: data sources, datasets, and attributes.
 
 {{% alert color="info" %}}The **Dataset** is the name of the **Entity set** of a published **Entity** in Mendix Studio Pro, which by default, is the entity name with an "s" appended to it. For example, if an entity named `Customer` is published in an OData service, the **Dataset** name in the **Search Details** will be `Customers`.{{% /alert %}}
 
-#### 3.1.1 Versions
+#### Versions
 
 Every published service (or data source) has a version number. Apps that consume a data source will consume from a specific version. Updates and changes to a service will be indicated by a change in the version number. Several versions of a registered data source may be available in the Catalog. The data source version is displayed in the [Asset Details](#search-details).
 
-#### 3.1.2 Environments
+#### Environments
 
 The Catalog is a register of published services (or data sources) that are deployed to a particular environment. You can have multiple versions of a service for each environment by giving them different version numbers.
 
@@ -294,7 +294,7 @@ Search results show the data source endpoints. If a version of a service is depl
 By default, search results in the Catalog are filtered to show only hits in the **Production** environments. You can extend the search to **Non-production** or **Mendix Free App (Sandbox)** environments by checking them in the search pane **Add Filter** list. For more details, see the [Filters](#filter) section below.
 {{% /alert %}}
 
-#### 3.1.3 Asset Description
+#### Asset Description
 
 The description that is included as part of the published service metadata. This description can be edited at the data source, dataset, and attribute level by owners and curators.
 
@@ -302,7 +302,7 @@ The description that is included as part of the published service metadata. This
 In Studio Pro, when publishing a service, it is possible to specify a summary of the service and a description. Only the description is included in the service contract document and registered in the Catalog.
 {{% /alert %}}
 
-### 3.2 Searching for Assets {#data-hub-home}
+### Searching for Assets {#data-hub-home}
 
 When searching in the Catalog, the following fields are searched:
 
@@ -322,21 +322,21 @@ From the **Catalog** home page, you can search the Catalog in the following ways
 
 Any of the above actions will take you to the **Search** screen.
 
-### 3.3 Search Screen {#search-tab}
+### Search Screen {#search-tab}
 
 The **Search** screen is divided into the [search](#search-pane) pane on the left, the [asset details](#search-details) of the selected asset in the center panel, and the [asset metadata](#metadata) panel on the right.
 
-### 3.4 Search Pane {#search-pane}
+### Search Pane {#search-pane}
 
 The collapsible **Search** pane is used to search for registered assets in the Catalog:
 
 {{< figure src="/attachments/catalog/search/search-pane.png" alt="search pane"   width="300"  class="no-border" >}}
 
-#### 3.4.1 Specifying the Search
+#### Specifying the Search
 
 Enter a search string in the **Search** area with a minimum of 3 alphanumeric characters. Searching for the wildcard `*` or the empty string `''` will return all registered items.
 
-#### 3.4.2 Filters {#filter}
+#### Filters {#filter}
 
 You can filter search results by: 
 
@@ -349,7 +349,7 @@ In the **Filter** dialog box, check the filters you want to include in your sear
 
 You will also see any restrictions that apply, including **Count** and **Pagination** and whether something is **Sortable** or **Filterable**.
 
-#### 3.4.3 Search Results {#search-results}
+#### Search Results {#search-results}
 
 The number of items satisfying the search criteria (search string plus filters) are shown in the search results list. The order of the items presented in the search results will be a combination of the following:
 
@@ -359,11 +359,11 @@ The number of items satisfying the search criteria (search string plus filters) 
 
 When an item in the search results is selected, the **Landscape** tab shows the network of connections and dependencies of the selected item in the [Landscape](/data-hub/data-hub-landscape/).
 
-### 3.5 Selected Asset Details {#search-details}
+### Selected Asset Details {#search-details}
 
 When you click a search result, the details are displayed in this panel.
 
-#### 3.5.1 Details of a Selected Data Source {#service-details}
+#### Details of a Selected Data Source {#service-details}
 
 The contract of the published service (the *$metadata* document) contains the details of what is exposed in the service. This includes the metadata of the exposed datasets (or entity sets in Mendix Studio Pro) and their exposed attributes, associations, and types. The contract metadata is displayed, along with any Catalog-curated metadata.
 
@@ -389,11 +389,11 @@ You can perform the following actions from this screen:
 * **Copy URI** – click to copy the URI of the data source contract to the clipboard. This URI can be used to integrate the data source in other enterprise applications.
 * **Copy Dataset URI** – click to copy the URI of the dataset to the clipboard for use in other business applications.
 
-#### 3.5.2 Details for a Selected Dataset {#entity-details}
+#### Details for a Selected Dataset {#entity-details}
 
 When a **Dataset** is selected in the search results, the following details are displayed in the **Search Details** panel.
 
-##### 3.5.2.1 General Information
+##### General Information
 
 The source and endpoint details of the dataset are displayed:
 
@@ -412,7 +412,7 @@ You can perform the following actions from this screen:
 * **Share** – click to copy the link to this dataset detail page to the clipboard so that it can be shared with others
 * **Edit** – click to access the dataset edit screen
 
-#### 3.5.2.2 Dataset Information
+#### Dataset Information
 
 The **Attributes** tab lists the attributes that are exposed for the dataset in the service.
 
@@ -424,21 +424,21 @@ Under the **Associations** tab for each dataset, the associations are displayed:
 * **Navigates to** – the dataset the association is made with. Click the link to see the details of the associated dataset in the Catalog.
 * **Multiplicity** – indicates the multiplicity.
 
-### 3.6 Metadata Panel {#metadata}
+### Metadata Panel {#metadata}
 
 The metadata panel at the right of the asset details screen displays details from the service metadata contract and values that have been curated in the Catalog:
 
 {{< figure src="/attachments/catalog/search/metadata.png" alt="metadata pane"   width="300"  class="no-border" >}}
 
-#### 3.6.1 Tags
+#### Tags
 
 These are the tags that have been assigned to the data source in the Catalog (for more information, see the [Adding or Editing Tags to a Service](/catalog/manage/curate/#tags) section of *How to Curate Registered Assets*). Tags assigned at a data source-level propagate down to the datasets and attributes exposed in the service.
 
-#### 3.6.2 Business Owner {#business-owner}
+#### Business Owner {#business-owner}
 
 This is a link to the business owner of the data exposed in the data source. For more information, see the [Changing Owners of an App](/catalog/manage/curate/#changing-owners) section of *How to Curate Registered Assets*.
 
-#### 3.6.3 Technical Owner
+#### Technical Owner
 
 This is a technical contact for the app. By default, this is the owner who registered the service.
 
@@ -446,7 +446,7 @@ For apps hosted in the Mendix Cloud, the **Technical Owner** is the app develope
 
 Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 
-#### 3.6.4 Discoverability {#discoverability-metadata}
+#### Discoverability {#discoverability-metadata}
 
 When a data source is registered, by default, it is **Discoverable** in the Catalog. When this is set, all users in your company can find it, view the details, and consume it. The owners of an asset and curators can set a data source as **Non-discoverable**, which means it is not visible to users unless they are the owner or a curator.
 
@@ -457,15 +457,15 @@ The following discoverability values can be set:
 * **Discoverable** – all users in your company can see and consume the asset in the Catalog and Studio Pro 
 * **Non-Discoverable** – the asset is only visible to owners, curators, and the Mendix Admin in the Catalog; it is not included in the search results in the [Integration pane](/refguide/integration-pane/) of Studio Pro, or any other client of the Catalog API.
 
-#### 3.6.5 Validated
+#### Validated
 
 This indicates if the data source has been **Validated**. For details on changing **Validated** as an owner or curator, see the [Curation Bar](#curation-option) section below. See the [Validated](/catalog/manage/curate/#validated) section of *Curate Registered Assets* to learn about what this means.
 
-#### 3.6.6 Application
+#### Application
 
 A link to the application from which the data source was published in the given environment.
 
-#### 3.6.7 Environment Type
+#### Environment Type
 
 The environment type indicates the quality and the status of the data that the exposed datasets connect to. The following environment types can be specified:
 
@@ -473,7 +473,7 @@ The environment type indicates the quality and the status of the data that the e
 * **Non-Production**
 * **Sandbox** (the Mendix Free App environment)
 
-### 3.7 Curation Option {#curation-option}
+### Curation Option {#curation-option}
 
 The **Curation Option** is displayed in the asset detail screen if you are the owner of the selected asset or a curator. In **Edit**, you can edit the information that is displayed in the Catalog for an asset:
 
@@ -483,11 +483,11 @@ The **Curation Option** is displayed in the asset detail screen if you are the o
 
 For further details, see the [Discoverable and Validated](/catalog/manage/curate/#discoverability) section of *Curate Registered Assets*.
 
-### 3.8 Data Source and Dataset URIs
+### Data Source and Dataset URIs
 
 The data source URI is the location of the service contract of the data source, also known as the service endpoint. The endpoints of all exposed datasets (entity sets) are defined in the contract. From the details screen of the data source and dataset, you can copy the URIs to the clipboard by clicking the **Copy Data Source URI** and **Copy Dataset URI** respectively. These URIs can be used for directly accessing the contract and resource in BI applications.
 
-### 3.9 Download the Contract of a Data Source {#download-contract}
+### Download the Contract of a Data Source {#download-contract}
 
 For a selected data source, you can click **Download** to download the service contract that is located at the data source endpoint. A ZIP file that includes the all the files that make up the full contract is generated and downloaded.
 
@@ -499,6 +499,6 @@ Here is an example:
 
 When you click **Download**, the following file is downloaded: `DataHub_SAP_Intelligence_1.0_OData4.zip`. This ZIP file has the folder `DataHub_SAP_Intelligence_1.0_OData4`, which contains all the metadata files that define the service.
 
-### 3.10 Viewing Search Results in the Landscape
+### Viewing Search Results in the Landscape
 
 When an item is selected in the search results pane, you can click the [Landscape](/data-hub/data-hub-landscape/) tab to see the network of connections and dependencies for the selected asset. This provides a graphical representation to indicate the context and relevance of a selected item and the data for the exposed datasets.

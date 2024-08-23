@@ -7,11 +7,11 @@ description: "Provides information and guidance on how to implement Mendix solut
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This page provides information and guidance on how to set up and upgrade a solution.
 
-## 2 Solution Lifecycle
+## Solution Lifecycle
 
 This image presents the typical solution lifecycle:
 
@@ -23,7 +23,7 @@ There are three main stages a solution goes through during its lifecycle:
 * **Implement** – At this stage, the solution is adapted to fit a specific customer's needs. This can be done by the ISV, an implementation partner, or the customer themselves.
 * **Consume** – This stage is the actual production use of the application by the customer.
 
-## 3 Implementation
+## Implementation
 
 As the **Build** stage is an iterative process, a new version is periodically released by the ISV. In the **Implement** stage, the implementer needs to incorporate the changes from this new version into the current implementation.
 
@@ -31,7 +31,7 @@ To be able to implement, you must set up the solution in the proper way to enabl
 
 For details on the upgrade procedure for a solution that has been set up correctly, see [Upgrade a Solution](/appstore/creating-content/sol-upgrade/).
 
-## 4 Read More
+## Read More
 
 * [Develop a Solution](/appstore/creating-content/sol-adapt/)
 * [Architect an Adaptable Solution](/appstore/creating-content/sol-architecting/)

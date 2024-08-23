@@ -4,7 +4,7 @@ url: /refguide9/monitoring-client-state/
 description: "Describes the supported client state monitoring actions."
 ---
 
-## 1 Introduction
+## Introduction
 
 The state is in the client (web browser). This allows the server to be scaled to multiple instances. As the state now resides in the client, it can be useful to monitor what's in the state and why at a given time.
 
@@ -14,7 +14,7 @@ To do this, use the <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combinat
 The <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>G</kbd> key combination works in all browsers except Mozilla Firefox in [Parallels](/refguide9/using-mendix-studio-pro-on-a-mac/).
 {{% /alert %}}
 
-## 2 Details
+## Details
 
 For each entity type, the IDs of the object instances that are in the state are listed. Every object instance shows the following information:
 

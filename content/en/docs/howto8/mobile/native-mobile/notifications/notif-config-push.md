@@ -5,11 +5,11 @@ weight: 56
 description: Tutorial for configuring push notifications.
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to teaches you how to configure the runtime for using push notifications in native apps. 
 
-## 2 Configure Your Notifications
+## Configure Your Notifications
 
 If you have completed [Add Module Dependencies](/howto8/mobile/notif-add-module-depends/) and [Implement the Push Notifications Module](/howto8/mobile/notif-implement-module/) per your use case, do the following to configure your push notifications:
 

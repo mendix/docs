@@ -5,7 +5,7 @@ weight: 30
 description: "Describes MxBuild, which is a command-line tool for building and deploying Mendix Apps."
 ---
 
-## 1 Introduction
+## Introduction
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix app.
 
@@ -36,7 +36,7 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 The examples used in this document are for Windows, except when specifically mentioned otherwise.
 {{% /alert %}}
 
-## 2 Command Line
+## Command Line
 
 To build your package, specify the Mendix app file (*.mpr*) for which you want to build the deployment package (*.mda*) on the command-line. The file name may be preceded by a relative or absolute path. The app file should be located inside a Mendix app directory.
 
@@ -52,7 +52,7 @@ You can also run MxBuild under Linux using the following command line format:
 
 After creating the deployment package, the MxBuild process quits.
 
-### 2.1 General Command-Line Options
+### General Command-Line Options
 
 Command-line options are described in the table below:
 
@@ -68,7 +68,7 @@ Command-line options are described in the table below:
 | `--sbom-output-path=VALUE` | File path to generate bill of material file (Default value: `deployment\sbom.json`). |
 | `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
 
-### 2.2 Options When Creating a Package
+### Options When Creating a Package
 
 {{% alert color="info" %}}
 The following options are only applicable with the `--target=package` option:
@@ -89,7 +89,7 @@ For example, to create a deployment package `out.mda` in the current directory u
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
-## 3 Return Code
+## Return Code
 
 When MxBuild exits, one of the following codes will be returned:
 
@@ -102,7 +102,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
-## 4 App Errors {#app-errors}
+## App Errors {#app-errors}
 
 When your Mendix app contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

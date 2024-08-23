@@ -6,7 +6,7 @@ description_list: true
 description: "Describes the Project Management section of Apps navigation pane."
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Project Management** category in the [navigation pane](/developerportal/#navigation-pane) of **Apps** provides fast access to the project management tool that you select for your app:
 

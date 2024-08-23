@@ -10,26 +10,26 @@ description: "Describes the configuration and usage of the Format String widget,
 This widget is deprecated. For an alternative, see [Text](/refguide/text/) or [HTML Element](/appstore/widgets/htmlelement/) depending on your use case.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Format String](https://marketplace.mendix.com/link/component/264/) widget adds a user-defined string to your page, taking object attributes as input parameters.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Use this widget to display multiple attributes as a single string.
 
-### 1.1 Features
+### Features
 
 * Multiple attributes supported
 * Retrieve attributes one-deep
 
-### 1.2 Limitations
+### Limitations
 
 * Setting the same attribute multiple times using different date/time formatting is not supported
 
-## 2 Properties
+## Properties
 
-### 2.1 Data Source Tab
+### Data Source Tab
 
 The data source is used to add replacements for your display string. The values from the attributes will be used to replace placeholders.
 
@@ -47,7 +47,7 @@ When you create a new attribute via the **Edit Attributes Item** dialog box, you
     * **Decimal precision** – the amount of decimals
     * **Group digits** – displays a numeric value with group digits
 
-### 2.2 Behavior Tab
+### Behavior Tab
 
 * **On click** – the microflow to be invoked on click.
 * **Stop propagation** – when enabled, the click action is stopped from being handled via prevention of the click event from going to other components (this can be useful when you do not want other actions like the selection in a list view to happen)
@@ -58,7 +58,7 @@ When you create a new attribute via the **Edit Attributes Item** dialog box, you
 * **Translatable strings**<a id="translatable-strings"></a> – with this property, you can use translatable strings (instead of the internal language pack)
 * **Locale selection** – when you use the internal language pack, only a few languages are supported – choose **Automatic** to let Dojo choose based on the application (with a fallback to **en-us**)
 
-### 2.3 Customization Tab
+### Customization Tab
 
 These are the values that you can change when you use [Translatable strings](#translatable-strings):
 
@@ -83,7 +83,7 @@ These are the values that you can change when you use [Translatable strings](#tr
 The widget has default values for **nl-nl**, **en-us**, and **en-gb**.
 {{% /alert %}}
 
-## 3 Example Scenario
+## Example Scenario
 
 In this scenario, you have an attribute that contains a hyperlink to a website (for example, `https://mendix.com`). The attribute is called **Link**.
 

@@ -4,11 +4,11 @@ url: /refguide/xpath-month-from-datetime/
 weight: 7
 ---
 
-## 1 Overview
+## Overview
 
 The `month-from-dateTime()` function extracts the month value from a **Date and time** attribute so it can be used to compare to a value.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -16,15 +16,15 @@ The syntax is as follows:
 month-from-dateTime ( attribute [, timezone ] )
 ```
 
-### 2.1 attribute
+### attribute
 
 `attribute` specifies the attribute to extract the day from. Attribute must be of the **Date and time** type.
 
-### 2.2 timezone
+### timezone
 
 `timezone` specifies the time zone to use for the extraction. This parameter is optional and defaults to the local time zone. It should be a string literal containing an IANA time zone or `'UTC'`. GMT offset time zones are not supported.
 
-## 3 Examples
+## Examples
 
 This query returns all logs where the month value `DateAttribute` is 12 (December) in the local time zone (for example, "2011-12-30"):
 

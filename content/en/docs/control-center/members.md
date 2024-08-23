@@ -10,11 +10,11 @@ no_list: true
 A member in Control Center means a user of the Mendix platform who participates in the development process. It does not mean an end-user of an app built in the Mendix Platform.
 {{% /alert %}}
 
-## 1 Introduction 
+## Introduction 
 
 The **Members** page allows you to manage active, deactivated, and external members of your company.
 
-## 2 Active and Deactivated Members {#active-deactive-members}
+## Active and Deactivated Members {#active-deactive-members}
 
 On the **Active Members** tab and the **Deactivated Members** tab, you can see an overview of the active and deactivated members of your company.
 
@@ -28,7 +28,7 @@ For security reasons, Mendix recommends deactivating an employee that is leaving
 You cannot deactivate yourself.
 {{% /alert %}}
 
-## 3 External Members
+## External Members
 
 On the **External Members** tab, you can see the members outside of your company who have access to at least one of your company apps.
 

@@ -1014,8 +1014,9 @@ Some capabilities of the chat completions operations are currently only availabl
 * **Function Calling** - You can use function calling in all chat completions operations using a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
 
 **Function calling microflows**: A microflow used as a tool for function calling must satisfy the following conditions:
-* One input parameter of type `String` or no input parameter
-* Return value of type `String`
+        
+        1. One input parameter of type String or no input parameter.
+        2. Return value of type String.
 
 * **Vision** - This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
 

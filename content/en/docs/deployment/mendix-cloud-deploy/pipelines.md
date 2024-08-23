@@ -36,7 +36,7 @@ For each run, you can view the following information:
 * Branch – The branch, if **Teamserver push (Git)** was used as the pipeline's trigger
 * Pipeline Name – The name of the pipeline design used for the run
 * Triggered by – The user who triggered the pipeline run
-* Last Run – The number of days since the pipeline run
+* Run – The number of days since the pipeline run
 * Duration – The time the pipeline took to complete the run
 * Trigger – The trigger type for the run
 

@@ -149,7 +149,10 @@ The association between the client and the server certificates does not need to 
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
-### 4.2 View Services
+
+### 5 Using Services
+
+#### 5.1. View Service
 
 The view services enable you to navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. See below:
 
@@ -157,7 +160,9 @@ The view services enable you to navigate the content of the server. There are th
 * `GetChildren` – This retrieves the sub level node for a given node.
 * `GetParent` – This retrieve the parent node for a given node.
 
-#### 4.2.1 The Browse Action
+For more advanced cases use the provided Browse action.
+
+#### 5.1.1 The Browse Action
 
 The browse action lets you traverse from one node to others.  The request object for the action is a `BrowseDescription`, which contains the following fields:
 
@@ -166,8 +171,6 @@ The browse action lets you traverse from one node to others.  The request object
 * `NodeiRreferenceTypeID` – This specifies the Node ID of the reference type to follow. If left empty, all references are returned.
 * `IncludeSubTypes` – This indicates whether subtypes of the `ReferenceType` should be included.
 * `NodeClassMask` – This specifies which `NodeClasses` will be returned. If no value is provided, no filter will be applied. This is an integer attribute. The interpretation is a set of bits as described in the table below. You need to sum up the values to create the mask. For example: browsing only `object`, `variable`, and `view` is binary represented by `[1,1,0,0,0,0,0,1]`, which has to be set up as 1 + 2 + 128 = 131 for the integer value. 
-
-{{% todo %}}In the domain model, NodeClassMask has the long datatype, not integer{{% /todo %}}
     
   | Bit  | Node class    | Value |
   | ---- | ------------- | ----- |
@@ -181,8 +184,6 @@ The browse action lets you traverse from one node to others.  The request object
   | 7    | View          | 128   |
 
 * `ResultMask` – This specifies the fields in the reference description structure that should be returned.   This is an integer attribute. The interpretation is a set of bits as described in the table below.  You need to sum up the values to create the mask. For example: requesting only the field `DisplayName` is binary represented by `[0,0,0,0,1,0]`, which has to be set up as 16 for the integer value.
-
-{{% todo %}}In the domain model, ResultMask has the long datatype, not integer{{% /todo %}}
 
   | Bit  | Node class     | Value |
   | ---- | -------------- | ----- |
@@ -203,9 +204,7 @@ The response of the `Browse` action returns a browse response object. There is a
 
 * `DisplayName` – This is the display name of the referenced node.
 
-* `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that can be used in future calls to retrieve more references. (not supported yet)
-
-{{% todo %}}What is exactly not supported yet here? And is there a plan to make it supported?{{% /todo %}}
+* `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that might be used in future calls to retrieve more references. 
 
 ### 4.3 Attribute Services
 

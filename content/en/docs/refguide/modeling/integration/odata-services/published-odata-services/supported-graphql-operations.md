@@ -10,7 +10,7 @@ weight: 50
 This is a list of supported operations for GraphQL services.
 
 {{% alert color="info" %}}
-Mendix currently supports only the operations described in this document.
+Mendix currently only supports the operations described in this document.
 {{% /alert %}}
 
 A client can request an operation of a GraphQL service by sending a `POST` request to the [location](/refguide/published-odata-services/#location) of the service. The service supports request content types `application/graphql` and `application/json`. In this document, `application/graphql` are the examples used.

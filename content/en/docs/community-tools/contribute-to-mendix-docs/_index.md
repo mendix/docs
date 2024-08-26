@@ -32,7 +32,9 @@ For details on how to fork a repo and create a pull request, watch [How to Contr
 
 This how-to teaches you how to do the following:
 
-* Add to and edit existing documentation
+* Add to and edit existing documentation in GitHub
+* Edit existing documentation locally and build local previews
+* Leave feedback on the documentation
 * Create new documentation
 
 ## Prerequisites
@@ -42,6 +44,8 @@ Before starting with this how-to, make sure you have completed the following pre
 * Have a GitHub account (sign up at [Join GitHub](https://github.com/join))
 
 You can create and edit files directly online within GitHub, or outside GitHub using your preferred writing and committing tools.
+
+In the [Editing the Documentation and Previewing Changes Locally](#local-build) section below, you will also learn how to fork and clone the [mendix / docs](https://github.com/mendix/docs) repository, edit documentation locally, and build local previews.
 
 ## Editing the Documentation in GitHub {#editing}
 
@@ -90,7 +94,7 @@ To edit existing documentation in GitHub, follow these steps:
 
 The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
 
-## Editing the Documentation and Previewing Changes Locally
+## Editing the Documentation and Previewing Changes Locally {#local-build}
 
 If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
@@ -138,7 +142,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
 8. To see the local site preview, go to http://localhost:1313/.
 9. Navigate to the page that you just made changes to, and you can preview your changes locally! 
 
-{{% alert color="info" %}}As long as the local build is running, each time after you saved your changes, you will be able to preview the changes on the local site. If not, refresh the local site using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. If this does not work, stop the current running build with <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
+{{% alert color="info" %}}As long as the local build is running, each time after you saved your changes, you will be able to preview the changes on the local site. If not, refresh the local site using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. If this still does not work, stop the current running build with <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
 
 ## Leaving Feedback on the Documentation
 

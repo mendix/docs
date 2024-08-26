@@ -13,6 +13,16 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2024
 
+### August 25, 2024
+
+#### Portal Improvements
+
+* Deployment package creation and deployment for Mendix version 7 and below is no longer supported.
+
+#### Bug Fixes
+
+* Issue of missing Tag Description for deployment package resolved.
+
 ### July 14, 2024
 
 #### Portal Improvements

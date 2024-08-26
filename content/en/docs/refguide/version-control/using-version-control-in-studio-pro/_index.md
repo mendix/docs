@@ -357,10 +357,6 @@ If you are doing more advanced changes to files, like adding Java actions or res
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
-{{% alert color="warning" %}}
-Studio Pro automatically performs the necessary post-processing steps when you download a Git clone through its user interface. Using the Git command line to create a Git clone or using a clone created by a third-party tool in Studio Pro is not supported.
-{{% /alert %}}
-
 ### Authenticating to Team Server {#authenticating}
 
 When using external tools, you might be asked to authenticate separately to Team Server.

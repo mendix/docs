@@ -278,7 +278,7 @@ When a notification comes in, the microflow specified by 'MicroflowName' on the 
 
 * Use the full name of the microflow (MODULENAME.MICROFLOWNAME).
 
-* The input parameters of the microflow subscription can be `MessageMonitoredItem` and/or `MessageMonitoredItemReadValueId`, and/or `MessageDataValue`. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required. 
+* These are the parameters that are allowed for a microflow to be called on a notification (not all are required) :
 
     * `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
     * `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.

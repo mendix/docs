@@ -42,7 +42,15 @@ You must have the following Marketplace module installed:
 
 This chapter explains how to quickly configure connection to an OPC UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
-{{% todo %}}After start up and before shutdown{{% /todo %}}
+### 3.1 Startup and shutdown
+
+Make sure you call the OPC 'After Start Up' and 'Before Shudtown' actions from your app After Start Up and Before Shutdown microflows.
+Actions full name are 'OPCUAConnector.ASU_OPCUA' and 'OPCUAConnector.BSD_OPCUA'.
+
+* After start up tries to reconnect to configured servers, re-monitor items and pre-loads your app trusted certificates. 
+* Before Shudtown close all opened connections.
+
+{{% alert color="info" %}}If you maintain many connections to OPC UA servers, the startup will take much longer.{{% /alert %}}
 
 ### 3.1 Configuring the Connection to the OPA-UA Server
 
@@ -149,7 +157,6 @@ The association between the client and the server certificates does not need to 
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
-
 ### 5 Using Services
 
 #### 5.1. View Service
@@ -222,14 +229,13 @@ For more advanced cases use the provided Read action.
 
 #### 5.2 The Read action
 
-The Read action lets you read specific attributes of a node.  The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
+The Read action lets you read specific attributes of a node. The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
 The ReadNodeReadValueId objects describe the attributes on the nodes you want to read. 
 The `Read node` action returns a `ReadNodeResponse` object that contains a list of `ReadNodeResponseResults` which will contain in the same order as the request the value of the read attributes.
 
 Each `ReadNodeResponseResult` object contains a `DataValue` attribute. This is the raw payload returned from the OPC UA Server. 
 To read the VALUE attibute on a `VariableNode`, set the NodeId on your ReadNodeReadValueId to the right node Id and the AttributeId to ENUM_AttributeId.VALUE.
 The corresponding DataValue attributes will depent on the type of the Datatype. 
-
 
 | Data type                                | Example read response                                        | Example write request                  | Conversion                             |
 | ---------------------------------------- | ------------------------------------------------------------ | -------------------------------------- | -------------------------------------- |
@@ -248,18 +254,15 @@ The corresponding DataValue attributes will depent on the type of the Datatype.
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-
 #### 5.3 The Write action
-
 
 The Write action lets you write to specific attributes on a node.  The request object for the action is a `WriteNodeRequest`, which contains a list of WriteNodes.
 The WriteNode objects describe how and what to write to a node. 
 The `Write node` action returns a `WriteNodeResponse` object that contains a list of `WriteNodeStatusCode` which will contain in the same order as the request the statuses of the written attributes; These need to be checked to know whether the action succeeded.
 
-To write the VALUE attibute on a `VariableNode`, set the NodeId on your WriteNode to the right node Id, the AttributeId to ENUM_AttributeId.VALUE, the Payload to one based on the table above in [Reading the Value of a Variable Node](#read-variable-node-value) section and the VariantType to the correct type.
+To write the VALUE attribute on a `VariableNode`, set the NodeId on your WriteNode to the right node Id, the AttributeId to ENUM_AttributeId.VALUE, the Payload to one based on the table above in [Reading the Value of a Variable Node](#read-variable-node-value) section and the VariantType to the correct type.
 
  {{% alert color="info" %}} It is highly recommended to set the VariantType to avoid the action to read the Variant type before it can write. {{% /alert %}}
-
 
 ### 5.5 Subscription and Monitored Item Services {#monitor-items}
 
@@ -267,58 +270,21 @@ The Subscription and Monitored Item services enable you to receive notification 
 A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.
 A monitored Item corresponds to a specific attribute on a node that is monitored.
 
-#### 5.5.1 The Create Subscribe Action
-The `Create Subscribe` action lets you register a new subscription at the server. 
+In order to monitor items create a microflow that does the following:
+1. Call 'CreateSubscription' action. 
+2. Create 'MonitorItem' objects for each attribute to be monitored, specifie the following fields: 'NodeID', 'AttributeID', 'MicroflowName' associated to the created Subscription. 
+3. Do not use the Mendix commit, user instead the provided 'CommitMonitoredItem' or 'CommitMonitoredItems' action.
 
-1. Create a subscription. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. To create a subscription, simply call the `CreateSubscription` action from the Toolbox in Studio Pro. The requested publishing interval is how often at most you will receive a notification. You can set this value, but it can be overwritten if the server deems the publishing interval not feasible. 
-
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow.png"  >}}
-
-2. Define what and how to listen to any change of a value via `MonitoredItems`. To receive a notification from a monitored item you need two artifacts:
-
-   1. You must instruct your Mendix application what needs to happen when you receive a notification
-   2. You must instruct the OPC-UA server to what information needs to be checked on the server
-
-   {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/create-monitored-item-microflow-configuration.png"  >}}
-   
-   For details on how to instruct your Mendix application and the OPC-UA server, see the sections below. 
-
-
-#### 4.4.1 Instructing Your Mendix Application {#instruct-mendix}
-
-When a notification comes in, a microflow will be triggered. You can check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the `USE_ME` > `12.MonitoredItems_service_set` folder. This microflow simply takes the information from the notification and logs it. The input parameters of the microflow are a `MessageMonitoredItem`, a `MessageMonitoredItemReadValueId`, and a `MessageDataValue`. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required.
-
+When a notification comes in, the microflow specified by 'MicroflowName' on the monitored item will be triggered. Use the full name of the microflow (MODULENAME.MICROFLOWNAME).
+The input parameters of the microflow subscription can be `MessageMonitoredItem` and/or `MessageMonitoredItemReadValueId`, and/or `MessageDataValue`. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required. You can check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the `USE_ME` > `12.MonitoredItems_service_set` folder. This microflow simply takes the information from the notification and logs it. 
 * `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
 * `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.
 * `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
 
-To create your custom implementation, create a microflow that has one or more of these input parameters. Make sure to use each type only once and do not add other type of parameters other than the three parameters listed above, because the microflow will be called in the background and only accept these type of parameters.
-
-{{% todo %}}
-Would you like to resolve your comment? 
-
-( I think these are too many words for what I'm trying to say... )@Stephane. We could do an example here with a singleton that just contains the latest value or just a microflow that adds the read value to the database? or do you have any other simple use case you would like to add here?
-{{% /todo %}}
-
-#### 4.4.2 Instructing Server
-
-To get notifications upon a change of a value, the OPC-UA server needs to know when to send a notification and what the notification should be about. To do so, create a `MonitoredItem` object. You need to provide the subscription that you created in the [Monitoring Items](#monitor-items) section. 
-
-The `NodeID` of which you want to read is an attribute. The value of `NodeID` is the name of the microflow created in the [Instructing Mendix](#instruct-mendix) section in the format `MODULENAME.MICROFLOWNAME`.
-
-{{% todo %}}Is the description above correct?{{% /todo %}}
-
-By default the `AttributeID` is set to `Value`, which will read the `Value` of a `VariableNode`. If you want to read another attribute or if your node is not a `VariableNode`, set the `AttributeID` to the attribute you want to read. For example, if you wish to read changes to the description of a node, set the `AttributeID` to `DESCRIPTION`.
-
-For additional options, see the documentation on the attributes of the `MonitoredItem` entity in the domain model in Studio Pro.
-
-#### 4.4.3 Starting Monitoring
-
-After you have created the `MonitoredItems` you want to be notified about, use the `Commit MonitoredItem(s)` action from the Toolbox to start receiving notifications.
-
-#### 4.4.4 Stoping Monitoring
-
 To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
+
+
+
 
 ## 5 Usage
 

@@ -18,6 +18,16 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### August 25, 2024
+
+#### Improvements
+
+* We took the first step towards a complete overhaul of the [App Buzz](/developerportal/general/buzz/) page and added some basic information to the top of the page. This information gives you a quick and clear overview of the app's features, functionality, and the latest updates on the Team Server.
+
+#### Fixes
+
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localized.
+
 ### August 22, 2024
 
 #### New features

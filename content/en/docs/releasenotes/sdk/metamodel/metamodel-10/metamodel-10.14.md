@@ -1,6 +1,7 @@
 ---
 title: "10.14"
-parent: "metamodel-10"
+url: /releasenotes/sdk/metamodel-10.14/
+weight: 86
 ---
 
 ## 10.14.0
@@ -30,7 +31,7 @@ parent: "metamodel-10"
 * We introduced the `boundaryEvents` property. 
 
 #### UserTaskActivity (Element)
-* We introduced the `boundaryEvents` property. 
+* We introduced the `boundaryEvents` property.
 
 #### WaitForNotificationActivity (Element)
 * We introduced the `boundaryEvents` property. 
@@ -40,5 +41,3 @@ parent: "metamodel-10"
 
 #### TimerBoundaryEvent (Element)
 * We introduced this element. 
-
-This page has been generated automatically.

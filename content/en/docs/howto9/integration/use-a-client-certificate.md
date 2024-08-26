@@ -1,13 +1,12 @@
 ---
 title: "Use a Client Certificate"
 url: /howto9/integration/use-a-client-certificate/
-
 description: "Describes how to configure your app to authenticate using a client certificate."
 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
@@ -18,12 +17,12 @@ This how-to teaches you how to do the following:
 * Configure to run locally
 * Configure in the Mendix Cloud
 
-## 2 Prerequisites
+## Prerequisites
 
 * A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
-## 3 Running Locally
+## Running Locally
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
@@ -59,7 +58,7 @@ The following sample uses client certificate `Mx1.pfx` for `WebService1` and no 
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 
-## 4 Running in the Cloud
+## Running in the Cloud
 
 {{% alert color="info" %}}
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
@@ -67,7 +66,7 @@ You will only be able to follow the steps below if you have the correct access r
 
 To configure client certificates in the Mendix Cloud, follow these steps:
 
-1. Go to the [Mendix Developer Portal](https://home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.

@@ -8,7 +8,7 @@ aliases:
 weight: 17
 ---
 
-## 1 Introduction
+## Introduction
 
 The Backups API v2 lets you manage backups of the data in your app hosted in Mendix Cloud.
 
@@ -16,17 +16,32 @@ Data snapshots consist of a PostgreSQL database dump and all the file objects re
 
 Database archives are a zip file which contains all the data in the snapshot, or the database and files separately if you prefer. 
 
-You cannot currently upload an archive through this API. This function is currently only supported via the [Developer Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
+You cannot currently upload an archive through this API. This function is currently only supported via the [Mendix Portal](/developerportal/operate/backups/). However, you can use this API to restore data from an existing environment snapshot.
 
 This API focuses on working with snapshots and archives asynchronously, because these can be very long-running tasks for large quantities of data. It replaces the deprecated Backups API v1.
 
-## 2 Authentication
+## Authentication
 
-The Backups API requires authentication via API keys that are bound to your Mendix account (for more information, see [Deploy Authentication](/apidocs-mxsdk/apidocs/deploy-api/#authentication)). In addition to the **API Access** permission, the **Backups** permission is also required to manage backups.
+The Backups API requires authentication via API keys that are bound to your Mendix account.
 
-## 3 Examples
+### Obtaining an API Key
 
-### 3.1 Downloading a Backup of Your Data
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### Configuring Permissions
+
+To perform an action via the Backups API, you need **Access to Backups** and **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+
+## Examples
+
+### Downloading a Backup of Your Data
 
 To download a backup of your data, do as follows:
 
@@ -42,11 +57,11 @@ To download a backup of your data, do as follows:
 
 6. After the archive is created, use the value of `url` in the output to download the backup archive.
 
-## 4 API Calls
+## API Calls
 
-### 4.1 List Environment Snapshots
+### List Environment Snapshots
 
-#### 4.1.1 Description
+#### Description
 
 Lists the snapshots of an environment. By setting the `offset` parameter, you can page through the list of snapshots created for an environment.
 
@@ -55,12 +70,12 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots
 ```
 
-#### 4.1.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Query Parameters**
 
@@ -78,7 +93,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.1.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -131,9 +146,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.2 Request Creation of an Environment Snapshot {#request-creation-snapshot}
+### Request Creation of an Environment Snapshot {#request-creation-snapshot}
 
-#### 4.2.1 Description
+#### Description
 
 Request the creation of a snapshot of an environment. The response is a JSON object containing the `snapshot_id` attribute that identifies a snapshot. Use the `snapshot_id` in an API request to check the progress of the creation of this snapshot.
 
@@ -142,12 +157,12 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots
 ```
 
-#### 4.2.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Request Body**
 
@@ -170,7 +185,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 4.2.3 Output
+#### Output
 
 A JSON object with the following key-value pairs:
 
@@ -213,9 +228,9 @@ A JSON object with the following key-value pairs:
 }
 ```
 
-### 4.3 Request Status of Creation of a Snapshot
+### Request Status of Creation of a Snapshot
 
-#### 4.3.1 Description
+#### Description
 
 Check the current status of an ongoing snapshot creation.
 
@@ -224,12 +239,12 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.3.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the snapshot being created.
 
 **Example Request**
@@ -243,7 +258,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.3.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -284,9 +299,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.4 Request Creation of a Snapshot Archive {#request-creation-archive}
+### Request Creation of a Snapshot Archive {#request-creation-archive}
 
-#### 4.4.1 Description
+#### Description
 
 Requests the creation of an archive of a backup snapshot. The response is a JSON object containing the `archive_id` attribute which identifies an archive. use this `archive_id` in an API request to check the progress of the creation of this archive, and obtain a URL to allow you to download it.
 
@@ -295,12 +310,12 @@ HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives
 ```
 
-#### 4.4.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the snapshot for which you want to create an archive.
 
 **Query Parameters**
@@ -319,7 +334,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.4.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -361,9 +376,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.5 Request Status of Creation of an Archive {#request-status-archive}
+### Request Status of Creation of an Archive {#request-status-archive}
 
-#### 4.5.1 Description
+#### Description
 
 After a request to create an archive is submitted, you can check the progress of the archive creation using the `archive_id`. The archive creation will eventually reach one of the following end states: *completed* or *failed*. When it is completed, the `url` attribute is populated with a direct link to your requested backup. This link is valid for eight hours after completion.
 
@@ -372,12 +387,12 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>/archives/<ArchiveId>
 ```
 
-#### 4.5.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *ArchiveId* (String): Identifier of the archive being created.
 
@@ -393,7 +408,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.5.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -434,9 +449,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.6 Update an Existing Snapshot
+### Update an Existing Snapshot
 
-#### 4.6.1 Description
+#### Description
 
 Set a new comment for an existing snapshot. The *updated_at* attribute remains unchanged after this operation.
 
@@ -445,12 +460,12 @@ HTTP Method: PUT
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.6.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *Comment* (String): Optional comment for this snapshot.
 
@@ -475,7 +490,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 4.6.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -516,9 +531,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.7 Delete an Existing Snapshot
+### Delete an Existing Snapshot
 
-#### 4.7.1 Description
+#### Description
 
 Delete an existing snapshot.
 
@@ -527,12 +542,12 @@ HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/snapshots/<SnapshotId>
 ```
 
-#### 4.7.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *SnapshotId* (String): Identifier of the backup.
 * *Comment* (String): Optional comment for this snapshot.
 
@@ -547,7 +562,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.7.3 Output
+#### Output
 
 **Error Codes**
 
@@ -563,23 +578,23 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 
 No content is returned when a backup has been successfully removed.
 
-### 4.8 Request a Restore of a Snapshot to an Environment
+### Request a Restore of a Snapshot to an Environment
 
-#### 4.8.1 Description
+#### Description
 
-Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Developer Portal.
+Restore a previously created backup snapshot to an environment. The environment to which the data will be restored must be stopped before using this call. The response of a successful call contains the details of the request. This call is only available for Mendix Cloud applications. Please note that the `source_snapshot_id` can be a snapshot created for a different environment, similar to the "restore into" functionality in the Mendix Portal.
 
 ```bash
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/restores
 ```
 
-#### 4.8.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 
 **Query Parameters**
 
@@ -609,7 +624,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.8.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -655,9 +670,9 @@ An object with the following key-value pairs:
 }
 ```
 
-### 4.9 Request Status of a Snapshot Restore
+### Request Status of a Snapshot Restore
 
-#### 4.9.1 Description
+#### Description
 
 Check the status of a restore request.
 
@@ -666,12 +681,12 @@ HTTP Method: GET
 URL: https://deploy.mendix.com/api/v2/apps/<ProjectId>/environments/<EnvironmentId>/restores/<RestoreId>
 ```
 
-#### 4.9.2 Request
+#### Request
 
 **Request Parameters**
 
-* *ProjectId* (String): Unique project identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
-* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Developer Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
+* *ProjectId* (String): Unique project identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [apps API](/apidocs-mxsdk/apidocs/deploy-api/#list-apps).
+* *EnvironmentId* (String): Unique environment identifier. Can be looked up via the [Mendix Portal](/developerportal/deploy/environments-details/) or [environments API](/apidocs-mxsdk/apidocs/deploy-api/#list-environments).
 * *RestoreId* (String): Identifier of the request to restore the data.
 
 **Example Request**
@@ -685,7 +700,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 4.9.3 Output
+#### Output
 
 An object with the following key-value pairs:
 

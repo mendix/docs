@@ -50,7 +50,7 @@ Please run `npm update mendixmodelsdk --save`.
 
 | Story # | Impact | Description |
 | --- | --- | --- |
-| 561960 | High | All constructors to create new model elements are removed, instead factory methods should be used. The migration is straight forward: `var entity = new domainmodels.Entity()` becomes: `var entity = domainmodels.Entity.create(model)`. See the next paragraph for more details. |
+| 561960 | High | All constructors to create new model elements are removed, instead factory methods should be used. The migration is straightforward: `var entity = new domainmodels.Entity()` becomes: `var entity = domainmodels.Entity.create(model)`. See the next paragraph for more details. |
 | 562069 | Medium | Versioning has been added explicitly, so usage of elements and properties is checked against the product (and hence meta model) version. As part of this, `new ModelSdkClient(..)` is no longer valid and has to be replaced with `Model.createSdkClient(..)` everywhere. |
 | 569299 | Low | Introduction / deprecation / deletion messages for structures / elements / properties are shown in the typescript documentation. |
 | 581572 | Low | Improved error-message when trying to use an unloaded element or property. |
@@ -60,7 +60,7 @@ Please run `npm update mendixmodelsdk --save`.
 | 561960 | Low | It is no longer possible to instantiate objects that are derived, such as `LayoutParameter`. |
 | 561960 | Low | All model elements expose a `.model` property that returns the model they belong to. |
 | 561960 | Low | Convenience methods to create elements and add them to a parent directly are introduced for all elements that are stored at a unique place (this holds for most elements except for utilities like `texts.Text`). See the next paragraph for more details. |
-| 553639 | Low | The Model API and SDK observe the same rules for setting properties to `null` as the Modeler does: (1) list properties cannot receive `null` at all, (2) non-list properties can only be set to `null` if they are are object-typed (as in, not primitive or enum) and not required (see documentation). |
+| 553639 | Low | The Model API and SDK observe the same rules for setting properties to `null` as the Modeler does: (1) list properties cannot receive `null` at all, (2) non-list properties can only be set to `null` if they are object-typed (as in, not primitive or enum) and not required (see documentation). |
 | 561972 | Low | It is no longer possible to move a model element from one model to another. In other words: model elements can only exist within the model they were created in. |
 | 562069, 561977, 568908 | None | The SDK is now versioned in the sense that structures and properties can have lifecycles, moving from `not yet introduced` to `introduced` to `deprecated` to `deleted` depending on which version of the Mendix Modeler was used to create (the *.mpk* for) the working copy. The SDK provides suitable warnings or errors (once per structure/property per connection) on the console whenever a structure or property is used that is either not yet introduced, deprecated or deleted. |
 | 463511* | Low | Finding images by qualified name now works, so for example, `pages.StaticImageViewer.image` isn't always `null`. |

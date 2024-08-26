@@ -4,15 +4,15 @@ url: /refguide9/boolean-expressions/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 Boolean expressions can be used to perform logical operations that return either true or false.
 
-## 2 and
+## and
 
 The `and` operator checks two Boolean expressions and only returns `true` if both of the expressions are true.
 
-### 2.1 Examples
+### Examples
 
 The examples below illustrate which value the expression returns:
 
@@ -32,11 +32,11 @@ The examples below illustrate which value the expression returns:
 
     The output is `false`, because only the second expression is `true`.
 
-## 3 or
+## or
 
 The `or` operator combines two Boolean expressions, and returns `true` if at least one of the expressions is true.
 
-### 3.1 Examples
+### Examples
 
 The examples below illustrate which value the expression returns:
 
@@ -58,19 +58,19 @@ The examples below illustrate which value the expression returns:
 
     The expression will return `false`, because both expressions are false.
 
-## 4 not
+## not
 
 The `not` operator negates the specified Boolean expression.
 
-### 4.1 Input
+### Input
 
 An expression of type Boolean.
 
-### 4.2 Output
+### Output
 
 Returns the negation of the specified expression. If the expression evaluates to `true`, it returns `false`; and vice versa.
 
-### 4.3 Examples
+### Examples
 
 The examples below illustrate which value the expression returns:
 

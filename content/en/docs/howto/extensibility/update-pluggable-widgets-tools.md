@@ -1,22 +1,21 @@
 ---
 title: "Update Pluggable Widgets Tools"
 url: /howto/extensibility/update-pluggable-widgets-tools/
-
 description: "Follow this guide to update the Pluggable Widgets Tools package used by your pluggable widget to a newer version.
 "
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 Follow this guide to update the Pluggable Widgets Tools package used by your pluggable widget to a newer version.
 
-## 2 Prerequisites
+## Prerequisites
 
 * Install the latest LTS version of [Node.js](https://nodejs.org)
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 
-## 3 Updating a Pluggable Widgets Tools Package
+## Updating a Pluggable Widgets Tools Package
 
 To update a specific widget's Pluggable Widget Tools package, run the following commands at the root of the widget's directory:
 
@@ -30,7 +29,7 @@ To update a specific widget's Pluggable Widget Tools package, run the following 
 If you see type or package errors with TypeScript, you might need to close and re-open the widget's project after update finishes.
 {{% /alert %}}
 
-## 4 Read More
+## Read More
 
 * [Build a Pluggable Native Widget
 ](/howto/extensibility/build-native-widget/)

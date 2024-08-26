@@ -1,7 +1,6 @@
 ---
 title: "Configure Your Theme"
 url: /howto8/front-end/configuring-your-theme/
-
 weight: 15
 aliases:
     - /howto8/ux/configuring-your-theme.html
@@ -9,11 +8,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes how to configure the styling of your page in Studio Pro.
 
-## 2 Configuring Your Theme
+## Configuring Your Theme
 
 The styling that is loaded when opening your Mendix application in a web browser is configured in the HTML of your index pages.
 

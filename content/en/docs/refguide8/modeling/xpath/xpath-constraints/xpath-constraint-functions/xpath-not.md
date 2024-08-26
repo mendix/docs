@@ -3,7 +3,7 @@ title: "XPath Not"
 url: /refguide8/xpath-not/
 ---
 
-## 1 Overview
+## Overview
 
 The `not()` function inverts the meaning (and as such; the result) of the argument.
 
@@ -11,7 +11,7 @@ The `not()` function inverts the meaning (and as such; the result) of the argume
 This can have different results from an inverse comparison (for example `!=` as the negative of `=`) if the XPath is over a one-to-many relationship. See the examples below for more explanation.
 {{% /alert %}}
 
-## 2 Examples
+## Examples
 
 This query returns all customers whose names are *not* equal to "Jansen":
 

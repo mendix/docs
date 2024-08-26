@@ -1,7 +1,6 @@
 ---
 title: "Epics"
 url: /developerportal/project-management/epics/
-
 weight: 1
 description_list: false
 description: "Describes how to use Epics for your app development."
@@ -10,13 +9,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 Epics is the default tool for you to manage the development process of new apps.  The Epics tool enables your team members to collaborate efficiently during the app development process. It supports the Scrum workflow and Kanban workflow.
 
-## 2 Opening an App in Epics
+## Opening an App in Epics
 
-Open the app in the [Developer Portal](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
+Open the app in [Apps](https://sprintr.home.mendix.com/link/myapps) and then go to the [Project Management](/developerportal/project-management/) section. This sections shows all the pages of the Epics tool:
 
 * [Board](/developerportal/project-management/epics/board/)
 * [Planning](/developerportal/project-management/epics/planning/)

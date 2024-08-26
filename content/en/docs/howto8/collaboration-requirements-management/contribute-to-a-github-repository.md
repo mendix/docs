@@ -1,14 +1,13 @@
 ---
 title: "Contribute to a Mendix GitHub Repository"
 url: /howto8/collaboration-requirements-management/contribute-to-a-github-repository/
-
 weight: 20
 aliases:
     - /howto8/collaboration-project-management/contribute-to-a-github-repository.html
     - /howto8/collaboration-project-management/contribute-to-a-github-repository
 ---
 
-## 1 Introduction
+## Introduction
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
@@ -16,7 +15,7 @@ This how-to teaches you how to do the following:
 
 * Contribute to a Mendix GitHub Repository according to Mendix guidelines
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
@@ -24,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Have a [Mendix account](https://home.mendix.com/)
 * Fork a repository on GitHub (for details, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
-## 3 Making Changes to an Existing Repository
+## Making Changes to an Existing Repository
 
 To make changes to an existing repository, follow these guidelines:
 
@@ -36,7 +35,7 @@ To make changes to an existing repository, follow these guidelines:
 * Make sure you have added the necessary tests for your changes
 * Run all the tests to assure nothing was accidentally broken
 
-## 4 Submitting Changes
+## Submitting Changes
 
 To submit changes, follow these guidelines:
 
@@ -46,7 +45,7 @@ To submit changes, follow these guidelines:
 * After feedback has been given, Mendix expects a response within two weeks
     * After two weeks, we may close the pull request if it isn't showing any activity
 
-## 5 Read More
+## Read More
 
 * [Start Your Own Repository](/howto8/collaboration-requirements-management/starting-your-own-repository/)
 * [Version Control](/refguide8/version-control/)

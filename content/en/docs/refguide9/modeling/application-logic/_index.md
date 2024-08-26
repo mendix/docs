@@ -1,12 +1,11 @@
 ---
 title: "Application Logic"
 url: /refguide9/application-logic/
-
 weight: 40
 description: "Presents an overview of documentation on microflows and nanoflows."
 ---
 
-## 1 Introduction
+## Introduction
 
 While you can create a simple Mendix app using widgets on pages, you can unleash the power of Mendix by adding application logic to your app.
 

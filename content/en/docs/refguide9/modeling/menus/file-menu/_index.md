@@ -5,13 +5,13 @@ description: "Describes the File Menu in Studio Pro."
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 The **File** menu allows you to manage documents and apps, for example, to create a new app or save changes:
 
 {{< figure src="/attachments/refguide9/modeling/menus/file-menu/file-menu.png" alt="File Menu" class="no-border" >}}
 
-## 2 Menu Items Overview {#overview}
+## Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:
 
@@ -31,6 +31,6 @@ The **File** menu items are described in the table below:
 | **Import App Package** | Imports a package that was created with the **Export App Package** menu item. For more information, see [Import App Package](/refguide9/import-app-package-dialog/). |                                                   |
 | **Exit**                   | Closes Studio Pro                                            |                                                   |
 
-## 3 Read More
+## Read More
 
 * [Studio Pro Overview](/refguide9/studio-pro-overview/)

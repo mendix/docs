@@ -1,7 +1,6 @@
 ---
 title: "Other Deployment Options"
 url: /releasenotes/developer-portal/on-premises/
-
 weight: 40
 description: "Release notes for On-premises deployments based on Virtual Machine (Windows and Linux) and Buildpacks (Cloud Foundry and Docker)"
 ---
@@ -39,7 +38,7 @@ For information on the current status of Mendix deployment see [Mendix Status](h
 #### IBM Cloud Portal Deployment
 
 * We have updated the process for deploying to IBM Cloud Portal.
-* We have also added the ability to manage IBM Cloud Portal Cloud Foundry  services from within the Mendix Developer Portal.
+* We have also added the ability to manage IBM Cloud Portal Cloud Foundry services from within the Mendix Developer Portal.
 
 ## 2018
 

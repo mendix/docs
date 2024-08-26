@@ -5,11 +5,11 @@ description: "Describes the Go to option in Mendix Studio Pro."
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 In Studio Pro editors, such as navigation, page, or microflow editor, you can access a handy menu by right-clicking items. A **Go to** option is commonly used to find your way in an app. It allows you to navigate from one element to another: for example, to navigate to the target of a button or to the source of a data grid.
 
-## 2 The Go to Option
+## The Go to Option
 
 The examples of using the **Go to** option are described below:
 
@@ -25,7 +25,7 @@ The examples of using the **Go to** option are described below:
 
     {{< figure src="/attachments/refguide/modeling/menus/edit-menu/go-to-option/go-to-entity.png" alt="Go to Entity" class="no-border" width="400" >}}
 
-## 3 Read More
+## Read More
 
 * [Find, Find Advanced, and Find Usages](/refguide/find-and-find-advanced/)
 * [Navigation](/refguide/navigation/)

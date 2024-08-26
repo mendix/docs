@@ -18,7 +18,7 @@ On the top of the page, you can find the following key information about your ap
 
     {{% alert color="info" %}}If no description is provided, there is a placeholder text.{{% /alert %}}
 
-    {{% alert color="info" %}}If you have the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/collaborate/general-settings) page.{{% /alert %}}
+    {{% alert color="info" %}}If you have the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/collaborate/general-settings/) page.{{% /alert %}}
 
 * The name of the **Company** owning the app
 * The **Target Cloud** where your app is deployed, and, if the target is the public Mendix cloud, the **License State** of the app

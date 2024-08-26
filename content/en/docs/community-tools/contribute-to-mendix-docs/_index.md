@@ -138,7 +138,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
 8. To see the local site preview, go to http://localhost:1313/.
 9. Navigate to the page that you just made changes to, and you can preview your changes locally! 
 
-{{% alert color="info" %}}As long as the local build is running, each time after you saved your changes, you will be able to preview the changes on the local site. If not, refresh the local site using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. If this does not work, stop the current running build with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> and run `npm run build` again. {{% /alert %}}
+{{% alert color="info" %}}As long as the local build is running, each time after you saved your changes, you will be able to preview the changes on the local site. If not, refresh the local site using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. If this does not work, stop the current running build with <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
 
 ## Leaving Feedback on the Documentation
 

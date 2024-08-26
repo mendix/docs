@@ -263,7 +263,7 @@ To write the VALUE attribute on a `VariableNode`, set the NodeId on your WriteNo
 
  {{% alert color="info" %}} It is highly recommended to set the VariantType to avoid the action to read the Variant type before it can write. {{% /alert %}}
 
-### 5.4 Subscription and monitored item services {#monitor-items}
+### 5.4 Subscription and monitored item services
 
 The Subscription and Monitored Item services enable you to receive notification upon a change of a monitored value.
 A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.

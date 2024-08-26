@@ -26,13 +26,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 In your microflow which is making a REST or SOAP call, perform a **Get Destination** action before the REST or SOAP call. This needs to use the Destination Name which is configured in a Destination on SAP BTP.
 
-{{< figure src="/attachments/deployment/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-destination-with-rest/rest-microflow.png" alt="REST Microflow" class="no-border" >}}
 
 The **Get Destination** action returns a **Destination** object. This is named as *DestinationObject* in the above example, and is used to configure the subsequent REST or SOAP call.
 
 The Destination object has the properties shown in the image below:
 
-{{< figure src="/attachments/deployment/sap-destination-with-rest/destination-entity.png" alt="Destination entity" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-destination-with-rest/destination-entity.png" alt="Destination entity" class="no-border" >}}
 
 ### Configuring a REST Call
 
@@ -52,7 +52,7 @@ The following entries are required in the **General** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/deployment/sap-destination-with-rest/rest-general.png" alt="REST general tab" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-destination-with-rest/rest-general.png" alt="REST general tab" class="no-border" >}}
 
 #### HTTP Headers Tab
 
@@ -91,7 +91,7 @@ The following entries are required in the **Operation** tab:
 |Username|$DestinationObject/SapConnectivityProxyCredentials|
 |Password|empty|
 
-{{< figure src="/attachments/deployment/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" class="no-border" >}}
+{{< figure src="/attachments/deployment/sap-btp/sap-destination-with-rest/web-service-general.png" alt="SOAP web service general tab" class="no-border" >}}
 
 #### HTTP Headers Tab
 

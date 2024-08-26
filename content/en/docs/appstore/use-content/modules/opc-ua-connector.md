@@ -274,13 +274,19 @@ In order to monitor items create a microflow that does the following:
 2. Create 'MonitorItem' objects for each attribute to be monitored, specifie the following fields: 'NodeID', 'AttributeID', 'MicroflowName' associated to the created Subscription. 
 3. Do not use the Mendix commit, user instead the provided 'CommitMonitoredItem' or 'CommitMonitoredItems' action.
 
-When a notification comes in, the microflow specified by 'MicroflowName' on the monitored item will be triggered. Use the full name of the microflow (MODULENAME.MICROFLOWNAME).
-The input parameters of the microflow subscription can be `MessageMonitoredItem` and/or `MessageMonitoredItemReadValueId`, and/or `MessageDataValue`. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required. You can check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the `USE_ME` > `12.MonitoredItems_service_set` folder. This microflow simply takes the information from the notification and logs it. 
-* `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
-* `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.
-* `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
+When a notification comes in, the microflow specified by 'MicroflowName' on the monitored item will be triggered. 
 
-To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
+* Use the full name of the microflow (MODULENAME.MICROFLOWNAME).
+
+* The input parameters of the microflow subscription can be `MessageMonitoredItem` and/or `MessageMonitoredItemReadValueId`, and/or `MessageDataValue`. These are the only parameters that are allowed for a microflow to be called on a notification, but not all are required. 
+
+    * `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
+    * `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.
+    * `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
+    
+    Check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the `USE_ME` > `12.MonitoredItems_service_set` folder. This microflow simply takes the information from the notification and logs it. 
+
+* To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
 
 ## 5 Usage
 

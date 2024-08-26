@@ -44,11 +44,11 @@ This chapter explains how to quickly configure connection to an OPC UA server, b
 
 ### 3.1 Startup and shutdown
 
-Make sure you call the OPC 'After Start Up' and 'Before Shudtown' actions from your app After Start Up and Before Shutdown microflows.
+Make sure you call the OPC 'After Start Up' and 'Before Shutdown' actions from your app After Start Up and Before Shutdown microflows.
 Actions full name are 'OPCUAConnector.ASU_OPCUA' and 'OPCUAConnector.BSD_OPCUA'.
 
 * After start up tries to reconnect to configured servers, re-monitor items and pre-loads your app trusted certificates. 
-* Before Shudtown close all opened connections.
+* Before Shutdown close all opened connections.
 
 {{% alert color="info" %}}If you maintain many connections to OPC UA servers, the startup will take much longer.{{% /alert %}}
 

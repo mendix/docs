@@ -35,17 +35,17 @@ Styling:
 
 #### Define Default Tab 
 
-**Define default tab** defines whether a specific tab page should be shown by default. If set to *Yes*, an additional **Default tab page** property will be shown to set the default tab. If set to *No*, the first tab will be shown. Note that the **Attribute** property may override this behavior if configured.
+**Define default tab** defines whether a specific tab page should be shown by default. If set to **Yes**, an additional **Default tab page** property will be shown to set the default tab. If set to **No**, the first tab will be shown. Note that the **Attribute** property may override this behavior if configured.
 
-Default: *No*
+Default: **No**
 
 #### Attribute
 
-The **Attribute** property can be used to set the active tab index (1-based) programmatically when the tab container is inside a data context. The selected attribute must be of type *Integer*. The active tab will automatically change when the value of the attribute changes to a valid tab index.
+The **Attribute** property can be used to set the active tab index (1-based) programmatically when the tab container is inside a data context. The selected attribute must be of type integer. The active tab will automatically change when the value of the attribute changes to a valid tab index.
 
-#### On change
+#### On Change
 
-The **On change** action can be used to execute an action when the user selects a tab page.
+The **On change** action can be used to run an action when the user selects a tab page.
 
 ### Visibility Section {#visibility}
 

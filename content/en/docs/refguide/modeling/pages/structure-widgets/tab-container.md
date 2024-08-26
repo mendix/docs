@@ -33,7 +33,7 @@ Styling:
 
 ### General
 
-#### Define Default Tab 
+#### Define Default Tab {#define-default}
 
 **Define default tab** defines whether a specific tab page should be shown by default. If set to **Yes**, an additional **Default tab page** property will be shown to set the default tab. If set to **No**, the first tab will be shown. Note that the **Attribute** property may override this behavior if configured.
 

@@ -137,7 +137,7 @@ A standard sign out action will end an end-user’s Mendix session, but it will 
 When you are building the native mobile app using **Build Native Mobile App** option, make sure to follow the steps below:
 
 1. Turn on **Deep Link**.
-1. After turning on the **Deep Link**, add the same appname from *`APP_NAME`*`://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
+1. After turning on the **Deep Link**, add the same *`APP_NAME`* from *`APP_NAME`*`://oauth/callback` to the **App Scheme**. For more information, see the [Configuring Client Information](#client-info) section above.
 
 {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Deeplink.png" max-width=80% >}}
 
@@ -202,7 +202,7 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 
     1. For the application that has been deployed using **Build Native Mobile App**: *`APP_NAME`*`://oauth/callback`
 
-        {{% alert color="info" %}} Use the same appname which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% /alert %}}
+        {{% alert color="info" %}} Use the same *`APP_NAME`* which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) App sections above. {{% /alert %}}
 
         {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Okta deployed.png" max-width=80% >}}
 

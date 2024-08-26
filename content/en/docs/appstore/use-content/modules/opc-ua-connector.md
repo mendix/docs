@@ -40,19 +40,19 @@ You must have the following Marketplace module installed:
 
 ## 3 Basic configuration
 
-This chapter explains how to quickly configure connection to an OPC UA server, browse for nodes, read, and write data using the template pages included in the connector.
+This chapter explains how to quickly configure connection to an OPC-UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
-### 3.1 Startup and shutdown
+### 3.1 App startup and shutdown
 
-Make sure you call the OPC 'After Start Up' and 'Before Shutdown' actions from your app After Start Up and Before Shutdown microflows.
-Actions full name are 'OPCUAConnector.ASU_OPCUA' and 'OPCUAConnector.BSD_OPCUA'.
+Make sure you call the OPC-UA `After Start Up` and `Before Shutdown` actions from your App After Startup and Before Shutdown microflows configured in your App settings.
+Actions full name are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
 
-* After start up tries to reconnect to configured servers, re-monitor items and pre-loads your app trusted certificates. 
+* After Start Up tries to reconnect to configured servers, re-monitor items and pre-loads your App trusted certificates. 
 * Before Shutdown close all opened connections.
 
-{{% alert color="info" %}}If you maintain many connections to OPC UA servers, the startup will take much longer.{{% /alert %}}
+{{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup will take much longer.{{% /alert %}}
 
-### 3.1 Configuring the Connection to the OPA-UA Server
+### 3.2 Configuring the connection to OPC-UA Server
 
 1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It will allow to acces the configuration page.
 
@@ -78,7 +78,7 @@ Actions full name are 'OPCUAConnector.ASU_OPCUA' and 'OPCUAConnector.BSD_OPCUA'.
 
 Once the configuration is saved, the APIs can be used in your application.
 
-### 3.2 Browsing the OPC-UA Server
+### 3.3 Browsing the OPC-UA Server
 
 1. In Studio Pro, assign the `CanBrowse` module role to a user role that will browse the OPC-UA server.
 2. Run the app locally and open the app.
@@ -88,27 +88,26 @@ Once the configuration is saved, the APIs can be used in your application.
 
 {{% todo %}}Where is the Browse button? Is there a screenshot?{{% /todo %}}
 
-## 4 Advance configuration
+## 4 Advance connection
 
-This chapter explains how to configure connection to an OPC UA server without discovery service.
+This chapter explains how to configure connection to an OPC-UA server without discovery service.
 
-### 4.1 Create a microflow to set up a manual connection
-ADD FIGURE
-* Create the microflow.
-* The microflow should create the following objects in order. The details for each can be found in the following paragraphs
+* Create a microflow to set up a manual connection.
+* The microflow should create the following objects in order. (The details for each can be found in the following paragraphs)
 
     * Create a `ServerConfiguration`
-    * Create and associate associated `IdentityToken`
+    * Create and associate an `IdentityToken`
     * Provide an associated `ClientCertificate` 
   
-* Call the ServerConfiguration_Connect microflow to connect to the server.
-    * If this microflow returns a TestConnectionResponse with isSuccess to true, the connection succeeded.
-    * If not, the error will be shown in the ErrorMessage attribute.
+* Call the `ServerConfiguration_Connect` microflow to connect to the server.
 
- * Trust the server certificate
+    * If this microflow returns a TestConnectionResponse with `isSuccess` to true, the connection succeeded.
+    * If not, the error will be shown in the `ErrorMessage` attribute.
+
+ * Trust the server certificate.
  * Call your microflow from within the application.
 
-#### 4.1.1 ServerConfiguration
+### 4.1 ServerConfiguration object
 
 The core information of the configuration to connect to an OPC-UA server must be stored as `ServerConfiguration` objects.
 
@@ -128,7 +127,7 @@ The configuration contains the following attributes:
 * `SecurityPolicyURI` – to determine what algorithm to use to encrypt and sign the data
 * `_IsConnected`: will be set to true when connection is open
 
-#### 4.1.2 Identity Token
+### 4.2 Identity Token
 
 A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support.
 
@@ -138,7 +137,7 @@ The three options are as follows:
 * `Username Identity Token` – This is the identity token based on a username and password combination.
 * `Certificate Identity Token` – This is the identity token based on a certificate. The certificate must be trusted by the OPC-UA server before it can be used.
 
-#### 4.1.3 Client Certificate
+### 4.3 Client Certificate
 
 A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection.
 
@@ -147,7 +146,7 @@ If the message security mode is set to *Sign* or Sign&Encrypt, the `ServerConfig
 * The `ClientCertificate` must be an X509 formatted PEM file.
 * The `ClientCertificatePrivateKey` must be an encrypted PKCS8 or PKCS1 formatted PEM file.
 
-#### 4.1.4 Server Certificate
+### 4.4 Server Certificate
 
 A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. 
 For the client side, this means the client should trust the certificate of the server. 
@@ -157,9 +156,9 @@ The association between the client and the server certificates does not need to 
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
-### 5 Using Services
+## 5 Using services
 
-#### 5.1. View Service
+### 5.1. View service
 
 The view services enable you to navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. See below:
 
@@ -169,7 +168,7 @@ The view services enable you to navigate the content of the server. There are th
 
 For more advanced cases use the provided Browse action.
 
-#### 5.1.1 The Browse Action
+#### 5.1.1 The browse action
 
 The browse action lets you traverse from one node to others.  The request object for the action is a `BrowseDescription`, which contains the following fields:
 
@@ -213,7 +212,7 @@ The response of the `Browse` action returns a browse response object. There is a
 
 * `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that might be used in future calls to retrieve more references. 
 
-### 5.2 Reading data (Attribute services)
+### 5.2 Attribute services
 
 The attribute services enable you a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
@@ -227,13 +226,13 @@ To make it easier to get the information on a node, there is a `GetNodeDetails` 
 
 For more advanced cases use the provided Read action.
 
-#### 5.2 The Read action
+#### 5.2.1 The read action
 
 The Read action lets you read specific attributes of a node. The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
 The ReadNodeReadValueId objects describe the attributes on the nodes you want to read. 
 The `Read node` action returns a `ReadNodeResponse` object that contains a list of `ReadNodeResponseResults` which will contain in the same order as the request the value of the read attributes.
 
-Each `ReadNodeResponseResult` object contains a `DataValue` attribute. This is the raw payload returned from the OPC UA Server. 
+Each `ReadNodeResponseResult` object contains a `DataValue` attribute. This is the raw payload returned from the OPC-UA Server. 
 To read the VALUE attibute on a `VariableNode`, set the NodeId on your ReadNodeReadValueId to the right node Id and the AttributeId to ENUM_AttributeId.VALUE.
 The corresponding DataValue attributes will depent on the type of the Datatype. 
 
@@ -254,7 +253,7 @@ The corresponding DataValue attributes will depent on the type of the Datatype.
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-#### 5.3 The Write action
+### 5.3 The write action
 
 The Write action lets you write to specific attributes on a node.  The request object for the action is a `WriteNodeRequest`, which contains a list of WriteNodes.
 The WriteNode objects describe how and what to write to a node. 
@@ -264,7 +263,7 @@ To write the VALUE attribute on a `VariableNode`, set the NodeId on your WriteNo
 
  {{% alert color="info" %}} It is highly recommended to set the VariantType to avoid the action to read the Variant type before it can write. {{% /alert %}}
 
-### 5.5 Subscription and Monitored Item Services {#monitor-items}
+### 5.4 Subscription and monitored item services {#monitor-items}
 
 The Subscription and Monitored Item services enable you to receive notification upon a change of a monitored value.
 A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.
@@ -282,9 +281,6 @@ The input parameters of the microflow subscription can be `MessageMonitoredItem`
 * `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
 
 To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
-
-
-
 
 ## 5 Usage
 

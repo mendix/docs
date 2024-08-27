@@ -118,7 +118,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
         1. In Sourcetree, click **Clone**. 
         2. Enter the URL of the forked repository and select a destination directory.
 
-     The repo will be cloned into a folder called **docs** in the location you selected. You can rename it afterwards if you want to.
+     The repo is cloned into a folder called **docs** in the location you selected. You can rename it afterwards if you want to.
 
      {{% alert color="warning" %}}If you are running on Windows, avoid using a long directory path for the local directory; some files can reach the limits of Git’s file length. A base path of up to 50 characters works, but 64 characters is currently too long.{{% /alert %}}
 

@@ -114,7 +114,7 @@ To edit the Java action in Eclipse, open Eclipse and follow these steps:
 
     In the Java code, there is some placeholder code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code.
 
-    ```java {linenos = table,hl_lines="4-6",linenostart=33}
+    ```java {hl_lines="4-6"}
     	@java.lang.Override
     	public java.lang.String executeAction() throws Exception
     	{

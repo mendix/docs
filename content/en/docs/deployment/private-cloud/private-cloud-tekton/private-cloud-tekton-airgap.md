@@ -72,7 +72,7 @@ Some registries cannot support complex repository addresses such as `my.registry
 
 You will need to update the `destination:` value for each of the repositories as shown below:
 
-```json {linenos=table,hl_lines=6,linenostart=22}
+```json {hl_lines=6}
 …
 {
 	"name": "mxbuild8.18.11",

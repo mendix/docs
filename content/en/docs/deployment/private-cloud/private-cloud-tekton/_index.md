@@ -200,7 +200,7 @@ To set the GitLab Token in GitLab you specify it as the **Secret Token** when cr
 With HTTP clients you simply need to add `X-GitLab-Token` to your header.
 For example, using the `curl` client:
 
-```bash {linenos=table, hl_lines=[3]}
+```bash {hl_lines=[3]}
 curl -X POST \\
   http://pipeline.trigger.yourdomain.com/ \\
   -H 'X-GitLab-Token: SomeLongSecureToken42' \\

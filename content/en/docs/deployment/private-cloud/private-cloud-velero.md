@@ -32,7 +32,7 @@ To create a backup with Velero, follow these steps:
 
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=0
     kubectl scale deployment mendix-operator --replicas=0
     ```
@@ -57,7 +57,7 @@ To create a backup with Velero, follow these steps:
 
 4. Restart the Mendix Operator and Mendix agent by entering the following command:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=1
     kubectl scale deployment mendix-operator --replicas=1
     ```

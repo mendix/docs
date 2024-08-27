@@ -88,7 +88,7 @@ Once the configuration is saved, the APIs can be used in your application.
 
 {{% todo %}}Where is the Browse button? Is there a screenshot?{{% /todo %}}
 
-## Advance Connection
+## Advanced Connection
 
 This chapter explains how to configure connection to an OPC-UA server without discovery service.
 

@@ -234,12 +234,12 @@ See [Length](/refguide/length/) for details.
 
 See [Parse Integer](/refguide/parse-integer/) for details.
 
-## Parse & Format Decimal Function Calls {#expressions-formatter-functions}
+## Parse and Format Decimal Function Calls {#expressions-formatter-functions}
 
 * [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
 * [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
 
-## Parse & Format Date Function Calls
+## Parse and Format Date Function Calls
 
 * [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
 * [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string

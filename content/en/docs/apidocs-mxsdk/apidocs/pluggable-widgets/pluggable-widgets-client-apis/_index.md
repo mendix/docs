@@ -62,7 +62,7 @@ The flag `canExecute` indicates if an action can be run under current conditions
 
 You can also employ this flag when using a **Call microflow** action triggering a microflow with a parameter. Such an action cannot be run until a parameter object is available, for example when a parent data view has finished loading. Attempting to `execute` an action that cannot be run will have no effect, and generates a debug-level warning message.
 
-The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](http://localhost:1313/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
+The exception to this behavior is when the `ActionValue` is returned by [`ListActionValue.get()`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#listactionvalue). In this case, the flag will be true when not all arguments have been loaded. Calling `execute()` for an action with loading arguments will run the action as soon as all arguments become available. While waiting, `isExecuting` will be set to `true` and subsequent calls to `execute()` are ignored. If any arguments become unavailable after loading, the action will not run and a debug-level warning message will be logged.
 
 #### 4.1.2 isExecuting
 

@@ -46,7 +46,7 @@ The deployment package must be available over the internet without requiring aut
 
 You need to create a file containing yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix CR yaml file. Adapt this example as required for your own application.
 
-```yml
+```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
 metadata:

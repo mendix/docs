@@ -81,7 +81,7 @@ For simplicity and compatibility with Minikube, we mount a folder from the `mini
 
 Here is the definition of the `postgres-deployment.yaml` database component:
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -123,7 +123,7 @@ And finally, it is necessary to expose the database as a service and make it ava
 
 (`postgres-service.yaml`):
 
-```yml
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -193,7 +193,7 @@ The Secret values in the secrets file must be base64 encoded.
 
 Create a file `mendix-app-secrets.yaml` with the following contents:
 
-```yml
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -224,7 +224,7 @@ Once the database service and the secrets are created, you can create the applic
 
 `mendix-app.yaml`:
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -319,7 +319,7 @@ The definition of publishing the Mendix app as a NodePort service is described i
 
 `mendix-app-service.yaml`:
 
-```yml
+```yaml
 apiVersion: v1
 kind: Service
 metadata:

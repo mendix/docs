@@ -246,7 +246,7 @@ To deploy your deployment package, do the following:
 5. Ensure you are in the same folder as the package you wish to deploy.
 6. Create a `manifest.yml` file with at least the following content:
 
-    ```yml
+    ```yaml
         applications:
         - name: {app_name}
           disk_quota: {disk_quota_size}

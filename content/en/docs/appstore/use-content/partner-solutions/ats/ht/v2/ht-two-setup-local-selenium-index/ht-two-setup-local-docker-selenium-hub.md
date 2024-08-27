@@ -28,7 +28,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 1. Create a folder or directory to place your docker-compose file
 2. Create a docker-compose.yml in your folder/directory: 
 
-    ```yml
+    ```yaml
     hub: 
      image: selenium/hub:3.8.1
      environment:
@@ -118,7 +118,7 @@ By default the hub only accepts a maximum of 5 sessions to run in parallel at a 
 
 If you want to watch your test case live for debugging purpose, you can use the following docker-compose.yml:
 
-```yml
+```yaml
 hub: 
  image: selenium/hub:3.8.1
  environment:

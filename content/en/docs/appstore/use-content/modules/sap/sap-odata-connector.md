@@ -233,7 +233,7 @@ To perform Java debugging, you must do the following:
 
 1. Set the following environment properties.
 
-    ```yml
+    ```yaml
     DEVELOPMENT_MODE= true
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
     ```

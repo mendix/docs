@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the OPC-UA connector, whi
 
 ---
 
-## 1 Introduction
+## Introduction
 
 [OPC](https://opcfoundation.org/) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. You can use the OPC-UA connector with your Mendix app to communicate with an OPC-UA server. The OPC-UA connector is based on [Eclipse Milo](https://github.com/eclipse/milo) client SDK, an open-source implementation of OPC.
 
-### 1.1 Features
+### Features
 
 The OPC-UA connector consists of microflows that enable you to do the following:
 
@@ -18,31 +18,31 @@ The OPC-UA connector consists of microflows that enable you to do the following:
 * Read and write OPC-UA node attributes
 * Subscribe to OPC-UA data changes
 
-### 1.2 License
+### License
 
 The OPC-UA connector is licensed under the [EPL2.0 License](https://www.eclipse.org/legal/epl-2.0/).
 
-### 1.3 Pre-requisites
+### Pre-requisites
 
 * Studio Pro version 9.24.3 or above
 * OPC-UA server version 1.03 or above
 
-### 1.4 Dependencies
+### Dependencies
 
 You must have the following Marketplace module installed:
 
 * [Community Commons](https://marketplace.mendix.com/link/component/170)
 
-## 2 Installation
+## Installation
 
 1. Install the dependencies.
 2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
 
-## 3 Basic configuration
+## Basic Configuration
 
 This chapter explains how to quickly configure connection to an OPC-UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
-### 3.1 App startup and shutdown
+### App Startup and Shutdown
 
 Make sure you call the OPC-UA `After Start Up` and `Before Shutdown` actions from your App After Startup and Before Shutdown microflows configured in your App settings.
 Actions full name are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
@@ -52,9 +52,9 @@ Actions full name are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
 
 {{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup will take much longer.{{% /alert %}}
 
-### 3.2 Configuring the connection to OPC-UA Server
+### Configuring the Connection to the OPC-UA Server
 
-1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It will allow to acces the configuration page.
+1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It allows to acces the configuration page.
 
 2. Assign the `CanConfigure` module role to a user role that will configure the connections to your server.
 
@@ -78,7 +78,7 @@ Actions full name are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
 
 Once the configuration is saved, the APIs can be used in your application.
 
-### 3.3 Browsing the OPC-UA Server
+### Browsing the OPC-UA Server
 
 1. In Studio Pro, assign the `CanBrowse` module role to a user role that will browse the OPC-UA server.
 2. Run the app locally and open the app.
@@ -88,7 +88,7 @@ Once the configuration is saved, the APIs can be used in your application.
 
 {{% todo %}}Where is the Browse button? Is there a screenshot?{{% /todo %}}
 
-## 4 Advance connection
+## Advance Connection
 
 This chapter explains how to configure connection to an OPC-UA server without discovery service.
 
@@ -107,7 +107,7 @@ This chapter explains how to configure connection to an OPC-UA server without di
  * Trust the server certificate.
  * Call your microflow from within the application.
 
-### 4.1 ServerConfiguration object
+### ServerConfiguration Object
 
 The core information of the configuration to connect to an OPC-UA server must be stored as `ServerConfiguration` objects.
 
@@ -127,7 +127,7 @@ The configuration contains the following attributes:
 * `SecurityPolicyURI` – to determine what algorithm to use to encrypt and sign the data
 * `_IsConnected`: will be set to true when connection is open
 
-### 4.2 Identity Token
+### Identity Token
 
 A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support.
 
@@ -137,7 +137,7 @@ The three options are as follows:
 * `Username Identity Token` – This is the identity token based on a username and password combination.
 * `Certificate Identity Token` – This is the identity token based on a certificate. The certificate must be trusted by the OPC-UA server before it can be used.
 
-### 4.3 Client Certificate
+### Client Certificate
 
 A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection.
 
@@ -146,7 +146,7 @@ If the message security mode is set to *Sign* or Sign&Encrypt, the `ServerConfig
 * The `ClientCertificate` must be an X509 formatted PEM file.
 * The `ClientCertificatePrivateKey` must be an encrypted PKCS8 or PKCS1 formatted PEM file.
 
-### 4.4 Server Certificate
+### Server Certificate
 
 A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. 
 For the client side, this means the client should trust the certificate of the server. 
@@ -156,9 +156,9 @@ The association between the client and the server certificates does not need to 
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
-## 5 Using services
+## Using Services
 
-### 5.1. View service
+### View Service
 
 The view services enable you to navigate the content of the server. There are three implementations provided that will be sufficient for most use cases. See below:
 
@@ -168,7 +168,7 @@ The view services enable you to navigate the content of the server. There are th
 
 For more advanced cases use the provided Browse action.
 
-#### 5.1.1 The browse action
+#### The Browse Action
 
 The browse action lets you traverse from one node to others.  The request object for the action is a `BrowseDescription`, which contains the following fields:
 
@@ -177,7 +177,7 @@ The browse action lets you traverse from one node to others.  The request object
 * `NodeiRreferenceTypeID` – This specifies the Node ID of the reference type to follow. If left empty, all references are returned.
 * `IncludeSubTypes` – This indicates whether subtypes of the `ReferenceType` should be included.
 * `NodeClassMask` – This specifies which `NodeClasses` will be returned. If no value is provided, no filter will be applied. This is an integer attribute. The interpretation is a set of bits as described in the table below. You need to sum up the values to create the mask. For example: browsing only `object`, `variable`, and `view` is binary represented by `[1,1,0,0,0,0,0,1]`, which has to be set up as 1 + 2 + 128 = 131 for the integer value. 
-    
+  
   | Bit  | Node class    | Value |
   | ---- | ------------- | ----- |
   | 0    | Object        | 1     |
@@ -212,7 +212,7 @@ The response of the `Browse` action returns a browse response object. There is a
 
 * `NodeClass` – This is the node class of the referenced node. If the server does not allow to return as many references as requested, the response will contain a continuation point that might be used in future calls to retrieve more references. 
 
-### 5.2 Attribute services
+### Attribute Services
 
 The attribute services enable you a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
@@ -226,7 +226,7 @@ To make it easier to get the information on a node, there is a `GetNodeDetails` 
 
 For more advanced cases use the provided Read action.
 
-#### 5.2.1 The read action
+#### The Read Action
 
 The Read action lets you read specific attributes of a node. The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
 The ReadNodeReadValueId objects describe the attributes on the nodes you want to read. 
@@ -253,7 +253,7 @@ The corresponding DataValue attributes will depent on the type of the Datatype.
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-### 5.3 The write action
+### The Write Action
 
 The Write action lets you write to specific attributes on a node.  The request object for the action is a `WriteNodeRequest`, which contains a list of WriteNodes.
 The WriteNode objects describe how and what to write to a node. 
@@ -263,7 +263,7 @@ To write the VALUE attribute on a `VariableNode`, set the NodeId on your WriteNo
 
  {{% alert color="info" %}} It is highly recommended to set the VariantType to avoid the action to read the Variant type before it can write. {{% /alert %}}
 
-### 5.4 Subscription and monitored item services
+### Subscription and Monitored Item Services
 
 The Subscription and Monitored Item services enable you to receive notification upon a change of a monitored value.
 A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.
@@ -288,6 +288,11 @@ When a notification comes in, the microflow specified by 'MicroflowName' on the 
 
 * To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
 
-## 5 Usage
+## Technical Reference
 
-{{% todo %}}To be filled with default documentation from Technical writer because all this information can be found in the documentation section of Studio Pro{{% /todo %}}
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro.
+
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
+
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click the element for which you want to view the documentation.  {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" >}}

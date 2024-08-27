@@ -120,6 +120,7 @@
     .highlight {
         @extend .card;
 
+        display: block;
         margin: 2rem 0;
         padding: 0;
         position: relative;

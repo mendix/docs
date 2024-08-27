@@ -252,6 +252,12 @@ In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta
 
 For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
 
+### System Texts Editor
+
+In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 
+
+If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+
 ### Toolbox
 
 Enable this setting to use the modernized toolbox. This requires restart of Studio Pro.

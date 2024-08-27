@@ -22,6 +22,7 @@ For information on the current status of deployment to SAP BTP and any planned r
 #### Bug Fixes
 
 * Issue of missing Tag Description for deployment package resolved.
+* Fixed updating buildpack version to latest while re-deployment of application on SAP BTP.
 
 ### July 14, 2024
 

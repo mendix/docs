@@ -56,7 +56,7 @@ The implementation of this Java action is pretty straightforward; you can use th
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
-```java {linenos=false}
+```java
 @Override
 public java.util.List<IMendixObject> executeAction() throws Exception
 {

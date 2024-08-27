@@ -103,13 +103,13 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     parseDateTime('2022-04-30T22:00:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     Apr 30 2022 22:00:00
     ```
 
@@ -117,13 +117,13 @@ The examples below illustrate which value the expression returns:
     
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     Mon Jan 01 00:00:00 CET 2007
     ```
 
@@ -152,19 +152,19 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
 To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
 
-```java {linenos=false}
+```java
 formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
 ```
 
@@ -192,13 +192,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 '9:50 AM'
 ```
 
@@ -226,13 +226,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 '7/2/74'
 ```
 
@@ -260,13 +260,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 141990610000
 ```
 
@@ -294,12 +294,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 epochToDateTime(141990610000)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 dateTime(1974, 7, 2, 9, 50, 10)
 ```

@@ -102,7 +102,7 @@ If you have made any of the modifications above, please follow the steps below. 
 
 This section concerns modifications you have made to the *custom-variables.scss* file of your **Atlas 2 theme**:
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/web/sass/app/_custom-variables.scss
 ```
 
@@ -110,13 +110,13 @@ To move your custom variable modifications to **Atlas 3**, there are two options
 
 **Option 1** — If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** SCSS file of the **Atlas 3 theme** directory:
 
-```text {linenos=false}
+```text
 theme/web/custom-variables.scss
 ```
 
 **Option 2** — If you want to extract the variables into a reusable module, move them into the **custom-variables** SCSS file of a module you have created in the **themesource** directory:
 
-```text {linenos=false}
+```text
 themesource/your-module/web/custom-variables.scss
 ```
 
@@ -124,7 +124,7 @@ themesource/your-module/web/custom-variables.scss
 
 This section concerns modifications you have made to the **custom** SCSS file of your **Atlas 2 theme**:
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/web/sass/app/_custom.scss
 ```
 
@@ -132,13 +132,13 @@ To move your custom styling modifications to **Atlas 3**, there are two options:
 
 **Option 1** — If the custom styling apply to the app level, then the modifications should be moved into the **main** SCSS file of the **Atlas 3 theme** directory: 
 
-```text {linenos=false}
+```text
 theme/web/main.scss
 ```
 
 **Option 2** — If you want to extract the custom styling into a reusable module, move them into the **main** SCSS file of a module you have created in the **themesource** directory:
 
-```text {linenos=false}
+```text
 themesource/your-module/web/main.scss
 ```
 
@@ -146,7 +146,7 @@ themesource/your-module/web/main.scss
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional SCSS stylesheets that you might have added:
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/web/sass/app/_
 ```
 
@@ -154,7 +154,7 @@ To move you additional stylesheets that you have added here to **Atlas 3**, ther
 
 **Option 1** — If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**:
 
-```text {linenos=false}
+```text
 theme/web/_
 ```
 
@@ -162,7 +162,7 @@ Remember to include `@import <file name>` in *theme/web/main.scss* to include yo
 
 **Option 2** — If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**:
 
-```text {linenos=false}
+```text
 themesource/your-module/web/_
 ```
 
@@ -172,13 +172,13 @@ Remember to include `@import<file name>` in *themesource/your-module/web/main.sc
 
 This section concerns modifications you have made to the *settings.json* file of your **Atlas 2 theme**:
 
-```text {linenos=false}
+```text
 theme_atlas2/settings.json
 ```
 
 Custom design properties that you have added to *settings.json* need to be moved into the web's **design-property** JSON file of a module you have created in the **themesource** directory:
 
-```text {linenos=false}
+```text
 themesource/your-module/web/design-properties.json
 ```
 
@@ -192,7 +192,7 @@ This section concerns modifications you have made to documents *login.html* and 
 
 Any custom *index.html* or *login.html* pages that you have created in your **Atlas 2 theme** need to be moved to the **web** directory of the **Atlas 3 theme**: 
 
-```text {linenos=false}
+```text
 theme/web/login.html
 ```
 
@@ -200,7 +200,7 @@ The same applies to additional HTML documents that you may have created.
 
 Additional static resources such as images or font libraries need to be moved to the **resources** directory of **web** in the **Atlas 3 theme**: 
 
-```text {linenos=false}
+```text
 theme/web/resources
 ```
 
@@ -225,7 +225,7 @@ If you have made any of the above modifications, please follow the following ste
 
 This section concerns modifications you have made to the **custom-variables** js file of your **Atlas 2 theme**.
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/native/app/custom-variables.js
 ```
 
@@ -233,13 +233,13 @@ To move your custom variable modifications to **Atlas 3**, there are two options
 
 **Option 1** - If the custom variables apply to the app level, then the modifications should be moved into the **custom-variables** scss file of the **Atlas 3 theme** directory. 
 
-```text {linenos=false}
+```text
 theme/native/custom-variables.js
 ```
 
 **Option 2** - If you want to extract the variables into a reusable module, move them into the **custom-variables** scss file of a module you have created in the **themesource** directory.
 
-```text {linenos=false}
+```text
 themesource/your-module/native/custom-variables.js
 ```
 
@@ -247,7 +247,7 @@ themesource/your-module/native/custom-variables.js
 
 This section concerns modifications you have made to the **custom** js file of your **Atlas 2 theme**.
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/native/app/_custom.js
 ```
 
@@ -255,13 +255,13 @@ To move your custom styling modifications to **Atlas 3**, there are two options:
 
 **Option 1** - If the custom styling apply to the app level, then the modifications should be moved into the **main** js file of the **Atlas 3 theme** directory. 
 
-```text {linenos=false}
+```text
 theme/native/main.js
 ```
 
 **Option 2** - If you want to extract the custom styling into a reusable module, move them into the **main** js file of a module you have created in the **themesource** directory.
 
-```text {linenos=false}
+```text
 themesource/your-module/native/main.js
 ```
 
@@ -269,7 +269,7 @@ themesource/your-module/native/main.js
 
 This section concerns modifications you have made to the **app** folder of your **Atlas 2 theme** and any additional js stylesheets that you might have added. 
 
-```text {linenos=false}
+```text
 theme_atlas2/styles/native/app/_
 ```
 
@@ -277,7 +277,7 @@ To move you additional stylesheets that you have added here to **Atlas 3**, ther
 
 **Option 1** - If the additional stylesheets apply to the app level, these changes should be moved into the **web** directory of the **Atlas 3 theme**. 
 
-```text {linenos=false}
+```text
 theme/native/_
 ```
 
@@ -285,7 +285,7 @@ Remember to import the file using JavaScript's `import` syntax in *theme/native/
 
 **Option 2** - If you want to extract the additional stylesheets into a reusable module, move them to a module you have created in **themesource**.
 
-```text {linenos=false}
+```text
 themesource/your-module/native/_
 ```
 
@@ -295,13 +295,13 @@ Remember to import the file using JavaScript's `import` syntax in *themesource/y
 
 This section concerns modifications you have made to the *settings-native.json* file of your **Atlas 2 theme**.
 
-```text {linenos=false}
+```text
 theme_atlas2/settings-native.json
 ```
 
 Custom **design properties** that you have added to *settings-native.json*, need to be moved into the native's **design-property** json file of a module you have created in the **themesource** directory. 
 
-```text {linenos=false}
+```text
 themesource/your-module/web/design-properties.json
 ```
 

@@ -44,7 +44,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/environments/6b61f27c-dac9-48c5-b359-f861374ceb36/permissions HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
@@ -62,7 +62,7 @@ The following steps change the Technical Contact of the app identified by the UU
 1. Set up your authentication PAT. You must have permission to change the Technical Contact of the app.
 1. Create a request body containing the `userId` of the new Technical Contact. For example, to make `jane.doe@domain.tld` the new Technical Contact, provide a body like this:
 
-    ```json {linenos=false}
+    ```json
     {
       "technicalContact": {
         "userId": "jane.doe@domain.tld"
@@ -72,7 +72,7 @@ The following steps change the Technical Contact of the app identified by the UU
 
 1. Call `PATCH /apps/{appId}` to update the Technical Contact for your app. Here is an example:
 
-    ```http {linenos=false}
+    ```http
     PATCH /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e
     ```
 
@@ -86,13 +86,13 @@ The following steps change the permissions of a team member to an environment of
 
 1. Call `GET /apps/{appId}/environments/{environmentId}/permissions` to get the existing team members' permissions for this {environmentId} of this {appId}. Here is an example:
 
-    ```http {linenos=false}
+    ```http
     GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/environments/6b61f27c-dac9-48c5-b359-f861374ceb36/permissions
     ```
 
 1. Update the JSON describing the existing permissions to give the permissions you want. For example, to give `john.doe@domain.tld` permission to deploy an app, but no other permissions, update the body as shown below:
 
-    ```json {linenos=false}
+    ```json
     …
     {
       "member": {

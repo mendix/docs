@@ -126,7 +126,7 @@ There are two constraints that can be appended easily with a single button click
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current user.
 
-```java {linenos=false}
+```java
 [System.owner='[%CurrentUser%]']
 ```
 
@@ -136,7 +136,7 @@ This constraint is only valid when the [Store 'owner'](/refguide9/entities/#stor
 
 The **Path to user...** button adds an XPath constraint so the access rule is only applied when the User object which is associated (directly or indirectly) is the current user. When you click **Path to user...**, you can select a path to an associated entity that is either a `System.User` or a specialization of `System.User`. This is then converted into an XPath constraint for the access rule.
 
-```java {linenos=false}
+```java
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 

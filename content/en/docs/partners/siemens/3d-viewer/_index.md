@@ -655,7 +655,7 @@ Defines the style of sectionHandle. `arrowRadius` and `handleRadius` are measure
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "arrowColor": 16711680,
         "handleColor": 16711680,
@@ -680,7 +680,7 @@ Specifies bboxSurfaceScanner options.
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "useDefault": true,
         "detailLevel": 35.8,
@@ -722,7 +722,7 @@ This defines measurement behaviors and dimension styles. The `measurement` secti
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {    
         "dimension": {    
             "text": {    

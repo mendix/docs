@@ -273,13 +273,13 @@ In order for the Mendix Operator to trust such certificates, you need to add the
 
         For OpenShift:
 
-        ```shell {linenos=false}
+        ```shell
         oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
         For Kubernetes:
 
-        ```shell {linenos=false}
+        ```shell
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 

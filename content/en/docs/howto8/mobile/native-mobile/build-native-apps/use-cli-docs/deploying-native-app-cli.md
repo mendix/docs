@@ -133,7 +133,7 @@ To initiate your first build in the Native Builder, you will execute a command i
 
 This is an example build command using the two required parameters mentioned above, as well as the optional `--app-version` command (it is best practice to include a [new app version](https://semver.org/) with each release):
 
-```bash {linenos=false}
+```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 
@@ -143,7 +143,7 @@ Now it is time for you to make your own first build:
 2. Make sure you are in still in your Native Builder directory.
 3. Write this command, with your own information replacing the example text:
 
-    ```text {linenos=false}
+    ```text
     native-builder.exe build --project-name {ExampleName} --build-number {1} --app-version {0.1.0}
     ```
 
@@ -217,7 +217,7 @@ The next steps differ depending on the type of app you want to configure.
 
 Finally, either start a build for this branch manually or run the `build` command again with the same build number as before:
 
-```bash {linenos=false}
+```bash
 native-builder.exe build --project-name CoolApp --build-number 1 --app-version 0.1.0
 ```
 

@@ -69,7 +69,7 @@ To access your Mendix applications inside a pod from outside of the Kubernetes, 
 
 Once Minikube is running you must configure your local environment to use the Docker daemon using the following command:
 
-```bash {linenos=false}
+```bash
 minikube docker-env
 ```
 
@@ -81,7 +81,7 @@ For simplicity and compatibility with Minikube, we mount a folder from the `mini
 
 Here is the definition of the `postgres-deployment.yaml` database component:
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -123,7 +123,7 @@ And finally, it is necessary to expose the database as a service and make it ava
 
 (`postgres-service.yaml`):
 
-```yml
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -145,7 +145,7 @@ kubectl create -f postgres-service.yaml
 
 The database is now created. To verify the installation, check out the logs:
 
-```bash {linenos=false}
+```bash
 kubectl logs $(kubectl get pods -lapp=postgres -o name)
 ```
 
@@ -155,19 +155,19 @@ The output should be similar to the following:
 
 The host and port values will be needed to deploy the application. To get these we execute the following command:
 
-```bash {linenos=false}
+```bash
 kubectl get service postgres-service
 ```
 
 If you are using Windows, you need to execute these inline commands first to get the pod name:
 
-```bash {linenos=false}
+```bash
 kubectl get pods -lapp=postgres -o name
 ```
 
 then use the pod name to retrieve the logs:
 
-```bash {linenos=false}
+```bash
 kubectl logs <name>
 ```
 
@@ -193,7 +193,7 @@ The Secret values in the secrets file must be base64 encoded.
 
 Create a file `mendix-app-secrets.yaml` with the following contents:
 
-```yml
+```yaml
 apiVersion: v1
 kind: Secret
 metadata:
@@ -208,7 +208,7 @@ data:
 
 `YOUR-DATABASE-ENDPOINT` is in the form `postgres://mendix:mendix@255.255.255.255:5432/db0` (for example, `postgres://mendix:mendix@172.17.0.3:5432/db0`). You can find the correct IP address and port for your database endpoint using the following command:
 
-```bash {linenos=false}
+```bash
 kubectl get ep postgres-service
 ```
 
@@ -216,7 +216,7 @@ See [Run a Mendix Docker Image](/developerportal/deploy/run-mendix-docker-image/
 
 Create the secrets in Kubernetes by executing the following command:
 
-```bash {linenos=false}
+```bash
 kubectl create -f mendix-app-secrets.yaml
 ```
 
@@ -224,7 +224,7 @@ Once the database service and the secrets are created, you can create the applic
 
 `mendix-app.yaml`:
 
-```yml
+```yaml
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -285,7 +285,7 @@ Create a Docker image of your Mendix app using the instructions in the [Mendix D
 
 Once you have created the Docker image, push it to the Docker hub using the following command:
 
-```bash {linenos=false}
+```bash
 minikube image push <hub-user>/<repo-name>:<tag>
 ```
 
@@ -297,7 +297,7 @@ In this example, you use a local storage folder on the node to show how to exter
 
 Deploy the application to Kubernetes:
 
-```bash {linenos=false}
+```bash
 kubectl create -f mendix-app.yaml
 ```
 
@@ -319,7 +319,7 @@ The definition of publishing the Mendix app as a NodePort service is described i
 
 `mendix-app-service.yaml`:
 
-```yml
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -337,19 +337,19 @@ spec:
 
 Deploy the service:
 
-```bash {linenos=false}
+```bash
 kubectl create -f mendix-app-service.yaml
 ```
 
 Check if the application is running using the command:
 
-```bash {linenos=false}
+```bash
 minikube service mendix-app-service
 ```
 
 To get the URL to the application on Minikube, execute this command and open the link in your browser:
 
-```bash {linenos=false}
+```bash
 minikube service mendix-app-service --url
 ```
 

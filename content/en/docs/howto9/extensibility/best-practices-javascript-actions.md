@@ -172,7 +172,7 @@ y = x.plus(0.2)            // '0.3'
 
 If you know your JavaScript action does not require this extended precision (for example, if you expect a simple integer between 1 and 100), you can easily convert a `Big` object to a JavaScript number:
 
-```javascript {linenos=false}
+```javascript
 const numberValue = Number(bigJsValue); // number
 ```
 
@@ -213,7 +213,7 @@ For more information on changing objects, consult the [Set](https://apidocs.rnd.
 
 Use the following code for loading platform-shipped dependencies (please note the shipped dependencies might vary per Mendix version):
 
-```javascript {linenos=false}
+```javascript
 // Synchronous libs that are already loaded
 var lang = require("mendix/lang");
 ```

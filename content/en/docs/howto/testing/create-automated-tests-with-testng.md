@@ -85,19 +85,19 @@ To create a variable to be used for the WebDriver, follow these steps:
 
 1. Search for the following:
 
-    ```java {linenos=false}
+    ```java
     public class MyFirstTestNGFile {
     ```
 
 2. Add the code below on the next line. This will create a `driver` variable of the WebDriver type:
 
-    ```java {linenos=false}
+    ```java
     public WebDriver driver;
     ```
 
 3. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> to organize the imports. This will import the missing statements and remove the unused import statements. The following statement will be imported:
 
-    ```java {linenos=false}
+    ```java
     import org.openqa.selenium.WebDriver;
     ```
 
@@ -126,7 +126,7 @@ The `@BeforeTest` annotation is used to state that the method under it will be e
 
 2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd>. The following statement will be imported:
 
-    ```java {linenos=false}
+    ```java
     import org.openqa.selenium.firefox.FirefoxDriver;
     ```
 

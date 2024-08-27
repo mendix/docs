@@ -46,7 +46,7 @@ To perform an action via the Build API, you need **API Rights** permissions. Thi
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
@@ -60,7 +60,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 
 ##### Example
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -91,7 +91,7 @@ List of objects with the following key-value pairs:
 
 ##### Example
 
-```json {linenos=false}
+```json
 [{
      "Name" :  "Main line-1.1.5.9.mda" ,
      "Status" :  "Succeeded" ,
@@ -119,7 +119,7 @@ List of objects with the following key-value pairs:
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Boolean>
 ```
@@ -134,7 +134,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Bool
 
 ##### Example
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf?url=true HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -174,7 +174,7 @@ An object with the following key-value pairs:
 
 ##### Example
 
-```json {linenos=false}
+```json
 {
     "Name" :  "Main line-2.5.4.63.mda" ,
     "Status" :  "Succeeded" ,
@@ -197,7 +197,7 @@ An object with the following key-value pairs:
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
@@ -209,7 +209,7 @@ URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 * *AppId* (String) : Subdomain name of an app
 * *PackageId* (String) : Id of the deployment package
 
-```http {linenos=false}
+```http
 DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
 
@@ -234,7 +234,7 @@ The **Download Package** call of the build API is deprecated. Please use [Retrie
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 ```
@@ -246,7 +246,7 @@ Parameters
 * *AppId* (String) : Subdomain name of an app.
 * *PackageId* (String) : Id of the deployment package.
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -268,7 +268,7 @@ Error codes
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Free App, this will also trigger a deployment of the new package.
 
-```http {linenos=false}
+```http
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
@@ -296,7 +296,7 @@ An object with the following key-value pairs:
 
 ##### Example
 
-```http {linenos=false}
+```http
 POST /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -335,7 +335,7 @@ Error codes
 
 ##### Example
 
-```json {linenos=false}
+```json
 {
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }

@@ -37,7 +37,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
-```http {linenos=false}
+```http
 GET /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542/webhooks HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
@@ -54,7 +54,7 @@ The following procedure will create a webhook endpoint and update the webhook en
 
 2. To create a webhook for an app, call `POST /apps/{app-id}/webhooks`. For example:
 
-   ```http {linenos=false}
+   ```http
    POST /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks
    ```
 
@@ -64,7 +64,7 @@ The following procedure will create a webhook endpoint and update the webhook en
 
     * API call:
 
-        ```http {linenos=false}
+        ```http
         PUT /apps/80a28d6e-c5fc-43d9-87c2-d7d56b07542e/webhooks/msg_2M605iBQRge9hTgpYg7fKXQubaw
         ```
 

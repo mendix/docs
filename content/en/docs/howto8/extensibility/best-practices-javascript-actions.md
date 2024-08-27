@@ -172,7 +172,7 @@ y = x.plus(0.2)            // '0.3'
 
 If you know your JavaScript action does not require this extended precision (for example, if you expect a simple integer between 1 and 100), you can easily convert a `Big` object to a JavaScript number:
 
-```javascript {linenos=false}
+```javascript
 var numberValue = Number(bigJsValue); // number
 ```
 

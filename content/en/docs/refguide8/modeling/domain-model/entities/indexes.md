@@ -43,7 +43,7 @@ Customers are usually retrieved by a combination of ZIP code and house number. S
 
 The objects are retrieved by the following OQL query – note that the order of the attributes in the `WHERE` clause is the same as the order of the attributes for the index:
 
-```sql {linenos=false}
+```sql
 FROM Module.Customer AS c
 WHERE c.zipcode = $ParameterZipCode AND c.housenumber = $ParameterHouseNumber
 SELECT c.name AS CustomerName

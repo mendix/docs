@@ -4,13 +4,13 @@ url: /refguide8/json-structures/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 General
+## General
 
 A JSON structure document stores a JSON snippet, and converts it into a schema structure that can be used in [Import Mappings](/refguide8/import-mappings/) and [Export Mappings](/refguide8/export-mappings/) to convert JSON content to Mendix objects and vice versa. 
 
 {{< figure src="/attachments/refguide8/modeling/integration/json-structures/19398772.png" class="no-border" >}}
 
-### 1.1 JSON Snippet
+### JSON Snippet
 
 Contains text of the JSON snippet. Usually it is pasted from API documentation, or you can enter it manually for simple JSON.
 
@@ -24,7 +24,7 @@ You cannot press "OK" without making the JSON valid.
 
 {{% /alert %}}
 
-### 1.2 Format
+### Format
 
 Formattings and whitespacing of JSON snippets that are found in API documentations may vary. You can paste JSON into the document without bothering about whitespaces. The button 'Format' formats the JSON snippet in such a way that it is canonical and readable. The semantic contents of the snippets are not changed.
 
@@ -34,7 +34,7 @@ Special unicode characters are encoded according to JSON standards. For example,
 
 {{% /alert %}}
 
-### 1.3 Structure
+### Structure
 
 Shows a tree structure with a schema that is parsed from the JSON snippet. The following columns are available:
 
@@ -52,13 +52,13 @@ When you modify the JSON snippet, you need to refresh the structure by clicking 
 You cannot press "OK" without updating the structure.
 {{% /alert %}}
 
-### 1.4 Documentation
+### Documentation
 
 Documentation that describes the snippet.
 
-## 2 Parsing of the JSON Snippet
+## Parsing of the JSON Snippet
 
-### 2.1 Simple JSON Objects
+### Simple JSON Objects
 
 A simple JSON object is contained in curly braces (between '{' and '}'). It contains a comma-separated list of JSON properties. See the following example.
 
@@ -72,7 +72,7 @@ Each JSON property is composed of a key ("name") and a value ("John"). If the va
 * `"1985-04-12T23:20:50.52Z"` – converted into an attribute of type **Date and time**
 * `12.50` – converted into an attribute of type Decimal
 
-### 2.2 JSON Arrays
+### JSON Arrays
 
 A JSON array is contained in square brackets (between `[` and `]`). It contains a comma-separated list of JSON values or JSON objects.
 

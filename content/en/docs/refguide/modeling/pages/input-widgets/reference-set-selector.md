@@ -9,7 +9,7 @@ weight: 80
 
 To upgrade it to a React-compliant widget which works on a native page, see the Mendix React Client's [Migration Guide](/refguide/mendix-client/react/#migration-guide).{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A **reference set selector** is used to allow the end-user to display or select the value (or values) of a many-to-many (reference set) [association](/refguide/associations/) by selecting the associated object (or objects).
 
@@ -42,7 +42,7 @@ The reference set selector looks a lot like a [data grid](/refguide/data-grid/) 
 You must explicitly commit the object in the data view containing your reference set selector to save the association changes. This can be done, for example, by having a **Save** button for the object in the data view (as shown for the *Customer* entity in the picture above).
 {{% /alert %}}
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Reference set selector consist of the following sections:
 
@@ -66,42 +66,42 @@ There are additional sets of properties which do not appear in the properties of
 
 2. Each attribute is displayed in a column. You can find out more about the properties of these columns in [Grid Columns](/refguide/columns/)
 
-## 3 Properties
+## Properties
 
-### 3.1 General Section {#general}
+### General Section {#general}
 
-#### 3.1.1 Width Unit {#width-unit}
+#### Width Unit {#width-unit}
 
 You can decide how to define the widths of the columns in the reference set selector. The possible values are:
 
 * Pixels – define the width in pixels
 * Percentage – define the width as a percentage of the width of the reference set selector widget
 
-#### 3.1.2 Column Widths {#column-widths}
+#### Column Widths {#column-widths}
 
 The column widths are defined as either percentages or pixels. The value for the columns are separated by semi-colons. For example a narrow column and a wide column could be defined as `20;80`. If the widths are defined in percentages, they have to add up to 100.
 
 If column widths are defined as percentages, you can also change the widths of columns by dragging the separating line between columns.
 
-#### 3.1.3 Number of Rows {#number-of-rows}
+#### Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows that will be shown in one page. See also the property 'Show empty rows'.
 
 Default: *5*
 
-#### 3.1.4 Show Empty Rows {#show-empty-rows}
+#### Show Empty Rows {#show-empty-rows}
 
 If you choose to show empty rows there will always be the grid that shows the same number of rows (see 'Number of rows') even if there are fewer objects to show on the page.
 
 Default: *False*
 
-#### 3.1.5 Tooltip Page {#tooltip-page}
+#### Tooltip Page {#tooltip-page}
 
 A tooltip page is a page that appears when you hover your mouse over a row. The tooltip page must contain a data view on the same entity as the data grid.
 
 The tooltip will only be shown for the columns you specify. The default for each column is that the tooltip will *not* appear. See [Grid Columns](/refguide/columns/) for more information.
 
-#### 3.1.6 Show Control Bar {#show-control-bar}
+#### Show Control Bar {#show-control-bar}
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons. See [Control Bar](/refguide/control-bar/) for more information.
 
@@ -111,7 +111,7 @@ Even if the control bar is invisible there can still be a default button that is
 
 Default: *True*
 
-#### 3.1.7 Show Paging Bar {#show-paging-bar}
+#### Show Paging Bar {#show-paging-bar}
 
 With this property, you can change the way the paging bar is shown.
 
@@ -127,7 +127,7 @@ Default: *Yes (with total count)*
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
 {{% /alert %}}
 
-#### 3.1.8 Selection Mode {#selection-mode}
+#### Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the reference set selector.
 
@@ -139,7 +139,7 @@ The selection mode determines whether and how the user can select items in the r
 | Multi-selection | The user can select multiple items by clicking the first one and holding the <kbd>Ctrl</kbd> key while clicking on other items. Clicking an item without the <kbd>Ctrl</kbd> key will deselect all other selected items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by clicking on them in turn. |
 
-#### 3.1.9 Select First {#select-first}
+#### Select First {#select-first}
 
 Specifies whether the first item should be selected by default when the reference set selector is first shown.
 
@@ -148,7 +148,7 @@ Possible values:
 * No *(default)* 
 * Yes
 
-#### 3.1.10 Default Button Trigger {#default-button-trigger}
+#### Default Button Trigger {#default-button-trigger}
 
 The default button can be triggered by single- or double-clicking a row.
 
@@ -157,7 +157,7 @@ The default button can be triggered by single- or double-clicking a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click  *(default)* | A double-click triggers the default button. |
 
-### 3.2 Data Source Section {#data-source}
+### Data Source Section {#data-source}
 
 {{% snippet file="/static/_includes/refguide/data-source-section-link.md" %}}
 
@@ -167,23 +167,23 @@ The attribute path specifies which attribute (or attributes) of an associated en
 You cannot currently use non-persistable entities in a reference set selector.
 {{% /alert %}}
 
-### 3.3 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-### 3.4 Events Section {#events}
+### Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 
-### 3.5 Common Section{#common}
+### Common Section{#common}
 
 The rows of the reference set selector can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.6 Selectable Objects Section {#selectable-objects}
+### Selectable Objects Section {#selectable-objects}
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection.
 
@@ -198,17 +198,17 @@ For more information, see the [Selectable Objects Section](/refguide/reference-s
 You cannot use a microflow to define selectable objects in a reference set selector.
 {{% /alert %}}
 
-## 4 Styling
+## Styling
 
-### 4.1 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}}
 
-### 4.2 Common Section{#common-styling}
+### Common Section{#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Data view](/refguide/data-view/)
 * [Entities](/refguide/entities/)

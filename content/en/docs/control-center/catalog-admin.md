@@ -8,7 +8,7 @@ aliases:
     - /developerportal/control-center/catalog-admin/
 ---
 
-## 1 Introduction
+## Introduction
 
 An organization's Catalog requires governance of the data-sharing policy down to the practical details of curating registered assets. A Mendix Admin can oversee these functions and also assign curators that can perform governance tasks for their apps.
 
@@ -19,7 +19,7 @@ In the [Catalog](/control-center/catalog-admin/) page of Control Center, you can
 * Invite and manage [External Users](#external-users)
 * Control the default discoverability settings of your company's data source [Settings](#settings)
 
-## 2 Curators {#curator}
+## Curators {#curator}
 
 A Mendix Admin sees the **Curators** tab displaying the list of Curators for the organization:
 
@@ -39,7 +39,7 @@ If you want to remove the curator rights for a user, check the box next to the u
 This only removes the Curator rights of the user, it does not remove the user as a Mendix Platform user.
 {{% /alert %}}
 
-## 3 Owners {#custom-owners}
+## Owners {#custom-owners}
 
 Custom owners are owners that have been added as contacts for a registered app. They may be added during the app [curation](/catalog/manage/search/#discoverability-metadata), or they may have been specified during app registration. For more information, see the [Adding a Custom Owner](/catalog/manage/search/#discoverability-metadata) section of *How to Curate Registered Assets*.
 
@@ -60,7 +60,7 @@ On this tab, you can do the following:
 * **Delete** – delete names from the list
     * Note that if a custom owner is removed from the list, they will also be removed from any registered assets where they were set as the owner, which means that the asset will not have a contact
 
-## 4 External Users {#external-users}
+## External Users {#external-users}
 
 Mendix Admins can invite external users on the **External Users** tab. An external user is a user from outside of your organization who can search for published data sources and use them in apps. External users cannot register or curate content unless they are an owner of the data source.
 
@@ -78,9 +78,9 @@ Once the external user receives the invitation, they log into the Catalog with t
 
 Mendix Admins can also **Remove** rights of users who no longer need access, and can add another user in their place.
 
-## 5 Settings {#settings}
+## Settings {#settings}
 
-### 5.1 Discoverability Status
+### Discoverability Status
 
 Mendix Admins can change the default discoverability status of the published data sources of the company. When OData resources are published, the discoverable status defaults to the value set here. 
 
@@ -94,6 +94,6 @@ This setting does not work in retrospect, it will only apply to the OData resour
 When the discoverable value is explicitly declared on the registration form or in the API field, it will take precedence over this company **Settings** value.
 {{% /alert %}}
 
-### 5.2 Sample Data Sources
+### Sample Data Sources
 
 Mendix Admins can enable or disable the option to hide sample data sources in the Catalog.

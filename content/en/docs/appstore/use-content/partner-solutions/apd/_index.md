@@ -9,7 +9,7 @@ aliases:
     - /addons/apd-addon/index.html
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 Mendix is no longer selling new licenses for APD. It is still a supported product for existing customers with active contracts.
@@ -25,4 +25,4 @@ With version 3, the product has been renamed from **Mendix Application Performan
 To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
 {{% /alert %}}
 
-## 2 Documents in This Section
+## Documents in This Section

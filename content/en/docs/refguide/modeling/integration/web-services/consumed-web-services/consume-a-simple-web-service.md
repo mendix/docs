@@ -7,7 +7,7 @@ aliases:
     - /howto/integration/consume-a-simple-web-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix is the app platform for the enterprise, and in enterprise software, it is not likely that you work in a [greenfield project](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. This how-to focuses on how you can consume web services with Studio Pro.
 
@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 * Import a WSDL
 * Create logic to call the web service
 
-## 2 Importing a WSDL
+## Importing a WSDL
 
 A WSDL describes the operations of a web service and can be imported in Studio Pro. After importing the WSDL, you can invoke the operations of the web service instantly within the microflow editor.
 
@@ -35,7 +35,7 @@ To import a WSDL, follow these steps:
 
     {{< figure src="/attachments/refguide/modeling/integration/consume-a-simple-web-service/wsdl-source-dialog-box.png" class="no-border" >}}
 
-## 3 Creating Logic to Call the Web Service
+## Creating Logic to Call the Web Service
 
 To create logic to call the web service, follow these steps:
 
@@ -96,7 +96,7 @@ To create logic to call the web service, follow these steps:
 
 21. Deploy the application and trigger the microflow to call the web service operation. You should see a message with the converted temperature.
 
-## 4 Read More
+## Read More
 
 * [Create a Secure App](/howto/security/create-a-secure-app/)
 * [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)

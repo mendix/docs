@@ -5,7 +5,7 @@ url: /refguide/perform-workflow-basic-functions/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 A workflow is composed of [elements](/refguide/workflow-elements/) that you can use in the workflow editor. In this document, you will learn how to perform the following basic functions when working on workflows and on workflow elements:
 
@@ -19,7 +19,7 @@ A workflow is composed of [elements](/refguide/workflow-elements/) that you can 
 * [Export a workflow to an image](#export-workflow)
 * [Switch between portrait and landscape editor orientation](#orientation-modes)
 
-## 2 Adding a Workflow {#add-workflow}
+## Adding a Workflow {#add-workflow}
 
 To add a workflow to your app, do the following:
 
@@ -31,7 +31,7 @@ To add a workflow to your app, do the following:
 
 The workflow is created.
 
-## 3 Deleting a Workflow {#delete-workflow}
+## Deleting a Workflow {#delete-workflow}
 
 To delete a workflow, do the following:
 
@@ -44,7 +44,7 @@ The selected workflow is deleted.
 The **Workflow** entity that was generated when the workflow was created remains in the domain model. You have to delete it manually.
 {{% /alert %}}
 
-## 4 Adding Elements to a Workflow {#add-elements-to-workflow}
+## Adding Elements to a Workflow {#add-elements-to-workflow}
 
 There are several ways to add an element to a workflow:
 
@@ -69,9 +69,9 @@ When adding elements, note the following:
 * It is not possible to add an **End** event or a **Jump** activity before an **End** event or a **Jump** activity as this makes the next element unreachable.
 * An **End** event cannot be placed in paths of a parallel split. This is the same for placing an **End** event on, for example, an outcome of a user task if this user task is placed on a path of a parallel split. 
 
-## 5 Moving Elements and Paths in a Workflow {#move-elements}
+## Moving Elements and Paths in a Workflow {#move-elements}
 
-### 5.1 Moving Elements in a Workflow
+### Moving Elements in a Workflow
 
 You can move elements around in your workflow. To do so, drag and drop an element to another path in the working area. 
 
@@ -79,13 +79,13 @@ This moves the whole structure of the dragged element, meaning that the element 
 
 You cannot move the first (and only) start event and the last end event.
 
-### 5.2 Moving Outgoing Paths in a Workflow
+### Moving Outgoing Paths in a Workflow
 
 You can swap outgoing paths from a parallel split, a user task, or a decision in a workflow. To do so, drag and drop a path to another path of the same element.
 
 This swaps the dragged path and its content with the targeted path. You can only swap paths that come from the same element.
 
-## 6 Cutting/Coping/Pasting Elements in a Workflow {#cut-copy-paste-elements}
+## Cutting/Coping/Pasting Elements in a Workflow {#cut-copy-paste-elements}
 
 To cut/copy/paste elements, use <kbd>Ctrl</kbd> + <kbd>X</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd> or  <kbd>Command</kbd> + <kbd>X</kbd> /  <kbd>Command</kbd> + <kbd>C</kbd> / <kbd>Command</kbd> + <kbd>V</kbd>.
 
@@ -102,7 +102,7 @@ When using cut/copy/paste, note the following:
 * Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
 * Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
 
-### 6.1 Elements that Cannot be Cut, Copied or Pasted
+### Elements that Cannot be Cut, Copied or Pasted
 
 The following elements cannot be cut, copied or pasted in the workflow editor:
 
@@ -112,7 +112,7 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 * End activity (the final **End activity** which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
 
-## 7 Viewing Element Properties {#view-element-properties}
+## Viewing Element Properties {#view-element-properties}
 
 To view properties of an element, do one of the following:
 
@@ -120,11 +120,11 @@ To view properties of an element, do one of the following:
 * Right-click an element and select **Properties** from the list of options that opens.
 * Double-click an element.
 
-## 8 Triggering a Workflow {#trigger-workflow}
+## Triggering a Workflow {#trigger-workflow}
 
 You can trigger a workflow [from a page](#trigger-page) or [via a microflow](#trigger-microflow). 
 
-### 8.1 Triggering a Workflow from a Page {#trigger-page}
+### Triggering a Workflow from a Page {#trigger-page}
 
 To start the workflow, you can add a widget with a specific on-click event on a page. For more information on on-click events, see [On Click Event and Events Section](/refguide/on-click-event/).
 
@@ -139,7 +139,7 @@ Do the following:
 
 You have configured the button to trigger the workflow.
 
-### 8.2 Triggering a Workflow via a Microflow {#trigger-microflow}
+### Triggering a Workflow via a Microflow {#trigger-microflow}
 
 To trigger a workflow via a microflow, you can add a **Call workflow** activity to the microflow. For more information on this activity, see [Call Workflow](/refguide/workflow-call/).  
 
@@ -158,7 +158,7 @@ Do the following:
 
 Now when you run this microflow, it will trigger the selected workflow. 
 
-## 9 Exporting a Workflow to an Image {#export-workflow}
+## Exporting a Workflow to an Image {#export-workflow}
 
 There are two ways to export a workflow to an image: 
 
@@ -171,13 +171,13 @@ Both options open a **Save file** dialog-box allowing you to choose a name and l
 
 The current document is exported as an image in the .png format.
 
-## 10 Switching between Portrait and Landscape Editor Orientation {#orientation-modes}
+## Switching between Portrait and Landscape Editor Orientation {#orientation-modes}
 
 You can switch between the portrait (vertical) and landscape (horizontal) editor orientation by clicking the orientation icon located in the upper-right corner of the workflow editor. Despite potential minor visual differences in certain canvas elements, the functionality remains entirely consistent across both rendering modes.
 
 It is important to bear in mind that the chosen orientation is not preserved or shared across projects. Consequently, each time you re-open a workflow, the orientation will reset to its default portrait mode.
 
-## 11 Read More
+## Read More
 
 * [Workflow Elements](/refguide/workflow-elements/)
 * [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/)

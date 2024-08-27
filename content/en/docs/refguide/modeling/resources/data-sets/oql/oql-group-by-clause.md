@@ -4,11 +4,11 @@ url: /refguide/oql-group-by-clause/
 weight: 40
 ---
 
-## 1 Description
+## Description
 
 The `GROUP BY` clause will condense all returned rows into a single row that shares the same values for the expressions defined in this clause. The expressions in this clause must exist in the `SELECT` clause of the query. All expressions in the `SELECT` clause which do not exist in the `GROUP BY` clause must be either an aggregation or the result an aggregate function.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -19,15 +19,15 @@ GROUP BY
 [HAVING <constraint>]
 ```
 
-### 2.1 expression
+### expression
 
 `expression` specifies the expressions by which values of the rows are grouped.
 
-### 2.2 HAVING \<constraint\>
+### HAVING \<constraint\>
 
 `HAVING <constraint>` specifies a constraint that must be defined in a `HAVING` clause, when a `GROUP BY` expression is used.
 
-## 3 Examples
+## Examples
 
 This query returns the count of all customers per city:
 

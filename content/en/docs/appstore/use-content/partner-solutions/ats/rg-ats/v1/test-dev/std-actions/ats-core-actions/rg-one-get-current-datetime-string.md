@@ -3,21 +3,21 @@ title: "Get Current DateTime String"
 url: /appstore/partner-solutions/ats/rg-one-get-current-datetime-string/
 ---
 
-## 1 Description
+## Description
 
 Returns the current date and time in supplied format (Java date format) (for example, `yyyy-MM-dd HH:mm:ss`).
 
-## 2 Usage
+## Usage
 
 Pass the format for the datetime. For more information about formatting datetime in Java, see the [SimpleDateFormat](https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html) Java reference.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------
 Datetime Format | String | yes | The Java datetime format definition to format the datetime (for example, `dd.MM.yyyy`).
 
-## 4 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

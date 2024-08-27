@@ -5,13 +5,13 @@ description: "Describes the purpose, features, and configurations of the Tree No
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Tree Node](https://marketplace.mendix.com/link/component/116540) widget displays a level of tree nodes.
 
 Mendix recommends using multiple Tree Node widgets in a nested matter. In this way, you can map out your entire domain model in the form of a tree view. If you only need one tree node, then the [Accordion](/appstore/widgets/accordion/) widget is a better alternative.
 
-## 2 Features
+## Features
 
 * Displays a level of tree nodes consisting of a header and content based on data from your domain model
 * Allows you to collapse and expand the content when interacting with the header using a mouse or keyboard
@@ -19,31 +19,31 @@ Mendix recommends using multiple Tree Node widgets in a nested matter. In this w
 * Delivers out-of-the-box performance and network optimizations through lazy loading and caching of tree nodes
 * Offers additional styling customizations through Atlas UI
 
-### 2.1 Lazy Loading
+### Lazy Loading
 
 As your tree view grows bigger, every tree node has to retrieve more data for its subtree. This can negatively impact the performance of the tree view and slow down any user interaction. To address this, each Tree Node widget loads only the data that is necessary for viewing the current tree view. Any subsequent data is deferred until user interaction.
 
-### 2.2 Caching
+### Caching
 
 As users interact with the tree view, the same tree nodes can be expanded and collapsed multiple times. Instead of loading the necessary data every time a tree node is expanded, the widget caches its result when the data is loaded the first time. The next time, instead of retrieving everything from scratch, the widget uses the cache. Therefore, if you visit the same tree nodes again, the delivery is fast and the network requests are smaller.
 
-### 2.3 Loading State
+### Loading State
 
 When a Tree Node widget is nested inside another one, the parent tree node automatically shows a loading state when you expand it for the first time. The loading state is changed after the children tree node has finished loading its data. This only applies to the first visit.
 
-### 2.4 Automatic Detection of End Nodes
+### Automatic Detection of End Nodes
 
 You configure how many levels your tree view has. However, not every branch can have data at each level. For example, your tree view could go six levels deep according to your configuration, but in reality, not every branch has data for all six levels. To address this, when you try to expand a tree node in a branch, the widget automatically checks whether this tree node still has a subtree or it is the last node in this branch, namely, an end node. If it is an end node, this tree node is not clickable anymore and removes its icons from the header.
 
-### 2.5 Accessibility
+### Accessibility
 
 Out of the box, the Tree Node widget is fully accessible through keyboard controls and screen readers, even when nested into a larger tree view.
 
-## 3 Configuration
+## Configuration
 
 Drag the Tree Node widget onto the page and use the configuration properties described in the following sections.
 
-### 3.1 General Tab {#general}
+### General Tab {#general}
 
 * **Data source** – the data source of the widget, which can also be optionally used as the data source for the header and content of the widget
     * Required
@@ -64,7 +64,7 @@ Drag the Tree Node widget onto the page and use the configuration properties des
 * **Animate** – defines whether the content is animated when a tree node expands and collapses
     * Default: **Yes**
 
-### 3.2 Visualization Tab {#visualization}
+### Visualization Tab {#visualization}
 
 The **Visualization** tab includes the following properties:
 
@@ -80,7 +80,7 @@ The **Visualization** tab includes the following properties:
 * **Animate icon**– defines whether the icon is animated when you expand or collapse a tree node
     * Default: **Yes**
 
-### 4 Styling
+### Styling
 
 The Tree Node widget has default styles and works out of the box without Atlas UI. However, including Atlas UI in the app brings improved styling and customizations such as design properties, helper classes, and custom variables.
 

@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 An entity usually represents a class of real-world objects, such as customers, invoices, CDs, etc. An instance of an entity is called an object.
 
@@ -31,7 +31,7 @@ You can also use data sources from other applications in your project through th
 For further information see [External Entities](/refguide8/external-entities/).
 {{% /alert %}}
 
-## 2 Type of Entities {#entity-types}
+## Type of Entities {#entity-types}
 
 The entity type defines how the data is handled and there are two types:
 
@@ -40,15 +40,15 @@ The entity type defines how the data is handled and there are two types:
 
 {{< figure src="/attachments/refguide8/modeling/domain-model/entities/type-of-entities.jpg" class="no-border" >}}
 
-### 2.1 Persistable Entity {#persistable-entity}
+### Persistable Entity {#persistable-entity}
 
 When an entity is declared persistable, a database table is created for the entity. These type of entities are colored *blue* in the domain model. For more information on persistable entities, see [Persistability](/refguide8/persistability/).
 
-### 2.2 Non-Persistable Entity {#non-persistable-entity}
+### Non-Persistable Entity {#non-persistable-entity}
 
 Non-persistable entities are stored in the runtime memory and never get committed to the database. These type of entities are colored *orange* in the domain model. For more information on persistable entities, see [Persistability](/refguide8/persistability/).
 
-## 3 Properties {#properties}
+## Properties {#properties}
 
 An example of the entity properties is represented in the image below:
 
@@ -65,27 +65,27 @@ Entity properties consist of the following sections:
 For more information, see the [Properties](/refguide8/external-entities/#properties) section of *External Entities*.
 {{% /alert %}}
 
-### 3.1 Access Rules Section {#access-rules}
+### Access Rules Section {#access-rules}
 
-#### 3.1.1 Access Rules
+#### Access Rules
 
 For more information on access rules, see [Access Rules](/refguide8/access-rules/).
 
-### 3.2 Documentation Section {#documentation}
+### Documentation Section {#documentation}
 
-#### 3.2.1 Documentation {#documentation-property}
+#### Documentation {#documentation-property}
 
 This allows you to describe aspects of the entity which may be useful to you or other team members when using the entity within the app.
 
-### 3.3 General Section {#entities-general-properties}
+### General Section {#entities-general-properties}
 
-#### 3.3.1 Name {#name}
+#### Name {#name}
 
 The name property defines the name of the entity. This name is used to refer to the entity in forms, microflows, queries, constraints, etc.
 
 The name has to be unique only within a module domain model. You can have two entities with the same name, provided they are in the domain models of different modules.
 
-#### 3.3.2 Generalization {#generalization}
+#### Generalization {#generalization}
 
 An entity can be a more specialized version of a general entity. This means that the specialized entity has all the attributes, associations, events, and other properties of the more general entity. Using the generalization property you can specify which entity is the generalization of the entity. For example, the **Car** entity could have **Vehicle** as its generalization.
 
@@ -101,17 +101,17 @@ For example, this property can be used in a situation where, you have a **Studen
 
 For more information, and a discussion on the relative merits of using generalization or associations, see [Generalization vs 1-1 Associations](/refguide8/generalization-and-association/).
 
-#### 3.3.4 Image {#image}
+#### Image {#image}
 
 The image property can be used to associate the entity with an image. In the domain model this image is visualized in the right-top corner of the entity representation. The image is also visible in entity selection windows and in the Connector. For instance, when selecting an entity for a data view.
 
-#### 3.3.5 Persistable
+#### Persistable
 
 Define whether instances of this entity can be stored in the database. For more information, see [Persistability](/refguide8/persistability/).
 
-### 3.4 System Members Properties{#system-members}
+### System Members Properties{#system-members}
 
-#### 3.4.1 Store 'createdDate' 
+#### Store 'createdDate' 
 
 This property defines whether the entity contains the system attribute 'createdDate'. This is an attribute of type **Date and time** that stores the date and time when the object was created. The value of this attribute is automatically set by the server upon creating an object.
 
@@ -124,7 +124,7 @@ This property defines whether the entity contains the system attribute 'createdD
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
-#### 3.4.2 Store 'changedDate' 
+#### Store 'changedDate' 
 
 This property defines whether the entity contains the system attribute 'changedDate'. This is an attribute of type **Date and time** that stores the most recent date and time when the object was changed.
 
@@ -141,7 +141,7 @@ The 'changedDate' property is only updated on real changes. Simply changing and 
 We do not support displaying this system member of the System.User entity or its specializations in a data grid directly.
 {{% /alert %}}
 
-#### 3.4.3 Store 'owner' 
+#### Store 'owner' 
 
 This property defines whether the entity has the system association 'owner'. This is an association to the system entity 'User' that (initially) stores a reference to the user that created the object. This association is automatically set by the server upon creating an object.
 
@@ -150,7 +150,7 @@ This property defines whether the entity has the system association 'owner'. Thi
 | True | Entity has the system association 'owner'. |
 | False  *(default)* | Entity does not have the system association 'owner'. |
 
-#### 3.4.4 Store 'changedBy' 
+#### Store 'changedBy' 
 
 This property defines whether the entity has the system association 'changedBy'. This is an association to the system entity 'User' that stores a reference to the user that most recently changed the object.
 
@@ -159,7 +159,7 @@ This property defines whether the entity has the system association 'changedBy'.
 | True | Entity has the system association 'changedBy'. |
 | False *(default)*  | Entity does not have the system association 'changedBy'. |
 
-## 4 Tabs in the Entity Dialog Box{#dialog-box}
+## Tabs in the Entity Dialog Box{#dialog-box}
 
 You can also edit an entity by opening the entity properties dialog box.
 

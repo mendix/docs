@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Rich Text widget, whi
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 This documentation applies to Rich Text widget versions 2.0 and below. 
@@ -19,7 +19,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
 
 {{< figure src="/attachments/appstore/use-content/widgets/rich-text/example.jpg" alt="Example" class="no-border" >}}
 
-### 1.1 Features
+### Features
 
 * Allows the user to enter and format text in a WYSIWYG editor
 * Configures which buttons are available on the toolbar of the editor
@@ -39,7 +39,7 @@ The [Rich Text](https://marketplace.mendix.com/link/component/74889/) widget pro
     * <kbd>Minus&nbsp;sign</kbd> + <kbd>Space</kbd> – starts a list
     * <kbd>Tab</kbd> – moves the focus to the next element
 
-## 2 Configuration
+## Configuration
 
 To configure this widget, follow these steps:
 
@@ -47,7 +47,7 @@ To configure this widget, follow these steps:
 2. Double-click the Rich Text widget to open the **Edit Rich Text** dialog box.
 3. Configure the widget using the properties described in the sections below.
 
-### 2.1 General Tab
+### General Tab
 
 * **Editor style**
     * **Toolbar** (default) – if selected, the toolbar is always displayed
@@ -81,7 +81,7 @@ To configure this widget, follow these steps:
 
     {{% alert color="info" %}}For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in the *Studio Pro Guide*.{{% /alert %}}
 
-### 2.2 Toolbar Tab
+### Toolbar Tab
 
 * **Presets** – defines which pre-set buttons are included in the editor
     * **Basic** – if selected, the editor contains buttons suitable for quick input fields
@@ -122,7 +122,7 @@ To configure this widget, follow these steps:
                 * **Delete** – deletes the selected button
                 * **Edit** – opens the **Edit Advanced Groups Item** dialog box where you can make changes to the selected button 
 
-### 2.3 Dimensions Tab
+### Dimensions Tab
 
 * **Width unit** – the width of the widget
     * **Percentage** – specifies the width in relation to the rest of the elements on the page
@@ -134,12 +134,12 @@ To configure this widget, follow these steps:
     * **Percentage of parent** – specifies the width in relation to the rest of the elements on the page
 * **Height** – used as an appropriate CSS value
 
-### 2.4 Events Tab
+### Events Tab
 
 * **On key press** – specifies an action to execute when the user presses any keyboard key or a combination of keyboard keys
 * **On change** – specifies an action to execute when the user changes any content in the editor
 
-### 2.5 Advanced Tab
+### Advanced Tab
 
 * **Enter mode** – defines which of the following elements is wrapped when the user presses the <kbd>Enter</kbd> key:
     * **Paragraph** (`<p>`)
@@ -166,15 +166,15 @@ To configure this widget, follow these steps:
 
         {{% alert color="info" %}}For more information about how to use tags for content filtering, see the [Custom ACF Mode](https://ckeditor.com/docs/ckeditor4/latest/examples/acfcustom.html) section in *Advanced Content Filter – Custom Mode*{{% /alert %}}
 
-### 2.6 Common Tab
+### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget. For more information on CSP compliance, see [Widget CSP Overview](/appstore/widgets/security/content-security-policy/).
 
-## 4 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features:
 
@@ -192,7 +192,7 @@ Features:
 
     {{% alert color="info" %}}To be fully secure, all user HTML input should be sanitized on the server side too. This could be done with the XSSSanitize action found in the [Community Commons](/appstore/modules/community-commons-function-library/). When the option 'Sanitize content' is set to 'false' server side sanitating is required before showing any HTML content.{{% /alert %}}
 
-## 5 Limitations
+## Limitations
 
 The following limitation applies to the rich text widget:
 

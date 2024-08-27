@@ -5,11 +5,11 @@ description: "Describes the various request handlers that are available in the r
 weight: 45
 ---
 
-## 1 Introduction
+## Introduction
 
 Communication between the Mendix client and the runtime server happens through various different request handlers. 
 
-## 2 Standard Request Handlers
+## Standard Request Handlers
 
 The following standard request handlers are used:
 
@@ -22,6 +22,6 @@ The following standard request handlers are used:
 | PWA Manifest | `/manifest.webmanifest` | Serves the manifest file that is required for [PWA applications](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/). |
 | Mx Dev Tools | `/mxdevtools` | Websocket endpoint that handles client logs and nanoflow debugging. Only enabled during development. |
 
-## 3 Custom Request Handlers
+## Custom Request Handlers
 
 Custom request handlers can be added using the `com.mendix.core.Core#addRequestHandler({name of the request handler})` API call.

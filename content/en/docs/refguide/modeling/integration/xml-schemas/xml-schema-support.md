@@ -3,7 +3,7 @@ title: "XML Schema Support"
 url: /refguide/xml-schema-support/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix derives the input/output formats for XML import/export and calling SOAP/XML web services by interpreting XML Schema Definition (XSD) files. When you import an XML schema (*.xsd*) or web service definition (*.wsdl*) using Mendix Studio Pro, you may get a dialog that contains warning messages about unsupported constructs. This is because at this time, Mendix does not support the entire XSD standard. The mapping in Mendix is based on entities and attributes, and some XSD constructs do not lend themselves easily for this format. The following table shows which XSD constructs are currently supported.
 
@@ -24,7 +24,7 @@ There are two kinds of XML mappings: import mapping, which translates XML data t
 
 In the mapping editor for import mappings, you can check elements that can occur in the XML according to the XSD, then define a mapping to Mendix objects for those elements. It does not matter how often or in which order elements occur; whenever an element occurs, the corresponding mapping for that element is applied.
 
-### 1.1 XSD Constraints
+### XSD Constraints
 
 * If the XSD contains any of the unsupported constructs, they will be highlighted in the mapping editor with this warning icon: {{< figure src="/attachments/refguide/modeling/integration/xml-schemas/xml-schema-support/16843903.png" class="no-border" >}}
 
@@ -34,7 +34,7 @@ In the mapping editor for import mappings, you can check elements that can occur
 
 * When importing or exporting an [XML schema](/refguide/xml-schema-support/), the XSD file needs to be in your app. If the XML refers to an XSD file that is not in your app, a runtime error will be thrown. Add the XSD file manually to resolve this error.
 
-## 2 Elements and Types
+## Elements and Types
 
 XSD defines elements that correspond to tags in XML. Elements have types that define their contents (for example, a primitive value or a list of child elements). Elements can have either a simple type or a complex type, while a complex type can have either simple or complex content. For both simple types and complex types with simple content, the content of the element is a primitive value, such as an integer or string value. For complex types with complex content, the content of the element can consist of several child elements. Complex types can also define attributes that can occur within the XML tag.
 
@@ -77,11 +77,11 @@ Example XML instance:
 
 As XML mappings in Mendix are based on the domain model which consists of entities, attributes, and associations, the XSD elements are translated to a sort of object model when you create a mapping. Elements that have complex types or occur more than once are translated to so-called 'object elements' that are mapped to an entity. Elements that have a simple type and occur at most once are translated to 'value elements' that are mapped to an attribute of the entity of their containing object element. XML attributes of complex types are also translated to value elements.
 
-## 3 Attributes
+## Attributes
 
 Complex types can specify attributes that can occur within the XML tag. These attributes always have a simple type and can occur once, at most. Attributes are fully supported in both mapping types. Attributes are translated to value elements in the mapping and can therefore be mapped to an attribute of an entity.
 
-## 4 Simple Types and Complex Types with Simple Content
+## Simple Types and Complex Types with Simple Content
 
 Mendix fully supports elements with primitive content, as in, simple types or complex types with simple content. However, Mendix currently does not take restrictions of simple types into account, such as limiting a string to a finite set of possibilities or limiting the range of an integer. In those cases, all possible values of the base type (for example, string) are allowed.
 
@@ -91,10 +91,10 @@ Usually, elements with primitive content are translated to value elements in the
 The hex binary type is recognized as a string, so operations on binary types are not applicable for a hex binary (for example, MTOM attachment).
 {{% /alert %}}
 
-## 5 Complex Types with Complex Content
+## Complex Types with Complex Content
 
 For elements that have a complex type with complex content, the content of the element can consist of several child elements, of which the order and multiplicity is defined by one or more grouping constructs, such as choice and sequence. 
 
-## 6 Mixed Content
+## Mixed Content
 
 Complex types can define their content to be mixed. This means that an element has both text and child elements as contents. Mixed content is commonly found in document data such as (X)HTML, and less commonly, in structured data. Currently, mixed content is not supported.

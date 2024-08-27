@@ -13,7 +13,7 @@ aliases:
 #The anchors "downloading", "widget", and "project-layout" below are mapped, so they should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to covers the basics of accessing the Marketplace from Studio Pro and provides examples of how to add a widget and a module to your application.
 
@@ -26,13 +26,13 @@ This how-to teaches you how to do the following:
 If you are using Studio Pro on a Mac with Parallels, see [this update](https://kb.parallels.com/112091#section7) for improving the loading time of Marketplace in Studio Pro.
 {{% /alert %}}
 
-## 2 Installing Marketplace Content {#install}
+## Installing Marketplace Content {#install}
 
 There are three ways to install a Marketplace component, which are described in the sections below.
 
-### 2.1 Finding and Downloading Content in Studio Pro {#downloading}
+### Finding and Downloading Content in Studio Pro {#downloading}
 
-#### 2.1.1 For Studio Pro 9.19 and Above {#current-sp}
+#### For Studio Pro 9.19 and Above {#current-sp}
 
 To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and above, follow these steps:
 
@@ -69,11 +69,11 @@ To download content in Studio Pro [9.19](/releasenotes/studio-pro/9.19/) and abo
     * [Extensions](#extensions)
     * [Apps](#apps)
 
-##### 2.1.1.1 Widgets {#widgets}
+##### Widgets {#widgets}
 
 If you download a widget, a pop-up window states the module was successfully imported. Click **OK**, and you can find the imported widget in the **Toolbox**.
 
-##### 2.1.1.2 Modules {#modules}
+##### Modules {#modules}
 
 If you download a module, the **Import Module** dialog box opens, where you should perform the following steps:
 
@@ -89,7 +89,7 @@ If you download a module, the **Import Module** dialog box opens, where you shou
    
 3. Wait until a pop-up window states that the module was successfully imported. Click **OK**. You can find the imported module in the **App Explorer**. 
 
-##### 2.1.1.3 Extensions {#extensions}
+##### Extensions {#extensions}
 
 If you download an [extension](/appstore/modules/#introduction), a warning dialog box opens.
 
@@ -103,7 +103,7 @@ If you do not want to trust the extension and would prefer to remove the extensi
 
 {{< figure src="/attachments/appstore/use-content/trust-extension.png" alt="trust extension" >}}
 
-##### 2.1.1.4 Apps {#apps}
+##### Apps {#apps}
 
 If you download an app, the **Download Marketplace App** dialog box opens, where you should perform the following steps:
 
@@ -113,7 +113,7 @@ If you download an app, the **Download Marketplace App** dialog box opens, where
 
     After the app is downloaded, it opens automatically in Studio Pro.
 
-#### 2.1.2 For Studio Pro 9.18 and Below
+#### For Studio Pro 9.18 and Below
 
 To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and below, follow these steps:
 
@@ -129,7 +129,7 @@ To download content in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and bel
    * [Modules](#modules)
    * [Apps](#apps)
 
-### 2.2 Importing Content from Studio Pro's App Explorer {#import}
+### Importing Content from Studio Pro's App Explorer {#import}
 
 {{% alert color="info" %}}This procedure works for [modules](/appstore/modules/) (including [add-on and solution modules](/refguide/module-settings/#module-type)).{{% /alert %}}
 
@@ -157,7 +157,7 @@ To import content downloaded from the online Mendix Marketplace into Studio Pro,
 
 You can find the imported module in the **App Explorer**.
 
-### 2.3 Manually Adding Content into App Directory {#add}
+### Manually Adding Content into App Directory {#add}
 
 To manually add content downloaded from the online Mendix Marketplace into Studio Pro, follow these steps:
 
@@ -176,13 +176,13 @@ To manually add content downloaded from the online Mendix Marketplace into Studi
 
 You can find the added widget in the **Toolbox** or the added *.mxmodule* in the **App Explorer**.
 
-## 3 Using Content in Studio Pro
+## Using Content in Studio Pro
 
 After you download a component, you can use the component in your app. For detailed information on how a component works, check the **Documentation** tab on the page of the component in the Marketplace.
 
-### 3.1 Using a Widget  {#widget}
+### Using a Widget  {#widget}
 
-#### 3.1.1 Adding the Widget to a Page
+#### Adding the Widget to a Page
 
 After you [install](#install) the widget from the Marketplace in your app, there are two ways to add the widget from the Marketplace via Studio Pro.
 
@@ -210,11 +210,11 @@ To add a widget using the **Add widget** option from the toolbar, follow these s
 
     {{< figure src="/attachments/appstore/use-content/widget-dropped-in-page.png" alt="Rating widget in the page" class="no-border" >}}
 
-#### 3.1.2 Updating the Widget to a Newer Version
+#### Updating the Widget to a Newer Version
 
 To update the widget in your app to a newer version, go to the Marketplace to download the right version, and [install](#install) it in your app.
 
-##### 3.1.2.1 Maintaining Added Translations in a Widget to Update
+##### Maintaining Added Translations in a Widget to Update
 
 In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace widget that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
 
@@ -222,7 +222,7 @@ In the scenario where you have an app with multiple languages in which you need 
 2. Update the widget via the steps described above.
 3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
 
-#### 3.1.3 Configuring the Widget
+#### Configuring the Widget
 
 After you place the widget in your page, some new errors can appear in the [Errors](/refguide/errors-pane/) pane. That is because you still need to configure the widget. In this procedure, the Ratings widget is used as an example.
 
@@ -242,13 +242,13 @@ To configure the widget, follow these steps:
 
 4. In the **Edit Rating** dialog box, click **OK**. The error in the **Errors** pane disappears.
 
-### 3.2 Using a Module {#module}
+### Using a Module {#module}
 
 After you [install](#install) a module in your app, you can use it.
 
 A module downloaded from the Marketplace has a light blue icon to differentiate it from the development modules.
 
-#### 3.2.1 Updating the Module to a Newer Version {#update-module}
+#### Updating the Module to a Newer Version {#update-module}
 
 To update the module in your app to a newer version, follow these steps:
 
@@ -262,7 +262,7 @@ To update the module in your app to a newer version, follow these steps:
 
 3. Check the **userlib** folder in your app directory for duplicate Java libraries. If your **userlib** folder contains multiple versions of the same Java library, it is usually safe to delete the old ones and keep only the new one.
 
-##### 3.2.1.1 Maintaining Added Translations in a Module to Update
+##### Maintaining Added Translations in a Module to Update
 
 In the scenario where you have an app with multiple languages in which you need to update an imported Marketplace module that only comes with one language and where you have manually added translations for the additional languages you need, you can maintain the additional translations by following these steps:
 
@@ -270,13 +270,13 @@ In the scenario where you have an app with multiple languages in which you need 
 2. Update the module via the steps described above.
 3. [Import](/refguide/batch-translate/#import) the maintained translations from the Excel.
 
-#### 3.2.2 Configuring the Module
+#### Configuring the Module
 
 Each module that you download from the Marketplace is different. Some modules can cause errors because they are connected to other modules. For example, after you download the [Database Replication](/appstore/modules/database-replication/) module, you also need to download the [Mx Model Reflection](/appstore/modules/model-reflection/) module to accomplish the configuration. If you run into any problems, always check the **Documentation** tab on the page of this module in the Marketplace for installation guidelines and details on any dependencies.
 
 Keep in mind that some modules you can download may come with their own user roles. If the **Security level** of your app is set to **Prototype/demo** or **Production**, you need to map the module roles to the applicable user roles in your app.
 
-### 3.4  Using a Starter App
+### Using a Starter App
 
 Downloading a starter app (via **Create New App**) creates a new app structure in the storage location that you select. After you click **Download**, a window will appear where you can specify how the app should be created.
 
@@ -284,7 +284,7 @@ Downloading a starter app (via **Create New App**) creates a new app structure i
 You cannot create a new app in an existing repository that is not empty.
 {{% /alert %}}
 
-## 4 Deleting Marketplace Content from Your App
+## Deleting Marketplace Content from Your App
 
 To remove a widget from your app, follow these steps:
 
@@ -302,7 +302,7 @@ To remove a module and user data from your app, follow these steps:
 
 3. When you are sure that you want to delete the module and existing user data, click **Delete module and user data**.
 
-## 5 Read More
+## Read More
 
 * [Importing and Exporting Apps, Modules, Widgets, and Documents](/refguide/import-and-export/)
 * [Properties Common in the Page Editor](/refguide/common-widget-properties/)

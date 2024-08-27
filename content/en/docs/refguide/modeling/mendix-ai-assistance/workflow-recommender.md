@@ -5,7 +5,7 @@ weight: 30
 description: "Describes Workflow Recommender in Mendix Studio Pro."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 {{% alert color="info" %}}
 Workflow Recommender is available in Studio Pro 10.12 and above.
@@ -19,7 +19,7 @@ The key features of Workflow Recommender are the following:
 * Auto-configuration – it does not only provide next best action, but automates the development further by pre-populating the parameters for such an action.
 * Contextual suggestions – it derives context in different ways, including by 'looking' left and right in your workflow when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.
 
-## 2 Modeling Using Workflow Recommender
+## Modeling Using Workflow Recommender
 
 {{% alert color="info" %}}
 Workflow Recommender is enabled by default.
@@ -43,7 +43,7 @@ Choose a suggestion and click it to accept it. You can also choose a suggestion 
 
 To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click).
 
-## 3 Read More
+## Read More
 
 * [Workflows](/refguide/workflows/)
 * [Logic Recommender](/refguide/logic-recommender/)

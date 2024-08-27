@@ -5,7 +5,7 @@ weight: 30
 description: "Widgets which can be added to pages to view and edit attributes of objects."
 ---
 
-## 1 Introduction
+## Introduction
 
 Input elements show data to the end-user and, optionally, allow them to edit the data.
 
@@ -59,11 +59,11 @@ For more information on data types, see [Data Types](/refguide/data-types/).
 For more information on associations and their properties, see [Associations](/refguide/associations/).
 {{% /alert %}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Pages](/refguide/pages/)

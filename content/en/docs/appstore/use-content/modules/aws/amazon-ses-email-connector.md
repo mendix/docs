@@ -8,11 +8,11 @@ aliases:
     - /appstore/connectors/aws/amazon-ses-email-connector/
 ---
 
-## 1 Introduction
+## Introduction
 
 [Amazon Simple Email Service (SES)](https://aws.amazon.com/ses/) is an email platform that provides an easy way to send and receive email using your own email addresses and domains. Amazon SES also provides SMTP details, which you can configure in the Mendix platform-supported [Email Connector](https://marketplace.mendix.com/link/component/120739) to send emails in your app.
 
-## 2 Configuring the Mendix Email Connector for Amazon SES
+## Configuring the Mendix Email Connector for Amazon SES
 
 To configure your SES account in the Email Connector in Studio Pro, follow these steps: 
 

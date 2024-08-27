@@ -5,13 +5,13 @@ description: "Describes the global navigation and top bar that is available thro
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 The global navigation top bar and menu work the same in **Apps** as they do in other browser-based parts of the Mendix Portal (for example, [Mendix Marketplace](/appstore/) and [Mendix Catalog](/catalog/)). 
 
 The global navigation is always accessible throughout the online Mendix Platform.
 
-## 2 Global Navigation Menu {#global-navigation}
+## Global Navigation Menu {#global-navigation}
 
 On the left side of the top bar, click **Open Global Navigation** ({{% icon name="layout-rounded-1" %}}) to access the main menu:
 
@@ -19,7 +19,7 @@ On the left side of the top bar, click **Open Global Navigation** ({{% icon name
 
 Click the menu items to navigate to different parts of the Mendix Platform, or hover over the menu items to expand the sections for further access.
 
-## 3 Search
+## Search
 
 In the **Search** box, you can search the platform for **Docs**, **Forum** posts, public **Marketplace** content, and **Academy** content.
 
@@ -27,7 +27,7 @@ Use the various filters to refine your search results:
 
 {{< figure src="/attachments/developerportal/global-nav/search-menu.png" width="500" class="no-border" >}}
 
-## 4 Support Menu
+## Support Menu
 
 Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) to read up on [what's new](https://www.mendix.com/releases/) in the Mendix Platform, [ask a question](/community-tools/mendix-community/#questions-tab) to the Mendix community, [share an idea](/community-tools/mendix-community/#ideas-tab) with the community, explore more [Mendix documentation](/), or contact [Mendix Support](/support/).
 
@@ -37,7 +37,7 @@ Click **Open Support Menu** ({{% icon name="question-circle" color="color" %}}) 
 If you see **Get Started with Mendix**, a red dot next to this menu item will remain there for 30 days after your signup.
 {{% /alert %}}
 
-## 5 Notifications Menu {#notifications}
+## Notifications Menu {#notifications}
 
 Click **Open Notifications Menu** ({{% icon name="alarm-bell" %}}) to see the platform notifications you have received. Clicking the notification itself takes you to the source.
 
@@ -49,7 +49,7 @@ To configure what types of notifications you receive, click **Settings** ({{% ic
 To stop receiving notifications when new feedback is submitted for a specific app, go to the [Settings](/developerportal/collaborate/general-settings/) page for that app and click **Stop Watching**. To disable notifications for multiple apps on one page, use the **Stop Watching** option on the [My Apps](/developerportal/#my-apps) page.
 {{% /alert %}}
 
-## 6 Profile Menu
+## Profile Menu
 
 Click **Open Profile Menu** ({{% icon name="user" %}}) to access your [Mendix Profile](/community-tools/mendix-profile/), enable **Dark Mode**, and access your [Account Settings](/community-tools/mendix-profile/user-settings/#settings). 
 

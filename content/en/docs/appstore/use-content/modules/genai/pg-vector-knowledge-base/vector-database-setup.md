@@ -6,7 +6,7 @@ weight: 5
 description: "Describes how to set up a vector database to store and manage vector embeddings for a knowledge base"
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 Vector databases play an important role in embeddings-based AI use cases by facilitating efficient storage, retrieval, and manipulation of high-dimensional vectors representing textual or semantic information. A crucial step within those use cases like semantic search and Retrieval Augmented Generation (RAG) is to find the closest and thus most similar pieces of information to a given semantic input. Those similarity and distance calculations between high-dimensional vectors cannot be done on a normal database and thus a vector database is needed.
 
@@ -16,9 +16,9 @@ This page describes how a PostgreSQL vector database can be set up to explore us
 This procedure describes a setup based on a PostgreSQL database with the pgvector extension to query embedding vectors. However, this is not the only possible solution. Other (vector) database types may better fit your use case.
 {{% /alert %}}
 
-## 2 Managing a PostgreSQL Database with Amazon RDS {#aws-database}
+## Managing a PostgreSQL Database with Amazon RDS {#aws-database}
 
-### 2.1 Creating a PostgreSQL Database with Amazon RDS {#aws-database-create}
+### Creating a PostgreSQL Database with Amazon RDS {#aws-database-create}
 
 {{% alert color="info" %}}
 For detailed steps for creating a PostgreSQL Database with Amazon RDS, see [Create and Connect to a PostgreSQL Database](https://aws.amazon.com/getting-started/hands-on/create-connect-postgresql-db/) in the *AWS Documentation*. You can check out the following sections in the AWS Documentation for preliminary background knowledge:
@@ -72,13 +72,13 @@ You can use the values in the steps below for experimental purposes:
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
 
-### 2.2 Deleting Resources in AWS {#aws-database-delete}
+### Deleting Resources in AWS {#aws-database-delete}
 
 If no action is taken, resources in AWS will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from AWS, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required. This is especially relevant the moment resources fall outside of the free-tier after a certain time.
 
-## 3 Managing a PostgreSQL Database with Microsoft Azure {#azure-database}
+## Managing a PostgreSQL Database with Microsoft Azure {#azure-database}
 
-### 3.1 Creating a PostgreSQL Database with Microsoft Azure {#azure-database-create}
+### Creating a PostgreSQL Database with Microsoft Azure {#azure-database-create}
 
 {{% alert color="info" %}}
 For detailed steps for creating a PostgreSQL Database with Azure and enabling the *pgVector* extension, see [Quickstart: Create an Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-server-portal) and [How to enable and use pgvector on Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector) in the *Azure Documentation*.
@@ -119,11 +119,11 @@ You can use the values in the steps below for experimental purposes:
    
 9. Search for **Databases** in the search bar on the left. Verify that there is already a database that you can use. Alternatively, create a new database by clicking **Add** at the top.
 
-### 3.2 Deleting Resources in Azure {#azure-database-delete}
+### Deleting Resources in Azure {#azure-database-delete}
 
 If no action is taken, resources on Azure will stay around indefinitely. Make sure to think about deleting the resources when you are done experimenting. When using services from Azure, you are responsible for having the necessary resources and deleting the ones that are no longer needed, to prevent from being charged more than is required.
 
-## 4 Configuring the Database Connection Details in Your Application {#configure-database-connection}
+## Configuring the Database Connection Details in Your Application {#configure-database-connection}
 
 1. Add the [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module and its dependencies to your Mendix app and set it up correctly, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
 
@@ -161,11 +161,11 @@ If no action is taken, resources on Azure will stay around indefinitely. Make su
 
    3. Save and test the configuration.
 
-## 5 Setup Alternatives {#setup-alternatives}
+## Setup Alternatives {#setup-alternatives}
 
 Setting up a cloud database with the pgvector extension is one of the easiest options for using a vector database for our sample implementation. However, there are also alternatives and general considerations, which are described in this section.
 
-### 5.1 Running a PostgreSQL Database Locally {#local-database}
+### Running a PostgreSQL Database Locally {#local-database}
 
 It is possible to run a PostgreSQL database locally. It is useful to familiarize yourself with PostgreSQL and tooling like pgAdmin. 
 
@@ -179,9 +179,9 @@ Make sure that you meet the following prerequisites:
 
 In this case, the configuration of the database connection details in your application is similar to what was described in the [Configuring the Database Connection Details in Your Application](#configure-database-connection) section. Your Jdbc URL will now look like `jdbc:postgresql://localhost:5432/{vectorDatabaseName}` where the value for `{vectorDatabaseName}` is the one you have chosen while creating the database.
 
-## 6 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-### 6.1 Password Authentication Failed for User "postgres" in the Mendix App {#authentication-error}
+### Password Authentication Failed for User "postgres" in the Mendix App {#authentication-error}
 
 If you get the error message **FATAL: password authentication failed for user "postgres"**, it could be a caching issue during the running of queries from apps locally.
 
@@ -191,19 +191,19 @@ When this occurs, do as follows:
 2. Close all browser tabs. 
 3. Shut down the app locally and run the app again.
 
-### 6.2 Error in Logs of the Mendix App About the Extension "Vector" {#extension-error}
+### Error in Logs of the Mendix App About the Extension "Vector" {#extension-error}
 
 If there is an error in the logs of your Mendix app about the extension called “vector", it could be that your PostgreSQL version does not meet the requirement of pgvector, or you have not met the installation prerequisites.
 
 When this occurs, make sure that you use the PostgreSQL version 11 or above. If you are using a PostgreSQL database on your local machine, make sure you have followed all the installation prerequisites specific for your setup and operating system. 
 
-### 6.3 Timeout Error in Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
+### Timeout Error in Logs of the Mendix App When You Try to Connect to the External Database {#timeout-error}
 
 If there is a timeout error in the logs of my Mendix app when you try to connect to the external database, the cause could be that some company network prohibits connections to AWS servers. 
 
 When this occurs, make sure you are connected to a network that does allow these connections, for example, with a phone hotspot or from your home network.
 
-## 7 Read More {#read-more}
+## Read More {#read-more}
 
 * [Embeddings-based Search – Open AI Cookbook](https://cookbook.openai.com/examples/question_answering_using_embeddings)
 * [Vector Database Options on AWS](https://aws.amazon.com/blogs/database/the-role-of-vector-datastores-in-generative-ai-applications/)

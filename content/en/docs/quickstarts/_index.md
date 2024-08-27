@@ -9,6 +9,7 @@ cascade:
 aliases:
     - /refguide/quickstart-guide/
     - /refguide9/quickstart-guide/
+numberless_headings: true
 ---
 
 Welcome to the Mendix quick starts for building an app! These tutorials cover the essentials of Mendix development:

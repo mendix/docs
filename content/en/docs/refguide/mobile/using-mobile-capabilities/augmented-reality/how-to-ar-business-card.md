@@ -7,11 +7,11 @@ aliases:
     - /howto/mobile/how-to-ar-business-card/
 ---
 
-## 1 Introduction
+## Introduction
 
 Follow the sections below to build a demo. While doing so, you will become familiar with a whole range of augmented reality (AR) widgets, and see them in action. Upon completing this document, you will end up with an interesting demo that can easily be customized for your own purposes. 
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -33,7 +33,7 @@ When you have completed the prerequisites, your work should look like this:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/BusinessCardRender.png" alt="Result"   width="400"  class="no-border" >}}
 
-## 3 Creating an AR Business Card Demo
+## Creating an AR Business Card Demo
 
 For this app you will need to start a new app based on the Blank Native Mobile App, or use another app with the Native Mobile Resources module imported from the Mendix Marketplace. First you will lay a virtual business card over your real business card. You will need the **Square (AR)** widget and the imported PNG of the business card you wish to use.
 
@@ -77,13 +77,13 @@ Go to the **General** tab and place it about 8 cm (*0.08,0,0*) to the right of t
 
 To finish this business card demo you need something people can click to find out more about your work. For this you will add two social media logos: a Twitter one and a LinkedIn one. You can use any 3D object. 
 
-The following settings correctly place them underneath our business card (since scale can differ between 3D objects, this is not guarenteed to work with all 3D objects):
+The following settings correctly place them underneath our business card (since scale can differ between 3D objects, this is not guaranteed to work with all 3D objects):
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-3d-object.png" alt="twitter 3d object"   width="400"  class="no-border" >}}{{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-3d-object.png" alt="twitter 3d object"   width="400"  class="no-border" >}}
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/linkedin-3d-object.png" alt="linkedin 3d object" width="400" class="no-border" >}}
 
-You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and Linkedin has #0A66C2:
+You can alter the color or texture of the 3D objects within Mendix. Currently, Twitter has a color of #1DA1F2 and LinkedIn has #0A66C2:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-business-card/twitter-material-dialogue.png" alt="twitter material"   width="400"  class="no-border" >}}
 
@@ -97,6 +97,6 @@ Now all that is left is to add a nanoflow that opens a URL to the **Events** > *
 
 Congratulations, you now have a functioning AR business card demo with custom 3D objects!
 
-## 4 Read More
+## Read More
 
 * [Native Mobile AR](/appstore/modules/native-mobile-ar/)

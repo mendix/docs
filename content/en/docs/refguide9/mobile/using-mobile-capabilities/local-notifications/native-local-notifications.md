@@ -5,7 +5,7 @@ weight: 10
 description: A tutorial for setting up local push notifications which do not use an internet connection.
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide teaches you how to build local notifications for native mobile applications. Local notifications will only allow you to schedule and send notifications confined to one mobile device. These notifications do not use an internet connection. One use of a local notification might be an alarm app which sends a notification after an amount of time has elapsed.
 
@@ -14,7 +14,7 @@ This guide teaches you how to do the following:
 * Build a button connected to a nanoflow which calls a local notification
 * Make your notification nanoflow request device permission for local notifications
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -25,7 +25,7 @@ Before starting this guide, make sure you have completed the following prerequis
 To use push notifications with apps created with the Native Builder, make sure you have completed [How To Build a Mendix Native App in the Cloud](/howto9/mobile/deploying-native-app/) and the guides described in [Push Notifications](/refguide9/mobile/using-mobile-capabilities/push-notifications/)
 {{% /alert %}}
 
-## 3 Creating an App and Configuring Notifications
+## Creating an App and Configuring Notifications
 
 Follow the instructions below to set up your first local notification:
 
@@ -176,6 +176,6 @@ Now you can run your app and see if your notification works.
 
 Congratulations! You can now see local notifications on your device. Next, in [How to Use Local Notifications Part 2: Badges](/refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-badges/), you will learn how to configure notification badges.
 
-## 4 Read More
+## Read More
 
 * [Build JavaScript Actions](/howto9/extensibility/build-javascript-actions/)

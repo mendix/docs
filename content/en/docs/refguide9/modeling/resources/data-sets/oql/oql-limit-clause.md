@@ -3,11 +3,11 @@ title: "OQL Limit Clause"
 url: /refguide9/oql-limit-clause/
 ---
 
-## 1 Description
+## Description
 
 With the `LIMIT` clause a portion of the result of a query can be returned.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -15,19 +15,19 @@ The syntax is as follows:
 [ LIMIT number ] [ OFFSET number ]
 ```
 
-### 2.1 LIMIT
+### LIMIT
 
 `LIMIT` specifies how many rows must be returned.
 
-### 2.2 OFFSET
+### OFFSET
 
 `OFFSET` specifies how many rows must be skipped before returning the result rows.
 
-## 3 Examples
+## Examples
 
 This query retrieves the first ten customers, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 LIMIT 10
@@ -35,7 +35,7 @@ LIMIT 10
 
 This query retrieves all customers, except the first ten, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 OFFSET 10
@@ -43,7 +43,7 @@ OFFSET 10
 
 This query retrieves the 11th to 20th customer, sorted by their last name:
 
-```sql
+```sql {linenos=false}
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 LIMIT 10 OFFSET 10

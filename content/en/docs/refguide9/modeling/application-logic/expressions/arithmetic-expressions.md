@@ -4,15 +4,15 @@ url: /refguide9/arithmetic-expressions/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the arithmetic operators which are supported in expressions. These all work on numeric data types (Integer/Long and Decimal).
 
-## 2 Multiplication
+## Multiplication
 
 Multiplies two numbers.
 
-### 2.1 Input parameters
+### Input parameters
 
 The input parameters are described in the table below:
 
@@ -21,13 +21,13 @@ The input parameters are described in the table below:
 | First number  | Integer/Long, Decimal |
 | Second number | Integer/Long, Decimal |
 
-### 2.2 Output
+### Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If either of the two inputs is of type Decimal, the result is of type Decimal.
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
@@ -41,11 +41,11 @@ The output is:
 6
 ```
 
-## 3 Division
+## Division
 
 Divides two numbers. You can use either the `div` or colon ( ``:`` ) syntax, as can be seen below in the examples. The colon ( ``:`` ) syntax is inspired by the divide symbol `÷`. We cannot use the more conventional slash ( / ) syntax because that would conflict with the slash which is used for separating objects and members.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -54,11 +54,11 @@ The input parameters are described in the table below:
 | First number  | Integer/Long, Decimal |
 | Second number | Integer/Long, Decimal |
 
-### 3.2 Output
+### Output
 
 The result is always of type Decimal, regardless of the types for the inputs.
 
-### 3.3 Example
+### Example
 
 Find the example of usages below:
 
@@ -86,7 +86,7 @@ Find the example of usages below:
     4.0
     ```
 
-### 3.4 Remarks
+### Remarks
 
 The result of a division is only an approximation if it has an infinite decimal expansion. The two examples below illustrate this approximation: 
 
@@ -128,11 +128,11 @@ The result of a division is only an approximation if it has an infinite decimal 
 
 Therefore, it is recommended to do division operations last.
 
-## 4 Modulo
+## Modulo
 
 Calculates the remainder of the division of one number by another. In other words, `m` modulo `n` corresponds to: `m = p + k*n`, where `p` is the result of the operation `m` modulo `n`.
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -141,13 +141,13 @@ The input parameters are described in the table below:
 | First number  | Integer/Long, Decimal |
 | Second number | Integer/Long, Decimal |
 
-### 4.2 Output
+### Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If either of the two inputs is of type Decimal, the result is of type Decimal.
 
-### 4.3 Example
+### Example
 
 If you use the following input:
 
@@ -161,13 +161,13 @@ the output is:
 3
 ```
 
-## 5 Addition
+## Addition
 
 Adds two numbers.
 
 For the use of the addition symbol for string concatenation, see [String function calls](/refguide9/string-function-calls/).
 
-### 5.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -176,13 +176,13 @@ The input parameters are described in the table below:
 | First number  | Integer/Long, Decimal |
 | Second number | Integer/Long, Decimal |
 
-### 5.2 Output
+### Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If either of the two inputs is of type Decimal, the result is of type Decimal.
 
-### 5.3 Example
+### Example
 
 If you use the following input:
 
@@ -196,11 +196,11 @@ the output is:
 1
 ```
 
-## 6 Subtraction
+## Subtraction
 
 Subtracts the second input from the first.
 
-### 6.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -209,13 +209,13 @@ The input parameters are described in the table below:
 | First number  | Integer/Long, Decimal |
 | Second number | Integer/Long, Decimal |
 
-### 6.2 Output
+### Output
 
 If the two inputs are both of type Integer/Long, the result is of type Integer/Long.
 
 If either of the two inputs is of type Decimal, the result is of type Decimal.
 
-### 6.3 Example
+### Example
 
 If you use the following input:
 

@@ -5,6 +5,14 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.15 {#715}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
 ## 7.0.14 {#714}
 
 **Release date: June 28, 2024**

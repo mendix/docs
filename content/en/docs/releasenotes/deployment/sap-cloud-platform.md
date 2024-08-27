@@ -13,6 +13,22 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2024
 
+### August 27, 2024
+
+#### Bug Fixes
+
+* Fixed updating the buildpack version to the latest while re-deploying the application on SAP BTP.
+
+### August 25, 2024
+
+#### Portal Improvements
+
+* Deployment package creation and deployment for Mendix version 7 and below is no longer supported.
+
+#### Bug Fixes
+
+* We have solved an issue where the tag description for a deployment package was missing.
+
 ### July 14, 2024
 
 #### Portal Improvements
@@ -170,7 +186,7 @@ For more information see [SAP Business Technology Platform - deploy](/developerp
 #### Improvements
 
 * We have added support for deploying to the Azure Netherlands region of SAP Cloud Platform.
-    * Object storage is only supported in the Azure Netherlands region for  Mendix 8.7.0 and above.
+    * Object storage is only supported in the Azure Netherlands region for Mendix 8.7.0 and above.
 * We have added a log of all deployment activities which are carried out on your SAP environments to the environments page of apps which are deployed to SAP Cloud Platform.
 * We have added the ability to specify a custom URL (for example, `appname.subdomain.domain.com`) where the user will be redirected after signing on using XSUAA, instead of being redirected to the generated URL (for example, `appname.cfapps.eu10.hana.ondemand.com`) of the app.
 

@@ -7,7 +7,7 @@ aliases:
     - /howto9/mobile/implementation/
 ---
 
-## 1 Introduction
+## Introduction
 
 Guides in this section will help you implement key features of native apps and/or progressive web apps (PWAs).
 

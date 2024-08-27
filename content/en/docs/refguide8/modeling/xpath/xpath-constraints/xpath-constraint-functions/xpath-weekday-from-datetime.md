@@ -3,11 +3,11 @@ title: "XPath Weekday-from-DateTime"
 url: /refguide8/xpath-weekday-from-datetime/
 ---
 
-## 1 Overview
+## Overview
 
 The `weekday-from-dateTime()` function extracts the day of the week (as a number) from a **Date and time** attribute so it can be used to compare to a value. Values range from 1 to 7 (1 = Sunday, 7 = Saturday).
 
-## 2 Example
+## Example
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 (Friday):
 

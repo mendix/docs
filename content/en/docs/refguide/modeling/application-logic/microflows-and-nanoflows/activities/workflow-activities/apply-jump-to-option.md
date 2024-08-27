@@ -9,7 +9,7 @@ weight: 5
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Apply jump-to option** activity allows the workflow to jump to a selected activity. This activity should be used after the [Generate jump-to options](/refguide/generate-jump-to-options/) activity that generates the list of possible workflow activities the workflow can jump to. This is useful when, for example, the workflow is in incompatible state and the Workflow Administrator or any other user should be able to select a specific activity where the workflow can continue.
 
@@ -21,7 +21,7 @@ This functionality is different from the [Jump activity](/refguide/jump-activity
 
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of **Apply jump-to option** properties is represented in the image below:
 
@@ -34,7 +34,7 @@ The **Apply jump-to option** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -42,14 +42,14 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object
+### Object
 
 An object of the **System.WorkflowJumpToDetails** entity available from the microflow parameters.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Jumping to Different Activities in a Workflow](/refguide/jump-to/)

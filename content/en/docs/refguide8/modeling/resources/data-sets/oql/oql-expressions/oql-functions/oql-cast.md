@@ -3,7 +3,7 @@ title: "OQL CAST"
 url: /refguide8/oql-cast/
 ---
 
-## 1 Introduction
+## Introduction
 
 The CAST function converts an expression to a specific data type.
 
@@ -22,7 +22,7 @@ CAST ( expression AS data_type )
     * LONG
     * STRING
 
-## 2 Supported Conversions
+## Supported Conversions
 
 The table below describes which CAST conversions are supported:
 

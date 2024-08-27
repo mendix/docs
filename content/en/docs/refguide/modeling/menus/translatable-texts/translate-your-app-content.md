@@ -6,7 +6,7 @@ aliases:
   - /howto/collaboration-requirements-management/translate-your-app-content/
 ---
 
-## 1 Introduction
+## Introduction
 
 Delivering your Mendix app in multiple languages is an important capability for reaching a wide audience. Most of the text that the end-user sees is stored as translatable texts (for example, labels, button names, and menu items). Using the language features of Mendix, you can quickly make your app multilingual and translate the content to many other languages.
 
@@ -21,7 +21,7 @@ This how-to teaches you how to do the following:
 
 It is assumed that you know the basics of creating new apps and editing them.
 
-## 2 Creating a Sample App
+## Creating a Sample App
 
 To demonstrate working with languages, you will create a new app from the blank app template. You will add some text to this app, as an example, but the app you create is to demonstrate the language features of Mendix and is not intended to be run.
 
@@ -56,7 +56,7 @@ To create your app, do the following:
 
 You now have an app with some translatable texts.
 
-## 3 Adding App Languages
+## Adding App Languages
 
 You can now add an additional language to your app.
 
@@ -78,7 +78,7 @@ To add an additional language, do the following:
 
 5. Click **OK**. 
 
-## 4 Changing the Current Language
+## Changing the Current Language
 
 The current language is the language of the dictionary where any text you enter is stored. At the lower-right corner of the Studio Pro window, the language indicator shows which language is the current language.
 
@@ -91,7 +91,7 @@ To change your current language to Chinese, do the following:
 
     {{% alert color="warning" %}}If you do more development later on, remember to change back to your default language so that any new text is recorded there and not in a translated dictionary.{{% /alert %}}
 
-## 5 Translating an Individual Piece of Text
+## Translating an Individual Piece of Text
 
 Now that your current language is Chinese, you can translate some of the texts into that language.
 
@@ -107,13 +107,13 @@ Now that your current language is Chinese, you can translate some of the texts i
 
 You have now added a translation for these two pieces of text.
 
-## 6 Using Batch Translate
+## Using Batch Translate
 
 You can translate each piece of text individually. However, there are texts which appear multiple times (for example, **Cancel**, **Delete**, and **Edit**).
 
 Mendix offers you a way to add a translation for all occurrences of a text at once.
 
-### 6.1 Translating Multiple Texts {#translate-multiple-texts}
+### Translating Multiple Texts {#translate-multiple-texts}
 
 To translate multiple occurrences and multiple texts from the default language, English, to Chinese in a single operation, do the following:
 
@@ -139,7 +139,7 @@ To translate multiple occurrences and multiple texts from the default language, 
 
     {{< figure src="/attachments/refguide/modeling/menus/translatable-texts/translate-your-app-content/product-new-edit-partial-translation.png" alt="Product New Edit page showing the cancel button translated into Chinese" class="no-border" width="350" >}}
 
-### 6.2 Dealing With More Complex Translations
+### Dealing With More Complex Translations
 
 Sometimes a single word in the source language does not have a single translation in the destination language.
 
@@ -179,7 +179,7 @@ To handle this, follow the steps below:
 
 You can now check that the correct translation has been applied to the other instances of Order (for example, on the **Order_Overview** page).
 
-## 7 Replacing Text in Current Language
+## Replacing Text in Current Language
 
 Once you have made some translations, you may want to look at the translations to check for spelling or consistency. To do this, use **Batch Replace** as follows:
 
@@ -192,7 +192,7 @@ Once you have made some translations, you may want to look at the translations t
 
 3. Enter any translations that need to be replaced in the **Replace with** column, then click **Replace**.
 
-## 8 Copying to a New Language
+## Copying to a New Language
 
 Having translated your app, you may want to translate it into another related language (for example **Dutch, Netherlands** into **Dutch, Belgium**, **English, United States** into **English, United Kingdom**, or **Chinese (Simplified), China** into **Chinese (Simplified), Singapore**). Many of the translations will be the same, so you do not want to type them again.
 
@@ -212,11 +212,11 @@ To copy our Chinese (Simplified), China translations into a Chinese (Simplified)
 9. Click **Apply**. Now in the **Chinese (Simplified), Singapore** column, it shows **8**, too. Your Chinese (Simplified), China texts are copied to the Chinese (Simplified), Singapore dictionary. You can go to **Language** > **Batch Replace** to review them or go to **Language** > **Batch Translate** to change any cases where the Chinese (Simplified), China and Chinese (Simplified), Singapore translations are different.
 10. Click **Close** to close the dialog box.
 
-## 9 Other Considerations
+## Other Considerations
 
 Now that you know how to make translations of translatable texts, there are a couple of other things you may wish to investigate.
 
-### 9.1 Completeness
+### Completeness
 
 To ensure all your text is properly translate, do a completeness check for your languages.
 
@@ -230,7 +230,7 @@ To set up the completeness check, do the following:
 
 For more information, see [Advanced Language Settings](/refguide/language-settings/#advanced) in the *Language Settings* reference guide.
 
-### 9.2 Sharing Translations With Other Apps
+### Sharing Translations With Other Apps
 
 You have seen how to create translations easily and copy your new translation to a new language in the current app.
 
@@ -240,6 +240,6 @@ Mendix allows you to export a translation to an Excel file, either for the whole
 
 For more information, see [Exporting and Importing Text](/refguide/batch-translate/#export-import) in the *Batch Translate* reference guide.
 
-## 10 Read More
+## Read More
 
 * [Language Menu](/refguide/translatable-texts/)

@@ -7,7 +7,7 @@ aliases:
 #The anchor <enable-cloud-debugging> below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 In addition to debugging a local deployment of your app, it is also possible to debug applications that are already in a cloud environment.
 
@@ -25,14 +25,14 @@ This how-to teaches you how to do the following:
 
 * Connect the debugger in Studio Pro to your Mendix Cloud environment
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have access as a team member to a Mendix app deployed to a [licensed](/developerportal/deploy/licensing-apps/) Mendix Cloud environment
 * Have **TRANSPORT RIGHTS** to the app environment you want to debug in the app's [node permissions](/developerportal/deploy/node-permissions/)
 
-## 3 The Basics
+## The Basics
 
 In the Mendix Cloud, the debugger is always listening for connections so you cannot turn it on or off. To debug your app in the cloud, you need to get a URL and a password from the app environment and provide that information to Studio Pro. The steps below explain how to do this.
 
@@ -40,9 +40,9 @@ In the Mendix Cloud, the debugger is always listening for connections so you can
 The debugger supports only debugging of single-instance environments. Multi-instance environments need to be scaled down to one instance before the debugger can be used. See [Scaling Your Environment in Mendix Cloud](/developerportal/deploy/scale-environment/) for more information.
 {{% /alert %}}
 
-### 3.1 Obtain Debugging Credentials
+### Obtain Debugging Credentials
 
-#### 3.1.1 Obtain Debugging Credentials from Mendix Cloud
+#### Obtain Debugging Credentials from Mendix Cloud
 
 When your application is in Mendix Cloud, follow these steps:
 
@@ -64,7 +64,7 @@ When your application is in Mendix Cloud, follow these steps:
 
 You will need to provide these credentials to Studio Pro to connect the debugger to the app running in the cloud.
 
-#### 3.1.2 Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
+#### Obtain Debugging Credentials from Private Cloud Connected{#private-cloud}
 
 If your application is on a connected Private Cloud, you can get the credentials from the Mendix Portal:
 
@@ -92,7 +92,7 @@ Once the debugger is enabled, you will see the **URL** and **Password** which ar
 
 When the debugger is enabled, you can click **Disable Debugger** to disable it. You will be asked to confirm your choice and will receive a warning that you have made some changes. Click **Apply Changes** to restart the app and apply the changes.
 
-#### 3.1.3 Obtain Debugging Credentials from SAP S/4 HANA Cloud
+#### Obtain Debugging Credentials from SAP S/4 HANA Cloud
 
 If your application is on the SAP S/4 HANA cloud, you will need to set the password in the SAP Cockpit:
 
@@ -106,7 +106,7 @@ If your application is on the SAP S/4 HANA cloud, you will need to set the passw
 
 4. Restart your application.
 
-#### 3.1.4 Obtain Debugging Credentials from Windows Mendix Service Console
+#### Obtain Debugging Credentials from Windows Mendix Service Console
 
 If your application is deployed to a Microsoft Windows environment, you will need to obtain the password from the Windows Mendix Service Console
 
@@ -120,7 +120,7 @@ The debugger is available at `{appURL}/debugger/` using the default runtime serv
 
 If you are debugging your app running behind IIS, make sure the debugger path is forwarded to the right runtime location as described in the [Reverse Proxy Inbound Rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules) section of *Microsoft Windows – deploy*.
 
-### 3.2 How to Enable Cloud Debugging in Studio Pro {#enable-cloud-debugging}
+### How to Enable Cloud Debugging in Studio Pro {#enable-cloud-debugging}
 
 Once you have the unique URL and password, there are two methods for connecting Studio Pro to the cloud environment. 
 
@@ -150,7 +150,7 @@ If you do cannot connect the debugger, then you do not have sufficient permissio
 
 The debugger is now connected to your app running in the cloud.
 
-## 4 Read More
+## Read More
 
 * [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
 * [The Ultimate Debugger](https://www.mendix.com/tech-blog/the-ultimate-debugger/) 

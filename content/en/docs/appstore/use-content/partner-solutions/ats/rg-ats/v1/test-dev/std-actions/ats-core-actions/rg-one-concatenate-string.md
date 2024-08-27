@@ -3,15 +3,15 @@ title: "Concatenate String"
 url: /appstore/partner-solutions/ats/rg-one-concatenate-string/
 ---
 
-## 1 Description
+## Description
 
 Concatenate Strings
 
-## 2 Usage
+## Usage
 
 Pass the Strings you want to concatenate, with a maximum of five strings.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

@@ -5,7 +5,7 @@ weight: 13
 description: "Describes how to create a published OData service with resources, add the OData server to Tableau and Excel, combine resources in Tableau, and create custom queries."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix apps encourage the application of a services-oriented architecture, with multiple smaller services providing APIs and user interfaces for a specific set of data and logic. Enterprises build up complete solutions by assembling these services.
 
@@ -22,7 +22,7 @@ This how-to outlines how to do the following:
 * Combine resources in Tableau
 * Create custom queries
 
-## 2 Prerequisites
+## Prerequisites
 
 Before reviewing this guide, make sure you do the following:
 
@@ -30,7 +30,7 @@ Before reviewing this guide, make sure you do the following:
 * Install Excel (this document uses Excel for Office 365).
 * Download and install the public version of [Tableau](https://public.tableau.com).
 
-## 3 Creating a Published OData Service {#create-service}
+## Creating a Published OData Service {#create-service}
 
 A published OData service can be used by third-party applications to read data from a Mendix application. For detailed steps on publishing an OData service, see the [Creating an App](/howto/integration/share-data/#createapp) and [Publishing to the Catalog](/howto/integration/share-data/#publishing) sections of *Share Data Between Apps*. The basic steps are as follows:
 
@@ -47,7 +47,7 @@ A published OData service can be used by third-party applications to read data f
 
 The OData service is now ready to be consumed.
 
-## 4 Working with Mendix Data in Excel for Office 365
+## Working with Mendix Data in Excel for Office 365
 
 1. Open Excel.
 2. Open the **DATA** tab and select **Get Data** > **From Other Sources** > **From OData Feed**.
@@ -57,11 +57,11 @@ The OData service is now ready to be consumed.
 
 The data of the Mendix application is now available in Excel.
 
-## 5 Working with Mendix Data in Tableau
+## Working with Mendix Data in Tableau
 
 In this section, we will outline the steps for adding more than one published entity so you can compare data from different data sources. 
 
-### 5.1 Use Case
+### Use Case
 
 Imagine you have an app that helps with asset management. You have a Published OData Service with persistable entities called **SmartTask** and **Employee** that expose information. The domain model looks like this:
 
@@ -115,7 +115,7 @@ To visualize data from your app in Tableau, follow these steps:
 
 You should now see a bar chart of the data.
 
-## 6 Filtering Data With Query Parameters
+## Filtering Data With Query Parameters
 
 By default, all data is retrieved by Tableau, but Studio Pro allows you to add filters to the query so only the desired data is being retrieved.
 
@@ -143,7 +143,7 @@ These are some other query examples:
 * `http://localhost:8080/odata/publishedservicename/v1/SmartTasks?$filter=DueDate+gt+datetime'1995-01-01T00:00:00'`
 * `http://localhost:8080/odata/publishedservicename/v1/SmartTasks?$filter=Created+gt+datetime'2005-01-01T00:00:00'&$orderby=DueDate`
 
-## 7 Read More
+## Read More
 
 * [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)

@@ -130,7 +130,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
         {{% alert color="warning" %}}If any new or changed files show up as uncommitted files, discard the changes. Do not commit them.{{% /alert %}}
 
 4. Now, you can edit the documentation locally with your preferred editing tool (for example, open the repository folder with Visual Studio Code, find the file, and make changes). Remember to save your changes.
-5. In the root of the repository directory, run the following command in a terminal: `npm run build`.
+5. To run a local version of site, in the root directory of the local repository, run the following command in a terminal: `npm run build`. 
 6. Once the site is built, you will see a table indicating how many pages have been created:
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/table-of-built-pages.png" max-width=30% >}}
@@ -139,10 +139,10 @@ You can clone a local copy of a forked repository, make documentation changes, a
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/server-set-up.png" max-width=60% >}}
 
-8. To see the local site preview, go to http://localhost:1313/.
-9. Navigate to the page that you just made changes to, and you can preview your changes locally! 
+8. To see the local site preview, go to `http://localhost:1313/`.
+9. Navigate in the left sidebar menu to the page that you just made changes to, and you can preview your changes locally! 
 
-{{% alert color="info" %}}As long as the local build is running, each time after you saved your changes, you will be able to preview the changes on the local site. If not, refresh the local site using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. If this still does not work, stop the current running build with <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
+{{% alert color="info" %}}As long as the current local build is still running, each time after you saved your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved. If not, refresh the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>. This ignores cached content. If this still does not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
 
 ## Leaving Feedback on the Documentation
 

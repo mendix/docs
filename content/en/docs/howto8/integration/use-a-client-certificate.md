@@ -35,7 +35,7 @@ To configure the custom settings that are only used when you run your app locall
 
 This is an example:
 
-```text {linenos=false}
+```text
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "www.server-to-contact.com": "D:\\App\\Mx2.pfx" }
 ```
 
@@ -53,7 +53,7 @@ Be sure to drop `https://` from a URL endpoint.
 
 The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
-```text {linenos=false}
+```text
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 

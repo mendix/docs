@@ -54,7 +54,7 @@ You install the PCLM server by applying a manifest using `kubectl` or `oc`. This
 The `installer-gen` option of mx-pclm-cli is used to create a yaml manifest file to apply to your Kubernetes namespace.
 Use the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli installer-gen --db-type <db-type> \
     --db-hostname <hostname> \ 
     --db-name <db-name> \
@@ -158,7 +158,7 @@ You can confirm that you can connect to the PCLM server using the following URLs
 
 When using the CLI, use `kubectl port-forward` instead of an ingress, as in the following example:
 
-```bash {linenos=false}
+```bash
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 ```
 
@@ -176,7 +176,7 @@ The PCLM server supports two **user types:**
 
 When the PCLM server is set up, it contains one user `administrator` with a default password. This password should be modified immediately using the command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli user update \
   -s <pclm-http-url> -u administrator -p <default-password> \
   --username administrator --password='<new-password>' --type admin
@@ -212,7 +212,7 @@ Where:
 
 You will want to set up *operator* users and (optionally) additional *admin* users. To do this, use the following command:
 
-``` bash {linenos=false}
+``` bash
 mx-pclm-cli user create \
   -s <pclm-http-url> -u <admin-user> -p <admin-password> \
   --username=<new-user>  --password='<password>' --type=<user-type>
@@ -234,7 +234,7 @@ Runtime licenses are required for each Mendix runtime environment, and an Operat
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license import \
     -s <pclm-http-url> \
     -u <admin-user> \
@@ -251,7 +251,7 @@ Where:
 
 You will get a report of the results of your import operation:
 
-```text {linenos=false}
+```text
 -- Loading zip file...
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ License Bundle Contents                            ┃
@@ -275,7 +275,7 @@ If a license has previously been imported, you will be told that it is `[Duplica
 
 Once the license bundle is installed, you can see the list of Runtime license in the bundle using following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -298,7 +298,7 @@ In order to update the **product type** in the Mendix App CR, ensure that you ar
 
 Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -319,7 +319,7 @@ To use the licenses, you must add information to the operator configuration. For
 
 The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator and Agent with the location of the PCLM server, and the credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
    
-```bash {linenos=false}
+```bash
 mx-pclm-cli config-namespace -n <operator-ns> \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -412,7 +412,7 @@ There are multiple ways to verify whether the licenses (both Operator and Mendix
 
 You can see which licenses are currently used by which environments and operators, as well as unused licenses, using the following command.
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password>
@@ -443,7 +443,7 @@ Use the following command to verify whether the Operator license was applied cor
 
 In the section `status.licenseStatus` you should see something similar to the following:
 
-```yaml {linenos=false}
+```yaml
 status:
   licenseStatus:
     licenseID: 1ca080f8-c54e-4e24-b09c-14353505a65d
@@ -458,7 +458,7 @@ Use the following command to verify whether the Runtime license was applied corr
 
 In the section `spec.resources.runtimeLicense` you should see something similar to the following:
 
-```yaml {linenos=false}
+```yaml
 spec:
   resources:
     runtimeLicense:
@@ -473,7 +473,7 @@ If you have manually configured static runtime licenses (offline licenses), PCLM
 
 Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
 
-```bash {linenos=false}
+```bash
 kubectl -n <namespace> scale deployment mendix-operator --replicas=0
 kubectl -n <namespace> scale deployment mendix-operator --replicas=1
 kubectl -n <namespace> scale deployment mendix-agent --replicas=0
@@ -484,7 +484,7 @@ This restarts the Mendix Operator, and associated Mendix App Runtimes, and confi
 
 You can confirm this by running the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password>

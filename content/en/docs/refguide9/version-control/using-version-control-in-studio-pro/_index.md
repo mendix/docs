@@ -304,7 +304,7 @@ When doing a **git merge** operation on two branches in the command line, Git at
 
 Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
-```text {linenos=false}
+```text
 [core]
   attributesfile = ~/.gitattributes
 [merge "custom"]
@@ -316,14 +316,14 @@ Where `[MX.EXE_PATH]` should be replaced by the *mx.exe* path with only forward 
 
 You can also configure the Git driver locally per repository using the following commands:
 
-```text {linenos=false}
+```text
 git config merge.custom.name "custom merge driver for specific files"
 git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
 ```
 
 After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
 
-```text {linenos=false}
+```text
 *.mpr merge=custom
 ```
 

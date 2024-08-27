@@ -61,7 +61,7 @@ In the Preferences of the Mendix Service Console you can configure the main dire
 
 This should be something like:
 
-```bash {linenos=false}
+```bash
 D:\Mendix\MyApplications\Servers
 ```
 

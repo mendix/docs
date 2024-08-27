@@ -138,7 +138,7 @@ Add the lines below to the *config* file located in the *.git* folder of your ap
 
 At the end of the file, add a `[merge "custom"]` block like this:
 
-```ini {linenos=false}
+```ini
 [merge "custom"]
     name = custom merge driver for MPR files
     driver = [MX.EXE_PATH] merge %O %A %B
@@ -148,7 +148,7 @@ Replace `[MX.EXE_PATH]` with a full path to your *mx.exe* file in the Unix forma
 
 Under the `[core]` section, add the following:
 
-```ini {linenos=false}
+```ini
     attributesfile = .git/.gitattributes
 ```
 
@@ -160,7 +160,7 @@ The *.git* folder is a hidden folder in a computer file management system. You c
 
 Create `.gitattributes` file in .git folder of your app on disk. Add the following line to tell git to use `[merge "custom"]` driver from .gitconfig chapter of this page for merging **.mpr* files.
 
-```ini {linenos=false}
+```ini
 *.mpr merge=custom
 ```
 

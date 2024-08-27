@@ -562,7 +562,7 @@ The **NODE** is a **Log node name** that you specified in your Mendix applicatio
 
 You can find your logs in your Mendix application pod inside the Mendix container using the command below:
 
-```{linenos=false}
+```
 kubectl logs <pod-name> -c mendix
 ```
 
@@ -721,7 +721,7 @@ In version 2.10.0 and above of the `mxpc-cli` administration and configuration t
 
 To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
 
-```bash {linenos=false}
+```bash
 mxpc-cli log-extract -n {namespace} -f {filename}
 ```
 

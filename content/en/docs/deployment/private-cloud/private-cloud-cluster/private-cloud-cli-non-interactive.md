@@ -34,7 +34,7 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 To perform the [base installation](/developerportal/deploy/standard-operator/#base-installation), use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
 
@@ -46,7 +46,7 @@ For Global Operator, the base installation should only be applied to the Global 
 
 For the Global Operator main namespace, use the following command for the base installation:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type> --global
 ```
 
@@ -54,13 +54,13 @@ For the Global Operator main namespace, use the following command for the base i
 
 To [configure a standard namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
 For namespaces managed by a global operator, apply the following command for the managed namespace – the command is not needed in the main namespace:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file> --global
 ```
 
@@ -101,7 +101,7 @@ To configure a managed namespace inside a Global Operator, the namespace configu
 
 For managed namespace configuration, apply the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
@@ -138,7 +138,7 @@ global_operator:
 
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
 
 ```

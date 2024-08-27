@@ -167,13 +167,13 @@ To start editing the `OperatorConfiguration`, use the following commands (replac
 
 For OpenShift:
 
-```shell {linenos=false}
+```shell
 oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 For Kubernetes:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
@@ -365,7 +365,7 @@ The Deployment object that controls the pod of a given Mendix application contai
 
 The Deployment object as a name in the following format:
 
-```shell {linenos=false}
+```shell
 <internal environment name>-master
 ```
 
@@ -612,7 +612,7 @@ Startup probes are no longer used, and changing the `startupProbe` settings will
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
-```yaml {linenos=false}
+```yaml
 terminationGracePeriodSeconds: 300
 ```
 
@@ -761,7 +761,7 @@ Horizontal pod autoscaling can be combined with cluster autoscaling, so that the
 
 To enable horizontal pod autoscaling for an environment, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} autoscale mendixapp {envname} --cpu-percent=50 --min=1 --max=10
 ```
 
@@ -770,7 +770,7 @@ Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to spec
 
 To configure additional horizontal pod autoscaling, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit horizontalpodautoscaler {envname}
 ```
 
@@ -900,7 +900,7 @@ spec:
 
 Run the following command in order to update the core resources in the `OperatorConfiguration`:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
 ```
 

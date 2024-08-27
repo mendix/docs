@@ -133,13 +133,13 @@ To create a new environment, perform the following steps:
 
 3. Select the **Domain**, **Organization**, and **Space** of your app. The URL of the domain will form part of the application's URL. The URL of the application will be this:
 
-    ```text {linenos=false}
+    ```text
     {appname}-{environment name}.{domain}
     ```
 
     This is an example URL:
 
-    ```http {linenos=false}
+    ```http
     https://myapp-development.cfapps.eu10.ondemand.com
     ```
 

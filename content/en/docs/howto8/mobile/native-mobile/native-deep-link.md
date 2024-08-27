@@ -74,13 +74,13 @@ When running locally from source, on iOS you have to run `pod install` once more
 
 1. Open your command line interface (CLI) of choice and change directory to the folder where you want to edit the build template:
 
-    ```shell {linenos=false}
+    ```shell
     cd c:/github
     ```
 
 1. Use Git to clone your Native Builder template from GitHub: 
 
-    ```shell {linenos=false}
+    ```shell
     git clone https://github.com/your-account/native-deeplink-app
     ```
 
@@ -169,7 +169,7 @@ When running locally from source you have to launch your app again:
 
 1. Now rebuild and install your native mobile app to add your new capabilities:
 
-    ```shell {linenos=false}
+    ```shell
     native-builder.exe build --project-name "Native Deep Link" --app-version "1.0.0" --build-number 1
     ```
 

@@ -31,12 +31,12 @@ The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releaseno
 
 This query returns all logs where the month value `DateAttribute` is 12 (December) in the local time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
+```java
 //Logging.Log[month-from-dateTime(DateAttribute) = 12]
 ```
 
 This query returns all logs where the month value `DateAttribute` is 12 (December) in the New York time zone (for example, "2011-12-30"):
 
-```java {linenos=false}
+```java
 //Logging.Log[month-from-dateTime(DateAttribute, 'America/New_York') = 12]
 ```

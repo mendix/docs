@@ -30,7 +30,7 @@ The next sections explain which monitoring actions are supported.
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_current_runtime_requests", "params":{} }
 ```
 
@@ -116,7 +116,7 @@ This request returns the current executions of actions known by the Mendix Runti
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "runtime_statistics", "params":{} }
 ```
 
@@ -268,7 +268,7 @@ If do want to develop a strategy on interpreting these pools anyway based on Jav
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "cache_statistics", "params":{} }
 ```
 
@@ -309,7 +309,7 @@ This information can be an aid in figuring out which objects cause a lot of memo
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "server_statistics", "params":{} }
 ```
 
@@ -348,7 +348,7 @@ The "threadpool" section gives information about the threadpool of the handler w
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_logged_in_user_names", "params":{} }
 ```
 
@@ -372,7 +372,7 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_all_thread_stack_traces", "params":{} }
 ```
 
@@ -434,7 +434,7 @@ Returns all the current thread stack traces by name. This is useful for low leve
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "runtime_status", "params":{} }
 ```
 
@@ -466,7 +466,7 @@ This information can be used to track what state the Mendix Runtime is in when t
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "check_health", "params":{} }
 ```
 
@@ -498,7 +498,7 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 
 ### Request
 
-```json {linenos=false}
+```json
 {"action" : "about", "params":{} }
 ```
 

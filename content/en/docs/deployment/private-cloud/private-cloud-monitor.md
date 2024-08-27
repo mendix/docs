@@ -159,13 +159,13 @@ To monitor Mendix app environments, you will need to install a separate copy of 
 
 Use the following command to create a new project: replace `{project}` with the project name (for example `grafana`):
 
-```shell {linenos=false}
+```shell
 oc new-project {project}
 ```
 
 Use the following command to create a secret containing the Grafana admin password: replace `{project}` with the project name (for example `grafana`); `{username}` with the admin username (for example `admin`); and `{password}` with the admin password:
 
-```shell {linenos=false}
+```shell
 oc --namespace {project} create secret generic grafana-admin --from-literal=admin-user={username} --from-literal=admin-password={password}
 ```
 
@@ -175,7 +175,7 @@ By default, OpenShift [restricts UIDs and group IDs](https://docs.openshift.com/
 
 To get a valid UID range, run the following command to get the project annotations: (replace `{project}` with the project name, for example `grafana`):
 
-```shell {linenos=false}
+```shell
 oc describe project {project}
 ```
 
@@ -273,13 +273,13 @@ For more details see the [Loki installation guide](https://grafana.com/docs/loki
 
 Use the following command to create an OpenShift Route object to access Grafana from your web browser: replace `{project}` with the project name (for example `grafana`):
 
-```shell {linenos=false}
+```shell
 oc --namespace {project} create route edge loki-grafana --service=loki-grafana --insecure-policy=Redirect
 ```
 
 To get the Grafana web UI URL (domain), run the following command: replace `{project}` with the project name (for example `grafana`):
 
-```shell {linenos=false}
+```shell
 oc --namespace {project} get route loki-grafana -o jsonpath="{.status.ingress[*].host}"
 ```
 
@@ -440,7 +440,7 @@ The Mendix Portal supports placeholder (template) variables in **Metrics** and *
 
 For example, if you have imported the reference dashboard JSON with default parameters, set **Metrics** and **Logs** links to the following:
 
-```http {linenos=false}
+```http
 https://grafana.mendix.example.com/d/4csBnmWnk/mendix-app-dashboard?var-namespace={namespace}&var-environment_id={environment_name}
 ```
 

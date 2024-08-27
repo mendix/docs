@@ -39,13 +39,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4<3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 False
 ```
 
@@ -79,13 +79,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4>3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 True
 ```
 
@@ -121,25 +121,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     6<=3
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     False
     ```
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     3<=3
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     True
     ```
 
@@ -173,13 +173,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4>=3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 True
 ```
 
@@ -216,25 +216,25 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     "mystring" = "myotherstring"
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     False
     ```
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     dateTime(2007) = dateTime(2007)
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     True
     ```
 
@@ -271,12 +271,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 "mystring" != "mystring"
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 False
 ```

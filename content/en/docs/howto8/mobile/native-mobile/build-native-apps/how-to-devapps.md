@@ -96,7 +96,7 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-    ```shell {linenos=false}
+    ```shell
     npm i && cd ios && pod install
     ```
 

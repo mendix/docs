@@ -31,12 +31,12 @@ The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releaseno
 
 This query returns all the logs where the day in the year in `DateAttribute` is 40 in the local time zone (for example, "2011-02-09" and "2012-02-09"):
 
-```java {linenos=false}
+```java
 //Logging.Log[day-of-year-from-dateTime(DateAttribute) = 40]
 ```
 
 This query returns all the logs where the day in the year in `DateAttribute` is 40 in the New York time zone (for example, "2011-02-09" and "2012-02-09"):
 
-```java {linenos=false}
+```java
 //Logging.Log[day-of-year-from-dateTime(DateAttribute, 'America/New_York') = 40]
 ```

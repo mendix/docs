@@ -101,7 +101,7 @@ This is the path and name of the program that is used to view the details of fil
 
 For example, you can see how to set up file comparison for Visual Studio Code below: 
 
-```text {linenos=false}
+```text
 {path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
 ```
 

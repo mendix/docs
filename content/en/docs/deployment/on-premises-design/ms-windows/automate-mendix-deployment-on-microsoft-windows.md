@@ -51,7 +51,7 @@ The scripts are intended to show the range of available deployment options. They
 
 The following script example demonstrates the process required to update your app. Firstly, it imports the necessary cmdlets. After that, it stops your app and updates it with files extracted from the Mendix Deployment Package. Finally, the script restarts the app with the `SynchronizeDatabase` parameter to synchronize the database without user input.
 
-```text {linenos=table}
+```text
 Import-Module '{<Mendix Service Console installation directory>}\Mendix.Service.Commands.dll'
 
 $mdaPath = '{Location of your Mendix Deployment Package}'
@@ -88,7 +88,7 @@ Stopping your app before you update it is a necessary part of the process. Do no
 
 The following script demonstrates how you can check which version of the Mendix Runtime is required for your app. It inspects a deployment package, finds the Mendix Runtime version it needs, and downloads the correct version.
 
-```text {linenos=table}
+```text
 Copy-Item -Path 'C:\Mendix\Some_Deployment.mda'-Destination C:\Temp\temp.zip
 Expand-Archive -LiteralPath 'C:\Temp\temp.zip' -DestinationPath C:\temp\MxApp
 $mxJson = Get-Content "C:\temp\MxApp\model\metadata.json" | ConvertFrom-Json
@@ -108,7 +108,7 @@ wget $targetURL -OutFile $targetFile
 
 The following script example demonstrates how you can update the [Mendix Runtime](/refguide/runtime/) to a version that matches the app that you are deploying. This is only required when you upgrade Mendix versions. The sample script first downloads the required Mendix Runtime version through PowerShell, and then extracts the Mendix Platform libraries into the server distribution folder. In this case, the app can remain running, as this process only extracts the new server version without affecting previously installed Mendix Platform versions.
 
-```text {linenos=table}
+```text
 # download Mendix Runtime
 wget https://cdn.mendix.com/runtime/mendix-{<major>.<minor>.<patch>.<build>}.tar.gz -OutFile {<target folder for the downloaded file>}\mendix-{<major>.<minor>.<patch>.<build>}.gz
 
@@ -120,7 +120,7 @@ Install-MxServer -LiteralPath {<target folder for the downloaded file>}\mendix-{
 
 The following script example demonstrates how to create a new Mendix app with its own folder and basic `Settings.yaml` file. You still need to extend the `Settings.yaml` file with database settings and a valid Java path before the app can really start.
 
-```text {linenos=table}
+```text
 $appName = 'Name of Mendix app'
 
 # Create new Mendix app
@@ -131,7 +131,7 @@ New-MxApp -Name $appName -Credential (Get-Credential)
 
 The following script example demonstrates how to set a log level for all log nodes of a log subscriber at once. This is only applicable when you have defined your own log subscribers in the `Settings.yaml` file.
 
-```text {linenos=table}
+```text
 $appName = 'Name of Mendix app'
 $subscriberName = 'Log subscriber name of the app'
 $level = 'Log level which needs to be assigned'
@@ -148,7 +148,7 @@ If you encounter any issues while automating Mendix deployment on Windows using 
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Could not load file or assembly, Version=3.3.0.0, Culture=neutral, PublicKeyToken= {token number}' or one of its dependencies. The system cannot find the file specified.
 ```
 
@@ -168,7 +168,7 @@ To solve this issue, follow these steps:
     * File name: *powershell.exe.config*
 3. In the *powershell.exe.config* file, provide the following configuration:
     
-    ```text {linenos=table}
+    ```text
     <?xml version="1.0"?> 
     <configuration> 
     <startup useLegacyV2RuntimeActivationPolicy="true"> 
@@ -184,7 +184,7 @@ With the above configuration, PowerShell primarily uses .NET version 4, but also
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Could not load file or assembly 'System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken={token number}' or one of its dependencies. The system cannot find the file specified.
 ```
 
@@ -200,7 +200,7 @@ Install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/downl
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Cannot open App1 service on computer '.'.
 At line:1 char:1
 + Start-MxApp App1 -synchronizedatabase
@@ -221,7 +221,7 @@ Run PowerShell as an administrator.
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp: Could not load file or assembly 'Mendix.Service, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null'. Het systeem kan het opgegeven bestand niet vinden.
 ```
 
@@ -237,7 +237,7 @@ Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell a
 
 When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Unable to start the app. Reason: The database does not exist. 
 At line:1 char:1 
 + Start-MxApp MyFirstApp -synchronizedatabase 
@@ -258,7 +258,7 @@ Deploy your app manually before you running automated deployment scripts. For mo
 
 When you run the `Start-MxApp $APP_NAME` cmdlet, PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Unable to start the app. Reason: The database is not synchronized with the model.
 At line:1 char:1
 + Start-MxApp MyFirstApp

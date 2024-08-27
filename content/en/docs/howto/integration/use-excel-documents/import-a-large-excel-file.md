@@ -40,7 +40,7 @@ To modify your Excel sheet, follow these steps:
 3. Add one column to the left.
 4. Place the following string in cell **A1**:
 
-    ```text {linenos=false}
+    ```text
     <xs:element type="xs:string" name="
     ```
 
@@ -50,7 +50,7 @@ To modify your Excel sheet, follow these steps:
 
 6. In cell **C1**, enter the following string:
 
-    ```text {linenos=false}
+    ```text
     "/>
     ```
 
@@ -62,7 +62,7 @@ To modify your Excel sheet, follow these steps:
 
 8. Select cell **D1** and type in the following into the formula box: 
 
-    ```text {linenos=false}
+    ```text
     =(A1&B1&C1)
     ```
 

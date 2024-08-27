@@ -32,9 +32,9 @@ For details on how to fork a repo and create a pull request, watch [How to Contr
 
 This how-to teaches you how to do the following:
 
-* Add to and edit existing documentation in GitHub
+* Edit existing documentation in GitHub
 * Edit existing documentation locally and build local previews
-* Leave feedback on the documentation
+* Leave feedback on existing documentation
 * Create new documentation
 
 ## Prerequisites

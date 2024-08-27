@@ -2,7 +2,7 @@
 title: "Supported OData Operations"
 url: /refguide/supported-odata-operations/
 description: "Lists the supported operations for published OData services."
-weight: 20
+weight: 40
 aliases:
   - /refguide/odata-query-options/ 
 ---

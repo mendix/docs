@@ -228,6 +228,10 @@ For more information, see [Defining Access Rules Using the New Editor](/refguide
 
 The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
+### GraphQL {#graphql}
+
+Publishing data as a GraphQL service is available as of Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+
 ### Maia
 
 #### Enable Domain Model Generator (Experimental)

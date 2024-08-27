@@ -7,7 +7,7 @@ description: "Introduces the domain model in Studio Pro."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **domain model** describes the information (or data) used by your app in a visual way. The domain model is a data model which abstracts the structure of a relational database management system (RDBMS) which stores the business data which powers your app. See [Implementation](#implementation), below, for information on the relationship between the domain model and the underlying RDBMS.
 
@@ -21,7 +21,7 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
 
-## 2 Representation of the Domain Model
+## Representation of the Domain Model
 
 Below is a domain model that describes customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system, and an [external entity](/refguide/external-entities/), `Products`, which holds a list of products stored in a separate system.
 
@@ -46,7 +46,7 @@ Below is a domain model that describes customers and orders. The names of the en
 | Non-persistable Entity | This is an entity which is not stored in a database but only stored temporarily within the app |
 | External Entity | This is an entity which represents a link to an external data source |
 
-## 3 Implementation of Persistable Entities {#implementation}
+## Implementation of Persistable Entities {#implementation}
 
 While data in non-persistable and external entities is maintained in the memory of the app, every app has its own database or schema where it stores persistable data. This is solely for its own use and cannot be shared with another Mendix app. The persistable (persistent or permanent) data is stored in one of the [supported RDBMSs](/refguide/system-requirements/#databases), depending on where the app is being deployed. For example, an app deployed to Mendix Cloud will use a PostgreSQL database to store its data. The database structure is created during the app deployment to support the domain models in the app.
 
@@ -60,13 +60,13 @@ Mendix apps cannot share data by sharing the same database. If you want two apps
 For more information on how the underlying database behaves and why data cannot be shared between apps see [Data Storage](/refguide/data-storage/).
 {{% /alert %}}
 
-### 3.1 Implementation Example
+### Implementation Example
 
 Take a look at the following domain model.
 
 {{< figure src="/attachments/refguide/modeling/domain-model/customer-order.png" >}}
 
-#### 3.1.1 Customer Entity
+#### Customer Entity
 
 Objects of the entity `Customer` are stored in the table `module$customer` which is shown below. The `system$owner` and `system$changedby` columns are added to tables when indicated in the entity definition and contain the IDs of objects from the `System.User` entity (the `User` entity in the `System` module domain model). This indicates the end-user who owns, and the one which last changed, each object.
 
@@ -75,7 +75,7 @@ Objects of the entity `Customer` are stored in the table `module$customer` which
 | 1 | 2006-10-24 08:10:45.053 | 2009-11-27 09:56:45.099 | 66 | 29 | Steve Jobs |
 | 3 | 2007-09-30 09:56:45.099 | 2008-04-01 08:10:45.053 | 66 | 34 | Bill Gates |
 
-#### 3.1.2 Order_Customer Association
+#### Order_Customer Association
 
 The association `Order_Customer` is stored in the table `module$order_customer` which is shown below. Both columns contain IDs of the associated objects.
 
@@ -84,7 +84,7 @@ The association `Order_Customer` is stored in the table `module$order_customer` 
 | 8 | 1 |
 | 5 | 3 |
 
-#### 3.1.3 Order_Customer Association
+#### Order_Customer Association
 
 The entity `Order` is stored in the table `module$order` which is shown below. It is similar to the table of the entity `Customer`. However no system attributes have been defined in the domain model and so they are not stored in the table.
 
@@ -93,7 +93,7 @@ The entity `Order` is stored in the table `module$order` which is shown below. I
 | 5 | 5 | 2009-11-27 09:56:45.099 |
 | 8 | 8 | 2008-04-01 08:10:45.053 |
 
-## 4 Read More
+## Read More
 
 * [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * [Maia Domain Model Generator](/refguide/domain-model-generator/)

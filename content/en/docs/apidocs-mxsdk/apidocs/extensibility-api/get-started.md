@@ -5,11 +5,11 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/getting-started/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 This document helps you set up a basic development environment for building extensions. Additionally, you can find links here to additional tutorials that help familiarize you to the extensibility API topics.
 
-## 2 Development Setup
+## Development Setup
 
 The recommended development environment is [Visual Studio 2022](https://visualstudio.microsoft.com/) running on Windows. This documentation is centered on this setup. (You can also use other IDEs and other .NET compatible programming languages like [F#](https://fsharp.org/)).
 
@@ -23,7 +23,7 @@ Make sure to keep this Studio Pro installation up-to-date to benefit from new fe
 Extensions can be built on any operating system as the underlying framework is cross-platform.
 {{% /alert %}}
 
-## 3 Using Extensions API via a Hosted NuGet Package
+## Using Extensions API via a Hosted NuGet Package
 
 You can start extension development by simply including the `Mendix.StudioPro.ExtensionsAPI` NuGet package to your project by searching for *Mendix.Studio.ExtensionsAPI* in NuGet.
 
@@ -32,7 +32,7 @@ You can start extension development by simply including the `Mendix.StudioPro.Ex
 
 Depending on your local environment setup, you possibly need to manually add a NuGet package to your solution. You can add a package source to Visual Studio via the menu: **Tools** > **Options** > **NuGet Package Manager** > **Package Sources**
 
-## 4 Importing Extensions API via a NuGet Package Hosted on a Local Repository
+## Importing Extensions API via a NuGet Package Hosted on a Local Repository
 
 Another option to start extension development is to import a locally hosted `Mendix.StudioPro.ExtensionsAPI` NuGet package into your project.  
 
@@ -51,7 +51,7 @@ To make the search process easier, you can specifically select a certain package
 For more information on local NuGet repositories, see the official [Local Feeds](https://learn.microsoft.com/en-us/nuget/hosting-packages/local-feeds) in *Microsoft Documentation*.
 {{% /alert %}}
 
-## 5 Extensions Development Setup
+## Extensions Development Setup
 
 Extensions load from within your mendix application and will only be loaded while the app is open. 
 

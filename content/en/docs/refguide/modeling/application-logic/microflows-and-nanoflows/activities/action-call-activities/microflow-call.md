@@ -8,11 +8,11 @@ url: /refguide/microflow-call/
 This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Microflow call** activity can be used to call a [microflow](/refguide/microflows/). Arguments can be passed to the microflow and the result can be stored.
 
-## 2 Properties
+## Properties
 
 There are two sets of properties for this activity, those in the dialog box on the left, and those in the properties pane on the right:
 
@@ -23,7 +23,7 @@ The **Microflow call** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -31,23 +31,23 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Microflow
+### Microflow
 
 The microflow that is called by this activity. 
 
-### 3.2 Parameters
+### Parameters
 
 Depending on the selected microflow, you will see a list of its parameters in a table. Parameters pass data to the activity. 
 
-#### 3.2.1 Name
+#### Name
 
 The name of the parameter that is read-only.
 
-#### 3.2.2 Type
+#### Type
 
 The type of the parameter that is read-only. For more information on possible types of parameters, see [Data Types](/refguide/data-types/). 
 
-#### 3.2.3 Argument {#argument}
+#### Argument {#argument}
 
 The **Edit parameter value** button allows you to edit the argument value. For each parameter of the microflow, you need to supply an argument of the same type. The values of the arguments are expressed using [expressions](/refguide/expressions/). There is a difference in the way argument values are passed to a sub-microflow:
 
@@ -58,7 +58,7 @@ The **Edit parameter value** button allows you to edit the argument value. For e
 When used inside a nanoflow in an offline profile, only primitives and non-persistable entities that have no associations with persistable entities are allowed as arguments for the call. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*.
 {{% /alert %}}
 
-### 3.3 Task Queue
+### Task Queue
 
 {{% alert color="warning" %}}
 You cannot execute microflows in a task queue when calling them from a nanoflow.
@@ -72,24 +72,24 @@ If you want a microflow to call a microflow to run in the background using a tas
 
 For more information about task queues, see [Task Queue](/refguide/task-queue/).
 
-### 3.4 Return Type
+### Return Type
 
 This read-only property indicates whether you will retrieve a variable, object or list. 
 
-### 3.5 Use Return Value
+### Use Return Value
 
 This property determines if the returned value from the called microflow should be available in the rest of the current microflow or nanoflow. If **Use return value** is set to *Yes*, you will need to fill in the [name](#name) of the variable, object, or list returned by the activity.
 
-### 3.6 Variable Name, Object Name, or List Name {#name}
+### Variable Name, Object Name, or List Name {#name}
 
 The name of the variable, list, or object returned by the activity.
 
 If you specify a name for the returned value in the called microflow's end event, this field will utilise that name while ensuring it remains unique within the current scope.
 
-## 4 Microflow Calls in Offline-First Apps
+## Microflow Calls in Offline-First Apps
 
 It is possible to perform a microflow call from an offline-first app. However, it works a bit differently than in online applications. For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of *Offline Best Practices*
 
-## 5 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

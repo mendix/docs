@@ -6,7 +6,7 @@ weight: 10
 description: "How to use an APM (application performance monitoring) tool to monitor your Mendix Cloud app."
 ---
 
-## 1 Introduction
+## Introduction
 
 There are several application performance monitoring (APM) tools for cloud applications available through a software as a service (SaaS) based data analytics platform. These APM tools provide comprehensive monitoring of servers, databases, tools, and services.
 
@@ -42,7 +42,7 @@ These third-party integrations require an agent to run alongside your runtime co
 For support on other cloud deployment options, such as Private Cloud, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
-## 2 What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?
+## What Information Can Mendix Supply to a SaaS-Based Data Analytics Platform?
 
 {{% alert color="info" %}}
 The integration with Splunk Cloud Platform sends only runtime application logs. It does not include other monitoring information.
@@ -53,11 +53,11 @@ Mendix provides two types of monitoring data:
 * Data from the Mendix Runtime, the Java Virtual Machine (JVM), the database, and the SaaS (for example, Cloud Foundry) environment – this is described in [Environment Metrics](#environment), below
 * Data from within the Mendix app itself – this is described in [App Metrics](#app-metrics), below
 
-## 3 Environment Metrics{#environment}
+## Environment Metrics{#environment}
 
 Once you have configured your data analytics platform for your app, it will automatically send information about the environment in which your app is running.
 
-### 3.1 Environment Metrics Namespaces
+### Environment Metrics Namespaces
 
 The metrics from your app's environment are supplied in the following namespaces:
 
@@ -69,7 +69,7 @@ The metrics from your app's environment are supplied in the following namespaces
 
 Many of these metrics are described in more detail in [Metrics – Mendix Runtime](/refguide/metrics/).
 
-### 3.2 Useful Metrics for Mendix Apps
+### Useful Metrics for Mendix Apps
 
 The following metrics are useful when monitoring the performance of your Mendix app:
 
@@ -89,31 +89,31 @@ The following metrics are useful when monitoring the performance of your Mendix 
 
 Note that the absolute values are often not useful, but looking at trends over time can indicate performance issues or future action that might be required. Some of these trends are similar to those described in [Metrics](/developerportal/operate/metrics/).
 
-## 4 App Metrics {#app-metrics}
+## App Metrics {#app-metrics}
 
 Mendix provides logging of various actions within the app. These are sent to your data analytics platform with the namespace `mx`. Timing values are sent in milliseconds.
 
 By default, Mendix only passes request handler activity, but you can configure it to provide metrics for microflows and activities as well. You can find how to do this in [Customizing the Metrics Agent](#customizing), below.
 
-### 4.1 What Metrics Can You Get From Your App?
+### What Metrics Can You Get From Your App?
 
-#### 4.1.1 Request Handler Metrics
+#### Request Handler Metrics
 
 Unless you customize your metrics agent, the metrics agent provides metrics for all your request handlers. The metrics provided are listed below:
 
-##### 4.1.1.1 mx.soap.time
+##### mx.soap.time
 
 This is a timing/histogram value for SOAP requests.
 
-##### 4.1.1.2 mx.odata.time
+##### mx.odata.time
 
 This is a timing/histogram value for OData requests.
 
-##### 4.1.1.3 mx.rest.time
+##### mx.rest.time
 
 This is a timing/histogram value for REST requests.
 
-##### 4.1.1.4 mx.client.time
+##### mx.client.time
 
 This indicates the time it takes to handle a request to a request handler used by the web UI. You can get results for all of the following types of requests:
 
@@ -124,7 +124,7 @@ This indicates the time it takes to handle a request to a request handler used b
 
 This metric helps you to gain an overview of how long users have to wait for individual requests; hence, it indicates overall application performance.
 
-#### 4.1.2 Microflow Metrics
+#### Microflow Metrics
 
 For the microflows you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent provides the following metrics relating to the time the microflow takes to run:
 
@@ -134,7 +134,7 @@ For the microflows you select (see [Customizing the Metrics Agent](#customizing)
 * mx.microflow.time.median
 * mx.microflow.time.95percentile
 
-#### 4.1.3 Activity Metrics
+#### Activity Metrics
 
 For the activities you select (see [Customizing the Metrics Agent](#customizing), below), the metrics agent provides the following metrics:
 
@@ -144,18 +144,18 @@ For the activities you select (see [Customizing the Metrics Agent](#customizing)
 * mx.activity.time.median
 * mx.activity.time.95percentile
 
-### 4.2 Customizing the Metrics Agent{#customizing}
+### Customizing the Metrics Agent{#customizing}
 
 By default, Mendix passes a log of all request handler activity to your data analytics platform and no other information. However, by using JSON to configure the metrics agent, you can add logs of microflows and activities within microflows, and restrict which request handler calls are sent.
 
-#### 4.2.1 Format of Metrics Agent Configuration{#mx-agent-format}
+#### Format of Metrics Agent Configuration{#mx-agent-format}
 
 <!-- Changes to this should be reflected in "Configuring the Java Instrumentation Agent" in /developerportal/deploy/private-cloud-monitor,
 updating relative links -->
 
 To specify which request handlers, microflows, and activities are reported, use a JSON configuration with the following format. (Note that this is the syntax, not an example of this custom setting.)
 
-```json {linenos=false}
+```json
 {
   "requestHandlers": [
     {
@@ -234,7 +234,7 @@ The following example sends logs for the following:
 * The microflow `After_Startup` in the module `Administration`
 * The `CreateObject` and `DeleteObject` activities
 
-```json {linenos=false}
+```json
 {
   "requestHandlers": [
     {
@@ -257,7 +257,7 @@ The following example sends logs for the following:
 }
 ```
 
-#### 4.2.2 Passing a Configuration to the Metrics Agent
+#### Passing a Configuration to the Metrics Agent
 
 You pass the configuration to the metrics agent by adding a custom runtime setting to your Mendix Cloud environment.
 
@@ -270,7 +270,7 @@ You pass the configuration to the metrics agent by adding a custom runtime setti
 4. Click **Save**.
 5. Restart your app to apply the new settings if you have already connected your node to your data analytics. If you are in the process of connecting your node, you must redeploy your application to apply the changes.
 
-## 5 Filtering Metrics Ingestion 
+## Filtering Metrics Ingestion 
 
 {{% alert color="info" %}}
 The metrics collected by APM vendors' agents are not affected by this feature. Only runtime metrics collected by Mendix can be filtered.
@@ -286,28 +286,28 @@ To filter the ingestion of metrics to APM vendors, you can use these environment
 Database metrics (`postgresql.*` and `mx.database.diskstorage_size`) cannot be filtered by name. To turn them off, set the `APPMETRICS_INCLUDE_DB` environment variable to `false`. 
 {{% /alert %}}
 
-### 5.1 APM_METRICS_FILTER_ALLOW{#app-metrics-filter-allow}
+### APM_METRICS_FILTER_ALLOW{#app-metrics-filter-allow}
 
 Set the value to a comma-separated list of prefixes for the metrics to be allowed. By default, all metrics are allowed, even if they are not specified via this environment variable.
 
 For example, to allow only the session and the JVM metrics, set the environment variable to `mx.runtime.stats.sessions,jvm`.
 
-### 5.2 APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
+### APM_METRICS_FILTER_DENY{#app-metrics-filter-deny}
 
 Set the value to a comma-separated list of prefixes for the metrics to be denied. 
 
 For example, to filter out only metrics starting with `jetty` or `mx.runtime`, set the environment variable to `jetty,mx.runtime`.
 
-### 5.3 APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
+### APM_METRICS_FILTER_DENY_ALL{#app-metrics-filter-deny-all}
 
 You can use this environment variable can be used to stop ingestion of all metrics at once. 
 
 If its value is set to `true`, all metrics will be denied regardless of the values of `APM_METRICS_FILTER_ALLOW`, `APM_METRICS_FILTER_DENY`, and `APPMETRICS_INCLUDE_DB`.
 
-## 6 Tuning Log Levels
+## Tuning Log Levels
 
 If desired, you can adjust the log levels. If you configure your app's log levels via the [**Log Levels** tab](/developerportal/deploy/environments-details/#log-levels) on the **Environment Details** page, the log levels that you set there are also reflected in your APM integrations.
 
-## 7 Read More
+## Read More
 
 * [Metrics](/developerportal/operate/metrics/) – Describes the graphs that you can use to monitor the performance and health of your Mendix Cloud app on the **Metrics** page in **Apps**

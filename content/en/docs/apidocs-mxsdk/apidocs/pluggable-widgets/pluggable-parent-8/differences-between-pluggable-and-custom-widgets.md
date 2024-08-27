@@ -5,11 +5,11 @@ url: /apidocs-mxsdk/apidocs/differences-between-pluggable-and-custom-widgets/
 description: This document explains the differences between pluggable and custom widgets.
 ---
 
-## 1 Introduction
+## Introduction
 
 Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/widget-development/). Pluggable widgets are based on a modern React framework, have access to better APIs in the client, and can use more advanced properties in Studio Pro. Therefore, pluggable widgets allow you to more easily implement existing front-end libraries, tools, and your own expertise. Pluggable widgets should be used instead of custom widgets whenever possible.
 
-## 2 Differences Between Pluggable and Custom Widgets
+## Differences Between Pluggable and Custom Widgets
 
 | Concept      | Pluggable widgets                                                                                     | Custom widgets                                                           |
 | ------------ | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
@@ -35,6 +35,6 @@ Pluggable widgets are the successor to [Custom widgets](/howto8/extensibility/wi
 | Widgets can contain other widgets                                 | [Yes](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#widgets)      | No                                                                    |
 | Widgets can create new objects                                    | No                                                   | [Yes](https://apidocs.rnd.mendix.com/8/client/mx.data.html#.create)   |
 
-## 3 Read More
+## Read More
 
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)

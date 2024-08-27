@@ -5,11 +5,11 @@ weight: 64
 description: Tutorial for testing your push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 After [configuring the Push Notifications module](/howto8/mobile/notif-config-push/) and [building your native app](/howto8/mobile/notif-build-native/) it is now time to send your first test push notification.
 
-## 2 Send the Test Notification
+## Send the Test Notification
 
 To send your first test notification, do the following:
 
@@ -31,11 +31,11 @@ Congratulations, you have just sent your first push notification!
 
 If you did not receive the message, check the application's logs to see if the message was sent successfully. See the troubleshooting section below for solutions to the most common issues.
 
-## 3 Troubleshoot Notification Issues {#troubleshoot}
+## Troubleshoot Notification Issues {#troubleshoot}
 
 | Issue | Cause | Solution |
 |-----|----|-----|
 | Sending a message causes a **SenderId mismatch** error or **403: Forbidden**. | Your native mobile app registered the device within your Mendix applications, but not with Firebase. | Follow the [Build Your Native App](/howto8/mobile/notif-build-native/#build-native-app) section in *Build a Native App with Push Notifications Enabled* and make sure you add the *google-services.json* file. |
 | Sending a message causes a **Request contains an invalid argument** error or **400: Bad Request**. | Your **Project ID** does not match the **project_id** in your private key *json* file. | Upload the correct file or [generate a new private key](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/#setting-up-a-service-account) in Firebase and upload it. |
-| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | Set the constant **EncryptionKey** in the **Encryption** module with a key of exactly 16 characters. |
+| Mendix Runtime exception on JavaAction 'DecryptString': **Key should not be empty**. | This module depends on the **Encryption** module, which requires a key. | Set the constant **EncryptionKey** in the **Encryption** module with a key of exactly 32 characters. |
 | Error sending message: **Error reading credentials from stream, 'type' field not specified. at PushNotifications.SendFCMMessages (JavaAction : 'GetFCMAccessToken')**. | The wrong private key file was uploaded. | Upload the correct file or [generate a new private key](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/#setting-up-a-service-account) in Firebase and upload it. |

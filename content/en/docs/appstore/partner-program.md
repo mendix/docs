@@ -7,7 +7,7 @@ aliases:
     - /appstore/creating-content/partner-program/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Marketplace is at the heart of the Mendix developer community, which is made up of over 175,000 developers. By providing everything from simple widgets to templatized solutions, the Marketplace has the resources you need to build innovative solutions. You can browse all the content in the Mendix Marketplace, get what you need to kick start your development, and share the content you have created, which includes your commercial offerings. 
 
@@ -23,7 +23,7 @@ In return, you will gain the following benefits:
 * Drive demand for your services
 * Present a [partner icon](/appstore/component-details/#header) on the components you support
 
-## 2 Joining the Marketplace Program
+## Joining the Marketplace Program
 
 The process is simple: 
 
@@ -37,6 +37,6 @@ There are a few steps to publishing an offering. A partner interested in publish
 
 Currently, we are offering product listings with contact referrals for commercial content. There is currently no fee to publish an offering on the Mendix Marketplace.
 
-## 3 Read More
+## Read More
 
 * [Create Solutions](/appstore/creating-content/sol-solutions-guide/)

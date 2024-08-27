@@ -6,8 +6,8 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 Learn some basics about starting to model a Mendix app with the introductory how-tos in this category.
 
-## 2 Documents in This Category
+## Documents in This Category

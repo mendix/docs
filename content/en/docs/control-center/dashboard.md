@@ -11,7 +11,7 @@ description_list: true
 A member in Control Center means a user of the Mendix platform who participates in the development process. It does not mean an end-user of an app built in the Mendix Platform.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Control Center dashboard gives you an overview of various activities for your company on the Mendix Platform:
 

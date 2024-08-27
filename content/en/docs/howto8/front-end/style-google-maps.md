@@ -4,7 +4,7 @@ url: /howto8/front-end/style-google-maps/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps below to sauce-up the map overviews in your applications with a minimal amount of effort!
 
@@ -14,7 +14,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 * Find and implement the right style matching your application
 * Upload new styles to support the community
 
-## 2 Preparation
+## Preparation
 
 Before you start this how-to, please make sure you have completed the following prerequisites.
 
@@ -24,9 +24,9 @@ Before you start this how-to, please make sure you have completed the following 
 These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 
-## 3 Adding the Style
+## Adding the Style
 
-### 3.1 Widget Properties
+### Widget Properties
 
 In this chapter I will explain how you can add styling to the Google Maps widget.
 
@@ -45,7 +45,7 @@ In this chapter I will explain how you can add styling to the Google Maps widget
 3. The example style will give you this result:
     {{< figure src="/attachments/howto8/front-end/style-google-maps/19398958.png" class="no-border" >}}
 
-### 3.2 Finding the Right Style
+### Finding the Right Style
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
@@ -69,7 +69,7 @@ Choosing an existing style sheet from a large library that fits your application
 6. And there it is:
     {{< figure src="/attachments/howto8/front-end/style-google-maps/19398963.png" class="no-border" >}}
 
-### 3.3 Upload Your Own Style Array
+### Upload Your Own Style Array
 
 Supporting communities is cool. Therefore I will also show you how to upload your own custom style array to the website.
 
@@ -80,7 +80,7 @@ Supporting communities is cool. Therefore I will also show you how to upload you
 
     Happy modeling!
 
-## 4 Read More
+## Read More
 
 * [Atlas UI](/howto8/front-end/atlas-ui/)
 * [Layouts and Snippets](/howto8/front-end/layouts-and-snippets/)

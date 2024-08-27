@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 An annotation is an element that can be used to put comments to a flow.
 
@@ -16,13 +16,13 @@ In the example below, you use a **Show message** activity to warn end-users abou
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/annotation/anotation.png" class="no-border" >}}
 
-## 2 Common Properties
+## Common Properties
 
-### 2.1 Caption
+### Caption
 
 For details, see [Common Properties](/refguide9/microflow-element-common-properties/).
 
-## 3 Annotation Flow {#annotation-flow}
+## Annotation Flow {#annotation-flow}
 
 An annotation flow is a connection that can be used to link an annotation to a flow object(s).
 

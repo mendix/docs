@@ -4,11 +4,11 @@ url: /refguide/microflow/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the properties of a microflow. If you want to see what microflows are for and what kind of elements they contain, you can check [Microflows](/refguide/microflows/). If you want to know about the settings of the **Call a microflow** event action, you can check [Microflow Settings](/refguide/on-click-event/#microflow-settings).
 
-## 2 Properties
+## Properties
 
 Microflow properties consist of the following sections:
 
@@ -18,9 +18,9 @@ Microflow properties consist of the following sections:
 * [Security](#security)
 * [Concurrent execution](#concurrent)
 
-### 2.1 General Section {#general}
+### General Section {#general}
 
-#### 2.1.1 Return Type {#returntype}
+#### Return Type {#returntype}
 
 The return type defines what information the microflow returns. The caller of the microflow will get a result of this type. See [Data Types](/refguide/data-types/) for the possible return types.
 
@@ -28,7 +28,7 @@ The return type defines what information the microflow returns. The caller of th
 To indicate whether or not an object should be committed, you can use Boolean as the return type of the microflow.
 {{% /alert %}}
 
-#### 2.1.2 URL {#url}
+#### URL {#url}
 
 Microflow URLs allow you to execute a microflow when the end-user navigates to a specific URL within your application. The microflow is executed during the client startup, just before the home page is shown. When the microflow executes a [Show page](/refguide/on-click-event/#show-page) activity, its page is the first page shown to the end-user. The microflow's full URL starts with the base URL of your application, followed by `/p/`, and then by the microflow's configured URL. For example, `http://example.mendixcloud.com/p/microflow` is the full URL for the microflow's configured URL `microflow`.
 
@@ -50,13 +50,13 @@ In the **Edit Microflow URL** dialog box, the configured URL is shown together w
 URLs are not supported for microflows that have non-persistable entities or lists as parameters.
 {{%/alert %}}
 
-### 2.2 Common Section {#common}
+### Common Section {#common}
 
-#### 2.2.1 Name
+#### Name
 
 **Name** is the internal name of the microflow. When referring to the microflow in the app you will use this name. It must be unique within the module, but you can have two microflows with the same name in different modules. When referring to the microflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use microflows in other modules.
 
-#### 2.2.2 Export Level 
+#### Export Level 
 
 {{% alert color="info" %}}
 
@@ -71,13 +71,13 @@ This property is only available for add-on and solution modules. For more inform
 | Hidden *(default)* | The document/element content is hidden from a consumer.      |
 | Usable             | Consumers can see the API and use the microflow in their app. They will not be able to see the contents of the microflow and how it is built. |
 
-#### 2.2.3 Documentation
+#### Documentation
 
 **Documentation** allows you to describe your microflow to make it easier for people to use and modify it.
 
-### 2.3 Usage Section {#usage}
+### Usage Section {#usage}
 
-#### 2.3.1 Mark as Used
+#### Mark as Used
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Microflows that are only called from Java code will be listed as unused, because Studio Pro cannot look inside the Java source code.
 
@@ -85,9 +85,9 @@ By enabling the property **Mark as used**, you explicitly specify that the micro
 
 Default: *disabled*
 
-### 2.4 Security Section {#security}
+### Security Section {#security}
 
-#### 2.4.1 Apply Entity Access
+#### Apply Entity Access
 
 **Apply entity access** indicates whether entity access based on the current user is applied when performing operations on objects. Setting this to yes limits the objects that are retrieved by the [retrieve action](/refguide/retrieve/) to only those that the current user is allowed to see. Similarly, when reading and writing attributes and associations the entity access of the current user is applied. Conversely, if entity access is not applied, all operations are allowed and all objects are retrieved.
 
@@ -104,7 +104,7 @@ By default entity access is not applied. Set **Apply entity access** to **Yes** 
 Microflows that apply entity access have an **Entity Access** tag in the editor.
 {{% /alert %}}
 
-#### 2.4.2 Allowed Roles
+#### Allowed Roles
 
 **Allowed roles** defines which [module role](/refguide/module-security/#module-role) the user must have to be able to execute the microflow.
 
@@ -114,9 +114,9 @@ These roles are only checked when the microflow is executed from the client. A m
 
 For more information, see [Module Security](/refguide/module-security/).
 
-### 2.5 Concurrent Execution Section {#concurrent}
+### Concurrent Execution Section {#concurrent}
 
-#### 2.5.1 Disallow
+#### Disallow
 
 The **Disallow** property allows you to specify whether the microflow can be executed multiple times concurrently. This applies to all end-users who are using the app, not just within one user session.
 
@@ -127,15 +127,15 @@ Disallowing concurrent execution of a microflow can be useful if a microflow wou
 | No *(default)*  | It is possible to execute the microflow more than once concurrently. |
 | Yes | It is not possible to execute the microflow more than once concurrently; the user receives a message or another microflow is executed instead. |
 
-#### 2.5.2 Error Message
+#### Error Message
 
 **Error message** defines the message the user gets when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. This will not be shown if there is an **Error microflow** defined.
 
-#### 2.5.3 Error Microflow
+#### Error Microflow
 
 **Error microflow** defines another microflow to execute when concurrent execution is not allowed and the user tries to start the microflow while it is already being executed. When set, there will be no further message shown to the user.
 
-## 3 Expose as Microflow Action {#expose-as-microflow}
+## Expose as Microflow Action {#expose-as-microflow}
 
 You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as microflow action**.
 
@@ -159,7 +159,7 @@ If only icon is specified, the icon image will be used for the toolbox tile view
 
 {{% /alert %}}
 
-## 4 Expose as Workflow Action {#expose-as-workflow-action}
+## Expose as Workflow Action {#expose-as-workflow-action}
 
 You can select this option by right-clicking in the microflow editor and selecting **Expose as action** > **Expose as workflow action**.
 

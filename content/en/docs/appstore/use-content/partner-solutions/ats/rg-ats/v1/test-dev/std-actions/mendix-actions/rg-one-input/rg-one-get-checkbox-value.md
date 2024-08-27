@@ -3,27 +3,27 @@ title: "Get Checkbox Value"
 url: /appstore/partner-solutions/ats/rg-one-get-checkbox-value/
 ---
 
-## 1 Description
+## Description
 
 Returns true if the checkbox is checked otherwise false.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox
 
-## 3 Usage
+## Usage
 
 Pass the name of the checkbox you want to get the value from.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Search Context | WebElement | no | Limit the search to the given WebElement
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 --- | --- | ---

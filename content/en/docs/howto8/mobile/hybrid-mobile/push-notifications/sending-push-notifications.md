@@ -4,7 +4,7 @@ url: /howto8/mobile/sending-push-notifications/
 weight: 20
 ---
 
-## 1 Overview
+## Overview
 
 This is a list of microflow actions that can be called by your application to send push notifications. They are located in the **Toolbox** under the **Push notifications** category.
 
@@ -32,7 +32,7 @@ In addition, you can modify the NextTry attribute to influence when the notifica
 
 As an alternative to providing a contextObjectGuid, you can pass the entity that you would like to use as a context object to the **SendMessage...** microflow actions.
 
-## 2 Actions
+## Actions
 
 You can specify actions to be performed once the recipient clicks a notification. To do so, you should specify the available actions in the widget by following these steps:
 
@@ -50,12 +50,12 @@ Use the **New** button to add new actions. Each action requires a name, an actio
 
 The names of the actions can be used as the value of the ActionName attribute of the MessageData entity.
 
-### 2.1 Shortcomings of This Approach
+### Shortcomings of This Approach
 
 * Nanoflows are not yet supported
 * Microflows can only be used in online apps; in offline apps, microflows are not supported
 
-## 3 Read More
+## Read More
 
 * [Set Up the Apple Push Notification Server](/howto8/mobile/setting-up-apple-push-notification-server/)
 * [Set Up the Google Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/)

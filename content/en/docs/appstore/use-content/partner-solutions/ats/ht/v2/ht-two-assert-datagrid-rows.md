@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-assert-datagrid-rows/
 description: "Describes how to assert data grid rows with the **Find/Assert DataGrid Row** action."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 Asserting a row of a data grid is very useful in automated testing, as you should check an added, edited or deleted row in your test case. 
 
@@ -14,13 +14,13 @@ This how-to teaches you how to do the following:
 
 * Assert data grid rows
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Asserting Data Grid Columns
+## Asserting Data Grid Columns
 
 This how to uses the datagrid of the Company Epxenses app as an example:
 
@@ -32,21 +32,21 @@ After adding a new expense in the company expenses app, a new row with that expe
 
 The first three input parameters are in bold, the other five are not in bold. Bold indicated that ATS needs those input parameters to run the action successfully. These are thus required input parameters, the others are optional.
 
-### 3.1 Adding Required Input Parameters 
+### Adding Required Input Parameters 
 
-#### 3.1.1 Widget name
+#### Widget name
 
 In **Widget Name** you have to add the mx-name of the datagrid:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/widget-name-grid.png" class="no-border" >}}
 
-#### 3.1.2 Column 1 Name
+#### Column 1 Name
 
 In **Column 1 Name** you have to add the mx-name of the column you want to assert. In this example that is the description column:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/column-mx-name.png" class="no-border" >}}
 
-#### 3.1.3 Column 1 Value
+#### Column 1 Value
 
 In **Column 1 Value** you have to add the value of the column you want to assert:
 
@@ -56,19 +56,19 @@ Filling the data in the **Find/Assert DataGrid Row** action, results in the foll
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/datagrid-action-partly-filled.png" class="no-border" >}}
 
-### 3.2 Adding Optional Input Parameters
+### Adding Optional Input Parameters
 
 As there could be more rows with the same description, ATS can assert the wrong item. To make sure ATS asserts the correct row you can add two more column names and column values:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/add-optional-parameters.png" class="no-border" >}}
 
-#### 3.2.1 Column 2
+#### Column 2
 
 In **Column 2 Name** you have to add the mx-name of the column. In **Column 2 Value** you have to add the value of the column you want to assert:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/column-value-2.png" class="no-border" >}}
 
-#### 3.2.2 Column 3
+#### Column 3
 
 In **Column 3 Name** you have to add the mx-name of the column. In **Column 3 Value** you have to add the value of the column you want to assert:
 
@@ -84,6 +84,6 @@ When asserting for the absence of that row after deleting it, you can use the sa
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-assert-datagrid-rows/assert-in-precondition.png" class="no-border" >}}
 
-## 4 Next Up
+## Next Up
 
 You now learned how to assert datagrid rows with ATS. The next how-to is [How to Increase Recorder and Helper Coverage](/appstore/partner-solutions/ats/ht-two-increase-recorder-helper-coverage/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

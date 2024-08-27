@@ -5,7 +5,7 @@ weight: 45
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Menu widgets display menu items configured in the [Navigation](/refguide8/navigation/) or in a [Menu](/refguide8/menu/).
 
@@ -21,11 +21,11 @@ Menu widgets display menu items configured in the [Navigation](/refguide8/naviga
 
     {{< figure src="/attachments/refguide8/modeling/pages/menu-widgets/simple-menu-bar-example.png" alt="Simple Menu Bar Example" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

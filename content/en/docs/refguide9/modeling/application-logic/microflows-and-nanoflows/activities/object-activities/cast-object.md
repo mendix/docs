@@ -8,13 +8,13 @@ weight: 10
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Cast object** activity is used in a microflow after an [object type decision](/refguide9/object-type-decision/) to change the type of object from the generalized object type to the specialized object type of the path out of the object type decision.
 
 For more information about specialization and generalization, see [Entities](/refguide9/entities/).
 
-## 2 Properties
+## Properties
 
 An example of cast object properties is represented in the image below:
 
@@ -27,7 +27,7 @@ The cast object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -35,15 +35,15 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object Name
+### Object Name
 
 This is the name for the result of the cast. It can be used by all activities that follow this activity.
 
-## 4 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
-## 5 Example
+## Example
 
 For example, there are three specializations of the **Question** object. Only an object of the specialized type **MultipleChoiceQuestion** needs to have some special actions performed on it. These will be done in a sub-microflow which has the input type as **MultipleChoiceQuestion**. Since an object of the type **Question** cannot get passed to the sub-microflow, the object first needs to be cast to the object type **MultipleChoiceQuestion**.
 

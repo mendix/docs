@@ -6,11 +6,11 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Snowflake REST SQL connector](https://marketplace.mendix.com/link/component/225717) allows you to use data from Snowflake in your Mendix application and enrich your app with the capabilities that Snowflake provides.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The Snowflake REST SQL connector provides a way to first setup key-pair authentication with an RSA key pair according to PKCS #8 standard, and then execute SQL statements on Snowflake via a REST call from within your Mendix application. These statements allow you to perform the following tasks:
 
@@ -25,7 +25,7 @@ The current version of the connector supports the following actions:
 * Execution of single SQL statements
 * Synchronous execution of calls
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The Snowflake REST SQL connector requires Mendix Studio Pro version 9.18.0 or above.
 
@@ -34,25 +34,25 @@ To use the Snowflake REST SQL connector, you must also install and configure the
 * [Community Commons](https://marketplace.mendix.com/link/component/170) - This module is a required dependency for the Snowflake REST SQL connector.
 * [Encryption](https://marketplace.mendix.com/link/component/1011) - This module is a required dependency for the Snowflake REST SQL connector. The EncryptionKey constant must be set up in your application settings.
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace, but the services in Snowflake to which is connects may incur a usage cost. For more information, refer to the [Snowflake documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [How to Use Marketplace Content in Studio Pro](/appstore/general/app-store-content/) to import the Snowflake REST SQL connector into your app.
 
-## 3 Configuration
+## Configuration
 
 After you install the connector, you can find it in the **App Explorer**, in the **SnowflakeRESTSQL** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use. 
 
-### 3.1 Configuring Snowflake Authentication
+### Configuring Snowflake Authentication
 
 In order to use the capabilities of Snowflake in a Mendix app with the Snowflake REST SQL connector, an RSA key-pair authentication method must be used.
 
-### 3.1.1 Configuring Key-pair Authentication in Snowflake {#setup-key-pair-snowflake}
+### Configuring Key-pair Authentication in Snowflake {#setup-key-pair-snowflake}
 
 To configure RSA key-pair authentication for your account in Snowflake, perform the following steps:
 
@@ -62,7 +62,7 @@ To configure RSA key-pair authentication for your account in Snowflake, perform 
 
 For more details about each step, refer to the official [Snowflake documentation](https://docs.snowflake.com/en/user-guide/key-pair-auth).
 
-### 3.1.2 Setting up the Key-pair Authentication in a Mendix App {#setup-key-pair-mendix}
+### Setting up the Key-pair Authentication in a Mendix App {#setup-key-pair-mendix}
 
 To make it easier for users to configure the key-pair authentication in a Mendix app, the Snowflake REST SQL connector includes pages and microflows that you can simply drag and drop them into your own modules.
 
@@ -90,21 +90,21 @@ To configure the authentication, perform the following steps:
 
 9. Click **Save** to save the connection, or click **Save and test connection** to generate a JSON Web Token (JWT) and validate your connection.
 
-### 3.2 Configuring a Microflow for the Service
+### Configuring a Microflow for the Service
 
 After you configure the authentication for Snowflake, you can implement the functions of the connector by using the provided activities in microflows. An extended microflow has been implemented and added to the Snowflake REST SQL connector as an example for users that would like to retrieve a list of objects from an existing table in Snowflake. In the **SnowflakeRESTSQL** module, see the **ExampleImplementation** microflow and the **ExampleObject** domain model entity to learn how the [**TransformResponsesToMxObjects** operation](#transform-response-to-mx-object) can be used to easily convert the data received in **HttpResponse** objects into Mendix objects. 
 
 {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/example_implementation.png" >}}
 
-## 4 Technical Reference
+## Technical Reference
 
 To help you work with the Snowflake REST SQL connector, the following sections of this document list the available entities, enumerations, and activities that you can use in your application.
 
-### 4.1 Domain Model {#domain-model}
+### Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
-#### 4.1.1 ConnectionDetails {#connection-details}
+#### ConnectionDetails {#connection-details}
 
 | Name | Description |
 | --- | --- |
@@ -114,20 +114,20 @@ The domain model is a data model that describes the information in your applicat
 | `AccountIdentifier` | A unique account identifier that identifies a Snowflake account within your organization, as well as throughout the global network of Snowflake-supported cloud platforms and cloud regions, for example, `<orgname>-<account_name>`. For more information, refer to the Snowflake documentation about [account identifiers](https://docs.snowflake.com/en/user-guide/admin-account-identifier#finding-the-organization-and-account-name-for-an-account). |
 | `Username` | The username with which you sign in to your Snowflake account. |
 
-#### 4.1.2 PrivateKey {#private-key}
+#### PrivateKey {#private-key}
 
 | Name | Description |
 | --- | --- |
 | `Passphrase` | A passphrase which is used to encode and decode the private key file. |
 
-#### 4.1.3 JWT {#jwt}
+#### JWT {#jwt}
 
 | Name | Description |
 | --- | --- |
 | `Token` | Value of the JSON Web Token as a string. |
 | `ExpirationDate` | Expiration date of the JSON Web Token.  |
 
-#### 4.1.4 Statement {#statement}
+#### Statement {#statement}
 
 | Name | Description |
 | --- | --- |
@@ -138,7 +138,7 @@ The domain model is a data model that describes the information in your applicat
 | `Warehouse` | The warehouse to use for computations. |
 | `Role` | The role to use to execute the SQL statement. The role sufficient permissions to execute the statement. |
 
-#### 4.1.5 ResultSet {#result-set}
+#### ResultSet {#result-set}
 
 | Name | Description |
 | --- | --- |
@@ -147,17 +147,17 @@ The domain model is a data model that describes the information in your applicat
 | `Message` | Message that is returned from Snowflake as a response to the executed statement. |
 | `NumRows` | The amount of rows which will be returned by the executed statement. This is a sum of all the rows in the partitions. |
 
-#### 4.1.6 PartitionInfo {#partition-info}
+#### PartitionInfo {#partition-info}
 
 | Name | Description |
 | --- | --- |
-| `RowCoun`t | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
+| `RowCount` | The number of rows within this partition. The sum of all `PartitionInfo.RowCount` corresponds to `ResultSet.NumRows`. |
 
-### 4.2 Activities {#activities}
+### Activities {#activities}
 
 Activities define the actions that are executed in a microflow or a nanoflow. 
 
-#### 4.2.1 ExecuteStatement {#execute-statement}
+#### ExecuteStatement {#execute-statement}
 
 The `ExecuteStatement` activity allows you to execute a command in Snowflake using the SQL statement and the configuration details given in a `Statement` object. It requires a `Statement` object and returns a list of `HttpResponse` objects.
 
@@ -167,7 +167,7 @@ The input and output for this service are shown in the table below:
 | --- | --- |
 | `Statement` | `{HttpResponseList}` |
 
-#### 4.2.2 TransformResponsesToMxObjects {#transform-response-to-mx-object}
+#### TransformResponsesToMxObjects {#transform-response-to-mx-object}
 
 The `TransformResponsesToMxObjects` activity allows you to transform the list of `HttpResponse` objects into objects of the entity of your choice. 
 
@@ -184,7 +184,7 @@ To showcase this, we have created an example entity in the domain model of the c
 | `ATTR_TXT` (string) |
 | `ATTR_INT` (integer) |
 | `ATTR_LONG` (long) |
-| `ATTR_BOOL` (boolean) |
+| `ATTR_BOOL` (Boolean) |
 | `ATTR_DECI` (decimal) |
 | `ATTR_ENUM` (enumeration) |
 | `ParsedDate` (date and time)|
@@ -193,7 +193,7 @@ This entity is only an example. You must review properties such as the naming of
 
 For example, a table in Snowflake may contain multiple columns named `column1, column2,.......,column8`. To retrieve data from the column, create `ExampleObject` objects and display them on a page, you must execute an SQL statement that would retrieve the table columns with the name of my attributes and have the same datatypes. After making sure that the datatypes in Snowflake and Mendix match, you can execute a statement such as the one shown in the following example:
 
-```
+```sql
 SELECT 
      column1 as ATTR_TXT,
      column2 as ATTR_INT,

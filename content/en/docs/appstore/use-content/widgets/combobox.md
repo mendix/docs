@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the combo box widget, whi
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Combo Box](https://marketplace.mendix.com/link/component/219304) widget displays a list of options that users can select from. This is useful in scenarios where end-users need to filter their data through choices, such as being able to select or de-select different countries from a list.
 
@@ -13,7 +13,7 @@ A typical combo box can look like this:
 
 {{< figure src="/attachments/appstore/use-content/widgets/combobox/combobox-demo.gif" width="300px" alt="Combo box example" class="no-border" >}}
 
-### 1.1 Features
+### Features
 
 * Supports different data sources:
     * Context:
@@ -26,7 +26,7 @@ A typical combo box can look like this:
 * Supports custom footers
 * Supports options filtering for quick selection
 
-## 2 Properties Pane
+## Properties Pane
 
 The properties pane is divided into two major sections by a toggle at the top of the pane: **Properties** and **Styling**. Combo box properties consist of the following sections:
 
@@ -44,9 +44,9 @@ Styling:
 
 The following sections will describe the different available widget properties and how to configure the widget using them.
 
-### 2.1 General Tab {#general}
+### General Tab {#general}
 
-#### 2.1.1 Data Source Tab
+#### Data Source Tab
 
 The **Source** option (required) is used is used to configure the datasource type for the widget. It supports the following data types via these properties:
 
@@ -54,7 +54,7 @@ The **Source** option (required) is used is used to configure the datasource typ
 * [Database](#database)
 * [Static](#static)
 
-##### 2.1.1.1 Context {#context}
+##### Context {#context}
 
 When Context source is selected, the **Data source** section (required) configures the type of the context. It supports the following data types via these properties:
 
@@ -62,15 +62,15 @@ When Context source is selected, the **Data source** section (required) configur
 * [Enumeration](/refguide/enumerations/)
 * [Boolean](/refguide/boolean-expressions/)
 
-##### 2.1.1.2 Database List {#database}
+##### Database List {#database}
 
 The database source type can be used to set the value of a string or integer attribute with options fetched from an attribute with the same type.
 
-##### 2.1.1.3 Static Values {#static}
+##### Static Values {#static}
 
 The static source type can be used to set the value of a string attribute with manually configured values.
 
-#### 2.1.2 General Tab
+#### General Tab
 
 The **General** section allows you to configure general behavior and captions for the combo box. The following configurations are available:
 
@@ -82,7 +82,7 @@ The **General** section allows you to configure general behavior and captions fo
 * **Show footer** – if enabled, this allows custom widgets to be placed in a combo box's footer (as shown below). For example, you can include a link, button, or image in the footer. A popular choice is including a "new item" button in the footer:
     {{< figure src="/attachments/appstore/use-content/widgets/combobox/show-footer.png" alt="Shows a footer which can house custom widgets." class="no-border" >}}
 
-#### 2.1.3 Multi Selection (Reference Set)
+#### Multi Selection (Reference Set)
 
 The **Multi selection (reference set)** section allows you to configure combo box behavior for reference set type datasource. The following configurations are available:
 
@@ -98,38 +98,38 @@ The **Multi selection (reference set)** section allows you to configure combo bo
 
     {{< figure src="/attachments/appstore/use-content/widgets/combobox/select-all.png" alt="Show select or unselect button header" class="no-border" >}}
 
-#### 2.1.4 Label
+#### Label
 
 The **Label** section allows you to display labels for the combo box.
 
-#### 2.1.5 Conditional Visibility {#visibility}
+#### Conditional Visibility {#visibility}
 
 For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
 
-#### 2.1.6 Editability Tab {#editability}
+#### Editability Tab {#editability}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
-### 2.2 Events Tab {#events}
+### Events Tab {#events}
 
 The following configurations are available:
 
 * **On change** – executes an action when the attribute value changes
 
-### 2.3 Accessibility Tab {#accessibility}
+### Accessibility Tab {#accessibility}
 
 The **Accessibility** tab allows you to configure settings for combo box accessibility features.
 
-### 2.4 Common Tab {#common}
+### Common Tab {#common}
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Styling
+## Styling
 
-### 3.1 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 3.2 Common Section {#common-styling}
+### Common Section {#common-styling}
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}

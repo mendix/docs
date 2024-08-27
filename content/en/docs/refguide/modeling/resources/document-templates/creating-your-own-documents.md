@@ -4,7 +4,7 @@ url: /refguide/creating-your-own-documents/
 description: "This documentation will give you insight into creating documents with Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 Have you been wondering how to create your own documents with Mendix? This reference will tell you how to do it!
 
@@ -15,7 +15,7 @@ Before we start, Mendix recommends first reading these pages:
 * [Document Templates](/refguide/document-templates/)
 * [Generate Documents](/refguide/generate-document/)
 
-## 2 Knowing Your Document
+## Knowing Your Document
 
 Before you start producing a document with Mendix, it is advisable to make a draft version of the document you want to produce. You can sketch something on a piece of paper or ask your customer to provide you with an example. Either way, it is good to have in mind what you want to achieve.
 
@@ -23,13 +23,13 @@ Using your desired document, you can choose a strategy for producing it. Mendix 
 
 Let’s have a look at how this works with an example.
 
-## 3 Business Case
+## Business Case
 
 In this application, customers can purchase products. They will do so by creating orders and selecting the products they want to purchase. To be able to present the customer with an overview of their order, a PDF will be created and sent to the customer as an attachment to their confirmation email. The order should show the customer details, the logo of the company, the products with their price, and the total value of the order.
 
-## 4 Generating a Document with Out-of-the-Box Mendix Functionality
+## Generating a Document with Out-of-the-Box Mendix Functionality
 
-### 4.1 Domain Model
+### Domain Model
 
 The domain model for this application looks like this:
 
@@ -41,7 +41,7 @@ The **Customer** holds the address information and the preferred communication l
 Do not use the **System.FileDocument** entity directly, because you have no control over the security of that part from the **System** module.
 {{% /alert %}}
 
-### 4.2 Microflow
+### Microflow
 
 Now the domain model has been set up, you are ready to create the microflow for your new generate document function.
 
@@ -102,7 +102,7 @@ Make sure to set the correct entity access for entities and their attributes use
 
 {{% /alert %}}
 
-### 4.3 Document Template
+### Document Template
 
 In this example, the following document template is available:
 

@@ -3,11 +3,11 @@ title: "Function Reference"
 url: /appstore/partner-solutions/ats/rg-two-function-reference/
 ---
 
-## 1 Introduction
+## Introduction
 
 The tables below list all the built-in functions of ATS. There is one table per category. 
 
-## 2 Widget – Set
+## Widget – Set
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -30,7 +30,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 ² The date/time format depends on the device type. For *mobile* devices, the date/time should be formatted in the ISO 8601 standard (meaning, `yyyy-MM-ddTHH:mm` for date and time, `yyyy-MM-dd` for date, or `HH:mm` for just time). Seconds should be omitted. For *desktop* devices, the string should be formatted so as to match the date/time picker format. This format is locale-dependent (for example, for the US, the format is `MM/dd/yyyy, hh:mm a`).
 ³ Use values `on` and `off` for Switch widget.
 
-## 3 Widget – Get
+## Widget – Get
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -57,7 +57,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 ¹ The Get Value function for CKEditor returns the inner HTML of the widget. Because of the way the CKEditor is implemented, it might generate different HTML tags depending on which browser is used (for example, in some versions of Firefox, the tag `<br type="_moz">` is added. This means that we cannot guarantee that the returned HTML from Get Value will be the same across all browsers.
 ² Use values `on` and `off` for Switch widget.
 
-## 4 Widget – Assert
+## Widget – Assert
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -76,7 +76,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 
 ¹ Use values `on` and `off` for Switch widget.
 
-## 5 Widget – Find
+## Widget – Find
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -93,7 +93,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Find Simple Checkbox Set Selector | Simple Checkbox Set Selector | Finds the checkbox by the given value. |
 | Find Widget Child Node | All widgets | Find a node within a Mendix widget. Also matches the widget node itself. The function is limited to search only within widgets that are visible. |
 
-## 6 Widget – Other
+## Widget – Other
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -117,7 +117,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Toggle Grid Selector Checkbox Value | Grid Selector | Inverses the checkbox found by a given column and row caption. |
 | Toggle Simple Checkbox Set Selector Value | Simple Checkbox Set Selector | Inverses the value of the checkbox found by the given entity attribute value. |
 
-## 7 Mendix
+## Mendix
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -128,7 +128,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Mendix wait | N/A | Wait for microflow and UI activities. |
 | Open Mendix Application | N/A | Opens a Mendix application at the website URL in a browser with Mendix-specific settings. |
 
-## 8 Web
+## Web
 
 | Function         | Description                              |
 | ---------------- | ---------------------------------------- |
@@ -170,7 +170,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Wait for Condition | Repeatedly runs the condition JavaScript snippet every Interval (in milliseconds) until one of the following is fulfilled: <br /><ul><li>The snippet returns neither null nor false</li><li>The snippet throws an unignored exception</li><li> The timeout (in milliseconds) expires</li></ul>|
 | Wait for Condition JS | Waits until the given expression returns true. |
 
-## 9 Mouse & Keyboard
+## Mouse & Keyboard
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -187,7 +187,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Send Enter | N/A                  | Simulates pressing <kbd>Enter</kbd> in the element. |
 | Send Keys | N/A                  | Simulates typing <kbd>Text</kbd> into the element. |
 
-## 10 Logic
+## Logic
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |
@@ -231,7 +231,7 @@ The tables below list all the built-in functions of ATS. There is one table per 
 | Set Return Value | N/A | Use this function in custom actions to set the return value of the custom action. When using the "extract action" feature this function call will be added automatically, where applicable. |
 | Sleep | N/A | The waits "sleep time" in milliseconds. |
 
-## 11 Generators
+## Generators
 
 | Function         | Supported Widgets | Description                              |
 | ---------------- | ----------------- | ---------------------------------------- |

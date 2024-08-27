@@ -65,6 +65,25 @@ This alert is indented to match the sub-list item.
 }
 ```
 
+#### OQL Code Block
+
+```sql
+ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
+CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
+```
+
+#### Java Code Block with Lines 1 and 4-6 Highlighted
+
+```java {hl_lines=[1,"4-6"]}
+@java.lang.Override
+public java.lang.String executeAction() throws Exception
+{
+    // BEGIN USER CODE
+    throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
+    // END USER CODE
+}
+```
+
 #### Diff Code Block
 
 ```diff
@@ -76,25 +95,6 @@ public class Hello1
 +      System.Console.WriteLine("Rock all night long!");
    }
 }
-```
-
-#### Java Code Block with Lines 4-6 Highlighted
-
-```java {hl_lines=["4-6"]}
-@java.lang.Override
-public java.lang.String executeAction() throws Exception
-{
-    // BEGIN USER CODE
-    throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");
-    // END USER CODE
-}
-```
-
-#### OQL Code Block
-
-```sql
-ALTER DATABASE [YourDatabase] SET READ_COMMITTED_SNAPSHOT ON;
-CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_SET = SAFE;
 ```
 
 #### Code Block Indented in List

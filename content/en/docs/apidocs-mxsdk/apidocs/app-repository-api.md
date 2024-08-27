@@ -13,7 +13,7 @@ The App Repository API enables retrieving information (branches, commits) of app
 
 Below is the base URL for all App Repository API endpoints:
 
-```http {linenos=false}
+```http
 https://repository.api.mendix.com/v1
 ```
 
@@ -44,7 +44,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /repositories/d92064a5-b1fd-4be4-97db-53fc90201d1c/info HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```

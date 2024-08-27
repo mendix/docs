@@ -719,7 +719,7 @@ If you want to use the information in an access token which is a JWT, you need t
 * The OIDC module provides you with default microflows for parsing access tokens from the following IdPs:
     * Siemens SAM – in this case the `sws.samauth.role.name` claim is interpreted — for example:
 
-        ```json {linenos=false}
+        ```json
         "sws.samauth.role.name": [
         "c1c31b36-2779-4ddd-a6e7-eaff22ad382c"
         ]
@@ -727,7 +727,7 @@ If you want to use the information in an access token which is a JWT, you need t
 
     * Microsoft Entra ID – in this case the `roles` claim is interpreted, using the roles claim in the access token — for example:
 
-        ```json {linenos=false}
+        ```json
         "roles": [
         "c1c31b36-2779-4ddd-a6e7-eaff22ad382c"
         ]

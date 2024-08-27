@@ -26,36 +26,36 @@ The input parameters are described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 toString(1.4)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 '1.4'
 ```
 
 If you type in an input with a Date and time type:
 
-```java {linenos=false}
+```java
 toString(dateTime(2007))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'Mon Jan 01 00:00:00 CET 2007'
 ```
 
 If you type in an input with a Boolean:
 
-```java {linenos=false}
+```java
 toString(true)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'true'
 ```

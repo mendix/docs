@@ -67,7 +67,7 @@ In the details section you find the number of instances per entity type availabl
 
 By default the Mendix Runtime will log a `WARNING` on the `RequestStatistics` log node when the request state exceeds the configured threshold. See this example of a log statement:
 
-```text {linenos=false}
+```text
 WARNING: Request state size of 551 objects exceeds the threshold of 500 objects. Request details: type `execute-action` in session `fd0771fe-8c12-49cf-8667-921058b116a3`. State consists of:
  * MyModule.MyEntity: 421 objects
  * AnotherModule.SomeEntity: 130 objects

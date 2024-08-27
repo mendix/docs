@@ -9,7 +9,7 @@ The `RANGEBEGIN` function extracts the initial value of a range parameter.
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 RANGEBEGIN ( $range )
 ```
 

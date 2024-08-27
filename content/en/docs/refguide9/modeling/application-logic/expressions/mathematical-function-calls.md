@@ -34,13 +34,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 max(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 6.7
 ```
 
@@ -68,13 +68,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 min(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 1
 ```
 
@@ -104,25 +104,25 @@ The second optional parameter determines the precision of the rounding. The defa
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 round(3.5)
 ```
 
 The output is of type Integer/Long:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 round(88.725,2)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 88.72
 ```
 
@@ -142,13 +142,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 random()
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 0.3
 ```
 
@@ -176,25 +176,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 floor(3.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 3
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 floor(-1.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -2
 ```
 
@@ -222,25 +222,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 ceil(3.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 ceil(-1.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -1
 ```
 
@@ -269,25 +269,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 pow(2, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 8
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 pow(2.5, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 15.625
 ```
 
@@ -319,19 +319,19 @@ The output is described in the table below:
 
 If you type in the negative value as an input:
 
-```java {linenos=false}
+```java
 abs(-5)
 ```
 
 Or, if you type in the positive value: 
 
-```java {linenos=false}
+```java
 abs(5)
 ```
 
 The output in both cases is:
 
-```java {linenos=false}
+```java
 5
 ```
 
@@ -363,12 +363,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 sqrt(9)
 ```
 
 The output is of type Decimal:
 
-```java {linenos=false}
+```java
 3
 ```

@@ -39,13 +39,13 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 07 23:59 CET 2007"
 ```
 
@@ -71,13 +71,13 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Sat Feb 10 23:59 CET 2007"
 ```
 
@@ -103,13 +103,13 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 28 23:59 CET 2007"
 ```
 
@@ -135,13 +135,13 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfYear(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Mon Dec 31 23:59 CET 2007"
 ```
 

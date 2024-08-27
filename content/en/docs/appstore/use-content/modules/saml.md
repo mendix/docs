@@ -102,7 +102,7 @@ The URL for downloading the SP metadata of your app is independent of the value 
 
 * For apps running on a Microsoft Windows environment, add the following rule to the [Microsoft Internet Information Services Server Configuration](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#configure-msiis):
 
-    ```xml {linenos=false}
+    ```xml
     <rule name="sso">
         <match url="^(sso/)(.*)" />
         <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" />

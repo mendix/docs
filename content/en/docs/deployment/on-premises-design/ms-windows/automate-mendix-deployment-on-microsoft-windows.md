@@ -148,7 +148,7 @@ If you encounter any issues while automating Mendix deployment on Windows using 
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Could not load file or assembly, Version=3.3.0.0, Culture=neutral, PublicKeyToken= {token number}' or one of its dependencies. The system cannot find the file specified.
 ```
 
@@ -184,7 +184,7 @@ With the above configuration, PowerShell primarily uses .NET version 4, but also
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Could not load file or assembly 'System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken={token number}' or one of its dependencies. The system cannot find the file specified.
 ```
 
@@ -200,7 +200,7 @@ Install [Windows Management Framework 3.0](https://www.microsoft.com/en-us/downl
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Cannot open App1 service on computer '.'.
 At line:1 char:1
 + Start-MxApp App1 -synchronizedatabase
@@ -221,7 +221,7 @@ Run PowerShell as an administrator.
 
 PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp: Could not load file or assembly 'Mendix.Service, Version=4.7.0.0, Culture=neutral, PublicKeyToken=null'. Het systeem kan het opgegeven bestand niet vinden.
 ```
 
@@ -237,7 +237,7 @@ Use Windows PowerShell 5.1 to run Mendix cmdlets. Other versions of PowerShell a
 
 When you run the `Start-MxApp $APP_NAME` or `Start-MxApp $APP_NAME -synchronizedatabase` cmdlets, PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Unable to start the app. Reason: The database does not exist. 
 At line:1 char:1 
 + Start-MxApp MyFirstApp -synchronizedatabase 
@@ -258,7 +258,7 @@ Deploy your app manually before you running automated deployment scripts. For mo
 
 When you run the `Start-MxApp $APP_NAME` cmdlet, PowerShell shows an error message similar to the following:
 
-```text {linenos=false}
+```text
 Start-MxApp : Unable to start the app. Reason: The database is not synchronized with the model.
 At line:1 char:1
 + Start-MxApp MyFirstApp

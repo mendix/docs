@@ -269,7 +269,7 @@ This section provides technical details on how IAM authentication works with Pos
 {{% alert color="info" %}}
 When dealing with an Aurora PostgreSQL database, an additional procedural step is required. To employ IAM authentication in conjunction with PostgreSQL, establish a connection to the designated database instance by using either the master user or an alternative user with admin privileges. Once the connection is established, assign the `rds_iam` role to the user, as shown in the following example:
 
-```shell {linenos=false}
+```shell
 GRANT rds_iam TO db_userx;
 ```
 
@@ -721,13 +721,13 @@ Azure workload identities allow a Kubernetes Service Account to authenticate its
 
 5. Open a Bash-compatible shell (or Azure Console in Bash mode), and run the following command to connect to the Azure SQL master database using [sqlcmd managed identity authentication](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/connecting-with-sqlcmd?view=sql-server-ver16), replacing `<hostname>` with the SQL Server server hostname (e.g. `example.database.windows.net`):
 
-   ```shell {linenos=false}
+   ```shell
    az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/token && sqlcmd -S <hostname> -G -P /tmp/token && rm /tmp/token
    ```
 
 6. In the sqlcmd client, run the following commands (replace `<sql-admin-managed-identity>` with the *SQL Admin* Managed Identity name):
 
-   ```sql {linenos=false}
+   ```sql
    CREATE USER [<sql-admin-identity-name>] FROM EXTERNAL PROVIDER;
    GO
    ALTER ROLE dbmanager ADD MEMBER [<sql-admin-identity-name>];
@@ -1880,7 +1880,7 @@ To configure the required settings for an RDS database, do the following steps:
 1. Create a Postgres RDS instance and enable **Password and IAM database authentication**, or enable **Password and IAM database authentication** for an existing instance.
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
-    ```sql {linenos=false}
+    ```sql
     kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
     export PGDATABASE=postgres
     export PGUSER=<database-username>
@@ -2209,13 +2209,13 @@ To configure the required settings for an Azure SQL, do the following steps:
 
 4. Run the following command to [connect to the Azure SQL database](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/connecting-with-sqlcmd?view=azuresqldb-current), replacing `<hostname>` with the **Server name** from Step 1:
 
-   ```shell {linenos=false}
+   ```shell
    az account get-access-token --resource https://database.windows.net --output tsv | cut -f 1 | tr -d '\n' | iconv -f ascii -t UTF-16LE > /tmp/token && sqlcmd -S <hostname> -G -P /tmp/token && rm /tmp/token
    ```
 
 5. In the sqlcmd client, run the following commands (replace `<storage-admin-identity-name>` with the **Name** of the *storage admin* Managed Identity you've created [in the beginning of this walkthrough](#walkthrough-azure-azwi):
 
-   ```sql {linenos=false}
+   ```sql
    CREATE USER [<storage-admin-identity-name>] FROM EXTERNAL PROVIDER;
    GO
    ALTER ROLE dbmanager ADD MEMBER [<storage-admin-identity-name>];

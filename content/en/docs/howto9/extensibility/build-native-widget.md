@@ -37,13 +37,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the LTS version of [Node.js](https://nodejs.org).
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g yo
     ```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g @mendix/generator-widget
     ```
 
@@ -76,7 +76,7 @@ To scaffold your app folder for the group box widget, follow these steps:
 
 3. Start the generator by executing the following command:
 
-    ```shell {linenos=false}
+    ```shell
     yo @mendix/widget GroupBox
     ```
 
@@ -199,7 +199,7 @@ Define the structure and default style of the group box widget with these steps:
 4. Change the current working directory to your app folder.
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test app:
 
-    ```shell {linenos=false}
+    ```shell
     npm start
     ```
 
@@ -275,13 +275,13 @@ For the group box widget it would be nice to have square corners on Android devi
 
 1. In **src/components/HelloWorldSample.tsx** you must adjust the import statement in order to use the **Platform** detection feature. Change the import from this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Text, View } from "react-native";
     ```
 
     to this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Text, View, Platform } from "react-native";
     ```
 
@@ -331,7 +331,7 @@ As you might have noticed, the display component is still called **HelloWorldSam
 3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
 4. Change the **GroupBox** class declaration to the following:
 
-    ```tsx {linenos=false}
+    ```tsx
     export class GroupBox extends Component<GroupBoxProps>
     ```
 
@@ -342,13 +342,13 @@ To fix the errors in the container component, use these steps:
 1. Open *src/GroupBox.tsx*.
 2. Replace the following import:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { HelloWorldSample } from "./components/HelloWorldSample";
     ```
 
     with this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
     ```
 
@@ -628,7 +628,7 @@ To start, make the complete header clickable:
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Import the React component **ComponentClass** so that your React imports look like this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Children, Component, ReactNode, createElement, ComponentClass } from "react";
     ```
 
@@ -693,7 +693,7 @@ Now make it possible to expand or collapse the group box:
 
 3. Change the class definition to give our component a state to keep track on whether it is collapsed or not:
 
-    ```tsx {linenos=false}
+    ```tsx
     export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
     ```
 
@@ -945,13 +945,13 @@ Fix your icon issue by introducing a default style for your container component:
 
 2. Import the `flattenStyles` function:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Style, flattenStyles } from "./utils/common";
     ```
 
 3. Add the following private attribute to the container component class:
 
-    ```tsx {linenos=false}
+    ```tsx
     private readonly styles = flattenStyles(defaultStyle, this.props.style);
     ```
 
@@ -1326,7 +1326,7 @@ Defining all the different styles inside **test/MxTestApp/theme/styles/native/ap
 2. Move all the code from **test/MxTestApp/theme/styles/native/app/custom.js** into the new file.
 3. Add the following import to **test/MxTestApp/theme/styles/native/app/custom.js**:
 
-    ```js {linenos=false}
+    ```js
     export * from "./group-box";
     ```
 

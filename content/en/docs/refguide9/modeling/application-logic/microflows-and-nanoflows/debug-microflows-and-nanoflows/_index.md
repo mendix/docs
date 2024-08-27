@@ -109,7 +109,7 @@ To use breakpoint conditions, follow these steps:
 
 2. Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java {linenos=false}
+    ```java
     $currentUser/name = 'YourUserName'
     ```
 

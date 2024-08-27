@@ -102,7 +102,7 @@ For example, the **Customer** entity is a specialization of the **User** entity.
 
 A logged-in customer is allowed to view personal orders, but is not allowed to view the orders of other customers. This is accomplished by using the following XPath constraint in the access rule of the **Order** entity:
 
-```java {linenos=false}
+```java
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 

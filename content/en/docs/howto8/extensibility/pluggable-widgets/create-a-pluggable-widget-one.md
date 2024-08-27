@@ -29,13 +29,13 @@ Before starting this how-to, make sure you have completed the following prerequi
     * For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
 * Install [Yeoman](https://yeoman.io/) with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g yo
     ```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman for Mendix 8 with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g @mendix/generator-widget@"<9"
     ```
 
@@ -197,7 +197,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 6. Alter *Textbox.editorPreview.tsx* by adding the `TextInput` import to *Textbox.editorPreview.tsx*:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { TextInput } from "./components/TextInput";
     ```
 

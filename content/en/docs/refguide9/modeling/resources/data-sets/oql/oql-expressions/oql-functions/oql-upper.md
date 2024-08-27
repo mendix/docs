@@ -15,7 +15,7 @@ The `UPPER` function converts all lowercase characters in a given string to uppe
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 UPPER ( expression )
 ```
 

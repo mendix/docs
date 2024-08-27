@@ -61,7 +61,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-    ```bash {linenos=false}
+    ```bash
     sudo docker-compose up -d
     ```
 

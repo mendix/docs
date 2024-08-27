@@ -294,7 +294,7 @@ To submit the CR via a CLI you will need a file containing the YML you created i
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```shell {linenos=false}
+```shell
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
@@ -306,7 +306,7 @@ To build and deploy your app using the OpenShift CLI, do the following:
 2. Switch to the project where you've deployed the Mendix Operator using the command `oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3. Paste the following command into your command line terminal:
 
-```shell {linenos=false}
+```shell
 oc apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 

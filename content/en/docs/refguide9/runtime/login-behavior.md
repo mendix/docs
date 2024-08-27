@@ -28,7 +28,7 @@ Login behavior can be customized by implementing a custom Java action and regist
 
 1. Create a subclass of `UserAction<ISession>` similar to following:
 
-    ```Java {linenos=false}
+    ```Java
     public class CustomLoginAction extends UserAction<ISession> {
       private final Map<String, ?> params;
 
@@ -47,7 +47,7 @@ Login behavior can be customized by implementing a custom Java action and regist
 
 1. Create a new Java action that replaces the `LoginAction` with our custom one:
 
-    ```Java {linenos=false}
+    ```Java
     public java.lang.Void executeAction() throws Exception
     {
     Core.addUserAction(CustomLoginAction.class);

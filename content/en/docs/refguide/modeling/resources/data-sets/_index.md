@@ -23,7 +23,7 @@ Fields for datasets contain the following properties:
 
 The following shows an example OQL query that calculates the aggregated total order amount for all orders of a customer for a specific group of customers:
 
-```sql {linenos=false}
+```sql
 FROM CRM.Customers As CustomerObj
 INNER JOIN CustomerObj/CRM.Orders_Customer/CRM.Orders As OrderObj
 WHERE CustomerObj/CRM.Customer_Group = $ParGroup

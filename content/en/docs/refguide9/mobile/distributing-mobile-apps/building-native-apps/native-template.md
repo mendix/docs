@@ -572,7 +572,7 @@ To run the toolkit using the run script defined in *package.json*, run `npm run 
 
 Having the configuration file relative to the root directory is not required for the toolkit, but is done for convenience. To specify a different configuration file path the toolkit can be executed using the following command:
 
-```text {linenos=false}
+```text
 native-mobile-toolkit configure --config-path='./<name of the configuration>.json' --verbose
 ```
 
@@ -592,7 +592,7 @@ To do so:
 1. Find the path to the executable **mxbuild.exe** and note it down. 
 1. Open a command line and run this command: 
 
-    ```text {linenos=false}
+    ```text
     <path-to-mxbuild.exe> --java-home=DIRECTORY -java-exe-path=FILENAME --target=deploy --native-packager <path-to-the-app-mpr>
     ```
 

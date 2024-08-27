@@ -165,7 +165,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
 
-    ```bash{linenos=false}
+    ```bash
     - '--el-security-context=false'
     ```
 

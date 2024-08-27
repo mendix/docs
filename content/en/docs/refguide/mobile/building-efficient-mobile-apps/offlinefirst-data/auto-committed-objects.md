@@ -94,7 +94,7 @@ The Mendix Runtime will delete auto-committed objects created during synchroniza
 
 This is how the message will appear:
 
-```text {linenos=false}
+```text
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
 - {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 - {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
@@ -113,7 +113,7 @@ Auto-committed objects created inside microflows that are called from a nanoflow
 
 Auto-committed objects created during synchronization are deleted immediately after the synchronization. When this happens, a warning is logged in the `Offline Synchronization` node:
 
-```text {linenos=false}
+```text
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
 - {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 - {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})

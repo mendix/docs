@@ -1,5 +1,5 @@
 ---
-title: "Published OData Services"
+title: "Published OData/GraphQL Services"
 url: /refguide/published-odata-services/
 weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
@@ -7,7 +7,7 @@ weight: 10
 
 ## Introduction
 
-In Studio Pro, [entities can be published](/refguide/published-odata-entity/) by adding them to a published OData service. You can publish any number of related entities in a published OData service. By default, the plural of the non-qualified names of entities are used in the URI to uniquely identify them, but you can override the name of the published entity as well. 
+In Studio Pro, [entities](/refguide/published-odata-entity/) and [microflows](/refguide/published-odata-microflow/) by adding them to a published OData/GraphQL service. You can publish any number of related entities and microflows.
 
 A published OData service is a REST service with an OpenAPI contract, which means that OpenAPI compatible REST clients can easily interact with it. 
 
@@ -19,18 +19,20 @@ The option to publish [OData v3](https://www.odata.org/documentation/odata-versi
 
 Not all parts of the standard are implemented. If something is not documented here, it has not yet been added.
 
-This document describes the options available to you when you create a published OData service and ends with some runtime considerations.
+This document describes the options available to you when you create a published OData/GraphQL service and ends with some runtime considerations.
 
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
+If you want the published service to be a GraphQL service as well, you can indicate that it [supports GraphQL](#supports-graphql).
+
 ## General {#general}
 
-To create a Published OData Service, right-click on the module in your app and choose **Add other** > **Published OData service**. You can also edit an existing published OData service by double-clicking on it, or right-clicking on it and selecting **Open**.
+To create a Published OData/GraphQL Service, right-click on the module in your app and choose **Add other** > **Published OData/GraphQL service**. You can also edit an existing published OData/GraphQL service by double-clicking on it, or right-clicking on it and selecting **Open**.
 
 ### Service Name {#service-name}
 
-The service name uniquely identifies the published OData service within the app.
+The service name uniquely identifies the published OData/GraphQL service within the app.
 
 ### Version
 
@@ -43,18 +45,32 @@ It is recommended to use [semantic versioning](https://semver.org/) for services
 {{% alert color="warning" %}}
 Once a version is released to production, any further changes should be made to a new version of the service.
 
-This is because changes to a particular version of a published OData service will be reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
+This is because changes to a particular version of a published OData/GraphQL service will be reflected in the entities and attributes available through the Catalog for every environment for which the service is published. For example, if you have version 1.0.0 published to both non-production and production environments, any changes you make to version 1.0.0 of the service in the non-production environment will also be reflected in the service in production.  
 {{% /alert %}}
 
-### Location
+### Location {#location}
 
 The location denotes where the service will be available. It is recommended to include the service name and the major version in the location (for example, `svc/products/v1/`).
 
 The URL prefixes `api-doc/`, `xas/`, `p/`, and `reload/` are reserved and cannot be used at the start of the location. Otherwise, you can change the location to any valid URL.
 
-### Namespace
+### Supports GraphQL {#supports-graphql}
 
-In OData, the namespace is used to refer to data types. You can customize this namespace, changing it to any value which starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
+{{% alert color="info" %}}
+GraphQL support was introduced in [Studio Pro 10.14.0](/releasenotes/studio-pro/10.14/).
+{{% /alert %}}
+
+Default: **No**
+
+Choose **Yes** to publish the entities in a GraphQL service. This allows clients to send GraphQL `POST` requests to the location of the service. The service responds with the requested entity data in JSON format. This option is available when the [GraphQL feature](/refguide/preferences-dialog/#graphql) is enabled or when the value is **Yes**.
+
+{{% alert color="warning" %}}
+Enabling GraphQL on a service that publishes OData v3 is not supported.
+{{% /alert %}}
+
+See [Supported GraphQL Operations](/refguide/supported-graphql-operations/) for an overview of the operations of the resulting GraphQL service.
+
+Not all features that you can model in a published OData/GraphQL service are supported through GraphQL. See [GraphQL Limitations](#graphql-limitations) for more details.
 
 ### Entities
 
@@ -94,11 +110,15 @@ This list gives an overview of the [parameters](/refguide/published-odata-microf
 
 You can choose between OData 4 (recommended) and OData 3. One of the main differences is that OData 4 services return results in JSON, and OData 3 services return results in XML.
 
+#### Namespace
+
+In OData, the namespace is used to refer to data types. You can customize this namespace and change it to any value that starts with a letter followed by letters, digits, or dots with a maximum length of 512 characters.
+
 #### Associations
 
 You can select how you want to represent associations. For more information, see the [Associations](/refguide/odata-representation/#associations) section of *OData Representation*.
 
-#### Include metadata in response by default
+#### Include Metadata in Response by Default
 
 This checkbox allows you to choose if the service should include the metadata (for example, the `@context` property) in the response. This setting is enabled by default to conform to the OData specification. Disabling this setting has the same effect as including `metadata=none` in the `Accept` header of your HTTP request. Note that the value passed in the `Accept` header always takes precedence over this setting.
 
@@ -122,11 +142,15 @@ The $metadata XML file contains the service's contract in OData's [CSDL](https:/
 
 The OpenAPI JSON file contains the service's REST contract in [OpenAPI 3.0](https://www.openapis.org/) format. This is a machine-readable file according to the OpenAPI Specification format. Most API tools support this format.
 
-When the app is running, you can also download this file from the [API documentation page](#api-documentation), under `/odata-doc/{location}/openapi.json`, where `{location}` is the location of the OData service (for instance, `odata/myservice/v1)`.
+When the app is running, you can also download this file from the [API documentation page](#api-documentation), under `/odata-doc/{location}/openapi.json`, where `{location}` is the location of the OData service (for instance, `odata/myservice/v1)`).
+
+#### GraphQL Schema
+
+The GraphQL schema describes the queries and types exposed by this GraphQL service. You can export the GraphQL schema when this service [supports GraphQL](#supports-graphql).
 
 ### Security {#security}
 
-You can configure security for the OData service when [App Security](/refguide/app-security/) is enabled.
+You can configure security for the OData/GraphQL service when [App Security](/refguide/app-security/) is enabled.
 
 #### Requires Authentication {#authentication}
 
@@ -135,7 +159,7 @@ Select whether clients need to authenticate or not. Select **No** to allow acces
 Even when you choose **Yes**, you can still expose the service to anonymous users. For detailed information on allowing anonymous users, see [Anonymous User Role](/refguide/anonymous-users/).
 
 {{% alert color="info" %}}
-The **Authentication** section of a published OData service is only visible when you have enabled [app security](/refguide/app-security/).
+The **Authentication** section of a published OData/GraphQL service is only visible when you have enabled [app security](/refguide/app-security/).
 {{% /alert %}}
 
 #### Authentication Methods {#authentication-methods}
@@ -189,19 +213,19 @@ There are three possible outcomes of the authentication microflow:
 
 ###### Mendix SSO {#authentication-mendix-sso}
 
-You can configure a published OData service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
+You can configure a published OData/GraphQL service to authenticate with the [Mendix SSO](/appstore/modules/mendix-sso/) module. This is a form of [Custom](#authentication-microflow) authentication.
 
 To set up authentication with Mendix SSO, do the following:
 
 1. Ensure the [Mendix SSO](/appstore/modules/mendix-sso/) module has been installed and configured in your app.
-2. In the published OData service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
+2. In the published OData/GraphQL service, choose **Custom** authentication and select the **AuthorizeRequestWithAccessTokenFrom Request** microflow.
 
 #### Allowed Roles
 
 The allowed roles define which [module role](/refguide/module-security/#module-role) a user must have to be able to access the service. This option is only available when **Requires authentication** is set to **Yes**.
 
 {{% alert color="warning" %}}
-Web service users cannot access OData services.
+Web service users cannot access OData/GraphQL services.
 {{% /alert %}}
 
 ## Public Documentation
@@ -214,7 +238,7 @@ In the **OpenAPI Documentation** pane, you can see a preview of the API document
 
 ## Properties
 
-In the Properties pane when an OData service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
+In the Properties pane when an OData/GraphQL service document is displayed, you can edit some of the values that you can also set in the **General** tab, such as **Service name**, **Version**, and **Namespace**.
 
 This section describes the additional values that you can set.
 
@@ -260,10 +284,32 @@ The Mendix runtime returns status codes for OData payloads. The possible status 
 * `401`, `402`, `403`, `404`, `405`, `422` – [Client error responses](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses)
 * `500` – Mendix default when something goes wrong and it has not been modeled; may or may not be the standard [internal server error](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
-## Publishing OData Services
+Responses to GraphQL requests return `200` when the server understands the request and can return at least some data, and `400` when the server does not understand the request.
+
+## Publishing CRUD
 
 To publish an entity with full CRUD (Create, Read, Update, or Delete functionality; or in Studio Pro, **Insertable**, **Readable**, **Updateable**, and **Deletable**), select the relevant checkboxes in the [Capabilities](/refguide/published-odata-entity/#capabilities) section in [Published OData Entity](/refguide/published-odata-entity/). You can then [Send](/refguide/send-external-object/) and [Delete](/refguide/delete-external-object/) objects using [External Object activities](/refguide/external-object-activities/). 
 
 ## Limitations
 
+### OData Limitations
+
 Studio Pro currently does not support publishing media entities with OData services. To learn about consuming media entities with OData, see the [Binary Attributes](/refguide/consumed-odata-service-requirements/#binary-attributes) section of *Consumed OData Service Requirements*. You can also [Publish and Retrieve Images and Files with REST](/refguide/send-receive-files-rest/).
+
+### GraphQL Limitations {#graphql-limitations}
+
+A service that [supports GraphQL](#supports-graphql) does not support all of the modeling features available for OData services. See [Supported GraphQL Operations](/refguide/supported-graphql-operations/) for an overview of what clients can retrieve when you publish an entity.
+
+The following modeling options are limited in the GraphQL service:
+
+* Published microflows are ignored.
+* The insertable, updatable, and deletable [capabilities](/refguide/published-odata-entity/#capabilities) values have no effect, because GraphQL services are read-only.
+* Entities that are not [readable](/refguide/published-odata-entity/#readable) are not part of the GraphQL service.
+* Entities without a [key](/refguide/published-odata-entity/#key) are not part of the GraphQL service.
+* The [Use paging](/refguide/published-odata-entity/#paging) setting has no effect.
+* Published `ID` attributes are ignored.
+* Published `owner` and `changedBy` system associations are ignored.
+* Enumerations [exposed as](/refguide/published-odata-attribute/#exposed-as) a string are ignored.
+* Binary attributes are ignored.
+* A published OData service that publishes associations as an associated object ID cannot support GraphQL.
+* The GraphQL endpoint is not part of the OpenAPI document.  

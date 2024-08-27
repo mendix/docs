@@ -60,8 +60,6 @@ To create an app using your own data, do the following:
 
 3. When you create your app, a page where you can upload your spreadsheet is opened. Drag your spreadsheet onto the page or browse your files and choose the one you would like to import.
 
-    {{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/drag-and-drop.jpg"  width="650"  class="no-border" >}}
-
     {{% alert color="info" %}}If you choose to start without data, you will have just a blank app, and will not be able to import a spreadsheet later.{{% /alert %}}
 
 ### Previewing Spreadsheet Data
@@ -89,15 +87,15 @@ After you upload the spreadsheet, worksheets that have relations (associations) 
 {{% alert color="info" %}}Associations are not identified if the data is converted to **Integer**. In this case you can either change the column type to **Text** in Excel, or change the type of both columns to **String** when previewing your data. For more information on how to change attribute types, see the [Managing Attribute Types](#managing-attribute-types) section.
 {{% /alert %}}
 
-In the **Data Import Preview**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon ({{% icon name="hyperlink" %}}):
+In the **Customize import**, you can check the spreadsheet data before the actual import is completed. You can review tables and columns and untick the ones that you do not want to import. Tables that have relations (associations) detected are indicated with a link icon ({{% icon name="hyperlink" %}}):
 
-{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/data-preview.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/data-preview.jpg" >}}
 
 The columns which have associations cannot be deselected for the import. You need to delete the association first.
 
-To review a list of associations and unselect the ones that you do not want to be created, click **Manage Relations**. In the **Manage Relations** pop-up window, you can see which table and column will be used to create an association **From** and which will be used to create an association **To**. A column with unique data is the one the association goes **to**.
+To review a list of associations and unselect the ones that you do not want to be created, click **Edit…**. In the **Edit Relations** dialog box, you can see which table and column will be used to create an association **From** and which will be used to create an association **To**. A column with unique data is the one the association goes **to**.
 
-{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-relations.jpg"   width="500"  class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/manage-relations.jpg"   width="500"  >}}
 
 For example, in the image above you can see that an association is created from the **MarketingDocs** entity to the **Contributors** entity. This association was discovered through the column **Responsible** in **MarketingDocs** and the column **Name** in **Contributors**.  As a result, when data is imported, the **MarketingDocs** entity does not have **Responsible** as an attribute. Instead, it has an association with the **Contributors** entity and gets data from this entity through the association.
 
@@ -109,7 +107,7 @@ A column can be used to create an association **from** it once only. If an assoc
 
 At the bottom of each column (that will be turned into an attribute), an attribute type is automatically identified and indicated. Click the drop-down menu to change the attribute type. For more information on how Excel data types correspond to attribute types, see [Correspondence between Excel Data Types and Attribute Types](#excel-type-attribute-type).
 
-{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/attribute-type-drop-down.jpg" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/app-from-spreadsheet/attribute-type-drop-down.jpg" >}}
 
 If columns have empty values, the attribute type will be identified as **String**. However, if you change it to another attribute type, Studio Pro automatically chooses and fills in a default value for the following attribute types:
 
@@ -134,7 +132,7 @@ You can now preview your app and test it out by clicking **Run Locally** ({{% ic
 
 ### Generating Pages {#generating-pages}
 
-If **Generate pages for my data** is selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor or in the navigation document:
+If **Generate overview pages** is selected in the preview page, pages are created based on your spreadsheet. The following changes are made in the page editor or in the navigation document:
 
 * One **{EntityName}_Overview** page per entity is created – a page with a data grid where you can have an overview of this entity's objects
 

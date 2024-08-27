@@ -56,7 +56,7 @@ The **Language** menu items are described in the table below:
 
 | Menu Item | Description | Shortcut Key |
 | --- | --- | --- |
-| **Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
+| <a id="current-language"></a>**Current Language** | Choose the current language from one of the languages set up in **Language Settings…**. | *None* |
 | **Select Previous Language** | Choose the previous language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> |
 | **Select Next Language** | Choose the next language in the list of languages chosen in **Language Settings…**. | <kbd>Ctrl</kbd> + <kbd>L</kbd> |
 | [Language Settings…](/refguide/language-settings/) | Choose which languages are supported by the app and configure date and time settings. | *None* |

@@ -1,19 +1,19 @@
 ---
 title: "Published OData Attribute"
 url: /refguide/published-odata-attribute/
-weight: 10
+weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData service.
+The **Edit published attribute** dialog allows you to edit the properties of an attribute published in an OData/GraphQL service.
 
 {{< figure src="/attachments/refguide/modeling/integration/published-odata-attribute/edit-published-attribute.png" alt="Edit published attribute dialog box." class="no-border" >}}
 
 ## General
 
-### Exposed Name
+### Exposed Name {#exposed-name}
 
 The exposed name is the name of the attribute as it appears to clients of the service. This cannot be the same as the exposed name of the entity.
 
@@ -35,7 +35,7 @@ The attribute that is being published. This value cannot be changed; to publish 
 
 The type of the attribute.
 
-### Exposed As
+### Exposed As {#exposed-as}
 
 This field is shown when the type is an enumeration that was previously exposed as a string, and only for OData v4. Change the value to **Enumeration** to publish the enumeration. This informs clients of the possible values of this attribute.
 

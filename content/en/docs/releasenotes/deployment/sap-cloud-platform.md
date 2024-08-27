@@ -13,6 +13,12 @@ For information on the current status of deployment to SAP BTP and any planned r
 
 ## 2024
 
+### August 27, 2024
+
+#### Bug Fixes
+
+* Fixed updating buildpack version to latest while re-deployment of application on SAP BTP.
+
 ### August 25, 2024
 
 #### Portal Improvements
@@ -22,7 +28,6 @@ For information on the current status of deployment to SAP BTP and any planned r
 #### Bug Fixes
 
 * Issue of missing Tag Description for deployment package resolved.
-* Fixed updating buildpack version to latest while re-deployment of application on SAP BTP.
 
 ### July 14, 2024
 

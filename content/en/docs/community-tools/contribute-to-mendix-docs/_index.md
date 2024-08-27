@@ -107,7 +107,7 @@ You can clone a local copy of a forked repository, make documentation changes, a
 2. Clone the forked repository using your preferred Git client, such as Visual Studio Code, GitHub Desktop, or Sourcetree:
 
     * Clone using Visual Studio Code:
-        1. In Visual Studio Code, open the Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>).
+        1. In Visual Studio Code, open the Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on a Mac).
         2. Search for `clone`.
         3. Select **Git: Clone**.
         4. Enter the URL of the forked repository (example URL: https://github.com/YOUR-USERNAME/docs) and select a destination directory.

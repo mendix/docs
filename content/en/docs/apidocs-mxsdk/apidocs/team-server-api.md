@@ -7,7 +7,7 @@ deprecated: true
 ---
 
 {{% alert color="warning" %}}
-The Team Server API is deprecated. Please use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
+The Team Server API is deprecated and will be removed on December 1, 2024. Use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
 {{% /alert %}}
 
 ## Introduction
@@ -24,7 +24,7 @@ The Team Server API is only available to *licensed* apps which are running in a 
 
 ## Authentication
 
-The Teamserver API requires authentication via API keys that are bound to your Mendix account.
+The Team Server API requires authentication via API keys that are bound to your Mendix account.
 
 ### Obtaining an API Key
 

@@ -98,7 +98,7 @@ This microflow runs in the context of the user, allowing you to make sure that i
 
 See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
-This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
+This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [various models available on Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 ## Agents and Assistants {#agents}
 

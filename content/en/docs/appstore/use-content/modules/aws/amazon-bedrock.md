@@ -27,7 +27,7 @@ The Amazon Bedrock connector requires Mendix Studio Pro version 9.24.2 or above.
 
 To authenticate with Amazon Web Service (AWS), you must also install and configure the [AWS Authentication connector version 3.0.0 or higher](https://marketplace.mendix.com/link/component/120333). It is crucial for the Amazon Bedrock connector to function correctly. For more information about installing and configuring the AWS Authentication connector, see [AWS Authentication](/appstore/modules/aws/aws-authentication/).
 
-You must also install the [GenAI Commons](/appstore/modules/genai/commons/) module. To make the integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by this module.
+You must also install the [GenAI Commons version 1.2.0 or higher](/appstore/modules/genai/commons/). To make integration of generative AI capabilities as easy as possible, the Amazon Bedrock connector depends on the generic domain model and operations provided by the GenAICommons module.
 
 ### Licensing and Cost
 
@@ -1027,7 +1027,15 @@ Some capabilities of the chat completions operations are currently only availabl
 
 * **Function Calling** - You can use function calling in all chat completions operations using a [supported model](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) by adding a `ToolCollection` with a `Tool` via the [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) operation. For more information about function calling, see the [Function Calling Documentation](/appstore/modules/genai/function-calling/).
 
-* **Vision** - This operation supports the *vision* capability of [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` with the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation.
+**Function calling microflows**: A microflow used as a tool for function calling must satisfy the following conditions:
+        
+        1. One input parameter of type String or no input parameter.
+        2. Return value of type String.
+
+* **Vision** - This operation supports the *vision* capability for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). With vision, you can send image prompts, in addition to the traditional text prompts. You can use vision by adding a `FileCollection` with a `File` to the `Message` using the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation. Make sure to set the `FileType` attribute to **image**.
+
+* **Document Chat** - This operation supports the ability to chat with documents for [supported models](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features). To send a document to the model add a `FileCollection` with a `System.FileDocument` to the `Message` using the [Files: Initialize Collection with File](/appstore/modules/genai/commons/#initialize-filecollection) or the [Files: Add to Collection](/appstore/modules/genai/commons/#add-file-to-collection) operation. For Document Chat, it is not supported to create a `FileContent` from an URL using the above mentioned operations; Please use the `System.FileDocument` option. Make sure to set the `FileType` attribute to **document**.
+
 
 ##### RetrieveAndGenerate {#retrieve-and-generate}
 
@@ -1253,6 +1261,28 @@ This operation corresponds to the **Response_GetRequestedResponseFields** microf
 | Input | Output |
 | --- | --- |
 | `GenAICommons.Response (object)`| `RequestedResponseField (list)` |
+
+##### Response: Get NextToken {#get-next-token}
+
+Use this microflow to retrieve the NextToken from the response after using the `Retrieve` operation. 
+
+This operation corresponds to the **Response_GetNextToken** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `NextToken (string)` |
+
+##### Response: Cast RetrieveAndGenerateResponse {#cast-rag-response}
+
+Use this microflow to get the RetrieveAndGenerateResponse object from the GenAiCommons.Response that is returned by the `RetrieveAndGenerate` operation.
+
+The RetrieveAndGenerateResponse object contains the SessionID of the current Session that can be used in a subsequent request to chat within the same session.
+
+This operation corresponds to the **Response_Cast_RetrieveAndGenerateResponse** microflow.
+
+| Input | Output |
+| --- | --- |
+| `GenAICommons.Response (object)`| `RetrieveAndGenerateResponse (object)` |
 
 #### Other Operations
 

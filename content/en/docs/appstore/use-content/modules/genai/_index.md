@@ -53,20 +53,22 @@ Mendix connectors offer direct support for the following models:
 | | gpt-4, gpt-4o, gpt-4o mini | Chat completions | text, image | text | Function calling |
 | | DALL·E 2, DALL·E 3 | Image generation | text | image | |
 | | text-embedding-ada-002, text-embedding-3-small, text-embedding-3-large     | Embeddings | text | embeddings| |
-| Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | |
+| Amazon Bedrock | Amazon Titan Text G1 - Express, Amazon Titan Text G1 - Lite, Amazon Titan Text G1 - Premier | Chat Completions | text | text | Document Chat (except Titan Premier) |
 | | AI21 Jamba-Instruct | Chat Completions | text | text |  |
 | | AI21 Labs Jurassic-2 (Text) | Chat Completions | text | text |  |
 | | Amazon Titan Image Generator G1 | Image generation | text | image | |
 | | Amazon Titan Embeddings Text v2 | Embeddings | text | embeddings| |
-| | Anthropic Claude v2.0, Anthropic Claude v2.1| Chat Completions | text | text |  |
-| | Anthropic Claude v3 Sonnet, Anthropic Claude v3.5 Sonnet, Anthropic Claude v3 Haiku, Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling |
-| | Cohere Command | Chat Completions | text | text | |
+| | Anthropic Claude v2.0, Anthropic Claude v2.1| Chat Completions | text | text | Document Chat |
+| | Anthropic Claude v3 Sonnet, Anthropic Claude v3 Haiku, Anthropic Claude v3 Opus | Chat Completions | text, image | text | Function calling, Document Chat |
+| | Anthropic Claude v3.5 Sonnet | Chat Completions | text, image | text | Function calling |
+| | Cohere Command | Chat Completions | text | text | Document Chat |
 | | Cohere Command Light | Chat Completions | text | text | |
-| | Cohere Command R, Cohere Command R+ | Chat Completions | text | text | Function calling |
+| | Cohere Command R, Cohere Command R+ | Chat Completions | text | text | Function calling, Document Chat |
 | | Cohere Embed English, Cohere Embed Multilingual | Embeddings | text | embeddings | |
-| | Meta Llama 2, MetaLlama 3| Chat Completions | text | text |  |
-| | Mistral AI Instruct | Chat Completions | text | text |  |
-| | Mistral Large | Chat Completions | text | text | Function calling |
+| | Meta Llama 2, MetaLlama 3| Chat Completions | text | text | Document Chat |
+| | Meta Llama 3.1| Chat Completions | text | text | Function calling, Document Chat |
+| | Mistral AI Instruct | Chat Completions | text | text | Document Chat |
+| | Mistral Large, Mistral Large 2 | Chat Completions | text | text | Function calling, Document Chat |
 | | Mistral Small | Chat Completions | text | text | Function calling |
 
 For more details on limitations and supported model capabilities for the Bedrock Converse API used in the ChatCompletions operations, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS documentation.

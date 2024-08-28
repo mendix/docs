@@ -4,15 +4,15 @@ url: /refguide/oql-where-clause/
 weight: 30
 ---
 
-## 1 Description
+## Description
 
 The `WHERE` clause specifies how the data being retrieved must be constrained.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 WHERE <constraint>
 ```
 
@@ -20,18 +20,18 @@ WHERE <constraint>
 
 For more information, see [OQL Expressions](/refguide/oql-expressions/).
 
-## 3 Examples
+## Examples
 
 This query retrieves all customers whose name is equal to "Jansen":
 
-```sql {linenos=false}
+```sql
 SELECT FirstName FROM Sales.Customer
 WHERE LastName = 'Jansen'
 ```
 
 This query retrieves all customers who live in "Rotterdam":
 
-```sql {linenos=false}
+```sql
 SELECT FirstName FROM Sales.Customer
 INNER JOIN Sales.Customer/Sales.Customer_Address/Sales.Address
 WHERE Sales.Address/City = 'Rotterdam'

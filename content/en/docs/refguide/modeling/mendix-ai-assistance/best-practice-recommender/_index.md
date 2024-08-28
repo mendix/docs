@@ -1,14 +1,14 @@
 ---
 title: "Best Practice Recommender"
 url: /refguide/best-practice-recommender/
-weight: 30
+weight: 10
 description: "Describes Best Practice Recommender in Mendix Studio Pro."
 aliases:
     - /refguide/mx-assist-performance-bot/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction 
+## Introduction 
 
 {{% alert color="info" %}}
 Best Practice Bot was rebranded to Best Practice Recommender in Studio Pro 10.12.0.
@@ -24,11 +24,11 @@ Best Practice Recommender is built using statistical analysis of thousands of an
 
 It consists of a three-level assistance:
 
-1. **Detection** –  it inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
+1. **Detection** – it inspects the model, identifies issue, and pinpoints you to the document/element causing the issue.
 2. **Recommendation** – it explains the identified issue, the potential impact, and how to fix it. There is also a detailed best practice guide with a dedicated step-by-step guideline of how to fix the issue.
 3. **Auto-fixing** – it can automatically implement the best practice and fix the issue.
 
-## 2 Best Practice Recommender Pane
+## Best Practice Recommender Pane
 
 To access settings of Best Practice Recommender, open **Edit** > **Preferences** > the **Maia** tab > **Best Practice Recommender** section. For more information, see [Preferences](/refguide/preferences-dialog/).
 
@@ -38,7 +38,7 @@ The pane gives you information on each anti-pattern and contains Best Practice R
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommender-pane.png" alt="Best Practice Recommender Pane" class="no-border" >}}
 
-### 2.1 Options and Configuration {#options}
+### Options and Configuration {#options}
 
 At the top of the **Best Practice Recommender** pane, you can see the following options: 
 
@@ -58,7 +58,7 @@ At the top of the **Best Practice Recommender** pane, you can see the following 
 
 You can use both app model and best practice configuration together. 
 
-### 2.2 Anti-Pattern Overview
+### Anti-Pattern Overview
 
 Each anti-pattern line in the pane provides you with the following information: 
 
@@ -83,9 +83,9 @@ The following actions are available in the drop-down menu:
 * **Mark as read** – marks the issue as read (this will make the blue circle to disappear)
 * **Suppress this recommendation** – suppresses the issue (this will gray out the issue and send it to the bottom of the list, and the related indicator in the editor will disappear)
 
-## 3 Using Best Practice Recommender in App Development  
+## Using Best Practice Recommender in App Development  
 
-### 3.1 Detecting an Anti-Pattern {#detecting}
+### Detecting an Anti-Pattern {#detecting}
 
 The first level of assistance is **detection** that includes inspecting the app model, identifying anti-patterns, and pinpointing you to the document causing the issue. 
 
@@ -105,7 +105,7 @@ To view the element or the document where the anti-pattern is located, double-cl
 Best Practice Recommender only detects a subset of the [documented best practices](/refguide/performance-best-practices/). This is to avoid any false positives and to maximize the quality rather than the quantity of the recommendations.
 {{% /alert %}}
 
-### 3.2 Recommending a Fix {#recommending}
+### Recommending a Fix {#recommending}
 
 The second level of assistance is **recommendation** – giving you an overview of the issue and recommending how to fix it. 
 
@@ -120,7 +120,7 @@ The recommendation contains the description of the identified issue, potential i
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/best-practice-recommender/best-practice-recommendation.png" alt="Best Practice Recommendation" width="500px" >}}
 
-### 3.3. Auto-Fixing the Anti-Pattern {#auto-fixing}
+### Auto-Fixing the Anti-Pattern {#auto-fixing}
 
 The third level of assistance is **auto-fixing** where the recommender can automatically implement the best practice and fix the issue in just one click. To avoid undesirable changes, auto-fixing is only available when the recommender can safely refactor the code without creating an error or making other undesirable change in the model. Each anti-pattern has an icon in the pane that indicates whether it is auto-fixable. If the icon has the “A” letter, the issue can be auto-fixed:
 
@@ -135,11 +135,11 @@ To auto-fix the issue, follow the steps below:
 
 After the issue is auto-fixed, a pop-up window listing the changes appears. You can click **Show the fix** to view the changed document and element. 
 
-## 4 Best Practice Recommender from the Command Line
+## Best Practice Recommender from the Command Line
 
 Best Practice Recommender may also be executed from the command line, via the [mx Command-Line Tool](/refguide/mx-command-line-tool/app/#check).
 
-## 5 Read More
+## Read More
 
 * [Mendix AI Assistance (Maia)](/refguide/mendix-ai-assistance/)
 * [Logic Recommender](/refguide/logic-recommender//)

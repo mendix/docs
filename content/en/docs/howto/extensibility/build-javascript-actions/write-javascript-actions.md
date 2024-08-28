@@ -6,7 +6,7 @@ weight: 10
 description: "This how-to teaches you how to create a JavaScript action."
 ---
 
-## 1 Introduction
+## Introduction
 
 Nanoflows are more powerful with pluggable nanoflow actions — called JavaScript actions. With JavaScript actions, the standard set of actions can be extended with new functionality. A JavaScript action is a reusable action based on JavaScript that runs in the client just like the nanoflow, and can use capabilities such as HTML5 browser functions, Cordova plugins, and React Native modules. JavaScript actions are similar to [Java actions](/refguide/java-actions/), but run on the client instead of the server. To share them inside your organization, JavaScript actions can be distributed and downloaded through the private [Mendix Marketplace](https://marketplace.mendix.com/).
 
@@ -19,7 +19,7 @@ This how-to teaches you how to do the following:
 * Expose an action as a nanoflow action
 * Use your actions in a demo
 
-## 2 Creating a JavaScript action: TextToSpeech
+## Creating a JavaScript action: TextToSpeech
 
 To create a JavaScript action that can synthesize text to speech, follow these steps:
 
@@ -138,7 +138,7 @@ To create a JavaScript action that can synthesize text to speech, follow these s
 11. Now you are going to put your new nanoflow to work. On a page of your app, make an action button by clicking **Add widget** in the top center toolbar. Then, under **Buttons**, select **Call nanoflow button**. Select your new nanoflow when prompted. 
 12. Click a place on your page to drop your new button where you want it. With the button now on your page, you can test your work. Run your model, click your new button, and if your sound is on you should be greeted by the voice you programmed! 
 
-## 3 Read More{#read-more}
+## Read More{#read-more}
 
 * [Build JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github/)
 * [Implement Best Practices for JavaScript Actions](/howto/extensibility/best-practices-javascript-actions/)

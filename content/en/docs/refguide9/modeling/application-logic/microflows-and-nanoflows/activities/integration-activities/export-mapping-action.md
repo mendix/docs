@@ -9,11 +9,11 @@ weight: 40
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Export with mapping** activity allows you to export the data stored in [domain model](/refguide9/domain-model/) entities into an XML document, JSON document, or string variable.
 
-## 2 Properties
+## Properties
 
 An example of export with mapping properties is represented in the image below:
 
@@ -26,7 +26,7 @@ The export with mapping properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,23 +34,23 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Export Mapping
+### Export Mapping
 
 The [Export Mapping](/refguide9/export-mappings/) action defines in which way the data in the [domain model](/refguide9/domain-model/) corresponds with the XML schema or JSON structure.
 
-### 3.2 Parameter Type
+### Parameter Type
 
 If the [export mapping](/refguide9/export-mappings/) requires an input, this field shows the type of the input.
 
-### 3.3 Parameter
+### Parameter
 
 If the [export mapping](/refguide9/export-mappings/) requires an input, you can select a parameter of the correct type.
 
-### 3.4 Content Type
+### Content Type
 
 If the [export mapping](/refguide9/export-mappings/) is based on a message definition, it can export both XML and JSON. Choose which type of output you want.
 
-### 3.5 Validate Against Schema
+### Validate Against Schema
 
 {{% alert color="info" %}}
 Validation against schema is only applicable if an export mapping is selected that maps to XML.
@@ -62,18 +62,18 @@ Setting this to yes can impact performance!
 
 Default: *No*
 
-### 3.6 Optional and Nillable
+### Optional and Nillable
 
 Elements in a schema can be optional (`minOccurs=0`) and/or nillable. When an empty value for an element is encountered, the server will check the schema to decide whether to exclude the element (optional) or send the element with a nil attribute (nillable). In case an empty value is encountered but the element is not optional or nillable, the server will throw an exception, which you need to handle yourself in the microflow. This will occur regardless of the XML validation settings. It is recommended to make sure the data that is being exported is valid according to the schema.
 
-### 3.7 Store In
+### Store In
 
 You can choose whether to store the result of an Export Mapping activity in an object which is a 'System.FileDocument' or a specialization of that entity or in a string variable.
 
-### 3.8 Name
+### Name
 
 The name of the object or string which is the result of the activity.
 
-## 4 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}

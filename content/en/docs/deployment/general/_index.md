@@ -6,7 +6,7 @@ description: "Presents an overview of deployment topics that are relevant to mor
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix apps can be deployed to many different platforms. Much of the deployment and management of a Mendix app depends on which platform it is deployed to. You can find information about each platform in the documentation sections focusing on deployment to that platform.
 
@@ -22,7 +22,7 @@ The subjects covered in this documentation section are as follows:
 * [Deployment Location](/developerportal/deploy/deployment-location/)
 * [Webhooks](/developerportal/deploy/webhooks/)
 
-## 2 Building Your Model
+## Building Your Model
 
 To deploy an app to the cloud, you first have to build a project model (MDA). The runtime deployment is described in more detail in [Runtime Deployment](/refguide/runtime-deployment/). This can be done independently or as part of the deployment pipeline.
 

@@ -7,7 +7,7 @@ weight: 5
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 To support automation namespace installation and configuration we provide a non-interactive mode in our configuration tool.
 
@@ -30,37 +30,37 @@ When using connected mode, you need to put namespace id and namespace secret as 
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-cli-non-interactive/installation-command.png" class="no-border" >}}
 
-## 2 Base Installation
+## Base Installation
 
 To perform the [base installation](/developerportal/deploy/standard-operator/#base-installation), use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type>
 ```
 
 The namespace-id and namespace-secret are only required when using Mendix for Private Cloud in connected mode.
 
-### 2.1 Global Operator Namespace - Base installation
+### Global Operator Namespace - Base installation
 
 For Global Operator, the base installation should only be applied to the Global Operator namespace and not to the managed namespace. For more information, see [Global Operator](/developerportal/deploy/global-operator/).
 
 For the Global Operator main namespace, use the following command for the base installation:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli base-install --namespace <namespace> -i <namespace-id> -s <namespace-secret> --clusterMode <cluster-mode> --clusterType <cluster-type> --global
 ```
 
-## 3 Apply Configuration
+## Apply Configuration
 
 To [configure a standard namespace](/developerportal/deploy/standard-operator/#configure-namespace) with a configuration file, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
 For namespaces managed by a global operator, apply the following command for the managed namespace – the command is not needed in the main namespace:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file> --global
 ```
 
@@ -101,7 +101,7 @@ To configure a managed namespace inside a Global Operator, the namespace configu
 
 For managed namespace configuration, apply the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli apply-config -i <namespace-id> -s <namespace-secret> --file <config-file>
 ```
 
@@ -134,11 +134,11 @@ global_operator:
   operator_namespace: <globalOperatorMainNamespace>
 ```
 
-## 4 Upgrade Mendix Operator and Mendix Gateway Agent
+## Upgrade Mendix Operator and Mendix Gateway Agent
 
 To [upgrade the versions of Mendix components in your namespace](/developerportal/deploy/private-cloud-upgrade-guide/#upgrade-cluster), use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-cli upgrade-namespace --clusterType <cluster-type> --namespace <namespace>
 
 ```

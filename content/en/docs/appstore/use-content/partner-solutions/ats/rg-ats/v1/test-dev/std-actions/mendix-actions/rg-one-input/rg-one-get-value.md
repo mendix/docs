@@ -3,11 +3,11 @@ title: "Get Value"
 url: /appstore/partner-solutions/ats/rg-one-get-value/
 ---
 
-## 1 Description
+## Description
 
 Returns the text value from Textboxes, Textareas, Dateinputs, RadioButtons, Dropdowns etc.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * TextBox
 * TextArea
@@ -20,19 +20,19 @@ Returns the text value from Textboxes, Textareas, Dateinputs, RadioButtons, Drop
 * Label
 * OnChangeInputbox
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget you want to get the value from.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---
 Widget Name | String | yes | The name of the widget
 Search Context | WebElement | no | Limit the search to the given WebElement
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 --- | --- | ---

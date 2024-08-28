@@ -7,18 +7,18 @@ aliases:
     - /private-mendix-platform-configure-azure/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on the Azure DevOps service.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To configure the CI/CD pipeline, prepare the following:
 
 * An Azure organization where you want to build your Mendix app.
 * An Azure blob or an AWS S3 endpoint where you can store the built MDA files.
 
-## 2 Configuring the CI/CD Pipeline
+## Configuring the CI/CD Pipeline
 
 If you have an Azure organization, you can set Azure as your CI System in **Settings** > **DevOps** > **CI/CD**. You need to first obtain a [Personal Access Token](#pat), and then configure the followings settings:
 
@@ -29,18 +29,18 @@ Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
 {{< figure src="/attachments/private-platform/pmp-cicd4.png" class="no-border" >}}
 
-### 2.1 Obtaining a Personal Access Token {#pat}
+### Obtaining a Personal Access Token {#pat}
 
 A Personal Access Token (PAT) is used to authenticate in Azure DevOps. For information about obtaining the token, see [Create a PAT](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows#create-a-pat) in the Azure DevOps documentation.
 
-### 2.2 Configuring Azure Blob Settings {#blob}
+### Configuring Azure Blob Settings {#blob}
 
 The settings in this section configure the Azure blob settings.
 
 * **Azure Blob URL** - For example, `https://{your domain name}.blob.core.windows.net/pmp`.
 * **Azure Blob Token** - This secret value is used to access the Azure Blob storage.
 
-### 2.3 Configuring Build Images Setting {#bucket}
+### Configuring Build Images Setting {#bucket}
 
 The settings in this section configure the S3 bucket.
 
@@ -50,7 +50,7 @@ The settings in this section configure the S3 bucket.
 * **Access Key ID** - This ID value is used to access the S3 bucket.
 * **Secret Access Key** - This secret key value is used to access the S3 bucket.
 
-### 2.4 Registering a Kubernetes Cluster {#register-cluster}
+### Registering a Kubernetes Cluster {#register-cluster}
 
 Before creating any environments, you must register your Kubernetes clusters by doing the following steps:
 
@@ -59,7 +59,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
     
     * **Cluster Name** - Specify a name for the cluster.
     * **API Server** - Specify your Kubernetes API server.
-    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and  then get the service account's token. For reference, see the following shell script:
+    * **Token** - You must first create a service account, cluster role, and cluster role binding in the cluster, and then get the service account's token. For reference, see the following shell script:
 
         ```text
         # create ServiceAccount, ClusterRole, and ClusterRoleBinding
@@ -222,17 +222,17 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 6. After the cluster is registered, create environments with the cluster, namespace and plans.
 
-## 3 Architecture of the CI/CD Pipeline
+## Architecture of the CI/CD Pipeline
 
 The diagrams in this section present the architecture and components of the pipeline. The architecture is different depending on whether you enabled the Auto Detect Mx Version build image setting.
 
-### 3.1 Architecture with the Auto Detect Mx Version Setting Enabled
+### Architecture with the Auto Detect Mx Version Setting Enabled
 
 The following diagram shows the architecture of the pipeline if you enable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform/configure-k8s/#build-images).
 
 {{< figure src="/attachments/private-platform/pmp-cicd2.png" alt="Auto Detect Mx Runtime Version" class="no-border" >}}
 
-### 3.2 Architecture with the Auto Detect Mx Version Setting Disabled
+### Architecture with the Auto Detect Mx Version Setting Disabled
 
 The following diagram shows the architecture of the pipeline if you disable the **Auto Detect Mx Version** setting. For more information, see [Build Images Setting](/private-mendix-platform/configure-k8s/#build-images).
 

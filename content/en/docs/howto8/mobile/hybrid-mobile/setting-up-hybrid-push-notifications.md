@@ -5,7 +5,7 @@ weight: 9
 description: "Learn how to set up hybrid push notifications with PhoneGap Build."
 ---
 
-## 1 Introduction
+## Introduction
 
 In this how to we will set up hybrid push notifications.
 
@@ -13,13 +13,13 @@ This how-to teaches you how to do the following:
 
 * Customize your hybrid template to enable push notifications
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [How to Set Up the Google Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/)
 
-## 3 Building Your Mobile Application
+## Building Your Mobile Application
 
 If your app supports push notifications, you are required to set up a Firebase account for your app and include Google service description files (*google-services.json* and *GoogleService-Info.plist*) in your hybrid app.
 
@@ -50,7 +50,7 @@ To build the hybrid app package, follow these steps:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/implement-sso-on-a-hybrid-app-with-mendix-and-saml/build.phonegap.com.png" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

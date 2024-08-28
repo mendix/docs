@@ -4,7 +4,7 @@ url: /howto8/front-end/get-started-with-atlasui/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to teaches you how to do the following:
 
@@ -12,13 +12,13 @@ This how-to teaches you how to do the following:
 * Choose a page template
 * Customize your theme
 
-## 2 Prerequisite
+## Prerequisite
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a Mendix account (sign up [here](https://www.mendix.com/try))
 
-## 3 Choosing Your App Template
+## Choosing Your App Template
 
 in [Apps](https://sprintr.home.mendix.com/index.html), click **Create App**. You will see a number of apps marked with **ATLAS UI**, which are Atlas UI-based app templates. You can select one to get started.
 
@@ -26,7 +26,7 @@ in [Apps](https://sprintr.home.mendix.com/index.html), click **Create App**. You
 
 For more information about Atlas UI, see [Atlas UI](/howto8/front-end/atlas-ui/). 
 
-## 4 Choosing a Page Template
+## Choosing a Page Template
 
 You can choose a page template when you create a new page. 
 
@@ -36,11 +36,11 @@ For example, **Dashboard Action Tiles**, **Dashboard Charts**, **Dashboard Expen
 
 Once the page is created, you can customize it.
 
-## 5 Customizing Your Theme
+## Customizing Your Theme
 
 The **Theme Customizer** allows you to customize your app.
 
-## 6 Read More
+## Read More
 
 * [How to Create Custom Preview Images for Building Blocks and Page Templates](/howto8/front-end/create-custom-preview-images-for-building-blocks-and-page-templates/)
 * [How to Migrate Existing Apps to Atlas UI](/howto8/front-end/migrate-existing-projects-to-atlasui/)

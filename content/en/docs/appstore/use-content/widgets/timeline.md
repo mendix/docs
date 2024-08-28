@@ -5,26 +5,26 @@ description: "Describes the Timeline widget, which is available in the Mendix Ma
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use the [Timeline](https://marketplace.mendix.com/link/component/115852/) widget to create a vertical list of events with descriptions.
 
-## 2 Configuration
+## Configuration
 
-### 2.1 Choosing the Render Type
+### Choosing the Render Type
 
 For the sake of simplicity, there are two modes available to create a timeline:
 
 * **Basic** – this is the default mode in which you can select the **Data source**, **Title**, **Description**, and **Time indication** on the **Data Source** tab and the **Icon** on the **General** tab to quickly implement a timeline in your app
 * **Custom** – enable this mode by setting **Custom Visualization** to **Yes** on the **General** tab to freely model everything that will be shown in the timeline, such as the title, icon, group header/day divider, time indication, and content
 
-### 2.2 Selecting a Data Source
+### Selecting a Data Source
 
 On the **Data Source** tab for both basic and custom modes, you must select the **Data source** that will be used. 
 
 Since the widget will try to group the events based on date, make sure there is a date-time attribute in the data-source entity itself. For details, see the [Showing the Group Header](#group-header) section below.
 
-### 2.3 Showing the Group Header {#group-header}
+### Showing the Group Header {#group-header}
 
 On the **General** tab for both basic and custom modes, you can opt to show a day divider by selecting **Yes** for **Group Events** and selecting a **Group Attribute**.
 
@@ -34,7 +34,7 @@ If you are using the basic mode, the values of the **Data source** field will be
 
 Selecting **No** for **Group Events** will make the timeline look like one single flow.
 
-### 2.4 Basic Mode-Specific Fields {#basic}
+### Basic Mode-Specific Fields {#basic}
 
 In the basic mode, configure the following properties:
 
@@ -54,6 +54,6 @@ In the basic mode, you can show a group header in the following formats:
 | **Month** / **Month** and **year** | This will show the short name of the month and the full year. | Apr 2020 |
 | **Year** | This will show the full year. | 2020 |
 
-### 2.5 Custom Mode-Specific Fields {#custom}
+### Custom Mode-Specific Fields {#custom}
 
 In the custom mode, the widget will generate five drop-zones for the icon, group header, title, time indication, and content. Since none of these fields are required, feel free to create your own timeline with any combination.

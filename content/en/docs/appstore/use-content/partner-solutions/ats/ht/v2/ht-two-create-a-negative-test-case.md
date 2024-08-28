@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-create-a-negative-test-case/
 description: "Describes the steps for performing negative tests with ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create a negative test case in ATS. The how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 
@@ -28,13 +28,13 @@ This how-to teaches you how to do the following:
 
 * Create a negative test case
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Creating a Negative Test Case
+## Creating a Negative Test Case
 
 The test case used in this how-to was created beforehand. It asserts that the navigation menu displays the correct items. Next, you add a step to check that it does not display the **Admin Menu** item.
 
@@ -85,6 +85,6 @@ You can use this method for a lot of different things.
 You can also add the **Assert not false** action with the **Assert value** set to false, instead of the **Assert not true** action, to create a negative test case.
 {{% /alert %}}
 
-## 4 Next Up
+## Next Up
 
 The next how-to is [How to Create Extracted Actions](/appstore/partner-solutions/ats/ht-two-create-extracted-actions/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

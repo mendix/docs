@@ -4,9 +4,9 @@ url: /refguide/demo-users/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
-Demo users are a demonstration of each [user role](/refguide/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section . 
+Demo users are a demonstration of each [user role](/refguide/user-roles/) existing in your app. You can use demo users to test what your app looks like for each user role or to demonstrate your app to other people (for more information, see the [Testing Your App via Demo Users](#test-your-app) section).
 
 When the application is started for the first time, the specified demo users are created automatically.
 
@@ -16,7 +16,7 @@ To access demo users and their properties, open **App Security** > **Demo users*
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/demo-users/demo-users-tab.png" class="no-border" >}}
 
-## 2 Enabling Demo Users
+## Enabling Demo Users
 
 When security is enabled, demo users are enabled by default. You can disable or enable them back with **Enable demo users** setting that has the following options:
 
@@ -27,7 +27,7 @@ When security is enabled, demo users are enabled by default. You can disable or 
 After they are created automatically, demo users do not differ in any way from other local users that are defined in your application. This means that you can still manually sign in using their user name and password, even after disabling the demo users feature. Also, the demo users are never automatically removed from the database.
 {{% /alert %}}
 
-## 3 Demo User Properties
+## Demo User Properties
 
 Double-click the demo user to open its properties:
 
@@ -42,7 +42,7 @@ Demo user properties are described in the table below:
 | Entity     | The entity of the demo user. This entity must be the System.User entity or a specialization of it. |
 | User roles | A user role of the demo user. Each demo user must have one or more roles. |
 
-## 4 Testing Your App via Demo Users {#test-your-app}
+## Testing Your App via Demo Users {#test-your-app}
 
 You can use demo user to test what your application looks like to different user roles. Do the following:
 
@@ -54,7 +54,7 @@ You can use demo user to test what your application looks like to different user
 
 4. Selecting a user from the list to sign in to your application with the credentials of this user, thus allowing you to test or demo your application with the selected user role.
 
-## 5 Read More
+## Read More
 
 * [App Security](/refguide/app-security/)
 * [User Roles](/refguide/user-roles/)

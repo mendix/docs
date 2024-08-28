@@ -5,29 +5,29 @@ description: "Describes the configuration and usage of the Checkbox Set Selector
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Checkbox Set Selector](https://marketplace.mendix.com/link/component/121/) widget lets you use a list of checkboxes for your reference set. It supports multiple display attributes and looks the same as a [reference set selector](/refguide/reference-set-selector/).
 
-### 1.1 Typical Usage Scenario
+### Typical Usage Scenario
 
 * Quickly set or adjust a reference set without having to go through pop-up windows and buttons
 * Show multiple attributes of the objects for a reference set
 
-### 1.2 Features
+### Features
 
 * Show multiple display attributes
 * Show the display attributes over a one-deep association
 
-### 1.3 Limitations
+### Limitations
 
 * Does not support dynamic sorting by clicking the headers
 * The on-change microflow only receives the context object
 * No paging is available
 
-## 2 Properties
+## Properties
 
-### 2.1 Data source
+### Data source
 
 * **Association** – the reference set association, starting from the data view object
 * **XPath Constraint** – an XPath constraint on the possible objects that are shown (note that a reference set can contain objects not shown because of this constraint if set elsewhere)
@@ -35,7 +35,7 @@ The [Checkbox Set Selector](https://marketplace.mendix.com/link/component/121/) 
 * **Sort order** – the order in which the list should be sorted
 * **Limit** – the limit to the number of objects shown to prevent the widget from becoming too large (leave **0** for unlimited)
 
-### 2.2 Appearance > Display Attribute
+### Appearance > Display Attribute
 
 * **Header text** – the text used for the header of the column
 * **Attribute** – the attribute that is to be shown
@@ -44,6 +44,6 @@ The [Checkbox Set Selector](https://marketplace.mendix.com/link/component/121/) 
 
 You must designate at least one **Display Attribute** (with **Header text** and **Attribute** included), or else the widget might block the page or pop-up window from loading.
 
-## 3 Read More
+## Read More
 
 * [Checkbox Set Selector (ATS)](/appstore/partner-solutions/ats/rg-one-checkbox-set-selector/)

@@ -4,7 +4,7 @@ url: /refguide8/offline-first/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 Offline-first applications work regardless of the connection in order to provide a continuous experience. Pages and logic interact with an offline database on the device itself, and data is synchronized with the server. This results in a snappier UI, increased reliability, and improved device battery life.
 
@@ -18,7 +18,7 @@ Mendix Studio Pro performs validations to make sure your app follows an offline-
 
 During development, the [Make It Native 8 app](/refguide8/getting-the-make-it-native-app/) (for native mobile apps) or [Mendix Developer App](/refguide8/getting-the-mendix-app/) (for hybrid mobile apps) can be used to preview and test your Mendix app on a device. The first time your Mendix app is loaded, an internet connection will be required to create a session on the server and download the necessary data and resources. After this initial synchronization, data will remain available in the app even without an internet connection. Subsequent synchronizations will be performed when requested by the user, through application logic or after a model change.
 
-## 2 Synchronization{#synchronization}
+## Synchronization{#synchronization}
 
 Mendix automatically analyzes your app's data model to determine which entities should be synchronized based on the pages and nanoflows used within your offline navigation profile. In addition, the platform takes entity access into account so that only the data the user is allowed to access is synchronized.
 
@@ -38,28 +38,28 @@ Synchronization can also be configured via different places in your Mendix app, 
 
 Synchronization is performed on the database level. This means if you synchronize while having some uncommitted changes for an object, the attribute values in local database will be synchronized, ignoring the uncommitted changes. Uncommitted changes are still available after a synchronization.
 
-### 2.1 Synchronization Types
+### Synchronization Types
 
 You can perform synchronization on two levels:
 
 * [Full synchronization](#full-sync)
 * [Selective synchronization](#selective-sync)
 
-#### 2.1.1 Full Synchronization {#full-sync}
+#### Full Synchronization {#full-sync}
 
 This mode performs both the upload and the download phases for all entities used in the offline-first app. You can customize the behavior of each entity with [customizable synchronization](#customizable-synchronization).
 
-#### 2.1.2 Selective Synchronization {#selective-sync}
+#### Selective Synchronization {#selective-sync}
 
 This mode allows you to select specific objects to synchronize.
 
 Selective synchronization can only be done through a **Synchronize** action inside a nanoflow. Synchronization performed using a UI element (for example a button, an onchange action, or other elements) performs the full synchronization.
 
-### 2.2 Synchronization Phases
+### Synchronization Phases
 
 The synchronization process consists of two phases. In the [upload phase](#upload), your app updates the server database with the new or changed objects that are committed. In the [download phase](#download), your app updates its local database using data from the server database. Note that synchronization only works at the database level. That means that new uncommitted objects and attribute changes are not synchronized.
 
-#### 2.2.1 Upload Phase {#upload}
+#### Upload Phase {#upload}
 
 The upload phase executes the following operations:
 
@@ -70,7 +70,7 @@ The upload phase executes the following operations:
     This means that any further changes you make to the synced objects in the event handlers will be applied to the device database during the download phase. There is one exception to this rule: changing the contents of a file entity is not applied when you attempt to change them in the event handlers.
     Before- and after-commit event handlers for new objects will also be executed.
 
-#### 2.2.2 Download Phase {#download}
+#### Download Phase {#download}
 
 If the upload phase was successful, the download phase starts in which the local database is updated with the newest data from the server database. The behavior of download phase differs per synchronization type.
 
@@ -78,7 +78,7 @@ If the upload phase was successful, the download phase starts in which the local
 
 **Selective synchronization** — Only the objects selected for synchronization are synchronized to the local database. There are no extra network requests made to retrieve these objects. The objects are returned in the response of a network request made during the upload phase. If a file entity is selected for synchronization, its content is also updated on the device storage incrementally. The logic is the same with the full synchronization.
 
-### 2.3 After Synchronization
+### After Synchronization
 
 After synchronization is completed, the widgets on your app's current page will be refreshed to reflect the latest data. If the synchronization is triggered from a nanoflow, all nanoflow object/list variables are updated (uncommitted changes are still preserved).
 
@@ -90,7 +90,7 @@ Please note that a nanoflow object variable's value might become `empty` after s
 * The entity is configured with **Nothing (clear data)** option on the customizable synchronization screen
 * The upload phase fails for the object, for example when before commit event handler returns false or committing fails due to violation of an unique validation
 
-### 2.4 Customizable Synchronization {#customizable-synchronization}
+### Customizable Synchronization {#customizable-synchronization}
 
 {{% alert color="warning" %}}
 These settings are not applied for [selective synchronization](#selective-sync).
@@ -109,15 +109,15 @@ If you have custom widgets or JavaScript actions which use an entity that cannot
 
 {{< figure src="/attachments/refguide8/mobile/offline-first/custom-sync.png" alt="custom synchronization"   width="450"  class="no-border" >}}
 
-### 2.5 Limitations
+### Limitations
 
 Running multiple synchronization processes at the same time is not supported, regardless the of the type (**full** or **selective**). For more information, see the [Limitations](/refguide8/synchronize/#limitations) section of the *Synchronize Reference Guide*.
 
-### 2.6 Error Handling {#error-handling}
+### Error Handling {#error-handling}
 
 During synchronization, errors might occur. This section describes how Mendix handles these errors and how you can prevent them.
 
-#### 2.6.1 Network-Related Errors {#network-errors}
+#### Network-Related Errors {#network-errors}
 
 Synchronization requires a connection to the server, so during synchronization, errors may occur due to failing or poor network connections. Network errors may involve a dropped connection or a timeout. By default, the timeout for synchronization is 30 seconds per network request for hybrid mobile apps. For native apps, there is no default timeout, and the timeout is determined by the platform and OS version.
 
@@ -133,7 +133,7 @@ If a network error occurs during the download phase, no data is updated on the d
 
 If the synchronization is called from a nanoflow, the error can be handled using nanoflow error handling. In other cases (for example, if synchronization is called from a button or at startup), a message will be displayed to the user that the data could not be synchronized.
 
-#### 2.6.2 Model- or Data-Related Errors {#othererrors}
+#### Model- or Data-Related Errors {#othererrors}
 
 During the synchronization, changed and new objects are committed. An object's synchronization might encounter problems due to the following reasons:
 
@@ -145,7 +145,7 @@ During the synchronization, changed and new objects are committed. An object's s
 
 {{% alert color="warning" %}}When a synchronization error occurs because of one the reasons above, an object's commit is skipped, its changes are ignored, and references from other objects to it become invalid. Objects referencing such a skipped object (which are not triggering errors) will be synchronized normally. Such a situation is likely to be a modeling error and is logged on the server. To prevent data loss, the attribute values for such objects are stored in the `System.SynchronizationError` entity (since Mendix 8.12).  {{% /alert %}}
 
-#### 2.6.3 Dangling References {#dangling-references}
+#### Dangling References {#dangling-references}
 
 During synchronization the server performs referential integrity validation of the new or changed objects that are being synchronized to the server. This validation ensures that none of the synchronized objects have associations pointing to an object that exists only on the device. If an association does not satisfy this condition, it is a dangling reference.
 
@@ -159,13 +159,13 @@ To prevent dangling reference errors during full synchronization, make sure both
 
 When some of the synchronized objects have dangling references, the server will synchronize all other objects except the ones with dangling references. For the objects with dangling references, the server will create a synchronization error and store it in the `System.SynchronizationError` entity. In such a situation you will see an error message like this:
 
-```text {linenos=false}
+```text
 Synchronizing an object of type City with GUID {123} has failed due to a modelling error. The object has a reference to other objects (City_Country) that have not been synchronized to the runtime yet. This breaks referential integrity of the object because it references a non-existing object in the runtime database. Please make sure that you synchronize the referenced object together with the City or before synchronizing the City.
 ```
 
 To prevent data loss, an error object contains a JSON representation of the data of an object that caused the error.
 
-### 2.7 Preventing Synchronization Issues {#prevent-sync-issues}
+### Preventing Synchronization Issues {#prevent-sync-issues}
 
 To avoid the problems mentioned above, Mendix suggests following these best practices:
 
@@ -176,13 +176,13 @@ To avoid the problems mentioned above, Mendix suggests following these best prac
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-### 2.8 Conflict Resolution {#conflict-res}
+### Conflict Resolution {#conflict-res}
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 
 If another approach is needed, conflicts can be detected in a before-commit microflow (for example, by using a revision ID attribute on the entity). Based on that, custom conflict resolution can be performed.
 
-## 3 Best Practices {#best-practices}
+## Best Practices {#best-practices}
 
 To ensure the best user experience for your Mendix application, follow these best practices:
 
@@ -195,21 +195,21 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Use a [microflow call](/refguide8/microflow-call/) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions.
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
-## 4 Ensuring Your App Is Offline-First {#limitations}
+## Ensuring Your App Is Offline-First {#limitations}
 
 Mendix helps developers in building rich offline-first apps. However, there are some limitations.
 
-### 4.1 Microflows {#microflows}
+### Microflows {#microflows}
 
 Microflows can be called from offline apps by using [microflow call](/refguide8/microflow-call/) action in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
 
-#### 4.1.1 Microflow Arguments Type
+#### Microflow Arguments Type
 
 * Passing an object or a list of a persistable entity is not supported.
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association).
 * Passing a non-persistable entity that was created in another microflow is not supported
 
-#### 4.1.2 UI Actions
+#### UI Actions
 
 UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
 
@@ -222,20 +222,20 @@ These actions are as the following:
 * [Close page](/refguide8/close-page/)
 * [Download file](/refguide8/download-file/)
 
-#### 4.1.3 Object Side-Effects
+#### Object Side-Effects
 
 Changes to persistable objects made in a microflow will not be reflected on the client unless you synchronize. Non-persistable objects must be returned in order for changes to be reflected.
 
-#### 4.1.4 Microflow Return Value
+#### Microflow Return Value
 
 * Returning an object or a list of persistable entity is not supported.
 * Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association).
 
-#### 4.1.5 Language Switching
+#### Language Switching
 
 To be able to switch the language of a Mendix app, a device must be online and have access to the Mendix runtime. For more information on the runtime, see the [Runtime Reference Guide](/refguide8/runtime/).
 
-### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
+### Offline Microflow Best Practices {#offline-mf-best-practices}
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over-the-air updates, see [How to Use Over the Air Updates](/howto8/mobile/how-to-ota/).
 
@@ -249,30 +249,30 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 
 If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
-### 4.3 Autonumbers and Calculated Attributes {#autonumbers}
+### Autonumbers and Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.4 Default Attribute Values {#default-attributive}
+### Default Attribute Values {#default-attributive}
 
 Default attribute values for entities in the domain model do not have any effect on objects created offline. Boolean attributes will always default to `false`, numeric attributes to `0`, and other attributes to `empty`.
 
-### 4.5 Many-to-Many Associations {#many-to-many}
+### Many-to-Many Associations {#many-to-many}
 
 Many-to-many associations are not supported. A common alternative is to introduce a third entity that has one-to-many associations with the other entities.
 
-### 4.6 Inheritance {#inheritance}
+### Inheritance {#inheritance}
 
 It is not possible to use more than one entity from a generalization or specialization relation. For example if you have an `Animal` entity and a `Dog` specialization, you can use either use `Animal` or `Dog`, but not both from your offline profile. An alternative pattern is to use composition (for example, object associations).
 
-### 4.7 System Members {#system-members}
+### System Members {#system-members}
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.8 Excel and CSV Export {#excel-cv}
+### Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
 
-### 4.9 Hashed String Attributes {#hashed-strings}
+### Hashed String Attributes {#hashed-strings}
 
 Attributes with the hashed string [attribute type](/refguide8/attributes/#type) will not be synchronized.

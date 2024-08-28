@@ -3,15 +3,15 @@ title: "OQL REPLACE"
 url: /refguide/oql-replace/
 ---
 
-## 1 Description
+## Description
 
 The `REPLACE` function replaces all occurrences of a specified string value with another string value. The function supports limited and unlimited strings. Arguments of other types are not supported.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 REPLACE ( expression, pattern, replacement )
 ```
 
@@ -21,6 +21,6 @@ REPLACE ( expression, pattern, replacement )
 
 `replacement` specifies the string to replace the pattern.
 
-## 3 Database-specific limitations
+## Database-specific limitations
 
 The behavior of the `REPLACE` function relies on underlying database implementation, which may vary by database vendor. For most supported databases, default behavior of `REPLACE` is case-sensitive. That means that `REPLACE('ABC abc', 'abc', 'xyz')` results in `'ABC xyz'`. In some configurations, the behavior is case-insensitive. For example, for SQL Server, case sensitivity of `REPLACE` depends on used collation.

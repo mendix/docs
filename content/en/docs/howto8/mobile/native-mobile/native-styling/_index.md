@@ -5,11 +5,11 @@ weight: 30
 description: General information for native styling in Mendix.
 ---
 
-## 1 Introduction
+## Introduction
 
 With Mendix 8, you can build native mobile apps with custom styling in Mendix Studio Pro. Styling native mobile apps uses JavaScript style sheets, which are new to Mendix Studio Pro. Consult the guidelines below for information on theme folder structure, classes, and design properties.
 
-## 2 Theme Folder Structure
+## Theme Folder Structure
 
 For each app, styling is stored in the **theme/styles** folder. From there styling is split into **native** and **web** folders. Both have the same structure. 
 
@@ -31,15 +31,15 @@ The **native/core/widgets** folder contains the default widget styling. Every wi
 
 In **native/ui_resources** you will find resource package styling. Here you can find all styling related to building blocks, page templates and layouts.
 
-## 3 Classes
+## Classes
 
 Default class names—which are the class names set by Mendix Studio Pro—will always be named in Pascal case. All other classes will be in lowerCamelCase. This keeps changes to default widget styles clear.
 
-## 4 Design Properties
+## Design Properties
 
 Available in Mendix Studio Pro, design properties are an easier way to apply classes. Atlas already offers several useful design properties out of the box. You can see them by clicking on a widget and looking at the **Properties** panel. A design property can be either a drop-down menu or a toggle. A toggle will toggle one class, while a drop-down menu will apply a different class for each drop-down item. 
 
-## 5 Read More
+## Read More
 
 * [Mendix Atlas UI](/howto8/front-end/atlas-ui/)
 * [Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile/)

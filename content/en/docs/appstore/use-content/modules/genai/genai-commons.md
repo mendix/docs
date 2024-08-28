@@ -177,7 +177,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### `ChunkCollection` {#chunkcollection}
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
 
 This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
 

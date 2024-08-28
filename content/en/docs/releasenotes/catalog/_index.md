@@ -13,6 +13,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### August 29, 2024
+
+#### Fixes
+
+* We fixed a bug where data sources in search results were incorrectly indicated to not be discoverable
+
 ### August 22, 2024
 
 #### Features

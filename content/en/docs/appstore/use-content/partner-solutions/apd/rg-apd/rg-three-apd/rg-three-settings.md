@@ -16,8 +16,8 @@ By default, the best options are already selected for the most common situations
 The following settings can be changed:
 
 * **Environment name**
-
 * **Environment type** – **Mendix Studio Pro**, **Test**, **Acceptance**, and **Production** environments are available
+
     * Mendix Studio Pro instances are private to the creator of the environment
     * To use the **Test**, **Acceptance**, or **Production** environments, you need to be a cloud operator in Mendix
     
@@ -27,10 +27,10 @@ The following settings can be changed:
     * Setting this to me **Medium** is advised
     
 * **Enabled** – With this security setting, you can configure if browser agent guest users, browser agents, or runtimes are allowed to connect to this environment
-
 * **Statistics collection** – Statistics are available **Per microflow** and **Per microflow action**
+
     * For **Per microflow action**, statistics will be generated for actions in a microflow (**Per microflow** does not do this).
-    
+
 * **Trap message collection** – This can be set to **All messages**, **Without database nodes**, and **None**. 
   
     * It is not recommended to set this setting to **All messages** for production environments, as it can degrade performance.    

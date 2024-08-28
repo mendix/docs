@@ -25,7 +25,7 @@ The following settings can be changed:
 * **Enabled** – With this security setting, you can configure if browser agent guest users, browser agents, or runtimes are allowed to connect to this environment
 * **Statistics collection** – Statistics are available **Per microflow** and **Per microflow action**
     * For **Per microflow action**, statistics will be generated for actions in a microflow (**Per microflow** does not do this).
-* **Trap message collection** – This can be set to **All messages** and **Without database nodes** (changing this to **Without database nodes** will stop the sending of logs from database nodes to the [APD Manager](https://apd.mendix.com/)); these nodes include the following:
+* **Trap message collection** – This can be set to **All messages**, **Without database nodes** and **None**. For Production environments, it is not recommended to set this setting to **All messages** as it can have a degrading effect on performance. Changing this to **None** will stop sending logs from all database nodes, changing this to **Without database nodes** will stop the sending of logs from database nodes to the [APD Manager](https://apd.mendix.com/); these nodes include the following:
     * DataStorage_QueryPlan
     * DataStorage_QueryHandling
     * ConnectionBus_Update

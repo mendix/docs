@@ -40,14 +40,14 @@ You must have the following Marketplace module installed:
 
 ## Basic Configuration
 
-This chapter explains how to quickly configure connection to an OPC-UA server, browse for nodes, read, and write data using the template pages included in the connector.
+This section explains how to quickly configure a connection to an OPC-UA server, browse for nodes, read, and write data using the template pages included in the connector.
 
 ### App Startup and Shutdown
 
-Make sure you call the OPC-UA `After Start Up` and `Before Shutdown` actions from your App After Startup and Before Shutdown microflows configured in your App settings.
-Actions full name are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
+Make sure that you call the OPC-UA `After Start Up` and `Before Shutdown` actions from your app's After-Startup and Before-Shutdown microflows that are configured in your App Settings.
+The full names of the actions are `OPCUAConnector.ASU_OPCUA` and `OPCUAConnector.BSD_OPCUA`.
 
-* After Start Up tries to reconnect to configured servers, re-monitor items and pre-loads your App trusted certificates. 
+* After Start Up tries to reconnect to configured servers, re-monitor items, and pre-loads your App trusted certificates. 
 * Before Shutdown close all opened connections.
 
 {{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup will take much longer.{{% /alert %}}
@@ -90,32 +90,35 @@ Once the configuration is saved, the APIs can be used in your application.
 
 ## Advanced Connection
 
-This chapter explains how to configure connection to an OPC-UA server without discovery service.
+This section explains how to configure a connection to an OPC-UA server without the discovery service.
 
-* Create a microflow to set up a manual connection.
-* The microflow should create the following objects in order. (The details for each can be found in the following paragraphs)
+1. Create a microflow to set up a manual connection. Make sure that the microflow creates the following objects in order:
 
-    * Create a `ServerConfiguration`
-    * Create and associate an `IdentityToken`
-    * Provide an associated `ClientCertificate` 
-  
-* Call the `ServerConfiguration_Connect` microflow to connect to the server.
+   * Create a [`ServerConfiguration`](#serverconfiguration-object)
 
-    * If this microflow returns a TestConnectionResponse with `isSuccess` to true, the connection succeeded.
-    * If not, the error will be shown in the `ErrorMessage` attribute.
+   * Create and associate an [`IdentityToken`](#identitytoken)
 
- * Trust the server certificate.
- * Call your microflow from within the application.
+   * Provide an associated [`ClientCertificate`](#clientcertificate) 
 
-### ServerConfiguration Object
+2. Call the `ServerConfiguration_Connect` microflow to connect to the server.
+
+   * If this microflow returns a TestConnectionResponse with `isSuccess` to true, the connection succeeded.
+
+   * If not, the error is shown in the `ErrorMessage` attribute. Read the error message and resolve the error.
+
+3. Trust the server certificate.
+
+4. Call the microflow that you created from within the application.
+
+### ServerConfiguration Object {#serverconfiguration-object}
 
 The core information of the configuration to connect to an OPC-UA server must be stored as `ServerConfiguration` objects.
 
 The configuration contains the following attributes:
 
 * `ConfigurationName` – the name to identify the configuration
-* `EndpointURL`: the URL of the endpoint of the OPC-UA server
-* `IsManualConfiguration` – set it to true to force the end point configuration 
+* `EndpointURL` – the URL of the endpoint of the OPC-UA server
+* `IsManualConfiguration` – Se to *true* to force the end point configuration 
 * `SessionTimeout` – requested maximum number of milliseconds a session should remain open without activity.
 * `RequestTimeout` – requested maximum number of milliseconds a request should remain open without response.
 * `MessageSecurityMode` – the type of security to apply to messages
@@ -125,9 +128,9 @@ The configuration contains the following attributes:
   * If it is *Sign&Encrypt* – messages are signed and encrypted by the client certificate.
 
 * `SecurityPolicyURI` – to determine what algorithm to use to encrypt and sign the data
-* `_IsConnected`: will be set to true when connection is open
+* `_IsConnected`: Set to *true* when connection is open
 
-### Identity Token
+### IdentityToken {#identifytoken}
 
 A connection to an OPC-UA server is made using an `IdentityToken`, similar to a user role in Mendix. The server will dictate the type of the identify token it will support.
 
@@ -137,7 +140,7 @@ The three options are as follows:
 * `Username Identity Token` – This is the identity token based on a username and password combination.
 * `Certificate Identity Token` – This is the identity token based on a certificate. The certificate must be trusted by the OPC-UA server before it can be used.
 
-### Client Certificate
+### ClientCertificate {#clientcertificate}
 
 A connection to an OPC-UA server may be encrypted to provide security. The server will dictate based on the response which message security modes (i.e. forms of encryption) it requires for a connection.
 
@@ -148,9 +151,7 @@ If the message security mode is set to *Sign* or Sign&Encrypt, the `ServerConfig
 
 ### Server Certificate
 
-A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. 
-For the client side, this means the client should trust the certificate of the server. 
-The server certificate must be added to the Mendix Certificate list in app settings / certificates of Studio Pro.
+A connection between an OPC-UA server and OPC-UA client (the Mendix application) can only be established if both identities have been acknowledged by the respective parties. For the client side, this means the client should trust the certificate of the server. The server certificate must be added to the Mendix certificate list on the **Certificates** tab in **App Settings** of Studio Pro.
 
 The association between the client and the server certificates does not need to be set in the domain model.
 
@@ -170,7 +171,7 @@ For more advanced cases use the provided Browse action.
 
 #### The Browse Action
 
-The browse action lets you traverse from one node to others.  The request object for the action is a `BrowseDescription`, which contains the following fields:
+The browse action lets you traverse from one node to others.  The request object for the action is a `BrowseDescription`, which contains the following attributes:
 
 * `Nodeid` – This is the ID of the node from where you want to browse.
 * `BrowseDirections` – This specifies in which direction to traverse.
@@ -224,9 +225,9 @@ The data model of an OPC-UA server consists of a set of `Node` objects. These no
 
 To make it easier to get the information on a node, there is a `GetNodeDetails` action provided, which will read all properties of the node and put them in the correct specialization of the `Node` entity. 
 
-For more advanced cases use the provided Read action.
+For more advanced cases, use the [Read action](#read-action) described below.
 
-#### The Read Action
+#### The Read Action {#read-action}
 
 The Read action lets you read specific attributes of a node. The request object for the action is a `ReadNodeRequest`, which contains a list of ReadNodeReadValueIDs.
 The ReadNodeReadValueId objects describe the attributes on the nodes you want to read. 

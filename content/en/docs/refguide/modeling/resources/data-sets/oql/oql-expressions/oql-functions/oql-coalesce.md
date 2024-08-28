@@ -3,15 +3,15 @@ title: "OQL COALESCE"
 url: /refguide/oql-coalesce/
 ---
 
-## 1 Description
+## Description
 
 The `COALESCE` function returns the first of its arguments that is not NULL.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 COALESCE ( expression [ ,...n ] )
 ```
 

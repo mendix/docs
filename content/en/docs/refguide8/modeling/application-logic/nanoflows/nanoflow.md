@@ -3,11 +3,11 @@ title: "Nanoflow Properties"
 url: /refguide8/nanoflow/
 ---
 
-## 1 Introduction
+## Introduction
 
 This page describes the properties of nanoflows. For details on using nanoflows and nanoflow elements, see [Nanoflows](/refguide8/nanoflows/).
 
-## 2 Properties
+## Properties
 
 An example of nanoflow properties is represented in the image below:
 
@@ -20,33 +20,33 @@ Nanoflow properties consist of the following sections:
 * [Security](#security)
 * [Usage](#usage)
 
-### 2.1 Common Section{#common}
+### Common Section{#common}
 
-#### 2.1.1 Name
+#### Name
 
 **Name** is the internal name of the nanoflow. When referring to the nanoflow in the app you will use this name. It must be unique within the module, but you can have two nanoflows with the same name in different modules. When referring to the nanoflow, you will normally prepend the name of the module to ensure uniqueness and allow you to use nanoflows in other modules.
 
-#### 2.1.2 Documentation
+#### Documentation
 
 **Documentation** allows you to describe your nanoflow to make it easier for people to use and modify it.
 
-### 2.2 Output Section{#output}
+### Output Section{#output}
 
-#### 2.2.1 Return Type
+#### Return Type
 
 The return type defines what information the nanoflow returns. The caller of the nanoflow will get a result of this type. For possible return types, see [Data Types](/refguide8/data-types/).
 
-### 2.3 Security Section{#security}
+### Security Section{#security}
 
-#### 2.3.1 Allowed Roles
+#### Allowed Roles
 
 These are the [module roles](/refguide8/module-security/#module-role) the user must have to be able to execute the nanoflow.
 
 For more information, see [Module Security](/refguide8/module-security/).
 
-### 2.4 Usage Section {#usage}
+### Usage Section {#usage}
 
-#### 2.4.1 Mark as Used
+#### Mark as Used
 
 You can search for unused items (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F</kbd>, then select **Unused items** in the **Search for** drop-down menu) in Studio Pro. Nanoflows that are only called from JavaScript code will be listed as unused, because Studio Pro cannot look inside the source code.
 

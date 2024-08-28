@@ -9,7 +9,7 @@ weight: 20
 The Build API only works for apps which are deployed to the Mendix Cloud.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Build API allows you to manage deployment packages and create new deployment packages using our build server. You will need the information from the [Teamserver API](/apidocs-mxsdk/apidocs/team-server-api/) as input for these API calls.
 
@@ -19,48 +19,48 @@ The image below provides a domain model representation of the concepts discussed
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/build-api/api-model.png" class="no-border" >}}
 
-## 2 Authentication
+## Authentication
 
 The Build API requires authentication via API keys that are bound to your Mendix account.
 
-### 2.1 Obtaining an API Key
+### Obtaining an API Key
 
 To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
 
-### 2.2 Using Authentication Headers
+### Using Authentication Headers
 
 Use the following request headers to authenticate an API call:
 
 * `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
 * `Mendix-ApiKey` – the API key of this user
 
-### 2.3 Configuring Permissions
+### Configuring Permissions
 
 To perform an action via the Build API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
 
-## 2 API Calls
+## API Calls
 
-### 2.1 Retrieve Packages
+### Retrieve Packages
 
-#### 2.1.1 Description
+#### Description
 
 Retrieves all deployment packages that are available for a specific app that the authenticated user has access to as a regular user. These packages can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
-#### 2.1.2 Request
+#### Request
 
-##### 2.1.2.1 Parameter
+##### Parameter
 
 * *AppId* (String) : Subdomain name of an app.
 
-##### 2.1.2.2 Example
+##### Example
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -68,7 +68,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 2.1.3 Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -83,15 +83,15 @@ List of objects with the following key-value pairs:
     Possible values: Succeeded, Queued, Building, Uploading and Failed.
 * *Size* (Long) : Size of the package in bytes.
 
-##### 2.1.3.1 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId |
 
-##### 2.1.3.2 Example
+##### Example
 
-```json {linenos=false}
+```json
 [{
      "Name" :  "Main line-1.1.5.9.mda" ,
      "Status" :  "Succeeded" ,
@@ -113,28 +113,28 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 2.2 Retrieve Package{#retrieve-package}
+### Retrieve Package{#retrieve-package}
 
-#### 2.2.1 Description
+#### Description
 
 Retrieves a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>?url=<Boolean>
 ```
 
-#### 2.2.2 Request
+#### Request
 
-##### 2.2.2.1 Parameters
+##### Parameters
 
 * *AppId* (String) : Subdomain name of an app.
 * *PackageId* (String) : Id of the deployment package.
 * *url* (Boolean) *(default: false)*: Indicates whether the API should return a URL pointing to the location of the package.
 
-##### 2.2.2.2 Example
+##### Example
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf?url=true HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -142,7 +142,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 2.2.3 Output
+#### Output
 
 An object with the following key-value pairs:
 
@@ -165,16 +165,16 @@ An object with the following key-value pairs:
     * *Location* (String): The URL pointing to the package file.
     * *TTL* (Long): How long the URL is valid (in seconds).
 
-##### 2.2.3.1 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_PARAMETERS | Not enough parameters given. Please set AppId and PackageId parameters. |
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found |
 
-##### 2.2.3.2 Example
+##### Example
 
-```json {linenos=false}
+```json
 {
     "Name" :  "Main line-2.5.4.63.mda" ,
     "Status" :  "Succeeded" ,
@@ -191,25 +191,25 @@ An object with the following key-value pairs:
 }
 ```
 
-### 2.3 Delete Package
+### Delete Package
 
-#### 2.3.1 Description
+#### Description
 
 Deletes a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: DELETE
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>
 ```
 
-#### 2.3.2 Request
+#### Request
 
-##### 2.3.2.1 Parameters
+##### Parameters
 
 * *AppId* (String) : Subdomain name of an app
 * *PackageId* (String) : Id of the deployment package
 
-```http {linenos=false}
+```http
 DELETE /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf HTTP/1.1
 Host: deploy.mendix.com
 
@@ -218,7 +218,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-##### 2.3.2.2 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -226,7 +226,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 409 | PACKAGE_IN_USE | Package is still in use. |
 
-### 2.4 ⚠ Download Package{#download-package}
+### ⚠ Download Package{#download-package}
 
 {{% alert color="warning" %}}
 The **Download Package** call of the build API is deprecated. Please use [Retrieve Package](#retrieve-package) with the `url=true` parameter instead.
@@ -234,19 +234,19 @@ The **Download Package** call of the build API is deprecated. Please use [Retrie
 
 Downloads a specific deployment package that is available for a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform.
 
-```http {linenos=false}
+```http
 HTTP Method: GET
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages/<PackageId>/download
 ```
 
-#### 2.4.1 Request
+#### Request
 
 Parameters
 
 * *AppId* (String) : Subdomain name of an app.
 * *PackageId* (String) : Id of the deployment package.
 
-```http {linenos=false}
+```http
 GET /api/1/apps/calc/packages/b3d14e53-2654-4534-b374-9179a69ef3cf/download HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -254,7 +254,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 2.4.2 Output
+#### Output
 
 Error codes
 
@@ -264,22 +264,22 @@ Error codes
 | 404 | PACKAGE_NOT_FOUND | Package or build job not found. |
 | 500 | BUILD_NOT_SUCCEEDED | Build not successful finished. |
 
-### 2.5 Start Building Deployment Package {#start-building-deployment-package}
+### Start Building Deployment Package {#start-building-deployment-package}
 
 Start the process to build a deployment package, based on the team server project of a specific app that the authenticated user has access to as a regular user. This package can be found if you click **Details** on an app in the **Nodes** screen in the Mendix Platform. For a Free App, this will also trigger a deployment of the new package.
 
-```http {linenos=false}
+```http
 HTTP Method: POST
 URL: https://deploy.mendix.com/api/1/apps/<AppId>/packages
 ```
 
-#### 2.5.1 Request
+#### Request
 
-##### 2.5.1.1 Parameter
+##### Parameter
 
 * *AppId* (String) : Subdomain name of an app.
 
-##### 2.5.1.2 Payload
+##### Payload
 
 The payload depends on whether the app is held in a [Git repository or an SVN repository](/refguide/version-control-faq/#which-team-server).
 
@@ -294,9 +294,9 @@ An object with the following key-value pairs:
 * *Version* (String) : Package version. This will also be the name of the tag on the project team server.
 * *Description* (String) : Description of the package.
 
-##### 2.5.1.3 Example
+##### Example
 
-```http {linenos=false}
+```http
 POST /api/1/apps/calc/packages HTTP/1.1
 Host: deploy.mendix.com
 Accept: */*
@@ -311,7 +311,7 @@ Mendix-ApiKey:  26587896-1cef-4483-accf-ad304e2673d6
 }
 ```
 
-#### 2.5.2 Output
+#### Output
 
 {{% alert color="info" %}}
 You will receive a response to indicate that the build has started. Depending on the complexity of your app, it may take some time before it is complete.
@@ -333,9 +333,9 @@ Error codes
 | 404 | APP_NOT_FOUND | App not found. |
 | 500 | BUILD_FAILED | Build job failed. |
 
-##### 2.5.2.1 Example
+##### Example
 
-```json {linenos=false}
+```json
 {
      "PackageId" :  "b3d14e53-2654-4534-b374-9179a69ef3cf"
 }

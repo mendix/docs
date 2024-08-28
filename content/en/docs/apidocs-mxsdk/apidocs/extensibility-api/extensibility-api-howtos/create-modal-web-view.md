@@ -4,13 +4,13 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/
 weight: 7
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can create a new web view hosted inside a modal dialog. You will then open the modal from a new menu item.
 
 You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples)
 
-## 2 Adding a View Model for Your New Modal
+## Adding a View Model for Your New Modal
 
 Add a view model for your new model. The view model takes care of the messages and the overall lifecycle of the modal web view.
 
@@ -48,7 +48,7 @@ class MyModalWebViewViewModel(
 }
 ```
 
-## 3 Adding a Controller Class
+## Adding a Controller Class
 
 You are creating a controller to delegate specific tasks, allowing you to keep the menu item free of unrelated business logic, for instance, conducting basic setup and displaying the web view. This approach is recommended, but not mandatory.
 
@@ -75,7 +75,7 @@ class MyModalWebViewController(IDialogService dialogService, IMessageBoxService 
 }
 ```
 
-## 4 Adding a Content Server
+## Adding a Content Server
 
 To open static pages, you need to source them from either a file system path or via the `WebServerExtension` route.  This document covers the latter, as this is the preferred way to provide static web content to an extension. 
 
@@ -143,7 +143,7 @@ class ContentServer : WebServerExtension
 }
 ```
 
-## 5 Adding a Menu Item That Opens the Modal Dialog
+## Adding a Menu Item That Opens the Modal Dialog
 
 Finally, you need to add a menu item to open the dialog. Replace the contents of `MyMenuExtension.cs` with the code below:
 

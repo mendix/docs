@@ -4,7 +4,7 @@ url: /refguide/workflow-elements/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 A workflow is composed of elements that you can drag on a path from the **Toolbox** or that you can see in the working area of the editor. Below is a categorized overview of all elements. The following categories are used:
 
@@ -14,12 +14,12 @@ A workflow is composed of elements that you can drag on a path from the **Toolbo
 * [Events](#events)
 * [System actions](#system)
 
-## 2 Workflow Parameters {#parameters}
+## Workflow Parameters {#parameters}
 
 A [workflow parameter](/refguide/workflow-parameters/) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-context.png" alt="Workflow Context Example" class="no-border" >}}
 
-## 3 General {#general}
+## General {#general}
 
 Elements in the general category help you control the workflow path, for example, add parallel paths or end them. 
 
@@ -39,7 +39,7 @@ The elements of this category are described in the table below:
 You can add customized activities to this section if you use the **Expose as a workflow action** setting in microflows. For more information see the [Expose as Workflow Action](/refguide/microflow/#expose-as-workflow-action) section in *Microflow Properties*.
 {{% /alert %}}
 
-## 4 User Tasks {#user-tasks}
+## User Tasks {#user-tasks}
 
 Elements in this category allow you to assign certain tasks to users.
 
@@ -50,7 +50,7 @@ The elements of this category are described in the table below:
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/user-task.png" width="50px" alt="User Task" class="no-border" >}} | [User task](/refguide/user-task/) | A central element in a workflow that allows you to assign a task to a certain user or a group of users using filters or microflows. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/multi-user-task.png" width="50px" alt="Multi-user task" class="no-border" >}} | [Multi-user task](/refguide/multi-user-task/) | A central element in a workflow that allows you assign a task to multiple users. Each user performs the same task. The outcomes from all individual tasks will be aggregated into a single multi-user task outcome based on the [completion condition](/refguide/multi-user-task/#completion-condition).  |
 
-## 5 Events {#events}
+## Events {#events}
 
 The elements of this category are described in the table below:
 
@@ -58,7 +58,7 @@ The elements of this category are described in the table below:
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer.png" width="50px" alt="Wait for timer activity" class="no-border" >}} | [Wait for timer](/refguide/wait-for-timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
 
-## 6 System Actions {#system}
+## System Actions {#system}
 
 Elements in this category allow you to call a microflow or another workflow.
 

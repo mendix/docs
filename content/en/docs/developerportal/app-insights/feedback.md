@@ -8,7 +8,7 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 If your app uses the [Mendix Feedback](/appstore/modules/mendix-feedback/) module, users can report feedback to your team using the feedback widget in your app, and all their feedback will go to the **Feedback** page. **Feedback** enables your team to view all the feedback. It also allows team members with the right permissions to organize feedback and add feedback manually. 
 
@@ -16,15 +16,15 @@ You can access the **Feedback** page by selecting your app in [Apps](https://spr
 
 The **Feedback** page contains two tabs: [Inbox](#inbox) and [Archive](#archive).
 
-### 1.1 What Happens to a User After They Submit Feedback? {#what-happens-to-user}
+### What Happens to a User After They Submit Feedback? {#what-happens-to-user}
 
-#### 1.1.1 What Happens to Your Team
+#### What Happens to Your Team
 
 After a user reports feedback in the app using the feedback widget, the feedback goes automatically to the [Inbox](#inbox) on the **Feedback** page, and the members in your team who are a Scrum Master or have the same permissions as the default permissions of a Scrum Master will get a [notification](/developerportal/global-navigation/#notifications). If you no longer want to receive feedback notifications for a specific app, you can [stop watching](/developerportal/#my-apps) the app. 
 
 Next to getting a notification in the Mendix Portal, Scrum Masters of your team will also receive an email with a link to the details of the new feedback.
 
-#### 1.1.2 What Happens to the User
+#### What Happens to the User
 
 After a user reports feedback in the app using the feedback widget, the user will get an email with a link to their submitted feedback. When the user opens the link, a page opens and shows their feedback details. See the table below:
 
@@ -46,7 +46,7 @@ If the user does not want to receive notifications anymore, they can clear the c
 
 {{< figure src="/attachments/developerportal/app-insights/feedback/user-notification.png" class="no-border" >}}
 
-## 2 Inbox {#inbox}
+## Inbox {#inbox}
 
 On the **Inbox** tab, everyone from your team can view all the unarchived feedback sent from your app by users.  
 
@@ -71,7 +71,7 @@ To search by **Subject**, **Description**, **User Email** and **Tags**, type the
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter feedback using the **Environment**, **Assignee**, **Priority**, **Status**, and **Submission date**. The filters are saved until the page is refreshed.
 
-### 2.1 Organizing Feedback in Inbox
+### Organizing Feedback in Inbox
 
 If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can also organize feedback items.
 
@@ -99,7 +99,7 @@ If you select feedback, you can see the following items:
 
 * **Delete** – Clicking this deletes the selected feedback permanently. The result is irreversible.
 
-## 3 Archive {#archive}
+## Archive {#archive}
 
 On the **Archive** tab, everyone in your team can view all the archived feedback.
 
@@ -119,11 +119,11 @@ To search by **Subject** and **ID**, type the keywords in the search bar.
 
 Clicking the filter bar will open the **Filter by** side panel. In this side panel, you can filter the feedback using the **Environment**, **Closed date**, **Submission date**, and **Assignees**. The filters are saved until the page is refreshed.
 
-## 4 Opening Feedback in Inbox or Archive{#feedback-details}
+## Opening Feedback in Inbox or Archive{#feedback-details}
 
 On the [Inbox](#inbox) and [Archive](#archive) tabs, you can open feedback by clicking it in the list. If you click the **ID** of the feedback, the feedback details page will open. If you click a place other than the **ID** of the feedback, a side panel will open. Either the feedback details page or the side panel contains two tabs: [Feedback](#feedback) and [Contact Reporter](#contact-reporter).
 
-### 4.1 Feedback Tab {#feedback}
+### Feedback Tab {#feedback}
 
 {{% alert color="info" %}}If your [role](/developerportal/general/app-roles/) has the permission that **Can edit ‘Stories, Documents and Feedback'**, you can edit the feedback details on the **Feedback** tab.{{% /alert %}}
 
@@ -183,13 +183,13 @@ The **Feedback** tab shows the following items:
 
 * **Communication** – This section shows all the comments on this feedback from your team. You can leave comments here and attach attachments to each comment. Comments submitted to this section are only visible to your team members.
 
-### 4.2 Contact Reporter Tab {#contact-reporter}
+### Contact Reporter Tab {#contact-reporter}
 
 The **Contact Reporter** tab allows you to read messages from the reporter and reply to them. Whenever the reporter sends a message, it is shown in this section. Once you reply to a message from the reporter, they receive an email. When multiple feedback items are linked, the system only sends an email to the reporter of this specific feedback item, not other associated feedback items in the same group.
 
 For more information, see the [What Happens to a User After They Submit Feedback](#what-happens-to-user) section.
 
-#### 4.2.1 Managing Tags {#manage-tags}
+#### Managing Tags {#manage-tags}
 
 From the [feedback details](#feedback-details) page, you can manage tags by clicking **Settings** ({{% icon name="cog" %}}) next to the **Tags** text box:
 
@@ -213,7 +213,7 @@ From the [feedback details](#feedback-details) page, you can manage tags by clic
   2. Click **Delete**. The **Confirmation** dialog box opens.
   3. Click **Delete Tag**.
 
-## 5 Receiving Notifications {#notifications}
+## Receiving Notifications {#notifications}
 
 You can receive a notification when new feedback lands in **Inbox** or when a reporter replies to their feedback. To receive notifications, do as follows:
 
@@ -223,6 +223,6 @@ You can receive a notification when new feedback lands in **Inbox** or when a re
     1. In Feedback, click the **Settings** {{% icon name="cog" %}} icon on the upper-right corner of the page.
     2. Turn on the toggle to receive notifications.
 
-### 5.1 Receiving Notifications for an Individual Feedback Item {#notifications-individual-feedback}
+### Receiving Notifications for an Individual Feedback Item {#notifications-individual-feedback}
 
 You can also just receive notifications for an individual feedback item. Set this up by clicking the {{% icon name="view-off" %}} icon on the upper-right corner of the [Feedback](#feedback) tab after you open the feedback. You also automatically start receiving notifications for an individual feedback item once you [respond to the reporter](#contact-reporter) of the feedback or leave a comment for your team in the **Communications** section within the feedback.

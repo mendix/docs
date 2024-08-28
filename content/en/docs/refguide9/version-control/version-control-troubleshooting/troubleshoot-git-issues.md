@@ -5,13 +5,13 @@ weight: 20
 description: "Describes a list of problems and fixes for Git version control issues."
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes known issues with Git version control and the ways to fix them.
 
-## 2 Troubleshooting
+## Troubleshooting
 
-### 2.1 Getting an `The project contains changes that have not been committed yet. Please commit first before attempting to merge again. While you have not changes any files.` Error {#css-error}
+### Getting an `The project contains changes that have not been committed yet. Please commit first before attempting to merge again. While you have not changes any files.` Error {#css-error}
 
 {{% alert color="info" %}}
 
@@ -37,7 +37,7 @@ The workaround corrects the issue for future commits. If you have other branches
 
 {{% /alert %}}
 
-### 2.2 Proxy Servers Are Not Supported
+### Proxy Servers Are Not Supported
 
 Studio Pro communicates to Git repositories by two means: LibGit2 library or Git command line interface (Git CLI). LibGit2 provides a nice and clean repository object model that is in intensive use during local repository operations. However, it is not performant enough when it comes to communication with remote Git servers. This is when Git CLI is used and Studio Pro switches to the client while performing fetch, pull and push operations (that is why the Git for Windows package, which ships Git CLI to your computer, is an integral part of Studio Pro installation). Therefore, any operation that requires transferring data to/from remote Git repositories, uses GitCLI client.
 
@@ -53,7 +53,7 @@ Unfortunately, Git for Windows is not synchronized with the system proxy setting
 
 You can also use `--global` modifier for applying the changes system-wise, but it is not recommended if you are using Git not only for Mendix development.
 
-### 2.3 Getting an "Oops" Pop-Up Menu
+### Getting an "Oops" Pop-Up Menu
 
 You may get an "Oops" pop-up menu when setting a name and an email for Git in the **Preferences** dialog box or while committing. The problem might occur if there is no global Git config file on the PC yet. To fix this issue, you can use the Git command line client and do the following:
 
@@ -64,7 +64,7 @@ You may get an "Oops" pop-up menu when setting a name and an email for Git in th
 
 Any of these commands will create a global Git config. Subsequent interactions via the Studio Pro interface will succeed from now on.
 
-### 2.4 Merging Branches Results in No Changes Being Applied
+### Merging Branches Results in No Changes Being Applied
 
 When two branches are merged, changes sometimes do not come through.
 To fix this issue, take the following steps:
@@ -79,11 +79,11 @@ To fix this issue, take the following steps:
      `git version`.
    * If needed install the correct version from the [git website](https://git-scm.com/download/win).
 
-### 2.5 Connection Problems When Cloning the Git Repository
+### Connection Problems When Cloning the Git Repository
 
 If you face connection problems when cloning the Git repository using the **Open App** or **Download App** dialog box, the first thing to check is whether the URL of the remote Git repository is correct. It should not be copied from the browser address bar. Most Git services have a noticeable colored **Clone** button which provides the correct URL in a pop-up window. You should use this URL with Studio Pro.
 
-### 2.6 Customer-Facing Issues
+### Customer-Facing Issues
 
 For Studio Pro developers to be able to troubleshoot issues that the customers face with beta Git support, Studio Pro provides a logging mechanism.
 
@@ -95,7 +95,7 @@ When filing a Git support issue with Mendix Support, attach the log files doing 
 
 2. Copy the file called *log.txt* into your ticket. You can also attach additional *log.X.txt* files if they exist.
 
-### 2.7 Git Properties Useful for Troubleshooting
+### Git Properties Useful for Troubleshooting
 
 {{% alert color="warning" %}}
 The properties described below might contain personal information. We advise you to make sure that all the private information is removed before sharing it. 

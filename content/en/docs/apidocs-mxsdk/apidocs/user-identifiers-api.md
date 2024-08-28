@@ -11,15 +11,15 @@ weight: 112
 The User Identifiers API is available for Mendix Admins.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The User Identifiers API allows Mendix admins to perform operations related to user identifiers within their company, such as obtaining the user UUIDs of specific email addresses.
 
-## 2 Authentication{#authentication}
+## Authentication{#authentication}
 
 Authentication for the User Identifiers API uses a personal access token (PAT).
 
-### 2.1 Generating a PAT
+### Generating a PAT
 
 To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
 
@@ -29,20 +29,20 @@ Select the following as **User Identifiers API** scopes:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your User Identifiers API calls.
 
-### 2.2 Using the PAT
+### Using the PAT
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /api/user-identifiers/v1/uuids HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
 To authenticate calls when using the Open API specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-## 3 Examples
+## Examples
 
-### 3.1 Using the API to Retrieve User UUIDs
+### Using the API to Retrieve User UUIDs
 
 {{% alert color="info" %}}Only Mendix Admins from the company have the authority to retrieve user UUIDs.{{% /alert %}}
 
@@ -51,7 +51,7 @@ The following steps lead to retrieval of user's UUIDs of the email addresses pro
 1. Set up your authentication PAT. You must be a Mendix Admin.
 1. Create a request body containing the email addresses under `emailAddresses`. For example, to get user UUIDs of `jane.doe@domain.tld` and `john.doe@domain.tld`, provide a body like this:
 
-    ```json {linenos=false}
+    ```json
     {
       "emailAddresses":[
           { "emailAddress":"jane.doe@domain.tld" },
@@ -62,6 +62,6 @@ The following steps lead to retrieval of user's UUIDs of the email addresses pro
 
 1. Call `GET /api/user-identifiers/v1/uuids` to get the UUIDs of the provided email addresses.
 
-## 4 API Reference
+## API Reference
 
 {{< swaggerui src="/openapi-spec/user-identifier-api.yaml"  >}}

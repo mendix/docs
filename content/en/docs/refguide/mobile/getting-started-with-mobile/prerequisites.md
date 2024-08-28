@@ -9,14 +9,14 @@ aliases:
     - /howto/mobile/common-issues/
 ---
 
-## 1 Introduction
+## Introduction
 
 While developing Mendix apps, you will need to test and iterate to make the best products possible. You may also occasionally run into issues which require troubleshooting. This guide addresses both of those needs:
 
 * The [Getting the Make It Native App](#get-min-app) section explains how to download the Make It Native App, which you can use to test your apps using a simple QR code
 * The [Troubleshooting Common Mobile Issues](#troubleshooting) section explains port forwarding, WiFi settings, and other common troubleshooting issues
 
-## 2 Getting the Make It Native App {#get-min-app}
+## Getting the Make It Native App {#get-min-app}
 
 The Make It Native app allows developers to preview, test, and debug native mobile apps in conjunction with Mendix Studio Pro. This app is available for both Android and iOS devices.
 
@@ -32,7 +32,7 @@ Depending on the Mendix version used to build your app, you have to use a differ
 
 For information on which mobile operating systems are supported by the Mendix native mobile apps, see the [Mobile Operating Systems](/refguide/system-requirements/#mobileos) section of *System Requirements*.
 
-### 2.1 Direct Download Links {#direct-links}
+### Direct Download Links {#direct-links}
 
 Download the latest version of Make It Native 10 using these QR codes:
 
@@ -48,7 +48,7 @@ Download the MTS version of Make it Native 10 using these QR codes:
 | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/android-min-10.png" alt="Android QR Code" class="no-border" >}} | {{< figure src="/attachments/refguide/mobile/native-mobile/getting-the-make-it-native-app/ios-min-10.png" alt="iOS QR Code" class="no-border" >}} |
 |   [MTS Version](https://play.google.com/store/apps/details?id=com.mendix.developerapp.mx10)    |        [MTS Version](https://apps.apple.com/us/app/make-it-native-10/id6450037464)         |
 
-### 2.2 Using the Latest Version of Make It Native
+### Using the Latest Version of Make It Native
 
 The latest version of Make It Native app receives monthly updates, and is compatible exclusively with the latest minor release of Mendix. We recommend using this version only if you intend to update your application regularly.
 
@@ -56,7 +56,7 @@ To access the latest version of Make It Native, you must join our official beta 
 
 Note that it is not possible to install both **Latest** and **MTS** versions on the same device.
 
-### 2.3 Recommendations
+### Recommendations
 
 When working with applications on a Long-Term Support (LTS) version of Mendix, use the corresponding LTS version of Make It Native. All patch versions of the Mendix LTS version can be used.
 
@@ -66,23 +66,23 @@ Only use the latest version of Mendix if you are prepared to update your applica
 
 If you want to use a custom version of Mendix you can always [create a Custom Developer App](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/) or [build your own Make It Native App](https://github.com/mendix/make-it-native) for that version of Mendix.
 
-## 3 Troubleshooting Common Mobile Issues {#troubleshooting}
+## Troubleshooting Common Mobile Issues {#troubleshooting}
 
 Mendix strives to make building and running native mobile apps as simple as possible. But because some complexity is inherent in making apps, problems can come up. If you are having issues while building or running native mobile apps, please consult the sections below to see if your issue has already been solved.
 
-### 3.1 Make It Native App
+### Make It Native App
 
 To troubleshoot issues related to the Make it Native app, see the sections below.
 
-#### 3.1.1 Port Issues
+#### Port Issues
 
 Mendix recommends keeping the **Runtime port** in your [configuration](/refguide/configuration/#server) on **8080**. If you change it, do not change it to **8083**, because that is designated for app packaging.
 
-#### 3.1.2 Wifi Network Settings
+#### Wifi Network Settings
 
 If you are using Windows, make sure your WiFi network is set to **Private**. Windows often sets WiFi to **Public** by default, which blocks incoming connections.
 
-#### 3.1.3 Error: Unable to Load Script {#unable-load-script}
+#### Error: Unable to Load Script {#unable-load-script}
 
 Depending on your device settings and network characteristics, the Make it Native app can fail to connect to the runtime. If so, the Make it Native app can show the following error messages:
 
@@ -110,11 +110,11 @@ For the Windows Defender firewall, the most common firewall, do the following:
 
 1. Windows distinguishes between two types of networks: private and public. Windows Defender Firewall applies stricter regulations for public networks. If, and only if, you are connected to a trusted network, configure the network as **Private** on your computer.
 
-#### 3.1.4 Error: Unable to Detect Studio Pro
+#### Error: Unable to Detect Studio Pro
 
 If your port forwarding settings are correct but you still get an error that the Make It Native app **cannot detect Studio Pro**, please reinstall the Make It Native app on your mobile device.
 
-#### 3.1.5 Strict Company Policies Prevent Your Connection
+#### Strict Company Policies Prevent Your Connection
 
 If your company has strict network policies which do not allow you to open the ports Mendix requires, here are 3 alternate approaches you can try:
 
@@ -127,15 +127,15 @@ If your company has strict network policies which do not allow you to open the p
     adb reverse tcp:8083 tcp:8083
     ```
 
-### 3.1.6 Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
+### Use Make It Native 9 with an Older Version of Mendix 9 {#use-MIN-older}
 
 The latest version of Make It Native 9 is only compatible with versions of Mendix 9.24.0 and above. To develop with older versions of Mendix 9, you can create a custom developer app by following [this guide](/refguide/mobile/distributing-mobile-apps/building-native-apps/how-to-devapps/). Note that a custom developer app can be used to develop multiple older Mendix apps as long as no custom dependencies are introduced.
 
-### 3.2 Configure Parallels
+### Configure Parallels
 
 To use Studio Pro on a Mac device, you will first need to install and configure Parallels. For more information, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/).
 
-### 3.3 Avoid Network or Cloud Folders
+### Avoid Network or Cloud Folders
 
 Storing a Mendix project on a network drive or in a cloud folder (such as those provided by OneDrive or Dropbox) is **not recommended**. Storing your projects in such folders will significantly slow down Studio Pro and cause errors when trying to run projects containing a native mobile profile. Note also that projects with a native mobile profile can only be started from drive **C:**.
 

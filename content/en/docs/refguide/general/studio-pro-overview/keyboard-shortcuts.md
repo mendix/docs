@@ -7,19 +7,19 @@ description: "Describes the shortcut keys available in Studio Pro."
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document summarizes the shortcut keys available in Studio Pro. This document is divided into sections which indicate where you can use the keys.
 
-## 2 General Shortcut Keys
+## General Shortcut Keys
 
 These keys are available in multiple places within Studio Pro and work generically.
 
-### 2.1 Panes and Editors
+### Panes and Editors
 
 These keys are active within the [Dockable Panes](#panes) and editors, such as the Domain Model, Pages, Workflows, Microflows, or the Navigation editor.
 
-#### 2.1.1 All Panes and Editors {#panes}
+#### All Panes and Editors {#panes}
 
 You can navigate between Studio Pro panes (for example, the domain model editor or the **Errors** pane) using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>. This opens a selection dialog where you can choose a pane using the mouse, <kbd>Ctrl</kbd> + arrow keys, or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd>. You are taken to the selected pane when you click the main mouse button or release the <kbd>Ctrl</kbd> key.
 
@@ -34,7 +34,7 @@ There are alternative ways to navigate between tabs within panes:
 
 Most menu items also have shortcut keys assigned to them that can be used in all panes. These are shown in the menus, listed in the [Menu Shortcut Keys](#menu-shortcuts) section, below, and are listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
-#### 2.1.2 Editors Only {#editors-only}
+#### Editors Only {#editors-only}
 
 The following key combinations work in the editors, such as the Domain Model, Pages, Workflows, Microflow, or Navigation editor.
 
@@ -52,7 +52,7 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Not available | Paste the widget styling onto another selected widget. |
 
-#### 2.1.3 Panes Only
+#### Panes Only
 
 The following key combinations work in the panes of Studio Pro:
 
@@ -60,7 +60,7 @@ The following key combinations work in the panes of Studio Pro:
 | --- | --- | --- |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>F7</kbd> | Not available | Navigate between panes (opens pane navigation dialog where panes are called *active tool windows*). |
 
-### 2.2 Dialog Boxes
+### Dialog Boxes
 
 In most dialog boxes for editing properties, the following shortcut keys can be used:
 
@@ -80,7 +80,7 @@ In most edit grids (such as the list of attributes in the entity properties), th
 | <kbd>↑</kbd> / <kbd>↓</kbd> | <kbd>↑</kbd> / <kbd>↓</kbd> | Selects previous/next item. |
 | <kbd>Ctrl</kbd> + <kbd>↑</kbd> / <kbd>↓</kbd> | Not available | Moves selected item (or items) up/down. |
 
-## 3 Domain Model Editor Shortcut Keys
+## Domain Model Editor Shortcut Keys
 
 The following shortcut keys are available in the domain model editor:
 
@@ -92,7 +92,7 @@ The following shortcut keys are available in the domain model editor:
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected entity, attribute, or association in a dialog box. |
 | <kbd>Esc</kbd> | <kbd>Esc</kbd> | Clears selection. |
 
-## 4 Page Editor Shortcut Keys
+## Page Editor Shortcut Keys
 
 The following shortcut keys are available in the page editor:
 
@@ -103,11 +103,11 @@ The following shortcut keys are available in the page editor:
 | <kbd>Enter</kbd> | <kbd>Enter</kbd> | Edits the properties of the currently selected object in a dialog box. |
 | <kbd>F2</kbd> | <kbd>Fn</kbd> + <kbd>F2</kbd> | Edits the caption of a label or button, or the contents of text, inline on the page. You can also just start typing a letter or a digit and the caption will be replaced by what you type. |
 
-## 5 Microflow and Nanoflow Editor Shortcut Keys
+## Microflow and Nanoflow Editor Shortcut Keys
 
 For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
 
-## 6 Debugger Shortcut Keys {#debugger-shortcuts}
+## Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the debugger:
 
@@ -119,7 +119,7 @@ The following shortcut keys are available for the debugger:
 | <kbd>Alt</kbd> + <kbd>F8</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F8</kbd> | **Continue** – instructs the debugger to continue until it reaches another breakpoint. |
 | <kbd>Alt</kbd> + <kbd>F9</kbd> | <kbd>Option</kbd> + <kbd>Fn</kbd> + <kbd>F9</kbd> | **Continue all** – instructs the debugger to continue all currently paused microflows/nanoflows until it reaches another breakpoint. |
 
-## 7 Menu Shortcut Keys {#menu-shortcuts}
+## Menu Shortcut Keys {#menu-shortcuts}
 
 The following shortcut keys are assigned to menu actions that can be used in all panes. These are also shown in the menus and listed on the documentation page for each menu under [Menus](/refguide/menus/).
 
@@ -156,7 +156,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>W</kbd> | Closes all document tabs. |
 | <kbd>Delete</kbd> | <kbd>Delete</kbd> | Deletes the selected element. |
 
-## 8 Read More
+## Read More
 
 * [App Explorer](/refguide/app-explorer/)
 * [Menus](/refguide/menus/)

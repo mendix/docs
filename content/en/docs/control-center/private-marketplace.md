@@ -6,7 +6,7 @@ weight: 70
 no_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Private Marketplace** page gives you the governance capabilities to approve or decline a request for adding a new component or a new version of an existing component to your organization's private Marketplace. It gives you the following benefits:
 
@@ -18,13 +18,13 @@ The **Private Marketplace** page gives you the governance capabilities to approv
 
 The **Private Marketplace** page contains two tabs: the [Approval Requests](#approval-requests) tab and the [Approval History](#approval-history) tab.
 
-## 2 Approval Requests {#approval-requests}
+## Approval Requests {#approval-requests}
 
 On the **Approval Requests** tab, you can configure the governance settings for publishing private Marketplace content and also manage all the pending requests.
 
 {{< figure src="/attachments/control-center/private-marketplace/approval-requests.png" max-width=100% alt=''private-marketplace''  >}}
 
-### 2.1 Approval Requests Settings
+### Approval Requests Settings
 
 Under the **Approvals Requests** section, you can configure settings for the following governance capabilities:
 
@@ -49,7 +49,7 @@ Under the **Approvals Requests** section, you can configure settings for the fol
 
   {{% alert color="info" %}}This setting only affects your notifications, not the notifications of other Mendix Admins in your organization.{{% /alert %}}
 
-### 2.2 Pending Approvals List {#pending-approvals}
+### Pending Approvals List {#pending-approvals}
 
 The **Pending Approvals** list shows all the submission requests that need to be approved or rejected, with the following details:
 
@@ -60,7 +60,7 @@ The **Pending Approvals** list shows all the submission requests that need to be
 * **Submitter** – This shows the name of the submitter.
 * **Submission Date** – This shows the date when the request is submitted.
 
-#### 2.2.1 Request Details
+#### Request Details
 
 If you click the component name in a request on the **Pending Approvals** list, the details of the request open in a new page. Here you can check all the provided information about the component, download the *•mpk* file, and approve or decline the request.
 
@@ -84,7 +84,7 @@ The request details page also has the following tabs:
 
 * **Capabilities** – This tab shows additional information about content types such as **Solution** and **Industry Template**. 
 
-## 3 Approval History {#approval-history}
+## Approval History {#approval-history}
 
 The **Approval History** tab lists all the requests that were approved or declined in the history.
 

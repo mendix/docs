@@ -5,19 +5,19 @@ weight: 10
 description: "This document explains the updated DOM structure for Mendix 8, and what that means for app's CSS."
 ---
 
-## 1 Introduction
+## Introduction
 
 Among other improvements to the client in Mendix 8, the HTML of Mendix applications has also been updated. These changes make widgets more accessible, more consistent, and give you a cleaner markup to work with. 
 
 However, these updates might impact your styling. The appearance of your application may be affected, as the widgets' Document Object Model structure has been updated. This reference guide will outline the differences between Mendix 7 and 8 as they pertain to the DOM and CSS. This document is only relevant for apps which employ custom CSS or modify existing Atlas UI CSS.
 
-## 2 Updating Atlas
+## Updating Atlas
 
 When you upgrade to Mendix 8, DOM structure changes will also alter the correlating Sass styling files. This could make some of your styling not work as expected anymore. To make your styling compatible with Mendix 8, see [Troubleshoot Atlas UI Changes when Migrating to Mendix 8](/refguide8/migration-atlas/). 
 
-## 3 Streamlined Custom Themes
+## Streamlined Custom Themes
 
-Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to AtlasUI. Now, building your own theme from scratch requires significantly less work.
+Before Mendix 8, the client provided a large amount of default styling if your app lacked a theme. This made building your own theme difficult, as you needed to override the default styling. As of Mendix 8, all styling has been moved to Atlas UI. Now, building your own theme from scratch requires significantly less work.
 
 If you have already built your own theme from scratch in an earlier version of Mendix, you might depend on the default styling (specifically the Bootstrap files and the **mxui.css** file) not included in Mendix 8 applications by default. 
 
@@ -29,7 +29,7 @@ Things differ from case to case, but in general when migrating from Mendix 7 to 
 If you get an error message `CE6103: We detected that you are not using Atlas UI for your theme. Please check 'Troubleshooting DOM Changes' to ensure your theme is fully compliant with Mendix 8. Right-click to see more options`, you can clear the message by right-clicking it and selecting **Mark as Resolved**.
 {{% /alert %}}
 
-## 4 Focus-Specific Class Removed
+## Focus-Specific Class Removed
 
 Before Mendix 8, the client frequently applied `mx-focus` to the element receiving focus and removed `mx-focus` when the element lost focus. Because all supported browsers now have proper support for the `:focus` pseudo-class, these reapplications are no longer necessary.  For more information on `:focus`, see Mozilla’s [:focus documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus).
 
@@ -51,7 +51,7 @@ Should be changed to:
 }
 ```
 
-## 5 Data Grid Markup Updates
+## Data Grid Markup Updates
 
 We made a number of updates to the data grid markup. Previously, the data grid was split into two separate tables: one containing the header and one containing the data. This made the data grid less accessible, because screen readers show these as two separate tables. Now the two tables have been merged into a single table. Furthermore, the `div` wrapping the two tables has been removed.
 
@@ -117,7 +117,7 @@ You should rewrite the data grid styling using these guidelines:
 }
 ```
 
-## 6 List View Markup Changes
+## List View Markup Changes
 
 The markup for list view widgets has also been changed. To simplify the styling, the following classes have been removed:
 
@@ -160,11 +160,11 @@ You should rewrite your list view styling using these guidelines :
 }
 ```
 
-## 7 Scroll Container Markup Changes
+## Scroll Container Markup Changes
 
 All classes starting with `mx-layoutcontainer` have been removed from scroll containers, as they are redundant with their `mx-scrollcontainer` counterparts.
 
-## 8 Link Button Markup Changes
+## Link Button Markup Changes
 
 The markup for link buttons has been made more consistent with other buttons:
 
@@ -175,11 +175,11 @@ The markup for link buttons has been made more consistent with other buttons:
 </a>
 ```
 
-## 9 Input Widgets Markup Changes
+## Input Widgets Markup Changes
 
 Every input widget has an implicit form group structure wrapped around it. Before recent changes, an input widget’s DOM structure could appear disorganized depending on its settings. Now, the form group structure ensures that the input widget is properly aligned inside the data view and properly labeled.
 
-### 9.1 Vertical and Horizontal Classes on DataView
+### Vertical and Horizontal Classes on DataView
 
 Previously, data view was rendering `form-horizontal` class on it when **Form orientation** was set to **Horizontal** and no such class if this option was set to **Vertical**. Now, `form-horizontal` or `form-vertical` are added on **Horizontal** and **Vertical** options respectively. 
 
@@ -201,7 +201,7 @@ This is how the DOM structure of the data view widget is organized now:
 </div>
 ```
 
-### 9.2 Form Group Structure
+### Form Group Structure
 
 Previously, if widget had the **Show caption** option set to **No**, form group structure was missing `form-group` class on its top level `div`:
 
@@ -221,7 +221,7 @@ Now, the `form-group` class stays in place with extra `no-columns` class:
 
 If you have made custom styles using `.form-group` before, this might be a breaking change as `.form-group`  matches with more elements now. You can now target form groups and elements inside them on only horizontal or only vertical forms using `.form-horizontal .form-group` or `.form-vertical .form-group` respectively. 
 
-### 9.3 Input Widget Type Classes
+### Input Widget Type Classes
 
 Form groups now have special class name depending on their widget type:
 
@@ -234,7 +234,7 @@ Form groups now have special class name depending on their widget type:
 * `.mx-textarea`
 * `.mx-textbox`
 
-### 9.4 Examples of Form Group Layout
+### Examples of Form Group Layout
 
 The vertical form group input widget now has a label, input control, and an optional validation message on the same level:
 
@@ -286,41 +286,41 @@ This is the structure of an input widget, in either a horizontal or vertical dat
 </div>
 ```
 
-### 9.5 Read-Only Controls
+### Read-Only Controls
 
 Previously, non-editable input controls of input widgets with **Read-only style** set to **Text** could have been rendered using a `p` or a `label` element with a `form-control-static` class on them. 
 
 Read-only controls with **Read-only style** set to **Text** are now rendered as the following:
 
-```html {linenos=false}
+```html
 <div class="form-control-static">value</div>
 ```
 
-### 9.6 Input Widgets Structure
+### Input Widgets Structure
 
 Previously, some input widgets had a wrapper element surrounding their control. 
 
 These redundant wrappers have been removed, and now bare controls are rendered wherever possible (except radio buttons in a radio buttons group, in which each individual control is wrapped in a `div`).
 
-### 9.7 Examples of Input Controls
+### Examples of Input Controls
 
 A few examples of various input controls are listed below.
 
 Text box:
 
-```html {linenos=false}
+```html
 <input class="form-control" type="text" id="123_abc" />
 ```
 
 Text area:
 
-```html {linenos=false}
+```html
 <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
 Checkbox:
 
-```html {linenos=false}
+```html
 <input type="checkbox" value="" />
 ```
 
@@ -365,9 +365,9 @@ Drop-down:
 </select>
 ```
 
-## 10 Date Picker Widget Changes
+## Date Picker Widget Changes
 
-### 10.1 Input
+### Input
 
 The following changes have been made to the date picker input widget:
 
@@ -376,7 +376,7 @@ The following changes have been made to the date picker input widget:
 * The inner `<div>` element with class `mx-dateinput-input-wrapper` around the input was removed
 * The `<button>` element was placed after the input in the DOM to match the visual order
 
-### 10.2 Calendar
+### Calendar
 
 Because the calendar pop-up window is no longer implemented using the Dojo framework, several changes were made to the calendar pop-up window's internal structure:
 
@@ -427,7 +427,7 @@ The year switcher now has the following structure:
 </div>
 ```
 
-## 11 Reference Selector and Input Reference Set Selector Markup Changes
+## Reference Selector and Input Reference Set Selector Markup Changes
 
 The following changes have been made to the reference selector markup:
 
@@ -439,14 +439,14 @@ The following changes have been made to the input reference set selector markup:
 * The inner `<div>` element (sharing a class ending with `-input-wrapper`) around the input was removed
 * The `<button>` elements have been placed after the input in the DOM to match the visual order
 
-## 12 DropDownButton Widget Cleanup
+## DropDownButton Widget Cleanup
 
 The following changes have been made to the `DropDownButton` widget:
 
 * The class `mx-list` has been removed from the list of terms in the dialog box
 * The class `mx-dropdown` has been removed from the dialog box, as it has nothing to do with drop-down in the search input
 
-## 13 File Manager and Image Uploader Widget Changes
+## File Manager and Image Uploader Widget Changes
 
 Previously, file manager and image uploader widgets were rendered differently on desktop and mobile browsers. On desktop these widgets rendered as an easy-to-style custom HTML snippet, while on mobile they manifested as difficult-to-style native file input.
 
@@ -454,6 +454,6 @@ File manager and image uploader widgets have been changed for consistency. Now, 
 
 Now, file manager and image uploader widgets are always represented as a `div`  element with `mx-compound-control` class on it. Also, the `mx-fileinput` class has been moved to the form group. Inside of the `div`, there is an input with `form-control` class. This input represents a filename of currently selected file. The class `mx-wrapped-label` is gone from the input. Next to the input, there are one of two buttons for uploading and downloading the current file. These buttons have the same classes as before.
 
-## 14 Read More
+## Read More
 
 * [Troubleshoot Atlas UI Changes](/refguide8/migration-atlas/)

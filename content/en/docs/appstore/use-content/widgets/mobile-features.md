@@ -10,15 +10,15 @@ description: "Describes the configuration and usage of the Mobile Features widge
 This widget is deprecated.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Mobile Features](https://marketplace.mendix.com/link/component/48902/) widget can be placed in a page layout and used in hybrid mobile applications.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The widget is designed to be dropped on your primary mobile page template. It overrides functions in the Mendix UI code to hook into Cordova plugins. The features below (with the exception of custom body classes) can be switched on and off.
 
-### 1.2 Features
+### Features
 
 This widget includes the following features that can be used in a Mendix hybrid mobile application:
 
@@ -31,23 +31,23 @@ This widget includes the following features that can be used in a Mendix hybrid 
     * **Online/offline** – when the app goes offline, a configurable class is added to the body of the page
     * **Android and iOS** – depending on the platform, a configurable class is added to the body of the page (used for styling per platform)
 
-### 1.3 Dependencies
+### Dependencies
 
 Be sure that the Cordova plugins below are included in your *config.xml* file, because without them, some features will not work.
 
-#### 1.3.1 Spinner
+#### Spinner
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-spinner" source="npm" />
 ```
 
-#### 1.3.2 Dialog
+#### Dialog
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.2.1" />
 ```
 
-#### 1.3.3 Transitions
+#### Transitions
 
 ```xml
 <gap:plugin name="com.telerik.plugins.nativepagetransitions" source="npm" />
@@ -55,23 +55,23 @@ Be sure that the Cordova plugins below are included in your *config.xml* file, b
 <preference name="CrosswalkAnimatable" value="true" />
 ```
 
-#### 1.3.4 Status Bar
+#### Status Bar
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.3" />
 ```
 
-## 2 Configuration
+## Configuration
 
-### 2.1 Spinner Tab
+### Spinner Tab
 
 This feature can override the normal Mendix spinner (with the loading dots) with a native mobile one.
 
-### 2.2 Dialog Tab
+### Dialog Tab
 
 This feature can override the normal Mendix dialog box with a native mobile one.
 
-### 2.3 Advanced Tab
+### Advanced Tab
 
 * **List view lazy load** – when this feature is turned on, the list view will render the items after the page is loaded, which can greatly improve the user experience
 * **Group box lazy load** – when this feature is turned on, the group box will render the items after the page is loaded, which can greatly improve the user experience

@@ -6,7 +6,7 @@ weight: 71
 description: A tutorial for pushing over the air updates (OTA).
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 This document is for legacy cases when older projects cannot use the Mendix Native Mobile Builder. However, we *strongly suggest* you migrate your project to the Mendix Native Mobile Builder. If you have not migrated your project to the Native Mobile Builder, or are on an Native Template version older than 5.1.9 (Mendix Studio Pro 8.15.0 or older), follow the [Transfer a CLI OTA-Compatible App to the Mendix Native Mobile Builder](/howto8/mobile/how-to-ota/#from-cli-to-ui) section of *How to Release Over the Air Updates with App Center's CodePush* to update your Native Template. If for whatever reason it's not possible to migrate your project to a newer version of Native Template, continue with this guide.
@@ -28,7 +28,7 @@ This how-to teaches you how to do the following:
 * Rollback an update
 * Configure an already pushed update
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -39,9 +39,9 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install your app on a test device or emulator
 * Read the [Offline First Reference Guide](/refguide8/offline-first/)
 
-## 3 When to Use OTA Updates
+## When to Use OTA Updates
 
-### 3.1 Safely Pushing OTA Updates Without Redeploying Your Mendix App {#safeToUpdate}
+### Safely Pushing OTA Updates Without Redeploying Your Mendix App {#safeToUpdate}
 
 It is good practice to *always* redeploy your Mendix App before pushing a new over the air update. However, releasing an OTA update without redeploying your Mendix App to Mendix Cloud in these cases is usually safe:
 
@@ -54,7 +54,7 @@ It is good practice to *always* redeploy your Mendix App before pushing a new ov
 * A new custom JavaScript-only widget or module was added
 * Non-destructive model changes (for more information, see the [Offline First Reference Guide](/refguide8/offline-first/))
 
-### 3.2 When a Full Release is Required
+### When a Full Release is Required
 
 If you have made any changes directly to your iOS or Android project, you will have to fully redeploy you app to the app stores for the changes to take effect. OTA updates do not suffice, and a full release is required, in the following cases:
 
@@ -66,7 +66,7 @@ If you have made any changes directly to your iOS or Android project, you will h
 * The app's launcher icons have been changed
 * The splash screen has been changed
 
-## 4 Deploying An Over the Air Update
+## Deploying An Over the Air Update
 
 Over the air updates let you correct mistakes in your published apps without issuing a new release. For example, imagine you issued a new release and later found a spelling mistake on your welcome screen:
 
@@ -85,13 +85,13 @@ To release a new version OTA, follow these steps:
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-    ```powershell {linenos=false}
+    ```powershell
     cd {path to Native Builder executable file}`
     ```
 
 6. Run the following command to build and push a new update:
 
-    ```text {linenos=false}
+    ```text
     native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
     ```
 
@@ -115,7 +115,7 @@ This command does the following:<br />
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/how-to-ota-cli/phone-success-prompt.png" alt="Update success prompt"   width="300"  class="no-border" >}}
 
-## 5 Rolling Back Updates
+## Rolling Back Updates
 
 Sometimes an update might not perform as expected. Out of the box, when an update fails, the automatic update mechanism will try to recover by switching back to the bundle packaged with your app's binary. In cases such as these, you should update your bundle by either fixing the issue and pushing a new update or by rolling back to the previous version.
 
@@ -123,7 +123,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 1. Get your list of available releases by running the following command:
 
-    ```text {linenos=false}
+    ```text
     `native-builder.exe release list --project-name "CoolApp"`
     ```
 
@@ -131,7 +131,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 2. To roll back from {v2} to {v1} type the following command:
 
-    ```text {linenos=false}
+    ```text
     native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
     ```
 
@@ -139,19 +139,19 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 3. Next time you open your app, you should be greeted with the **Update available** dialog box. Tap **Confirm** to roll your app back on your device.
 
-## 6 Initiating a Partial Initial Rollout
+## Initiating a Partial Initial Rollout
 
-### 6.1 When it is Safe to Rollback an Update
+### When it is Safe to Rollback an Update
 
 For information on rollbacks, see [Safely Pushing OTA Updates Without Redeploying Your Mendix App](#safeToUpdate) above. The cases listed there also apply to rolling back safely.
 
-### 6.2 Doing a Partial Rollout
+### Doing a Partial Rollout
 
 In case you want to test the stability of a new update, it is good practice to test releases on a small number of users before fully rolling them out.
 
 To roll out your app to only *some* of your users, run this command:
 
-```text {linenos=false}
+```text
 `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 ```
 
@@ -159,11 +159,11 @@ Instead of passing a rollout percentage of 100%, you are passing 50%. This means
 
 To fully roll out the update, run this command:
 
-```text {linenos=false}
+```text
 native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
-## 7 Configuring a Pushed Update
+## Configuring a Pushed Update
 
 You might want to reconfigure an update which has already been pushed for the following reasons:
 
@@ -172,17 +172,17 @@ You might want to reconfigure an update which has already been pushed for the fo
 
 The key here is `patch-update`. The `patch-update` command allows you to modify a pushed updated. You can modify things like a rollout percentage, or you can choose to make a release mandatory.
 
-### 7.1 Releasing an Optional Update
+### Releasing an Optional Update
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command:
 
-```text {linenos=false}
+```text
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 
 Instead of the mandatory update pop-up window, you app's users should now be greeted with an optional pop-up window. This window will allow them to choose to install the update or not.
 
-## 8 Preserving your Model's Integrity
+## Preserving your Model's Integrity
 
 Before issuing OTA updates or releasing new versions, please read and understand the [Offline First](/refguide8/offline-first/) reference guide. It is important to understand the implications of offline first.
 
@@ -193,7 +193,7 @@ Mendix Native Apps are offline first. This means you should be cautious when cha
 
 Generally, you should avoid doing destructive changes to offline-synced entities. In the rare cases this is unavoidable, releasing a new app version or doing over the air updates might put your app's users in an unrecoverable state.
 
-### 8.1 Offline Apps and Data Loss
+### Offline Apps and Data Loss
 
 Data loss can occur when OTA updates or new releases coincide with apps being offline. For example, imagine your Mendix developers were hard at work optimizing the data store entity structure by consolidating entities to speed up sync operations. They release that morning. They push a new runtime by pressing the **Run** button in Studio Pro, and then run the Native Builder to push a new update to the apps. All seems to work fine.
 
@@ -201,7 +201,7 @@ That same morning however, your engineers were hard at work gathering field data
 
 This issue is independent from OTA updates and specific to offline apps. Your offline app runs a snapshot of your runtime's model locally. So as a Mendix Developer, you have to think twice before doing major changes that might make the app's state unrecoverable. In the example above the entity model was changed, and when the app attempted to synchronize it failed. This can create unrecoverable situations that will require a re-installation of the app, and can lead to data loss for unsynced data.
 
-## 9 Read More
+## Read More
 
 * [How to Build a Mendix Native App in the Cloud](/howto8/mobile/deploying-native-app/)
 * [Native Builder Reference Guide](/refguide8/native-builder/)

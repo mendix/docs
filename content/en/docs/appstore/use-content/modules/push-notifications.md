@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Push Notifications mo
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Push Notifications Connector](https://marketplace.mendix.com/link/component/3003) module enables notifying end-users of events even when they are not actively using your app. This capability is available in native Android and iOS apps as well as most web browsers.
 
@@ -13,7 +13,7 @@ This module makes it easy for Mendix developers who want to include push notific
 
 For more information on adding push notifications to your apps, see the [Push Notifications](/refguide/mobile/using-mobile-capabilities/push-notifications/) guide.
 
-## 2 Development
+## Development
 
 When using the module in your app, all dependencies are bundled when downloaded from the Marketplace. For developers who want to update and publish a newer version, there are some helpful scripts described below.
 
@@ -24,7 +24,7 @@ These are the development prerequisites:
 
 Install the dependency *.jar* files:
 
-```bash {linenos=false}
+```bash
 $ gradle prepareDeps
 ```
 
@@ -35,13 +35,13 @@ Note that all app `test/userlib` content is cleared, including the *.jar* files 
 
 Check that the versions are up to date for the *.jar* dependencies:
 
-```bash {linenos=false}
+```bash
 $ gradle dependencyUpdate
 ```
 
 Check the security for the *.jar* dependencies:
 
-```bash {linenos=false}
+```bash
 $ gradle dependencyCheckAnalyze
 ```
 
@@ -54,6 +54,6 @@ MXBUILD_VERSION = '7.23.8.58888'
 
 Export the module for the Marketplace, including the dependent *userlib* content (the module will be exported to *dist/{version}/module/PushNotifications.mpk*):
 
-```bash {linenos=false}
+```bash
 $ gradle extractModule
 ```

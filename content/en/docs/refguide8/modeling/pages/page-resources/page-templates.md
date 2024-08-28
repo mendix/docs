@@ -8,13 +8,13 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Page templates are the starting point for creating new pages. Every time a new page is created, a page template is selected as a baseline that can then be edited to match the pages specific needs. 
 
 When creating a new page, the user is presented with an overview of all the compatible page templates in the project. Page templates as document types allow users to edit existing page templates and even create entirely new ones.
 
-## 2 Custom Page Templates
+## Custom Page Templates
 
 By mapping out the common design patterns of a project, a great deal of the initial work involved in creating new pages can be mitigated. 
 
@@ -26,25 +26,25 @@ As the purpose of page templates is to facilitate design rather than functionali
 
 Page template properties are described in the sections below.
 
-## 3 Common Properties
+## Common Properties
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-## 4 Designer Properties
+## Designer Properties
 
 {{% snippet file="/static/_includes/refguide8/designer-properties.md" %}}
 
-## 5 General Properties
+## General Properties
 
-### 5.1 Display Name
+### Display Name
 
 The display name determines by what name the page template will appear in the **Create Page** wizard.
 
-### 5.2 Image
+### Image
 
 The image selected will appear in the **Create Page** wizard. Selecting a representative image will allow users to easily distinguish between page templates. If left blank, the template will display an empty white field. Any image selected will be scaled down to 200x200 pixels.
 
-### 5.3 Shown When
+### Shown When
 
 Depending on the context in which a page is created, the user is presented with a different set of page templates to choose from. This setting determines which set the page template belongs to.
 
@@ -56,11 +56,11 @@ Generating select pages | The page templates is available when the user generate
 
 This setting may also place extra restrictions on the template. Page templates intended as new or edit pages require exactly one top-level data view be present. Page templates intended as Select pages require exactly one list view, data grid, or template grid. 
 
-### 5.4 Layout Type
+### Layout Type
 
 [Layouts](/refguide8/layout/) are all assigned a type in their properties. This type determines in which profiles the layout can be used. To ensure that a user can always map a page template to a compatible layout during page creation, a page template must be assigned one of these same layout types. In practice, this setting will affect in which profile tab of the **Create Page** wizard the page template is displayed. Additionally, it will automatically restrict the default layout setting to layouts of the same type.
 
-### 5.5 Preview Layout
+### Preview Layout
 
 Although page templates and layouts can be mixed and matched, this setting will determine which layout will be used to display the template in the editor. It also has a minor effect on the page creation process: if the template describes contents for layout [placeholders](/refguide8/placeholder/) that are not present in the previously selected layout, the first compatible layout will be pre-selected in the **Create Page** wizard. For a full description of the interaction between a page template and its preview layout, see [Layout](/refguide8/layout/).
 

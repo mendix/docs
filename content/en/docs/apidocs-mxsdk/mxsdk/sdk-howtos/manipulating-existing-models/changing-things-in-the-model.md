@@ -3,11 +3,11 @@ title: "Change Things in the Model"
 url: /apidocs-mxsdk/mxsdk/changing-things-in-the-model/
 ---
 
-## 1 Introduction
+## Introduction
 
 All units and elements can be freely altered after loading as long as you adhere to the type system. The properties `id`, `container`, `structureTypeName`, `isLoaded` and `unit`, as defined on the [IStructure](https://apidocs.rnd.mendix.com/modelsdk/latest/interfaces/istructure.html) object, should not be used: these are (mostly) for internal purposes.
 
-## 2 Creating New Units and Elements
+## Creating New Units and Elements
 
 To create new units, you need to pass the parent structural unit to the constructor.
 
@@ -37,13 +37,13 @@ function createEntity(domainModel: domainmodels.DomainModel, entityName: string,
 }
 ```
 
-## 3 Element States {#es}
+## Element States {#es}
 
 An element can be in four different states. The state determines what can be done with the element.
 
-### 3.1 States
+### States
 
-#### 3.1.1 New
+#### New
 
 The *new* state signifies that an element has been created and has not yet been added to a model. A *new* element does not need to be added to a model, it can be "forgotten".
 
@@ -56,7 +56,7 @@ When a *new* element is added to a *detached* element, the *new* element and its
 
 An element in the *new* state cannot become *detached*.
 
-#### 3.1.2 Attached
+#### Attached
 
 The *attached* state signifies that an element is part of a model or is part of a *detached* element.
 
@@ -64,7 +64,7 @@ When an element becomes part of a model, it gets the *attached* state. All acces
 
 If an element gets the *attached* state, all of its parts also get the *attached* state.
 
-#### 3.1.3 Detached
+#### Detached
 
 The *detached* state signifies that an element has been part of a model and is temporarily not part of a model.
 
@@ -87,7 +87,7 @@ A *detached* element can be attached to an *attached* element. A *detached* elem
 
 If a *detached* element is attached to a model, the element becomes *attached*. All of its parts that have the *attached* state stay in this state.
 
-#### 3.1.4 Deleted
+#### Deleted
 
 The *deleted* state signifies that the element has been deleted from the model.
 
@@ -95,7 +95,7 @@ All write access to a *deleted* element is forbidden and will throw an error.
 
 All the parts of a *deleted* element are also *deleted* and cannot be accessed. If an element gets the state *deleted*, all of its parts will also get the *deleted* state.
 
-### 3.2 Overview of Allowed State Changes
+### Overview of Allowed State Changes
 
 | Starting State | To *new*    | To *attached* | To *detached* | To *deleted* |
 | -------------- | ----------- | ------------- | ------------- | ------------ |
@@ -104,6 +104,6 @@ All the parts of a *deleted* element are also *deleted* and cannot be accessed. 
 | *detached*     | Not allowed | Allowed       | -             | Not allowed  |
 | *deleted*      | Not allowed | Not allowed   | Not allowed   | -            |
 
-## 4 Next Step
+## Next Step
 
 Continue with [How to Close the Server Connection](/apidocs-mxsdk/mxsdk/closing-the-server-connection/).

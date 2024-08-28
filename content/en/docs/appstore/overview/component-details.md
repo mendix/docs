@@ -6,13 +6,13 @@ no_list: false
 description_list: true
 description: "Presents information on the component details page."
 ---
-## 1 Introduction
+## Introduction
 
 Clicking the tile of a [Marketplace](https://marketplace.mendix.com/) component brings you to its details page with the sections described below.
 
 {{< figure src="/attachments/appstore/overview/component-details/component-details.png" >}}
 
-## 2 Header {#header}
+## Header {#header}
 
 The header for a component presents the following details:
 
@@ -48,7 +48,7 @@ The **Support** section presents the category of support Mendix offers for the c
 
 A **GitHub** link will take you to the GitHub source files of the component.
 
-## 3 Tabs
+## Tabs
 
 The component details page also presents the following tabs:
 
@@ -57,7 +57,7 @@ The component details page also presents the following tabs:
     * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
     * Each version can be downloaded by clicking **Download.**
-    * If any version has the label **React-Ready** next to it, it means this version is optimized for React Client applications.
+    * If any version has the <text class="badge badge-pill badge-react" style="margin-left:0px">{{< icon name="react" color="blue" >}} REACT-CLIENT</text> label next to it, it means this version is optimized for React Client applications. This label is only used for widgets.
 * **Reviews** – This tab shows user reviews of the component.
     * You can browse, sort by review date, and filter by ratings for insights on the component.
     * You can select the **Only show my reviews** checkbox to check your own reviews.

@@ -3,15 +3,15 @@ title: "OQL LOWER"
 url: /refguide/oql-lower/
 ---
 
-## 1 Description
+## Description
 
 The `LOWER` function converts all uppercase characters in a given string to lowercase and returns the result.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 LOWER ( expression )
 ```
 

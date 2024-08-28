@@ -5,7 +5,7 @@ description: "Describes the supported Mendix Runtime monitoring actions."
 #The anchor request-handlers below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 For on-premises and local deployments of Mendix, the Mendix Runtime monitoring actions can be called by sending a JSON request to the admin handler. This is accomplished by sending a request to the admin port which is specified in the application configuration (the default port is 8090).
 
@@ -31,15 +31,15 @@ The M2EE password is NOT the super administrator password, but a separate passwo
 
 The next sections explain which monitoring actions are supported.
 
-## 2 Current Executions
+## Current Executions
 
-### 2.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_current_runtime_requests", "params":{} }
 ```
 
-### 2.2 Example Response
+### Example Response
 
 ```json
 {
@@ -101,7 +101,7 @@ The next sections explain which monitoring actions are supported.
 }
 ```
 
-### 2.3 Return Values
+### Return Values
 
 This request returns the current executions of actions known by the Mendix Runtime. Actions can include microflows, Java actions, web service calls, and scheduled events. For each execution the following is reported:
 
@@ -117,15 +117,15 @@ This request returns the current executions of actions known by the Mendix Runti
 * The "user" associated with the session executing the action – for a non-user session the name "System" is returned
 * The "action_stack" for this execution – for each action in this stack detailed information is displayed, for example the current activity and name of a microflow
 
-## 3 Runtime Statistics
+## Runtime Statistics
 
-### 3.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "runtime_statistics", "params":{} }
 ```
 
-### 3.2 Example Response
+### Example Response
 
 ```json
 {
@@ -214,9 +214,9 @@ This request returns the current executions of actions known by the Mendix Runti
 }
 ```
 
-### 3.3 Return Values
+### Return Values
 
-#### 3.3.1 Requests{#request-handlers}
+#### Requests{#request-handlers}
 
 Displays information about the request per handler:
 
@@ -230,11 +230,11 @@ For each handler you will get two pieces of information:
 * The value field shows the number of requests per handler.
 * The last_request_timestamp field shows the timestamp in milliseconds of the last handled request. If there are no requests handled, this field shows the moment the handler is registered.
 
-#### 3.3.2 Cache
+#### Cache
 
 Shows the total number of objects which are currently part of the runtime state (all session together). The runtime state either resides in memory (non-clustered runtime) or in Redis or the database (clustered runtime). Too many objects in the state could slow down the performance of the Mendix Runtime.
 
-#### 3.3.3 Sessions
+#### Sessions
 
 The "user_sessions" sections shows the current user sessions with their user agents.
 
@@ -244,11 +244,11 @@ The other sections show the number of sessions per category. Categories are:
 * "named_user_sessions" (the number of non-anonymous concurrent sessions)
 * "anonymous_sessions" (the number of anonymous concurrent sessions)
 
-#### 3.3.4 Connectionbus
+#### Connectionbus
 
 Number of database requests. Distinguishes between "select", "update", "insert", and "delete" commands and started database transactions.
 
-#### 3.3.5 Memory
+#### Memory
 
 {{% alert color="warning" %}}
 
@@ -271,15 +271,15 @@ If you are automatically processing the "memorypools" section to, for example, d
 If do want to develop a strategy on interpreting these pools anyway based on Java version: you can get the Java version from the 'about' admin action.
 {{% /alert %}}
 
-## 4 State Statistics {#state}
+## State Statistics {#state}
 
-### 4.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "cache_statistics", "params":{} }
 ```
 
-### 4.2 Example Response
+### Example Response
 
 ```json
 {
@@ -303,7 +303,7 @@ If do want to develop a strategy on interpreting these pools anyway based on Jav
 }
 ```
 
-### 4.3 Return Values
+### Return Values
 
 This monitoring action gives more detailed information about objects which are currently in the state of the Mendix Runtime: 
 
@@ -312,15 +312,15 @@ This monitoring action gives more detailed information about objects which are c
 
 This information can be an aid in figuring out which objects cause a lot of memory usage.
 
-## 5 Server Statistics
+## Server Statistics
 
-### 5.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "server_statistics", "params":{} }
 ```
 
-### 5.2 Example Response
+### Example Response
 
 ```json
 {
@@ -346,7 +346,7 @@ This information can be an aid in figuring out which objects cause a lot of memo
 }
 ```
 
-### 5.3 Return Values
+### Return Values
 
 The server statistics monitor action gives information about the embedded Jetty web server. The "jetty" section lists the number of current open connections and the maximum number of open connections. In addition, it lists the maximum idle time of the connection before it is closed, if Jetty is running under normal circumstances.
 
@@ -354,15 +354,15 @@ The server statistics monitor action gives information about the embedded Jetty 
 
 The "threadpool" section gives information about the threadpool of the handler which processes all requests which go through the runtime port. See the [Jetty QueuedThreadPool documentation](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/util/thread/QueuedThreadPool.html) for more information.
 
-## 6 Logged-In Users
+## Logged-In Users
 
-### 6.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_logged_in_user_names", "params":{} }
 ```
 
-### 6.2 Example Response
+### Example Response
 
 ```json
 {
@@ -374,19 +374,19 @@ The "threadpool" section gives information about the threadpool of the handler w
 }
 ```
 
-### 6.3 Return Values
+### Return Values
 
 Shows which users are currently logged in. If a user has multiple sessions, this user will be listed once for every session.
 
-## 7 Thread Stack Traces {#thread}
+## Thread Stack Traces {#thread}
 
-### 7.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "get_all_thread_stack_traces", "params":{} }
 ```
 
-### 7.2 Example Response
+### Example Response
 
 ```json
 {
@@ -436,19 +436,19 @@ Shows which users are currently logged in. If a user has multiple sessions, this
 }
 ```
 
-### 7.3 Return Values
+### Return Values
 
 Returns all the current thread stack traces by name. This is useful for low level analysis of what is happening in the application. Use the "get_current_runtime_executions" request to retrieve information at a higher level (microflows and other actions).
 
-## 8 Runtime Status {#runtime-status}
+## Runtime Status {#runtime-status}
 
-### 8.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "runtime_status", "params":{} }
 ```
 
-### 8.2 Example Response
+### Example Response
 
 ```json
 {
@@ -459,7 +459,7 @@ Returns all the current thread stack traces by name. This is useful for low leve
 }
 ```
 
-### 8.3 Return Values
+### Return Values
 
 Returns the current Mendix Runtime status. Possible status values are:
 
@@ -472,15 +472,15 @@ Returns the current Mendix Runtime status. Possible status values are:
 
 This information can be used to track what state the Mendix Runtime is in when the command to start or stop was given, or to check whether the runtime is still running.
 
-## 9 Check Health {#check-health}
+## Check Health {#check-health}
 
-### 9.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "check_health", "params":{} }
 ```
 
-### 9.2 Example Response
+### Example Response
 
 ```json
 {
@@ -492,7 +492,7 @@ This information can be used to track what state the Mendix Runtime is in when t
 }
 ```
 
-### 9.3 Return Values
+### Return Values
 
 In Mendix Studio Pro, a [health check microflow](/refguide/app-settings/) can be configured. This microflow can report on the functional status of the application; does the general functionality of the application work, and are the necessary remote services available?
 
@@ -504,15 +504,15 @@ The health check microflow gets invoked multiple times per minute. Therefore, it
 This request can only be executed when the Mendix Runtime status is "running" (see [Runtime Status](#runtime-status) above).
 {{% /alert %}}
 
-## 10 About Runtime
+## About Runtime
 
-### 10.1 Request
+### Request
 
-```json {linenos=false}
+```json
 {"action" : "about", "params":{} }
 ```
 
-### 10.2 Example Response
+### Example Response
 
 ```json
 {
@@ -530,6 +530,6 @@ This request can only be executed when the Mendix Runtime status is "running" (s
 }
 ```
 
-### 10.3 Return Values
+### Return Values
 
 Returns feedback about the Mendix Runtime.

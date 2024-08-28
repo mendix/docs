@@ -11,11 +11,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction {#Introduction}
+## Introduction {#Introduction}
 
 The [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) is an OData connector written specifically to integrate with SAP back-end systems like SAP Business Suite (SAP ERP 6.0), SAP S/4HANA, SAP S/4HANA Cloud, and SAP SuccessFactors. The OData Connector for SAP solutions can be used for all SAP back-end systems that have OData enabled, both in the cloud and on-premises. For ECC, SAP Gateway is used to expose the traditional BAPI interface as an OData service.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 When running the Mendix application on SAP Business Technology Platform (SAP BTP), you can choose to use the SAP Destination Service to gain access to your on-premises SAP instance. The SAP Destination Service can be configured to invoke the SAP Connectivity Service in SAP BTP to find a route to your OData service residing on-premises. This route is configured from the SAP Cloud Connector running as an agent in your on-premises SAP back-end. If no route is configured, the OData Connector for SAP solutions will route requests to the public OData service. For more information, see the [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) documentation and the [OData Connector for SAP Solutions](https://marketplace.mendix.com/link/component/74525/Mendix/SAP-OData-Connector).
 
@@ -23,17 +23,17 @@ When running the Mendix application on SAP Business Technology Platform (SAP BTP
 The SAP Destination Service replaces the SAP Cloud Connector flag which was used in previous version of the OData Connector for SAP solutions.
 {{% /alert %}}
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 The OData Connector for SAP solutions connector requires an app built with the correct version of Mendix Studio Pro. The latest version of the OData Connector requires Mendix Studio Pro 9.24.0 or above. Previous versions of the connector, compatible with earlier versions of Mendix Studio Pro, are available on the **Releases** tab of the connector page in the Mendix Marketplace.
 
 To authenticate with SAP, you must also obtain authorization credentials for the [SAP NetWeaver (ES5)](https://sapes5.sapdevcenter.com/).
 
-## 2 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the [OData Connector for SAP solutions](https://marketplace.mendix.com/link/component/74525) into your app.
 
-## 3 Configuration
+## Configuration
 
 Once you have downloaded the OData Connector for SAP solutions from the Marketplace, it will be imported into your app. You will find it in the App Explorer under **{App name}** > **Marketplace modules** > **SAPODataConnector**.
 
@@ -42,7 +42,7 @@ This how-to teaches you how to do the following:
 * Configure the OData Connector for SAP solutions
 * Display product data from the SAP OData service GWSAMPLE_BASIC in your Mendix app
 
-### 3.1 Getting an SAP Data Model
+### Getting an SAP Data Model
 
 You can use the [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a data model from the metadata of your OData service, exposed from your SAP back-end system, or from APIs in the SAP API Business Hub or the SAP Catalog Service. For more details see [Model Creator for SAP Integrations](/appstore/services/use-sap-model-creator/).
 
@@ -79,11 +79,11 @@ In this example, you will display a list of products from the GWSAMPLE_BASIC ODa
 
 For more information, see [Model Creator for SAP Integrations](/appstore/services/use-sap-model-creator/).
 
-### 3.2 Using the OData Connector for SAP Solutions
+### Using the OData Connector for SAP Solutions
 
 In this section, you will learn how to implement the data connector in your Mendix app. These steps assume you are using a blank Mendix app with a module called MyFirstModule.
 
-#### 3.2.1 Creating a Microflow {#microflow}
+#### Creating a Microflow {#microflow}
 
 To create the microflow for this retrieval, follow these steps:
 
@@ -117,7 +117,7 @@ The final result of your microflow should look like this:
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-odata-connector/get-list.png" class="no-border" >}}
 
-#### 3.2.2 Creating a Page
+#### Creating a Page
 
 To create a page to show the objects in a list, follow these steps:
 
@@ -135,7 +135,7 @@ To create a page to show the objects in a list, follow these steps:
 
 You can now run your app and see a list of the products available in the **GWBASIC_SAMPLE** application.
 
-#### 3.2.3 Running OData Actions with the Mendix Task Queue
+#### Running OData Actions with the Mendix Task Queue
 
 You can run OData actions asynchronously by using the [Mendix Task Queue](/refguide/task-queue/). To use any of the OData actions through the Task Queue, follow these steps:
 
@@ -145,15 +145,15 @@ You can run OData actions asynchronously by using the [Mendix Task Queue](/refgu
 
     {{< figure src="/attachments/appstore/use-content/modules/sap-odata-connector/task-queue.png" class="no-border" >}}
 
-## 4 Troubleshooting
+## Troubleshooting
 
 If you encounter any issues while using the OData Connector for SAP solutions, use the following troubleshooting tips to help you solve them.
 
-### 4.1 Getting Destination Failed
+### Getting Destination Failed
 
 If you cannot fetch the destination, it could be for one of the following reasons.
 
-#### 4.1.1 XSUAA token failed
+#### XSUAA token failed
 
 The JWT token for the currently signed-in user is not valid. You can resolve this by getting a valid token for the user.
 
@@ -161,79 +161,79 @@ Firstly, refresh the token to fetch a valid token for the user.
 
 If refreshing the token does not work, check that the user is a valid SAP Business Technology Platform (SAP BTP) user.
 
-#### 4.1.2 Destination name not found
+#### Destination name not found
 
 The destination name is provided in the ‘GetDestination’ Java action. Check that a valid destination is provided in a ‘GetDestination’ Java action in the microflow.
 
-#### 4.1.3 Unauthorized error
+#### Unauthorized error
 
 This might happen if the client ID and secret pair is invalid. The client ID and secret are fetched from SAP Cloud Portal using the VCAP environment details.
 
-### 4.2 HTTP 401 Error While Running OData Function 
+### HTTP 401 Error While Running OData Function 
 
 If you receive a 401 error code from your OData call, it could be for one of the following reasons.
 
-#### 4.2.1 Invalid credentials while using Basic Authentication with request params
+#### Invalid credentials while using Basic Authentication with request params
 
 Check that the correct username and password are set on the ‘Add basic authentication’ activity when using request params in the microflow.
 
-#### 4.2.2 Destination service is not set up correctly
+#### Destination service is not set up correctly
 
 Destination services are defined in SAP BTP. Check that the destination service is running correctly and you can establish a connection with the credentials provided.
 
-#### 4.2.3 Invalid bearer token sent
+#### Invalid bearer token sent
 
 In case of OAuth authentication, the bearer token received with the destination might be invalid or expired. Retry or check the destination service created.
 
-#### 4.2.4 User permissions not provided
+#### User permissions not provided
 
 The role given to the user on SAP BTP might not allow them to access the destination service or the database.
 
-### 4.3 HTTP 500 Error While Running OData Function 
+### HTTP 500 Error While Running OData Function 
 
 If you receive a 500 error code from your OData call, check the issue below.
 
-#### 4.3.1 Database is not running 
+#### Database is not running 
 
 The Database exposed using OData might not be running as expected. Check the database connection.
 
-### 4.4 HTTP 503 Error While Running OData Function 
+### HTTP 503 Error While Running OData Function 
 
 If you receive a 503 error code from your OData call, check the issue below.
 
-#### 4.4.1 OData application is down
+#### OData application is down
 
 The OData application which is exposing the service is not running as expected. Check the application status.
 
-### 4.5 HTTP 404 Error While Running OData Function 
+### HTTP 404 Error While Running OData Function 
 
 If you receive a 404 error code from your OData call, it could be for one of the following reasons.
 
-#### 4.5.1 Destination service is not running
+#### Destination service is not running
 
 Destination services are defined in SAP Cloud Portal. Check that the destination service is running correctly.
 
-#### 4.5.2 Invalid Query
+#### Invalid Query
 
 Check the base URL (while using Request Params) and parameters inside the Query text in any OData function Java action.
 
-### 4.6 Other Issues
+### Other Issues
 
 The following techniques can help in identifying issues which are causing your OData connector to fail.
 
-#### 4.6.1 Setting Application Log level
+#### Setting Application Log level
 
 You can get more information from your app by setting the log level. For this you will need to have the Marketplace module [SAP Logging Connector](https://marketplace.mendix.com/link/component/110219/) set up in your app. For more information see the [SAP Logging Connector](/appstore/modules/sap/sap-logger/) documentation.
 
 To set log level for an application deployed to SAP BTP, go to ‘Model Options’ in the environment and set ‘SapApplicationLogs.SapLogLevel’ to the required level. (Debug, Info, Error, Warn, or Trace).
 
-#### 4.6.2 Remote Debugging
+#### Remote Debugging
 
 To perform Java debugging, you must do the following:
 
 1. Set the following environment properties.
 
-    ```yml
+    ```yaml
     DEVELOPMENT_MODE= true
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
     ```
@@ -272,11 +272,11 @@ To perform Java debugging, you must do the following:
 
     {{< figure src="/attachments/appstore/use-content/modules/sap-odata-connector/debug-in-ide.png" alt="Debug configuration screen in Eclipse" class="no-border" >}}
 
-## 5 Technical Reference
+## Technical Reference
 
 To help you work with the OData Connector for SAP solutions, the following sections of this document list the available [activities](#activities), [parameters](#parameters), and [domain models](#domain-models) that you can use in your application.
 
-### 5.1 Activities {#activities}
+### Activities {#activities}
 
 The OData Connector for SAP solutions module gives you access to additional actions which you can assign to your Microflow Activities. These give you access to the OData services.
 
@@ -292,9 +292,9 @@ Some inputs are necessary for the connector to work and these are marked **(requ
 
 A more detailed description of the parameters is in the [Parameters](#parameters) section.
 
-#### 5.1.1 Entity and Attribute Manipulation{#EntityManipulation}
+#### Entity and Attribute Manipulation{#EntityManipulation}
 
-##### 5.1.1.1 Get List
+##### Get List
 
 The Get List action gets a list of objects described by a type of entity in the domain model from the SAP OData service. This action uses filters (SQL queries) to control which objects are returned. The entity collection is described by an entity in the SAP service domain model which you have imported into your app.
 
@@ -313,13 +313,13 @@ The Get List action gets a list of objects described by a type of entity in the 
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
 The **Response Type** would be GWSAMPLE_BASIC.Product. You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
-##### 5.1.1.2 Get Entry
+##### Get Entry
 
 The Get Entry operation gets a single existing entity instance from the OData service.
 
@@ -338,13 +338,13 @@ For example, this connector can get details of a product using the **GWSAMPLE_BA
 
 For a product with the reference **HT-1000**, the URL would be set to:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '(''HT-1000'')'
 ```
 
 This produces the GET request `https://sapes5.sapdevcenter.com/sap/opu/odata/iwbep/GWSAMPLE_BASIC/ProductSet('HT-1000')` and, if the product exists, returns it.  You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
-##### 5.1.1.3 Create
+##### Create
 
 The Create operation creates a new object in the SAP back-end system using the OData service. The object is described by an entity in the SAP service domain model.
 
@@ -374,7 +374,7 @@ In the image below, creating a **Parent** object via the OData Connector for SAP
 
 For example, this connector can be used to create a product using the **GWSAMPLE_BASIC** service. In this case the **Query** is
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet)
 ```
 
@@ -386,7 +386,7 @@ The **Odata object** is an object of entity type **Product**. This can be create
 
 You will need to pass authentication using **Request Parameters** and the **Add basic authentication** action described in [Helper Actions](#HelperActions), below.
 
-##### 5.1.1.4 Delete
+##### Delete
 
 The Delete operation deletes an existing entity instance in the SAP back-end system using the OData service.
 
@@ -402,7 +402,7 @@ The Delete operation deletes an existing entity instance in the SAP back-end sys
 
 For example, this connector can delete a product using the **GWSAMPLE_BASIC** service.
 
-##### 5.1.1.5 Execute entry
+##### Execute entry
 
 The Open Data Protocol (OData) includes standard CRUD (Create, Retrieve, Update, and Delete) operations that map to the HTTP methods POST, GET, PUT/MERGE, and DELETE. These are supported in the OData Connector for SAP solutions as individual activity actions. In addition, SAP allows you to use additional custom operations (service operations) which cannot be mapped to the standard CRUD operations. These service operations are exposed through the OData service and are invoked by the HTTP methods GET or POST.
 
@@ -425,7 +425,7 @@ The Execute entry action allows you to invoke these service operations on the SA
     * Return type - Object: an object which has the same type as the entity type which was passed as Response type
     * Variable - the name which you would like to give to the object which is returned by the OData service operation
 
-##### 5.1.1.6 Execute list
+##### Execute list
 
 This performs the same action as the Execute entry action, but this is used where the expected result from the service operation is a list, rather than a single item.
 
@@ -442,7 +442,7 @@ This performs the same action as the Execute entry action, but this is used wher
     * Return type - List
     * Variable - the name which you would like to give to the list of objects which is returned by the OData service operation
 
-##### 5.1.1.7 Refresh
+##### Refresh
 
 This action refreshes local data which is cached in objects within the Mendix domain model and may have become 'dirty' or in some other way is not the same as the data held in the SAP back-end system.
 
@@ -456,7 +456,7 @@ This action refreshes local data which is cached in objects within the Mendix do
     * Return type - Boolean
     * Variable - the name which you would like to give to the Boolean variable which indicates the success or failure of the refresh action.
 
-##### 5.1.1.8 Update {#update-put}
+##### Update {#update-put}
 
 The Update operation uses the HTTP PUT method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PATCH method instead, see [Update_PATCH](#update-patch).
 
@@ -472,7 +472,7 @@ The Update operation uses the HTTP PUT method to change the attributes of an exi
 
 For example, this connector can update details of a product using the **GWSAMPLE_BASIC** service.
 
-##### 5.1.1.9 Update_PATCH {#update-patch}
+##### Update_PATCH {#update-patch}
 
 The Update_PATCH operation uses the HTTP PATCH method to change the attributes of an existing entity instance in the SAP back-end system using the OData service. If your use case requires that you use the HTTP PUT method instead, see [Update](#update-put).
 
@@ -484,9 +484,9 @@ The Update_PATCH operation uses the HTTP PATCH method to change the attributes o
     * Return type - Boolean
     * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the update action
 
-#### 5.1.2 Helper Actions {#HelperActions}
+#### Helper Actions {#HelperActions}
 
-##### 5.1.2.1 Create request params
+##### Create request params
 
 This creates a RequestParams object which can be used to control the behavior of other SAP actions such as Get entry. It is also needed before you can create HTTP headers using **Add header** or **Add basic authentication**.
 
@@ -495,7 +495,7 @@ This creates a RequestParams object which can be used to control the behavior of
     * Return type - SAPODataConnector.RequestParams
     * Variable - the name which you would like to give to the RequestParams object which is returned by this action
 
-##### 5.1.2.2 Add header
+##### Add header
 
 One or more headers can be provided to the OData Connector for SAP solutions actions by adding them to RequestParameters. HTTP headers may be required to control the behavior of service operations that you invoke with Execute entry or Execute list.
 
@@ -513,7 +513,7 @@ For example, a service operation may require your email address (`me@here.com`) 
 
 This header is automatically associated with the RequestParams object.
 
-##### 5.1.2.3 Add basic authentication
+##### Add basic authentication
 
 This action is a specialized version of the Add header action. It allows an authentication request to be made without having to manually encode the parameters as Base64. This header will have a name of 'Authorization' and a value which is the encoding of the Username and Password passed to the action.
 
@@ -525,7 +525,7 @@ This action is a specialized version of the Add header action. It allows an auth
     * Return type - Boolean
     * Variable - the name which you would like to give to the Boolean variable indicating the success or failure of the authentication action
 
-##### 5.1.2.4 Get Latest Http Response
+##### Get Latest Http Response
 
 This action returns the HTTP Response to the last OData action that was performed. It is mainly used within exception handling to manage any errors which are returned to the microflow.
 
@@ -538,7 +538,7 @@ For example, you could catch an exception on **Get List** and display an error m
 
 {{< figure src="/attachments/appstore/use-content/modules/sap-odata-connector/errorhandling-sapodataconnector.png" class="no-border" >}}
 
-##### 5.1.2.5 Get cloud connector info
+##### Get cloud connector info
 
 {{% alert color="info" %}}
 This action is included for backward compatibility. The information about your cloud connector connection is available in the **Destination** entity after you have performed a **Get Destination** action. See [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/) for more information.
@@ -555,7 +555,7 @@ This creates a **CloudConnectorInfo** object and fills the values for **ProxyHos
 If your app is not running on SAP BTP, this action will throw an error.
 {{% /alert %}}
 
-### 5.2 Parameters {#parameters}
+### Parameters {#parameters}
 
 Each [activity](#activities) requires a number of parameters which will be categorized as either **Input** or **Output**. Here is an example of the parameters which are required for the **Get List** action.
 
@@ -575,17 +575,17 @@ Within the edit box, you can type your parameter. As is standard in Mendix, cert
 
 Press <kbd>Enter</kbd> to select the highlighted item.
 
-#### 5.2.1 Input Parameters
+#### Input Parameters
 
-##### 5.2.1.1 Odata object
+##### Odata object
 
 This is an object which is based on an entity type which is a specialization of the OdataObject entity in the OData Connector for SAP solutions domain model. These entities are the ones created in the domain models which you can download from the Marketplace or import via the Model Creator for SAP Integrations. Objects which are not based on a specialization of the OdataObject entity cannot be used here.
 
-##### 5.2.1.2 Response type
+##### Response type
 
 When an object is returned from an OData service, your app needs to know to which entity type it should map the returned data. The Response type is passed so that the response from the SAP back-end system can be validated. The Select… button will present you with a list of possible entities. This should match the Collection that you used in the query or URL.
 
-##### 5.2.1.3 Destination
+##### Destination
 
 Destination is the name of the object of type SAPODataConnector.Destination where the details of a destination have been stored by a *Get Destination* action. An SAP Destination Service enables your Mendix app to use services defined in the SAP BTP cockpit without needing to know all the technical details of the endpoint. You can find more information about the SAP Destination Service in [SAP Destination Service](/developerportal/deploy/sap-cloud-platform/sap-destination-service/).
 
@@ -593,13 +593,13 @@ Destination is the name of the object of type SAPODataConnector.Destination wher
 The SAP Destination Service will only provide the correct information when run on SAP BTP. To test your app on your local machine you will have to use a URL to connect directly to an OData service which is available to you.
 {{% /alert %}}
 
-##### 5.2.1.4 Query{#Query}
+##### Query{#Query}
 
 This is the OData query which identifies what data should be returned. This query formats an SQL query such as `SELECT * FROM EntitySet WHERE (foo) ORDER BY (bar) …` into an OData GET request like `GET ~/EntitySet?$filter=foo&$orderby=bar…`. It is the responsibility of the developer to ensure that the query is constructed correctly.
 
 The format of the Query is:
 
-```javascript {linenos=false}
+```javascript
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '?' + 'QUERYPARAMETERS'
 ```
 
@@ -620,7 +620,7 @@ If you are using a Destination configured by the SAP Destination Service, then t
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
@@ -630,7 +630,7 @@ Note that the request has to be URL encoded so that, for example, spaces have to
 
 This is the equivalent of the SQL SELECT statement:
 
-```sql {linenos=false}
+```sql
 SELECT * FROM SalesOrderSet WHERE Category='Notepads'
 ```
 
@@ -638,7 +638,7 @@ The `$inlinecount=allpages` clause asks OData to return a count of the number of
 
 You can find more information about OData queries in [OData Query Options](/refguide/supported-odata-operations/).
 
-##### 5.2.1.5 Url
+##### Url
 
 This is the parameter used within an action when:
 
@@ -648,7 +648,7 @@ This is the parameter used within an action when:
 
 When you are referencing an object, the format of the URL is:
 
-```javascript {linenos=false}
+```javascript
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 
@@ -664,11 +664,11 @@ If you are using a *Destination* configured by the SAP Destination Service, then
 
 Alternatively, you can obtain the entire URL from attributes of an object. For example, the **meta_objectURI** attribute of an object is the full URL to the instance of the object which is held by the OData service.
 
-##### 5.2.1.6 Http method
+##### Http method
 
 This is the method used to obtain data from the OData service using a service operation, when standard CRUD methods cannot be used. This is either **GET** or **POST**.
 
-##### 5.2.1.7 Function parameters
+##### Function parameters
 
 These are the parameters which are required when a service operation (function) is invoked by Execute list or Execute entry to obtain data from the OData service when standard CRUD methods cannot be used. These parameters are defined by the OData service operation.
 
@@ -685,7 +685,7 @@ For example: in the **GWSAMPLE_BASIC** service domain model there is a function 
 
 To use this function you will need to create an object of entity type **SalesOrder_InvoiceCreatedParameters** with the correct values for **SalesOrderID** and **postParameterInline**, using the Create object action. You can then use these parameters when you invoke the function using Execute list.
 
-##### 5.2.1.8 Request parameters
+##### Request parameters
 
 These are parameters which are used within the OData Connector for SAP solutions action to override the default behavior of the action. This should be passed as an object of entity type RequestParams.
 
@@ -709,7 +709,7 @@ For example, you may be initiating a service operation using the Execute entry a
 
 Request parameters can also be set to `empty` if no headers are needed and the default action behavior is used.
 
-##### 5.2.1.9 Parent
+##### Parent
 
 This is an object which should be associated as the parent of a list of objects returned from the Get List action.
 
@@ -734,31 +734,31 @@ There is no data content validation on the Parent parameter. This means you will
 
 For example, you want to retrieve all the **SalesOrderLineItems** which are associated with a **SalesOrder** via the **ToLineItems_SalesOrder_SalesOrderLineItem** association. By passing the **ToLineItemsDeferred** URL to the Get List action as the URL and passing the **SalesOrder** entity as Parent, the Get List action will set the **ToLineItems_SalesOrder_SalesOrderLineItem** association between all the **SalesOrderLineItem** objects retrieved and the **SalesOrder**.
 
-##### 5.2.1.10 Result info
+##### Result info
 
 This is an object of type ResultInfo where the number of items in the list is returned. It is used for the Get List action. Note that for a Get List the query should include `$inlinecount=allpages` in order to return the total number of items in the list.
 
 Set this to *empty* if it is not required.
 
-##### 5.2.1.11 Username
+##### Username
 
 This is a username used for creating an authorization HTTP header field.
 
-##### 5.2.1.12 Password
+##### Password
 
 This is the password associated with a username and is used for creating an authorization HTTP header field.
 
-##### 5.2.1.13 Name
+##### Name
 
 This is the name of an HTTP header field which is a component of the HTTP header which is part of an HTTP message. It is used to provide an operating parameter for an HTTP transaction.
 
-##### 5.2.1.14 Value
+##### Value
 
 This is the value of an HTTP header field which is a component of the HTTP header which is part of an HTTP message. It is used to provide an operating parameter for an HTTP transaction.
 
-#### 5.2.2 Output Parameters
+#### Output Parameters
 
-##### 5.2.2.1 Return type
+##### Return type
 
 This is the type of data which will be returned from the action. There are three types of data:
 
@@ -766,11 +766,11 @@ This is the type of data which will be returned from the action. There are three
 * object - an object of an entity type which is either in the SAP service domain model, or in the OData Connector for SAP solutions domain model
 * list - a list of objects of the same type, defined by an entity type in the SAP service domain model
 
-##### 5.2.2.2 Variable
+##### Variable
 
 This is the name that you give the result of your Activity. This can be used later in the Microflow to drive logic or to return data. Mendix will suggest a name for you, but you can change it if you want to.
 
-### 5.3 Domain Models {#domain-models}
+### Domain Models {#domain-models}
 
 This documentation describes two different domain models.
 
@@ -780,7 +780,7 @@ This documentation describes two different domain models.
 
 For more information on domain models, see [Domain Model](/refguide/domain-model/).
 
-#### 5.3.1 SAP Service Domain Model
+#### SAP Service Domain Model
 
 Most of the actions of the OData Connector for SAP solutions make use of a domain model representing the SAP service data model. These models contain non-persistable Mendix entities which represent entities in the OData service which is exposed by an SAP back-end system. The entities contain attributes which correspond to the entity properties plus additional attributes which support the OData Connector for SAP solutions.
 
@@ -821,7 +821,7 @@ This domain model generally works in the same way as a Mendix domain model, with
 * Every object is based on an entity which is a specialization of the ComplexType, FunctionParameters, or OdataObject entity. The OdataObject entity adds a **meta_objectURI** string, which is the URI of the object and can be used in entity manipulation actions, and a **meta_etag** string that identifies a state of the object. This is used by the OData service when you try to change data to check if it has been changed since it was retrieved by your app.
 * Many objects have attributes which end in …Deferred. These contain URIs which will return a list of objects of an entity type which is associated with the current object. For example: in the domain model above, the **Product** entity contains an attribute **ToSupplierDeferred**. This will contain a URI which can be used to return the **BusinessPartner** associated with the current **Product** object via the **ToSupplier_Product_BusinessPartner** association.
 
-#### 5.3.2 OData Connector for SAP Solutions Domain Model {#ConnectorDM}
+#### OData Connector for SAP Solutions Domain Model {#ConnectorDM}
 
 In addition to the SAP Service Domain Model, there is a domain model which is used internally by the OData Connector for SAP solutions to control the connection between your Mendix app and the SAP back-end. The domain model consists of entities and their relationships represented by associations.
 
@@ -864,7 +864,7 @@ This domain model is part of the OData Connector for SAP solutions module and ca
     * AuthTokens
     * Root
 
-## 6 Read More
+## Read More
 
 * [Attributes](/refguide/attributes/)
 * [Data Types](/refguide/data-types/)

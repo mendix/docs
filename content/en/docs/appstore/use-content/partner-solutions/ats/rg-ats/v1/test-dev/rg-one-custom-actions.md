@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/rg-one-custom-actions/
 weight: 5
 ---
 
-## 1 Create Custom Actions from Scratch
+## Create Custom Actions from Scratch
 
 If you want to create a new action from scratch, go to the Repository and switch to the **All Objects** tab.
 
@@ -24,7 +24,7 @@ Now open the newly created action by double-clicking its name in the repository.
 
 On this page you can edit your new action by adding other existing actions to it, like you would in a test case, and set **input-** and **output parameters**.
 
-## 2 Create Custom Actions from Existing Actions
+## Create Custom Actions from Existing Actions
 
 Based on the existing actions, you can build up your own actions (custom actions). Also, if you are fluent in JavaScript, you can add a whole variety of functionalities by using the generic “Execute JavaScript” action.
 
@@ -38,7 +38,7 @@ Then extract the actions into one test step that contains your selected actions 
 
 On this dialog box, you can give your new custom action a **Name** and a **Description**. Click **Close** to finish. You can now add your action to any test case, like you would with any other action.
 
-## 3 Changing Custom Actions
+## Changing Custom Actions
 
 When selecting a custom action, click **Open** under **Test Step Settings** to go inside the custom action:
 
@@ -46,7 +46,7 @@ When selecting a custom action, click **Open** under **Test Step Settings** to g
 
 While inside your custom action, you can change the action just like you would in a test case. Additionally, you can set input and output parameters for your action under the settings tab.
 
-## 4 Setting Input Parameters
+## Setting Input Parameters
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/21168184.png" alt="Custom action settings screen" class="no-border" >}}
 
@@ -65,7 +65,7 @@ Required/Optional | Sets if the parameter is required or can be left open.
 Show as Password | Sets if the parameter is readable in cleartext or hidden.
 Type | Sets if the parameter is used as an input for a Selenium or internal function (should normally be **Default**).
 
-### 4.1 Enumerations
+### Enumerations
 
 When creating a new input parameter, you can choose the datatype enumeration. An enumeration is a predefined list of values. When using an enumeration, as an input parameter you can choose which value of the enumeration to use.
 
@@ -82,7 +82,7 @@ Enumeration entries have two attributes:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/test-dev/rg-one-custom-actions/21168187.png" alt="Edit enumeration dialog" class="no-border" >}}
 
-## 5 Setting an Output Parameter
+## Setting an Output Parameter
 
 Setting an output parameter, works in a similar way to setting an input parameter. The difference is that you can only have one output parameter per action. To set an output parameter, click **Set** under **Output Parameter**.
 

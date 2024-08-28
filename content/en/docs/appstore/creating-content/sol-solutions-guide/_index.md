@@ -7,11 +7,11 @@ description: "Provides information and guidance on how to develop solutions you 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This section provides information and guidance on how to develop solutions you can sell both on and off the Mendix Marketplace.
 
-## 2 What Is a Solution?
+## What Is a Solution?
 
 A solution is any Mendix app that is suitable to be sold to multiple different customers. This means the app is built to match the needs and expectations of a wider range of customers. Sometimes this means the app is configurable at runtime to better cater to the needs of groups of customers. In this case, general Mendix development [best practices](/refguide/dev-best-practices/) apply, and you can get started building a solution with any template available on the Mendix Platform.
 
@@ -19,7 +19,7 @@ Customers often require more from a solution than it supports out of the box. Wh
 
 For more details on how to combine out-of-the-box logic with customer adaptations, see [Introduction to Adaptable Solutions](/appstore/creating-content/sol-adapt/).
 
-## 3 Read More
+## Read More
 
 If you are looking to publish premium components, take a look at the details of the [Mendix Component Partner Program](/appstore/partner-program/).
 

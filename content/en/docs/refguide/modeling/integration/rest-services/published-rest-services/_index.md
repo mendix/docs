@@ -7,11 +7,11 @@ description: "An overview of published REST services from Mendix apps"
 # linked from integration - published rest > F1 help
 ---
 
-## 1 Introduction
+## Introduction
 
 Add a [published REST service](/refguide/published-rest-service/) to expose your entities and microflows to other apps using the REST standard.
 
-## 2 Published REST Service
+## Published REST Service
 
 For an overview of the available options when you add a published service, see [Published REST Service](/refguide/published-rest-service/).
 
@@ -19,7 +19,7 @@ You can easily expose an entity via REST by right-clicking the entity in the [do
 
 To publish a microflow as a REST operation, right-click anywhere in the editor and select [Publish as REST service operation](/refguide/publish-microflow-as-rest-operation/).
 
-## 3 Authentication {#authorization}
+## Authentication {#authorization}
 
 Published REST services can be secured with basic authentication, active session authentication, and custom authentication. Basic and active session authentication are the default and are automatically applied when you set the [security level](/refguide/app-security/) of your app to **Prototype / demo**  or **Production**.
 
@@ -35,7 +35,7 @@ Web service users cannot access REST services.
 
 For more details, see [Published REST Routing](/refguide/published-rest-routing/) and the [Requires Authentication](/refguide/published-rest-service/#authentication) section in *Published REST Service*.
 
-## 4 Documentation {#interactive-documentation}
+## Documentation {#interactive-documentation}
 
 Every [published REST service](/refguide/published-rest-service/) is automatically documented. This documentation is available in the app under `http://yourapp.com/rest-doc/`. Each service has an interactive documentation page using [Swagger UI](https://swagger.io/swagger-ui/). You can interact with the service to see how it behaves.
 
@@ -45,6 +45,6 @@ The documentation of the services is available in the [OpenAPI 3.0](/refguide/op
 Exporting OpenAPI documentation in version 3.0 of the specification was introduced in Studio Pro [10.1.0](/releasenotes/studio-pro/10.1/).
 {{% /alert %}}
 
-## 5 Logging
+## Logging
 
 To log detailed information about interaction with your published REST service, [set the log level](/refguide/logging/) of the **REST Publish** log node to **Trace**.

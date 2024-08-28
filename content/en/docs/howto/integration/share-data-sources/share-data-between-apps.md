@@ -14,7 +14,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will demonstrate how easy it is to build apps using data from different sources using the [Catalog](https://catalog.mendix.com/). The steps describe the following: 
 
@@ -25,13 +25,13 @@ This how-to will demonstrate how easy it is to build apps using data from differ
 * Change data in the original app and see it updated in the new or consuming app
 * See the network of shared data in the [Landscape](/catalog/manage/landscape/)
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install Mendix Studio Pro [8.14.0 or above](https://marketplace.mendix.com/link/studiopro/)
 
-## 3 Creating an App {#createapp} 
+## Creating an App {#createapp} 
 
 Follow these steps to create a simple app in Studio Pro: 
 
@@ -62,7 +62,7 @@ You have created a simple app with the entity **Customer**, and a web page where
 
 Customize the home page further by changing the banner text.
 
-## 4 Publishing to the Catalog {#publishing}
+## Publishing to the Catalog {#publishing}
 
 You need to register the **Customer** entity in the Catalog to use this entity in other apps. To do this, expose the **Customer** entity in a [Published OData service](/refguide/published-odata-services/) in Studio Pro. OData v3 and OData v4 are REST-based protocols and standard formats for registering services in the Catalog. 
 
@@ -106,7 +106,7 @@ Do the following:
 
 When this entity set is consumed by another app via the Catalog, the other app will see the data entered here.
 
-## 5 Using the Catalog and Curating Your Own Service {#use-and-curate}
+## Using the Catalog and Curating Your Own Service {#use-and-curate}
 
 The **{yourname}CustomerODataService** from your app is now registered in the Catalog. The data can be used in other apps. The service is called a **Data Source** in the Catalog, and the exposed **Customer** entity is a **Dataset**.
 
@@ -129,7 +129,7 @@ You have permissions edit the metadata for this service in the Catalog and are a
 
 For more details on searching in the Catalog and the **Search Details** screen, see [Search in the Catalog](/catalog/manage/search/). You can also explore registered services in the Landscape. For more information, see [Landscape View](/catalog/manage/landscape/).
 
-## 6 Using the Customer Dataset in Another App
+## Using the Customer Dataset in Another App
 
 You are going to create a second app and consume the **Customer** dataset from the **{yourname}CustomerODataService** service.
 
@@ -151,7 +151,7 @@ To do this, follow the steps below:
 9. From the **App Explorer**, open **Home_Web** and drag **Customer_Overview** into the empty Auto-fill container.
 10. Click **Publish** to deploy the app and pull in the data you added to the **Customer** entity in the publishing app **({yourname}CustomerServiceApp**) through the **({yourname}CustomerODataService**).
 
-## 7 Viewing the Shared Data in Your New App 
+## Viewing the Shared Data in Your New App 
 
 To view the consumed data in your new app, follow these steps:
 
@@ -160,7 +160,7 @@ To view the consumed data in your new app, follow these steps:
 
     The overview page displays the list of the customers that you entered in the **{yourname}CustomerServiceApp** app. The data is shared from another app, so there are no options for adding or changing the data.
 
-## 8 Seeing Changes in Data in the Consuming App
+## Seeing Changes in Data in the Consuming App
 
 To see an example of consumed data being updated when data is changed in the originating app, follow these steps:
 
@@ -170,7 +170,7 @@ To see an example of consumed data being updated when data is changed in the ori
 
 Congratulations, you have successfully used the Catalog to share data between Mendix apps! You can now see your new apps in your Landscape. 
 
-## 9 Viewing Your Apps in the Landscape
+## Viewing Your Apps in the Landscape
 
 You can view the two apps that you have created in the Landscape and see how they are connected:
 

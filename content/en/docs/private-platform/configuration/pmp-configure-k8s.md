@@ -6,18 +6,18 @@ weight: 30
 aliases:
     - /private-mendix-platform-configure-k8s/
 ---
-## 1 Introduction
+## Introduction
 
 This document explains the configuration options available when configuring a Continuous Integration and Delivery (CI/CD) solution for Private Mendix Platform on a Kubernetes Cluster.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To configure the CI/CD pipeline, prepare the following:
 
 * A namespace where you want to deploy the Mendix app.
 * An S3-compatible endpoint where you can store an MDA file.
 
-## 2 Configuring the CI/CD Pipeline
+## Configuring the CI/CD Pipeline
 
 If you have a Kubernetes cluster, you can set Kubernetes as your CI System in **Settings** > **DevOps** > **CI/CD**. You need to first obtain and configure a [CA certificate](#ca-certificate), and then configure the followings settings:
 
@@ -29,7 +29,7 @@ Finally, you must also [register your Kubernetes cluster](#register-cluster).
 
 {{< figure src="/attachments/private-platform/pmp-cicd1.png" class="no-border" >}}
 
-### 2.1 Obtaining and Configuring the CA Certificate {#ca-certificate}
+### Obtaining and Configuring the CA Certificate {#ca-certificate}
 
 Most Kubernetes cluster API servers use self-signed certificates. In order to access the API server from Private Mendix Platform, you must add its CA certificate to the operator configuration of the namespace where Private Mendix Platform is installed. For more information, see [Creating a Private Cloud Cluster: Custom TLS](/developerportal/deploy/standard-operator/#custom-tls).
 
@@ -54,7 +54,7 @@ kubectl -n ${namespace} patch operatorconfiguration mendix-operator-configuratio
 
 If you have already configured a custom CA certificate, you must only add your new CA certificate to the secret and restart Private Mendix Platform.
 
-### 2.2 Configuring Build Cluster Setting {#build-cluster}
+### Configuring Build Cluster Setting {#build-cluster}
 
 The settings in this section configure the Kubernetes cluster.
 
@@ -121,7 +121,7 @@ kubectl get secret mxplatform-cicd -n$NAMESPACE -o jsonpath='{.data.token}'|base
 kubectl get secret mxplatform-cicd -n$NAMESPACE -o jsonpath='{.metadata.annotations.openshift\.io/token-secret\.value}'
 ```
 
-### 2.3 Configuring Build Images Setting {#build-images}
+### Configuring Build Images Setting {#build-images}
 
 The settings in this section configure the images.
 
@@ -154,7 +154,7 @@ kubectl get ns $NAMESPACE -oyaml
 
 **OCI Registry Password** - This setting is only applicable if you selected the **Build OCI Image** check box. Password for the registry authentication.
 
-### 2.4 Configuring S3 Bucket Setting {#s3-bucket}
+### Configuring S3 Bucket Setting {#s3-bucket}
 
 The settings in this section configure the S3 bucket.
 
@@ -180,7 +180,7 @@ kubectl create secret generic mxplatform-awssecret -n your-namespace --from-lite
 
 **Secret Access Key** - This setting is only applicable if you did not select the Use K8S Secret check box. This value is used to access the S3 bucket.
 
-### 2.5 Registering a Kubernetes Cluster {#register-cluster}
+### Registering a Kubernetes Cluster {#register-cluster}
 
 Before creating any environments, you must register your Kubernetes clusters by doing the following steps:
 
@@ -353,7 +353,7 @@ Before creating any environments, you must register your Kubernetes clusters by 
 
 6. After the cluster is registered, create environments with the cluster, namespace and plans.
 
-## 3 Architecture of the CI/CD Pipeline
+## Architecture of the CI/CD Pipeline
 
 The diagrams in this section present the architecture and components of the pipeline. For more information, see [Build Images Setting](#build-images) above.
 

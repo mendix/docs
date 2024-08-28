@@ -5,7 +5,7 @@ weight: 5
 description: "Presents a list of how-tos to guide you to create customized applications using Atlas UI."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix offers Atlas UI, a cross-platform UI framework that gives teams the foundation they need to build engaging, high-quality experiences and brings UX, IT, and business together. See the [Atlas 3](https://atlas.mendix.com) site additional information on Atlas.
 

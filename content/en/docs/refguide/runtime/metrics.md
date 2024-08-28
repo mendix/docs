@@ -4,7 +4,7 @@ url: /refguide/metrics/
 description: "Describes how to configure and report metrics in Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix supports reporting metrics through [Micrometer](https://micrometer.io/docs).
 
@@ -16,7 +16,7 @@ The Metrics can be configured in the following ways:
 * [Java API](#java-api) – to handle metrics using a Java API in a Java action
 * [Logging](#logging) – to log metrics to a log node
 
-## 2 Metrics Registries Configuration {#registries-configuration}
+## Metrics Registries Configuration {#registries-configuration}
 
 Micrometer can send metrics to multiple registries. To configure micrometer for a specific registry, use the following syntax in `runtime settings` with the custom runtime setting name `Metrics.Registries`. See [Runtime Customization](/refguide/custom-settings/#metrics-settings) for more information. The setting is in JSON format.
 
@@ -48,7 +48,7 @@ The details of each settings are listed below.
     * [statsd](#statsd)
 * `filters` *(optional)* – instructions on which metrics to accept or deny. See the [Filters](#filters) section, below, for more information.
 
-### 2.1 Settings
+### Settings
 
 The following settings can be used, depending on the type of metrics being generated:
 
@@ -67,7 +67,7 @@ The following settings can be used, depending on the type of metrics being gener
 | `step` | *Duration* | No | all | The step size (reporting frequency) to use | 1m | `1ms`, `2s`, `3m`, `4h`, `5d` or [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) -> `P3Y6M4DT12H30M5S` |
 | `filters` | *Json* | No | all | Custom setting from Mendix to filter metrics | - | [See below](#filters)    
 
-#### 2.1.1 Prometheus{#prometheus}
+#### Prometheus{#prometheus}
 
 We do not support multiple [Prometheus](https://prometheus.io/docs/introduction/overview/). When the Prometheus registry is set, it can be accessed through the `/prometheus` context path over the admin endpoint.
 
@@ -103,7 +103,7 @@ Example 2
 ]
 ```
 
-#### 2.1.2 Jmx{#jmx}
+#### Jmx{#jmx}
 
 * `step` – The step size or reporting frequency to use.
 * `domain` – The Jmx domain to which to publish the metrics.
@@ -135,7 +135,7 @@ Example 2
 ]
 ```
 
-#### 2.1.3 Influx{#influx}
+#### Influx{#influx}
 
 * `uri` – the URI for the Influx back end.
 * `db` – the database name to which to send the metrics.
@@ -175,7 +175,7 @@ Example 2
 ]
 ```
 
-#### 2.1.4 StatsD{#statsd}
+#### StatsD{#statsd}
 
 * `flavor` – specifies the variant of the StatsD protocol to use.
 * `host` – the host name of the StatsD agent.
@@ -215,7 +215,7 @@ Example 2
 ]
 ```
 
-### 2.2 Filters {#filters}
+### Filters {#filters}
 
 Filters are optional, but can help in filtering metrics based on given criteria. Below is the syntax:
 
@@ -267,7 +267,7 @@ Example 2
 
 The above filter discards metrics which start with `Unnamed.`, `Invalid.`, or `Internal.`.
 
-### 2.3 Notes
+### Notes
 
 {{% alert color="info" %}}
 The following should be taken into account when configuring the metrics registries.
@@ -309,7 +309,7 @@ The following should be taken into account when configuring the metrics registri
     ]
     ```
 
-## 3 Application Tags {#application-tags}
+## Application Tags {#application-tags}
 
 Common tags which should be reported by every metric can be specified using the `Metrics.ApplicationTags` setting. This setting should be in JSON format.
 
@@ -322,18 +322,18 @@ Common tags which should be reported by every metric can be specified using the 
 }
 ```
 
-## 4 Microflow Activities {#microflow-activities}
+## Microflow Activities {#microflow-activities}
 
 You can use activities to provide custom metrics from your app. See [Metrics Activities](/refguide/metrics-activities/) for information about these activities .
 
-## 5 Java API {#java-api}
+## Java API {#java-api}
 
 Micrometer metrics can be accessed through [Mendix Runtime Java APIs](/apidocs-mxsdk/apidocs/runtime-api/) as well inside Mendix. This can be achieved by using the custom runtime setting `com.mendix.metrics.Type`. This setting defaults to `micrometer`.
 
 * Custom Runtime Setting – **Name**: `com.mendix.metrics.Type`
 * **Value**: `micrometer`
 
-### 5.1 Current Metrics and Usage
+### Current Metrics and Usage
 
 Currently supported metrics are `counter`, `gauge`, and `timer`. We support [Bloch's builder pattern](https://blogs.oracle.com/javamagazine/java-builder-pattern-bloch) to create the metrics and support `Tag` and `Description` which can be added to each metric.
 
@@ -365,23 +365,23 @@ The name must adhere to the following rules:
 It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 5.2 ⚠ Deprecated Usages
+### ⚠ Deprecated Usages
 
 The following deprecated usages will be removed in the future releases,
 
 1. The [`Core.metrics()` Mendix Runtime Java API methods](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/metrics/Metrics.html) `counter()`, `timer()`, `gauges()`, and `sets()`, and the corresponding `Counters`, `Timers`, `Gauges` and `Sets` interfaces are deprecated.
 
-## 6 Logging {#logging}
+## Logging {#logging}
 
 Metering-related log messages are sent to the `Metering` log node. If a registry is enabled, they will be reported with severity `debug`.
 
-## 7 List of Metrics {#list-of-metrics}
+## List of Metrics {#list-of-metrics}
 
 The Runtime Server produces various metrics. Some of these metrics are controlled by Mendix: these are prefixed with `mx`.
 
 Other metrics are produced by Micrometer, the library that is used for metrics. This library outputs metrics for other libraries that it recognizes, such as the Jetty server that is embedded in the Runtime Server. These additional Micrometer metrics are not under our control and might change.
 
-### 7.1 Runtime Server Metrics
+### Runtime Server Metrics
 
 The Runtime Server produces the following metrics out-of-the-box:
 
@@ -399,7 +399,7 @@ The Runtime Server produces the following metrics out-of-the-box:
 | **mx.<wbr>odata.<wbr>consume.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Send External Object activity](/refguide/send-external-object/). |
 | **mx.<wbr>odata.<wbr>consume.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated using the [Send External Object activity](/refguide/send-external-object/). |
 | **mx.<wbr>odata.<wbr>consume.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created using the [Delete External Object activity](/refguide/delete-external-object/). |
-| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData service](/refguide/published-odata-services/). |
+| **mx.<wbr>odata.<wbr>publish.<wbr>objects** | counter | `entity` | The total number of objects that were served for a particular type of object (`entity`) by a [published OData/GraphQL service](/refguide/published-odata-services/). |
 | **mx.<wbr>odata.<wbr>publish.<wbr>created** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were created due to client requests to a [published OData service](/refguide/published-odata-services/). |
 | **mx.<wbr>odata.<wbr>publish.<wbr>updated** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were updated due to client requests to a [published OData service](/refguide/published-odata-services/). |
 | **mx.<wbr>odata.<wbr>publish.<wbr>deleted** | counter | `entity` | The total number of objects of a certain entity type (`entity`) that were deleted due to client requests to a [published OData service](/refguide/published-odata-services/). |
@@ -410,13 +410,13 @@ Note that the actual name may vary slightly depending on the back end (for examp
 Additionally, a suffix may be added for the unit of the metric (for example, `_bytes`).
 {{% /alert %}}
 
-### 7.2 Additional Metrics
+### Additional Metrics
 
 {{% alert color="info" %}}
 The additional Micrometer metrics are not under our control and might change unannounced over time.
 {{% /alert %}}
 
-#### 7.2.1 System and Process Metrics 
+#### System and Process Metrics 
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -425,7 +425,7 @@ The additional Micrometer metrics are not under our control and might change una
 | `system.load.average.1m` | gauge | The average number of runnable (queued and running) threads on the available processors. |
 | `process.cpu.usage` | gauge | The recent CPU usage for the Java Virtual Machine process (in the range [0…1]). |
 
-#### 7.2.2 Java Virtual Machine Metrics 
+#### Java Virtual Machine Metrics 
 
 | Name | Type | Tags | Description |
 | --- | --- | --- | --- |
@@ -453,7 +453,7 @@ The additional Micrometer metrics are not under our control and might change una
 
 Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/java/javase/21/docs/api/java.management/java/lang/management/ManagementFactory.html) for more details.
 
-#### 7.2.3 Jetty HTTP Server Metrics
+#### Jetty HTTP Server Metrics
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -470,7 +470,7 @@ Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/jav
 | `jetty.threads.config.min` | gauge | The minimum number of threads in the Jetty pool. |
 | `jetty.threads.config.max` | gauge | The maximum number of threads in the Jetty pool. |
 
-#### 7.2.4 Database Connection Pool Metrics
+#### Database Connection Pool Metrics
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -488,6 +488,6 @@ Refer to the [Java Virtual Machine documentation](https://docs.oracle.com/en/jav
 | `commons.pool2.destroyed.by.evictor` | counter | The total number of connections destroyed by the evictor associated with the pool over its lifetime. |
 | `commons.pool2.destroyed.by.borrow.validation` | counter | The total number of connections destroyed by the pool over its lifetime as a result of failing validation during borrowing. |
 
-## 8 Read More
+## Read More
 
 * [Meter Concepts](https://micrometer.io/docs/concepts)

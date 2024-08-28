@@ -5,7 +5,7 @@ weight: 10
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
@@ -23,7 +23,7 @@ When developing a Mendix app which will be deployed to Insights Hub, there are a
 
 Finally, there is a section on some [Limitations](#limitations) which apply to Mendix apps deployed to Insights Hub.
 
-## 2 Authorizing Insights Hub REST Calls{#mstoken}
+## Authorizing Insights Hub REST Calls{#mstoken}
 
 The **AccessToken** entity contains the *Access_token* attribute which needs to be passed as the Authorization header in REST calls to Insights Hub APIs.
 
@@ -31,7 +31,7 @@ To improve security of your app, it is recommended that you delete the AccessTok
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/delete-mindspheretoken.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
 
-### 2.1 Authorizing Insights Hub REST Calls from within Scheduled Events
+### Authorizing Insights Hub REST Calls from within Scheduled Events
 
 The access token connector *cannot* be used for calling an Insights Hub API in a microflow which is executed *without* a user context – for example, called from a **scheduled event**. Therefore the SiemensInsightsHubSingleSignOn module offers a microflow, **DS_GetAccessTokenForScheduledEvents**, that returns a Token for a given Tenant. This microflow is also exposed in the toolbox on the right side:
 
@@ -77,7 +77,7 @@ Do not create a Tenant object yourself as this is done automatically during logi
 
 For more information on how to perform REST calls see the [Importing and Exporting Your Data](https://academy.mendix.com/link/path/44) learning path (you must be signed in to the Mendix Platform to see this learning path).
 
-## 3 Cloud Foundry Environment Variables {#cfenvvars}
+## Cloud Foundry Environment Variables {#cfenvvars}
 
 If you need to set or change the value of any Cloud Foundry Environment Variables, you will have to do this using the Cloud Foundry Command Line Interface (CF CLI).
 
@@ -95,11 +95,11 @@ If you do **not** restage your app, it will continue to run using the old values
 
 Your app will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
 
-```bash {linenos=false}
+```bash
     cf set-env MyApp MX_MyModule_MyConstant "ABC123"
 ```
 
-## 4 Licensing Your App {#licensing}
+## Licensing Your App {#licensing}
 
 When you initially deploy a Mendix App, it is treated as a *Free App*. For an Insights Hub app the most important restriction is that the app will go into sleep mode after 1-2 hours: this could cause the Cloud Foundry environment to be restarted and pick up the latest values of environment variables.
 
@@ -107,9 +107,9 @@ To license your app, you need to obtain a license key from [Mendix Support](http
 
 Instructions for licensing apps are available in the [License Activation](https://github.com/mendix/cf-mendix-buildpack#license-activation) section of the *Mendix Cloud Foundry Buildpack Readme*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-## 5 Local Testing {#localtesting}
+## Local Testing {#localtesting}
 
-### 5.1 Corporate Proxies
+### Corporate Proxies
 
 If you need to use a corporate web proxy, the following settings must be applied in Mendix Studio Pro to allow communication with Insights Hub during local development.
 
@@ -123,7 +123,7 @@ Proxy settings for version control used in Mendix Studio Pro:
 For more information about the version control used by Mendix apps, see [Using Version Control in Studio Pro](/refguide/using-version-control-in-studio-pro/#working-outside-studio-pro). Depending on your local development environment, you may have to configure your version control client to use a proxy as well. You may need to do this to solve a merge conflict manually.
 {{% /alert %}}
 
-### 5.2 Application Credentials{#app-creds}
+### Application Credentials{#app-creds}
 
 The SSO module supports you in getting a valid Insights Hub token locally via **Application Credentials**.
 
@@ -175,7 +175,7 @@ To ensure that the correct application credentials are requested, you have to se
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/image23.png" >}}
 
-### 5.3 Configuration
+### Configuration
 
 **AskForCredentialsOnStartUp**
 
@@ -211,7 +211,7 @@ This should be the tenant that the user has access to in a multi-tenant environm
 
 Specify the email used for the local **MxAdmin** user account. Default value "max.mustermann@email.com" is used in case no value is provided.
 
-### 5.4 User Roles
+### User Roles
 
 If you are testing different roles in your app, do not use the demo users. If you switch between demo users, this will not correctly populate the tenant and role information from Insights Hub. To test different roles, allocate the role to MxAdmin, redeploy, and sign in again.
 
@@ -219,7 +219,7 @@ The MxAdmin role is found In the **Administrator** tab of the *Security* setting
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/mxadmin-roles.png" >}}
 
-### 5.5 Local User Passwords
+### Local User Passwords
 
 Local users should not be created for your Insights Hub app.
 
@@ -229,11 +229,11 @@ When a new user is identified during SSO, the SSO process generates a random pas
 This policy is set up as the default in the Insights Hub starter and example apps and should not be changed.
 {{% /alert %}}
 
-## 6 Insights Hub Icons {#atlasui}
+## Insights Hub Icons {#atlasui}
 
 The **Siemens Insights Hub Web Content** module includes two ways of including Insights Hub icons in your app.
 
-### 6.1 Insights Hub Icons as 'glyphicons'
+### Insights Hub Icons as 'glyphicons'
 
 You can select Insights Hub icons from Siemens Insights Hub Web Content to be displayed in your application.
 
@@ -244,7 +244,7 @@ You can select Insights Hub icons from Siemens Insights Hub Web Content to be di
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-development-considerations/SelectIcon.png" alt="Add icon as an image" >}}
 
-### 6.2 Insights Hub Icons via CSS
+### Insights Hub Icons via CSS
 
 **Siemens Insights Hub Web Content** provides a font which contains icons. This means that you can use an Insights Hub icon in any page element where you can assign a class.
 
@@ -266,17 +266,17 @@ You will not see the icon in Studio Pro when it is in **Structure mode**. Switch
 You can only add one icon per element.
 {{% /alert %}}
 
-## 7 Multi-Tenancy {#multitenancy}
+## Multi-Tenancy {#multitenancy}
 
 In Insights Hub, apps are usually designed to be multi-tenant, meaning that a single instance of the app serves multiple tenants. A tenant is a representation of a real-world organization. It groups users, data, assets, entities, and many kinds of other properties. Access to these resources for users of the same tenant is controlled via the authorization management system.
 
 For an Insights Hub app to be multi-tenant, each user can only see the data from a single tenant, defined by their login credentials, and cannot access resources of other tenants.
 
-### 7.1 Control Through Insights Hub APIs
+### Control Through Insights Hub APIs
 
 The Authorization HTTP Header (see DS_AccessToken in the [Microflows](/partners/siemens/mindsphere-module-details/#microflows) section of *Insights Hub Module Details*) which is passed for every Insights Hub API call ensures that the user can only obtain data which is authorized to them via their tenant.
 
-### 7.2 Control Within a Mendix App
+### Control Within a Mendix App
 
 If no security is placed on persistable Mendix entity objects, these are accessible to all users of the app (subject to access granted by their user role). This means that any app which stores data in persistable Mendix entities cannot be made multi-tenant without additional security.
 
@@ -307,7 +307,7 @@ To make your Mendix app multi-tenant, do the following:
 
 2. Every microflow action on this object must have the following XPath constraint:
 
-    ```java {linenos=false}
+    ```java
     [SiemensInsightsHubSingleSignOn.TenantObject_Tenant/SiemensInsightsHubSingleSignOn.Tenant/SiemensInsightsHubSingleSignOn.Account_Tenant='$currentUser']
     ```
 
@@ -317,7 +317,7 @@ To make your Mendix app multi-tenant, do the following:
 
 3. Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
 
-    ```java {linenos=false}
+    ```java
     [SiemensInsightsHubSingleSignOn.TenantObject_Tenant/SiemensInsightsHubSingleSignOn.Tenant/SiemensInsightsHubSingleSignOn.Account_Tenant='[%CurrentUser%]']
     ```
 
@@ -336,17 +336,17 @@ You have some limits which are set for the user's tenant to be applied to a time
 
 4. When you want to retrieve the list of limits, call this microflow instead of using the retrieve objects action. This will ensure that tenant-based security is always applied.
 
-## 8 Validation {#validation}
+## Validation {#validation}
 
 Your app should, as a minimum, meet the requirements of the checklist on the Insights Hub developer site here: [Get your Application Ready for Productive Use](https://developer.mindsphere.io/howto/howto-app-publication.html).
 
-## 9 Limitations {#limitations}
+## Limitations {#limitations}
 
 The following limitations apply to Mendix apps which are deployed to Insights Hub.
 
 If these limitations affect the design of your app, you can still create a Mendix app to use Insights Hub APIs from outside Insights Hub.
 
-### 9.1 Binary File Storage
+### Binary File Storage
 
 Insights Hub does not currently have a compatible file service available in its Cloud Foundry stack. Therefore, you cannot use any Mendix features which rely on having a file service.
 
@@ -356,7 +356,7 @@ You can store small amounts of binary information in persistable entities. Howev
 
 Alternatively, you can use a separate AWS S3 bucket. See [Connect an External Filestore](https://github.com/mendix/cf-mendix-buildpack#connect-an-external-filestore) in the *Mendix Cloud Foundry Buildpack GitHub Repository*. Refer to [Cloud Foundry Environment Variables](#cfenvvars), above, for instructions on changing Cloud Foundry environment variables.
 
-### 9.2 App Name {#appname}
+### App Name {#appname}
 
 There are few limitations on what you call your app within Mendix. However, when you deploy the app to Insights Hub, the app name registered in the Developer Cockpit must have the following characteristics:
 
@@ -367,7 +367,7 @@ There are few limitations on what you call your app within Mendix. However, when
 
 If you want to use the same app name in both Mendix and Insights Hub, you should bear these constraints in mind when naming your Mendix app.
 
-### 9.3 Roles and Scopes
+### Roles and Scopes
 
 Insights Hub supports up to five application roles. You should take this into account when designing security within your Mendix app.
 
@@ -375,7 +375,7 @@ To use these scopes, you must create identically-named scopes for each Insights 
 
 There is a more detailed discussion of Insights Hub and Mendix roles and scopes in the [Roles and Scopes](/partners/siemens/mindsphere-module-details/) section of *Insights Hub Module Details*.
 
-### 9.4 Logout from Insights Hub
+### Logout from Insights Hub
 
 If the user signs out from Insights Hub, the Mendix app will not delete the session cookie.
 
@@ -385,11 +385,11 @@ If the user signs out from Insights Hub, the Mendix app will not delete the sess
 In some circumstances, this could lead to another user *using the same app in the same browser on the same computer*, picking up the session from the previous user if the cookie has not yet expired.
 {{% /alert %}}
 
-### 9.5 Progressive Web Applications
+### Progressive Web Applications
 
 Mendix Studio Pro version 9 introduced support for developing [progressive web apps (PWAs)](/refguide/progressive-web-app/). PWAs are not supported for *Mendix on Insights Hub*.
 
-## 10 Read More
+## Read More
 
 * [Siemens Insights Hub – deployment](/developerportal/deploy/deploying-to-mindsphere/)
 * [Insights Hub Module Details](/partners/siemens/mindsphere-module-details/)

@@ -6,7 +6,7 @@ weight: 10
 description: "This how-to teaches you how to create a pluggable web widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 Pluggable web widgets are the new generation of custom-built widgets. These widgets are based on React and use a different architecture than the older custom widgets based on Dojo. With pluggable web widgets, you can develop powerful tools in simple, precise ways. In the first part of this series, you will learn to create a text input widget.
 
@@ -20,7 +20,7 @@ This how-to teaches you how to do the following:
 
 Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub with the basic and advanced features already implemented.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -29,24 +29,24 @@ Before starting this how-to, make sure you have completed the following prerequi
     * For Mac, install using [Homebrew](https://docs.brew.sh/Installation) and these [official tools](https://nodejs.org/en/download/package-manager/#macos)
 * Install [Yeoman](https://yeoman.io/) with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g yo
     ```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman for Mendix 8 with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g @mendix/generator-widget@"<9"
     ```
 
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
-## 3 Creating a TextBox Input Widget
+## Creating a TextBox Input Widget
 
 The following steps teach you how to build a pluggable input widget, and show you how to use the new pluggable widget API.
 
-### 3.1 Creating a Test Project{#creating-a-test-project}
+### Creating a Test Project{#creating-a-test-project}
 
 1. Open Mendix Studio Pro and create a new test project by selecting **File > New Project** from the top menu bar and then **Blank App**.
 2. Create a test case for the new widget:<br />
@@ -68,7 +68,7 @@ The following steps teach you how to build a pluggable input widget, and show yo
 
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-one/microflowcreateentity.png" class="no-border" >}}
 
-### 3.2 Widget Scaffolding
+### Widget Scaffolding
 
 The Pluggable Widget Generator is the quickest way to start developing a widget. It creates a widget’s recommended folder structure and files.
 
@@ -101,7 +101,7 @@ The generator will ask you a few questions during setup. Answer the questions by
 
 Note that whenever it is required to reinstall NPM package dependencies inside the scaffolded widget development project with an NPM version of 7 or higher, make sure to run the installation script with an extra flag: `npm install --legacy-peer-deps`.
 
-### 3.3 Adding the Attribute
+### Adding the Attribute
 
 Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of choice (any IDE is fine if it can execute commands). From now on, all file references will be relative to this path. To set up your new widget, first you must use an attribute of the context object and display that attribute in an input field: 
 
@@ -197,7 +197,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
 6. Alter *Textbox.editorPreview.tsx* by adding the `TextInput` import to *Textbox.editorPreview.tsx*:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { TextInput } from "./components/TextInput";
     ```
 
@@ -230,7 +230,7 @@ Open the **(YourMendixProject)/CustomWidgets/TextBox** folder in your IDE of cho
 
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-one/twotextwidgets.png" alt="two text widgets" class="no-border" >}}
 
-### 3.4 Adding Style
+### Adding Style
 
 The input works, but the styling could be improved. In the next code snippets, you will add the default styling to make your TextBox widget look like a Mendix widget. Also, you need to pass the `Class`, `Style` and `Tab index` [standard properties](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/#standard-properties) from the `Common` tab which originate from the **Edit Custom Widget** dialog box:
 
@@ -286,7 +286,7 @@ The input works, but the styling could be improved. In the next code snippets, y
 
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-one/styledinputwidgets.png" alt="styled widgets" class="no-border" >}}
 
-### 3.5 Labeling the Input{#label-input}
+### Labeling the Input{#label-input}
 
 While the Mendix input widgets come with labels, you will need to add one to TextBox manually. With the new API it is easy to [add a label](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#label) to any widget.
 
@@ -310,7 +310,7 @@ While the Mendix input widgets come with labels, you will need to add one to Tex
 
     {{< figure src="/attachments/howto8/extensibility/pluggable-widgets/create-a-pluggable-widget-one/inputwidgetswithlabel.png" alt="input widgets with label" class="no-border" >}}
 
-### 3.6 Handling Updates
+### Handling Updates
 
 The value from the attribute can be displayed and updated using the other input, however you cannot change the value directly from within your widget. You can close the loop by following these steps. 
 
@@ -385,7 +385,7 @@ Congratulations, you have now made a fully functional input widget!
 
 Continue with the next tutorial to learn how to add validation feedback, custom validations, and an on-change event activity. You will also learn how to handle a read-only state, improve web accessibility, and make a Mendix Studio Pro preview.
 
-## 4 Read More
+## Read More
 
 * [Build a Pluggable Web Widget: Part 2 (Advanced)](/howto8/extensibility/create-a-pluggable-widget-two/)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)

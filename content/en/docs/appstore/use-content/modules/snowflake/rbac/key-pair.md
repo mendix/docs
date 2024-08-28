@@ -6,7 +6,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use key-pair authentication to enable your Mendix app to use role-based access control (RBAC). Key pair authentication is a method of authenticating with a system using a pair of keys that comply with specific security requirements. The following diagram is a graphic representation of how key-pair authentication can work between Snowflake and a Mendix application. 
 
@@ -14,11 +14,11 @@ You can use key-pair authentication to enable your Mendix app to use role-based 
 
 In the context of integration between Snowflake and Mendix, RBAC helps ensure that the data being exposed to a certain user or role within Snowflake is the same as the data presented to the same user in a Mendix app.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To enable key-pair RBAC for your Mendix app, you must first install and configure the [Snowflake REST SQL Connector](/appstore/connectors/snowflake/snowflake-rest-sql/).
 
-## 2 Configuring the Connection Details {#connection-details}
+## Configuring the Connection Details {#connection-details}
 
 To enable role-based access control for your Snowflake-integrated Mendix app, perform the following steps:
 
@@ -41,7 +41,7 @@ To enable role-based access control for your Snowflake-integrated Mendix app, pe
 
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/connection-details-newedit.png" >}}
 
-## 3 Configuring the SQL Queries {#queries}
+## Configuring the SQL Queries {#queries}
 
 To interact with Snowflake, you must configure your Mendix app to execute SQL queries by using the **Execute Statement** microflow action. 
 
@@ -83,7 +83,7 @@ To interact with Snowflake, you must configure your Mendix app to execute SQL qu
 
     {{< figure src="/attachments/appstore/use-content/modules/snowflake-rest-sql/sample-results.png" >}}
 
-## 4 Sample Test Scenario
+## Sample Test Scenario
 
 This section provides an example of how to set up RBAC in Snowflake for two test users and view the same data for the same users in a Mendix app.
 

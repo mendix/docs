@@ -5,7 +5,7 @@ url: /howto8/logic-business-rules/extending-your-application-with-custom-java/
 weight: 12
 ---
 
-## 1 Introduction
+## Introduction
 
 Most application logic can be developed using microflows. Microflows are very powerful and contain a lot of the features that you need in every application. To prevent you from getting stuck due to a missing feature, Mendix microflows are extendable. So, whenever you feel something is missing, you can add it yourself with the use of Java actions. 
 
@@ -13,7 +13,7 @@ This how-to teaches you how to do the following:
 
 * Extend your application with custom Java code
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
@@ -23,7 +23,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 * Have an app ready using the [Asset Manager App](https://marketplace.mendix.com/link/component/69674) template.
 
-## 3 Adding a Java Action in Studio Pro
+## Adding a Java Action in Studio Pro
 
 1. Right-click the **AssetManager** module and select **Add other** > **Java action**.
 2. Enter *ReverseAssetName* for the **Name** of the new Java action and click **OK**.
@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
 5. Select **App** > **Deploy for Eclipse** from the top Studio Pro toolbar.
 
-## 4 Editing the Java Action in Eclipse
+## Editing the Java Action in Eclipse
 
 To edit the Java action in Eclipse, follow these steps:
 
@@ -76,7 +76,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 5. Replace the existing line:
 
-    ```java {linenos=false}
+    ```java
         throw new com.mendix.systemideinterfaces.MendixRuntimeException("Java action was not implemented");
     ```
 
@@ -89,7 +89,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 6. Select **File** > **Save** to save the Java action in Eclipse.
 
-## 5 Calling the Java Action from a Microflow
+## Calling the Java Action from a Microflow
 
 1. Back in Studio Pro, locate the **Home** page via **App Explorer**.
 2. Under **{AssetName}**, right-click and select **Add widget**.
@@ -134,7 +134,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/microflow4.png"   width="500"  class="no-border" >}}
 
-## 6 Deploying and Seeing the Results
+## Deploying and Seeing the Results
 
 1. Click **Run Locally** to deploy the application locally, and click **View** to open the application in your browser.
 2. Select **Add asset** from the top right.
@@ -149,7 +149,7 @@ To edit the Java action in Eclipse, follow these steps:
 
     {{< figure src="/attachments/howto8/logic-business-rules/extending-your-application-with-custom-java/app2.png"   width="400"  class="no-border" >}}
 
-## 7 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 If you get an `UnsupportedClassVersionError` when running your app, follow these steps:
 
@@ -157,7 +157,7 @@ If you get an `UnsupportedClassVersionError` when running your app, follow these
 
 2. Add the same JDK version to Eclipse as that which you are using in Studio Pro (this is the recommended version correlation). For details on JDK requirements, see the [Mendix Studio Pro](/refguide8/system-requirements/#sp) section of *System Requirements*.
 
-## 8 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/)

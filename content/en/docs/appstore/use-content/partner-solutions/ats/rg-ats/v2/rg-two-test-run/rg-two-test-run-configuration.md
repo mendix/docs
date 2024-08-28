@@ -3,7 +3,7 @@ title: "Job Configuration"
 url: /appstore/partner-solutions/ats/rg-two-test-run-configuration/
 ---
 
-## 1 Introduction
+## Introduction
 
 To run an existing test, you must open the test case or test suite by clicking its name in the repository, or click the play button displayed in the test case:
 
@@ -27,26 +27,26 @@ If you selected a Selenium hub from a supported Selenium hub provider (SauceLabs
 
 For explanations of the platform settings, see [3 Platform Settings](#platform).
 
-## 2 General Settings {#general}
+## General Settings {#general}
 
-### 2.1 Environment
+### Environment
 
 This is the environment on which ATS executes the test case.
 
-### 2.2 Selenium Hub
+### Selenium Hub
 
 This is the Selenium hub ATS uses to execute the test case.
 
-### 2.3 Browser
+### Browser
 
 This the browser in which ATS executes the test case. The browser version is set automatically by ATS. For supported Selenium hub providers, ATS sets the following browser versions:
 
 * Firefox: version 58
 * Chrome: version 64 (for Windows XP: version 49)
 
-## 3 Platform Settings {#platform}
+## Platform Settings {#platform}
 
-### 3.1 Platform
+### Platform
 
 {{% alert color="info" %}}
 
@@ -58,7 +58,7 @@ If you have selected a Selenium hub from a supported Selenium hub provider (Sauc
 
 For more information on the different supported operating systems, see [Supported Selenium Hub Providers](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
 
-### 3.2 Resolution
+### Resolution
 
 {{% alert color="info" %}}
 

@@ -5,7 +5,7 @@ weight: 4
 description: "Describes how to add an XML schema, create domain-to-XML mapping, and export logic."
 ---
 
-## 1 Introduction
+## Introduction
 
 In enterprise software, it is not likely that you work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can export XML documents.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Add an XML schema
 * Create domain-to-XML mapping and export logic
 
-## 2 Prerequisites
+## Prerequisites
 
 Before you can start exporting XML documents, you need data in your application that is used during the export. You first need to set up the data structure and GUI to maintain the customer data. Then, you'll create the actual export logic and the corresponding export mapping. To do this, you need to know how to do the following:
 
@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/howto/integration/export-xml-documents/18581814.png" class="no-border" >}}
 
-## 3 Adding an XML Schema (XSD)
+## Adding an XML Schema (XSD)
 
 Whether you plan to import documents or export documents, working with XML means that your application must contain an XML schema (also called XSD). An XSD describes the possible contents of an XML file. Based on this XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are a couple of online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto/integration/export-xml-documents/18581813.xsd).
 
@@ -54,7 +54,7 @@ Whether you plan to import documents or export documents, working with XML means
 
 4. Click **OK** to save the XML Schema. We'll be using this schema in the following steps.
 
-## 4 Creating Domain-to-XML mapping
+## Creating Domain-to-XML mapping
 
 The XML schema describes what the contents of an XML document should be. We need to create domain-to-XML mapping to define how the data in our application is transformed into a XML document.
 
@@ -97,7 +97,7 @@ The XML schema describes what the contents of an XML document should be. We need
 
 9. Click **OK** to save the mapping.
 
-## 5 Creating the Export Logic
+## Creating the Export Logic
 
 This section explains how you can create logic to export the customers stored in your application to an XML document.
 
@@ -179,7 +179,7 @@ To create the export logic, follow these steps:
 22. Deploy the application and open the customer overview page.
 23. Click the **Export as XML** button and download the generated XML document.
 
-## 6 Read More
+## Read More
 
 * [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)

@@ -7,13 +7,13 @@ description: "How to limit access to your app using IP addresses and certificate
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Your app is accessible over the internet—but you may not want everyone to be able to access it. For fine-grained control over external access to your application, configure the access restrictions.
 
 You can apply restrictions to the top level of the application URL (`/`). You can also apply restrictions to more specific paths (such as `/ws/` or `/odata/`). This allows you to, for example, open up web services without giving general users access to the app itself. Presets are available to simplify common requirements, such as allowing or denying all access. In addition, custom profiles can be created using IP range filters and client certificate authorities (CAs).
 
-## 2 Access Restriction Profiles {#access-restriction-profiles}
+## Access Restriction Profiles {#access-restriction-profiles}
 
 You can specify multiple different access restriction profiles for your application. You can give each of these a name that describes its purpose.
 
@@ -27,7 +27,7 @@ When configuring an access restriction profile, keep the following consideration
 * Access restriction profiles can contain any number of IPv4 address ranges, client CAs, or both.
 * If an access restriction profile contains both IP address ranges and client CAs, then any match on either the IP range or the client certificate will grant access.
 
-### 2.1 Configuring Access Restriction Profiles {#access-restriction}
+### Configuring Access Restriction Profiles {#access-restriction}
 
 To view the page where you can configure an access restriction profile, click **New** to create a new profile or **Edit** to modify an existing profile.
 
@@ -35,11 +35,11 @@ To view the page where you can configure an access restriction profile, click **
 
 Add IP ranges and certificate profiles as described below, then click **Save** to save the access restriction profile.
 
-#### 2.1.1 Changing the Profile Name
+#### Changing the Profile Name
 
 To change the name of your access restriction profile, click **Edit** {{% icon name="pencil" %}} next to the name of the profile and enter the new name.
 
-#### 2.1.2 Specifying TLS Client Certificate Verification
+#### Specifying TLS Client Certificate Verification
 
 Click **Create** to create a new TLS certificate profile, or select an existing profile and click **Edit**. If you are creating a new certificate profile, you will first be asked to enter the name of your profile. You can also delete an existing certificate profile by selecting a profile and clicking **Delete**.
 
@@ -63,7 +63,7 @@ If you do not select any certificates, then all the certificates are valid.
 
 Click **Save** to save the current certificate profile.
 
-#### 2.1.3 Specifying IP Ranges {#ip-ranges}
+#### Specifying IP Ranges {#ip-ranges}
 
 You can specify a number of different IP ranges. Click **Create** to add a new IP range, or use **Edit** or **Delete** to modify an existing IP range.
 
@@ -71,7 +71,7 @@ For each IP range, you can specify a **Name** for the range and a range of addre
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/access-restrictions/ip-range.png" alt="Edit IP Range dialog box" width=60% class="no-border" >}}
 
-## 3 Applying a Restriction to an Application Environment
+## Applying a Restriction to an Application Environment
 
 To apply a restriction to a specific application environment, follow these steps:
 
@@ -88,7 +88,7 @@ To apply a restriction to a specific application environment, follow these steps
 
 {{% /alert %}}
 
-### 3.1 Default Settings
+### Default Settings
 
 These are the default settings:
 
@@ -96,11 +96,11 @@ These are the default settings:
 * All paths ending in `-doc` have a preset **Deny all access** profile set by default
 * All the remaining paths have no restriction applied by default
 
-## 4 Use Cases for Access Restrictions
+## Use Cases for Access Restrictions
 
 Two scenarios in which you can use access restrictions are described below.
 
-### 4.1 Example Scenario 1 – Restricting Access Based on an IP Range
+### Example Scenario 1 – Restricting Access Based on an IP Range
 
 Consider this example scenario in which a basic IP range restriction could be used: You have an app running in Mendix Cloud that is only to be accessed from a single office. The interactive web browser interface of the app should only be accessible to employees in the office of the company running the app. From the rest of the internet, the login screen of the application should not even be visible.
 
@@ -128,7 +128,7 @@ To restrict access to the app to an IP range, follow these steps:
 9. Select **Custom Profile for Client Certificates and/or IP ranges** as the **New Restriction Type**.
 10. Select your access restriction profile as the **New Restriction Profile**, and save it.
 
-### 4.2 Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
+### Example Scenario 2 – Back-End Administration with Third-Party Web Service Integrations
 
 This second scenario is an extended version of the first scenario.
 
@@ -157,7 +157,7 @@ To add this additional access restriction profile, follow these steps:
 If the `/ws/` path should still be reachable from the office location without using a client certificate, add the IP ranges of the office location to the profile used for `/ws/`.
 {{% /alert %}}
 
-## 5 Read More
+## Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
 * [Deployment](/deployment/)

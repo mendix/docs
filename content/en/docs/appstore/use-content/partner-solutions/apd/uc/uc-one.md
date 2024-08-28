@@ -4,13 +4,13 @@ url: /appstore/partner-solutions/apd/uc-one/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 The APM tools have been used extensively by CLEVR’s developers and support engineers in developing and supporting ExpertDesk and other Mendix applications. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without the proper information and have grown to an application monitoring and analysis suite.
 
 The different use cases are described here:
 
-## 2 Generic
+## Generic
 
 The trap tool is always on in development, test, acceptance and production and is used to have all logging immediately available when an error occurs.
 
@@ -20,7 +20,7 @@ The log tool is a tool for cases that need analysis, but have no specific trigge
 
 The measurements tool is used to detect high memory usage or high CPU to find out which functionality is causing the issue.
 
-## 3 In Development
+## In Development
 
 During the development the performance tool is used when a function is seen as slow. Also it can be used to verify the expected flow/path is followed.
 
@@ -32,7 +32,7 @@ The statistics tool snapshots are stored also on shutdown of the Mendix applicat
 
 The query tool can be used to do an explain plan of long running queries.
 
-## 4 In Test and Acceptance
+## In Test and Acceptance
 
 During the test and acceptance phase other users than the developer are testing and using the application. Now it is especially important to collect information for further analysis if they find an issue.
 
@@ -42,7 +42,7 @@ The performance tool can be always turned on with a small threshold to capture t
 
 Another strategy would be to record all MicroflowEngine with the log tool to be able to see what the users have done afterwards.
 
-## 5 In Production
+## In Production
 
 The trap tool is used to have all needed logging immediately available when something unwanted occurs. Off course the first day the trap log is monitored and exclusions are made for often occurring warnings or known errors.
 
@@ -52,7 +52,7 @@ Also a brief run of the performance tool can be done if some issue cannot be rep
 
 The measurements tool can be used to collect application specific metrics and build triggers for when they exceed thresholds. The measurements tool can also be used to detect new deployments and send an email to inform people about this.
 
-## 6 In a Load Test
+## In a Load Test
 
 In a lab a large load is generated and the statistics tool and performance tool with thresholds are used to analyze what is happening. With some filtering the performance tool does not fill up the entire memory and still captures the longest running microflows in full detail. Extra protection is built in to stop recording when the amount of data is exceeding a threshold.
 

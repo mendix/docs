@@ -9,13 +9,13 @@ weight: 10
 This activity can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Counter** activity can be used to increment a metrics counter by a specific value.
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/metrics-activities/metrics-counter/counter.png" alt="Counter" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of counter properties is represented in the image below:
 
@@ -28,7 +28,7 @@ The **Counter** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -36,7 +36,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Name
+### Name
 
 The name of the counter whose value you want to increment, which must adhere to the following rules:
 
@@ -49,19 +49,19 @@ The name of the counter whose value you want to increment, which must adhere to 
 It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
-### 3.2 Value
+### Value
 
 The value used to increment the counter's value. Values are specified with [expressions](/refguide9/expressions/) and should be of type Integer/Long. It is only possible to increment the counter, so values cannot be negative.
 
-### 3.3 Tags
+### Tags
 
 You can specify a list of tags to enrich the counter name with key/value pairs. See [Tag Naming](https://micrometer.io/docs/concepts#_tag_naming) on the Micrometer site for more guidance on using tags.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Metric Configuration](/refguide9/metrics/)
 * [Metrics Activities](/refguide9/metrics-activities/)

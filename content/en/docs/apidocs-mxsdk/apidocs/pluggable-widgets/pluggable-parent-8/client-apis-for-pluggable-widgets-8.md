@@ -6,31 +6,31 @@ weight: 20
 description: A guide for understanding the client APIs available to pluggable widgets.
 ---
 
-## 1 Introduction
+## Introduction
 
 The main API the Mendix Platform provides to a pluggable widget client component is the props the component receives. These props resemble the structure of properties specified in the widget definition XML file (a structure described in [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)). A property's attribute type affects how the property will be represented to the client component. Simply, an attribute's type defines what will it be. You can find the more details on property types and the interfaces that property value can adhere to in [Pluggable Widget Property Types](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/). To see examples of pluggable widgets in action, see [How To Build Pluggable Widgets](/howto/extensibility/pluggable-widgets/)
 
 The Mendix Platform also exposes a few JavaScript modules, specifically extra Mendix APIs as well as existing libraries, like React, that client components must share with the platform to function properly. For more information on exposed libraries, see the [Exposed Libraries](#exposed-libraries) section below.
 
-## 2 Bundling
+## Bundling
 
 Mendix does not provide you code as an *npm package*, which is the approach commonly used by JavaScript libraries. Instead, Mendix provides you modules available during execution. Hence, if you are using a module bundler like [webpack](https://webpack.js.org/), you should configure it to mark these modules as [externals](https://webpack.js.org/configuration/externals/).
 
 This process can be cumbersome, so it is recommended you use this [tools package](https://www.npmjs.com/package/@mendix/pluggable-widgets-tools) which contains the correctly-configured bundlers to work with pluggable widgets. If you follow best practices and use the [Mendix Pluggable Widget Generator](https://www.npmjs.com/package/@mendix/generator-widget) to scaffold your widget, then this package is added automatically.
 
-## 3 Standard Properties {#standard-properties}
+## Standard Properties {#standard-properties}
 
 Alongside the props that correspond to the properties specified in widget definition XML file, the props listed below are always passed to a client component.
 
-### 3.1 Name 
+### Name 
 
 In Mendix Studio Pro, every widget must have a name configured. The primary usage of a widget name is to make its component identifiable in the client so that it can be targeted using [Selenium](/howto/integration/selenium-support/) or Appium test automation. In web apps, the Mendix Platform automatically adds the class `mx-name-{widgetName}` to a widget so that no extra action from a component developer is required. Unfortunately, this solution is not possible for [native mobile apps](/refguide/mobile/). For native mobile apps a component developer must manually pass a given `string` `name` prop to an underlying React Native [testID](https://facebook.github.io/react-native/docs/view#testid).
 
-### 3.2 Class
+### Class
 
 A user can specify multiple classes for every widget. They can do this either directly by configuring a [class](/refguide/common-widget-properties/#class) property in Studio Pro, or by using design properties. In web apps, the Mendix Platform creates a CSS class string from the configuration and passes it as a `string` `class` prop to every client component. Unfortunately, React Native does not have similar support for classes. Therefore in native mobile apps a component will not receive `class` prop, but a `style` prop instead.
 
-### 3.3 Style
+### Style
 
 A user can specify a custom CSS for every widget on a web page by using the [style](/refguide/common-widget-properties/#style) property. This styling is passed to a client component through an optional `style` prop of the type `CSSProperties`.
 
@@ -40,13 +40,13 @@ On native pages, the meaning of a `style` prop is very different. First of all, 
 This property was introduced in Mendix 8.0 with an array of style objects. This array was changed to contain a single style object in Mendix 8.6.
 {{% /alert %}}
 
-### 3.4 TabIndex
+### TabIndex
 
 If a widget uses a TabIndex prop [system property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#tabindex), then it will receive a configured `Tab index` through a `number` `tabIndex` property, except in the case when a configured tab index is on its default value of 0. Currently, `tabIndex` is not passed to widgets used on native pages. 
 
-## 4 Property Values
+## Property Values
 
-### 4.1 ActionValue {#actionvalue}
+### ActionValue {#actionvalue}
 
 ActionValue is used to represent actions, like the [On click](/refguide/on-click-event/#on-click) property of an action button. For any action except **Do nothing**, your component will receive a value adhering to the following interface. For **Do nothing** it will receive `undefined`. The `ActionValue` prop appears like this:
 
@@ -66,7 +66,7 @@ Note that `isExecuting` indicates only whether the current action is running. It
 
 The method `execute` triggers the action. It returns nothing and does not guarantee that the action will be started synchronously. But when the action does start, the component will receive a new prop with the `isExecuting` flag set.
 
-### 4.2 DynamicValue {#dynamic-value}
+### DynamicValue {#dynamic-value}
 
 DynamicValue is used to represent values that can change over time and is used by many property types. It is defined as follows:
 
@@ -95,7 +95,7 @@ Though the type definition above looks complex, it is fairly simply to use becau
     * In case a dynamic value was previously in a `ValueStatus.Available` state, then the previous `value` is still returned. This is done so that a component can keep showing the previous value if it doesn’t need to handle `Loading` explicitly. This prevents flickering: a state when a displayed value rapidly changes between loading and not loading several times.
     * In other cases, the `value` is `undefined`. This is a common situation while a page is still being loaded.
 
-### 4.3 EditableValue {#editable-value}
+### EditableValue {#editable-value}
 
 EditableValue is used to represent values that can be changed by a pluggable widget client component and is passed only to [attribute properties](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#attribute). It is defined as follows:
 
@@ -137,7 +137,7 @@ There is a way to use more the convenient `displayValue`  and `setTextValue` whi
 
 The optional field `universe` is used to indicate the set of all possible values that can be passed to a `setValue` if a set is limited. Currently, `universe` is provided only when the edited attribute is of the Boolean or enumeration [types](/refguide/attributes/#type).
 
-### 4.4 IconValue {#icon-value}
+### IconValue {#icon-value}
 
 `DynamicValue<IconValue>` is used to represent icons: small pictograms in the Mendix Platform. Those can be static or dynamic file- or font-based images. An icon can only be configured through an [icon](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#attribute) property. `IconValue` is defined as follows:
 
@@ -164,7 +164,7 @@ export type IconValue = WebIcon | NativeIcon;
 
 In practice, `WebIcon` and `NativeIcon` are usually passed to a `Icon` component provided by Mendix, since this provides a convenient way of handling all types of icons at once. For more information on `Icon`, see the [Icon](#icon) section below.
 
-### 4.5 ImageValue{#imagevalue}
+### ImageValue{#imagevalue}
 
 `DynamicValue<ImageValue>` is used to represent static or dynamic images. An image can be configured only through an [image](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#image) property. `ImageValue` is defined as follows:
 
@@ -180,7 +180,7 @@ export type ImageValue = WebImage | NativeImage;
 
 `NativeImage` can be passed to a `mendix/components/native/Image` component provided by Mendix for native widgets. `WebImage` can be passed to react-dom’s `img` component.
 
-### 4.6 FileValue {#filevalue}
+### FileValue {#filevalue}
 
 `DynamicValue<FileValue>` is used to represent files. A file can be configured only through a [file](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#file) property. `FileValue` is defined as follows:
 
@@ -191,7 +191,7 @@ export interface FileValue {
 }
 ```
 
-### 4.7 ListValue{#listvalue}
+### ListValue{#listvalue}
 
 `ListValue` is used to represent a list of objects for the [datasource](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#datasource) property.
 
@@ -216,7 +216,7 @@ When a `datasource` property with `isList="true"` is configured for a widget, th
 
 However it is not possible to access domain data directly from `ListValue`, as every object is represented only by GUID in the `items` array. Instead, a list of items may be used in combination with other properties, for example with a property of type [`attribute`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#attribute), [`action`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#action) or [`widgets`](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#widgets).
 
-### 4.8 ListActionValue {#listactionvalue}
+### ListActionValue {#listactionvalue}
 
 `ListActionValue` represents actions that may be applied to items from `ListValue`. The `ListActionValue` is a function and its definition is as follows:
 
@@ -245,7 +245,7 @@ actionOnFirstItem.execute();
 
 In this code sample, checks of status `myDataSource` and availability of items are omitted for simplicity. See [ActionValue section](#actionvalue) for more information about usage of `ActionValue`.
 
-### 4.9 ListAttributeValue {#listattributevalue}
+### ListAttributeValue {#listattributevalue}
 
 `ListAttributeValue` represents an [attribute property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#attribute) that is linked to a data source.
 This allows the client component to access attribute values on individual items from a `ListValue`. `ListAttributeValue` is a function and its definition is as follows:
@@ -279,7 +279,7 @@ const attributeValue = this.props.myAttributeOnDatasource(this.props.myDataSourc
 
 Note: in this code sample checks of status of `myDataSource` and availability of items are omitted for simplicity. See [EditableValue section](#editable-value) for more information about usage of `EditableValue`.
 
-### 4.10 ListWidgetValue {#listwidgetvalue}
+### ListWidgetValue {#listwidgetvalue}
 
 `ListWidgetValue` represents a [widget property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#widgets) that is linked to a data source. 
 This allows the client component to render child widgets with items from a `ListValue`.
@@ -304,7 +304,7 @@ Because of the above configurations, the client component may render every insta
 this.props.myDataSource.items.map(i => this.props.myWidgets(i));
 ```
 
-### 4.11 ListExpressionValue {#listexpressionvalue}
+### ListExpressionValue {#listexpressionvalue}
 
 `ListExpressionValue` represents an [expression property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#expression) or [text template property](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/#texttemplate) that is linked to a data source. This allows the client component to access expression or text template values for individual items from a `ListValue`. `ListExpressionValue` is a function and its definition is as follows:
 
@@ -332,15 +332,15 @@ The following code sample shows how to get a `DynamicValue` that represents the 
 const expressionValue = this.props.myDataSource.myExpressionOnDatasource(this.props.myDataSource.item[0]);
 ```
 
-## 5 Exposed Modules
+## Exposed Modules
 
-### 5.1 Icon {#icon}
+### Icon {#icon}
 
 Mendix Platform exposes two versions of an `Icon` react component: `mendix/components/web/Icon` and `mendix/components/native/Icon`. Both components are useful helpers to render `WebIcon` and `NativeIcon` values respectively. They should be passed through an `icon` prop. The native `Icon` component additionally accepts `color` (`string`) and `size` (`number`) props.
 
-## 6 Exposed Libraries {#exposed-libraries}
+## Exposed Libraries {#exposed-libraries}
 
-### 6.1 React and React Native {#exposed-react}
+### React and React Native {#exposed-react}
 
 Mendix Platform re-export [react](https://www.npmjs.com/package/react), [react-dom](https://www.npmjs.com/package/react-dom), and [react-native](https://www.npmjs.com/package/react-native) packages to pluggable widgets. React is available to all components. React-dom is available only to components running in web or hybrid mobile apps. React-native is available only to components running in native mobile apps.
 
@@ -385,11 +385,11 @@ For react-native Mendix exposes a single version: 0.61.5. Mendix also includes t
 |   [react-navigation-stack](https://www.npmjs.com/package/react-navigation-stack)   |   2.3.1   |
 |   [react-navigation-tabs](https://www.npmjs.com/package/react-navigation-tabs)   |   2.8.4 |
 
-### 6.2 Big.js
+### Big.js
 
 The Mendix Platform uses [big.js](https://www.npmjs.com/package/big-js) to represent and operate on numbers. Mendix 8.0 re-exports version 5.2.
 
-## 7 Read More
+## Read More
 
 * [Pluggable Widgets API Documentation](/apidocs-mxsdk/apidocs/pluggable-widgets/)
 * [Pluggable Widget Property Types Documentation (Mendix 8)](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/)

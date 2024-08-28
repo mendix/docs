@@ -8,11 +8,11 @@ aliases:
 # If moving or renaming this doc file, implement a permanent redirect and let the respective team (R&D/AppDev/Frontend/Mobile Offline Team) update the URL in the product.
 ---
 
-## 1 Introduction
+## Introduction
 
 Auto-committed objects are Mendix objects committed to the database automatically because the app commits another object that references the auto-committed object. To learn more about auto-committed objects, see the [Autocommit and Associated Objects](/refguide/committing-objects/#autocommit-and-associated-objects) section of *Commit Object(s)*.
 
-## 2 Offline-First Apps and Auto-Commit Logic
+## Offline-First Apps and Auto-Commit Logic
 
 Offline-first apps do not have an auto-commit logic. When you commit an object that references an uncommitted object in an offline-first app, the Mendix Client will only commit the original object and not the referenced object. This means the local database has an invalid reference until the app explicitly commits the referenced object.
 
@@ -30,7 +30,7 @@ Assume a user closes the app right after the example nanoflow has run. Since the
 
 It is true that an offline-first app *can* create auto-committed objects on the runtime database. However, although auto-committed objects help ensure database consistency in web applications, creating auto-committed objects in offline-first apps is *not recommended*.
 
-## 3 Auto-Committed Objects: Not Recommended in Offline-First Apps
+## Auto-Committed Objects: Not Recommended in Offline-First Apps
 
 Auto-committed objects live until the user's session expires. When the user's session expires, the Mendix Runtime deletes any auto-committed objects created in that session. This logic works well for web applications, but is not a good fit for offline-first apps for the following reasons:
 
@@ -42,11 +42,11 @@ Auto-committed objects live until the user's session expires. When the user's se
 * **Delete behavior issues** – the Mendix Runtime may delete other associated objects while deleting the auto-committed objects at the end of a session. This can happen if the association's [on delete behavior](/refguide/association-properties/#delete-behavior) is set to deleting associated objects.
 * **Long-lived sessions** – In Mendix versions below 10.9.0, offline-first progressive web apps use [long-lived sessions](/refguide/mobile/introduction-to-mobile-technologies/progressive-web-app/#sessions) with longer session timeout by default. This causes auto-committed objects to remain on the server database as long as a session is active. Other PWA users can synchronize the auto-committed objects to their local databases. For example, a user changes and attempts to synchronize an auto-committed object with validation problems. In that case the server may fail to synchronize it. This is not the case for apps created in Mendix version 10.9.0 and above, as a new [session management](/refguide/session-management/) using authentication tokens was introduced in that version.
 
-## 4 How Offline-First Apps Create Auto-Committed Objects
+## How Offline-First Apps Create Auto-Committed Objects
 
 Even though an offline-first app always works against the local database, it can still execute logic on the runtime creating auto-committed objects.
 
-### 4.1 Calling Microflows
+### Calling Microflows
 
 An offline-first app can call microflows on the runtime, creating auto-committed objects. See the following example:
 
@@ -54,11 +54,11 @@ An offline-first app can call microflows on the runtime, creating auto-committed
 
 In the example microflow above, the commit action of the `$Order` object will auto-commit the `$Customer` object.
 
-#### 4.1.1 Preventing Microflows from Creating Auto-Committed Objects
+#### Preventing Microflows from Creating Auto-Committed Objects
 
 To prevent auto-committed objects from microflows, commit any new objects created in microflows executed in an offline-first app.
 
-### 4.2 Synchronization
+### Synchronization
 
 During synchronization, the Mendix Runtime may create new objects and commit/delete existing objects. For example, imagine event handler microflows are defined on the domain model for the synchronized entities. In that case, the Mendix Runtime will execute them. 
 
@@ -75,26 +75,26 @@ Assume the `$NewCustomer` object is invalid due to a missing required attribute 
     * The commit fails due to the validation error (synchronization creates a `System.SynchronizationError` entry for this object and continues)
 * The `$NewCustomer` object remains auto-committed
 
-#### 4.2.1 Preventing Synchronization from Creating Auto-Committed Objects
+#### Preventing Synchronization from Creating Auto-Committed Objects
 
 To prevent synchronization from creating auto-committed objects, Solve the root cause of the validation failure. 
 
-## 5 How Mendix Handles Auto-Committed Objects in an Offline-First App
+## How Mendix Handles Auto-Committed Objects in an Offline-First App
 
 Mendix's method of handling auto-committed objects depends on the application type and the Mendix version. The sections below have more information divided by app type:
 
 * [Offline-First Progressive Web Apps](#offline-pwas)
 * [Native Mobile Apps](#native-apps)
 
-### 5.1 Offline-First Progressive Web Apps {#offline-pwas}
+### Offline-First Progressive Web Apps {#offline-pwas}
 
-#### 5.1.1 Created During Synchronization
+#### Created During Synchronization
 
 The Mendix Runtime will delete auto-committed objects created during synchronization. It will also log a warning in the `Offline Synchronization` log node.
 
 This is how the message will appear:
 
-```text {linenos=false}
+```text
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
 - {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 - {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
@@ -105,15 +105,15 @@ Please refer to the documentation to learn more about this issue and how to solv
 https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/auto-committed-objects/
 ```
 
-#### 5.1.2 Created While Executing a Microflow
+#### Created While Executing a Microflow
 
 Auto-committed objects created inside microflows that are called from a nanoflow will remain in the database. An error will be logged when the user's session expires unless auto-committed objects are explicitly committed or deleted.
 
-### 5.2 Native Mobile Apps {#native-apps}
+### Native Mobile Apps {#native-apps}
 
 Auto-committed objects created during synchronization are deleted immediately after the synchronization. When this happens, a warning is logged in the `Offline Synchronization` node:
 
-```text {linenos=false}
+```text
 The offline synchronization detected {count} auto-committed objects during synchronization executed by {user}. Auto committed objects are not supported during offline synchronization. The Mendix runtime has deleted the following objects:
 - {Entity1}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
 - {Entity2}: {count} object(s) - ({guid1}, {guid2}, ... {guidN})
@@ -126,7 +126,7 @@ https://docs.mendix.com/refguide/mobile/building-efficient-mobile-apps/offlinefi
 
 Auto-committed objects created inside microflows that are called from a nanoflow will remain on the database.
 
-## 6 Customizing the Auto-Commit Handling Behavior
+## Customizing the Auto-Commit Handling Behavior
 
 A custom runtime setting (`com.mendix.offline.DeleteAutoCommittedObjectsAfterSync`) is available to disable deleting the auto-committed objects created during synchronization. This setting can be used in apps from Mendix Studio Pro 9.18 and above.
 

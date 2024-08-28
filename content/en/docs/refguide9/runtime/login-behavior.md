@@ -4,7 +4,7 @@ url: /refguide9/login-behavior/
 description: "Describes default and customized login behavior in the Mendix Runtime."
 ---
 
-## 1 Default Login Behavior
+## Default Login Behavior
 
 A user is blocked after three consecutive bad login attempts, regardless of the time between the login attempts. The failed login count is reset after a successful login attempt or when a blocked user is unblocked. Blocking users only occurs when the app security level is set to **Production**.
 
@@ -22,13 +22,13 @@ In versions of Mendix below 9.11.0, the cluster manager will unblock *all* block
 Cluster manager behavior currently cannot be changed.
 {{% /alert %}}
 
-## 2 Customizing Login Behavior
+## Customizing Login Behavior
 
 Login behavior can be customized by implementing a custom Java action and registering it to be used instead of the default login action. To do this you need to perform the following steps, saving the updated Java in the `javasource` folder of your app.
 
 1. Create a subclass of `UserAction<ISession>` similar to following:
 
-    ```Java {linenos=false}
+    ```Java
     public class CustomLoginAction extends UserAction<ISession> {
       private final Map<String, ?> params;
 
@@ -47,7 +47,7 @@ Login behavior can be customized by implementing a custom Java action and regist
 
 1. Create a new Java action that replaces the `LoginAction` with our custom one:
 
-    ```Java {linenos=false}
+    ```Java
     public java.lang.Void executeAction() throws Exception
     {
     Core.addUserAction(CustomLoginAction.class);

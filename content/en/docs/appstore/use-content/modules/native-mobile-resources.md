@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Native Mobile Resourc
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/) module is a bundle of Mendix platform-supported widgets and nanoflow actions for building native mobile and hybrid applications. For more information on styling widgets, see the [Native Mobile Styling Reference Guide](/refguide/native-styling-refguide/).
 
@@ -19,7 +19,7 @@ For excellent deep-dive demonstrations of how to use these native mobile widgets
 Native Mobile Resources v3.1.4 and above will indicate their version inside *themesource/nativemobileresources/.version* located in the app directory. Versions v3.1.3 and below included a constant in the module indicating version.
 {{% /alert %}}
 
-## 2 Native Widgets
+## Native Widgets
 
 These are the native widgets included in these resources along with links to the GitHub repositories where they are stored (with further documentation as necessary):
 
@@ -65,24 +65,24 @@ These are the native widgets included in these resources along with links to the
 | [Video Player](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/video-player-native) | Plays a video loaded from a URL. |
 | [Web View](https://github.com/mendix/native-widgets/tree/main/packages/pluggableWidgets/web-view-native) | Displays an external web page or loads custom HTML. |
 
-## 3 Nanoflow Actions
+## Nanoflow Actions
 
 This section contains information about the nanoflow actions included in the Native Mobile Resources module. For more information, see the JavaScript nanoflow actions [source code](https://github.com/mendix/native-widgets/tree/main/packages/jsActions/nanoflow-actions-native/src) in GitHub.
 
-### 3.1 Client Activities Category
+### Client Activities Category
 
 These are the nanoflow actions in the client activities category:
 
 * **Download file** – lets the user save a file to the device or cloud storage, or let the user open it in another app
 
-### 3.2 Native Authentication Category
+### Native Authentication Category
 
 These are the nanoflow actions in the native authentication category:
 
 * **Biometric authentication** – uses FaceId or the fingerprint scanner to verify that the device owner is using the app
 * **Is biometric authentication supported** – checks if biometric authentication is supported
 
-### 3.3 Native Camera Category
+### Native Camera Category
 
 These are the nanoflow actions in the native camera category:
 
@@ -90,14 +90,14 @@ These are the nanoflow actions in the native camera category:
 * **Take picture** – opens the camera and let the user take a picture
 * **Take picture (advanced)** – opens the camera and let the user take a picture with advanced options
 
-### 3.4 Native Clipboard Category
+### Native Clipboard Category
 
 These are the nanoflow actions in the native clipboard category:
 
 * **Get clipboard content** – fetches the latest string from the device's copy and paste clipboard 
 * **Set clipboard content** – sets a string to the device's copy and paste clipboard 
 
-### 3.5 Native Deep Link Category
+### Native Deep Link Category
 
 These are the nanoflow actions in the native clipboard category:
 
@@ -124,7 +124,7 @@ These are the nanoflow actions in the native clipboard category:
     * order: "newest" 
 * **Register deep link** – registers a nanoflow to handle all deep link requests
 
-### 3.6 Native Network Category
+### Native Network Category
 
 These are the nanoflow actions in the native network category:
 
@@ -136,7 +136,7 @@ These are the nanoflow actions in the native network category:
 These methods only check if the device is connected, not if Internet access is provided. If you want to check if the device is connected to the Internet, please use the **IsConnectedToServer** JS action from the [Nanoflow Commons Module](https://marketplace.mendix.com/link/component/109515)
 {{% /alert %}}
 
-### 3.7 Native Mobile Category{#native-mobile-category}
+### Native Mobile Category{#native-mobile-category}
 
 These are the nanoflow actions in the native mobile category:
 
@@ -177,7 +177,7 @@ These are the nanoflow actions in the native mobile category:
 * **Request generic permission** – requests a specific permission
 * **Vibrate** – vibrates the device for a specific duration
 
-### 3.8 Native Notifications Category
+### Native Notifications Category
 
 These are the nanoflow actions in the native notifications category:
 

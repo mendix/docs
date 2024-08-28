@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A Mendix app consists of modules: a **System** module, a [UI resources package](/refguide/ui-resources-package/), one or more user-defined **app modules**, [Marketplace modules](/appstore/modules/), [add-on modules](/refguide/configure-add-on-and-solution-modules/), and [solution modules](/refguide/configure-add-on-and-solution-modules/). 
 
@@ -23,7 +23,7 @@ Mendix modules are distinct from React Native modules. Mendix modules are portio
 
 The sections below present categories and tables for all the different kinds of documents you can create within a module.
 
-## 2 Module Types {#module-types}
+## Module Types {#module-types}
 
 When you create a module, it has a default **app module** type. The type can be changed at any time in [Module Settings](/refguide/module-settings/). 
 
@@ -33,7 +33,7 @@ There are the following type of modules:
 * [Add-on modules](/refguide/module-settings/#add-on-module) 
 * [Solution modules](/refguide/module-settings/#solution-module)
 
-## 3 Common
+## Common
 
 | Document type | Typical elements | Description |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ There are the following type of modules:
 | [Microflows](/refguide/microflows/) | [Activities](/refguide/activities/), [sequence Flow](/refguide/sequence-flow/) | Microflows describe the logic of your app. They are composed of activities that manipulate objects and interact with the client. |
 | [Enumerations](/refguide/enumerations/) |   | An enumeration is a set of predefined values (for example, in a web shop, an enumeration called MemberType could have the values Gold and Silver. |
 
-## 4 Page Resources
+## Page Resources
 
 | Document type | Description |
 | --- | --- |
@@ -50,7 +50,7 @@ There are the following type of modules:
 | [Menus](/refguide/menu/) | A menu document defines a navigation menu that can be used by a [menu widget](/refguide/menu-widgets/). |
 | [Snippets](/refguide/snippet/) | Snippets define reusable interface parts. They can be used on [pages](/refguide/page/) and [layouts](/refguide/layout/). |
 
-## 5 Resources
+## Resources
 
 | Document type | Description |
 | --- | --- |
@@ -63,7 +63,7 @@ There are the following type of modules:
 | [Task Queue](/refguide/task-queue/) | A task queue runs continuously to check if any microflow tasks have been added to it and executes the tasks in the background. |
 | [Scheduled Events](/refguide/scheduled-events/) | A scheduled event is used to execute a microflow at a certain point in time. You can also schedule it to repeat after a given time. For example, a scheduled event can run every morning at 6 AM |
 
-## 6 Consumed Services
+## Consumed Services
 
 | Document type | Description |
 | --- | --- |
@@ -72,10 +72,10 @@ There are the following type of modules:
 |  | An XML-to-domain mapping defines a translation from XML objects to domain model objects. |
 | [XML Schemas](/refguide/xml-schemas/) | An XML schema is defined in an XML schema definition (XSD) file and can be imported in your model. It describes what a certain XML document should look like. |
 
-## 7 Published Services
+## Published Services
 
 | Document type | Description |
 | --- | --- |
 | [Published REST Services](/refguide/published-rest-services/) | A microflow can be published as a REST service operation so that it can be consumed by other Mendix apps. |
-| [Published OData Services](/refguide/published-odata-services/) | Persistable entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
+| [Published OData/GraphQL Services](/refguide/published-odata-services/) | Persistable entities can be exposed in an OData service, so that they can be imported by third-party applications such as Excel. |
 | [Published Web Services](/refguide/published-web-services/) | A microflow can be published as a web service operation so that it can be called by third-party applications. |

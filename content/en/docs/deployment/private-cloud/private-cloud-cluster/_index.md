@@ -5,7 +5,7 @@ description: "Describes the processes for creating a Private Cloud cluster in th
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to create a cluster and add at least one namespace in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** and **Mendix Gateway Agent** in your OpenShift or Kubernetes context and create a link to the **Environments** pages of your Mendix app through the **Interactor**.
 
@@ -19,7 +19,7 @@ Once you have created your namespace, you can invite additional team members who
 You can also create clusters and namespaces using the [Mendix for Private Cloud Deploy API](/apidocs-mxsdk/apidocs/private-cloud-deploy-api/).
 {{% /alert %}}
 
-## 2 Prerequisites for Creating a Cluster {#prerequisites}
+## Prerequisites for Creating a Cluster {#prerequisites}
 
 To create a cluster in your OpenShift context, you need the following:
 
@@ -29,7 +29,7 @@ To create a cluster in your OpenShift context, you need the following:
 * **Kubectl** installed if you are deploying to another Kubernetes platform (see [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on the Kubernetes webside for more information)
 * A command line terminal that supports the console API and mouse interactions. In Windows, this could be PowerShell or the Windows Command Prompt. See [Terminal limitations](#terminal-limitations), below, for a more detailed explanation.
 
-### 2.1 Connected Environments {#prerequisites-connected}
+### Connected Environments {#prerequisites-connected}
 
 Should you consider using a connected environment, the following URLs should be safelisted in your cluster's operating system, as these URLs point to services or resources required by the *Connected Environments'* infrastructure.
 
@@ -40,9 +40,9 @@ Should you consider using a connected environment, the following URLs should be 
 | `https://private-cloud.registry.mendix.com` | Docker registry for downloading Runtime base images |
 | `https://subscription-api.mendix.com` | Service to verify call-home license |
 
-## 3 Creating a Cluster and Namespace {#create-cluster-namespace}
+## Creating a Cluster and Namespace {#create-cluster-namespace}
 
-### 3.1 Creating a Cluster {#create-cluster}
+### Creating a Cluster {#create-cluster}
 
 1. Click [Cloud Settings](/developerportal/collaborate/general-settings/#cloud-settings) on the **Settings** page of your Mendix app.
 2. Click **Mendix for Private Cloud**.
@@ -73,7 +73,7 @@ Should you consider using a connected environment, the following URLs should be 
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/create-cluster.png" class="no-border" >}}
 
-### 3.2.1 Adding a Namespace for Connected Cluster {#add-namespace}
+### Adding a Namespace for Connected Cluster {#add-namespace}
 
 You now need to add a namespace to your cluster. Your cluster can contain several namespaces, see [Containerized Mendix App Architecture](#containerized-architecture), below for more information.
 
@@ -99,7 +99,7 @@ To add a namespace, do the following:
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
-### 3.2.2 Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
+### Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
 
 If you would like to add a namespace to be added in the Standalone cluster, do the following:
 
@@ -127,14 +127,14 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
     In above page, once you do a JSON format, you will get the links for mxpc-cli for different available versions.
 
-## 4. Installing and Configuring the Mendix Operator {#install-operator}
+## Installing and Configuring the Mendix Operator {#install-operator}
 
 You can install and run the Mendix Operator in either Global or Standard mode. In Global mode, the Operator is installed once for all available namespaces, whereas in Standard mode, it is installed separately for each namespace where a Mendix app is deployed. For more information, see:
 
 * [Running the Mendix Operator in Global Mode](/developerportal/deploy/global-operator/)
 * [Running the Mendix Operator in Standard Mode](/developerportal/deploy/standard-operator/)
 
-### 5 Licensing the Application with Private Cloud License Manager
+### Licensing the Application with Private Cloud License Manager
 
 You can license the Operator and Runtime of your application by configuring the Operator configuration with License Manager details. In order to start using Private Cloud License Manager, you need to first download the PCLM executable available in the Installation page. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/). The PCLM executable is available for download from this page.
 
@@ -148,7 +148,7 @@ In order to configure PCLM, make sure that the Operator version is 2.11.0 and ab
 In the context of the Global Operator, it is necessary to configure both the managed namespace and the Global Operator namespace with the License Manager details. For more information, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/).
 {{% /alert %}}
 
-## 6 Advanced Operator Configuration
+## Advanced Operator Configuration
 
 {{% alert color="warning" %}}
 Before updating the Operator with the advanced configurations, make sure to go through the [Introduction to Operators](/developerportal/deploy/private-cloud-technical-appendix-01/) which explains how Operators work in Mendix for Private Cloud.
@@ -167,13 +167,13 @@ To start editing the `OperatorConfiguration`, use the following commands (replac
 
 For OpenShift:
 
-```shell {linenos=false}
+```shell
 oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 For Kubernetes:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
@@ -181,7 +181,7 @@ kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 Changing options which are not documented here can cause the Mendix Operator to configure environments incorrectly. Mendix recommends making a backup before applying any changes.
 {{% /alert %}}
 
-### 6.1 Runtime Base Image
+### Runtime Base Image
 
 Starting from version 2.15.0, the OperatorConfiguration contains allows to specify the base OS image tag template.
 
@@ -210,7 +210,7 @@ If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (an
 
 {{% /alert %}}
 
-### 6.2 Endpoint (network) Configuration {#advanced-network-settings}
+### Endpoint (network) Configuration {#advanced-network-settings}
 
 The OperatorConfiguration contains the following user-editable options for network configuration:
 
@@ -334,7 +334,7 @@ You can change the following options:
 When switching between Ingress and OpenShift Routes, you need to [restart the Mendix Operator](#restart-after-changing-network-cr) for the changes to be fully applied.
 {{% /alert %}}
 
-### 6.3 Mendix App Deployment settings {#advanced-deployment-settings}
+### Mendix App Deployment settings {#advanced-deployment-settings}
 
 The OperatorConfiguration contains the following user-editable options for configuring Mendix app Deployments (Pods):
 
@@ -359,13 +359,13 @@ You can change the following options:
 * **runtimeAutomountServiceAccountToken**: – specify if Mendix app Pods should get a Kubernetes Service Account token; defaults to `false`; should be set to `true` when using Linkerd [Automatic Proxy Injection](https://linkerd.io/2.10/features/proxy-injection/)
 * **runtimeDeploymentPodAnnotations**: – specify default annotations for Mendix app Pods
 
-### 6.4 Mendix App Resource Customization {#advanced-resource-customization}
+### Mendix App Resource Customization {#advanced-resource-customization}
 
 The Deployment object that controls the pod of a given Mendix application contains user-editable options for fine-tuning the execution to the application's runtime resources.
 
 The Deployment object as a name in the following format:
 
-```shell {linenos=false}
+```shell
 <internal environment name>-master
 ```
 
@@ -447,7 +447,7 @@ spec:
 # ...
 ```
 
-#### 6.4.1 Resource Definition via Operator Configuration Manifest {#resource-definition-ocm}
+#### Resource Definition via Operator Configuration Manifest {#resource-definition-ocm}
 
 For a given namespace, all the resource information is aggregated in the `mendix-operator-configuration` manifest. This centralizes and overrides all the configuration explained above. For an example of the Operator configuration manifest, see below. Note that the below configuration is just for reference purpose.
 
@@ -529,7 +529,7 @@ An app will return a successful health check status if all of these conditions a
 3. If the Runtime is `running`, and a healthcheck microflow is configured, the healthcheck microflow needs to return a `healthy` state. If there is no `check_health` microflow configured, or the Runtime's state is not `running`, this condition is ignored.
 {{% /alert %}}
 
-#### 6.4.2 Customize Liveness Probe to Resolve Crash Loopback Scenarios
+#### Customize Liveness Probe to Resolve Crash Loopback Scenarios
 
 The `liveness probe` informs the cluster whether the pod is dead or alive. If the pod fails to respond to the liveness probe, the pod will be restarted (this is called a `crash loopback`).
 
@@ -572,7 +572,7 @@ Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck o
 The default settings for the liveness probe should work for almost every use case, and should not be modified unless instructed by Mendix Support.
 {{% /alert %}}
 
-#### 6.4.3 Customize Startup Probes for Slow Starting Applications
+#### Customize Startup Probes for Slow Starting Applications
 
 If you want to wait before executing a liveness probe you should use `initialDelaySeconds` or a startup probe.
 
@@ -608,11 +608,11 @@ Mendix Operator 2.15.0 uses an improved liveness probe that runs a healthcheck o
 Startup probes are no longer used, and changing the `startupProbe` settings will have no effect.
 {{% /alert %}}
 
-#### 6.4.4 Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
+#### Customize terminationGracePeriodSeconds for Gracefully Shutting Down the Application Pod
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
-```yaml {linenos=false}
+```yaml
 terminationGracePeriodSeconds: 300
 ```
 
@@ -620,7 +620,7 @@ terminationGracePeriodSeconds: 300
 The `terminationGracePeriodSeconds` setting is available in the Mendix for Private Cloud Operator version 2.6.0 and above.
 {{% /alert %}}
 
-#### 6.4.5 Customize Container Resources: Memory and CPU
+#### Customize Container Resources: Memory and CPU
 
 The `resources` following section shows an example configuration of the `resources` section from the example application deployment, above. Note that the configuration is just for reference purpose.
 
@@ -642,7 +642,7 @@ The settings in the example above mean that
 * if the server node where a pod is running has enough of a given resource available the container can be granted resource than its `requests`
 * a container will never be granted more than its resource `limits`
 
-##### 6.4.5.1 Meaning of CPU
+##### Meaning of CPU
 
 Limits and requests for CPU resources are measured in cpu units. One CPU, in this context, is equivalent to 1 vCPU/Core for cloud providers and 1 hyperthread on bare-metal Intel processors.
 
@@ -650,7 +650,7 @@ Fractional requests are allowed. For instance, in this example, we are requestin
 
 A precision finer than 1m is not allowed.
 
-##### 6.4.5.2 Meaning of Memory
+##### Meaning of Memory
 
 Limits and requests for memory are measured in bytes. You can express memory as a plain integer or as a fixed-point number using one of these suffixes: E, P, T, G, M, K. You can also use the power-of-two equivalents: Ei, Pi, Ti, Gi, Mi, Ki. For example, the following represent roughly the same value: `128974848`, `129e6`, `129M`, `123Mi`
 
@@ -660,7 +660,7 @@ For instance, in the example above, we are requesting and limiting memory usage 
 Modifying the resource configuration should be performed carefully as that might have direct implications on the performance of your application, and the resource usage of the server node.
 {{% /alert %}}
 
-### 6.5 Customize Runtime Metrics {#customize-runtime-metrics}
+### Customize Runtime Metrics {#customize-runtime-metrics}
 
 Mendix for Private Cloud provides a Prometheus API, which can be used to collect metrics from Mendix apps.
 
@@ -719,7 +719,7 @@ To disable the Prometheus metrics API, remove the `runtimeMetricsConfiguration` 
 
 For more information about collecting metrics in Mendix for Private Cloud, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 
-### 6.6 Customize Service Account {#customize-service-account}
+### Customize Service Account {#customize-service-account}
 
 The Mendix environment can be configured to use a specific Kubernetes ServiceAccount instead of the default ServiceAccount.
 
@@ -731,7 +731,7 @@ The service account can be customized for Private Cloud Operator version 2.7.0 a
 
 If required, you can use additional annotations. For example, in order to authenticate with AWS services instead of with static credentials, you can attach an AWS IAM role to an environment and use [IRSA](https://aws.amazon.com/blogs/opensource/introducing-fine-grained-iam-roles-service-accounts/).
 
-### 6.7 Autoscaling
+### Autoscaling
 
 Mendix for Private Cloud is compatible with multiple types of Kubernetes autoscalers.
 
@@ -741,13 +741,13 @@ To optimize resource utilization, autoscaling can terminate running instances of
 When autoscaling scales down an app or Kubernetes node, microflows in affected pods will be terminated, and the terminating pod will no longer accept new HTTP connections.
 {{% /alert %}}
 
-#### 6.7.1 Cluster Autoscaling
+#### Cluster Autoscaling
 
 The Kubernetes [cluster autoscaler](https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler) monitors resource usage and automatically adjusts the size of the cluster based on its resource needs.
 
 Mendix for Private Cloud is compatible with cluster autoscaling. To install and enable cluster autoscaling, follow your cluster vendor's recommended way of configuring the cluster autoscaler.
 
-#### 6.7.2 Horizontal Pod Autoscaling {#horizontal-autoscaling}
+#### Horizontal Pod Autoscaling {#horizontal-autoscaling}
 
 {{% alert color="info" %}}
 You need to have the Mendix Operator version 2.4.0 or above installed in your namespace to use horizontal pod autoscaling.
@@ -761,7 +761,7 @@ Horizontal pod autoscaling can be combined with cluster autoscaling, so that the
 
 To enable horizontal pod autoscaling for an environment, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} autoscale mendixapp {envname} --cpu-percent=50 --min=1 --max=10
 ```
 
@@ -770,7 +770,7 @@ Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to spec
 
 To configure additional horizontal pod autoscaling, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit horizontalpodautoscaler {envname}
 ```
 
@@ -786,7 +786,7 @@ When an environment is scaled (manually or automatically), it will not be restar
 Scaling an environment up (increasing the number of replicas) adds more pods - without restarting any already running pods; once the additional pods become available, they will start receiving HTTP (or HTTPS) requests.
 Scaling an environment down (decreasing the number of replicas) removes some of the running pods - without restarting remaining pods; all HTTP (or HTTPS) traffic will be routed to the remaining pods.
 
-#### 6.7.3 Vertical Pod Autoscaling {#vertical-pod-autoscaling}
+#### Vertical Pod Autoscaling {#vertical-pod-autoscaling}
 
 [Vertical pod autoscaling](https://github.com/kubernetes/autoscaler/tree/master/vertical-pod-autoscaler) can automatically configure CPU and memory resources and requirements for a pod.
 
@@ -805,9 +805,9 @@ Mendix recommends using horizontal pod autoscaling to adjust environments to mee
 Vertical pod autoscaling cannot be combined with horizontal pod autoscaling.
 {{% /alert %}}
 
-### 6.8 Log format
+### Log format
 
-#### 6.8.1 Runtime log format{#runtime-log-format}
+#### Runtime log format{#runtime-log-format}
 
 Mendix Operator version 2.11.0 or above allows you to specify the log format used by Mendix apps.
 
@@ -842,9 +842,9 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
-### 6.9 Pod labels {#pod-labels}
+### Pod labels {#pod-labels}
 
-#### 6.9.1 General pod labels
+#### General pod labels
 
 Mendix Operator version 2.13.0 or above allows you to specify default pod labels for app-related pods: task pods (build and storage provisioners) and runtime (app) pods.
 
@@ -870,7 +870,7 @@ Alternatively, for Standalone clusters, pod labels can be specified in the `Mend
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
 {{% /alert %}}
 
-### 6.10 GKE Autopilot Workarounds {#gke-autopilot-workarounds}
+### GKE Autopilot Workarounds {#gke-autopilot-workarounds}
 
 In GKE Autopilot, one of the key features is its ability to automatically adjust resource settings based on the observed resource utilization of the containers. GKE Autopilot verifies the resource allocations and limits for all containers, and makes adjustments to deployments when the resources are not as per its requirements.
 
@@ -900,7 +900,7 @@ spec:
 
 Run the following command in order to update the core resources in the `OperatorConfiguration`:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
 ```
 
@@ -908,11 +908,11 @@ kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration
 Google Kubernetes Engine (GKE) requires a balanced allocation of CPU and memory resources. If a container requests a substantial amount of memory, it should also correspondingly request more CPU cores. For detailed information on resource requests, you can refer to the [Resource Requests in Autopilot](https://cloud.google.com/kubernetes-engine/docs/concepts/autopilot-resource-requests) documentation provided by Google Kubernetes Engine.
 {{% /alert %}}
 
-## 7 Cluster and Namespace Management
+## Cluster and Namespace Management
 
 Once it is configured, you can manage your cluster and namespaces through the Mendix Portal.
 
-### 7.1 Cluster Overview {#overview}
+### Cluster Overview {#overview}
 
 Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu of the **Clouds** page of the Mendix Portal.
 
@@ -920,7 +920,7 @@ Go to the Cluster Manager page by clicking **Cluster Manager** in the top menu o
 
 From this page you can see a summary of your clusters with all their namespaces and an indication of the namespace status and how long it has been running (runtime).
 
-#### 7.1.1 Managing the Cluster
+#### Managing the Cluster
 
 Here you can perform the following actions on the entire cluster:
 
@@ -958,7 +958,7 @@ The only limitations are that:
 When you delete a cluster, this removes the cluster from the Mendix Portal. However, it will not remove the associated namespace from your platform. You will need to explicitly delete the namespace using the tools provided by your platform.
 {{% /alert %}}
 
-### 7.2 Namespace Management
+### Namespace Management
 
 If you are a member of a namespace, you can also manage a namespace in the cluster.
 
@@ -1102,7 +1102,7 @@ You can also see an activity log containing the following information for all na
 * When developer mode is enabled in the namespace
 * When developer mode is disabled in the namespace
 
-#### 7.2.1 Apps
+#### Apps
 
 The **Apps** tab of namespace details in the cluster manager page lists all the app environments which are deployed to this namespace.
 
@@ -1116,7 +1116,7 @@ You can only see the environment details of an app if you are a member of the te
 
 If you are a cluster administrator, you can also click **Configure** to configure the environment by adding annotations for pods, ingress, and service.
 
-##### 7.2.1.1 Configure Environment
+##### Configure Environment
 
 You can add, edit, and delete annotations for your environment.
 
@@ -1147,7 +1147,7 @@ You can configure the runtime metrics for the environment in the **Runtime** sec
 
 You can also configure the pod labels for the environment in the **Labels** section. For more information, see [App Pod Labels](#pod-labels).
 
-#### 7.2.2 Members
+#### Members
 
 By default, the cluster manager, who created the cluster in Mendix, and anyone added as a cluster manager has full administration rights to the cluster and its namespaces. These cluster managers will also need to be given the appropriate permissions on the Kubernetes or OpenShift Cluster. The administration rights are:
 
@@ -1185,7 +1185,7 @@ The following actions require the appropriate access to the namespace **and** ac
 
 The **Members** tab allows you to manage the list of members of the namespace and control what rights they have.
 
-##### 7.2.2.1 Adding Members
+##### Adding Members
 
 You can invite additional members to the namespace, and configure their role depending on what they should be allowed to do.
 
@@ -1214,7 +1214,7 @@ You can invite additional members to the namespace, and configure their role dep
 
 7. If you have not enabled the **Automatically accept invites** option, the user will receive an email and will be required to follow a link to confirm that they want to join this namespace. They will need to be logged in to Mendix when they follow the confirmation link.
 
-##### 7.2.2.2 Editing and Removing Members
+##### Editing and Removing Members
 
 You can change the access rights for, or completely remove, existing members.
 
@@ -1226,7 +1226,7 @@ You can change the access rights for, or completely remove, existing members.
 
         {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image30.png" class="no-border" >}}
 
-#### 7.2.3 Operate {#operate}
+#### Operate {#operate}
 
 The **Operate** tab allows you to add a set of links which are used when users request an operations page for their app in [Apps](https://sprintr.home.mendix.com/).
 The following pages can be configured:
@@ -1242,21 +1242,21 @@ Open the **Operate** tab, enter the URLs relevant to your namespace, and click *
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image32.png" class="no-border" >}}
 
-#### 7.2.4 Plans
+#### Plans
 
 The **Plans** tab shows you the database and storage plans which are currently configured for your namespace.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image33.png" class="no-border" >}}
 
-##### 7.2.4.1 Deactivating a Plan
+##### Deactivating a Plan
 
 Enable the toggle button next to the name of the plan you wish to deactivate. You cannot remove plans from within the cluster manager, but you can deactivate them to ensure that developers cannot create environments using the plan. Any environments currently using the plan will not be affected by this setting.
 
-##### 7.2.4.2 Activating a Plan
+##### Activating a Plan
 
 Disable the toggle button next to the name of the plan you wish to activate. The plan can then be used by developers when they create an environment to deploy their apps.
 
-##### 7.2.4.3 Deleting a Plan
+##### Deleting a Plan
 
 You can only delete storage or database plans if they are not used in any of your environments, regardless of whether they are active or inactive.
 
@@ -1279,7 +1279,7 @@ kubectl -n {namespace} delete storageplan {StoragePlanName}
 
 {{% /alert %}}
 
-#### 7.2.5 Custom Core Resource Plan {#custom-core-resource-plan}
+#### Custom Core Resource Plan {#custom-core-resource-plan}
 
 Here, you can create customized plan for your core resources.
 
@@ -1308,7 +1308,7 @@ Ephemeral Storage is a temporary storage attached to the lifecycle of a pod. Hen
 Once you enable the **Use custom core resources plans** button, you cannot switch back to the default core plans until you delete all the environments using the custom core plans and disable **Use custom core resources plans** button. A warning message with the same information is displayed when trying to enable this feature.
 {{% /alert %}}
 
-#### 7.2.6 Installation
+#### Installation
 
 The **Installation** tab shows you the Configuration Tool which you used to create the namespace, together with the parameters which are used to configure the agent. You can use the Configuration Tool again to change the configuration of your namespace by pasting the command into a command line terminal as described in [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), above. You can also download the Configuration Tool again, if you wish.
 
@@ -1316,11 +1316,11 @@ The **Installation** tab shows you the Configuration Tool which you used to crea
 In case of Global Operator Managed namespace, you will see the Configuration tab instead of the Installation tab. For more information, see [Global Operator Namespace](/developerportal/deploy/global-operator/)
 {{% /alert %}}
 
-#### 7.2.7 Additional Information
+#### Additional Information
 
 This tab shows information on the versions of the various components installed in your namespace.
 
-#### 7.2.8 Customization
+#### Customization
 
 This tab allows the cluster manager to customize the enablement of the secret store, developer mode for the developers, and product type for the PCLM Runtime License.
 
@@ -1348,7 +1348,7 @@ The selected product type will be applied to all environments within this namesp
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/Customization.png" class="no-border" >}}
 
-#### 7.2.9 PCLM Statistics
+#### PCLM Statistics
 
 This tab shows information about claimed licenses, operator licenses and runtime licenses.
 
@@ -1380,9 +1380,9 @@ For more information, see [Private Cloud License Manager](/developerportal/deplo
 If Global Operator is configured with [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/), you can view the **Runtime** and **Operator** list of licenses for the main namespace, and only the list of **claims** for the managed namespace.
 {{% /alert %}}
 
-## 8 Current Limitations
+## Current Limitations
 
-### 8.1 Storage Provisioning
+### Storage Provisioning
 
 If the Operator fails to provision or deprovision storage (a database or file storage), it will not retry the operation. If there is a failed `*-database` or `*-file` pod, you'll need to do the following:
 
@@ -1390,7 +1390,7 @@ If the Operator fails to provision or deprovision storage (a database or file st
 2. Troubleshoot and fix the cause of this error.
 3. Delete the failed pod to retry the process again.
 
-### 8.2 Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
+### Restart Required When Switching Between Ingress and OpenShift Route {#restart-after-changing-network-cr}
 
 Starting with Mendix Operator version 1.5.0, the operator will monitor only one network resource type: Ingress or OpenShift route.
 
@@ -1410,9 +1410,9 @@ kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
-### 8.3 Terminal limitations {#terminal-limitations}
+### Terminal limitations {#terminal-limitations}
 
-#### 8.3.1 Windows
+#### Windows
 
 The Windows version of the Configuration Tool must be run in a terminal that supports the Windows console API and has mouse support. PowerShell and the Windows Command Prompt are supported.
 
@@ -1426,13 +1426,13 @@ Some previously released versions of Mendix for Private Cloud required using Git
 Starting from Mendix Operator version 1.9.0, Git Bash is no longer required.
 {{% /alert %}}
 
-#### 8.3.2 Linux and macOS
+#### Linux and macOS
 
 When running the installation tool over SSH, make sure that the SSH client supports terminal emulation and has mouse support enabled.
 
 `ssh.exe` in Windows doesn't support mouse click forwarding and another SSH client should be used instead, such as [MobaXterm](https://mobaxterm.mobatek.net/) or [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html).
 
-### 8.4 Configuration Tool - Known Issues
+### Configuration Tool - Known Issues
 
 When restoring a previously saved session, some UI elements (such as drop-downs and checkboxes) will not use the saved session and will revert to their default values.
 
@@ -1440,19 +1440,19 @@ For example, the **Authentication** dropdown for Postgres will always switch to 
 
 Selecting the correct value from those drop-downs will restore the state of the form and any fields which might not be visible.
 
-## 9 Troubleshooting
+## Troubleshooting
 
-### 9.1 Status Reporting
+### Status Reporting
 
 This section covers an issue which can arise where Mendix cannot recover automatically and manual intervention may be required.
 
 Under some circumstances changes in the status of the cluster, namespaces, and environments will not be updated automatically. To ensure you are seeing the current status, you may need to click the **Refresh** button on the screen (not the browser page refresh button).
 
-### 9.2 Windows PowerShell
+### Windows PowerShell
 
 This section covers how to troubleshoot an issue you may find when running the installation tool with Windows PowerShell Terminal.
 
-### 9.2.1 Enable Copy and Paste in Windows PowerShell
+### Enable Copy and Paste in Windows PowerShell
 
 If you are unable to copy and paste in the installation tool, you may need to enable it from the Windows PowerShell Properties. Open the **Properties** menu by right clicking the header or by pressing <kbd>Alt</kbd> + <kbd>Space</kbd>.
 
@@ -1464,7 +1464,7 @@ Select the **Options** tab and enable **Use Ctrl+Shift+C/V as <u>C</u>opy/Paste*
 
 You can now copy and paste with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> and <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> in the terminal.
 
-### 9.2.2 Unable to Click a Button
+### Unable to Click a Button
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image36.png" class="no-border" >}}
 
@@ -1474,7 +1474,7 @@ If you highlight a button instead of clicking the button, you may need to disabl
 
 After disabling the option you need to enable the new settings. You can do this by navigating to other page by pressing a shortcut key, or reopening the installer tool by closing it with <kbd>Ctrl</kbd> + <kbd>C</kbd> and reopening the tool with the installation command.
 
-## 10 Containerized Mendix App Architecture  {#containerized-architecture}
+## Containerized Mendix App Architecture  {#containerized-architecture}
 
 Within your cluster you can run one, or several, Mendix apps. Each app runs in an environment, and each environment is in a namespace. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

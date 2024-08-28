@@ -5,15 +5,15 @@ weight: 20
 description: "This describes how developers can change apps styling and create re-usable styling."
 ---
 
-## 1 Introduction
+## Introduction
 
 This page describes how developers can change the styling of apps and create re-usable styling. For progressive and web apps, SASS (SCSS) is used and for native mobile apps JavaScript is used. Even though the technologies differ, the approach for customizing styling is the same.
 
-## 2 Changing the App Look and Feel
+## Changing the App Look and Feel
 
 Developers have several options to change an app's look and feel. 
 
-### 2.1 Changing the Default Theme Settings
+### Changing the Default Theme Settings
 
 When tailoring your app's look, a simple first step is to change the theme settings. This quickly adjusts the theme to a company's brand by changing the colors.
 
@@ -21,7 +21,7 @@ To customize the default theme settings, you can open and edit the *custom-varia
 
 For more information on how changes can be quickly previewed, see the [Preview a Styling Change](#previewing-styling) section below.
 
-### 2.2 Using the Styling Editor {#styling-editor}
+### Using the Styling Editor {#styling-editor}
 
 The styling editor is based on the editor that powers Visual Studio Code and is also used for JavaScript actions. You can find the styling files (JS, SCSS) and theme settings (JSON) under App Explorer's **Styling** node. When you double-click a styling file, it will be opened in the styling editor:
 
@@ -33,7 +33,7 @@ By default, Studio Pro shows styling files on the app level and from UI resource
 
 To learn more about the file and folder structure, see the [File and Folder Structure](#file-and-folder) section below.
 
-### 2.3 Adding Custom Styling {#add-custom-styling}
+### Adding Custom Styling {#add-custom-styling}
 
 Developers can add custom styling for apps in the `theme/web` or `theme/native` folder.
 
@@ -43,7 +43,7 @@ While custom styling can be added directly in the *main.scss* or *main.js* it is
 
 Within custom styling, the theme settings (colors, spacings, etc.) as configured in *custom-variables.scss* or *custom-variables.js*, can be re-used. This is also recommended to provide a consistent user experience.
 
-#### 2.3.1. Web Environment Example
+#### Web Environment Example
 
 In the following example a custom style is added to change any matching element's font-size upon use.
 
@@ -51,31 +51,31 @@ Steps:
 
 1. In *theme/web/custom-variables.scss* add a SCSS variable by adding the following code to the file: 
 
-    ```scss {linenos=false}
+    ```scss
 	$company-header-text-size: 30px;
     ```
 
 2. Create a new file *theme/web/company-header.scss*. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
-    ```scss {linenos=false}
+    ```scss
 	.company-header { font-size: $company-header-text-size; }
     ```
 
 3. Import the new file in *theme/web/main.scss* by adding the following:
 
-    ```scss {linenos=false}
+    ```scss
 	@import “company-header”;
     ```
 
 This ensures the SCSS is included in CSS compilation.
 
-#### 2.3.2 Native Environment Example
+#### Native Environment Example
 
 In this example we will be creating a custom style which will change the font size of text upon use:
 
 1. Add a JavaScript variable in *theme/native/custom-variables.js* with the following code: 
    
-    ```javascript {linenos=false}
+    ```javascript
 	export const companyHeaderTextSize = 30;
     ```
 
@@ -93,7 +93,7 @@ In this example we will be creating a custom style which will change the font si
 	module.exports = {companyHeader};
     ```
 
-### 2.4 Importing CSS (Web Only)
+### Importing CSS (Web Only)
 
 An app's theme is based on SASS (`.scss` files), but it can be the case you require CSS files from third-party libraries. This can be done by adding the third-party library file to the `cssFiles` property in *theme/web/settings.json*.
 
@@ -105,7 +105,7 @@ See the following fragment as an example of how additional CSS can be added to y
 }
 ```
 
-## 3 Creating Re-Usable Styling
+## Creating Re-Usable Styling
 
 The previous section describes how developers can customize the styling of an app. Next to that it is possible to place styling inside modules, which then can be re-used in other apps. This can be used to [create a theme module](#create-theme-mod) or a [company design system](/howto/front-end/create-a-company-design-system/).
 
@@ -113,7 +113,7 @@ Adding styling to a module is similar to adding styling to an app, except that s
 
 For classes that are generic or that should be easily discovered, a developer can consider creating design properties for this. For more information, see [How to Extend Design Properties](/howto/front-end/extend-design-properties/).
 
-## 4 Creating a Theme Module {#create-theme-mod}
+## Creating a Theme Module {#create-theme-mod}
 
 A theme module is useful for styling which can be easily re-used through modules across apps. By default, the theme settings like color, font, spacing, and more are in the **theme** folder, which is specific per app. However, often these settings should be re-used to create a consistent look and feel across apps.
 
@@ -121,13 +121,13 @@ This can be done by creating a theme module and making the *custom-variables* fi
 
 See the examples below for more information on creating a re-usable theme module.
 
-### 4.1 Marking as a UI Resources Module
+### Marking as a UI Resources Module
 
 Modules that contain theme styling should be marked as UI resources modules. To do so, right-click the **Module {name}** in the App Explorer, then click **Mark as UI resources module**. This will give the modules a green icon, which makes it easy to distinguish theme modules from other modules, and also influences the order in which styling will be applied from those modules:
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/green-module.png" alt="green module" class="no-border" >}}
 
-#### 4.2 Ordering UI Resource Modules
+#### Ordering UI Resource Modules
 
 When a module contains styling (SCSS/CSS), be sure it is added to the compiled CSS file in the correct order relative to other files. For example, if a theme module should override styling that is defined in **Atlas_Core**, it is important that the theme module is added *after* **Atlas_Core**. 
 
@@ -135,9 +135,9 @@ You can set an explicit order in the theme settings (**App Settings** > **Theme*
 
 {{< figure src="/attachments/howto/front-end/atlas-ui/customize-styling-new/app-theme-settings.png" alt="app theme settings" class="no-border" >}}
 
-### 4.3 Examples
+### Examples
 
-#### 4.3.1 Web
+#### Web
 
 As an example, the following variables in *theme/web/custom-variables.scss* will be made into a re-usable theme module:
 
@@ -165,7 +165,7 @@ The two files should end up looking like this:
 
 *theme/web/custom-variables.scss*:
 
-```scss {linenos=false}
+```scss
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
 
@@ -187,7 +187,7 @@ You can now export the **mytheme** module from Studio Pro to re-use in your apps
 
 To test the theme for all the widgets, page templates, and building blocks it can be helpful to use the Atlas Design System app as discussed in [Create a Company Design System](/howto/front-end/create-a-company-design-system/).
 
-#### 4.3.2 Native Mobile
+#### Native Mobile
 
 As an example, the following variables in *theme/native/custom-variables.js* will be made into a re-usable theme module:
 
@@ -216,7 +216,7 @@ Steps:
 3. Cut the export statement and variables from *theme/native/custom-variables.js* and paste in *themesource/mytheme/native/custom-variables.js*.
 4. In *theme/native/custom-variables.js* add the following code to the top of the file, replacing “mytheme” with your module name:
 
-    ```javascript {linenos=false}
+    ```javascript
 	export * from "../../themesource/mytheme/native/custom-variables";
     ```
 
@@ -224,7 +224,7 @@ The two files should end up looking like this:
 
 *theme/native/custom-variables.js*:
 
-```javascript {linenos=false}
+```javascript
 export * from "../../themesource/mytheme/native/custom-variables";
 ```
 
@@ -251,15 +251,15 @@ If you get errors, double check if the imports point to valid files.
 When this approach is used, Mendix recommends creating a company starter app. Out-of-the-box this app will contain the theme module, and already contains this change in the theme folder that points to the module.
 {{% /alert %}}
 
-## 5 Previewing a Styling Change {#previewing-styling}
+## Previewing a Styling Change {#previewing-styling}
 
 Depending on the type of app you are building, the preview of styling or a theme change is different.
 
-### 5.1 Web apps
+### Web apps
 
 Mendix monitors the file system in the **theme** and **themesource** folder for changes in the `.scss` files. When a change is detected, the `.scss` files are compiled to CSS and the app is automatically reloaded (if it is running), so no additional tooling is needed. For more information on how the SCSS is compiled see the [Styling Output](#styling-output) section below.
 
-### 5.2 Native Mobile Apps
+### Native Mobile Apps
 
 Mendix monitors the file system in the **theme** and **themesource** folders for changes in the `.js` files. When loading a native mobile app in the Make it Native app there you will see the **Enable developer mode** option. If this setting is not enabled, after making a styling change, you can reload the app with a three-finger tap.
 
@@ -267,7 +267,7 @@ If **Enable developer mode** is enabled, and changes are made in the JavaScript 
 
 For more information, see the Getting the [Make It Native App Reference Guide](/refguide/getting-the-make-it-native-app/).
 
-## 6 File and Folder Structure {#file-and-folder}
+## File and Folder Structure {#file-and-folder}
 
 Mendix offers a modular and flexible approach for styling apps. Styling can be done on an app level for app-specific styling, and styling can be put in modules for re-use.
 
@@ -298,11 +298,11 @@ The bullets below describe the file structure for the theme folder and for modul
             * *design-properties.json* — This file contains additional design properties or additional options for existing design properties that are based on the classes defined in this module.
         * **public** — This folder can contain other re-usable resources like a custom *login.html* page or images and fonts used from your web styling.
 
-## 7 Styling output {#styling-output}
+## Styling output {#styling-output}
 
 With the modular structure of the styling of Mendix app, the styling files are placed in different folders. Studio Pro automatically combines the files to a single output (stylesheet for web and JavaScript for native) which is used by the app in the browser or on the device. The following sections describe in more detail how this is done.
 
-### 7.1 Web Apps
+### Web Apps
 
 Studio Pro combines the different *.scss* files in a certain order and compiles the SASS into CSS which is used in the browser. The compiled output is saved in a folder named **theme-cache**.
 
@@ -329,7 +329,7 @@ The content from the **public** folder will be copied to the same folder as the 
 
 Note that public folders will be copied in the same order *.scss* files are compiled. Therefore if two modules have the same public resource, the last to be copied will end up in the deployment folder.
 
-### 7.2 Native Mobile Apps
+### Native Mobile Apps
 
 For native mobile apps the React Native framework is used to combine all the JavaScript files into one file, using a "bundler" that is responsible for creating the JavaScript bundle used to run the app. The styling of the different modules is combined and made ready to be processed by the bundler in the following order:
 
@@ -344,11 +344,11 @@ If there are errors during the bundling, these will be shown in Studio Pro and t
 
 For more details on styling native mobile apps see the [Native Mobile Styling](/refguide/native-styling-refguide/) Reference Guide.
 
-## 8 Disabling default styling from Atlas Core {#disable-default}
+## Disabling default styling from Atlas Core {#disable-default}
 
 Mendix provides styling for the platform supported widgets in the Atlas core module. In general, for every widget there is base styling to provide a default look and feel for the widget and helper styling, which can be seen as additional styling and variations that can be used to fit the widget into its context. Styling can be overridden, but in some cases it can be preferred to disable this default styling. This is possible by excluding styling using variables which can be set in the exclusion variables file.
 
-### 8.1 Disabling Default Web Widget Styling
+### Disabling Default Web Widget Styling
 
 To disable the default styling of a web widget, open the *exclusion-variables.scss* file located in the folder **{Mendix app}/theme/web**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the *exclusion-variables.scss* file in the app specific theme folder point to the exclusion variables file in your theme module.
 
@@ -360,7 +360,7 @@ Pick the button widget as an example. The success button is by default styled as
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the variable `$exclude-button-helpers` to `true`:
 
-```scss {linenos=false}
+```scss
 $exclude-button-helpers: true;
 ```
 
@@ -452,7 +452,7 @@ $exclude-typography
 $exclude-typography-helpers
 ```
 
-### 8.2 Disabling Default Native Mobile Widget Styling
+### Disabling Default Native Mobile Widget Styling
 
 To disable the default styling of a native mobile widget, open the *exclusionVariables.js* file located in the folder **{Mendix app}/theme/native**. This file contains supported exclusion variables. Note that these variables can be part of a custom theme module as well, just like the custom variables as described in [Create a Theme Module](#create-theme-mod), by making the *exclusionVariables.js* file in the app specific theme folder point to the exclusion variables file in your theme module.
 
@@ -464,7 +464,7 @@ Pick the button widget as an example again. The success button is by default sty
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the constant variable `excludeButtonsHelpers` to `true`:
 
-```javascript {linenos=false}
+```javascript
 export const excludeButtonsHelpers = true;
 ```
 
@@ -557,53 +557,53 @@ excludeWebView
 excludeHelpers
 ```
 
-## 9 Customizing index.html (Web) {#custom-web}
+## Customizing index.html (Web) {#custom-web}
 
 By default, Mendix generates the *index.html* (the page that is loaded to start the app) based on the app configuration. In some cases it may be needed to customize this HTML, which can be done by creating a file called *index.html* in the **theme/web** folder. To make sure that your file has the right structure, Mendix recommends copying *index-example.html* from the **deployment/web** folder to the **theme/web**, rename it to *index.html*, and then use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
-### 9.1 Cache Busting in Mendix
+### Cache Busting in Mendix
 
 Cache busting is where a browser is told by the web server to re-download page resources (such as images, stylesheets, or JavaScript) because of changes in those resources. Mendix automatically takes care of this by adding dynamic query parameters on top of the resources in *login.html* and *index.html*. Here is an example of the auto-generated cachebust query parameters in a line from */deployment/web/index.html*:
 
-```html {linenos=false}
+```html
 <script src="mxclientsystem/mxui/mxui.js?638184496048312490"></script>
 ```
 
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
-```html {linenos=false}
+```html
 <script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
 ```
 
 To ensure cache busting keeps working, whenever you need to customize *index.html* or *login.html*, make sure these files are copied according to the recommendations in [Customizing index.html](#custom-web). Whenever cache busting breaks, it is likely that the query parameters have become hard coded (for example `?638184496048312490`) instead of dynamic (for example `?{{cachebust}}`) due to copying */deployment/web/index.html* instead of the correct filename  */deployment/web/index-example.html*.
 
-## 10 Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
+## Customizing Unsupported Browsers (Web) {#customize-unsupported-browsers}
 
 When an end-user opens a Mendix app in an unsupported browser, a page is shown that the current browser is not supported and explain which other browsers can be used. To customize this screen, you can create a custom html file called *unsupported-browser.html* in the **theme/web** folder. If desired, you can copy *unsupported-browser.html* from the **deployment/web** folder to the **theme/web** folder and use it as a starting point. This file will be created after you have deployed your app locally at least once.
 
-## 11 Serving Fonts Locally (Web) {#local-fonts}
+## Serving Fonts Locally (Web) {#local-fonts}
 
 By default, Atlas uses the font Open Sans, and the font files are loaded from the Google Fonts Content Delivery Network (CDN). While the Google Fonts CDN is convenient, you might need to change your font file service location.
 
 For example, you may need to change your font file service location in order to comply with stricter [CSP](/howto/security/csp/) policies, or if you cannot use Google Fonts CDN due to business requirements. Fortunately, you can serve fonts from your own local server instead of using the Google Fonts CDN using the sections below.
 
-### 11.1 Downloading Font Files
+### Downloading Font Files
 
 Font files prepared for use with Atlas are available at this [GitHub repository](https://github.com/mendix/open-sans). Download the repository’s content by clicking the **Code** button and selecting **Download ZIP**. 
 
 Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folder of your Mendix app. Make sure that *open-sans.css* and the font files are located directly in the **/theme/web/fonts/** folder of your Mendix app.
 
-### 11.2 Using Local Font Files
+### Using Local Font Files
 
 Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
 
-```scss {linenos=false}
+```scss
 $font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 ```
 
 Replace that line with the following code:
 
-```scss {linenos=false}
+```scss
 $font-family-import: "./fonts/open-sans.css"
 ```
 

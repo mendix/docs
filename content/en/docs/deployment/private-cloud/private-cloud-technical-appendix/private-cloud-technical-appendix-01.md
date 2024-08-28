@@ -6,23 +6,23 @@ description: "Describes which providers are supported by Mendix for Private Clou
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 The deployment of apps to Mendix for Private Cloud is controlled by the Mendix Operator. This document provides information on how the Mendix Operator works and how it interacts with Kubernetes.
 
-## 2 What Is an Operator?
+## What Is an Operator?
 
-### 2.1 Issues Around Deploying Manually
+### Issues Around Deploying Manually
 
 The quickest way to deploy an application into Kubernetes is to manually create its resources with commands such as `kubectl create pod` or `kubectl apply`. This works with any container image and getting started is easy. But any non-default configuration options require knowledge of how the application and its container image work internally. For example, some applications use environment variables and others require a configuration file.
 
-### 2.2 Using Helm to Deploy
+### Using Helm to Deploy
 
 Tools like [Helm](https://helm.sh) and [Kustomize](https://kustomize.io/) allow the use of a library of templates and simplify deploying applications. Instead of managing individual resources such as Pods or Services, Helm allows the installation of an entire application, such as a Postgres database server – and configures application-specific options such Postgres replication settings.
 
 While Helm might be suitable for applications that don't need to be frequently modified or reconfigured, Helm doesn't monitor applications after they have been deployed. In addition, Helm cannot do any advanced processing, such as requesting a new database user or ensuring that an application knows its ingress domain name.
 
-### 2.3 Kubernetes Operators{#operators}
+### Kubernetes Operators{#operators}
 
 Kubernetes offers a standard way to automate application management – the [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/). An operator uses the standard Kubernetes [REST API](https://kubernetes.io/docs/reference/using-api/) and its own Kubernetes service account to monitor and manage Kubernetes resources for an application.
 
@@ -43,14 +43,14 @@ To find out more about Kubernetes operators, see the following links:
 * [This Container Solutions blog post](https://blog.container-solutions.com/kubernetes-operators-explained)
 * [This blog by Ivan Velichko exploring the Kubernetes Operator Pattern](https://iximiuz.com/en/posts/kubernetes-operator-pattern/)
 
-## 3 Mendix for Private Cloud Operator
+## Mendix for Private Cloud Operator
 
 Mendix for Private Cloud contains multiple components. The following components are not a part of the Mendix Operator, but can manage or control it through Mendix CRs:
 
 * The Mendix Gateway Agent allows the Private Cloud Portal to manage environments
 * The Configuration Tool updates CRs that are used to configure the Mendix Operator
 
-### 3.1 What the Mendix Operator Offers
+### What the Mendix Operator Offers
 
 After it has been installed and configured, the Mendix Operator will manage Mendix app environments. These environments can be configured by creating, updating or deleting the `MendixApp` CR. This CR is used to express the environment's desired state, and if the current state does not match the desired state the Mendix Operator will apply the changes necessary to bring the environment to the desired state.
 
@@ -66,7 +66,7 @@ The Mendix Operator is an all-in-one operator that can do the following actions:
     * partitioning a database or storage bucket so that each environment can only access its own data
 * Build and push a Mendix app container image from an MDA file into a container registry.
 
-### 3.2 Dependencies
+### Dependencies
 
 To integrate with managed services from a cloud provider and Kubernetes vendor, the Mendix Operator does not run services that are commonly included with a Kubernetes cluster:
 
@@ -79,7 +79,7 @@ You will need to set up, configure, and manage these resources yourself. This al
 
 In addition, we highly recommend using a logging/monitoring stack such as Grafana/Prometheus/Promtail/Loki to collect and visualize logs and metrics.
 
-### 3.3 Processing Changes
+### Processing Changes
 
 Following the Kubernetes operators best practices, the Mendix Operator does not have an internal state. Every time the Operator's control loop runs, the Operator checks if its managed resources match its desired state or whether they need to be updated. It then applies any changes necessary.
 If the `mendix-operator` deployment is stopped and started again after some time, it will process any changes between the state when it was stopped and the state when it is restarted. In other words, the Operator does not process individual changes (for example “enable debug mode”), it updates resources (such as deployments) to match the current desired state.
@@ -90,11 +90,11 @@ It is safe to update the an existing `MendixApp` CR while the Operator is still 
 
 However, do not modify resources (deployments, services, or ConfigMaps) which are not covered in the documentation. This might lead to the Operator seeing that a resource needs to be updated and either not being able to process changes to reach the desired state or rolling back your changes.
 
-### 3.4 Custom Resources
+### Custom Resources
 
 Mendix for Private Cloud includes multiple Custom Resources (CRs).
 
-#### 3.4.1 CRs Which Control the Operator
+#### CRs Which Control the Operator
 
 These CRs provide the configuration for the Operator:
 
@@ -102,7 +102,7 @@ These CRs provide the configuration for the Operator:
 * `OperatorVersion` is used to specify Operator versions and the registry containing auxiliary container images. This CR should not be modified manually — it is updated automatically when the Operator is installed or upgraded.
 * `StoragePlan` provides the Operator with instructions on how to provide a database or file blob storage to a new environment, and how to clean up storage after an environment has been deleted. It is not meant to be edited manually, the `mxpc-cli` Cloud Configuration Tool creates and updates `StoragePlan` CRs and ensures that the configuration is valid.
 
-#### 3.4.2 CRs Which Control the App Environment
+#### CRs Which Control the App Environment
 
 The `MendixApp` CR is the top-level CR which provides the configuration for a Mendix app environment. This CR is the only one that should be modified to update an environment.
 
@@ -133,7 +133,7 @@ Some CRs depend on others and use the `status` of their dependencies for configu
 
 If you want to prevent developers from accessing secrets or other Kubernetes objects, you can use [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) to limit developers read/write access to `MendixApp` CRs. In this way, the `MendixApp` CR provides a higher level abstraction over basic Kubernetes objects.
 
-### 3.5 Scope
+### Scope
 
 Mendix Operator is limited in scope to one namespace. If you need to use the Mendix Operator in multiple namespaces, you have to install it and configure it in each namespace. This allows the use of multiple versions of the Operator, with different configurations, in the same cluster — as long as each Operator runs in its own dedicated namespace.
 It is not possible to install one global instance of the Operator for the entire cluster.
@@ -146,7 +146,7 @@ Since the Operator and the CRs it manages are in the same namespace, the namespa
 The Operator deployment/pod and its configuration CRs (`OperatorConfiguration`, `StoragePlan`s, `Secret`s) are used by the Kubernetes garbage collector to clean up the database and file storage associated with an environment.
 Do not run `kubectl delete namespace` before all environments have been deleted from that namespace, otherwise Kubernetes cannot perform the garbage collection and the namespace will be stuck in a `Terminating` state.
 
-### 3.6 Service Containers
+### Service Containers
 
 Some actions, such as building a container image or managing an Azure SQL database, require additional dependencies and resources.
 For example, building a container image can take several minutes. To push the resulting image into a registry, additional authentication helpers might be required.
@@ -156,7 +156,7 @@ For some tasks, the Operator uses “task” pods: pods that execute a certain t
 This allows the Operator to support extensions and provider-specific add-ons that are delivered as separate containers, keeping the Operator image compact and free of code and dependencies that are optional.
 Running separate pods also allows the Operator to be restarted without interrupting any tasks that are in progress. This approach also allows lengthy or resource-consuming tasks to run separately from the Operator, in separate pods or even on different nodes, without consuming resources from the Operator.
 
-### 3.7 Other Notes
+### Other Notes
 
 The Mendix Operator is installed and upgraded using a custom tool (the `mxpc-cli` Configuration Tool). This tool requires only `kubectl` or `oc` to be installed on your system, and works identically in clusters and providers.
 We do not currently offer alternative installation options, such as [OLM](https://olm.operatorframework.io/) or Helm charts. If want to audit changes before they are applied, the `mxpc-cli` tool can generate a yaml file and `kubectl patch` instructions that can be reviewed and applied manually.

@@ -2,10 +2,11 @@
 title: "Security Advisories"
 url: /releasenotes/security-advisories/
 weight: 50
+numberless_headings: true
 #layout: wide
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix publishes security advisories by leveraging [Siemens ProductCERT](https://new.siemens.com/global/en/products/services/cert.html), which is a dedicated team of seasoned security experts that manages the receipt, investigation, internal coordination, and public reporting of security issues related to Siemens products, solutions, and services.
 
@@ -15,7 +16,7 @@ Mendix adds the CVSS score and CVSS vector for security vulnerabilities describe
 Siemens publishes their common vulnerabilities and exposures (CVE) on the second Tuesday of every month.
 {{% /alert %}}
 
-## 2 Security Advisory Details {#details}
+## Security Advisory Details {#details}
 
 | CVE ID | CVSS v3.1 Base Score | Siemens Security Advisory (SSA) Description | Notes |
 | --- | --- | ---  | --- |
@@ -54,7 +55,7 @@ Siemens publishes their common vulnerabilities and exposures (CVE) on the second
 | CVE-2021-27394 | 8.1 | [Privilege Escalation Vulnerability in Mendix](https://cert-portal.siemens.com/productcert/pdf/ssa-875726.pdf) | See the SSA description for remediation details. |
 | CVE-2021-25672 | 6.8 | [Mendix Forgot Password App Store Module](https://cert-portal.siemens.com/productcert/pdf/ssa-917115.pdf) | See the SSA description for remediation details. |
 
-## 3 More Information
+## More Information
 
 * [Siemens ProductCERT and Siemens CERT](https://new.siemens.com/global/en/products/services/cert.html)
     * [Search](https://new.siemens.com/global/en/products/services/cert.html#SecurityPublications) for relevant security advisories with the keyword "Mendix"

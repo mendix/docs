@@ -10,7 +10,7 @@ weight: 47
 Private Cloud License Manager is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 When deploying your Mendix app for production use, it needs to be licensed. This removes the restrictions which are placed on unlicensed apps. For more information, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing) in the *Private Cloud* documentation.
 
@@ -20,7 +20,7 @@ Rather than having to apply and update licenses for each environment individuall
 
 The PCLM runs as a Kubernetes service on your cluster. This means that it can be used by all your Mendix apps which run in namespaces within that cluster.
 
-## 2 Prerequisites{#prerequisites}
+## Prerequisites{#prerequisites}
 
 To install and use the PCLM, you need the following prerequisites:
 
@@ -41,7 +41,7 @@ To install and use the PCLM, you need the following prerequisites:
 The PCLM server will not create the database for the licenses, you need to create this yourself using the guidance above.
 {{% /alert %}}
 
-## 3 Installing the PCLM server
+## Installing the PCLM server
 
 {{% alert color="info" %}}
 To prevent unexpected issues, as a best practice, install the PCLM server in a separate namespace.
@@ -49,12 +49,12 @@ To prevent unexpected issues, as a best practice, install the PCLM server in a s
 
 You install the PCLM server by applying a manifest using `kubectl` or `oc`. This manifest can be created for you by the mx-pclm-cli tool. The mx-pclm-cli tool is available for download in the **Installation** tab of the **Namespace Details** page.
 
-### 3.1 Creating the Manifest
+### Creating the Manifest
 
 The `installer-gen` option of mx-pclm-cli is used to create a yaml manifest file to apply to your Kubernetes namespace.
 Use the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli installer-gen --db-type <db-type> \
     --db-hostname <hostname> \ 
     --db-name <db-name> \
@@ -82,7 +82,7 @@ Where you need to supply the following parameters
 * `<docker-tag>` – the docker image tag, default: `0.4.0`
 * `<out-file>` – the name of the file where the yaml is written, for example `manifest.yaml`
 
-### 3.2 Applying the Manifest
+### Applying the Manifest
 
 To apply the installation manifest to install the server in the Kubernetes namespace, use the following command:
 
@@ -99,11 +99,11 @@ This creates the following resources:
 * `mendix-pclm` – a secret containing the credentials to access the Database
 * `mx-private-cloud-mx-privatecloud-license-manager` – the service name of the PCLM server
 
-## 4 Reaching the HTTP REST API of the PCLM Server
+## Reaching the HTTP REST API of the PCLM Server
 
 You will now be able to communicate with the PCLM Server through an HTTP REST endpoint. The endpoint will be different depending on whether you are using a Kubernetes Service or Kubernetes Ingress.
 
-### 4.1 Using Kubernetes Ingress
+### Using Kubernetes Ingress
 
 In most cases, the PCLM server is installed in a separate cluster. This means you have to create an [ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/) for your Kubernetes cluster or a [Route](https://docs.openshift.com/enterprise/3.0/architecture/core_concepts/routes.html) for your OpenShift cluster in order to allow those HTTP connections.
 
@@ -147,7 +147,7 @@ You can confirm that you can connect to the PCLM server using the following URLs
 * `http<s>://pclm.<domain>/health` should return `HTTP 200 OK`
 * `https<s>://pclm.<domain>/metrics` should return `HTTP 200 OK` together with the collected server metrics
 
-### 4.2 Using the Kubernetes Service
+### Using the Kubernetes Service
 
 If PCLM is installed in the same Kubernetes cluster as the Private Cloud environments, the PCLM server can be reached at `http://mx-privatecloud-license-manager.<namespace>.svc.cluster.local`, where `<namespace>` is the namespace where the PCLM Server was installed.
 
@@ -158,13 +158,13 @@ You can confirm that you can connect to the PCLM server using the following URLs
 
 When using the CLI, use `kubectl port-forward` instead of an ingress, as in the following example:
 
-```bash {linenos=false}
+```bash
 kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 ```
 
 and use http://localhost:8080 as the PCLM address
 
-## 5 Setting Up Users
+## Setting Up Users
 
 Once the PCLM server is running, you can set up users.
 The PCLM server supports two **user types:**
@@ -172,11 +172,11 @@ The PCLM server supports two **user types:**
 * Admin – this user type has read-write permissions of users and licenses resources. It should only be used from the cli.
 * Operator – this user type has only read-only permissions for license resources. This user is designed to allow the Mendix for Private Cloud Operator to obtain licenses.
 
-### 5.1 Administrator
+### Administrator
 
 When the PCLM server is set up, it contains one user `administrator` with a default password. This password should be modified immediately using the command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli user update \
   -s <pclm-http-url> -u administrator -p <default-password> \
   --username administrator --password='<new-password>' --type admin
@@ -188,7 +188,7 @@ Where:
 * `<default-password>` – is the default password which is set for the `administrator` user – you can obtain this from [Mendix Support](https://support.mendix.com)
 * `<new-password>` – is the new password for the `administrator` user
 
-#### 5.1.1 Authenticating Using a Config File
+#### Authenticating Using a Config File
 
 To avoid supplying the `<admin-user>`, `<admin-password>`, and `<pclm-http-url>` on every call, these can be set up once in a config file. The PCLM command line, mx-pclm-cli, will then pick up these values and use them for all commands.
 
@@ -208,11 +208,11 @@ Where:
 * `<admin-password>` – is the password for the chosen *admin* user
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
 
-### 5.2 Additional Users
+### Additional Users
 
 You will want to set up *operator* users and (optionally) additional *admin* users. To do this, use the following command:
 
-``` bash {linenos=false}
+``` bash
 mx-pclm-cli user create \
   -s <pclm-http-url> -u <admin-user> -p <admin-password> \
   --username=<new-user>  --password='<password>' --type=<user-type>
@@ -227,14 +227,14 @@ Where:
 * `<password>` – is the password for the new user
 * `<user-type>` – is the type of user you are creating, either `admin` or `operator`
 
-## 6 Installing Licenses
+## Installing Licenses
 
 Licenses are supplied by Mendix as a **License Bundle**. A license bundle can contain both Mendix Runtime (app) licenses and a Mendix Operator license.
 Runtime licenses are required for each Mendix runtime environment, and an Operator license is required for each namespace where the Operator runs.
 To purchase a license bundle, please contact [Mendix Support](https://support.mendix.com/). You will receive your license (or licenses) as a .zip file.
 The following command will import a license bundle into the PCLM server:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license import \
     -s <pclm-http-url> \
     -u <admin-user> \
@@ -251,7 +251,7 @@ Where:
 
 You will get a report of the results of your import operation:
 
-```text {linenos=false}
+```text
 -- Loading zip file...
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃ License Bundle Contents                            ┃
@@ -271,11 +271,11 @@ You will get a report of the results of your import operation:
 
 If a license has previously been imported, you will be told that it is `[Duplicated]`.
 
-### 6.1 Listing the Runtime License
+### Listing the Runtime License
 
 Once the license bundle is installed, you can see the list of Runtime license in the bundle using following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -294,11 +294,11 @@ The **PRODUCTS** field represents the product type requested for the runtime lic
 In order to update the **product type** in the Mendix App CR, ensure that you are using Mendix Operator version 2.12 and newer.
 {{% /alert %}}
 
-### 6.2 Listing the Operator License
+### Listing the Operator License
 
 Once the license bundle is installed, you can view the list of Runtime licenses in the bundle by using the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -311,15 +311,15 @@ You will receive the result in the following format:
 |--------------------------------------|------------|----------------------|----------------------|----------|
 | c97ecdae-0376-42ab-9d91-22a45a88a3e4 | mx-operator| 2024-05-02T14:38:39Z | 2023-05-02T14:38:39Z | standard |
 
-## 7 Applying Licenses to Your Operator and Apps
+## Applying Licenses to Your Operator and Apps
 
 To use the licenses, you must add information to the operator configuration. For this, you need to have set up the operator in a namespace on your cluster. See [Installing and Configuring the Mendix Operator](/developerportal/deploy/private-cloud-cluster/#install-operator) in the *Private Cloud Cluster* documentation. Assume that the operator is running in the namespace `<operator-ns>`.
 
-### 7.1 Storing Operator User Credentials and Configuring the Mendix Operator
+### Storing Operator User Credentials and Configuring the Mendix Operator
 
 The credentials you have created for an operator or admin type user need to be stored in the repository. You also need to patch the Mendix Operator and Agent with the location of the PCLM server, and the credentials for accessing the PCLM server. To do this, you can use the below mx-pclm-cli command:
    
-```bash {linenos=false}
+```bash
 mx-pclm-cli config-namespace -n <operator-ns> \
    -s <pclm-http-url> \
    -u <admin-user> \
@@ -332,11 +332,11 @@ The default secret name is `mendix-operator-pclm`. If PCLM was previously config
 For Global Operator installation, execute the above command in both the Global Operator namespace and its managed namespaces where the license is intended to be applied. Please make certain that identical PCLM license details are configured for both the managed and global operator namespaces to avoid unexpected outcomes. Global Operator is still in beta, and it does not currently fully supports PCLM.
 {{% /alert %}}
 
-#### 7.1.1 Sample Yaml Files
+#### Sample Yaml Files
 
 Below are sample yaml files for the secrets, with the changes applied after running the above command. You do not need to make those changes manually; to configure the Mendix Operator and Agent, it is enough to run the above command.
 
-##### 7.1.1.1 Mendix Operator
+##### Mendix Operator
    
 ```yaml
 apiVersion: v1
@@ -369,7 +369,7 @@ Where:
 * `<secret-name>` – the default secret name is `mendix-operator-pclm`
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
 
-##### 7.1.1.2 Mendix Agent
+##### Mendix Agent
 
 ```yaml
 apiVersion: v1
@@ -390,7 +390,7 @@ Where:
 * `<password>` – is the password for the chosen username
 * `<server-url>` – is the URL of the PCLM server
 
-### 7.2 Applying Licenses
+### Applying Licenses
 
 Once you have patched the Mendix Operator, restart your environment. All app environments which are controlled through the operator will have licenses applied automatically after the restart.
 
@@ -404,15 +404,15 @@ If you do not have any unused licenses, new app environments will not be license
 
 The Mendix Operator will also pick up a Mendix Operator license if one has been imported into the PCLM server.
 
-### 7.3 Verifying That the Licenses Are Applied{#verify}
+### Verifying That the Licenses Are Applied{#verify}
 
 There are multiple ways to verify whether the licenses (both Operator and MendixApp) are applied and where.
 
-#### 7.3.1 Using the PCLM CLI
+#### Using the PCLM CLI
 
 You can see which licenses are currently used by which environments and operators, as well as unused licenses, using the following command.
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password>
@@ -431,11 +431,11 @@ Which would reply with something similar to this:
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator | yyyy-mm-dd hh:mm:ss |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  | yyyy-mm-dd hh:mm:ss |
 
-#### 7.3.2 From Mendix Application Custom Resources Installed in the Namespace
+#### From Mendix Application Custom Resources Installed in the Namespace
 
 This way of checking is more advanced, and should be used only for debugging.
 
-##### 7.3.2.1 Checking the Operator License
+##### Checking the Operator License
 
 Use the following command to verify whether the Operator license was applied correctly:
 
@@ -443,14 +443,14 @@ Use the following command to verify whether the Operator license was applied cor
 
 In the section `status.licenseStatus` you should see something similar to the following:
 
-```yaml {linenos=false}
+```yaml
 status:
   licenseStatus:
     licenseID: 1ca080f8-c54e-4e24-b09c-14353505a65d
     mode: Licensed
 ```
 
-##### 7.3.2.2 Checking the Runtime License
+##### Checking the Runtime License
 
 Use the following command to verify whether the Runtime license was applied correctly:
 
@@ -458,7 +458,7 @@ Use the following command to verify whether the Runtime license was applied corr
 
 In the section `spec.resources.runtimeLicense` you should see something similar to the following:
 
-```yaml {linenos=false}
+```yaml
 spec:
   resources:
     runtimeLicense:
@@ -467,13 +467,13 @@ spec:
       type: offline
 ```
 
-## 8 Migration
+## Migration
 
 If you have manually configured static runtime licenses (offline licenses), PCLM will not replace those licenses. Only the runtime licenses applied through a Subscription secret will be replaced. If your namespace was never licensed, please ignore this section.
 
 Once you have configured the Mendix Operator running in a specific `<namespace>` to use the PCLM (following steps 7.1 and 7.2) you need to restart the Mendix operator to remove the existing licenses. You can do this as follows:
 
-```bash {linenos=false}
+```bash
 kubectl -n <namespace> scale deployment mendix-operator --replicas=0
 kubectl -n <namespace> scale deployment mendix-operator --replicas=1
 kubectl -n <namespace> scale deployment mendix-agent --replicas=0
@@ -484,7 +484,7 @@ This restarts the Mendix Operator, and associated Mendix App Runtimes, and confi
 
 You can confirm this by running the following command:
 
-```bash {linenos=false}
+```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password>
@@ -497,9 +497,9 @@ This will indicate that licenses have been applied to the operator and apps in t
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-operator |
 | `<license-id>` | `<namepace>` | `<app-ID>` | mx-runtime  |
 
-## 9 Troubleshooting
+## Troubleshooting
 
-### 9.1 mx-pclm-cli Help
+### mx-pclm-cli Help
 
 You can get help on using mx-pclm-cli and its individual commands at any time by using the help command.
 For example, `mx-pclm-cli --help` or `mx-pclm-cli user --help`.

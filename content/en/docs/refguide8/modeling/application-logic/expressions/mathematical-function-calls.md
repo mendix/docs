@@ -4,17 +4,17 @@ url: /refguide8/mathematical-function-calls/
 weight: 70
 ---
 
-## 1 Introduction
+## Introduction
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
 If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
 
-## 2 max
+## max
 
 Returns the largest value from the specified arguments.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -22,7 +22,7 @@ The input parameters are described in the table below:
 | ------------------ | -------------------------------------- |
 | Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -30,25 +30,25 @@ The output is described in the table below:
 | ----------------------------------------------- | ------------------------------------------------------------ |
 | The largest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
-### 2.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 max(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 6.7
 ```
 
-## 3 min
+## min
 
 Returns the smallest value from the specified arguments.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -56,7 +56,7 @@ The input parameters are described in the table below:
 | ------------------ | -------------------------------------- |
 | Two or more values | All numeric type (Integer/Long or Decimal) or all Date and time                          |
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -64,25 +64,25 @@ The output is described in the table below:
 | ------------------------------------------------ | ------------------------------------------------------------ |
 | The smallest value from the specified arguments. | If the arguments are of type Date and time, the result will also be of type Date and time. <br />If the arguments are numeric, the result will be of the most precise type. <br />For example, if both an Integer/Long and a Decimal argument are specified, the result will be of type Decimal. |
 
-### 3.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 min(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 1
 ```
 
-## 4 round
+## round
 
 Rounds a number to a certain precision.
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -91,7 +91,7 @@ The input parameters are described in the table below:
 | A number               | Integer/Long, Decimal |
 | A precision (optional) | Integer/Long          |
 
-### 4.2 Output
+### Output
 
 In the [Project Settings](/refguide8/project-settings/), your option for **Round numbers** can be set which determines how half numbers (0.5) are treated:
 
@@ -100,37 +100,37 @@ In the [Project Settings](/refguide8/project-settings/), your option for **Round
 
 The second optional parameter determines the precision of the rounding. The default value is 0. The result will be of the most precise type possible. For a precision of 0, the result will be of integer/long type, and for all other precision values, the result will be of the decimal type.
 
-### 4.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 round(3.5)
 ```
 
 The output is of type Integer/Long:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 round(88.725,2)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 88.72
 ```
 
-## 5 random
+## random
 
 Generates a random number >= 0.0 and < 1.0
 
-### 5.1 Output
+### Output
 
 The output is described in the table below:
 
@@ -138,25 +138,25 @@ The output is described in the table below:
 | ------------------------------------------------------ | ------- |
 | A random number of a decimal type between 0.0 and 1.0. | Decimal |
 
-### 5.2 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 random()
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 0.3
 ```
 
-## 6 floor
+## floor
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
-### 6.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -164,7 +164,7 @@ The input parameters are described in the table below:
 | -------- | --------------------- |
 | A number | Integer/Long, Decimal |
 
-### 6.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -172,37 +172,37 @@ The output is described in the table below:
 | ---------------------------------------------------- | ------- |
 | The input value rounded down to the nearest integer. | Integer |
 
-### 6.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 floor(3.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 3
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 floor(-1.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -2
 ```
 
-## 7 ceil
+## ceil
 
 Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
-### 7.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -210,7 +210,7 @@ The input parameters are described in the table below:
 | -------- | --------------------- |
 | A number | Integer/Long, Decimal |
 
-### 7.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -218,37 +218,37 @@ The output is described in the table below:
 | -------------------------------------------------- | ------- |
 | The input value rounded up to the nearest integer. | Integer |
 
-### 7.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 ceil(3.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 ceil(-1.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -1
 ```
 
-## 8 pow
+## pow
 
 Raises a number to a certain power.
 
-### 8.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -257,7 +257,7 @@ The input parameters are described in the table below:
 | A number | Integer/Long, Decimal |
 | A power  | Integer/Long, Decimal |
 
-### 8.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -265,35 +265,35 @@ The output is described in the table below:
 | ------------------------------------ | ------- |
 | The number to the power, as in, n^p. | Decimal |
 
-### 8.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 pow(2, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 8
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 pow(2.5, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 15.625
 ```
 
 Calculation of 'pow' with a decimal power might be less accurate, as the standard Java libraries do not support these calculations with high precision. Use a specialized library in a custom Java action if high precision is required for this case.
 
-### 8.4 (square) root
+### (square) root
 
 To get the square root of a decimal, use 0.5 as the second parameter:
 
@@ -304,11 +304,11 @@ Or, use a division for a specific root:
 * `pow(27, 1:3)` results in `3`
 * `pow(16, 1:4)` results in `2`
 
-## 9 abs
+## abs
 
 Calculates the absolute value of a number (meaning, not negative).
 
-### 9.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -316,7 +316,7 @@ The input parameters are described in the table below:
 | -------- | --------------------- |
 | A number | Integer/Long, Decimal |
 
-### 9.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -324,22 +324,22 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ----------------------- |
 | The absolute value of the input, which is never negative. Corresponds to taking the square and then the positive square root. | Integer/Long or Decimal |
 
-### 9.3 Example
+### Example
 
 If you type in the negative value as an input:
 
-```java {linenos=false}
+```java
 abs(-5)
 ```
 
 Or, if you type in the positive value: 
 
-```java {linenos=false}
+```java
 abs(5)
 ```
 
 The output in both cases is:
 
-```java {linenos=false}
+```java
 5
 ```

@@ -7,7 +7,7 @@ aliases:
     - /apm/reference-guide/rg-2/reference-guide-2/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Application Performance Monitor (APM) is a solution that helps you to analyze performance issues and runtime behavior.
 
@@ -25,7 +25,7 @@ This is the reference guide for CLEVR APM 2 for Mendix. It has the following cha
 
 The sections below provide a short explanation of APM along with its features and possible uses.
 
-## 2 Definition of APM
+## Definition of APM
 
 CLEVR APM is based on Wikipedia's definition of [Application Performance Management](https://en.wikipedia.org/wiki/Application_performance_management), with emphasis on these points:
 
@@ -39,7 +39,7 @@ We all know that software contains bugs, and of course we all test before we bri
 
 The APM tools provide valuable information for analyzing the behavior and performance of an application in production. This allows for direct analysis without asking the customer to wait, reproduce, or deliver technical information. The same information is available during development as well to prevent issues before they appear in production.
 
-## 3 Performance Statistics to See Performance Issues in Advance
+## Performance Statistics to See Performance Issues in Advance
 
 Performance in applications is difficult to test during the initial/developing stage. The dataset is too small and the exact usage by users (for example, their search behavior) is unknown. Even after applying all performance best practices while building a Mendix application, issues will still appear in production. Usually they appear over time as the dataset grows, so the question is how can you see them coming.
 
@@ -49,15 +49,15 @@ In development, it is advised to add checking in APM to the generic definition o
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/statistics_history.png" class="no-border" >}}
 
-## 4 The Performance Recorder to Collect Individual Traces
+## The Performance Recorder to Collect Individual Traces
 
 When Support or DevOps wants to investigate a performance issue, they can use the APM Performance Recorder. It shows individual actions, loop iterations, and exactly where the obstacles are.
 
-## 5 Your Flight Data Recorder
+## Your Flight Data Recorder
 
 The runtime agent's **Trap** feature is listening on all levels of logging, up to the TRACE level. If an error occurs, the logging in memory and the error is stored in the APM manager database, which can provide information regarding what the runtime was processing at the time of the error.
 
-## 6 Logs
+## Logs
 
 The logs are used to collect Mendix Runtime log messages and store them in the APM manager database.
 

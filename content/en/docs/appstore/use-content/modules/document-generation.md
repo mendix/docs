@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the PDF Document Generati
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [PDF Document Generation](https://marketplace.mendix.com/link/component/211553) module allows you to generate pixel-perfect PDF documents based on regular pages in your app. 
 
-### 1.1 Features
+### Features
 
 * Generate pixel-perfect PDF documents based on regular pages in your app.
 * Make use of the full capabilities of the page editor, including the use of snippets, text templates, conditional visibility based on expressions, dynamic classes, etc.
@@ -17,7 +17,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 * Use “Instant Update” during local development, which allows you to see changes to your documents immediately without having to do a full restart of your app.
 * Generate documents using a synchronous or asynchronous approach. In the asynchronous action, the result object is available instantly, the content is added at a later stage.
 
-### 1.2 Limitations {#limitations}
+### Limitations {#limitations}
 
 * Currently, PDF is the only supported document export format.
 * For deployment, currently we support [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
@@ -45,15 +45,15 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 
     {{% alert color="info" %}}This is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.{{% /alert %}}
 
-### 1.3 Dependencies
+### Dependencies
 
 * [Combo Box](https://marketplace.mendix.com/link/component/219304) widget
 
-## 2 Installation {#installation}
+## Installation {#installation}
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Documentation Generation module into your app.
 
-## 3 Configuration {#configuration}
+## Configuration {#configuration}
 
 1. In the **App Explorer**, open the **App** section, double-click **Settings**, then go to the **Runtime** tab, and configure the **ASu_DocumentGeneration_Initialize** microflow for the **After startup** property. If there is already an after startup microflow set, add the **ASu_DocumentGeneration_Initialize** microflow as an action in the existing microflow.
 2. In the **App Explorer**, double-click **Security** in the **App** section, and then set the `Security level` to *Prototype/demo* or *Production*.
@@ -73,17 +73,17 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
         * [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/)
         * [Linux](/developerportal/deploy/unix-like/)
 
-### 3.1 Running Locally from Studio Pro {#run-locally}
+### Running Locally from Studio Pro {#run-locally}
 
 To be able to test PDF document generation when using **Run Locally** inside Studio Pro, you need to have Chrome or Chromium installed on your local machine.
 
-#### 3.1.1 Chrome
+#### Chrome
 
 The PDF Document Generation module automatically tries to find the Chrome executable (*chrome.exe*) in the default installation paths. 
 
 If you have installed Chrome in a custom location, configure the path to the Chrome executable in the constant **CustomChromePath** in the **_UseMe** > **Configuration** folder. 
 
-#### 3.1.2 Chromium {#chromium}
+#### Chromium {#chromium}
 
 If you use Chromium, only use stable releases. The currently supported stable release is [112.0.5615.0](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). 
 
@@ -91,7 +91,7 @@ Download the *chrome-win.zip* package and extract the archive to a location of y
 
 Configure the path to the *chrome.exe* executable in the **CustomChromePath** constant in the **_UseMe** > **Configuration** folder.
 
-### 3.2 Running on Mendix Cloud {#run-on-mendix-cloud}
+### Running on Mendix Cloud {#run-on-mendix-cloud}
 
 To allow the module to send and receive document generation requests on your Mendix Cloud environments, you need to perform the following steps:
 
@@ -103,7 +103,7 @@ To allow the module to send and receive document generation requests on your Men
 
 The steps for each procedure are described in the sections below. 
 
-#### 3.2.1 Enabling the DocGen Request Handler for Licensed Apps {#enable-docgen}
+#### Enabling the DocGen Request Handler for Licensed Apps {#enable-docgen}
 
 {{% alert color="info" %}}Skip this step if your app is [deployed as a Free app](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/#deploy-free-app) to Mendix Cloud. You can [register your app environment](#register-app) directly.{{% /alert %}}
 
@@ -136,7 +136,7 @@ The steps for each procedure are described in the sections below.
     
     8. Now you can [register your app environments](#register-app).
 
-#### 3.2.2 Registering Your App Environments {#register-app}
+#### Registering Your App Environments {#register-app}
 
 1. Add the snippet **Snip_AppRegistration** to a page in your app that is accessible to users with the **Administrator** module role set in the **DocumentGeneration** module. The snippet can be found in the  **_UseMe** > **Admin** folder of the **DocumentGeneration** module.
 2. Enable the scheduled event **SE_AccessToken_Refresh** to automatically refresh the access token that is used to secure access to the Document Generation cloud service. The scheduled event can be found in the  **_UseMe** > **Scheduled events** folder of the **DocumentGeneration** module.
@@ -150,7 +150,7 @@ The steps for each procedure are described in the sections below.
 
 {{% alert color="info" %}}Each of your app environments needs to be registered separately. A successful app registration is limited to the app URL that was provided during the registration. Note that a change in the app URL, or restoring a database backup from one environment to another, will require you to register the affected app environments again.{{% /alert %}}
 
-### 3.3 Running On-Premises {#run-on-premises}
+### Running On-Premises {#run-on-premises}
 
 To configure the module to generate documents on your on-premises environments, you need to perform the following steps:
 
@@ -158,23 +158,23 @@ To configure the module to generate documents on your on-premises environments, 
 2. Configure the module to use the local service.
 3. Enable the DocGen request handler.
 
-#### 3.3.1 Installing the Prerequisite Software {#install-prerequisites}
+#### Installing the Prerequisite Software {#install-prerequisites}
 
 You should pre-install and actively maintain the following software. Mendix does not provide support for the installation, configuration, and maintenance of these packages.
 
-##### 3.3.1.1 Chromium
+##### Chromium
 
 You should have installed a stable release of the Chromium browser. The currently supported stable release is 112.0.5615.0 ([Windows](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Win_x64/1109252/). [Linux](https://storage.googleapis.com/chromium-browser-snapshots/index.html?prefix=Linux_x64/1109252/)).
 
 {{% alert color="info" %}}Even though we advise using Chromium, you can also use Google Chrome instead. The configuration remains the same.{{% /alert %}}
 
-##### 3.3.1.1 Node.js
+##### Node.js
 
 You should have installed a stable release of [Node.js](https://nodejs.org/).  Mendix recommends installing the same version that is shipped with the Studio Pro version that is used to build the project. You can find this version by locating and executing the `node` executable within the `modeler/tools/node` folder of your Studio Pro installation.
 
 {{% alert color="info" %}}Make sure that the Mendix Runtime has the applicable permissions to run the *node* executable.{{% /alert %}}
 
-#### 3.3.1 Configuring the Module to use the Local Service {#configure-local-service}
+#### Configuring the Module to use the Local Service {#configure-local-service}
 
 1. Set the **OverrideServiceType** constant to *Local* in the **_UseMe** > **Configuration** folder. This enforces the use of the local service instead of the cloud service.
 
@@ -182,7 +182,7 @@ You should have installed a stable release of [Node.js](https://nodejs.org/).  M
 
 3. Configure the path to the *node* executable in the **CustomNodePath** constant in the **_UseMe** > **Configuration** folder. 
 
-#### 3.3.2 Enabling the DocGen Request Handler {#setup-inbound-rules}
+#### Enabling the DocGen Request Handler {#setup-inbound-rules}
 
 In case you deploy on [Microsoft Windows](/developerportal/deploy/deploy-mendix-on-microsoft-windows/), you need to add the following rules when configuring the [reverse proxy inbound rules](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#reverse-proxy-rules):
 
@@ -193,9 +193,9 @@ Rule | Name | Pattern | Rewrite URL
 
 {{% alert color="info" %}}Rule 1 is based on the default URL prefix (`p`) for page/microflow URLs. If you configured a different prefix in the runtime settings of your app, adjust the rule accordingly.{{% /alert %}}
 
-## 4 Usage
+## Usage
 
-### 4.1 Generating Documents for the Current User
+### Generating Documents for the Current User
 
 1. Add an entity in your domain model for storing the generated documents. Use **System.FileDocument** as its generalization. When app security was set to *Production*, you need to assign *Read* access rights to the user roles which should be able to download the document.
 
@@ -232,7 +232,7 @@ Rule | Name | Pattern | Rewrite URL
 To see the generated document in the browser or download it, you can use the **Download file** microflow action. This will only work if you set the **Wait for result** property of the **Generate PDF from page** action to *true*.
 {{% /alert %}}
 
-### 4.2 Generating Documents as a System Task {#system-task}
+### Generating Documents as a System Task {#system-task}
 
 For scenarios where you want to generate documents as a system task (for example in a scheduled event), the recommended approach is to set up one or more service users for document generation.
 
@@ -259,9 +259,9 @@ For scenarios where you want to generate documents as a system task (for example
 We recommend that you log in manually as the service user at least once, to verify if the service user has the required module roles to log in. Depending on your app’s implementation, it might for example be required to assign the `Administration.Account` module role.
 {{% /alert %}}
 
-### 4.3 Language and Date/Time Handling
+### Language and Date/Time Handling
 
-#### 4.3.1 Language
+#### Language
 
 For the language of the document, the document generation service uses the language of the user that is passed in the `Generate as user` property.
 
@@ -269,7 +269,7 @@ For the language of the document, the document generation service uses the langu
 If no language is configured for the user that is passed in the `Generate as user` property, the default language as set in the [App Settings](/refguide/app-settings/) in Studio Pro is used.
 {{% /alert %}}
 
-#### 4.3.2 Date/Time Handling
+#### Date/Time Handling
 
 For the localization of dates and times, the document generation service uses the time zone of the user that is passed in the `Generate as user` property.
 
@@ -277,9 +277,9 @@ For the localization of dates and times, the document generation service uses th
 If no time zone is configured for the user that is passed in the `Generate as user` property, and the default time zone in the [App Settings](/refguide/app-settings/) in Studio Pro is set to *(none)*, all dates and times will be displayed using UTC.
 {{% /alert %}}
 
-### 4.4 Styling Documents
+### Styling Documents
 
-#### 4.4.1 Page settings
+#### Page settings
 
 The following page-related design properties are available in the **Styling** tab of the properties panel.
 
@@ -289,7 +289,7 @@ The following page-related design properties are available in the **Styling** ta
 | **Page size** | This design property enables you to set the page size for your documents. |
 | **Show page numbers** | This design property enables you to show page numbers in your documents. <br>{{% alert color="info" %}}At the moment, we only support basic page numbers. We will extend and add support for custom headers and footers at a later stage{{% /alert %}} |
 
-#### 4.4.2 Page breaks
+#### Page breaks
 
 You can use the **Page break** widget that is included in this module to structure your documents. This widget enables you to force a page break at a specific position in your document. In addition, you can use the **Add page break** design property that is available for **Container** widgets.
 
@@ -300,7 +300,7 @@ The following **Container** widget related design properties are available in th
 | **Add page break** | This design property enables you to force a page break before or after the specific container widget. |
 | **Avoid break inside** | This design property allows you to prevent page breaks within a specific container. This can be useful to keep widgets grouped together on the same page. |
 
-#### 4.4.3 Applying Custom Fonts {#applying-custom-fonts}
+#### Applying Custom Fonts {#applying-custom-fonts}
 
 For extended font support, Mendix recommends using custom fonts. To apply a custom font, follow the steps below:
 
@@ -323,7 +323,7 @@ The procedure uses the `Noto Sans SC` font as an example. You can visit [Google 
 
 4. Add the class `font-noto-sans-sc` to all applicable text and widgets.
 
-#### 4.4.4 Advanced Styling
+#### Advanced Styling
 
 For advanced styling, you can use the styling editor in Studio Pro to style your documents. The module stylesheet includes several theme variables, such as *$document-background-color*, to customize your documents.
 
@@ -331,9 +331,9 @@ For advanced styling, you can use the styling editor in Studio Pro to style your
 We recommend you do not use the viewport width (`vw`) and viewport height (`vh`) units when styling your document. These units are related to the browser viewport, not to the page size of your document. Use absolute units (such as `px`, `mm`, etc.) or other relative units (such as `%`, `em`, or `rem`) instead.
 {{% /alert %}}
 
-## 5 Architecture
+## Architecture
 
-### 5.1 Overview
+### Overview
 
 The Document Generation module uses the PDF document generation service running in the Mendix Public Platform to convert any regular web page in your app into a PDF document. The result is similar to what you would get when using the "Save as PDF" feature in the print dialog box of your browser.
 
@@ -343,7 +343,7 @@ When running on Mendix Cloud, the PDF document generation service on Mendix Publ
 
 {{< figure src="/attachments/appstore/use-content/modules/document-generation/request-flow.png"  alt="architecture-overview-diagram" >}}
 
-### 5.2 Security
+### Security
 
 When deployed to Mendix Cloud, the cloud service uses the user which was provided in the `Generate as user` parameter to access the requested page. A short-lived security token is used to authenticate each request. The lifetime of this token can be configured using the constant `TokenLifetimeInSeconds`.
 
@@ -351,9 +351,9 @@ The architecture is set up to process every request in a fully isolated context.
 
 The PDF document generation service does not store pages or documents at any time in the process.
 
-## 6 Troubleshooting
+## Troubleshooting
 
-### 6.1 App Environment Registration Issues
+### App Environment Registration Issues
 
 If you encounter any issues while [registering your app environment](#register-app), refer to the table below for more details and suggestions on how to resolve them.
 
@@ -367,20 +367,20 @@ If you encounter any issues while [registering your app environment](#register-a
 | **Invalid Token** | "Domain verification failed, invalid token" | The cloud service was able to reach your app, but could not verify that this app is currently trying to register. | Verify that the application URL matches the current environment. |
 | **Other Errors** |<ul><li>"Project verification failed"</li></ul><ul><li>"Domain verification failed, invalid response from verification endpoint"</li></ul><ul><li>"Domain verification failed for unknown reason"</li></ul> | An unexpected error occurred. | Verify that your app was not restarted by someone else during the registration process. If not, submit a ticket in the Mendix Support Portal. |
 
-### 6.2 Module Usage and Runtime Issues {#module-usage-runtime-issues}
+### Module Usage and Runtime Issues {#module-usage-runtime-issues}
 
 In general, we recommend that you perform the following steps if you get any issues during runtime:
 
 1. Temporarily set the log level of `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 2. Temporarily add the page microflow that is configured in the action to the app navigation, or make it accessible via a button. This can help to verify that the page itself loads correctly, and can for example outline misconfiguration of entity access, widgets, etc. Make sure that you access the page with the same user you provided to the `Generate as user` parameter in the action.
 
-#### 6.2.1 Exceptions
+#### Exceptions
 
 {{% alert color="info" %}}For module version 1.8.0 and above, errors that occur during the document generation process in the cloud and local service are now sent back to the module. If any error is received, this will cause the module to throw Document Generation specific exceptions.{{% /alert %}}
 
 The sections below contain the exceptions that can possibly occur during the document generation process and the suggested steps to verify the reason.
 
-##### 6.2.1.1 Wait for Content Exception
+##### Wait for Content Exception
 
 If you encounter a `DocGenWaitForContentException` exception with error code `DOCGEN_WAIT_FOR_CONTENT_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
@@ -388,7 +388,7 @@ If you encounter a `DocGenWaitForContentException` exception with error code `DO
 | ---------------------------------------- | ------------------------------------------------------------ |
 | "Failed while waiting for page content." | <ul><li>The required `Enable PDF export` design property is not set to *Yes* for the page you are trying to export to PDF.</li></ul><ul><li>Loading the page failed or took too much time. When this occurs, verify that the page loads successfully within the fixed timeout of 30 seconds and does not trigger any client errors. To verify this, we recommend temporarily adding the page to, for example, the app navigation.</li></ul><ul><li>A widget or add-on is being used in the `index.html` file that performs long polling network requests. This is not supported, since the document generation service waits until there are no more pending network requests.</li></ul> |
 
-##### 6.2.1.2 Navigation Exception
+##### Navigation Exception
 
 If you encounter a `DocGenNavigationException` exception with error code `DOCGEN_NAVIGATION_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
@@ -400,7 +400,7 @@ If you encounter a `DocGenNavigationException` exception with error code `DOCGEN
 | "Failed to navigate to page due to an error: `<error message>`." | The service was unable to reach the app, for example due to the following reasons: <ul><li>Your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/). This is not supported. Also refer to the [limitations](#limitations) section.</li><li>A timeout or network error occurred. Try again.</li></ul> |
 | "Failed to navigate to page due to an invalid response code: `<code>`." | The module rejected the request from the service. Verify the application logs. |
 
-##### 6.2.1.3 Runtime Exception
+##### Runtime Exception
 
 If you encounter a `DocGenRuntimeException` exception with error code `DOCGEN_RUNTIME_ERROR` while generating a document, refer to the table below for more details and suggestions on how to resolve them.
 
@@ -411,15 +411,15 @@ If you encounter a `DocGenRuntimeException` exception with error code `DOCGEN_RU
 
 If you encounter a `DocGenRuntimeException` exception with a message that is not mentioned in the table above, we recommend you [submit a support request](/support/submit-support-request/).
 
-##### 6.2.1.4 Polling Exception
+##### Polling Exception
 
 If you encounter a `DocGenPollingException` exception while generating a document, this means that the module timed out while waiting for the service to send the resulting PDF. Verify if the application logs contain any other errors and try again.
 
-##### 6.2.1.5 Default Exception
+##### Default Exception
 
 If you encounter a `DocGenException` exception with error code `DOCGEN_UNKNOWN_ERROR` while generating a document, we recommend you [submit a support request](/support/submit-support-request/).
 
-#### 6.2.2 Rendering/Styling Issues
+#### Rendering/Styling Issues
 
 In case of issues regarding styling, Mendix recommends temporarily adding the page microflow to your app navigation (for details, see step 2 in the [Module Usage and Runtime Issues](#module-usage-runtime-issues) section). This allows you to preview the page in your browser and inspect the applied styles. Mendix recommends using Chrome or Chromium and the [Chrome DevTools](https://developer.chrome.com/docs/devtools/css/) for this, since Chromium is the browser that is used by the document generation service.
 
@@ -431,7 +431,7 @@ If the resulting PDF document contains an additional blank page at the end of th
 When testing the PDF Document Generation module locally using Chrome or Chromium version 117 or 118, the scaling of your PDF document might be different compared to the document generated from the PDF document generation service in Mendix Cloud. This issue has been fixed in Chrome version 119, we recommend that you update your Chrome version to the latest release if you run into this issue. To guarantee the same result locally as when using our PDF document generation service, we advise using the Chromium version cited in the [Chromium](#chromium) section above.
 {{% /alert %}}
 
-#### 6.2.3 Local Service Errors
+#### Local Service Errors
 
 If you encounter the message "Local service exited with error" in your runtime logs, for example:
 
@@ -442,7 +442,7 @@ com.mendix.modules.microflowengine.MicroflowException: com.mendix.systemwideinte
 
 We recommend that you temporarily set the log level of the `DocumentGeneration` log node to [trace](/howto/monitoring-troubleshooting/log-levels/#level). This should give more insight at what stage the action fails.
 
-#### 6.2.4 Cloud Service Errors
+#### Cloud Service Errors
 
 If you encounter the message "Unable to generate document for request `<requestId>`, service response code: 401" in the logs of your cloud environment, the request was rejected by the document generation service. This could be caused by the following reasons:
 
@@ -453,7 +453,7 @@ If you encounter the message "Unable to generate PDF document. Failed to refresh
 
 If you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
 
-#### 6.2.4 Timeout Errors
+#### Timeout Errors
 
 If you encounter the message "Failed to load page: TimeoutError: waiting for selector `#content .document-content` failed: timeout 30000ms exceeded" in your runtime logs, this means that a timeout occurred while the browser was waiting for the configured page to finish loading. This could be caused by the following reasons:
 

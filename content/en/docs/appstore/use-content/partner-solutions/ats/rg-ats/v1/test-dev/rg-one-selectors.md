@@ -4,11 +4,11 @@ url: /appstore/partner-solutions/ats/rg-one-selectors/
 weight: 7
 ---
 
-## 1 Introduction
+## Introduction
 
 For the [Find Widget Child Node action](/appstore/partner-solutions/ats/rg-one-find-widget-child-node/) or as part of a script for [Execute JavaScript Integer](/appstore/partner-solutions/ats/rg-one-execute-javascript-integer/), [Execute JavaScript String](/appstore/partner-solutions/ats/rg-one-execute-javascript-string/) and [Execute JavaScript WebElement](/appstore/partner-solutions/ats/rg-one-execute-javascript-webelement/) actions, you will have to use selectors to get a node or WebElement. ATS supports both, JQuery and CSS3 selectors. In addition to that, ATS includes its own selectors. The following summary will give you a short overview of the most commonly used selectors in ATS.
 
-## 2 ATS Selectors
+## ATS Selectors
 
 You can use the custom ATS selectors like CSS3 selectors in your custom actions.
 
@@ -21,7 +21,7 @@ Pattern |Name | Meaning
 :containsText(*text*) | ContainsText pseudo-class | Selects an element whose inner text value is equal to the given text. Can only be used on text, CDATA and element nodes
 :val(*text*) | Value pseudo-class | Selects an input, select or textarea whose value is equal to the given text
 
-## 3 CSS Selectors {#css-selectors}
+## CSS Selectors {#css-selectors}
 
 You can use any CSS Selector defined in CSS3 and supported by your browser. The following table shows some of the commonly used CSS3 selectors in ATS.
 
@@ -38,7 +38,7 @@ You can use any CSS Selector defined in CSS3 and supported by your browser. The 
 
 For more information, visit the official [W3C CSS3 selectors reference](https://www.w3.org/TR/css3-selectors/).
 
-## 4 JQuery Selectors {#jquery-selectors}
+## JQuery Selectors {#jquery-selectors}
 
 JQuery uses CSS3 selectors and extends the collection of selectors with its own ones. You can use those in your ATS actions.
 

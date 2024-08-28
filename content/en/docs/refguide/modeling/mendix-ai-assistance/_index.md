@@ -7,7 +7,7 @@ aliases:
     - /refguide/mx-assist-studio-pro/
 ---
 
-## 1 Introduction 
+## Introduction 
 
 Mendix AI Assistance (Maia) refers to Mendix Platform capabilities that leverage [artificial intelligence (AI)](https://www.mendix.com/glossary/artificial-intelligence-ai/) and [machine learning (ML)](https://www.mendix.com/glossary/machine-learning/) to assist developers in application development (via AI-assisted development (AIAD)). Maia is designed to help development teams in modeling and delivering Mendix applications faster, more consistently, and with higher quality. 
 
@@ -17,7 +17,7 @@ For information on Mendix data storage policies and practices for Maia, see [Mai
 
 For information on what third-party services Maia uses and what data are sent to the third-party services, see the [Maia Third-Party Services](#maia-third-party-services) section below.
 
-## 2 Maia in Mendix Studio Pro 
+## Maia in Mendix Studio Pro 
 
 In Mendix Studio Pro, Maia consists of the following capabilities: 
 
@@ -34,16 +34,16 @@ Recommenders:
 Generators:
 
 * **Domain Model Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.13.0) - an AI-powered tool that you can use for generating a [domain model](/refguide/domain-model/). It helps you to generate entities and associations based on text input. It currently only works for empty domain models. For more information, see [Domain Model Generator](/refguide/domain-model-generator/).
-* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool for **Batch translate** in Mendix Studio Pro. It helps you to translate your model to different languages for which you may not have a translation. It gives translations for the languages that you have selected, using parameters in the way that works specifically for the selected languages. For more information, see [Translation Generator](/refguide/translation-generator/).
+* **Translation Generator** (currently an [experimental feature](/releasenotes/beta-features/) introduced in Studio Pro 10.12.0) - an AI-powered translation tool available in Mendix Studio Pro. Currently, it can be used for [batch translate](/refguide/translation-generator/#batch-translate) and [translating system texts](/refguide/translation-generator/#translate-system-text) in the new web-based system texts editor (in Studio Pro 10.14.0 and above). For more information, see [Translation Generator](/refguide/translation-generator/).
 
-## 3 Maia in Mendix Portal
+## Maia in Mendix Portal
 
 Below are the Maia capabilities that are available in Mendix Portal:
 
 * **Maia Rewrite** - an AI-assisted writing aid integrated within the Mendix Community posting interface, which helps you to ask properly-formatted questions that are more likely to be answered. For more information on how to use it, see the [Asking Your Question](/community-tools/mendix-community/#asking-question) section in *Mendix Community*.
 * **Maia Summarize** - an AI-assisted summarizing aid which condenses lengthy discussions for a question posted on Mendix Community into key points, making it easier for you to find solutions to your questions without having to plough through every single answer in the thread. For more information on how to use it, see the [Question Details](/community-tools/mendix-community/#question-details) section in *Mendix Community*.
 
-## 4 Maia Third-Party Services {#maia-third-party-services}
+## Maia Third-Party Services {#maia-third-party-services}
 
 The table below presents all the third-party services each Maia capability uses and what data are sent to the third-party services.
 

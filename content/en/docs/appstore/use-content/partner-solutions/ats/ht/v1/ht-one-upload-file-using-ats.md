@@ -5,7 +5,7 @@ weight: 6
 description: "Describes how to upload a file in your app using ATS and the restrictions it has."
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 This how-to explains how to upload a file in your app using ATS. You have some test situations in which you must upload a file to finish that test situation. During manual testing, you upload this file from your local computer into your app. ATS works similar, the only difference is that the local computer is your Selenium hub.
 
@@ -29,16 +29,16 @@ This how-to teaches you how to do the following:
 * Uploading a file using ATS
 * The approach for each Selenium setup
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/)
 * Know your Selenium setup (a provider like BrowserStack, local server, etc.)
 
-## 3 Uploading a File
+## Uploading a File
 
-### 3.1 Introduction
+### Introduction
 
 To upload a file in your app, ATS must have access to that file. Selenium simulates a user on a local computer. When ATS gives the command to upload a file, it provides a file path to the file you want to upload. Since there are three different Selenium setups, there are also three different situations.
 
@@ -48,7 +48,7 @@ The second situation is that you use Selenium SaaS. This means Selenium has no a
 
 The third situation is that you use a Selenium SaaS agent. ATS executes the test on the machine on which you installed the agent. In most cases this is a server inside your network. ATS can find all the files on this machine.
 
-### 3.2 Uploading a File Using ATS
+### Uploading a File Using ATS
 
 ATS has a standard action for uploading files into your Mendix app. The [Set File Manager](/appstore/partner-solutions/ats/rg-one-set-file-manager/) action uploads a file from the local computer into the app using a file path. As explained earlier the file must be on the local machine for this to work.
 
@@ -64,7 +64,7 @@ C:\users\ats\documents\receipt-1.png
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-upload-file-using-ats/file-uploader-widget-app.png" class="no-border" >}}
 
-### 3.3 Advice
+### Advice
 
 Each Selenium setup has different possibilities. We advise that if you want to test the uploading of files in your Mendix app, you must use a generic test file set. Create a set of files to use in your tests and make sure that your Selenium setup has access to it.
 
@@ -74,11 +74,11 @@ Each Selenium setup has different possibilities. We advise that if you want to t
 | Selenium SaaS | Depends on the chosen provider. |
 | Selenium SaaS Agent | Install the agent on a server with your Mendix app. Also put the generic test files there. |
 
-## 4 Uploading a File Using a Local Selenium Server (Docker)
+## Uploading a File Using a Local Selenium Server (Docker)
 
 When testing using a local Selenium server, ATS executes the test on that server. The *Set File Manager* action only has access to the files on that server. You can create a generic set of test files or just add files to the server and use them in your tests.
 
-## 5 Uploading a File in BrowserStack (SaaS)
+## Uploading a File in BrowserStack (SaaS)
 
 When testing using the BrowserStack, ATS executes the test against a new VM session every time. So every run gets a new VM session and afterwards BrowserStack deletes the entire session. With this setup it is not possible to upload your own files. BrowserStack does provide a large set of test files that they upload in each VM session. You can use the Set File Manager action to achieve this.
 
@@ -90,6 +90,6 @@ You can find the BrowserStack test files [here](https://raw.githubusercontent.co
 These files are possibly outdated and not maintained by Mendix. For the latest version please contact BrowserStack.
 {{% /alert %}}
 
-## 6 Uploading a File with a Selenium SaaS Agent
+## Uploading a File with a Selenium SaaS Agent
 
 When you use a Selenium SaaS provider you can also use their agent. Each provider gives access to an agent that allows you to test on a local machine. In the *Set File Manager* action, you can provide the filepath. This filepath depends on where you activated the local machine. Either a local server or a local computer.

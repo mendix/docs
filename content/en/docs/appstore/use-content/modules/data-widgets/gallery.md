@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Gallery widget, which
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Gallery](https://marketplace.mendix.com/link/component/116540) widget, a replacement for both the template grid and list view, helps you build beautiful lists and grids for desktop, tablet, and mobile devices. Featuring the same filtering and sorting as seen in [Data Grid 2](https://marketplace.mendix.com/link/component/116540), the Gallery widget also provides options for varying columns per device type and gives you the power to create amazing grid and list experiences for every user.
 
@@ -13,7 +13,7 @@ Here is an example of a Gallery widget using filters:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/example.png" alt="Example of gallery using filter and sort"   width="300"  class="no-border" >}}
 
-### 1.2 Advanced Options
+### Advanced Options
 
 The gallery has an option to enable advanced options. When this option is toggled on, it enables numerous features to customize your gallery:
 
@@ -24,27 +24,27 @@ The gallery has an option to enable advanced options. When this option is toggle
 * Filtering
 * Sorting
 
-## 2 Configuration
+## Configuration
 
 Several options can be defined in the Gallery widget:
 
-### 2.1 Data Source
+### Data Source
 
 Data source specifies the source of the data being presented in the Gallery. You can select data from **Database**, **Association**, **Microflow**, **Nanoflow**, or **Xpath**.
 
-### 2.2 Columns
+### Columns
 
 We provide a mechanism that automatically applies a different number of columns based on the device being used. In the Gallery widget, you can select columns for **Desktops**, **Tablets**, or **Phone/Mobile**.
 
-### 2.3 Items
+### Items
 
 In the items group you can define the properties related to the items being presented.
 
-#### 2.3.1 Page size
+#### Page size
 
 Defines the amount of data shown for each page or the limit to be presented when using virtual scrolling.
 
-#### 2.3.2 Pagination
+#### Pagination
 
 {{% alert color="info" %}}
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
@@ -52,17 +52,17 @@ This widget does not support [system texts](/refguide/system-texts/), meaning is
 
 You can choose between paging buttons (button being presented below or above the grid) or virtual scrolling (mechanism that automatically loads data when the users reaches the bottom of the scroll bar).
 
-#### 2.3.3 Position of Paging Buttons
+#### Position of Paging Buttons
 
 This option is only available when `Pagination` is marked as `Paging buttons` and defines its position relative to the grid items.
 
-#### 2.3.4 Empty Message
+#### Empty Message
 
 When this option is defined as custom it will show a composable region. Here you can place widgets that will be presented when no items are available to be shown, as well as when the filter does not return any data:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/empty-message.png" alt="Example of empty message"   width="300"  class="no-border" >}}
 
-#### 2.3.5 Dynamic Item Class
+#### Dynamic Item Class
 
 In the new Gallery widget we offer an option to dynamically apply a CSS class to a specific item. You can achieve this by adding an expression based on the item values (attributes) like the example below.
 
@@ -70,15 +70,15 @@ In this example we check the value of `CountryName`, then if the attribute is eq
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/dynamic-item-class.png" alt="Example of dynamic item class"   width="300"  class="no-border" >}}
 
-### 2.4 Events
+### Events
 
 The new Gallery widget can trigger some events while iterating with it.
 
-#### 2.4.1 On Click Action
+#### On Click Action
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the items. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
 
-## 3 Filtering
+## Filtering
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/filtering.gif" alt="Example of filtering"   width="300"  class="no-border" >}}
 
@@ -110,7 +110,7 @@ An example of text filter being used in the composable region combined with a dr
 
 For more information about filters, see the [Filters](/appstore/modules/data-grid-2/#filters) section of *Data Grid 2*.
 
-## 4 Sorting
+## Sorting
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/sorting.gif" alt="Example of sorting"   width="300"  class="no-border" >}}
 
@@ -122,7 +122,7 @@ If you have a sorting applied in the datasource of the gallery it will pre-selec
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/gallery/sorting.png" alt="Example of sorting configuration"   width="300"  class="no-border" >}}
 
-### 4.1 Drop-Down Sort {#dropdown}
+### Drop-Down Sort {#dropdown}
 
 The Drop-Down Sort widget is a widget you can use in combination with the Gallery widget. The Drop-Down Sort widget just needs to be placed inside a composable region of the Gallery widget after defining the sorting attributes in the Gallery widget's **Sorting** tab.
 
@@ -131,7 +131,7 @@ The Drop-Down Sort widget has two options you can set:
 * Empty option caption: value to be used when no value is selected
 * Screen reader caption: value to be announced by screen readers when using assistive technology
 
-## 5 Keyboard Navigation and Selection
+## Keyboard Navigation and Selection
 
 In the Gallery widget it is possible to navigate and select items using the keyboard. Keyboard navigation can increase user speed, as well as makes the widget more accessible.
 
@@ -144,25 +144,25 @@ For the keyboard navigation and keyboard selection to work, the user must open t
 * **Single**: enables keyboard navigation with just single selection
 * **Multi**: to enable keyboard navigation with multi-selection
 
-### 5.1 Keyboard Navigation
+### Keyboard Navigation
 
 Using the keyboard arrow keys (<kbd>↑</kbd>, <kbd>↓</kbd>, <kbd>←</kbd>, <kbd>→</kbd>) the user can navigate between the items displayed in the Gallery. Also, the user can use special keyboard keys like <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>Page&nbsp;up<</kbd>, and <kbd>Page&nbsp;down</kbd>.
 
 With the keyboard, the user can press <kbd>Tab</kbd> and navigate between elements to reach the Gallery items.
 
-### 5.2 Keyboard Selection
+### Keyboard Selection
 
 Keyboard selection, which differs from navigation, simulates the click of the mouse on an item. Thus, after navigating to a desired item, the user can press <kbd>Shift</kbd> + <kbd>Space</kbd> and the item will be selected.
 
-### 5.3 Keyboard Multi-Selection
+### Keyboard Multi-Selection
 
 To further improve the user experience, it is also possible to select many items only using the keyboard. To achieve this, the user can hold <kbd>Shift</kbd> on the first item and navigate with arrow key to the last item they want to select. By doing this, all the items between the first and last selected will also be selected.
 
-### 5.4 Accessibility
+### Accessibility
 
 Employing keyboard navigation is an effective way of ensuring users who cannot use a mouse can still interact with the Gallery widget.
 
-## 6 Troubleshooting
+## Troubleshooting
 
 The new Gallery widget uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) as its base for styling. If you need to combine rows or columns you can achieve this using the following helper classes in the `Dynamic item class`:
 

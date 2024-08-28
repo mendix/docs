@@ -9,13 +9,13 @@ description: "Describes the configuration and usage of the new Consumed REST ser
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Use the new Consumed REST Service document to send REST requests from Mendix Studio Pro. With this feature, you can build, test, and create data structures to store your requests. 
 
 This feature is supported for [Mendix Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above.
 
-### 1.1 Use Cases
+### Use Cases
 
 You can use this Consumed REST Service document to do the following:
 
@@ -24,7 +24,7 @@ You can use this Consumed REST Service document to do the following:
 * Create entities directly in the domain model
 * Send REST requests through a microflow
 
-### 1.2 Limitations
+### Limitations
 
 * `PATCH` methods are only supported for [Mendix Studio Pro 10.7](/releasenotes/studio-pro/10.7/) and above. 
 * `PUT` methods are only supported for [Mendix Studio Pro 10.8](/releasenotes/studio-pro/10.8/) and above. 
@@ -33,12 +33,12 @@ You can use this Consumed REST Service document to do the following:
 * To use the request response to create a data structure in your domain model, the response data should be in JSON format. Other formats, such as XML, are currently not supported. 
 * If you are debugging a running Published REST Service in the same app as your Consumed REST Service document, a deadlock could occur when sending the request. Wait until the timeout occurs (default: 300 seconds) for Studio Pro to respond again.
 
-### 1.3 Prerequisites 
+### Prerequisites 
 
 * [Studio Pro 10.6](/releasenotes/studio-pro/10.6/) and above
 * Familiarity with [HTTP request methods](https://www.w3schools.com/tags/ref_httpmethods.asp)
 
-## 2 Add the Consumed REST Service Document {#installation}
+## Add the Consumed REST Service Document {#installation}
 
 Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add the Consumed REST Service document to your app. To do this, 
 
@@ -48,11 +48,11 @@ Download [Studio Pro](https://marketplace.mendix.com/link/studiopro/) and add th
 
 {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/add-service.png" class="no-border" >}}
 
-## 3 Configuration {#configuration}
+## Configuration {#configuration}
 
 Use the Consumed REST Service to configure a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request for your app. 
 
-### 3.1 Basic Configuration {#configure-a-request}
+### Basic Configuration {#configure-a-request}
 
 Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your server by doing the following:
 
@@ -72,7 +72,7 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
 
 You can visualize your request in the **Response data** tab, then use the response to [create an entity in the domain model](#create-entity). 
 
-### 3.2 Authentication Methods {#authentication}
+### Authentication Methods {#authentication}
 
 You can configure basic authentication to use for all requests in your document. Authentication is not required but can be added if needed. To add basic authentication, do the following:
 
@@ -86,7 +86,7 @@ You can configure basic authentication to use for all requests in your document.
    2. Name the constant and click **OK**.
 4. Add any additional information needed and click **OK** > **OK**.
 
-### 3.3 Adding Parameters {#add-parameters}
+### Adding Parameters {#add-parameters}
 
 Parameters are fully supported in the path and query part of the URL and in the header value. They are defined within curly brackets. For example, in the URL, defining `numbers` as parameter would be `http://numbersapi.com/{numbers}`. All parameters must be added to the **Parameters** grid and match what is present within the curly brackets.
 
@@ -105,7 +105,7 @@ To add a parameter, follow these steps:
 Parameters are not supported in the [configuration](#configuration), including authentication and Base URL.
 {{% /alert %}} 
 
-### 3.4 Adding Headers {#add-headers}
+### Adding Headers {#add-headers}
 
 {{% alert color="info" %}}
 The support for parameter in the header value was introduced in Mendix [10.7](/releasenotes/studio-pro/10.7/).
@@ -123,7 +123,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 3. Click **OK**. To test the header, click **Send**.  
 
-### 3.5 Adding a Request Body (for POST, PUT and PATCH requests only) {#add-a-request-body}
+### Adding a Request Body (for POST, PUT and PATCH requests only) {#add-a-request-body}
 
 `POST`, `PUT` and `PATCH` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
@@ -139,7 +139,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 4. The entity name is prefilled, but you can change it to a custom name. To create an entity, click **Create Entity** > **OK**. Click **Show** to view the entity in your domain model.
 
-### 3.6 Creating an Entity from the Response {#create-entity}
+### Creating an Entity from the Response {#create-entity}
 
 You can check the response of your request in the **Response data** tab. 
 
@@ -154,7 +154,7 @@ The entity name is prefilled, but you can change it to a custom name. To create 
 1. Click **Create Entity** > **OK**. 
 2. To view the entity in your domain model, click **Show**.
 
-### 3.7 Using a REST Request in a Microflow {#add-entity-to-microflow}
+### Using a REST Request in a Microflow {#add-entity-to-microflow}
 
 To select a request in the microflow, complete the following steps:
 

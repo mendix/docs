@@ -3,7 +3,7 @@ title: "Use a Client Certificate"
 url: /howto8/integration/use-a-client-certificate/
 ---
 
-## 1 Introduction
+## Introduction
 
 Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
@@ -14,12 +14,12 @@ This how-to teaches you how to do the following:
 * Configure to run locally
 * Configure in the Mendix Cloud
 
-## 2 Prerequisites
+## Prerequisites
 
 * A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
-## 3 Running Locally
+## Running Locally
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
@@ -35,7 +35,7 @@ To configure the custom settings that are only used when you run your app locall
 
 This is an example:
 
-```text {linenos=false}
+```text
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "www.server-to-contact.com": "D:\\App\\Mx2.pfx" }
 ```
 
@@ -53,11 +53,11 @@ Be sure to drop `https://` from a URL endpoint.
 
 The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
-```text {linenos=false}
+```text
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 
-## 4 Running in the Cloud
+## Running in the Cloud
 
 {{% alert color="info" %}}
 

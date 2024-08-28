@@ -6,7 +6,7 @@ description: "This API allows you to access both public and company-specific Mar
 weight: 35
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Content API allows you to retrieve versions of both public and private company-specific Marketplace content. 
 
@@ -16,9 +16,9 @@ If you have Marketplace content, this API can help you get the following informa
 * The latest version that is compatible with your Mendix Studio Pro version
 * [Component details](/appstore/component-details/) such as content type, category, and license
 
-## 2 Authentication {#authentication}
+## Authentication {#authentication}
 
-### 2.1 Generating a PAT
+### Generating a PAT
 
 For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section of *User Settings*.
 
@@ -28,17 +28,17 @@ Select at least the following as the **Marketplace** scope:
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Content API calls.
 
-### 2.2 Using the PAT
+### Using the PAT
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /content HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
 To authenticate calls when using the OpenAPI specification below, click **Authorize** and use the value `MxToken {GENERATED_PAT}`.
 
-## 3 API Reference
+## API Reference
 
 {{< swaggerui src="/openapi-spec/marketplace-content.yaml"  >}}

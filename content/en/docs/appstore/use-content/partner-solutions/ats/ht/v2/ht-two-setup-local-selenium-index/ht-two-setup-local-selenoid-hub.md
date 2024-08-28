@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-setup-local-selenoid-hub/
 description: "Describes how to set up a local selenoid hub."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to shows you an example of a simple setup of a Selenoid hub with a Chrome and Firefox node on a Linux machine with docker. This works on a Windows machine with docker as well, but the commands and configuration could be different. For the official project, go to [https://github.com/aerokube/selenoid](https://github.com/aerokube/selenoid). For the official documentation, go to [https://aerokube.com/selenoid/latest/](https://aerokube.com/selenoid/latest/).
 
@@ -14,7 +14,7 @@ It is possible to run Selenoid without Docker, but that is outside of the scope 
 Mendix does not deliver support for local Selenium solutions. 
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 The following components are needed to set up a local Selenoid hub:
 
@@ -22,7 +22,7 @@ The following components are needed to set up a local Selenoid hub:
 * A machine with the latest versions of **docker** and **docker-compose** installed
 * Your machine should allow connections from ATS on port 4444
 
-## 3 Installing Your Hub and Nodes with Docker-Compose
+## Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install the hub and nodes with Docker-Compose:
 
@@ -59,7 +59,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 4. Create a docker-compose.yml in your folder/directory (/docker)
 
-    ```yml
+    ```yaml
     version: '3'
     services:
      selenoid:
@@ -111,11 +111,11 @@ The following steps describe how to install the hub and nodes with Docker-Compos
     {"total":5,"used":0,"queued":0,"pending":0,"browsers":{"chrome":{"65.0":{}},"firefox":{"58.0":{}}}}
     ```
 
-## 4 Starting Testing
+## Starting Testing
 
 You can start testing by sending your test script to: `http://yourmachinenameorIP:4444/wd/hub`.  Make sure it is reachable from the outside!
 
-## 5 Recording a Video of Your Test Case
+## Recording a Video of Your Test Case
 
 In case you want to record your test case as a video follow these steps:
 
@@ -130,7 +130,7 @@ In case you want to record your test case as a video follow these steps:
 
 After executing the test case, don't forget to download the video file or give it a different name in the next session, otherwise it is overwritten!
 
-## 6 Optional: Installing a Hub with a Portal with "Live-View"
+## Optional: Installing a Hub with a Portal with "Live-View"
 
 To install a hub with a Portal for "Live-View" you need a different *browsers.json* and *docker-compose.yml* file. To add a "Live-View" follow these steps:
 
@@ -165,7 +165,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 2. Create a docker-compose.yml with added selenoid UI for the portal:
 
-    ```yml
+    ```yaml
     version: '3'
     services:
      selenoid:

@@ -1,28 +1,29 @@
 ---
 title: "Published OData Entity"
 url: /refguide/published-odata-entity/
+weight: 10
 alias:
     - /refguide/published-odata-services/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the properties of an entity published in an OData service. 
 
-For an overview of OData services, see [Published OData Services](/refguide/published-odata-services/).
+For an overview of OData/GraphQL services, see [Published OData/GraphQL Services](/refguide/published-odata-services/).
 
-## 2 Adding or Editing an Entity
+## Adding or Editing an Entity
 
-### 2.1 Add an Entity
+### Add an Entity
 
-In the **Entities** pane of the **Published OData Service** window, click **Add** to open the **Select Entity** window. Select an entity to publish and click **Select**.
+In the **Entities** pane of the **Published OData/GraphQL Service** window, click **Add** to open the **Select Entity** window. Select an entity to publish and click **Select**.
 
-An alternative way to add an entity is by right-clicking an entity in the domain model and choosing **Publish in OData service**. You can select a published OData service or create a new one. 
+An alternative way to add an entity is by right-clicking an entity in the domain model and choosing **Publish in OData/GraphQL service**. You can select a published OData/GraphQL service or create a new one. 
 
-### 2.2 Edit a Published Entity
+### Edit a Published Entity
 
-In the **Entities** pane of the **Published OData Service** window, select an entity and click **Edit** to display the **Edit published entity** window. 
+In the **Entities** pane of the **Published OData/GraphQL Service** window, select an entity and click **Edit** to display the **Edit published entity** window. 
 
 It is possible to select another entity or view the entity in the domain model by clicking **Show**.
 
@@ -30,7 +31,7 @@ You can see the location where the entity is published in **Example of location*
 
 In the **Public documentation** tab, you can provide a summary and a description of the published entity.
 
-## 3 Selecting Published Attributes and Associations {#exatass}
+## Selecting Published Attributes and Associations {#exatass}
 
 {{% alert type="info" %}}
 Support for publishing associations to and from entities that do not have the **Readable** capability was introduced in Studio Pro [10.11.0](/releasenotes/studio-pro/10.11/).
@@ -38,23 +39,23 @@ Support for publishing associations to and from entities that do not have the **
 
 When you have selected an entity in the list to the left, its published attributes and associations are shown in the list to the right. In this list, you can add, edit, delete, and move these attributes and associations.
 
-Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the OData content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
+Attributes of published entities are **Nillable** by default. This means if their value is empty, they will be encoded as explicit nulls in the response content. If **Nillable** is unchecked for an attribute, the attribute cannot be empty (as this will result in a runtime error).
 
 {{% alert color="info" %}}
 
-Attributes of type **Binary** cannot be exported through OData services except for the **Contents** field of the **System.FileDocument** attribute.
+Attributes of type **Binary** cannot be exported through OData/GraphQL services except for the **Contents** field of the **System.FileDocument** attribute.
 
 {{% /alert %}}
 
 Entities that are published with the **Readable** capability do not allow including associations to entities that do not have the **Readable** capability. Associations from the other directions, from non-readable to readable entities, are supported.
 
-### 3.1 Required Validation Rules for Published Attributes
+### Required Validation Rules for Published Attributes
 
-For published OData services, the **Can be empty** checkbox appears when you edit a published attribute. 
+For published OData/GraphQL services, the **Can be empty** checkbox appears when you edit a published attribute. 
 
 When the checkbox is unselected and there is no **Required** validation rule set, you are prompted to add a required validation rule or use a before commit microflow to ensure end-users do not leave it empty.
 
-## 4 Mapping from Internal Names to Exposed Names
+## Mapping from Internal Names to Exposed Names
 
 Use **Exposed entity name** in the **Edit published entity** window to customize the name of the entity that is exposed to the outside world. The default is the name of the published entity in the domain model. The **Exposed entity name** must start with a letter followed by letters or digits with a maximum length of 480 characters. 
 
@@ -70,13 +71,13 @@ For associations, the exposed name is the name given to the navigation property,
 
 {{% alert color="info" %}}
 
-When names have been customized in this way, the name of the entity, attribute, or association as defined in the domain model will not be exposed to the outside world. For all OData communication, the exposed name is used.
+When names have been customized in this way, the name of the entity, attribute, or association as defined in the domain model will not be exposed to the outside world. For all OData/GraphQL communication, the exposed name is used.
 
 {{% /alert %}}
 
 These features make it easier to refactor the domain model without affecting external APIs.
 
-## 5 Key {#key}
+## Key {#key}
 
 A published entity should have a key attribute or a combination of attributes that form a key. This allows you to easily retrieve the entity and makes it easy to combine data referring to the same object (for example a customer) from several systems. The attribute (or attributes) can be of type **Integer**, **Long**, **String**, or **AutoNumber**.
 
@@ -98,11 +99,11 @@ Selecting more than one attribute as the key is only available for published ODa
 
 Mendix recommends that you do not use the entity [ID](/refguide/odata-representation/#id-representation) as a key as it has no meaning outside the Mendix app. 
 
-## 6 Capabilities {#capabilities}
+## Capabilities {#capabilities}
 
 The **Capabilities** section gives an overview of what operations the published entity supports.
 
-### 6.1 Insertable
+### Insertable
 
 Select the checkbox for **Insertable** to indicate that clients can insert new objects.
 
@@ -119,16 +120,16 @@ You can also choose the **Call a microflow** action to use your own logic. Speci
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
-### 6.2 Readable {#readable}
+### Readable {#readable}
 
 There are two options to handle an incoming GET request for a published entity:
 
-1. **Read from database** – This action will parse the incoming OData query to a database query and retrieve the data from the database. This is the default action for **Readable** section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
+1. **Read from database** – This action will parse the incoming query to a database query and retrieve the data from the database. This is the default action for **Readable** section. This action is not applicable to non-persistable entities, because non-persistable entities cannot be retrieved from the database.
 2. **Call a microflow** – This action will call a microflow. You can specify your custom logic in this microflow to return a list of objects that correspond to the incoming request.
 
 You can also set the [query options](#query-options) for each request.
 
-A published OData entity is readable by default. It is possible to disable this capability, which means the service only exposes the type and structure of the entity, not the data. You can use the entity as a parameter or return type of a published microflow.
+A published entity is readable by default. It is possible to disable this capability, which means the service only exposes the type and structure of the entity, not the data. You can use the entity as a parameter or return type of a published microflow.
 
 When **Readable** is enabled, you can configure how data is queried in the [exposed data](#exposed-data) section. Note that **Readable** must be enabled in order to enable the other capabilities.
 
@@ -136,9 +137,9 @@ When **Readable** is enabled, you can configure how data is queried in the [expo
 Support for publishing entities without the **Readable** capability was introduced in Studio Pro [10.8.0](/releasenotes/studio-pro/10.8/).
 {{% /alert %}}
 
-## 6.2.1 Query Options {#query-options}
+#### Query Options {#query-options}
 
-Select the options to include for the **Readable** OData capability:
+Select the options to include for the **Readable** OData/GraphQL capability:
 
 * **Countable** – This option is required for getting the total number of records.
 * **Top supported** – This option indicates whether clients can specify that they want to retrieve only a limited number of items. Enable this option when [Use paging](#paging) is selected.
@@ -148,7 +149,7 @@ The **Top supported** and **Skip supported** queries are required for pagination
 
 For more information, see the [System Query Option $top and $skip](https://www.odata.org/getting-started/basic-tutorial/#topskip) in the *Basic Tutorial* on OData.org
 
-### 6.3 Updatable {#updatable}
+### Updatable {#updatable}
 
 Select the checkbox for **Updatable** to indicate that clients can update the values of attributes and associations.
 
@@ -164,7 +165,7 @@ You can also choose the **Call a microflow** action to use your own logic. Speci
 
 In the publishing app, you can use a validation message action to report a validation error. The client app can include a custom error handler on the [Send External Object](/refguide/send-external-object/) activity to handle the error. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed. For more information, see [Supported OData Operations](/refguide/supported-odata-operations/#updating-objects).
 
-### 6.4 Deletable {#deletable}
+### Deletable {#deletable}
 
 Select the checkbox for **Deletable** to indicate that clients can delete the values of attributes and associations.
 
@@ -172,21 +173,21 @@ Choose whether the object should be deleted from the database directly, or wheth
 
 You can use a validation message to report a validation error if you are performing, for example, a soft delete. If the microflow reports [validation feedback](/refguide/validation-feedback/), the runtime informs the client that the request has failed.
 
-## 7 Exposed Data {#exposed-data}
+## Exposed Data {#exposed-data}
 
-### 7.1 Exposed Set Name
+### Exposed Set Name
 
 It is possible to customize the name of the entity set that is displayed in the **Exposed set name** field of the **Edit published entity** window. This forms the last part of the URL of the published entity as given in the **Example of location**.
 
 Default: {Entity name}s
 
-### 7.2 Alternative Name (in URL)
+### Alternative Name (in URL)
 
 You can choose to specify an alternative to the exposed set name. This name will be use in the OpenAPI document of the service. If you specify an alternative name, the entity will be available on two different URLs: one that uses the exposed set name, and one that uses the alternative name. This value is optional. 
 
 Use an alternative name when you require the published entity to be available on a URL that would be invalid in OData but valid in OpenAPI, such as `my-entities`.
 
-### 7.3 Use Paging {#paging}
+### Use Paging {#paging}
 
 The **Use paging** option is used to set a maximum number of objects per response and includes a link to the next set of objects. A client such as [Tableau](https://www.tableau.com) is able use this to display progress and automatically continues to follow the links until all the data is retrieved. The memory usage of the clients can be improved if paging is set to a reasonable page size.
 
@@ -196,7 +197,7 @@ When set to **Yes**, select **Top supported** and **Skip supported** [query opti
 
 Setting **Use paging** to **Yes** may result in inconsistency in the retrieved data because the data will not be retrieved in a single transaction. For example, sorting on the **Age** attribute in an entity called **Customer** and retrieving customers set to 1000 objects per page. If a customer is deleted between two calls, the customer with **Age** 23 at position 1001 moves to position 1000. This means the object that would be the first item on the second page is moved to the first page and is no longer retrieved. Similarly, data inserted between calls can result in a duplication of the data. This option should only be used when this kind of inconsistency is acceptable.
 
-#### 7.4 Page Size
+#### Page Size
 
 When **Use paging** is set to **Yes**, the number of objects per page can be set in **Page size**.
 

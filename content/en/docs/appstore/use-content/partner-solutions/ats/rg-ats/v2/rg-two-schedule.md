@@ -3,7 +3,7 @@ title: "Schedule"
 url: /appstore/partner-solutions/ats/rg-two-schedule/
 ---
 
-## 1 Schedule
+## Schedule
 
 Scheduling allows you to plan the execution of test cases and test suites at defined dates. You can also choose to send alerts when a scheduled run is done.
 
@@ -11,7 +11,7 @@ Scheduling allows you to plan the execution of test cases and test suites at def
 
 If you want to edit the schedule, click **Edit** ({{% icon name="pencil" %}}) to the right of the schedule. Clicking **Delete** ({{% icon name="remove" %}}) will delete the schedule. To activate/deactivate a schedule, click the box in front of the schedule.
 
-## 2 New/Edit Schedule
+## New/Edit Schedule
 
 The following schedule settings are available:
 
@@ -27,7 +27,7 @@ The following schedule settings are available:
 | Send alerts        | Set whether to send email alerts when a schedule run is done. Off by default. |
 | Send alerts when passed | Set whether to send alerts when a schedule run is passed. Off by default. |
 
-## 3 Platform
+## Platform
 
 {{% alert color="info" %}}
 This option is only available for supported Selenium hubs.
@@ -37,7 +37,7 @@ If you have selected a Selenium hub from a supported Selenium hub provider (Sauc
 
 For more information on the different supported operating systems, see [Supported Selenium Hub Providers](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
 
-## 4 Resolution
+## Resolution
 
 {{% alert color="info" %}}
 This option is only available for supported Selenium hubs.
@@ -45,7 +45,7 @@ This option is only available for supported Selenium hubs.
 
 With this option, you can specify the screen resolution for your test run. A list of all the supported screen resolutions can be found in [Supported Selenium Hub Providers](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/).
 
-## 5 Alerts
+## Alerts
 
 Alerts are sent only to users who have subscribed using the email from their Mendix account. Subscription is per app.
 

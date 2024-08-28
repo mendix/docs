@@ -8,7 +8,7 @@ description: "Describes the environmental details of your app and how to manage 
 #The anchor #services below is mapped from the Mendix Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 To open the **Environment Details** page, go to [Apps](https://sprintr.home.mendix.com) and click **Environments** on your licensed app. Then click **Details** ({{% icon name="notes-paper-edit" %}}) by the environment you want to view.
 
@@ -18,7 +18,7 @@ To open the **Environment Details** page, go to [Apps](https://sprintr.home.mend
 
 The **Environment Details** page shows information about the selected environment. You can use this page to manage and debug several aspects of the environment. The page has eight tabs: **General**, **Model Options**, **Network**, **Log Levels**, **Runtime**, **Maintenance**, **Tags**, and **Services**.
 
-## 2 The General Tab
+## The General Tab
 
 In the **General** tab, you can find the following information about your environment:
 
@@ -44,7 +44,7 @@ In the **General** tab, you can find the following information about your enviro
 
 At the bottom of the page, there are three overview grids showing the deployment package details, plan details, and license. These are described in detail below in the [Overviews](#overviews) section.
 
-### 2.1 Actions {#actions}
+### Actions {#actions}
 
 On the right side of the screen in the **General** tab, there are buttons that you can use to perform various actions. Some action buttons are visible when your app is running, some are visible when your app is stopped, and some are always visible.
 
@@ -75,7 +75,7 @@ When your app is stopped, you see this set of action buttons instead:
 During a [maintenance window](/developerportal/deploy/maintenance-windows/), you cannot start, restart, or stop your app.
 {{% /alert %}}
 
-#### 2.1.2 Clearing an Environment {#clear-environment}
+#### Clearing an Environment {#clear-environment}
 
 The **Clear Environment** button lets you clear your environment so that you can use it for another purpose. This option is only available if the environment is stopped.
 
@@ -97,7 +97,7 @@ To clear your environment, follow these steps:
     max-width=70%
     >}}
 
-### 2.2 Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
+### Naming of Environments – Flexible Environments in Mendix Cloud {#naming}
 
 If you are the app's [Technical Contact](/developerportal/general/app-roles/#technical-contact), you can rename the environments.
 
@@ -113,7 +113,7 @@ To rename an environment, follow these steps:
 After you rename an environment, it may take up to 15 minutes before you can access an app via its URL. This is because the URL includes the name of the environment, and the old value needs to be removed from the DNS cache. It may take considerably longer for the change to be visible worldwide.
 {{% /alert %}}
 
-### 2.3 Scaling {#scaling}
+### Scaling {#scaling}
 
 To see the options for changing scaling, scroll down to the **Instances** section of the **General** tab and click **Change scaling**.
 
@@ -136,11 +136,11 @@ If you have 1 GiB RAM of total allocated memory, you have one instance available
 
 For more information, see [Scaling Your Environment](/developerportal/deploy/scale-environment/).
 
-### 2.4 Overviews {#overviews}
+### Overviews {#overviews}
 
 At the bottom of the **General** tab, there are three overview grids showing the deployment package details, plan details, and license.
 
-#### 2.4.1 Deployment Package Details
+#### Deployment Package Details
 
 In this section, you can find information about the deployment package that is loaded into the environment:
 
@@ -150,11 +150,11 @@ In this section, you can find information about the deployment package that is l
 * **Size (MB)** of the deployment package
 * **Upload date** of the deployment package
 
-#### 2.4.2 Plan Details
+#### Plan Details
 
 This section shows details of the plan that applies to this environment.
 
-#### 2.4.3 License
+#### License
 
 The license overview contains the following information:
 
@@ -162,13 +162,13 @@ The license overview contains the following information:
 * **Is Production** – indicates if the environment is licensed as a production environment
 * **Runtime mode** – Production, Acceptance, or Test
 
-## 3 The Model Options Tab {#model-options}
+## The Model Options Tab {#model-options}
 
 On this tab, you can edit the following model options: scheduled events and constants.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/model-options.png" class="no-border" >}}
 
-### 3.1 Scheduled Events
+### Scheduled Events
 
 In this section, you can view your configured scheduled events.
 
@@ -182,7 +182,7 @@ With scheduled events, you can let the Mendix Runtime run a microflow at a speci
 
 For more information, see [Scheduled Events](/refguide/scheduled-events/).
 
-### 3.2 Constants {#constants}
+### Constants {#constants}
 
 In this section, you can view the configured constants. Constants are used to define configuration values that can differ per environment.
 
@@ -204,13 +204,13 @@ When a constant is first introduced to a cloud deployment, its value is taken fr
 
 For more information, see [Constants](/refguide/constants/).
 
-## 4 The Network Tab {#network-tab}
+## The Network Tab {#network-tab}
 
 On the **Network** tab, you can manage the elements described below.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/network1.png" alt="" class="no-border" >}}
 
-### 4.1 Custom Domains {#custom-domains}
+### Custom Domains {#custom-domains}
 
 * **Domain name**
 * **Certificate**
@@ -224,7 +224,7 @@ You can perform the following actions:
 
 For more information, see [Certificates](/developerportal/deploy/certificates/) and [Custom Domains](/developerportal/deploy/custom-domains/).
 
-### 4.2 HTTP Headers {#http-headers}
+### HTTP Headers {#http-headers}
 
 The **HTTP Headers** section lets you set the values of selected HTTP response headers. These headers allow the server to pass additional information with the response, which the browser interprets to control the behavior of your Mendix app.
 
@@ -263,7 +263,7 @@ The changes to the headers are implemented when the app is redeployed.
 
 For more information about HTTP headers, see [MDN's HTTP headers overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers).
 
-#### 4.2.1 HTTP Response Headers Inserted Automatically
+#### HTTP Response Headers Inserted Automatically
 
 Mendix and the deployment environment automatically add some non-configurable response headers. These are listed below.
 
@@ -274,7 +274,7 @@ Mendix and the deployment environment automatically add some non-configurable re
 | `strict-transport-security` | TLS terminating webservers – set to `max-age=31536000` (365 days, in seconds)|
 | `x-vcap-request-id` | Cloud Foundry to track requests through CF |
 
-#### 4.2.2 Running Your App in an Iframe {#iframe}
+#### Running Your App in an Iframe {#iframe}
 
 Most browsers have additional security to ensure that iframes are only allowed when they are from the same domain as the main page. The defaults for these vary by browser version. This security is controlled through `SameSite` cookies. For more information, see [SameSite Cookies Explained](https://web.dev/samesite-cookies-explained/).
 
@@ -282,11 +282,11 @@ Most browsers have additional security to ensure that iframes are only allowed w
 There can be additional issues when using cookies in iframes for end-users using the Safari browser. Resolving these issues is outside the control of Mendix. For more information, see [Full Third-Party Cookie Blocking and More](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/).
 {{% /alert %}}
 
-##### 4.2.2.1 Using Custom Domains
+##### Using Custom Domains
 
 To avoid security issues when you want to embed the app in an iframe, use [custom domains](/developerportal/deploy/custom-domains/). This way, you can ensure that the app you want to embed is part of the same domain. For example, if your page is `mainpage.domain.name`, then the app embedded in the iframe should be `appname.domain.name`.
 
-##### 4.2.2.2 Applying a Different SameSite Setting {#samesite}
+##### Applying a Different SameSite Setting {#samesite}
 
 From Studio Pro 8.12, you can control the value of `SameSite` in your cookies. The default for all cookies depends on the version of Mendix you are using:
 
@@ -301,7 +301,7 @@ For Mendix 8.11 and below, there was no `SameSite` value set on cookies, and the
 The `SAMESITE_COOKIE_PRE_MX812` setting is implemented the next time your app is deployed after you apply the change.
 {{% /alert %}}
 
-##### 4.2.2.3 Using Custom Sign-In Pages
+##### Using Custom Sign-In Pages
 
 If you use a custom sign-in page, the `originURI` cookie is normally set in the *index.html* file. If your Mendix app runs within an iframe, set this cookie with the `SameSite=None` and `Secure` attributes.
 
@@ -312,19 +312,19 @@ Change this to add the required attributes. Here is an example:
 document.cookie = "originURI=/login.html" + (window.location.protocol === "https:" ? ";SameSite=None;Secure" : "")
 ```
 
-#### 4.2.3 Content Security Policy {#csp}
+#### Content Security Policy {#csp}
 
 A Content Security Policy informs the client (browser) where your page loads resources from. Setting this can make your app more secure by declaring trusted sources for your resources. For more information, see the W3C recommendation [Content Security Policy Level 2](https://www.w3.org/TR/CSP2/).
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:
 
-```text {linenos=false}
+```text
 default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src 'self' ; font-src 'self' https://fonts.gstatic.com data: ; img-src 'self' data: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ; base-uri 'self' ; form-action 'self' ; object-src 'none' ; frame-ancestors 'self' ;
 ```
 
 If you have issues that appear to be related to a content security policy, you can use the console of your browser to investigate them.
 
-### 4.3 Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
+### Outgoing Connections Safelisting (Mendix Cloud Dedicated) {#connection-safelist}
 
 If you are deploying your apps to [Mendix Cloud Dedicated](/deployment/#mendix-cloud-dedicated), all outgoing IP addresses are allowed by default.
 
@@ -337,7 +337,7 @@ You can add or edit multiple different IP address and port combinations. Any ran
 * To edit a range, select an existing range and click **Edit**.
 * To delete a range, select an existing range, click **Delete**, and then confirm that you want to delete it.
 
-#### 4.3.1 Managing a Safelist Range
+#### Managing a Safelist Range
 
 For each range where you define safelisted IP addresses and ports, you can enter the following information:
 
@@ -349,7 +349,7 @@ For each range where you define safelisted IP addresses and ports, you can enter
 
 Click **Save** to save your range. The new values are applied within a few minutes without needing an app restart.
 
-#### 4.3.2 Valid IP Ranges {#valid-ip}
+#### Valid IP Ranges {#valid-ip}
 
 IP addresses must be within the following ranges:
 
@@ -361,7 +361,7 @@ IP addresses must be within the following ranges:
 | 172.32.0.0  | 192.167.255.255 |
 | 192.169.0.0 | 255.255.255.255 |
 
-### 4.4 Path-Based Access Restrictions {#path-based-restrictions}
+### Path-Based Access Restrictions {#path-based-restrictions}
 
 You can restrict access to your application by means of Client Certificates or IP ranges.
 
@@ -384,15 +384,15 @@ You can **Delete** a path or you can **Add** and **Edit** a path with the follow
 
 For more information, see [How to Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
 
-### 4.5 Outgoing Connections Certificates
+### Outgoing Connections Certificates
 
 Add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format). These are used when your application initiates SSL/TLS connections.
 
-## 5 The Log Levels Tab {#log-levels}
+## The Log Levels Tab {#log-levels}
 
 Log levels are used to distinguish the log messages. Log levels highlight the highest-priority log messages so that they can be prioritized accordingly. 
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/loglevels-tab.png" alt="Viewing the log levels" >}}
 
 Custom log nodes appear in the list only after a message has been logged to them. For more information, see [Log Message](/refguide/log-message/#log-node-name).
 
@@ -425,13 +425,13 @@ The log level types are as follows:
 
 For more information about log levels, see [How to Set Log Levels](/howto/monitoring-troubleshooting/log-levels/).
 
-## 6 The Runtime Tab {#runtime-tab}
+## The Runtime Tab {#runtime-tab}
 
 On the **Runtime** tab, you can add **Custom Runtime Settings** and **Custom Environment Variables**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" class="no-border" >}}   
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/runtime.png" alt="Viewing the Runtime tab" >}}   
 
-### 6.1 Custom Runtime Settings {#custom-runtime-settings}
+### Custom Runtime Settings {#custom-runtime-settings}
 
 Use the **Custom Runtime Settings** section to perform the following actions:
 
@@ -467,7 +467,7 @@ Mendix Cloud uses runtime settings to configure the included systems for logs, b
 * `TempPath`
 * `WebServiceClientCertificates`
 
-### 6.2 Custom Environment Variables {#custom-environment-variables}
+### Custom Environment Variables {#custom-environment-variables}
 
 Use the **Custom Environment Variables** section to add, edit, or delete an environment variable.
 
@@ -488,11 +488,11 @@ Click **Add** and select **Supported** to choose from the following variables:
 
 To support features that are in beta, click **Add** and select **Unsupported**. Then, you can add an unsupported environment variable. Unsupported environment variables can only be used for controlling Mendix beta features. If you are involved in using a beta feature, you will be informed what **Name** and **Value** to enter.
 
-## 7 The Maintenance Tab {#maintenance-tab}
+## The Maintenance Tab {#maintenance-tab}
 
 You can use the **Maintenance** tab to view information about planned maintenance. You can also configure your preferred maintenance window.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" class="no-border" >}}   
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" >}}   
 
 There are two types of maintenance:
 
@@ -501,19 +501,19 @@ There are two types of maintenance:
 
 For more information about configuring maintenance windows, see the [Configuring Maintenance](/developerportal/deploy/maintenance-windows/) section of the *Maintenance Windows* page.
 
-### 7.1 Preferred Maintenance Window
+### Preferred Maintenance Window
 
 You can view and change your preferred maintenance window in this section.
 
-### 7.2 Planned Maintenance
+### Planned Maintenance
 
 When a maintenance operation is planned, it appears under **Planned Maintenance**. By default, this is planned in your preferred maintenance window. To override the maintenance window of a specific maintenance operation, click **Override**.
 
-## 8 The Tags Tab{#tags}
+## The Tags Tab{#tags}
 
 You can set tags on your environment. Tags are arbitrary strings that are not interpreted by the Mendix Portal.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/tags.png" alt="Viewing the Tags tab" >}}
 
 Tags serve two purposes:
 
@@ -524,16 +524,18 @@ For example, you may wish to use tags when logging with Datadog. For more inform
 
 If you want to add, edit, or delete a tag, make the change on the **Tags** tab and then restart your environment to update the tags.
 
-## 9 The Services Tab {#services}
+## The Services Tab {#services}
 
 You can enable and disable custom services for individual environments of your app. The service that you want to enable must have been enabled for the app by its [Technical Contact](/developerportal/general/app-roles/#technical-contact). For more information, see [Services](/developerportal/deploy/environments/#services).
 
 In the **Services** tab, the [Technical Contact](/developerportal/general/app-roles/#technical-contact) can decide which custom services can be used in each environment of this app.
 
-### 9.1 Available Services
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/services-tab.png" >}}
+
+### Available Services
 
 One custom service is available: Mendix Event Broker. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
 
-### 9.2 Enabling Custom Services
+### Enabling Custom Services
 
 Custom services are only available if the app's Technical Contact has enabled them. The custom services are enabled or disabled separately for each environment of each app. For more information, see [Services](/developerportal/deploy/environments/#services) in the *Environments* documentation.

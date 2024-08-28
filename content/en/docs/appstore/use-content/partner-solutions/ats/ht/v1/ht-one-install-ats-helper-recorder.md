@@ -6,7 +6,7 @@ weight: 2
 description: "Describes how to install the ATS Helper and the ATS Recorder tool."
 ---
 
-## 1 Introduction
+## Introduction
 
 ATS provides two different tools to help build test scripts: the ATS Helper and ATS Recorder. The ATS Helper identifies the mx-name of widgets on the application under test (AUT). The recorder is a function/plugin within ATS that records your manual test steps in the AUT and automatically selects the correct action for each step.
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 * Install the ATS Helper
 * Install the [ATS Recorder](/appstore/partner-solutions/ats/rg-one-recorder/)
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have the following prerequisites in place:
 
@@ -29,7 +29,7 @@ Both the ATS Helper and the ATS Recorder only work on a Mendix app.
 Both the ATS Helper and the ATS Recorder only function in [Google Chrome](https://www.google.com/chrome/browser/).
 {{% /alert %}}
 
-## 3 Installing the ATS Helper
+## Installing the ATS Helper
 
 To install the ATS Helper, follow these steps:
 
@@ -55,7 +55,7 @@ The ATS Helper only works on standalone widgets.
 
 See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/) for more information on how to use the ATS Helper.
 
-## 4 Installing the ATS Recorder
+## Installing the ATS Recorder
 
 To install the ATS Recorder, follow these steps:
 
@@ -74,7 +74,7 @@ To install the ATS Recorder, follow these steps:
 
 See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/) for more information on how to use the ATS Helper.
 
-## 5 Next up
+## Next up
 
 You have now learned how to install the ATS tools, so the next how-to is [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/).
 

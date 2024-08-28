@@ -9,7 +9,7 @@ description: "Use the Mendix SSO module to add Single Sign-on to your app using 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Mendix SSO](/appstore/modules/mendix-sso/) module enables your app end-users to sign in with their Mendix account when your app is deployed to Mendix Cloud.
 
@@ -28,13 +28,13 @@ Using Mendix accounts during development has the following benefits:
 
 For information on installing and configuring the Mendix SSO module, see [Mendix SSO](/appstore/modules/mendix-sso/).
 
-## 2 Using Mendix SSO
+## Using Mendix SSO
 
 {{% alert color="warning" %}}
 Mendix Single Sign-On is only activated when your app is deployed to Mendix Cloud. When you run your app locally or on another cloud, you need to use local credentials.
 {{% /alert %}}
 
-### 2.1 Signing On as an End-User
+### Signing On as an End-User
 
 As an end-user, you will see the Mendix SSO screen when you open an app if this is your first time visiting the app environment or if you have not opened the app recently. From this screen, you can choose to sign in with local user credentials, or you can click **Mendix Account** to use your Mendix account with Mendix SSO.
 
@@ -48,11 +48,11 @@ So, the first time you sign in to an environment (for example, myapp running in 
 
 Click **Authorize** to continue using Mendix SSO with the app. Authorizing the app automatically signs you in to the app.
 
-### 2.2 Assigning End-User Roles
+### Assigning End-User Roles
 
 To give end-users access to your app, use the [Access Management](/developerportal/collaborate/general-settings/#managing-app-users) tab on the **Settings** page after opening your app in **Apps**.
 
-{{< figure src="/attachments/deployment/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" class="no-border" >}}
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/mendix-sso/access-management-tab.png" alt="" >}}
 
 {{% alert color="warning" %}}
 Do not attempt to add or delete Mendix SSO users using administration functions within the app. User access to your app can only be changed through the Mendix Portal.

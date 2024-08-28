@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction 
+## Introduction 
 
 {{% alert color="info" %}}
 MendixChat was rebranded to Maia Chat and released in GA in Studio Pro 10.12.0.
@@ -21,7 +21,7 @@ Maia Chat does not use any project, customer, or company information. It only us
 
 Maia Chat is a built-in chat interface powered by Generative AI in Studio Pro. Developers can ask questions about app development in Mendix, including how to apply concepts, best practices, and development patterns. It is built based on large language models (LLMs), using data from [Mendix Docs](/), [Mendix Community](https://community.mendix.com/), and [Mendix Academy](https://academy.mendix.com/).
 
-## 2 Using Maia Chat
+## Using Maia Chat
 
 {{% alert color="info" %}}
 To use Maia Chat, internet connection is required and make sure you are signed in to Studio Pro.
@@ -36,7 +36,7 @@ The chat interface appears at the right side of Studio Pro under the **Maia** ta
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/maia-chat/maia-chat-interface.png" width="300px">}}
 
-### 2.1 An Example of Interacting with Maia Chat
+### An Example of Interacting with Maia Chat
 
 You can start using Maia Chat by clicking one of the demo questions. You can also start by asking your own question in the chatbox. 
 
@@ -66,11 +66,11 @@ The following steps present an example of how you can interact with Maia Chat by
 
 6. If you want to clear the messages to start a new conversation in a clean state, navigate to the top of the interface and click **New chat** (this option was added in 10.7.0).
 
-### 2.2 Asking Follow-Up Questions
+### Asking Follow-Up Questions
 
 In Studio Pro 10.8.0 and above, Maia Chat supports asking follow-up questions based on your previous question and the answer you have received. For example, you can ask it to summarize the latest answer you received by typing the following in the chat: *Can you summarize that?*.
 
-## 3 Keyboard Support
+## Keyboard Support
 
 You can use the following shortcut keys in Maia Chat, including on the feedback page:
 

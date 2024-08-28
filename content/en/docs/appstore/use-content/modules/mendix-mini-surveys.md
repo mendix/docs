@@ -4,15 +4,15 @@ url: /appstore/modules/mendix-mini-surveys/
 description: "Describes the configuration and usage of the Mendix Mini Surveys module, which is available in the Mendix Marketplace."
 ---
 
-## 1 Introduction
+## Introduction
 
 After you have created a [mini survey](/developerportal/app-insights/mini-surveys/) in the Mendix Portal, use the [Mendix Mini Surveys](https://marketplace.mendix.com/link/component/205483) module to implement your mini survey in Studio Pro.
 
-## 2 Installation
+## Installation
 
 To import this module into your app, follow the instructions in [Using Marketplace Content](/appstore/use-content/).
 
-## 3 Configuration {#configuration}
+## Configuration {#configuration}
 
 {{% alert color="info" %}}Before you configure this module in Studio Pro, make sure you have [created your mini survey](/developerportal/app-insights/mini-surveys/#create-survey) in the Mendix Portal. {{% /alert %}}
 
@@ -42,9 +42,9 @@ To import this module into your app, follow the instructions in [Using Marketpla
 
 {{% alert color="info" %}}Once the start time of the mini survey is reached, the mini survey will start running, and all the target users of the mini survey will receive the survey automatically.{{% /alert %}}
 
-## 4 FAQ {#faq} 
+## FAQ {#faq} 
 
-### 4.1 How to Use a Constant Variable for Survey ID to Show a Survey? 
+### How to Use a Constant Variable for Survey ID to Show a Survey? 
 
 You can achieve this using the data view and nanoflow solution we provide in the module as follows:
 
@@ -54,21 +54,21 @@ You can achieve this using the data view and nanoflow solution we provide in the
 
 {{% alert color="info" %}}We will continue to support this deprecated solution. In a future version you will be able to configure survey IDs in the App Insights dashboard, without configuring constants or string values in your app.{{% /alert %}} 
 
-### 4.2 What Happens if a User Does Not Finish Answering a Survey? {#unfinished-survey}
+### What Happens if a User Does Not Finish Answering a Survey? {#unfinished-survey}
 
 If a user only answers one or two questions before they close the mini survey. The answers will be stored in your app. Every 15 minutes a scheduled event will submit all unfinished surveys collected in your app to the **Mini Surveys** in the Mendix Portal. A survey answer must be more than one hour old before it is submitted by the scheduled event.
 
-### 4.3 Does `TEST_MODE` Constant Affect Unfinished Surveys?
+### Does `TEST_MODE` Constant Affect Unfinished Surveys?
 
 No. The behaviors are exactly the same as described in the [What Happens if a User Does Not Finish Answering a Survey?](#unfinished-survey) section above.
 
-### 4.4 Can I Use Multiple Widgets on a Single Page?
+### Can I Use Multiple Widgets on a Single Page?
 
 Mendix recommends using only one Mini Survey widget per page. If you are experimenting, enable the **TEST_MODE** constant.
 
 If your app uses a master layout page and many child pages. You can place one Mini Survey widget on the master layout page and then use multiple **ShowSurvey_OnAction** or **ShowSurvey_UsingDataView** nanoflow actions to trigger the survey to show.
 
-### 4.5 What Are the Survey Opt-Out Rules? {#survey-rules} 
+### What Are the Survey Opt-Out Rules? {#survey-rules} 
 
 A mini survey has the following opt-out rules: 
 
@@ -82,13 +82,13 @@ Survey opt-out rule is a variable cached to your internet browser. You can reset
 
 {{% alert color="info" %}}In a future release, we will allow you to customize these opt-out rules from the App Insights portal.{{% /alert %}} 
 
-### 4.6 Can I Delay the Appearance of the Mini Survey After the Page Loads?
+### Can I Delay the Appearance of the Mini Survey After the Page Loads?
 
 Yes. To set the delay time, open the settings of the Mini Survey widget, and set the delay time in seconds in the **Pop-up Delay** field on the **Show Survey** tab. If the value is set to 0, it is still assigned to the variable that is used.
 
-## 5 Troubleshooting {#troubleshooting} 
+## Troubleshooting {#troubleshooting} 
 
-### 5.1 The Survey Is Not Showing?
+### The Survey Is Not Showing?
 
 If this occurs, try the following:
 
@@ -98,6 +98,6 @@ If this occurs, try the following:
 
 * In the app, enable the **TEST_MODE** constant. If the survey loads, then the survey has triggered an [op-out rule](#survey-rules) and will not show. In this case, clear the survey opt-out rules by clearing your browser cache or using incognito mode.
 
-### 5.2 Surveys Do not Work Locally When Running Multiple Applications
+### Surveys Do not Work Locally When Running Multiple Applications
 
 If this occurs, upgrade the module to v1.1.0 or above, and ensure to clear your browsers cached data to remove deprecated feature – you only need to do this one time in your browser.

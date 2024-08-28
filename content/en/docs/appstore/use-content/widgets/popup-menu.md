@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Pop-Up Menu widget, w
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget shows a floating menu with items. The widget allows users to create their own items in "custom" mode.
 
-### 1.1 Features
+### Features
 
 * Allows you to configure widgets that trigger the menu visibility
 * Allows you to change the menu's relative position to the trigger widgets
@@ -17,7 +17,7 @@ The [Pop-Up Menu](https://marketplace.mendix.com/link/component/115826/) widget 
 * Allows you to create textual or custom menu items with an on click action
 * Allows for additional styling customizations through Atlas UI
 
-## 2 Configuration
+## Configuration
 
 Drag the widget onto a page. Place one or more widgets inside the Pop-Up Menu widget's trigger area to appoint which widgets trigger the menu. After that, use the configuration properties included in the **General** tab.
 
@@ -42,7 +42,7 @@ Other main properties of the widget are as follows:
 
 * **Open on** – determines whether hovering or clicking the trigger widgets displays the menu
     * Default: **Click**
-* **Menu position**  – determines the location of a visible menu relative to the trigger area
+* **Menu position** – determines the location of a visible menu relative to the trigger area
     * Default: **Bottom**
 * **Custom visualization** – determines whether menu items can be composed of text or widgets
     * Default: **No**

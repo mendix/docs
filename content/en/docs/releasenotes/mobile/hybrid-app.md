@@ -128,7 +128,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
-```xml {linenostart=213}
+```xml
 <resource-file src="config/google-services.json" target="app/google-services.json" />
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```

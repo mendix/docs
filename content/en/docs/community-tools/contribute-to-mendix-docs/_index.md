@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, update the link in the site footer and links in the mendix/docs repo. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 All Mendix documentation is open to the Mendix community, which means you can make changes and add to it in ways that you see necessary. Do you see a how-to that is inaccurate or a section of the *Studio Pro Guide* that needs to be updated? You can easily help us improve the documentation for the whole Mendix community!
 
@@ -35,7 +35,7 @@ This how-to teaches you how to do the following:
 * Add to and edit existing documentation
 * Create new documentation
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
@@ -46,7 +46,7 @@ You can create and edit files online within GitHub. If you want to work outside 
 * For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix / docs** repository)
 * For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
 
-## 3 Editing the Documentation in GitHub {#editing}
+## Editing the Documentation in GitHub {#editing}
 
 To edit existing documentation, follow these steps:
 
@@ -80,9 +80,9 @@ To edit existing documentation, follow these steps:
 
 8. Click **Create pull request**.
 
-The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and  you will be able to see the changes on the Mendix Docs site!
+The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
 
-## 4 Leaving Feedback on the Documentation
+## Leaving Feedback on the Documentation
 
 If you find an issue with the documentation—whether it is a typo, a missing step, or a specific technical problem—we want to know about it so we can improve!
 
@@ -103,18 +103,18 @@ We look at all feedback and take it seriously, and we will be in contact about h
 You need to have a GitHub account to leave feedback. The good news is that, with that same GitHub account, you can also send a pull request with a direct [edit](#editing) of the documentation or even [new documentation](#new-documentation).
 {{% /alert %}}
 
-## 5 Writing New Documentation {#new-documentation}
+## Writing New Documentation {#new-documentation}
 
 The sections below present the key steps in writing new documentation for Mendix.
 
-### 5.1 Using a Template
+### Using a Template
 
 To submit a new how-to or *Studio Pro Guide* page to the Mendix documentation, start with a Mendix documentation template:
 
 * To get the how-to template, right-click this link and save the file locally: [How-to Template](https://raw.githubusercontent.com/mendix/docs/development/templates/how-to-template.md)
 * To get the reference page template, right-click this link and save the file locally: [Mendix Studio Pro Guide Page Template](https://raw.githubusercontent.com/mendix/docs/development/templates/reference-template.md)
 
-### 5.2 Guidelines and Conventions {#naming}
+### Guidelines and Conventions {#naming}
 
 Follow these guidelines and conventions when writing:
 
@@ -128,7 +128,7 @@ Follow these guidelines and conventions when writing:
     * Save the image as a *.png* (preferred), *.jpg*, or *.gif* file
     * Save the image file in a sub-folder in the [attachments](https://github.com/mendix/docs/tree/development/static/attachments) folder for the location of the document (this sub-folder should have the same name as the document file name you are working on)
 
-### 5.3 Submitting Your Work
+### Submitting Your Work
 
 When you are ready to submit your work, follow these guidelines:
 
@@ -141,7 +141,7 @@ Finally, create a pull request that specifies the Mendix **development** branch 
 You may receive a response to your pull request asking for verification of specific issues. Do not panic! We just want to make sure your documentation submission fits well with what we have.
 {{% /alert %}}
 
-## 6 Signing the Contributor License Agreement
+## Signing the Contributor License Agreement
 
 The first time you make a contribution to the Mendix documentation (via a pull request), you need to sign the [Contributor License Agreement for mendix/docs](https://cla-assistant.io/mendix/docs).
 
@@ -149,6 +149,6 @@ To access the license agreement, go to the **Checks** section of the pull reques
 
 This only needs to be done once.
 
-## 7 Read More
+## Read More
 
 * [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/)

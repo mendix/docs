@@ -25,15 +25,15 @@ SELECT [ DISTINCT ]
 
 {{% alert color="info" %}}
 
-```sql {linenos=false}
+```sql
 SELECT Sales.Customer.* FROM Sales.Customer
 ```
 
-```sql {linenos=false}
+```sql
 SELECT Person.* FROM Sales.Customer AS Person
 ```
 
-```sql {linenos=false}
+```sql
 SELECT "Sales.Order".* FROM "Sales.Order"
 ```
 
@@ -45,7 +45,7 @@ Is either a constant, a function or any combination of attribute names, constant
 
 {{% alert color="info" %}}
 
-```sql {linenos=false}
+```sql
 SELECT Name AS CustomerName, LastName AS CustomerLastName, Birthday, Category FROM Sales.Customer
 ```
 
@@ -57,11 +57,11 @@ See [this page](/refguide8/oql-expressions/) for more information.
 
 {{% alert color="info" %}}
 
-```sql {linenos=false}
+```sql
 SELECT Sales.Customer.Name AS CustomerName FROM Sales.Customer
 ```
 
-```sql {linenos=false}
+```sql
 SELECT Sales.Customer.Name AS "Customer_Name" FROM Sales.Customer
 ```
 

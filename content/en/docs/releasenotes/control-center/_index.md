@@ -3,6 +3,7 @@ title: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
 weight: 30
+numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 

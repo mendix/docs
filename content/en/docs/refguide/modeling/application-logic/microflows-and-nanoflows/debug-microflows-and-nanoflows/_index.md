@@ -4,7 +4,7 @@ url: /refguide/debug-microflows-and-nanoflows//
 weight: 120
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro has a built-in consistency checker that validates if the application you are building contains any obvious errors. This dramatically reduces the amount of technical errors during run-time, but Studio Pro isn't able to check if your app contains functional errors. This is mainly a manual practice, but Mendix does support enough tools to make this easier. If you run into a functional error in any of the microflows or nanoflows, you can easily debug them with the debugger.
 
@@ -13,14 +13,14 @@ This how-to teaches you how to do the following:
 * Use breakpoints
 * Debugging Microflows and Nanoflows
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Read [Configuring a Domain Model](/refguide/configuring-a-domain-model/)
 * Read [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/)
 
-## 3 Debugging Overview
+## Debugging Overview
 
 There are three debugging panes: **Breakpoints**, **Debugger**, and **Variables**:
 
@@ -40,7 +40,7 @@ The **Variables** pane shows the variables, objects, and lists involved in your 
 
 The best practice is to have the **Debugger** and **Variables** panes in different docks. The **Debugger** pane should usually be at the bottom of your development dock, and the **Variables** pane can be either in the left dock or the side dock. You want to be aware of how the values are being changed in the microflow/nanoflow, and it is difficult to see those changes if both panes are tabs within the same dock.
 
-## 4 Using Breakpoints
+## Using Breakpoints
 
 Breakpoints are points in a microflow/nanoflow where the application will halt execution. This is useful to analyze the application execution and data up to that point. You can add breakpoints at any point in your microflow/nanoflow by following these steps:
 
@@ -58,7 +58,7 @@ Breakpoints are points in a microflow/nanoflow where the application will halt e
 
     {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/breakpoints-pane.png" >}}
 
-## 5 Debugging
+## Debugging
 
 1. Run the application and open it in your browser.
 2. Do whatever is needed to trigger the microflow/nanoflow that you want to debug:
@@ -88,7 +88,7 @@ To debug a microflow from a nanoflow you need to add a separate breakpoint to th
 
 For details on available shortcut keys, see the [Debugger Shortcut Keys](/refguide/keyboard-shortcuts/#debugger-shortcuts) section of *Keyboard Shortcuts*.
 
-## 6 Variables Viewer
+## Variables Viewer
 
 As you are stepping through a microflow/nanoflow, the variables pane will start to change. This overview will show you all the variables, objects, and lists involved in the application, that is all the variables, entities, references, current-user information, and device-type information. It can be used as you are stepping through the microflow/nanoflow to review the values and see if they match your expectations.
 
@@ -98,7 +98,7 @@ You can open the **Variables** pane from the **View** menu:
 The **Variables** viewer can be used to inspect values accessible to the microflow/nanoflow. The values are updated with every step you make in the **Debugger**:
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/debug-microflows-and-nanoflows/variables-pane.png" class="no-border" >}}
 
-## 7 Breakpoint Conditions
+## Breakpoint Conditions
 
 Sometimes it is necessary to configure a breakpoint so that the microflow/nanoflow only breaks on a certain condition. This is achieved with breakpoint conditions and is configured by use of microflow/nanoflow expressions. Setting a breakpoint condition can be very useful if you are debugging a batch process and you only want to break at a certain value. Using breakpoint conditions is strongly advised if you are debugging an application that is running in production, as this will prevent the application from stopping for users other than yourself.
 
@@ -110,7 +110,7 @@ To use breakpoint conditions, follow these steps:
 
 2. Use the expression below to make sure this breakpoint only interrupts the microflow/nanoflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java {linenos=false}
+    ```java
     $currentUser/name = 'YourUserName'
     ```
 
@@ -119,7 +119,7 @@ To use breakpoint conditions, follow these steps:
 
 3. Click **OK** to save the breakpoint condition.
 
-## 8 Read More
+## Read More
 
 * [Debugging Microflows Remotely](/refguide/debug-microflows-remotely/)
 * [Common Properties](/refguide/microflow-element-common-properties/)

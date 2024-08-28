@@ -5,7 +5,7 @@ weight: 4
 description: "Describes how to set breakpoints and debug Java actions in Eclipse."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro has a built-in debugger to solve errors on the microflow level. A microflow can be extended with custom Java actions, but because these actions are text-based, they can only be checked on compile errors. If you run into an error in any of the Java actions, you can easily debug them by utilizing the debugger of Eclipse.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Set breakpoints
 * Debug in Eclipse
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -24,7 +24,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Deploy the application for Eclipse by selecting **Deploy for Eclipse** from the app menu in Studio Pro (you should redo this every time you make changes in Studio Pro):
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18581045.png" class="no-border" >}}
 
-## 3 Setting Breakpoints
+## Setting Breakpoints
 
 1. Open Eclipse and locate the app in the **Package Explorer**.
 2. Double-click **ReverseCustomerName.java**:
@@ -35,7 +35,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a breakpoint.
 {{% /alert %}}
 
-## 4 Debugging in Eclipse
+## Debugging in Eclipse
 
 1. Select the app root node in the package explorer and click the debug icon in the Eclipse toolbar:
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18580062.png" class="no-border" >}}
@@ -54,7 +54,7 @@ You can also use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> to disable a 
 5. Place your cursor on any of the variables in the Java action to see its value in a pop-up window:
     {{< figure src="/attachments/howto9/monitoring-troubleshooting/debug-java-actions/18580057.png" class="no-border" >}}
 
-## 5 Read More
+## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto9/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto9/monitoring-troubleshooting/clear-warning-messages/)

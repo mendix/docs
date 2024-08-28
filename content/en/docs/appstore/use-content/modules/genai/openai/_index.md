@@ -194,7 +194,7 @@ Function calling enables LLMs to connect with external tools to gather informati
 
 OpenAI does not call the function. The model returns a tool called JSON structure that is used to build the input of the function (or functions) so that they can be executed as part of the chat completions operation. Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The OpenAI connector takes care of handling the tool call response as well as executing the function microflows until the API returns the assistant's final response.
 
-Function microflows take a single input parameter of type string and must return a string.
+Function microflows take a single input parameter of type string or no input parameter and must return a string.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability and should be used with caution. Function microflows run in the context of the current user, without enforcing entity access. You can use `$currentUser` in XPath queries to ensure that you retrieve and return only information that the end-user is allowed to view; otherwise, confidential information may become visible to the current end-user in the assistant's response.

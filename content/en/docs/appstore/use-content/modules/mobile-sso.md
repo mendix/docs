@@ -148,47 +148,81 @@ The following subsections show how to configure your *Entra ID or Okta IdP*:
 #### Configuring IdP for Entra ID
 
 1. On the [Microsoft Entra ID](https://portal.azure.com/#home) portal, select **App Registrations**.
-1. Click **New registration**, provide required information, and click **Register**.
-1. In the **Authentication** tab, select **No** to disable the option to **Allow public client flows** as this module only supports confidential client flows.
+2. Click **New registration**, provide required information, and click **Register**.
+3. In the **Authentication** tab, select **No** to disable the option to **Allow public client flows** as this module only supports confidential client flows.
 
     {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Public client flows.png" max-width=80% >}}
 
-1. Add the following JSON representations to the **Manifest** of the application:
-    1. For the application that has been deployed using **Build Native Mobile App**
+4. Add the following JSON representations to the **Manifest** of the application:
 
-        ```json
-        "replyUrlsWithType": [
-         {
-            "type": "Web",
-            "url": "APP_NAME://oauth/callback"
-         }
-        ],
-        ```
+    1. For the application that has been deployed using **Build Native Mobile App**.
+
+        1. Update the **Manifest** in the **Microsoft Graph App Manifest (New)** tab.
+        Add the following JSON representations to the `web` section of the **Manifest**.
+
+            ```json
+            "web": {
+            "homePageUrl": null,
+            "logoutUrl": null,
+            "redirectUris": [
+            "APP_NAME://oauth/callback"
+            ]
+            }
+            ```
+
+            {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/microsoft_graph.png" max-width=80% >}}
+
+        2. Update the **Manifest** in the **ADD Graph App Manifest (Deprecating Soon)** tab by updating the following JSON representations. 
+
+            ```json
+            "replyUrlsWithType": [
+            {
+            "url": "APP_NAME://oauth/callback",
+            "type": "Web"
+            }
+            ],
+            ```
+        
+            {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/ADD_graph.png" max-width=80% >}}
 
         {{% alert color="info" %}} Use the same *`APP_NAME`* which you used in the **Custom callback URL** tab of the configuration and while building the application using **Build Native Mobile App**. For more information, see the [Configuring Client Information](#client-info) and [Building Native Mobile App](#build-native) sections above. {{% /alert %}}
 
-        {{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Manifest.png" max-width=80% >}}
-
     2. For local testing, use the JSON below in the **Manifest** of the application:
+        1. Update the **Manifest** in the **Microsoft Graph App Manifest (New)** tab.
 
-        ```json
-        {
-            "url": "<https://<IP_address>>/oauth/v2/callback",
+            ```json
+            "web": {
+            "homePageUrl": null,
+            "logoutUrl": null,
+            "redirectUris": [
+                "makeitnative://oauth/callback",
+                "https://IP_address/oauth/v2/callback"
+            ]
+            },
+            ```
+
+        2. Update the **Manifest** in the **ADD Graph App Manifest (Deprecating Soon)** tab, if you are using the deprecated AAD Graph App Manifest.
+
+            ```json
+            "replyUrlsWithType": [
+            {
+            "url": "https://IP_address/oauth/v2/callback",
             "type": "Web"
-        },
-        {
+            },
+            {
             "url": "makeitnative://oauth/callback",
             "type": "Web"
-        }
-        ```
+            }
+            ]
+            ```
 
         {{% alert color="info" %}} Make sure to add `makeitnative://oauth/callback` to the **Custom callback URL** tab of the configuration. For more information, see the [Configuring Client Information](#client-info) section above. {{% /alert %}}
 
-1. Save the **Manifest** file.
-1. In Entra ID, click the **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
-1. Click **Overview** tab of the application and copy **Application (client) ID**. Use this copied value in the **Client ID** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
-1. Import the configuration in the page and add the required scopes such as, `openid`, `profile`, and `email`.
-1. Save the configuration and you can sign in into the application using Azure SSO.
+5. Save the **Manifest** file.
+6. In Entra ID, click the **Certificates & secrets** tab of the application and create **New client secret**. You can use this **Value** in the **Client Secret** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
+7. Click **Overview** tab of the application and copy **Application (client) ID**. Use this copied value in the **Client ID** field on the **OIDC_Client_Overview** page of the OIDC SSO module.
+8. Import the configuration in the page and add the required scopes such as, `openid`, `profile`, and `email`.
+9. Save the configuration and you can sign in into the application using Azure SSO.
 
 #### Configuring IdP for Okta
 

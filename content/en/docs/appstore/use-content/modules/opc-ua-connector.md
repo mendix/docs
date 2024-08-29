@@ -55,7 +55,7 @@ The descriptions of the actions are as follows:
 
 ### Configuring the Connection to the OPC-UA Server
 
-1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It allows to acces the configuration page.
+1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It allows to acces the **Configurations** page.
 
 2. Assign the `CanConfigure` module role to a user role that will configure the connections to your server.
 
@@ -63,7 +63,7 @@ The descriptions of the actions are as follows:
 
 4. Log in as a user that can configure the connection.
 
-5. Go to the added configuration page.
+5. Go to the added **Configurations** page.
 
 6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
 
@@ -82,12 +82,16 @@ Once the configuration is saved, the APIs can be used in your application.
 ### Browsing the OPC-UA Server
 
 1. In Studio Pro, assign the `CanBrowse` module role to a user role that will browse the OPC-UA server.
+
 2. Run the app locally and open the app.
+
 3. Log in as a user that can browser the OPC-UA server.
-4. Go to the configuration page.
+
+4. Go to the **Configurations** page.
+
 5. Click **Browse** and see what data is available on the server.
 
-{{% todo %}}Where is the Browse button? Is there a screenshot?{{% /todo %}}
+    {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/browse.png"  >}}
 
 ## Advanced Connection {#advanced-connection}
 

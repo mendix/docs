@@ -36,7 +36,7 @@ You must have the following Marketplace module installed:
 ## Installation
 
 1. Install the dependencies.
-2. Follow the instructions in [Using Marketplace Content](/appstore/overview/use-content/) to import the OPC-UA connector into your app.
+2. Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the OPC-UA connector into your app.
 
 ## Basic Configuration
 

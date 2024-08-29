@@ -171,7 +171,7 @@ The view services enable you to navigate the content of the server. The followin
 
 For more advanced cases, use the provided Browse action.
 
-#### The Browse Action
+#### Browse Action
 
 The browse action allows you to traverse from one node to others.  The request object for the action is `BrowseDescription`, which contains the following attributes:
 

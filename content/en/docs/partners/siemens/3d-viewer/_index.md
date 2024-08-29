@@ -70,9 +70,9 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### Prerequisites
 
-3D Viewer version 4.0.0 and higher can be used with Studio Pro versions starting with [10.0.0](/releasenotes/studio-pro/10.0/).
+3D Viewer version 4.0.0 or above can be used with Studio Pro version [10.0.0](/releasenotes/studio-pro/10.0/) or above.
 
-For more information about the requirements for other releases, see the releases history in the [Marketplace](https://marketplace.mendix.com/link/component/118345) page.
+For more information about the requirements for other releases, see the releases history in the [component page](https://marketplace.mendix.com/link/component/118345) in the Marketplace.
 
 ## Installation
 

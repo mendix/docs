@@ -214,17 +214,15 @@ The browse action allows you to traverse from one node to others.  The request o
 
 The attribute services enable you a client access data on a server. In particular, the OPC-UA connector lets you read data from and write data to the server.
 
-These exposed actions deserve some additional guidance, as the data a client receives and the data the server requires can differ greatly between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. 
+These exposed actions deserve some additional guidance, as the data a client receives and the data the server requires can differ greatly between calls. This is all due to the highly flexible and customizable nature of an OPC-UA protocol. See the [Read Action](#read-action) section and the [Write Action](#write-action) section below as well as the documentation in the microflows and domain model in Studio Pro.
 
-{{% todo %}}Where can users find the additional guidance for these exposed actions?{{% /todo %}}
-
-The data model of an OPC-UA server consists of a set of `Node` objects. These nodes can have one of the following values for their `NodeClasses` attribute: `DataType`, `Method`, `Object`, `ObjectType`, `ReferenceType`, `Variable`, `VariableType`, or `View`. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the `Node` entities.
+The data model of an OPC-UA server consists of a set of `Node` objects. These nodes can have one of the following values for their `NodeClasses` attribute: `DataType`, `Method`, `Object`, `ObjectType`, `ReferenceType`, `Variable`, `VariableType`, or `View`. Each of these has their own set of properties. For the purpose of each and the set of properties, see the documentation in the domain model of the specializations of the `Node` entities in Studio Pro.
 
 To make it easier to get the information on a node, a `GetNodeDetails` action is provided, which reads all properties of the node and puts them in the correct specialization of the `Node` entity. 
 
 For more advanced cases, use the [read action](#read-action) as described below.
 
-#### The Read Action {#read-action}
+#### Read Action {#read-action}
 
 The read action allows you to read specific attributes of a node. The request object for the action is `ReadNodeRequest`, which contains a list of `ReadNodeReadValueIDs`.
 
@@ -253,7 +251,7 @@ The corresponding `DataValue` attributes depends on the type of the datatype, as
 | QualifiedName                            | {"value" : {"namespaceIndex" : {"value" : 1}, "name" : "string"}} | not supported                          |                                        |
 | LocalizedText                            | {"value" : {"locale" : "en", "text": "hello"}}               | "hello"                                | Currently always writes in "en" locale |
 
-### The Write Action
+#### Write Action {#write-action}
 
 The Write action allows you to write to specific attributes on a node. The request object for the action is a `WriteNodeRequest`, which contains a list of `WriteNodes`.
 
@@ -261,7 +259,7 @@ The `WriteNode` objects describe how and what to write to a node.
 
 The `Write node` action returns a `WriteNodeResponse` object. The object contains a list of `WriteNodeStatusCode` that contains the statuses of the written attributes in the same order as the request. Check the statuses to know whether the action succeeded.
 
-To write the `VALUE` attribute on a `VariableNode`, set the `NodeId` on your `WriteNode` to the right node ID, the `AttributeId` to *ENUM_AttributeId.VALUE*, and the `Payload` to one based on the table above in the [The Read Action](#read-action) section and the `VariantType` to the correct type.
+To write the `VALUE` attribute on a `VariableNode`, set the `NodeId` on your `WriteNode` to the right node ID, the `AttributeId` to *ENUM_AttributeId.VALUE*, and the `Payload` to one based on the table above in the [Read Action](#read-action) section and the `VariantType` to the correct type.
 
 {{% alert color="info" %}} It is highly recommended to set the `VariantType` to avoid the action to read the `Variant type` before it can write. {{% /alert %}}
 

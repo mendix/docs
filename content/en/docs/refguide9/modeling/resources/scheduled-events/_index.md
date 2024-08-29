@@ -6,7 +6,7 @@ description: "Options for configuring scheduled events"
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 With scheduled events you can let the runtime execute a microflow at specific moments in time.
 
@@ -16,7 +16,7 @@ A scheduled event is added to your module as a document (right-click your module
 Scheduled events can be tested locally, but they will not be run if your app is deployed as a Free App. See the Free App section of [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/#free-app) for more information on Free App limitations.
 {{% /alert %}}
 
-## 2 Variants
+## Variants
 
 Until Mendix 9.12.0 scheduled events only execute on the cluster leader node, with an at-most-once guarantee, which means that they will not be executed if something happens to the cluster leader node. Also, these scheduled events do not support proper monthly and yearly events and potentially suffer from a shift of one hour due to daylight saving. These 'legacy' scheduled events are deprecated and will no longer be supported from Mendix 10.
 
@@ -36,7 +36,7 @@ Mendix 9.12 and above supports the following schedule types:
 * **Hourly** – an event that occurs every so many hours — see [Hourly scheduled events](/refguide9/scheduled-events-task-queue/#hourly)
 * **Minutes** – an event that occurs every so many minutes — see [Minute scheduled events](/refguide9/scheduled-events-task-queue/#minutes)
 
-## 3 Migration{#migration}
+## Migration{#migration}
 
 When migrating to version [9.12.0](/releasenotes/studio-pro/9.12/#9120) or above, Studio Pro will attempt to convert legacy scheduled events into task queue-based events, when possible. In cases where this is not possible, a deprecation warning will be shown (in versions [9.12.1](/releasenotes/studio-pro/9.12/#9121) and above). Right-click the warning to see possible options for fixing it. If none of the options is suitable, you should perform the conversion manually.
 

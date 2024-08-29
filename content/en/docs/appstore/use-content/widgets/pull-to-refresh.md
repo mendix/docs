@@ -10,11 +10,11 @@ description: "Describes the configuration and usage of the Pull to Refresh widge
 This widget is deprecated.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Pull to Refresh](https://marketplace.mendix.com/link/component/47782/) widget enables the end-user to pull down on mobile apps to trigger a page refresh or a synchronization for offline apps.
 
-### 1.1 Features
+### Features
 
 * Overlay with icon and message shown when pulling down
 * Refresh current page when online
@@ -23,12 +23,12 @@ The [Pull to Refresh](https://marketplace.mendix.com/link/component/47782/) widg
 * Cancel refresh when swiping up
 * Does not interfere with scroll behavior
 
-### 1.2 Limitations
+### Limitations
 
 * When refreshing a page, the list view does not keep **Load more** items
 * Only works when app is scrolled to top
 
-## 2 Usage
+## Usage
 
 To use this widget, follow these steps:
 

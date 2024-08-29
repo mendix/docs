@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-create-extracted-actions/
 description: "Describes how to create maintainable test cases in ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 You often reuse some of the same test steps in your test cases. For example, to open the application and logging into the application. Adding these separate steps each time you create a test case is time-consuming. Besides, if the password of the user changes you have to change the password in each test case that uses it. ATS has the functionality to create your own actions, this makes your test cases easier to maintain. You create your own actions from within a test case or by creating a new action from the **repository**. This how-to explains both ways of creating such actions.
 
@@ -14,18 +14,18 @@ This how-to teaches you how to do the following:
 * Create an extracted action from a test case
 * Create an extracted action by creating a new action
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 Extract actions
+## Extract actions
 
 You can create an extracted action for all test steps that you use in more than one test case.
 
-### 3.1 Create an extracted action from a test case 
+### Create an extracted action from a test case 
 
 The following steps describe how to extract actions. In this example, we create an extracted action for the **Open Mendix Application** and **Login** actions:
 
@@ -72,7 +72,7 @@ To use this custom action in other test cases follow these steps:
 
 You have now added your extracted action to another test case. So, if the password changes you only have to change it within the action and not within each test case. 
 
-### 3.2 Create an extracted action by creating a new action 
+### Create an extracted action by creating a new action 
 
 The following steps describe how to create an extracted action for deleting an expense in a company expenses app:
 
@@ -141,6 +141,6 @@ You now created an action which can delete a new expenses based on the descripti
 
 Congratulations, you created a reusable extracted action to delete a new expense. Every time you want to delete an expense in your test cases you only have to add this actions and enter the input parameter. 
 
-## 4 Next Up
+## Next Up
 
 The next how-to is [How to Schedule Test Cases/Test Suites](/appstore/partner-solutions/ats/ht-two-schedule-testcase-testsuite/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

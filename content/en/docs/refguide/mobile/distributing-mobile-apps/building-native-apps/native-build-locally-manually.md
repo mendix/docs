@@ -8,7 +8,7 @@ aliases:
     - /howto/mobile/native-build-locally-manually/
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 When the Mendix Native Mobile Builder identifies a Native Template version (v5.1.9 and above) that is Mobile Toolkit capable, it will not apply changes directly to the app. To apply the changes when building locally, check out your latest changes, run `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`), then make sure to run `npm run configure`.
@@ -26,7 +26,7 @@ In a similar fashion, MxBuild and the Mendix Native Template follow these rules:
 * When using MxBuild, the JS code and static assets are bundled together
 * The bundled code and assets are put into the Mendix Native Template that provides a foundation for both an iOS and Android version of your app
 
-## 2 Prerequisites {#local-manual-prerecs}
+## Prerequisites {#local-manual-prerecs}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -41,13 +41,13 @@ For Android Builds:
 
 * Install [Android SDK](https://developer.android.com/studio) and [platform tools](https://developer.android.com/studio/releases/platform-tools)
 
-## 3 Getting the Native Template
+## Getting the Native Template
 
 The Native Template is the base for building native mobile apps with Mendix. In essence, it is a React Native template with the extra dependencies and configurations required to run your Mendix app.
 
 The Native Template is versioned against Mendix Studio Pro. This means the Studio Pro version you use to create your Mendix app dictates which version of the Native Template you should use. When using the Native Mobile Builder this is handled automatically when the tool is started from Studio Pro.
 
-### 3.1 Determining Which Native Template Version to Use
+### Determining Which Native Template Version to Use
 
 To determine which version of the Native Template you should use, do the following:
 
@@ -63,7 +63,7 @@ So like in the example picture shown above, in the case of Mendix Studio Pro 8.9
 
 There is no best way of getting a copy of the Native Template. In the following sections we provide two ways to get the version you need.
 
-#### 3.1.1 Getting the Native Template Using the Git CLI
+#### Getting the Native Template Using the Git CLI
 
 This method is useful if you have Git installed. To get the Native Template, do the following:
 
@@ -84,7 +84,7 @@ For a Mac OS X machine building an iOS app, do the following:
 
 1. Run `cd ios && pod install` to install the required dependencies.
 
-#### 3.1.2 Getting the Native Template by Downloading the Source Code from GitHub
+#### Getting the Native Template by Downloading the Source Code from GitHub
 
 This method is useful if you do not have Git installed. To get the Native Template, do the following:
 
@@ -99,7 +99,7 @@ This method is useful if you do not have Git installed. To get the Native Templa
 
 Now that you have a copy of the Native Template checked out and ready, you can bundle your Mendix app, move the bundle into the Native Template folder, and compile everything together to produce your finished native app.
 
-## 4 Bundling Your Mendix App
+## Bundling Your Mendix App
 
 Bundling is the process of packaging everything you created in Studio Pro and making that package ready to be compiled into your native mobile app. Bundling in the case of a React Native app, and hence a Mendix Native App, includes transpiling the business logic and layout of your app into a JavaScript bundle and gathering all your static resources into the correct folder structure. 
 
@@ -107,7 +107,7 @@ For bundling your resources, Mendix Studio Pro comes with a helpful tool called 
 
 1. Run the following command:
 
-    ```text {linenos=false}
+    ```text
     mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check path-to-your-app-mpr-file
     ```
 
@@ -129,13 +129,13 @@ When completed there should be a folder under the app's deployment folder **app-
 
 Congratulations! You have successfully completed the basic setup of a Native Template with the latest bundle and assets of your Mendix app.
 
-## 5 Building your Native Mobile App {#building-app-project}
+## Building your Native Mobile App {#building-app-project}
 
 Now that the Native Template is ready and includes the app's bundle, resources, and runtime URL configuration, it can be built into a native app. To build your app you can open the app with Android Studio or Xcode for the Android and iOS app respectively, and then build as normal. More advanced use cases, such as apps for continuous integration pipelines, can make use of Gradle or xcodebuild to build the apps using command line.
 
 In the sections below you can see the basic steps to get an app up and running on an emulator or device using Android or iOS IDEs.
 
-### 5.1 Building an Android App with Android Studio
+### Building an Android App with Android Studio
 
 {{% alert color="warning" %}}
 During this process, do not accept any suggestions to update to latest Gradle or Kotlin version.
@@ -164,7 +164,7 @@ To build an Android app with Android Studio, do the following:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-build-locally-manually/as-start-build.png" alt="Android Build Toolbar"   width="250"  class="no-border" >}}
 
-### 5.2 Building an iOS App with Xcode
+### Building an iOS App with Xcode
 
 {{% alert color="info" %}}
 When the built iOS app is opened with Xcode for the first time, Xcode will show the following error: `Undefined symbol: _OBJC_CLASS_$_AppPreferences`. To resolve this, simply launch the app in a simulator within Xcode that supports Rosetta.
@@ -188,7 +188,7 @@ When the built iOS app is opened with Xcode for the first time, Xcode will show 
 
 After the build succeeds the app should be running on the selected device and connected to the runtime using the runtime URL you provided. 
 
-## 6 Adding Dependencies{#adding-dependencies}
+## Adding Dependencies{#adding-dependencies}
 
 Mendix Studio Pro supports a new format for widgets and JS actions, allowing them to define them Native Dependencies required. Mendix Native Mobile Builder, is able to derive the Native Dependencies required from the app and automatically adds them to the package.json of the app's Native Template. This works with all auto-linkable Native Dependencies. 
 
@@ -196,32 +196,32 @@ In some cases though, like when a dependency is not derivable by its use case (s
 
 Mendix native mobile apps are build on top of React Native. Therefore, any React Native module can be added and used in an app. The same rules apply as with any React Native app.
 
-### 6.1 Adding Dependencies Which Support Auto-Linking
+### Adding Dependencies Which Support Auto-Linking
 
 Mendix supports RN and therefore auto-linking. Auto linking is a React Native mechanism that allows React Native to link the native dependencies defined in the *package.json* file automatically with the native apps. To add dependencies do the following:
 
 1. Add the dependency to the root *package.json* of your Native Template using `npm i -s <dependency name>`.
 1. If the dependency supports auto-linking when `npm install` (for NPM v7 and above run `npm install --legacy-peer-deps`) is run it will automatically add itself correctly to the Android and iOS apps. If the dependency does not support auto-linking or requires more configuration, follow its documentation to add the required entries manually.
 
-### 6.2 Adding Dependencies Which Do Not Support Auto-Linking
+### Adding Dependencies Which Do Not Support Auto-Linking
 
 If a dependency does not support auto-linking follow the steps of the dependency's documentation to add it to the Android and iOS apps.
 
-## 7 Removing Dependencies{#removing-dependencies}
+## Removing Dependencies{#removing-dependencies}
 
 As the requirements of an app might change, so do the required native modules and libraries. To avoid bloating your app with unnecessary libraries, consider removing unused libraries. This process is not currently automated and requires a bit of consideration when identifying any unused libraries.
 
-### 7.1 Removing Dependencies Which Support Auto-Linking
+### Removing Dependencies Which Support Auto-Linking
 
 To remove dependencies which support auto-linking, do the following:
 
 1. Remove the dependency entry from the *package.json* file.
 1. Run `npm i`.
 
-### 7.2 Removing Dependencies Which Do Not Support Auto-Linking
+### Removing Dependencies Which Do Not Support Auto-Linking
 
 To remove dependencies which do not support auto-linking, revert the steps you applied when adding the dependency.
 
-## 8 Read More
+## Read More
 
 * [How to Create a Custom Developer App](/howto/mobile/how-to-devapps/)

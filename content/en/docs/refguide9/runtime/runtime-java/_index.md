@@ -4,15 +4,15 @@ url: /refguide9/runtime-java/
 description: "Explains some of the basic concepts of Java in Mendix."
 ---
 
-## 1 Introduction
+## Introduction
 
 When you're developing or running Mendix you will sooner or later come in contact with Java. In this document we'll explain some of the basic concepts of Java in Mendix.
 
-## 2 Concepts
+## Concepts
 
 The Java concepts are listed below.
 
-### 2.1 Java Virtual Machine (JVM)
+### Java Virtual Machine (JVM)
 
 When using Mendix you will use it together with Java (JDK) to deploy and run the actual application in a Java Virtual Machine (JVM). The JVM is a container in which the Mendix application runs. It looks like this:
 
@@ -22,11 +22,11 @@ Or as shown in the Mendix Cloud:
 
 {{< figure src="/attachments/refguide9/runtime/runtime-java/4.jpg" class="no-border" >}}
 
-### 2.2 Stack
+### Stack
 
 Another interesting area is the Stack. This is what holds, among other things, all information about microflows, domain models and other Mendix specific information. Any microflow that is executed will also end up in the stack (see *thread stacks* in the graph above).
 
-### 2.3 Heap, Garbage Collector and OOM Errors
+### Heap, Garbage Collector and OOM Errors
 
 Next up is the heap space (Heap). But before we go into that, let’s briefly discuss another important part of the JVM: the Garbage Collector (GC).
 
@@ -54,7 +54,7 @@ You can see this quite well in the following JVM Object Heap graph taken from th
 
 The purple and green spikes are minor garbage collections. The large drops in the red part are major garbage collections. This is a healthy looking Heap.
 
-### 2.4 Application Server
+### Application Server
 
 And finally a Mendix Cloud graph where all of the above comes together:
 
@@ -62,7 +62,7 @@ And finally a Mendix Cloud graph where all of the above comes together:
 
 The green part (apps) is basically the JVM in which the Mendix application is running. Anything else is reserved for the operating system of the application server.
 
-## 3 Read More
+## Read More
 
 * [Non-Persistable Objects and Garbage Collecting](/refguide9/transient-objects-garbage-collecting/)
 * [Java Memory Usage](/refguide9/java-memory-usage/)

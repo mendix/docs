@@ -6,7 +6,7 @@ weight: 99
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix can be installed on-premises on systems running Unix-like operating systems. The installation consists of the following:
 
@@ -19,7 +19,7 @@ For a list of the operating systems which are currently supported, see [Operatin
 
 Installation on other Unix-like operating systems is possible, but these have not been tested and cannot be supported by Mendix.
 
-## 2 Technical Documentation
+## Technical Documentation
 
 The documentation describing the installation and basic configuration of the Mendix software on a Unix-like system is available as part of the m2ee-tools helper program: [https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md](https://github.com/mendix/m2ee-tools/tree/develop/doc/README.md).
 
@@ -27,7 +27,7 @@ The documentation describing the installation and basic configuration of the Men
 Specific Mendix versions require specific versions of the buildpack. For more information, see [Supported Mendix Versions](https://github.com/mendix/cf-mendix-buildpack#supported-mendix-versions).
 {{% /alert %}}
 
-## 3 License Key Activation on Linux
+## License Key Activation on Linux
 
 To activate your license key, follow these steps:
 

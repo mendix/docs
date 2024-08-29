@@ -8,11 +8,11 @@ weight: 50
 This activity can be used in both microflows and nanoflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Delete object(s)** activity can be used to delete one or more objects.
 
-## 2 Properties
+## Properties
 
 An example of delete object properties is represented in the image below:
 
@@ -27,7 +27,7 @@ The delete object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -35,11 +35,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object or List
+### Object or List
 
 The name of the object or list of objects that will be deleted. If you choose a list, all objects in that list will be deleted.
 
-### 3.2 Refresh in Client
+### Refresh in Client
 
 This setting defines whether data sources are rerun after objects are deleted from the database.
 
@@ -53,25 +53,25 @@ If **Refresh in client** is set to **Yes**, then all widgets are updated, includ
 When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
-#### 3.2.1 Activity Used in a Microflow Called from the Client in a Responsive Web App or PWA
+#### Activity Used in a Microflow Called from the Client in a Responsive Web App or PWA
 
 If **Refresh in client** is set to **No**, the data sources are not rerun, and widgets which need to reload data will still display the object (or objects).
 
 If set to **Yes**, the deletion is reflected across the client, which includes reloading the relevant [data sources](/refguide/data-sources/).
 
-#### 3.2.2 Activity Used in a Microflow Called in an Offline-First App
+#### Activity Used in a Microflow Called in an Offline-First App
 
 When inside a microflow that is called from an offline or native app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#microflows) section of Offline-First Data.
 
-#### 3.2.3 Activity Used in a Nanoflow {#delete-in-nano}
+#### Activity Used in a Nanoflow {#delete-in-nano}
 
 The **Refresh in client** option is not configurable when the activity is used in a nanoflow. 
 
 All changes immediately take effect in the client while executing such a nanoflow, similar to when **Refresh in client** is set to **Yes**.
 
-## 4 Limitations
+## Limitations
 
 When using the activity in a nanoflow accessible from an offline profile, please note the following limitations:
 
@@ -85,7 +85,7 @@ When using the activity in a nanoflow accessible from an offline profile, please
 
 For more information on associations' delete behavior, see the [On Delete Behavior](/refguide/association-properties/#delete-behavior) section of Association Properties.
 
-### 4.1 Example {#delete-example}
+### Example {#delete-example}
 
 The following example shows that one **Customer** object is associated with multiple **Order** objects:
 
@@ -95,13 +95,13 @@ The **On delete of 'Customer' object** option below should be set to **Keep 'Ord
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/delete-limitations-example-1.png"   width="350"  class="no-border" >}}
 
-## 5 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 6 What Happens During a Delete? 
+## What Happens During a Delete? 
 
-### 6.1 Activity Used in a Microflow or a Nanoflow in a Responsive Web App or PWA
+### Activity Used in a Microflow or a Nanoflow in a Responsive Web App or PWA
 
 Clicking a **Delete** button or triggering a delete activity will initiate delete events. In addition, when an object is removed through the configured delete behavior, it will execute all before and after events.
 
@@ -110,7 +110,7 @@ In detail, the following graph shows what happens during deletions:
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+The **Committing** state of the **IMendixObject** is deprecated.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
@@ -128,11 +128,11 @@ The **Delete object(s)** activity also removes the variable from the microflow. 
     * The object is be removed from memory and (if applicable) from the database
     * All delete behavior for the associations is validated, and any associated objects are removed as well
 
-### 6.2 Activity Used in a Nanoflow in an Offline-First App 
+### Activity Used in a Nanoflow in an Offline-First App 
 
 Depending on the type of an object being deleted, the client acts as described below.
 
-#### 6.2.1 Deleting a Persistable Object Which Has Not Been Committed  
+#### Deleting a Persistable Object Which Has Not Been Committed  
 
 1. Removes the object from memory.
 1. Searches the device database for all objects that reference the deleted object.
@@ -140,7 +140,7 @@ Depending on the type of an object being deleted, the client acts as described b
 
 No before or after delete events will be executed in this case.
 
-#### 6.2.2 Deleting a Committed Persistable Object That Has Not Been Synchronized with the Runtime
+#### Deleting a Committed Persistable Object That Has Not Been Synchronized with the Runtime
 
 1. Removes the object from memory.
 1. Searches the device database for all objects that reference the deleted object.
@@ -150,7 +150,7 @@ No before or after delete events will be executed in this case.
 
 No before or after delete events will be executed in this case.
 
-#### 6.2.3 Deleting a Persistable Object That Exists in the Runtime Database
+#### Deleting a Persistable Object That Exists in the Runtime Database
 
 1. Removes the object from memory.
 1. Searches the device database for all objects that reference the deleted object.
@@ -160,6 +160,6 @@ No before or after delete events will be executed in this case.
 
 Before and after events for the deleted object will be executed upon synchronization.
 
-#### 6.2.4 Deleting a Non-Persistable Object
+#### Deleting a Non-Persistable Object
 
 Deleting a NPE is not supported in a nanoflow in an offline-first app.

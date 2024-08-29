@@ -206,16 +206,16 @@ For this widget to visualize a model correctly, set the following properties:
 * On the **Transport** tab, make sure the **HttpEndpoint** is set to **@Viewer3D.HttpEndpoint** or **visualization**
 * On the **Appearance** tab, make sure the widget has a fixed height (for example, set **Style** to **height:600px**, or make sure height of its parent is fixed); otherwise, the viewer will expand indefinitely
 * On the **General** tab, there are some optional customization options for changing the widget's behavior:
-    * **Viewer ID**  – sets the id for the widget — this can be used later to get the viewer instance 
-    * **Show coordinate system**  – determines if a coordinate system will appear at the lower-left corner of the viewer 
-    * **Show navigation cube**  – determines if a navigation cube will appear at the upper-right corner of the viewer
+    * **Viewer ID** – sets the id for the widget — this can be used later to get the viewer instance 
+    * **Show coordinate system** – determines if a coordinate system will appear at the lower-left corner of the viewer 
+    * **Show navigation cube** – determines if a navigation cube will appear at the upper-right corner of the viewer
     * **Show tooltip** determines if a tooltip will appear when the end-user clicks a model part; this accepts a Boolean value
     * **Automatically load parts** – determines if the model part will be loaded into the Viewer automatically; if set to **Yes**, the model will be automatically loaded as long as the Viewer receives the **Model ID** and **Model source type** values; if set to **No**, the model will only be loaded into the Viewer when triggered from the PS Tree part toggling (for this use case, add the [PS Tree](#ps-tree) widget so you can trigger the part loading by clicking the PS Tree)
     * **Advance configuration** – provides advanced configurations in JSON string format for Viewer. Please see [Advanced Configuration](#advance_configuration), below, for details.
 * On the **Events** tab, there are some optional customization options for changing the widget's behavior:
     * **On selection change** – by binding a String attribute to the **Selection** property, you can use this attribute as an input parameter to add an action to trigger when the selection changes on the Viewer 
     * **On error** – by binding a String attribute to the **Error** property, you can obtain the error message raised by the Viewer and add custom actions to trigger when an error arises
-    * **On progress change** – by binding a String  attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
+    * **On progress change** – by binding a String attribute to the **Progress status** property, you can obtain the current model loading status; by binding a Decimal attribute to the **Progress percentage** property, you can obtain the current model loading percentage; you can also add custom actions triggered by this change
     * **On load** – by binding a Boolean attribute to the **Loaded** property, you can obtain information about if the product structure is loaded; you can also add custom actions triggered by this change
 
 3D Viewer also exposes some APIs on the Viewer for you to invoke and implement custom logic that suits your needs. For information on how to use the 3D Viewer APIs and other details, see [Use the 3D Viewer API](/partners/siemens/3d-viewer-api/).
@@ -475,7 +475,7 @@ By selecting one attribute to set **Selection**, you can get information on the 
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselectionchange-result.jpg" alt="viewer-onselectionchange-result" class="no-border" >}}
 
-Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET`APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID`in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
+Like other Mendix events, you can select from a list of actions upon a model part selection for **Action**. One possible use case is utilizing `GET` APIs exposed by the Viewer (for example, get `Boundingbox` by `PSID`, set the material by `PSID` in a JavaScript action, include this in a nanoflow, and set the **Action** to call this nanoflow).
 
 {{< figure src="/attachments/partners/siemens/3d-viewer/viewer-onselect-sample.jpg" alt="viewer-onselect-sample" class="no-border" >}}
 
@@ -537,12 +537,12 @@ The sections below present operations within the Section View widget.
 
 * **Add** – Use this to add a section plane. First, select the axis along which you would like to section the model, then click **Add**. You will see a section plane of the desired axis added to the scene. The default position of the newly added section plane is in the middle of the bounding box of the direction selected.
 * **Delete** – Use this to delete a selected section plane. Click the edge of the section plane to select it (when selected, the section plane edges are highlighted in yellow color). Then, click **Delete**.
-* **Clear** –  Use this to clear all the section planes added to the scene.
+* **Clear** – Use this to clear all the section planes added to the scene.
 
 #### Direction
 
-* **X Direction** –  sets the X axis of the default coordinate system as the reference
-* **Y Direction** –  sets the Y axis of the default coordinate system as the reference
+* **X Direction** – sets the X axis of the default coordinate system as the reference
+* **Y Direction** – sets the Y axis of the default coordinate system as the reference
 * **Z Direction** – sets the Z axis of the default coordinate system as the reference
 
 For example, if you select **Y Direction**, then the cross section is created on the ZX plane.
@@ -551,10 +551,10 @@ For example, if you select **Y Direction**, then the cross section is created on
 
 When a section plane is selected (and highlighted in yellow), you can choose which part of the model you would like to clip away by selecting a clipping option:
 
-* **Off** –  do not clip
+* **Off** – do not clip
 * **Both** – clip both sides, showing the 2D intersecting curve on the section plane
 * **Near** – clip away the positive side (toward the **Direction**)
-* **Far** –  clip away the negative side (away from the **Direction**)
+* **Far** – clip away the negative side (away from the **Direction**)
 
 #### Position
 
@@ -638,7 +638,7 @@ You can set the following configuration options:
 
 #### enableCache
 
-This  enables the edge / segment / vertex cache when loading JT files. When opening the same JT files, it will load directly from the browser cache to improve performance.
+This enables the edge / segment / vertex cache when loading JT files. When opening the same JT files, it will load directly from the browser cache to improve performance.
 
 * Type – Boolean
 * Default value – *false*
@@ -661,12 +661,12 @@ If you set enableSectionHandle to true for a [section view](#section-view), it w
 
 #### sectionHandle
 
-Defines the style of sectionHandle. `arrowRadius`and `handleRadius` are measured in pixels.
+Defines the style of sectionHandle. `arrowRadius` and `handleRadius` are measured in pixels.
 
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "arrowColor": 16711680,
         "handleColor": 16711680,
@@ -691,7 +691,7 @@ Specifies bboxSurfaceScanner options.
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "useDefault": true,
         "detailLevel": 35.8,
@@ -733,7 +733,7 @@ This defines measurement behaviors and dimension styles. The `measurement` secti
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {    
         "dimension": {    
             "text": {    

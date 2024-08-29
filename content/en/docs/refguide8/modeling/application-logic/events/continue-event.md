@@ -4,7 +4,7 @@ url: /refguide8/continue-event/
 weight: 4
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 
@@ -20,7 +20,7 @@ For example, you have a list of objects of the *OrderLine* entity and you want t
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/events/continue-event/continue-event.png" class="no-border" >}}
 
-## 2 Read More
+## Read More
 
 * [Loop](/refguide8/loop/)
 * [Break Event](/refguide8/break-event/)

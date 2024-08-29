@@ -7,7 +7,7 @@ weight: 20
 
 {{% alert color="warning" %}}The template grid widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A template grid shows a list of objects in a tile view. For example, a template grid can show a list of employees with their profile pictures. Using controls provided by the template grid you can browse, search, and manipulate those objects:
 
@@ -15,17 +15,17 @@ A template grid shows a list of objects in a tile view. For example, a template 
 
 The template grid has a lot in common with a [data grid](/refguide/data-grid/). The main difference is that the objects are shown in templates instead of rows.
 
-## 2 Components
+## Components
 
-### 2.1 Control Bar
+### Control Bar
 
 For more information, see [Control Bar](/refguide/control-bar/).
 
-### 2.2 Search Bar
+### Search Bar
 
 **Search Bar** is only available for **Database** and, below version 10.5, **XPath** [data sources](#data-source). For more information on a search bar and its settings, see [Search Bar](/refguide/search-bar/).
 
-## 3 Properties
+## Properties
 
 An example of template grid properties is represented in the image below:
 
@@ -39,17 +39,17 @@ Template grid properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 3.1 Common Section {#common}
+### Common Section {#common}
 
 The rows of the template grid can be sorted using the `Sort order` property. It is only available for **Database** [data sources](#data-source). For more information on sorting, see [Sort Order](/refguide/sort-order/).
 
 {{% snippet file="/static/_includes/refguide/common-section-link.md" %}}
 
-### 3.2 Data Source Properties {#data-source}
+### Data Source Properties {#data-source}
 
 The data source determines which objects will be shown in the template grid. For general information about data sources, see [Data Sources](/refguide/data-sources/).
 
-#### 3.2.1 Type
+#### Type
 
 The template grid supports the following types of data sources: 
 
@@ -61,13 +61,13 @@ The template grid supports the following types of data sources:
 
 The database and, below version 10.5, XPath sources retrieve objects from the database and supports searching and sorting. 
 
-### 3.3 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide/design-section-link.md" %}} 
 
-### 3.4 General Section {#general}
+### General Section {#general}
 
-#### 3.4.1 Show Control Bar {#show-control-bar}
+#### Show Control Bar {#show-control-bar}
 
 This property indicates whether the control bar will be visible in the end-user interface. The control bar also includes the paging buttons.
 
@@ -77,7 +77,7 @@ Even if the control bar is invisible there can still be a default button that is
 
 Default: *True*
 
-#### 3.4.2 Show Paging Bar {#show-paging-bar}
+#### Show Paging Bar {#show-paging-bar}
 
 With this property, you can change the way the paging bar is shown.
 
@@ -93,23 +93,23 @@ Default: *Yes (with total count)*
 Hiding the control bar also hides the paging buttons. For details, see [Show Control Bar](#show-control-bar).
 {{% /alert %}}
 
-#### 3.4.3 Number of Rows {#number-of-rows}
+#### Number of Rows {#number-of-rows}
 
 With this property you can change the number of rows of templates that will be shown on one page.
 
 Default: *3*
 
-#### 3.4.4 Number of Columns {#number-of-columns}
+#### Number of Columns {#number-of-columns}
 
 With this property you can change the number of templates that will be shown next to each other in one row.
 
 Default: *2*
 
-#### 3.4.5 Style Template {#style-template}
+#### Style Template {#style-template}
 
 The style template property allows you to choose from three different styling of the template grid. These stylings depend on your theme package.
 
-#### 3.4.6 Selection Mode {#selection-mode}
+#### Selection Mode {#selection-mode}
 
 The selection mode determines whether and how the user can select items in the grid.
 
@@ -121,13 +121,13 @@ The selection mode determines whether and how the user can select items in the g
 | Multi-selection | The user can select multiple items by clicking the first one and holding the 'Ctrl' key while clicking on other items. Simply clicking an item will deselect all items and make the clicked item the selection. |
 | Simple multi-selection | The user can select multiple items by simply clicking on them. |
 
-#### 3.4.7 Select First {#select-first}
+#### Select First {#select-first}
 
 This property indicates whether the first item will be selected initially. This is especially useful if there is a data view listening to this grid.
 
 Default: *False*
 
-#### 3.4.8 Default Button Trigger {#default-button-trigger}
+#### Default Button Trigger {#default-button-trigger}
 
 The default button can be triggered by single- or double-clicking a row.
 
@@ -136,24 +136,24 @@ The default button can be triggered by single- or double-clicking a row.
 | Single click | A single click triggers the default button. This cannot be used in combination with allowing the user to select rows. |
 | Double click *(default)* | A double-click triggers the default button. |
 
-#### 3.4.9 Refresh Time (in Seconds) {#refresh-time}
+#### Refresh Time (in Seconds) {#refresh-time}
 
 If the refresh time is non-zero, the template grid will refresh its contents every given number of seconds. For example, a task list could be refreshed every minute so that you know when new tasks arrive. By default the refresh time is zero and this means that the grid will not automatically refresh itself.
 
 Default: *0*
 
-### 3.5 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
 
-## 4 Performing Specific Actions
+## Performing Specific Actions
 
 To perform actions on a template grid, select it on a page and right-click it. The list of possible actions opens. While some actions from this list, such as **Select data source**, **Edit condition for visible**, are a quick way to set the properties, the following actions are specific actions that you can perform:
 
-* **Go to entity** – opens a domain model and highlights an an entity that is used as the data source 
-* **Go to data source** **microflow**– this action is only displayed when a microflow is set as the data source and opens this microflow 
+* **Go to entity** – opens a domain model and highlights an entity that is used as the data source 
+* **Go to data source microflow** – this action is only displayed when a microflow is set as the data source and opens this microflow 
 
-## 5 Read More
+## Read More
 
 * [Page](/refguide/page/)
 * [Data Containers](/refguide/data-widgets/)

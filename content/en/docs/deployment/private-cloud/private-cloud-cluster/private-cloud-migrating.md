@@ -6,7 +6,7 @@ weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 When you have an OpenShift or Kubernetes cluster which is firewalled, you will need to host Mendix components in your own image registry.
 
@@ -14,7 +14,7 @@ Storing images in your own registry can also help as it caches images locally an
 
 This document explains how to export the components from the Mendix registry and import them into your own registry. It also explains how to tell the Mendix Configuration Tool to use your own registry when configuring the namespace.
 
-## 2 Prerequisites for Migrating to Your Registry
+## Prerequisites for Migrating to Your Registry
 
 To export components from the Mendix registry, you will need the following:
 
@@ -22,11 +22,11 @@ To export components from the Mendix registry, you will need the following:
 * A local or managed image registry
 * All the other prerequisites for creating a Mendix for Private Cloud cluster, as documented in the [Prerequisites for Creating a Cluster](/developerportal/deploy/private-cloud-cluster/#prerequisites) section of *Creating a Private Cloud Cluster*.
 
-## 3 Download the Mendix Configuration Tool
+## Download the Mendix Configuration Tool
 
 Follow the instructions in [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/) using the configuration tool until you reach [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool).
 
-## 4 Export Mendix Components{#export}
+## Export Mendix Components{#export}
 
 To export the Mendix components you want to migrate to your own registry, you need to run the Mendix Configuration Tool in registry migration mode.
 
@@ -35,10 +35,7 @@ Follow these steps to export the Mendix components and store them on your local 
 1. Start the Configuration Tool using the command `mxpc-cli registry-migration` to initiate registry migration mode.
 2. Select **Migration Type** to be *Export*.
 3. Select the **Main Components** and **Storage Provisioners** you want to export.
-4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `8.12.*, 7.23.6.*` will export all patch versions of the Mendix 8.12 runtime and the published build of the Mendix 7.23.6 runtime.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-migrating/export.png" class="no-border" >}}
-
+4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `10.12.*, 9.24.26.*` will export all patch versions of the Mendix 10.12 runtime and the published build of the Mendix 9.24.26 runtime.
 5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
 6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
 7. Click **Export components**.
@@ -50,7 +47,7 @@ To avoid downloading too many images, there is a default limit on the number of 
 Since version 2.10.2 of `mxpc-cli`, you can change this limit by using a `--max-images` command-line argument, for example, `mxpc-cli registry-migration --max-images=50`.
 {{% /alert %}}
 
-## 5 Import Mendix Components Into Your Own Registry
+## Import Mendix Components Into Your Own Registry
 
 Once you have the Mendix components saved on your local machine, you can import them into your own registry. This means that, once configured, Mendix will be able to find them, even if you have an air-gapped installation which is not connected to the internet.
 
@@ -77,7 +74,7 @@ Perform the following steps.
 
     The components you selected will be uploaded from the folder on your local machine where they were saved, and imported into the selected registry. This will be from the folder `C:\Users\<User id>\.mxpc-cli\registry-migration` on Windows or `home/<User id>/.mxpc-cli/registry-migration` for Mac and Linux.
 
-## 6 Create and Configure Mendix for Private Cloud Cluster and Namespace
+## Create and Configure Mendix for Private Cloud Cluster and Namespace
 
 You can now create a new Mendix for Private Cloud cluster and namespace. To tell the Configuration Tool that you want to use your own registry, you will use the configuration tool with the argument `--registry {registry_url}/{repository}` (use the **Registry URL** value specified in the previous step as the `{registry_url}` value, and **Repository** as the value for `{repository}`).
 
@@ -89,11 +86,11 @@ Continue following the instructions in [Creating a Private Cloud Cluster](/devel
 
 In the section [Running the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool), add the flag `--registry` to the command line that you paste into the terminal, before your press <kbd>Enter</kbd>.
 
-### 6.1 Base Installation
+### Base Installation
 
 With the `--registry` flag set, follow the instructions in the [Base Installation](/developerportal/deploy/standard-operator/#base-installation) section of *Creating a Private Cloud Cluster*.
 
-### 6.2 Configure Namespace
+### Configure Namespace
 
 With the `--registry` flag set, follow the instructions in the [Configure Namespace](/developerportal/deploy/standard-operator/#configure-namespace) section of *Creating a Private Cloud Cluster*.
 
@@ -101,7 +98,7 @@ When you get to the stage [Review and Apply](/developerportal/deploy/standard-op
 
 Click **Apply Configuration** to apply the configuration to your namespace, as normal.
 
-### 6.3 Upgrade Cluster{#upgrade-cluster}
+### Upgrade Cluster{#upgrade-cluster}
 
 {{% alert color="info" %}}
 Make sure that you are in the right Kubernetes context before upgrading the namespace.

@@ -12,13 +12,13 @@ aliases:
 This product has been renamed from **Mendix Application Quality Monitor (AQM)** to **Mendix Quality and Security Management (QSM)**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 [Mendix Quality and Security Management (QSM)](https://www.softwareimprovementgroup.com/solutions/sigrid-for-mendix-quality-and-security-management/) is a cloud service developed by Mendix and the Software Improvement Group (SIG). Mendix QSM performs a static analysis of Mendix application models according the ISO 25010 standard for maintainability. Dashboards provide instant insight into the quality of the application models as they're built, including quality ratings based on benchmarks of thousands of projects.
 
 By proactively monitoring quality on a daily basis customers can improve maintainability and reduce lifecycle costs.
 
-## 2 Maintainability
+## Maintainability
 
 The Mendix QSM maintainability model is based on the SIG/TÜViT Evaluation Criteria. These criteria provide standardized evaluation and certification of the technical quality of the source code of software products. By ensuring that an application is highly maintainable, the maintenance load can be reduced, reducing cost and freeing up capacity to focus on innovation. QSM provides actionable insights to structurally and iteratively improve the maintainability of any application and leverages AI to provide explanations and methods to determine what to do with individual findings. 
 
@@ -26,23 +26,23 @@ The general notion of software quality embraces a variety of quality aspects, of
 
 As mentioned above, QSM checks whether your Mendix application adheres to the ISO 25010 standard for writing maintainable software. The model that is used for this partially overlaps with the [Mendix Development Best Practices](/refguide/dev-best-practices/), specifically with regard to microflow development best practices. For more Information on the exact model used, see [QSM Model Documentation](https://www.softwareimprovementgroup.com/wp-content/uploads/SIG-TUViT-Evaluation-Criteria-Trusted-Product-Maintainability.pdf). For broader documentation on QSM as a platform and all of its features, see [QSM Documentation](https://docs.sigrid-says.com/). Note that Sigrid is the technology agnostic name for QSM, where QSM is specific to Mendix.
 
-## 3 Architecture
+## Architecture
 
 While maintainability concerns itself with the quality of specific flows, documents and modules architecture takes a more holistic view of the application and its internal structure. It provides measurable and objective metrics to track quality in otherwise intangible concepts like component coupling and cohesion.
 
 Additionally, the architecture model, fully automatically, generates architecture diagrams at any required level of detail, allowing you to dive in to the large scale relations between different modules, as well as analyze the different ways in which an individual flow can be accessed. This is invaluable when analyzing or re-designing the architecture of an application, but can also support otherwise tedious tasks like security attack surface, or error analysis. 
 
-## 4 Security
+## Security
 
 The security of your application is only as strong as the weakest link. Unfortunately, this means that a data leak or ransomware attack can be the result of a single oversight. QSM's security model is tailor-made in close collaboration between Mendix and SIG to catch as many potential issues as possible. The focus here is to catch issues that cause actual security incidents in practice, like entity access misconfiguration. 
 
 Because QSM can provide these findings out of the box and in early stages of development, developers can catch issues during development, instead of waiting for a security team or penetration test to reveal potential issues. This, in turn, speeds up time to market and improves predictability of delivery. 
 
-## 5 Open-source Health
+## Open-source Health
 
 In addition to the security of your own code, it is essential to also consider the security of third-party code within your system. Open-source health allows you to automatically generate an exhaustive list of all open-source software present in your system. Both Mendix modules or widgets, and Java or JavaScript libraries are caught and analyzed by this model. QSM will inform you whenever there is a known vulnerability in such a library, or which ones have new updates available. This way, QSM can support you pro-actively, keeping your dependencies up-to-date and avoiding security incidents before they even have a chance to appear. 
 
-## 6 Additional Information
+## Additional Information
 
 {{% alert color="info" %}}
 To obtain or renew your purchased license, go to [this form](https://addon.mendix.com/index.html).
@@ -56,13 +56,13 @@ To obtain or renew your purchased license, go to [this form](https://addon.mendi
     * By default, the Mendix QSM reports are based on the main line in your app's Team Server.
     * We are building CI support for Mendix that will allow you to run QSM in your Mendix CI pipeline (for more information, see [SigridCI](https://github.com/Software-Improvement-Group/sigridci)).
 
-## 7 Release Notes
+## Release Notes
 
 {{% alert color="info" %}}
 QSM is continuously improved and expanded. For an overview of recently released major features, see [QSM documentation](https://docs.sigrid-says.com/reference/release-notes.html). 
 {{% /alert %}}
 
-### 2.0.0
+### 
 
 #### Quality Monitor tool update
 

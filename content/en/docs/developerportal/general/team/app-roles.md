@@ -15,11 +15,11 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 The roles defined in **Apps** for an [app](/developerportal/#my-apps) and [team](/developerportal/general/team/) are described below.
 
-## 2 Team Member
+## Team Member
 
 If a user wants to join a team, they need an invitation from a current team member who has the **Invite Members** permission.
 
@@ -27,7 +27,7 @@ If a user wants to join a team, they need an invitation from a current team memb
 Since users outside a team cannot see current team members, and can only see who the [Technical Contact](#technical-contact) of the team is, it would be easy for them if they could ask the Technical Contact for an invitation. Therefore, it is a good practice to give Technical Contact the correct permissions to manage the app (for example, the **Scrum Master** role).
 {{% /alert %}}
 
-## 3 Team Roles {#team-roles}
+## Team Roles {#team-roles}
 
 Within a team, there are predefined roles that can be provisioned to team members. Each team role has access to permission areas based on the following factors:
 
@@ -38,7 +38,7 @@ Within a team, there are predefined roles that can be provisioned to team member
 
 Scrum Masters can edit and create new team roles on the [Team](/developerportal/general/team/) page, and Mendix Admins can edit and create new team roles within the company in [Control Center](/control-center/).
 
-## 4 Technical Contact {#technical-contact}
+## Technical Contact {#technical-contact}
 
 Every deployed app has a Technical Contact. When you view the [Settings](/developerportal/collaborate/general-settings/#general) for a deployed app, you can see the app's Technical Contact. The Technical Contact is the user you can contact with questions related to the app. 
 
@@ -52,7 +52,7 @@ The Technical Contact manages the technical deployment settings of the app. The 
 
 The responsibilities of a Technical Contact depend on whether you are hosting your app in Mendix Cloud or on premises.
 
-### 4.1 Mendix Cloud Responsibilities
+### Mendix Cloud Responsibilities
 
 For apps in Mendix Cloud, the Technical Contact is the first point of contact for the app and can do the following:
 
@@ -65,11 +65,11 @@ As the Technical Contact, you can perform all the regular operations on the Mend
 
 The Technical Contact is also responsible for managing licenses (as in, renewals, activations, and upgrades) and is the first point of contact for the Mendix Support department. Note that Mendix is responsible for Mendix Cloud app renewals, and you can contact your Customer Success Manager (CSM) if you want to expand your license.
 
-### 4.2 On-Premises Responsibilities
+### On-Premises Responsibilities
 
 When a Mendix app is on premises, it is running on the customer's own infrastructure. For managing licenses in this scenario, Mendix sends license renewal notifications to the Technical Contact via email. As a Technical Contact, if you want to expand the license (for example, for more users), you need to contact your Account Executive.
 
-### 4.3 Changing the Technical Contact {#change-technical-contact}
+### Changing the Technical Contact {#change-technical-contact}
 
 {{% alert color="info" %}}
 It is not possible to have more than one Technical Contact for an app.

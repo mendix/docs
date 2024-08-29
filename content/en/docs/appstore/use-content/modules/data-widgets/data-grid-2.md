@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Data Grid 2 widget, w
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 [Data Grid 2](https://marketplace.mendix.com/link/component/116540) is the successor to the standard data grid widget for displaying content in a tabular form. It comes with many powerful new features and settings like support for widgets, row and cell coloring, responsive layout, accessibility, and paging options like virtual scrolling. The Data Grid 2 widget offers personalization support so that end-users can show, hide, and re-order columns. Personalizations can be persisted in the database for flexibility and control. 
 
@@ -29,11 +29,11 @@ You can enable these advanced options to customize your data grid:
 * Custom configuration
 * Header Filters
 
-## 2 Capabilities
+## Capabilities
 
 In the new data grid, you are able to choose how users can iterate within the grid. Iteration capabilities are listed below.
 
-### 2.1 Sorting
+### Sorting
 
 **Sorting** enables the header to be clickable. When clicked it will switch between ascending, descending, and no sorting. This functionality can be discerned according to the arrows on the right side:
 
@@ -45,13 +45,13 @@ In the new data grid, you are able to choose how users can iterate within the gr
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/sorting-desc.png" alt="Descending sort" class="no-border" >}}
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/no-sorting.png" alt="Natural order (No sorting)" class="no-border" >}}
 
-### 2.2 Resizing
+### Resizing
 
 **Resizing** enables the header to be resizable by dragging the handle on the right side of a header. Here is an example of the handle indicating the column is resizable:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/resizing.png" alt="Handle indicating the column is resizable" class="no-border" >}}
 
-### 2.3 Reordering
+### Reordering
 
 **Reordering** enables the header to be reordered by dragging and dropping in another column. When dragging, a black handle indicates where the column can be dropped:
 
@@ -59,7 +59,7 @@ Here is an example of reordering in progress:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/reordering.gif" alt="Example of reordering" class="no-border" >}}
 
-### 2.4 Hiding
+### Hiding
 
 **Hiding** enables a column to be hidden. When this option is enabled for any column, a button with an eye icon ({{% icon name="view" %}}) will appear on the right side of the data grid like the example below. It contains all the columns **hidden by default** or enabled to be hidden. When de-selected, the column will not be visible in the grid anymore.
 
@@ -79,7 +79,7 @@ Here is an example containing a column with **Yes, hidden by default** in **Desi
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/hidden-columns-design-mode.png" alt="Example containing a column with “Yes, hidden by default” in Design mode" class="no-border" >}}
 
-## 3 Pagination
+## Pagination
 
 {{% alert color="info" %}}
 This widget does not support [system texts](/refguide/system-texts/), meaning is not possible to translate its content to another language.
@@ -87,9 +87,9 @@ This widget does not support [system texts](/refguide/system-texts/), meaning is
 
 In the new data grid we offer two types of pagination: **Paging Buttons** and **Virtual Scrolling**.
 
-### 3.1 Paging Buttons
+### Paging Buttons
 
-The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be be available.
+The **Paging Buttons** option will render the default buttons as the previous data grid. When the data source is uncountable (for example, external entities), neither the last page button nor the counting will be available.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/paging-buttons.png" alt="Example of paging buttons" >}}
 
@@ -98,15 +98,15 @@ You can configure pagination based on the following properties:
 * **Position** — The **Position of paging button** options allow you to position paging buttons above or below the data grid.
 * **Visibility** — The **Show paging buttons** options allow you to always show paging, or to automatically show and hide paging based on the amount of available data compared to the display limit per page.
 
-### 3.2 Virtual Scrolling 
+### Virtual Scrolling 
 
 The **Virtual Scrolling** option forces the data grid to show a fixed amount of items (defined in the page size option) within a scrollable container. When the end-user reaches the bottom of the scrollable container it fetches more items automatically.
 
-### 3.3 Load More
+### Load More
 
 This option functions similarly to the **Virtual Scrolling** feature, but instead of automatically loading data as the end-user scrolls, a button is displayed at the end of the list of items. Clicking this button enables the end-user to fetch more items.
 
-## 4 Columns
+## Columns
 
 In Data Grid you can choose what you want to render into columns. This can be an attribute, dynamic text, or even a combination of widgets (custom content). To choose what you want to render, open a column in the column list and select the appropriate option according to your needs.
 
@@ -114,17 +114,17 @@ Here is an example of column properties:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-properties.png" alt="Example of column properties" >}}
 
-### 4.1 Attribute
+### Attribute
 
 **Attribute** renders the value of a selected attribute.
 
-### 4.2 Dynamic Text
+### Dynamic Text
 
 **Dynamic Text** renders a text-templated string which can contain text combined with attributes:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-dynamic-text.png" alt="Example of dynamic text" class="no-border" >}}
 
-### 4.3 Custom Content
+### Custom Content
 
 **Custom Content** allows users to drop widgets into the data grid and use the column attribute value to show custom content. After selecting this option you will be given dropzones in which to drop your widgets.
 
@@ -134,7 +134,7 @@ Here is an example of custom content using new Badge widget in **Structure mode*
 
 For more information on configuring various widget properties, see [Common Widget Properties](/refguide/common-widget-properties/).
 
-### 4.4 Column Width
+### Column Width
 
 You can define how each cell will be rendered in the data grid. We offer three choices:
 
@@ -144,7 +144,7 @@ You can define how each cell will be rendered in the data grid. We offer three c
 * **Auto-fit** — Content With this option it will calculate the width of your column based on the content of each row.
 * **Manual** — With this option you will manually define the size of your column based of flexbox grow values, for more information, please [check here](https://www.w3.org/TR/css-flexbox-1/).
 
-### 4.5 Alignment
+### Alignment
 
 You can choose how the content inside your columns will be aligned. We offer three choices: left, center, and right.
 
@@ -154,7 +154,7 @@ This will also change the alignment of your header.
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-alignment.png" alt="Settings for alignment of each column item" class="no-border" >}}
 
-### 4.6 Dynamic Cell Class
+### Dynamic Cell Class
 
 In the new data grid we offer an option to dynamically apply a CSS class in a specific cell. You can achieve this by adding an expression based on the column value (attribute) like the example below.
 
@@ -162,7 +162,7 @@ In this example we check the value of `StringAttribute` and then apply the class
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dynamic-cell-class.png" alt="Example of dynamic cell class" class="no-border" >}}
 
-### 4.7 Wrap Text
+### Wrap Text
 
 You can choose if you want to wrap the text content of a column and apply ellipsis in the end of it.
 
@@ -172,7 +172,7 @@ If you are using **Custom content** in the **Show** option of the **General** ta
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/column-wrap-text.png" alt="Example of wrap text" class="no-border" >}}
 
-### 4.8 Tooltip
+### Tooltip
 
 If you need to display advisory information for cell content, you can specify the tooltip text. This text will be shown when a user is hovering over the cell content.
 
@@ -182,7 +182,7 @@ This property is not available if you enable **Custom content** for the column
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/tooltip-prop.png" alt="Example of wrap text" class="no-border" >}}
 
-### 4.9 Association Filter {#association-filter}
+### Association Filter {#association-filter}
 
 * **Reference** — this property defines the association that will be used for filtering. When set, it enables filtering over association with the Drop-down filter. Drop-down filter will prioritize this property over `Attribute` property.
 * **Data source** — defines data source for filter options. The data source should return list of all possible entities that could be associated with a parent.
@@ -192,21 +192,21 @@ This property is not available if you enable **Custom content** for the column
 This column configuration is intended to be used in conjunction with [Drop-down Filter](#drop-down-filter). Other filter types do not support association filtering.
 {{% /alert %}}
 
-### 4.10 Visible {#visible-filter}
+### Visible {#visible-filter}
 
 When using a data grid, sometimes columns do not need to be shown. Using this **Visible** expression configuration, you can specify when you want to display columns
 
-## 5 Rows
+## Rows
 
 This section defines options for the rows of the grid.
 
-### 5.1 Empty List Message
+### Empty List Message
 
 The **Empty List Message** option defines what users can see when the data grid does not have a value to be presented or when a filter is applied without results. When this option is defined as custom you can place widgets right above the rows in a dropzone. Here is an example:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/empty-list-message.png" alt="Example of empty list message placeholder in Structure mode" class="no-border" >}}
 
-### 5.2 Dynamic Row Class
+### Dynamic Row Class
 
 The **Dynamic Row Class** option allows users to dynamically apply a CSS class in a specific row. This option will apply for the entire row the same class. You can achieve this by adding an expression based on the column value (attribute), like the example below.
 
@@ -218,15 +218,15 @@ In this example we check the value of `StringAttribute and` then apply the class
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dynamic-row-class.png" alt="Example of dynamic row class" class="no-border" >}}
 
-## 6 Events
+## Events
 
 The new data grid can trigger some events while iterating with it.
 
-### 6.1 On Click Action
+### On Click Action
 
 Triggers an action (such as a nanoflow, microflow, or Show page action) when the end-user clicks in one of the rows. It also adds a pointer cursor to signal that it is clickable. This function also complies with accessibility features and can be reached using only the keyboard.
 
-## 7 Filters {#filters}
+## Filters {#filters}
 
 Sets of filters can be used in combination with data grids. To be able to use filters you need to select the option **Show column filters**. When this option is selected a drop-zone where you can place your desired filter widget will appear in each column header.
 
@@ -242,9 +242,9 @@ Here is an example of dropzones for filters in **Structure mode**:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropzones-for-filters.png" alt="Example of dropzones for filters in Structure mode" class="no-border" >}}
 
-### 7.1 Date Filter
+### Date Filter
 
-{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of  default Date filter look and feel" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter.png" alt="Example of default Date filter look and feel" class="no-border" >}}
 
 **Date filter** allows users to match date attributes based on these predefined criteria:
 
@@ -284,17 +284,17 @@ When **Default filter** is defined as **Between** these fields will appear to de
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/date-filter-between-settings.png" alt="Example of Date filter with “Default value” set as Between" class="no-border" >}}
 
-#### 7.1.1 Configurations
+#### Configurations
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
 * Date & Time
 
-#### 7.1.2 Events
+#### Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.2 Drop-Down Filter {#drop-down-filter}
+### Drop-Down Filter {#drop-down-filter}
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/dropdown-filter.png" alt="Example of default drop-down filter" class="no-border" >}}
 
@@ -307,7 +307,7 @@ When a drop-down filter is used in conjunction with an Association Filter data g
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration. This limitation also applies when using page state, meaning that the filter value used in the drop-down filter will not persist when navigating between pages.
 {{% /alert %}}
 
 When adding a new option, the following properties are required:
@@ -323,7 +323,7 @@ This widget also allows multiple selections by selecting **Multiselect** in the 
 
 You can also define the empty option caption, which will be rendered as the first item if **Multiselect** if set as **No**. It allows users to clean the filter if pressed.
 
-#### 7.2.1 Configurations
+#### Configurations
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be this type:
 
@@ -333,11 +333,11 @@ In this section you can select a **Saved attribute** in order to save the curren
 If **Multiselect** is enabled you must select a String attribute containing `Unlimited` in its size.
 {{% /alert %}}
 
-#### 7.2.2 Events
+#### Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.3 Number Filter
+### Number Filter
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/number-filter.png" alt="Example of default number filter" class="no-border" >}}
 
@@ -368,7 +368,7 @@ You can also define the default value of the widget, which will be predefined as
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
-#### 7.3.1 Configurations
+#### Configurations
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
@@ -377,11 +377,11 @@ In this section you can select a **Saved attribute** in order to save the curren
 * Integer
 * Long
 
-#### 7.3.2 Events
+#### Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.4 Text Filter
+### Text Filter
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/text-filter.png" alt="Example of default text filter" class="no-border" >}}
 
@@ -415,18 +415,18 @@ You can also define the default value of the widget, which will be predefined as
 
 To have better control of when the filter will be applied, we offer a **Apply after (ms)** option under the **On change behavior** group. This option will only trigger the filter after a predefined period of time while typing. By default, Mendix suggests 500ms.
 
-#### 7.4.1 Configurations
+#### Configurations
 
 In this section you can select a **Saved attribute** in order to save the current value of the filter. However, the value is not automatically applied to the widget. To restore the previously saved value of the filter, you must configure the same attribute as the **Default value** of the widget. The attribute available in this section must be one of the following types:
 
 * Hashed string
 * String
 
-#### 7.4.2 Events
+#### Events
 
 In this section you can select an action to be executed **On change** by the filter value. This means every time the user types or selects a value it will be executed.
 
-### 7.5 Grid Wide Filtering {#grid-wide-filtering}
+### Grid Wide Filtering {#grid-wide-filtering}
 
 In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
@@ -440,7 +440,9 @@ In order to enable filtering within the data grid header (outside the columns) y
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. Only the first keyword in the filter will be considered when filtering multiple attributes in grid wide filtering
+
+When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
@@ -450,7 +452,7 @@ If a filter is being used and its type does not match with any selected attribut
 There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
-## 8 Export to Excel
+## Export to Excel
 
 The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.
 
@@ -461,7 +463,7 @@ To export data from the data grid, create a new nanoflow that calls *Export_To_E
 * **Sheet name** - the name to use for the Excel sheet of the exported document
 * **Include column names** - a Boolean expression that, if true, tells the action to include column captions as the first row in the exported document
 
-## 9 Configuration
+## Configuration
 
 You can define an attribute to store the current configuration of the data grid. In this way, if you re-open your page then the current sorted columns, order, and hidden columns will remain the same as in the previous state. To set this option, you need to select a `String` attribute with `Unlimited` as its size as the attribute in the data grid **Personalization** tab in Studio Pro.
 
@@ -479,11 +481,11 @@ Here is an example of a configuration containing an On change action:
 
 {{< figure src="/attachments/appstore/use-content/modules/data-widgets/data-grid-2/configuration.png" alt="Example of a configuration containing on change action" class="no-border" >}}
 
-## 10 Performance
+## Performance
 
 The performance of the new data grid can be affected if sorting or filtering are enabled. This is because Data widgets v1.1 - 1.2 retrieve all available values for sorting or filtering while the widget runs. This problem does not occur in versions above 1.3 because those versions use [Filtering APIs](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis-list-values/#filter-helpers) to retrieve only the necessary data.
 
-## 11 Troubleshooting
+## Troubleshooting
 
 If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, please replace the line 3 `cssFiles` with the following code in the file `theme/settings.json`:
 
@@ -494,7 +496,7 @@ If you are using Atlas v2.x and you cannot upgrade to Atlas 3 at the moment, ple
 ],
 ```
 
-## 12 In-Memory Selection {#selection}
+## In-Memory Selection {#selection}
 
 {{% alert color="info" %}}
 In-memory selection was introduced in Data Widgets v2.7.0.
@@ -502,23 +504,23 @@ In-memory selection was introduced in Data Widgets v2.7.0.
 
 Enabling selection allows users to select a row by clicking the row or a checkbox. Selection is disabled by default, and can be activated by changing the **Selection** setting from **None** to either **Single** or **Multi**.
 
-Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can  only select items that are currently visible.
+Since the data grid widget keeps selected items in short-living memory that is cleared every time you change the data grid page, selecting items across multiple pages is not supported. This means that the end-user can only select items that are currently visible.
 
-### 12.1 Selection Mode
+### Selection Mode
 
 In **Single** selection mode, users are limited to selecting one row at a time. 
 
 In **Multi** mode, the user can select multiple rows.
 
-### 12.2 Selection Method
+### Selection Method
 
 When selection is enabled, you can choose a method for selecting rows. The **Checkbox** method adds a checkbox to the beginning of each row, and the end-user must click the checkbox to select the row. By contrast, the **Row** method does not add any additional controls to the row, and the end-user must click the row itself to select that row.
 
-### 12.3 Show (Un)check All Toggle
+### Show (Un)check All Toggle
 
 If this setting is enabled, then the data grid widget shows a checkbox at the header. This checkbox controls the selection for all visible items. Clicking on this checkbox will select all visible items. If all items are already selected, clicking the checkbox clears the selection.
 
-### 12.4 Selection and Row Click Action
+### Selection and Row Click Action
 
 {{% alert color="info" %}}
 The **On click trigger** setting was introduced in Data Widgets v2.13.0. Previous versions did not allow both selection and click actions at the same time.
@@ -530,32 +532,32 @@ The setting for action triggers is related to the selection method and can somet
 
 | Selection method | Action trigger          | Selection trigger                                | Supported |
 | ---------------- | ----------------------- | ------------------------------------------------ | --------- |
-| Checkbox         | Single click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
-| Checkbox         | Double-click on the row | Click on the checkbox, Ctrl/Cmd+Click on the row | Yes       |
+| Checkbox         | Single click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
+| Checkbox         | Double-click on the row | Click on the checkbox, <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac) | Yes       |
 | Row              | Single click on the row |                                                  | No        |
-| Row              | Double-click on the row | Ctrl/Cmd + Click on the row                      | Yes       |
+| Row              | Double-click on the row | <kbd>Ctrl</kbd> + click on the row (or <kbd>Command</kbd> + click on the row on Mac)                    | Yes       |
 
 To achieve this behavior, set the **On click trigger** to **Double click**. When a data grid is configured this way, the user may select a row by double-clicking it.
 
-## 13 Keyboard Support {#keyboard-support}
+## Keyboard Support {#keyboard-support}
 
 | Key                      | Function                                                     |
 | ------------------------ | ------------------------------------------------------------ |
-| Right Arrow              | Moves focus one cell to the right.                           |
-| Left Arrow               | Moves focus one cell to the left.                            |
-| Down Arrow               | Moves focus one cell down.                                   |
-| Up Arrow                 | Moves focus one cell up.                                     |
-| Page Up                  | Moves focus one page up.                                     |
-| Page Down                | Moves focus once page down.                                  |
-| Home                     | Moves focus to the first cell in the row.                    |
-| End                      | Moves focus to the last cell in the row.                     |
-| Ctrl + Home              | Moves focus to the first cell in grid.                       |
-| Ctrl + End               | Moves focus to the last cell in grid.                        |
-| Shift + Space            | Selects current row. (1)                                     |
-| Ctrl/Cmd + A             | Select all visible rows. (1)(2)                              |
-| Shift + {Down, Up} Arrow | Moves focus and selects current and row above/below. (1)(2)  |
-| Shift + Page {Up, Down}  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
-| Shift + Home/End         | Moves focus to the end/start of the grid and selects all rows between current and final row. (1)(2) |
+| <kbd>→</kbd>              | Moves focus one cell to the right.                           |
+| <kbd>←</kbd>               | Moves focus one cell to the left.                            |
+| <kbd>↓</kbd>               | Moves focus one cell down.                                   |
+| <kbd>↑</kbd>                 | Moves focus one cell up.                                     |
+| <kbd>Page&nbsp;up</kbd>                  | Moves focus one page up.                                     |
+| <kbd>Page&nbsp;down</kbd>                | Moves focus once page down.                                  |
+| <kbd>Home</kbd>                     | Moves focus to the first cell in the row.                    |
+| <kbd>End</kbd>                      | Moves focus to the last cell in the row.                     |
+| <kbd>Ctrl</kbd> + <kbd>Home</kbd>              | Moves focus to the first cell in grid.                       |
+| <kbd>Ctrl</kbd> + <kbd>End</kbd>               | Moves focus to the last cell in grid.                        |
+| <kbd>Shift</kbd> + <kbd>Space</kbd>            | Selects current row. (1)                                     |
+| <kbd>Ctrl</kbd> + <kbd>A</kbd>             | Select all visible rows. (1)(2)                              |
+| <kbd>Shift</kbd> + <kbd>↑</kbd>/<kbd>↓</kbd> | Moves focus and selects current and row above/below. (1)(2)  |
+| <kbd>Shift</kbd> + <kbd>Page&nbsp;up</kbd>/<kbd>Page&nbsp;down</kbd>  | Moves focus one page up/down and selects all rows between current and final row. (1)(2) |
+| <kbd>Shift</kbd> + <kbd>Home</kbd>/<kbd>End</kbd>         | Moves focus to the start/end of the grid and selects all rows between current and final row. (1)(2) |
 
 Legend:
 
@@ -564,7 +566,7 @@ Legend:
 | 1 | Available only when selection is enabled. |
 | 2 | Available only when selection mode should be “Multi”. |
 
-## 14 Resetting Filters
+## Resetting Filters
 
 Resetting filters is possible using **Reset_Filter** and **Reset_All_Filters** actions available as part of the Data Widgets module. Setting up these actions is a manual process that requires creating a nanoflow and setting the name of the filter or data grid to be reset.
 

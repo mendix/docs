@@ -263,28 +263,26 @@ To write the `VALUE` attribute on a `VariableNode`, set the `NodeId` on your `Wr
 
 ### Subscription and Monitored Item Services
 
-The Subscription and Monitored Item services enable you to receive notification upon a change of a monitored value.
-A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application.
-A monitored Item corresponds to a specific attribute on a node that is monitored.
+The subscription and monitored item services enable you to receive notification upon a change of a monitored value. A subscription is a client-defined endpoint so that your OPC-UA server can send notification to your Mendix application. A monitored item corresponds to a specific attribute on a node that is monitored.
 
-In order to monitor items create a microflow that does the following:
-1. Call 'CreateSubscription' action. 
-2. Create 'MonitorItem' objects for each attribute to be monitored, specifie the following fields: 'NodeID', 'AttributeID', 'MicroflowName' associated to the created Subscription. 
-3. Do not use the Mendix commit, user instead the provided 'CommitMonitoredItem' or 'CommitMonitoredItems' action.
+In order to monitor items, create a microflow that does the following:
+1. Call `CreateSubscription` action. 
+2. Create `MonitorItem` objects for each attribute to be monitored, with the following fields specified: `NodeID`, `AttributeID`, `MicroflowName`, associated to the created `Subscription`. 
+3. Do not use the Mendix commit, use instead the provided `CommitMonitoredItem` or `CommitMonitoredItems` action.
 
-When a notification comes in, the microflow specified by 'MicroflowName' on the monitored item will be triggered. 
+When a notification comes in, the microflow specified by `MicroflowName` on the monitored item will be triggered. 
 
-* Use the full name of the microflow (MODULENAME.MICROFLOWNAME).
+Use the full name of the microflow, which has this format: `MODULENAME.MICROFLOWNAME`).
 
-* These are the parameters that are allowed for a microflow to be called on a notification (not all are required) :
+Below are the parameters that can be used when calling a microflow on a notification (not all the parameters are required):
 
-    * `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
-    * `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.
-    * `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
-    
-    Check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the `USE_ME` > `12.MonitoredItems_service_set` folder. This microflow simply takes the information from the notification and logs it. 
+* `MessageMonitoredItem` – This parameter contains the `MonitoredItem` information, that is, how the notification was generated.
+* `MessageMonitoredItemReadValueID` – This parameter contains the information on what node and attribute was read.
+* `MessageDataValue` – This parameter contains the information on the actual read value on the `Value` attribute.
 
-* To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
+Check out the example microflow `EXAMPLE_MonitoredItem_LogDefaultMessage` in the **USE_ME** > **12.MonitoredItems_service_set** folder. This microflow simply takes the information from the notification and logs it. 
+
+To stop receiving notifications, call the `Delete MonitoredItem(s)` action from the Toolbox.
 
 ## Technical Reference
 

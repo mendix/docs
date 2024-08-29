@@ -1,5 +1,6 @@
 ---
-title: "Mendix for Private Cloud"
+title: "Mendix for Private Cloud Release Notes"
+linktitle: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
 weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"

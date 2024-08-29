@@ -1,5 +1,6 @@
 ---
-title: "SAP BTP"
+title: "SAP BTP Release Notes"
+linktitle: "SAP BTP"
 url: /releasenotes/developer-portal/sap-cloud-platform/
 weight: 30
 description: "Release notes for deployment to SAP Business Technology Platform"

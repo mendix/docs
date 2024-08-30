@@ -98,7 +98,7 @@ The pull request is created. the Mendix Docs team will review the pull request a
 
 If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix/docs** repository)
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or [Visual Studio Code in the browser](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix/docs** repository)
 * For committing your documentation – [GitHub Desktop](https://desktop.github.com/), [Visual Studio Code](https://code.visualstudio.com), or [Sourcetree](https://www.sourcetreeapp.com/)
 
 You can clone a local copy of a forked repository, make documentation changes, and build local previews. To do so, follow these steps:

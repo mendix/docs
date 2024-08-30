@@ -53,7 +53,7 @@ Only the Selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-stand-alone-3.141.59.jar) | JRE 8
+2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
 
 ### Chrome Driver
 

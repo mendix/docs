@@ -99,7 +99,7 @@ To add a namespace, do the following:
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
-### Adding a Namespace for Stand-alone Cluster {#add-stand-alone-namespace}
+### Adding a Namespace for Stand-alone Cluster {#add-standalone-namespace}
 
 If you would like to add a namespace to be added in the Stand-alone cluster, do the following:
 

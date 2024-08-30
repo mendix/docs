@@ -57,7 +57,7 @@ Using this channel, any Mendix user who has been given the correct authority can
 
 If you have chosen to register a stand-alone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
 
-{{< figure src="/attachments/deployment/private-cloud/mx4pc-stand-alone-architecture.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/private-cloud/mx4pc-standalone-architecture.png" class="no-border" >}}
 
 ## Product Capability Comparison
 

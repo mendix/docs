@@ -1,5 +1,6 @@
 ---
-title: "Software Composition"
+title: "Software Composition (App)"
+linktitle: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
 weight: 3

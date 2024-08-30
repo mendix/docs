@@ -1,5 +1,6 @@
 ---
-title: "Apps"
+title: "Apps Overview"
+linktitle: "Apps"
 url: /control-center/apps/
 description: "Describes the Apps page in the Mendix Control Center."
 weight: 15

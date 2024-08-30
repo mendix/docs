@@ -91,7 +91,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Stand-alone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
 
 4. Click **Done** to create the namespace.
 
@@ -116,7 +116,7 @@ If you would like to add a namespace to be added in the Stand-alone cluster, do 
 3. Enter the following details:
 
     * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
-    * **Installation type** – Choose **Stand-alone**.
+    * **Installation type** – Choose **Standalone**.
 
 4. Click **Next**.
 5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.

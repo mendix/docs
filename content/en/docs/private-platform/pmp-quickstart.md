@@ -103,7 +103,7 @@ To install and configure the Mendix Operator, perform the following steps:
     1. Run the following command, where `-n` indicates the namespace: `./installer operator configure -n=<namespace name>`
     2. Click **Base Installation**, and then set the following settings:
 
-        * **Cluster Mode** – Select **stand-alone**.
+        * **Cluster Mode** – Select **standalone**.
         * **Cluster Type** – Select **openshift** or **generic**.
 
         {{< figure src="/attachments/private-platform/pmp-install1.png" class="no-border" >}}

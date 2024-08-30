@@ -153,7 +153,7 @@ This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
 * Disabling the Debugger will no longer display an incorrect loader message, enhancing user experience.
 * For Global Operator, a new UUID is now generated every time a main namespace is created in a cluster, ensuring uniqueness and consistency.
 * We fixed an issue in the Global Operator where the status for the managed namespace was incorrect under certain conditions.
-* We have removed the **Stand-alone** option when creating the main namespace in the Global Operator, streamlining the process for administrators.
+* We have removed the **Standalone** option when creating the main namespace in the Global Operator, streamlining the process for administrators.
 
 #### Deploy API Improvements
 

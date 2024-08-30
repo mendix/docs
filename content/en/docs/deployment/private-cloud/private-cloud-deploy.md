@@ -14,7 +14,7 @@ Once the cluster has been registered, and a namespace created, team members with
 
 This document explains how to use the Mendix Portal to deploy your **connected** app.
 
-To deploy to a namespace in a **stand-alone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
+To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 
 Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 

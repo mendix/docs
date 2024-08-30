@@ -179,7 +179,7 @@ If your app is **Connected** to the Mendix Portal, you can enter the subscriptio
 
 #### Stand-alone & Offline Private Cloud Apps{#activate-offline}
 
-If your app is **Stand-alone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 
 #### Private Cloud Licensing Manager
 

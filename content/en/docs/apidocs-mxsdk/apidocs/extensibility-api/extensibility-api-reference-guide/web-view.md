@@ -30,7 +30,7 @@ The following table shows the APIs that allow you to add custom UI, and the corr
 
 The view model base classes are `abstract`, so you are required to create your own view model class that derives from the base class.
 
-Each view model class has a method called `InitWebView` that you should override to initialize the web view.
+Each view model class has a method called `InitWebView` that you must override to initialize the web view.
 
 In this method, you can tell the web view to navigate to the (local) URL that contains your web content.
 
@@ -40,6 +40,6 @@ In addition, the view model class can be used to house the logic for communicati
 
 For serving content to the web view and communicating both ways with it, see [Build a Todo Example Extension](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/build-todo-example-extension/).
 
-## Known issues
-
-* If you're serving your web content out of a `wwwroot` folder, please make sure it's present as a part of the base path to your content, otherwise you might have issues making your extension `macOS` compatible.
+{{% alert color="warning" %}}
+If you serve your web content out of a `wwwroot` folder, make sure it is present as a part of the base path to your content; otherwise you can have issues making your extension `macOS` compatible.
+{{% /alert %}}

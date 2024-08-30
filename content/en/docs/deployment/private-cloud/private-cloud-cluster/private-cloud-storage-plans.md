@@ -540,7 +540,7 @@ If your app is using Mendix 10.10 (or a later version) consider using the [Azure
 ##### Limitations
 
 * Passwords can only be rotated manually.
-* A standalone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not affect performance of other databases on the same server.
+* A stand-alone SQL Server will be shared between environments, which could affect scalability. Azure SQL allows more flexibility, and is much better at scaling - each database can have reserved capacity and does not affect performance of other databases on the same server.
 * NetBIOS names are not supported. It is only possible to connect using the server's FQDN.
 * Only username/password authentication is supported at the moment.
 
@@ -579,7 +579,7 @@ In the SQL Server plan configuration, enter the following details:
 * **Authentication** - select `static` from the dropdown.
 * **Username** - Username for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
 * **Password** - Password for the admin user, used by the Mendix Operator to create or delete tenants for app environments.
-* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
+* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a stand-alone SQL Server):
     * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
     * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
     * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic`. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).
@@ -679,7 +679,7 @@ Do not use the name of an existing Service Account (environment name), or one of
 
 {{% /alert %}}
 
-* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a standalone SQL Server):
+* **Is Azure SQL Server** - Opens additional options that are only available when using Azure SQL (instead of a stand-alone SQL Server):
     * **Elastic Pool** - Specifies an existing Elastic Pool to use (can be left empty if the new app's database should not be using an elastic pool)
     * **Edition** - Specifies the [database edition/tier](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#edition) to use, for example `Basic`. Can be left empty, in this case Azure SQL will use the default `GeneralPurpose` edition.
     * **Service Objective** - Specifies the [database service objective](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-database-transact-sql?view=azuresqldb-current&tabs=sqlpool#service_objective) (performance level), for example `Basic`. Can be left empty, in which case Azure SQL will use the default service objective (such as `GP_Gen5_2`).

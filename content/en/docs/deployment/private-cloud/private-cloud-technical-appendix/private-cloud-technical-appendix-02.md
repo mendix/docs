@@ -16,7 +16,7 @@ This documentation provides an overview of how the Mendix for Private Cloud comp
 {{% alert color="info" %}}
 The sequence diagrams in this document are simplified for clarity. Kubernetes Operators are non-blocking, event-driven, and asynchronous. Instead of relying on blocking method calls, the Operator receives events when a [Custom Resource (CR)](/developerportal/deploy/private-cloud-technical-appendix-01/#operators) or another Kubernetes Resource changes its status and, if changes are necessary, will send a request to create, update, or delete a Kubernetes Resource.
 
-The diagrams apply to both connected and standalone modes, with some additional steps which are identified as being only used in connected mode.
+The diagrams apply to both connected and stand-alone modes, with some additional steps which are identified as being only used in connected mode.
 {{% /alert %}}
 
 ## Installation Prerequisites
@@ -103,7 +103,7 @@ You can then download `mxpc-cli`, the configuration tool, which is used to insta
 
 The configuration tool provides an interactive, terminal-based GUI to prepare and apply Kubernetes configuration objects (such as deployments, pods, secrets, and Mendix Operator CRs). To communicate and authenticate with the Kubernetes API, the default `KUBECONFIG` is used. If your `KUBECONFIG` has multiple contexts, clusters, or users, you must switch to the correct target context before running the `mxpc-cli` tool.
 
-In *Connected Mode*, the `mxpc-cli` tool will call the Mendix Portal to create a label for the storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Mendix Portal when the cluster is installed in Standalone mode.
+In *Connected Mode*, the `mxpc-cli` tool will call the Mendix Portal to create a label for the storageplan CR which is successfully created or updated in Kubernetes. Cluster members with the appropriate roles can then select this plan from a dropdown when creating a new environment. The `mxpc-cli` tool will not interact with the Mendix Portal when the cluster is installed in Stand-alone mode.
 
 {{% alert color="info" %}}
 The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
@@ -115,7 +115,7 @@ When you want to create a new environment you need to create a `MendixApp` CR in
 
 In connected mode, this is initiated in the Mendix Portal, which sends the `MendixApp` CR to the Mendix Gateway Agent. The Agent will then create the `MendixApp` CR in Kubernetes.
 
-In standalone mode, you need to create the MendixApp CR directly in your Kubernetes namespace, using the `mxpc-cli` tool.
+In stand-alone mode, you need to create the MendixApp CR directly in your Kubernetes namespace, using the `mxpc-cli` tool.
 
 When it finds the MendixApp CR, the Operator will initiate processing of all the `MendixApp` dependencies, as shown in the diagram below.
 
@@ -160,7 +160,7 @@ If the provisioner pod fails with an error, it is likely to be because of a conf
 
 When a new deployment package (MDA) is deployed from the Mendix Portal to an environment, the Mendix Portal will generate a new sourceURL (the URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
 
-For a standalone environment, you need to create the `MendixApp` CR yourself and apply it to the namespace where it should be deployed. You can find further instructions in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
+For a stand-alone environment, you need to create the `MendixApp` CR yourself and apply it to the namespace where it should be deployed. You can find further instructions in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 
 The processing of the `MendixApp` CR is shown in the diagram below.
 

@@ -20,7 +20,7 @@ A recent CPU (minimal dual core, minimal 2 GHz), 4 GB of memory, and 20 GB of fr
 
 ### Selenium Server (or Servers)
 
- &#xfeff; | Standalone Server | Grid Hub | Grid Node 
+ &#xfeff; | Stand-alone Server | Grid Hub | Grid Node 
 -----|----|--------------|--------------
 Minimal    | Recent CPU, 1 GHz 2 GB RAM    | Recent CPU, 1 GHz 2 GB RAM    | Recent CPU, 1 GHz 2 GB RAM
 In addition per browser instance ¹    | 1 Core, 1 GHz 500 MB RAM | 200 MHz 200 MB RAM | 1 Core, 1 GHz 500 MB RAM
@@ -53,7 +53,7 @@ Only the Selenium server version that is delivered as part of the ATS installati
 
 ATS Version | Supported Selenium version | Download |Required Java version
 ---|---|---|---
-2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar) | JRE 8
+2.9 | 3.141.59 | [Download here](https://selenium-release.storage.googleapis.com/3.141/selenium-server-stand-alone-3.141.59.jar) | JRE 8
 
 ### Chrome Driver
 

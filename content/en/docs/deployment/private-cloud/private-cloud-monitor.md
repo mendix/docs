@@ -349,7 +349,7 @@ If you would like to enable Prometheus scraping only for a specific environment,
 
 <!-- Be careful - this documentation reuses some screenshots from other pages like private-cloud-cluster.md -->
 
-#### Enable Scraping in Standalone Mode
+#### Enable Scraping in Stand-alone Mode
 
 {{% alert color="warning" %}}Do not use this approach in Connected mode - any annotations you set this way will be overridden by annotations set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
@@ -540,7 +540,7 @@ In this mode, all other `runtimeMetricsConfiguration` attributes are ignored.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/environment-metrics-mode-compatibility.png" class="no-border" >}}
 
-#### Enable Compatibility Metrics in Standalone Mode
+#### Enable Compatibility Metrics in Stand-alone Mode
 
 {{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
@@ -590,7 +590,7 @@ To completely disable metrics collection, delete the `runtimeMetricsConfiguratio
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/environment-metrics-mode-default.png" class="no-border" >}}
 
-#### Disable Metrics in Standalone Mode
+#### Disable Metrics in Stand-alone Mode
 
 {{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 
@@ -690,7 +690,7 @@ After an environment is [switched into native metrics mode](#enable-native-metri
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-monitor/private-cloud-metrics-apply.png" class="no-border" >}}
 
-#### Enable Native Metrics in Standalone Mode
+#### Enable Native Metrics in Stand-alone Mode
 
 {{% alert color="warning" %}}Do not use this approach in Connected mode. Any configuration you set this way will be overridden by the configuration set in the Private Cloud section of the Mendix Portal.{{% /alert %}}
 

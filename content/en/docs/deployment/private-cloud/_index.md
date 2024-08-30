@@ -12,7 +12,7 @@ weight: 48
 
 Your organization may have a requirement to use a private cloud, perhaps as part of a multi-cloud strategy. This could be because of legal requirements or a desire to have complete control over your data. Mendix for Private Cloud allows you to do this while keeping the familiar components of Docker and Kubernetes.
 
-You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal, or utilize the *standalone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Standalone Clusters](#connected-standalone), below, for more information.
+You can use Mendix for Private Cloud with the *connected* option to keep the simplicity of one-click deployments from the Mendix Portal, or utilize the *stand-alone* Mendix Operator to deploy Mendix apps through your own DevOps process, which is particularly useful for private clouds with an *air-gap* isolating them from the internet. See [Connected and Stand-alone Clusters](#connected-stand-alone), below, for more information.
 
 Please see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/) for a list of platforms supported by Mendix for Private Cloud.
 
@@ -37,13 +37,13 @@ To deploy your app, you have two options:
 
 When you deploy through the Mendix Portal, this can be done by any Mendix user who has been given the appropriate rights to the cluster which has been registered.
 
-## Connected and Standalone Clusters{#connected-standalone}
+## Connected and Stand-alone Clusters{#connected-stand-alone}
 
 To allow you to manage the deployment of your apps to Red Hat OpenShift and Kubernetes, you first need to register a cluster in the Mendix Portal. This will provide you with the information you need to deploy the **Mendix Operator** in your cluster.
 If you have chosen a *connected* cluster, the **Mendix Gateway Agent** will also be deployed.
 Once the Mendix Operator is deployed to your cluster, you can use it to configure the resources which will be used by your apps.
 
-You then have two options, depending on whether you have chosen to create a *connected* cluster or a *standalone* cluster.
+You then have two options, depending on whether you have chosen to create a *connected* cluster or a *stand-alone* cluster.
 
 ### Connected Architecture
 
@@ -53,17 +53,17 @@ Using this channel, any Mendix user who has been given the correct authority can
 
 {{< figure src="/attachments/deployment/private-cloud/mx4pc-architecture.png" class="no-border" >}}
 
-### Standalone Architecture
+### Stand-alone Architecture
 
-If you have chosen to register a standalone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
+If you have chosen to register a stand-alone cluster, then all communication with the Mendix Operator will be through instructions which are made directly through the Kubernetes API. These can be made manually, but are generally performed by your CI/CD pipeline. In this case, you will also have to have local source control of the Mendix app deployment packages to ensure that the deployment process can discover them.
 
-{{< figure src="/attachments/deployment/private-cloud/mx4pc-standalone-architecture.png" class="no-border" >}}
+{{< figure src="/attachments/deployment/private-cloud/mx4pc-stand-alone-architecture.png" class="no-border" >}}
 
 ## Product Capability Comparison
 
-The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Standalone.
+The table below shows the differences between the capabilities for apps deployed to Mendix Cloud, Mendix for Private Cloud Connected, and Mendix for Private Cloud Stand-alone.
 
-| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Standalone |
+| Capability | Mendix Cloud | Mendix for Private Cloud Connected | Mendix for Private Cloud Stand-alone |
 | --- | --- | --- | --- |
 | Environment provisioning | Fully automated | Provisioned with database and blob storage provided by the customer | Provisioned with database and blob storage provided by the customer|
 | Environment configuration<br/>*For example, constants and scheduled event* | Mendix Portal | Mendix Portal | Custom Resources via Mendix Operator |
@@ -91,7 +91,7 @@ The Mendix container is specified per app in the portal. You can update the reso
 The m2ee-sidecar container's resources are specified in the [OperatorConfiguration CR](/developerportal/deploy/private-cloud-cluster/#resource-definition-ocm).
 
 {{% alert color="info" %}}
-If the app is running in Standalone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of *OperatorConfiguration* CR's *spec.runtimeResources* instead.
+If the app is running in Stand-alone mode and its MendixApp CR does not have any resources assigned in the MendixApp CR specification resources, the Mendix Operator will use the value of *OperatorConfiguration* CR's *spec.runtimeResources* instead.
 {{% /alert %}}
 
 If the customer decided to use a [Vertical Pod autoscaler](/developerportal/deploy/private-cloud-cluster/#vertical-pod-autoscaling), the autoscaler can override any pod or container resources.
@@ -120,7 +120,7 @@ You can request an Operator license by doing the following:
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator
-    * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
+    * The Mendix for Private Cloud architecture type. See [Connected and Stand-alone Clusters](#connected-stand-alone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace (or namespaces) for which you want to request an Operator license
 
 5. Save the request.
@@ -145,7 +145,7 @@ You can request a Runtime license by doing the following:
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Runtime
-    * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
+    * The Mendix for Private Cloud architecture type. See [Connected and Stand-alone Clusters](#connected-stand-alone), above, for more information — optionally, leave additional information in the **comment** field
     * If "Connected" please provide the namespace (or namespaces) for which you are requesting the runtime license (or licenses)
 
 5. Save the request.
@@ -166,7 +166,7 @@ You can also request for both the Operator and Runtime license within the same r
 
     * The name of your company (if requesting on behalf of a client, enter the name of their company).
     * License Type: Operator and Runtime
-    * The Mendix for Private Cloud architecture type. See [Connected and Standalone Clusters](#connected-standalone), above, for more information — optionally, leave additional information in the **comment** field
+    * The Mendix for Private Cloud architecture type. See [Connected and Stand-alone Clusters](#connected-stand-alone), above, for more information — optionally, leave additional information in the **comment** field
     * The namespace (or namespaces) for which you want to request an Operator license
 
 ### Activating Your License (or Licenses)
@@ -177,9 +177,9 @@ If your app is able to connect to the internet to contact the Mendix license ser
 
 If your app is **Connected** to the Mendix Portal, you can enter the subscription secret [in the Mendix Portal](/developerportal/deploy/private-cloud-deploy/#license-mendix)
 
-#### Standalone & Offline Private Cloud Apps{#activate-offline}
+#### Stand-alone & Offline Private Cloud Apps{#activate-offline}
 
-If your app is **Standalone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
+If your app is **Stand-alone** or unable to contact the Mendix license server, you will receive a **LicenseId** and a **LicenseKey**. You will have to apply these by [editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) in the cluster.
 
 #### Private Cloud Licensing Manager
 

@@ -8,7 +8,7 @@ description: "A description of some extra considerations to be taken into accoun
 ## Introduction
 
 {{% alert color="warning" %}}
-This information is for standalone Mendix application which are not fully integrated into Insights Hub but just want to incorporate IIoT Data coming from Insights Hub.
+This information is for stand-alone Mendix application which are not fully integrated into Insights Hub but just want to incorporate IIoT Data coming from Insights Hub.
 {{% /alert %}}
 
 If you have your own user management or SSO solution, but want to gather insights via the Insights Hub APIs, this page explains how you can achieve it. It describes how you can authenticate Insights Hub API REST calls with the help of a **Technical User** and the **Siemens Insights Hub API Authenticator**.

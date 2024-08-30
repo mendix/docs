@@ -14,7 +14,7 @@ The following pattern letters can be used to parse and format Date and time valu
 | Letter | Date or Time Component                    | Examples               |
 | ------ | ----------------------------------------- | ---------------------- |
 | M      | Month in year (context sensitive)         | November; Nov; 11      |
-| L      | Month in year (standalone)                | November; Nov; 11      |
+| L      | Month in year (stand-alone)                | November; Nov; 11      |
 | y      | Year                                      | 2001; 01               |
 | G      | Era designator                            | AD                     |
 | E      | Day name in week                          | Tuesday; Tue           |

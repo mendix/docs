@@ -50,7 +50,7 @@ To use the ATS Helper, select the bookmark, press <kbd>Ctrl</kbd>, and hover ove
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-install-ats-helper-recorder/ats-helper-widget.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The ATS Helper only works on standalone widgets.
+The ATS Helper only works on stand-alone widgets.
 {{% /alert %}}
 
 See [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/) for more information on how to use the ATS Helper.

@@ -285,7 +285,7 @@ To enable your environment to use Vault as external secret storage, follow these
           #  secretPath: "secret/data/<{env-configuration-secret}>"
     ```
 
-14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true` in the Mendix app CRD.
+14. Create an app with the secret store enabled. If you are using the Portal, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a stand-alone app, you must set the value of the `allowOverrideSecretsWithSecretStoreCSIDriver` setting to `true` in the Mendix app CRD.
     The following yaml shows an example Mendix app CRD:
 
     ```yaml
@@ -372,7 +372,7 @@ To enable your environment to use [AWS Secrets Manager](https://aws.amazon.com/b
     kubectl -n <{Kubernetes namespace}> annotate serviceaccount <{environment name}> eks.amazonaws.com/role-arn=<{aws role ARN}>
     ```
 
-11. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+11. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a stand-alone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
 
     The following yaml shows an example Mendix app CRD:
 
@@ -572,7 +572,7 @@ To enable your environment to use [Azure Key Vault](https://learn.microsoft.com/
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-vault/aks-keyvault-keys.png" >}}
 
-7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a standalone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
+7. Create an app with the secret store enabled. If you are using connected mode, secret stores are enabled automatically if the **Enable Secrets Store** option is activated for the namespace where you create the app. For a stand-alone app, you must set the value of the setting `allowOverrideSecretsWithSecretStoreCSIDriver` to `true` in the Mendix app CRD.
 
     The following yaml shows an example Mendix app CRD:
 

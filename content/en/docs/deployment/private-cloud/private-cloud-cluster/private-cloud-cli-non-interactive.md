@@ -21,7 +21,7 @@ The following parameters may be used in the commands:
   
 * `--namespace` – a cluster namespace.
 * `--clusterType` – a cluster type *openshift* or *generic*.
-* `--clusterMode` – a cluster mode *standalone* or *connected*.
+* `--clusterMode` – a cluster mode *stand-alone* or *connected*.
 * `-i` – the *namespace id* that is shown in the **Installation** tab of a namespace in the Private Cloud Portal.
 * `-s` – the *namespace secret* that is shown in the **Installation** tab of a namespace in the Private Cloud Portal.
 * `--file` – a file which contains the configuration for the namespace.

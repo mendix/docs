@@ -1101,14 +1101,14 @@ components:
       title: installationType
       enum:
         - Connected
-        - Standalone
+        - Stand-alone
       example: Connected
       description: |-
         non-editable</br>
         Model for installationType.
       x-examples:
         example-connected: Connected
-        example-standalone: Standalone
+        example-stand-alone: Stand-alone
     cliVersion:
       type: object
       x-examples:
@@ -2046,7 +2046,7 @@ components:
                     namespace:
                       namespaceId: 7dab54b2-39f9-48e4-8ceb-5a7ecbba44e1
                       name: my-namespace-2
-                      installationType: Standalone
+                      installationType: Stand-alone
                       secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
                       productTypePCLM: standard
                       plans:

@@ -1,4 +1,4 @@
-{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" stand-alone=\"yes\"?>" | safeHTML }}
 <!-- Updated to exclude pages which have the front matter sitemapexclude: true - can then exclude all but the latest version see https://dereckcurry.com/posts/excluding-pages-from-the-sitemap/ -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">

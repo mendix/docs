@@ -14,7 +14,7 @@ Once the cluster has been registered, and a namespace created, team members with
 
 This document explains how to use the Mendix Portal to deploy your **connected** app.
 
-To deploy to a namespace in a **standalone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
+To deploy to a namespace in a **stand-alone** cluster, you provide the CRs through the console or command line. This is described in [Using Command Line to Deploy a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-operator/).
 
 Within your namespace you can run one, or several, Mendix apps. You can see the relationship between the Mendix environments and the Kubernetes namespaces in the image below.
 
@@ -456,7 +456,7 @@ By default, there will be no admin password set for your environment. This means
 
 This deletes the environment — you will be asked to confirm this action.
 
-If the cluster is standalone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
+If the cluster is stand-alone, or the Mendix Gateway Agent is not connected for some other reason, you can still delete the environment information in the Mendix Portal. However, the actual environment will not be deleted and you will have to do this manually.
 
 If the environment cannot be deleted, you will receive a warning, but can go ahead and remove it from the Mendix Portal.
 
@@ -640,7 +640,7 @@ Under some circumstances changes in the status of the environment and its apps w
 
 ### Deleting the Cluster
 
-If the cluster is running in standalone mode, you need to delete all `MendixApp` CRs.
+If the cluster is running in stand-alone mode, you need to delete all `MendixApp` CRs.
 
 To confirm that environments and their associated storage have been successfully deleted, run:
 
@@ -837,7 +837,7 @@ If your application keeps restarting unexpectedly, check your application log fo
 
 ## How the Operator Deploys Your App {#how-operator-deploys}
 
-The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal, for a connected cluster, or through the command line, for a standalone cluster. The process looks like this:
+The Mendix Operator is another app within your private cloud namespace. It is triggered when you provide a CR file. This can either be through the Mendix Portal, for a connected cluster, or through the command line, for a stand-alone cluster. The process looks like this:
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/mx4pc-operator-deploy.png" class="no-border" >}}
 

@@ -142,7 +142,11 @@ You can clone a local copy of a forked repository, make documentation changes, a
 8. To see the local site preview, go to `http://localhost:1313/`.
 9. Navigate in the left sidebar menu to the page that you just made changes to, and you can preview your changes locally! 
 
-{{% alert color="info" %}}As long as the current local build is still running, each time after you save your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved. If not, clear your browser cache, close and reopen the browser, and go to the local site again (in many browsers, such as Google Chrome, Firefox, and Microsoft Edge, you can perform a hard refresh on the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> on a Mac. This ignores cached content.) If this still does not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run `npm run build` again. {{% /alert %}}
+{{% alert color="info" %}}As long as the current local build is still running, each time after you save your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved!
+
+If you do not see the changes you just saved, clear your browser cache, close and reopen the browser, and go to the local site again. Alternatively, in many browsers, such as Google Chrome, Firefox, and Microsoft Edge, you can perform a hard refresh on the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> on a Mac. This hard refresh ignores cached content.
+
+If the above solutions do not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run the command `npm run build` again. {{% /alert %}}
 
 ## Leaving Feedback on the Documentation
 

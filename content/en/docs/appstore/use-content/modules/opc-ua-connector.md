@@ -49,9 +49,9 @@ Make sure that you call the OPC-UA after-startup and before-shutdown actions (`O
 The descriptions of the actions are as follows:
 
 * `OPCUAConnector.ASU_OPCUA` tries to reconnect to configured servers, re-monitor items, and pre-loads your app trusted certificates. 
-* `OPCUAConnector.BSD_OPCUA` closes all opened connections.
+* `OPCUAConnector.BSD_OPCUA` closes all open connections.
 
-{{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup will take much longer.{{% /alert %}}
+{{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup may take much longer.{{% /alert %}}
 
 ### Configuring the Connection to the OPC-UA Server
 
@@ -75,7 +75,7 @@ The descriptions of the actions are as follows:
 
     {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/new-configuration-step-one.png"  >}}
 
-    {{% alert color="info" %}}If you want to have your own custom business logic to connect to a server, you can also make your own configuration. It is recommended to use the wizard whenever possible. However, it can be the case that the server is not discoverable. When this happens, create your own microflow that manually sets all the fields on a server configuration object. For more information, see [Advanced Connections](#advanced-connection) section.{{% /alert %}}
+    {{% alert color="info" %}}If you want to have your own custom business logic to connect to a server, you can also make your own configuration. It is recommended to use the wizard whenever possible. However, it can be the case that the server is not discoverable. If so, you need to create your own microflow that manually sets all the fields on a server configuration object. For more information, see [Advanced Connections](#advanced-connection) section.{{% /alert %}}
 
 Once the configuration is saved, the APIs can be used in your application.
 
@@ -85,7 +85,7 @@ Once the configuration is saved, the APIs can be used in your application.
 
 2. Run the app locally and open the app.
 
-3. Log in as a user that can browser the OPC-UA server.
+3. Log in as a user with the `canBrowse` user role.
 
 4. Go to the **Configurations** page.
 
@@ -96,6 +96,7 @@ Once the configuration is saved, the APIs can be used in your application.
 ## Advanced Connection {#advanced-connection}
 
 This section shows you how to configure a connection to an OPC-UA server without the discovery service.
+If you have succesfully set up your configuration in the Basic Configuration section, this section can be omited and please continue to section {[Using Services](#using-services)
 
 1. Create a microflow to set up a manual connection. Make sure that the microflow do the following in order:
 
@@ -144,7 +145,7 @@ The three options are as follows:
 
 A connection to an OPC-UA server can be encrypted to provide security. Based on the response, the server will dictate which message security modes (i.e. forms of encryption) it requires for a connection.
 
-If the `MessageSecurityMode` attribute of the `ServerConfiguration` object is set to *Sign* or `Sign&Encrypt`, the `ServerConfiguration` object requires a `ClientCertificateHolder`, with the `ClientCertificate` and `ClientCertificatePrivateKey` objects that must meet the following requirements:
+If the `MessageSecurityMode` attribute of the `ServerConfiguration` object is set to *Sign* or *Sign&Encrypt*, the `ServerConfiguration` object requires a `ClientCertificateHolder`, with the `ClientCertificate` and `ClientCertificatePrivateKey` objects that must meet the following requirements:
 
 * The `ClientCertificate` must be an X509 formatted PEM file.
 * The `ClientCertificatePrivateKey` must be an encrypted PKCS8 or PKCS1 formatted PEM file.
@@ -159,7 +160,7 @@ The association between the client and the server certificates does not need to 
 
 If you ever want to reject a certificate from the server, remove it from the list of trusted certificates and restart the application.
 
-## Using Services
+## Using Services {#using-services}
 
 ### View Service
 
@@ -177,7 +178,7 @@ The browse action allows you to traverse from one node to others.  The request o
 
 * `Nodeid` – This is the ID of the node from where you want to browse.
 * `BrowseDirections` – This specifies the direction to traverse.
-* `NodeiRreferenceTypeID` – This specifies the node ID of the reference type to follow. If it is left empty, all references are returned.
+* `NodeIdReferenceTypeID` – This specifies the node ID of the reference type to follow. If it is left empty, all references are returned.
 * `IncludeSubTypes` – This indicates whether subtypes of the `ReferenceType` are included.
 * `NodeClassMask` – This specifies which `NodeClasses` will be returned. If no value is provided, no filter will be applied. This is an integer attribute. The interpretation is a set of bits as described in the table below. You need to sum up the values to create the mask. For example: browsing only `object`, `variable`, and `view` is represented in binary by `[1,1,0,0,0,0,0,1]`, which has to be set up as 1 + 2 + 128 = 131 for the integer value. 
   

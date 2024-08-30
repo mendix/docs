@@ -595,12 +595,12 @@ Role of user identifiers in OIDC and SCIM protocols:
 
 * OIDC protocol can use both types of identifiers based on use case:
 
-  * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
-  * The ID-token also contains an `oid` claim, which includes the user’s object ID.
+    * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
+    * The ID-token also contains an `oid` claim, which includes the user’s object ID.
 
 * SCIM:
 
-  * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
+    * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
 
 #### Guidance on User Identifier{#guidance-user-identifier}
 

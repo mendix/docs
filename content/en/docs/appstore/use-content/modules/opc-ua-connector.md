@@ -51,20 +51,15 @@ The descriptions of the actions are as follows:
 * `OPCUAConnector.ASU_OPCUA` tries to reconnect to configured servers, re-monitor items, and pre-loads your app trusted certificates. 
 * `OPCUAConnector.BSD_OPCUA` closes all open connections.
 
-{{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup may take much longer.{{% /alert %}}
+{{% alert color="info" %}}If you maintain many connections to OPC-UA servers, the startup can take much longer.{{% /alert %}}
 
 ### Configuring the Connection to the OPC-UA Server
 
 1. In Studio Pro, add the `NAV_Configuration` microflow to your navigation. It allows to acces the **Configurations** page.
-
 2. Assign the `CanConfigure` module role to a user role that will configure the connections to your server.
-
 3. Run the app locally and open the app.
-
-4. Log in as a user that can configure the connection.
-
+4. Log in as a user with the `CanConfigure` user role.
 5. Go to the added **Configurations** page.
-
 6. If you want to connect to a server with a message security mode `Sign` or `Sign&Encrypt`, add your client certificate by clicking **Update application certificate** in the upper-right corner of the page.
 
 7. Click **New configuration** in the upper-right corner of the page.
@@ -82,13 +77,9 @@ Once the configuration is saved, the APIs can be used in your application.
 ### Browsing the OPC-UA Server
 
 1. In Studio Pro, assign the `CanBrowse` module role to a user role that will browse the OPC-UA server.
-
 2. Run the app locally and open the app.
-
-3. Log in as a user with the `canBrowse` user role.
-
+3. Log in as a user with the `CanBrowse` user role.
 4. Go to the **Configurations** page.
-
 5. Click **Browse** and see what data is available on the server.
 
     {{< figure src="/attachments/appstore/use-content/modules/opcua-connector/browse.png"  >}}
@@ -204,7 +195,7 @@ The browse action allows you to traverse from one node to others.  The request o
   | 4    | DisplayName    | 16    |
   | 5    | TypeDefinition | 32    |
 
-    The response of the `Browse` action returns a browse response object. There is a `StatusCode` associated to the response, which represents the status of the call. The response may contain one or more `BrowseNode` objects. These are the references from the response. `BrowseNode` contains the following fields:
+    The response of the `Browse` action returns a browse response object. There is a `StatusCode` associated to the response, which represents the status of the call. The response can contain one or more `BrowseNode` objects. These are the references from the response. `BrowseNode` contains the following fields:
 
     * `Nodeid` – This is the ID of the referenced node.
     * `BrowseName` – This is the browse name of the referenced node.

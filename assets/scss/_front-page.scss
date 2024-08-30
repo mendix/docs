@@ -1,5 +1,5 @@
 h1.page-title{
-    font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
+    font-weight: $font-weight-normal;
     font-size: 2.5rem;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -72,15 +72,13 @@ div.my-column{
     margin-right:2rem;
 }
 div.w-50{
-    margin: 0.75rem 0.05rem 0.75rem 4.5%;
-    padding: 2rem;
     border: none;
     @include media-breakpoint-up(xl) {
         padding-bottom: 1.5rem;
     }
     @include media-breakpoint-up(xl){
-        flex: 0 0 44%;
-        max-width: 44%;
+        flex: 0 0 30%;
+        max-width: 30%;
     }
     @include media-breakpoint-down(xl){
         flex: 0 0 90%;
@@ -92,12 +90,6 @@ div.w-50{
     }
 }
 
-div.my-row{
-    padding: 0;
-    margin: 0;
-    margin-top: 1rem;
-    max-width: 1280px;
-}
 div.inner-row{
     padding: 0;
     margin: 0rem 1rem 0rem 0rem;
@@ -113,17 +105,9 @@ div.landing-page-alert{
     margin: 1rem;
     margin-right: .5rem;
 }
-div.cards-layout{
-    padding-right: 0;
-    padding-left: 0;
-}
 img.my-icon{
     width: 64px;
     height: 64px;
-}
-
-.icon-recolor{
-    filter: invert(17%) sepia(4%) saturate(3835%) hue-rotate(184deg) brightness(92%) contrast(85%);
 }
 
 img.ToC-icon{
@@ -144,15 +128,22 @@ img.nav-icon{
 }
 h4.card-title{
     color: $gray-900;
-    font-weight: $font-weight-medium; // NK - adjusted weight
+    font-weight: $font-weight-medium;
     margin: 0.5rem 0;
-    font-size: $h3-font-size; // NK - adjusted size
+    font-size: $h3-font-size;
+}
+h4.card-title{
+    color: $gray-900;
+    font-weight: $font-weight-medium;
+    font-size: $h3-font-size;
+    border-top: 3px solid;
+    padding-top: 1rem;
+    margin-top: 1rem;
 }
 h4.card-title-w-50{
     color: $gray-900;
-    font-weight: $font-weight-medium; // NK - adjusted weight
-    font-size: $h3-font-size; // NK - adjusted size
-    border-top: 2px solid;
+    font-weight: $font-weight-medium;
+    font-size: $h3-font-size;
     padding-top: 1rem;
     margin-top: 1rem;
 }
@@ -174,13 +165,6 @@ div.my-container{
     border-style: none;
 }
 
-a.doc-link{
-    border-radius: 0.5rem;
-    padding: 0.375rem 0.375rem;
-    position: absolute; // NK - fixed position of button
-    bottom: 1rem; // NK - fixed position of button
-    right: 1rem; // NK - fixed position of button
-}
 // 404 page
 a.home-btn{
     border-radius: 0.5rem;

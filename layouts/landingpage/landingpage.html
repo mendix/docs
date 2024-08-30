@@ -8,28 +8,12 @@
             <div class="td-main">
                 <div class="row flex-xl-nowrap stretch-main" style="overflow-x:hidden !important;">
                     <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
-                        <!-- NK - adjusted resizing for different screens -->
                         {{ partial "sidebar.html" . }}
                     </aside>
-                    <main class="col lp" role="main" style="padding-top:0rem; border-right: none;">
-                        <!-- NK - adjusted resizing for different screens -->
-                        <!-- MvM - Do a test for missing Title -->
-                        {{ if not .Title }}
-                        {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
-                        {{ end }}
-                        <!-- NK - START of addition of versions selector menu, 
-                            taken from themes\docsy\layouts\partials\navbar.html, 
-                            this might get moved again, with further styling changes -->
-                        {{ if  .Site.Params.versions }}
-                        <li class="nav-item dropdown mr-4 d-none d-lg-block">
-                            {{ partial "navbar-version-selector.html" . }}
-                        </li>
-                        {{ end }}
-                        <!-- END of addition -->
-                        <!-- Start of landing page cards -->
+                    <main class="col lp" role="main" style="border-right: none;">
                         <div class="container my-container">
-                            <div class="row" style="padding-top: 5rem; padding-left: 1rem; padding-bottom: 1rem;">
-                                <!-- NK - addded more visual padding -->
+                            <!-- Header start-->
+                            <div class="row">
                                 <div class="col-lg-12 col-xl-7">
                                     <h1 class="page-title">{{ .Page.Title}}</h1>
                                     <br>
@@ -39,15 +23,16 @@
                                     <img src="/images/docs-extended-small.png">
                                 </div>
                             </div>
-                            <div class="row my-row">
-                                <div class="col cards-layout">
-                                    <!-- NK - moved Product cards section to partial -->
+                            <!-- Header end-->
+                            <!-- Product cards start -->
+                            <div class="row">
+                                <div class="col">
                                     {{ partial "landingpage/product-cards.html" . }}
                                 </div>
                             </div>
+                            <!-- Product cards end -->
                             <div class="row resources">
                                 <div class="col col-sm-2 my-column card-body">
-                                    <!-- NK - moved Latest Releases section to partial -->
                                     {{ partial "landingpage/latest-releases.html" . }}
                                 </div>
                                 <div class="col">

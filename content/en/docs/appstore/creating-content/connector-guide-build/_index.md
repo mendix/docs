@@ -140,7 +140,7 @@ Distribute the module to whomever wants to use it (share the file or upload to M
 
 ### Architectural Impact
 
-Because connectors are exported as modules and then published on the Marketplace, they are as decoupled as possible from your development application. This is needed because a copy of the module will be imported in other applications when users download the module from the Marketplace. The implementing application might need to configure some constants, add specific microflows, use pages or snippets, configure specifics on runtime, but it will always be a standalone situation.
+Because connectors are exported as modules and then published on the Marketplace, they are as decoupled as possible from your development application. This is needed because a copy of the module will be imported in other applications when users download the module from the Marketplace. The implementing application might need to configure some constants, add specific microflows, use pages or snippets, configure specifics on runtime, but it will always be a stand-alone situation.
 
 ## Read More
 

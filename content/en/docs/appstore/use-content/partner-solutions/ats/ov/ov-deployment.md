@@ -227,7 +227,7 @@ Selenium is an open-source third-party component and there is no active support 
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Selenium standalone support has been dropped with ATS 2.0. Only Selenium Grid is supported. By following the instructions below, you will set up a Selenium Grid.
+Selenium stand-alone support has been dropped with ATS 2.0. Only Selenium Grid is supported. By following the instructions below, you will set up a Selenium Grid.
 {{% /alert %}}
 
 #### Selenium Runner Setup

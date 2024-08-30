@@ -32,7 +32,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have resolved an issue that prevented users from setting the CPU core request below 1 while creating an environment (Ticket [222687](https://mendixsupport.zendesk.com/agent/tickets/222687)) and (Ticket [222284](https://mendixsupport.zendesk.com/agent/tickets/222284)).
 * We have resolved an issue where users were unable to deselect the namespace in the **Convert Namespace** flow.
 * We have resolved an issue where users were unable to close the **Convert Namespace** screen after navigating back to the namespace selection page.
-* We have resolved an issue where a newly created standalone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
+* We have resolved an issue where a newly created stand-alone namespace was temporarily listed on the **Namespace Overview** page and only disappeared after refreshing the page.
 
 ### July 10th, 2024
 
@@ -89,7 +89,7 @@ This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
 
 #### Portal Enhancements
 
-* Standalone cluster members are now redirected directly to the mxpc-cli download page instead of the Installation page.
+* Stand-alone cluster members are now redirected directly to the mxpc-cli download page instead of the Installation page.
 * An issue has been resolved where an incorrect notification email was sent when cluster/namespace membership was auto-accepted.
 * A new field, License Provision Error, has been added to the Environment details page for cases where license provisioning fails.
 * A problem preventing users with developer permissions from accessing the Model Option from the Environment Overview page has been fixed (Ticket [215150](https://mendixsupport.zendesk.com/agent/tickets/215150)).
@@ -153,7 +153,7 @@ This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
 * Disabling the Debugger will no longer display an incorrect loader message, enhancing user experience.
 * For Global Operator, a new UUID is now generated every time a main namespace is created in a cluster, ensuring uniqueness and consistency.
 * We fixed an issue in the Global Operator where the status for the managed namespace was incorrect under certain conditions.
-* We have removed the **Standalone** option when creating the main namespace in the Global Operator, streamlining the process for administrators.
+* We have removed the **Stand-alone** option when creating the main namespace in the Global Operator, streamlining the process for administrators.
 
 #### Deploy API Improvements
 
@@ -176,7 +176,7 @@ This issue has been fixed in Mendix Operator [version 2.17.1](#2.17.1).
 * Instead of checking if the app is responding to HTTP requests (which only happens after an app has completed its startup process), the liveness probe now calls a dedicated healthcheck endpoint.
     * This prevents Kubernetes from restarting an app if it's temporarily overwhelmed with requests or background tasks - instead, an app fails a liveness check only if it's not replying to healthcheck calls, or returning a failed healthcheck status.
     * It is no longer necessary to adjust startup or liveness probes, as the app will be detected as healthy a few seconds after it is started.
-* For Standalone clusters, it is no longer necessary to specify all `microflowConstants` in the MendixApp CR.
+* For Stand-alone clusters, it is no longer necessary to specify all `microflowConstants` in the MendixApp CR.
     * The Operator will use default constant values for any constants that are not specified.
     * With this change, *Missing microflow constant definitions* errors will no longer cause deployments to fail.
     * In addition, the `mendixRuntimeVersion` parameter no longer needs to be updated.
@@ -257,7 +257,7 @@ Some features, such as Private Cloud License Manager, are not fully supported ye
 * We have updated our AWS implementation to detect if a custom [AWS partition](https://docs.aws.amazon.com/whitepapers/latest/aws-fault-isolation-boundaries/partitions.html) should be used, and use that partition's ARN format. This should improve support for AWS China and GovCloud.
 * We have updated third-party component versions.
 * We have improved the reliability of the code that processes statuses for resources such as Network, Build and Runtime. This reduces the number of retries for *the object has been modified, please apply your changes to the latest version and try again* errors, and ensures that status icons are updated as soon as possible.
-* For standalone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
+* For stand-alone clusters, it is now possible to specify the Kubernetes [topologySpreadConstraints](https://kubernetes.io/docs/concepts/scheduling-eviction/topology-spread-constraints/) field.
 * Upgrading to Mendix Operator v2.14.0 from a previous version will restart environments managed by that version of the Operator.
 
 ### November 23, 2023
@@ -931,7 +931,7 @@ To upgrade an existing installation of Mendix for Private Cloud to Mendix Operat
     * customize the Ingress class.
     * customize the Service type.
     * customize the Service port (or ports).
-* We have added options to override the following Ingress and Service options per-environment (only supported in Standalone mode at the moment):
+* We have added options to override the following Ingress and Service options per-environment (only supported in Stand-alone mode at the moment):
     * Ingress annotations
     * Service annotations
     * Ingress class
@@ -998,7 +998,7 @@ To upgrade an existing installation of Private Cloud to this version, follow the
     * The process for upgrading to the next version of Mendix for Private Cloud has been completely automated. Instead of a manual process using a Bash terminal, an upgrade can be done with a click of the mouse.
     * It's now possible to install or upgrade to a specific version of Mendix Operator (1.9.0 and later). Previously, it was only possible to install the latest version of the Operator.
 * We have added reporting of the **Storage Provisioner Version** to the Private Cloud Portal.
-* We have added dedicated sections to configure scheduled events and app constants when using the Operator in standalone mode.
+* We have added dedicated sections to configure scheduled events and app constants when using the Operator in stand-alone mode.
 
 To upgrade an existing installation of Private Cloud to this version, follow the [Upgrade instructions](/developerportal/deploy/private-cloud-upgrade-guide/).
 

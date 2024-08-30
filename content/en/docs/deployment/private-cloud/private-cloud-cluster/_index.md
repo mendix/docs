@@ -91,7 +91,7 @@ To add a namespace, do the following:
 
 3. Enter the following details:
     * **Namespace** – this is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name
-    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Standalone**
+    * **Installation type** – if you want to create environments and deploy your app from the [Mendix Portal](/developerportal/deploy/private-cloud-deploy/), choose **Connected**, but if you only want to control your deployments through the Mendix Operator using the [CLI](/developerportal/deploy/private-cloud-operator/), choose **Stand-alone**
 
 4. Click **Done** to create the namespace.
 
@@ -99,9 +99,9 @@ To add a namespace, do the following:
 
 {{% alert color="warning" %}} If you have selected a *Connected Installation Type* please verify that the [Connected Environment Pre-requisites](#prerequisites-connected) are configured. {{% /alert %}}
 
-### Adding a Namespace for Standalone Cluster {#add-standalone-namespace}
+### Adding a Namespace for Stand-alone Cluster {#add-stand-alone-namespace}
 
-If you would like to add a namespace to be added in the Standalone cluster, do the following:
+If you would like to add a namespace to be added in the Stand-alone cluster, do the following:
 
 1. Click **Details** ({{% icon name="notes-paper-text" %}}) on the top right of the page:
 
@@ -111,17 +111,17 @@ If you would like to add a namespace to be added in the Standalone cluster, do t
 
 2. Click **Add Namespace**.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details-standalone.png" class="no-border" >}}
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/namespace-details-stand-alone.png" class="no-border" >}}
 
 3. Enter the following details:
 
     * **Namespace** – This is the namespace in your platform; this must conform to the namespace naming conventions of the cluster: all lower-case with hyphens allowed within the name.
-    * **Installation type** – Choose **Standalone**.
+    * **Installation type** – Choose **Stand-alone**.
 
 4. Click **Next**.
 5. Once you click on **Next**, you will be redirected to the Installation pop up page from where you can download the mxpc-cli and get the command to install the namespace in the cluster.
 
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/standalone_downloadcli.png" class="no-border" >}}  
+    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/stand-alone_downloadcli.png" class="no-border" >}}  
 
     For existing namespaces, if you would like to download the executables for mxpc-cli, you can go [here](https://privatecloud.mendixcloud.com/rest/internal/v1/mxpc-cli?operatorVersion=latest)
 
@@ -864,7 +864,7 @@ spec:
       azure.workload.identity/use: "true"
 ```
 
-Alternatively, for Standalone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
+Alternatively, for Stand-alone clusters, pod labels can be specified in the `MendixApp` CR for a specific app.
 
 {{% alert color="warning" %}}
 The Mendix Operator uses some labels for internal use. To avoid conflicts with these internal pod labels, please avoid using labels starting with the `privatecloud.mendix.com/` prefix.
@@ -1418,7 +1418,7 @@ The Windows version of the Configuration Tool must be run in a terminal that sup
 
 {{% alert color="info" %}}
 When running PowerShell or the Windows Command Prompt from the [new Windows Terminal](https://www.microsoft.com/en-US/p/windows-terminal/9n0dx20hk701), mouse clicks are [not supported](https://github.com/microsoft/terminal/issues/376).
-Run PowerShell or the Windows Command Prompt terminal as a standalone app.
+Run PowerShell or the Windows Command Prompt terminal as a stand-alone app.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

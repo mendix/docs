@@ -76,7 +76,7 @@ The prerequisites are the following:
     | --- | --- |
     | [2.37.1](https://github.com/git-for-windows/git/releases/tag/v2.37.1.windows.1) | [2.41.0](https://github.com/git-for-windows/git/releases/tag/v2.41.0.windows.3) |
 
-* [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Standalone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
+* [Microsoft Edge WebView2 Evergreen Runtime (x64 or ARM64) (Evergreen Stand-alone Installer version)](https://developer.microsoft.com/en-us/microsoft-edge/webview2/)
 * Mendix Studio Pro version 9.24.0 and above require the following versions of [Gradle](https://gradle.org/install/#manually) with Gradle extracted to the parent directory of the folder where Studio Pro is installed (usually `C:\Program Files\Mendix`) instead of `C:\Gradle`.
     * Mendix Studio Pro versions 9.24.0 to 9.24.10 require Gradle version 7.6 or above
     * Mendix Studio Pro version 9.24.11 and above require Gradle version 7.6.3 or above

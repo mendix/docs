@@ -1,5 +1,5 @@
 ---
-title: "CI/CD for Mendix for Standalone Private Cloud Using Tekton"
+title: "CI/CD for Mendix for Stand-alone Private Cloud Using Tekton"
 linktitle: "CI/CD with Tekton"
 url: /developerportal/deploy/private-cloud-tekton/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
@@ -13,7 +13,7 @@ Please make a request to your Customer Success Manager (CSM) to arrange for acce
 
 ## Introduction
 
-Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Standalone Private Cloud apps. This document explains how to install:
+Mendix recommends using [Tekton](https://tekton.dev/) to create a CI/CD (Continuous Integration and Delivery/Deployment) solution for your Mendix for Stand-alone Private Cloud apps. This document explains how to install:
 
 * Tekton
 * Pipelines containing the appropriate tasks and steps to manage apps and environments
@@ -35,7 +35,7 @@ All commands used in this document should be executed in a Bash (or bash-compati
 To follow these instructions you will need:
 
 * Administrator access to a Kubernetes/OpenShift cluster
-* The standalone [cluster registered in the Mendix Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
+* The stand-alone [cluster registered in the Mendix Portal](/developerportal/deploy/private-cloud-cluster/#create-cluster)
 * A [namespace added](/developerportal/deploy/private-cloud-cluster/#add-namespace) to the cluster
 * The [Mendix Operator v2.8.0+ installed](/developerportal/deploy/private-cloud-cluster/#install-operator) and configured in the cluster
 * The [Helm](https://helm.sh) package manager

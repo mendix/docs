@@ -9,7 +9,7 @@ weight: 10
 
 Mendix offers powerful integration options to incorporate IIoT data provided by Siemens Insights Hub into your Mendix Applications. There are two ways to leverage these integrations.
 
-1. If you would like to have a standalone Mendix application and just want to incorporate IIoT Data coming from Insights Hub into your business logic, please see [Siemens Insights Hub – API calls only](/partners/siemens/mindsphere-api-only/).
+1. If you would like to have a stand-alone Mendix application and just want to incorporate IIoT Data coming from Insights Hub into your business logic, please see [Siemens Insights Hub – API calls only](/partners/siemens/mindsphere-api-only/).
 
 1. If you would like to have full integration within Insights Hub displaying your application on the Insights Hub Launchpad, manage the user access via the Insights Hub Settings app, achieve OEM based use cases via [subtenancy](https://developer.mindsphere.io/howto/howto-subtenant-management.html), or offer your Mendix application within the Insights Hub eco system to other Insights Hub customers (multitenancy), then see the documentation described below.
 

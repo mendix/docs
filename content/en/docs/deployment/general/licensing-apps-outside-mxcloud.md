@@ -76,7 +76,7 @@ To license an Insights Hub app, you need to provide your **License ID** and **Li
 
 ### Mendix for Private Cloud
 
-To license a Mendix app on Mendix for Private Cloud, you need to supply a **Subscription Secret** or license credentials for your app. See below for how it can be added to either a Connected or Standalone cluster.
+To license a Mendix app on Mendix for Private Cloud, you need to supply a **Subscription Secret** or license credentials for your app. See below for how it can be added to either a Connected or Stand-alone cluster.
 
 In addition to the licenses for your apps, you will also need to license the Mendix Operator which helps deploy your app to a Private Cloud environment. For details on the Mendix Operator license, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing).
 
@@ -84,7 +84,7 @@ In addition to the licenses for your apps, you will also need to license the Men
 
 You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add or change the subscription secret on the **Environment Details** page of the environment you wish to license. For more information, see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#license-mendix) section of *Deploying a Mendix App to a Private Cloud Cluster*.
 
-#### Mendix for Private Cloud Standalone
+#### Mendix for Private Cloud Stand-alone
 
 You will need to add the license credentials and configure the license in the Mendix Custom Resource (CR) for your Private Cloud environment. For more information, see the [Editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) section of *Using Command Line to Deploy a Mendix App to a Private Cloud Cluster*.
 

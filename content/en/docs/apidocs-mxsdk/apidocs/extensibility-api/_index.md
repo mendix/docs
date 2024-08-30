@@ -37,6 +37,12 @@ Here is a list of how-tos for you to begin with:
 * [How to host some web content inside a modal dialog using a modal web view](/apidocs-mxsdk/apidocs/extensibility-api/create-modal-web-view/)
 * [How to create microflows for calculations](/apidocs-mxsdk/apidocs/extensibility-api/create-microflows-for-calculations/)
 
+## Advanced APIs
+
+All the APIs meant for the Mendix platform's power users
+
+- [Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/)
+
 ## Learn More
 
 You can dive into the following topics in depth:

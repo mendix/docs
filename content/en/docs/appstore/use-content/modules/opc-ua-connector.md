@@ -275,7 +275,7 @@ In order to monitor items, create a microflow that does the following:
 
 When a notification comes in, the microflow specified by `MicroflowName` on the monitored item will be triggered. 
 
-Use the full name of the microflow, which has this format: `MODULENAME.MICROFLOWNAME`).
+Use the full name of the microflow, which has this format: `MODULENAME.MICROFLOWNAME`.
 
 Below are the parameters that can be used when calling a microflow on a notification (not all the parameters are required):
 

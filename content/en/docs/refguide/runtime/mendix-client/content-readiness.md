@@ -20,7 +20,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Community Commons](https://marketplace.mendix.com/link/component/170) | ✅ |
 | [Mx Model Reflection](https://marketplace.mendix.com/link/component/69) | ❌ |
 | [Excel Importer](https://marketplace.mendix.com/link/component/72) | ❌ |
-| [Encryption](https://marketplace.mendix.com/link/component/1011) | ❌ |
+| [Encryption](https://marketplace.mendix.com/link/component/1011) | ✅ |
 | [SAML](https://marketplace.mendix.com/link/component/1174) | ❌ |
 | [Excel Exporter](https://marketplace.mendix.com/link/component/726) | ❌ |
 | [Deep Link Module](https://marketplace.mendix.com/link/component/43) | ✅ |
@@ -28,7 +28,7 @@ The following table shows which of the more popular platform-supported Marketpla
 | [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515) | ✅ |
 | [Data Widgets](https://marketplace.mendix.com/link/component/116540) | ✅ |
 | [Database Connector](https://marketplace.mendix.com/link/component/2888) | ✅ |
-| [Workflow Commons](https://marketplace.mendix.com/link/component/117066) | ❌ |
+| [Workflow Commons](https://marketplace.mendix.com/link/component/117066) | ✅ |
 | [Atlas Core](https://marketplace.mendix.com/link/component/117187) | ✅ |
 | [Email Connector](https://marketplace.mendix.com/link/component/120739) | ❌ |
 | [UnitTesting](https://marketplace.mendix.com/link/component/390) | ✅ |

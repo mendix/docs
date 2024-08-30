@@ -30,13 +30,17 @@ li.link-list{
     font-size: 1rem;
     list-style-position: outside;
     list-style: none;
-    color: $link-color;
     a {
         text-decoration: none;
+        &::after {
+            content: "→";
+            padding-left: 0.25rem;
+        }
         &:hover {
             color: $link-hover-color;
             text-decoration: underline;
         }
+        color: $secondary;
     }
 }
 

@@ -205,7 +205,7 @@
 }
 
 // Style visited links but exclude buttons and left sidebar
-a:not(.btn):not(.td-sidebar-link):visited {
+a:not(.btn):not(.td-sidebar-link):not(.link-list a):visited {
     color: $purple;
 }
 

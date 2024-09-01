@@ -310,7 +310,7 @@ You can import and export table mappings to an XML file using the **Table mappin
  
 Database-specific data types are converted to a Java type with the JDBC driver. The module then converts these Java types into a Mendix primitive type. This step also performs implicit conversions between types.
 
-[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with _X_):
+[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with *X*):
 
 | Mendix Type / Java Type | Boolean | DateTime | Integer | AutoNumber / Long | Decimal | HashString / String / Enum | Binary |
 |:---------------------------:|:-------:|:--------:|:-------:|:--------------------:|:-------:|:-----------------------------:|:------:|

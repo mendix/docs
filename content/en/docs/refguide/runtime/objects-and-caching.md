@@ -53,7 +53,7 @@ If you have a few references to entity instances and you got these references vi
 
 There is no clear way to identify this, so to ensure you have the latest version of the object, you should re-read the object as soon as you have committed changes to it to the database.
 
-###  Impact on Microflows
+### Impact on Microflows
 
 This behavior impacts microflows in a similar way. Therefore, the best practice here is to reload an object as soon as you have committed changes to another reference of (potentially) the same object.
 

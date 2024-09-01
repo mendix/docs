@@ -315,7 +315,7 @@ The following properties are specific for this event:
 
 For more information on workflow-related entities in the System module, see the [Workflow Entities in the System Module](/refguide9/workflows/#workflow-entities) section in *Workflows*. 
 
-###  Complete User Task {#complete-task}
+### Complete User Task {#complete-task}
 
 The **Complete user task** event marks the specified user task in the workflow as completed.
 

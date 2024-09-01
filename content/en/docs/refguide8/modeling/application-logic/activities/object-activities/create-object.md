@@ -63,13 +63,13 @@ If **Refresh in client** is set to *No*, the change is not reflected in any widg
 
 If **Commit** and **Refresh in client** are both set to *Yes*, [data sources](/refguide8/data-sources/) are reloaded and the new object's values are displayed in relevant widgets.
 
-####  Microflow Is Called in an Offline, Native, or Hybrid App
+#### Microflow Is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide8/offline-first/#microflows) section of the *Offline-First Reference Guide*.
 
-####  Action Is in a Nanoflow
+#### Action Is in a Nanoflow
 
 In a nanoflow, the create object action reloads [data sources](/refguide8/data-sources/) as if Refresh in client was set to *Yes*.
 

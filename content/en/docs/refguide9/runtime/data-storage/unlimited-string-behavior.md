@@ -20,7 +20,7 @@ You can sort by and compare unlimited strings. Unlimited strings can be used in 
 
 You can sort by and compare unlimited strings. Uniqueness constraints on unlimited strings are not supported.
 
-###  Oracle
+### Oracle
 
 You can sort by unlimited strings. Uniqueness constraints on unlimited strings are not supported. Comparison of unlimited strings is not supported.
 

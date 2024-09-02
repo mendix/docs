@@ -19,7 +19,7 @@
                                     <br>
                                     <h5 class="lp">{{ .Page.Description}}</h5>
                                 </div>
-                                <div class="d-none d-lg-block order-lg-first d-xl-flex justify-content-xl-end order-xl-last col-xl-5" style="width:319px; height: 155px;">
+                                <div class="d-none d-lg-block order-lg-first d-xl-flex justify-content-xl-end order-xl-last col-xl-5" style="width:319px; height: 136px;">
                                     <img src="/images/docs-extended-small.png">
                                 </div>
                             </div>
@@ -32,31 +32,29 @@
                             </div>
                             <!-- Product cards end -->
                             <div class="row resources">
-                                <div class="col col-sm-2 my-column card-body">
+                                <div class="col">
                                     {{ partial "landingpage/latest-releases.html" . }}
                                 </div>
                                 <div class="col">
-                                    <div class="card-body" style="padding-bottom:1rem">
                                         <div>
                                             <div>                
-                                                <h4 class="card-title-w-50" style="margin-left:0.5rem;">Community Resources</h4>
+                                                <h4 class="card-title-w-50">Community Resources</h4>
                                             </div>
                                         </div>
-                                        <ul class="landing-list">
+                                        <ul class="card-text landing-list">
                                             <li class="link-list"><a href="/community-tools/contribute-to-mendix-docs/">Contribute to the Docs site</a></li>
                                             <li class="link-list"><a href="https://community.mendix.com/">Ideas and Questions</a></li>
                                             <li class="link-list"><a href="https://support.mendix.com/">Support</a></li>
                                             <li class="link-list"><a href="https://www.mendix.com/blog/">Low-Code Development Blog</a></li>
                                         </ul>
                                     </div>
-                                </div>
                             </div>
-                            <div class="row inner-row">
+                            <div class="row">
                                 <div class="col">
                                     {{ partial "landingpage/get-started.html" . }}
                                 </div>
                             </div>
-                            <div class="row inner-row">
+                            <div class="row">
                                 <div class="col">
                                     {{ partial "landingpage/note.html" . }}
                                 </div>

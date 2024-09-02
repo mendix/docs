@@ -1,6 +1,6 @@
 h1.page-title{
     font-weight: $font-weight-normal;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-left: 1rem;
     margin-top: 1rem;
 }
@@ -8,27 +8,12 @@ h5.lp{
     margin-left: 1rem;
     margin-bottom: 2rem;
     margin-top: -1rem;
+    font-size: 1rem;
+    font-weight: 400;
 }
-
-.my-container {
-    max-width: 100%;
-}
-
-div.card-icon{
-    margin: auto; 
-    padding: 10% 0 0 0;
-
-    i {
-        font-size: 3rem;
-        color: $blue;
-    }
-}
-
 
 li.link-list{
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    list-style-position: outside;
+    font-size: $font-size-base;
     list-style: none;
     a {
         text-decoration: none;
@@ -47,6 +32,10 @@ li.link-list{
 p.rn-date{
     color: $gray-900;
     font-size: 0.85rem;
+}
+
+.td-main main {
+    padding: 32px;
 }
 
 div.my-column{
@@ -69,35 +58,29 @@ div.my-column{
 }
 .resources{
     background: $gray-100;
-    border: 1px solid $gray-200;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-left:2rem;
-    margin-right:2rem;
 }
+
 div.w-50{
     border: none;
     @include media-breakpoint-up(xl) {
         padding-bottom: 1.5rem;
     }
     @include media-breakpoint-up(xl){
-        flex: 0 0 30%;
-        max-width: 30%;
+        flex: 0 0 33%;
+        max-width: 33%;
     }
     @include media-breakpoint-down(xl){
-        flex: 0 0 90%;
-        max-width: 90%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
     @include media-breakpoint-down(lg){
-        flex: 0 0 90%;
-        max-width: 90%;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
-div.inner-row{
-    padding: 0;
-    margin: 0rem 1rem 0rem 0rem;
-}
 h3.title-row{
     font-weight: $font-weight-medium;
     margin: 0.5rem 0rem 1rem 1.75rem;
@@ -112,6 +95,8 @@ div.landing-page-alert{
 img.my-icon{
     width: 64px;
     height: 64px;
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 img.ToC-icon{
@@ -132,28 +117,17 @@ img.nav-icon{
 }
 h4.card-title{
     color: $gray-900;
-    font-weight: $font-weight-medium;
-    margin: 0.5rem 0;
-    font-size: $h3-font-size;
-}
-h4.card-title{
-    color: $gray-900;
-    font-weight: $font-weight-medium;
-    font-size: $h3-font-size;
+    font-weight: 600;
+    font-size: 1.25rem;
     border-top: 3px solid;
     padding-top: 1rem;
-    margin-top: 1rem;
 }
 h4.card-title-w-50{
     color: $gray-900;
-    font-weight: $font-weight-medium;
-    font-size: $h3-font-size;
+    font-weight: 600;
+    font-size: 1.25rem;
     padding-top: 1rem;
     margin-top: 1rem;
-}
-div.card-body{
-    padding-top: 1rem;
-    padding-bottom: 2rem;
 }
 ul.card-text{
     margin-top: 1rem;
@@ -167,6 +141,10 @@ div.my-container{
 
 .my-container img{
     border-style: none;
+}
+
+.card-body{
+    padding:0rem;
 }
 
 // 404 page

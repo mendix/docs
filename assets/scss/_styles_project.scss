@@ -930,3 +930,16 @@ a.home-btn{
     border-radius: 0.5rem;
     padding: 0.375rem 0.375rem;
 }
+
+// Icon styling on right ToC
+img.ToC-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    float:left;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+    &:hover {
+        background-color: $gray-light;
+    };
+}

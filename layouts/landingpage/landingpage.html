@@ -12,23 +12,18 @@
                     </aside>
                     <main class="col lp" role="main" style="border-right: none;">
                         <div class="container my-container">
-                            <!-- Header start-->
                             <div class="row">
                                 <div class="col-lg-12 col-xl-7">
                                     <h1 class="page-title">{{ .Page.Title}}</h1>
-                                    <br>
-                                    <h5 class="lp">{{ .Page.Description}}</h5>
+                                    <h5 class="lp-description">{{ .Page.Description}}</h5>
                                 </div>
-                                <div class="d-none d-lg-block order-lg-first mb-lg-4 d-xl-flex justify-content-xl-end order-xl-last col-xl-5" style="width:319px; height: 136px;">
+                                <div class="d-none d-lg-block order-lg-first mb-lg-4 mb-xl-0 d-xl-flex justify-content-xl-end order-xl-last col-xl-5" style="width:319px; height: 136px;">
                                     <img src="/images/docs-extended-small.png">
                                 </div>
                             </div>
-                            <!-- Header end-->
-                            <!-- Product cards start -->
-                            <div class="row lp">
-                                    {{ partial "landingpage/product-cards.html" . }}
+                            <div class="row lp-row">
+                                    {{ partial "landingpage/user-journey-cards.html" . }}
                             </div>
-                            <!-- Product cards end -->
                             <div class="row lp-row resources">
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                                     {{ partial "landingpage/latest-releases.html" . }}

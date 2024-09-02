@@ -45,7 +45,7 @@ In Studio Pro, you do not write element B in your XPath query because it is impl
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved. Consider the following complete XPath query:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Name='Jansen']
 ```
 

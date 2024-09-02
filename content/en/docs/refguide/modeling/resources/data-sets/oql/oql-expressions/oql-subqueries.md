@@ -18,7 +18,7 @@ A subquery must always be placed in parentheses.
 
 Example:
 
-```
+```sql
 SELECT
     City,
     ZipCodeValue AS ZipCodeAlias,
@@ -39,7 +39,7 @@ To avoid ambiguity, it is recommended to always refer to attributes with corresp
 
 Example:
 
-```
+```sql
 SELECT
     ZipCode.City,
     ZipCode.ZipCode,
@@ -73,7 +73,7 @@ A value subquery is a subquery that returns exactly one row and exactly one colu
 
 Example:
 
-```
+```sql
 SELECT
     *
 FROM
@@ -88,7 +88,7 @@ A collection subquery is a subquery that can have more than one row. If a subque
 
 Examples:
 
-```
+```sql
 SELECT
     *
 FROM
@@ -104,7 +104,7 @@ WHERE
     )
 ```
 
-```
+```sql
 SELECT
     *
 FROM
@@ -128,7 +128,7 @@ A subquery can also be used in a `HAVING` clause in a similar way to a `WHERE` c
 
 Example:
 
-```
+```sql
 SELECT
     ZipCode,
     AVG(Price)

@@ -73,15 +73,15 @@ The **Entity Access** tab is displayed as a matrix showing access rules that app
 
 Each access rule in turn applies to a set of module roles. For more information, see [Access Rules](/refguide/access-rules/).
 
-## OData Access 
+## OData/GraphQL Access 
 
-**OData Access** defines for each module role whether users with this role are authorized to access OData resources for each OData service exposed within the module.
+**OData/GraphQL Access** defines for each module role whether users with this role are authorized to access entities and microflows for each OData/GraphQL service in the module.
 
-The **OData Access** tab is displayed as a matrix showing published OData services and modules roles:
+The **OData/GraphQL Access** tab is displayed as a matrix showing published OData/GraphQL services and modules roles:
 
 {{< figure src="/attachments/refguide/modeling/security/module-security/odata-access-tab.png" class="no-border" >}}
 
-For each combination, you can indicate whether the module role has access to the published OData service. You can also edit this information in [published OData services](/refguide/published-odata-services/) using the **Allowed roles** property in the **Settings** tab.
+For each combination, you can indicate whether the module role has access to the published OData/GraphQL service. You can also edit this information in [published OData/GraphQL services](/refguide/published-odata-services/) using the **Allowed roles** property in the **Settings** tab.
 
 ## REST Access
 

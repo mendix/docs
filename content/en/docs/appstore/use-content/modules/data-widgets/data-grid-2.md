@@ -307,7 +307,7 @@ When a drop-down filter is used in conjunction with an Association Filter data g
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration. This limitation also applies when using page state, meaning that the filter value used in the drop-down filter will not persist when navigating between pages.
 {{% /alert %}}
 
 When adding a new option, the following properties are required:
@@ -440,7 +440,9 @@ In order to enable filtering within the data grid header (outside the columns) y
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. Only the first keyword in the filter will be considered when filtering multiple attributes in grid wide filtering
+
+When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.

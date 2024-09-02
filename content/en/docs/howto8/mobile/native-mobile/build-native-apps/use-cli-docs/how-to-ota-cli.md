@@ -85,13 +85,13 @@ To release a new version OTA, follow these steps:
 4. Open a command line interface (CLI) such as Command Prompt.
 5. Navigate to the directory of your Native Builder:
 
-    ```powershell {linenos=false}
+    ```powershell
     cd {path to Native Builder executable file}`
     ```
 
 6. Run the following command to build and push a new update:
 
-    ```text {linenos=false}
+    ```text
     native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory
     ```
 
@@ -123,7 +123,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 1. Get your list of available releases by running the following command:
 
-    ```text {linenos=false}
+    ```text
     `native-builder.exe release list --project-name "CoolApp"`
     ```
 
@@ -131,7 +131,7 @@ Imagine you want to rollback an update. Maybe you released it too early or somet
 
 2. To roll back from {v2} to {v1} type the following command:
 
-    ```text {linenos=false}
+    ```text
     native-builder.exe release rollback-update --project-name "CoolApp" --label "v1"
     ```
 
@@ -151,7 +151,7 @@ In case you want to test the stability of a new update, it is good practice to t
 
 To roll out your app to only *some* of your users, run this command:
 
-```text {linenos=false}
+```text
 `native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 50 --mandatory`
 ```
 
@@ -159,7 +159,7 @@ Instead of passing a rollout percentage of 100%, you are passing 50%. This means
 
 To fully roll out the update, run this command:
 
-```text {linenos=false}
+```text
 native-builder.exe release patch-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
@@ -176,7 +176,7 @@ The key here is `patch-update`. The `patch-update` command allows you to modify 
 
 Using a modification of `rollout-percentage` you can make builds optional. To do so, run this command:
 
-```text {linenos=false}
+```text
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100 --mandatory false
 ```
 

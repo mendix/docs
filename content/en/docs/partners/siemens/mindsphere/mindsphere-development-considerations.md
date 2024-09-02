@@ -95,7 +95,7 @@ If you do **not** restage your app, it will continue to run using the old values
 
 Your app will define the default values for [constants](/refguide/constants/). You can override these default values with Cloud Foundry environment variables. To do this, you need to replace the dot with an underscore and prefix the name with `MX_`. For example, a constant `MyConstant` in module `MyModule` (that is, `MyModule.MyConstant`), in app `MyApp` could be set to `ABC123` like this:
 
-```bash {linenos=false}
+```bash
     cf set-env MyApp MX_MyModule_MyConstant "ABC123"
 ```
 
@@ -307,7 +307,7 @@ To make your Mendix app multi-tenant, do the following:
 
 2. Every microflow action on this object must have the following XPath constraint:
 
-    ```java {linenos=false}
+    ```java
     [SiemensInsightsHubSingleSignOn.TenantObject_Tenant/SiemensInsightsHubSingleSignOn.Tenant/SiemensInsightsHubSingleSignOn.Account_Tenant='$currentUser']
     ```
 
@@ -317,7 +317,7 @@ To make your Mendix app multi-tenant, do the following:
 
 3. Similarly, every data widget on a page (for example a *Data view*) which retrieves data from the database or via an association must have the following XPath constraint, which works in the same way as the microflow XPath constraint, above:
 
-    ```java {linenos=false}
+    ```java
     [SiemensInsightsHubSingleSignOn.TenantObject_Tenant/SiemensInsightsHubSingleSignOn.Tenant/SiemensInsightsHubSingleSignOn.Account_Tenant='[%CurrentUser%]']
     ```
 

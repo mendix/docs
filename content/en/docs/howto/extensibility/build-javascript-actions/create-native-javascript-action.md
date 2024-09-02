@@ -109,7 +109,7 @@ Now make a JavaScript action to read the NFC tag information:
 1. Select **Return type** > **String**.
 1. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
 
-    ``` javascript {linenos=false}
+    ``` javascript
     import NfcManager, { Ndef } from "react-native-nfc-manager";
     ```
 
@@ -138,7 +138,7 @@ The dependency is split into two parts: the native device part, and the client J
 
 1. In your CLI, open the module folder which contains your JavaScript action:
 
-    ```powershell {linenos=false}
+    ```powershell
     cd C:\MendixApps\NativeNFC\javascriptsource\nativenfc\actions
     ```
 

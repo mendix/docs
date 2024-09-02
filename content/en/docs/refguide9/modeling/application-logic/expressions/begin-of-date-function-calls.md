@@ -41,13 +41,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 beginOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 07 00:00 CET 2007"
 ```
 
@@ -75,13 +75,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 beginOfWeek(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Sun Feb 04 00:00 CET 2007"
 ```
 
@@ -109,13 +109,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 beginOfMonth(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Thu Feb 01 00:00 CET 2007"
 ```
 
@@ -143,13 +143,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 beginOfYear(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Mon Jan 01 00:00 CET 2007"
 ```
 

@@ -35,10 +35,7 @@ Follow these steps to export the Mendix components and store them on your local 
 1. Start the Configuration Tool using the command `mxpc-cli registry-migration` to initiate registry migration mode.
 2. Select **Migration Type** to be *Export*.
 3. Select the **Main Components** and **Storage Provisioners** you want to export.
-4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `8.12.*, 7.23.6.*` will export all patch versions of the Mendix 8.12 runtime and the published build of the Mendix 7.23.6 runtime.
-
-    {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/private-cloud-migrating/export.png" class="no-border" >}}
-
+4. Enter the version numbers of any Mendix Runtimes which you want to export. You can use wildcards and create a list of versions separated by commas. For example `10.12.*, 9.24.26.*` will export all patch versions of the Mendix 10.12 runtime and the published build of the Mendix 9.24.26 runtime.
 5. Click the **Clear cache** button, which will trigger the deletion of local image cache, otherwise the cache is reused when redownloading the same images.   
 6. Click the **Check for updates** button, which is used to verify that the hash of your downloaded images matches with the latest remote images.  
 7. Click **Export components**.

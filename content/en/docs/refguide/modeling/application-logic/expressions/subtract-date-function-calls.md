@@ -37,13 +37,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1000)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:00 CET 2007
 ```
 
@@ -72,13 +72,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractSeconds(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:00:30 CET 2007
 ```
 
@@ -107,13 +107,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractMinutes(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 00:30:01 CET 2007
 ```
 
@@ -142,13 +142,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractHours(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 00:01:01 CET 2007
 ```
 
@@ -177,13 +177,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractDays(dateTime(2007, 1, 5, 1, 1, 1), 5)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
@@ -212,13 +212,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractWeeks(dateTime(2007, 1, 15, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
@@ -247,13 +247,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractMonths(dateTime(2007, 3, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
@@ -282,13 +282,13 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 Input: subtractQuarters(dateTime(2007, 4, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
@@ -317,12 +317,12 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 Input: subtractYears(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2006
 ```

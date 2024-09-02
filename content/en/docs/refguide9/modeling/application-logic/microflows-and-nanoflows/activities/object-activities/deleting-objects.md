@@ -106,7 +106,7 @@ In detail, the following graph shows what happens during deletions:
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/deleting-objects/during-deletes.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+The **Committing** state of the **IMendixObject** is deprecated.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

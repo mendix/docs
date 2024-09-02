@@ -220,7 +220,7 @@ To deploy your deployment package, do the following:
 
 2. Select your org and space using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf target –o {org_name} -s {space_name}
     ```
 
@@ -228,7 +228,7 @@ To deploy your deployment package, do the following:
 
 3. Create a PostgreSQL instance using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
     ```
 
@@ -246,7 +246,7 @@ To deploy your deployment package, do the following:
 5. Ensure you are in the same folder as the package you wish to deploy.
 6. Create a `manifest.yml` file with at least the following content:
 
-    ```yml
+    ```yaml
         applications:
         - name: {app_name}
           disk_quota: {disk_quota_size}
@@ -263,7 +263,7 @@ To deploy your deployment package, do the following:
 
 7. Push your app to Insights Hub using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf push -p "{deployment_package_name}"
     ```
 
@@ -275,7 +275,7 @@ You should always use the latest available Cloud Foundry stack. The latest stack
 
 You can specify that your app uses a specific stack using the following command line option when you push your app:
 
-```bash {linenos=false}
+```bash
 cf push -p "{deployment_package_name}" -s {stack_name}
 ```
 

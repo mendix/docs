@@ -92,7 +92,7 @@ By default, dependencies are downloaded from the [Maven Central](https://central
 
 Custom repositories are configured in the **Repositories** setting of the **Deployment** tab in the [Preferences](/refguide/preferences-dialog/) dialog box. This setting uses the same syntax as Gradle. For internal usage of the platform, some dependencies are required which are also resolved using the configured repositories. For example:
 
-```groovy {linenos=false}
+```groovy
 maven {
     url '{url to your custom remote repository}'
        credentials {
@@ -104,7 +104,7 @@ maven {
 
 By default the repositories are configured as:
 
-``` {linenos=false}
+```
 gradlePluginPortal()
 mavenCentral()
 ```
@@ -139,7 +139,7 @@ See the official [Networking with Gradle](https://docs.gradle.org/current/usergu
 
 Sample `gradle.properties` file:
 
-```txt {linenos=false}
+```txt
 systemProp.http.proxyHost=proxy-host-ip
 systemProp.http.proxyPort=proxy-port
 systemProp.http.proxyUser=userid
@@ -158,7 +158,7 @@ If Gradle still fails to download dependencies with the correct proxy settings c
 
 Add the following lines to the `gradle.properties` file:
 
-```txt {linenos=false}
+```txt
 systemProp.javax.net.ssl.trustStore=\\path\\to\\win_ini_file
 systemProp.javax.net.ssl.trustStoreType=Windows-ROOT 
 ```
@@ -180,7 +180,7 @@ You can find the file for your Java installation under `/conf/net.properties`
 
 Sample `net.properties` file
 
-```{linenos=false}
+```
 http.proxyHost=your.proxy.ip.address
 http.proxyPort=your.proxy.port
 https.proxyHost=your.proxy.ip.address

@@ -119,7 +119,7 @@ This is the path and name of the program that is used to view the details of fil
 
 For example, you can see how to set up file comparison for Visual Studio Code below: 
 
-```text {linenos=false}
+```text
 {path to VS Code}/Code.exe --wait --diff "{0}" "{1}"
 ```
 
@@ -228,6 +228,10 @@ For more information, see [Defining Access Rules Using the New Editor](/refguide
 
 The expression editor is modernized since Studio Pro 10.6. This setting is enabled by default. The editor allows the user to write rich text statements and get instant feedback on their validity. In Studio Pro, it is often used to write an expression for a decision or to write an XPath expression for data filtering.
 
+### GraphQL {#graphql}
+
+Publishing data as a GraphQL service is available as of Studio Pro 10.14. When you enable this feature, you can indicate that a published OData service [also supports GraphQL](/refguide/published-odata-services/#supports-graphql).
+
 ### Maia
 
 #### Enable Domain Model Generator (Experimental)
@@ -247,6 +251,12 @@ This setting allows you to set the beta version as the default editor.
 In Studio Pro version 10.9, X-ray mode was introduced to the page editor in beta. Enable this option to view your app in X-ray mode: a more detailed version of Design mode. 
 
 For more information, see [X-Ray Mode](/refguide/page/#x-ray-mode).
+
+### System Texts Editor
+
+In Studio Pro 10.14.0, the web version of the system texts editor was released as an experimental feature. Enable this option to use the web version of the editor. 
+
+If Translation Generator is also enabled, you can use it in this editor as well. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
 
 ### Toolbox
 

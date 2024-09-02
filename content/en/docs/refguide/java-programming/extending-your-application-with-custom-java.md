@@ -114,7 +114,7 @@ To edit the Java action in Eclipse, open Eclipse and follow these steps:
 
     In the Java code, there is some placeholder code between the `//BEGIN USER CODE` and `//END USER CODE` comment statements. This is where you can add your own Java code.
 
-    ```java {linenos = table,hl_lines=["4-6"],linenostart=33}
+    ```java {hl_lines="4-6"}
     	@java.lang.Override
     	public java.lang.String executeAction() throws Exception
     	{
@@ -128,7 +128,7 @@ To edit the Java action in Eclipse, open Eclipse and follow these steps:
 
 6. Replace the existing line `throw new com.mendix.systemwideinterfaces.MendixRuntimeException("Java action was not implemented");` between `//BEGIN USER CODE` and `//END USER CODE`, with the code:
 
-    ```java {linenos = false}
+    ```java
     String productName = this.productParameter.getName(this.getContext());
     return new StringBuilder(productName).reverse().toString();
     ```
@@ -206,7 +206,7 @@ Firstly, a reminder of how this XPath could be implemented in a Retrieve activit
     * Entity: Products.Product
     * XPath constraint:
 
-        ```xpath {linenos = false}
+        ```xpath
         [Products.Product_ProductState/Products.ProductState[
         Available = true ()
         ]]
@@ -256,7 +256,7 @@ To use this same XPath in a Java action called from a microflow, perform the fol
 
 4. Add the following `import` statements after the generated import statements in the Java file:
 
-    ```java {linenos = false}
+    ```java
     import java.util.List;
     import com.mendix.core.Core;
     import products.proxies.Product;
@@ -268,7 +268,7 @@ To use this same XPath in a Java action called from a microflow, perform the fol
 
 5. Add the following instructions between `//BEGIN USER CODE` and `//END USER CODE` to build the XPath and execute it. This replaces the placeholder command to throw a runtime exception.
 
-    ```java {linenos = false}
+    ```java
    	//create the xpath
 	String xpath = String.format("//%s[%s/%s[%s = true()]][%s = $Category][%s = '%s']",
 			Product.entityName,

@@ -562,7 +562,7 @@ The **NODE** is a **Log node name** that you specified in your Mendix applicatio
 
 You can find your logs in your Mendix application pod inside the Mendix container using the command below:
 
-```{linenos=false}
+```
 kubectl logs <pod-name> -c mendix
 ```
 
@@ -721,7 +721,7 @@ In version 2.10.0 and above of the `mxpc-cli` administration and configuration t
 
 To use this feature, run the following command, replacing `{namespace}` with the Kubernetes namespace where the Mendix Operator is installed, and `{filename}` with the file where the information should be saved:
 
-```bash {linenos=false}
+```bash
 mxpc-cli log-extract -n {namespace} -f {filename}
 ```
 
@@ -845,9 +845,9 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
 
-2. The StorageInstance CR is created for the database – this causes the Operator to provision database database, according to the plan selected, and pass information about the database to the Runtime CR
+2. The StorageInstance CR is created for the database – this causes the Operator to provision the database, according to the plan selected, and pass information about the database to the Runtime CR
 
-3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
+3. The StorageInstance CR is created for the file storage – this causes the Operator to provision a file storage bucket for the app and pass information about the storage to the Runtime CR
 
 4. The Ingress CR is created – this sets up a route to the app.
 

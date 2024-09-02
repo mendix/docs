@@ -33,7 +33,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /api/user-identifiers/v1/uuids HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
@@ -51,7 +51,7 @@ The following steps lead to retrieval of user's UUIDs of the email addresses pro
 1. Set up your authentication PAT. You must be a Mendix Admin.
 1. Create a request body containing the email addresses under `emailAddresses`. For example, to get user UUIDs of `jane.doe@domain.tld` and `john.doe@domain.tld`, provide a body like this:
 
-    ```json {linenos=false}
+    ```json
     {
       "emailAddresses":[
           { "emailAddress":"jane.doe@domain.tld" },

@@ -60,7 +60,7 @@ The Pluggable Widget Generator is the quickest way to start developing a widget.
 
 Using a terminal or command line, navigate to your new Mendix app's folder, create a new folder named *myPluggableWidgets*, and start the generator using:
 
-```shell {linenos=false}
+```shell
 mkdir myPluggableWidgets
 cd myPluggableWidgets
 npx @mendix/generator-widget TextBox
@@ -298,7 +298,7 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
 1. In *src/components/TextInput.tsx* add an `onChange` property to the `TextInputProps`. This will act as a callback, allowing our `TextInput` component to signal changes in the value. It does this by calling the function with the new value. This is the same mechanism by which the `TextInput` component receives updated values from the `input` component.
 
-    ```tsx {hl_lines=["6-6", "15-17"]}
+    ```tsx {hl_lines=[6,"15-17"]}
     export interface TextInputProps {
         value: string;
         className?: string;
@@ -336,7 +336,7 @@ Our widget now looks like a Mendix widget, but does not behave like one yet. Whi
 
 2. Now that `TextInput` is able to provide updates, we need to make sure that those updates are forwarded to the Mendix client. To do this open *src/TextBox.tsx* and pass the `setValue` method of `props.textAttribute` to the `onChange` prop of `TextInput`.
 
-    ```tsx {hl_lines=["5-5"]}
+    ```tsx {hl_lines=5}
     export function TextBox(props: TextBoxContainerProps): ReactElement {
         const value = props.textAttribute.value || "";
         return <TextInput 

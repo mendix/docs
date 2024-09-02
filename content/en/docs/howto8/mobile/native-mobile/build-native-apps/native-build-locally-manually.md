@@ -107,7 +107,7 @@ For bundling your resources, Mendix Studio Pro comes with a helpfull tool called
 
 1. Run the following command:
 
-    ```shell {linenos=false}
+    ```shell
     mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check [path-to-project-mpr-file]
     ```
 
@@ -245,7 +245,7 @@ To remove dependencies which do not support auto-linking, do the following:
 
 1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
 
-    ```text {linenos=false}
+    ```text
     implementation project(":react-native-firebase")
     ```
 

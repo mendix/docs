@@ -106,7 +106,7 @@ For bundling your resources, Mendix Studio Pro comes with a helpful tool called 
 
 1. Run the following command:
 
-    ```text {linenos=false}
+    ```text
     mxbuild.exe --java-home="JDKDirectory" --java-exe-path="javaExecutable" --target=deploy --native-packager --loose-version-check path-to-your-app-mpr-file
     ```
 

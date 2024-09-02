@@ -37,13 +37,13 @@ Be sure that the Cordova plugins below are included in your *config.xml* file, b
 
 #### Spinner
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-spinner" source="npm" />
 ```
 
 #### Dialog
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-dialogs" source="npm" version="1.2.1" />
 ```
 
@@ -57,7 +57,7 @@ Be sure that the Cordova plugins below are included in your *config.xml* file, b
 
 #### Status Bar
 
-```xml {linenos=false}
+```xml
 <gap:plugin name="cordova-plugin-statusbar" source="npm" version="2.1.3" />
 ```
 

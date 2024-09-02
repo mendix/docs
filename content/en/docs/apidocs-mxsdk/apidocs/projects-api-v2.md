@@ -29,7 +29,7 @@ Store the generated value somewhere safe so you can use it to authorize your API
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
 
-```http {linenos=false}
+```http
 GET /projects HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```

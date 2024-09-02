@@ -51,19 +51,19 @@ Steps:
 
 1. In *theme/web/custom-variables.scss* add a SCSS variable by adding the following code to the file: 
 
-    ```scss {linenos=false}
+    ```scss
 	$company-header-text-size: 30px;
     ```
 
 2. Create a new file *theme/web/company-header.scss*. In the new file create a class with a selector name (`.company-header`) and include a CSS property that references the variables created in step 1.
 
-    ```scss {linenos=false}
+    ```scss
 	.company-header { font-size: $company-header-text-size; }
     ```
 
 3. Import the new file in *theme/web/main.scss* by adding the following:
 
-    ```scss {linenos=false}
+    ```scss
 	@import “company-header”;
     ```
 
@@ -75,7 +75,7 @@ In this example we will be creating a custom style which will change the font si
 
 1. Add a JavaScript variable in *theme/native/custom-variables.js* with the following code: 
    
-    ```javascript {linenos=false}
+    ```javascript
 	export const companyHeaderTextSize = 30;
     ```
 
@@ -165,7 +165,7 @@ The two files should end up looking like this:
 
 *theme/web/custom-variables.scss*:
 
-```scss {linenos=false}
+```scss
 @import "../../themesource/mytheme/web/custom-variables.scss";
 ```
 
@@ -216,7 +216,7 @@ Steps:
 3. Cut the export statement and variables from *theme/native/custom-variables.js* and paste in *themesource/mytheme/native/custom-variables.js*.
 4. In *theme/native/custom-variables.js* add the following code to the top of the file, replacing “mytheme” with your module name:
 
-    ```javascript {linenos=false}
+    ```javascript
 	export * from "../../themesource/mytheme/native/custom-variables";
     ```
 
@@ -224,7 +224,7 @@ The two files should end up looking like this:
 
 *theme/native/custom-variables.js*:
 
-```javascript {linenos=false}
+```javascript
 export * from "../../themesource/mytheme/native/custom-variables";
 ```
 
@@ -360,7 +360,7 @@ Pick the button widget as an example. The success button is by default styled as
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the variable `$exclude-button-helpers` to `true`:
 
-```scss {linenos=false}
+```scss
 $exclude-button-helpers: true;
 ```
 
@@ -464,7 +464,7 @@ Pick the button widget as an example again. The success button is by default sty
 
 To exclude additional styles, like the success button styles, the button helper styles need to be disabled. This can be achieved by setting the constant variable `excludeButtonsHelpers` to `true`:
 
-```javascript {linenos=false}
+```javascript
 export const excludeButtonsHelpers = true;
 ```
 
@@ -565,13 +565,13 @@ By default, Mendix generates the *index.html* (the page that is loaded to start 
 
 Cache busting is where a browser is told by the web server to re-download page resources (such as images, stylesheets, or JavaScript) because of changes in those resources. Mendix automatically takes care of this by adding dynamic query parameters on top of the resources in *login.html* and *index.html*. Here is an example of the auto-generated cachebust query parameters in a line from */deployment/web/index.html*:
 
-```html {linenos=false}
+```html
 <script src="mxclientsystem/mxui/mxui.js?638184496048312490"></script>
 ```
 
 Mendix is able to add the `?638184496048312490` query parameter because of the use of a dynamic parameter called `{{cachebust}}` in */deployment/web/index-example.html*, which looks like this:
 
-```html {linenos=false}
+```html
 <script src="mxclientsystem/mxui/mxui.js?{{cachebust}}></script>
 ```
 
@@ -597,13 +597,13 @@ Unzip the ZIP file and place the **fonts** folder into the **/theme/web/** folde
 
 Open your Mendix app's *theme/web/custom-variables.scss* file and locate the following line:
 
-```scss {linenos=false}
+```scss
 $font-family-import: "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
 ```
 
 Replace that line with the following code:
 
-```scss {linenos=false}
+```scss
 $font-family-import: "./fonts/open-sans.css"
 ```
 

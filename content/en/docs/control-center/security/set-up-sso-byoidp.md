@@ -65,7 +65,6 @@ BYOIDP SSO has the following limitations.
 * If the user's email address is changed in your IdP, Mendix may not recognize it as the same account and will ask the user to set up a new Mendix account.
 * `login_hint` is not optional and is always sent as part of authentication requests to the IdP.
 * BYOIDP SSO only supports OIDC and does not support other protocols such as SAML.
-* Your Mendix app must be built using Mendix 7.23 or above.
 * Once BYOIDP is activated, direct access to [Team Server](/developerportal/general/team-server/) is no longer possible using a username and password. To access code repositories from a pipeline, you need to use a personal access token (PAT).
 * Mendix Platform APIs which require a PAT can use one which is created by a platform user. You cannot directly set up service accounts within Mendix once BYOIDP SSO is activated. You can set up a service-like account to consume Mendix Platform APIs in one of the following ways:
     * Use a personal account as if it were a service account

@@ -48,7 +48,9 @@ class MyModalWebViewViewModel(
 }
 ```
 
-{{% wwwrootwarn %}}
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
 
 ## Adding a Controller Class
 

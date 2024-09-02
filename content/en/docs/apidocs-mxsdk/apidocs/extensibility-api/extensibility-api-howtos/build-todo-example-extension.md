@@ -275,7 +275,9 @@ In this section, you will add a view model to store our view data:
     }
     ```
 
-{{% wwwrootwarn %}}
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
 
 ### Explanation
 
@@ -327,7 +329,9 @@ In order to host a web interface inside Studio Pro, your viewmodel must implemen
     }
 ```
 
-{{% wwwrootwarn %}}
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
 
 Firstly, you set the default address to `new Uri(_baseUri, "index")`. You will delve a bit deeper into where this index comes from later in the guide. If you want to skip ahead, see [Setting up Communication Between the User Interface and Extension](#set-up-communication)
 
@@ -561,25 +565,25 @@ In this section, you will add a menu item to the toolbar that will allow you to 
 
     ```csharp
     using System.Collections.Generic;
-
+    
     using System.ComponentModel.Composition;
     using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
     using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
     using Mendix.StudioPro.ExtensionsAPI.UI.Services;
-
+    
     namespace Mendix.ToDoExtension;
-
+    
     [Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
     public class ToDoListMenuBarExtension : MenuExtension
     {
         private readonly IDockingWindowService _dockingWindowService;
-
+    
         [ImportingConstructor]
         public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
         {
             _dockingWindowService = dockingWindowService;
         }
-
+    
         public override IEnumerable<MenuViewModel> GetMenus()
         {
             yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));

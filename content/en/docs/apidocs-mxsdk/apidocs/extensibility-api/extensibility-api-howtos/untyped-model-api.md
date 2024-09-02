@@ -1,5 +1,5 @@
 ﻿---
-title: "Untyped Model Access API"
+title: "Use the Untyped Model Access API"
 url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/
 weight: 11
 ---
@@ -12,13 +12,13 @@ Specifically the type names that you will see referenced all over our api can be
 
 {{% alert color="info" %}}
 
-None of the methods that are provided by our api are recursive. Every search you start will only return the elements one level down to reduce the impact of the query on the StudioPro's performance.
+All methods provided by our api are recursive to reduce the amount of API calls necessary to get to the countent you're interested in.
 
 {{% /alert %}}
 
 {{% alert color="info" %}}
 
-To see the api in action you have to do the bare minimum of creating a microflow with the default name - "MyFirstLogic" with an action and adding an entity to the domain model.
+To see the api in action using the examples in this guide you must create a microflow having the default name - "MyFirstLogic" with an action and add an entity to the domain model.
 
 {{% /alert %}}
 

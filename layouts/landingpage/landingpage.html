@@ -4,7 +4,7 @@
         {{ partial "head.html" . }}
     </head>
     <body class="td-{{ .Kind }}">
-        <div class="container-xxl td-outer">
+        <div class="container-fluid td-outer">
             <div class="td-main">
                 <div class="row flex-xl-nowrap stretch-main" style="overflow-x:hidden !important;">
                     <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
@@ -31,30 +31,26 @@
                                 </div>
                             </div>
                             <!-- Product cards end -->
-                            <div class="row resources">
+                            <div class="row lp-row resources">
                                 <div class="col">
                                     {{ partial "landingpage/latest-releases.html" . }}
                                 </div>
-                                <div class="col">
-                                        <div>
-                                            <div>                
-                                                <h4 class="card-title-w-50">Community Resources</h4>
-                                            </div>
-                                        </div>
+                                <div class="col">      
+                                        <h4 class="resources-title">Community Resources</h4>
                                         <ul class="card-text landing-list">
-                                            <li class="link-list"><a href="/community-tools/contribute-to-mendix-docs/">Contribute to the Docs site</a></li>
-                                            <li class="link-list"><a href="https://community.mendix.com/">Ideas and Questions</a></li>
-                                            <li class="link-list"><a href="https://support.mendix.com/">Support</a></li>
-                                            <li class="link-list"><a href="https://www.mendix.com/blog/">Low-Code Development Blog</a></li>
+                                            <li class="resources-list"><a href="/community-tools/contribute-to-mendix-docs/">Contribute to the Docs site</a></li>
+                                            <li class="resources-list"><a href="https://community.mendix.com/">Ideas and Questions</a></li>
+                                            <li class="resources-list"><a href="https://support.mendix.com/">Support</a></li>
+                                            <li class="resources-list"><a href="https://www.mendix.com/blog/">Low-Code Development Blog</a></li>
                                         </ul>
                                     </div>
                             </div>
-                            <div class="row">
+                            <div class="row lp-row">
                                 <div class="col">
                                     {{ partial "landingpage/get-started.html" . }}
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row lp-row">
                                 <div class="col">
                                     {{ partial "landingpage/note.html" . }}
                                 </div>

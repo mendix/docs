@@ -8,6 +8,10 @@ h5.lp{
     font-weight: 400;
 }
 
+.lp-row{
+    margin-bottom: 2rem !important;
+}
+
 li.link-list{
     font-size: $font-size-base;
     list-style: none;
@@ -25,8 +29,8 @@ li.link-list{
     }
 }
 
-p.rn-date{
-    color: $gray-900;
+.rn-date{
+    color: #FFFFFF;
     font-size: 0.85rem;
 }
 
@@ -51,16 +55,30 @@ div.my-column{
 }
 
 .resources{
-    background: $gray-100;
+    background: #171717;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 8px;
+    padding: 1.5rem 1rem;
+    margin: .05rem;
+}
+
+.resources-title{
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.resources-list{
+    font-size: $font-size-base;
+    list-style: none;
+    line-height: 1.5rem;
+    a {
+        color: #8AC4FF !important;
+    }
 }
 
 div.w-50{
     border: none;
-    @include media-breakpoint-up(xl) {
-        padding-bottom: 1.5rem;
-    }
     @include media-breakpoint-up(xl){
         flex: 0 0 33%;
         max-width: 33%;
@@ -105,13 +123,7 @@ h4.card-title{
     border-top: 3px solid;
     padding-top: 1rem;
 }
-h4.card-title-w-50{
-    color: $gray-900;
-    font-weight: 600;
-    font-size: 1.25rem;
-    padding-top: 1rem;
-    margin-top: 1rem;
-}
+
 ul.card-text{
     margin-top: 1rem;
     font-size: 1.125rem;

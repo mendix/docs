@@ -48,6 +48,8 @@ class MyModalWebViewViewModel(
 }
 ```
 
+{{% wwwrootwarn %}}
+
 ## Adding a Controller Class
 
 You are creating a controller to delegate specific tasks, allowing you to keep the menu item free of unrelated business logic, for instance, conducting basic setup and displaying the web view. This approach is recommended, but not mandatory.

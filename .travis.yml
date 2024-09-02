@@ -7,7 +7,7 @@ os: linux             # optional, this is default
 dist: jammy          # or bionic | xenial | trusty | precise with xenial as default - Recommended here: https://docs.travis-ci.com/user/reference/overview/#deprecated-virtualization-environments
 
 git:
-  depth: 20000 # We're cloning a max of xxx commits, so the author date is correct
+  depth: 1 # We're cloning a max of xxx commits, so the author date is correct
   quiet: true # prevent commit numbers appearing in the log and being flagged as potential security leaks.
   submodules: false # turn off submodules
 

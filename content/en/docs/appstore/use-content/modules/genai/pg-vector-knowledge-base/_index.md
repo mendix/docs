@@ -54,7 +54,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration {#configuration}
 
-After you install the PgVector Knowledge Base module, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to a database and let it act as a knowledge base. To implement an activity, use it in a microflow. To ensure that your app can connect to an external database, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration).
+After you install the PgVector Knowledge Base module, you can find it in the **App Explorer**, in the **Marketplace modules** section. The connector provides a domain model and several activities that you can use to connect your app to a database and let it act as a knowledge base. To implement an activity, use it in a microflow. To ensure that your app can connect to an external database, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration).
 
 ### General Configuration {#general-configuration}
 
@@ -65,7 +65,7 @@ You must perform the following steps to integrate a Mendix app integrate a PgVec
 3. Set up your database configurations at runtime. For more information, see the [Configuring the Database Connection Details](/appstore/modules/genai/pgvector-setup/#configure-database-connection) section in *Setting up a Vector Database*.
 
 {{% alert color="info" %}}
-It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same [DatabaseConfiguration](#databaseconfiguration-entity).
+It is possible to have multiple knowledge bases in the same database in parallel by providing different knowledge base names in combination with the same `DatabaseConfiguration`.
 {{% /alert %}}
 
 ### General Operations {#general-operations-configuration} 
@@ -76,7 +76,7 @@ Additionally, there is one activity to prepare the connection input, which is a 
 
 #### `Create PgVector Knowledge Base Connection` {#create-pgvectorconnection}
 
-All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity (see the [PgVectorKnowledgeBaseConnection](#pgvectorconnection) section). After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
+All operations that include knowledge base interaction need the connection details to the knowledge base. Adhering to the GenAI Commons standard, this information is conveyed in a specialization of the GenAI Commons [Connection](/appstore/modules/genai/commons/#connection) entity (see the documentation on `PgVectorKnowledgeBaseConnection` in Studio Pro). After instantiating the `PgVectorKnowledgeBaseConnection` based on custom logic and/or front-end logic, this object can be used for the actual knowledge base operations.
 
 ### (Re)populate Operations {#repopulate-operations-configuration}
 
@@ -113,7 +113,7 @@ The `Replace` operation is intended to be used in scenarios in which the chunks 
 
 ### Retrieve Operations {#retrieve-operations}
 
-Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the knowledge base name) on a single database server (specified by the [DatabaseConfiguration](#databaseconfiguration-entity)). The details for this are captured in the [PgVectorKnowledgeBaseConnection](#pgvectorconnection). Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on metadata. 
+Currently, four operations are available for on-demand retrieval of data chunks from a knowledge base. All operations work on a single knowledge base (specified by the knowledge base name) on a single database server (specified by the `DatabaseConfiguration`). The details for this are captured in the `PgVectorKnowledgeBaseConnection`. Apart from a regular [Retrieve](#retrieve), an additional operation was exposed to [Retrieve Nearest Neighbors](#retrieve-nearest-neighbors), where the cosine similarity between the input vector and the vectors of the records in the knowledge base is calculated. In both cases it is possible to filter on metadata. 
 
 A typical pattern for retrieval from a knowledge base uses GenAI Commons operations and can be illustrated as follows:
 

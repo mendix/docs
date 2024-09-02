@@ -1,14 +1,10 @@
 h1.page-title{
     font-weight: $font-weight-normal;
     font-size: 2rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
 }
+
 h5.lp{
-    margin-left: 1rem;
-    margin-bottom: 2rem;
-    margin-top: -1rem;
-    font-size: 1rem;
+    font-size: $font-size-base;
     font-weight: 400;
 }
 
@@ -35,7 +31,8 @@ p.rn-date{
 }
 
 .td-main main {
-    padding: 32px;
+    padding: 2rem;
+    padding-top:5.25rem !important;
 }
 
 div.my-column{
@@ -43,10 +40,6 @@ div.my-column{
     border: 1px solid $gray-200;
     box-sizing: border-box;
     border-radius: 4px;
-    margin-top: 0.75rem;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding: 1rem;
     @include media-breakpoint-up(xl){
         flex: 0 0 31%;
         max-width: 31%;
@@ -56,6 +49,7 @@ div.my-column{
         max-width: 46%;
     }
 }
+
 .resources{
     background: $gray-100;
     box-sizing: border-box;
@@ -81,17 +75,6 @@ div.w-50{
     }
 }
 
-h3.title-row{
-    font-weight: $font-weight-medium;
-    margin: 0.5rem 0rem 1rem 1.75rem;
-}
-p.landing-page-note{
-    margin: 1rem 0rem 1rem 1.75rem;
-}
-div.landing-page-alert{
-    margin: 1rem;
-    margin-right: .5rem;
-}
 img.my-icon{
     width: 64px;
     height: 64px;

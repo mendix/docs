@@ -29,11 +29,6 @@ li.link-list{
     }
 }
 
-.rn-date{
-    color: #FFFFFF;
-    font-size: 0.85rem;
-}
-
 .td-main main {
     padding: 2rem 2.5rem;
     padding-top:5.25rem !important;
@@ -54,12 +49,19 @@ li.link-list{
 }
 
 .resources-list{
-    font-size: $font-size-base;
+    font-size: 1rem;
+    font-weight: 600;
     list-style: none;
-    line-height: 1.5rem;
+    margin-bottom: .5rem;
     a {
         color: #8AC4FF !important;
     }
+}
+
+.rn-date{
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 400;
 }
 
 img.my-icon{

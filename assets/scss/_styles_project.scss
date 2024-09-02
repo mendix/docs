@@ -918,3 +918,9 @@ nav.foldable-nav {
     content: counters(item, ".") " "; 
     counter-increment: item ;
   }
+
+
+// Increase spacing between top-level items on the left sidebar
+  ul.ul-1 > li > label {
+    line-height: 1.5rem;
+  }

@@ -98,7 +98,7 @@ To import the OpenAI Connector into your app, follow the instructions in [Using 
 
 ## Configuration {#configuration}
 
-After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace Modules** section. The connector provides a [domain model](#domain-model) and several [activities](#activities) that you can use to connect your app to OpenAI. To implement an activity, use it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
+After you install the OpenAI Connector, you can find it in the **App Explorer**, in the **Marketplace Modules** section. The connector provides a domain model and several activities that you can use to connect your app to OpenAI. To implement an activity, use it in a microflow. To ensure that your app can connect to OpenAI, you must also [configure the Encryption module](/appstore/modules/encryption/#configuration). 
 
 ### General Configuration {#general-configuration}
 
@@ -113,7 +113,7 @@ The following inputs are required for the OpenAI configuration:
 | Parameter   | Value                                                        |
 | ----------- | ------------------------------------------------------------ |
 | DisplayName | This is the name identifier of a configuration (for example, *MyConfiguration*). |
-| API type    | Select `OpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| API type    | Select `OpenAI`.<br />For more information, see the documentation on `ENUM_ApiType` in Studio Pro. |
 | Endpoint    | This is the API endpoint (for example, `https://api.openai.com/v1`)   |
 | API key     | This is the access token to authorize your API call. <br />To get an API, follow these steps:<ol><li>Create an account and sign in at [OpenAI](https://platform.openai.com/).</li><li> Go to the [API key page](https://platform.openai.com/account/api-keys) to create a new secret key. </li><li>Copy the API key and save this somewhere safe.</li></ol> |
 
@@ -128,12 +128,12 @@ The following inputs are required for the Azure OpenAI configuration:
 | Parameter      | Value                                                        |
 | -------------- | ------------------------------------------------------------ |
 | DisplayName    | This is the name identifier of a configuration (for example, *MyConfiguration*). |
-| API type       | Select `AzureOpenAI`.<br />For more information, see the [ENUM_ApiType](#enum-apitype) section. |
+| API type       | Select `AzureOpenAI`.<br />For more information, see the documentation on `ENUM_ApiType` in Studio Pro. |
 | Endpoint       | This is the API endpoint (for example, `https://your-resource-name.openai.azure.com/openai/deployments/`).<br />For details on how to obtain `your-resource-name`, see the [Obtaining Azure OpenAI Resource Name](#azure-resource-name) section below. |
 | DeploymentName | This is the deployment name you chose when you deployed the model. Deployments provide endpoints to the Azure OpenAI base models or your fine-tuned models.<br />To check the deployment name, go to [Azure OpenAI](https://oai.azure.com/) and check the deployment name under **Deployments**. |
 | API version    | This is the API version to use for this operation. It follows the `yyyy-MM-dd` format. For supported versions, see [Azure OpenAI documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/reference). The supported versions can vary depending on the type of model, so make sure to look for the right section (such as Chat Completions, Image Generation, or Embeddings) on that page. |
 | API key        | This is the access token to authorize your API call.         |
-| Key type       | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure `api-key` authentication mechanism. For details on how to obtain an API key, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the [ENUM_KeyType](#enum-keytype) section. |
+| Key type       | This is the type of token that is entered in the API key field. For Azure OpenAI, two types of keys are currently supported: Microsoft Entra token and API key. <br />For details on how to generate a Microsoft Entra access token, see [How to Configure Azure OpenAI Service with Managed Identities](https://learn.microsoft.com/en-gb/azure/ai-services/openai/how-to/managed-identity). Alternatively, if your organization allows it, you could use the Azure `api-key` authentication mechanism. For details on how to obtain an API key, see the [Obtaining Azure OpenAI API keys](#azure-api-keys) section below. For more information, see the documentation on `ENUM_KeyType` Studio Pro. |
 
 {{% alert color="info" %}}
 For the Azure OpenAI configuration, each model needs a separate deployment so that it can be used. In order to benefit from multiple supported operations in your Mendix app, you need to create multiple configuration objects—one for every deployed model. For details, see the [Azure OpenAI Service REST API reference](https://learn.microsoft.com/en-gb/azure/ai-services/openai/reference).
@@ -159,34 +159,34 @@ For the Azure OpenAI configuration, each model needs a separate deployment so th
 
 After following the general setup above, you are all set to use the microflows in the **USE_ME > Operations > ChatCompletions** folder in your logic. Currently, two microflows for chat completions are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro. 
 
-These microflows expect an [OpenAIConnection](#openaiconnection) object that refers to a [Configuration](#configuration-entity). Additionally, a model or deployment needs to be passed:
+These microflows expect an `OpenAIConnection` object that refers to a `Configuration`. Additionally, a model or deployment needs to be passed:
 
-* For the OpenAI API configuration, the desired model must be specified for every call in the `Model` attribute of the [OpenAIConnection](#openaiconnection).
-* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal) that was set on the referenced [Configuration](#configuration-entity). Any model explicitly specified will be ignored and hence can be left empty. 
+* For the OpenAI API configuration, the desired model must be specified for every call in the `Model` attribute of the `OpenAIConnection`.
+* For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal) that was set on the referenced `Configuration`. Any model explicitly specified will be ignored and hence can be left empty. 
 
 In the context of chat completions, system prompts and user prompts are two key components that help guide the language model in generating relevant and contextually appropriate responses. For more information on prompt engineering, see the [Read More](#read-more) section. Different exposed microflow activities may require different prompts and logic for how the prompts must be passed, as described in the following sections. For more information on message roles, see the [ENUM_MessageRole](/appstore/modules/genai/commons/#enum-messagerole) section in *GenAI Commons*.
 
-All chat completions operations within the OpenAI connector support [JSON mode](#enum-responseformat-chat), [function calling](#chatcompletions-functioncalling), and [vision](#chatcompletions-vision).
+All chat completions operations within the OpenAI connector support `JSON mode`, [function calling](#chatcompletions-functioncalling), and [vision](#chatcompletions-vision).
 
 For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix recommends downloading our [showcase app](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of examples. 
 
 #### Chat Completions (without History) {#chatcompletions-without-history}
 
-The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection` and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
 Optionally, you can also use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
-For technical details, see the [Technical Reference](#chat-completions-without-history-technical) section.
+For technical details, see the documentation on `Chat Completions (without history)` in Studio Pro.
 
 #### Chat Completions (with History) {#chatcompletions-with-with-history}
 
-The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection), a [Request](/appstore/modules/genai/commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection`, a [Request](/appstore/modules/genai/commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
 
 Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
-For technical details, see the [Technical Reference](#chat-completions-with-history-technical) section.
+For technical details, see the documentation on `Chat completions (with history)` in Studio Pro.
 
 #### Function Calling {#chatcompletions-functioncalling}
 
@@ -212,7 +212,7 @@ Vision enables models like GPT-4o and GPT-4 Turbo to interpret and analyze image
 
 For `Chat Completions without History`, `FileCollection` is an optional input parameter. For `Chat Completions with History`, `FileCollection` can optionally be added to individual user messages using [Chat: Add Message to Request](/appstore/modules/genai/commons/#chat-add-message-to-request).
 
-Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision, it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector; however, they do not support the optional `Detail` attribute of the [OpenAIFileContent](#openaifile-content) entity.
+Use the two exposed microflows [Files: Initialize Collection with OpenAI File](#initialize-filecollection) and [Files: Add OpenAIFile to Collection](#add-file) to construct the input with either `FileDocuments` (for vision, it needs to be of type `Image`) or `URLs`. The same file operations exposed by the GenAI commons module can be used for vision requests with the OpenAIConnector; however, they do not support the optional `Detail` attribute of the `OpenAIFileContent` entity.
 
 {{% alert color="info" %}}
 OpenAI and Azure OpenAI for vision do not yet provide feature parity when it comes to combining functionalities. In other words, Azure OpenAI does not support the use of JSON mode and function calling in combination with image (vision) input.
@@ -226,9 +226,9 @@ For more information on vision, see [OpenAI](https://platform.openai.com/docs/gu
 
 In order to implement image generations into your Mendix application, you can use the microflows in the **USE_ME > Operations > ImageGenerations** folder. Currently, one microflow for image generations is exposed as a microflow action under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
+The microflow requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection` that determines the model and endpoint to use, and it also requires optional [ImageOptions](/appstore/modules/genai/commons/#imageoptions-entity) to determine optional attributes like the height and width of the image. The `Response` for a single image can be processed using [Get Generated Image (Single)](/appstore/modules/genai/commons/#image-get-single) to store the image in your custom `Image` entity.
 
-For technical details, see the [Technical Reference](#image-generations-technical) section.
+For technical details, see the documentation on the microflow in the **USE_ME > Operations > ImageGenerations** folder in Studio Pro.
 
 * For an OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -237,7 +237,7 @@ For technical details, see the [Technical Reference](#image-generations-technica
 
 In order to implement embeddings into your Mendix application, you can use the microflows in the **USE_ME > Operations > Embeddings** folder. Currently, two microflows for embeddings are exposed as microflow actions under the **OpenAI (Operations)** category in the **Toolbox** in Mendix Studio Pro.
 
-These microflows require a specialized [Connection](/appstore/modules/genai/commons/#connection) of type [OpenAIConnection](#openaiconnection) that determines the model and endpoint to use, and they also require optional [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) to determine optional attributes like the dimensions of the embedding vectors. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) needs to be provided. The current version of this operation only supports the float representation of the resulting vector.
+These microflows require a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection` that determines the model and endpoint to use, and they also require optional [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) to determine optional attributes like the dimensions of the embedding vectors. Depending on the selected operation, an `InputText` String or a [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) needs to be provided. The current version of this operation only supports the float representation of the resulting vector.
 
 * For a OpenAI API configuration, the desired model must be specified for every call with the `Model` attribute in the [Connection](/appstore/modules/genai/commons/#connection).
 * For the Azure OpenAI configuration, the model is already determined by the deployment in the [Azure OpenAI portal](https://oai.azure.com/portal). Any model explicitly specified will be ignored and hence can be left empty. 
@@ -246,7 +246,7 @@ These microflows require a specialized [Connection](/appstore/modules/genai/comm
 
 The microflow activity `Embeddings (String)` supports scenarios where the vector embedding of a single string must be generated, e.g. to perform a nearest neighbor search across an existing knowledge base. This input string can be passed directly as the `TextInput` parameter of this microflow. Note that the parameter [EmbeddingsOptions](/appstore/modules/genai/commons/#embeddingsoptions-entity) is optional. Use the exposed microflow [Embeddings: Get First Vector from Response](/appstore/modules/genai/commons/#embeddings-get-first-vector) to retrieve the generated embeddings vector.
 
-For technical details, see the [Technical Reference](#embeddings-string-technical) section.
+For technical details, see the documentation on `Embeddings (String)` in Studio Pro.
 
 #### Embeddings (ChunkCollection) {#embeddings-chunkcollection}
 
@@ -262,19 +262,19 @@ You can use the following OpenAI-specific exposed microflows to construct reques
 
 #### `Create OpenAI Connection` {#create-openai-connection}
 
-This microflow can be used to create the [OpenAIConnection](#openaiconnection) object that is required for the chat completions operations. A [Configuration](#configuration) object is required for the input. For OpenAI configurations (but not Azure OpenAI configurations), the model name is mandatory too.
+This microflow can be used to create the `OpenAIConnection` object that is required for the chat completions operations. A [Configuration](#configuration) object is required for the input. For OpenAI configurations (but not Azure OpenAI configurations), the model name is mandatory too.
 
 #### `Chat: Set Response Format` {#set-responseformat-chat}
 
-This microflow can be used to optionally change the [ResponseFormat](#enum-responseformat-chat) of the `OpenAIRequest_Extension` object, which will be created for a `Request` if not present. This describes the format that the chat completions model must output.
+This microflow can be used to optionally change the `ResponseFormat` of the `OpenAIRequest_Extension` object, which will be created for a `Request` if not present. This describes the format that the chat completions model must output.
 
 #### `Files: Initialize Collection with OpenAI File` {#initialize-filecollection}
 
-This microflow can be used to initialize a new `FileCollection` and add a new `FileDocument` or URL. Optionally, the [Image Detail](#enum-imagedetail) or a description using `TextContent` can be passed.
+This microflow can be used to initialize a new `FileCollection` and add a new `FileDocument` or URL. Optionally, the `Image Detail` or a description using `TextContent` can be passed.
 
 #### `Files: Add OpenAI File to Collection` {#add-file}
 
-This microflow can be used to add a new `FileDocument` or URL to an existing `FileCollection`. Optionally, the [Image Detail](#enum-imagedetail) or a description using `TextContent` can be passed.
+This microflow can be used to add a new `FileDocument` or URL to an existing `FileCollection`. Optionally, the `Image Detail` or a description using `TextContent` can be passed.
 
 #### `Image Generations: Set ImageOptions Extension` {#set-imageoptions-extension}
 

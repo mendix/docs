@@ -7,6 +7,10 @@ numberless_headings: true
 
 These release notes cover changes to the Extensibility API.
 
+## Version 10.15.0
+
+* Introducing the `Untyped Model Access API`. Please see <a href="/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/">the official documentation<a/> for more details and real life usecase examples.
+
 ## Version 10.14.0
 
 * We added the event `ActiveDocumentChanged`, which allows an extension to be notified when the active document changes in Studio Pro. If the document is not yet supported by the Extensibility API, only its name and type will be returned.

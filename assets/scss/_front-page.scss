@@ -39,21 +39,6 @@ li.link-list{
     padding-top:5.25rem !important;
 }
 
-div.my-column{
-    background: $gray-100;
-    border: 1px solid $gray-200;
-    box-sizing: border-box;
-    border-radius: 4px;
-    @include media-breakpoint-up(xl){
-        flex: 0 0 31%;
-        max-width: 31%;
-    }
-    @include media-breakpoint-down(xl){
-        flex: 0 0 46%;
-        max-width: 46%;
-    }
-}
-
 .resources{
     background: #171717;
     box-sizing: border-box;
@@ -74,22 +59,6 @@ div.my-column{
     line-height: 1.5rem;
     a {
         color: #8AC4FF !important;
-    }
-}
-
-div.w-50{
-    border: none;
-    @include media-breakpoint-up(xl){
-        flex: 0 0 33%;
-        max-width: 33%;
-    }
-    @include media-breakpoint-down(xl){
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    @include media-breakpoint-down(lg){
-        flex: 0 0 100%;
-        max-width: 100%;
     }
 }
 

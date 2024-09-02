@@ -1,96 +1,98 @@
+<!-- Each card takes up 12/12 columns on a small screen, 6/12 columns on a medium screen, and 4/12 columns on large and xl screens. See https://getbootstrap.com/docs/5.0/layout/grid/ -->
+<!-- Each card has a bottom margin of 1.5 rem. See https://getbootstrap.com/docs/5.0/layout/utilities/#margin-and-padding. -->
 
-<div class="row">
-    <div class="col card w-50">
-        <div class="card-body">
+<!-- Get Started card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
             <div>
-                <div>
-                    <img class="my-icon" src="/icons/mendix-icon.svg">
-                    <h4 class="card-title" style="border-color:#146FF4">Get Started</h4>                    
-                </div>
+                <img class="my-icon" src="/icons/mendix-icon.svg">
+                <h4 class="card-title" style="border-color:#146FF4">Get Started</h4>                    
             </div>
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/refguide/install/">Install Studio Pro</a></li>
-                <li class="link-list"><a href="/quickstarts/">Quick Starts</a></li>
-            </ul>
         </div>
-    </div>
-    <div class="col card w-50">
-        <div class="card-body">
-            <div>
-                <div>
-                    <img class="my-icon" src="/icons/app-multiple.svg/">
-                    <h4 class="card-title" style="border-color: #1DB11D">Develop</h4>
-                </div>
-            </div>
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/refguide/modeling/ ">App Modeling</a></li>                
-                <li class="link-list"><a href="/refguide/application-logic/">Application Logic</a></li>
-                <li class="link-list"><a href="/refguide/version-control/">Version Control</a></li>
-                <li class="link-list"><a href="/refguide/dev-best-practices/">Best Practices</a></li>
-            </ul>            
-        </div>
-    </div>
-    <div class="col card w-50">
-        <div class="card-body">
-            <div>
-                <div>
-                    <img class="my-icon" src="/icons/deploy.svg">
-                    <h4 class="card-title" style="border-color:#5B1BEF">Deploy</h4>
-                </div>
-            </div>
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/developerportal/deploy/mendix-cloud-deploy/">Mendix Cloud</a></li>
-                <li class="link-list"><a href="/developerportal/deploy/private-cloud/">Mendix for Private Cloud</a></li>
-                <li class="link-list"><a href="/developerportal/deploy/deploy-mendix-on-microsoft-windows/">Microsoft Windows Deployments</a></li>
-            </ul>
-        </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/refguide/install/">Install Studio Pro</a></li>
+            <li class="link-list"><a href="/quickstarts/">Quick Starts</a></li>
+        </ul>
     </div>
 </div>
-<div class="row lp-row">
-    <div class="col card w-50">
-        <div class="card-body">
+<!-- Develop card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
             <div>
-                <div>
-                    <img class="my-icon" src="/icons/connect-1.svg">
-                    <h4 class="card-title" style="border-color:#D31E23">Extend</h4>
-                </div>
+                <img class="my-icon" src="/icons/app-multiple.svg/">
+                <h4 class="card-title" style="border-color: #1DB11D">Develop</h4>
             </div>
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/appstore/general/app-store-overview/">Marketplace</a></li>
-                <li class="link-list"><a href="/apidocs-mxsdk/">APIs</a></li>
-                <li class="link-list"><a href="/catalog/">Catalog</a></li>
-                <li class="link-list"><a href="/partners/">Strategic Partners</a></li>
-            </ul>
         </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/refguide/modeling/">App Modeling</a></li>
+            <li class="link-list"><a href="/refguide/application-logic/">Application Logic</a></li>
+            <li class="link-list"><a href="/refguide/version-control/">Version Control</a></li>
+            <li class="link-list"><a href="/refguide/dev-best-practices/">Best Practices</a></li>
+        </ul>            
     </div>
-    <div class="card w-50">
-        <div class="card-body">
+</div>
+<!-- Deploy card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
             <div>
-                <div>
-                    <img class="my-icon" src="/icons/handshake-business.svg/">
-                    <h4 class="card-title" style="border-color:#AB19DB">Collaborate</h4>
-                </div>
+                <img class="my-icon" src="/icons/deploy.svg">
+                <h4 class="card-title" style="border-color:#5B1BEF">Deploy</h4>
             </div>
-            <p class="card-text">
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/developerportal/project-management/epics/ ">Epics</a></li>
-                <li class="link-list"><a href="/developerportal/project-management/jira-connector/">Jira</a></li>
-                <li class="link-list"><a href="/developerportal/portfolio-management/">Portfolio Management</a></li> 
-            </ul>
-            </p>
         </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/developerportal/deploy/mendix-cloud-deploy/">Mendix Cloud</a></li>
+            <li class="link-list"><a href="/developerportal/deploy/private-cloud/">Mendix for Private Cloud</a></li>
+            <li class="link-list"><a href="/developerportal/deploy/deploy-mendix-on-microsoft-windows/">Microsoft Windows Deployments</a></li>
+        </ul>
     </div>
-    <div class="col card w-50">
-        <div class="card-body">
+</div>
+<!-- Extend card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
             <div>
-                <div>
-                    <img class="my-icon" src="/icons/cog-shield.svg/">
-                    <h4 class="card-title" style="border-color:#E39600">Govern</h4>
-                </div>
+                <img class="my-icon" src="/icons/connect-1.svg">
+                <h4 class="card-title" style="border-color:#D31E23">Extend</h4>
             </div>
-            <ul class="card-text landing-list">
-                <li class="link-list"><a href="/developerportal/control-center/">Control Center</a></li>
-            </ul>
         </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/appstore/general/app-store-overview/">Marketplace</a></li>
+            <li class="link-list"><a href="/apidocs-mxsdk/">APIs</a></li>
+            <li class="link-list"><a href="/catalog/">Catalog</a></li>
+            <li class="link-list"><a href="/partners/">Strategic Partners</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Collaborate card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
+            <div>
+                <img class="my-icon" src="/icons/handshake-business.svg/">
+                <h4 class="card-title" style="border-color:#AB19DB">Collaborate</h4>
+            </div>
+        </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/developerportal/project-management/epics/">Epics</a></li>
+            <li class="link-list"><a href="/developerportal/project-management/jira-connector/">Jira</a></li>
+            <li class="link-list"><a href="/developerportal/portfolio-management/">Portfolio Management</a></li>
+        </ul>
+    </div>
+</div>
+<!-- Govern card -->
+<div class="col-12 col-md-6 col-lg-4 mb-4">
+    <div class="card-body">
+        <div>
+            <div>
+                <img class="my-icon" src="/icons/cog-shield.svg/">
+                <h4 class="card-title" style="border-color:#E39600">Govern</h4>
+            </div>
+        </div>
+        <ul class="card-text landing-list">
+            <li class="link-list"><a href="/developerportal/control-center/">Control Center</a></li>
+        </ul>
     </div>
 </div>

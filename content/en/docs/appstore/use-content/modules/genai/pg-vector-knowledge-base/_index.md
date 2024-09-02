@@ -172,3 +172,15 @@ The **Documentation** pane displays the documentation for the currently selected
 2. Click the element for which you want to view the documentation.
 
     {{< figure src="/attachments/appstore/use-content/modules/doc-pane.png" >}}
+
+## Showcase Application {#showcase-application}
+
+For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
+
+{{% alert color="info" %}}
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section and the [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/) section.
+{{% /alert %}}
+
+## Read More {#read-more}
+
+* [pgvector: Open-Source Extension For Vector Similarity Search For PostgreSQL](https://github.com/pgvector/pgvector?tab=readme-ov-file#pgvector)

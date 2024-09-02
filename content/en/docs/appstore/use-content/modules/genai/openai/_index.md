@@ -172,7 +172,7 @@ For more inspiration or guidance on how to use the above-mentioned microflows in
 
 #### Chat Completions (without History) {#chatcompletions-without-history}
 
-The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection` and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/commons/#request) object and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat Completions (without history)` supports scenarios where there is no need to send a list of (historic) messages comprising the conversation so far as part of the request. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection` and a UserPrompt as a string. Additional parameters, such as system prompt, can be passed via the optional [Request](/appstore/modules/genai/commons/#request) object and the optionally referenced `OpenAIRequest_Extension` for OpenAI-specific optional attributes.
 
 Functionally, the prompt strings can be written in a specific way and can be tailored to get the desired result and behavior. For more information on prompt engineering, see the [Read More](#read-more) section.
 
@@ -182,7 +182,7 @@ For technical details, see the documentation on `Chat Completions (without histo
 
 #### Chat Completions (with History) {#chatcompletions-with-with-history}
 
-The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection`, a [Request](/appstore/modules/genai/commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced [OpenAIRequest_Extension](#openairequest-extension) for OpenAI-specific optional attributes.
+The microflow activity `Chat completions (with history)` supports more complex use cases where a list of (historical) messages (for example, the conversation or context so far) is sent as part of the request to the LLM. The operation requires a specialized [Connection](/appstore/modules/genai/commons/#connection) of type `OpenAIConnection`, a [Request](/appstore/modules/genai/commons/#request) object containing messages, optional attributes, an optional `ToolCollection`, and the optionally referenced `OpenAIRequest_Extension` for OpenAI-specific optional attributes.
 
 Optionally, you can use [function calling](#chatcompletions-functioncalling) by adding a [ToolCollection](/appstore/modules/genai/commons/#add-function-to-request) to the Request. Or you can [send images](#chatcompletions-vision) along with the user prompt by passing a [FileCollection](#initialize-filecollection).
 
@@ -254,7 +254,7 @@ The microflow activity `Embeddings (ChunkCollection)` supports the more complex 
 
 In order to create embeddings, it does not matter whether the [ChunkCollection](/appstore/modules/genai/commons/#chunkcollection) contains [Chunks](/appstore/modules/genai/commons/#chunk-entity) or its specialization [KnowledgeBaseChunks](/appstore/modules/genai/commons/#knowledgebasechunk-entity). However, if the end goal is to store the generated emebedding vectors in a knowledge base (e.g. using the [PgVector Knowledge Base](/appstore/modules/pgvector-knowledge-base/) module), then Mendix recommends adding `KnowledgeBaseChunks` to the `ChunkCollection` and using these as an input for the embeddings operations, so they can afterwards directly be used to populate the knowledge base with.
 
-For technical details, see the [Technical Reference](#embeddings-chunkcollection-technical) section.
+For technical details, see the documentation on `Embeddings (ChunkCollection)` in Studio Pro.
 
 ### Exposed Microflows {#exposed-microflows}
 

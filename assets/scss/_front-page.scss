@@ -51,8 +51,7 @@ ul.card-text {
     a {
         text-decoration: none;
         &::after {
-            content: "→";
-            padding-left: 0.25rem;
+            content: " →";
         }
         &:hover {
             color: $link-hover-color;
@@ -66,7 +65,7 @@ div.lp-panel {
     background: #171717;
     box-sizing: border-box;
     border-radius: 8px;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.25rem;
     margin: 0.05rem;
 }
 
@@ -74,20 +73,26 @@ h4.lp-panel-title {
     color: #FFFFFF;
     font-weight: 600;
     font-size: 1.125rem;
+    margin-bottom: 0.875rem !important;
 }
 
 li.lp-panel-list {
     font-size: 1rem;
     font-weight: 600;
     list-style: none;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     a {
         color: #8AC4FF !important;
+        &:hover {
+            color: #99D0FF !important;
+        }
     }
+
 }
 
 p.rn-date {
     color: #FFFFFF;
     font-size: 0.75rem;
     font-weight: 400;
+    margin-bottom: 0rem;
 }

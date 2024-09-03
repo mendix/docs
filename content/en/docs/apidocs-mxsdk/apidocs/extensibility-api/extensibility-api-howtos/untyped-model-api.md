@@ -1,39 +1,37 @@
-﻿---
+---
 title: "Use the Untyped Model Access API"
 url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/
 weight: 11
 ---
 
-# Introduction into the Untyped Model Access API
+## Introduction
 
-The untyped model API is a part of our advanced toolset meant to cater to the power user, allowing access to the parts of the model no-one had access before. 
-Since it's meant to be used by people used to the internals of our platform, you'll have to operate with model element and property names that you can look up on our [Official Model SDK Documentation page](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html).
-Specifically the type names that you will see referenced all over our api can be found under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
+The Untyped Model API is a part of Mendix advanced toolset meant to cater to the advanced users who are used to the internals of the Mendix platform.
+
+For model element and property names, see [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Specifically, the type names that the Mendix APIs reference Mendix APIs can be found under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
 
 {{% alert color="info" %}}
-
-All methods provided by our api are recursive to reduce the amount of API calls necessary to get to the countent you're interested in.
-
+All methods provided by the Untyped Model API are recursive to reduce the amount of API calls necessary to get to the content you are interested in.
 {{% /alert %}}
 
 {{% alert color="info" %}}
-
-To see the api in action using the examples in this guide you must create a microflow having the default name - "MyFirstLogic" with an action and add an entity to the domain model.
-
+To see the Untyped Model API in action, as described in the examples in this document, you must create a microflow having the default name `MyFirstLogic` with an action, and add an entity to the domain model.
 {{% /alert %}}
 
-## Setup
+## Getting Started
 
-All you have to do to start using our new api is to import it as you always did before.
+To start using the Untyped Model API, import it:
+
 ```csharp
 class Sample(IUntypedModelAccessService untypedModelAccessService)
 {
 }
 ```
 
-## First steps
+## Gaining Access to the Model Root
 
-To gain access to the model root, all you have to do is to request it from the newly added service
+To gain access to the model root, request it from the newly added service:
+
 ```csharp
 class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {
@@ -42,9 +40,9 @@ class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ```
 
-## Requesting top level model elements(a.k.a. Project, Module)
+## Requesting Top-level Model Elements
 
-To start going through the model you have to pick a starting point first.
+To start going through the model and requesting top level-model elements, such as apps and modules, choose a starting point first:
 ```csharp
 class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {
@@ -60,11 +58,12 @@ class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel curre
 }
 ```
 
-## Accessing model element's child elements like microflow's actions and domain model entities
+## Accessing Child Elements
 
-If you'd like to look up model unit's or element's sub elements. Please see the following example.
-Using either `GetElements` or `GetElementsOfType` you can query Microflow's actions or Domain Model's entities, in case you'd like to analyze them or
-implement custom validation rules based on these and many other elements of our model.
+To access the child elements of model elements, such as the actions of a microflow and entities of a domain model, see the example below:
+
+Using either `GetElements` or `GetElementsOfType`, you can query the actions of a microflow and entities of a domain model. This can help you, for example, analyze these elements or implement custom validation rules.
+
 ```csharp
 class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {
@@ -85,9 +84,9 @@ class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel curre
 }
 ```
 
-## Going deeper, getting model unit's properties
+## Getting Model Unit's Properties
 
-In case you need more of the model unit's data like its properties you can look those up too. Here's an example.
+In case you need more data of the model unit, like its properties, you can also access them. Below is an example:
 ```csharp
 class Sample5(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {

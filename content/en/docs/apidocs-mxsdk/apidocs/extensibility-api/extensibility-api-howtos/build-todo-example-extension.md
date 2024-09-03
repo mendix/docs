@@ -565,25 +565,25 @@ In this section, you will add a menu item to the toolbar that will allow you to 
 
     ```csharp
     using System.Collections.Generic;
-    
+
     using System.ComponentModel.Composition;
     using Mendix.StudioPro.ExtensionsAPI.UI.DockablePane;
     using Mendix.StudioPro.ExtensionsAPI.UI.Menu;
     using Mendix.StudioPro.ExtensionsAPI.UI.Services;
-    
+
     namespace Mendix.ToDoExtension;
-    
+
     [Export(typeof(Mendix.StudioPro.ExtensionsAPI.UI.Menu.MenuExtension))]
     public class ToDoListMenuBarExtension : MenuExtension
     {
         private readonly IDockingWindowService _dockingWindowService;
-    
+
         [ImportingConstructor]
         public ToDoListMenuBarExtension(IDockingWindowService dockingWindowService)
         {
             _dockingWindowService = dockingWindowService;
         }
-    
+
         public override IEnumerable<MenuViewModel> GetMenus()
         {
             yield return new MenuViewModel("To Do List", () => _dockingWindowService.OpenPane(ToDoListDockablePaneExtension.PaneId));

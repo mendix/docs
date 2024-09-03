@@ -468,7 +468,7 @@ As for your very first project, you want to pick a use case out of your portfoli
 
 Here’s a **quick checklist of things to consider when choosing your first application**:
 
-**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can stand alone in production. 
+**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can standalone in production. 
 
 **Make them worthy:** The first application should also be highly visible within the organization. It must have the right urgency and executive support, and also deliver tangible business value. Select an app idea where you’re sure the results will get noticed and the success will be shared by your stakeholders. 
 

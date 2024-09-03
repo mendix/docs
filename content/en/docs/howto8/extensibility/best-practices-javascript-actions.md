@@ -389,7 +389,7 @@ To create and refine your JavaScript actions most effectively, consult the subse
 With well-designed APIs, JavaScript actions will become easier to reuse. Please consider the following guidelines when designing APIs: 
 
 * Create small, functional actions – when actions with many functions are split into smaller components, the nanoflow can combine them in various ways
-* Generate the fewest number of side effects – an action without a side effect does not have a state, does not depend on the state of other components, and can thus stand alone (this will also make testing and behavior predicting easier for developers) 
+* Generate the fewest number of side effects – an action without a side effect does not have a state, does not depend on the state of other components, and can thus standalone (this will also make testing and behavior predicting easier for developers) 
 * Do not implement actions that can be done with standard actions, and do not combine new and existing functions into single actions (instead, compose the required function with multiple actions in a nanoflow)
 * Business logic should be in the nanoflow – the actions should only `Do`  things, `Check` states, and `Get` data
 * Create `Check` actions and `Do` actions for developers who do not know that the Mendix Client can perform the actions – for example the `CheckCameraSupported` and `OpenCamera` actions

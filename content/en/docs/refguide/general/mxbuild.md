@@ -61,11 +61,11 @@ Command-line options are described in the table below:
 | `-h`, `--help` | Prints a short description of the MxBuild and a list of all available options. |
 | `--java-home=DIRECTORY` | (Required). The directory in which the JDK is installed.<br/>For example, `--java-home=/usr/lib/jvm/java-8-oracle`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"`. |
 | `--java-exe-path=FILENAME` | (Required). The full path to the Java executable.<br/>For example, `--java-exe-path=/usr/lib/jvm/java-8-oracle/bin/java`.<br/>For Windows, *DIRECTORY* should be enclosed in double-quotes `"` and must contain the complete file name `...\java.exe`. |
-| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package. |
+| <code>––target=[package&#124;deploy]</code> | `package`: default if option is omitted; creates a deployment package (*.mda file*).<br/>`deploy`: deploys the app without making a deployment package.<br/>`sbom`: generate a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format for the App. |
 | `--loose-version-check` | Creates a deployment package from an app which was created with a lower Mendix version.<br/>The app will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will not be stored in your app. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the app to the specified file in JSON format.<br />This file is only written when the app contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [App Errors](#app-errors) section below. |
-| `--generate-sbom` | Generates a [Software Bill of Materials](/refguide/sbom-generation/) (SBOM) in the CycloneDX format. |
-| `--sbom-output-path=VALUE` | File path to generate bill of material file (Default value: `deployment\sbom.json`). |
+| `--generate-sbom` | Generate a software bill of materials (SBOM) file as a part of the `package` and `deployment` targets. The sbom will be included in the deployment package if this option is used and the sbom is saved under its default location: `deployment\sbom.json` |
+| `--sbom-output-path=VALUE` | File path to generate bill of material file for the `package` and `deployment` targets, use `--output` for the `sbom` target (Default value: `deployment\sbom.json`). Note: this parameter is deprecated and will be removed in Mendix 11 and is replaced with the `sbom` target. |
 | `--gradle-home` | Sets the Gradle home directory. This can be used when auto-detection of the Gradle installation fails. | 
 
 ### Options When Creating a Package
@@ -87,6 +87,24 @@ For example, to create a deployment package `out.mda` in the current directory u
 
 ```bat
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
+```
+
+### Options When Creating a SBOM
+
+{{% alert color="info" %}}
+The following options are only applicable with the `--target=sbom` option:
+{{% /alert %}}
+
+Options when creating a software bill of materials (SBOM) are described in the table below:
+
+| Option&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
+| --- | --- |
+| `-o FILENAME` or<br/>`--output=FILENAME` | The name (with optional relative or absolute path) of the file that will contain the SBOM and is created by MxBuild.<br />If this option is omitted, the file will be saved in the deployment directory of the App under the name `sbom.json`. |
+
+For example, to create a SBOM in the deployment directory of the App with the name `sbom.json` using the app `MyApp` using the Windows version of MxBuild, you can use the following command:
+
+```bat
+mxbuild --target=sbom --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
 ## Return Code

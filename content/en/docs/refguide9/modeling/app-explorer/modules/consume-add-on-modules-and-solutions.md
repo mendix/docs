@@ -8,7 +8,7 @@ weight: 30
 
 ## Introduction
 
-An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *stand-alone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 
+An *add-on module* is a special type of module that adds functionality to your app. It has Intellectual Property (IP) protection enabled and has the *.mxmodule* extension. An add-on module is developed to be a *standalone functionality* that other users can consume in their apps, for example, an add-on can be a connector. 
 
 A *solution* is a Mendix app that has out-of-the-box solution suitable for multiple customers. Solution, as any other app, may consist of several modules, including app modules (standard modules) and add-on modules, but it also has solution modules that form the **solution core**. Solution modules have IP protection enabled. For more information on IP protection, see [IP Protection](/appstore/creating-content/sol-ip-protection/). 
 

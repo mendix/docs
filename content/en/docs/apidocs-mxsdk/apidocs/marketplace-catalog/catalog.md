@@ -1,10 +1,10 @@
 ---
-title: "APIs for Catalog"
+title: "Catalog APIs"
 url: /apidocs-mxsdk/apidocs/catalog-apis/
 description: "The Catalog APIs register data sources from other business applications."
 weight: 35
 restapi: true
-linktitle: "Catalog"
+linktitle: "Catalog APIs"
 aliases:
     - /apidocs-mxsdk/apidocs/data-hub-apis/
 ---

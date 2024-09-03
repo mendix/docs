@@ -111,13 +111,13 @@ You can use the values in the steps below for experimental purposes:
 
 6. Wait for the database to be created. This can take some time. You may already navigate to the newly created resource by searching for the name you chose.
 
-8. Once the server is running, you can add the pgVector extension to the allowed extensions list (see [How to enable and use pgvector on Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector) in the *Azure documentation*) or see the following steps:
+7. Once the server is running, you can add the pgVector extension to the allowed extensions list (see [How to enable and use pgvector on Azure Database for PostgreSQL](https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/how-to-use-pgvector) in the *Azure documentation*) or see the following steps:
    1. Search for **Server parameters** in the search bar on the left. A list of parameters is loaded.
    2. Search for **azure.extensions**.
    3. In the column *VALUE*, search in the dropdown for **VECTOR** (note that in Azure the extension is not called *pgVector* but just *Vector*).
    4. Save the changes.
    
-9. Search for **Databases** in the search bar on the left. Verify that there is already a database that you can use. Alternatively, create a new database by clicking **Add** at the top.
+8. Search for **Databases** in the search bar on the left. Verify that there is already a database that you can use. Alternatively, create a new database by clicking **Add** at the top.
 
 ### Deleting Resources in Azure {#azure-database-delete}
 

@@ -1,20 +1,52 @@
-h1.page-title{
-    font-weight: $font-weight-normal;
-    font-size: 2rem;
-    margin-bottom: .75rem;
+.td-main main {
+    padding: 2rem 2.5rem;
+    padding-top:5.25rem !important;
 }
 
-h5.lp-description{
-    font-size: 1rem;
-    font-weight: 400;
+div.lp-container {
+    padding: 0;
+    margin: 0;
 }
 
 .lp-row{
     margin-bottom: 2rem !important;
 }
 
-li.link-list{
-    font-size: $font-size-base;
+h1.page-title {
+    font-weight: $font-weight-normal;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h5.lp-description {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.lp-container img {
+    border-style: none;
+}
+
+img.card-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: -0.2rem;
+}
+
+h4.card-title {
+    color: $gray-900;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-top: 3px solid;
+    padding-top: 1rem;
+    border-color: $green;
+}
+
+ul.card-text {
+    margin-top: 1rem;
+    padding-left: 0rem;
     list-style: none;
     a {
         text-decoration: none;
@@ -30,26 +62,21 @@ li.link-list{
     }
 }
 
-.td-main main {
-    padding: 2rem 2.5rem;
-    padding-top:5.25rem !important;
-}
-
-.resources{
+div.lp-panel {
     background: #171717;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 1.5rem 1rem;
-    margin: .05rem;
+    margin: 0.05rem;
 }
 
-.resources-title{
+h4.lp-panel-title {
     color: #FFFFFF;
     font-weight: 600;
     font-size: 1.125rem;
 }
 
-.resources-list{
+li.lp-panel-list {
     font-size: 1rem;
     font-weight: 600;
     list-style: none;
@@ -59,43 +86,8 @@ li.link-list{
     }
 }
 
-.rn-date{
+p.rn-date {
     color: #FFFFFF;
     font-size: 0.75rem;
     font-weight: 400;
-}
-
-img.my-icon{
-    width: 4rem;
-    height: 4rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: -.2rem;
-}
-
-h4.card-title{
-    color: $gray-900;
-    font-weight: 600;
-    font-size: 1.25rem;
-    border-top: 3px solid;
-    padding-top: 1rem;
-}
-
-ul.card-text{
-    margin-top: 1rem;
-    font-size: 1.125rem;
-    padding-left: 0rem;
-}
-
-div.my-container{
-    padding: 0;
-    margin: 0;
-}
-
-.my-container img{
-    border-style: none;
-}
-
-.card-body{
-    padding:0rem;
 }

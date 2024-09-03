@@ -12,7 +12,7 @@
             {{ if $gh_url -}}
               <!-- NK - changed icon properties -->
               {{/* {{ warnf "Warning: use of `github_url` is deprecated. For details see https://www.docsy.dev/docs/adding-content/repository-links/#github_url-optional" -}}*/ -}}
-              <a data-proofer-ignore href="{{ $gh_url }}" target="_blank"><img class="my-icon" src="/icons/content-paper-edit.svg" title="Edit on GitHub"></a>
+              <a data-proofer-ignore href="{{ $gh_url }}" target="_blank"><img class="ToC-icon" src="/icons/content-paper-edit.svg" title="Edit on GitHub"></a>
             {{ else if $gh_repo -}}
               {{ $gh_repo_path := printf "%s/content/%s" $gh_branch $pathFormatted -}}
               {{ if and ($gh_subdir) (.Site.Language.Lang) -}}

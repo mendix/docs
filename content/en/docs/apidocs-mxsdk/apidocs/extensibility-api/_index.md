@@ -39,7 +39,7 @@ Here is a list of how-tos for you to begin with:
 
 ## Advanced APIs
 
-All the APIs meant for the Mendix platform's power users
+All the APIs meant for the Mendix platform's advanced users
 
 - [Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/)
 

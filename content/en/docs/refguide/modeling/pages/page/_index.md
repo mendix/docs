@@ -193,11 +193,11 @@ It has the following features which are not available in **Structure mode**:
 
 #### X-Ray Mode {#x-ray-mode}
 
-Before this feature, you could either work in **Structure** mode and see a completely detailed view of your app in progress or **Design** mode which gave you a more simplified view of the app as your end-user might see it. 
+**Structure** mode allows you to see a completely detailed view of your app in progress. **Design** mode gives you a more simplified view of the app as your end-user might see it. 
 
 **X-ray mode** is a way to visualize certain structures of a page while in **Design mode**. It offers you a similar experience as **Design** mode, but you get more detailed information on structures and page elements. 
 
-When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
+When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. In addition, widgets like the **Data View** will show information on their data sources, even if the widget is not currently selected. These extra effects are removed when **X-ray mode** is turned off.
 
 **X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
 

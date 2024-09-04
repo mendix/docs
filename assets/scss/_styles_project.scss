@@ -535,13 +535,9 @@ nav.foldable-nav {
     }
 }
 
-// _sidebar-tree.scss - Left side navigation
+// _sidebar-tree.scss - Left-side navigation
 
 .td-sidebar-nav {
-    padding-right: 0.5rem;
-    margin-right: -5px; // NK - decreased
-    margin-left: -15px;
-    font-size: 0.95rem; // NK - decreased from inherited
     line-height: 1.2; // NK - decreased from inherited
 
     @include media-breakpoint-up(md) {
@@ -574,21 +570,18 @@ nav.foldable-nav {
             font-weight: inherit;//$font-weight-light;`
         }
         .link-title:hover {
-            text-decoration: underline;
+            text-decoration: underline; // DB – added
         }
     }
     
     .td-sidebar-link.tree-root{
-        font-weight: $font-weight-bold;
-        color: $td-sidebar-tree-root-color;
-        border-bottom: none;//1px $td-sidebar-tree-root-color solid; // NK - deactivated to align with design proposal
-        margin-bottom: 1rem;
+        display: none; // DB – added to prevent linktitle from index page
     }
 }
 
 .td-sidebar {
     @include media-breakpoint-up(md) {
-        padding-top: 4rem;
+        padding-top: 5.25rem; // DB – aligns with .td-main main padding-top
         background-color: $td-sidebar-bg-color;
         padding-right: 1rem;
         border-right: none;//border-right: 1px solid $td-sidebar-border-color; // NK - moved to td-main main, to fully span height of screen

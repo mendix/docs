@@ -19,7 +19,7 @@ This module is particularly powerful for Mendix apps that use large language mod
 When there is a need for a separate private knowledge base outside of the LLM infrastructure, this module provides a low-code way to store discrete pieces of data (commonly refered to as **chunks**) in the private knowledge base and retrieve relevant information for end-user actions or app processes.
 
 {{% alert color="info" %}}
-Check out the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) to see example implementations, including retrieval augmented generation and semantic search with knowledge bases.
+Check out the [GenAI showcase app](https://marketplace.mendix.com/link/component/220475) to see example implementations, including retrieval augmented generation and semantic search with knowledge bases.
 {{% /alert %}}
 
 #### Retrieval Augmented Generation {#use-cases-rag}
@@ -175,10 +175,10 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ## Showcase Application {#showcase-application}
 
-For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [OpenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
+For more inspiration and guidance on how to use these operations in your logic and how to combine it with use cases in the context of generative AI, Mendix highly recommends downloading the [GenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace. This application contains various examples in the context of generative AI, some of which use the PgVector Knowledge Base module for storing embedding vectors.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section and the [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/) section.
+For more information on how to set up a vector database for retrieval augmented generation (RAG), see the [Setting up a Vector Database](/appstore/modules/genai/pgvector-setup/) section and the [RAG Example Implementation in the GenAI Showcase Application](/appstore/modules/genai/rag/) section.
 {{% /alert %}}
 
 ## Read More {#read-more}

@@ -180,7 +180,7 @@ The following versions are available and can be swapped as needed:
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
-See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
 
 ### Additional Operations {#operations}
 

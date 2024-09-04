@@ -138,8 +138,10 @@ The settings in this section configure the images.
     * **S3 Bucket** - This option requires an access key ID and secret access key for authentication.
     * **Azure Blob** - This option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. Add role assignment with the Storage Blob Data Reader role to the storage account in your managed identity.
 
-* **Build Package Path** - The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. You can also use an S3 bucket for this purpose. The file name format is *mxbuild-9.24.1.4658.tar.gz*.
-* **Build OCI Image** - Select this check box to build the OCI image besides the MDA file. Only OCI image can be used for deployment if this is checked.
+* **Build Package Path** - This setting is required for the **File Server** build package source. The default value is `https://cdn.mendix.com/runtime`. If you have your own file server, you must download the package from the Mendix Content Delivery Network, and then upload it to your file server. The file name format is *mxbuild-9.24.1.4658.tar.gz*.
+* **S3 Endpoint**, **S3 Bucket Name**, **Region**, **Access Key ID**, **Secret Access Key** - These settings are required for the **S3 Bucket** build package source.
+* **Storage Account**, **Container** - These settings are requried for the **Azure Blob** build package source.
+* **Build OCI Image** - Select this check box to build the OCI image besides the MDA file. Only OCI image can be used for deployment if this is checked. This option can be used to avoid configuring anonymous access to your S3 bucket or Azure Blob container.
 * **Runtime Base Image** - This setting is only applicable if you selected the **Build OCI Image** check box. The default value is `private-cloud.registry.mendix.com/app-building-blocks`. If you are in an air gap environment, sync tag `ubi9-1-jre{XX}-entrypoint` and `runtime-{YYYYY}`, where `{XX}` is java version in your app, and `{YYYYY}` is your app runtime version. For example: `app-building-blocks:ubi9-1-jre21-entrypoint` and `app-building-blocks:runtime-10.12.1.39914`.
 * **Allow Anonymous Access** - Select this checkbox if above Runtime Base Image is accessible without authentication.
 * **Runtime Base Registry User** - This setting is only applicable if you did not select the **Allow Anonymous Access** check box. User name for the registry authentication.
@@ -148,14 +150,15 @@ The settings in this section configure the images.
 * **OCI Registry User** - This setting is only applicable if you selected the **Build OCI Image** check box. User name for the registry authentication.
 * **OCI Registry Password** - This setting is only applicable if you selected the **Build OCI Image** check box. Password for the registry authentication.
 
-### Configuring S3 Bucket Setting {#mda-storage}
+### Configuring MDA Storage Setting {#mda-storage}
 
-The settings in this section configure the S3 bucket.
+The settings in this section configure the storage for build output artifacts.
 
+* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. The Azure Blob option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. Add role assignment with the Storage Blob Data Reader role to the storage account in your managed identity.
 * **S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
 * **No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds --no-verify-ssl to the AWS CLI command to avoid failure.
 * **S3 Bucket Name** - Your S3 bucket name, for example, *mybucket*.
-* **Mda Location** - Your S3 bucket name's domain, for example, `https://mybucket.s3.ap-southeast-1.amazonaws.com`. This URL is used to access build artifacts, the whole path is: `Mda Location + Appid + Mda/Meta file`. Make sure it is publicly accessible without any authentication.
+* **Mda Location** - Your S3 bucket name's domain, for example, `https://mybucket.s3.ap-southeast-1.amazonaws.com`. This URL is used to access build artifacts, the whole path is: `Mda Location + Appid + Mda/Meta file`. Make sure that the S3 bucket is configured to allow anonymous access.
 * **Region** - For example, `ap-southeast-1`.
 * **Use K8S Secret** - Select whether you want to input the **Access Key ID** and **Secret Access Key**, or set them in a Kubernetes secret. Enable this setting to avoid showing sensitive credentials in a build pod.
 * **Secret Name** - This setting is only applicable if you selected the **Use K8S Secret** check box. This is the secret name where you want to store the **Access Key ID** and **Secret Access Key**. Use the following command to create this secret, where your-namespace is the namespace that you specified in **Build Cluster Setting** > **Namespace**.

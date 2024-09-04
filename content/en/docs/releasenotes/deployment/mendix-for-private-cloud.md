@@ -11,10 +11,23 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### September 5th, 2024
+
+#### Portal Improvements
+
+* We resolved an issue where updates to constant descriptions were not being reflected in the portal (Ticket [225562](https://mendixsupport.zendesk.com/agent/tickets/225562)).
+* We resolved an issue where updating the environment resulted in an invalid MxAdmin password error (Ticket [226829](https://mendixsupport.zendesk.com/agent/tickets/226829)).
+
+#### Deploy API
+
+* We fixed an issue where new constants from Studio Pro were not propagated to the Cluster via the **Update Environment** API call if they weren't specifically mentioned in the manifest. Their default values will be the ones set in Studio Pro.
+* We addressed an issue in the **Update Namespace** API where updating a namespace also required providing Namespace **Additional Information** in the manifest. The field is has not been marked as non-editable in the specification file and its validation has been removed (Ticket [163987](https://mendixsupport.zendesk.com/agent/tickets/163987)).
+* We added support for modifying ephemeral storage via the API (Ticket [226147](https://mendixsupport.zendesk.com/agent/tickets/226147)).
+
 ### August 15th, 2024
 
 * We now allow rounding off model constants value with decimal type to 10 decimal digits.
-* We have fixed an issue where the build status failed to be retrieved (ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
+* We have fixed an issue where the build status failed to be retrieved (Ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
 
 #### Portal Enhancements
 

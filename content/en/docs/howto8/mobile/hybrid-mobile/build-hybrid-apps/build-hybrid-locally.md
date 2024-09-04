@@ -205,7 +205,7 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 
 ## Read More
 
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Offline Reference Guide](/refguide8/offline-first/)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

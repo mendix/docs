@@ -625,7 +625,7 @@ When setting up your deployment strategy, it is important to look at the feature
 
 If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
-For a list of all the deployment options that are available, see [Deployment](/deployment/). 
+For a list of all the deployment options that are available, see [Deploying Apps](/deployment/). 
 
 Some highlights to consider:
 

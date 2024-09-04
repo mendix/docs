@@ -1,5 +1,6 @@
 ---
-title: "Software Composition"
+title: "Software Composition (Control Center)"
+linktitle: "Software Composition"
 url: /control-center/software-composition/
 description: "Describes the Software Composition page in the Mendix Control Center."
 weight: 80

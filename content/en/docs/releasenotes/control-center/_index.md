@@ -1,5 +1,6 @@
 ---
-title: "Control Center"
+title: "Control Center Release Notes"
+linktitle: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
 weight: 30

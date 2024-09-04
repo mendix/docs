@@ -20,6 +20,6 @@ Open the app in [Apps](https://sprintr.home.mendix.com/link/myapps) and then go 
 * [Board](/developerportal/project-management/epics/board/)
 * [Planning](/developerportal/project-management/epics/planning/)
 * [Epics](/developerportal/project-management/epics/epics/)
-* [Archive](/developerportal/project-management/epics/archive/)
+* [Archive Stories](/developerportal/project-management/epics/archive/)
 
 After you open the app in Epics, you can easily switch to other apps that you have access to. To do so, click the name of the current app on the upper-left corner, and then select a different app from the drop-down list.

@@ -1,5 +1,6 @@
 ---
-title: "Community"
+title: "Community Release Notes"
+linktitle: "Community"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 weight: 37

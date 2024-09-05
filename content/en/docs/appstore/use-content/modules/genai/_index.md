@@ -35,6 +35,7 @@ To help you get started, the following sections list the available GenAI compone
 |-------------------|---------------------------------------------------|----------------------------------|------------|
 | [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) | Lets you kick-start the development of enterprise-grade AI chatbot experiences. For example, you can use it to create your own private enterprise-ready ChatGPT-like app. | Starter App | 10.12 |
 | [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) | Start from scratch to create a new application with GenAI capabilities and without any dependencies. | Starter App | 10.12 |
+| [Support Assistant Starter App](https://marketplace.mendix.com/link/component/231035) | Learn how to combine common GenAI patterns, such as function calling and RAG to build your own support assistant. Connect it to a model like Anthropic Claude or Amazon Titan via Amazon Bedrock or use an (Azure) OpenAI subscription.  | Starter App | 10.12 |
 | [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) | Understand what you can build with generative AI. Understand how to implement the OpenAI and Amazon Bedrock connectors and how to integrate with the Conversational UI module. |Showcase App | 9.24.2 |
 | [Conversational UI](/appstore/modules/genai/conversational-ui/) | Create a Conversational UI for a new or existing app. | UI Module | 9.24.2 |
 | [OpenAI Connector](/appstore/modules/genai/openai/) | Connect to Azure OpenAI. | Connector Module | 9.24.2 |

@@ -84,7 +84,7 @@ The association `Order_Customer` is stored in the table `module$order_customer` 
 | 8 | 1 |
 | 5 | 3 |
 
-#### Order_Customer Association
+#### Order Entity
 
 The entity `Order` is stored in the table `module$order` which is shown below. It is similar to the table of the entity `Customer`. However no system attributes have been defined in the domain model and so they are not stored in the table.
 

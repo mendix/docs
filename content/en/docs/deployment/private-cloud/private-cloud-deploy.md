@@ -59,6 +59,11 @@ Before you can create an environment, you will need to create a deployment packa
 Deployment package creation for Mendix versions 7 and below is no longer supported. Upgrade to version 8 or above in order to build and deploy.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The deployment package created with Java 17/21 support requires Operator 2.15.0 version and above.
+{{% /alert %}}
+
+
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 

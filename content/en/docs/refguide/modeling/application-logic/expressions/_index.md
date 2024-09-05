@@ -59,7 +59,7 @@ This way the first statement gets evaluated.
 
 [Regular Expression](/refguide/regular-expressions/) resource documents cannot be used in expressions. However, the format of regular expressions, sub-expressions, and quantifiers used in regular expression strings is the same as the ones described in the [Expression](/refguide/regular-expressions/#expression) section of *Regular Expressions*.
 
-## System Items{#system-items}
+## System Items {#system-items}
 
 Mendix provides you with a number of system items which describe the current user's session. You can use these in the same way as any other named item.
 
@@ -81,69 +81,72 @@ For performance reasons, this information is cached. If you need the current val
 
 ## Unary Expressions
 
-* [Unary minus ( - )](/refguide/unary-expressions/)
+* [Unary minus ( `-` )](/refguide/unary-expressions/)
 
 ## Arithmetic Expressions
 
-* [Multiplication ( * )](/refguide/arithmetic-expressions/)
-* [Division ( div or : )](/refguide/arithmetic-expressions/)
-* [Modulo ( mod )](/refguide/arithmetic-expressions/)
-* [Addition ( + )](/refguide/arithmetic-expressions/)
-* [Subtraction ( - )](/refguide/arithmetic-expressions/)
+* [Multiplication ( `*` )](/refguide/arithmetic-expressions/#multiplication)
+* [Division ( `div` or `:` )](/refguide/arithmetic-expressions/#division)
+* [Modulo ( `mod` )](/refguide/arithmetic-expressions/#modulo)
+* [Addition ( `+` )](/refguide/arithmetic-expressions/#addition)
+* [Subtraction ( `-` )](/refguide/arithmetic-expressions/#subtraction)
 
 ## Relational Expressions
 
-* [Less than ( < )](/refguide/relational-expressions/)
-* [Greater than ( > )](/refguide/relational-expressions/)
-* [Less than or equal to ( <= )](/refguide/relational-expressions/)
-* [Greater than or equal to ( >= )](/refguide/relational-expressions/)
-* [Is equal to ( = )](/refguide/relational-expressions/)
-* [Is not equal to ( != )](/refguide/relational-expressions/)
+* [Less than ( `<` )](/refguide/relational-expressions/#less-than)
+* [Greater than ( `>` )](/refguide/relational-expressions/#greater-than)
+* [Less than or equal to ( `<=` )](/refguide/relational-expressions/#less-than-or-equal-to)
+* [Greater than or equal to ( `>=` )](/refguide/relational-expressions/#greater-than-or-equal-to)
+* [Equal to ( `=` )](/refguide/relational-expressions/#equal-to)
+* [Not equal to ( `!=` )](/refguide/relational-expressions/#not-equal-to)
 
 ## Special Checks
 
-* [Checking for an empty object](/refguide/special-checks/)
-* [Checking for an empty object member](/refguide/special-checks/)
-* [`isNew`](/refguide/special-checks/) – checks whether an object is new
+* [Checking for an empty object](/refguide/special-checks/#empty-object)
+* [Checking for an empty object member](/refguide/special-checks/#empty-object-member)
+* [Checking if an object is new (`isNew`)](/refguide/special-checks/#new)
+* [Checking if an object is synced (`isSynced`)](/refguide/special-checks/#synced)
+* [Checking if a synchronization is running (`isSyncing`)](/refguide/special-checks/#is-syncing)
 
 ## Boolean Expressions
 
-* [and](/refguide/boolean-expressions/)
-* [or](/refguide/boolean-expressions/)
-* [not](/refguide/boolean-expressions/)
+* [`and`](/refguide/boolean-expressions/#and)
+* [`or`](/refguide/boolean-expressions/#or)
+* [`not`](/refguide/boolean-expressions/#not)
 
 ## If Expressions
 
-* [if](/refguide/if-expressions/) – performs a conditional action
+* [`if`](/refguide/if-expressions/) – performs a conditional action
 
 ## Mathematical Function Calls
 
-* [`max`](/refguide/mathematical-function-calls/) – the maximum of a list of numbers
-* [`min`](/refguide/mathematical-function-calls/) – the minimum of a list of numbers
-* [`round`](/refguide/mathematical-function-calls/) – the rounding of a floating-point number, optionally to a specified precision
-* [`random`](/refguide/mathematical-function-calls/) – random number generation
-* [`floor`](/refguide/mathematical-function-calls/) – the rounding of a floating-point number down
-* [`ceil`](/refguide/mathematical-function-calls/) – the rounding of a floating-point number up
-* [`pow`](/refguide/mathematical-function-calls/) – the exponentiation
-* [`abs`](/refguide/mathematical-function-calls/) – the absolute value
+* [`max`](/refguide/mathematical-function-calls/#max) – the maximum of a list of numbers
+* [`min`](/refguide/mathematical-function-calls/#min) – the minimum of a list of numbers
+* [`round`](/refguide/mathematical-function-calls/#round) – the rounding of a floating-point number, optionally to a specified precision
+* [`random`](/refguide/mathematical-function-calls/#random) – random number generation
+* [`floor`](/refguide/mathematical-function-calls/#floor) – the rounding of a floating-point number down
+* [`ceil`](/refguide/mathematical-function-calls/#ceil) – the rounding of a floating-point number up
+* [`pow`](/refguide/mathematical-function-calls/#pow) – the exponentiation
+* [`abs`](/refguide/mathematical-function-calls/#abs) – the absolute value
+* [`sqrt`](/refguide/mathematical-function-calls/#sqry) – the square root
 
 ## String Function Calls
 
-* [`toUpperCase`](/refguide/string-function-calls/) – converts the string to upper-case
-* [`toLowerCase`](/refguide/string-function-calls/) – converts the string to lower-case
-* [`substring`](/refguide/string-function-calls/) – gets a part of a string
-* [`find`](/refguide/string-function-calls/) – gets a sub-string position
-* [`findLast`](/refguide/string-function-calls/) – gets the last sub-string position
-* [`contains`](/refguide/string-function-calls/) – contains the sub-string
-* [`startsWith`](/refguide/string-function-calls/) – determines whether a string starts with the specified sub-string
-* [`endsWith`](/refguide/string-function-calls/) – determines whether a string ends with the specified sub-string
-* [`trim`](/refguide/string-function-calls/) – removes the leading and trailing whitespace
-* [`isMatch`](/refguide/string-function-calls/) – matches a regular expression
-* [`replaceAll`](/refguide/string-function-calls/) – replaces the occurrences of a sub-string
-* [`replaceFirst`](/refguide/string-function-calls/) – replaces the first occurrence of a sub-string
-* [`String concatenation ( + )`](/refguide/string-function-calls/) – concatenates strings
-* [`urlEncode`](/refguide/string-function-calls/) – converts a string to be used in a URL
-* [`urlDecode`](/refguide/string-function-calls/) – converts a string back from a URL
+* [`toLowerCase`](/refguide/string-function-calls/#toLowerCase) – converts the string to lower-case
+* [`toUpperCase`](/refguide/string-function-calls/#toUpperCase) – converts the string to upper-case
+* [`substring`](/refguide/string-function-calls/#substring) – gets a part of a string
+* [`find`](/refguide/string-function-calls/#find) – gets a sub-string position
+* [`findLast`](/refguide/string-function-calls/#findLast) – gets the last sub-string position
+* [`contains`](/refguide/string-function-calls/#contains) – contains the sub-string
+* [`startsWith`](/refguide/string-function-calls/#startWith) – determines whether a string starts with the specified sub-string
+* [`endsWith`](/refguide/string-function-calls/#endWith) – determines whether a string ends with the specified sub-string
+* [`trim`](/refguide/string-function-calls/#trim) – removes the leading and trailing whitespace
+* [`isMatch`](/refguide/string-function-calls/#isMatch) – matches a regular expression
+* [`replaceAll`](/refguide/string-function-calls/#replaceAll) – replaces the occurrences of a sub-string
+* [`replaceFirst`](/refguide/string-function-calls/#replaceFirst) – replaces the first occurrence of a sub-string
+* [String concatenation ( `+` )](/refguide/string-function-calls/#string-concatenation) – concatenates strings
+* [`urlEncode`](/refguide/string-function-calls/#urlEncode) – converts a string to be used in a URL
+* [`urlDecode`](/refguide/string-function-calls/#urlDecode) – converts a string back from a URL
 
 ## Date Creation
 

@@ -9,7 +9,7 @@ description: "Describes relational expressions in Mendix."
 
 Relational expressions allow users to compare values and to make changes and perform actions based upon that information. The return type of such expressions is always Boolean.
 
-## Less Than ( < )
+## Less Than ( < ) {#less-than}
 
 This expression determines whether the first value is less than the second value.
 
@@ -49,7 +49,7 @@ the output is:
 False
 ```
 
-## Greater Than ( > )
+## Greater Than ( > ) {#greater-than}
 
 This expression determines whether the first value is greater than the second value.
 
@@ -92,7 +92,7 @@ the output is:
 True
 ```
 
-## Less Than or Equal To ( <= )
+## Less Than or Equal To ( <= ) {#less-than-or-equal-to}
 
 This expression determines whether the first value is less than or equal to the second value.
 
@@ -149,7 +149,7 @@ The examples below illustrate which value the expression returns:
     True
     ```
 
-## Greater Than or Equal To ( >= )
+## Greater Than or Equal To ( >= ) {#greater-than-or-equal-to}
 
 Determines whether the first value is greater than or equal to the second.
 
@@ -192,7 +192,7 @@ the output is:
 True
 ```
 
-## Is Equal To ( = )
+## Equal To ( = ) {#equal-to}
 
 This expression determines whether the two values are equal.
 
@@ -250,7 +250,7 @@ The examples below illustrate which value the expression returns:
     True
     ```
 
-## Is Not Equal To ( != )
+## Not Equal To ( != ) {#not-equal-to}
 
 Determines whether the two values are not equal.
 

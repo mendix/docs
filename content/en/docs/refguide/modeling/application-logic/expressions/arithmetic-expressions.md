@@ -8,7 +8,7 @@ weight: 20
 
 This document describes the arithmetic operators which are supported in expressions. These all work on numeric data types (Integer/Long and Decimal).
 
-## Multiplication
+## Multiplication (*) {#multiplication}
 
 Multiplies two numbers.
 
@@ -41,9 +41,9 @@ The output is:
 6
 ```
 
-## Division
+## Division (div or :) {#division}
 
-Divides two numbers. You can use either the `div` or colon ( ``:`` ) syntax, as can be seen below in the examples. The colon ( ``:`` ) syntax is inspired by the divide symbol `÷`. We cannot use the more conventional slash ( / ) syntax because that would conflict with the slash which is used for separating objects and members.
+Divides two numbers. You can use either the `div` or colon ( `:` ) syntax, as can be seen below in the examples. The colon ( `:` ) syntax is inspired by the divide symbol `÷`. We cannot use the more conventional slash ( / ) syntax because that would conflict with the slash which is used for separating objects and members.
 
 ### Input Parameters
 
@@ -128,7 +128,7 @@ The result of a division is only an approximation if it has an infinite decimal 
 
 Therefore, it is recommended to do division operations last.
 
-## Modulo
+## Modulo (mod) {#modulo}
 
 Calculates the remainder of the division of one number by another. In other words, `m` modulo `n` corresponds to: `m = p + k*n`, where `p` is the result of the operation `m` modulo `n`.
 
@@ -161,7 +161,7 @@ the output is:
 3
 ```
 
-## Addition
+## Addition (+) {#addition}
 
 Adds two numbers.
 
@@ -196,7 +196,7 @@ the output is:
 1
 ```
 
-## Subtraction
+## Subtraction (-) {#subtraction}
 
 Subtracts the second input from the first.
 

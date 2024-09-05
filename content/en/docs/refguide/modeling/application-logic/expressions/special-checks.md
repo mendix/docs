@@ -9,7 +9,7 @@ description: "Describes special checks in expressions in Mendix."
 
 This documents describes special checks in expressions, such as checking whether an object is empty, new, is synced. 
 
-## Checking for an Empty Object
+## Checking for an Empty Object {#empty-object}
 
 Checks if an object is empty. 
 
@@ -43,7 +43,7 @@ The output will be `True` if the object does not currently exist (which is possi
 
 The same holds for when $object1 is a variable (such as Integer, String, etc).
 
-## Checking for an Empty Object Member
+## Checking for an Empty Object Member {#empty-object-member}
 
 ### Input Parameters
 
@@ -132,7 +132,7 @@ An example of an input can be the following:
 isSynced($currentObject)
 ```
 
-## Checking if a Synchronization is Running {#is-syncing}
+## Checking If a Synchronization Is Running {#is-syncing}
 
 This function is available only in client-side expressions (expressions in [nanoflows](/refguide/nanoflows/) and [pages](/refguide/pages/)).
 

@@ -8,9 +8,9 @@ weight: 70
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
-If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
+If you need more elaborate functions (such as `sin`, `cos`, `tan`, `numberOfPermutations`, `factorial`, or `fibonacciNumber`), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
 
-## max
+## max {#max}
 
 Returns the largest value from the specified arguments.
 
@@ -44,7 +44,7 @@ The output is a decimal:
 6.7
 ```
 
-## min
+## min {#min}
 
 Returns the smallest value from the specified arguments.
 
@@ -78,7 +78,7 @@ The output is a decimal:
 1
 ```
 
-## round
+## round {#round}
 
 Rounds a number to a certain precision.
 
@@ -126,7 +126,7 @@ The output is a decimal:
 88.72
 ```
 
-## random
+## random {#random}
 
 Generates a random number >= 0.0 and < 1.0
 
@@ -152,7 +152,7 @@ The output is:
 0.3
 ```
 
-## floor
+## floor {#floor}
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
@@ -198,7 +198,7 @@ The output is:
 -2
 ```
 
-## ceil
+## ceil {#ceil}
 
 Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
@@ -295,7 +295,7 @@ The output is:
 Calculation of `pow` with a decimal power might be less accurate, as the standard Java/JavaScript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/JavaScript action if high precision is required for this case.
 {{% /alert %}}
 
-## abs
+## abs {#abs}
 
 Calculates the absolute value of a number (meaning, not negative).
 
@@ -335,7 +335,7 @@ The output in both cases is:
 5
 ```
 
-## sqrt
+## sqrt {#sqrt}
 
 Calculates the square root of a number.
 

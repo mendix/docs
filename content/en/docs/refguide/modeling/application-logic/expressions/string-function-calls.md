@@ -16,7 +16,7 @@ For a great deep-dive look into string functions call, check out this video:
 
 {{< vidyard "EpVivdyB4i1jGvc8J9yXkt" >}}
 
-## toLowerCase
+## toLowerCase {#toLowerCase}
 
 Converts all characters in the string to lowercase.
 
@@ -50,7 +50,7 @@ The output is the following:
 'thisismystring'
 ```
 
-## toUpperCase
+## toUpperCase {#toUpperCase}
 
 Converts all characters in the string to uppercase.
 
@@ -84,7 +84,7 @@ The output is the following:
 'THISISMYSTRING'
 ```
 
-## substring
+## substring {#substring}
 
 Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
@@ -145,7 +145,7 @@ To prevent the value of the third parameter from getting out of range, you can s
 substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
-## find
+## find {#find}
 
 Finds the position of the first occurrence of the substring in the string.
 
@@ -205,7 +205,7 @@ The output is:
 11
 ```
 
-## findLast
+## findLast {#findLast}
 
 Finds the position of the last occurrence of a substring in the original string.
 
@@ -267,7 +267,7 @@ The output is:
 
 As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
 
-## contains
+## contains {#contains}
 
 Determines whether the original string (first parameter) contains a substring (second parameter).
 
@@ -326,7 +326,7 @@ The output is:
 true
 ```
 
-## startsWith
+## startsWith {#startWith}
 
 Determines whether a string starts with the specified substring.
 
@@ -361,7 +361,7 @@ The output is:
 true
 ```
 
-## endsWith
+## endsWith {#endWith}
 
 Determines whether a string ends with the specified substring.
 
@@ -442,7 +442,7 @@ The output is:
 ''
 ```
 
-## isMatch
+## isMatch {#isMatch}
 
 Checks to see if a string matches a given regular expression.
 
@@ -501,7 +501,7 @@ NB searching an empty string:
 
 * `isMatch('', '.*[0-9].*')` returns `false`
 
-## replaceAll
+## replaceAll {#replaceAll}
 
 Replaces all occurrences of a regular expression with another string.
 
@@ -562,7 +562,7 @@ And the output is that there are no matches for the input:
 'this is a string with no numbers thrown in'
 ```
 
-## replaceFirst
+## replaceFirst {#replaceFirst}
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
@@ -611,7 +611,7 @@ The output is:
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## String Concatenation ( + )
+## String Concatenation ( + ) {#string-concatenation}
 
 The `+` operator can be used to concatenate two strings or a string and a number.
 
@@ -704,7 +704,7 @@ The output is:
 'Hello%2C+world%21'
 ```
 
-## urlDecode
+## urlDecode {#urlDecode}
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 

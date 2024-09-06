@@ -88,7 +88,7 @@ If your chosen architecture doesn't have fully-integrated RAG capabilities, or i
 
 In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
-An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase Application](/appstore/modules/genai/rag/).
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/).
 
 ## The ReAct Pattern (Function Calling) {#react}
 

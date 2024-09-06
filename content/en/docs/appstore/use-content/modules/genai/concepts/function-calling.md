@@ -81,7 +81,7 @@ Function calling can be used for a variety of use cases including the following:
 
 ## Examples {#examples}
 
-The [GenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) contains multiple examples that demonstrate function calling. Two scenarios are visualized in the diagrams below.
+The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains multiple examples that demonstrate function calling. Two scenarios are visualized in the diagrams below.
 
 The first diagram shows a simple process where the user is interested in the status of a certain ticket. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the API returns the final assistant's response as visualized by the blue box.
 

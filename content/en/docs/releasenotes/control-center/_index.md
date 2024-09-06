@@ -14,13 +14,13 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
-### Sep 5, 2024
+### September 5, 2024
 
 #### New Features
 
 * Deep links have been added to the [Software Composition](/control-center/software-composition/) page to enable unique identification and easy shareability.
 
-### Sep 3, 2024
+### September 3, 2024
 
 #### Improvements
 

@@ -88,7 +88,7 @@ If your chosen architecture doesn't have fully-integrated RAG capabilities, or i
 
 In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
-An example of how this can be done with OpenAI is described in [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/).
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/).
 
 ## The ReAct Pattern (Function Calling) {#react}
 
@@ -96,7 +96,7 @@ Another way to provide the LLM with additional information and capabilities is t
 
 This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
 
-See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
+See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
 This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [various models available on Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 

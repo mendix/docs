@@ -128,7 +128,7 @@ For performance reasons, this information is cached. If you need the current val
 * [`ceil`](/refguide/mathematical-function-calls/#ceil) – the rounding of a floating-point number up
 * [`pow`](/refguide/mathematical-function-calls/#pow) – the exponentiation
 * [`abs`](/refguide/mathematical-function-calls/#abs) – the absolute value
-* [`sqrt`](/refguide/mathematical-function-calls/#sqry) – the square root
+* [`sqrt`](/refguide/mathematical-function-calls/#sqrt) – the square root
 
 ## String Function Calls
 
@@ -155,45 +155,45 @@ For performance reasons, this information is cached. If you need the current val
 
 ## Begin-of Date Function Calls
 
-* [`BeginOfDay`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the day compared to the initial date
-* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the week compared to the initial date
-* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the month compared to the initial date
-* [`BeginOfYear`](/refguide/begin-of-date-function-calls/) – calculates the beginning of the year compared to the initial date
+* [`BeginOfDay`](/refguide/begin-of-date-function-calls/#beginOfDay) – calculates the beginning of the day compared to the initial date
+* [`BeginOfWeek`](/refguide/begin-of-date-function-calls/#beginOfWeek) – calculates the beginning of the week compared to the initial date
+* [`BeginOfMonth`](/refguide/begin-of-date-function-calls/#beginOfMonth) – calculates the beginning of the month compared to the initial date
+* [`BeginOfYear`](/refguide/begin-of-date-function-calls/#beginOfYear) – calculates the beginning of the year compared to the initial date
 
 ## End-of Date Function Calls
 
-* [`EndOfDay`](/refguide/end-of-date-function-calls/) – calculates the end of the day compared to the initial date
-* [`EndOfWeek`](/refguide/end-of-date-function-calls/) – calculates the end of the week compared to the initial date
-* [`EndOfMonth`](/refguide/end-of-date-function-calls/) – calculates the end of the month compared to the initial date
-* [`EndOfYear`](/refguide/end-of-date-function-calls/) – calculates the end of the year compared to the initial date
+* [`EndOfDay`](/refguide/end-of-date-function-calls/#endOfDay) – calculates the end of the day compared to the initial date
+* [`EndOfWeek`](/refguide/end-of-date-function-calls/#endOfWeek) – calculates the end of the week compared to the initial date
+* [`EndOfMonth`](/refguide/end-of-date-function-calls/#endOfMonth) – calculates the end of the month compared to the initial date
+* [`EndOfYear`](/refguide/end-of-date-function-calls/#endOfYear) – calculates the end of the year compared to the initial date
 
 ## Between Date Function Calls
 
-* [`millisecondsBetween`](/refguide/between-date-function-calls/) – the milliseconds between two dates
-* [`secondsBetween`](/refguide/between-date-function-calls/) – the seconds between two dates
-* [`minutesBetween`](/refguide/between-date-function-calls/) – the minutes between two dates
-* [`hoursBetween`](/refguide/between-date-function-calls/) – the hours between two dates
-* [`daysBetween`](/refguide/between-date-function-calls/) – the days between two dates
-* [`weeksBetween`](/refguide/between-date-function-calls/) – the weeks between two dates
-* [`calendarMonthsBetween`](/refguide/between-date-function-calls/) - the months between two dates
-* [`calendarYearsBetween`](/refguide/between-date-function-calls/) - the years between two dates
+* [`millisecondsBetween`](/refguide/between-date-function-calls/#millisecondsBetween) – the milliseconds between two dates
+* [`secondsBetween`](/refguide/between-date-function-calls/#secondsBetween) – the seconds between two dates
+* [`minutesBetween`](/refguide/between-date-function-calls/#minutesBetween) – the minutes between two dates
+* [`hoursBetween`](/refguide/between-date-function-calls/#hoursBetween) – the hours between two dates
+* [`daysBetween`](/refguide/between-date-function-calls/#daysBetween) – the days between two dates
+* [`weeksBetween`](/refguide/between-date-function-calls/#weeksBetween) – the weeks between two dates
+* [`calendarMonthsBetween`](/refguide/between-date-function-calls/#calendarMonthsBetween) - the months between two dates
+* [`calendarYearsBetween`](/refguide/between-date-function-calls/#calendarYearsBetween) - the years between two dates
 
 ## Add Date Function Calls
 
-* [`addMilliseconds`](/refguide/add-date-function-calls/) – adds milliseconds to a date
-* [`addSeconds`](/refguide/add-date-function-calls/) – adds seconds to a date
-* [`addMinutes`](/refguide/add-date-function-calls/) – adds minutes to a date
-* [`addHours`](/refguide/add-date-function-calls/) – adds hours to a date
-* [`addDays`](/refguide/add-date-function-calls/) – adds days to a date
-* [`addDaysUTC`](/refguide/add-date-function-calls/) – adds days to a date using the UTC calendar
-* [`addWeeks`](/refguide/add-date-function-calls/) – adds weeks to a date
-* [`addWeeksUTC`](/refguide/add-date-function-calls/) – adds weeks to a date using the UTC calendar
-* [`addMonths`](/refguide/add-date-function-calls/) – adds months to a date
-* [`addMonthsUTC`](/refguide/add-date-function-calls/) – adds months to a date using the UTC calendar
-* [`addQuarters`](/refguide/add-date-function-calls/) – adds quarters to a date
-* [`addQuartersUTC`](/refguide/add-date-function-calls/) – adds quarters to a date using the UTC calendar
-* [`addYears`](/refguide/add-date-function-calls/) – adds years to a date
-* [`addYearsUTC`](/refguide/add-date-function-calls/) – adds years to a date using the UTC calendar
+* [`addMilliseconds`](/refguide/add-date-function-calls/#addMilliseconds) – adds milliseconds to a date
+* [`addSeconds`](/refguide/add-date-function-calls/#addSeconds) – adds seconds to a date
+* [`addMinutes`](/refguide/add-date-function-calls/#addMinutes) – adds minutes to a date
+* [`addHours`](/refguide/add-date-function-calls/#addHours) – adds hours to a date
+* [`addDays`](/refguide/add-date-function-calls/#addDays) – adds days to a date
+* [`addDaysUTC`](/refguide/add-date-function-calls/#addDays) – adds days to a date using the UTC calendar
+* [`addWeeks`](/refguide/add-date-function-calls/#addWeeks) – adds weeks to a date
+* [`addWeeksUTC`](/refguide/add-date-function-calls/#addWeeks) – adds weeks to a date using the UTC calendar
+* [`addMonths`](/refguide/add-date-function-calls/#addMonths) – adds months to a date
+* [`addMonthsUTC`](/refguide/add-date-function-calls/#addMonths) – adds months to a date using the UTC calendar
+* [`addQuarters`](/refguide/add-date-function-calls/#addQuarters) – adds quarters to a date
+* [`addQuartersUTC`](/refguide/add-date-function-calls/#addQuarters) – adds quarters to a date using the UTC calendar
+* [`addYears`](/refguide/add-date-function-calls/#addYears) – adds years to a date
+* [`addYearsUTC`](/refguide/add-date-function-calls/#addYears) – adds years to a date using the UTC calendar
 
 ## Subtract Date Function Calls
 

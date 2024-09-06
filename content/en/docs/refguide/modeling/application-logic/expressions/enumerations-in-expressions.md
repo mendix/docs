@@ -34,7 +34,7 @@ else
   false
 ```
 
-## getCaption {#get-caption}
+## getCaption {#getCaption}
 
 The `getCaption` function takes an enumeration value and returns the caption of this value. The *caption* is a translatable string and the result of this function depends on the current language.
 
@@ -64,7 +64,7 @@ The output can be:
 Gouden
 ```
 
-## getKey
+## getKey {#getKey}
 
 The `getKey` function takes an enumeration value and returns the key (called *Name* in Studio Pro) of this value. The key is the technical name for the enumeration value and is language independent. For more information, see [Enumerations](/refguide/enumerations/).
 

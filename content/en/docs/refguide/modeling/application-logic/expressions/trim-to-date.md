@@ -8,7 +8,7 @@ weight: 120
 
 These are functions to round off dates to different time units.
 
-## trimToSeconds
+## trimToSeconds {#trimToSeconds}
 
 This function is used to trim the date to seconds, rounding off all milliseconds to zero.
 
@@ -42,7 +42,7 @@ The output is:
 'Sun Jun 08 10:12:51 CEST 2008'
 ```
 
-## trimToMinutes
+## trimToMinutes {#trimToMinutes}
 
 This function is used to trim the date to minutes, rounding off all (milli)seconds to zero.
 
@@ -76,7 +76,7 @@ The output is:
 'Sun Jun 08 10:12:00 CEST 2008'
 ```
 
-## trimToHours[UTC]
+## trimToHours[UTC] {#trimToHours}
 
 This function is used to trim the date to hours, rounding off all minutes to zero.
 
@@ -112,7 +112,7 @@ The output is:
 'Sun Jun 08 10:00:00 CEST 2008'
 ```
 
-## trimToDays[UTC]
+## trimToDays[UTC] {#trimToDays}
 
 This function is used to trim the date to days, rounding off all hours to zero.
 
@@ -148,7 +148,7 @@ The output is:
 'Sun Jun 08 00:00:00 CEST 2008'
 ```
 
-## trimToMonths[UTC]
+## trimToMonths[UTC] {#trimToMonths}
 
 This function is used to trim the date to months, rounding off all days to zero.
 
@@ -184,7 +184,7 @@ The output is:
 'Sun Jun 01 00:00:00 CEST 2008'
 ```
 
-## trimToYears[UTC]
+## trimToYears[UTC] {#trimToYears}
 
 This function is used to trim the date to years, rounding off all months and days to zero.
 

@@ -12,7 +12,7 @@ This document describes parsing and formatting decimal function calls. For detai
 In nanoflows, it is not possible to use parsing and formatting decimal function calls with optional format string (for example, `'#,###.##'`) within a text parameter on a page. The text parameter works the same way as a nanoflow and is restricted to only using the format appropriate to the locale from the language of the current user in Mendix apps.
 {{% /alert %}}
 
-## parseDecimal
+## parseDecimal {#parseDecimal}
 
 Parses a string value to a decimal value according to a specified format.
 
@@ -65,7 +65,7 @@ The following example only applies to microflows, given that in nanoflows, you c
 
 * `parseDecimal('3,241.98', '#,###.##')` returns `3241.98`
 
-## formatDecimal
+## formatDecimal {#formatDecimal}
 
 Converts a decimal value to a string value according to a specified format.
 

@@ -106,7 +106,7 @@ In order to make the application translatable during implementation, all transla
 Only adaptable content can be translated, since protected content is locked down.
 {{% /alert %}}
 
-Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#get-caption) function. 
+Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#getCaption) function. 
 
 ## Java Source Code Protection
 

@@ -197,33 +197,33 @@ For performance reasons, this information is cached. If you need the current val
 
 ## Subtract Date Function Calls
 
-* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/) – subtracts milliseconds from a date
-* [`subtractSeconds`](/refguide/subtract-date-function-calls/) – subtracts seconds from a date
-* [`subtractMinutes`](/refguide/subtract-date-function-calls/) – subtracts minutes from a date
-* [`subtractHours`](/refguide/subtract-date-function-calls/) – subtracts hours from a date
-* [`subtractDays`](/refguide/subtract-date-function-calls/) – subtracts days from a date
-* [`subtractDaysUTC`](/refguide/subtract-date-function-calls/) – subtracts days from a date using the UTC calendar
-* [`subtractWeeks`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date
-* [`subtractWeeksUTC`](/refguide/subtract-date-function-calls/) – subtracts weeks from a date using the UTC calendar
-* [`subtractMonths`](/refguide/subtract-date-function-calls/) – subtracts months from a date
-* [`subtractMonthsUTC`](/refguide/subtract-date-function-calls/) – subtracts months from a date using the UTC calendar
-* [`subtractQuarters`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date
-* [`subtractQuartersUTC`](/refguide/subtract-date-function-calls/) – subtracts quarters from a date using the UTC calendar
-* [`subtractYears`](/refguide/subtract-date-function-calls/) – subtracts years from a date
-* [`subtractYearsUTC`](/refguide/subtract-date-function-calls/) – subtracts years from a date using the UTC calendar
+* [`subtractMilliseconds`](/refguide/subtract-date-function-calls/#subtractMilliseconds) – subtracts milliseconds from a date
+* [`subtractSeconds`](/refguide/subtract-date-function-calls/#subtractSeconds) – subtracts seconds from a date
+* [`subtractMinutes`](/refguide/subtract-date-function-calls/#subtractMinutes) – subtracts minutes from a date
+* [`subtractHours`](/refguide/subtract-date-function-calls/#subtractHours) – subtracts hours from a date
+* [`subtractDays`](/refguide/subtract-date-function-calls/#subtractDays) – subtracts days from a date
+* [`subtractDaysUTC`](/refguide/subtract-date-function-calls/#subtractDays) – subtracts days from a date using the UTC calendar
+* [`subtractWeeks`](/refguide/subtract-date-function-calls/#subtractWeeks) – subtracts weeks from a date
+* [`subtractWeeksUTC`](/refguide/subtract-date-function-calls/#subtractWeeks) – subtracts weeks from a date using the UTC calendar
+* [`subtractMonths`](/refguide/subtract-date-function-calls/#subtractMonths) – subtracts months from a date
+* [`subtractMonthsUTC`](/refguide/subtract-date-function-calls/#subtractMonths) – subtracts months from a date using the UTC calendar
+* [`subtractQuarters`](/refguide/subtract-date-function-calls/#subtractQuarters) – subtracts quarters from a date
+* [`subtractQuartersUTC`](/refguide/subtract-date-function-calls/#subtractQuarters) – subtracts quarters from a date using the UTC calendar
+* [`subtractYears`](/refguide/subtract-date-function-calls/#subtractYears) – subtracts years from a date
+* [`subtractYearsUTC`](/refguide/subtract-date-function-calls/#subtractYears) – subtracts years from a date using the UTC calendar
 
 ## Trim to Date
 
-* [`trimToSeconds`](/refguide/trim-to-date/) – trims to seconds
-* [`trimToMinutes`](/refguide/trim-to-date/) – trims to minutes
-* [`trimToHours`](/refguide/trim-to-date/) – trims to hours
-* [`trimToHoursUTC`](/refguide/trim-to-date/) – trims to hours using the UTC calendar
-* [`trimToDays`](/refguide/trim-to-date/) – trims to days
-* [`trimToDaysUTC`](/refguide/trim-to-date/) – trims to days using the UTC calendar
-* [`trimToMonths`](/refguide/trim-to-date/) – trims to months
-* [`trimToMonthsUTC`](/refguide/trim-to-date/) – trims to months using the UTC calendar
-* [`trimToYears`](/refguide/trim-to-date/) – trims to years
-* [`trimToYearsUTC`](/refguide/trim-to-date/) – trims to years using the UTC calendar
+* [`trimToSeconds`](/refguide/trim-to-date/#trimToSeconds) – trims to seconds
+* [`trimToMinutes`](/refguide/trim-to-date/#trimToMinutes) – trims to minutes
+* [`trimToHours`](/refguide/trim-to-date/#trimToHours) – trims to hours
+* [`trimToHoursUTC`](/refguide/trim-to-date/#trimToHours) – trims to hours using the UTC calendar
+* [`trimToDays`](/refguide/trim-to-date/#trimToDays) – trims to days
+* [`trimToDaysUTC`](/refguide/trim-to-date/#trimToDays) – trims to days using the UTC calendar
+* [`trimToMonths`](/refguide/trim-to-date/#trimToMonths) – trims to months
+* [`trimToMonthsUTC`](/refguide/trim-to-date/#trimToMonths) – trims to months using the UTC calendar
+* [`trimToYears`](/refguide/trim-to-date/#trimToYears) – trims to years
+* [`trimToYearsUTC`](/refguide/trim-to-date/#trimToYears) – trims to years using the UTC calendar
 
 ## To String
 
@@ -239,19 +239,19 @@ See [Parse Integer](/refguide/parse-integer/) for details.
 
 ## Parse and Format Decimal Function Calls {#expressions-formatter-functions}
 
-* [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a string to a decimal
-* [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/) – converts a decimal to a string
+* [`parseDecimal`](/refguide/parse-and-format-decimal-function-calls/#parseDecimal) – converts a string to a decimal
+* [`formatDecimal`](/refguide/parse-and-format-decimal-function-calls/#formatDecimal) – converts a decimal to a string
 
 ## Parse and Format Date Function Calls
 
-* [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a string to a date value
-* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts a date value to a string
-* [`formatTime[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the time part of a date value to a string
-* [`formatDate[UTC]`](/refguide/parse-and-format-date-function-calls/) – converts the date part of a date value to a string
-* [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls/) – converts a date to a long
-* [`epochToDateTime`](/refguide/parse-and-format-date-function-calls/) – converts a long to a date
+* [`parseDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/#parseDateTime) – converts a string to a date value
+* [`formatDateTime[UTC]`](/refguide/parse-and-format-date-function-calls/#formatDateTime) – converts a date value to a string
+* [`formatTime[UTC]`](/refguide/parse-and-format-date-function-calls/#formatTime) – converts the time part of a date value to a string
+* [`formatDate[UTC]`](/refguide/parse-and-format-date-function-calls/#formatDate) – converts the date part of a date value to a string
+* [`dateTimeToEpoch`](/refguide/parse-and-format-date-function-calls/#dateTimeToEpoch) – converts a date to a long
+* [`epochToDateTime`](/refguide/parse-and-format-date-function-calls/#epochToDateTime) – converts a long to a date
 
 ## Enumerations in Expressions
 
-* [`getCaption`](/refguide/enumerations-in-expressions/) – gets the caption of an enumeration value in current language
-* [`getKey`](/refguide/enumerations-in-expressions/) – gets the technical name of an enumeration value
+* [`getCaption`](/refguide/enumerations-in-expressions/#getCaption) – gets the caption of an enumeration value in current language
+* [`getKey`](/refguide/enumerations-in-expressions/#getKey) – gets the technical name of an enumeration value

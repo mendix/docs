@@ -3,7 +3,7 @@ title: "Function Calling"
 url: /appstore/modules/genai/function-calling/
 linktitle: "Function Calling"
 weight: 20
-description: "Describes function calling with OpenAI"
+description: "Describes function calling in Mendix"
 ---
 
 ## Introduction {#introduction}
@@ -33,20 +33,20 @@ For more general information on this topic, see [OpenAI: Function Calling](https
 
 Both the [OpenAI Connector](/appstore/modules/genai/openai/) and [Amazon Bedrock Connector](/appstore/modules/aws/amazon-bedrock/) support function calling by leveraging the [GenAI Commons module](/appstore/modules/genai/commons/). In both connectors, function calling is supported for all chat completions operations. All entity, attribute and activity names in this section refer to the GenAI Commons module. 
 
-Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflow(s) until the LLM returns the final assistant's response. Currently, function microflows are limited to one input parameter of type string and must return a string.
+Functions in Mendix are essentially microflows that can be registered within the request to the LLM​. The LLM connector takes care of handling the tool call response as well as executing the function microflow(s) until the LLM returns the final assistant's response. Currently, function microflows can either have no input parameters or one input parameter of type string and must return a string.
 
 To enable function calling, a `ToolCollection` object must be added to the request, which is associated to one or many `Function` objects. 
 
-A helper operation is available in GenAI Commons to construct the `ToolCollection` with a list of `Functions`:
+A helper operation is available in [GenAI Commons](/appstore/modules/genai/commons/) to construct the `ToolCollection` with a list of `Functions`:
 
-* [Tools: Add Function to Request](/appstore/modules/genai/commons/#add-function-to-request) can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
+* Tools: Add Function to Request can be used to initialize a new `ToolCollection` and add a new `Function` to it in order to enable function calling.
 
 Depending on the user prompt and the available functions, the model can suggest one or multiple tool calls to the same or different functions or there might be multiple API calls followed by new tools calls until the model returns the final assistant's response.
-A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the [Request](/appstore/modules/genai/commons/#request) entity controls which (if any) function is called by the model.
+A way to steer the function calling process is the `ToolChoice` parameter. This optional attribute on the Request entity controls which (if any) function is called by the model.
 
 A helper operation is available in GenAI Commons to define the Tool Choice: 
 
-* [Tools: Set Tool Choice](/appstore/modules/genai/commons/#set-toolchoice) can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
+* Tools: Set Tool Choice can be used to set the `ToolChoice` parameter and the `ToolCollection_ToolChoice` association accordingly.
 
 {{% alert color="warning" %}}
 Function calling is a very powerful capability, but may be used with caution. Please note that function microflows run in the context of the current user without enforcing entity-access. You can use `$currentUser` in XPath queries to ensure you retrieve and return only information that the end-user is allowed to view; otherwise confidential information may become visible to the current end-user in the assistant's response.
@@ -62,7 +62,9 @@ For models used through Azure OpenAI, feature availability is currently differen
 
 ### Supported Amazon Bedrock models {#supported-models-bedrock}
 
-Currently, only Anthropic Claude version 3 models support function calling via the Amazon Bedrock Connector. 
+Multiple models available on Amazon Bedrock support function calling. In Bedrock documentation, function calling is often addressed as *Tool Use*, which describes the same concept.
+A detailed overview showing which models support function calling (tool use) can be found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
+ 
 
 ## Use cases {#use-cases}
 
@@ -79,7 +81,7 @@ Function calling can be used for a variety of use cases including the following:
 
 ## Examples {#examples}
 
-The [GenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) contains multiple examples that demonstrate function calling. Two scenarios are visualized in the diagrams below.
+The [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) contains multiple examples that demonstrate function calling. Two scenarios are visualized in the diagrams below.
 
 The first diagram shows a simple process where the user is interested in the status of a certain ticket. The LLM connector takes care of handling the tool call response as well as executing the function microflows until the API returns the final assistant's response as visualized by the blue box.
 

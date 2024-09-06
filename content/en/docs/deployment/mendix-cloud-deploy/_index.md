@@ -78,7 +78,7 @@ If the standard environments that you get with a licensed app do not meet your r
 
 Apps deployed to Mendix Cloud are configured to use a PostgreSQL database. It is not possible to configure your app to use an alternative database if it is deployed to Mendix Cloud.
 
-If you need to use a different database, consider deploying your app to a different platform. For more information, see [Deployment](/deployment/).
+If you need to use a different database, consider deploying your app to a different platform. For more information, see [Deploying Apps](/deployment/).
 
 ### URLs and Ports
 

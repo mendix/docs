@@ -267,7 +267,7 @@ For the Svix component, you can use the Svix panel to upgrade directly.
 
 After you install Private Mendix Platform, run a one-time configuration wizard to configure the necessary settings.
 
-To start the wizard, log in to your Private Mendix Platform app as an administrator. The wizard starts automatically and walks you through the required configuration steps. For more information about the available options, refer to the sections below.
+To start the wizard, log in to your Private Mendix Platform app with the user ID *Admin*. The wizard starts automatically and walks you through the required configuration steps. For more information about the available options, refer to the sections below.
 
 {{% alert color="info" %}}
 The settings that are enabled for your Private Mendix Platform depend on the service package that you have purchased. Because of that, some of the settings listed below may be disabled for your platform.

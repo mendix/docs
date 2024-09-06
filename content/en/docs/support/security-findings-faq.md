@@ -86,7 +86,7 @@ If you want to scan uploaded files for malicious content, you have to implement 
 
 Security scanning tools can report vulnerabilities in Java libraries. These can be things like outdated and vulnerable libraries, code, or dependencies. Often, vulnerabilities have been addressed in the latest versions of Java libraries. Before reporting a vulnerability in a Java library, please verify that:
 
-* The jar is coming from a platform supported module. For more information about support categories, ee the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
+* The jar is coming from a platform supported module. For more information about support categories, See the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 * Your module is updated to the latest version.
 * You have removed the old libraries from their userlib folder. See [Updating the Module to a Newer Version](/appstore/use-content/#update-module) in *Using Marketplace Content* for more information.
 
@@ -188,18 +188,10 @@ By default, end-users are allowed to have multiple sessions simultaneously. This
 
 ### Bootstrap Vulnerabilities 
 
-In Mendix 7, Bootstrap is flagged by security scans mainly because of the Bootstrap JavaScript files. Although these files are shipped with the product, they are not used in the Mendix Client, which reduces the attack chance to zero.
+Mendix does not ship with Bootstrap JavaScript files. All Bootstrap styling is in the Mendix Atlas UI themes.
 
-We cannot remove these files from Mendix 7 as some customers might have included them in their custom theme, which would break these projects. Neither can we simply update to a new major Bootstrap version as this is not always a match for the current DOM structure of the Mendix widgets, nor is it backward compatible which results in broken styling for many projects.
-
-Support for Mendix 7 has ended. If you are still concerned about this report, you can upgrade to a later version of Mendix, which does not have these bootstrap files.
-
-#### Bootstrap Vulnerabilities in Mendix 8 and Above
-
-In Mendix 8 and above, the Bootstrap JavaScript files have been removed. All Bootstrap styling has been moved to the Mendix Atlas UI themes.
-
-If there still is a security finding in the your project, you may be using the Bootstrap library in your custom theme.
-We would therefore suggest that you do one of the following:
+If Bootstrap is flagged by a security scan, you may be using the Bootstrap library in your custom theme.
+Mendix therefore suggests that you do one of the following:
 
 * Update the libraries yourself
 * Change the custom theme so it does not need Bootstrap

@@ -51,6 +51,10 @@ Upload your CA from a file in PEM format by clicking **Upload Certificate Author
 Your CA must contain a single root certificate and can have multiple intermediate certificates. It should not contain client certificates.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+Your CA for TLS client certificate verification must be different than the CA used to sign the SSL certificate configured for any custom domain of the app. Using the same CA for both can result in browsers requesting client certificates on all paths of the app.
+{{% /alert %}}
+
 Once the CA is uploaded, you will see a tree containing the root certificate and any intermediate certificates included in the CA. When you upload a CA, the last certificate in the CA will be selected by default.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/access-restrictions/ca-profile.png" alt="Certificate authority profile" class="no-border" >}}
@@ -62,6 +66,10 @@ If you do not select any certificates, then all the certificates are valid.
 {{% /alert %}}
 
 Click **Save** to save the current certificate profile.
+
+{{% alert color="info" %}}
+Your CA for TLS client certificate verification should be different from the CA used to sign the SSL certificate configured for any custom domain of the app. Using the same CA for both can result in browsers requesting client certificates on all paths of your application.
+{{% /alert %}}
 
 #### Specifying IP Ranges {#ip-ranges}
 
@@ -160,6 +168,6 @@ If the `/ws/` path should still be reachable from the office location without us
 ## Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Environments](/developerportal/deploy/environments/)
 * [Environment Details](/developerportal/deploy/environments-details/)

@@ -1,5 +1,6 @@
 ---
-title: "Catalog"
+title: "Catalog Release Notes"
+linktitle: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 weight: 36
@@ -12,6 +13,12 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### August 29, 2024
+
+#### Fixes
+
+* We fixed a bug where data sources in the search results were incorrectly indicated to not be discoverable.
 
 ### August 22, 2024
 

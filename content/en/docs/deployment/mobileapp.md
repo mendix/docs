@@ -44,9 +44,7 @@ In the **General settings** section, you must provide the following information:
 
 ### Profile Settings
 
-If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
-
-Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro.
+When building mobile apps, please specify the correct navigation profiles to use on phones and tablets depending on your use case. Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro:
 
 * **Phone profile**
 * **Tablet profile**
@@ -102,6 +100,6 @@ For Android please follow the instructions in the [Building Your Android App Loc
 
 ## Read More
 
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Offline Reference Guide](/refguide/offline-first/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

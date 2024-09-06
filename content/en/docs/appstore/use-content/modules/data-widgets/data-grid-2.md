@@ -440,7 +440,9 @@ In order to enable filtering within the data grid header (outside the columns) y
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. Only the first keyword in the filter will be considered when filtering multiple attributes in grid wide filtering
+
+When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.

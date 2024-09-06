@@ -1,5 +1,6 @@
 ---
 title: "Software Composition"
+linktitle: "Software Composition"
 url: /developerportal/deploy/software-composition/
 description: "Describes the Software Composition page in Apps."
 weight: 3
@@ -28,9 +29,9 @@ After the creation of a deployment package, it may take up to a day for the **So
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above; therefore, they are not available for apps made with Studio Pro versions below 9.24.22 and 10.6.9, as well as versions 10.7, 10.8, and 10.9.
+* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above, and 10.14.0 and above. 
 
-  {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
+    {{% alert color="warning" %}}Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.{{% /alert %}}
 
 * Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 

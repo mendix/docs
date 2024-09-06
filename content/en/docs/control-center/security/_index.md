@@ -1,5 +1,6 @@
 ---
-title: "Security"
+title: "Security Settings in Control Center"
+linktitle: "Security"
 url: /control-center/security/
 description: "Describes the Security page in the Mendix Control Center."
 weight: 40

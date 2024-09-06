@@ -28,7 +28,7 @@ A Mendix Admin can do the following:
 * Curate the Catalog according to the organization's data governance policy
 * Access all the registered assets in the Catalog for the organization
 
-For more information, see the [Catalog](/control-center/catalog-admin/) section of *Control Center*. 
+For more information, see the [Catalog Administration](/control-center/catalog-admin/) section of *Control Center*. 
 
 ### External Users
 

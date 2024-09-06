@@ -27,7 +27,7 @@ For example, you can use an LLM to do:
 * **Conversational Interaction:** Powering chatbots and virtual assistants to interact naturally with users.
 * **Data Generation:** Generating Mendix objects by combining JSON generation and [Import mappings](/refguide/import-mapping-action/).
 
-Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/#chat-completions-with-history) and [GPT-4o](/appstore/modules/genai/openai/#chatcompletions-vision), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
+Some LLMs, such as [Anthropic Claude](/appstore/modules/aws/amazon-bedrock/) and [GPT-4o](/appstore/modules/genai/openai/), can also use one or more images as input, allowing you to ask questions about images for use cases such as object recognition, image to text (OCR), and validating whether an image is as intended.
 
 ### What is an LLM Not?
 
@@ -80,7 +80,7 @@ There are two approaches to including RAG in your generative AI-powered app.
 
 Some architectures provide the capabilities for the RAG pattern out of the box, which shields you from having to retrieve and augment your prompt yourself. All you need to do is ensure that your knowledge base is available to the model.
 
-For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the [Retrieve And Generate](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate) operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
+For example, Amazon Bedrock has the concept of [knowledge bases for Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html), which allows you to create a repository of private information that can be used to improve an LLM's response. This knowledge base is based on files (e.g. manuals or historical documents) in an S3 bucket. You can then use the Retrieve And Generate operation which will retrieve data from the knowledge base, augment the prompt with the retrieved information, and generate the response.
 
 ### PgVector Knowledge Base {#pgvectorknowledgebase}
 
@@ -88,7 +88,7 @@ If your chosen architecture doesn't have fully-integrated RAG capabilities, or i
 
 In this case you will have to index and store your knowledge yourself, and index your input data in order to retrieve the information with which you want to augment your prompt. For this you can use the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) in combination with an embeddings model, to maintain and use your knowledge base. 
 
-An example of how this can be done with OpenAI is described in [RAG Example Implementation in the OpenAI Showcase Application](/appstore/modules/genai/rag/).
+An example of how this can be done with OpenAI is described in [RAG Example Implementation in the GenAI Showcase App](/appstore/modules/genai/rag/).
 
 ## The ReAct Pattern (Function Calling) {#react}
 
@@ -96,9 +96,9 @@ Another way to provide the LLM with additional information and capabilities is t
 
 This microflow runs in the context of the user, allowing you to make sure that it only shows data that is relevant for the current user. You can also use it to execute actions on behalf of the user, or interact with page that the user is looking at.
 
-See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
+See [Function Calling](/appstore/modules/genai/function-calling/) for more information on ReAct. You can see ReAct implemented in the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) where the `GetInformationForTicketID` microflow allows an LLM to answer a question like "What is the status of ticket 42?".
 
-This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [Bedrock in the Anthropic Claude v3 models](https://docs.anthropic.com/en/docs/tool-use).
+This pattern is supported both by [OpenAI](https://platform.openai.com/docs/guides/function-calling) and [various models available on Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
 
 ## Agents and Assistants {#agents}
 

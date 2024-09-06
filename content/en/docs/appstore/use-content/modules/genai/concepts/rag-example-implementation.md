@@ -4,7 +4,7 @@ url: /appstore/modules/genai/rag/
 
 linktitle: "Retrieval Augmented Generation (RAG)"
 weight: 30
-description: "Describes the retrieval augmented generation (RAG) example implementation in the GenAI showcase application"
+description: "Describes the retrieval augmented generation (RAG) example implementation in the GenAI Showcase Application"
 ---
 
 ## Introduction {#introduction}
@@ -62,11 +62,11 @@ You have access to a (remote) PostgreSQL database with the [pgvector](https://gi
 
 {{% alert color="info" %}}
 
-The GenAI showcase application uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
+The GenAI Showcase Application uses the Mendix [PgVector Knowledge Base](https://marketplace.mendix.com/link/component/225063) module from the Marketplace to run queries and statements on your remote database. If you want to know more about this or if you are looking for certain technical details, see [PgVector Knowledge Base](/appstore/modules/genai/pgvector/).
 
-The GenAI showcase application uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
+The GenAI Showcase Application uses this module to take care of creating the required tables in the remote vector database, including the open-source extension called pgvector. If you want to know more about the extension and how the tables look like in combination with this extension, see the [pgvector source code and documentation on GitHub](https://github.com/pgvector/pgvector).
 
-If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/genai/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI showcase application or in the [Read More](#read-more) section.
+If you want to know more about RAG, embeddings, or [vector databases](/appstore/modules/genai/pgvector-setup/), make sure to review the links on the **Resources** page of the GenAI Showcase Application or in the [Read More](#read-more) section.
 
 {{% /alert %}}
 
@@ -74,11 +74,11 @@ If you want to know more about RAG, embeddings, or [vector databases](/appstore/
 
 This section lists some general key points that apply regardless of which architecture you choose.
 
-If you would like to build your own RAG setup, feel free to learn from the GenAI showcase application and start building your own app. Below you can find the key takeaways from the GenAI showcase app:
+If you would like to build your own RAG setup, feel free to learn from the GenAI Showcase Application and start building your own app. Below you can find the key takeaways from the GenAI Showcase App:
 
-* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI showcase application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/genai/pgvector-setup/) for more details.
+* For RAG, you need a storage space for high-dimensional embedding vectors outside of your normal Mendix app database. Typically, this is a remote vector database. In order to connect to it, the GenAI Showcase Application uses the Mendix database connector. See [Vector Database Setup](/appstore/modules/genai/pgvector-setup/) for more details.
 
-* The GenAI showcase application relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
+* The GenAI Showcase Application relies on a PostgreSQL database with the pgvector extension included. In such a setup you can similarly rely on the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) to take care of creating and executing the right queries. If you choose to use a different type of vector database, the database queries and statements, which you will have to perform, should cover at least the following:
     * Include the vector extension if applicable for the chosen database type (create extension).
     
     * Create tables to store the embedding vectors (create table).
@@ -89,7 +89,7 @@ If you would like to build your own RAG setup, feel free to learn from the GenAI
     
     * Remove individual records (delete) or tables (drop table).
 
-{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) which comes automatically with GenAI showcase application.{{% /alert %}}
+{{% alert color="info" %}}Example queries in the form of SQL statements are available for inspiration in the source code of the [PgVector Knowledge Base module](/appstore/modules/genai/pgvector/) which comes automatically with GenAI Showcase Application.{{% /alert %}}
 
 ## Read More {#read-more}
 

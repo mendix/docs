@@ -62,7 +62,7 @@ Embeddings are commonly used for the following:
 Combine embeddings with text generation capabilities and leverage specific sources of information to create a smart chat functionality tailored to your own knowledge base.
 
 {{% alert color="info" %}}
-For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/). Also, check out the [GenAI showcase app](https://marketplace.mendix.com/link/component/220475) from the Marketplace for an example implementation.
+For more information on how to set up a vector database, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/). Also, check out the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) from the Marketplace for an example implementation.
 {{% /alert %}}
 
 ### Features {#features}
@@ -168,7 +168,7 @@ In the context of chat completions, system prompts and user prompts are two key 
 
 All chat completions operations within the OpenAI connector support `JSON mode`, [function calling](#chatcompletions-functioncalling), and [vision](#chatcompletions-vision).
 
-For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix recommends downloading our [GenAI showcase app](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of examples. 
+For more inspiration or guidance on how to use the above-mentioned microflows in your logic, Mendix recommends downloading our [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of examples. 
 
 #### Chat Completions (without History) {#chatcompletions-without-history}
 
@@ -293,7 +293,7 @@ The **Documentation** pane displays the documentation for the currently selected
 
 ## GenAI showcase Application {#showcase-application}
 
-For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI showcase app](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
+For more inspiration or guidance on how to use those microflows in your logic, Mendix recommends downloading the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475), which demonstrates a variety of example use cases.
 
 {{% alert color="info" %}}
 Some examples demonstrate knowledge base interaction and require a connection to a vector database. For more information these concepts, see [Retrieval Augmented Generation (RAG)](/appstore/modules/genai/rag/)

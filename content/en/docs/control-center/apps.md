@@ -1,5 +1,5 @@
 ---
-title: "Apps Overview"
+title: "Company Apps Dashboard "
 linktitle: "Apps"
 url: /control-center/apps/
 description: "Describes the Apps page in the Mendix Control Center."

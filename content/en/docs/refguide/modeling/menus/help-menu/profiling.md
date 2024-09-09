@@ -6,20 +6,15 @@ description: "Describes how to run a performance profiler session on the local m
 
 ## Introduction
 
+{{% alert color="info" %}}
+These features are not yet supported on native MacOS machines.
+{{% /alert %}}
 
 ### Performance Profiler
-
-{{% alert color="info" %}}
-This feature is not yet supported on native MacOS machines.
-{{% /alert %}}
 
 To investigate performance issues that are reproduced on your local machine, you can run a performance profiler session from within Studio Pro without installing the actual profiler on your machine. This session generates a report written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this report on their machines to investigate the performance issues you experienced locally. 
 
 ### Memory Profiler
-
-{{% alert color="info" %}}
-This feature is not yet supported on native MacOS machines.
-{{% /alert %}}
 
 In addition to the performance profiling, you can capture a snapshot of memory consumed by Studio Pro. The snapshot gets written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this snapshot on their machines to investigate the issues related to memory consumption.
 

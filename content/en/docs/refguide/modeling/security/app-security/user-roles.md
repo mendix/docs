@@ -22,6 +22,11 @@ To access user roles, open **App Security** > **User roles** tab:
 
 {{< figure src="/attachments/refguide/modeling/security/app-security/user-roles/user-roles-example.png" class="no-border" >}}
 
+{{% alert color="warning" %}}
+The effects of changes to user roles are not immediate, due to which the UI might show outdated pages, data. For more information, please refer documentation about [persistent sessions](refguide/clustered-mendix-runtime/#sessions-are-always-persistent)
+It is recommended to NOT use this feature to have dynamic UI as these changes will not take effect immediately. 
+{{% /alert %}}
+
 ## User Role Properties
 
 Double-click the user role to open its properties. 
@@ -57,7 +62,7 @@ Internally, user management properties are translated into entity access rules f
 
 ## Read More
 
-* [App Security](/refguide/app-security/)
+* [App Security](/refguide/app-security/)   
 * [Administrator](/refguide/administrator/)
 * [Demo Users](/refguide/demo-users/)
 * [Anonymous Users](/refguide/anonymous-users/)

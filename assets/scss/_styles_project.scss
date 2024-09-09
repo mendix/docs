@@ -3,6 +3,8 @@
 // _front-page.scss is only custom styling page not from Docsy/Bootstrap
 @import "front-page";
 
+// Font
+
 @font-face { // LZ - Added for MxDock by request 2024-01-30
     font-family: "noto-sans";
     src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
@@ -72,11 +74,8 @@
 
 .alert {
     font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
-    color: inherit;
     border-radius: 4px; // Round corners
     padding: 14px;
-    display: flex;
-    align-items: flex-start; // Align items at the top of the flexbox
     @each $color, $value in $theme-colors {
         &-#{$color} {
             background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
@@ -96,7 +95,7 @@
     margin-right:12px;
 }
 
-.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks
+.alert.has-line-breaks { // Reduce bottom padding of .alert when alert text has line breaks (class added in alerts.html)
     padding-bottom: 0px;
 }
 
@@ -204,12 +203,12 @@
     }
 }
 
-// Style visited links but exclude buttons and left sidebar
+// Style visited links but exclude buttons, left sidebar, and card text
 a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
     color: $purple;
 }
 
-// Add icon after external links in main content (but exclude buttons and breadcrumb and get-started banner)
+// Add icon after external links in main content (but exclude some content)
 main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp  a)::after {
     display: inline-block;
     width: 1rem;
@@ -290,16 +289,15 @@ html {
         height: 100%; // NK - so that all of main (side menus and content get stretched to bottom of page)
     }
 
-// NK - to fully stretch the footer & bottom of dock
 div.footer{
     background-color: $gray-100;
     border-top: 1px solid $gray-border;
     border-bottom: 1px solid $gray-border;
-    margin: 0 -15px;
+    margin: 0 -15px; // to fully stretch the footer & bottom of dock
     padding: 0.5rem 0;
 }
-div.mx-dock-footer{
-    margin: 0 -15px;
+div.mx-footer{
+    margin: 0 -15px; // to fully stretch the footer & bottom of dock
 }
 div.date-format{
     font-size: 0.8rem;
@@ -337,15 +335,6 @@ div.date-format{
 }
 
 // Icons
-// NK - custom edit
-.dropdown-toggle.lang-arrow {
-    &::after {
-        border-left: 0.4em solid transparent;
-        border-right: 0.4em solid transparent;
-        border-top: 0.4em solid;
-        margin-left: -0.8em;
-    }
-}
 
 // DB - custom edit, inline SVG icons for shortcode
 .inline-svg {
@@ -357,7 +346,7 @@ div.date-format{
 
 // Images
 
-// DB – custom edit, add borders around images
+// DB – Add borders around images
 main img {
     border-color: #d7d7d7;
     border-width: 1px;
@@ -384,7 +373,6 @@ img {
 
 .pageinfo {
     font-weight: $font-weight-medium;
-    color: inherit;
     border-radius: 4px;
     margin: 2rem;
     padding: 14px;
@@ -670,20 +658,12 @@ nav.foldable-nav {
 
 }
 
-// MvM/YL Max width was only 80% and looked horrible. Making the tabs full width.
+//tabbed-pane.scss
 .tab-content {
     .tab-pane {
-      .highlight {
-        margin: 0rem 0 0rem 0;
-        border: none;
-        max-width: 100%;
-      }
-      margin-top: 0rem;
-      margin-bottom: 1.5rem;
-      max-width: 100%;
-      border-left: 1px solid rgba(0, 0, 0, 0.125);
-      border-right: 1px solid rgba(0, 0, 0, 0.125);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        .highlight{
+            border-radius: 0px;
+        }
     }
   }
 

@@ -1,5 +1,6 @@
 ---
-title: "Catalog"
+title: "Catalog Administration"
+linktitle: "Catalog"
 url: /control-center/catalog-admin/
 weight: 60
 description: "Describes the catalog administration in the Mendix Control Center."

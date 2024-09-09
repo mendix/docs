@@ -1,5 +1,6 @@
 ---
-title: "Native Template"
+title: "Native Template Release Notes"
+linktitle: "Native Template"
 url: /releasenotes/mobile/native-template/
 weight: 12
 description: "Native Template release notes."

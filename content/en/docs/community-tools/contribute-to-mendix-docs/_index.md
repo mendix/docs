@@ -23,7 +23,7 @@ All documentation contributions may be edited to conform to our internal style g
 {{% alert color="info" %}}
 **Quick guide to making a documentation change:**
 
-1. Fork the **development** branch of the [mendix / docs](https://github.com/mendix/docs) repository.
+1. Fork the **development** branch of the [mendix/docs](https://github.com/mendix/docs) repository.
 2. Make your changes.
 3. Create a pull request with our **development** branch as the base.
 
@@ -32,7 +32,9 @@ For details on how to fork a repo and create a pull request, watch [How to Contr
 
 This how-to teaches you how to do the following:
 
-* Add to and edit existing documentation
+* Edit existing documentation in GitHub
+* Edit existing documentation locally and build local previews
+* Leave feedback on existing documentation
 * Create new documentation
 
 ## Prerequisites
@@ -41,30 +43,39 @@ Before starting with this how-to, make sure you have completed the following pre
 
 * Have a GitHub account (sign up at [Join GitHub](https://github.com/join))
 
-You can create and edit files online within GitHub. If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
+You can create and edit files directly online within GitHub, or outside GitHub using your preferred writing and committing tools.
 
-* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or Visual Studio Code in the browser (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix / docs** repository)
-* For committing your documentation – [Sourcetree](https://www.sourcetreeapp.com/) or [GitHub Desktop](https://desktop.github.com/)
+In the [Editing the Documentation and Previewing Changes Locally](#local-build) section below, you will also learn how to fork and clone the [mendix/docs](https://github.com/mendix/docs) repository, edit documentation locally, and build local previews.
 
 ## Editing the Documentation in GitHub {#editing}
 
-To edit existing documentation, follow these steps:
+To edit existing documentation in GitHub, follow these steps:
 
-1. Click **View on GitHub** in the upper-right corner of the specific Mendix documentation page that you want to work on.
+1. Click **View on GitHub** ({{< icon name="notes-paper-edit" >}}) in the upper-right corner of the specific Mendix documentation page that you want to work on.
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/view-on-github.png">}}
 
     The file of this doc opens on GitHub.
 
-2. Click the **Edit this file** icon in the upper-right corner.
+2. Click **Edit this file** ({{< icon name="pencil" >}}) in the upper-right corner.
 
     {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/edit-file.png">}}
 
-3. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
-4. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
-5. Enter a commit message, select **Create a new branch for this commit and start a pull request**, enter the name for your branch, and then click **Propose changes**.
+    * If you already have a fork of the **development** branch of the [mendix/docs](https://github.com/mendix/docs) repository, the doc opens in a web editor.
+    
+    * If you do not have a fork yet, the following page opens and tells you need to fork the repository to propose changes. Click **Fork this repository**.
 
-    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" max-width=50% >}}
+        {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/fork-this-repository.png">}}
+
+        The doc opens in a web editor.
+
+3. Make your changes in the editor. Make sure the changes align with our [Documentation Writing Guidelines](/developerportal/community-tools/documentation-guidelines/).
+
+4. Click **Commit changes** in the upper-right corner above the editor. The **Propose changes** dialog box opens.
+
+5. Enter a commit message, add more description if needed, and then click **Propose changes**.
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/propose-changes.png" max-width=60% >}}
 
     The **Open a pull request** page opens. 
     
@@ -78,15 +89,70 @@ To edit existing documentation, follow these steps:
 
     {{% alert color="warning" %}}If you need your pull request to be merged on a specific date (for example, for a specific release), specify that in the title of the pull request or as a comment. Otherwise, all pull requests are reviewed and merged under the assumption that the content can be published immediately.{{% /alert %}}
 
-8. Click **Create pull request**.
+8. Make sure that **Allow edits by maintainers** is selected.
+9. Click **Create pull request**.
 
-The pull request is created. We will review the pull request as soon as possible. After we review the pull request, we will publish the changes and you will be able to see the changes on the Mendix Docs site!
+The pull request is created. the Mendix Docs team will review the pull request as soon as possible. After the review and if there are no questions, the pull request will be published and you will be able to see the changes on the Mendix Docs site!
+
+## Editing the Documentation and Previewing Changes Locally {#local-build}
+
+If you want to work outside GitHub, Mendix recommends using the following tools to contribute to the Mendix documentation:
+
+* For writing, editing, and previewing documentation – [Typora](https://typora.io/), [Visual Studio Code](https://code.visualstudio.com), or [Visual Studio Code in the browser](https://docs.github.com/en/codespaces/the-githubdev-web-based-editor) (accessible by pressing <kbd>Period</kbd> after opening your fork of the **mendix/docs** repository)
+* For committing your documentation – [GitHub Desktop](https://desktop.github.com/), [Visual Studio Code](https://code.visualstudio.com), or [Sourcetree](https://www.sourcetreeapp.com/)
+
+You can clone a local copy of a forked repository, make documentation changes, and build local previews. To do so, follow these steps:
+
+1. Fork the **development** branch of the [mendix/docs](https://github.com/mendix/docs) repository in GitHub. For more information, see [Fork a repository in GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo#forking-a-repository).
+2. Clone the forked repository using your preferred Git client, such as Visual Studio Code, GitHub Desktop, or Sourcetree:
+
+    * Clone using Visual Studio Code:
+        1. In Visual Studio Code, open the Command Palette (<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> on a Mac).
+        2. Search for `clone`.
+        3. Select **Git: Clone**.
+        4. Enter the URL of the forked repository (example URL: https://github.com/YOUR-USERNAME/docs) and select a destination directory.
+    * Or clone using GitHub Desktop:
+        1. In GitHub Desktop, choose the option **File** > **Clone Repository** > **URL**.
+        2. Enter the URL of the forked repository and select a destination directory.
+    * Or clone using Sourcetree:
+        1. In Sourcetree, click **Clone**. 
+        2. Enter the URL of the forked repository and select a destination directory.
+
+     The repo is cloned into a folder called **docs** in the location you selected. You can rename it afterwards if you want to.
+
+     {{% alert color="warning" %}}If you are running on Windows, avoid using a long directory path for the local directory; some files can reach the limits of Git’s file length. A base path of up to 50 characters works, but 64 characters is currently too long.{{% /alert %}}
+
+3. Prepare the local repository with the Node package manager (npm) packages. You only need to do this once for this local repository. To do so, follow these steps:
+    1. Download and install the [Node.js LTS version](https://nodejs.org/en/download/prebuilt-installer) (20.10 as of 2024). You do not need Chocolatey if that is offered.
+    2. After the installation, make sure to verify the current Node.js version. You can do so by running the following command in a terminal: `node -v`.
+    3. In the root directory of the local repository, run the following command in a terminal: `npm install`. 
+    
+        {{% alert color="warning" %}}If any new or changed files show up as uncommitted files, discard the changes. Do not commit them.{{% /alert %}}
+
+4. Edit the documentation locally with your preferred editing tool (for example, open the repository folder with Visual Studio Code, find the file, and make changes). Remember to save your changes.
+5. To run a local version of site, in the root directory of the local repository, run the following command in a terminal: `npm run build`. 
+6. Once the site is built, you see a table indicating how many pages have been created:
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/table-of-built-pages.png" max-width=30% >}}
+
+7. Wait until the server is set up before you can see the site:
+
+    {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/server-set-up.png" max-width=60% >}}
+
+8. To see the local site preview, go to `http://localhost:1313/`.
+9. Navigate in the left sidebar menu to the page that you just made changes to, and you can preview your changes locally! 
+
+{{% alert color="info" %}}As long as the current local build is still running, each time after you save your changes, it will detect your changes and rebuild the site. Wait until the web server is available again, and you will be able to preview the changes you just saved!
+
+If you do not see the changes you just saved, clear your browser cache, close and reopen the browser, and go to the local site again. Alternatively, in many browsers, such as Google Chrome, Firefox, and Microsoft Edge, you can perform a hard refresh on the current page by pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd>, or <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> on a Mac. This hard refresh ignores cached content.
+
+If the above solutions do not work, stop the current running build in the terminal by pressing <kbd>Ctrl</kbd> + <kbd>C</kbd> and run the command `npm run build` again. {{% /alert %}}
 
 ## Leaving Feedback on the Documentation
 
 If you find an issue with the documentation—whether it is a typo, a missing step, or a specific technical problem—we want to know about it so we can improve!
 
-Click the **Leave Feedback** button in the upper-right corner of the screen.
+Click **Leave Feedback** ({{< icon name="message-bubble-typing" >}}) in the upper-right corner of the screen.
 
 {{< figure src="/attachments/community-tools/contribute-to-mendix-docs/leave-feedback.png">}}
 
@@ -132,8 +198,8 @@ Follow these guidelines and conventions when writing:
 
 When you are ready to submit your work, follow these guidelines:
 
-* Commit new Markdown files via Sourcetree or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
-* Commit new image files via Sourcetree or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
+* Commit new Markdown files via your preferred Git client or via the **Create new file** button in the [Mendix GitHub repo](https://github.com/mendix/docs) (where you can copy-paste your text)
+* Commit new image files via your preferred Git client or via the **Upload files** button in the GitHub repo (where you can drag and drop your image files)
 
 Finally, create a pull request that specifies the Mendix **development** branch as the base (for more information, see [Creating a Pull Request](https://help.github.com/articles/creating-a-pull-request/)).
 

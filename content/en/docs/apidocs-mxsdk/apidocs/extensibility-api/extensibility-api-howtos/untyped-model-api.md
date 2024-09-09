@@ -8,10 +8,11 @@ weight: 24
 
 The Untyped Model API caters to the advanced users who are familiar with the internals of the Mendix platform. With the Untyped Model API, you can access the rich data of model elements.
 
-For model element and property names, see [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Specifically, you can find the type names referenced by the Mendix APIs under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
+As you will have to use model element, unit and property names in the Untyped Model API, you can reference [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). 
+Moreover, you can find the type names used by the Untyped Model lookup APIs under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
 
 {{% alert color="info" %}}
-All methods provided by the Untyped Model API are recursive to reduce the amount of API calls necessary to get to the content you are interested in.
+All methods provided by the Untyped Model API are recursive to reduce the amount of API calls necessary to get to the content you are looking for.
 {{% /alert %}}
 
 ## Prerequisites
@@ -30,7 +31,7 @@ class Sample(IUntypedModelAccessService untypedModelAccessService)
 
 ## Gaining Access to the Model Root
 
-To gain access to the model root, request it from the newly added service:
+To gain access to the model `Root`, request it from the newly added API service:
 
 ```csharp
 class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
@@ -42,7 +43,8 @@ class Sample2(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Requesting Top-level Model Elements
 
-To start going through the model and requesting top level-model elements, such as apps and modules, choose a starting point first:
+To start going through the model elements, such as `Apps` and `Modules`, choose a starting point first:
+
 ```csharp
 class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {
@@ -60,9 +62,9 @@ class Sample3(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Accessing Child Elements
 
-To access the child elements of a model element, such as the actions of a microflow and entities of a domain model, see the example below:
+It is possible to access the child elements of a model element, such as the actions of a microflow or entities of a domain model.
 
-Using either `GetElements` or `GetElementsOfType`, you can query the actions of a microflow and entities of a domain model. This can help you, for example, analyze these elements or implement custom validation rules.
+Using either `GetElements` or `GetElementsOfType`, can help you, for example, analyze these elements' properties to implement custom validation rules. See an example below:
 
 ```csharp
 class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
@@ -86,7 +88,8 @@ class Sample4(IUntypedModelAccessService untypedModelAccessService, IModel curre
 
 ## Getting Model Unit's Properties
 
-In case you need more data of a model unit, like its properties, you can also access them. Below is an example:
+In case you would like to extract data out of a model element or unit, you need to access its properties. See an example below:
+
 ```csharp
 class Sample5(IUntypedModelAccessService untypedModelAccessService, IModel currentApp)
 {

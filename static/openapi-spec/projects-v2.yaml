@@ -15,13 +15,13 @@ paths:
     get:
       tags:
         - Projects
-      summary: 'Get a list of company-owned projects'
-      description: 'Returns a list of app projects owned by the company of the requesting user. Inactive app projects are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      summary: 'Get a list of company-owned apps'
+      description: 'Returns a list of apps owned by the company of the requesting user. Inactive apps are only returned if the requesting user is a Mendix Administrator.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-projects
       parameters:
         - name: createdSince
           in: query
-          description: 'Retrieve all projects created after this date. Time is in UTC and must be provided in this format: 2020-01-16T05:53:28Z'
+          description: 'Retrieve all apps created after this date. Time is in UTC and must be provided in this format: 2020-01-16T05:53:28Z'
           schema:
             type: string
         - $ref: '#components/parameters/limit'
@@ -40,8 +40,8 @@ paths:
     post:
       tags:
         - Projects
-      summary: 'Create a project'
-      description:  'Schedules a job on the server to create a project. The job will be handled asynchronously; the operation returns a jobId that can be used to monitor the status of the process.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
+      summary: 'Create an app'
+      description:  'Schedules a job on the server to create an app. The job will be handled asynchronously; the operation returns a jobId that can be used to monitor the status of the process.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
       operationId: post-project
       requestBody:
         $ref: '#/components/requestBodies/Project'
@@ -58,8 +58,8 @@ paths:
     delete:
       tags:
         - Projects
-      summary: 'Delete a project'
-      description: 'Deletes a project, its repository, cloud resources, and all collaboration data. A project cannot be deleted if it is attached to a licensed node or if it is hosted in a non-public Mendix cloud.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:delete`.'
+      summary: 'Delete an app'
+      description: 'Deletes an app, its repository, cloud resources, and all collaboration data. An app cannot be deleted if it is attached to a licensed node or if it is hosted in a non-public Mendix cloud.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:delete`.'
       operationId: delete-project
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -78,8 +78,8 @@ paths:
     get:
       tags:
         - Projects
-      summary: 'Get project team members'
-      description: 'Returns a list of team members of the project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      summary: 'Get app team members'
+      description: 'Returns a list of team members of the app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-project-members
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -102,7 +102,7 @@ paths:
       tags:
         - Projects
       summary: 'Add a project team member'
-      description: 'Adds a team member to the project with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum Master role can be assigned.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
+      description: 'Adds a team member to the app with a specific role. The user must be an active member of the platform and belong to the same company as the user requesting the change. If the company is not yet using centralised platform roles, only the Scrum Master role can be assigned.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
       operationId: post-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -125,8 +125,8 @@ paths:
     delete:
       tags:
         - Projects
-      summary: 'Remove a project team member'
-      description: 'Removes a team member from a project. The member is not removed when they are the last Scrum Master of the project, the last member of the project, or the Technical Contact of a licensed app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
+      summary: 'Remove an app team member'
+      description: 'Removes a team member from an app. The member is not removed when they are the last Scrum Master of the app, the last member of the app, or the Technical Contact of a licensed app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
       operationId: delete-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -145,8 +145,8 @@ paths:
     patch:
       tags:
         - Projects
-      summary: 'Update a project team member'
-      description: 'Changes the way the team member interacts with the project. Mendix and project administrators are allowed to change the team member''s project role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      summary: 'Update an app team member'
+      description: 'Changes the way the team member interacts with the app. Mendix and app administrators are allowed to change the team member''s app role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
       operationId: patch-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -198,8 +198,8 @@ paths:
     get:
       tags:
         - Projects
-      summary: 'Get the status of a job creating a project'
-      description: 'Returns the status of the process that creates a project.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
+      summary: 'Get the status of a job creating an app'
+      description: 'Returns the status of the process that creates an app.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:create`.'
       operationId: get-project-job
       parameters:
         - $ref: '#/components/parameters/job-id'
@@ -216,19 +216,19 @@ paths:
     get:
       tags:
         - Users
-      summary: 'Get a list of projects the user is a team member of'
-      description: 'Returns a list of projects that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      summary: 'Get a list of apps the user is a team member of'
+      description: 'Returns a list of apps that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-user-projects
       parameters:
         - $ref: '#/components/parameters/user-id'
         - name: permissions
           in: query
-          description: 'A comma separated list of permissions the user has within the project. Possible values are `administrator`, `technicalcontact`, `repositoryaccess`, `cloudaccess`, `storyaccess`, `invitationrights`. The values are applied to the query using the AND operator'
+          description: 'A comma separated list of permissions the user has within the app. Possible values are `administrator`, `technicalcontact`, `repositoryaccess`, `cloudaccess`, `storyaccess`, `invitationrights`. The values are applied to the query using the AND operator'
           schema:
             type: string
         - name: isPinnedByUser
           in: query
-          description: 'Indicates whether the user has pinned the app as a favourite app. If not supplied, both pinned and un-pinned projects are returned.'
+          description: 'Indicates whether the user has pinned the app as a favourite app. If not supplied, both pinned and un-pinned apps are returned.'
           schema:
             type: boolean
         - $ref: '#/components/parameters/limit'
@@ -246,7 +246,7 @@ tags:
   - name: Users
     description: 'Mendix platform users'
   - name: Projects
-    description: 'App projects managed on the Mendix platform'
+    description: 'Apps managed on the Mendix platform'
 components:
   parameters:
     app-id:
@@ -266,7 +266,7 @@ components:
     job-id:
       name: job-id
       in: path
-      description: Identifier of a project creation job
+      description: Identifier of an app creation job
       required: true
       schema:
         type: string
@@ -313,18 +313,18 @@ components:
             properties:
               name:
                 type: string
-                description: Name of the project
+                description: Name of the app
                 maxLength: 100
               summary:
                 type: string
-                description: Description of the project
+                description: Description of the app
                 maxLength: 400
               image:
                 type: string
-                description: 'Base-64 encoded string of the project icon image. The file size is limited to 5MB, minimum of 200 x 200 px and amaximum of 400 x 400 px.'
+                description: 'Base-64 encoded string of the app icon image. The file size is limited to 5MB, minimum of 200 x 200 px and amaximum of 400 x 400 px.'
               templateId:
                 type: string
-                description: 'Identifier of the template that the project will be copied from. If empty, the default template will be used.'
+                description: 'Identifier of the template that the app will be copied from. If empty, the default template will be used.'
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 maxLength: 36
@@ -351,7 +351,7 @@ components:
       in: header
   responses:
     ProjectsResponse:
-      description: List of projects
+      description: List of apps
       content:
         application/json:
           schema:
@@ -372,31 +372,31 @@ components:
                     description: 'Number of items in this current page'
               items:
                 type: array
-                description: 'Array of projects.'
+                description: 'Array of apps.'
                 items:
                   type: object
                   properties:
                     projectId:
                       type: string
-                      description: Unique identifier for projects on the Mendix platform.
+                      description: Unique identifier for apps on the Mendix platform.
                     name:
                       type: string
-                      description: Name of the project.
+                      description: Name of the app.
                     description:
                       type: string
-                      description: Description of the project.
+                      description: Description of the app.
                     logo:
                       type: string
-                      description: URL of the project image/logo.
+                      description: URL of the app image/logo.
                     createdOn:
                       type: string
-                      description: Date and time in UTC when the project was created.
+                      description: Date and time in UTC when the app was created.
                     active:
                       type: boolean
-                      description: 'Indicates whether a project is active or not. Inactive projects will only be returned to Mendix administrators.'
+                      description: 'Indicates whether an app is active or not. Inactive apps will only be returned to Mendix administrators.'
                     createdBy:
                       type: object
-                      description: Contains information about the person that created this project.
+                      description: Contains information about the person that created this app.
                       properties:
                         userId:
                           type: string
@@ -412,8 +412,8 @@ components:
                   elements: 100
                 items:
                   - projectId: Unique UUID
-                    name: Project Name
-                    description: Project with a lovely description
+                    name: App Name
+                    description: App with a lovely description
                     logo: Image URL
                     createdOn: 'Jun 29, 2023 4:39 PM'
                     active: true
@@ -438,7 +438,7 @@ components:
                       userId: string
                       fullName: string
     ProjectMembersResponse:
-      description: List of project members
+      description: List of app members
       content:
         application/json:
           schema:
@@ -518,7 +518,7 @@ components:
             properties:
               jobId:
                 type: string
-                description: Unique identifier of the job that creates the project. Use this ID to query the status of the process.
+                description: Unique identifier of the job that creates the app. Use this ID to query the status of the process.
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 minLength: 36
@@ -539,14 +539,14 @@ components:
             properties:
               status:
                 type: string
-                description: 'Status of the project creation job. Possible values are ''scheduled'', ''running'', ''completed'', or ''failed''.'
+                description: 'Status of the app creation job. Possible values are ''scheduled'', ''running'', ''completed'', or ''failed''.'
                 maxLength: 200
               errorMessage:
                 type: string
                 description: Error message provided in case the job has failed
               projectId:
                 type: string
-                description: Identifier of the new created project
+                description: Identifier of the new created app
                 format: uuid
                 pattern: '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
                 maxLength: 36
@@ -562,7 +562,7 @@ components:
                 errorMessage: string
                 projectId: bbb9c2b3-18f3-43ab-b149-c0dabf946f4b
     UserProjectsResponse:
-      description: List of projects
+      description: List of apps
       content:
         application/json:
           schema:
@@ -583,7 +583,7 @@ components:
                     description: 'Number of items in this current page'
               items:
                 type: array
-                description: 'Array of projects.'
+                description: 'Array of apps.'
                 items:
                   type: object
                   properties:
@@ -598,26 +598,26 @@ components:
                       description: 'Description of the app.'
                     logo:
                       type: string
-                      description: 'URL of the project image/logo.'
+                      description: 'URL of the app image/logo.'
                     cloudTarget:
                       type: string
                       description: 'URL of the cloud portal the app is hosted on.'
                     active:
                       type: boolean
-                      description: 'Indicates whether a project is active and can be maintained by a team. Inactive projects will only be returned to Mendix administrators. Note this attribute does not indicate whether the app is actively deployed or running in the cloud.'
+                      description: 'Indicates whether an app is active and can be maintained by a team. Inactive apps will only be returned to Mendix administrators. Note this attribute does not indicate whether the app is actively deployed or running in the cloud.'
                     isPinnedByUser:
                       type: boolean
                       description: 'Indicates whether the app was pinned as a favourite app by the user.'
                     role:
                       type: object
-                      description: 'The set of permissions the team member has within the project team.'
+                      description: 'The set of permissions the team member has within the app team.'
                       properties:
                         name:
                           type: string
                           description: 'Name of the role.'
                         isAdministrator:
                           type: boolean
-                          description: 'Indicates whether the team member is a project administrator.'
+                          description: 'Indicates whether the team member is an app administrator.'
                         isTechnicalContact:
                           type: boolean
                           description: 'Indicates whether the team member is the technical contact of the app.'
@@ -632,7 +632,7 @@ components:
                           description: 'Indicates whether the team member has access to Stories and Feedback of the app.'
                         hasInvitationRights:
                           type: boolean
-                          description: 'Indicates whether the team member is allowed to invite other users to the project team.'
+                          description: 'Indicates whether the team member is allowed to invite other users to the app team.'
             x-examples:
               Example 1:
                 page:
@@ -641,8 +641,8 @@ components:
                   elements: 100
                 items:
                   - projectId: Unique UUID
-                    name: Project Name
-                    description: Project with a lovely description
+                    name: App Name
+                    description: App with a lovely description
                     logo: 'https://etcetera/lovely-photograph.jpg'
                     cloudTarget: 'https://etcetera/cloud'
                     active: true

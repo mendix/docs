@@ -94,14 +94,15 @@ You should install the latest version of the Mendix Feedback module, as it will 
 To configure the Feedback widget, double-click it to open the **Edit Feedback** dialog box. To use the feedback feature, configure the following properties:
 
 * **Configuration** tab
-    * **Feedback button action** –This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
-    * **Project Settings** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
-
+    * **Model pop-up type**This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
+    * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
+    
         {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}
-    
-    * **HTML2Canvas screenshot settings** – These options control the rendering of the screenshots. If you are experiencing problems with screenshots, turn the **Foreign rendering** on.
-    
+        
+    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, the advanced settings are not shown. If you select **Yes**, the following items are displayed:
+        * **Enable object rendering** – By default, this is disabled. Only enable this when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
+        * **CSS scrollable area **– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. Add a CSS selector to specify which element your page scrolls the content.
 * **Customize Button** tab
     * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:

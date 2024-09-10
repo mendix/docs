@@ -1,5 +1,5 @@
 ---
-title: "Mendix Mobile App Release Notes"
+title: "Mendix Mobile App Release Notes
 linktitle: Mendix Mobile App"
 url: /releasenotes/mobile/mendix-mobile-app/
 weight: 20

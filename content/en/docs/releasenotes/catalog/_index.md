@@ -1,5 +1,6 @@
 ---
-title: "Catalog"
+title: "Catalog Release Notes"
+linktitle: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 weight: 36

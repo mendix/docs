@@ -188,9 +188,6 @@ This refers to a PostgreSQL database which is automatically provisioned by the O
 
 The following standard PostgreSQL databases are supported:
 
-* PostgreSQL 9.6
-* PostgreSQL 10
-* PostgreSQL 11
 * PostgreSQL 12
 * PostgreSQL 13
 * PostgreSQL 14
@@ -199,7 +196,7 @@ The following standard PostgreSQL databases are supported:
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
-For best compatibility, use Postgres 12 - it's supported by the latest supported LTS versions of the Mendix Runtime.
+For best compatibility, use Postgres 13. 
 {{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.
@@ -251,7 +248,6 @@ This refers to a SQL Server database which is automatically provisioned by the O
 
 The following Microsoft SQL Server editions are supported:
 
-* SQL Server 2017
 * SQL Server 2019
 
 The following managed Microsoft SQL Server databases are supported:

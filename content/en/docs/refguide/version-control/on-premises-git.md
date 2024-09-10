@@ -41,6 +41,7 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 {{< figure src="/attachments/refguide/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" >}}
 
 Currently Mendix keeps PAT using operating system supported solutions:
+
 * For Windows, Mendix uses a credential locker mechanism, accessible to users by using Credential Manager.
 * For MacOs, Mendix uses keychains, accessible to users by using Keychain Access.
 

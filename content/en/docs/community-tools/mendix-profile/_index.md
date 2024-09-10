@@ -139,7 +139,7 @@ These are points you can gain through activity in the [Mendix Marketplace](https
 | Deploy to a licensed node | 1 | 5 |
 | Deploy a Free App | 1 | N/A |
 
-### Community Points
+### Impact Points
 
 | Activity | Points | Max. per Day |
 | --- | --- | --- |

@@ -1,5 +1,6 @@
 ---
-title: "Archive"
+title: "Archive Stories"
+linktitle: "Archive"
 url: /developerportal/project-management/epics/archive/
 weight: 40
 description: "Describes the Archive page in Epics."

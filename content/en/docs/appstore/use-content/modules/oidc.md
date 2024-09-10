@@ -561,11 +561,12 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
 
-6. In the **Custom UserProvisioning**, select a microflow you want to run for [Custom User Provisioning Using a Microflow](#custom-provisioning-mf).
+6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
-    The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you will need to refresh the module containing your microflow as described in [Installing Mx Model Reflection](#mxmodelreflection).
+    1. **UserInfoParam**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
-    This selection can be blank if you do not want to add custom logic.
+    It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.
 
 7. Click **Save** to save the configuration.
 
@@ -594,12 +595,12 @@ Role of user identifiers in OIDC and SCIM protocols:
 
 * OIDC protocol can use both types of identifiers based on use case:
 
-  * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
-  * The ID-token also contains an `oid` claim, which includes the user’s object ID.
+    * The ID token contains a `sub` claim, which includes the pairwise unique identifier (locally unique identifier).
+    * The ID-token also contains an `oid` claim, which includes the user’s object ID.
 
 * SCIM:
 
-  * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
+    * In the SCIM protocol, you typically want to use the object ID to identify a user. It is used as the value for the `externalID` claim in SCIM payloads by default.
 
 #### Guidance on User Identifier{#guidance-user-identifier}
 

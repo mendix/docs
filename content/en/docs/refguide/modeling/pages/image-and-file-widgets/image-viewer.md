@@ -74,7 +74,7 @@ Dynamic image properties consist of the following sections:
 
 The **Entity (path)** property specifies which object will be shown in the dynamic image. It must be a System.Image or a specialization thereof. If the object in the data view is (a specialization of) System.Image you can use this object in the dynamic image as well.
 
-###  Events Section {#events}
+### Events Section {#events}
 
 {{% snippet file="/static/_includes/refguide/events-section-link.md" %}}
 

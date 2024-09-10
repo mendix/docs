@@ -21,6 +21,8 @@ A domain model consists of [entities](/refguide/entities/) with their relationsh
 
 You can also add [annotations](/refguide/annotations/) to your domain model to remind yourself, and other team members, how it is to be used.
 
+See [Configuring a Domain Model](/refguide/configuring-a-domain-model/) for information on how to create persistable and non-persistable entities in the domain model of your app modules. See [External Entities](/refguide/external-entities/) for how to add an external entity to your app.
+
 ## Representation of the Domain Model
 
 Below is a domain model that describes customers and orders. The names of the entities are `Customer` and `Order`. The line between them is an association. `Order_Customer`. One customer can have many orders, but each order is for one customer. Within the boxes representing the entities you can see the [attributes](/refguide/attributes/) of the entities together with the [type](/refguide/attributes/#type) of data they hold. There is also a [non-persistable](/refguide/persistability/) entity, `ProductQueryResults`, which is used to record product information which is retrieved from a separate product system, and an [external entity](/refguide/external-entities/), `Products`, which holds a list of products stored in a separate system.
@@ -84,7 +86,7 @@ The association `Order_Customer` is stored in the table `module$order_customer` 
 | 8 | 1 |
 | 5 | 3 |
 
-#### Order_Customer Association
+#### Order Entity
 
 The entity `Order` is stored in the table `module$order` which is shown below. It is similar to the table of the entity `Customer`. However no system attributes have been defined in the domain model and so they are not stored in the table.
 

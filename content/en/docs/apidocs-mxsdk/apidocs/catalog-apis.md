@@ -37,7 +37,7 @@ The [Search API](https://datahub-spec.s3.eu-central-1.amazonaws.com/search_v5.ht
 
 You can paginate through search results with an offset, which allows you to limit the number of results and specify how many to skip. 
 
-For step-by-step instructions and an example API call, see the [Search via the API](/catalog/manage/search/#search-api) section of *How to Search in the Catalog*. 
+For step-by-step instructions and an example API call, see the [Search Using the API](/catalog/manage/search/#search-api) section of *Search in the Catalog*. 
 
 ## Registration API {#registration}
 

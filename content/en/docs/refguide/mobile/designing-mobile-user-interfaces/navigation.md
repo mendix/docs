@@ -1,5 +1,6 @@
 ---
-title: "Navigation"
+title: "Navigation In Native Mobile Apps"
+linktitle: "Navigation"
 url: /refguide/mobile/designing-mobile-user-interfaces/navigation/
 weight: 20
 description: "General information for native navigation in Mendix."

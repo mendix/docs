@@ -257,7 +257,7 @@ Mendix Support can analyze these components if your app is running on Mendix Clo
 
 ### Deployment Pipeline
 
-The deployment pipeline takes care of creating and deploying deployment packages. Read more about deployment options in [Deployment](/deployment/).
+The deployment pipeline takes care of creating and deploying deployment packages. Read more about deployment options in [Deploying Apps](/deployment/).
 
 Mendix Support can analyze this component if your app is running on Mendix Cloud, Mendix Cloud Dedicated, Private Cloud Connected, or SAP BTP through the Mendix Portal.
 

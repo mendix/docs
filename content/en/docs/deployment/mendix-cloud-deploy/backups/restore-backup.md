@@ -119,9 +119,7 @@ A **Full Snapshot** backup file is a *.tar.gz* file (for example, *files_and_dat
 
 #### .tar Archive
 
-The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a number of files in a folder structure.
-
-Here is an example:
+The *.tar* archive within the *.tar.gz* archive (for example, *files_and_database-fc9e126f-201811210121.tar*) contains a [db](#db-folder) folder, a [tree](#tree-folder) folder, and a [.metadata](#metadata) file, like this:
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/restore-backup/tar-gz-structure.png" class="no-border" >}}
 
@@ -139,9 +137,9 @@ tree/46/9c/469c9c80-34d3-4810-8494-86b63eb37214
 tree/4d/8f/4d8ffd66-7ad3-4f5c-a992-985cf360581b
 ```
 
-#### .metadata File
+#### .metadata File{#metadata}
 
-This contains JSON describing the backup. Here is an example:
+This file contains JSON describing the backup. Here is an example:
 
 ```json
 {
@@ -155,7 +153,7 @@ This contains JSON describing the backup. Here is an example:
 
 #### db Folder{#db-folder}
 
-This contains the *db.backup* file. This is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
+This folder contains the *db.backup* file, which is a PostgreSQL dump file created using the command `pg_dump -O -x -Fc`.
 
 {{% alert color="warning" %}}
 If the dump does not use the custom format, then the restore will fail.
@@ -163,9 +161,11 @@ If the dump does not use the custom format, then the restore will fail.
 The dump must be created with `pg_dump` version 1.14 or below, which is currently bundled with PostgreSQL 12, 13, 14, and 15. If it is created with a later version, then the upload will fail.
 {{% /alert %}}
 
-#### Tree Folder
+#### tree Folder{#tree-folder}
 
-This contains the files that are stored in external file storage. Each file has the name of the UUID used within Mendix to identify the resource. They are also stored in the following tree structure, where each file is stored in a second-level location:
+This folder contains any files that are stored in external file storage; the folder is part of the *.tar* archive as long as there is at least one file uploaded.
+
+Each file has the name of the UUID used within Mendix to identify the resource. They are also stored in the following tree structure, where each file is stored in a second-level location:
 
 ```shell
 /tree
@@ -176,11 +176,11 @@ This contains the files that are stored in external file storage. Each file has 
 
 The file has the name of the UUID used within Mendix to identify the resource.
 
-The directory [xx] is the first two characters of UUID.
+The directory [xx] is the first two characters of the UUID.
 
 The directory [yy] is the third and fourth characters of the UUID.
 
-So, for example, the first file in the example file above (0d3e301f-5551-46f8-ad44-8de2be084c95) is stored in the following structure:
+So, in the example file list above, the first file (0d3e301f-5551-46f8-ad44-8de2be084c95) is stored in the following structure:
 
 ```shell
 /tree

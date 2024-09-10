@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Mendix for Private Cloud Deploy API
-  version: 4.8.0
+  version: 4.9.0
   contact:
     name: Mendix Support
     url: 'https://support.mendix.com'
@@ -136,7 +136,7 @@ paths:
         - namespaces
       responses:
         '200':
-          $ref: '#/components/responses/namespacesManifests'
+          $ref: '#/components/responses/namespacesManifestsResponse'
         '401':
           $ref: '#/components/responses/error401'
         '403':
@@ -164,11 +164,7 @@ paths:
         - namespaces
       description: Creates a new namespace based on a manifest.
       requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/namespaceManifest'
-        description: Manifest of a namespace.
+        $ref: '#/components/requestBodies/createNamespaceManifest'
   '/clusters/{clusterId}/namespaces/{namespaceId}':
     parameters:
       - $ref: '#/components/parameters/clusterId'
@@ -179,7 +175,7 @@ paths:
         - namespaces
       responses:
         '200':
-          $ref: '#/components/responses/namespaceManifest'
+          $ref: '#/components/responses/namespaceManifestResponse'
         '401':
           $ref: '#/components/responses/error401'
         '403':
@@ -225,11 +221,7 @@ paths:
       tags:
         - namespaces
       requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/updateNamespaceManifest'
-        description: Manifest of a namespace.
+        $ref: '#/components/requestBodies/updateNamespaceManifest'
   /apps:
     get:
       summary: Get Manifests of Multiple Applications
@@ -404,7 +396,7 @@ paths:
           type: string
           format: uuid
           example: c533ee0b-f7db-4e62-868b-1192d392ccec
-        description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
+        description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
       - name: namespaceId
         in: path
         required: true
@@ -569,7 +561,7 @@ components:
       title: appId
       format: uuid
       example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of the Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of the Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
       x-examples:
         example-appid: c533ee0b-f7db-4e62-868b-1192d392ccec
     error:
@@ -918,19 +910,30 @@ components:
         example-resource-requests:
           cpu: '1'
           memory: '0.512'
+        example-with-ephemeral-storage:
+          cpu: '1'
+          memory: '0.512'
+          ephemeralStorage: '1'
       description: Model for resources (limits & requests).
+      x-stoplight:
+        id: 3cf5b8d99db2e
       properties:
         cpu:
           type: string
           example: '1'
+          description: The unit of measurement is `Cores` and it will be added automatically.
         memory:
           type: string
           example: '0.512'
+          description: The unit of measurement is `Gb` and it will be added automatically.
+        ephemeralStorage:
+          type: string
+          example: '1'
+          default: 1
+          description: The unit of measurement is `Gb` and it will be added automatically.
       required:
         - cpu
         - memory
-      x-stoplight:
-        id: 3cf5b8d99db2e
     environmentVariable:
       type: object
       x-examples:
@@ -1061,41 +1064,6 @@ components:
         example-os: os
         example-eks: eks
         example-k8s: k8s
-    namespaceManifest:
-      type: object
-      x-examples:
-        example-namespace-manifest:
-          $ref: '#/components/examples/NamespaceManifest'
-      description: Model for the namespace manifest.
-      properties:
-        manifestVersion:
-          type: string
-          example: 2.0.0
-        namespace:
-          type: object
-          required:
-            - namespaceId
-            - name
-            - installationType
-            - secret
-          properties:
-            namespaceId:
-              type: string
-              format: uuid
-              example: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
-            name:
-              type: string
-              example: my-namespace
-            namespaceType:
-              $ref: '#/components/schemas/namespaceType'
-            installationType:
-              $ref: '#/components/schemas/installationType'
-            secret:
-              type: string
-              example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
-      required:
-        - manifestVersion
-        - namespace
     installationType:
       type: string
       title: installationType
@@ -1135,11 +1103,279 @@ components:
       description: Model for cliVersionValue.
       x-examples:
         example-cli-version-value: 2.0.0
+    namespaceManifest:
+      type: object
+      x-examples:
+        example-update-namespace-manifest:
+          $ref: '#/components/examples/NamespaceManifestExample'
+      description: Model for the manifest used when retrieving a namespace.
+      properties:
+        manifestVersion:
+          type: string
+          example: 2.0.0
+        namespace:
+          type: object
+          required:
+            - namespaceId
+            - name
+            - installationType
+            - secret
+            - productTypePCLM
+          properties:
+            namespaceId:
+              type: string
+              format: uuid
+              example: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
+            name:
+              type: string
+              example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
+            installationType:
+              $ref: '#/components/schemas/installationType'
+            secret:
+              type: string
+              example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            productTypePCLM:
+              type: string
+              example: standard
+              x-stoplight:
+                id: 2r6towzytlu3z
+            plans:
+              type: array
+              items:
+                type: object
+                properties:
+                  planName:
+                    type: string
+                    example: my-db | my-str
+                    description: non-editable
+                  planType:
+                    $ref: '#/components/schemas/planType'
+                  activate:
+                    type: boolean
+                    default: false
+                  planConfig:
+                    type: string
+                    example: '"{type:\"database | storage\"}"'
+                    description: non-editable
+            enableDevelopmentMode:
+              type: boolean
+              default: false
+            enableExternalSecretsStore:
+              type: boolean
+              default: false
+            membership:
+              type: array
+              items:
+                type: object
+                properties:
+                  email:
+                    type: string
+                    example: abc@xxx.com
+                  role:
+                    type: string
+                    example: Developer | Administrator | Custom
+                  status:
+                    $ref: '#/components/schemas/invitationStatus'
+                  displayName:
+                    type: string
+                    example: member name
+                    description: non-editable
+                  autoAcceptInvite:
+                    type: boolean
+                    default: false
+                    description: Can be used to automatically accept the invite for this user.
+                  permissions:
+                    type: object
+                    properties:
+                      manageEnvironment:
+                        type: boolean
+                        default: false
+                      deployApp:
+                        type: boolean
+                        default: false
+                      scaleApp:
+                        type: boolean
+                        default: false
+                      startApp:
+                        type: boolean
+                        default: false
+                      stopApp:
+                        type: boolean
+                        default: false
+                      modifyMxAdminPassword:
+                        type: boolean
+                        default: false
+                      editAppConstants:
+                        type: boolean
+                        default: false
+                      manageAppScheduledEvents:
+                        type: boolean
+                        default: false
+                      viewAppLogs:
+                        type: boolean
+                        default: false
+                      viewAppAlerts:
+                        type: boolean
+                        default: false
+                      viewAppMetrics:
+                        type: boolean
+                        default: false
+                      manageAppBackups:
+                        type: boolean
+                        default: false
+                      manageDebugger:
+                        type: boolean
+                        default: false
+                      manageTLSConfigurations:
+                        type: boolean
+                        default: false
+                      manageCustomEnvVarJVMOpts:
+                        type: boolean
+                        default: false
+                      manageCustomRuntimeSettings:
+                        type: boolean
+                        default: false
+                      manageLogLevels:
+                        type: boolean
+                        default: false
+                      manageRuntimeMetricsConfiguration:
+                        type: boolean
+                        default: false
+                required:
+                  - email
+                  - role
+            operationalLinks:
+              type: object
+              properties:
+                metricsUrl:
+                  type: string
+                  example: 'https://www.exampleurl.com'
+                alertsUrl:
+                  type: string
+                  example: 'https://www.exampleurl.com'
+                logsUrl:
+                  type: string
+                  example: 'https://www.exampleurl.com'
+                backupsUrl:
+                  type: string
+                  example: 'https://www.exampleurl.com'
+            additionalInformation:
+              type: object
+              description: |
+                non-editable<br/>
+                The section contains useful information for debugging.
+              properties:
+                componentVersion:
+                  type: object
+                  properties:
+                    operatorVersion:
+                      type: string
+                      description: |-
+                        non-editable<br/>
+                        The version of the operator.
+                      example: 3.0.0
+                    repositoryURL:
+                      type: string
+                      description: |-
+                        non-editable <br/>
+                        Docker repository URL.
+                      example: docker-local.artifactory.url
+                    builderVersion:
+                      type: string
+                      example: ingvar-rhel
+                      description: |-
+                        non-editable <br/>
+                        Version of the builder.
+                    metricsSidecarVersion:
+                      type: string
+                      example: 1.0.0
+                      description: |-
+                        non-editable <br/>
+                        Version of the metrics sidecar.
+                    m2EESidecarVersion:
+                      type: string
+                      description: |-
+                        non-editable <br/>
+                        Version of the M2EE sidecar.
+                      example: 1.0.0
+                internalDetails:
+                  type: object
+                  properties:
+                    operatorSDK:
+                      type: string
+                      example: v0.18.2
+                      description: |-
+                        non-editable <br/>
+                        Version of the Operator SDK.
+                    goRuntimeVersion:
+                      type: string
+                      example: go1.14.13_linux/amd64
+                      description: |-
+                        non-editable <br/>
+                        Version of the GO runtime.
+                    buildBranch:
+                      type: string
+                      example: HEAD
+                      description: non-editable
+                    buildDate:
+                      type: string
+                      example: '2021-01-05_10:14:42'
+                      description: non-editable
+                    buildHash:
+                      type: string
+                      example: 7fd1d6df6e754cafb43efaa75071cff3a16932be
+                      description: non-editable
+      required:
+        - manifestVersion
+        - namespace
+      x-stoplight:
+        id: c5451533c063d
+      title: ''
+    createNamespaceManifest:
+      type: object
+      x-examples:
+        example-update-namespace-manifest:
+          $ref: '#/components/examples/NamespaceManifestExample'
+      description: Model for the manifest used when creating a namespace.
+      x-stoplight:
+        id: c57e2bcb44bc0
+      properties:
+        manifestVersion:
+          type: string
+          example: 2.0.0
+        namespace:
+          type: object
+          required:
+            - namespaceId
+            - name
+            - installationType
+            - secret
+          properties:
+            namespaceId:
+              type: string
+              format: uuid
+              example: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
+            name:
+              type: string
+              example: my-namespace
+            namespaceType:
+              $ref: '#/components/schemas/namespaceType'
+            installationType:
+              $ref: '#/components/schemas/installationType'
+            secret:
+              type: string
+              example: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+      required:
+        - manifestVersion
+        - namespace
+      title: ''
     updateNamespaceManifest:
       type: object
       x-examples:
         example-update-namespace-manifest:
-          $ref: '#/components/examples/UpdateNamespaceManifest'
+          $ref: '#/components/examples/UpdateNamespaceManifestExample'
       description: Model for the manifest used when updating a namespace.
       properties:
         manifestVersion:
@@ -1455,7 +1691,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: 'The ID of a Mendix App. In the Mendix Portal, this is shown as the App ID and it is a UUID format.'
+      description: 'The ID of a Mendix App. In the Developer Portal, this is shown as the App ID and it is a UUID format.'
     jobId:
       name: jobId
       in: path
@@ -1839,6 +2075,109 @@ components:
                         interval: PT1H30M
                         mxAgentConfig: config
                         mxAgentInstrumentationConfig: config
+            example-environments-manifests-with-ephemeral-storage:
+              value:
+                environments:
+                  - manifestVersion: 2.0.0
+                    environment:
+                      id: e9m3vf7f
+                      properties:
+                        name: my-environment
+                        production: true
+                        defaultStudioTarget: true
+                        secretsStoreEnabled: false
+                        OverwriteProductTypePCLM: standard
+                      deployment:
+                        appUrl: 'http://test.app.url'
+                        packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
+                        constants:
+                          - name: MyFirstModule.bool
+                            value: 'False'
+                          - name: MyFirstModule.Constant_DateTime_Unused
+                            value: '2022-03-10T13:15:00'
+                          - name: MyFirstModule.Constant_DateTime_Used
+                            value: '2022-03-10T09:43:00'
+                          - name: MyFirstModule.decim
+                            value: '10.5'
+                          - name: MyFirstModule.integ
+                            value: '11'
+                          - name: MyFirstModule.string
+                            value: test
+                        scheduledEvents:
+                          - name: MyFirstModule.Scheduled_event1
+                            enabled: true
+                          - name: MyFirstModule.Scheduled_event2
+                            enabled: false
+                        appLogLevels:
+                          - name: loglevel
+                            level: CRITICAL
+                      container:
+                        state: Ready
+                        instances: 5
+                        coreResources:
+                          limits:
+                            cpu: '1'
+                            memory: '0.512'
+                            ephemeralStorage: '1'
+                          requests:
+                            cpu: '0.1'
+                            memory: '0.512'
+                            ephemeralStorage: '1'
+                      network:
+                        outgoingConnectionCertificate:
+                          - enabled: true
+                            password: dGVzdA==
+                            certificateType: Client
+                            key: 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
+                      runtime:
+                        subscriptionSecret: c3Vic2NyaXB0aW9uLXNlY3JldA==
+                        debuggerPassword: NEtpKStwIjhiMzVVUUcodw==
+                        mxAdminPassword: NEtpKStwIjhiMzVVUUcodw==
+                        runtimeVersion: 9.24.2
+                        environmentVariables:
+                          - name: custom-env-variable1
+                            value: custom-env-variable1-value
+                          - name: custom-env-variable2
+                            value: custom-env-variable2-value
+                          - name: JAVA_TOOL_OPTIONS
+                            value: customJVM
+                        customRuntimeSettings:
+                          - name: custom-runtime-setting1
+                            value: custom-runtime-setting1-value
+                          - name: custom-runtime-setting2
+                            value: custom-runtime-setting2-value
+                      provider:
+                        clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
+                        namespace: my-namespace
+                        namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
+                      annotations:
+                        - key: prometheus.io/path
+                          value: /metrics
+                          annotationType: Pod
+                        - key: prometheus.io/port
+                          value: '8900'
+                          annotationType: Pod
+                        - key: prometheus.io/scrape
+                          value: 'true'
+                          annotationType: Pod
+                        - key: ingress-annotation
+                          value: ingress-annotation-value
+                          annotationType: Ingress
+                        - key: service-annotation
+                          value: service-annotation-value
+                          annotationType: Service
+                      services:
+                        - name: ephemeral_db
+                          plan: OnDemand
+                          config: '{type: \"database\"}'
+                        - name: minio_sp
+                          plan: OnDemand
+                          config: '{type: \"storage\"}'
+                      runtimeMetricsConfiguration:
+                        mode: native
+                        interval: PT1H30M
+                        mxAgentConfig: config
+                        mxAgentInstrumentationConfig: config
     clusterManifest:
       description: The cluster manifest response returned by a get-cluster-manifest request.
       content:
@@ -1891,7 +2230,7 @@ components:
                         - email: abc@xxx.com
                           status: Invitation_Sent
                           displayName: member name
-    namespaceManifest:
+    namespaceManifestResponse:
       description: The namespace manifest response returned by a get-namespace-manifest request.
       content:
         application/json:
@@ -1950,7 +2289,7 @@ components:
                     alertsUrl: 'https://www.exampleurl.com/'
                     logsUrl: 'https://www.exampleurl.com/'
                     backupsUrl: 'https://www.exampleurl.com/'
-                  additionalInformationTab:
+                  additionalInformation:
                     componentsVersion:
                       operatorVersion: master
                       repositoryURL: private-cloud.non-prod.registry.mendix.com
@@ -1964,7 +2303,7 @@ components:
                       buildBranch: HEAD
                       buildDate: '2023-01-03_14:45:47'
                       buildHash: fee1feb8df3898b37b356281006b2f0acbfa8982
-    namespacesManifests:
+    namespacesManifestsResponse:
       description: The namespaces manifests response returned by a get-namespaces-manifests request.
       content:
         application/json:
@@ -2028,7 +2367,7 @@ components:
                         alertsUrl: 'https://www.exampleurl.com/'
                         logsUrl: 'https://www.exampleurl.com/'
                         backupsUrl: 'https://www.exampleurl.com/'
-                      additionalInformationTab:
+                      additionalInformation:
                         componentsVersion:
                           operatorVersion: master
                           repositoryURL: private-cloud.non-prod.registry.mendix.com
@@ -2089,7 +2428,7 @@ components:
                         alertsUrl: 'https://www.exampleurl.com/'
                         logsUrl: 'https://www.exampleurl.com/'
                         backupsUrl: 'https://www.exampleurl.com/'
-                      additionalInformationTab:
+                      additionalInformation:
                         componentsVersion:
                           operatorVersion: master
                           repositoryURL: private-cloud.non-prod.registry.mendix.com
@@ -2158,6 +2497,8 @@ components:
           examples:
             example-environment-manifest:
               $ref: '#/components/examples/EnvironmentManifest'
+            example-environment-manifest-with-ephemeral-storage:
+              $ref: '#/components/examples/EnvironmentManifestWithEphemeralStorage'
       description: Request body for the environment manifest.
     clusterManifest:
       content:
@@ -2168,14 +2509,14 @@ components:
             example-cluster-manifest:
               $ref: '#/components/examples/ClusterManifest'
       description: Request body for the cluster manifest.
-    namespaceManifest:
+    createNamespaceManifest:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/namespaceManifest'
+            $ref: '#/components/schemas/createNamespaceManifest'
           examples:
             example-namespace-manifest:
-              $ref: '#/components/examples/NamespaceManifest'
+              $ref: '#/components/examples/CreateNamespaceManifestExample'
       description: Request body for the namespace manifest.
     updateClusterManifest:
       content:
@@ -2193,7 +2534,7 @@ components:
             $ref: '#/components/schemas/updateNamespaceManifest'
           examples:
             example-update-namespace-manifest:
-              $ref: '#/components/examples/UpdateNamespaceManifest'
+              $ref: '#/components/examples/UpdateNamespaceManifestExample'
       description: Request body for the manifest used when updating a namespace.
   examples:
     EnvironmentManifest:
@@ -2272,7 +2613,7 @@ components:
           clusterType: os
           operatorType: standard_operator
           description: This cluster is for testing purposes.
-    NamespaceManifest:
+    NamespaceManifestExample:
       value:
         manifestVersion: 2.0.0
         namespace:
@@ -2281,6 +2622,61 @@ components:
           installationType: Connected
           secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
           namespaceType: standard
+          productTypePCLM: standard
+          plans:
+            - planName: mock-db
+              planType: OnDemand
+              activate: true
+              planConfig: '{type: "database"}'
+            - planName: mock-sp
+              planType: OnDemand
+              activate: true
+              planConfig: '{type: "storage"}'
+          enableDevelopmentMode: true
+          enableExternalSecretsStore: true
+          membership:
+            - email: member1@abc.com
+              role: Administrator
+              status: Accepted
+              autoAcceptInvite: false
+              permissions:
+                manageEnvironment: true
+                deployApp: true
+                scaleApp: true
+                startApp: true
+                stopApp: true
+                modifyMxAdminPassword: true
+                editAppConstants: true
+                manageAppScheduledEvents: true
+                viewAppLogs: true
+                viewAppAlerts: true
+                viewAppMetrics: true
+                manageAppBackups: true
+                manageDebugger: true
+                manageTLSConfigurations: true
+                manageClientCertificates: true
+                manageCustomEnvVarJVMOpts: true
+                manageCustomRuntimeSettings: true
+                manageLogLevels: true
+                manageRuntimeMetricsConfiguration: true
+          operationalLinks:
+            metricsUrl: 'http://www.metrics.com'
+            alertsUrl: 'http://www.alerts.com'
+            logsUrl: 'http://www.logs.com'
+            backupsUrl: 'http://www.backups.com'
+          additionalInformation:
+            componentsVersion:
+              operatorVersion: 3.0.0
+              repositoryURL: docker-repository.url
+              builderVersion: rhel
+              metricsSidecarVersion: 1.0.0
+              m2EESidecarVersion: 1.0.0
+            internalDetails:
+              operatorSDK: v1.0.0
+              goRuntimeVersion: go1.14.13_linux/amd64
+              buildBranch: HEAD
+              buildDate: '2021-01-05_10:14:42'
+              buildHash: 6bd1d6df6e754cafb43efaa75071cff3a16932ba
     UpdateClusterManifest:
       value:
         manifestVersion: 2.0.0
@@ -2297,7 +2693,7 @@ components:
               status: Invitation_Sent
               displayName: member-name e.g John
               autoAcceptInvite: false
-    UpdateNamespaceManifest:
+    UpdateNamespaceManifestExample:
       value:
         manifestVersion: 2.0.0
         namespace:
@@ -2354,6 +2750,84 @@ components:
         app:
           appId: 085a0e34-69ec-4c61-9c7d-5cd42554f9f2
           appName: my-app
+    CreateNamespaceManifestExample:
+      value:
+        manifestVersion: 2.0.0
+        namespace:
+          namespaceId: 9fab54b2-39f9-48e4-8ceb-5a7ecbba44e1
+          name: my-namespace
+          installationType: Connected
+          secret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+          namespaceType: standard
+    EnvironmentManifestWithEphemeralStorage:
+      value:
+        manifestVersion: 2.0.0
+        environment:
+          id: e9m3vf7f
+          properties:
+            name: my-environment
+            production: true
+            defaultStudioTarget: true
+            secretsStoreEnabled: false
+            OverwriteProductTypePCLM: standard
+          deployment:
+            appUrl: 'https://test.app.url'
+            packageId: 045b8cf4-c9cd-41b4-b241-414b87a7f219
+            constants:
+              - name: MyFirstModule.Constant_Name
+                value: '2022-03-10T13:15:00'
+            scheduledEvents:
+              - name: MyFirstModule.Scheduled_event1
+                enabled: true
+            appLogLevels:
+              - name: MY_LOG_LEVEL
+                level: DEBUG
+          container:
+            state: Ready
+            instances: 3
+            coreResources:
+              limits:
+                cpu: '1'
+                memory: '0.512'
+                ephemeralStorage: '1'
+              requests:
+                cpu: '1'
+                memory: '0.512'
+                ephemeralStorage: '1'
+          network:
+            outgoingConnectionCertificate:
+              - enabled: true
+                password: 'base64 encoded string, e.g.  dGVzdA=='
+                certificateType: Client
+                key: long base64 encoded .pfx file
+          runtime:
+            subscriptionSecret: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            debuggerPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            mxAdminPassword: 'base64 encoded string, e.g. c3Vic2NyaXB0aW9uLXNlY3JldA=='
+            runtimeVersion: 9.24.2
+            environmentVariables:
+              - name: custom-env-variable1
+                value: custom-env-variable1-value
+            customRuntimeSettings:
+              - name: HashAlgorithm
+                value: BCRYPT
+          provider:
+            clusterId: a712d8f4-a77c-4189-a211-e0ea1dfde03c
+            namespace: my-namespace
+            namespaceId: b912d8f4-a77c-4189-a211-e0ea1dfde04f
+          annotations:
+            - key: prometheus.io/port
+              value: '8900'
+              annotationType: Pod
+          services:
+            - name: ephemeral_db
+              plan: OnDemand
+              config: '{type: \"database\"}'
+          runtimeMetricsConfiguration:
+            mode: native
+            interval: 'https://docs.mendix.com/refguide/custom-settings/#11-durationinterval-settings'
+            mxAgentConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
+            mxAgentInstrumentationConfig: 'https://docs.mendix.com/developerportal/deploy/private-cloud-monitor/#configuring-mxagent'
 tags:
   - name: apps
   - name: cli

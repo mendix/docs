@@ -9,12 +9,14 @@ weight: 86
 ### CustomWidgets
 
 #### WidgetValueType (Element)
+
 * We introduced the `isLinked` property. 
 * We introduced the `isMetaData` property. 
 
 ### Pages
 
 #### TabContainer (Element)
+
 * We introduced the `activePageAttributeRef` property. 
 * We introduced the `activePageSourceVariable` property. 
 * We introduced the `activePageOnChangeAction` property. 
@@ -22,22 +24,29 @@ weight: 86
 ### Workflows
 
 #### CallWorkflowActivity (Element)
+
 * We introduced the `boundaryEvents` property. 
 
 #### EndOfBoundaryEventPathActivity (Element)
+
 * We introduced this element. 
 
 #### CallMicroflowTask (Element)
+
 * We introduced the `boundaryEvents` property. 
 
 #### UserTaskActivity (Element)
+
 * We introduced the `boundaryEvents` property.
 
 #### WaitForNotificationActivity (Element)
+
 * We introduced the `boundaryEvents` property. 
 
 #### BoundaryEvent (Element)
+
 * We introduced this element. 
 
 #### TimerBoundaryEvent (Element)
+
 * We introduced this element. 

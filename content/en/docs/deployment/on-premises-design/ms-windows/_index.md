@@ -389,6 +389,10 @@ To make sure the correct application root URL is used within your web services, 
 
 When configuring IIS it can seem like you have done everything right but it just doesn't seem to work. A guide to troubleshooting IIS is available here: [Troubleshooting IIS](/developerportal/deploy/troubleshooting-iis/).
 
+## Missing Features/Known Issues
+
+1. Service status is not updating on the Service Console GUI after executing different commands like Start-MxApp and Stop-MxApp from PowerShell.
+
 ## Read More
 
 * [On-Premises](/developerportal/deploy/on-premises-design/)

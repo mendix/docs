@@ -19,16 +19,16 @@
                             
                             <!-- Title, Description, and Illustration -->
                             <div class="row">
-                                <div class="col-12 col-lg-7">
+                                <div class="col-lg-auto d-flex">
                                     <!-- Title and description from https://github.com/mendix/docs/blob/development/content/en/docs/_index.md -->
-                                    <h1 class="page-title">{{ .Page.Title}}</h1>
-                                    <h5 class="lp-description">{{ .Page.Description}}</h5>
-                                </div>
-                                <div class="col-12 col-lg-5 d-none d-lg-block" style="margin-top: -.5rem;">
-                                    <img src="/images/woman-stack-of-books-laptop.svg" alt="">
+                                    <div class="flex-grow-1">
+                                        <h1 class="page-title">{{ .Page.Title}}</h1>
+                                        <h5 class="lp-description">{{ .Page.Description}}</h5>
+                                    </div>
+                                    <img src="/images/woman-stack-of-books-laptop.svg" alt="" class="d-none d-lg-block ms-4" style="margin-top: -.5rem;">
                                 </div>
                             </div>
-
+                            
                             <!-- User Journey cards -->
                             <div class="row lp-row">
                                     {{ partial "landingpage/user-journey-cards.html" . }}

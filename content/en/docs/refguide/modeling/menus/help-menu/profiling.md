@@ -16,11 +16,9 @@ To investigate performance issues that are reproduced on your local machine, you
 
 ### Memory Profiler
 
-In addition to the performance profiling, you can capture a snapshot of memory consumed by Studio Pro. The snapshot gets written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this snapshot on their machines to investigate the issues related to memory consumption.
+You can capture a snapshot of memory consumed by Studio Pro. The snapshot is written to disk, which you can then send to the Mendix Support teams. Mendix developers will load this snapshot on their machines to investigate the issues related to memory consumption.
 
-<br/>
-
-The profiling features can be reached by clicking **Help** > **Support Tools** > **Profiling**:
+The profiling features can be reached by clicking **Help** > **Support Tools** > **Profiling**.
 
 {{< figure src="/attachments/refguide/modeling/menus/help-menu/profiling/profiling-menu.png" class="no-border" width="500" >}}
 
@@ -38,8 +36,10 @@ Profiling can be started at any time (when you start to see performance issues) 
 
 ## Capture Memory Snapshot
 
-When you click **Profiling** > **Capture Memory Snapshot**, you are presented with a dialog box that asks you to choose a location on the local disk to save the memory snapshot to. Choose a local spot on your disk and avoid selecting a network drive.
+When you click **Profiling** > **Capture Memory Snapshot**, you see a dialog box that asks you to choose a location on the local disk to save the memory snapshot to. Avoid selecting a network drive.
 
-When the operation is completed, zip the file you can find in the directory that are opened (the directory you chose when clicking **Capture Memory Snapshot**), then send the archive to Mendix Support.
+When the operation is complete, zip the file from the directory that are opened (the directory you chose when clicking **Capture Memory Snapshot**), then send the archive to Mendix Support.
 
-The **Profiling** > **Capture Memory Snapshot** menu is not available when a **Performance Profiler Session** is in progress. Stop the running session in order to capture memory snapshot.
+{{% alert color="info" %}}
+The **Capture Memory Snapshot** menu is not available when a performance profiler session is in progress. Stop the running session to capture memory snapshot.
+{{% /alert %}}

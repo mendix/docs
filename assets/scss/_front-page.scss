@@ -48,10 +48,11 @@ ul.card-text {
     margin-top: 1rem;
     padding-left: 0rem;
     list-style: none;
+    font-size: 1rem;
     a {
         text-decoration: none;
         &::after {
-            content: " →";
+            content: "\00a0→"; // Add a nonbreaking space (\00a0) and arrow to links
         }
         &:hover {
             color: $link-hover-color;

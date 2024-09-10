@@ -94,15 +94,16 @@ You should install the latest version of the Mendix Feedback module, as it will 
 To configure the Feedback widget, double-click it to open the **Edit Feedback** dialog box. To use the feedback feature, configure the following properties:
 
 * **Configuration** tab
-    * **Model pop-up type**This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
+    * **Model pop-up type** – This controls what happens once you click the **Feedback** button. By default, it opens the **Share Feedback** page. If you select **Custom**, you can select a different **On click** action.
     * **App ID** – This is the unique identifier of your app. You can find it in your app’s [General Settings](/developerportal/collaborate/general-settings/) in Apps.
     
         {{% alert color="info" %}}The original value of **App ID** is *1*, but this value should automatically change to your correct app ID. If it does not change automatically, see [Updating App ID](#update-app-id) below.
         {{% /alert %}}
         
-    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, the advanced settings are not shown. If you select **Yes**, the following items are displayed:
-        * **Enable object rendering** – By default, this is disabled. Only enable this when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
-        * **CSS scrollable area **– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. Add a CSS selector to specify which element your page scrolls the content.
+    * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, this is set to **No**. If you select **Yes**, the following items appear:
+        
+        * **Enable object rendering** – By default, this is set to **No**. Only select **Yes**, when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
+        * **CSS scrollable area**– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
 * **Customize Button** tab
     * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
@@ -203,7 +204,7 @@ You can configure the widget for certain actions in your app. All the configurat
         * **No** (default)
         * **Yes** – only used when the page includes sensitive information
     
-* **Authentication** tab {#legacy-authentication}
+* **Authentication** tab
 
     {{% alert color="info" %}}For the best user experience, your are strongly encouraged to apply Mendix SSO to your app and connect the Mendix SSO module to the Mendix Feedback widget version 8.2.1 or above. Choose only one of the authentication methods: either **MendixSSO** or **Custom Authentication**.</br></br>You need to enter the value of authentication items manually as currently the widget does not support a drop-down menu for selecting microflow or the attributes of an entity.{{% /alert %}}
 

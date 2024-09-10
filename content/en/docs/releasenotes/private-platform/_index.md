@@ -1,6 +1,6 @@
 ---
 title: "Private Mendix Platform Release Notes"
-linktitle: Private Mendix Platform"
+linktitle: Private Mendix Platform
 url: /releasenotes/private-platform/
 description: "Release notes for updates to the Private Mendix Platform"
 weight: 40

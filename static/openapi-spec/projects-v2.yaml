@@ -146,7 +146,7 @@ paths:
       tags:
         - Projects
       summary: 'Update an app team member'
-      description: 'Changes the way the team member interacts with the app. Mendix and app administrators are allowed to change the team member''s app role assignment, regardless of whether the project or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their project is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
+      description: 'Changes the way the team member interacts with the app. Mendix and app administrators are allowed to change the team member''s app role assignment, regardless of whether the app or the user is active or not. Team members can change the `isPinned` or `isWatching` attributes, but only if they themselves are active members of the platform and their app is active.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`'
       operationId: patch-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'
@@ -217,7 +217,7 @@ paths:
       tags:
         - Users
       summary: 'Get a list of apps the user is a team member of'
-      description: 'Returns a list of apps that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all projects (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their projects. Project members must be active and will get a list of all active projects that they themselves are a team member of. Project members cannot request a list of projects on behalf of someone else.<br/>The result is sorted alphabetically by project name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
+      description: 'Returns a list of apps that the specified user is a team member of. The output is restricted based on the authorization of the calling user. Mendix administrators will get a list of all apps (active or inactive) owned by their company for the specified user. This includes external users hired by them to work on their apps. App members must be active and will get a list of all active apps that they themselves are a team member of. App members cannot request a list of apps on behalf of someone else.<br/>The result is sorted alphabetically by app name in ascending order.</br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:metadata:read`.'
       operationId: get-user-projects
       parameters:
         - $ref: '#/components/parameters/user-id'

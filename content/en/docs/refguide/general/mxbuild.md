@@ -20,7 +20,7 @@ The table below can help you find the correct MxBuild. Copy a URL from the corre
 
 {{% alert color="info" %}}
 
-A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 5003 build of the 10.0.0 Studio Pro release).
+A build number is included in the version, which has to be included in the link path mentioned above (for example, `10.0.0.9976` is the 9976 build of the 10.0.0 Studio Pro release).
 
 You can find the build number in path of your Mendix installation (for example, if your installation looks like this `C:\Program Files\Mendix\10.0.0.9976`, use this URL to get your files: [https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz](https://cdn.mendix.com/runtime/mxbuild-10.0.0.9976.tar.gz)).
 

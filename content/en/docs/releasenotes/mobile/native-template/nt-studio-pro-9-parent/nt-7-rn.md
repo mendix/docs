@@ -11,7 +11,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We fixed OTA updates compatibility issues on iOS 18.
+* We fixed OTA update compatibility issues on iOS 18.
 
 ## 7.0.16 {#716}
 
@@ -19,7 +19,7 @@ description: "Native Template 7 release notes."
 
 ### Fixes
 
-* We resolved a build error related to Flipper on Xcode 15.3
+* We resolved a build error related to Flipper on Xcode 15.3.
 
 ## 7.0.15 {#715}
 

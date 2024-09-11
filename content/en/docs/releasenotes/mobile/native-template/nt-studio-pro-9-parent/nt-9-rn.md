@@ -11,7 +11,7 @@ description: "Native Template 9 release notes."
 
 ### Fixes
 
-* We have fixed OTA updates compatibility issues on iOS 18.
+* We fixed OTA update compatibility issues on iOS 18.
 
 ## 9.0.0 {#900}
 

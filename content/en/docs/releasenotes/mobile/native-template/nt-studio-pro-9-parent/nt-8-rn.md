@@ -11,7 +11,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We have fixed OTA updates compatibility issues on iOS 18.
+* We fixed OTA update compatibility issues on iOS 18.
 
 ## 8.2.6 {#826}
 

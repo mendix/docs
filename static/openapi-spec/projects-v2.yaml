@@ -245,7 +245,7 @@ paths:
 tags:
   - name: Users
     description: 'Mendix platform users'
-  - name: Projects
+  - name: Apps
     description: 'Apps managed on the Mendix platform'
 components:
   parameters:

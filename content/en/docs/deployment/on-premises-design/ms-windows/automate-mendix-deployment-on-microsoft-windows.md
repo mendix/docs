@@ -19,7 +19,7 @@ Before starting this how-to, make sure you complete the following prerequisites:
 * Ensure that your Mendix Service Console version is 4.7.4 or above.
 * Familiarize yourself with the update process for Mendix apps running on Windows. For more information, see [MS Windows: Update a Mendix App](/developerportal/deploy/updating-a-mendix-application/).
 
-## Importing Mendix-Specific Cmdlets into Windows PowerShell
+## Importing Mendix-Specific Cmdlets into Windows PowerShell {#powershell}
 
 To install Mendix-specific cmdlets that you can use to script your app deployment, follow these steps:
 
@@ -38,6 +38,10 @@ To install Mendix-specific cmdlets that you can use to script your app deploymen
     For more information about each command and its parameters, add `-?` after the command, for example, `Start-MxApp -?`.
 
 After installing the Mendix-specific cmdlets, you can use them to write your own scripts that start, stop, or update your Mendix app.
+
+{{% alert color="info" %}}
+The [Service Console GUI](/developerportal/deploy/deploy-mendix-on-microsoft-windows/#service-console) will not show the updated service status automatically if you use a PowerShell cmdlet to change the status, for example, by using 'Start-MxApp'. The correct status will be shown when you restart the Service Console.
+{{% /alert %}}
 
 ## Sample Scripts
 

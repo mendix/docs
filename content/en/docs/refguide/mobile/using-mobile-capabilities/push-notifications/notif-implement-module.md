@@ -21,6 +21,10 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
+{{% alert color="info" %}}
+When importing the module in Mendix 10.6.0 or above, you might get consistency error CE6087 for renamed design properties. Right-click and update all renamed design properties in the project.
+{{% /alert %}}
+
 ## Configuring Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:

@@ -21,6 +21,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 * We have updated components to the latest dependency versions, in order to improve security score ratings for container images.
 * You can now configure the Operator to trust the Private Cloud Licensing Manager using a self-signed CA certificate.
 * We have resolved an issue where the application couldn't be scaled up when the namespace was configured with PCLM but lacked licenses.
+* The logs are now generated in JSON format, so that most fields (such as log levels) are now automatically recognised.
 
 ### September 5th, 2024
 

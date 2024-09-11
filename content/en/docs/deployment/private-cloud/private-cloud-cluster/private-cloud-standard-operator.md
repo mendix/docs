@@ -210,7 +210,7 @@ Additional network options such as Ingress/Service annotations and Service ports
 {{% /alert %}}
 
 {{% alert color="info" %}}
-From Operator v2.19.0 and Mx version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which would set the path prefix to support this feature. In order to support this feature, a new annotation `nginx.ingress.kubernetes.io/rewrite-target` is added in the Openshift route and Ingress.
+From Operator v2.19.0 and Mx version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which would set the path prefix to support this feature. In order to support this feature, NGINX Ingress uses `nginx.ingress.kubernetes.io/rewrite-target` and Openshift route uses `haproxy.router.openshift.io/rewrite-target`.
 {{% /alert %}}
 
 #### Registry {#registry}

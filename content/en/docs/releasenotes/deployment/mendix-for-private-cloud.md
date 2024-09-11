@@ -12,6 +12,16 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### September 13th, 2024
+
+#### Mendix Operator v2.19.0 {#2.19.0}
+
+* Its now possible to set the log levels in Operator deployment, enabling customers to tailor log visibility according to their specific needs (Ticket [223377](https://mendixsupport.zendesk.com/agent/tickets/223377))
+* We have also minimized unnecessary Operator logs, removed outdated entries, and eliminated repeated messages
+* We have updated components to the latest dependency versions, in order to improve security score ratings for container images.
+* You can now configure the Operator to trust the Private Cloud Licensing Manager using a self-signed CA certificate.
+* We have resolved an issue where the application couldn't be scaled up when the namespace was configured with PCLM but lacked licenses.
+
 ### September 5th, 2024
 
 #### Portal Improvements

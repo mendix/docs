@@ -192,11 +192,12 @@ The following standard PostgreSQL databases are supported:
 * PostgreSQL 13
 * PostgreSQL 14
 * PostgreSQL 15
+* PostgreSQL 16
 
 {{% alert color="info" %}}
 While Mendix for Private Cloud supports all Postgres versions listed above, the Mendix Runtime might require a more specific Postgres version.
 
-For best compatibility, use Postgres 13. 
+For best compatibility, use Postgres 13, as Postgres 12 is soon going to be deprecated for use in Mendix Applications.
 {{% /alert %}}
 
 A standard PostgreSQL database is an unmodified PostgreSQL database installed from a Helm chart or from an installation package.

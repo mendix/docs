@@ -7,25 +7,25 @@ description: "Generate a published REST resource from an entity"
 # linked from DM: domain model > entity (right-click) > Expose as REST resource > Help (integration)
 ---
 
-## 1 Introduction
+## Introduction
 
 You can publish a REST resource with basic operations based on an entity by right-clicking an entity in the domain model and selecting **Expose as REST resource**. Alternatively, you can drag an entity or message definition onto the list of resources of a published REST service. This page describes the options you have once you perform one of these actions.
 
-## 2 REST Service
+## REST Service
 
 This only shows up when you click **Expose as REST resource** in the domain model. Next, choose a service in which to generate the resource and operation.
 
-## 3 General
+## General
 
-### 3.1 Resource Name
+### Resource Name
 
 Type the name of the resource that you want to publish.
 
-### 3.2 Key Attribute
+### Key Attribute
 
 To be able to create a **Get by key**, a **Patch** or a **Delete** operation, there needs to be a unique attribute on the entity. Select that attribute here.
 
-## 4 Operations {#operations}
+## Operations {#operations}
 
 Select the checkbox for the operations that you want to generate:
 

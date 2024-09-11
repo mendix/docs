@@ -7,7 +7,7 @@ weight: 80
 #To update screenshots of these microflows in Studio Pro, use the SlackRekognition-main-master app, which is saved locally in Other Resources > Documentation Backups (No Update).
 ---
 
-## 1 Introduction
+## Introduction
 
 The goal of the Mendix [Connector Kit](https://www.mendix.com/blog/introducing-mendix-connector-kit/) is to enable Java developers to easily add powerful and robust new microflow actions to their Mendix toolbox. These microflow actions can be shared in the Mendix Marketplace, so anyone can benefit from them without having to know Java.
 
@@ -32,7 +32,7 @@ This how-to teaches you how to do the following:
 
 {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/toolkit-connector-kit-demo.png" alt="Connectorkit demo toolbox" class="no-border" >}}
 
-## 2 Creating Generic Actions Using Type Parameters
+## Creating Generic Actions Using Type Parameters
 
 Let's start with type parameters. In the **Type parameters** tab in the Java action definition dialog box, you can use a type parameter if you want to ensure that certain parameters of your action share the same entity but you do not know the name of this entity when defining the actions.
 
@@ -72,7 +72,7 @@ You now have a reusable action in your toolbox that will join two objects into a
 
 As you can see, type parameters enable creating typesafe generic actions.
 
-## 3 Executing Microflows
+## Executing Microflows
 
 The following example illustrates how you can use microflow parameters. The microflow below creates a list of **Product** objects and calls a microflow for every project object to initialize it:
 
@@ -118,7 +118,7 @@ The `executeAction` method is where all the magic happens:
 
 Microflow parameters are especially useful for handling events. For example, the community-supported [MQTT Client](https://marketplace.mendix.com/link/component/3066/Mendix/MQTT-Client) connector (via the [GitHub MQTTClient project](https://github.com/ako/MqttClient)) will execute a microflow when receiving an IoT sensor event so it can be handled using a user-specified microflow.
 
-## 4 Using Import and Export Mappings
+## Using Import and Export Mappings
 
 Now we will discuss an example of how you can use mappings in your Java actions. In this example, you'll create an action to import a string using an import mapping. This is not particularly useful, seeing there is a default action in your toolbox already that provides this functionality called **Import with mapping**. However, as an example, it illustrates how to use mappings.
 
@@ -135,7 +135,7 @@ The action is defined as follows:
 * **ResultEntity** – the type of object that will be the result of the import
 * **Return type** – an object of the type specified with `ResultEntity`
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping java action parameters" class="no-border" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_action_pars.png" alt="Import String with mapping Java action parameters" class="no-border" >}}
 
 Implement the action in Java as follows:
 
@@ -143,11 +143,11 @@ Implement the action in Java as follows:
 2. Use `Core.integration().importStream()` to import the JSON with the specified mapping.
 3. Return the first object imported.
 
-{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String java action" class="no-border" >}}
+{{< figure src="/attachments/howto8/extensibility/howto-connector-kit/import_string_java.png" alt="Import String Java action" class="no-border" >}}
 
-## 5 Some Development Tips
+## Some Development Tips
 
-### 5.1 Unit Testing
+### Unit Testing
 
 When developing connector modules, you can use the unit test module to test the actions you are implementing.
 
@@ -158,7 +158,7 @@ In the screenshot below, observe two important points. First, the **ConnectorKit
 
 {{< figure src="/attachments/howto8/extensibility/howto-connector-kit/project_test.png" alt="Mendix Connector kit module project with tests" class="no-border" >}}
 
-### 5.2 Managing Libraries
+### Managing Libraries
 
 When you export the module package for publishing in the Marketplace, you only want to include the relevant Java libraries. The easiest way to manage this is to use a build tool to specify and download the relevant dependencies.
 

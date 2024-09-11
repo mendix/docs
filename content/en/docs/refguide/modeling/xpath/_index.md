@@ -5,7 +5,7 @@ weight: 90
 description: "Describes how the XPath query language is used in Mendix by presenting functions and examples."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations.
 
@@ -28,7 +28,7 @@ The syntax of XPath queries differs between Studio Pro and Java environments. In
 Not all [XPath operators](/refguide/xpath-operators/) are supported by Studio Pro.
 {{% /alert %}}
 
-## 2 XPath Elements
+## XPath Elements
 
 A common XPath query consists of several elements.
 
@@ -45,7 +45,7 @@ In Studio Pro, you do not write element B in your XPath query because it is impl
 
 Element C of a query is optional and contains one or more constraints to restrict the data being retrieved. Consider the following complete XPath query:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Name='Jansen']
 ```
 
@@ -59,21 +59,21 @@ Element A of a query is optional and specifies an aggregation. Element A can be 
 Element A is for use in Java code only.
 {{% /alert %}}
 
-## 3 Tokens
+## Tokens
 
 For details, see [XPath Tokens](/refguide/xpath-tokens/).
 
-## 4 Operators
+## Operators
 
 For details, see [XPath Operators](/refguide/xpath-operators/).
 
-## 5 Functions
+## Functions
 
 There are two function types. XPath aggregate functions are for use in Java code only and must contain full queries as their arguments. XPath constraint functions can be used both in Java code and in Studio Pro. In Studio Pro, you do not write complete queries, only the constraints.
 
 For details, see [XPath aggregate functions](/refguide/xpath-aggregate-functions/) and [XPath constraint functions](/refguide/xpath-constraint-functions/). 
     
-## 6 Example
+## Example
 
 **How to find the right path to XPath**
 
@@ -83,7 +83,7 @@ This video was done with [Studio Pro 8](/refguide8/), but the concepts remain ap
 
 {{< youtube sdabUY-w4ZU >}}
 
-## 7 Read More
+## Read More
 
 * [Filtering Data on an Overview Page Using XPath](/refguide/filtering-data-on-an-overview-page/)
 * [Defining Access Rules Using XPath](/refguide/define-access-rules-using-xpath/)

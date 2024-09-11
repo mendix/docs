@@ -6,13 +6,13 @@ weight: 10
 description: Describes how to build a Mendix native app in the cloud with the Mendix Native Mobile Builder.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to teaches you how to go from a blank slate to an app running on a device.
 
 The Mendix Native Mobile Builder is the UI tool to set up and build your Mendix Native Mobile Apps. It is directly accessible in Mendix Studio Pro 8.15 and above for all projects with a native mobile navigation profile.
 
-## 2 Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -22,7 +22,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * A [GitHub](https://github.com/) account.
 * An [App Center](https://appcenter.ms/) account. Mendix recommends a paid account if you will be building and deploying regularly.
 
-### 2.1 Platform-Specific Prerequisites
+### Platform-Specific Prerequisites
 
 If you plan to deploy your app for testing on an iOS device, make sure you have completed the following prerequisites:
 
@@ -33,11 +33,11 @@ If you plan to deploy your app for testing on an iOS device, make sure you have 
 
 If you plan to deploy your app for testing on an Android device, make sure you have an Android device available.
 
-## 3 Getting Your Tokens {#getting-your-tokens}
+## Getting Your Tokens {#getting-your-tokens}
 
 To use the Mendix Native Mobile Builder, you will first need to get tokens to authenticate with GitHub and App Center. If you already have tokens for your GitHub and App Center, you do not need to complete the **Getting Your Token** sections.
 
-### 3.1 GitHub Token {#github-token}
+### GitHub Token {#github-token}
 
 1. Go to [GitHub](https://github.com/) and sign in.
 2. Go to [Settings](https://github.com/settings/profile) by clicking your profile picture in the upper-right corner of the page.
@@ -48,7 +48,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 7. Click **Generate token**.
 8. Store your token in a secure place. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-### 3.2 App Center Token {#appcenter-token}
+### App Center Token {#appcenter-token}
 
 1. Go to [App Center](https://appcenter.ms/apps) and sign in.
 2. Click your profile icon in the upper-right corner, then click **Settings**, and then **Account Settings**.
@@ -56,7 +56,7 @@ To use the Mendix Native Mobile Builder, you will first need to get tokens to au
 4. Add a description of your token, select **Full Access**, then click **Add new API token**, and then **New API Token**.
 5. Store this token in a secure place as well. You will not be able to see it again. If you lose it, you will have to create a new token and delete your old one.
 
-## 4 Build Your Native App {#building}
+## Build Your Native App {#building}
 
 {{% alert color="info" %}}
 The Mendix Native Mobile Builder needs to communicate with GitHub and App Center. Therefore, make sure your firewall permissions do not restrict the tool.
@@ -122,11 +122,11 @@ Next, do the following:
 
     {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/deploying-native-app/build-release-app-build-done-both.png" alt="Build completed"   width="350"  class="no-border" >}}
 
-## 5 Signing Your Apps {#signing-a-build}
+## Signing Your Apps {#signing-a-build}
 
 By default, App Center builds are unsigned and cannot be released on the Google Play Store or the Apple App Store. To release your apps, you must provide your signature keys to Mendix Native Mobile Builder. Signature keys prove the authenticity of your app and prevent forgeries. For more information to how to acquire these keys, see the [Managing App Signing Keys Reference Guide](/refguide8/managing-app-signing-keys/).
 
-### 5.1 Set Up Signing for iOS {#signing-for-ios}
+### Set Up Signing for iOS {#signing-for-ios}
 
 iOS supports two types of signing configurations: **Development** and **Release**. The type of the build depends on the type of provisioning file and certificate that was used for configuring the tool. To set up signing for iOS, follow these steps:
 
@@ -148,7 +148,7 @@ iOS supports two types of signing configurations: **Development** and **Release*
 
 With that you have completed setting up signing for iOS. Your next build will use the provided configuration to sign your iOS app.
 
-### 5.2 Set Up Signing for Android {#signing-for-android}
+### Set Up Signing for Android {#signing-for-android}
 
 1. From within Mendix Native Mobile Builder, choose **Android** under **Certificates**:
 
@@ -167,7 +167,7 @@ With that you have completed setting up signing for iOS. Your next build will us
 
 With that you have completed setting up signing for Android. The next build will use the provided configuration to sign your Android app.
 
-## 6 Distributing {#distributing}
+## Distributing {#distributing}
 
 This section will guide you in distributing your binaries, setup, signing for [iOS](#signing-for-ios) and [Android](#signing-for-android) using your release certificates and keystore, and building your binaries.
 
@@ -176,15 +176,15 @@ For distributing to a specific platform, consult the appropriate section below:
 * [Distributing for Android](#android-distributing)
 * [Distributing for iOS](#ios-distributing)
 
-### 6.1 Distribute the iOS app to App Store Connect {#ios-distributing}
+### Distribute the iOS app to App Store Connect {#ios-distributing}
 
-Depending on whether you chose to sign your iOS app or not, the output of the build will be an *IPA* or *XCArchive* file, respectively. *IPA* files can be directly distributed to App Store Connect for further processing. *XCArchives* require XCode to sign and generate an *IPA* before they can be further processed.
+Depending on whether you chose to sign your iOS app or not, the output of the build will be an *IPA* or *XCArchive* file, respectively. *IPA* files can be directly distributed to App Store Connect for further processing. *XCArchives* require Xcode to sign and generate an *IPA* before they can be further processed.
 
-#### 6.1.1 Distribute a Signed IPA
+#### Distribute a Signed IPA
 
 To be able to upload your app to App Store Connect, you will have to have set up a new app using the App Store Connect website. While there, use the **app name** and **app id** you used to build your app. For further instruction, see the [App Store Connect Guide to adding a new app](https://help.apple.com/app-store-connect/en.lproj/static.html#devbec4892b7).
 
-When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, XCode includes a command line tool. Assuming XCode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
+When signing your iOS app, an *IPA* file is generated. To upload an *IPA* to the Apple App Store, Xcode includes a command line tool. Assuming Xcode is installed and the extra command line tool is set up, the command to upload the *IPA* is the following:
 
 ```text
 xcrun altool --upload-app --type ios --file "path/to/application.ipa"
@@ -195,7 +195,7 @@ Replace `file "path/to/application.ipa"` with the absolute path to your IPA file
 
 The command will first verify your IPA is packaged correctly and ready to be shipped, and then will then upload it to TestFlight for further processing.
 
-#### 6.1.2 Distributed an Unsigned XCArchive
+#### Distributed an Unsigned XCArchive
 
 Local signing is useful if you only want to test your app on a device, or you do not have a distribution certificate and have run out of build minutes on App Center when signing with a developer certificate.
 
@@ -230,10 +230,10 @@ Congratulations. You now have a signed *.ipa* file:
 
 {{< figure src="/attachments/howto8/mobile/native-mobile/build-native-apps/use-cli-docs/deploying-native-app-cli/xcode-app-loader-7.png" alt="Xcode Application loader"   width="350"  class="no-border" >}}
 
-### 6.2 Distribute the Android app to Google Play {#android-distributing}
+### Distribute the Android app to Google Play {#android-distributing}
 
 A signed Android APK can be uploaded to Google Play store directly. For more info on setting up a new app and uploading your binaries follow Google's guide on [Uploading an app](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 
-## 7 Read More
+## Read More
 
 * [How To Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile/)

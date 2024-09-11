@@ -5,7 +5,7 @@ weight: 30
 description: "Describes how to make secure, high-performing offline-first apps."
 ---
 
-## 1 Generic Best Practices
+## Generic Best Practices
 
 To ensure the best user experience for your Mendix application, follow these best practices:
 
@@ -18,7 +18,7 @@ To ensure the best user experience for your Mendix application, follow these bes
 * Use a [microflow call](/refguide/microflow-call/) in your nanoflows to perform additional server-side logic such as retrieving data from a REST service, or accessing and using complex logic such as Java actions
 * Help your user remember to synchronize their data so it is processed as soon as possible: you can check for connectivity and automatically synchronize in the nanoflow that commits your object, or remind a user to synchronize while using a notification or before signing out to ensure no data is lost
 
-## 2 Preventing Synchronization Issues
+## Preventing Synchronization Issues
 
 To avoid the problems mentioned above, Mendix suggests following these best practices:
 
@@ -29,21 +29,21 @@ To avoid the problems mentioned above, Mendix suggests following these best prac
 
 If synchronization is triggered using a synchronize action in a nanoflow and an error occurs, it is possible to handle the error gracefully using the nanoflow error handling.
 
-## 3 Conflict Resolution
+## Conflict Resolution
 
 It can happen that multiple users synchronize the same state of an object on their device, change it, and then synchronize this object back to the server. In this case, the last synchronization overwrites the entire content of the object on the server. This is also called a "last wins" approach.
 
 If another approach is needed, conflicts can be detected in a before-commit microflow (for example, by using a revision ID attribute on the entity). Based on that, custom conflict resolution can be performed.
 
-## 4 Differences with Regular Web Apps
+## Differences with Regular Web Apps
 
 Mendix helps developers build rich offline-first apps. However, there are some limitations. See the subsections below for details.
 
-### 4.1 Microflows {#microflows}
+### Microflows {#microflows}
 
 Microflows can be called from offline apps by using [microflow call](/refguide/microflow-call/) action in your nanoflows to perform logic on the server. However, it works a bit different from when used in online profiles, these differences are explained below:
 
-#### 4.1.1 Microflow Arguments Type
+#### Microflow Arguments Type
 
 * Passing an object or a list of a persistable entity is not supported
 * Passing an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such an association can be an indirect association)
@@ -52,7 +52,7 @@ Microflows can be called from offline apps by using [microflow call](/refguide/m
 If you need to execute a microflow with a persistable object as parameter, you can define a before/after commit event handler on the desired persistable entity. When you create and commit an instance of this entity in the client and perform synchronization, the configured event handler (or handlers) will run. 
 {{% /alert %}}
 
-#### 4.1.2 UI Actions
+#### UI Actions
 
 UI-related actions will be ignored and will not have any effect. We encourage you to model such UI-side effects in the caller nanoflow.
 
@@ -65,20 +65,20 @@ These actions are as the following:
 * [Close page](/refguide/close-page/)
 * [Download file](/refguide/download-file/)
 
-#### 4.1.3 Object Side-Effects
+#### Object Side-Effects
 
 Changes to persistable objects made in a microflow will not be reflected on the client unless you synchronize. Non-persistable objects must be returned in order for changes to be reflected.
 
-#### 4.1.4 Microflow Return Value
+#### Microflow Return Value
 
 * Returning an object or a list of persistable entity is not supported
 * Returning an object or a list of a non-persistable entity that has an association with a persistable entity is not supported (such association can be an indirect association)
 
-#### 4.1.5 Language Switching
+#### Language Switching
 
 To be able to switch the language of a Mendix app, a device must be online and have access to the Mendix runtime. For more information on the runtime, see the [Runtime Reference Guide](/refguide/runtime/).
 
-### 4.2 Offline Microflow Best Practices {#offline-mf-best-practices}
+### Offline Microflow Best Practices {#offline-mf-best-practices}
 
 To make microflow calls work from offline-first apps, Mendix stores some microflow information in the offline app. That information is called from the app. This means that changes to microflows used from offline apps must be backwards-compatible, because there can be older apps which have not received an over the air update yet. All microflow calls from such a device will still contain the old microflow call configuration in nanoflows, which means that the request might fail. For more information on over-the-air updates, see [Updating Native Apps](/refguide/mobile/distributing-mobile-apps/overtheair-updates/).
 
@@ -92,30 +92,30 @@ To avoid backwards-compatibility errors in offline microflow calls after the ini
 
 If you want to deviate from the practices outlined above, introduce a new microflow. You can change the contents of the microflow, but keep in mind that older apps might call the new version of the microflow until they are updated.
 
-### 4.3 Autonumbers and Calculated Attributes {#autonumbers}
+### Autonumbers and Calculated Attributes {#autonumbers}
 
 Both autonumbers and calculated attributes require input from the server; therefore, they are not allowed. Objects with these attribute types can still be viewed and created offline, but the attributes themselves cannot be displayed.
 
-### 4.4 Many-to-Many Associations {#many-to-many}
+### Many-to-Many Associations {#many-to-many}
 
 Many-to-many associations are not supported. A common alternative is to introduce a third entity that has one-to-many associations with the other entities.
 
-### 4.5 Inheritance {#inheritance}
+### Inheritance {#inheritance}
 
 It is not possible to use more than one entity from a generalization or specialization relation. For example if you have an `Animal` entity and a `Dog` specialization, you can use either use `Animal` or `Dog`, but not both from your offline profile. An alternative pattern is to use composition (for example, object associations).
 
-### 4.6 System Members {#system-members}
+### System Members {#system-members}
 
 System members (`createdDate`, `changedDate`, `owner`, `changedBy`) are not supported.
 
-### 4.7 Excel and CSV Export {#excel-cv}
+### Excel and CSV Export {#excel-cv}
 
 Excel and CSV export are not available in offline applications.
 
-### 4.8 Hashed String Attributes {#hashed-strings}
+### Hashed String Attributes {#hashed-strings}
 
 Attributes with the hashed string [attribute type](/refguide/attributes/#type) will not be synchronized.
 
-### 4.9 Access Rules with XPath Constraints {#access-rules}
+### Access Rules with XPath Constraints {#access-rules}
 
 While working offline, offline-first apps cannot apply access rules with XPath constraints. For example, consider a `Customer` entity with `Locked` (Boolean) and `Name` (string) attributes. There is an access rule where the `Name` attribute of the customer is writable only when the `Locked` attribute is false. Changing and committing the `Locked` attribute’s value while offline will not change the read-only status of the `Name` attribute. Instead, this change will take effect after you synchronize the changed `Customer` object.

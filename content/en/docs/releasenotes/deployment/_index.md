@@ -1,8 +1,11 @@
 ---
-title: "Deployment"
+title: "Deployment Release Notes"
+linktitle: "Deployment"
 url: /releasenotes/developer-portal/deployment/
 description: "Release notes for deployment capabilities managed in the Mendix Developer Portal"
 weight: 25
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, featured.html. Update the link there if renaming or moving the doc file.
 ---
 
@@ -12,8 +15,8 @@ Follow the links in the table below to see the release notes you want:
 
 | Type of Deployment | Last Updated |
 | --- | --- |
-| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | May 14, 2024 |
-| [Mendix for Private Cloud](/releasenotes/developer-portal/mendix-for-private-cloud/) | April 4, 2024 |
+| [Mendix Cloud](/releasenotes/developer-portal/mendix-cloud/) | September 5, 2024 |
+| [Mendix for Private Cloud](/releasenotes/developer-portal/mendix-for-private-cloud/) | July 10, 2024 |
 | [SAP Business Technology Platform (SAP BTP)](/releasenotes/developer-portal/sap-cloud-platform/) | November 17, 2022 |
 | [Other Deployment Options](/releasenotes/developer-portal/on-premises/) | December 12, 2022 |
 

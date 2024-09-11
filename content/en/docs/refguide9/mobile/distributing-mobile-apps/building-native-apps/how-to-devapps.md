@@ -7,18 +7,18 @@ aliases:
     - /howto9/mobile/how-to-devapps/
 ---
 
-## 1 Introduction
+## Introduction
 
 As your Mendix app matures, you may want to expand its functionality (such as by introducing custom widgets or logic that will require new native dependencies). One such customization could be adding a near-field communication (NFC) module to your app. While the Make It Native app suffices for testing basic apps, as your app adds custom dependencies—like custom native widgets or fonts—you will need a more tailored developer app.
 
 A custom developer app helps you by serving as a replacement for the Make It Native app, and should be used when you have custom widgets and logic which are not supported by the Make It Native app. Custom developer apps are apps you can generate yourself using your current app structure, your custom modules, and any other requirements to test your evolving app. Custom developer apps feature the same functionality as the Make It Native app but are tailored to your needs.
 
-## 2 Prerequisites
+## Prerequisites
 
 * Complete [Get Started with Native Mobile](/refguide9/mobile/getting-started-with-mobile/)
 * Complete the Mendix Native Mobile Builder wizard as found in [Build a Mendix Native App Locally](/refguide9/mobile/distributing-mobile-apps/building-native-apps/native-build-locally-manually/)
 
-## 3 Building Your Developer App {#build-your-developer-app}
+## Building Your Developer App {#build-your-developer-app}
 
 1. Run Mendix Native Mobile Builder from your app: 
 
@@ -45,13 +45,13 @@ A custom developer app helps you by serving as a replacement for the Make It Nat
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/deploying-native-app/build-release-app-build-done-both.png" alt="Build release app"   width="350"  class="no-border" >}}
 
-## 4 Installing Your Custom Developer App manually
+## Installing Your Custom Developer App manually
 
-### 4.1 Android
+### Android
 
 For Android the output of the build is an *APK* file. *APK* files can be directly installed on devices or emulators.
 
-#### 4.1.1 Installing on an Emulator
+#### Installing on an Emulator
 
 With your emulator running, install your app in your emulator by doing the following:
 
@@ -59,7 +59,7 @@ With your emulator running, install your app in your emulator by doing the follo
 2. Wait for the installation to be done.
 3. Open the app from the launcher.
 
-#### 4.1.2 Installing on a Device
+#### Installing on a Device
 
 There are various ways install an app on a device. Installing using a USB is detailed below, but you can use a different method if it suits you. Do the following to install your *APK* onto a device:
 
@@ -74,24 +74,24 @@ There are various ways install an app on a device. Installing using a USB is det
 9. Go through the installation steps.
 10. Open the app from the launcher.
 
-### 4.2 iOS
+### iOS
 
-By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in  [Distributing Native Apps](/refguide9/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
+By default your custom developer app will be unsigned. To get a signed *IPA*, follow the steps in [Distributing Native Apps](/refguide9/mobile/distributing-mobile-apps/distributing-native-apps/). Your custom developer app branch is named **developer**.
 
 The unsigned output of an iOS build is an *XCArchive* file. *XCArchive* files require manual signing before they are ready to be installed on a device.
 
 The signed output of iOS build is an *IPA* file. If correctly signed, *IPA* files can be installed on physical devices.
 
-#### 4.2.1 Installing on an Emulator
+#### Installing on an Emulator
 
 Before installing, make sure you have completed the following prerequisites:
 
 * Have a Mac OSX machine
-* Install LTS builds of NodeJs and NPM (download [here](https://nodejs.org/en/))
+* Install LTS builds of Node.js and NPM (download [here](https://nodejs.org/en/))
 * Install Cocoapods ([installation instructions](https://cocoapods.org/#install))
-* Install the latest XCode version
+* Install the latest Xcode version
 
-Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on XCode's Simulator you will have to build the developer branch locally from source by completing these steps:
+Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts. Therefore, to run on Xcode's Simulator you will have to build the developer branch locally from source by completing these steps:
 
 1. Navigate to your GitHub repo.
 2. Switch to your **developer** branch:
@@ -106,7 +106,7 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 5. Open a terminal and change directory into the folder.
 6. Run this command:
 
-    ```shell {linenos=false}
+    ```shell
     npm i && cd ios && pod install
     ```
 
@@ -115,14 +115,14 @@ Builds with the Mendix Native Mobile Builder are stripped of simulator artifacts
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/how-to-devapps/ios-folder.png" alt="iOS folder structure" class="no-border" >}}
 
-8. In XCode select the **Dev** target and the emulator you want to build your developer app for:
+8. In Xcode select the **Dev** target and the emulator you want to build your developer app for:
 
     {{< figure src="/attachments/howto9/mobile/native-mobile/distribution/build-native-apps/how-to-devapps/xcode-target-selection.png" alt="Dev target selection" class="no-border" >}}
 
 9. Click **Play**.
 
-#### 4.2.2 Distributing the Custom Developer App to the Apple App Store
+#### Distributing the Custom Developer App to the Apple App Store
 
-To run your custom developer app on a device which is not registered as a test device on the Apple Developer Portal, you will have to sign the developer app with your certificates manually and distibrute it via TestFlight.
+To run your custom developer app on a device which is not registered as a test device on the Apple Developer Portal, you will have to sign the developer app with your certificates manually and distribute it via TestFlight.
 
 Read more on TestFlight in the [official documentation](https://testflight.apple.com/).

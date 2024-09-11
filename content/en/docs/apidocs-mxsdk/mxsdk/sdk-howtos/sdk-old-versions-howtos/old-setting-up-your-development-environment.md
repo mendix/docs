@@ -5,11 +5,11 @@ url: /apidocs-mxsdk/mxsdk/old-setting-up-your-development-environment/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will lead you through the process of setting up everything you need to start working with the Mendix Platform SDK. This includes setting up development tools and creating your first SDK script that automatically bootstraps a new Mendix app.
 
-## 2 Quick Installation
+## Quick Installation
 
 If you know what you are doing, the quick installation instructions below are for you. Otherwise, please skip this paragraph and continue with the [Setting Up Your Development Tools](#setting) section.
 
@@ -26,7 +26,7 @@ $ npm install mendixmodelsdk mendixplatformsdk when @types/when --save
 $ tsc --init --target es2018
 ```
 
-## 3 Setting Up Your Development Tools {#setting}
+## Setting Up Your Development Tools {#setting}
 
 To set up your development tools, follow these steps:
 
@@ -40,13 +40,13 @@ To set up your development tools, follow these steps:
 
     For Debian-based Linux distributions such as Ubuntu, refer to these [Installation Instructions](https://github.com/nodesource/distributions#user-content-installation-instructions) to properly set up your `apt-get` sources.
 
-    {{% alert color="info" %}}In the rest of the how-to's in these series, in blocks such as the above, lines starting with `$` represent commands to type into a terminal. Sometimes a line follows without a `$`, which represents the output of the command.
+    {{% alert color="info" %}}In the rest of the how-tos in these series, in blocks such as the above, lines starting with `$` represent commands to type into a terminal. Sometimes a line follows without a `$`, which represents the output of the command.
     {{% /alert %}}
 
 3. Install [Visual Studio Code](https://code.visualstudio.com/) (not to be confused with Visual Studio), a text editor/IDE with good support for [TypeScript](https://www.typescriptlang.org/). Make sure you have a recent version (v1.11.0+) (you can check the version you are using via **Help** > **About**).
 4. Install TypeScript 3.6.2 (or higher) with [`npm`](https://www.npmjs.com/), Node.js's package manager:
 
-    ```bash {linenos=false}
+    ```bash
     $ npm install -g typescript
     ```
 
@@ -59,7 +59,7 @@ To set up your development tools, follow these steps:
 
     If the version number is much lower, it could be that you also have an outdated TypeScript SDK on your system, left over from a previous installation. You can either uninstall the old TypeScript SDK, or bypass it by removing the old TypeScript SDK from your system's PATH environment variable.
 
-## 4 Setting Up a Working Directory for Your Script
+## Setting Up a Working Directory for Your Script
 
 To set up a working directory for your script, follow these steps:
 
@@ -75,7 +75,7 @@ To set up a working directory for your script, follow these steps:
 
 2. Start Visual Studio Code and open the directory you just created. You can open a new instance of VSC from the command line with the directory you want to open as the first argument. For example, if your current working directory in your terminal is the directory in which all your project files live, use the following command to open VSC:
 
-    ```bash {linenos=false}
+    ```bash
     $ code .
     ```
 
@@ -94,7 +94,7 @@ To set up a working directory for your script, follow these steps:
 
 4. Save your changes and then execute the following to install the dependencies:
 
-    ```bash {linenos=false}
+    ```bash
     $ npm install
     ```
 
@@ -119,6 +119,6 @@ To set up a working directory for your script, follow these steps:
 
     Create new files in your app directory with Visual Studio Code by hovering over the name of the working directory in the left-side pane. When the **New file** icon appears, click it to create a new file. For more information on basic editing with VSC, see [Basic Editing](https://code.visualstudio.com/Docs/editor/codebasics).
 
-## 5 Next Step
+## Next Step
 
 Continue with [How to Create Your First Script (Old Versions)](/apidocs-mxsdk/mxsdk/old-creating-your-first-script/).

@@ -5,7 +5,7 @@ description: A guide for understanding the configuration module API which influe
 weight: 35
 ---
 
-## 1 Introduction
+## Introduction
 
 A pluggable widget's configuration module allows for several modeler experience improvements. For example, you can hide widget properties based on conditions, add consistency checks to validate the widget's configuration, and customize your widget's appearance in structure mode.
 
@@ -13,13 +13,13 @@ It is usually located in a JavaScript file using the same name as the widget’s
 
 The file is expected to be in CommonJS format, using the `exports` object to export functions.
 
-## 2 Widget Developer Console {#widget-dev-console} 
+## Widget Developer Console {#widget-dev-console} 
 
 Errors that are related to the configuration module are shown in the Widget Developer Console. This console is separate from the default console and can be found in the [View menu](/refguide/view-menu/).  
 
-## 3 Customizing the Widget’s Properties
+## Customizing the Widget’s Properties
 
-To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function::
+To customize the properties available in Studio Pro for the pluggable widget, the module should export a `getProperties` function. Two parameters are passed to this function:
 
 * The current configured values, following the [Values API](/apidocs-mxsdk/apidocs/pluggable-widgets-studio-apis/#values)
 * The default property configuration
@@ -34,7 +34,7 @@ function getProperties(
 Using this API, it is possible to dynamically show or hide certain properties based on configured values.
 
 {{% alert color="info" %}}
-Please note that when a property is hidden,, its value will be cleared.
+Please note that when a property is hidden, its value will be cleared.
 {{% /alert %}}
 
 {{% alert color="info" %}}
@@ -51,7 +51,7 @@ The expected property configuration structure is as follows:
     * Optionally, a `description` field can be returned with a description of the property
     * If the property is of type `object` it requires a more complex configuration
         * The `objects` array field of the `Property` object contains the sub-objects’ properties (each sub-object will require an entry as an `ObjectProperties` object in this array)
-            * The  `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
+            * The `properties` array field of the `ObjectProperties` object contains the sub-object's properties in form of an array of `PropertyGroup` objects
             * The object grid can be customized by using the property's `objectHeaders` and the object's `captions` array field (for more information, see the [Customizing Object Grids](#customize-object-grids) section)
 
 ```typescript
@@ -195,11 +195,11 @@ The default configuration would then be:
 ]
 ```
 
-## 4 Customizing Object Grids {#customize-object-grids}
+## Customizing Object Grids {#customize-object-grids}
 
 An object grid for object properties can be customized. To do this, the property needs to have `objectHeaders` configured, which will be used as column headers. Each object also needs to have `captions` configured for the grid to be filled.
 
-### 4.1 Example
+### Example
 
 If you wished to use data point structure detailed above to visualize geographic coordinates, you might want to add the suffixes `° N` and `° W` to the numeric **x** and **y** values so the grid will look like this (values below are purely hypothetical):
 
@@ -258,7 +258,7 @@ The following code example shows an object property configuration which uses obj
 }
 ```
 
-## 5 Customizing Validation Using Consistency Checks
+## Customizing Validation Using Consistency Checks
 
 By default, Studio Pro will validate required properties. To add extra validations to the configured data, the module can export a `check` function. This function gets the values passed following the values API, and is expected to return an array of problems found:
 
@@ -279,11 +279,11 @@ type Problem = {
 
 Any problem returned from this function will be shown in the [Errors](/refguide/errors-pane/) pane in Studio Pro.
 
-### 5.1 Targeting a Property of a Sub-Object
+### Targeting a Property of a Sub-Object
 
 A property of the type `object` contains a list of objects with properties. In this case, it is possible to specify in which property of which object a problem occurred. This can be done by specifying the property as `<property>/<index>/<sub-property>` where index is the 1-based index of the object list. 
 
-#### 5.1.1 Example
+#### Example
 
 For example, if an object-property `dataPoints` with the sub-properties `x` and `y` exists, and `y` should not be larger than 10, the following code will return the corresponding error:
 
@@ -302,7 +302,7 @@ function check(values) {
 }
 ```
 
-## 6 Customizing Page Explorer Caption
+## Customizing Page Explorer Caption
 
 The Page Explorer will normally use the type name of the custom widget as its caption. If a custom caption should be used, the module can export a `getCustomCaption` function. This function gets the values passed following the values API and the current platform:
 
@@ -312,7 +312,7 @@ function getCustomCaption(values: ValuesAPI, platform: "desktop" | "web"): strin
 
 If the caption is `null`, `undefined`, or not a string, then the default caption will be used.
 
-## 7 Widget Preview in Structure Mode
+## Widget Preview in Structure Mode
 
 To configure the appearance of the custom widget in Studio Pro, export a `getPreview` function. This function receives three parameters: the first one contains the current values, the second one indicates whether dark mode is set, and the third parameter passes the current Studio Pro version. The function should return a preview properties object containing the configuration of the custom widget preview.
 
@@ -338,7 +338,7 @@ All types of preview properties share two common properties: `type` and `grow`:
 
 The following elements extend the base preview props with properties native to their elements. For example, it could contain `content` for text elements, or `document` and `width` for image elements. The following element sections will list all available element types and their properties.
 
-### 7.1 Image
+### Image
 
 ```typescript
 type ImageProps = BaseProps & {
@@ -378,7 +378,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-image.png" alt="an svg image of a circle" width="200"  class="no-border" >}}
 
-### 7.2 Container
+### Container
 
 ```typescript
 type ContainerProps = BaseProps & {
@@ -410,7 +410,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-container.png" alt="a bordered container with two texts" width="600"  class="no-border" >}}
 
-### 7.3 Row Layout {#row-layout}
+### Row Layout {#row-layout}
 
 ```typescript
 type RowLayoutProps = ContainerProps & {
@@ -421,13 +421,13 @@ type RowLayoutProps = ContainerProps & {
 
 Row layouts are similar to a container, and can be used to render multiple elements horizontally next to each other. They have all the props that a container has, with the addition of a `columnSize`, which defines whether its children sizes are equal fixed weights or determined by their content (for more information, see the next section).
 
-#### 7.3.1 Column Size
+#### Column Size
 
-##### 7.3.1.1 Fixed (Default)
+##### Fixed (Default)
 
 When `columnSize` is not set (or set to `"fixed"`) all available space is split into fixed weights. It will then fit the child content into the column, rather than expanding and shrinking the column based on the content size. 
 
-As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically recieve the value 1.
+As an example, this is useful for creating grid-like structures. By default, all columns get the equal amount of space. However, if the children have a `grow` value set, this will be used to set proportional column sizes for the children. Children without a `grow` value automatically receive the value 1.
 
 As an example, consider this. The following code creates a row layout with four children. The first child (`Image`) takes the first half of the available space, and the other three children (`Texts`) share the other half. This can be achieved by simply setting the `grow` property of the first child to 3:
 
@@ -447,9 +447,9 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-fixed.png" alt="a row layout with fixed column weights" width="1000"  class="no-border" >}}
 
-##### 7.3.1.2 Grow
+##### Grow
 
-When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically recieve the value 1.
+When the `columnSize` is set to `"grow"`, the column sizes are determined by the content. When there is leftover space, the space is distributed over all columns. To influence the relative amount of space into which a child grows, you can set a `grow` factor for each child. The column will then grow proportionally according to this factor. Children without a `grow` value automatically receive the value 1.
 
 If a layout has less space than the elements prefer, items are shrunk disproportionally to their `grow` factors (a high grow factor means a low shrink factor) until they reach their minimum sizes:
 
@@ -494,7 +494,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow.png" alt="a row layout with different grow factors" width="1000"  class="no-border" >}}
 
-##### 7.3.1.3 Example
+##### Example
 
 Here is an example of a button to show how to center items using row layouts:
 
@@ -527,7 +527,7 @@ export const getPreview = (_values: WidgetPreviewProps, _isDarkMode: boolean, _v
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-row-layout-grow-2.png" alt="structure mode preview of a bordered container with two texts" width="600"  class="no-border" >}}
 
-### 7.4 Text
+### Text
 
 ```typescript
 type TextProps = BaseProps & {
@@ -552,7 +552,7 @@ export const getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _ve
     });
 ```
 
-### 7.5 Drop Zones 
+### Drop Zones 
 
 ```typescript
 type DropZoneProps = BaseProps & {
@@ -587,7 +587,7 @@ exports.getPreview = (values: WidgetPreviewProps, _isDarkMode: boolean, _version
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-drop-zone.png" alt="a container with a dropzone" width="600"  class="no-border" >}}
 
-### 7.6 Selectable
+### Selectable
 
 ```typescript
 type SelectableProps = BaseProps & {
@@ -630,7 +630,7 @@ export function getPreview(values: WidgetPreviewProps, _isDarkMode: boolean, _ve
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/structure-preview-example-selectable.png" alt="a list of selectable text elements" width="600"  class="no-border" >}}
 
-### 7.7 Datasource
+### Datasource
 
 ```typescript
 type DatasourceProps = BaseProps & {

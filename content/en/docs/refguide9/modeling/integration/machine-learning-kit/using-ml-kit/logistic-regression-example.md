@@ -5,13 +5,13 @@ weight: 20
 ---
 {{% alert color="info" %}}Machine learning model support is currently in [beta](/releasenotes/beta-features/), and is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 This document walks through the steps an example of a logistic regression model, its [netron.app](https://netron.app/) schema and the component display, along with the ML Mapping.  [Usage](/refguide9/machine-learning-kit/using-ml-kit/#usage) section of *Using ML Kit* lists the steps you need to get started with integrating machine learning models into Studio Pro. 
 
-{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
+{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter Notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
 
-## 2 Importing and Configuring the Model
+## Importing and Configuring the Model
 
 The image below is the [netron.app](https://netron.app/) schema of a logistic regression model:
 
@@ -27,7 +27,7 @@ To integrate this in a Mendix app with the Mendix [Machine Learning Kit](/refgui
 
 3. Resolve any errors by [configuring dynamic tensor shapes](/refguide9/machine-learning-kit/using-ml-kit/#dynamic-shapes).
 
-## 3 Using the Model
+## Using the Model
 
 Once you have imported the model, you can start working with it by calling it in microflows.
 
@@ -51,4 +51,4 @@ The complete microflow to predict the IRIS flower classification using logistic 
 
 {{< figure src="/attachments/refguide9/modeling/integration/ml-kit/ml-kit/logistic-regression/predict-iris-class-microflow.png" class="no-border" >}}
 
-{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}
+{{% alert color="info" %}}Access the [ONNX file](https://github.com/mendix/mlkit-example-app/tree/main/mlsource/iris_logisticregression), [Jupyter Notebook](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/iris_lr.ipynb), and the [Java files](https://github.com/mendix/mlkit-example-app/tree/main/javasource/iris_logisticregression/proxies) for the logistic regressor example in the [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app#getting-started).{{% /alert %}}

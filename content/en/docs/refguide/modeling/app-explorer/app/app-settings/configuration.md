@@ -4,7 +4,7 @@ url: /refguide/configuration/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A configuration is a group of settings that are applied when running your app locally. To access configurations, open the **App Explorer** > **App** > **Settings** > the **Configuration** tab. 
 
@@ -13,10 +13,10 @@ You can define any number of configurations. The active configuration, as in, th
 You can use configurations to have different database settings for different people working on your app. Maybe one person has SQL Server on their computer and the other has PostgreSQL. You can also have a shared configuration for connecting to a database server that you both have access to.
 
 {{% alert color="warning" %}}
-When you are deploying your application to a server or the Mendix cloud you will have to configure settings  there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
+When you are deploying your application to a server or Mendix Cloud, you will have to configure settings there. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
-## 2 Configuration Settings 
+## Configuration Settings 
 
 A configuration contains the following:
 
@@ -26,7 +26,7 @@ A configuration contains the following:
 * [Constants tab](#constants)
 * [Custom tab](#custom)
 
-### 2.1 Database {#database}
+### Database {#database}
 
 The **Database** tab has the following settings:
 
@@ -37,7 +37,7 @@ The **Database** tab has the following settings:
 * **User name (not for built-in database)** – the user name that is used to sign in to the database server. If you use integrated security, no user name has to be specified.
 * **Password (not for built-in database)** – the password that is used to sign in to the database server. If you use integrated security, no password has to be specified.
 
-### 2.2 Server {#server}
+### Server {#server}
 
 The **Server** tab has the following settings:
 
@@ -45,14 +45,14 @@ The **Server** tab has the following settings:
 * **Runtime port** – in this setting you can fill in the HTTP port through which a browser accesses the server on which your application is running. Multiple concurrently running servers on the same computer should use different HTTP port numbers. Default: *8080*
 * **Runtime port security** – determines whether the runtime HTTP port will be open to other machines or just to the current machine (localhost).
 * **Admin port** – this port number is used to communicate with the server. Multiple concurrently running servers on the same computer should use different server admin port numbers. Default: *8090*
-* **Admin port security** –  determines whether the admin port will be open to other machines or just to the current machine (localhost).
+* **Admin port security** – determines whether the admin port will be open to other machines or just to the current machine (localhost).
 * **Java heap** – in this setting you can specify the maximum Java heap memory size. There following options are available:
     * **Default** – use the default heap memory size of the installed Java virtual machine.
     * **Custom** – use the value of the **Maximum size (in MB)** setting.
 * **Maximum size (in MB)** – when you set the Java heap setting to *Custom*, you can specify the amount of heap memory that is available for the Java virtual machine on which you deploy your application.
 * **Extra JVM parameters** – here you can enter extra parameters for the Java virtual machine on which you deploy your application. Note: use with care. If the parameters are invalid, the Java VM might not start.
 
-### 2.3 Constants {#constants}
+### Constants {#constants}
 
 Constants have a default value that you can override per configuration. You only need to add a constant here if you want a different value than the default value. An example is specifying different web service locations for different configurations.
 
@@ -65,7 +65,7 @@ The choice between a **Shared** value or a **Private** value determines where St
 Private configuration values are available in Studio Pro 10.9.0 and above. In versions below 10.9.0, all configuration values are shared.
 {{% /alert %}}
 
-### 2.4 Custom {#custom}
+### Custom {#custom}
 
 You can use custom server settings to configure the Runtime beyond the standard possibilities offered by Studio Pro.
 
@@ -77,7 +77,7 @@ Each custom setting consists of a name and a value. For example, to set the hash
 
 For settings overview, see [Runtime Customization](/refguide/custom-settings/).
 
-## 3 An Example
+## An Example
 
 Say you have an app which calls an API. In the `GetData` module of your app you have a constant `API_ENDPOINT` which points to this endpoint and has the default value `https://example.com/usefulendpoint`.
 
@@ -100,6 +100,6 @@ The new configuration will become the active configuration. If you deploy your a
 
 You can select which configuration is active using **Make active**.
 
-## 4 Read More
+## Read More
 
 * [App Settings](/refguide/app-settings/)

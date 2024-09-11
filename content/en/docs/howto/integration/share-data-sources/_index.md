@@ -3,11 +3,11 @@ title: Share Data Sources
 url: /howto/integration/share-data-sources/
 ---
 
-## 1 Introduction 
+## Introduction 
 
-Build, update, and share data from different sources using the [Catalog](http://catalog.mendix.com). 
+Build, update, and share data from different sources using the [Catalog](https://catalog.mendix.com). 
 
-How-to's available for this topic: 
+How-tos available for this topic: 
 
 * [Share Data Between Apps](/howto/integration/share-data/)
 

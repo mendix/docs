@@ -1,8 +1,10 @@
 ---
-title: "Control Center"
+title: "Control Center Release Notes"
+linktitle: "Control Center"
 url: /releasenotes/control-center/
 description: "Release notes for Control Center"
 weight: 30
+numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -12,11 +14,37 @@ To see the current status of the Mendix Control Center, see [Mendix Status](http
 
 ## 2024
 
+### September 5, 2024
+
+#### New Features
+
+* Deep links have been added to the [Software Composition](/control-center/software-composition/) page to enable unique identification and easy shareability.
+
+### September 3, 2024
+
+#### Improvements
+
+* Recently, performance issues were identified in the Software Bill of Materials (SBOM) generation process, which occurs during deployment package creation. Mendix has resolved these issues, ensuring that SBOM generation and the associated Software Composition capabilities are now fully compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above, and 10.14.0 and above. 
+
+    Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in [Software Composition](/control-center/software-composition/). Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.
+
+### July 29, 2024
+
+#### New Features
+
+* We introduced the [Apps with License Keys](/control-center/deployed-apps/#apps-license-keys) tab on the **Deployed Apps** page, which provides a comprehensive overview and management capabilities for all apps with issued license keys. This new feature allows you to view apps with active license keys across all environments, resend or download licenses, and update Technical Contacts as needed.
+
+### June 14, 2024
+
+#### New Features
+
+* We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
+
 ### May 16, 2024
 
 #### New Features
 
-* We have added a new tab to the **Apps** page: the [Private Cloud](/control-center/apps/#3-private-cloud-connected) tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
+* We have added a new tab to the **Apps** page: the [Private Cloud](/control-center/apps/#pc-connected) tab. Here you get an overview of all the apps deployed on Mendix Private Cloud Connected.
 
 ### April 4, 2024
 

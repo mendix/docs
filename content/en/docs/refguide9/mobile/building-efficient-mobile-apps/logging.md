@@ -6,7 +6,7 @@ description: "Describes using logging in native mobile apps"
 aliases:
     - /refguide9/mobile/logging/
 ---
-## 1 Introduction
+## Introduction
 
 In Mendix Studio Pro 9.16 and above, native mobile apps are able to send logs to the [Mendix Runtime](/refguide9/runtime/). Read this guide for information on native app logging configuration.
 
@@ -16,7 +16,7 @@ Please note the following current limitations regarding native client logs:
 * Crash logs that happen outside the Mendix Native Client will not be collected and sent to the Mendix Runtime.
 {{% /alert %}}
 
-## 2 Enabling Native App Logging
+## Enabling Native App Logging
 
 Sending logs from native apps is disabled by default. However, sending logs can be enabled from your [native phone profile](/refguide9/navigation/#native-phone) by selecting the **Enable sending logs to runtime** checkbox inside the **Logging** group box.
 
@@ -26,7 +26,7 @@ Please note that after enabling or disabling sending logs to runtime, you must c
 
 {{< figure src="/attachments/refguide9/mobile/native-mobile/logging/enable-logging.png" class="no-border" >}}
 
-## 3 Log Levels
+## Log Levels
 
 {{% alert color="warning" %}}
 Please note the following:
@@ -36,37 +36,37 @@ Please note the following:
 
 For more information on log levels, see the [Log Levels](/refguide9/logging/#log-levels) section of *Logging*.
 
-### 3.1 Critical
+### Critical
 
 **Critical** is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action.
 
-### 3.2 Error
+### Error
 
 **Error** is used to log all unhandled exceptions. These are unexpected events that should not occur, but are not critical. The application should be able to function normally afterwards.
 
-### 3.3 Warning
+### Warning
 
 **Warning** is often used for handled exceptions or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the **Warning** level should be used to log the missing configuration setting.
 
-### 3.4 Information
+### Information
 
 The **Information** level is typically used to output information that is useful to the running and management of your system. **Information** is typically the level used to log entry and exit points in key areas of your application. 
 
 However, you may choose to add more entry and exit points at the **Debug** level for more granularity during development and testing.
 
-### 3.5 Debug
+### Debug
 
 **Debug** should be used for debugging systems during development, but never in a production system. It can be used to easily assess problems as well as your app's general flow.
 
-### 3.6 Trace
+### Trace
 
 **Trace** is the most verbose logging level, and should be used if you want more detailed logging than **Debug**.
 
-## 4 Native Client Default Log Nodes
+## Native Client Default Log Nodes
 
 This section provides some details on specific log nodes used by the Mendix native client. Mendix recommends that if you write your own [log messages](/refguide9/log-message/), you should also use your own log node names to avoid confusion with the Mendix log messages.
 
-### 4.1 Default Mendix Native Client Log Nodes {#native-client-log-nodes}
+### Default Mendix Native Client Log Nodes {#native-client-log-nodes}
 
 The following log nodes are used by Mendix when writing log messages:
 
@@ -92,7 +92,7 @@ The following log nodes are used by Mendix when writing log messages:
 | Client_Startup | Logs messages related to client startup phase. |
 | Client_Synchronization | Logs messages related to the full synchronization action and its phases. |
 
-## 5 Sending Log Messages to Runtime {#sending-client-log-nodes-to-runtime}
+## Sending Log Messages to Runtime {#sending-client-log-nodes-to-runtime}
 
 The native client stores logs on the device's memory. When **Enable sending logs to runtime** is selected, the native client will attempt to send logs whenever a quota of 1,000 logs has been reached or after 1 hour from the last sending attempt.
 
@@ -102,7 +102,7 @@ In this scenario, it will discard older messages so that it will not overflow wi
 
 The body of the log message consists of the timestamp in which the message was logged (which differs from the timestamp that is normally shown in the Cloud Portal as that one refers to the timestamps the log messages were collected), a unique session ID so that the log messages can be grouped by device or origin, and the main content of the log message itself. 
 
-## 6 Extending Logging
+## Extending Logging
 
 It is possible to add a custom log handler to react to all log messages, including errors, as they arise. This can be used to integrate with your own custom logging and error handling infrastructure, such as Google Crashlytics.
 

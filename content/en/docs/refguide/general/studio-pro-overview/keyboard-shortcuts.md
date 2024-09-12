@@ -107,6 +107,16 @@ The following shortcut keys are available in the page editor:
 
 For an overview of the supported shortcut keys in the microflow and nanoflow editors, see the [Keyboard Support](/refguide/microflows/#keyboard) section in *Microflows*. The supported shortcut keys are the same in the microflow, nanoflow, and rule editors. 
 
+## Workflow Editor Shortcut Keys
+
+| Windows | Mac | Description |
+| --- | --- | --- |
+| Mouse scroll | Mouse scroll | Scroll up/down. |
+| <kbd>Shift</kbd> + mouse scroll | | Scroll left/right. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | | Zoom in/out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + mouse scroll | | Zoom in/out. |
+
 ## Debugger Shortcut Keys {#debugger-shortcuts}
 
 The following shortcut keys are available for the debugger:

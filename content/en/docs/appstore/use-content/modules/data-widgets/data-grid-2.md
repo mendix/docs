@@ -452,6 +452,37 @@ If a filter is being used and its type does not match with any selected attribut
 There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
 
+### Filter Groups
+
+The “Filter groups” is a new way of configuring header filters of the widget. This way of configuring filters has four main advantages over previous “Grid wide filtering”:
+
+1. More than 4 filters are allowed in the header at the same time.
+2. No restriction on filter type. The header can have one, two or more filters of the same data type.
+3. Dropdown filters can use associations.
+4. If personalization is enabled, filter state is saved along with other widget settings.
+
+Compared to "Grid-wide filtering", this way of configuration requires one extra step - declaring groups in the "Groups" list.
+
+New settings will only be visible if the "Enable filter groups" switch is set to "Yes".
+
+#### Groups
+
+This list contains the groups that will be used for filtering.
+
+Logically, each group represents a filter. Each group (filter) can either contain one or more attributes, or define an association from a parent data source.
+
+Each group has a required parameter - the "group key". The only requirement to the "group key" is that it should be unique within the list.
+
+When creating a new group, you need to select the group type: attribute or reference.
+
+The group of type "Attribute" represents a group of attributes that should match the condition created by the filter. The only requirement is that all attributes in the group should be of the same type (e.g. only string attributes or only number attributes).
+
+The reference type group controls the association used in the filter.
+
+#### Group attributes
+
+This list controls the mapping between attributes and groups. Each item contains the "group key" and the attribute to be associated with the group.
+
 ## Export to Excel
 
 The Data Grid 2 widget ships with built-in functionality to export data from the data source you configured in the settings. The export is done via the *Export_To_Excel* JavaScript action that is distributed as part of the [Data Widgets](/appstore/modules/data-widgets/) module.

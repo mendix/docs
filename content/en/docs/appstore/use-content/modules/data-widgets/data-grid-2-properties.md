@@ -141,6 +141,16 @@ A list of filters that can be used in the header of the data grid. Each filter d
 This property requires advanced knowledge of data grid widget. Please read [Grid Wide Filtering](/appstore/modules/data-grid-2/#grid-wide-filtering) and view its examples for additional guidance.
 {{% /alert %}}
 
+#### Groups
+
+This list contains the groups that will be used for filtering.
+
+Logically, each group represents a filter. Each group (filter) can either contain one or more attributes, or define an association from a parent data source.
+
+#### Group attributes
+
+This list controls the mapping between attributes and groups. Each item contains the "group key" and the attribute to be associated with the group.
+
 ### Aria Labels
 
 #### Filter Section

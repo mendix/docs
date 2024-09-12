@@ -479,6 +479,10 @@ The group of type "Attribute" represents a group of attributes that should match
 
 The reference type group controls the association used in the filter.
 
+{{% alert color="info" %}}
+To connect the filter to the group, copy the group key value to the "Group key" property of the filter widget. Otherwise, the filter will not be able to connect to the group.
+{{% /alert %}}
+
 #### Group attributes
 
 This list controls the mapping between attributes and groups. Each item contains the "group key" and the attribute to be associated with the group.

@@ -32,7 +32,7 @@ This extension currently has the following limitations:
 * Source data can be mapped to one entity only; associations are not currently supported 
 * You cannot map data to an existing NPE; you have to create a new entity as part of mapping
 * Enumerations are not supported
-* Multi-line headers, header containing new-line character (\r, \n, \r+\n), are not supported.
+* Multi-line headers and headers containing new-line characters (\r, \n, \r+\n) are not supported
 * **String** is the default attribute type (*.csv* only)
 
 ### Prerequisites

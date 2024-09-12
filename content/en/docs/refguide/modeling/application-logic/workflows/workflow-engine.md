@@ -136,7 +136,7 @@ All microflows that are run as part of the workflow are executed as an asynchron
 
 Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
 
-#### Timer Boundary Events
+#### Timer Boundary Events {#timer-boundary-events}
 
 A timer boundary event is attached to the boundary of an activity. Once the activity begins, a new task is added to the **Task queue** to be executed after the specified delay. When the timer expires, the scheduled task will check if the activity is still in a runnable state. If the activity has already been completed, aborted, or has failed, the scheduled task will be disregarded, and the execution of the boundary event path will be skipped. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
 

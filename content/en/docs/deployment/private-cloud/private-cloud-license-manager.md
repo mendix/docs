@@ -164,6 +164,28 @@ kubectl port-forward -n <namespace> svc/<service name> 8080:8080
 
 and use http://localhost:8080 as the PCLM address
 
+## Self Signed Custom CA Certificate
+
+If the PCLM server is self signed with Custom CA Certificate, then Openshift route or Ingress needs to be configured with custom certificate. 
+
+Example for Openshift route:
+
+```bash
+oc -n <namespace> create route edge --service=mx-privatecloud-license-manager \
+    --cert=server.crt \
+    --key=server.key \
+    --ca-cert=ca.crt \
+    --hostname=<hostname>
+```    
+The next step is to create  generic secret in the namespace where we need to deploy the application. Below is an example on how to create the secret:
+
+```bash
+oc -n <namespace> create secret generic custom-ca-secret --from-file=custom.crt=<path of ca.crt>
+```
+
+The next step is to also configure the Operator configuration of the namespace with above created custom CA secret. The custom ca secret can be configured following this [documentation](/developerportal/deploy/standard-operator/#custom-tls)
+
+
 ## Setting Up Users
 
 Once the PCLM server is running, you can set up users.
@@ -179,7 +201,8 @@ When the PCLM server is set up, it contains one user `administrator` with a defa
 ```bash
 mx-pclm-cli user update \
   -s <pclm-http-url> -u administrator -p <default-password> \
-  --username administrator --password='<new-password>' --type admin
+  --username administrator --password='<new-password>' --type admin \
+  --custom-tls-cert-path=<custom-ca-cert-path>
 ```
 
 Where:
@@ -187,6 +210,7 @@ Where:
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
 * `<default-password>` – is the default password which is set for the `administrator` user – you can obtain this from [Mendix Support](https://support.mendix.com)
 * `<new-password>` – is the new password for the `administrator` user
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert. 
 
 #### Authenticating Using a Config File
 
@@ -206,7 +230,7 @@ Where:
 
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator`
 * `<admin-password>` – is the password for the chosen *admin* user
-* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server
+* `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server 
 
 ### Additional Users
 
@@ -215,7 +239,8 @@ You will want to set up *operator* users and (optionally) additional *admin* use
 ``` bash
 mx-pclm-cli user create \
   -s <pclm-http-url> -u <admin-user> -p <admin-password> \
-  --username=<new-user>  --password='<password>' --type=<user-type>
+  --username=<new-user>  --password='<password>' --type=<user-type> \
+  --custom-tls-cert-path=<custom-ca-cert-path>
 ```
 
 Where:
@@ -226,6 +251,7 @@ Where:
 * `<new-user>` – is the name of the new user you are creating
 * `<password>` – is the password for the new user
 * `<user-type>` – is the type of user you are creating, either `admin` or `operator`
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.   
 
 ## Installing Licenses
 
@@ -239,7 +265,9 @@ mx-pclm-cli license import \
     -s <pclm-http-url> \
     -u <admin-user> \
     -p <admin-password> \
-    -f <bundle-zip-file-path>
+    -f <bundle-zip-file-path> \
+    -t <custom-ca-cert-path>
+
 ```
 
 Where:
@@ -248,6 +276,7 @@ Where:
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
 * `<bundle-zip-file-path>` – is the location of your license bundle file
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.   
 
 You will get a report of the results of your import operation:
 
@@ -279,8 +308,11 @@ Once the license bundle is installed, you can see the list of Runtime license in
 mx-pclm-cli license runtime list \
    -s <pclm-http-url> \
    -u <admin-user> \
-   -p <admin-password>
+   -p <admin-password> \
+   -t <custom-ca-cert-path>
 ```   
+
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.   
 
 You will receive the result in the following format:
 
@@ -302,8 +334,11 @@ Once the license bundle is installed, you can view the list of Runtime licenses 
 mx-pclm-cli license operator list \
    -s <pclm-http-url> \
    -u <admin-user> \
-   -p <admin-password>
+   -p <admin-password> \
+   -t <custom-ca-cert-path>
 ```   
+
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.   
 
 You will receive the result in the following format:
 
@@ -415,7 +450,8 @@ You can see which licenses are currently used by which environments and operator
 ```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
-    -p <admin-password>
+    -p <admin-password> \
+    -t <custom-ca-cert-path>
 ```
 
 Where:
@@ -423,6 +459,7 @@ Where:
 * `<pclm-http-url>` – is the HTTP REST endpoint of the PCLM server (overrides the config file)
 * `<admin-user>` – is a user of type *admin* which can update users, default: `administrator` (overrides the config file)
 * `<admin-password>` – is the password for the chosen *admin* user (overrides the config file)
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.     
 
 Which would reply with something similar to this:
 
@@ -487,8 +524,11 @@ You can confirm this by running the following command:
 ```bash
 mx-pclm-cli license list-usage -s <pclm-http-url> \
     -u <admin-user> \
-    -p <admin-password>
+    -p <admin-password> \
+    -t <custom-ca-cert-path>
 ```
+
+* `<custom-ca-cert-path>` - is optional. Required only if the PCLM server is configured with custom cert.   
 
 This will indicate that licenses have been applied to the operator and apps in the selected namespace:
 

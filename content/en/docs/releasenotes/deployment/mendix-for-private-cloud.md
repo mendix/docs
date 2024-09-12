@@ -14,6 +14,11 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ### September 13th, 2024
 
+#### License Manage CLI v0.9.0
+
+* We have added a new feature to the PLCL CLI that allows users to specify the path for a self-signed CA certificate for the PCLM server.
+
+
 #### Mendix Operator v2.19.0 {#2.19.0}
 
 * Its now possible to set the log levels in Operator deployment, enabling customers to tailor log visibility according to their specific needs (Ticket [223377](https://mendixsupport.zendesk.com/agent/tickets/223377))

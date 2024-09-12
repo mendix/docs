@@ -14,6 +14,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### September 12, 2024
+
+#### Improvement
+
+* We updated the terminology used in the UI when describing contract elements (such as entities and actions) to be more specific.
+
 ### August 29, 2024
 
 #### Fixes

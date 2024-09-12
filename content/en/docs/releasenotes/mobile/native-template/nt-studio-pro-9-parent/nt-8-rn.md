@@ -5,13 +5,29 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
-## 8.2.6 {#815}
+## 8.2.7 {#827}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
+## 8.2.6 {#826}
 
 **Release date: August 5, 2024**
 
 ### Improvements
 
 * Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.0.15 {#815}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA updates compatibility issues on iOS 18.
 
 ## 8.0.14 {#814}
 

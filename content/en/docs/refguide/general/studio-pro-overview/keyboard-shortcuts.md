@@ -46,9 +46,9 @@ The following key combinations work in the editors, such as the Domain Model, Pa
 | <kbd>Ctrl</kbd> + <kbd>Y</kbd> | <kbd>Command</kbd> + <kbd>Y</kbd> | Redo the last undone action in an editor pane. |
 | <kbd>Ctrl</kbd> + <kbd>Z</kbd> | <kbd>Command</kbd> + <kbd>Z</kbd> | Undo the last action in an editor pane. |
 | <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> | Not Available | Navigate between open editors (opens pane navigation dialog where editors are called *active files*). |
-| <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zooms in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Minus&nbsp;sign</kbd> | Not available | Zooms in or out. |
-| <kbd>Shift</kbd> + Mouse&nbsp;scroll&nbsp;wheel | <kbd>Shift</kbd> + Mouse&nbsp;scroll&nbsp;wheel | Scrolls left or right. Works as if you were using the horizontal scroll bar. |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Not available | Zoom in or out. |
+| <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. Works as if you were using the horizontal scroll bar. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> | Not available | Copy the inline styles, classes, and design properties of a widget. |
 | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd> | Not available | Paste the widget styling onto another selected widget. |
 
@@ -109,13 +109,15 @@ For an overview of the supported shortcut keys in the microflow and nanoflow edi
 
 ## Workflow Editor Shortcut Keys
 
+The following shortcut keys are available in the workflow editor:
+
 | Windows | Mac | Description |
 | --- | --- | --- |
-| Mouse scroll | Mouse scroll | Scroll up/down. |
-| <kbd>Shift</kbd> + mouse scroll | | Scroll left/right. |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | | Zoom in/out.  |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> | | Reset zoom level to 100%. |
-| <kbd>Ctrl</kbd> + mouse scroll | | Zoom in/out. |
+| Mouse scroll wheel| Mouse scroll wheel | Scroll up or down. |
+| <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
+|<kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Not available | Zoom in or out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | TODO: NEED TO CHECK! | Reset zoom level to 100%. |
 
 ## Debugger Shortcut Keys {#debugger-shortcuts}
 
@@ -170,7 +172,7 @@ The following shortcut keys are assigned to menu actions that can be used in all
 
 You can use the following shortcut keys in [Maia Chat](/refguide/maia-chat/), including on the feedback page:
 
-| Key | Description |
+| Windows | Description |
 | --- | --- |
 | <kbd>Enter</kbd> or <kbd>Ctrl</kbd> + <kbd>Enter</kbd> | Send your question in the chat. |
 | <kbd>Shift</kbd> + <kbd>Enter</kbd> | Add a new line to your question. |

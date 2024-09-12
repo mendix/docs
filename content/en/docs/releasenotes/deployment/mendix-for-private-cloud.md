@@ -16,7 +16,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### License Manage CLI v0.9.0
 
-* We have added a new feature to the PLCL CLI that allows users to specify the path for a self-signed CA certificate for the PCLM server.
+* We have added a new feature to the PCLM CLI that allows users to specify the path for a self-signed CA certificate for the PCLM server.
 
 #### Mendix Operator v2.19.0 {#2.19.0}
 
@@ -53,7 +53,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### License Manage CLI v0.8.0
 
-* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+* We have introduced a new feature in the PLCM CLI that enables users to upgrade their old PCLM server versions to the latest available version.
 
 #### Portal Enhancements
 

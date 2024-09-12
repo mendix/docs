@@ -844,21 +844,21 @@ For example, to correctly display newline characters in Grafana, use the [Escape
 
 ### Log levels {#log-levels}
 
-Mendix Operator version 2.19.0 or above allows you to configure the log levels for your Operator pods. 
+Mendix Operator version 2.19.0 and above allows you to configure the log levels for your Operator pods. 
 
 Following log levels can be configured:
 
-* **L0** : Fatal LogLevel
+* `L0` : Fatal Log Level
 
-* **L1** : Error LogLevel
+* `L1` : Error Log Level
 
-* **L2** : Warn LogLevel
+* `L2` : Warn Log Level
 
-* **L3** : Info LogLevel
+* `L3` : Info Log Level
 
-* **L4** : Debug LogLevel
+* `L4` : Debug Log Level
 
-* **L5** : Trace LogLevel
+* `L5` : Trace Log Level
 
 The log level can be set in the mendix-operator deployment yaml:
 
@@ -883,6 +883,7 @@ spec:
             - name: LOG_LEVEL
               value: L1
 ```
+
 By default, the log level value is set to L1 level for operator pods.
 
 ### Pod labels {#pod-labels}

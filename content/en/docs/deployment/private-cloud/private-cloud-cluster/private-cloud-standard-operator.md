@@ -210,7 +210,7 @@ Additional network options such as Ingress/Service annotations and Service ports
 {{% /alert %}}
 
 {{% alert color="info" %}}
-From Operator v2.19.0 and Mx version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which would set the path prefix to support this feature. In order to support this feature, NGINX Ingress uses `nginx.ingress.kubernetes.io/rewrite-target` and Openshift route uses `haproxy.router.openshift.io/rewrite-target`.
+For Operator version 2.19.0 and Mendix version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which sets the path prefix to support this feature. To support this feature, NGINX Ingress uses `nginx.ingress.kubernetes.io/rewrite-target` and the OpenShift route uses `haproxy.router.openshift.io/rewrite-target`.
 {{% /alert %}}
 
 #### Registry {#registry}
@@ -311,7 +311,7 @@ The Mendix Gateway Agent will trust CAs specified through Custom TLS Trust if yo
 {{% /alert %}}
 
 {{% alert color="info" %}}
-From Operator version 2.19.0 and above, the Self Signed Custom CA certificate will be trusted by Mendix operator when communicating with Private Cloud Licensing Manager.
+For Operator version 2.19.0 and above, the Self Signed Custom CA certificate will be trusted by the Mendix Operator when communicating with the Private Cloud Licensing Manager.
 {{% /alert %}}
 
 ### Review and Apply {#review-apply}

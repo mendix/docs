@@ -154,9 +154,9 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 	</plist>
     ```
 
-#### Execute Pod Install in your iOS directory
+#### Run Pod Install in your iOS directory
 
-Next, execute `pod install` in your iOS app's directory to _______.
+Next, run `pod install` in your iOS app's directory to _______.
 
 #### Add Permissions Usage Descriptions 
 

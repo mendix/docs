@@ -145,11 +145,11 @@ This property requires advanced knowledge of data grid widget. Please read [Grid
 
 This list contains the groups that will be used for filtering.
 
-Logically, each group represents a filter. Each group (filter) can either contain one or more attributes, or define an association from a parent data source.
+Logically, each group represents a filter. Each group can either contain one or more attributes, or define an association from a parent data source.
 
-#### Group attributes
+#### Group Attributes
 
-This list controls the mapping between attributes and groups. Each item contains the "group key" and the attribute to be associated with the group.
+This list controls the mapping between attributes and groups. Each item contains the "group key", as well as the attribute to be associated with the group.
 
 ### Aria Labels
 

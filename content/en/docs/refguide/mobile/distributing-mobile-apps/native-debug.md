@@ -57,7 +57,7 @@ To install React Developer Tools, do the following:
 Open your native app in iOS Simulator or Android emulator and then do the following:
 
 1. Select **Enable dev mode** on your native app.
-2. Run `npx react-devtools@^3`.
+2. Run `npx react-devtools`.
 3. React Developer Tools will launch and connect to Simulator. You can now inspect and modify the React Native elements the same way you could modify HTML elements in Chrome:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/distribution/build-native-apps/native-debug/simulator-rn-dev.png" alt="debug simulator"   width="350"  class="no-border" >}}

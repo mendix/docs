@@ -41,4 +41,8 @@ To authenticate calls when using the OpenAPI specification below, click **Author
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/marketplace-content.yaml"  >}}
+{{% alert color="warning" %}}
+You cannot call endpoints in the Swagger UI below on this page.
+{{% /alert %}}
+
+{{< swaggerui-disable-try-it-out src="/openapi-spec/marketplace-content.yaml"  >}}

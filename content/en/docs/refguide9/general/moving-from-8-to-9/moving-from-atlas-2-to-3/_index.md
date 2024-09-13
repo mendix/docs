@@ -42,7 +42,7 @@ To upgrade your theme directory to Atlas 3 specifications, please complete the f
 
     {{< figure src="/attachments/refguide9/general/moving-from-8-to-9/moving-from-atlas-2-to-3/atlas3-themefolder.png" alt="Atlas 3 folder" class="no-border" >}}
 
-###  Migrating UI Content {#upgrade-ui-content}
+### Migrating UI Content {#upgrade-ui-content}
 
 **Atlas 3** distributes the UI content previously found in the Atlas_UI_Resources, in 3 separate modules: **Atlas Core**, **Atlas Web Content** and **Atlas Native Content**. 
 

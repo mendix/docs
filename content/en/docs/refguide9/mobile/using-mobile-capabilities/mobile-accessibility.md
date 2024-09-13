@@ -23,7 +23,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
 Mendix provides accessible widgets by default when possible, and also provides configurable properties to customize the accessibility experience.
 
-###  Accessibility Properties
+### Accessibility Properties
 
 #### Accessible
 

@@ -842,6 +842,50 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
+### Log levels {#log-levels}
+
+Mendix Operator version 2.19.0 and above allows you to configure the log levels for your Operator pods. 
+
+Following log levels can be configured:
+
+* `L0` : Fatal Log Level
+
+* `L1` : Error Log Level
+
+* `L2` : Warn Log Level
+
+* `L3` : Info Log Level
+
+* `L4` : Debug Log Level
+
+* `L5` : Trace Log Level
+
+The log level can be set in the mendix-operator deployment yaml:
+
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod labels
+    spec:
+      containers:
+        - resources:
+          # ...
+          # Other configuration options values
+          name: mendix-operator
+          command:
+            - mendix-operator
+          env:
+            # ...
+            # Other configuration options values
+            - name: LOG_LEVEL
+              value: L1
+```
+
+By default, the log level value is set to L1 level for operator pods.
+
 ### Pod labels {#pod-labels}
 
 #### General pod labels

@@ -97,8 +97,8 @@ All the details of an initiative are exported, except the data of the following 
    | **WSJFRiskReduction** | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                |`Medium`|
    | **WSJFJobSize**     | {{< icon name="remove-circle-filled" color="red" >}} | String                       | The selectable options can be found in the [WSJF](/developerportal/portfolio-management/prioritization-models/#wsjf) section in *Prioritization Models*. |                                    |`XS`|
 
-5. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
+4. When your Excel file is ready to be imported, drag it to the **Import Initiatives** dialog box, or click **Upload** and select the file.
 
-6. Click **Import**.
+5. Click **Import**.
 
-All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 
+All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page.

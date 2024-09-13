@@ -201,11 +201,13 @@ The Amazon Bedrock Connector offers a range of operations to retrieve and store 
 This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabililties on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 Currently, there are operations available to sync metadata about:
+
 * Sync Models 
 * Sync Knowledge Bases
 * Sync Agents
 
 The syncing process works the same for all of these operations. 
+
 1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
 2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
 3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.

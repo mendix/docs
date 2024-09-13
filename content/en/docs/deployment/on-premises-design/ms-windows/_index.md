@@ -47,7 +47,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * A local or domain user with the *“log on as a service”* local security policy set
 
-## Installing the Mendix Service Console
+## Installing the Mendix Service Console {#service-console}
 
 To download and install the Mendix Service Console, follow these steps:
 
@@ -387,7 +387,13 @@ To make sure the correct application root URL is used within your web services, 
 
 ## Troubleshooting
 
+### IIS
+
 When configuring IIS it can seem like you have done everything right but it just doesn't seem to work. A guide to troubleshooting IIS is available here: [Troubleshooting IIS](/developerportal/deploy/troubleshooting-iis/).
+
+### Service Console Shows Wrong Service Status
+
+If you are using [Powershell cmdlets](/developerportal/deploy/automate-mendix-deployment-on-microsoft-windows/#powershell) to change the status of your service (for example, using `Start-MxApp`) the service status will not update automatically in the Service Console GUI. The correct status will be shown when you restart the Service Console.
 
 ## Read More
 

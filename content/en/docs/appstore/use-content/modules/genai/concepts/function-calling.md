@@ -65,7 +65,6 @@ For models used through Azure OpenAI, feature availability is currently differen
 Multiple models available on Amazon Bedrock support function calling. In Bedrock documentation, function calling is often addressed as *Tool Use*, which describes the same concept.
 A detailed overview showing which models support function calling (tool use) can be found [here](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
  
-
 ## Use cases {#use-cases}
 
 Function calling can be used for a variety of use cases including the following:

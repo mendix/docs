@@ -111,11 +111,11 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         * **Side Tab** – If this option is selected, the **Feedback** button hovers vertically at the right side of the screen. This is the default option.
         * **Button** – If this option is selected, the **Feedback** button shows as a horizontal button on the location the widget is set
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
-    * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in the Design mode.
+    * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in Design mode.
 
 ### Hiding or Showing the Feedback Button in Design Mode
 
-After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in the Design mode.
+After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in Design mode.
 
 To hide the Feedback button, do as follows:
 

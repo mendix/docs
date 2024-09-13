@@ -134,7 +134,7 @@ You can find several implementation examples for the ChatCompletions operations 
 
 ### Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. Most text models can however be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
+Depending on your needs, you can just reuse the operations inside the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. Most text models can, however, be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
 
 To invoke a specific model that is not covered by the ChatCompletions operation, you can make use of the **Invoke Model** operation by performing the following steps:
 
@@ -196,21 +196,23 @@ The **Documentation** pane displays the documentation for the currently selected
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
-#### Operations to Persist Amazon Bedrock Metadata inside the Application
+### Operations to Persist Amazon Bedrock Metadata inside the Application
 
 The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
 
-This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabililties on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 Currently, there are operations available to sync metadata about:
+
 * Sync Models 
 * Sync Knowledge Bases
 * Sync Agents
 
 The syncing process works the same for all of these operations. 
+
 1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
 2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
-3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
+3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that existing usages of the object in the running application should not be removed.
 
 ## Troubleshooting
 

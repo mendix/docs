@@ -456,10 +456,10 @@ There cannot be more than one filter of the same type in the data grid header. F
 
 Filter groups are another way to configure a widget's header filters. This way of configuring filters has four main advantages over grid wide filtering:
 
-* More than 4 filters are allowed in the header at the same time.
-* No restriction on filter type. The header can have one, two or more filters of the same data type.
-* Dropdown filters can use associations.
-* If personalization is enabled, filter state is saved along with other widget settings.
+* More than 4 filters are allowed in the header at the same time
+* No restriction on filter type (the header can have one, two or more filters of the same data type)
+* Dropdown filters can use associations
+* If personalization is enabled, filter state is saved along with other widget settings
 
 Compared to grid wide filtering, this way of configuration requires one extra step; you must declare groups in the **Groups** list.
 

@@ -41,7 +41,7 @@ Here is a list of how-tos for you to begin with:
 
 APIs for the Mendix platform's advanced users:
 
-* [Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/)
+* [Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/)
 
 ## Learn More
 

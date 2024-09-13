@@ -488,8 +488,8 @@ When a `dataSource` attribute is specified and configured by the user, it is pas
 | `type`         | Yes      | String         | Must be `action`                                                                                        |
 | `key`          | Yes      | String         | See [key](#key)                                                                                         |
 | `dataSource`   | No       | Property Path  | Specifies path to a [`datasource`](#datasource) property linked to this action property                 |
-| `defaultValue` | No       | String         | Default value for the property. The format should be `<ModuleId>.<DocumentId>`                          |
-| `defaultType`  | No       | String         | Default type for the property. Supported values are `None`, `OpenPage`, `CallNanoflow`, `CallMicroflow` |
+| `defaultValue` | No       | String         | Default value for the property, the format should be `<ModuleId>.<DocumentId>`                          |
+| `defaultType`  | No       | String         | Default type for the property, supported values are `None`, `OpenPage`, `CallNanoflow`, `CallMicroflow` |
 
 #### Studio Pro UI
 

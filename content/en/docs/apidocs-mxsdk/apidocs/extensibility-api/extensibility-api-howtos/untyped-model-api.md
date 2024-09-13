@@ -1,15 +1,14 @@
 ---
 title: "Use the Untyped Model Access API"
-url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/
+url: /apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/
 weight: 24
 ---
 
 ## Introduction
 
-The Untyped Model API caters to the advanced users who are familiar with the internals of the Mendix platform. With the Untyped Model API, you can access the rich data of model elements.
+The Untyped Model Access API caters to the advanced users who are familiar with the internals of the Mendix platform. With the Untyped Model API, you can access the rich data of model elements.
 
-As you will have to use model element, unit and property names in the Untyped Model API, you can reference [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). 
-Moreover, you can find the type names used by the Untyped Model lookup APIs under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
+When you need to use model elements, units, and property names in the Untyped Model API, you can reference the [Mendix Model SDK](https://apidocs.rnd.mendix.com/modelsdk/latest/index.html). Moreover, you can find the type names used by the Untyped Model Access API under the [structureTypeName](https://apidocs.rnd.mendix.com/modelsdk/latest/classes/Structure.html#structureTypeName) property of any model element.
 
 {{% alert color="info" %}}
 All methods provided by the Untyped Model API are recursive to reduce the amount of API calls necessary to get to the content you are looking for.

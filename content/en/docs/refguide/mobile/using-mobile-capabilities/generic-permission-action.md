@@ -109,7 +109,7 @@ The permissions that you cannot find using the Native Builder UI can be added ma
 
 ### iOS {#update-ios-native-permissions}
 
-Update Your *ios/podfile* With Required Permissions:
+Update your *ios/podfile* file with the required permissions:
 
 ```xml
 # ⬇️ uncomment the permissions you need

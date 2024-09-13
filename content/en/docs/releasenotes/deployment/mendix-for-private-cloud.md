@@ -12,6 +12,21 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 ## 2024
 
+### September 13th, 2024
+
+#### License Manage CLI v0.9.0
+
+* We have added a new feature to the PCLM CLI that allows users to specify the path for a self-signed CA certificate for the PCLM server.
+
+#### Mendix Operator v2.19.0 {#2.19.0}
+
+* It is now possible to set the log levels in Operator deployment, enabling customers to tailor log visibility according to their specific needs. (Ticket [223377](https://mendixsupport.zendesk.com/agent/tickets/223377))
+* We have also removed unnecessary Operator logs, removed outdated entries, and eliminated repeated messages.
+* We have updated components to the latest dependency versions in order to improve security score ratings for container images.
+* You can now configure the Operator to trust the Private Cloud Licensing Manager using a self-signed CA certificate.
+* We have resolved an issue where the application couldn't be scaled up when the namespace was configured with PCLM but lacked licenses.
+* The logs are now generated in JSON format so that most fields (such as log levels) are now automatically recognised.
+
 ### September 5th, 2024
 
 #### Portal Improvements
@@ -38,7 +53,7 @@ For information on the current status of deployment to Mendix for Private Cloud 
 
 #### License Manage CLI v0.8.0
 
-* We have introduced a new feature in the PLCL CLI that enables users to upgrade their old PCLM server versions to the latest available version.
+* We have introduced a new feature in the PLCM CLI that enables users to upgrade their old PCLM server versions to the latest available version.
 
 #### Portal Enhancements
 

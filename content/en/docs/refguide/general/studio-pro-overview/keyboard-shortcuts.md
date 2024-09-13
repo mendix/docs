@@ -116,8 +116,8 @@ The following shortcut keys are available in the workflow editor:
 | Mouse scroll wheel| Mouse scroll wheel | Scroll up or down. |
 | <kbd>Shift</kbd> + Mouse scroll wheel | <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
 |<kbd>Ctrl</kbd> + Mouse scroll wheel | <kbd>Command</kbd> + Mouse scroll wheel | Zoom in or out. |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Not available | Zoom in or out.  |
-| <kbd>Ctrl</kbd> + <kbd>0</kbd> | TODO: NEED TO CHECK! | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
+| <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
 
 ## Debugger Shortcut Keys {#debugger-shortcuts}
 

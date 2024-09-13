@@ -476,7 +476,7 @@ Then the Studio Pro UI for the property appears like this:
 ### Action {#action}
 
 {{% alert color="info" %}}
-The `defaultType` and `defaultValue` attributes for Action was introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
+The `defaultType` and `defaultValue` attributes for Action were introduced in Mendix [10.15](/releasenotes/studio-pro/10.15/).
 {{% /alert %}}
 
 The action property type allows a user to configure an action which can do things like call nanoflows, save changes, and open pages.

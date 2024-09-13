@@ -69,6 +69,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 ### Adding the Feedback Widget to Your App
 
 1. Configure the **User roles** in the **App Security** for the Feedback module.
+
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
     {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/toolbox-feedback.png" width="250px" class="no-border" >}}
@@ -101,15 +102,35 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         {{% /alert %}}
         
     * **Show advanced settings** – The advanced settings control html2canvas, a backup screen capture tool the Mendix Feedback widget uses when the default browser screenshot tool fails. By default, this is set to **No**. If you select **Yes**, the following items appear:
-        
+      
         * **Enable object rendering** – By default, this is set to **No**. Only select **Yes**, when you experience problems with creating screenshots. Then it will enable the `foreignObjectRendering` method which helps rendering complex HTML, including styles, SVGs, and embedded elements.
         * **CSS scrollable area**– If your app does not use the default scrolling behavior in Studio Pro, the screenshot feature may not work correctly. You can add a CSS selector here to specify which element on your page scrolls the content.
 * **Customize Button** tab
-    * **Button Labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
+    * **Feedback and screenshot button labels** – These are the labels for the buttons on the feedback form. You can change the captions for those button here.
     * **Feedback Button Styling** – This controls how the **Feedback** button is rendered. There are three options:
         * **Side Tab** – If this option is selected, the **Feedback** button hovers vertically at the right side of the screen. This is the default option.
         * **Button** – If this option is selected, the **Feedback** button shows as a horizontal button on the location the widget is set
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
+    * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in the Design mode.
+
+### Hiding or Showing the Feedback Button in Design Mode
+
+After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in the Design mode.
+
+To hide the Feedback button, do as follows:
+
+1. Double-click the **Feedback** button to open the **Edit Feedback** dialog box.
+2. Go to the **Cutomize button** tab.
+3. Set **Show in Design mode** to **No**.
+4. Click **OK** to save the change.
+
+To show the Feedback button, do as follows:
+
+1. For Windows users, find the Feedback widget in the [Structure mode](/refguide/page/#structure-mode). For Mac users (who do not have the Structure mode), go to the [Page Explorer](/refguide/page-explorer/) and find the Feedback widget.
+2. Double-click the widget to open the **Edit Feedback** dialog box.
+3. Go to the **Cutomize button** tab.
+4. Set **Show in Design mode** to **Yes**.
+5. Click **OK** to save the change.
 
 ### Submitting Feedback on an App
 

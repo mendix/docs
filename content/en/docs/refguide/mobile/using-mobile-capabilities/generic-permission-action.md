@@ -215,7 +215,7 @@ Next, add the corresponding permissions usage descriptions to your *Info.plist*:
 
 ### Android {#update-android-native-permissions}
 
-Update the *android/app/src/main/AndroidManifest.xml* file with the needed permissions:
+Update the *android/app/src/main/AndroidManifest.xml* file with the permissions requried by your app's use case. Make sure to keep only the permissions that are actually used in your app:
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -270,4 +270,3 @@ Update the *android/app/src/main/AndroidManifest.xml* file with the needed permi
 
 </manifest>
 ```
-Note: Make sure to keep only the permissions that are actually used in your app.

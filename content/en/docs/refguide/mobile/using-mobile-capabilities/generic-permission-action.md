@@ -69,7 +69,7 @@ This an example for requesting contact access permission for Android and iOS dev
 
 ### Development
 
-#### IOS
+#### iOS
 
 The following permissions can be tested using the iOS Make It Native app:
 
@@ -109,7 +109,7 @@ The permissions that you cannot find using the Native Builder UI can be added ma
 
 ### iOS {#update-ios-native-permissions}
 
-#### Update your *ios/podfile* file with the needed permissions:
+Update Your *ios/podfile* With Required Permissions:
 
 ```xml
 # ⬇️ uncomment the permissions you need
@@ -154,9 +154,14 @@ To allow a Siri permission you will need to enable Siri capability in your app. 
 	</plist>
     ```
 
-#### Execute pod install in your iOS directory.
+#### Execute Pod Install in your iOS directory
 
-#### Add the corresponding permissions usage descriptions to your Info.plist:
+Next, execute `pod install` in your iOS app's directory to _______.
+
+#### Add Permissions Usage Descriptions 
+
+Next, add the corresponding permissions usage descriptions to your *Info.plist*:
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">

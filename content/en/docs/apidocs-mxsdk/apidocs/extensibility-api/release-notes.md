@@ -9,7 +9,7 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.15.0
 
-* Introducing the `Untyped Model Access API`. Please see <a href="/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/">the official documentation<a/> for more details and real life usecase examples.
+* We have introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-api/).
 
 ## Version 10.14.0
 

@@ -86,7 +86,7 @@ On a DataGrid column, a dynamic class is only applied to the `<col>` element, no
 {{% /alert %}}
 
 {{% alert color="info" %}}
-Starting with Mendix Studio Pro 10.15, you no longer need a data container for dynamic classes.
+In Studio Pro 10.15 and above, dynamic classes do not require a data container.
 {{% /alert %}}
 
 ### Documentation{#documentation}
@@ -398,7 +398,7 @@ For example, you might want a button to only be visible if a condition is met. A
 Note that the expression is evaluated in the browser, and hence, we advise against using "secret" values (like access keys) in it. In particular, we disallow usages of [constants](/refguide/constants/). Also, client-side expressions currently do not support all the functions that are available in the microflows. Please refer to an autocomplete list to know what functions are supported in your version.
 
 {{% alert color="info" %}}
-Starting with Mendix Studio Pro 10.15, you no longer need a data container for conditional visibility using expressions.
+In Studio Pro 10.15 and above, dynamic classes do not require a data container.
 {{% /alert %}}
 
 #### Module Roles

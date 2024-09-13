@@ -477,19 +477,33 @@ You can use the **Maintenance** tab to view information about planned maintenanc
 There are two types of maintenance:
 
 * Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
-* Planned maintenance (which affects your app in some ways), about which you will automatically receive an email and you can override the maintenance window if necessary
-
-For more information about maintenance, see [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/).
+* Planned maintenance (which affects your app in some ways), about which you will automatically receive an email
 
 ### 7.1 Preferred Maintenance Window
 
-You can view and change the preferred maintenance.
+You can view and change the preferred maintenance. For more information about maintenance, see [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/).
 
 ### 7.2 Planned Maintenance
 
-When a maintenance operation is planned, it appears under **Planned Maintenance**. By default, this is planned in your preferred maintenance window. You can override the maintenance window of a specific maintenance operation by clicking **Override**.
+When a maintenance operation is planned, it appears under **Planned Maintenance**. Each task card will show the purpose of the maintenance, when it's scheduled and its status.
 
+{{% alert color="info" %}}
+Maintenance _topics_ (e.g. "PostgreSQL 14 Upgrade") have a predefined period (start date and deadline). From the start date you will get the option to execute it immediately, regardless of the Maintenance Window configured for the environment, by pressing the _Execute Now_ button.
+{{% /alert %}}
+
+The status of a maintenance task can be:
+
+- **Succeeded**: The maintenance task was successful
+- **Failed**: The maintenance task failed and the environment requires intervention
+    - Our engineering team should already have been notified about the failed task. If you are still experiencing issues, please open up a support case: [Mendix Support](https://support.mendix.com/hc/en-us)
+- **Incomplete**: The maintenance task was unsuccessful but no changes were applied
+    - You can operate the environment as usual. Our engineering team should already have been alerted about the incomplete task and will take appropriate action (which might involve rescheduling the task).
+- **Ineligible**: The maintenance task was unsuccessful because one or more starting criteria were not met
+    - For example, the database of your environment was scheduled to be upgraded but it's already on the target version
+
+{{% alert color="info" %}}
 You automatically receive email notifications about planned maintenance.
+{{% /alert %}}
 
 ## 8 Tags Tab{#tags}
 

@@ -4,7 +4,7 @@ url: /howto8/front-end/charts-basic-rest/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 With the Charts widgets, you can use data from a REST Service to plot graphs.
 
@@ -13,14 +13,14 @@ This how-to teaches you how to do the following:
 * Publish a REST API
 * Use a REST endpoint as a data source for the Charts widget
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Create an app
 * Import the latest [Charts Widgets](/appstore/widgets/charts/) from the Mendix Marketplace
 
-## 3 Setting up Data to be Exposed by a REST Endpoint
+## Setting up Data to be Exposed by a REST Endpoint
 
 Mendix allows you to publish REST Web services natively from Studio Pro. Using these capabilities you can publish a REST service and use it in our Charts widget to plot graphs.
 
@@ -44,16 +44,16 @@ For more information on publishing a REST API refer to this Mendix document: [Pu
 1. In your browser, open the NewEdit page.
 1. Add values and series by entering data in the appropriate fields.
 
-## 4 Publishing the Service
+## Publishing the Service
 
 To use data from a model in the REST service, you need to create a JSON structure.
 
-### 4.1 Creating the Structure
+### Creating the Structure
 
 1. Create a **JSON Structure**  
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-rest/chart-series-json-structure.png" alt="Charts Rest MD" class="no-border" >}}
 
-### 4.2 Configuring the REST Service
+### Configuring the REST Service
 
 To configure the REST service, follow these steps:
 
@@ -66,7 +66,7 @@ To configure the REST service, follow these steps:
 1. Add **Export mapping**.
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-rest/charts-rest-export-mapping.png" alt="Charts Rest Export Mapping" class="no-border" >}}
 
-## 5 Using REST as a Data Source
+## Using REST as a Data Source
 
 To use the REST Data source endpoint in your chart, follow these steps:
 
@@ -98,7 +98,7 @@ To use the REST Data source endpoint in your chart, follow these steps:
 
     {{< figure src="/attachments/howto8/front-end/charts-tutorials/charts-basic-rest/charts-rest-area-chart.png" alt="Show Chart" class="no-border" >}}
 
-## 6 Read More
+## Read More
 
 * [Use Chart Data Source REST](/howto8/front-end/charts-basic-create/)
 * [Use Any Chart](/howto8/front-end/charts-any-usage/)

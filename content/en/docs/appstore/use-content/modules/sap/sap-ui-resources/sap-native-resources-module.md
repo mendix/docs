@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [SAP Horizon Native UI Resources module](https://marketplace.mendix.com/link/component/210026) allows you to design your native mobile app pages with SAP Horizon-styled widgets and building blocks as part of your layout. The module uses the Horizon theme. Based on the selected mobile theme, your app will use the light or dark version of the theme.
 
@@ -18,11 +18,11 @@ The SAP Horizon Native UI Resources module includes the following resources:
 * Page templates - Predesigned pages that you can use directly in your app
 * Layouts - Layouts that you can use to build your app
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 You may want to use this module if you are building a native mobile Mendix app with a SAP Fiori Horizon theme. The module will make your native app consistent with SAP Fiori UI-based applications.
 
-## 2 Prerequisites
+## Prerequisites
 
 The SAP Horizon Native UI Resources module requires the following modules:
 
@@ -30,11 +30,11 @@ The SAP Horizon Native UI Resources module requires the following modules:
 * [Atlas Native Content](https://marketplace.mendix.com/link/component/117175)
 * [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513)
 
-## 3 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the SAP Horizon Native UI Resources module into your app.
 
-## 4 Configuration
+## Configuration
 
 After you install the module, you can find it in the **App Explorer**, in the **SAP_Native_Resources** section. The module provides a number of [components](#components), [building blocks](#building-blocks), [page templates](#page-templates), and [layouts](#layouts) that you can use to style your app to be consistent with the SAP Fiori Horizon theme. To apply the theme to your app, do the following steps:
 
@@ -56,21 +56,21 @@ When using the module, keep the following additional concerns in mind:
 * If you want to customize the styling or look of the components, you can add a new *main.js* file in **SAP_Native_Resources > Styling > native**.
 {{% /alert %}}
 
-### 4.1 Customization
+### Customization
 
 If you want to apply custom styling to the SAP Horizon UI module, see [Customize Styling: Adding Custom Styling](/howto/front-end/customize-styling-new/#add-custom-styling).
 
-## 5 Reference
+## Reference
 
 To help you work with the SAP Horizon Native UI Resources module, the following sections of this document describe the available components, building blocks, page templates, and layouts that you can use in your application.
 
-### 5.1 Components {#components}
+### Components {#components}
 
 The module styles most Mendix components to match SAP Fiori styles by default.
 
 If you want to change a Mendix component to match the SAP Fiori style, you need to manually add the required classes to the component.
 
-### 5.2 Building Blocks {#building-blocks}
+### Building Blocks {#building-blocks}
 
 The module adds the following building blocks:
 
@@ -78,7 +78,7 @@ The module adds the following building blocks:
 * Fiori Card - The card is usually used to display content in the card form.
 * Fiori Header - There are two types of headers. The first type has an SAP icon and page title, and can be used at the top of the page. The second type is the page title with a side menu where you can add navigation options.
 
-### 5.3 Page Templates {#page-templates}
+### Page Templates {#page-templates}
 
 There are some predesigned pages that you can use to quickly create a native page. You can choose these templates while creating a new page in your native mobile app.
 
@@ -89,7 +89,7 @@ The module adds the following page templates:
 * List - The module includes a list type where items are displayed in the card style.
 * Form - This is basic form that includes all Fiori inputs. You can use and modify this form according to your requirements.
 
-### 5.4 Layouts {#layouts}
+### Layouts {#layouts}
 
 The module adds the following page templates:
 

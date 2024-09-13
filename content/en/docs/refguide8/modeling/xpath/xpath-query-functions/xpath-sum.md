@@ -3,7 +3,7 @@ title: "XPath Sum"
 url: /refguide8/xpath-sum/
 ---
 
-## 1 Overview
+## Overview
 
 The `sum()` function returns the sum of its argument.
 
@@ -13,7 +13,7 @@ The function must specify a column in the query to aggregate.
 
 The query must specify an attribute that has a numeric type.
 
-## 2 Examples
+## Examples
 
 This query returns the sum of the total prices of all placed orders:
 

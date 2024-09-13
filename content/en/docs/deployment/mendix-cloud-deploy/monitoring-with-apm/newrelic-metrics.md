@@ -6,7 +6,7 @@ description: "How to configure Mendix Cloud to enable monitoring and analysis wi
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 [New Relic](https://www.newrelic.com/) is a monitoring and analysis tool for cloud applications. It provides monitoring of servers, databases, tools, and services through a SaaS-based data analytics platform.
 
@@ -22,9 +22,9 @@ For support on other cloud deployment options, such as Private Cloud, refer to t
 
 For more information on the data you can send to New Relic, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
-## 2 Setting up New Relic for Your Mendix App
+## Setting up New Relic for Your Mendix App
 
-### 2.1 New Relic API Key {#newrelic-api-key}
+### New Relic API Key {#newrelic-api-key}
 
 To make use of New Relic, you need a New Relic API key. To find an existing key or request a new one for your app, follow these steps:
 
@@ -34,7 +34,7 @@ To make use of New Relic, you need a New Relic API key. To find an existing key 
 
 {{% alert color="info" %}}For more information, see [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/).{{% /alert %}}
 
-### 2.2 Connecting Your Node to New Relic{#connect-node}
+### Connecting Your Node to New Relic{#connect-node}
 
 To send your runtime information to New Relic, you must provide the New Relic API key to your environment.
 
@@ -54,11 +54,11 @@ To send your runtime information to New Relic, you must provide the New Relic AP
 
     {{% alert color="warning" %}}To start sending data to New Relic, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
     
-## 3 Tagging Metrics for New Relic
+## Tagging Metrics for New Relic
 
 To help you with analyzing your app metrics as described in the [App Metrics](/developerportal/operate/monitoring-with-apm/#app-metrics) section of *Monitoring Your Mendix Apps with an APM Tool*, Mendix adds tags to metrics from microflows and activities when using New Relic.
 
-### 3.1 Metadata
+### Metadata
 
 In addition to the runtime application logs, the following JSON-formatted metadata is automatically sent to New Relic:
 
@@ -71,7 +71,7 @@ In addition to the runtime application logs, the following JSON-formatted metada
 
 You can filter the data by these fields.
 
-### 3.2 Custom Tags
+### Custom Tags
 
 If you use New Relic to monitor more than one app and environment, you will not be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in New Relic, you need to add tags for the app name and environment.
 
@@ -89,17 +89,17 @@ To set these tags, do the following:
 
 Setting these values for your app causes all metrics from this environment of your app to have these tags. For example, the tags for `mx.microflow.time.avg` for this set of metrics include `app:customermanagement` and `env:accp`.
 
-## 4 Additional Information{#additional-info}
+## Additional Information{#additional-info}
 
-### 4.1 New Relic Regions{#uri-regions}
+### New Relic Regions{#uri-regions}
 
 The valid values for `NEW_RELIC_LOGS_URI` and `NEW_RELIC_METRICS_URI` are listed at [Send Your Logging Data with Our Log API](https://docs.newrelic.com/docs/logs/log-api/introduction-log-api/) and [Introduction to the Metric API](https://docs.newrelic.com/docs/data-apis/ingest-apis/metric-api/introduction-metric-api/) in the New Relic documentation.
 
-### 4.2 New Relic Issues
+### New Relic Issues
 
 If you have any issues related to accessing New Relic, contact [New Relic Support](https://support.newrelic.com/s/).
 
-## 5 Read More
+## Read More
 
 * [Metrics](/developerportal/operate/metrics/)
 * [New Relic Java Agent](https://docs.newrelic.com/docs/apm/agents/java-agent/getting-started/introduction-new-relic-java/) – New Relic documentation

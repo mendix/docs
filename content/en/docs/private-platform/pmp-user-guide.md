@@ -7,17 +7,17 @@ aliases:
     - /private-mendix-platform-user-guide/
 ---
 
-## 1 Introduction
+## Introduction
 
 See the following articles for information about the business-as-usual use cases available for Private Mendix Platform.
 
-## 2 Configuring Your User Profile and Settings
+## Configuring Your User Profile and Settings
 
 Your user account is created by the administrator of your Private Mendix Platform. After you log in for the first time, you can configure some of your profile settings by clicking the user icon in the top right corner of the screen, and then selecting **Manage My Account** from the drop-down.
 
 {{< figure src="/attachments/private-platform/pmp-ug1.png" class="no-border" >}}
 
-### 2.1 Profile {#profile}
+### Profile {#profile}
 
 In the **Profile** tab, you can configure general information about yourself. This includes the following information:
 
@@ -29,7 +29,7 @@ In the **Profile** tab, you can configure general information about yourself. Th
 You cannot change your email, user role, or user group. If this information must be updated, contact your Private Mendix Platform administrator.
 {{% /alert %}}
 
-### 2.2 Change Password
+### Change Password
 
 In the **Change Password** tab, you can set a new password for your account. The password must fulfill the following criteria:
 
@@ -38,19 +38,19 @@ In the **Change Password** tab, you can set a new password for your account. The
 * Contains a number
 * Minimum one special character
 
-### 2.3 Personal Access Tokens
+### Personal Access Tokens
 
 Personal Access Tokens (PATs) are used as alternatives to passwords. They are designed to be used when the client application needs to get access on behalf of a specific platform user, but the user is not “present” at the time of access, so the user cannot login via a browser (web SSO). The client application can be any application (meaning, even an app not built with Mendix).
 
 For more information about Personal Access Tokens, as well as creating and using them, see [Personal Access Token](/community-tools/mendix-profile/user-settings/#pat).
 
-### 2.4 Service Credentials {#service-credentials}
+### Service Credentials {#service-credentials}
 
 In the **Service Credentials** tab, you can view and manage the credentials for various external systems that Private Mendix Platform can connect with. These services include GitHub, GitLab, Bitbucket, and AzureDevOps, used for managing your app projects.
 
 To create or work on app projects in Private Mendix Platform, you must create an access token in GitHub, GitLab, AzureDevOps, or Bitbucket, and then add it in the **Service Credentials** tab. The token must have read and write access to a repository where the app project is stored.
 
-## 3 Installing Mendix Studio Pro
+## Installing Mendix Studio Pro
 
 Before you can create your first app, you must first install Mendix Studio Pro by performing the following steps:
 
@@ -63,7 +63,7 @@ Before you can create your first app, you must first install Mendix Studio Pro b
 4. Extract the Studio Pro patch file to the *modeler* directory located in the Studio Pro installation directory, and let it patch the files inside.
 5. Launch Studio Pro and log in to it with the same credentials as for Private Mendix Platform.
 
-## 4 Creating a New App
+## Creating a New App
 
 To create a new app, perform the following steps:
 
@@ -83,7 +83,7 @@ To create a new app, perform the following steps:
     * [Quick Starts](/quickstarts/)
     * [Learning path: Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer)
 
-## 5 Managing Your App
+## Managing Your App
 
 As a user of Private Mendix Platform, you can view the apps that you own directly on the home page of Private Mendix Platform.
 
@@ -102,7 +102,7 @@ In the **Manage** section, you can you can quickly perform a number of actions:
 * Archive the app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is archived.
 * Delete the app, provided you are the only team member. You will be warned of the consequences and asked for confirmation before the app is deleted.
 
-## 6 Deploying Your App
+## Deploying Your App
 
 In the **Deploy** section, you can configure the environment to which your app will be deployed.
 
@@ -120,18 +120,18 @@ In the **Deploy** section, you can configure the environment to which your app w
 3. Click **Create**, and then click **Proceed**.
 4. After the environment is created, you can click **Operate** > **Deploy Environment** to deploy your app to this environment.
 
-## 7 Managing Marketplace Content
+## Managing Marketplace Content
 
 If your organization has enabled the Marketplace for your Private Mendix Platform, you can build your own connectors and modules, and then share them on the Marketplace, so that other teams from your organization can use the connector in their own apps.
 
-### 7.1 Creating Marketplace Content
+### Creating Marketplace Content
 
 For more information about building a connector for your Mendix app, see the following topics:
 
 * [Build a Connector](/appstore/creating-content/connector-guide-build/)
 * [Best Practices for Building Connectors](/appstore/creating-content/connector-guide-best-practices/)
 
-### 7.2 Sharing Marketplace Content {#sharing}
+### Sharing Marketplace Content {#sharing}
 
 To share the connector that you built, perform the following steps:
 
@@ -163,7 +163,7 @@ To share the connector that you built, perform the following steps:
 
 Depending on the process set up by your Private Mendix Platform administrator, your component may be subject to an approval process before it is shared with other users.
 
-### 7.3 Sharing Content with Groups
+### Sharing Content with Groups
 
 On the **Manage Group Content** page, you can share components with the user groups to which you belong.
 

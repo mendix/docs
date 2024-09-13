@@ -6,10 +6,10 @@ no_list: false
 description_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 In the **Reference Guide**, you can explore a variety of topics related to the Extensibility API in detail.
 
-### 2 Documentation in This Category
+### Documentation in This Category
 
 The **Reference Guide** category contains the following documents:

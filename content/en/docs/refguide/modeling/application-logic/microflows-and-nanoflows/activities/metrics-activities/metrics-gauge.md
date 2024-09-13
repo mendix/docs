@@ -9,11 +9,11 @@ weight: 20
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Gauge** activity can be used to set a gauge to a specific value.
 
-## 2 Properties
+## Properties
 
 An example of gauge properties is represented in the image below:
 
@@ -26,7 +26,7 @@ The **Gauge** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,7 +34,7 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Name
+### Name
 
 The name of the gauge for which you want to set a value, which must adhere to the following rules:.
 
@@ -47,19 +47,19 @@ The name of the gauge for which you want to set a value, which must adhere to th
 It is recommended to use a common prefix that uniquely defines your organisation and application.
 {{% /alert %}}
 
-### 3.2 Value
+### Value
 
 The value used to set the gauge to. Values are specified with [expressions](/refguide/expressions/) and should be of type Decimal.
 
-### 3.3 Tags
+### Tags
 
 You can specify a list of tags to enrich the gauge name with key/value pairs. See [Tag Naming](https://micrometer.io/docs/concepts#_tag_naming) on the Micrometer site for more guidance on using tags.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 5 Read More
+## Read More
 
 * [Metric Configuration](/refguide/metrics/)
 * [Metrics Activities](/refguide/metrics-activities/)

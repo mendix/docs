@@ -1,5 +1,6 @@
 ---
-title: "Software Composition"
+title: "Software Composition (Control Center)"
+linktitle: "Software Composition"
 url: /control-center/software-composition/
 description: "Describes the Software Composition page in the Mendix Control Center."
 weight: 80
@@ -11,7 +12,7 @@ beta: true
 This feature is in beta. For more information, see [Beta Releases](/releasenotes/beta-features/). 
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A Mendix app can consist of the Mendix Model (which includes pages, domain model, microflows, etc.), custom Java, and JavaScript. Additionally, it can use reusable components such as standard marketplace modules, widgets, Java libraries, npm packages, and the runtime version. These reusable components are dependencies, namely, components you are dependent on for your Mendix app to run.  
 
@@ -19,17 +20,17 @@ Over time, these dependencies can become deprecated, outdated. or vulnerable. En
 
 To enable this, the **Software Composition** page in Control Center provides visibility into the component dependencies in each app environment. The components displayed here will be based on the [Software Bill of Materials (SBOM)](/refguide/sbom-generation/).
 
-### 1.1 Known Issues
+### Known Issues
 
 After the creation of a deployment package, it may take up to a day for the **Software Composition** page to become visible. Mendix is working to improve the performance on this front.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 To be able to see the software composition information, make sure that you meet the following prerequisites:
 
-* Component details and related actions are available for apps made with Studio Pro versions [9.24.22](/releasenotes/studio-pro/9.24/#92422) and above, [10.6.9](/releasenotes/studio-pro/10.6/#1069) and above, and [10.10.0](/releasenotes/studio-pro/10.10/#10100) and above, therefore, not available for apps made with Studio Pro versions below 9.24.22 and 10.6.9, as well as versions 10.7, 10.8, and 10.9.
+* Software Bill of Materials (SBOM) generation and the associated Software Composition capabilities are compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above. 
 
-  {{% alert color="info" %}}With Mendix versions 9.24.22 and above, only unmanaged Java dependencies or jars are shown. With Mendix versions 10.6.9 and above, both managed and unmanaged Java dependencies or jars will be shown.{{% /alert %}}
+    {{% alert color="warning" %}}Make sure you upgrade to a compatible Studio Pro version to continue to use Software Composition. Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in Software Composition. Any historical data within Software Composition remains accessible regardless of the upgrade.{{% /alert %}}
 
 * Software composition visibility is only possible for deployment packages created via the platform services. It is not available if you manually upload the locally-created deployment package. SBOMs are created behind the scenes for each deployment package. For more information, see [Create Deployment Package](/refguide/create-deployment-package-dialog/).
 
@@ -37,7 +38,7 @@ To be able to see the software composition information, make sure that you meet 
 
 * If your deployment package was deployed before June 14, 2024, you must create and deploy a new deployment package in order to get the software composition information populated on this page.
 
-### 1.3 Software Composition Generation {#software-composition-generation}
+### Software Composition Generation {#software-composition-generation}
 
 Components are identified in the following manner:
 
@@ -45,7 +46,7 @@ First, when a new deployment package is created via the Mendix Portal with the c
 
 The component dependencies for each non-expired, deployment package are available in the [Software Composition](/developerportal/deploy/software-composition/) page in **Apps**. 
 
-## 2 Overview {#overview}
+## Overview {#overview}
 
 On the **Overview** tab, you can see a list of all the deployed apps and their environments, if applicable.
 
@@ -65,7 +66,7 @@ The list contains the following information:
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
-### 2.1 Component Summary {#component-summary}
+### Component Summary {#component-summary}
 
 On the **Overview** tab, if you click **View Details** for an item in the list, the **Component Summary** page opens. This page shows the components of the selected app environment for your easy visual consumption.
 
@@ -75,13 +76,13 @@ On the top of the page, you can find the app name, the environment name, the Men
 
 For details on the information in the list and how to search, filter, and export information in the list, see the [All Components](#all-components) section.
 
-#### 2.1.1 Downloading the Software Bill of Materials
+#### Downloading the Software Bill of Materials
 
 A software bill of materials (SBOM) is a *.json* file in the CycloneDX format. It contains a description about the Mendix app and the components (dependencies) put into it. For more information, see [SBOM Generation](/refguide/sbom-generation/).
 
 On the upper-right corner of the **Component Summary** page, you can click {{% icon name="download-bottom" %}}**SBOM** to download the software bill of materials (SBOM). Different versions of Studio Pro support different component dependencies. For details on component dependencies supported per version, see the [Supported Features](/refguide/sbom-generation/#supported-features) section in *SBOM Generation*.
 
-## 3 All Components {#all-components}
+## All Components {#all-components}
 
 The **All Components** tab gives an overview of all the unique components used across your app landscape. 
 
@@ -95,8 +96,8 @@ The list shows the following information about the component:
 
 * **Component**: This is the name of the component.
 
-*  **Type**: This shows the type of the component. The type could be modules, widgets, framework, Java libraries (JAR), etc. The descriptions of each type are as follows:
-   
+* **Type**: This shows the type of the component. The type could be modules, widgets, framework, Java libraries (JAR), etc. The descriptions of each type are as follows:
+  
     * **Modules** – Standard marketplace modules imported from the Marketplace, for example [Community Commons](https://marketplace.mendix.com/link/component/170)
     * **Widgets** – User interface elements downloaded from the Marketplace, for example [Charts](https://marketplace.mendix.com/link/component/105695)
     * **Framework** – The Mendix Runtime version, for example 10.12.0
@@ -116,7 +117,7 @@ The list shows the following information about the component:
 
 To export the information of selected items in the list to an Excel file, select the check boxes of the items in the list, and then click {{% icon name="office-sheet" %}} **Selection Export** that appears at the bottom of the page.
 
-### 3.1 Component Usage {#component-usage}
+### Component Usage {#component-usage}
 
 On the **All Components** tab, if you click **View details** for an item, the **Component Usage** page opens. This page lists the apps and the environments where the selected component is being used. If a security vulnerabilities is found in one of the components, then the component usage tab can be used to assess the impact radius.
 

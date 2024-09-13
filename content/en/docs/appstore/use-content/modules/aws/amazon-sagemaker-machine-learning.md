@@ -8,13 +8,13 @@ aliases:
     - /appstore/connectors/aws/amazon-sagemaker-machine-learning/
 ---
 
-## 1 Introduction
+## Introduction
 
 Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on developing algorithms and models that enable computers to learn from data and make predictions or decisions without being explicitly programmed. In this way, models can be trained based on custom data of a specific sector or company, and can perform tasks more efficiently than an out-of-the-box foundational model. 
 
 In this document, you will learn how you can incorporate ML into your Mendix app by using [Amazon SageMaker](https://aws.amazon.com/pm/sagemaker/).
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To complete this tutorial, you need the following tools:
 
@@ -27,7 +27,7 @@ By following the tutorial, you will create a demo spam filter with the help of A
 * [The spam_nb.ipynb notebook example](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam_nb.ipynb)
 * [The spam.csv file](https://github.com/mendix/mlkit-example-app/blob/main/notebooks/spam.csv)
 
-## 2 Getting Started with Amazon SageMaker Studio
+## Getting Started with Amazon SageMaker Studio
 
 To start using SageMaker Studio, perform the following steps:
 
@@ -45,7 +45,7 @@ To start using SageMaker Studio, perform the following steps:
 
     3. After training and testing the model, terminate all running instances to avoid extra charges.
 
-### 2.1 Spam_nb.ipynb File Contents {#file-contents}
+### Spam_nb.ipynb File Contents {#file-contents}
 
 The *spam_nb.ipynb* file consists of the following parts:
 
@@ -53,7 +53,7 @@ The *spam_nb.ipynb* file consists of the following parts:
 * Training and exporting  
 * Testing
 
-#### 2.1.1 Necessary Libraries
+#### Necessary Libraries
 
 At this point, the libraries are imported: 
 
@@ -62,7 +62,7 @@ At this point, the libraries are imported:
 * The onnx module.  
 * The onnxruntime module. 
  
-#### 2.1.2 Training and Exporting
+#### Training and Exporting
 
 At this point, the model is trained and converted to ONNX, and then exported to an ONNX file.
 
@@ -95,7 +95,7 @@ To convert the model to the ONNX file using the *to_onnx* function, and then to 
 
 For more examples and information about converting a pipeline to ONNX, refer to the ONNX documentation. 
 
-## 3 Importing the Model into Mendix Studio Pro
+## Importing the Model into Mendix Studio Pro
 
 After creating the ONNX model file, import it into Mendix Studio Pro by doing the following steps:
 
@@ -147,7 +147,7 @@ After creating the ONNX model file, import it into Mendix Studio Pro by doing th
 
     {{< figure src="/attachments/appstore/use-content/modules/aws-sagemaker/run-app.png" alt="The Run and View App options" class="no-border" >}}
 
-## 4 Testing the Spam Filter
+## Testing the Spam Filter
 
 After importing the ML model into Mendix Studio Pro, test the performance of the spam filter by doing the following steps:
 
@@ -175,7 +175,7 @@ After importing the ML model into Mendix Studio Pro, test the performance of the
 
 If the email is recognized as spam, the prediction will display *spam*, and if not, *ham*.
 
-## 5 Read More:
+## Read More:
 
 * [mlkit-example-app](https://github.com/mendix/mlkit-example-app)
 * [AI-enhanced app development for the enterprise](https://www.mendix.com/platform/ai/)

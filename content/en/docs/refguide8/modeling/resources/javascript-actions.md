@@ -10,7 +10,7 @@ description: "This reference guide details the ways JavaScript Actions can exten
 This activity can only be used in **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 With JavaScript actions, you can extend your application's functionality in ways nanoflows alone cannot. To use a JavaScript action, call it from a nanoflow using the [JavaScript Action Call](/refguide8/javascript-action-call/).
 
@@ -24,7 +24,7 @@ The skeletons of these *.js* files are generated automatically when you save an 
 
 To learn how to create, configure, and use a JavaScript action, see these [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/) how-tos.
 
-## 2 General Settings
+## General Settings
 
 After double-clicking a JavaScript action in your **Project Explorer** you will see the JavaScript action's settings: 
 
@@ -32,11 +32,11 @@ After double-clicking a JavaScript action in your **Project Explorer** you will 
 
 The settings for JavaScript actions and their implications are detailed below.
 
-### 2.1 Name
+### Name
 
 This setting handles a JavaScript action's name, which a nanoflow refers to when performing a call to it. This name is also the name of the generated *.js* file.
 
-### 2.2 Parameters
+### Parameters
 
 Parameters pass data to JavaScript actions. For example, if you had a JavaScript action which multiplied numbers, parameters would define the numbers to be multiplied. A JavaScript action can have zero or more parameters. Each parameter should have a unique name. You may add a parameter by clicking **Parameters** > **Add**, and then customize that parameter to pass data into a JavaScript action:
 
@@ -52,11 +52,11 @@ You will see a parameter's category (1), parameter name (2), and description (3)
 
 The parameter types supported by JavaScript actions are described below.
 
-#### 2.2.1 Name
+#### Name
 
 This setting handles the parameter's name. A name is required. Names must start with a letter and contain only letters. Spaces are not permitted in names.
 
-#### 2.2.2 Type
+#### Type
 
 |   Name   |   Description   |
 | ---- | ---- |
@@ -71,19 +71,19 @@ This setting handles the parameter's name. A name is required. Names must start 
 |   Integer/Long   |  The integer/long parameter type allows you to pass a decimal value to a JavaScript action. In the generated JavaScript action code, this type will be represented as a [Big](https://www.npmjs.com/package/big-js) object.  |
 |   String   |  The string parameter type allows you to pass a string value to a JavaScript action. |
 
-#### 2.2.3 Category
+#### Category
 
 Use categories to keep parameters apart in a [JavaScript Action Call](/refguide8/javascript-action-call/). Categories are useful for making logical groups of parameters when your project has several parameters. If you do not specify a category, the parameter will appear in the **Input** group.
 
-#### 2.2.4 Description
+#### Description
 
 For projects with several parameters, descriptions serve as useful reminders of parameters' exact purposes. Descriptions also allow you to describe your parameters to project collaborators. Descriptions may contain both upper- and lower-case letters, numbers, and symbols.
 
-### 2.3 Return Type
+### Return Type
 
 The return parameter type determines the type of data a JavaScript action returns. Because many APIs are asynchronous, you can also return a `Promise` object which resolves to this type. The return value of the JavaScript action can be given a name and stored so it can be used in the nanoflow where it is called. For all types which you can use for parameters, you can also use a return type. In addition, you can use the return type 'Nothing' if no data should return from the action.
 
-## 3 Type Parameter
+## Type Parameter
 
 A type parameter is a placeholder for an entity type which will be filled with a specific entity when called in a nanoflow. Type parameters can be used when configuring the data type of a parameter, which allows users to pass an object or list of an arbitrary entity type. They can easily be added, edited, or deleted:
 
@@ -91,7 +91,7 @@ A type parameter is a placeholder for an entity type which will be filled with a
 
 A JavaScript action can have zero or more type parameters. Each type parameter should have a unique name.
 
-## 4 Expose as Nanoflow Action
+## Expose as Nanoflow Action
 
 In the **Expose as nanoflow action** tab, it is possible to expose a JavaScript action as a nanoflow action. This sample action has been given *Sample Action* caption text, assigned *Workshop* as its category, and given no icon:
 
@@ -101,19 +101,19 @@ Exposing the JavaScript action will make it appear in the **Toolbox** window whe
 
 {{< figure src="/attachments/refguide8/modeling/resources/javascript-actions/workshop-exposed.png" alt="workshop exposed" class="no-border" >}}
 
-### 4.1 Caption
+### Caption
 
 A caption is required when exposing a JavaScript action. This caption will accompany your JavaScript action inside the nanoflow **Toolbox** window and can give helpful reminder information about your JavaScript action there.
 
-### 4.2 Category
+### Category
 
 A category is required when exposing a JavaScript action. Use categories to organize JavaScript actions with similar purposes together in the nanoflow **Toolbox** window.
 
-### 4.3 Icon
+### Icon
 
 An icon is optional when exposing a JavaScript action. When no icon is selected, the default JavaScript action icon is used. The recommended size for an icon is 16x16 pixels.
 
-## 5 Documentation
+## Documentation
 
 In the **Documentation** tab, press **Edit** to document a JavaScript action: 
 
@@ -123,7 +123,7 @@ Documentation is visible in the **Code** tab. Your documentation also is copied 
 
 {{< figure src="/attachments/refguide8/modeling/resources/javascript-actions/documentation-js-file.png" alt="documentation js file"   width="450"  class="no-border" >}}
 
-## 6 Code
+## Code
 
 In the **Code** tab, you can edit the JavaScript action code without leaving Studio Pro. The editor is based on the [Monaco Editor](https://microsoft.github.io/monaco-editor/index.html). It offers features such as syntax highlighting and code completion. From Mendix 8.3 and above, the code can be written in modern JavaScript (ES8 / ES2017) and can use functions like `async` with `await` and `Promise`. The code will be transpiled and polyfilled for you to run (even on Internet Explorer 11). 
 
@@ -160,7 +160,7 @@ export async function Hello(message) {
 }
 ```
 
-## 7 Read More
+## Read More
 
 * [JavaScript Action Call](/refguide8/javascript-action-call/)
 * [Nanoflows](/refguide8/nanoflows/)

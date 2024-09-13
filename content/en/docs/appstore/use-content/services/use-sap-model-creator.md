@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix apps can consume OData services exposed by SAP back-end systems. To do this you need to use the [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/), which needs to know details of the OData service which has been exposed. This involves mapping the data structures exposed by the OData service (via the $metadata URL) to entities and attributes of the domain model. This information is created as a Mendix module (*.mpk*) file which can be imported into your Mendix app.
 
@@ -26,7 +26,7 @@ For an OData service, there are four ways to create the data model:
 * [Uploading an OData Metadata XML File](#Uploading)
 * [Providing the URL to the Metadata](#URL)
 
-### 1.2 SAP Data Models
+### SAP Data Models
 
 The Data Model module contains up to four resources which help to consume the OData Service:
 
@@ -35,7 +35,7 @@ The Data Model module contains up to four resources which help to consume the OD
 * Entity Set Names
 * Function Names
 
-#### 1.2.1 Domain Model
+#### Domain Model
 
 Each Mendix SAP data model has a domain model that describes the information in the OData service. The domain model consists of entities and their relations represented by associations. For more information, see [Domain Model](/refguide/domain-model/).
 
@@ -45,19 +45,19 @@ Each Mendix SAP data model has a domain model that describes the information in 
 Do not change the names of entities, attributes, or associations in the Domain Model; they need to match the names used by the SAP OData service for the OData Connector for SAP Solutions to work correctly.
 {{% /alert %}}
 
-#### 1.2.2 Service Root
+#### Service Root
 
 The module contains a constant whose value is the service root of the OData service. For example, the **GWSAMPLE_BASIC** data model, generated from the SAP Catalog Service using the Model Creator for SAP Integrations has a Service Root which is the constant GWSAMPLE_BASIC which has the value `https://sapes5.sapdevcenter.com:443/sap/opu/odata/iwbep/GWSAMPLE_BASIC`.
 
-#### 1.2.3 Entity Set Names
+#### Entity Set Names
 
 The enumeration **EntitySetNames** contains a list of the collections in the service. These are entities which can be queried to produce a list of matching objects.
 
-#### 1.2.4 Function Names
+#### Function Names
 
 The enumeration **FunctionNames** contains a list of functions which are exposed by the OData service. To assist in using these functions the domain model will also include an entity for each function, suffixed with the string *Parameters*, which is used to provide the required parameters to the function.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -70,7 +70,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 The Model Creator for SAP Integrations will produce a module which is in Mendix 8.18.10. To use the module you will have to create your app in, or upgrade your app to, Mendix 8.18.10 or above.
 {{% /alert %}}
 
-## 3 Generating an OData Data Model
+## Generating an OData Data Model
 
 The Model Creator for SAP Integrations is an app in the Marketplace. Search for it in the Mendix Marketplace, or find it here: [Model Creator for SAP Integrations - OData](https://sapmodelcreator.mendixcloud.com/link/odata). If the app gives you a choice between **SAP OData** and **SAP BAPI**, choose **SAP OData**.
 
@@ -91,7 +91,7 @@ There are four ways to generate your data model.
 * If you have access to the metadata file, select **Manual** and continue with [Uploading an OData Metadata XML File](#Uploading)
 * If you have the metadata URL for the OData service, select **URL** and continue with [Providing the URL to the Metadata](#URL)
 
-### 3.1 Using the API Business Hub{#APIBusHub}
+### Using the API Business Hub{#APIBusHub}
 
 Your SAP back end OData API is held in the API Business Hub.
 
@@ -138,7 +138,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 You have now created the module. The [Using the Data Model Module in a Mendix App](#Using) section, below, explains how to import it into your app.
 
-### 3.2 Selecting an API from the SAP Catalog Service{#catalog}
+### Selecting an API from the SAP Catalog Service{#catalog}
 
 Your SAP back end OData API is held in the SAP Catalog Service.
 
@@ -184,7 +184,7 @@ There may be several schemas in the packages of an API. Each of these will gener
 
 You have now created the module. The [Using the Data Model Module in a Mendix App](#Using) section, below, explains how to import it into your app.
 
-### 3.3 Uploading an OData Metadata XML File{#Uploading}
+### Uploading an OData Metadata XML File{#Uploading}
 
 You may want to generate the data model by hand using the `$metadata` file directly. This may, for example, not be in the API Business Hub.
 
@@ -227,7 +227,7 @@ One way to do this is by getting the OData metadata XML file. This file can be d
 
 You have now created the module. The [Using the Data Model Module in a Mendix App](#Using) section, below, explains how to import it into your app.
 
-### 3.4 Providing the URL to the Metadata{#URL}
+### Providing the URL to the Metadata{#URL}
 
 You can also generate the data model from the metadata by providing the URL to the Model Creator for SAP Integrations.
 
@@ -265,7 +265,7 @@ This method does not work where the destination needs authentication. You cannot
 
 You have now created the module. The [Using the Data Model Module in a Mendix App](#Using) section, below, explains how to import it into your app.
 
-## 4 Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
+## Create a Mendix BAPI Module Using the Model Creator {#create-bapi-module}
 
 Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com/) to generate a Mendix BAPI module containing the domain model for a BAPI using the schema file downloaded from BAPI explorer.
 
@@ -303,7 +303,7 @@ Use [Model Creator for SAP Integrations](https://sapmodelcreator.mendixcloud.com
 
     {{< figure src="/attachments/appstore/use-content/services/sap-model-creator/model-creator-bapi-download.png" class="no-border" >}}
 
-## 5 Using the Data Model Module in a Mendix App{#Using}
+## Using the Data Model Module in a Mendix App{#Using}
 
 Now you have a Mendix module ready to import into your app.
 
@@ -324,7 +324,7 @@ Do not change the names of entities, attributes, or associations in the Domain M
 
 For more information on how to use the imported data model together with the OData Connector for SAP Solutions, see [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/).
 
-## 6 Read More
+## Read More
 
 * [Using Marketplace Content](/appstore/use-content/)
 * [OData Connector for SAP Solutions](/appstore/modules/sap/sap-odata-connector/)

@@ -7,7 +7,7 @@ aliases:
     - /howto/integration/publish-rest-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to explains how to publish a REST service in an example project and demonstrates the `GET` operation for a published REST service.
 
@@ -15,13 +15,13 @@ This how-to teaches you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
-## 3 Setting Up the Example App
+## Setting Up the Example App
 
 To set up the example app that you will use in the next sections for publishing your REST service, follow these steps:
 
@@ -42,11 +42,11 @@ Your completed **Order_Overview** page should look like this:
 
 Add the overview page to your app navigation. Then, run the application and create a couple of orders and order items.
 
-## 4 Publishing the Service
+## Publishing the Service
 
 To use the data from your model in the REST service, you need to create a message definition.
 
-### 4.1 Creating the Mapping
+### Creating the Mapping
 
 To create the mapping, follow these steps:
 
@@ -62,7 +62,7 @@ To create the mapping, follow these steps:
 7. Click **OK** to close the dialog box.
 8. Save and close the **MD_Orders** message definition.
 
-### 4.2 Configuring the REST Service
+### Configuring the REST Service
 
 1. In the **App Explorer**, right-click the **RESTExample** module and select **Add other** > **Published REST Service**.
 2. Enter *PRS_OrderService* for the **Name** of your REST service. Then press **OK** to create and start editing the new REST service.
@@ -94,7 +94,7 @@ To create the mapping, follow these steps:
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/RetrieveOrder.png" alt="Range and XPath constraint settings in the Retrieve Objects dialog box" class="no-border" >}}
 
-#### 4.2.1 Building an Export Mapping (optional){#export-mapping}
+#### Building an Export Mapping (optional){#export-mapping}
 
 The next steps explain how to ensure that outputs are generated in JSON. You can do this using [Export Mappings](/refguide/export-mappings/) or in a microflow. Creating an export mapping is not required because published REST services in Studio Pro support [content negotiation](https://nordicapis.com/content-negotiation/), which means the REST services let you select which media type you want to be returned to the server.
 
@@ -138,7 +138,7 @@ To build an export mapping, follow these steps:
 
     {{% alert color="info" %}}You should have no errors. If you have error CE0346, check if an **httpResponse** parameter was automatically created when you [started editing the microflow](#edit-microflow). If there is one, remove it.{{% /alert %}}
 
-### 4.3 Viewing the App {#viewing}
+### Viewing the App {#viewing}
 
 To view and try out your app, follow these steps:
 
@@ -157,11 +157,11 @@ To view and try out your app, follow these steps:
 
 Congratulations! You have published your first REST service from Mendix.
 
-## 5 Error Handling
+## Error Handling
 
 You have not yet implemented error handling in this new service. For example, if you enter text instead of an integer in the **OrderID** parameter (or if you leave it blank) before clicking **Execute**, you will see a generic `500` or `404` error. To publish a more robust service, implement error handling.
 
-### 5.1 Adding Error Handling
+### Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow and right-click the first activity. Select **Set error handling** > **Custom with rollback** > **OK**.
 2. Hover your mouse over the error handling flow. Click the blue circle and select **Create object**.
@@ -186,7 +186,7 @@ You have not yet implemented error handling in this new service. For example, if
 
     {{< figure src="/attachments/howto/integration/publish-rest-service/ParsingErrorRESTResult.png" alt="Error in server response" class="no-border" >}}
 
-### 5.2 Additional Error Handling
+### Additional Error Handling
 
 Now that you have covered the **OrderID** parameter error handling, it is time to handle empty responses. Empty responses are not technically errors, but it is good practice to indicate what happened when nothing is returned. To add error handling for the situations when the **OrderID** parameter is filled with a valid integer but no corresponding **Order** result is found in the database, follow these steps:
 
@@ -206,6 +206,6 @@ Now that you have covered the **OrderID** parameter error handling, it is time t
 
 4. Test your new error responses, as you did with the app in the [Viewing the App](#viewing) section.
 
-## 6 Read More
+## Read More
 
 * [Published REST Services](/refguide/published-rest-services/) – Information on creating published REST services in Mendix (including `GET`, `POST`, and `DELETE` operations)

@@ -3,19 +3,19 @@ title: "Set BooleanSlider Value"
 url: /appstore/partner-solutions/ats/rg-one-set-booleanslider-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the given text as active value for the BooleanSlider appstore widget.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * BooleanSlider
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to mark as active.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

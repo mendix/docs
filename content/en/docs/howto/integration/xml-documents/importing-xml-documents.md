@@ -5,7 +5,7 @@ weight: 3
 description: "Describes how to prepare the data structure and GUI, add an XML schema, and create XML-to-domain mapping."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix is the app platform for the enterprise organization, and in enterprise software, you likely do not work in a [greenfield](https://en.wikipedia.org/wiki/Greenfield_project). In almost every situation, you will need to integrate with existing systems. Mendix supports many ways of integration, but this how-to focuses on how you can import XML documents with Mendix.
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 * Add an XML schema
 * Create XML-to-domain mapping
 
-## 2 Prerequisites
+## Prerequisites
 
 Before you continue, make sure that you know how to create:
 
@@ -24,7 +24,7 @@ Before you continue, make sure that you know how to create:
 * Overview and detail pages (see [How to Create Your First Two Overview and Detail Pages](/howto/front-end/create-your-first-two-overview-and-detail-pages/))
 * Menu items (see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/))
 
-## 3 Preparing the Data Structure and GUI
+## Preparing the Data Structure and GUI
 
 The XML document used in this how-to contains customers. To see the imported data, you first need to set up the data structure and GUI to maintain the customer data. Then, you need to facilitate the uploading and downloading of XML documents. Finally, you will create the actual import logic and the corresponding import mapping.
 
@@ -43,7 +43,7 @@ To prepare the data structure and the GUI, follow these steps:
 5. Create the overview and detail pages to manage objects of the **XMLDocument** type.
 6. Create a menu item to access the XML document overview page (for more information, see [Setting Up Navigation](/refguide/setting-up-the-navigation-structure/)).
 
-## 4 Adding an XML Schema (XSD)
+## Adding an XML Schema (XSD)
 
 Whether you plan to import or export documents, working with XML means your application must contain an XML schema, which is also called an XSD. An XSD describes the possible contents of an XML file. Based on the XSD, your application knows how to read or write an XML file. If you don't have an XSD file, there are some online XSD generators that accept an XML document as input. For this how-to, you can use [Customers.xsd](/attachments/howto/integration/importing-xml-documents/18581652.xsd).
 
@@ -60,7 +60,7 @@ To add an XML schema (XSD), follow these steps:
 
 4. Click **OK** to save the XML schema, which you will be using in the following steps.
 
-## 5 Create XML-to-Domain Mapping
+## Create XML-to-Domain Mapping
 
 The XML schema describes what the possible contents of an XML file are, but we need to create an XML-to-domain mapping to define how the data in the XML document is imported into the application.
 
@@ -99,7 +99,7 @@ To create the XML-to-domain mapping, follow these steps:
 
 9. Click **OK** to save the mapping.
 
-## 6 Creating the Import Logic
+## Creating the Import Logic
 
 In this section, you will create the logic to import the customers stored in an [XML document](/attachments/howto/integration/importing-xml-documents/18581651.xml) in your application.
 
@@ -136,14 +136,14 @@ To create the import logic, follow these steps:
 
     {{< figure src="/attachments/howto/integration/importing-xml-documents/18581667.png" class="no-border" >}}
 
-## 7 Importing an XML File
+## Importing an XML File
 
 To import the XML file, follow these steps:
 
 1. Deploy the application, upload [Customers.xml](/attachments/howto/integration/importing-xml-documents/18581651.xml), and trigger the import microflow.
 2. Open the customer overview page and check if the customer data has been imported into your application.
 
-## 8 Read More
+## Read More
 
 * [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)
 * [How to Consume a Simple Web Service](/howto/integration/consume-a-simple-web-service/)

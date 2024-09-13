@@ -4,7 +4,7 @@ url: /refguide/performance-logging/
 description: "Describes how to enable, view and compare performance metrics to key functionalities in Studio Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 Studio Pro can log performance measurements to key functionalities (such as opening and closing microflow editors and moving items around in the App Explorer) that can help identify performance degradations.
 
@@ -19,14 +19,14 @@ This tool enables you to do the following:
 * View performance measurements
 * Compare performance measurements
 
-## 2 Enable Performance Logging
+## Enable Performance Logging
 
 Check **Enable performance logging** to turn on performance logging.
 
 * If it is checked, performance logging is enabled and measurements are being logged
 * If it is unchecked, performance logging is disabled
 
-## 3 Start a New Session of Performance Logging {#new-session}
+## Start a New Session of Performance Logging {#new-session}
 
 When you click **Start new session**, you will see the following dialog:
 
@@ -36,7 +36,7 @@ You can specify a name for the new performance logging session that can be used 
 
 {{< figure src="/attachments/refguide/modeling/menus/help-menu/performance-logging/compare-measurements.png" class="no-border" width="750" >}}
 
-## 4 View Performance Measurements
+## View Performance Measurements
 
 When you click **Show measurements**, you will see the following dialog:
 
@@ -53,7 +53,7 @@ The dialog displays the data grid with the measurements:
 
 The **Generate Report** button in the bottom-right corner allows you to view the results in text editor documents (such as Notepad).
 
-## 5 Compare Performance Measurements
+## Compare Performance Measurements
 
 When you click **Compare measurements**, you will see the following dialog:
 

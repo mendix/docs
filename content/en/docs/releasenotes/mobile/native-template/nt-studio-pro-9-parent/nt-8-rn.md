@@ -5,7 +5,39 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
-## 8.2.5 {#814}
+## 8.2.7 {#827}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
+## 8.2.6 {#826}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.0.15 {#815}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA updates compatibility issues on iOS 18.
+
+## 8.0.14 {#814}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.2.5 {#813}
 
 **Release date: July 5, 2024**
 
@@ -70,7 +102,6 @@ description: "Native Template 8 release notes."
 
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
 
-
 ## 8.1.0 {#806}
 
 **Release date: April 04, 2024**
@@ -90,7 +121,6 @@ description: "Native Template 8 release notes."
 ### Fixes
 
 * We updated the `@mendix/native` dependency to fix an encryption issue.
-
 
 ## 8.0.10 {#809}
 

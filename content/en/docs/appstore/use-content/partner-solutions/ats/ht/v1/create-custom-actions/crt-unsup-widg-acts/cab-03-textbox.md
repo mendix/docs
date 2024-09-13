@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-one-cab-03-textbox/
 description: "Explains how to create an Unsupported Widget action for the Mendix text box widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create an Unsupported Widget action for the Mendix text box widget widget. In a standard situation, the first step is checking if ATS supports the widget. 
 
@@ -17,13 +17,13 @@ This how-to teaches you how to do the following:
 * Approach a widget in which ATS must enter text
 * Create a custom action for entering text in the widget
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
  
 * Read [Custom Action General Section](/appstore/partner-solutions/ats/ht-one-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
@@ -39,7 +39,7 @@ This is the text box unfocused:
 
 Now you know that you must focus, enter text, and unfocus the widget. You perform these tasks on the `input` element that is available inside all input widgets. The `input` element with the type `text` makes it possible to type inside a widget.
 
-## 4 Creating the Action Structure
+## Creating the Action Structure
 
 In the previous step, you wrote down the user approach for the text box widget. Now you are going to create this approach in ATS with actions.
 
@@ -85,7 +85,7 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/crt-unsup-widg-acts/cab-03-textbox/text-box-mendix-wait.png" class="no-border" >}}
 
-## 5 Action Parameters
+## Action Parameters
 
 Next, you need to add these action input parameters:
 
@@ -123,7 +123,7 @@ To add the action parameters, follow these steps:
 
 There is no need to add logic to this custom action. It only involves entering text in a widget.
 
-## 6 Final Check
+## Final Check
 
 Now check for the following:
 

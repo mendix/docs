@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can create a new project in Mendix Studio Pro. 
 
@@ -25,31 +25,31 @@ To create a new project, follow the steps below:
 
 The new project is created and opened. 
 
-## 2 App Settings {#app-settings}
+## App Settings {#app-settings}
 
 When creating a new app, the **App Settings** dialog box is opened where you can specify an app name, whether or not to enable the online services provided by the Mendix Platform, the default language, and the location on disk where the project files for your app are stored:
 
 {{< figure src="/attachments/refguide8/modeling/menus/file-menu/new-project/app-settings-dialog.png" alt="App Settings" class="no-border" >}}
 
-### 2.1 Name
+### Name
 
 The name of your new app. This name is used as the name of the project directory and file on disk. If you enable the online services for this app, the name is also used for the Team Server repository and a corresponding app in **My Apps**.
 
-### 2.2 Enable Online Services
+### Enable Online Services
 
 The Mendix Platform offers online services such as [version control](/refguide8/version-control/) and [cloud deployment](/deployment/). When enabled, this will create a project in the Mendix Portal and a corresponding version control repository.
 
 If you choose *No*, you will create an app that is only stored on your local disk. At a later point you can still decide to upload this local app to a version control server and enjoy the benefits of version control.
 
-### 2.3 Default Language
+### Default Language
 
 The default language is the language of the user interface of your project. Choose the language that you will initially use in your forms and other user interface elements. You can always add additional languages to your project later.
 
-### 2.4 Project Directory
+### Project Directory
 
 Specify the project directory in which the files for your app are stored. If you enable the online services for the new app, you will see that the suffix *-main* will be appended to the directory name automatically. This is to indicate that the directory contains the main branch line of your project. While working on your app, you can create new branches and download these to other directories. For more information on the branch line management, see [Branch Line Manager](/refguide8/branch-line-manager-dialog/).
 
-## 3 Read More
+## Read More
 
 * [Version Control](/refguide8/version-control/)
 * [Open Project](/refguide8/open-app-dialog/)

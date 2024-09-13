@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ov-introduction/
 weight: 1
 ---
 
-## 1 ATS Home Page
+## ATS Home Page
 
 When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you see the **My apps** page. This page displays all the Mendix apps you are a member of and that have an ATS license. Every member of the team in your app has access to ATS.
 
@@ -12,7 +12,7 @@ When you [log in to Application Test Suite (ATS)](https://ats.mendix.com), you s
 
 Each app has a doughnut chart that displays how many test cases inside that app are passed. This allows for a quick overview of the progress of your apps.
 
-## 2 ATS Dashboard
+## ATS Dashboard
 
 When you open an app that does not contain any test cases, the dashboard looks like this:
 
@@ -51,7 +51,7 @@ You can export the current results of your test cases by clicking **Download Rep
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-introduction/download-report.png" alt="Dashboard export button" class="no-border" >}}
 
-## 3 Navigation
+## Navigation
 
 You can navigate inside ATS using the menu on the left side of the screen.
 
@@ -66,15 +66,15 @@ Using the menu, you can navigate to different pages inside ATS:
 | **Test Cases**              | This page contains the **Repository**, the **Test Data**, and the **Stories**. Here you can create new test cases, test suites, and test data. You can also connect your user stories to your test cases.|
 | **Test Runs**               | This page contains the **Jobs**, **Schedules**, and **CI/CD Templates**. Here you can see the results of your test cases, create new schedules, and create a CI/CD template for your test case/suite. |
 
-## 4 Different User Roles {#roles}
+## Different User Roles {#roles}
 
 ATS has the following different user role settings.
 
-### 4.1 Scrum Master
+### Scrum Master
 
 The Scrum Master of your app can access the **App Settings** from the profile menu. Here you can add your app environment URL for testing and add a Selenium hub for executing your tests. This is the only difference with other roles.
 
-### 4.2 Others
+### Others
 
 All other roles in your app have access to ATS. The only difference is that the Scrum Master can access the **App Settings** of your app.
 

@@ -7,15 +7,15 @@ no_list: false
 description_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Deployment** category in the **Apps** [navigation pane](/developerportal/#navigation-pane) provides access to built-in deployment and monitoring tools for your app. The pages in this category are listed below.
 
 {{% alert color="info" %}}
-The interface and functionality of these pages vary depending on where your app is deployed. For details about the various deployment options, see the [Deployment](/deployment/) section.
+The interface and functionality of these pages vary depending on where your app is deployed. For details about the various deployment options, see the [Deploying Apps](/deployment/) section.
 {{% /alert %}}
 
-## 2 Environments
+## Environments
 
 For supported platforms, the **Environments** page allows you to review and configure different aspects of your app. It also allows you to deploy to your chosen platform, configure individual environments, and transport your app between staging environments.
 
@@ -27,42 +27,42 @@ For details on the **Environments** pages for Mendix Cloud, Mendix for Private C
 
 Other platforms are not currently supported on the **Environments** page; instead, you must go to the relevant platform portal to monitor and configure your environments.
 
-## 3 Pipelines
+## Pipelines
 
 The **Pipelines** page is for licensed apps deployed to Mendix Cloud. For more information, see [Pipelines](/developerportal/deploy/pipelines/).
 
-## 4 Software Composition
+## Software Composition
 
 The **Software Composition** page is for Free Apps and licensed apps running in Mendix Cloud or Mendix for Private Cloud. For more information, see [Software Composition](/developerportal/deploy/software-composition/).
 
-## 5 Metrics
+## Metrics
 
 The **Metrics** page is for licensed apps deployed to Mendix Cloud. Metrics are not available for Free Apps deployed to Mendix Cloud. For more information, see [Metrics](/developerportal/operate/metrics/).
 
 If your app is deployed to SAP Business Technology Platform (SAP BTP), the **Metrics** page displays links to the SAP BTP cockpit.
 
-## 6 Logs
+## Logs
 
 The **Logs** page is for licensed apps deployed to Mendix Cloud. Logs are not available for Free Apps deployed to Mendix Cloud. For more information, see [Logs](/developerportal/operate/logs/).
 
 To configure logs if your app is running on a different cloud, go to the cloud management portal for the cloud to which your app is deployed. For more information, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/) or [Monitoring Environments in Mendix Apps on SAP BTP](/developerportal/deploy/sap-cloud-platform/sap-monitoring/).
 
-## 7 Backups
+## Backups
 
 The **Backups** page is for apps deployed to Mendix Cloud. For more information, see [Backups](/developerportal/operate/backups/).
 
 If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Backups** page links to the SAP BTP cockpit. 
 
-## 8 Alerts
+## Alerts
 
 The **Alerts** page is for licensed apps deployed to Mendix Cloud. Alerts are not available for Free Apps deployed to Mendix Cloud. For more information, see [Alerts](/developerportal/operate/monitoring-application-health/).
 
 If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Alerts** page links to the SAP BTP cockpit. 
 
-## 9 Mobile App
+## Mobile App
 
 On the **Mobile App** page, you can manage and publish your app in mobile app stores. For more details, see [Mobile App](/developerportal/deploy/mobileapp/).
 
-## 10 Webhooks
+## Webhooks
 
 The **Webhooks** page is for licensed apps that are deployed to Mendix Cloud or Mendix for Private Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).

@@ -8,7 +8,7 @@ aliases:
     - /howto9/collaboration-requirements-management/on-premises-git-howto/
 ---
 
-## 1 Introduction
+## Introduction
 
 When developing Mendix applications, changes to these applications are stored in a version control system. This system is called [Team Server](/developerportal/general/team-server/) and is part of the Mendix Platform. This means that the application's files are stored in the Mendix online environment. For more information, see the [Version Control Reference Guide](/refguide9/version-control/).
 
@@ -18,14 +18,14 @@ While using Team Server is the recommended for most Mendix developers, you may p
 This document does not describe how to set up a Git server from scratch; typically, this will be taken care of by the IT department of your organization.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Make sure you have completed the following prerequisites:
 
 * Make sure you have the right server provider. We currently only support Git Private Server. For more information, see the [Preparing Your Repository](#preparing-your-repo) section. 
 * You have an unversioned Mendix app. For more information, see the [Creating an App](#create-app) section.
 
-## 3 Supported Authentication Mechanisms
+## Supported Authentication Mechanisms
 
 Currently, we only support HTTP Basic authentication for Git service providers. With most providers, this takes the form of using of personal access tokens (PATs).
 
@@ -33,11 +33,11 @@ To use PAT (or another equivalent), you need to specify it in the **Password** f
 
 {{< figure src="/attachments/refguide9/version-control/on-premises-git/sign-in-dialog.png" alt="Sign In dialog" class="no-border" >}}
 
-## 4 Setting Up the Environment
+## Setting Up the Environment
 
 This section describes how to configure a Git versioned app in Studio Pro. You need a Git server and an initially unversioned Mendix app.
 
-### 4.1 Preparing Your Repository {#preparing-your-repo}
+### Preparing Your Repository {#preparing-your-repo}
 
 Mendix supports multiple Git service providers that are listed below. For more information on a specific provider and requirements for it, see [System Requirements](/refguide9/system-requirements/). 
 
@@ -60,7 +60,7 @@ You need to create a private repository in the selected provider and create a pe
 
 To interact with this private repository from Studio Pro, you need a link to the repository and a PAT.
 
-### 4.2 Preparing Studio Pro for Git {#preparing-git-support}
+### Preparing Studio Pro for Git {#preparing-git-support}
 
 To use on-premise Git, you need to configure name and email values that will be used to identify your commit in Studio Pro by navigating to **Edit** > **Preferences** > **Version Control**:
 
@@ -68,7 +68,7 @@ To use on-premise Git, you need to configure name and email values that will be 
 
 Studio Pro now is set up to support Git.
 
-### 4.3 Creating an App {#create-app}
+### Creating an App {#create-app}
 
 Create an unversioned app in Studio Pro:
 
@@ -76,7 +76,7 @@ Create an unversioned app in Studio Pro:
 
 Once the app is created, you can upload it to your private Git repository. For more information on how to upload it, see the [Uploading to the Private Git Server](#upload-to-private-git-server) section below.
 
-### 4.4 Downloading from a Private Repository
+### Downloading from a Private Repository
 
 Now that you have a Git app on your server, you can download it to another directory or one of your team members can download it on their machine. Follow the steps below:
 
@@ -98,19 +98,19 @@ Now that you have a Git app on your server, you can download it to another direc
 
 The app is downloaded and ready to be used with version control.
 
-### 4.5 Opening the Existing Git App
+### Opening the Existing Git App
 
 There are a few ways to open a Git Mendix app, as long as you have Studio Pro [Git support activated](#preparing-git-support).
 
-#### 4.5.1 Recent Apps List
+#### Recent Apps List
 
 In your **Recent Apps** list, you can click the app name and the app will open.
 
-#### 4.5.2 Recent Apps Menu
+#### Recent Apps Menu
 
 Under **File** > **Recent Apps**, you can select the app and open it.
 
-#### 4.5.3 Open App Form
+#### Open App Form
 
 The **Open App** form is accessible from two different places:
 
@@ -135,7 +135,7 @@ For the previous local disk method do the following:
 
     {{< figure src="/attachments/refguide9/version-control/on-premises-git/open-app-select-file.png" alt="Open App Select File" class="no-border" >}}
 
-### 4.6 Uploading to the Private Git Server {#upload-to-private-git-server}
+### Uploading to the Private Git Server {#upload-to-private-git-server}
 
 Once you have an unversioned app, you can upload it to your private team server. 
 
@@ -161,7 +161,7 @@ The app is uploaded successfully. You can check on your private server and see t
 
 {{< figure src="/attachments/refguide9/version-control/on-premises-git/project-uploaded-confirmation.png" alt="App Uploaded confirmation window" class="no-border" >}}
 
-### 4.7 Moving a Subversion App to Git
+### Moving a Subversion App to Git
 
 If you already have an existing versioned app (with Subversion) that you would like to upload to your Git private server instead, you can export it, then re-import it, and uploading it to your server.
 
@@ -201,7 +201,7 @@ Note that your previous app still exists, **Studio Pro** will simply make an unv
 
 {{< figure src="/attachments/refguide9/version-control/on-premises-git/recent-apps.png" alt="Recent Apps form" class="no-border" >}}
 
-## 5 Read More
+## Read More
 
 * [Version Control Reference Guide](/refguide9/version-control/)
 * [Team Server](/developerportal/general/team-server/)

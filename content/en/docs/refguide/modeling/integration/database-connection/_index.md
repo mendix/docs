@@ -5,7 +5,7 @@ weight: 80
 description: "Overview of the [External Database Connection document](https://marketplace.mendix.com/link/component/219862) in Studio Pro, downloaded from the Mendix Marketplace."
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Database Connector](/appstore/modules/external-database-connector/) integrates with Studio Pro with an **External database connection** service document. Use this document alongside the connector to connect to external databases right in Studio Pro.
 
@@ -15,7 +15,7 @@ This page references the **External database connection** document in Studio Pro
 You must have the [External Database Connector](https://marketplace.mendix.com/link/component/219862) installed for external database connections to work properly while running your app. For instructions on adding modules or connectors to your app, see [Use Marketplace Content in Studio Pro](/appstore/use-content/).
 {{% /alert %}}
 
-## 2 Connect to Database Wizard {#wizard}
+## Connect to Database Wizard {#wizard}
 
 Right-click on your module and click **Add other > External database connection** to open the **Connect to Database** wizard:
 
@@ -26,7 +26,7 @@ Once in the wizard, enter or select the following:
 * **Name** — name of your database connection
 * **Database Type** — Microsoft SQL, MySQL, Oracle, PostgreSQL, Snowflake (Beta support from [Studio Pro 10.10](/releasenotes/studio-pro/10.10/))
 
-### 2.1 Connecting Using Connection Details
+### Connecting Using Connection Details
 
 If you select **Use connection details**, enter:
 
@@ -36,7 +36,7 @@ If you select **Use connection details**, enter:
 * **User Name** — the username to access the database
 * **Password** — the password to access the database
 
-### 2.2 Connecting Using Connection String
+### Connecting Using Connection String
 
 If you select **Use connection string**, enter the following:
 
@@ -49,11 +49,11 @@ If you select **Use connection string**, enter the following:
     * **PostgreSQL** — `jdbc:postgresql://myHostName:myPortNumber/myDatabaseName`
     * **Snowflake** — `jdbc:snowflake://my_account_identifier.snowflakecomputing.com/?db=myDatabaseName` 
 
-### 2.3 Password Security
+### Password Security
 
 The password that you provide when using one of the above connection methods will be stored in a constant, which can be altered upon deployment on a Cloud node. Starting with Mendix 10.9, you can indicate which constants contain private or sensitive information, to ensure that this information is saved locally, and is not shared on the TeamServer, or the Cloud Portal.
 
-## 3 External Database Connection Document {#external-database-document}
+## External Database Connection Document {#external-database-document}
 
 After entering your database information in the **Connect to Database** wizard, the external database connection document is open in Studio Pro. 
 
@@ -61,7 +61,7 @@ The name of the document is the **Name** (not **Database name**) you provided wh
 
 {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/database-service-document.png" class="no-border" >}}
 
-### 3.1 Query Screen {#query-screen}
+### Query Screen {#query-screen}
 
 On the left side of the document is the **Query** screen. Here, you can write an SQL query to retrieve data and run it to validate its response.
 
@@ -80,20 +80,20 @@ In the **Parameters** section, click **Add Parameter** to enter the following in
 
 Click **Execute Query** to view a preview of the response.
 
-### 3.2 Tables & Columns {#tables-columns}
+### Tables & Columns {#tables-columns}
 
 The **Tables & Columns** field on the right side of the screen displays the information from your database. You can use queries to access certain information in your database.
 
-### 3.3 Response {#response}
+### Response {#response}
 
 After [querying the database](/appstore/modules/external-database-connector/#query-database), you can view the data included in the query in the **Response** screen.
 
 If you are satisfied with the response, click **Use Response**. This will take you to the [Data Structure](#data-structure) tab where you can preview and create an entity from the response.
 
-### 3.4 Response Structure {#data-structure}
+### Response Structure {#data-structure}
 
 The **Data Structure** tab displays a preview of an entity that can be created from the response of your query. You can adjust the name, or move back to a previous step. Click **Save Query & Create Entity** to create the entity in your domain model.
 
-## 4 Read More
+## Read More
 
 To learn about how to use the data in a microflow, see the [Query External Database](/refguide/query-external-database/) activity. 

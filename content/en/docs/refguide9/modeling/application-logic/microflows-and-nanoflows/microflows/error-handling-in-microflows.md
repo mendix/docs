@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 In a [microflow](/refguide9/microflows/), microflow elements ([activities](/refguide9/activities/), [decisions](/refguide9/decisions/), or [loops](/refguide9/loop/)) can sometimes fail and produce an error. If you do nothing, Mendix will report the error with a system error message and roll back all the changes. However, you can also change this behavior and handle errors yourself.
 
@@ -15,7 +15,7 @@ This document introduces different error handling options in microflows and expl
 
 This document also presents information on how you can inspect errors using predefined error objects and the best practices for working with error handling in microflows.
 
-## 2 Error Handling Options {#errorhandlers}
+## Error Handling Options {#errorhandlers}
 
 There are four error handling options:
 
@@ -36,7 +36,7 @@ It is important to know that when a microflow is started by an end-user (for exa
 
 In the following subsections, we introduce the functionality of each error handling option using simple examples.
 
-### 2.1 Error Handling  - Default
+### Error Handling  - Default
 
 In this example, the error handling in **Microflow 2** is the default: **Rollback**.
 
@@ -44,9 +44,9 @@ In this example, the error handling in **Microflow 2** is the default: **Rollbac
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, the default error handling is to roll back all changes to the state of this savepoint (so all changes are reverted), the microflow is aborted, the error is logged, and a system error message is shown to the end-user.
 
-### 2.2 Error Handling - Custom with Rollback
+### Error Handling - Custom with Rollback
 
-#### 2.2.1 Error Handling Which Ends with an Error Event
+#### Error Handling Which Ends with an Error Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom with rollback** and the error handling flow ends with an error event.
 
@@ -54,7 +54,7 @@ In this example, the error handling in **Microflow 2** is set to **Custom with r
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in **Create Order** and in **Create Customer** are both reverted. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2**, and **Microflow 1** will terminate because there is no custom error handing there.
 
-#### 2.2.2 Error Handling Which Ends with an End Event
+#### Error Handling Which Ends with an End Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom with rollback** and the error handling flow ends with an end event.
 
@@ -62,11 +62,11 @@ In this example, the error handling in **Microflow 2** is set to **Custom with r
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. When an error occurs in **Microflow 2**, everything rolls back to the state of this savepoint because the error handling is set to **Custom with rollback**. Hence, changes made in **Create Order** and in **Create Customer** are both reverted. A custom error is logged using a **Log message** activity.
 
-### 2.3 Error Handling - Custom without Rollback
+### Error Handling - Custom without Rollback
 
 Setting **Custom without rollback** will not stop data changes within the activity which failed from being rolled back. For example, if a [Call REST Service](/refguide9/call-rest-action/) returns an error, any data the REST call retrieved will not be kept.
 
-#### 2.3.1 Error Handling Which Ends with an Error Event
+#### Error Handling Which Ends with an Error Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom without rollback** and the error handling flow ends with an error event.
 
@@ -78,7 +78,7 @@ When **Microflow 1** starts with a button click, a savepoint is created at the v
 Using custom error handling without rollback and ending the error handling flow with an error event here makes it possible to create a custom log message with details about the **NewOrder** (if you used error handling with rollback, this information would not be available). However, after logging this message, everything will still be rolled back.  
 {{% /alert %}}
 
-#### 2.3.2 Error Handling Which Ends with an End Event
+#### Error Handling Which Ends with an End Event
 
 In this example, the error handling in **Microflow 2** is set to **Custom without rollback** and the error handling flow ends with an end event.
 
@@ -86,7 +86,7 @@ In this example, the error handling in **Microflow 2** is set to **Custom withou
 
 When **Microflow 1** starts with a button click, a savepoint is created at the very beginning of **Microflow 1**. Another savepoint is created right before **GenerateError** because the error handling is set to **Custom without rollback**. When an error occurs in **Microflow 2**, changes made in **Create Order** are kept because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. **Microflow 1** does not receive the error and continues to its end. Changes made in **Create Customer** are kept.
 
-### 2.4 Error Handling – Continue
+### Error Handling – Continue
 
 The **Continue** option can only be set on a microflow call or on a loop.
 
@@ -102,7 +102,7 @@ Data changes within the activity which returns an error (for example, within an 
 You should be very careful with using the **Continue** option since it can make it very difficult to understand when something goes wrong. Where possible, try to use **Custom without rollback** instead and log the error message.
 {{% /alert %}}
 
-## 3 An Example of Combined Error Handling {#example}
+## An Example of Combined Error Handling {#example}
 
 In this example, the error handling on the **GenerateError** activity in **Microflow 2** and on the call of **Microflow 2** are both set to **Custom without rollback**. The error handling flow in **Microflow 2** ends with an error event. 
 
@@ -112,7 +112,7 @@ There are three savepoints. When **Microflow 1** starts with a button click, a s
 
 When an error occurs in **Microflow 2**, changes made in **Create Order** are at this moment saved because of the savepoint right before **GenerateError**. A custom error is logged using a **Log message** activity. After that, the error event throws an error to terminate **Microflow 2** and rolls back everything inside **Microflow 2** to the state of **savepoint 2**, (at this moment, what was saved in **Create Order** is now rolled back). The custom error handling in **Microflow 1** that applies to the call of **Microflow 2** causes the error handling flow in **Microflow 1** to be followed and terminates **Microflow 1** with an end event. Changes made in **Create Customer** are hence kept.
 
-## 4 Inspecting Errors
+## Inspecting Errors
 
 When an error occurs inside a microflow, a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity **System.Error**, while `$latestSoapFault` is an object of entity **System.SoapFault**, which is a specialization of **System.Error**.
 
@@ -128,11 +128,11 @@ In a custom error handler that is executed after an error occurs, `$latestError`
 In microflows that apply entity access, you may not be able to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 {{% /alert %}}
 
-### 4.1 Inspecting REST Errors
+### Inspecting REST Errors
 
 If the error is a REST fault (an error that occurs as a result of a REST call), the result of the call will be stored in `$latestHttpResponseVariable` which is an object of type `HttpResponse`.  This object is available in your custom error flows and you can use it to write more focused messages to the log or to make other decisions within the error flow. For more information, see the [Response Tab](/refguide9/call-rest-action/#response) section in *Call REST Service*.
 
-### 4.2 Inspecting SOAP Errors
+### Inspecting SOAP Errors
 
 If the error is a SOAP fault (an error that occurs as a result of a web service call), `$latestSoapFault` is set to an object of type **System.SoapFault** that contains more specific information about the SOAP fault. Otherwise, `$latestSoapFault` is `empty`.
 
@@ -152,7 +152,7 @@ The attributes of the **System.SoapFault** entity are shown below:
 
 For more information, see [SOAP Fault](https://www.w3.org/TR/soap12-part1/#soapfault).
 
-## 5 Best Practices
+## Best Practices
 
 Consider the following best practices for error handling:
 
@@ -161,6 +161,6 @@ Consider the following best practices for error handling:
 * Where possible, avoid using the **Continue** option and use **Custom without rollback** instead.
 * Do not overdo it – you can specify a lot of complicated error handling combinations, but this makes it more difficult (and slower) for the Mendix Runtime to evaluate the microflow, and it also makes it more difficult to predict the exact behavior in case of an exception.
 
-## 6 Read More
+## Read More
 
 * [Error Handling in Nanoflows](/refguide9/error-handling-in-nanoflows/)

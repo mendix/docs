@@ -9,11 +9,11 @@ description: "Describes how to use an app service to publish data to other Mendi
 App services are deprecated marked for removal. Use a [published web service](/refguide8/published-web-services/) or a [published REST service](/refguide8/published-rest-services/) instead.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 In this how-to, you will create an app in which you keep track of the inventory of a shop. This app makes the inventory available for use in other Mendix apps via an app service.
 
-## 2 Creating the Domain Model
+## Creating the Domain Model
 
 The domain model defines the products that you want the save and how you want to expose them.
 
@@ -24,7 +24,7 @@ To create the domain model, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/domain-model.png" class="no-border" >}}
 
-## 4 Creating Pages
+## Creating Pages
 
 To create pages that allows users to create, edit, and delete products, follow these steps:
 
@@ -43,7 +43,7 @@ To create pages that allows users to create, edit, and delete products, follow t
 
     {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/homepage.png" class="no-border" >}}
 
-## 5 Creating a Microflow
+## Creating a Microflow
 
 We will now create a microflow that retrieves all the products from the database and converts them to published products.
 
@@ -74,7 +74,7 @@ To create this microflow, follow these steps:
 
     {{< figure src="/attachments/howto8/integration/publish-data-to-other-mendix-apps-using-an-app-service/microflow.png" class="no-border" >}} 
 
-## 6 Creating an App Service
+## Creating an App Service
 
 You will use the microflow to create an app service that exposes the products to other apps. To accomplish this, follow these steps:
 
@@ -88,7 +88,7 @@ You will use the microflow to create an app service that exposes the products to
 8. Go to the **General** tab and for **Status**, select **Consumable**, then click **OK**.
 9. A dialog box will ask whether you want to make this version available. Click **OK**.
 
-## 7 Securing the App
+## Securing the App
 
 Before you publish our app, you need to make sure it is protected with a username and password. To accomplish this, follow these steps:
 
@@ -100,11 +100,11 @@ Before you publish our app, you need to make sure it is protected with a usernam
 6. Go to the **Administrator** tab.
 7. Type a password, and then click **OK**.
 
-## 8 Publishing the App Service
+## Publishing the App Service
 
 You can now go ahead and deploy the app. This will publish your app service.
 
-## 9 Read More
+## Read More
 
 * [Expose a Web Service](/howto8/integration/expose-a-web-service/)
 * [Expose Data to BI Tools Using OData](/howto8/integration/exposing-data-to-bi-tools-using-odata/)

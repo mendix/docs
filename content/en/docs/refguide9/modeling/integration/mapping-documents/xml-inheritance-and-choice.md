@@ -3,7 +3,7 @@ title: "XML Inheritance and Choice"
 url: /refguide9/xml-inheritance-and-choice/
 ---
 
-## 1 Obtaining an Object by Entity specialization
+## Obtaining an Object by Entity specialization
 
 There are two special cases for XSD elements in mapping documents: choice and inheritance.
 
@@ -15,7 +15,7 @@ In Mendix, both inheritance and choice are mapped by entity specialization.
 * The base inheritance or choice element is mapped to a generalization entity. For export mappings, the base mapping contains the setting on how to obtain the Mendix object (from parameter, by association, microflow, or key) as explained in [Export Mappings](/refguide9/export-mappings/).
 * Child elements of inheritance or choice are mapped by entity specialization. For export mappings, you cannot specify how to obtain an object because that is already defined one level up at the base mapping element. For import mappings however, you do need to specify how to obtain the Mendix object as explained in [Import Mappings](/refguide9/import-mappings/). 
 
-## 2 XML Inheritance
+## XML Inheritance
 
 In the image below, an example of an Export Mapping with inheritance is shown. For Import Mappings, the structure is the same, only the direction of the arrows is reversed. One *Persons* object has a one-to-many association to *Person.* The person can be either a Customer or Employee.
 
@@ -25,13 +25,13 @@ For import mappings, mapping the incoming XML to a specific XSD type is defined 
 
 For export mappings, if the inheritance element is **optional** and an empty object is obtained for the element either via association or microflow, no element will be created. If the inheritance element is **nillable**, and an empty object is obtained for the element, the element will be created with the *xsi:type* set to the first inheritance option in the mapping.
 
-### 2.1 Selection of Request Part for Web Services in Export Mappings
+### Selection of Request Part for Web Services in Export Mappings
 
 [Select Elements](/refguide9/select--elements/) describes how to select XML schema or WSDL elements to use in the mapping. If you use an export mapping to create a request body for a web service operation, you can select request parts if there are multiple request parameters. Inheritance elements are also supported as a request part.
 
 When the root element is an inheritance element, you can only maps the entire body. Mapping individual request parameter is not possible in this case.
 
-## 3 XML Choice
+## XML Choice
 
 The image below shows an Export Mapping with a choice element. The schema specifies a choice with two alternatives: an employee id or member ID. In this image, a base entity *Person* is mapped to the choice element, to serve as a generalization for the choice options. 
 

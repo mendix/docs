@@ -4,7 +4,7 @@ url: /howto8/monitoring-troubleshooting/manage-app-performance-with-new-relic/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 To ensure your applications run smoothly, they need to be actively monitored so that the information is available in order to do the following:
 
@@ -17,17 +17,17 @@ This how-to teaches you how to do the following:
 
 * Set up application performance management for your Mendix application on New Relic
 
-## 2 Prerequisite
+## Prerequisite
 
 Before starting with this how-to, make sure you have completed the following prerequisite:
 
 * Create a New Relic account by signing up here: [https://newrelic.com/signup](https://newrelic.com/signup)
 
-## 3 Setting Up
+## Setting Up
 
 In this section, we will walk through all the steps to configure New Relic so that it can be used for the [application performance diagnostics](/appstore/partner-solutions/apd/) of your Mendix application.
 
-## 3.1 Setting up New Relic (On-Premises Only)
+## Setting up New Relic (On-Premises Only)
 
 The following steps are only relevant for on-premises deployments (skip to [2.2.1 Cloud Foundry](#CloudFoundry) if you are deploying your Mendix application to Cloud Foundry).
 
@@ -44,13 +44,13 @@ The following steps are only relevant for on-premises deployments (skip to [2.2.
 
 4. Add your license key to the *newrelic.yml* file from the downloaded archive as described here: [https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files](https://docs.newrelic.com/docs/agents/java-agent/installation/java-agent-manual-installation#h2-download-files).
 
-## 3.2 Setting Up Your Mendix Deployment
+## Setting Up Your Mendix Deployment
 
-### 3.2.1 Cloud Foundry{#CloudFoundry}
+### Cloud Foundry{#CloudFoundry}
 
 Follow these buildpack instructions to set up New Relic for Cloud Foundry deployments: [https://github.com/mendix/cf-mendix-buildpack#new-relic](https://github.com/mendix/cf-mendix-buildpack#new-relic).
 
-### 3.2.2 On Premise Linux and Windows Service Console
+### On Premise Linux and Windows Service Console
 
 To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaagent>javaagent.jar". For example:
 
@@ -62,7 +62,7 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
  ]
 ```
 
-### 3.2.3 Mendix Studio Pro (Development Mode Only)
+### Mendix Studio Pro (Development Mode Only)
 
 1. Open your Mendix application, and click **Settings** in the **Project Explorer**.
 2. Open a configuration:
@@ -73,22 +73,22 @@ To the `javaopts` list in your *m2ee.yaml* file, add "-javaagent:<path-to-javaag
 
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398904.png" class="no-border" >}}
 
-## 4 Transactions
+## Transactions
 
 After completing the steps described above, all the requests handled by your Mendix application should become visible together with various graphs and statistics:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398943.png" class="no-border" >}} 
 
-## 5 Databases
+## Databases
 
 Your database calls and queries will now be visible on the database page:
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/manage-app-performance/manage-app-performance-with-new-relic/19398944.png" class="no-border" >}} 
 
-## 6 Further Documentation
+## Further Documentation
 
 For more information on New Relic, see the New Relic documentation here: [https://docs.newrelic.com/](https://docs.newrelic.com/).
 
-## 7 Read More
+## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages in Mendix](/howto8/monitoring-troubleshooting/clear-warning-messages/)

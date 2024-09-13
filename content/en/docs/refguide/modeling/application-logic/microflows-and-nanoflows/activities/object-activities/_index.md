@@ -5,7 +5,7 @@ weight: 10
 #To update screenshots of these microflows in Studio Pro, use the Microflow Screenshots app.
 ---
 
-## 1 Introduction
+## Introduction
 
 When working with the Mendix Platform, objects of entities are always being manipulated. This happens implicitly within [data containers](/refguide/data-widgets/) on a page, or explicitly using activities in microflows and nanoflows.
 
@@ -27,6 +27,6 @@ The following are the object activities you can use in your microflow or nanoflo
 Any changes made to an object are visible in all widgets. This is because changes are stored globally in the client.
 {{% /alert %}}
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide/activities/)

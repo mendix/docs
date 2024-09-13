@@ -4,11 +4,11 @@ url: /refguide8/button-properties/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A button can perform various actions such as calling a microflow or nanoflow or opening a page. 
 
-## 2 Properties
+## Properties
 
 An example of button properties is represented in the image below:
 
@@ -23,27 +23,27 @@ Button properties consist of the following sections:
 * [Items](#items) (only for a drop-down button)
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design}
+### Design Properties Section {#design}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 2.3 Events Section {#events}
+### Events Section {#events}
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-### 2.4 General Section {#general}
+### General Section {#general}
 
-#### 2.4.1 Caption {#caption}
+#### Caption {#caption}
 
 The **Caption** property defines a text that will be shown on the button. The caption can contain parameters that are written between braces, for example, {1}.  
 
 For more information on using parameters, see the [Parameters](#parameters) section below. 
 
-#### 2.4.2 Parameters {#parameters}
+#### Parameters {#parameters}
 
 Parameters are attributes the value of which will be displayed. To view **Parameters**, do one of the following:
 
@@ -61,7 +61,7 @@ Parameters have the following settings:
 
     {{< figure src="/attachments/refguide8/modeling/pages/button-widgets/button-properties/button-parameter-settings.png" alt="Parameter Settings" class="no-border" >}}
 
-##### 2.4.2.1 Adding New Parameters
+##### Adding New Parameters
 
 To add parameters, do the following:
 
@@ -76,7 +76,7 @@ To add parameters, do the following:
 
     {{< figure src="/attachments/refguide8/modeling/pages/button-widgets/button-properties/button-parameter-example.png" alt="Parameter Example" class="no-border" >}}
 
-##### 2.4.2.2 Performing Other Actions on Parameters
+##### Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -87,11 +87,11 @@ In addition to adding new parameters, you can perform the following actions on p
 
     {{< figure src="/attachments/refguide8/modeling/pages/button-widgets/button-properties/button-parameter-actions.png" alt="Parameter Actions" class="no-border" >}}
 
-#### 2.4.3 Tooltip
+#### Tooltip
 
 The **Tooltip** property determines a text end-users will see in the tooltip that appears when they hover over the button. The tooltip text is translatable. For more information on translatable texts, see [Language Menu](/refguide8/translatable-texts/). If the tooltip is not specified, no tooltip will be shown when hovering over the button.
 
-#### 2.4.4 Icon {#icon}
+#### Icon {#icon}
 
 The **Icon** property determines the icon that will be shown in front of the caption of the button. Possible options are: 
 
@@ -101,7 +101,7 @@ The **Icon** property determines the icon that will be shown in front of the cap
 
 Glyphicons come from the Bootstrap Halflings collection. The advantages of a glyphicon over a bitmap image are that they are scalable, look sharp on high-resolution screens, and their color can be changed by changing the font color. The advantage of an image icon is that it can have multiple colors.
 
-#### 2.4.5 Render Mode
+#### Render Mode
 
 Defines the way the button will be shown to the end-user. Possible options are the following:
 
@@ -110,7 +110,7 @@ Defines the way the button will be shown to the end-user. Possible options are t
 
 *Default render mode:* Button
 
-#### 2.4.6 Button Style
+#### Button Style
 
 The **Button style** property applies a predefined styling to the button. Possible options are the following:
 
@@ -122,13 +122,13 @@ The **Button style** property applies a predefined styling to the button. Possib
 * Warning
 * Danger
 
-#### 2.4.7 Disabled During Action
+#### Disabled During Action
 
 This property is only shown when **Call a microflow** or **Call a nanoflow** is selected as the [on-click event](/refguide8/on-click-event/). Selecting **Disabled during action** disables the button until the action is completed or failed.
 
 Default: *true*
 
-### 2.5 Items Section {#items}
+### Items Section {#items}
 
 {{% alert color="info" %}}
 The **Items** section is only shown for drop-down buttons. 
@@ -151,7 +151,7 @@ Each item has the following properties:
 
     {{< figure src="/attachments/refguide8/modeling/pages/button-widgets/button-properties/items-properties.png" alt="Properties of Items" class="no-border" >}}
 
-#### 2.5.1 Adding New Items
+#### Adding New Items
 
 To add items to a drop-down buttons, do the following:
 
@@ -167,11 +167,11 @@ To add items to a drop-down buttons, do the following:
     4. Click **OK**.
 4. In the **Edit Items** dialog box, click **OK** to save your changes and add new item. 
 
-### 2.6 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Button Widgets](/refguide8/button-widgets/)

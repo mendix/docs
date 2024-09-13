@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-mask-your-password/
 description: "Describes the steps for unmasking your password in ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 To test your application, you need to open it and log in. For this, you need to enter a username and a password in the **Login** action. Your password will automatically be encrypted to anonymize the data. But you might not want to have your login password masked. ATS has the functionality that makes unmasking your password possible. This how-to explains how to do that.
 
@@ -12,14 +12,14 @@ This how-to teaches you how to do the following:
 
 * Unmask your password
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have the following prerequisites in place:
 
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 * Understand [How to Create a Custom Action](/appstore/partner-solutions/ats/ht-two-custom-action-general/)
 
-## 3 Unmasking Your Password
+## Unmasking Your Password
 
 To unmask your password, follow these steps:
 
@@ -86,7 +86,7 @@ To unmask your password, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-mask-your-password/selected_input_parameters.png" class="no-border" >}}
 
-### 3.1 Verifying That Your Password Is Unmasked
+### Verifying That Your Password Is Unmasked
 
 To verify that your password is unmasked, follow these steps:
 
@@ -107,6 +107,6 @@ After selecting the constant value, the entered password represents the **Passwo
 
 You can now unmask your password using ATS. You can use these steps as well to mask data in ATS.
 
-## 4 Next Up
+## Next Up
 
 You have now learned how to unmask your password in a login action. The next how-to to complete is [How to Upload a File in Your App Using ATS](/appstore/partner-solutions/ats/ht-two-upload-file-using-ats/). You can find an overview of all the how-tos and the structure on [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/). We advise you to follow the predefined structure.

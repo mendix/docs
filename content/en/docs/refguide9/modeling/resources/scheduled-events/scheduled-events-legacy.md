@@ -17,7 +17,7 @@ If your app is Mendix 9.12.0 or above, legacy scheduled events will have been co
 Legacy scheduled events are deprecated and will no longer be supported from Mendix 10.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 With scheduled events you can let the runtime execute a microflow at a specific moment in time. The event can also be repeated with a given interval, for example every day.
 
@@ -43,21 +43,21 @@ A `ScheduledEventInformation` object is created every time the scheduled event d
 The `ScheduledEventInformation` objects are not cleared automatically. If you have a large number of scheduled events you will need to decide how long you need to keep this information and remove stale objects when they are no longer required.
 {{% /alert %}}
 
-## 2 Common Properties {#common-properties}
+## Common Properties {#common-properties}
 
 | Property | Description |
 | --- | --- |
 | Name | The name of the scheduled event. This name is stored in the `ScheduledEventInformation` objects at runtime, so that runs of the scheduled event are recognizable. |
 | Documentation | This field is for documentation purposes in the app model only. Its value is not visible to end-users and doesn't influence the behavior of your application. |
 
-## 3 Execution Properties
+## Execution Properties
 
 | Property | Description |
 | --- | --- |
 | Microflow | The microflow that is executed when the scheduled event is executed. It should have no parameters and is run with all rights (see [Microflow](/refguide9/microflow/)). |
 | Enabled | The microflow is only executed if the scheduled event is enabled. This setting only applies when running from Studio Pro or from Eclipse. On production environments, scheduled events are enabled/disabled via the platform tools (for example [Apps](https://sprintr.home.mendix.com/) or Windows Service Console). |
 
-## 4 Timing Properties
+## Timing Properties
 
 | Property | Description |
 | --- | --- |
@@ -66,15 +66,15 @@ The `ScheduledEventInformation` objects are not cleared automatically. If you ha
 | Interval | This number together with the interval type indicates how large the interval is between two events. This number should be greater than zero. |
 | Interval type | The interval type determines the unit of the interval. Together with the interval number it indicates how large the interval between two events is. For example, 1 day or 10 minutes. |
 
-## 5 Additional Information
+## Additional Information
 
-### 5.1 Running Concurrently
+### Running Concurrently
 
 You cannot run more then 10 scheduled events in parallel.
 
 This limit cannot be overridden and is independent of how the app is scaled.
 
-### 5.2 Calculating Intervals
+### Calculating Intervals
 
 The platform schedules the scheduled event by fixed intervals. That means that at startup, the platform schedules the next iterations/intervals the scheduled event should run. This is done by retrieving the intervals, and in addition the platform does some calculations.
 
@@ -125,24 +125,24 @@ switch(scheduledEvent.getIntervalType())
 }
 ```
 
-#### 5.2.3 Running a Scheduled Event on a Specific Day
+#### Running a Scheduled Event on a Specific Day
 
 If it is absolutely critical to run a scheduled event on a specific day of the month, schedule the event to run daily and have it check whether it is the right day of the month to run it. 
 
 In your microflow, start with a decision using an expression similar to this:
 
-```java {linenos=false}
+```java
 parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This runs the scheduled event on the 15th of the month
 ```
 
 To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://community.mendix.com/link/questions/6934):
 
-```java {linenos=false}
+```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
 ```
 
-### 5.3 Specifying the Time
+### Specifying the Time
 
 In addition to Monthly and Yearly scheduled events, you also want to be careful when scheduling daily events if they need to run every day at a specific time. This is because of daylight saving time.
 
@@ -152,11 +152,11 @@ This depends on the locale (time zone) your server is hosted in. Even if you cho
 
 Unfortunately there isn't a great workaround for this issue. If the scheduled event has to be run at a specific time you could create a similar solution to that described above, scheduling the event hourly and using 'HH' (0-23 hours), or 'kk' (1-24 hours) rather than 'dd' in the date format expression. Remember that this will increase the number of `ScheduledEventInformation` objects created.
 
-### 5.4 Long Running Events
+### Long Running Events
 
 If a repeated scheduled event takes longer than the interval then the next scheduled event will be delayed, the events will not run concurrently. For example, if a scheduled event is repeated every 5 minutes but the event takes 10 minutes then the next event is delayed by 5 minutes.
 
-### 5.5 Cleaning Up Old Events {#cleanup}
+### Cleaning Up Old Events {#cleanup}
 
 The execution of a scheduled event produces a `System.ScheduledEventInformation` object in the database. Over time these accumulate and the table can grow large.
 

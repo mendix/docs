@@ -5,7 +5,7 @@ url: /howto8/mobile/setting-up-apple-push-notification-server/
 weight: 30
 ---
 
-## 1 Introduction {#intro}
+## Introduction {#intro}
 
 In order to proceed you need an Apple developer license and a device running Mac OS X.
 
@@ -20,23 +20,23 @@ If everything is set up and you can build and deploy your application, you can p
 * An Apple Push Notification service key, or
 * An Apple Push Notification service SSL certificate in the *.p12* format
 
-## 2 Option A: Using a key
+## Option A: Using a key
 
 Follow the steps below to obtain and set up an Apple Push Notifications key from Apple.
 
-### 2.1 Signing Into the Apple Developer Center
+### Signing Into the Apple Developer Center
 
 Sign in to Apple Developer and navigate to [https://developer.apple.com/account/ios/authkey/](https://developer.apple.com/account/ios/authkey/).
 
-### 2.2 Creating a Key
+### Creating a Key
 
 Click the **+** icon in the upper right of the screen. This will present you with a new form. Enter a descriptive name for this key, select the **Push Notifications service** checkbox, and then press **Contine**. On the next page, press **Confirm**.
 
-### 2.3 Downloading the Key
+### Downloading the Key
 
 Press the download button and store the key in a secure place. Also, copy the **Key ID** for use in the next step.
 
-### 2.4 Configuring APNs in Your Application
+### Configuring APNs in Your Application
 
 For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with the Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](/howto8/mobile/implementation-guide/#setting) section of *How to Implement Push Notifications*.
 
@@ -50,31 +50,31 @@ For this purpose, do the following:
     * Enter your team ID as shown on the Apple developer website
     * Enter the key ID as copied during the previous step
 
-## 3 Option B: Using an SSL certificate
+## Option B: Using an SSL certificate
 
 Follow the steps below to obtain and set up an Apple Push Notifications service SSL certificate from Apple.
 
-### 3.1 Signing in to the Apple Developer Center
+### Signing in to the Apple Developer Center
 
 Sign in to Apple Developer and select your app on [https://developer.apple.com/account/ios/identifier/bundle](https://developer.apple.com/account/ios/identifier/bundle).
 
-### 3.2 Choosing the Certificate Type
+### Choosing the Certificate Type
 
 Click **Edit**, scroll to the **Push Notifications** section, and choose to configure either a **Development** certificate or a **Production** certificate. A Development certificate can only be used with iOS apps built and run in development mode. Production certificates can only be used with apps built and run in production mode.
 
-### 3.3 Creating the CSR File
+### Creating the CSR File
 
 The wizard now explains how to create a Certificate Signing Request (CSR). Read this description and press **Continue**. During the next step, you should be asked for your CSR file. You may use the same CSR you used to create the app signing certificate. If you do not have one, please follow the instructions as shown below.
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/setting-up-apple-push-notification-server/20217898.png" class="no-border" >}}
 
-### 3.4 Downloading the Certificate
+### Downloading the Certificate
 
 Download your Apple Push Notification service SSL certificate and add it to your Keychain.
 
 This certificate needs to be converted into the *.p12* format. If you do not know how to do this, refer to Apple's [What is app signing?](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html).
 
-### 3.5 Configuring APNs in Your Application
+### Configuring APNs in Your Application
 
 For the last step, you need to configure APNs within your application. This can be done by signing into your application as a user with Administrator role and navigating to the **PushNotifications_Administration** page that was set up in the [Setting Up the Project Security for Your Module](/howto8/mobile/implementation-guide/#setting) section of *How to Implement Push Notifications*.
 
@@ -87,7 +87,7 @@ To configure your APNs, complete the following steps:
 * Add your Apple Push Notification service SSL certificate in the *.p12* format
     * Enter the password that you used during creation of the certificate
 
-## 4 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)

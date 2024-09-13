@@ -5,7 +5,7 @@ weight: 4
 description: "Describes how to create a test suite and add test cases and test suites to your test suite."
 ---
 
-## 1 Introduction
+## Introduction
 
 A test suite enables the user to execute test cases and test suites in a specific order. You can add test steps to your test suite and link a test case or another test suite to that test step. ATS executes the test steps in the same way as a test case.
 
@@ -16,14 +16,14 @@ This how-to teaches you how to do the following:
 * Create a test suite
 * Add test cases and test suites to a test suite
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [How to Get Started](/appstore/partner-solutions/ats/ht-one-getting-started/)
 * Complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/)
 
-## 3 Create a Test Suite
+## Create a Test Suite
 
 To create a test suite, follow these steps:
 
@@ -53,7 +53,7 @@ The **Test Suite** page looks like the **Test Case** page, but with fewer option
     
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/ht-one-create-a-test-suite/repository-test-suite-page.png" class="no-border" >}}
     
-## 4 Add Existing Test Cases and Test Suites to a Test Suite
+## Add Existing Test Cases and Test Suites to a Test Suite
 
 To add a test case or another test suite to a test suite, follow these steps:
 
@@ -82,7 +82,7 @@ Repeat this process for the Recorder test case to complete your test suite.
 
 You have now completed the test suite. In the next section, you will add a new test case.
 
-## 5 Adding New Test Cases or Test Suites to a Test Suite
+## Adding New Test Cases or Test Suites to a Test Suite
 
 To create a new test case, click **Create a new Test Case**, and complete [How to Create a Test Case](/appstore/partner-solutions/ats/ht-one-create-a-test-case/).
     
@@ -92,7 +92,7 @@ To create a new test case, click **Create a new Test Case**, and complete [How t
 You can add as many test cases and test suites as you want. 
 {{% /alert %}}
 
-## 6 Next up
+## Next up
 
 You have now learned how to create a test suite, so the next how-to is [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-one-create-custom-actions/), which will cover creating your own actions. You can also proceed with [How to Upload a File in Your App Using ATS](/appstore/partner-solutions/ats/ht-one-upload-file-using-ats/).
 

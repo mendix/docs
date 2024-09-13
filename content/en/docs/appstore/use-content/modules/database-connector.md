@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 Use the [Database](https://marketplace.mendix.com/link/component/2888/) connector to incorporate your external data directly in your Mendix application. This connector lets you seamlessly connect to external databases without limiting your choice of database or SQL dialect.
 
@@ -17,11 +17,11 @@ The **Execute query** action (which is present in the connector) provides a cons
 
 The **Execute statement** action works internally in the same manner as the **Execute query** action. However, **Execute statement** is used for `INSERT`, `UPDATE`, `DELETE`, `STORED PROCEDURE`, and `DDL` statements.
 
-### 1.1 Dependencies
+### Dependencies
 
 This connector has one dependency: [HikariCP](https://github.com/brettwooldridge/HikariCP). HikariCP is a high-performance JDBC connection pool.
 
-## 2 Prerequisites{#prerequisites}
+## Prerequisites{#prerequisites}
 
 To use the Database connector, you must have the following prerequisites:
 
@@ -38,7 +38,7 @@ To use the Database connector, you must have the following prerequisites:
 Follow these prerequisites carefully to avoid connection errors. It is especially important to make sure you add the *.jar* files for the database to which you want to connect into the **userlib** folder.
 {{% /alert %}}
 
-## 3 Getting Started
+## Getting Started
 
 Once you have imported the Database connector into your app, you will have the **Database connector** category available in the **Toolbox**. This connector supports five actions: 
 
@@ -50,9 +50,9 @@ Once you have imported the Database connector into your app, you will have the *
 
 {{< figure src="/attachments/appstore/use-content/modules/database-connector/database-connector-in-toolbox.png" class="no-border" >}}
 
-### 3.1 Executing Queries and Statements
+### Executing Queries and Statements
 
-#### 3.1.1 Usage
+#### Usage
 
 To use **Execute parameterized query**, **Execute parameterized statement**, **Execute query**, or **Execute statement** in your application, drag it into your microflow. Next, provide all the arguments for the selected action and choose the output result name.
 
@@ -64,22 +64,22 @@ For both queries and statements, the parameterized version takes a string templa
 The parameterized actions are available only with Database connector versions 3.0.0 and above. To use them, you must use Studio Pro [8.6.0](/releasenotes/studio-pro/8.6/#860) and above.
 {{% /alert %}}
 
-##### 3.1.1.1 Execute Query Action {#execute-query}
+##### Execute Query Action {#execute-query}
 
 To use the **Execute query** action, you need to create an actual object of the entity that will reflect the structure of the result set. The action requires this object for mapping. It is an empty object with the purpose of passing on the structure (because Java actions cannot access the model).
 
-##### 3.1.1.2 Execute Statement Action
+##### Execute Statement Action
 
 See [Execute an SQL Statement on an External Database](/howto/integration/execute-an-sql-statement-on-an-external-database/) for detailed instructions on how to use this action.
 
-#### 3.1.2 Results
+#### Results
 
 The results of the actions are:
 
 * **Execute query** and **Execute parameterized query** – a list of objects of the row type, which is also the output of the `SELECT` SQL query
 * **Execute statement** and **Execute parameterized statement** – either an integer or a long value, which usually represents the number of affected rows
 
-### 3.2 Executing Callable Statements
+### Executing Callable Statements
 
 The **Execute callable statement** microflow action is used to execute stored procedures and functions in the database engine. In addition to **JDBC Url**, **Username**, and **Password**, this action expects an input object of type **DatabaseConnector.Statement**. This input object should define the contract to perform the execution and retrieve the results:
 
@@ -101,11 +101,11 @@ The **DatabaseConnector.Parameter** type also has a **ParameterMode** attribute 
 
 Do not use the **DatabaseConnector.Parameter** type directly; use it through one of its type-specific specializations instead.
 
-#### 3.2.1 Supported Parameter Types
+#### Supported Parameter Types
 
 For a type-safe representation of a stored procedure's **IN**, **OUT**, or **INOUT** parameters, use the **DatabaseConnector.Parameter** type's predefined specializations.
 
-##### 3.2.1.1 Primitive Types
+##### Primitive Types
 
 The following table outlines which specialization to use to refer to each SQL primitive type.
 
@@ -120,7 +120,7 @@ The following table outlines which specialization to use to refer to each SQL pr
 
 The **Value** attribute defined in these specializations is handled differently depending on the parameter mode used. For input parameters, the attribute must hold the value to pass to the stored procedure. For output parameters, it is set to the output from the stored procedure.
 
-##### 3.2.1.2 ParameterObject Type
+##### ParameterObject Type
 
 Some database vendors support creating complex SQL object types, which can be referred to using the **DatabaseConnector.ParameterObject**. The **SQLTypeName** attribute should be set to the underlying SQL object type name.
 
@@ -132,7 +132,7 @@ Attributes of the object can be represented by associated **DatabaseConnector.Pa
 Attributes within an object are identified by their position in the object and not by their name. Therefore, it is necessary to set the **Position** attribute correctly for all object attributes.
 {{% /alert %}}
 
-##### 3.2.1.3 ParameterList Type{#parameterlist}
+##### ParameterList Type{#parameterlist}
 
 List parameters are also supported and usable via the **DatabaseConnector.ParameterList** type. The **SQLTypeName** attribute should refer to the SQL list type:
 
@@ -140,7 +140,7 @@ List parameters are also supported and usable via the **DatabaseConnector.Parame
 
 List items can be represented by associated **DatabaseConnector.Parameter** objects using the **ParameterObject_Parameter** association. You can use any specialization of **DatabaseConnector.Parameter** for the list items.
 
-##### 3.2.1.4 ParameterRefCursor Type
+##### ParameterRefCursor Type
 
 To manage **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor** type:
 
@@ -148,14 +148,14 @@ To manage **REF CURSOR** outputs, use the **DatabaseConnector.ParameterRefCursor
 
 The many-to-many-association with **DatabaseConnector.Parameter** is also used here for the same reasons mentioned in the [ParameterList Type](#parameterlist) section above.
 
-## 4 Best Practices
+## Best Practices
 
 When using the Database connector, keep these best practices in mind:
 
 * Avoid having a user input as part of your dynamic SQL queries and statements. Use parameters instead.
 * Avoid fetching large amounts of data. Fetching too much data can lead to memory issues because all the **ResultSet** data is loaded into memory at once.
 
-## 5 Common JDBC Drivers{#links}
+## Common JDBC Drivers{#links}
 
 * [Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/mgmt/configure-jdbc-connection.html#download-jdbc-driver)
 * [Apache Derby](https://db.apache.org/derby/derby_downloads.html)
@@ -177,11 +177,11 @@ When using the Database connector, keep these best practices in mind:
 If you intend to connect to SQL Server using integrated security, be aware that the JDBC driver in the **userlib** folder needs to match the version supplied with Studio Pro (via the **runtime/bundles/** folder inside the Mendix installation directory).
 {{% /alert %}}
 
-### 5.1 Errors
+### Errors
 
 Errors can often be resolved by adding missing **JAR** dependencies to the **userlib** folder in the module. For more information, see the [Prerequisites](#prerequisites) section.
 
-## 6 Developing This Marketplace Component
+## Developing This Marketplace Component
 
 To develop this component, follow these steps:
 
@@ -189,6 +189,6 @@ To develop this component, follow these steps:
 2. Open the *DatabaseConnector.mpr* in the Desktop Modeler or Studio Pro.
 3. Use the **Deploy for Eclipse** option (<kbd>F6</kbd>), then import this connector as an Eclipse project to the Eclipse IDE.
 
-## 7 Read More
+## Read More
 
 * [How to Implement Best Practices for App Security](/howto/security/best-practices-security/)

@@ -5,7 +5,7 @@ weight: 80
 description: "Describes Mendix Validation Assist on pages."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 The Validation Assist helps you build validation microflows in a more automated way using pre-built expressions. [Validation rules](/refguide/validation-rules/) are conditions that should be satisfied before an object is committed. There are different ways to [set up data validations](/refguide/setting-up-data-validation/) in Mendix. Building data validation in microflows is a manual and repetitive task and Validation Assist helps automate it. 
 
@@ -17,7 +17,7 @@ The main features of the Validation Assist are as follows:
 * Ability to call an existing validation sub-microflow in a new validation microflow
 * Auto-generation of the validation microflow 
 
-## 2 Validation Assist Overview
+## Validation Assist Overview
 
 The Validation Assist is activated by default in the page elements where data validation might be needed. These elements include:
 
@@ -64,7 +64,7 @@ The dialog box consists of two sections:
     * **Duplicate** – duplicates selected validation
     * **Extract** **submicroflow** – extracts a list of validations and saves it as a new validation sub-microflow to reuse later
 
-## 3 Using Validation Assist to Build Data Validations {#data-validations}
+## Using Validation Assist to Build Data Validations {#data-validations}
 
 You can configure a custom **Save** button with the help of the Validation Assist. 
 
@@ -124,7 +124,7 @@ The created microflow is used for the **Save** button to validate all conditions
 
 You can now click **Run Locally** ({{% icon name="controls-play-filled" %}}) in the Studio Pro top bar to run your app locally and test validations.
 
-## 4 Read More 
+## Read More 
 
 * [Validation Rules](/refguide/validation-rules/)
 * [Setting Up Data Validation](/refguide/setting-up-data-validation/)     

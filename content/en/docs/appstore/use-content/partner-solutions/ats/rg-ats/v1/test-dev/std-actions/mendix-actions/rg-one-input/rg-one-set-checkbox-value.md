@@ -3,20 +3,20 @@ title: "Set Checkbox Value"
 url: /appstore/partner-solutions/ats/rg-one-set-checkbox-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the value of a Checkbox.
 
-## 2 Supported widgets
+## Supported widgets
 
 * Checkbox
 
-## 3 Usage
+## Usage
 
 Pass the name of the checkbox and the value you want to set.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

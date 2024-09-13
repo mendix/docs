@@ -12,11 +12,11 @@ The OData implementation in Mendix does not support all features of the OData sp
 When using third-party APIs, it is advised you to make a proof of concept to ensure the functionality provided in Mendix matches the requirements of your third-party APIs. If external entities do not work with your OData APIs, you can use the Mendix [REST](/refguide/consumed-rest-services/) functionality instead.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 This document describes the requirements for an OData service that is going to be consumed. These requirements are not further verified at runtime and are expected to hold. If these requirements are not met, errors may result.
 
-## 2 Requirements for a Consumed OData Service
+## Requirements for a Consumed OData Service
 
 The requirements for a consumed OData service used in a Mendix app are the following:
 
@@ -29,11 +29,11 @@ The requirements for a consumed OData service used in a Mendix app are the follo
     * `$expand`
     * `$count` (or `$inlinecount`)
 
-## 3 Requirements on the Service Entities and Attributes
+## Requirements on the Service Entities and Attributes
 
 This section describes the features of a consumed OData service that are supported in Mendix apps. These features are checked before an external entity is used in the domain model.
 
-### 3.1 Entities
+### Entities
 
 Vocabulary annotations can be used in a service to indicate features that are not supported. The following vocabulary annotations are recognized for entity sets:
 
@@ -68,9 +68,9 @@ The list above for supported key fields does not include `Date` or `DateTime` da
 
 Entities that are not accessible through an entity set can be used as a [non-persistable entity](/refguide/consumed-odata-services/#external-non-persistable-entities).
 
-### 3.2 Attributes
+### Attributes
 
-#### 3.2.1 Supported Attribute Types {#supported-types}
+#### Supported Attribute Types {#supported-types}
 
 {{% alert color="warning" %}}
 Attributes marked as `FC_KeepInContent=false` cannot be used.
@@ -94,7 +94,7 @@ The most commonly used attribute types can be used in your app. The types of the
 
 ² Decimal values outside of the range of a [Mendix Decimal](/refguide/attributes/#type) are currently not supported. If the service returns a value outside of the range, there will be an error.
 
-#### 3.2.2 Attributes of Complex Types
+#### Attributes of Complex Types
 
 {{% alert color="info" %}}
 Support for consuming attributes of complex types was introduced in Mendix version 10.6.
@@ -108,7 +108,7 @@ By default, the attribute names consist of the name of the complex attribute and
 External entities that contain attributes of complex types can only be read or deleted. They cannot be created, updated, or used in external actions.
 {{% /alert %}}
 
-### 3.3 Generalizations
+### Generalizations
 
 The consumed OData service does not support importing generalizations and specializations. This means that the Published OData service contract from the originating app will show specializations as discrete entities which will include the attributes of the generalization along with the attributes of the specialized entity.
 
@@ -120,13 +120,13 @@ Associations to the generalizations with other published entities in the publish
 When a generalization and a specialized entity are published in the same service. Only the association for the generalization will be visible when both entities are consumed. The now discrete specialization will have the inherited association. A possible work-around for this is to publish a service with the specializations without the generalization. Alternatively, the association for the generalization should not be published, allowing for the inherited association in the specialization to be preserved.
 {{% /alert %}}
 
-### 3.4 Binary Attributes {#binary-attributes}
+### Binary Attributes {#binary-attributes}
 
 The binary data format is supported in the form of *media entities*. When a media entity is dragged into the domain model, a corresponding external entity is created. The entity will have a `contents` attribute with the binary data.
 
 Currently, the binary data can only be accessed by Java actions.
 
-### 3.5 Associations
+### Associations
 
 An OData v3 association can only be used if it has two ends.
 
@@ -134,7 +134,7 @@ An OData v4 navigation property can only be used as an association if it has a p
 
 When you publish a self-referencing association, you can only publish one side of it. This means that you cannot use the association when you consume it as an external entity.
 
-### 3.6 Enumerations
+### Enumerations
 
 In Studio Pro 10.11 and earlier, enumeration types that have one or more members with a name that is not a valid [enumeration value name](/refguide/enumerations/#name) are not supported.
 
@@ -142,7 +142,7 @@ In Studio Pro 10.11 and earlier, enumeration types that have one or more members
 As of Mendix 10.12, the original enumeration member value is stored separately from the enumeration member name and caption in the app model. This enables Studio Pro to consume enumerations that have special characters or reserved keywords as enumeration values. By default, the caption will be equal to the remote value; the name will be equal to the remote value, with any unsupported characters replaced by underscores. 
 {{% /alert %}}
 
-## 4 Requirements on Actions {#actions}
+## Requirements on Actions {#actions}
 
 The [Call External Action](/refguide/call-external-action/) activity calls actions. It cannot call
 

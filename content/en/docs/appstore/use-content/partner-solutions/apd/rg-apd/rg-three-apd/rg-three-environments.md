@@ -3,7 +3,7 @@ title: "Environments"
 url: /appstore/partner-solutions/apd/rg-three-environments/
 ---
 
-## 1 Environments Overview
+## Environments Overview
 
 After selecting an app from the [Apps Overview](/appstore/partner-solutions/apd/rg-three-apps/), an overview of available environments for that app is displayed. It is possible to select an existing environment or add a new environment.
 
@@ -17,7 +17,7 @@ When an environment is marked as red instead of green, that means the APD agent 
 * The APD agent is not (yet) installed
 * The APD agent is not properly configured
 
-## 2 Adding a New Environment
+## Adding a New Environment
 
 In order to add a new environment, click **New environment** in the **Environments** overview:
 

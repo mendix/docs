@@ -5,19 +5,19 @@ weight: 40
 description: "This pattern lets you combine multiple objects to improve synchronization performance."
 ---
 
-## 1 Introduction
+## Introduction
 
 This pattern lets you combine multiple objects to improve synchronization performance.
 
-## 2 Challenge
+## Challenge
 
 Synchronizing data that is spread across multiple entities requires each entity to be synchronized individually. This can lead to performance problems because of the amount of data that is transmitted and the complexity of the queries on the offline database.
 
-## 3 Solution
+## Solution
 
 These performance problems can be countered by combining multiple objects into compound objects. It is then sufficient to synchronize only the compound objects and ignore much of the complexity of the server’s database on the client.
 
-## 4 Implementation
+## Implementation
 
 To implement this pattern, do the following:
 
@@ -48,7 +48,7 @@ To implement this pattern, do the following:
 
 1. Replace all usages of the target object and related objects with the compound object in your offline client.
 
-## 5 Recommendations
+## Recommendations
 
 To improve your apps further, consult the following recommendations:
 
@@ -58,7 +58,7 @@ To improve your apps further, consult the following recommendations:
 * It is assumed that compound objects are not changed by the offline client. If this is needed, combine the compound object with a [Request Object](/refguide/mobile/best-practices/request-object/).
 * Combine the compound object with [Incremental Synchronization](/refguide/mobile/best-practices/incremental-synchronization/) to further increase synchronization performance.
 
-## 6 Read More
+## Read More
 
 * To increase the clarity, organization, and documentation of your apps, see [Mendix Best Practices for Development
 ](/refguide/dev-best-practices/)

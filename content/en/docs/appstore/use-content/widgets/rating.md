@@ -5,13 +5,13 @@ description: "Describes the configuration and usage of the Star Rating widget, w
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Rating](https://marketplace.mendix.com/link/component/54611) widget enables rating from 0 to a defined maximum amount using an attribute.
 
 {{< figure src="/attachments/appstore/use-content/widgets/rating/example.gif" alt="Example" class="no-border" >}}
 
-## 2 Usage
+## Usage
 
 To use this widget, place it in a [data container](/refguide/data-sources/) that has an Integer, Long, or Decimal attribute.
 
@@ -28,7 +28,7 @@ The widget offers the following for configuration:
 
 This widget is compatible with [Atlas Core](https://marketplace.mendix.com/link/component/117187).
 
-## 3 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features:
 

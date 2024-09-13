@@ -5,15 +5,15 @@ description: "Describes usage and implementation of the Workflow Commons module 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Workflow Commons](https://marketplace.mendix.com/link/component/117066) module provides an out-of-the box starter experience for users who would like to build a workflow in their app.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 This module allows Mendix developers with little or no experience in building workflows to start with standardized options for implementing and monitoring workflows.
 
-### 1.2 Features
+### Features
 
 * Dashboards for monitoring workflows for administrators, initiators, and executors (users who can chose an outcome/complete a user task) of workflows
 * Page templates to generate task pages, task admin, an inbox, and different dashboards
@@ -23,18 +23,18 @@ This module allows Mendix developers with little or no experience in building wo
 
 {{% alert color="info" %}}For Workflow Commons version 2.4.0 and above, attachments are (an optional) part of comments. This means that the WorkflowAttachment entity is associated with the WorkflowComment entity. Security settings for the WorkflowAttachment entity are based on the workflows in which a user is involved, since the context of a specific workflow is not known in advance in Workflow Commons. If you would like to set custom security for attachments, you need to configure the attachment entity in your domain model and associate it with the workflow context entity of the workflow. {{% /alert %}}
 
-### 1.3 Prerequisites
+### Prerequisites
 
 As workflows are only available from Mendix 9 version, Workflow Commons requires Mendix 9.0.5 and above.
 
-### 1.4  Dependencies
+### Dependencies
 
 * [Data Widgets](https://marketplace.mendix.com/link/component/116540)
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
 * [Atlas Web Content](https://marketplace.mendix.com/link/component/117183)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 
-## 2 Installation 
+## Installation 
 
 Download and install the following modules:
 
@@ -44,45 +44,46 @@ Download and install the following modules:
 * Atlas Web Content 
 * Nanoflow Commons
 
-## 3 Components {#components}
+## Components {#components}
 
 The purpose of Workflow Commons is to provide you with useful pages, page templates, snippets, and microflows that can save you development time. All documents in the **Private** folder are meant for internal purposes within the module itself, but you can find a couple of useful documents that you can make use of in the **UseMe** folder.
 
-### 3.1 Pages
+### Pages
 
 Multiple pages are provided with the Workflow Commons module to get you and your users started with workflows. The functionality contained in these pages works out-of-the-box. Simply add these pages to the [navigation](/refguide/navigation/) of your app to start using them. 
 You can find the following pages in Workflow Commons:
 
 * **DefaultWorkflowAdmin** – The default workflow admin page that a workflow administrator can use to view and manage a workflow instance. This page can be used in the **Show workflow admin page** microflow activity and button action.
 * **MyInitiatedWorkflows** – This page gives end-users an overview of all their initiated workflows. They can view the current state, task timeline and can withdraw workflows that are in progress, paused, or incompatible.
-* **TaskDashboard** –  This page gives end-users an overview of their performance. It contains such information as the number of completed tasks, average time spent to complete a task, and percentage of completed tasks within a deadline.
+* **TaskDashboard** – This page gives end-users an overview of their performance. It contains such information as the number of completed tasks, average time spent to complete a task, and percentage of completed tasks within a deadline.
 * **TaskInbox** – This page contains a list of all tasks that a user can interact with. **My open tasks** shows the tasks assigned to current users, **All open tasks** is a list of tasks they could pick up and **Unassigned tasks** shows all unassigned tasks.
 * **WorkflowAdminCenter** – A navigational page for workflow administrators. From here, a workflow administrator can go the **Workflow Dashboard**, which gives them general statistics of workflows. Workflow administrators also gain access to **Workflow management**, where they can see all the instances of specific workflows and make changes to their data or even abort workflows.
 * **WorkflowDashboard** – This page gives you workflow/task based metrics and direct access to all *Workflow* and *WorkflowUserTask* data. When you want to use the Workflow Dashboard as your only admin go-to page, add this to the navigation instead of the **WorkflowAdminCenter**. 
 
-### 3.2 Page Templates
+### Page Templates
 
 Workflow Commons contains page templates to easily get you started with building workflow-related pages. These templates are automatically suggested to you when you make a new page from either the user task or workflow properties. 
 You can find the following page templates in Workflow Commons:
 
 * **MyInitiatedWorkflows** – This page template allows users who initiate workflows keep track of their progress. A user is also able to withdraw a workflow if it is still in progress.
 * **UserTask_Basic** – A basic template that shows a header with the task name and description, a sidebar with details about the assignee and status of the task, and a main view where input elements and buttons to complete the task are generated.
-* **UserTask_Extended** –  This page template does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
+* **UserTask_Extended** – This page template does exactly the same as the basic user task template, but extends it by adding attachments and comments sections, as well as an activity timeline to see what has previously happened in this workflow.
 * **Workflow_Admin** – This template can be used to easily generate an overview page for a specific workflow. It contains a header with the name of the workflow, as well as an action menu for administrators. There are three tabs, **General information**, **Task details**, and **Notes and attachments**. In the **General information** tab, you see the current state of the workflow, start and end date and time, as well as the due date and potential reasons for failure. The activity timeline is displayed, and there is a section with generated input elements that allows administrators to make changes to the data in the workflow. In the **Task details** tab, you can view information on individual tasks: who worked on them and who would have been able to pick them up. Finally, the **Notes and attachments** tab provides an overview of all the notes and attachments that were added for this workflow.
 * **Workflow_TaskDashboard** – This page template can be used to generate your own **TaskDashboard**, for example, when you want to use your own metrics or add context information.
 * **Workflow_TaskInbox** – This page template can be used to generate your own ***TaskInbox*** page, for example, when you would like to add context information from your business data to this page.
 
-### 3.3 Snippets
+### Snippets
 
 If you would like to customize page templates, you can do that with the help of the snippets provided by Workflow Commons. You can find them in the **Snippets** folder of the Workflow Commons module.
 
-### 3.4 Microflows
+### Microflows
 
 Preconfigured microflows help you assigning user tasks, and one allows you to abort workflows.
 You can find the following microflows in Workflow Commons:
 
 * **ACT_UserTask_AssignToMe** – Assigns a user task, which is passed as a parameter, and assigns it to the current user.
-* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters.
+* **ACT_UserTask_AssignToUser** – Assigns a user task to a specified user, both passed as parameters. This microflow can be used for [user tasks](/refguide/user-task/) and [multi-user tasks](/refguide/multi-user-task/).
+* **ACT_UserTask_AssignToUsers** – Assigns a user task to a specified list of users, both passed as parameters. This microflow can only be used for [multi-user tasks](/refguide/multi-user-task/).
 * **ACT_UserTask_Unassign** – Removes the assignee from a user task, which is passed as a parameter.
 * **ACT_Workflow_Abort** – Aborts a workflow instance and all of its currently running user tasks. The workflow instance is passed in as a parameter.
 * **ACT_Workflow_Continue** – Continues processing of a workflow instance from the point where it was before a new version of the workflow definition was deployed. The workflow instance is passed in as a parameter.
@@ -90,9 +91,9 @@ You can find the following microflows in Workflow Commons:
 * **ACT_Workflow_Pause** – Pauses processing of a workflow instance. The workflow instance is passed in as a parameter.
 * **ACT_Workflow_Restart** – Stops the current task of the workflow and starts it from the initial task in the workflow definition. The workflow instance is passed in as a parameter.
 * **ACT_Workflow_Retry** – Retries a failed workflow from the failed activity to check whether the workflow can get back into the in-progress state. The workflow instance is passed in as a parameter.
-* **ACT_Workflow_Resume** – Resumes the workflow after it has been paused. The workflow instance is passed in as a parameter.
+* **ACT_Workflow_Unpause** – Unpauses the workflow after it has been paused. The workflow instance is passed in as a parameter.
 
-## 4 Configuration
+## Configuration
 
 1. Add the following pages to your navigation:
     1. TaskInbox
@@ -110,7 +111,7 @@ You can find the following microflows in Workflow Commons:
     1. Set **Workflow state change** to *OCh_Workflow_State*
     2. Set **User task state change** to *OCh_WorkflowUserTask_State*
 
-## 5 Workflow Audit Trail
+## Workflow Audit Trail
 
 {{% alert color="info" %}}
 The audit trail feature was introduced in [Workflow Commons 3.6.0](https://marketplace.mendix.com/link/component/117066). It leverages the use of [workflow events](/refguide/workflow-events/#event-mechanism) to track all events and actions that have taken place in the workflows in your application.
@@ -118,12 +119,12 @@ The audit trail feature was introduced in [Workflow Commons 3.6.0](https://marke
 
 Workflow Audit Trail is a detailed, chronological record that tracks all changes and actions taken within a workflow process. It documents who performed each action, when it was done, and what specific changes were made. This helps ensure transparency, accountability, and traceability, allowing for easy identification of errors, monitoring of compliance with regulations, and verification of proper procedure adherence.
 
-### 5.1 Features
+### Features
 
 * Logs all events that took place on a specific workflow or all workflows in your application
 * Provides an export workflow audit trail to Excel
 
-### 5.2 Configuration {#configuration}
+### Configuration {#configuration}
 
 Workflow Audit Trail uses [workflow events](/refguide/workflow-events/#configuration) to store data of a single or all workflows in your app. You can configure the audit trail to keep track of a specific set of events which you can configure in the **Event handlers** setting in [App Settings](/refguide/app-settings/#event-handlers) or through [workflow properties](/refguide/workflow-properties/#event-handlers). For more information about event handlers in workflows, see the [Event Handlers](/refguide/workflow-properties/#event-handlers) section in *Workflow Properties*.
 
@@ -146,7 +147,7 @@ The image below represents an example of how to configure audit trail event hand
 
 {{% alert color="info" %}}The audit table can grow rapidly when many workflows are initiated in a short period of time, and could contain many non-human activities. In this case, we recommend to only select a limited set of events depending on your need and to regularly delete old audit records. You can use the included scheduled event: for details, see the [Clean-Up](#clean-up) section below.{{% /alert %}}
 
-### 5.3 Viewing the Audit Trail
+### Viewing the Audit Trail
 
 After completing the steps in the [Configuration](#configuration) section above, you now have the audit trail setup and will start logging your workflow events data to the audit trail. 
 
@@ -161,7 +162,7 @@ You can view audit trail on three levels:
 2. **A workflow definition**: Here you can see all audit trail logs for all instances of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > **Audit trail** tab.
 3. **A specific workflow instance**: Here you can see all audit trail logs for a specific instance of a workflow definition. You can find this view in: **Workflow management** page > select a workflow definition > in the **Workflow** tab, select a workflow > **Audit trail** tab.
 
-### 5.4 Clean-Up {#clean-up}
+### Clean-Up {#clean-up}
 
 {{% alert color="info" %}}
 This was introduced in [Workflow Commons 3.7.0](https://marketplace.mendix.com/link/component/117066).
@@ -175,17 +176,17 @@ This scheduled event is set to run every night at 01:00 AM and will permanently 
 
 {{% alert color="info" %}}For the scheduled event to work, make sure that the **Workflow Completed** and **Workflow Aborted** events are selected in the [Configuration](#configuration) section.{{% /alert %}}
 
-### 5.5 Q&A
+### Q&A
 
 * Should I always select all events to be audited?
 
     Answer: No, in general, this depends on the purpose of the workflow and how relevant it is to keep a record of certain activities that have been executed. In many situations, it can be sufficient to just record the outcomes of user tasks. Therefore, only select those events in the workflow event handler that are relevant to be recorded. This can differ from workflow definition to workflow definition. No changes to the events handler workflow are required. Only select those events that are needed. Keep in mind that the audit table can grow rapidly, depending on selected events.
 
-## 6 Usage
+## Usage
 
 For more information on how to use Workflow Commons in an app, see [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/) in the *Studio Pro Guide*.
 
-## 7 Read More
+## Read More
 
 * [Adding a Workflow to an Existing App: Using Workflow Commons](/refguide/workflow-setting-up-app/)
 * [Data Widgets](/appstore/modules/data-widgets/)

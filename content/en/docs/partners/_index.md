@@ -11,10 +11,10 @@ cascade:
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
-## 1 Introduction
+## Introduction
 
 The *Mendix Strategic Partners Guide* provides documentation on widgets written and maintained by Mendix which support integration with AWS, SAP, Siemens, and Snowflake cloud platforms and services.
 
-## 2 Guide Categories
+## Guide Categories
 
 The *Strategic Partners Guide* is divided into the following categories:

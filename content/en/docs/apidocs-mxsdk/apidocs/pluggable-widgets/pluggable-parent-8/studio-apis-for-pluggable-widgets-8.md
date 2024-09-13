@@ -6,13 +6,13 @@ weight: 30
 description: A guide for understanding the APIs which influence pluggable widget preview appearances.
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide explains the APIs offered by Mendix Studio Pro so you can build better pluggable widgets. Specifically, you can use these APIs and modules to alter pluggable widgets' preview appearances while working in Studio Pro's **Design mode**.
 
 In contrast, [Client APIs Available to Pluggable Widgets](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/) is meant for pluggable widget development once your app is running in the client. This guide's APIs are available in Mendix 8.0.0 and higher.
 
-## 2 Values API {#values}
+## Values API {#values}
 
 The values API passes the values configured for a pluggable widget's properties. These values will be passed in a JavaScript object, where the property's `key` is used as the object property.
 
@@ -25,7 +25,7 @@ Here is an example of such an object:
 }
 ```
 
-### 2.1 Static Properties
+### Static Properties
 
 Static property types are exposed with their configured value as a JavaScript value:
 
@@ -39,7 +39,7 @@ Static property types are exposed with their configured value as a JavaScript va
 
 For `enumeration` properties, the currently selected option's `key` will be used as the value.
 
-### 2.2 Icon {#icon}
+### Icon {#icon}
 
 This property appears as follows:
 
@@ -56,7 +56,7 @@ For the `"glyph"` type, `iconClass` is available. It contains the class to apply
 
 For the `"image"` type, `imageUrl` is available. It represents a URL from which your selected image can be reached by Studio Pro's **Design mode**. It will be an empty string value if no image has been selected.
 
-### 2.3 Image
+### Image
 
 This property appears as follows:
 
@@ -73,7 +73,7 @@ For the `"static"` type, `imageUrl`  is available. It represents a URL from whic
 
 For the `"dynamic"` type, `entity` is available. It represents the entity where the selected image's data is stored. It will be an empty string value if no entity has been selected.
 
-### 2.4 Widgets {#widgets}
+### Widgets {#widgets}
 
 This property appears as follows:
 
@@ -89,11 +89,11 @@ This property is exposed as an object containing the following properties:
 * `widgetCount`: The number of immediate child widgets configured
 * `renderer`: A React component allowing rendering of the child widgets in the preview
 
-### 2.5 Expression
+### Expression
 
 This property will be passed as a string value containing the expression as typed by the user.
 
-### 2.6 Text Template
+### Text Template
 
 A preview string will be passed. This preview is built using the currently active language, and by
 replacing the placeholders with the names of the attributes.
@@ -112,11 +112,11 @@ Name: {EventName}
 Description: {EventDescription}
 ```
 
-### 2.7 Action
+### Action
 
 When an action is set, an empty object `{}` is passed to indicate that an action has been set. When no client action is set, the passed value will be `null`.
 
-### 2.8 Attribute
+### Attribute
 
 A string containing the path of the selected attribute will be passed.
 
@@ -125,11 +125,11 @@ Here are a few examples:
 * `EventName`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event/EventName`
 
-### 2.9 Object
+### Object
 
 Object properties are passed as an `array` of JavaScript objects. For each configured sub-object, an object will be passed with all the sub-object's properties. These properties are available by their `key`, with values as described throughout the [Values API](#values) section.
 
-### 2.10 File
+### File
 
 A string containing the path of the selected file entity will be passed.
 
@@ -138,7 +138,7 @@ Here are a few examples:
 * `MyFirstModule.Event`
 * `MyFirstModule.EventSchedule_Event/MyFirstModule.Event`
 
-## 3 Preview Module for Studio Pro's Design Mode
+## Preview Module for Studio Pro's Design Mode
 
 It is possible to create a preview for pluggable widgets in Studio Pro's Design Mode.
 
@@ -147,7 +147,7 @@ Add the module by adding a file to your custom widget with the same name as your
 
 This preview module is expected to be a CommonJS module, exporting the following functions using the `exports` object.
 
-### 3.1 Exposed Libraries
+### Exposed Libraries
 
 In **Design mode**, only a few libraries are allowed to be imported. This is expected to occur through the CommonJS method: by using `require`.
 
@@ -157,7 +157,7 @@ It is possible to require the following modules:
 * An `Icon` component that can be used to render icon properties: `"mendix/components/web/Icon"`
 * A `Selectable` component that can be used to define what it selectable in preview: `"mendix/preview/Selectable"`
 
-### 3.2 Preview Export
+### Preview Export
 
 The `preview` export is expected to be a `class` or `function` representing a `React` component. This component, the values object (see the [Values API](#values) section above), and the following properties will be rendered along with the values as properties:
 
@@ -181,7 +181,7 @@ export const preview: React.FC<Props> = (props) => (
 );
 ```
 
-#### 3.2.1 Using a Widgets Property
+#### Using a Widgets Property
 
 A [Widgets Property](#widgets) contains a `renderer` field that allows its content to be rendered when filled, or shows an empty drop-zone when empty inside the preview. It requires a single, empty, DOM node as a child in which to render the contents:
 
@@ -202,7 +202,7 @@ export const preview: React.FC<Props> = (props) => {
 }
 ```
 
-#### 3.2.2 Using an Icon Property
+#### Using an Icon Property
 
 The preview module provides a component to preview an [icon property](#icon) in the same way as the
 `Icon` component in the client would. This component can be imported from `"mendix/components/web/Icon"` and accepts
@@ -223,7 +223,7 @@ export const preview: React.FC<Props> = (props) => (
 );
 ```
 
-#### 3.2.3 Using the Selectable Component
+#### Using the Selectable Component
 
 The preview module provides a component to define that an object is selectable in the preview. This component can be imported from `"mendix/preview/Selectable"`, accepts an item from an `object` list property as an `object` parameter, and has an optional `caption` parameter.
 
@@ -264,7 +264,7 @@ When the widget is added to a page you can select a specific item and edit it:
 
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-parent-8/studio-apis-for-pluggable-widgets-8/selectable-component.png" alt="Example of the selectable component" class="no-border" >}}
 
-### 3.3 The GetPreviewCss Export
+### The GetPreviewCss Export
 
 The `getPreviewCss` export is expected to be a `function` returning a `string` containing any CSS that the preview needs
 to render.
@@ -279,7 +279,7 @@ export function getPreviewCss() {
 }
 ```
 
-## 4 Read More
+## Read More
 
 * [Client APIs Available to Pluggable Widgets (Mendix 8)](/apidocs-mxsdk/apidocs/client-apis-for-pluggable-widgets-8/)
 * [Pluggable Widget Property Types (Mendix 8)](/apidocs-mxsdk/apidocs/property-types-pluggable-widgets-8/)

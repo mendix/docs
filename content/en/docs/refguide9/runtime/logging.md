@@ -4,44 +4,44 @@ url: /refguide9/logging/
 description: "Describes what the various log levels of the runtime will show as output."
 ---
 
-## 1 Introduction
+## Introduction
 
 Below we describe what the various log levels of the runtime will show as output.
 During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy/) pages.
 
 You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto9/monitoring-troubleshooting/log-levels/#standard-log-levels) in *How To Set Log Levels* for more information.
 
-## 2 Log Levels {#log-levels}
+## Log Levels {#log-levels}
 
-### 2.1 Critical
+### Critical
 
 Critical is reserved for rare cases where the application may not be able to function reliably anymore. This should normally not occur. If it does, you should immediately take action. The 3.0 cloud treats these messages as alerts and will notify you on the cloud dashboard.
 
-### 2.2 Error
+### Error
 
 Error is used to log all unhandled exceptions. These are unexpected events that should not occur, but are not critical. The application should be able to function normally afterwards.
 
-### 2.3 Warning
+### Warning
 
 Warning is often used for handled 'exceptions' or other important log events. For example, if your application requires a configuration setting but has a default in case the setting is missing, then the Warning level should be used to log the missing configuration setting.
 
-### 2.4 Information
+### Information
 
 The Information level is typically used to output information that is useful to the running and management of your system. Information would also be the level used to log entry and exit points in key areas of your application. However, you may choose to add more entry and exit points at Debug level for more granularity during development and testing.
 
-### 2.5 Debug
+### Debug
 
 This should be used for debugging systems during development, but never in a production system. It can be used to easily pinpoint problems and the general flow of your application.
 
-### 2.6 Trace
+### Trace
 
 This is the most verbose logging level, and can be used if you want even more fine-grained logging than debug.
 
-## 3 Log Nodes
+## Log Nodes
 
 This section provides some details on specific log nodes used by Mendix. It is recommended that if you write your own [log messages](/refguide9/log-message/) you use your own log node names to avoid confusion with the Mendix log messages.
 
-### 3.1 Default Mendix Log Nodes {#mendix-nodes}
+### Default Mendix Log Nodes {#mendix-nodes}
 
 The following log nodes are used by Mendix when writing log messages.
 
@@ -98,7 +98,7 @@ This list is currently incomplete and is being updated.
 | XML Export | Logs messages related to export mappings to XML. |
 | XML Import | Logs messages related to import mappings from XML. |
 
-### 3.2 JSON {#json}
+### JSON {#json}
 
 Has only one relevant level: *Debug*.
 

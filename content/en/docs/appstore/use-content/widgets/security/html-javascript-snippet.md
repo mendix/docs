@@ -5,26 +5,26 @@ weight: 20
 description: "Describe the configuration for map widget content security policy"
 ---
 
-## 1 Introduction
+## Introduction
 
 The [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget is not fully CSP compliant out-of-the-box. This is due to the widget's innate methods of injecting HTML or JavaScript into pages. To make this widget CSP compliant, see the sections below.
 
-## 2 Setup Information
+## Setup Information
 
 Follow the configuration advice below to made the widget CSP compliant.
 
-### 2.1 Use CSP Compliant Code
+### Use CSP Compliant Code
 
 Make sure that the HTML or JavaScript code that you are injecting to the page is following CSP compliant specifications.
 
-### 2.2 Use External Files Instead of Content Attributes
+### Use External Files Instead of Content Attributes
 
 Create a new JavaScript file in the app's root directory (**theme** folder) and refer to it instead of using its content attribute. This applies for both HTML and JavaScript snippets:
 
 {{< figure src="/attachments/appstore/use-content/widgets/security/html-js-csp/create.png" width="350" >}}
 {{< figure src="/attachments/appstore/use-content/widgets/security/html-js-csp/refer.png" width="350" >}}
 
-### 2.3 Directives Unsafe-Inline and Unsafe-Eval
+### Directives Unsafe-Inline and Unsafe-Eval
 
 If you cannot follow both of the steps above, you can always input the following directives to enable the widget in CSP environment:
 

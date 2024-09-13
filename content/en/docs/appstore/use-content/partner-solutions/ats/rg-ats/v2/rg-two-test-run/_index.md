@@ -3,7 +3,7 @@ title: "Test Run"
 url: /appstore/partner-solutions/ats/rg-two-test-run/
 ---
 
-## 1 Introduction
+## Introduction
 
 There are multiple ways to run an existing test:
 
@@ -18,25 +18,25 @@ You can also cancel a running job by pressing **Cancel** in the corresponding li
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-run/job-cancel.png" class="no-border" >}}
 
-## 2 Special Behavior 
+## Special Behavior 
 
 This section presents descriptions of special situations for test case runs and the outcoming results of them.
 
-### 2.1 Setting an Integer as Input for a Text Box
+### Setting an Integer as Input for a Text Box
 
 Inputs for text boxes are always interpreted as text. This means that the integer is converted into a string.
 
-### 2.2 Trying to Run a Test Case with an Empty Step
+### Trying to Run a Test Case with an Empty Step
 
 In the current version of ATS, test steps without an action lead to failing test results.
 
-### 2.3 Running an Empty Test Case or Test Suite
+### Running an Empty Test Case or Test Suite
 
 Empty test cases run and lead to a successful test results.
 
 Empty test suites run and are shown in the pending tests overview, but the result is not saved.
 
-### 2.4 Running a Test Case Including an Action Without Required Input Parameters
+### Running a Test Case Including an Action Without Required Input Parameters
 
 The test case runs until the action with the missing input parameter is executed. ATS searches for the input parameter and will not find it. This results in the following error:
 

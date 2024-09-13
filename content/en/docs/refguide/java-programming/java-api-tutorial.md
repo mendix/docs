@@ -5,7 +5,7 @@ weight: 40
 description: "Describes how to add a Java action, edit it in Eclipse, and call it from a microflow."
 ---
 
-## 1 Introduction
+## Introduction
 
 This tutorial contains some examples of how to use the [Mendix Runtime Java API](/apidocs-mxsdk/apidocs/runtime-api/). The tutorial assumes that you have some basic Java and Mendix modeling knowledge.
 
@@ -18,7 +18,7 @@ This tutorial teaches you how to do the following:
 * Execute microflows and commit objects
 * Copy FileDocuments
 
-## 2 Executing Microflows and Committing Objects
+## Executing Microflows and Committing Objects
 
 Sometimes you want to execute a microflow in a Java Action. This section explains how to do this, including how to pass parameters and obtain the return value. Additionally, the result will be saved in an object and the object will be committed.
 
@@ -58,7 +58,7 @@ Core.commit(context, testObject.getMendixObject());
 …
 ```
 
-## 3 Copying FileDocuments
+## Copying FileDocuments
 
 A **FileDocument** is a system module entity that holds the content of a file (for example, a text file or an Excel sheet). For this case, you have an entity called `GenericObject` that has a relation with an `Attachment` entity. The `Attachment` entity inherits from `FileDocument`. One `GenericObject` can have multiple `Attachments`. You copy the `Attachments` from one `GenericObject` to another so that they can be independently modified later.
 
@@ -118,6 +118,6 @@ for (IMendixObject iMendixObject: getAttachments(sourceObject, context))
 
 After this, all `Attachments` belonging to one `GenericObject` are copied to another.
 
-## 4 Read More
+## Read More
 
 * [Extending Your Application with Custom Java](/refguide/extending-your-application-with-custom-java/)

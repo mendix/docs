@@ -6,7 +6,7 @@ weight: 90
 description: "Describes how to create custom microflow actions using Data Storage APIs."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro supports two query languages to retrieve data:
 
@@ -30,7 +30,7 @@ For more information on Java programming for Mendix, see [Java Programming](/ref
 
 For more information on calling Java actions from a microflow, see [Java Actions](/refguide/java-actions/).
 
-## 2 Retrieving Advanced XPath
+## Retrieving Advanced XPath
 
 The goal is to create a microflow action where a user can specify an XPath expression and which result entities are expected. The action will execute the XPath statement and return the resulting list of objects.
 
@@ -56,7 +56,7 @@ The implementation of this Java action is pretty straightforward; you can use th
 
 The implementation also validates that the list returned contains objects of the entity specified.
 
-```java {linenos=false}
+```java
 @Override
 public java.util.List<IMendixObject> executeAction() throws Exception
 {
@@ -82,7 +82,7 @@ You can drag the Java action created above from the toolbox into a microflow. In
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image013.png" class="no-border" >}}
 
-## 3 Retrieving Objects Using OQL
+## Retrieving Objects Using OQL
 
 The following example illustrates how you can use the OQL APIs for reporting purposes. OQL is the general-purpose Mendix query language, very much resembling SQL. The biggest differences between OQL and SQL are:
 
@@ -137,7 +137,7 @@ The result is a generic OQL action that you can use in your microflows as follow
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image023.png" class="no-border" >}}
 
-## 4 Retrieving Objects Using OQL Specified in a Dataset
+## Retrieving Objects Using OQL Specified in a Dataset
 
 Instead of coding the OQL statement in a string parameter, you can also use a Dataset. This has the benefit the that Mendix Studio Pro will validate your OQL query.
 
@@ -155,7 +155,7 @@ Below is the Java code to get the Dataset OQL, execute the OQL, and retrieve the
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image043.png" class="no-border" >}}
 
-## 5 Retrieving Objects Using SQL
+## Retrieving Objects Using SQL
 
 An API is available to allow you to execute SQL queries on the application database (this feature is currently in beta). Using this API, you can create a microflow action to execute SQL: similar to the action for OQL in the previous sections.
 
@@ -188,7 +188,7 @@ You now have a generic SQL action that can be used in microflows to retrieve dat
 Note that in case of SQL statements you need to implement security constraints yourself.
 {{% /alert %}}
 
-## 6 PostgreSQL-specific SQL
+## PostgreSQL-specific SQL
 
 Using the JDBC connection you can benefit from vendor specific database extensions, like Oracle Pl/SQL or Postgres user-defined functions.
 
@@ -214,13 +214,13 @@ For example:
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image032.png" class="no-border" >}}
 
-### 6.1 Creating the Java Action
+### Creating the Java Action
 
 You create a Java action with parameters for the start date and the end date. You have a specific entity to return a list of the dates: *Hr.FirstMondayDate*.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image033.png" class="no-border" >}}
 
-### 6.2 Creating the Java Code
+### Creating the Java Code
 
 1. Specify the required SQL statement in the Java method. JDBC queries expect the parameters to be specified by question marks (?) in the SQL statement.
 
@@ -243,11 +243,11 @@ You will see the list of dates in the console.
 
 {{< figure src="/attachments/howto/extensibility/howto-datastorage-api/image039.png" class="no-border" >}}
 
-## 7 Global Custom Entity Event Listeners
+## Global Custom Entity Event Listeners
 
 Global entity event listeners enable you to define generic event handlers on all entities. This enables you to build generic validations or create a real-time data export to a central datastore. You can use a Java action to register any desired event handler, most likely in the *After App Startup Microflow*.
 
-### 7.1 Example code to Register the Event Listener.
+### Example code to Register the Event Listener.
 
 This code will log old and new attribute value for all changes to attributes before making changes in the database:
 

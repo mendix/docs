@@ -3,16 +3,16 @@ title: "Open Application"
 url: /appstore/partner-solutions/ats/rg-one-open-application/
 ---
 
-## 1 Description
+## Description
 
 Opens a Mendix application at [Application URL] in a browser with
 Mendix specific settings.
 
-## 2 Usage
+## Usage
 
 Pass the URL of the application you want to open. You can also use the global constant **Application URL**.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

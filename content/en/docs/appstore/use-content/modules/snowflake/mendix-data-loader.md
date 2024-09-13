@@ -6,32 +6,32 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Mendix Data Loader](https://app.snowflake.com/marketplace/listing/GZTDZHHIE0/mendix-mendix-data-loader) allows for seamless data ingestion from operational Mendix applications by using an exposed OData service into Snowflake, enhancing an organization's business intelligence and reporting capabilities.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 The Mendix Data Loader supports a range of data ingestion tasks, enabling organizations to leverage their operational data within Snowflake for analytical purposes. The key functionalities include ingesting data dynamically from Mendix applications (only needing an OData endpoint and credentials) to Snowflake. The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. The user should copy the tables of the target schema into a database and schema where they want to store the ingested data. This should be done after every ingestion.
 
-### 1.2 Prerequisites {#prerequisites}
+### Prerequisites {#prerequisites}
 
 To use the Mendix Data Loader, you must have the following:
 
-* A Mendix application with a [published OData service](https://docs.mendix.com/refguide/published-odata-services/) that includes exposed entities. 
+* A Mendix application with a [published OData service](/refguide/published-odata-services/) that includes exposed entities. 
 * A Snowflake environment.
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 The Mendix Data Loader is covered under the Mendix EULA. While the loader itself does not incur additional costs, operating within Snowflake may incur a usage cost. For more information, refer to the [Snowflake pricing documentation](https://www.snowflake.com/en/data-cloud/pricing-options/).
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Installation
+## Installation
 
 Follow instructions in [Install an app from a listing](https://other-docs.snowflake.com/en/native-apps/consumer-installing) to add the component to your Snowflake environment.
 
-## 3 Configuration
+## Configuration
 
 Once the Mendix Data Loader is deployed, follow these steps to configure and use it:
 
@@ -84,13 +84,13 @@ Once the Mendix Data Loader is deployed, follow these steps to configure and use
 
 The ingested data is stored in the target schema of the target database specified by the user and created by the Mendix Data Loader application. This target schema in the target database serves as a staging area. Because of that, you should copy the tables of the target schema into a database and schema that you want to use to store the ingested data. This should be done after every ingestion.
 
-## 4 Verifying the Access Token
+## Verifying the Access Token
 
 When using OAuth authentication with the Mendix Data Loader, it is crucial to verify the access token received by your Mendix application. This verification process ensures the token's authenticity and integrity, protecting your application from unauthorized access attempts.
 
-{{% alert color="info" %}} If your organization already has an established solution for token verification, you can implement the Mendix Data Loader using OAuth as the authentication method without additional steps. However, if you do not have an existing solution, note that the platform-supported [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) has this feature on its roadmap. {{% /alert %}}
+The [OIDC SSO module](https://marketplace.mendix.com/link/component/120371) in the Mendix Marketplace can be used to authenticate the access token. To find out more please refer to the [OIDC SSO documentation](/appstore/modules/oidc/#client-credential-grant).
 
-### 4.1 Token Verification Process
+### Token Verification Process
 
 To verify an access token, follow these high-level steps:
 
@@ -98,7 +98,7 @@ To verify an access token, follow these high-level steps:
 2. Extract the claims from the token's payload.
 3. Verify the payload by checking specific properties.
 
-### 4.2 Verifying the Payload
+### Verifying the Payload
 
 When verifying the payload, typically you should check the following properties:
 
@@ -111,44 +111,64 @@ Additionally, you may need to verify custom claims specific to your OAuth provid
 
 {{% alert color="info" %}} The exact properties and verification process may vary depending on your OAuth provider and security requirements. Always refer to your provider's documentation and your organization's security policies when implementing token verification. {{% /alert %}}
 
-## 5 Technical Reference
+## Setting up the app client in your OAuth provider
 
-### 5.1 Current Limitations
+When setting up the OAuth provider to be able to use it with the Mendix Data Loader, the correct **redirect URL** must be input in order for the authorization server to redirect the user back to the application. The redirect URL fro your Snowflake environment will be as follows:
+
+```
+https://apps-api.c1.<cloud_region_id>.<cloud>.app.snowflake.com/oauth/complete-secret
+```
+
+The *cloud_region_id* and the *cloud* in the URL will depend on the configurations of your Snowflake account. You can check out [Supported Cloud Regions](https://docs.snowflake.com/en/user-guide/intro-regions) and [Supported Cloud Platforms](https://docs.snowflake.com/en/user-guide/intro-cloud-platforms) to see what these values will be according to the region and cloud platform your account is in.
+
+## Current Limitations
 
 * Exposing an association in an Odata service is as a link is not supported yet by the Mendix Data Loader. Instead, choose the **As an associated object id** option in your Odata settings. This option will store the associated object ID in the table, but not explicitly as foreign key.
 * The Mendix Data Loader supports single endpoint (OData) ingestion. If you want to ingest data from multiple endpoint, you can do this by ingesting the data from each endpoint separately one by one. Make sure to assign a different staging schema for every ingestion you do, or the previous ingestions will be overwritten. The ability to ingest data from multiple endpoints in one go will be added in a future release.
-* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side. 
+* The Mendix Data Loader always ingests all the data exposed by the OData published by your Mendix application. If you do not want to ingest all of the data inside the exposed entities, you must filter the data at the Mendix/OData side.
+* The Mendix Data Loader does not support custom domains for Mendix applications when using pagination in published OData services. This is because the OData response always returns the base domain's root URL, regardless of the custom domain being used. As a result, the call for the next page fails because the returned root URL does not have a corresponding network rule in Snowflake.
 
-### 5.2 Troubleshooting
+## Technical Reference {#technical-reference}
+
+The module includes technical reference documentation for the available entities, enumerations, activities, and other items that you can use in your application. You can view the information about each object in context by using the **Documentation** pane in Studio Pro. You can also download a copy of the full documentation available for your app.
+
+The **Documentation** pane displays the documentation for the currently selected element. To view it, perform the following steps:
+
+1. In the [View menu](/refguide/view-menu/) of Studio Pro, select **Documentation**.
+2. Click on the element for which you want to view the documentation.
+
+    {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
+
+## Troubleshooting
 
 If you encounter any issues while using the Mendix Data Loader, use the following troubleshooting tips to help you solve them.
 
 For any additional troubleshooting, contact the [development team](mailto:sa_dev_team@mendix.com).
 
-#### 5.2.1 Error Parsing JSON: Document Is Too Large
+### Error Parsing JSON: Document Is Too Large
 
 When ingesting data, the Mendix Data Loader shows an error similar to the following: `net.snowflake.client.jdbc.SnowflakeSQLException: Error parsing JSON: document is too large, max size 16777216 bytes`.
 
-##### 5.2.1.1 Cause
+#### Cause
 
 The amount of data being ingested is so large that the JSON file has become too large to parse.
 
-##### 5.2.1.2 Solution
+#### Solution
 
 To solve this issue, configure the exposed OData entities to have pagination. For the best performance, make the pages as large as possible while still ensuring that the JSON does not become too large to parse. 
 
-#### 5.2.2 No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
+### No Response from my Mendix Application when Pagination is Enabled on Mendix Studio Pro 10.10
 
 In the process of ingesting data, the Mendix application may not return any values if pagination is enabled for the published OData service and if the Mendix Studio Pro version is 10.10.
 
-##### 5.2.2.1 Cause
+#### Cause
 
 A bug in the published OData service resource in Mendix Studio Pro 10.10 where the application root url is set incorrectly causes no data to be returned.
 
-##### 5.2.1.2 Solution
+#### Solution
 
-This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](https://docs.mendix.com/developerportal/deploy/custom-domains/#use-custom-url).
+This issue will be resolved in a future Mendix Studio Pro release. If you wish to work around this issue, you can set the ApplicationRootUrl of the application so that it has a trailing slash "/", e.g., **https://mymendixapp.mendixcloud.com/**. This resolution is the same as setting a custom domain as described in the [Custom Domains Mendix Documentation](/developerportal/deploy/custom-domains/#use-custom-url).
 
-### 5.3 Contact Information
+## Contact Information
 
 For support or queries regarding the Mendix Data Loader, email the development team at [SA_Dev_Team@mendix.com](mailto:sa_dev_team@mendix.com).

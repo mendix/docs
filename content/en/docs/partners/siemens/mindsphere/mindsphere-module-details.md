@@ -12,7 +12,7 @@ aliases:
 #The anchors #mssso, #msosbar and #msthemepack below are mapped from the Siemens Insights Hub documentation site, so they should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 This information is for apps which are fully integrated apps into Insights Hub. It does not apply to apps which are only calling Insights APIs.
@@ -22,7 +22,7 @@ This page contains detailed information about the content of Insights Hub module
 
 This page can be used for troubleshooting issues with your deployment, or for assistance in additional customization you may wish to carry out.
 
-## 2 Single Sign-On (SiemensInsightsHubSingleSignOn){#mssso}
+## Single Sign-On (SiemensInsightsHubSingleSignOn){#mssso}
 
 When running on Insights Hub, the Insights Hub user can use their Insights Hub credentials to sign in to your app. This is referred to as Single Sign-On (SSO). To do this, you need to use the microflows and resources in the **SiemensInsightsHubSingleSignOn** module. You will also need the SSO module to get a valid user context during a local test session.
 
@@ -34,31 +34,31 @@ The SSO module also requires changes to the app theme. See the section on [Sieme
 Please ensure that you also download the *latest version* of the Siemens Insights Hub Widget module when you download the SSO module.
 {{% /alert %}}
 
-### 2.1 Constants
+### Constants
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image2.png" alt="Folder structure of the SiemensInsightsHubSingleSignOn module" >}}
 
-#### 2.1.1 LocalDevelopment
+#### LocalDevelopment
 
 These constants are only needed for local development and testing. For details of what needs to be put into the constants in the *LocalDevelopment* folder, please see [Local Testing](/partners/siemens/mindsphere-development-considerations/#localtesting) in *Insights Hub Development Considerations*.
 
-#### 2.1.2 Native Mobile
+#### Native Mobile
 
 The constants in *Native Mobile* are only needed when developing native mobile apps with Mendix for Insights Hub, please see [Insights Hub Mobile Native](/partners/siemens/mindsphere-mobile-native/) for details.
 
-#### 2.1.3 CockpitApplicationName
+#### CockpitApplicationName
 
 This is the name of your app as registered in the Insights Hub Mendix Portal. See [Running a Cloud Foundry-Hosted Application](https://developer.mindsphere.io/howto/howto-cf-running-app.html#configure-the-application-via-the-developer-cockpit) for more information.
 
-#### 2.1.4 GatewayURL
+#### GatewayURL
 
 This is the base URL for all requests to Insights Hub APIs. For example, the URL for Insights Hub on AWS PROD is `https://gateway.eu1.mindsphere.io`.
 
-#### 2.1.5 PublicKeyURL
+#### PublicKeyURL
 
 This is the URL where the public key can be found to enable token validation during the login process. For example, the URL for Insights Hub on AWS PROD is `https://core.piam.eu1.mindsphere.io/token_keys`.
 
-### 2.2 Microflows{#microflows}
+### Microflows{#microflows}
 
 The SiemensInsightsHubSingleSignOn module also provides microflows which are used to support SSO within Insights Hub and allow the user’s **tenant** and **email** to be obtained for use within the app (*DS_Account*)
 
@@ -66,13 +66,13 @@ The microflows *DS_AccessToken* and *DS_GetAccessTokenForScheduledEvents* can be
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image3.png" alt="Folder structure showing microflows in the SiemensInsightsHubSingleSignOn module" >}}
 
-#### 2.2.1 RegisterSingleSignOn
+#### RegisterSingleSignOn
 
 This microflow must be added as the *After startup* microflow or added as a sub-microflow to an existing after startup microflow. You can do this on the *Runtime* tab of the **App** > **Settings** dialog, accessed through the *App Explorer* dock.
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image4.png" alt="App settings dialog" >}}
 
-#### 2.2.2 DS_AccessToken
+#### DS_AccessToken
 
 This microflow populates the *AccessToken* entity.
 
@@ -94,7 +94,7 @@ To improve security of your app, it is recommended that you delete *AccessToken*
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image6.png" alt="Section of a microflow showing the Access token action and the Edit Custom HTTP Header dialog in the Call REST action" >}}
 
-#### 2.2.3 DS_Account
+#### DS_Account
 
 This microflow populates the *Name* attribute of the *Tenant* entity and the *Email* attribute of the *Account* entity from the Insights Hub account details of the user. These are extensions to the Mendix User Object which assist the creation of multi-tenant apps.
 
@@ -108,7 +108,7 @@ If the same user logs in using a different tenant, Mendix will treat this as a d
 
 For advice on how to make your apps multi-tenant, see [Multi-Tenancy](/partners/siemens/mindsphere-development-considerations/#multitenancy) in *Insights Hub Development Considerations*.
 
-### 2.3 Roles and Scopes{#rolesscopes}
+### Roles and Scopes{#rolesscopes}
 
 Using SSO, the Mendix app needs to know which roles to allocate to the user. This enables the app to know whether the user should have, for example, administrator access.
 
@@ -133,7 +133,7 @@ And in the Mendix app they will be mapped to these roles:
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-module-details/image9.png" alt="Mendix App Security dialog" >}}
 
-## 3 Insights Hub OS Bar {#msosbar}
+## Insights Hub OS Bar {#msosbar}
 
 All Insights Hub apps must integrate the Insights Hub OS Bar. This unifies the UI of all Insights Hub apps. It is used for showing the app name, routing back to the Launchpad, and signing out from Insights Hub easily. Apps without the Insights Hub OS Bar will not be validated for deployment to an Insights Hub production environment.
 
@@ -147,7 +147,7 @@ The SiemensInsightsHubOSBarConfig module creates an endpoint which is used by th
 The Insights Hub OS Bar Connector also needs the Siemens Insights Hub Web Content module, or manual configuration of the index.html file, in order to work. See [Customizing an Existing App](/developerportal/deploy/deploying-to-mindsphere/#existingapp) in *Siemens Insights Hub – deploy* and [index.html Changes](#indexhtmlchanges), below, for more information.
 {{% /alert %}}
 
-### 3.1 Configuring the OS Bar
+### Configuring the OS Bar
 
 Within the OS Bar you can see information about the app you are running.
 
@@ -166,7 +166,7 @@ The JSON should contain the following information:
 
 More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the Insights Hub developer site.
 
-## 4 Siemens Insights Hub Web Content{#msthemepack}
+## Siemens Insights Hub Web Content{#msthemepack}
 
 The **SiemensInsightsHubWebContent** module is an *Atlas UI Resource* based on the [User Experience Toolkit for Insights Hub and Industrial IoT](https://design.mindsphere.io/) which includes the following:
 
@@ -180,11 +180,11 @@ The **SiemensInsightsHubWebContent** module is an *Atlas UI Resource* based on t
     * public key url (*error_page/PublicKeyUrl.html*)
     * role mapping (*error_page/RoleMapping.html*)
 
-### 4.1 Insights Hub Icons
+### Insights Hub Icons
 
 See also the [Insights Hub Icons](/partners/siemens/mindsphere-development-considerations/#atlasui) section of *Insights Hub Development Considerations* for a discussion about adding icons from Siemens Insights Hub Web Content.
 
-### 4.2 index.html Changes{#indexhtmlchanges}
+### index.html Changes{#indexhtmlchanges}
 
 The [Siemens Insights Hub Starter Application](https://marketplace.mendix.com/link/component/109130), example apps, and Siemens Insights Hub Web Content have an updated `index.html` file to allow integration with Insights Hub.
 
@@ -198,11 +198,11 @@ The changes are required to support:
 
 The modified `index.html` file can be found in the /themesource/siemensinsightshubwebcontent/public folder of your app.
 
-### 4.3 sso-login.html
+### sso-login.html
 
 The Siemens Insights Hub Starter Application, example apps, and Siemens Insights Hub Web Content have a `sso-login.html` file which replaces the standard Mendix `login.html` file to allow SSO integration with Insights Hub. This can be found in the /themesource/siemensinsightshubwebcontent/public folder of your app.
 
-### 4.4 Error pages
+### Error pages
 
 These error pages are included in the Siemens Insights Hub Starter Application, example apps, and Siemens Insights Hub Web Content. This section explains why they are there.
 
@@ -222,9 +222,9 @@ This page is shown if the **PublicKeyURL** does not match the issuer of the give
 
 This page is shown if the provided Insights Hub application scopes do not match any of the roles in the Mendix application.
 
-## 5 Appendices
+## Appendices
 
-### 5.1 index.html{#indexhtml}
+### index.html{#indexhtml}
 
 Various changes have been made to the standard Mendix index.html file to ensure compatibility with Insights Hub. These are supplied by default in the Siemens Insights Hub Starter Application, example apps, and Siemens Insights Hub Web Content.
 
@@ -232,7 +232,7 @@ You will only have to make the changes below if you are configuring your existin
 
 Run your app locally, copy the *index.html* from the /deployment folder to /theme/web/public folder of your app and apply the changes described below.
 
-#### 5.1.1 XSRF / Gatway session expired
+#### XSRF / Gatway session expired
 
 In index.html, in the header before the line `{{themecss}}`, the following script needs to be included in the file.
 
@@ -382,7 +382,7 @@ This change does two things:
 </script>
 ```
 
-#### 5.1.2 SSO
+#### SSO
 
 To allow SSO, the usual login.html needs to be replaced with a different file (sso-login.html).
 
@@ -408,7 +408,7 @@ and directly after the script of the X-XRSR put the following script
 If you do not use the **Siemens Insights Hub Web Content** module you have to create the sso-login.html yourself in the folder /theme/web/public. See the [sso-login.html](#mindspherelogin) section, below.
 {{% /alert %}}
 
-#### 5.1.3 OS Bar
+#### OS Bar
 
 For the OS Bar to work correctly in your Mendix app, the following script has to be added after the just added SSO script. Please note the comments in the code regarding the order in which things need to be done if you are inserting this manually.
 
@@ -503,7 +503,7 @@ For the OS Bar to work correctly in your Mendix app, the following script has to
 	</script>
 ```
 
-### 5.2 sso-login.html{#mindspherelogin}
+### sso-login.html{#mindspherelogin}
 
 A new login file `sso-login.html` is needed to support Insights Hub SSO. This is supplied by default in the MindSphere app template, example app, and Siemens Insights Hub Web Content.
 
@@ -523,7 +523,7 @@ You will only have to create a `sso-login.html` file in the folder /theme/web/pu
 </html>
 ```
 
-## 6 Read More
+## Read More
 
 * [Siemens Insights Hub – deploy](/developerportal/deploy/deploying-to-mindsphere/)
 * [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/)

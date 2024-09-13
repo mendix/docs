@@ -7,7 +7,7 @@ no_list: false
 description_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 Testing is a vital component when creating a Mendix application. In this category, you can find all the test-related how-tos and blogs written by experienced Mendix professionals.
 
@@ -17,4 +17,4 @@ These blog posts also present useful details on testing:
 * [8 Lightweight Quality Assurance Practices](https://www.mendix.com/blog/8-lightweight-quality-assurance-practices/)
 * [The Quality Assurance Mindset in Mendix](https://www.youtube.com/watch?v=hpJp-tAUn-g)
 
-## 2 Documents in This Category
+## Documents in This Category

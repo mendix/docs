@@ -3,8 +3,9 @@
   <head>
     {{ partial "head.html" . }}
   </head>
-  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}">
-{{/* MvM - deactivation of original navbar - as in baseof.html
+  <!-- DB – Check for numberless_headings -->
+  <body class="td-{{ .Kind }}{{ with .Page.Params.body_class }} {{ . }}{{ end }}{{ if .Params.numberless_headings }} numberless_headings{{ end }}">
+    {{/* MvM - deactivation of original navbar - as in baseof.html
     <header>
       {{ partial "navbar.html" . }}
     </header>

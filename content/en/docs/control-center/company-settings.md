@@ -6,19 +6,19 @@ weight: 30
 no_list: list
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Company Settings** page allows you to change company details, company email domains, and security contact. Moreover, you can view and add Mendix Admins of your company.
 
-## 2 General Settings
+## General Settings
 
 On the **General Settings** tab of this page, you can manage your company details, company email domains, and security contact.
 
-### 2.1 Company Details
+### Company Details
 
 Under **Company Details**, you can edit your **Company Name** and **Description**.
 
-### 2.2 Company Email Domains {#company-email-domains}
+### Company Email Domains {#company-email-domains}
 
 {{% alert color="warning" %}}Once you add an email domain, it is permanently added to your company and cannot be removed anymore, as soon as a user creates a Mendix account with this email domain, whether this Mendix account is active or not.{{% /alert %}}
 
@@ -34,7 +34,7 @@ To export all the email domains, use the **Export to Excel** button.
 
 It is possible to merge two companies into one company. However, this action is irreversible. Before Mendix can do this action, [the single sign-on configurations](/control-center/security/set-up-sso-byoidp/) for these two companies must be deactivated if they are enabled. After the two companies are merged, all users from the two companies and their applications will be moved to the same company.{{% /alert %}}
 
-### 2.3 Security Contact {#security-contact}
+### Security Contact {#security-contact}
 
 Under **Security Contact**, you can provide a specific security contact who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.
 
@@ -50,7 +50,7 @@ Click **Delete** to delete the existing Security Contact. This is the first step
 
 For more information on security issues, see [Security Advisories](/releasenotes/security-advisories/).
 
-## 3 Mendix Admins{#mendix-admins}
+## Mendix Admins{#mendix-admins}
 
 The **Mendix Admins** tab lists all the current Mendix Admins in your company. A Mendix Admin will normally be someone in the IT department of your company, and they will have full access to Control Center to perform all available tasks. 
 

@@ -5,7 +5,7 @@ weight: 35
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Integrating Models with Pre-processors and Post-processors](/refguide/machine-learning-kit/using-ml-kit/#pre-post-processors) section of *Integrate Machine Learning Models* outlines considerations when importing a machine learning model with advanced processing needs. 
 
@@ -20,11 +20,11 @@ This document explores four pre-processor and post-processor design patterns for
 
 {{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
-### 1.1 Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
+### Pre-processors and Post-processors as Microflow Activities {#microflow-activities}
 
 The most simple processors could be implemented using existing microflow activities that are provided by Studio Pro. Here is some example usage of Design Pattern #1.
 
-#### 1.1.1 Categorical-to-Numerical
+#### Categorical-to-Numerical
 
 Machine learning models cannot interpret categorical data without pre-processing steps. Hence, a raw feature that is a string or enumeration might need to be translated into a numerical format for a given model. 
 
@@ -38,7 +38,7 @@ Create Variable Activity
 
 As an example, production quality grade of a bike could be ranging from letter A to F. In order to feed that feature into model, the quality grade enumeration can be converted to ordinal data which holds priority ordering with each variable ranging from 1 to 6.
 
-#### 1.1.2 Numerical-to-Categorical
+#### Numerical-to-Categorical
 
 In a similar scenario, an output of an ML model that is a numerical value might need to be converted into a string representation to update a field in a domain entity or display a human-interpretable result in the user interface of an application. Such a post-processor can be converted in the below fashion.
 
@@ -52,7 +52,7 @@ Create Variable Activity
 
 For instance, the output of the model that is called target_probability which is ranging from 0 and 1 can be converted into a binary value based on a threshold (0.80) value.
 
-#### 1.1.3 Aggregation
+#### Aggregation
 
 Some numerical features can be somewhat summarized using aggregation components. The most common aggregate functions are min(), max(), mean(), count(), sum(), etc. Those features could be very powerful features for use-cases like real-time data flow is a concern on time-series data. [List activities](/refguide/list-activities/) can be useful to calculate such features inside the microflows.
 
@@ -66,13 +66,13 @@ Aggregate List Activity
  
 For instance, a new feature (minimum bike age) is calculated via Aggregate List activity and fed into the model.
 
-### 1.2 Pre-processors and Post-processors as Java Actions {#java-actions}
+### Pre-processors and Post-processors as Java Actions {#java-actions}
 
 More advanced use cases would require to use the full power of a programming language in order to achieve some complex transformation, into and from the model itself.
 
 If your model has multidimensional numeric inputs and/or outputs, you need to encode these as `strings`, using Base64. In this use case Java Actions will be required. See the [Multidimensional Outputs](/refguide/machine-learning-kit/using-ml-kit/#multidimensional-outputs) section of *Using ML Kit* for more information.
 
-#### 1.2.1 Java Actions for Encoding Features
+#### Java Actions for Encoding Features
 
 Consider the following microflow:
 
@@ -126,11 +126,11 @@ The post-processor is even simpler (see this Random Forest example in our [Mendi
  
 Most of the code is related to creating a Map from Integer (the output of the model) to String (a valid class name) from a file that should be already in your artifacts folder and then returning it so that we can process it later.
 
-#### 1.2.2 Java Actions for Data Transformation Features
+#### Java Actions for Data Transformation Features
 
 A common step required in most non-structured data inference using neural networks is to resize the image, normalize, et al. For NLP, a similar flow would require text-cleaning, stop word removal, lemmatization, etc. These would require more complex tasks to be executed. As an example, we share the Pre- and post-processing required for inference using an image through the [ResNet50 in the ONNX model zoo](https://github.com/onnx/models/tree/main/vision/classification/resnet), essentially, resizing and normalization.
 
-##### 1.2.2.1 Pre-Processing
+##### Pre-Processing
 
 As you can see, most of the code are the loops required for normalization and encoding (see this ResNet50 example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/resnet50/actions/ResNet50Preprocessor.java)):
 
@@ -182,7 +182,7 @@ As you can see, most of the code are the loops required for normalization and en
     }
 ```
  
-##### 1.2.2.2 Post-Processing
+##### Post-Processing
 
 In this case, the bulk of the code is about creating a map for translating the id derived from the highest confidence class retrieved by the model, and the highest probability calculation. See this ResNet50 example in our [Mendix ML Kit Demo Repository](https://github.com/mendix/mlkit-example-app/blob/main/javasource/resnet50/actions/ResNet50Postprocessor.java):
 
@@ -237,11 +237,11 @@ In this case, the bulk of the code is about creating a map for translating the i
     }
 ```
 
-### 1.3 Pre-processors and Post-processors as ONNX Operators {#onnx-operators}
+### Pre-processors and Post-processors as ONNX Operators {#onnx-operators}
 
 More often than not the pre- and post-processing steps are deeply coupled with the model being used, thus, supporting in-file embedded, model-training creation time entities is so important. ONNX allows doing pretty much any pre and post-processor except, maybe, in the most convoluted use cases, and even more so, these probably will be covered in the future as the format grows and expands.
 
-#### 1.3.1 Embedded ONNX Operators
+#### Embedded ONNX Operators
 
 There is an extensive [list of ONNX Operators](https://github.com/onnx/onnx/blob/main/docs/Operators.md) that can be embedded into the model file in order to perform several kinds of calculations. Several [examples](https://towardsdatascience.com/creating-onnx-from-scratch-4063eab80fcd) are also available online to demonstrate how this can be achieved. 
 
@@ -338,7 +338,7 @@ The below code snippet creates a preprocessor ONNX artifact that contains the ne
     onnx.save(model_def, 'preprocessor.onnx')
 ```
 
-#### 1.3.2 Modifying ONNX Graphs
+#### Modifying ONNX Graphs
 
 The computation graph of an existing ONNX artifact can be altered in various ways. An ONNX operator (node) can be added or removed, or replaced with another operator. [Python API](https://github.com/onnx/onnx/blob/rel-1.9.0/docs/PythonAPIOverview.md) of the ONNX provides a bunch of tools to make modifications to existing artifacts.
 
@@ -366,7 +366,7 @@ Another common scenario is merging multiple ONNX artifacts. For instance, an exi
 
 The above snippet shows how to combine and save two ONNX artifacts which stores ONNX graphs for pre-processing operators and the relevant ResNet model that is being used in the previous examples.
 
-### 1.4 Pre-Processors and Post-processors as Hybrid Activities {#complex-hybrid}
+### Pre-Processors and Post-processors as Hybrid Activities {#complex-hybrid}
 
 The pre- / post-processing steps of an ML Model Call activity are not restricted by a single design pattern, and it can be composed of multiple design patterns. That means Mendix developers can combine many design patterns to construct complex pre- / post-processing actions.
 

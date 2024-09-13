@@ -6,7 +6,7 @@ description: "Describes the process for using Velero to create and restore backu
 weight: 25
 ---
 
-## 1 Introduction
+## Introduction
 
 [Velero](https://velero.io/docs/) is a tool that you can use to back up your Kubernetes namespaces as an additional disaster recovery measure. It does not back up your database or S3 resources, so it cannot serve as your main backup method, but it can supplement the default [backup process](/developerportal/operate/backups/) for your Mendix app.
 
@@ -17,7 +17,7 @@ Velero enables you to back up and restore the following Mendix objects:
 * `builds.privatecloud.mendix.com`
 * `mendixapps.privatecloud.mendix.com`
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -26,13 +26,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Create a recovery cluster.
     {{% alert color="info" %}}The process of creating a recovery cluster may vary depending on the platform that you use to host your private cloud. For more information, refer to the documentation supplied by your cloud provider.{{% /alert %}}
 
-## 3 Creating a Velero Backup
+## Creating a Velero Backup
 
 To create a backup with Velero, follow these steps:
 
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=0
     kubectl scale deployment mendix-operator --replicas=0
     ```
@@ -41,7 +41,7 @@ To create a backup with Velero, follow these steps:
 
 2. Create the backup by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero create backup mendix-velero-bkp
     ``` 
 
@@ -51,24 +51,24 @@ To create a backup with Velero, follow these steps:
 
 3. Verify that the backup is complete by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero backup describe mendix-velero-bkp
     ```
 
 4. Restart the Mendix Operator and Mendix agent by entering the following command:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=1
     kubectl scale deployment mendix-operator --replicas=1
     ```
 
-## 4 Restoring a Velero Backup
+## Restoring a Velero Backup
 
 To restore a backup that you created with Velero, follow these steps:
 
 1. Restore the backup by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero restore create --from-backup mendix-velero-bkp --status-include-resources=storageinstances.privatecloud.mendix.com,storageplans.privatecloud.mendix.com,builds.privatecloud.mendix.com,mendixapps.privatecloud.mendix.com
     ```
 
@@ -77,7 +77,7 @@ To restore a backup that you created with Velero, follow these steps:
 2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     kubectl patch storageinstances $(kubectl get storageinstances --no-headers -o custom-columns=":metadata.name") -p '{"metadata":{"finalizers":["finalizer.privatecloud.mendix.com"]}}' --type=merge
     ```
 

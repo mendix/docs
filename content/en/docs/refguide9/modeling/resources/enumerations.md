@@ -9,13 +9,13 @@ aliases:
 #The anchor <enum-value-properties> below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 An enumeration defines a list of predefined values. Enumerations are used for the enumeration attribute type. For example, the status of an order can be *Open*, *Closed*, or *In Progress*. So, the enumeration for the order status will consist of three values: *Open*, *Closed*, and *In_Progress*. 
 
 An enumeration consists of one or more [enumeration values](/refguide9/enumerations/#enum-properties). Each value represents one option. An attribute of the enumeration type can also represent an uninitialized state: for example, if you do not assign any status to an order, the order status will be *empty*. 
 
-## 2 Creating an Enumeration  
+## Creating an Enumeration  
 
 To create a new enumeration, do the following: 
 
@@ -34,7 +34,7 @@ To create a new enumeration, do the following:
 
 You have added a new enumeration to your app. You can use the same enumeration for different attributes of the enumeration type in your app. 
 
-## 3 Enumeration Properties {#enum-properties}
+## Enumeration Properties {#enum-properties}
 
 An enumeration has the following properties:
 
@@ -52,11 +52,11 @@ An enumeration has the following properties:
 
     {{< figure src="/attachments/refguide9/modeling/resources/enumerations/enumeration-properties.png" class="no-border" >}}
 
-### 3.1 Enumeration Value Properties {#enum-value-properties}
+### Enumeration Value Properties {#enum-value-properties}
 
 Enumeration value properties are described below:
 
-#### 3.1.1 Caption 
+#### Caption 
 
 This is the caption of an enumeration value is the text that the end-user sees for this enumeration value.
 
@@ -64,7 +64,7 @@ The caption can be changed and can contain any character. For example, *In Progr
 
 This is a translatable text. For more information, see [Language Menu](/refguide9/translatable-texts/). 
 
-#### 3.1.2 Name{#name}
+#### Name{#name}
 
 This is the name of an enumeration value. It is a technical name of the value which is used to refer to the enumeration value in your app.
 
@@ -146,13 +146,13 @@ The name of an enumeration value must be a technical name, starting with a lette
 The name of an enumeration value is also used for storing the enumeration value in the database. Therefore, changing the **Name** of an enumeration value is not allowed; it would invalidate the data in your database.
 {{% /alert %}}
   
-#### 3.1.3 Image
+#### Image
 
 This is an image selected for an enumeration value to be displayed in a data grid column.
 
 To use the image in a data grid, set the enumeration format of the column to *Image*. For more information on data grid columns, see [Grid Columns](/refguide9/columns/).
 
-## 4 Read More
+## Read More
 
 * [Attributes](/refguide9/attributes/)
 * [Entities](/refguide9/entities/)

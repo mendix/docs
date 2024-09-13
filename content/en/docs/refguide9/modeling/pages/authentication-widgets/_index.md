@@ -4,7 +4,7 @@ url: /refguide9/authentication-widgets/
 weight: 55
 ---
 
-## 1 Introduction
+## Introduction
 
 Authentication widgets are used to sign users in and log them out. 
 
@@ -29,11 +29,11 @@ The **Authentication** category contains the following widgets:
 
     {{< figure src="/attachments/refguide9/modeling/pages/authentication-widgets/validation-message-example.png" alt="Validation Message Example" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide9/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Pages](/refguide9/pages/)

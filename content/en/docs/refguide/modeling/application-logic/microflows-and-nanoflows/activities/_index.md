@@ -4,7 +4,7 @@ url: /refguide/activities/
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 Activities define the actions that are executed in a microflow or a nanoflow.
 
@@ -14,7 +14,7 @@ There are different types of activity, and they are grouped together in the Stud
 Most activities can be used in both microflows and nanoflows. However, some can only be used in one of these types of flow, or the behavior may differ between in microflows and in nanoflows.
 {{% /alert %}}
 
-## 2 Object Activities
+## Object Activities
 
 Object activities can be used to create and manipulate objects. The [domain model](/refguide/domain-model/) defines the object types ([entities](/refguide/entities/)) that can be used.
 
@@ -28,7 +28,7 @@ Object activities can be used to create and manipulate objects. The [domain mode
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/retrieve.png" alt="retrieve" link="/refguide/retrieve/" max-width=80% class="no-border" >}} | [Retrieve](/refguide/retrieve/) | Gets one (or more) associated objects of another object. Furthermore, this activity can also get one or more objects directly from a database. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/rollback.png" alt="rollback object" link="/refguide/rollback-object/" max-width=80% class="no-border" >}} | [Rollback object](/refguide/rollback-object/) | Rolls uncommitted changes back that were made to an object in the part of the microflow preceding the activity. Furthermore, it deletes objects that have been created but have never been committed. |
 
-## 3 List Activities
+## List Activities
 
 List activities can be used to create and manipulate lists of objects.
 
@@ -39,7 +39,7 @@ List activities can be used to create and manipulate lists of objects.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-list.png" alt="create list" link="/refguide/create-list/" max-width=65% class="no-border" >}} | [Create list](/refguide/create-list/) | Creates a (empty) list variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/list-operation.png" alt="list operation" link="/refguide/list-operation/" max-width=65% class="no-border" >}} | [List operation](/refguide/list-operation/) | Combines or compares two lists with objects of the same entity. |
 
-## 4 Action Call Activities
+## Action Call Activities
 
 Action call activities can be used to call another microflow or to call a Java action.
 
@@ -49,7 +49,7 @@ Action call activities can be used to call another microflow or to call a Java a
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-javascript-action.png" alt="javascript action call" link="/refguide/javascript-action-call/" max-width=65% class="no-border" >}} | [Call JavaScript action](/refguide/javascript-action-call/) (nanoflows only) | Calls a JavaScript action. Arguments can be passed to the action and the result can be stored in a variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-microflow.png" alt="microflow call" link="/refguide/microflow-call/" max-width=65% class="no-border" >}} | [Microflow call](/refguide/microflow-call/) | Calls a microflow. Arguments can be passed to the microflow and the result can be stored in a variable. |
 
-## 5 Variable Activities
+## Variable Activities
 
 Variable activities can be used to create or change a variable.
 
@@ -58,7 +58,7 @@ Variable activities can be used to create or change a variable.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/change-variable.png" alt="change variable" link="/refguide/change-variable/" max-width=55% class="no-border" >}} | [Change variable](/refguide/change-variable/) | Allows you to changes the value of a variable. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/create-variable.png" alt="create variable" link="/refguide/create-variable/" max-width=55% class="no-border" >}} | [Create variable](/refguide/create-variable/) | Allows you to creates a new variable. |
 
-## 6 Client Activities
+## Client Activities
 
 Client activities can be used to have the web client of your application perform an action, such as showing a different page or downloading a file.
 
@@ -74,7 +74,7 @@ Client activities can be used to have the web client of your application perform
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/synchronize.png" alt="synchronize" link="/refguide/synchronize/" max-width=100% class="no-border" >}} | [Synchronize](/refguide/synchronize/)  (nanoflows only) | Synchronizes data. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/validation-feedback.png" alt="validation feedback" link="/refguide/validation-feedback/" max-width=100% class="no-border" >}} | [Validation feedback](/refguide/validation-feedback/) | Allows you to display a red text below a widget that displays an attribute or association. |
 
-## 7 Integration Activities
+## Integration Activities
 
 {{% alert color="info" %}}
 These activities can only be used in microflows.
@@ -92,19 +92,19 @@ Integration activities can be used to integrate with other systems, for example 
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/query-external-database.png" alt="query external database" link="/refguide/query-external-database/" max-width=100% class="no-border" >}} | [Query external database](/refguide/query-external-database/) | Can be used with the [External Database Connector](/appstore/modules/external-database-connector/) to use preconfigured database queries and display retrieved data in your app.|
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/send-rest-request.png" alt="send rest request" link="/refguide/send-rest-request/" max-width=100% class="no-border" >}} | [Send REST request (beta)](/refguide/send-rest-request/) | Can be used to send a REST request, which is configured in a [consumed REST service (beta)](/refguide/consumed-rest-services-beta/) document.|
 
-## 8 Logging Activities
+## Logging Activities
 
 | Graphic | Name | Description |
 | ---| --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/log-message.png" alt="log message" link="/refguide/log-message/" max-width=60% class="no-border" >}} | [Log message](/refguide/log-message/) | Allows you to create messages that appear in the log of your Mendix application. |
 
-## 9 Document Generation Activities
+## Document Generation Activities
 
 | Graphic | Name | Description |
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/generate-document.png" alt="generate document" link="/refguide/generate-document/" max-width=60% class="no-border" >}} | [Generate document](/refguide/generate-document/) (microflows only) | Allows you to create a document of a certain type based on a [template](/refguide/document-templates/). |
 
-## 10 Metrics Activities
+## Metrics Activities
 
 {{% alert color="info" %}}
 These activities can only be used in microflows.
@@ -116,13 +116,13 @@ These activities can only be used in microflows.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/increment-counter.png" alt="increment-counter" link="/refguide/metrics-increment-counter/" max-width=55% class="no-border" >}} | [Increment counter](/refguide/metrics-increment-counter/) | Allows you to increment a counter by 1. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/gauge.png" alt="gauge" link="/refguide/metrics-gauge/" max-width=55% class="no-border" >}} | [Gauge](/refguide/metrics-gauge/) | Allows you to specify the value of a gauge. |
 
-## 11 ML Kit Activities
+## ML Kit Activities
 
 | Graphic | Name | Description |
 | --- | --- | --- |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/call-ML-model.png" alt="call ml model" link="/refguide/call-ml-model/" max-width=60% class="no-border" >}} | [Call ML model](/refguide/call-ml-model/) (microflows only) | Allows you to call an [ML model mapping](/refguide/ml-model-mapping/) document. |
 
-## 12 Workflow Activities
+## Workflow Activities
 
 {{% alert color="info" %}}
 These activities can only be used in microflows.
@@ -146,7 +146,7 @@ Workflow activities are used in relation to workflows and their user tasks.
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/unlock-workflow.png" link="/refguide/unlock-workflow/" max-width=100% class="no-border" >}} | [Unlock workflow](/refguide/unlock-workflow/) | Allows you to unlock a workflow. |
 | {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/notify-workflow.png" link="/refguide/notify-workflow/" max-width=100% class="no-border" >}} | [Notify workflow](/refguide/notify-workflow/) | Allows you to notify a workflow that is suspended on the [Wait for notification](/refguide/wait-for-notification/) activity. |
 
-## 13 External Object Activities
+## External Object Activities
 
 {{% alert color="info" %}}
 These activities can only be used in microflows.

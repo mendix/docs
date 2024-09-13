@@ -5,7 +5,7 @@ weight: 300
 description: "A description of some extra considerations to be taken into account when developing for deployment to Insights Hub"
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}
 This information is for standalone Mendix application which are not fully integrated into Insights Hub but just want to incorporate IIoT Data coming from Insights Hub.
@@ -24,13 +24,13 @@ If you prefer a full Insights Hub app, please see [Insights Hub Development Cons
 * [Build an Insights Hub app with Mendix](https://academy.mendix.com/link/path/80/Build-a-MindSphere-app-with-Mendix) - this learning path will teach you how to develop an app for Insights Hub with Mendix
 * [Build an Insights Hub App - Continued](https://academy.mendix.com/link/path/93/Build-a-MindSphere-App---Continued) - this learning path is for everyone who wants to dive more deeply into how to build an Insights Hub App with the Mendix Platform
 
-## 2 Technical User
+## Technical User
 
 If your application is not fully integrated with Insights Hub and is using its own user management the signed in users have no rights to call Insights Hub APIs. In this scenario, Insights Hub is providing so called **Technical Users**. An Insights Hub tenant administrator is able to create a technical user in the **Insights Hub Settings** app.
 
 Please follow the steps described in the Insights Hub documentation [Technical Users](https://documentation.mindsphere.io/MindSphere/apps/settings/technical-users.html) to create a **Technical User**. Please make sure the created Technical User has the role assignment needed to call the desired Insights Hub APIs.
 
-## 3 Authenticating Calls to Insights Hub APIs{#authenticating}
+## Authenticating Calls to Insights Hub APIs{#authenticating}
 
 To extract data from Insights Hub, your calls to the Insights Hub APIs need to be authenticated. This is done through the [Siemens Insights Hub API Authenticator](https://marketplace.mendix.com/link/component/226260).
 
@@ -68,9 +68,9 @@ Add the **Siemens Insights Hub API Authenticator** module role **User** to all y
 
 {{< figure src="/attachments/partners/siemens/mindsphere/mindsphere-api-only/ModuleRole.png" alt="Authentication" >}}
 
-## 4 Authentication Considerations
+## Authentication Considerations
 
-### 4.1 Authenticating During Development
+### Authenticating During Development
 
 When you are developing your app, you can set the **ClientID** and **ClientSecret** constants within the app. You can also override these by using different [Configurations](/refguide/configuration/) within your app settings.
 
@@ -86,13 +86,13 @@ Don't forget to restart Studio Pro after you change / add the environment variab
 
 For security, the values of the **ClientSecret** should not be included when you deploy / commit the app.
 
-### 4.2 Authenticating for Deployment
+### Authenticating for Deployment
 
 When you deploy your app, you should remove the values of **ClientID** and **ClientSecret** from the app model for security reasons. You should then set the correct value as a constant (Cloud Foundry / Kubernetes environment variable) during the deployment.
 
 For the Mendix Cloud, this can be done by setting the value of the constants on the [Model Options](/developerportal/deploy/environments-details/#model-options) tab of the **Environment Details**. See [Constants](/refguide/constants/) for information on how to set these values on other deployment platforms.
 
-## 5 Insights Hub Widgets
+## Insights Hub Widgets
 
 If you want to use the [Siemens Insights Hub Widgets](https://marketplace.mendix.com/link/component/110119) in your app, these will need to use the *Insights Hub API Reverse Proxy*.
 

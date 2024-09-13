@@ -6,7 +6,7 @@ description: "Describes custom settings for server, log file, database, Amazon S
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use custom server settings to configure Mendix Runtime beyond the standard possibilities offered by Studio Pro.
 
@@ -25,7 +25,7 @@ When you are running your app locally, you can set these values in a [Configurat
 
 There is more information on how this is done in the Cloud Foundry buildpack in [Custom Runtime Settings](https://github.com/mendix/cf-mendix-buildpack#custom-runtime-settings) in the GitHub repo.
 
-### 1.1 Duration/Interval Settings
+### Duration/Interval Settings
 
 In versions of Mendix below 9.13.0, durations, intervals, and timeouts have to be specified as a number. This can be somewhat confusing because
 different units are used for different settings. Also, specifying long durations in milliseconds can be a bit cumbersome.
@@ -34,7 +34,7 @@ In Mendix 9.13.0 and above it is possible to specify durations in more user-frie
 * **ISO 8601 Periods**, such as `P7D`, `PT1H30M`, or `PT1S` (See https://en.wikipedia.org/wiki/ISO_8601#Durations for more information)
 * **HOCON durations**, such as `7 days`, `90m`, or `1 second` (See https://github.com/lightbend/config/blob/main/HOCON.md#duration-format for more information)
 
-## 2 General Settings {#general}
+## General Settings {#general}
 
 The following custom settings can be configured:
 
@@ -76,7 +76,7 @@ The following custom settings can be configured:
 | <a id="UploadedFilesPath" href="#UploadedFilesPath">UploadedFilesPath</a> | The location of the uploaded files. A valid path can be: `\\FileServer\CustomerPortalFiles`. | [deployment folder]\data\files |
 | <a id="mapping.import.MaxJsonReadingLength" href="#mapping.import.MaxJsonReadingLength">mapping.import.MaxJsonReadingLength</a> | The maximum length of the JSON string received from the remote which can be processed with import mapping. Use this setting when you expect a string which is longer than the default. See [Import Mappings](/refguide/import-mappings/#troubleshooting) for more information. <br />*This setting was introduced in Mendix version 9.24.17.* | 20000000 *(dependent on library version)* |
 
-## 3 Log File Settings
+## Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
@@ -86,9 +86,9 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="MaxLogFileSize" href="#MaxLogFileSize">MaxLogFileSize</a> | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | <a id="MaxLogFileCount" href="#MaxLogFileCount">MaxLogFileCount</a> | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
-## 4 Database Settings
+## Database Settings
 
-### 4.1 Common Settings
+### Common Settings
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ The settings below influence the behavior of the log files. These settings can o
 | <a id="JdbcLoginTimeout" href="#JdbcLoginTimeout">JdbcLoginTimeout</a> | This setting defines the database connection establishment time in milliseconds. | 5000 (5 seconds) |
 | <a id="SynchronizationCleanupInterval" href="#SynchronizationCleanupInterval">com.mendix.offline.SynchronizationCleanupInterval</a> | This setting defines how often objects of type `System.OfflineSynchronizationHistory` are cleaned up. | 90 (90 days) |
 
-### 4.2 Connection Pooling {#connection-pooling}
+### Connection Pooling {#connection-pooling}
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/). 
 
@@ -128,7 +128,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 | <a id="ConnectionPoolingTestOnReturn" href="#ConnectionPoolingTestOnReturn">ConnectionPoolingTestOnReturn</a> | If `true`, a database connection will be validated by the connection pool when it is returned to the pool by the application. Supported in Mendix versions 9.24.16 and above. | false |
 | <a id="ConnectionPoolingTestWhileIdle" href="#ConnectionPoolingTestWhileIdle">ConnectionPoolingTestWhileIdle</a> | If `true`, all idle database connections will be validated when the idle object evictor runs. Supported in Mendix versions 9.24.16 and above. | false |
 
-### 4.3 Migration Settings
+### Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
 
@@ -147,7 +147,7 @@ Before the data copying process starts, the main database structure will be gene
 | <a id="SourceDatabaseUserName" href="#SourceDatabaseUserName">SourceDatabaseUserName</a> | The user name for the connection to the source database. |   |
 | <a id="SourceOracleServiceName" href="#SourceOracleServiceName">SourceOracleServiceName</a> | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#amazon-s3-storage-service-settings}
+## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage.
 
@@ -174,7 +174,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 | <a id="commendixstorages3RequestTimeout" href="#commendixstorages3RequestTimeout">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>RequestTimeout</a> | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | <a id="commendixstorages3UseCACertificates" href="#commendixstorages3UseCACertificates">com.<wbr>mendix.<wbr>storage.<wbr>s3.<wbr>UseCACertificates</a> | Set this value to `true` to use the configured [CACertificates](#CACertificates) for the connection to the S3 service. | false |
 
-## 6 Microsoft Azure SQL
+## Microsoft Azure SQL
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
@@ -192,7 +192,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 | <a id="AzureDatabaseUserName" href="#AzureDatabaseUserName">DatabaseUserName</a> | `your-username` |   |
 | <a id="AzureDatabasePassword" href="#AzureDatabasePassword">DatabasePassword</a> | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings{#azure-blob}
+## Microsoft Azure Blob Storage Settings{#azure-blob}
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
@@ -218,7 +218,7 @@ For deployments to the Mendix Cloud, SAP BTP, and Mendix for Private Cloud these
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 Web Client Settings{#web-client-settings}
+## Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
@@ -232,7 +232,7 @@ The settings below influence the behavior of the Mendix web client.
 | <a id="commendixwebuiStateSizeWarningThreshold" href="#commendixwebuiStateSizeWarningThreshold">com.<wbr>mendix.<wbr>webui.<wbr>StateSizeWarningThreshold</a> | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | <a id="commendixwebuiCommittedObjectsThreshold" href="#commendixwebuiCommittedObjectsThreshold">com.<wbr>mendix.<wbr>webui.<wbr>CommittedObjectsThreshold</a> | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 9 Metrics Settings{#metrics-settings}
+## Metrics Settings{#metrics-settings}
 
 The settings below configure metrics through [micrometer](https://micrometer.io/docs). See [Metrics](/refguide9/metrics/) for more information and the specification of the settings format. 
 
@@ -242,7 +242,7 @@ The settings below configure metrics through [micrometer](https://micrometer.io/
 | <a id="MetricsRegistries" href="#MetricsRegistries">Metrics.Registries</a> | Registries to send metrics to |   |
 | <a id="MetricsApplicationTags" href="#MetricsApplicationTags">Metrics.ApplicationTags</a> | Common tags used for every meter |   |
 
-## 10 Proxy Settings
+## Proxy Settings
 
 The settings below allow you to use a proxy. 
 

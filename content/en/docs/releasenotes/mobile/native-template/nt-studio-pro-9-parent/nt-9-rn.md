@@ -5,6 +5,14 @@ weight: 7
 description: "Native Template 9 release notes."
 ---
 
+## 9.0.1 {#901}
+
+**Release date: September 3, 2023**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
 ## 9.0.0 {#900}
 
 **Release date: July 30, 2023**

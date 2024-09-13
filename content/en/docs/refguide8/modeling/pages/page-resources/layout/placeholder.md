@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A **placeholder** can be used in two ways:
 
@@ -18,7 +18,7 @@ For example, the image below shows two placeholders, **Main** and **Other** posi
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-resources/layout/placeholder/placeholder.png" alt="Two placeholders in a layout grid. One is labeled 'Main', and one is labeled 'Other'" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of placeholder properties is represented in the image below:
 
@@ -26,7 +26,7 @@ An example of placeholder properties is represented in the image below:
 
 A placeholder has a single section, **Misc** and a single property, **Name**.
 
-### 2.1 Name
+### Name
 
 Unlike most other widgets, the name of a placeholder carries a special significance. A layout contains one or more placeholders and one of these placeholders must be named **Main**.
 

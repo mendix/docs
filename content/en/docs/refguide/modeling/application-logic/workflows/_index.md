@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document provides a general introduction to workflows, including the reasons why organizations adopt workflow processes, when and when not to use workflows, and a few Mendix workflow business use cases. For instructions on how to perform Mendix workflow basic functions, see [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/).
 
@@ -31,7 +31,7 @@ For more information on when and when not to use workflows, see the [When to Use
 
 For information on Mendix workflow use cases, see the [Mendix Workflow Use Cases](#use-case) section below.
 
-## 2 When to Use Workflows {#when-to-use}
+## When to Use Workflows {#when-to-use}
 
 Automating a process with workflows is the most effective when the process meets specific criteria, ensuring smooth execution and optimization. 
 
@@ -46,7 +46,7 @@ Below are the criteria that a process should meet to be successfully implemented
 * Series of activities – it comprises a sequence of interconnected steps or actions.
 * Longer duration – the process spans a significant period, ranging from hours to months.
 
-## 3 When Not to Use Workflows {#when-not}
+## When Not to Use Workflows {#when-not}
 
 While workflow processes offer numerous benefits, they may not always be the ideal solution for every scenario. 
 
@@ -57,7 +57,7 @@ Below are situations where the use of workflows might not be appropriate:
 * Dynamic or unpredictable work – processes that involve dynamic or unknown elements, or where individuals require a high degree of freedom to decide their next actions, may not fit within the constraints of a workflow.
 * Outcome-driven processes – processes focused more on achieving specific outcomes rather than following a predefined series of steps may not be best suited for workflow implementation. It might be beneficial to consider alternative approaches, such as utilizing multiple smaller workflows that are loosely coupled with other logic.
 
-## 4 Mendix Workflow Use Cases {#use-case}
+## Mendix Workflow Use Cases {#use-case}
 
 Mendix provides a development platform which supports multiple editors. This enables the integration of workflows into broader application design. With Mendix, you can keep workflows focused on representing your business processes, while using the other logic (such as microflows and nanoflows) for more technical implementations.
 
@@ -73,11 +73,11 @@ The table below presents a few use cases that are a good fit for Mendix workflow
 
 For more information on a concrete use case, see [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/).
 
-## 5 Workflow Elements
+## Workflow Elements
 
 A workflow is composed of elements that you can use in the workflow editor: you can either see them in the working area (start and end events, a parameter), or drag them from **Toolbox** to the flow. For more information, see [Workflow Elements](/refguide/workflow-elements/). 
 
-## 6 Workflow Variables
+## Workflow Variables
 
 Workflows have dedicated variables that can be used in an XPath and Expressions inside the Workflow editor. 
 
@@ -88,25 +88,25 @@ The list of variables is described below:
 
 For example, you can use these variables as parameters in the **Task name** and **Task description** properties of a user task. For more information, see [User Task](/refguide/user-task/). 
 
-## 7 Workflow-Specific Activities in Microflows
+## Workflow-Specific Activities in Microflows
 
 You can add workflow-related activities to your microflows. For more information on these activities, see [Workflow Activities](/refguide/workflow-activities/). 
 
-## 8 Workflow-Specific On-Click Events on Pages
+## Workflow-Specific On-Click Events on Pages
 
 You can trigger workflows or user tasks from pages via specific on-click events configured on widgets. For more details, see [On Click Event and Events Section](/refguide/on-click-event/).
 
-## 9 Workflow Commons Module
+## Workflow Commons Module
 
 The [Workflow Commons](/appstore/modules/workflow-commons/) module is a workflow specific module that has preconfigured page templates, pages, dashboards, etc. It can save you a lot of time during development. You can either download it from the Marketplace or use one of the app templates when creating a new app in [Apps](https://sprintr.home.mendix.com/). These templates already contain the **Workflows Commons** module.
 
 For more information on how to configure the **Workflow Commons** in an existing app, see [Adding a Workflow to an Existing App with Workflow Commons](/refguide/workflow-setting-up-app/).
 
-## 10 Workflow Engine
+## Workflow Engine
 
 The Workflow Engine is the Mendix Runtime engine for executing workflows. For information on how the engine works, how you can interact with the engine, and what information it stores, see [Workflow Engine](/refguide/workflow-engine/).
 
-## 11 Read More
+## Read More
 
 * [Performing Workflow Basic Functions](/refguide/perform-workflow-basic-functions/)
 * [Configuring a Workflow in Studio Pro for the Employee Onboarding Process](/refguide/workflow-how-to-configure/)

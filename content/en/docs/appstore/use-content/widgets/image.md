@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Image widget, which i
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Image](https://marketplace.mendix.com/link/component/118579) widget displays an image and optionally performs an on-click action like enlarging to mobile-friendly, opening a page, calling a microflow, and more.
 
-### 1.1 Features
+### Features
 
 * Supports different data sources
     * Set a static image or icon
@@ -20,13 +20,13 @@ The [Image](https://marketplace.mendix.com/link/component/118579) widget display
     * Enlarge and pinch zoom
     * Any Mendix action, like opening a page, calling a microflow, calling a nanoflow, or more
 
-## 2 Configuration
+## Configuration
 
 The following sections will describe the different available widget properties and how to configure the widget using them.  
 
-### 2.1 General Tab {#general}
+### General Tab {#general}
 
-#### 2.1.1 Data Source Section
+#### Data Source Section
 
 The **Data source** section (required) is used to configure the data for the widget. It has the following properties:
 
@@ -46,7 +46,7 @@ The **Data source** section (required) is used to configure the data for the wid
     * Configurable when **Image type** is set to **Icon**
 * **Background image** – used to render an image as a background
 
-#### 2.1.2 Events Section
+#### Events Section
 
 The **Events** sections allows you to configure what happens when the user interacts with the image. It includes the following properties:
 
@@ -57,13 +57,13 @@ The **Events** sections allows you to configure what happens when the user inter
 * **On click** – an action property to configure a Mendix action for when a user clicks on the image
     * Configurable when **On click type** is set to **Action** 
 
-#### 2.1.3 Accessibility Section
+#### Accessibility Section
 
 The **Accessibility** sections allows you to configure accessibility features for the widget. It includes the following properties:
 
 * **Alternative text** – alternative text of the image for accessibility purposes
 
-### 2.2 Dimensions Tab {#dimensions}
+### Dimensions Tab {#dimensions}
 
 The **Dimensions** tab allows you to configure settings that are related to the dimensional aspects of the widget. It includes the following properties:
 
@@ -83,7 +83,7 @@ The **Dimensions** tab allows you to configure settings that are related to the 
     * The image will never get larger than its original size, but it can become smaller
     * This option will be hidden if **Image type** is set to **Icon**
 
-## 3 Styling
+## Styling
 
 The widget is shipped with default styles and works out of the box without Atlas UI. However, including Atlas UI in the app brings improved styling and customizations such as design properties, helper classes, and custom variables.
 

@@ -3,7 +3,7 @@ title: "Results"
 url: /appstore/partner-solutions/ats/rg-two-results/
 ---
 
-## 1 Introduction
+## Introduction
 
 Under **Results**, you find all the running and executed tests from your app. The tests are sorted based on the finishing date.
 
@@ -51,13 +51,13 @@ You can search the most recent tests via the following:
 * Before date
 * Run by
 
-## 2 Result Log
+## Result Log
 
 When you click your test case, the **Result log** opens. The result log shows detailed information about the results of a test. It contains the results of all the test steps, the run configuration, and, if a step failed, screenshots of that step. The results are updated every time a step has finished its execution.
 
 If the test was not successful, you can check the error log for more information.
 
-### 2.1 Result Calculation
+### Result Calculation
 
 Test step result:
 
@@ -78,7 +78,7 @@ Test case result:
 
 The rules are applied in order, the first one that matches wins.
 
-### 2.2 Test Steps
+### Test Steps
 
 Under **Test steps**, you will find the result, start time, and the duration of every step of your test.
 
@@ -96,7 +96,7 @@ The following results can be assigned to a test step:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-results/mixed-icon.png" class="no-border" >}}  Different Results - some of the containing tests passed, some failed and some where not executed
 
-### 2.3 Actions
+### Actions
 
 On the upper-right side the screen, you will find the **Edit** and **Run** buttons:
 
@@ -104,24 +104,24 @@ On the upper-right side the screen, you will find the **Edit** and **Run** butto
 * **Run** – opens the **Job Configuration** page, where you can edit the run configuration and re-run the test
 * **Rerun not passed** – opens the **Job Configuration** page, where you can edit the run configuration and re-run the test. This is only available for not passed test suites and is going to add all not passed test cases to the new job.
 
-### 2.4 Run Configuration
+### Run Configuration
 
 The **Run Configuration** tab shows the configuration with which the test was executed. It shows the name of the environment, the Selenium hub, and the icon of the browser.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-results/result-log-run-config.png" class="no-border" >}}
 
-### 2.5 Error Log
+### Error Log
 
 The **Error Log** shows detailed information about a failed test step.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-results/result-log-error-log.png" class="no-border" >}}
 
-### 2.5 Screenshots
+### Screenshots
 
 All the screenshots ATS takes during the test run are available under **Screenshots**. Screenshots are only taken if a test step fails.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-results/result-log-screenshots.png" class="no-border" >}}
 
-### 2.6 Recording
+### Recording
 
 The **Recording** tab plays a video recording of the test case execution. It is only available if the test has been executed on BrowserStack. Please note that we do not store these recording, but we only link to the recorded videos from the respective Selenium provider.

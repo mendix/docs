@@ -5,13 +5,13 @@ weight: 20
 description: "Describe the configuration for map widget content security policy"
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Maps](/appstore/widgets/maps/) widget requires access to a map provider (the exact provider is based on your configuration) in order to work. Below, you can see the `allowlist` domains you need to set up for each available provider.
 
-## 2 Setup Information
+## Setup Information
 
-### 2.1 Google Maps
+### Google Maps
 
 You can enable `allowlist` CSP for Google Maps by including these domains:
 
@@ -31,7 +31,7 @@ This list is subject to change by Google Maps. For more first-party details, see
 You can also look at Google Maps' [domain access](https://developers.google.com/maps/domains) list for details on host name access requirements.
 {{% /alert %}}
 
-### 2.2 OpenStreetMap
+### OpenStreetMap
 
 You can enable `allowlist` CSP for Open Street Maps by including these domains:
 
@@ -40,7 +40,7 @@ script-src 'self';
 img-src 'self' https://*.tile.osm.org data:;
 ```
 
-### 2.3 Mapbox
+### Mapbox
 
 You can enable enable `allowlist` CSP for Mapbox by including these domains:
 
@@ -55,7 +55,7 @@ connect-src https://api.mapbox.com https://events.mapbox.com ;
 For more first-party details, see [Mapbox's content security policy](https://docs.mapbox.com/mapbox-search-js/guides/browsers-and-testing/).
 {{% /alert %}}
 
-### 2.4 HERE Maps
+### HERE Maps
 
 You can enable `allowlist` CSP for HERE Maps by including these domains:
 

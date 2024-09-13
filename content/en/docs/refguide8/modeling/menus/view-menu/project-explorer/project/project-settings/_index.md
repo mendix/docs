@@ -6,7 +6,7 @@ description: "Settings which apply to the project app as a whole."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 In the **Project Settings** dialog box, you can alter the settings that are applicable to the whole project:
 
@@ -14,29 +14,29 @@ In the **Project Settings** dialog box, you can alter the settings that are appl
 
 The categories described below are available.
 
-## 2 Configurations Tab
+## Configurations Tab
 
 A configuration is a group of settings. You can define any number of configurations. The active configuration (meaning, the one that will be used when running your application) is determined by the drop-down menu in the toolbar of Studio Pro.
 
 For more information on settings in a configuration, see [Configuration](/refguide8/configuration/).
 
-## 3 Runtime Tab
+## Runtime Tab
 
 These settings influence the behavior of the Runtime when running your application.
 
-### 3.1 Static Resources from Disk
+### Static Resources from Disk
 
 If this option is enabled, the static resources for your mobile application are downloaded as soon as you open your application rather than bit by bit as you navigate through the app. This can drastically cut down the number of network requests, as the files can be retrieved from the disk rather than from the server.
 
 The resources are downloaded to the device once for each deployment and are reused for subsequent runs of your app. This affects a number of files, including: your theme; the JavaScript client; CSS files; and pages.
 
-### 3.2 Optimize Network Calls {#optimize-network-calls}
+### Optimize Network Calls {#optimize-network-calls}
 
 If this option is enabled (**true** by default), Mendix analyzes every microflow that can be triggered from the client to minimize the number of objects required to be sent. This speeds up your app significantly.
 
 If you experience an issue while running your app in which objects seem to be lost, this option can be disabled to resolve that issue. If this does resolve the issue, please file a bug report so that we can fix the issue in the platform.
 
-### 3.3 After Startup{#after-startup}
+### After Startup{#after-startup}
 
 Here you can select a microflow that is automatically executed immediately after the application has been started up.
 
@@ -46,11 +46,11 @@ There is a timeout of *11 minutes* on the after startup microflow. If your after
 After startup is designed to initialize the app and therefore runs *before* the app is able to respond to incoming service requests (for example, published REST services).
 {{% /alert %}}
 
-### 3.4 Before Shutdown
+### Before Shutdown
 
 Here you can select a microflow that is automatically executed when a shutdown command has been given, just before the application shuts down.
 
-### 3.5 Health Check
+### Health Check
 
 Here you can select a microflow which performs the checks on a running app that you think are required to assess the app's health.
 
@@ -64,7 +64,7 @@ The health check microflow is specific to the [Mendix Cloud](/developerportal/de
 
 {{% /alert %}}
 
-### 3.6 First Day of the Week {#first-day-of-the-week}
+### First Day of the Week {#first-day-of-the-week}
 
 The first day of the week setting determines the first day of the week in the date picker widget.
 
@@ -79,11 +79,11 @@ The first day of the week setting determines the first day of the week in the da
 | Friday | Use Friday as first day of the week in date picker widgets. |
 | Saturday | Use Saturday as first day of the week in date picker widgets. |
 
-### 3.7 Default Time Zone
+### Default Time Zone
 
 The default time zone determines the time zone for newly created users. If your application is only used in one time zone, setting this default will make sure that users of your application never have to worry about setting their time zone.
 
-### 3.8 Scheduled Event Time Zone {#scheduled}
+### Scheduled Event Time Zone {#scheduled}
 
 The scheduled event time zone defines under which time zone scheduled events run. The default is UTC and this has been the case since 3.0. If you would like to run scheduled events under another time zone (such as the time zone of the company office or the project default time zone), you can select it here.
 
@@ -91,7 +91,7 @@ This affects time zone-related operations, such as parsing and formatting dates 
 
 If you run on-premises, then you can select the time zone to which the server is set. However, please note that no guarantees are given for the whereabouts of application servers in the cloud.
 
-### 3.9 Hash Algorithm{#hash-algorithm}
+### Hash Algorithm{#hash-algorithm}
 
 The hash algorithm is used to generate hash values for attributes of the **Hashed string** type, such as the password of a user. Mendix offers two recommended hashing algorithms:
 
@@ -102,11 +102,11 @@ The hash algorithm is used to generate hash values for attributes of the **Hashe
 
 Mendix believes both algorithms are secure enough to store passwords within Mendix. The main difference between BCrypt and SSHA256 is that the BCrypt algorithm has been configured so that it is relatively slow on purpose, since it was designed specifically to stop brute force attacks. That's why this results in a slight performance difference with the SSHA256 algorithm.
 
-#### 3.9.1 Performance
+#### Performance
 
 This performance difference is hardly noticeable to a single user when signing in (the password you enter when signing in is hashed using the selected algorithm), so in general the performance alone is not a reason to choose SSHA256 over BCrypt. This situation can change when dealing with high concurrency of hashing operations. A common example of an area where this occurs is published web services exposing operations that compute quickly, like short-running microflows.
 
-#### 3.9.2 Performance Tests
+#### Performance Tests
 
 A (web service) user will sign in to execute a web service operation, wait for the operation to finish, and finally get the result back (if any).
 
@@ -133,7 +133,7 @@ The difference is noticeable when the operation takes less time. So if you expec
 It is important to remember when changing hashing algorithms is that any hashed attribute (like the System$User password attribute) has its algorithm set on hashing. In other words, for the hashing type to take effect, any existing hashed attribute will have to be reset using the new hashing type.
 {{% /alert %}}
 
-### 3.10 Rounding Mode{#rounding}
+### Rounding Mode{#rounding}
 
 The rounding mode is used to select how to round numbers when performing calculations.
 
@@ -154,7 +154,7 @@ This table presents the results of rounding the input to one digit with the give
 | -2.5 | -3 | -2 |
 | -5.5 | -6 | -6 |
 
-### 3.11 Multiple Sessions per User{#multiple-sessions}
+### Multiple Sessions per User{#multiple-sessions}
 
 If this option is enabled, users can sign in multiple times through different clients (for example, desktop browser and tablet). Otherwise, an existing session for a user is signed out when the user signs in somewhere else.
 
@@ -164,25 +164,25 @@ In production, this only works with licenses based on concurrent users.
 
 Default: *Yes*
 
-### 3.12 Uniqueness Validation
+### Uniqueness Validation
 
 This option can have two different values: **Runtime** and **Database**. **Database** will be the default value.
 
-#### 3.12.1 Database
+#### Database
 
 When **Database** is selected, attributes and associations will be validated for uniqueness at the database level. This will ensure that the data doesn't get corrupted even in the case of high concurrency transactions.
 
 Database is the recommended setting, because it ensures data accuracy at the highest level.
 
-#### 3.12.2 Runtime
+#### Runtime
 
 When **Runtime** is selected, the uniqueness of attributes and associations is handled in the Mendix Runtime and not at the database level.
 
-#### 3.12.3 Switching Uniqueness Validation Values
+#### Switching Uniqueness Validation Values
 
 You can always switch between **Runtime** and **Database**.
 
-##### 3.12.3.1 Switching from Runtime to Database
+##### Switching from Runtime to Database
 
 Moving from **Runtime** to **Database** means that the unique constraints will be added to the database and the uniqueness responsibility will belong to the database.
 
@@ -190,25 +190,25 @@ Before switching to the Database option, the **DataStorage.EnableDiagnostics** c
 
 For more details on migration, see [Uniqueness Constraint Migration](/refguide8/uniqueness-constraint-migration/).
 
-##### 3.12.3.2 Switching from Database to Runtime
+##### Switching from Database to Runtime
 
 Falling back to the **Runtime** option will remove the unique constraints from the database, and uniqueness rules will not be checked at the database level anymore. Hence, data accuracy cannot be guaranteed at the highest level, especially in the case of high concurrency transactions.
 
-## 4 Languages Tab
+## Languages Tab
 
 For more information about using different languages in your app, see [Language Menu](/refguide8/translatable-texts/).
 
-### 4.1 Default Language
+### Default Language
 
 The default language indicates the language that is used when a user has not chosen a language. The default language is also used as a fall-back language when a certain text is not translated to another language.
 
-### 4.2 Languages {#languages}
+### Languages {#languages}
 
 This is the list of languages in which your application will be available for users.
 
 For each language, you can configure whether to check that all mandatory texts have a value. The default language is always checked. If a language is not checked and certain texts are not translated in Studio Pro, the default language is used as fall-back language. This means that you can run your application even though you have only partially translated your interface into a new language.
 
-## 5 Certificates Tab
+## Certificates Tab
 
 Certificates are used to connect to web services over HTTPS when the following requirements are met:
 
@@ -250,13 +250,13 @@ For background information, see [Transport Layer Security (TLS) Renegotiation Is
 
 {{% /alert %}}
 
-## 6 Theme Tab
+## Theme Tab
 
-### 6.1 UI Resources Package
+### UI Resources Package
 
 The look and feel of a Mendix application is governed by the [UI resources package](/refguide8/ui-resources-package/). This package supplies the project with all the required theme information accompanied by matching page templates and building blocks. The module which is designated as the UI resources package is governed by the **UI resources package** setting. Generally, this is automatically updated when a new UI resources package is imported. However, with this setting, the desired module can also be set manually.
 
-### 6.2 Theme ZIP File
+### Theme ZIP File
 
 {{% alert color="warning" %}}
 
@@ -274,20 +274,20 @@ Switching from a ZIP file to a UI resources package is straightforward:
 
 3. Lastly, set the **Theme ZIP file** setting to **None**.
 
-## 7 Miscellaneous Tab {#miscellaneous}
+## Miscellaneous Tab {#miscellaneous}
 
 These settings determine the behavior of Studio Pro for this project. The settings apply to everyone that is working on this project.
 
-### 7.1 Bundle Widgets When Running Locally
+### Bundle Widgets When Running Locally
 
 When deploying to the cloud, custom widgets are bundled to optimize client-server communication. When deploying locally, this step is skipped to accelerate startup duration. In some cases, this may obfuscate errors triggered by faulty custom widgets.
 
 If this option is set, custom widgets will also be bundled locally. This mimics the production deployment, eliminating risk at the cost of start-up time.
 
-### 7.2 Suggest Lower-Case Variable Names in Microflows
+### Suggest Lower-Case Variable Names in Microflows
 
 When enabled, the names that Studio Pro suggests in microflows will start with a lower-case letter instead of an upper-case letter.
 
-### 7.3 Activity Default Colors
+### Activity Default Colors
 
 This table allows you to select a default color for each microflow activity type that is available in your project. The selected color will be used as the background color for all microflow activities of that type in your project. It is possible to override this default value for individual activities in the microflow editor. If you change the default color for an activity type, and there are activities of that type present in the project that have an individual background color specified, a dialog will be shown that allows you to apply the new default color to these activities as well.

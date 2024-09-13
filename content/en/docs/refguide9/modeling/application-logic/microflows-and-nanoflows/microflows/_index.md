@@ -6,7 +6,7 @@ description: "Presents an overview of all the elements that can be used in a mic
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Microflows allow you to express the logic of your application. A microflow can perform actions such as creating and updating objects, showing pages and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
 
@@ -18,7 +18,7 @@ For the properties of the microflow itself, see [Microflow Properties](/refguide
 
 For information on using microflows as data sources, see [Microflow Source](/refguide9/microflow-source/).
 
-## 2 Microflow Notation
+## Microflow Notation
 
 The graphical notation of microflows is based on the [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). BPMN is a standardized graphical notation for drawing business processes in a workflow.
 
@@ -32,7 +32,7 @@ A microflow is composed of elements. Below is a categorized overview of all elem
 * [Parameter](#parameter) is data that serves as input for the microflow.
 * [Annotation](#annotation) is an element that can be used to put comments in a microflow.
 
-### 2.1 Events{#events}
+### Events{#events}
 
 Events represent start and endpoints of a microflow and special operations in a loop.
 
@@ -44,7 +44,7 @@ Events represent start and endpoints of a microflow and special operations in a 
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/continue-event.png" link="/refguide9/continue-event/" class="no-border" >}} | [Continue Event](/refguide9/continue-event/) | A continue event is used to stop the current iteration of a loop and continue with the next iteration. Continue events can only be used inside a [Loop](/refguide9/loop/). |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/break-event.png" link="/refguide9/break-event/" class="no-border" >}} | [Break Event](/refguide9/break-event/) | A break event is used to stop iterating over the list of objects and continue with the rest of the flow after the loop. Break events can only be used inside a [Loop](/refguide9/loop/). |
 
-### 2.2 Flows{#flows}
+### Flows{#flows}
 
 Flows form the connection between elements.
 
@@ -53,7 +53,7 @@ Flows form the connection between elements.
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/sequence-flow.png" link="/refguide9/sequence-flow/" class="no-border" >}} | [Sequence Flow](/refguide9/sequence-flow/) | A sequence flow is an arrow that links events, activities, decisions, and merges with each other. Together they define the order of execution within a microflow. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation-flow.png" link="/refguide9/annotation/#annotation-flow" class="no-border" >}} | [Annotation flow](/refguide9/annotation/#annotation-flow) | An association is a connection that can be used to connect an annotation to another element. |
 
-### 2.3 Decisions {#decisions}
+### Decisions {#decisions}
 
 Decisions deal with making choices and merging different paths again.
 
@@ -63,13 +63,13 @@ Decisions deal with making choices and merging different paths again.
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/object-type-decision.png" link="/refguide9/object-type-decision/" class="no-border" >}} | [Object Type Decision](/refguide9/object-type-decision/) | An object type decision is an element that makes a choice based on the [specialization](/refguide9/entities/) of the selected object. You can give the specialized object a name using a [cast object](/refguide9/cast-object/) action. |
 | {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/merge.png" link="/refguide9/merge/" class="no-border" >}} | [Merge](/refguide9/merge/)                               | A merge can be used to combine multiple sequence flows into one. If a choice is made in a microflow and afterwards some common work needs to be done, you can combine the two (or more) paths using a merge. |
 
-### 2.4 Activities{#activities}
+### Activities{#activities}
 
 [Activities](/refguide9/activities/) are the actions that are executed in a microflow:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/activity.png" alt="Activity" class="no-border" >}}
 
-### 2.5 Loop {#loop}
+### Loop {#loop}
 
 A [loop](/refguide9/loop/) is used to iterate over a list of objects:
 
@@ -77,7 +77,7 @@ A [loop](/refguide9/loop/) is used to iterate over a list of objects:
 
 For every object the flow inside the loop is executed. A loop activity can contain all elements used in microflows, with the exception of start and end events. 
 
-### 2.6 Parameter {#parameter}
+### Parameter {#parameter}
 
 A [parameter](/refguide9/parameter/) is data that serves as input for the microflow. 
 
@@ -85,13 +85,13 @@ A [parameter](/refguide9/parameter/) is data that serves as input for the microf
 
 Parameters are filled at the location from where the microflow is triggered.
 
-### 2.7 Annotation {#annotation}
+### Annotation {#annotation}
 
 An [annotation](/refguide9/annotation/) is an element that can be used to put comments in a microflow:
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/annotation.png" alt="Annotation" class="no-border" >}}
 
-### 2.6 Item Usages
+### Item Usages
 
 Studio Pro visualizes which items are used by the selected element(s). It does this by showing the used items in white text on a blue background. Conversely, elements that use the item(s) returned by the selected element(s) are marked with the word 'Usage' in white text on a green background.
 
@@ -99,7 +99,7 @@ In the example below, the parameter **AccountPasswordData** is highlighted becau
 
 {{< figure src="/attachments/refguide9/modeling/application-logic/microflows-and-nanoflows/microflows/microflow-nanoflow-example.png" class="no-border" >}}
 
-## 3 Keyboard Support{#keyboard}
+## Keyboard Support{#keyboard}
 
 The microflow editor offers keyboard support for navigating and manipulating microflows. The following table shows the keys that can be used.
 
@@ -116,14 +116,14 @@ The microflow editor offers keyboard support for navigating and manipulating mic
 | <kbd>End</kbd> | Cycle through the end events. |
 | Context-menu key or <kbd>Shift</kbd> + <kbd>F10</kbd> | Open the context-menu for the currently selected element. |
 
-## 4 Microflow Debugging
+## Microflow Debugging
 
 If you want to see what happens while a microflow is executing, you can use the microflow debugger. See the following how-tos:
 
 * [Debugging Microflows and Nanoflows](/refguide9/debug-microflows-and-nanoflows/)
 * [Debugging Microflows Remotely](/refguide9/debug-microflows-remotely/)
 
-## 5 Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
+## Converting a Microflow to a Nanoflow {#convert-to-nanoflow}
 
 {{% alert color="info" %}}
 This feature was introduced in Studio Pro [9.24.0](/releasenotes/studio-pro/9.24/#9240) and the alternative option was added in Studio Pro 9.24.1.

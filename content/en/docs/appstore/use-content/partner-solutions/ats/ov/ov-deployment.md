@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ov-deployment/
 weight: 3
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the supported deployment scenarios for the Application Test Suite (ATS).
 
@@ -14,7 +14,7 @@ All in all, there are four different supported deployment scenarios. This docume
 
 Please be aware that not every option supports the full set of features. Take a look at [Comparing the Options](#comparing-the-options) to understand the differences.
 
-## 2 Components
+## Components
 
 Every ATS deployment consists of four components: the ATS application, the Mendix Portal, a Selenium Runner, and your Application Under Test (AUT).
 
@@ -22,45 +22,45 @@ The following diagram illustrates how the components are connected:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/ATS_architecture_simplified.png" alt="ATS simplified architecture" class="no-border" >}}
 
-### 2.1 Application Test Suite (ATS) Application
+### Application Test Suite (ATS) Application
 
 The ATS application provides the GUI to create, manage, and run your tests.
 
-### 2.2 Mendix Portal
+### Mendix Portal
 
 The Mendix Portal is provided as a cloud service by Mendix. It hosts your projects, user stories, and other related data that is also used by the ATS application.
 
-### 2.3 Selenium Runner
+### Selenium Runner
 
 The Selenium Runner is used to execute your tests. Once you trigger a test run from ATS, ATS will connect to your Selenium Service provider to start the test. The Selenium Runner then starts the browser and executes the commands that it receives from ATS.
 
-### 2.4 Application Under Test (AUT)
+### Application Under Test (AUT)
 
 The AUT is the deployed Mendix application that you want to test.
 
-## 3 Deployment Options
+## Deployment Options
 
 There are three deployment options. The first option with the SaaS Selenium provider is recommended.
 
-### 3.1 SaaS Selenium Provider
+### SaaS Selenium Provider
 
 This option is highly recommended for all customers. It supports all current and future features, is easy to set up, annd is maintenance-free (the SaaS provider takes care of that). It also gets the best support.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/deploymentoption_standard.png" alt="SaaS Selenium Option" class="no-border" >}}
 
-### 3.2 Public App On-Premises
+### Public App On-Premises
 
 This option is meant for customers who run their app on premises. Since the app runs on premises, it is protected from external access via a firewall. In order to allow the Selenium Runner to access the app, you have to configure your firewall.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/deploymentoption_alternative1.png" alt="Public app on-premise" class="no-border" >}}
 
-### 3.3 Private App On-Premises
+### Private App On-Premises
 
 This option is meant for customers who run their app on premises and who don't want to open their firewall for the Selenium Runner. In order to enable communication between the Selenium Runner and your local application, you have to deploy a Selenium Saas Agent in your local network. This agent will establish a VPN tunnel to your Selenium Service Provider and route all traffic between the Selenium Runner and your application.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ov/ov-deployment/deploymentoption_alternative2.png" alt="Private app on-premise" class="no-border" >}}
 
-### 3.4 Customer-Hosted Selenium
+### Customer-Hosted Selenium
 
 This option is meant for customers who run their app on premises and who also want to run their own Selenium Runner. The challenging part of this option is that the customer needs to set up, maintain, and operate its own Selenium Runner. Because of the large effort this requires, this option should only be a last resort if no other option fits your use case.
 
@@ -76,11 +76,11 @@ Since the Selenium Runner offers fewer features compared to Selenium SaaS Provid
 The feature set in this option is limited.
 {{% /alert %}}
 
-## 4 Comparing the Options {#comparing-the-options}
+## Comparing the Options {#comparing-the-options}
 
 Before you pick your option, you need to be aware of the differences. The following two sections will help you to make your choice.
 
-### 4.1 Features
+### Features
 
 Feature                       | Standard          | SaaS Selenium Provider | Public App On-Premises        | Private App On-Premises       | Customer-Hosted Selenium
 ----------------------------- | ----------------- | ---------------------- | ----------------------------- | ----------------------------- | -----------------------------
@@ -100,7 +100,7 @@ Future Proof<sup>5</sup>      | {{< figure src="/attachments/appstore/use-conten
 <sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premises apps.<br />
 <sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.</small>
 
-### 4.2 Setup and Maintenance
+### Setup and Maintenance
 
 The following matrix compares the efforts for setup and maintenance of the different options.
 
@@ -117,7 +117,7 @@ Selenium<sup>2</sup> Support          | {{< figure src="/attachments/appstore/us
 <sup>3</sup> Provided by your Selenium SaaS provider.<br />
 <sup>4</sup> Not required in this option.</small>
 
-### 4.3 Uploading Files
+### Uploading Files
 
 ATS does not support the uploading of files in every situation. This table presents a summary of the different possibilities:
 
@@ -133,9 +133,9 @@ ATS does not support the uploading of files in every situation. This table prese
 
 For more information, see [How to Upload a File in Your App Using ATS](/appstore/partner-solutions/ats/ht-two-upload-file-using-ats/).
 
-## 5 Selenium SaaS Subscription
+## Selenium SaaS Subscription
 
-### 5.1 General Solutions
+### General Solutions
 
 {{% alert color="warning" %}}
 This section presents generic advice on which subscription type you need when using a Selenium SaaS provider. Always look at what fits best for your situation!
@@ -151,7 +151,7 @@ To test your application for desktops and mobile, you need **automated browser t
 
 ATS has two supported Selenium providers (for details, see [Supported Selenium Providers](/appstore/partner-solutions/ats/rg-two-supported-selenium-hub-provider/)). The solutions of these providers are discussed in the next sections.
 
-### 5.2 BrowserStack Solutions/Products
+### BrowserStack Solutions/Products
 
 {{% alert color="warning" %}}
 BrowserStack is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
@@ -169,7 +169,7 @@ These BrowserStack solutions are compatible with ATS:
 
 For more information on pricing, see [BrowserStack Pricing](https://www.browserstack.com/pricing).
 
-### 5.3 Sauce Labs Solutions/Products
+### Sauce Labs Solutions/Products
 
 {{% alert color="warning" %}}
 Sauce Labs is a third party, so the information displayed here may be out of date! This section is purely to help you understand the different solutions.
@@ -191,25 +191,25 @@ There is also a difference between virtual machines and real devices, which does
 
 For more information on pricing, see [Sauce Labs Pricing](https://saucelabs.com/pricing).
 
-## 6 Setup Instructions
+## Setup Instructions
 
-### 6.1 Standard
+### Standard
 
 There are no additional steps required to set up the standard option.
 
-### 6.2 Public App On-Premises
+### Public App On-Premises
 
 This option requires configuring your firewall in order to allow Selenium to establish a connection to your AUT.
 
-#### 6.2.1 Firewall Configuration
+#### Firewall Configuration
 
 The firewall should accept connections from the internet either on port 80 (if you use http) or port 443 (if you use https) and forward to the web server of your Mendix application.
 
-### 6.3 Private App On-Premises
+### Private App On-Premises
 
 This option requires you to deploy an agent component on-premise.
 
-#### 6.3.1 Agent Setup
+#### Agent Setup
 
 The setup of the agents depends on your provider.
 
@@ -218,7 +218,7 @@ Selenium Service | Agent Name          | Setup Instructions
 BrowserStack     | BrowserStack Local  | [Here](https://www.browserstack.com/local-testing)
 Sauce Labs        | Sauce Connect Proxy | [Here](https://wiki.saucelabs.com/display/DOCS/Getting+Started+with+Sauce+Connect+Proxy)
 
-### 6.4 Customer-Hosted Selenium {#customer-hosted-selenium}
+### Customer-Hosted Selenium {#customer-hosted-selenium}
 
 This option requires you to set up your own Selenium Server on-premises.
 
@@ -230,7 +230,7 @@ Selenium is an open-source third-party component and there is no active support 
 Selenium standalone support has been dropped with ATS 2.0. Only Selenium Grid is supported. By following the instructions below, you will set up a Selenium Grid.
 {{% /alert %}}
 
-#### 6.4.1 Selenium Runner Setup
+#### Selenium Runner Setup
 
 We provide basic installation instructions for the Selenium Runner based on Docker containers. For details, see [Get Started with Docker](https://docs.docker.com/engine/getstarted/), [Selenium Documentation](https://www.seleniumhq.org/docs/), and [Docker-Selenium](https://github.com/SeleniumHQ/docker-selenium).
 
@@ -286,6 +286,6 @@ Before you start, make sure that your server has internet access to download the
     docker-compose scale firefoxnode=2 chromenode=2
     ```
 
-#### 6.4.2 Firewall Configuration
+#### Firewall Configuration
 
 The firewall should accept TCP connections from the internet on port 4444 (the standard port for Selenium Server). This port should forward to your Selenium Server.

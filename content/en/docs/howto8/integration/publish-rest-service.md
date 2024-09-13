@@ -5,7 +5,7 @@ weight: 10
 description: "Describes how to publish REST web services natively from ."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix allows you to publish REST web services natively from Studio Pro. This how-to will show you how to publish a REST service in an example project. This example will demonstrate the GET operation for a published REST service.
 
@@ -13,13 +13,13 @@ This how-to teaches you how to do the following:
 
 * Create a published REST service and return the results in JSON or XML
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Studio Pro](https://marketplace.mendix.com/link/studiopro/)
 
-## 3 Setting Up the Example Project
+## Setting Up the Example Project
 
 To create the example project you will use in the next sections for publishing your REST service, follow these steps:
 
@@ -38,11 +38,11 @@ Your page should now look like this:
 
 Add the overview page to your project navigation and run the application. Create a couple of orders and order lines by filling in the appropriate fields.
 
-## 4 Publishing the Service
+## Publishing the Service
 
 To be able to use the data from your model in the REST service, you need to create a message definition.
 
-### 4.1 Creating the Mapping
+### Creating the Mapping
 
 1. In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Mappings** > **Message Definitions**:
 
@@ -62,7 +62,7 @@ To be able to use the data from your model in the REST service, you need to crea
 7. Click **OK** to close the dialog box.
 8. Close the message definition, and make sure to save the definition if asked!
 
-### 4.2 Configuring the REST Service
+### Configuring the REST Service
 
 1. In the **Project Explorer**, right-click the **RESTExample** module and select **Add** > **Published Services** > **Published REST Service**:
 
@@ -129,7 +129,7 @@ To be able to use the data from your model in the REST service, you need to crea
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/CompleteMFNoErrorHandling.png" class="no-border" >}}
 
-### 4.3 Viewing the App{#viewing}
+### Viewing the App{#viewing}
 
 To view and try out your app, follow these steps:
 
@@ -153,11 +153,11 @@ To view and try out your app, follow these steps:
 
 Cool! You have published your first REST service from Mendix.
 
-## 5 Error Handling
+## Error Handling
 
 In this new service, no error handling has been implemented. For example, if you now execute your service and enter a string in the **OrderID** parameter (or leave it out), you will see a 500 or a 404 generic error. So, error handling should be implemented to publish a robust service.
 
-### 5.1 Adding Error Handling
+### Adding Error Handling
 
 1. Open the **PRS_GetGetOrderByID** microflow, right-click the first activity, then select the option to **Set Error Handling** to **Custom with rollback**.
 2. After the first activity, add an activity that creates a new HttpResponse object. Enter *NewHttpErrorResponse* for the **Name**, and map the attributes like this:
@@ -181,7 +181,7 @@ In this new service, no error handling has been implemented. For example, if you
 
     {{< figure src="/attachments/howto8/integration/publish-rest-service/ParsingErrorRESTResult.png" class="no-border" >}}
 
-### 5.2 Additional Error Handling
+### Additional Error Handling
 
 Now that you covered the error handling of the parameter parsing, it's time to handle empty responses. This is not really an error, but an indication of what happened when nothing was returned is always a good idea.
 
@@ -201,12 +201,12 @@ To add the error handling for those situations when the OrderID parameter is fil
 
 3. Test your new error responses as you did with the app in section [4.3 Viewing the App](#viewing).
 
-## 6 Example
+## Example
 
 **How to publish REST in Studio Pro 8**
 
 {{< youtube Ff_P84NOcZk >}}
 
-## 7 Read More
+## Read More
 
 * For more information on creating published REST services in Mendix (including GET, POST, and DELETE operations), see [Published REST Services](/refguide8/published-rest-services/)

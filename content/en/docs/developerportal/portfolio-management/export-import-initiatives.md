@@ -7,17 +7,17 @@ description: "Describes how to import and export the initiatives in the Mendix P
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 In [Portfolio Management](/developerportal/portfolio-management/), you can import initiatives to a portfolio using an Excel file. This enables you to import already-defined initiatives and thus rapidly get started. You can also export a whole portfolio board or a subset of initiatives to an Excel file. This allows you to move initiatives from one board to another, or export initiatives to generate reports.
 
-## 2 Prerequisites
+## Prerequisites
 
 * You need to have at least the [Contributor](/developerportal/portfolio-management/access-management/#members) role for the portfolio.
 
-## 3 Procedure
+## Procedure
 
-### 3.1 Exporting Initiatives {#export-initiatives}
+### Exporting Initiatives {#export-initiatives}
 
 {{% alert color="info" %}}
 Each time, you can only export initiatives from one portfolio. It is not possible to export all the portfolios in one go.
@@ -59,7 +59,7 @@ All the details of an initiative are exported, except the data of the following 
 * **Archived By**
   {{% /alert %}}
 
-### 3.2 Importing Initiatives {#import-initiatives}
+### Importing Initiatives {#import-initiatives}
 
 1. In Portfolio Management, click the portfolio to open it. The portfolio opens. You can see the **Initiatives Overview** page.
 
@@ -78,6 +78,7 @@ All the details of an initiative are exported, except the data of the following 
    | **Name**              | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                           | If an initiative with the same name already exists in the portfolio, a duplicate will be created. |`My first initiative`|
    | **Stage**             | {{< icon name="checkmark-circle-filled" color="green" >}} | String                       |  Character limit: 200                                                            | If a stage does not exist in the portfolio, it will be created. |`Proposal`|
    | **Status**             | {{< icon name="remove-circle-filled" color="red" >}} | String                      |  Only one of the three statuses can be filled in: `On Track`, `At Risk`, or `Off Track`.  |                                       |`On Track`|
+   | **PercentageCompleted**             | {{< icon name="remove-circle-filled" color="red" >}} | Integer                      |  A number between 0–100  || `50`   |
    | **Tags**              | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  <ul><li>Character limit: 50 per tag.</li></ul> <ul><li>Multiple tags should be separated by commas.</li></ul>     | If a tag does not exist in the portfolio, it will be created. |`Important, Operational, Architecture`|
    | **Description**       | {{< icon name="remove-circle-filled" color="red" >}} | String                       |                                                              |                               |`A description of the initiative.`|
    | **Department**        | {{< icon name="remove-circle-filled" color="red" >}} | String                       |  Character limit: 200                                                              | If a department does not exist in the portfolio, it will be created. |`Finance`|
@@ -100,4 +101,4 @@ All the details of an initiative are exported, except the data of the following 
 
 5. Click **Import**.
 
-All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page. 
+All the initiatives in the Excel file are imported successfully. You can see the initiatives on the **Initiatives Overview** page.

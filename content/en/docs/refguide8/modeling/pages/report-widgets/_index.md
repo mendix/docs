@@ -7,7 +7,7 @@ weight: 50
 
 {{% alert color="warning" %}}Report widgets are not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 With report widgets, you can create reports from the database data. Reporting is mainly used for presenting aggregated information (for example, total sales per customer). 
 
@@ -29,11 +29,11 @@ The **Report widgets** category contains the following widgets:
 
     {{< figure src="/attachments/refguide8/modeling/pages/report-widgets/generate-report-button-example.png" alt="Example generate report button" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

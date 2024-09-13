@@ -4,17 +4,17 @@ url: /refguide/to-string/
 weight: 130
 ---
 
-## 1 Introduction
+## Introduction
 
 Basic functions to convert values of various data types to string.
 
-## 2 toString
+## toString
 
 Converts the specified value to a string representation.
 
 If you need full control over the output format, consider using the data type specific format functions. For example, for decimal, use [formatDecimal](/refguide/parse-and-format-decimal-function-calls/).
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -26,7 +26,7 @@ The input parameters are described in the table below:
 If you pass an empty object or attribute to this function, the output will be an empty string.
 {{% /alert %}}
 
-### 2.2 Example
+### Example
 
 If you use the following input:
 

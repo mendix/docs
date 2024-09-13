@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-setup-local-selenium-hub/
 description: "Describes how to set up a local Selenium hub."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to shows you an example of a simple installation of a Selenium hub with a Google Chrome/Mozilla Firefox node on a Windows machine. For the official documentation go to: [https://www.seleniumhq.org/projects/](https://www.seleniumhq.org/projects/)
 
@@ -12,7 +12,7 @@ This how-to shows you an example of a simple installation of a Selenium hub with
 Mendix does not deliver support for local Selenium solutions. 
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 The following components are needed:
 
@@ -21,14 +21,14 @@ The following components are needed:
 * Your machine should allow connections from ATS on port 4444
 * From version 2.6, ATS uses the Selenium 3.8.1 API; therefore, using this version of Selenium is recommended
 
-## 3 Downloading Selenium Server
+## Downloading Selenium Server
 
 The following steps describe how to download the Selenium server:
 
 1. Create a folder on your disk (for example, *C:\Selenium*).
-2. Download [Selenium Server stand-alone version 3.8.1](https://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
+2. Download [Selenium Server standalone version 3.8.1](https://selenium-release.storage.googleapis.com/3.8/selenium-server-standalone-3.8.1.jar) and place it in the folder
 
-## 4 Downloading the Latest Chrome and Gecko (Firefox) Drivers
+## Downloading the Latest Chrome and Gecko (Firefox) Drivers
 
 The following steps describe how to download the latest Chrome and Gecko (Firefox) drivers:
 
@@ -36,14 +36,14 @@ The following steps describe how to download the latest Chrome and Gecko (Firefo
 2. With the following link you can download the latest Gecko driver: [https://github.com/mozilla/geckodriver/releases](https://github.com/mozilla/geckodriver/releases) (Make sure it matches the version (win32bits or win64bits) of Firefox you installed on the machine).
 3. Place the unzipped items in the same folder as the Selenium jar.
 
-## 5 Starting the Selenium Hub
+## Starting the Selenium Hub
 
 The following steps describe how to start the Selenium hub: 
 
-1. Go to the folder and open a command box (Shift+Right click and choose Open command window here)
+1. Go to the folder and open a command box (<kbd>Shift<kbd> + right-click and choose the **Open command** window here)
 2. Start your Selenium hub (version number can be different):
 
-    ```powershell {linenos=false}
+    ```powershell
     java -jar selenium-server-standalone-3.8.1.jar -role hub
     ```
 
@@ -72,14 +72,14 @@ The following steps describe how to start the Selenium hub:
 
     Congratulations, your local Selenium hub is running.
 
-## 6 Configuring and Starting Your Chrome/Firefox Node
+## Configuring and Starting Your Chrome/Firefox Node
 
 The following steps describe how to start the node with three Chrome and three Firefox browsers:
 
 1. Go to the folder and open a command box (Shift+Right click and choose the **Open command** window here)
 2. Start the node:
 
-    ```powershell {linenos=false}
+    ```powershell
     java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe  -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium-    server-standalone-3.8.1.jar -role node -hub http://localhost:4444/grid/register -browser "browserName=firefox, maxInstances=3"  -browser "browserName=chrome, maxInstances=3"
     ```
 
@@ -120,7 +120,7 @@ The following steps describe how to start the node with three Chrome and three F
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-setup-local-selenium-index/ht-two-setup-local-selenium-hub/grid_nodes.png" class="no-border" >}}
 
-## 7 Starting Testing
+## Starting Testing
 
 You can start testing by sending your test script to `http://yourmachinenameorIP:4444/wd/hub`.
 
@@ -128,7 +128,7 @@ You can start testing by sending your test script to `http://yourmachinenameorIP
 Make sure it is reachable from the outside!
 {{% /alert %}}
 
-## 8 Optional: Starting Selenium Hub and Node with JSON Configuration File
+## Optional: Starting Selenium Hub and Node with JSON Configuration File
 
 This step is recommended because you can easily change options (for example timeout) in the JSON files.
 
@@ -193,17 +193,17 @@ The following steps describe how to start the selenium hub and the node with a J
 
 2. Start the hub:
 
-    ```powershell {linenos=false}
+    ```powershell
     java -jar selenium-server-standalone-3.8.1.jar -role hub -hubConfig gridHubConfig.json
     ```
 
 3. Start the node:
 
-    ```powershell {linenos=false}
+    ```powershell
     java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar selenium- server-standalone-3.8.1.jar -role node -nodeConfig node.json   
     ```
 
-## 9 Optional: Batching File to Start Up Everything at Once
+## Optional: Batching File to Start Up Everything at Once
 
 The following steps describe how to create a batch file to start up everything at once:
 
@@ -212,13 +212,13 @@ The following steps describe how to create a batch file to start up everything a
     ```batch
     start /B java -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role hub -hubConfig C:\Selenium \gridHubConfig.json
     timeout /t 10
-    start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar  C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
+    start /B java -Dwebdriver.chrome.driver=C:\Selenium\chromedriver.exe -Dwebdriver.firefox.driver=C:\Selenium\geckodriver.exe -jar C:\Selenium\selenium-server-standalone-3.8.1.jar -role node -nodeConfig C:\Selenium\node.json
     exit
     ```
 
 2. Start from the cmd box:
 
-    ```powershell {linenos=false}
+    ```powershell
     start.bat
     ```
 

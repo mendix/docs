@@ -8,7 +8,7 @@ aliases:
     - /howto/front-end/chart-advanced-tuning/
 ---
 
-## 1 Introduction
+## Introduction
 
 The individual Charts widgets can be fine-tuned with advanced settings. The settings can affect the layout, configuration and data.
 
@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 * Change chart type (data series)
 * Enable toolbar (configuration)
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Downloaded the latest [Chart Widget](/appstore/widgets/charts/) from the Mendix Marketplace
 * Set up a chart, see [How to Create a Chart](/howto/front-end/charts-basic-create/)
 
-## 3 Changing the Layout {#layout-changes}
+## Changing the Layout {#layout-changes}
 
 This is what the original chart looks like:
 
@@ -73,7 +73,7 @@ To create a custom layout, follow these steps:
 Please note that the advanced settings only apply to the chart in Advanced or Developer mode.
 {{% /alert %}}
 
-## 4 Changing the Chart Type
+## Changing the Chart Type
 
 This is what the chart looks like before making any changes:
 
@@ -95,7 +95,7 @@ After the changes, the chart looks like this:
 
 {{< figure src="/attachments/appstore/use-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-widget-bar-line-combination-result.png" alt="chart editor" class="no-border" >}}
 
-## 5 Changing the Configuration 
+## Changing the Configuration 
 
 To create custom a configuration, follow these steps:
 
@@ -112,7 +112,7 @@ To create custom a configuration, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/widgets/charts/charts-tutorials/charts-advanced-tuning/charts-config-toolbar.png" alt="chart editor" class="no-border" >}}
 
-## 6 Read More
+## Read More
 
 * Reference for the [advanced properties](/refguide/charts-configuration/#advanced)
 * Layout options: [cheat sheet](/refguide/charts-advanced-cheat-sheet/#layout-all)  

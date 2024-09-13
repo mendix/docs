@@ -1,8 +1,11 @@
 ---
-title: "Apps"
+title: "Apps Release Notes"
+linktitle: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of Apps"
 weight: 20
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -15,6 +18,22 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
+
+### August 25, 2024
+
+#### Improvements
+
+* We took the first step towards a complete overhaul of the [App Buzz](/developerportal/general/buzz/) page and added some basic information to the top of the page. This information gives you a quick and clear overview of the app's features, functionality, and the latest updates on the Team Server.
+
+#### Fixes
+
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localized.
+
+### August 22, 2024
+
+#### New features
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now enter a value in the **Percentage Completed** field to indicate the progress made on any ongoing initiative. This field provides a clear way to track how much work has been completed. The **Percentage Completed** is visible in both the [list view](/developerportal/portfolio-management/initiatives-overview/#list-view) and the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view), giving you an easy overview of your progress at a glance.
 
 ### August 1, 2024
 
@@ -38,6 +57,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * We have greatly simplified the process of [creating an app](/developerportal/#create-app) from Apps, making it easier and quicker to start working on your new app.
 * When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page.
+
 ### June 30, 2024
 
 #### New features
@@ -968,7 +988,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
-* We implemented [context deep links](/developerportal/general/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
+* We implemented context deep links to all main app pages on the Developer Portal so you can easily share references.
 * We increased the performance of opening the [My Apps page](/developerportal/#my-apps)
 
 #### Fixes
@@ -1021,7 +1041,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version 7.23.14 or below. Please update your templates to 7.23.15 or above before creating apps based on those templates.
 
 ### May 17, 2021
 

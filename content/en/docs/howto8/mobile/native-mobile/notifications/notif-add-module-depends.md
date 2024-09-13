@@ -5,11 +5,11 @@ weight: 52
 description: Tutorial for adding push notification module dependencies.
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will help you add module dependencies for the [Push Notifications Connector](/appstore/modules/push-notifications/) module. You only need to install the modules your use case requires. Once your app has the modules it needs, you may move on to [Implement the Push Notifications Module](/howto8/mobile/notif-implement-module/).
 
-## 2 Implement the Encryption Module
+## Implement the Encryption Module
 
 Skip this section if the [Encryption](https://marketplace.mendix.com/link/component/1011) module is already implemented in your app. Implement this module by doing the following:
 
@@ -19,7 +19,7 @@ Skip this section if the [Encryption](https://marketplace.mendix.com/link/compon
 1. Click **Download**.
 1. Follow the instructions on the [Encryption marketplace guide](/appstore/modules/encryption/) to set up this module.
 
-## 3 Implement the Community Commons Module
+## Implement the Community Commons Module
 
 Skip this section if the [Community Commons](https://marketplace.mendix.com/link/component/170) module is already implemented in your app. Implement this module by doing the following:
 
@@ -29,7 +29,7 @@ Skip this section if the [Community Commons](https://marketplace.mendix.com/link
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Community Commons marketplace guide](/appstore/modules/community-commons-function-library/).
 
-## 4 Implement the Nanoflow Commons Module
+## Implement the Nanoflow Commons Module
 
 Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/Mendix/Nanoflow-Commons) module is already implemented in your app. Implement this module by doing the following:
 
@@ -39,7 +39,7 @@ Skip this section if the [Nanoflow Commons](https://marketplace.mendix.com/link/
 1. Click **Download**.
 1. No further installation is required. If you want to know more about the module visit the [Nanoflow Commons marketplace guide](/appstore/modules/nanoflow-commons/).
 
-## 5 Implement the Native Mobile Resources Module
+## Implement the Native Mobile Resources Module
 
 Skip this section if the [Native Mobile Resources](https://marketplace.mendix.com/link/component/109513/Mendix/Native-Mobile-Resources) module is already implemented in your app. Implement this module by doing the following:
 
@@ -50,7 +50,7 @@ Skip this section if the [Native Mobile Resources](https://marketplace.mendix.co
 1. Add the `NativeMobileResources.User` module role to any user role that needs to interact with notifications.
 1. No further installation is required. If you want to know more about the module visit the [Native mobile resources marketplace guide](/appstore/modules/native-mobile-resources/).
 
-## 6 Implement the Atlas Core Module
+## Implement the Atlas Core Module
 
 Implement the Atlas Core module for apps in Mendix Studio Pro 9.0 and above. Skip this section if the [Atlas Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core) module is already implemented in your app. Implement this module by doing the following:
 

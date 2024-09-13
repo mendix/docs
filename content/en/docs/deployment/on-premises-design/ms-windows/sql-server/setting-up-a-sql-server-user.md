@@ -5,12 +5,12 @@ weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Description
+## Description
 
 This document describes how to configure the users of a SQL server to create a secure environment for a Mendix based application.
 To create a secure environment it is important to make a clear distinction between an user with an administrator role and a regular user of the application.
 
-## 2 Instructions
+## Instructions
 
 * **Create an administrator:** Create a user with the administrator role, for example 'MendixAdmin'.
 * **Set the server roles for the administrator:** Depending on the tasks this user has to execute the administrator role should be connected to the following database roles:
@@ -32,7 +32,7 @@ To create a secure environment it is important to make a clear distinction betwe
 
 On this page you can find a step by step instruction on how to: [Set up the database user](/developerportal/deploy/setting-up-the-database-user/)
 
-## 3 Read More
+## Read More
 
 * [Activating a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/)
 * [Setting Up the Database User](/developerportal/deploy/setting-up-the-database-user/)

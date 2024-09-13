@@ -6,7 +6,7 @@ description: "Describes how to deploy to iOS or Android via the Apple App Store 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Mobile App** page enables publishing your app in the Apple App Store (for iOS) and Google Play Store (for Android).
 
@@ -24,7 +24,7 @@ To build a hybrid app and publish it, see [How to Build a Mendix Hybrid App Loca
 To publish your app in an app store, Mendix recommends building native iOS apps instead. For more information, see [Build Native Apps](/refguide/mobile/distributing-mobile-apps/building-native-apps/).
 {{% /alert %}}
 
-## 2 App Info
+## App Info
 
 In this tab, you can find the following sections:
 
@@ -33,7 +33,7 @@ In this tab, you can find the following sections:
 * **Permissions**
 * **Custom Cordova configuration**
 
-### 2.1 General Settings
+### General Settings
 
 In the **General settings** section, you must provide the following information:
 
@@ -42,11 +42,9 @@ In the **General settings** section, you must provide the following information:
 * A **Description** of the app
 * Whether a 5 digit PIN is enabled or disabled via the **PIN required?** checkbox
 
-### 2.2 Profile Settings
+### Profile Settings
 
-If you are targeting Mendix 7.2.0 or above, please specify the navigation profiles to use on phones and tablets.
-
-Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro.
+When building mobile apps, please specify the correct navigation profiles to use on phones and tablets depending on your use case. Make sure the profile identifier corresponds with the one defined in Mendix Studio Pro:
 
 * **Phone profile**
 * **Tablet profile**
@@ -54,7 +52,7 @@ Make sure the profile identifier corresponds with the one defined in Mendix Stud
 
 For more information, see **Availability** in [Offline](/refguide/offline-first/).
 
-### 2.3 Permissions
+### Permissions
 
 By default, Mendix hybrid applications require a set of device permissions. When users install the app or open the app for the first time, they will be asked to grant these permissions. You can use the checkboxes below to control which permissions are requested.
 
@@ -71,13 +69,13 @@ The permissions that can be enabled/disabled:
 Some functionality might not be available when you disable these permissions (for example, your app will not be able to use the camera widget when you disable it).
 {{% /alert %}}
 
-### 2.4 Custom Cordova Configuration {#custom}
+### Custom Cordova Configuration {#custom}
 
 You can specify additional Cordova settings and plugins by adding an XML snippet below. This snippet will be inserted at the bottom of the configuration file.
 
 For an overview of available elements and settings, refer to [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/).
 
-## 3 iOS and Android
+## iOS and Android
 
 In these tabs, you will see an overview of all the images that will be used in the app store. The images are divided into two categories:
 
@@ -92,7 +90,7 @@ If you do not upload any images, the default Mendix-branded images that are show
 
 Take note of the required resolutions and file types for the image files, as the system will not allow you to upload images with different resolutions (because your app packages will not function properly).
 
-## 4 Doing It Yourself {#doing-it-yourself}
+## Doing It Yourself {#doing-it-yourself}
 
 Once you begin the app building wizard and choose the correct environment, click **Download a customizable package**. The package contains all your settings, icons, and splash screens. It allows you to easily make changes, create local builds, and run on emulators.
 
@@ -100,8 +98,8 @@ For iOS please follow the instructions in the [Building Your iOS App Locally](/h
 
 For Android please follow the instructions in the [Building Your Android App Locally](/howto8/mobile/build-hybrid-locally/#building-android-locally) section of *How to Build a Mendix Hybrid App Locally*.
 
-## 5 Read More
+## Read More
 
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Offline Reference Guide](/refguide/offline-first/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

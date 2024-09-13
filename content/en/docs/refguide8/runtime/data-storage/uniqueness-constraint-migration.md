@@ -7,7 +7,7 @@ aliases:
     - /refguide/uniqueness-constraint-migration
 # referred to in M2EE error message
 ---
-## 1 Introduction
+## Introduction
 
 The uniqueness validation constraint is usually handled in the database. This enables stateless clustering, a higher number of concurrent users, and above load applications to be handled efficiently.
 
@@ -28,9 +28,9 @@ A migration toolkit is available to help you fix any inconsistencies between dat
 
 For more information about the setting for *Uniqueness Validation*, see [Project Settings](/refguide8/project-settings/).
 
-## 2 Unique Attributes
+## Unique Attributes
 
-### 2.1 Effect of Runtime Uniqueness Validation
+### Effect of Runtime Uniqueness Validation
 
 If your Mendix app uses runtime validation, you can change an entity and add a unique validation rule on an attribute without affecting the current data. For example, you could indicate in your domain model that an insurance number should be unique for a person in the database because you wanted to use it to uniquely identify someone.
 
@@ -40,7 +40,7 @@ Applying the validation rule does not affect people that were already stored in 
 
 The advantage of this is that the stricter model does not affect the current data. The disadvantage is that it is easy to make wrong assumptions about the uniqueness of data in the database. For example, logic in a microflow could depend on unique insurance numbers, and the presence of old data with duplicate insurance numbers could easily be overlooked.
 
-### 2.2 Current Situation for Uniqueness Validation
+### Current Situation for Uniqueness Validation
 
 Using runtime validation for uniqueness has been deprecated. However, until it is removed, we are providing a Runtime setting that, if set to **Database**, will enforce the unique validation rules on a database level.
 
@@ -50,7 +50,7 @@ We highly recommend setting this radio button to **Database**. This will prepare
 
 {{< figure src="/attachments/refguide8/runtime/data-storage/uniqueness-constraint-migration/deprecation-warning.PNG" class="no-border" >}}
 
-### 2.3 Effect of Database Uniqueness Validation
+### Effect of Database Uniqueness Validation
 
 The effect of selecting **Database** is that when you deploy a model with unique validation rules on attributes (existing rules or new rules), all the existing objects for the affected entity will be checked for the uniqueness of the attribute. If there are multiple people with the same insurance number then:
 
@@ -59,7 +59,7 @@ The effect of selecting **Database** is that when you deploy a model with unique
 
 {{< figure src="/attachments/refguide8/runtime/data-storage/uniqueness-constraint-migration/startup-error.png" class="no-border" >}}
 
-### 2.4 Limitations on Using Database Uniqueness Validation
+### Limitations on Using Database Uniqueness Validation
 
 There are limitations on using database uniqueness validation if you are using an entity which is a specialization of another (generalization) entity.
 
@@ -86,7 +86,7 @@ You can resolve this issue simply, by moving unique validation rules of these at
 
 {{< figure src="/attachments/refguide8/runtime/data-storage/uniqueness-constraint-migration/unique-validation-rule-resolved.png" class="no-border" >}}
 
-## 3 Unique Associations
+## Unique Associations
 
 A comparable situation occurs for associations. Consider the following example:
 
@@ -102,6 +102,6 @@ Existing association data in the database must also adhere to the updated one-to
 
 We enforce this new stricter association on existing data in order to avoid easily overlooked mistakes that result in returning only a single address per person (where in fact they still have multiple addresses in the database). The Mendix Platform consistently returned the same address each run, but other addresses would be dormant entries in the database.
 
-## 4 Help with Migration
+## Help with Migration
 
 To help with migrating your old data, Mendix has developed a migration toolkit. For details on this, please contact [Mendix Support](https://support.mendix.com).

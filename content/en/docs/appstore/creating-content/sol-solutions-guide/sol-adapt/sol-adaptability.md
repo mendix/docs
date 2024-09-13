@@ -6,15 +6,15 @@ weight: 3
 description: "Best practices for creating a solution for adaptation"
 ---
 
-## 1 Domain Model
+## Domain Model
 
 The sections below describe best practices for your solution's domain model.
 
-### 1.1 Solution Module Defining the Data Model Core
+### Solution Module Defining the Data Model Core
 
 Mendix recommends having the majority of your data model defined within solution modules in order to ensure stability. This also helps to maintain a clear separation between which entities, attributes, and associations come from the publisher and what is added during implementation. Finally, this also enables doing internal refactoring without having to take all customer instances into account.
 
-### 1.2 Extension Through Extension Entities (Composition Pattern or Specializations)
+### Extension Through Extension Entities (Composition Pattern or Specializations)
 
 In general, Mendix recommends using a separate extension entity with a one-to-many or one-to-one relationship owned by the core entity. This enables adding additional attributes and associations during the implementation. Using a separate entity also allows for the introduction or removal of extension capabilities without large data migration. 
 
@@ -27,7 +27,7 @@ Alternatively, it is possible to use specializations. Mendix recommends consider
 | **Multiple extension versions** (for example, `Vehicle` becomes both `Car` and `Train`). | Setup can be complex. | More suitable. |
 | **Offline synchronization** | Fully supported. | Restrictions apply (for details, see [Offline Best Practices](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/best-practices/#inheritance)). |
 
-### 1.3 Example
+### Example
 
 Here is an example:
 
@@ -40,7 +40,7 @@ In this example, the following details apply:
 * **Task** is extended through a specialization, because every customer has very unique requirements on entity access.
 * **Logo** is not extensible.
 
-## 2 Making Part of the Logic Adaptable
+## Making Part of the Logic Adaptable
 
 You can make logic (microflows, nanoflows, and workflows) adaptable by placing documents into the open application modules. By using sub-flows, you can decide whether the entire flow can be adapted, or only specific parts thereof.
 
@@ -56,7 +56,7 @@ You can make logic (microflows, nanoflows, and workflows) adaptable by placing d
 All document types can be part of the solution module, but only nanoflows, microflows, and Java actions can be made usable.
 {{% /alert %}}
 
-## 3 Creating an Adaptable UI
+## Creating an Adaptable UI
 
 The same patterns that can be used for microflows can be used for making pages (partially) adaptable. For this, you can use a combination of (hidden) pages, editable layouts, and snippets.
 
@@ -72,7 +72,7 @@ The same patterns that can be used for microflows can be used for making pages (
 The app title, favicon, and login pages are always adaptable, since they live at the app level.
 {{% /alert %}}
 
-### 3.1 Cascading Theming Modules
+### Cascading Theming Modules
 
 For solution development, Mendix recommends using a layered approach to your theme modules to make them as adaptable as possible (for more information, see the [Brand Your Adaptable Solution](https://academy.mendix.com/link/paths/130/Brand-your-Adaptive-Solution) learning path, which includes details on how to structure your SASS files).
 
@@ -92,13 +92,13 @@ For an ISV with a single solution, this can be reduced to three modules (Atlas C
 
 In general, Mendix recommends being explicit regarding the used design system (and creating the relevant building blocks) to allow for a consistent look and feel across the adaptation and core UI.
 
-## 4 Using Constants
+## Using Constants
 
 The default value of a usable constant cannot be overridden at implementation, but the local Studio Pro value can be changed using the [Mendix Runtime settings](/developerportal/deploy/environments-details/#constants). Constants can always be configured as part of the environment settings (including hidden constants).
 
 For more information, see [Constant Default Value](/refguide/constants/#default-value) in the *Studio Pro Guide*.
 
-## 5 Translating the Implementation and Implementing Jargon
+## Translating the Implementation and Implementing Jargon
 
 In order to make the application translatable during implementation, all translatable documents need to be stored in open application modules. Using the [batch translate](/refguide/batch-translate/) and [batch replace](/refguide/batch-replace/) features, the text can be translated or updated during implementation. This can be done, for example, to implement jargon by changing a default concept like “Asset” into a customer-specific word such as “Car” .
 
@@ -108,12 +108,12 @@ Only adaptable content can be translated, since protected content is locked down
 
 Variables cannot (easily) be translated, nor can text be changed in a protected microflow (since this is locked down). As a workaround for this, consider using an editable Enumeration as an “internationalization map” combined with the [getCaption](/refguide/enumerations-in-expressions/#get-caption) function. 
 
-## 6 Java Source Code Protection
+## Java Source Code Protection
 
 Setting the export level to **Hidden** on a Java action prevents the unpacking of the action in the app directory in the same path as regular modules. Your Java code is put in a package, but no obfuscation or other security measures take place. This means that reverse engineering the package would reveal your source code.
 
 Mendix does not offer a facility to further protect intellectual property in your Java files. For further protection, Mendix recommends using other software (for example, to obfuscate your source code).
 
-## 7 Read More
+## Read More
 
 * [Using the Right Components](https://academy.mendix.com/link/modules/510/lectures/4050/2.1-Using-the-Right-Components)

@@ -8,7 +8,7 @@ weight: 45
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Studio Pro supports machine learning (ML) model integration in Mendix apps. Collectively called the *Machine Learning (ML) Kit*, this functionality allows Mendix developers to deploy a ML model built using common ML framework and language into the Mendix Runtime.
 
@@ -18,13 +18,13 @@ To get started with machine learning models, check out [Using ML Kit](/refguide/
 
 {{% alert color="info" %}}Check out a demo app and Jupyter Notebook examples in our [Demo for Mendix ML Kit](https://github.com/mendix/mlkit-example-app) repository for further information on working with machine learning models in Mendix.{{% /alert %}}
 
-## 2 Properties
+## Properties
 
-### 2.1 Action
+### Action
 
 * **ML model mapping** – the [ML model mapping](/refguide/ml-model-mapping/) model
 * **Input object** – the inputObject, defined in the microflow with a [Create Object](/refguide/create-object/) or [Java Action Call](/refguide/java-action-call/), and expects the same object type (not the entity) as in the **model mapping**
 
-### 2.2 Output
+### Output
 
 * **Output object** – name of the output object (for example, `outputObject`)

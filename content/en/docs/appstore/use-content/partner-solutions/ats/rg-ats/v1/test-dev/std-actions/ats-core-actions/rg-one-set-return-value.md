@@ -3,16 +3,16 @@ title: "Set Return Value"
 url: /appstore/partner-solutions/ats/rg-one-set-return-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the given value as return value for the action it is used in.
 
-## 2 Usage
+## Usage
 
 Use this action to set the return value of your custom action.
 Pass the value you want to set as return value as parameter.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

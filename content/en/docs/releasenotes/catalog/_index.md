@@ -1,8 +1,10 @@
 ---
-title: "Catalog"
+title: "Catalog Release Notes"
+linktitle: "Catalog"
 url: /releasenotes/catalog/
 description: "Release notes for updates to the Mendix Catalog"
 weight: 36
+numberless_headings: true
 aliases:
     - /releasenotes/data-hub/
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
@@ -11,6 +13,31 @@ aliases:
 These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
+
+### September 12, 2024
+
+#### Improvement
+
+* We updated the terminology used in the UI when describing contract elements (such as entities and actions) to be more specific.
+
+### August 29, 2024
+
+#### Fixes
+
+* We fixed a bug where data sources in the search results were incorrectly indicated to not be discoverable.
+
+### August 22, 2024
+
+#### Features
+
+* We have added support for OData Actions, including:
+    * Updated relevant pages in the UI to reflect these action details.
+    * Included actions to be added to the relevant functions within the app (such as search results, filtering, editing, etc.).
+
+#### Fixes
+
+* We fixed a bug where the application filter was not displaying the results in the associated drop-down list.
+* We repositioned the **Next** button on the **Registration** page to make it visible on smaller screens.
 
 ### August 01, 2024
 
@@ -96,7 +123,7 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 #### Fixes
 
-* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to  version 10.7 or above.
+* We fixed an issue where endpoints would get deleted and re-created when an application was converted from Mendix version 10.6 or below to version 10.7 or above.
 
 ### February 29, 2024
 
@@ -1036,8 +1063,8 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register/register-data/)  Mendix OData v3 contracts.
-* Data sources that are [validated](/catalog/manage/curate/#discoverability)  are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
+* A Mendix connector has been added to the business applications on the Data Hub Home to enable users to [manually register](/catalog/register/register-data/) Mendix OData v3 contracts.
+* Data sources that are [validated](/catalog/manage/curate/#discoverability) are now clearly indicated in the search results list and for the selected asset details with a validated shield icon. The validation status of the data source is now displayed in the metadata panel.
 * The [discoverability](/catalog/manage/curate/#discoverability) of a data source is displayed in the search results pane, the asset details screen and the metadata panel.
 
 ### March 11, 2021
@@ -1152,13 +1179,13 @@ The [Data Hub Transform API](https://datahub-spec.s3.eu-central-1.amazonaws.com/
 
 #### Improvements
 
-* In the Data Hub **Catalog** search pane, we now show the number of  [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
+* In the Data Hub **Catalog** search pane, we now show the number of [filters](/catalog/manage/search/#filter) that are active for the current search at the filter icon.
 
 ### October 29, 2020
 
 #### Improvements
 
-* In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of of the selected assets network, you can pan and zoom using the mouse.
+* In [Landscape](/data-hub/data-hub-landscape/) nodes are now static and cannot be dragged around the display. To see other parts of the selected assets network, you can pan and zoom using the mouse.
 * In Data Hub **Catalog** by default, the [search filter](/catalog/manage/search/#filter) is set to show results in the **Production** environment only. To include hits in **Non-production** or **Sandbox** environments you have to check these boxes in the **Add Filters** dialog box.
 * The [entity details](/catalog/manage/search/#entity-details) screen now displays the number of connections to the individual entity. The service details continue to show the total number of connections to the service.
 

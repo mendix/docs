@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-use-precondition-in-test-cases/
 description: "Describes how to use precondition in test cases in ATS"
 ---
 
-## 1 Introduction
+## Introduction
 
 To create more logic in test cases and more difficult test situations ATS has the possibility to add preconditions. These preconditions are added to test steps in your test cases. Maybe you have an application that sometimes shows a dialog after you log in with your open or new orders. If you do not know in advance whether you see the dialog after you log in, that makes it difficult to prepare test cases that always work. You sometimes need the **Close Dialog** action but not always. To make sure your test cases do not fail due to the presence (or absence) of the Dialog, you add a precondition to the **Find/Assert Dialog** action. If a dialog is present then the precondition is successful and ATS executes the underlying test step **Close Dialog**. In case no dialog is found the precondition fails and ATS does not execute the underlying test step **Close Dialog**. Not run means that ATS continues with the next step.
 
@@ -19,14 +19,14 @@ This how-to teaches you how to do the following:
 * How to use preconditions in test cases
 * Analyzing the results of a test case with preconditions
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
 * Read [How to Get Started](/appstore/partner-solutions/ats/ht-two-getting-started/)
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 
-## 3 How to Use Preconditions in Test Cases
+## How to Use Preconditions in Test Cases
 
 The following steps explain how to create a test case with preconditions: 
 
@@ -104,7 +104,7 @@ The following steps explain how to create a test case with preconditions:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-use-precondition-in-test-cases/setup-and-teardown.png" class="no-border" >}}
 
-## 4. Analyzing the Results of a Test Case Using Preconditions
+## Analyzing the Results of a Test Case Using Preconditions
 
 Running the test case can give two different results. If the expense is present on the first page the test run results look like:
 
@@ -118,6 +118,6 @@ If the expense is present on the first page ATS does not click the next button a
 
 Congratulations, you created a test case using preconditions. This is an example of what you can do with preconditions. It is a relatively difficult example, as it shows the different possibilities in ATS. There are many more options like a negative test case, which is the next advised read. 
 
-## 5 Next Up
+## Next Up
 
 The next how-to is [How to Create a Negative Test Case](/appstore/partner-solutions/ats/ht-two-create-a-negative-test-case/). You can find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

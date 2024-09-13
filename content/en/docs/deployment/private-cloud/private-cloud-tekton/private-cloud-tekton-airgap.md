@@ -1,12 +1,12 @@
 ---
 title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
-linktitle: "Air-gapped Tekton Installation"
+linktitle: "Air-Gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 The instructions for setting up Tekton CI/CD for Mendix for Private Cloud differ between environments which are connected to the internet and air-gapped environments. 
 
@@ -23,7 +23,7 @@ Please read [CI/CD for Mendix for Private Cloud using Tekton](/developerportal/d
 All commands used in this document should be executed in a Bash (or bash-compatible) terminal.
 {{% /alert %}}
 
-## 2 Preparation for Air-Gapped Environments {#preparation}
+## Preparation for Air-Gapped Environments {#preparation}
 
 To install Tekton and your CI/CD Pipeline in air-gapped environment you need to provision a list of images in your registry. Mendix has created a tool, **aip**, to perform this on different operating systems. You will need to download it using one of the following links:
 
@@ -35,7 +35,7 @@ To install Tekton and your CI/CD Pipeline in air-gapped environment you need to 
 The following steps in this section must be done in an environment which has internet access.
 {{% /alert %}}
 
-### 2.1 Tekton Images
+### Tekton Images
 
 If you have not installed Tekton from this registry before, you will need to put all the Tekton images into your registry.
 
@@ -72,7 +72,7 @@ Some registries cannot support complex repository addresses such as `my.registry
 
 You will need to update the `destination:` value for each of the repositories as shown below:
 
-```json {linenos=table,hl_lines=[6],linenostart=22}
+```json {hl_lines=6}
 …
 {
 	"name": "mxbuild8.18.11",
@@ -93,7 +93,7 @@ aip push
 cd ..
 ```
 
-### 2.2 Mendix Pipelines and Triggers for Tekton
+### Mendix Pipelines and Triggers for Tekton
 
 Get the pipeline package:
 
@@ -128,11 +128,11 @@ aip login -u user -p mypassword myprivate.registry.com
 aip push
 ```
 
-## 3 Tekton Installation{#tekton-installation}
+## Tekton Installation{#tekton-installation}
 
 If Tekton is already installed in your namespace, you can skip to [Pipelines Installation](#pipelines-installation).
 
-### 3.1 Installing on Air-Gapped Kubernetes
+### Installing on Air-Gapped Kubernetes
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands:
 
@@ -143,7 +143,7 @@ cat tekton-triggers.yaml | aip inject-manifest | kubectl apply -f -
 cat interceptors.yaml | aip inject-manifest | kubectl apply -f -
 ```
 
-### 3.2 Installing on Air-Gapped OpenShift
+### Installing on Air-Gapped OpenShift
 
 Assuming you have [performed the preparation steps](#preparation), use the following commands to install Tekton and Tekton triggers
 
@@ -165,7 +165,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
 
-    ```bash{linenos=false}
+    ```bash
     - '--el-security-context=false'
     ```
 
@@ -176,7 +176,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 7. Edit the `tekton-triggers-webhook` deployment.
 8. Change `runAsUser:` to a valid OpenShift user (like `1001000000`).
 
-## 4 Pipeline Installation{#pipelines-installation}
+## Pipeline Installation{#pipelines-installation}
 
 Before you install the Mendix pipelines, which contain all Tekton-related objects, you need to do the following:
 
@@ -204,13 +204,13 @@ helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   --set images.configureAppEnv=$PRIVATE_REGISTRY/mxpc-pipeline-tools-cli:0.0.8 
 ```
 
-## 5 Installing Triggers{#installing-triggers}
+## Installing Triggers{#installing-triggers}
 
 After following the steps in this document you con continue with the instructions in [Installing Triggers](/developerportal/deploy/private-cloud-tekton/#installing-triggers) in the *CI/CD for Mendix for Private Cloud using Tekton* document. The remaining instructions are the same for both air-gapped and connected environments.
 
-## 6 Troubleshooting{#troubleshooting}
+## Troubleshooting{#troubleshooting}
 
-### 6.1 `Context Deadline Exceeded` when Installing for Kubernetes
+### `Context Deadline Exceeded` when Installing for Kubernetes
 
 When installing Tekton and the Pipelines for Kubernetes, you can face an issue such as:
 

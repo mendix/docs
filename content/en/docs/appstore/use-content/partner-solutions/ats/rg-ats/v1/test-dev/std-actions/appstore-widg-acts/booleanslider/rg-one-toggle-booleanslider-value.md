@@ -3,19 +3,19 @@ title: "Toggle BooleanSlider Value"
 url: /appstore/partner-solutions/ats/rg-one-toggle-booleanslider-value/
 ---
 
-## 1 Description
+## Description
 
 Clicks the BooleanSlider widget to toggle its value. This will invert the current value of the BooleanSlider.
 
-## 2 Supported widgets
+## Supported widgets
 
 * BooleanSlider
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

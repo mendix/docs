@@ -4,7 +4,7 @@ url: /refguide/xpath-constraints/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 A constraint can be added to any XPath query to filter the data retrieved. It should always take the form of a valid [expression](/refguide/xpath-expressions/). This should consist of one or more entities, attributes, or associations combined with [operators](/refguide/xpath-operators/), [functions](/refguide/xpath-constraint-functions/), and [keywords or system variables](/refguide/xpath-keywords-and-system-variables/).
 
@@ -14,9 +14,9 @@ The syntax of XPath queries differs between Studio Pro and Java environments. In
 All the Studio Pro examples below assume that an entity `Sales.Customer` is selected for retrieval.
 {{% /alert %}}
 
-## 2 Constraints in Studio Pro
+## Constraints in Studio Pro
 
-### 2.1 Using Visual Builder for XPath Constraints
+### Using Visual Builder for XPath Constraints
 
 In Studio Pro version 10.5, a new, visual, way of constructing XPath constraints was introduced. This is called **visual Builder for XPath constraints** (Builder). This was in beta in version 10.5 and released as GA in version 10.12.
 
@@ -28,7 +28,7 @@ You can use the Builder in all places where you can retrieve data from the datab
 
 Ensure the **Builder** option is selected to use the Builder—this is the default from Mendix version 10.10. You can switch between the Builder and the XPath expression editor to view them in different ways. You can also set the Builder as the default in your [preferences](/refguide/preferences-dialog/#visual-builder).
 
-#### 2.1.1 Constructing an XPath Constraint
+#### Constructing an XPath Constraint
 
 The entity you are retrieving from the database is already selected as the context and this is indicated in the dialog box as **Select records of {entity}**.
 
@@ -58,7 +58,7 @@ You can create groups of rules which should be applied in combination. Click **A
 
 You can change the order of rules, or move them from one group to another using the handles on each rule indicated by six dots (**⋮⋮**).
 
-#### 2.1.2 Builder Limitations {#limitations}
+#### Builder Limitations {#limitations}
 
 Visual Builder for XPath constraints cannot be used to make arbitrarily complex XPath expressions. Builder has the following limitations:
 
@@ -79,13 +79,13 @@ If you try to use an unsupported feature you will be warned and can choose to ed
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/advanced-features.png" >}}
 
-### 2.2 Writing XPath Expressions
+### Writing XPath Expressions
 
 In all versions of Mendix you can write XPath constraints using the syntax explained below. As you enter your XPath you will be given assistance to help you choose the correct entities, attributes, variables, and associations. You will also see if there are any syntax errors.
 
 Depending on the version, you may have to use a different option to add your XPath constraint.
 
-#### 2.2.1 Mendix Version 10.5 and Above
+#### Mendix Version 10.5 and Above
 
 For all places where you can retrieve data from the database, for example a [Retrieve](/refguide/retrieve/) activity in a microflow or the [Data Source](/refguide/xpath-source/) of a widget, you select **(From) Database** and you will always have the option to add an **XPath constraint** by clicking **Edit…** to open a dialog box where you can enter your constraint.
 
@@ -95,7 +95,7 @@ You can type your constraint by selecting the option **XPath expression**.
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/xpath-expression-10-5.png" class="no-border" >}}
 
-#### 2.2.2 Mendix Versions Below 10.5
+#### Mendix Versions Below 10.5
 
 For a **Retrieve** activity in a microflow, you choose **Source: From database** and you can enter your constraint under **XPath constraint**.
 
@@ -105,7 +105,7 @@ For a **Data Source** of a page widget such as a [Data Grid](/refguide/data-grid
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/data-source-xpath-10-4.png" class="no-border" >}}
 
-## 3 Constraints in Java
+## Constraints in Java
 
 To apply XPath constraints in Java, you should use a complete XPath expression as described in [XPath](/refguide/xpath/). This includes the entity context plus your constraint expression and (optionally) an aggregate function and attribute to retrieve.
 
@@ -113,7 +113,7 @@ The XPath should be used in a [core.createXPathQuery](https://apidocs.rnd.mendix
 
 For example, to retrieve all customers named Jansen:
 
-```java {linenos = false}
+```java
 public getCustomersNameJansen(IContext context, ICore core, int value) {
     List<IMendixObject> results = core.createXPathQuery("//Sales.Customer[Name='Jansen']")
         .execute(context);
@@ -121,19 +121,19 @@ public getCustomersNameJansen(IContext context, ICore core, int value) {
 }
 ```
 
-## 4 Simple Constraints
+## Simple Constraints
 
 The following example shows how you should perform an XPath query in Studio Pro. You **Select** the **Entity** `Sales.Customer` and then write the XPath constraint `[Name='Jansen']`:
 
 {{< figure src="/attachments/refguide/modeling/xpath/xpath-constraints/XPath-constraint-example.png" alt="XPath constraint example in Studio Pro" width="400px" class="no-border" >}}
 
-## 5 Multiple Constraints
+## Multiple Constraints
 
 Multiple constraints can be added to a single query for all queries except where you are querying on the `id` (the unique identifier) of the object.
 
 If you need to query on `id` (for example `[id = $currentuser]`) as part of multiple constraints, you can create an `and` constraint by using the first format shown in the [Constraint One `and` Constraint Two](#and) section: `[id = …][{additional constraint}]`.
 
-### 5.1 Constraint One `and` Constraint Two{#and}
+### Constraint One `and` Constraint Two{#and}
 
 There are two ways of combining constraints so that the result is a list of objects where both constraints are applied to the objects being retrieved.
 
@@ -161,7 +161,7 @@ It is also possible to combine constraints with an `and` [operator](/refguide/xp
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 5.2 Constraint One `or` Constraint Two
+### Constraint One `or` Constraint Two
 
 You can also use the `or` operator. This query retrieves all customers whose name is Jansen *or* who live in Rotterdam.
 
@@ -175,7 +175,7 @@ You can also use the `or` operator. This query retrieves all customers whose nam
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 5.3 Prioritizing Constraints
+### Prioritizing Constraints
 
 With parentheses, constraints can be grouped to define priorities. This query retrieves all customers who are not only named "Jansen" or "Smit," but also live in Rotterdam:
 
@@ -189,7 +189,7 @@ With parentheses, constraints can be grouped to define priorities. This query re
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 5.4 Sub-constraints
+### Sub-constraints
 
 In some cases, it might also be useful define sub-constraints to restrict the data that is being constrained. This is easily achieved by adding a sub-constraint within the brackets of the original constraint. Do not confuse this with two separate constraints, as the sub-constraint only applies to the meta-constraint, not the actual query. As such, the brackets are not opened and closed one after the other; the sub-constraint should be entirely within the meta-constraint. In sufficiently complicated queries, this can result in confusion regarding where one constraint ends and the other begins. Make sure you keep careful track of bracket sets to prevent this from happening.
 
@@ -229,7 +229,7 @@ This query retrieves all customers who live in New Amsterdam, Guyana (as opposed
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 5.5 Combining Paths
+### Combining Paths
 
 Avoid the use of the same path more than once in a single constraint. For example, the example on Rotterdam and Losdun could also be established like this:
 

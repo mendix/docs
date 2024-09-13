@@ -5,13 +5,13 @@ description: "Describes the configuration and usage of the HTML Element widget, 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [HTML Element](https://marketplace.mendix.com/link/component/204843) widget allows a developer to create custom HTML elements to build custom structures, visualizations, or interactions. The widget can also execute advanced text formatting, build custom UI components, and embed HTML.
 
 The HTML Element widget contains settings to define the HTML tag, HTML attributes, events, and repeat elements. This widget can be nested and combined with other widgets.
 
-### 1.1 Features
+### Features
 
 Almost any arbitrary custom HTML configuration can be used with HTML Element. Here are some example outputs:
 
@@ -31,7 +31,7 @@ Almost any arbitrary custom HTML configuration can be used with HTML Element. He
 
     {{< figure src="/attachments/appstore/use-content/widgets/htmlelement/sample-tailored-html.png" class="no-border" >}}
 
-## 2 Configuration
+## Configuration
 
 To configure this widget, follow these steps:
 
@@ -39,9 +39,9 @@ To configure this widget, follow these steps:
 2. Double-click the HTML Element widget to open the **Edit HTML Element** dialog box.
 3. Configure the widget using the properties described in the sections below.
 
-### 2.1 General Tab
+### General Tab
 
-#### 2.1.1 HTML Element Section
+#### HTML Element Section
 
 * **Tag name** – sets the type of the element (such as div, span, or img). If you would like to add a custom name for the element, select **Use custom name** in the drop-down menu.
 * **Repeat element**
@@ -52,25 +52,25 @@ To configure this widget, follow these steps:
     * **HTML** – if selected, uses custom HTML markup as defined in the HTML settings. 
 * **HTML** (Visible if **Content** option is set to **HTML**) – can be either an expression or a text template. This defines custom HTML markup for the widget, therefore the value should be valid HTML as it will be inserted as HTML element content.
 
-#### 2.1.2 HTML Attributes Section
+#### HTML Attributes Section
 
 * **Attributes** – sets the attributes to be assigned into the HTML element.
 
-### 2.2 Events Tab
+### Events Tab
 
 {{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-### 2.3 Common Tab
+### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
 {{% alert color="info" %}}For more information, see [Event Actions](/refguide/on-click-event/#actions) in *Properties Common in the Page Editor*.{{% /alert %}}
 
-## 3 Advanced Configuration
+## Advanced Configuration
 
-### 3.4 HTML Sanitization
+### HTML Sanitization
 
-#### 3.4.1 Sanitization Configuration
+#### Sanitization Configuration
 
 This setting stores the [DOMPurify](https://cure53.de/purify) library configuration in JSON. Use this setting to fine-tune how the sanitization process handles input HTML. You can block tags, whitelist dangerous tags and values, and more.
 

@@ -11,7 +11,7 @@ This document explains how to make custom error pages for web pages. Native mobi
 To create customized error information for native pages, please create custom [system texts](/refguide9/system-texts/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 Whenever your application is stopped, you are presented with the default Mendix error page. However, you can make a custom error page on Mendix Cloud for a more tailored user experience. 
 
@@ -31,7 +31,7 @@ This how-to teaches you how to do the following:
 
 * Create a custom error page
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -39,7 +39,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Have your app *hosted in the Mendix Cloud*
 * Identify which version of the Atlas module you are using
 
-## 3 Creating a Custom Error Page
+## Creating a Custom Error Page
 
 {{% alert color="info" %}}
 If you are using Atlas 2, consider [upgrading](/refguide9/moving-from-atlas-2-to-3/). If you cannot, follow the instructions below but create the **error_page** folder in your **theme** folder directly.
@@ -74,7 +74,7 @@ If you are using Atlas 3, do the following:
 It might take up to an hour to before the custom error page is visible when the app is offline.
 {{% /alert %}}
 
-### 3.1 Example Offline Page
+### Example Offline Page
 
 An example `offline.html`, `404.html`, or `403.html` page could look like this:
 

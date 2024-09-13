@@ -5,15 +5,15 @@ url: /refguide/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
 ---
 
-## 1 Introduction
+## Introduction
 
 There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide/custom-settings/).
 
 However, a few of the more commonly used custom settings can be complicated and have far-reaching implications. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
-## 2 Session Duration {#session-duration}
+## Session Duration {#session-duration}
 
-### 2.1 Web Client Settings
+### Web Client Settings
 
 The following settings influence the behavior of the Mendix web client:
 
@@ -21,7 +21,7 @@ The following settings influence the behavior of the Mendix web client:
 | --- | --- | --- |
 | `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after `SessionTimeout` milliseconds of inactivity (default 10 minutes), even if the browser remains open. See `SessionTimeout` in the next section for more information. | true |
 
-### 2.2 General Settings {#general-settings}
+### General Settings {#general-settings}
 
 The following custom settings can be configured:
 
@@ -48,9 +48,9 @@ Finally, there is a security consideration to be made. An idle session means tha
 
 So, make sure to keep in mind all of the above when changing these values. Also, make sure your decision to alter any of these values is made with the right considerations.
 
-## 3 Query Logging
+## Query Logging
 
-### 3.1 Database Settings: Common settings
+### Database Settings: Common settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -64,9 +64,9 @@ The most important part of this setting is to regularly check the application lo
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 Connection Pooling
+## Connection Pooling
 
-### 4.1 The Number of Database Connections{#num-connections}
+### The Number of Database Connections{#num-connections}
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/proper/commons-pool/).
 
@@ -113,7 +113,7 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.
 
-### 4.2 Validating Database Connections
+### Validating Database Connections
 
 The settings mentioned below are supported in Mendix version 10.6 in patch versions 10.6.4 and above, and in Mendix version 10.8.0 and above.
 
@@ -131,6 +131,6 @@ There are a number of custom runtime settings to enable this validation:
 
 These options may have a small performance impact, which is the reason they are not enabled by default.
 
-## 5 Read More
+## Read More
 
 * [Runtime Customization](/refguide/custom-settings/)

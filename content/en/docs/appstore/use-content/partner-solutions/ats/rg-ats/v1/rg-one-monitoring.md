@@ -3,7 +3,7 @@ title: "Monitoring"
 url: /appstore/partner-solutions/ats/rg-one-monitoring/
 ---
 
-## 1 Test Results
+## Test Results
 
 The link Monitoring/Results shows you pending and most recent tests to review the results of test case or test suite runs. You can switch between both views via tabs.
 
@@ -32,7 +32,7 @@ Error log:
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-monitoring/21168220.png" alt="Result Log Error Tab" class="no-border" >}}
 
-## 2 Running Tests
+## Running Tests
 
 When building up or after finishing your test case, you want to run your test case in order to see if it works as intended.
 

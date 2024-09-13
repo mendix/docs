@@ -3,19 +3,19 @@ title: "Set BootstrapRTE Value"
 url: /appstore/partner-solutions/ats/rg-one-set-bootstraprte-value/
 ---
 
-## 1 Description
+## Description
 
 Sets the given value as current value for the BootstrapRTE value. Strings can be formatted via HTML code.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * BootstrapRTE
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to set.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

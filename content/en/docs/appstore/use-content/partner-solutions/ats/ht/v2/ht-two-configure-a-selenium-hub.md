@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-configure-a-selenium-hub/
 description: "Describes how to configure a Selenium hub for the supported Selenium providers and a custom Selenium hub."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to explains how to configure a Selenium hub in ATS. There are four Selenium hub possibilities in ATS. How to configure all the four Selenium hubs and where you can retrieve the necessary information is explained.
 
@@ -15,14 +15,14 @@ This how-to teaches you how to do the following:
 * Configure a TestingBot Selenium hub
 * Configure a Custom Selenium hub
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
 * Have the appropriate role to gain access to the test settings in ATS.
 * Have access to a Selenium provider account or internal Selenium server.
 
-## 3 The Test Settings
+## The Test Settings
 
 To get to the test settings follow these steps:
 
@@ -40,7 +40,7 @@ The **Select Provider** dialog box opens. Here you select one of the four config
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/select-provider-dialog.png" class="no-border" >}}
 
-## 4 Custom Capabilities
+## Custom Capabilities
 
 Each Selenium provider allows the user to set certain custom capabilities. The custom capabilities are used to set specific conditions. ATS uses these custom capabilities when you execute a test case or test suite. For example, Selecting 'Chrome' as your browser is a custom capability. ATS will then execute the test case or test suite using Chrome. The different Selenium providers allow for different custom capabilities. How to select custom capabilities is explained for each Selenium hub in the corresponding chapter.
 
@@ -57,9 +57,9 @@ Browser and platform overwrites do not work! The ATS run configuration will over
 
 Custom capabilities are explained separately for each Selenium option in the next chapters.
 
-## 5 Configure BrowserStack
+## Configure BrowserStack
 
-### 5.1 Basic Configuration
+### Basic Configuration
 
 To configure BrowserStack as a Selenium hub follow these steps:
 
@@ -84,7 +84,7 @@ To find the username and access key follow these steps:
 
 Leave the **New Selenium Hub** dialog box open for the next chapter.
 
-### 5.2 Custom Capabilities
+### Custom Capabilities
 
 To set a custom capability for BrowserStack follow these steps:
 
@@ -115,9 +115,9 @@ You now configured your BrowserStack Selenium hub. You can create as many variat
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/finished-browserstack-selenium-hub.png" class="no-border" >}}
 
-## 6 Configure Sauce Labs
+## Configure Sauce Labs
 
-### 6.1 Basic Configuration
+### Basic Configuration
 
 To configure Sauce Labs as a Selenium hub follow these steps:
 
@@ -145,7 +145,7 @@ To find the username and access key follow these steps:
 
 Leave the **New Selenium Hub** dialog box open for the next chapter.
 
-### 6.2 Custom Capabilities
+### Custom Capabilities
 
 To set a custom capability for Sauce Labs follow these steps:
 
@@ -176,9 +176,9 @@ To set a custom capability for Sauce Labs follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/finished-saucelabs-selenium-hub.png" class="no-border" >}}
 
-## 7 Configure TestingBot
+## Configure TestingBot
 
-### 7.1 Basic Configuration
+### Basic Configuration
 
 To configure TestingBot as a Selenium hub follow these steps:
 
@@ -206,7 +206,7 @@ To find the username and access key follow these steps:
 
 Leave the **New Selenium Hub** dialog box open for the next chapter.
 
-### 7.2 Custom Capabilities
+### Custom Capabilities
 
 To set a custom capability for TestingBot follow these steps:
 
@@ -237,9 +237,9 @@ You now configured your TestingBot Selenium hub. You can create as many variatio
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/finished-testingbot-selenium-hub.png" class="no-border" >}}
 
-## 8 Configure a Custom Selenium Hub
+## Configure a Custom Selenium Hub
 
-### 8.1 Basic Configuration
+### Basic Configuration
 
 To configure a custom Selenium hub follow these steps:
 
@@ -258,7 +258,7 @@ To configure a custom Selenium hub follow these steps:
 
 Leave the **New Selenium Hub** dialog box open for the next section.
 
-### 8.2 Custom Capabilities
+### Custom Capabilities
 
 Setting a custom capability in your custom Selenium is possible but must be configured on the server itself.
 
@@ -266,6 +266,6 @@ You now configured your custom Selenium hub. You can create as many variations a
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/finished-custom-selenium-hub.png" class="no-border" >}}
 
-## 9 Next Up
+## Next Up
 
 You now learned how to configure the different Selenium hubs. The next how-to is [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

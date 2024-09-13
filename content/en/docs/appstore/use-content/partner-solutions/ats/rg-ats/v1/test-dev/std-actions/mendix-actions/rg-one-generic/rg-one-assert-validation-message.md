@@ -3,20 +3,20 @@ title: "Assert Validation Message"
 url: /appstore/partner-solutions/ats/rg-one-assert-validation-message/
 ---
 
-## 1 Description
+## Description
 
 Asserts the validation message of a widget with a certain text.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * All standard widgets
 
-## 3 Usage
+## Usage
 
 You have to pass the widget name and the expected validation message to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

@@ -9,11 +9,11 @@ aliases:
     - /developerportal/community-tools/oauth-scopes/
 ---
 
-## 1 Introduction
+## Introduction
 
 The sections below provide introductory information on how OAuth and scopes work as well as details on scopes generated in the Mendix Portal.
 
-## 2 OAuth
+## OAuth
 
 OAuth is a standard for access delegation. It is commonly used as a way for users to grant websites or applications limited access (scopes) to their data without providing their credentials. Mendix uses [OAuth 2.0](https://oauth.net/2/).
 
@@ -23,7 +23,7 @@ In other words, OAuth allows a user with an account from one website/application
 2. The user is asked to authenticate themselves on website/application B.
 3. Website/application B confirms the identity of the user to website/application A.
 
-## 3 Scopes
+## Scopes
 
 Once the user is authenticated by website/application B, website/application A has a guarantee of their real identity. In addition, OAuth provides more complex functionality. For example, website/application B can communicate a set of information (for example, the email address or profile picture) and a set of rights to website/application A. This can only happen if the user grants certain rights.
 
@@ -33,13 +33,13 @@ Here is an example page where a user is asked to accept scopes on their Mendix a
 
 {{< figure src="/attachments/community-tools/oauth-scopes/authorize_page.png" alt="Authorize Page" class="no-border" >}} 
 
-## 4 Generated Scopes
+## Generated Scopes
 
 The scopes below provide access to data with user consent. They are generated automatically within the Mendix Portal.
 
 This information is provided so that you can make an informed decision on whether you want to authorize or cancel the request for access to your personal information or app.
 
-### 4.1 Profile Scope {#profile}
+### Profile Scope {#profile}
 
 With this scope, a website or application can access the user's basic [profile](/community-tools/mendix-profile/) information as recorded in Mendix. This scope contains the following user data:
 
@@ -48,15 +48,15 @@ With this scope, a website or application can access the user's basic [profile](
 * Avatar
 * URL of the user's personal website or blog
 
-### 4.2 Email Scope {#email}
+### Email Scope {#email}
 
 With this scope, a website or application has access to the user's email address.
 
-### 4.3 OpenID Scope {#openid}
+### OpenID Scope {#openid}
 
 This is one of the most common scopes. With this scope, website A (for example, Mendix) is informed that website B (for example, Wikipedia) wants to authenticate the user. Website B then receives the user's unique identifier.
 
-### 4.4 Mendix Profile Scope {#mx:user:profile:v1:read}
+### Mendix Profile Scope {#mx:user:profile:v1:read}
 
 This scope is an extension of the [profile scope](#profile). With this scope, a website can access the user's Mendix profile for the following user data:
 
@@ -75,10 +75,10 @@ This scope is an extension of the [profile scope](#profile). With this scope, a 
 * LinkedIn profile
 * Twitter account
 
-### 4.5 Creating an App Scope {#mx:app:create}
+### Creating an App Scope {#mx:app:create}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP (as a strategic Mendix partner). This scope allows a website/application or partner to create a Mendix application on behalf of the user.
 
-### 4.6 Changing the Deployment Cloud Target of an App Scope {#mx:app:cloudswitch}
+### Changing the Deployment Cloud Target of an App Scope {#mx:app:cloudswitch}
 
 This is a Mendix-specific scope that is used by internal Mendix applications as well as by SAP (as a strategic Mendix partner). This scope allows a website/application to change the platform to which an app will be deployed.

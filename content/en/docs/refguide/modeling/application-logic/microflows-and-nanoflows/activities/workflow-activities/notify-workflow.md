@@ -9,7 +9,7 @@ weight: 90
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 The **Notify workflow** activity can be used to notify a [workflow](/refguide/workflows/) that is suspended on the [Wait for notification](/refguide/wait-for-notification/) workflow activity.
 
@@ -19,7 +19,7 @@ If the workflow is suspended on the specified wait for notification activity, th
 When you try to notify a workflow which is already `Completed` or `Aborted`, it will result in a Runtime error. For information on how to handle the error, see [Error Handling in Microflows](/refguide/error-handling-in-microflows/).
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of **Notify workflow** properties is represented in the image below:
 
@@ -32,7 +32,7 @@ The **Notify workflow** properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -40,20 +40,20 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow Object {#workflow}
+### Workflow Object {#workflow}
 
 The workflow instance that will be notified by this activity.
 
-### 3.2 Activity
+### Activity
 
 The ([caption](/refguide/wait-for-notification/#general) of the) [wait for notification](/refguide/wait-for-notification/) workflow activity that suspends the workflow instance. This wait for notification workflow activity needs to be notified so that the workflow can continue.
 
-### 3.3 Variable Name
+### Variable Name
 
 The name of the variable returned by the activity. This variable will be a Boolean that indicates whether the notification is received or not by the workflow instance.
 
 For more information on the return values, see the [Introduction](#introduction) section above.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

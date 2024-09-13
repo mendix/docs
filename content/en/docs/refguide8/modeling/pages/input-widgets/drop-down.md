@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A **drop-down** is used to display and, optionally, allow the end-user to edit the value of an attribute of [data type](/refguide8/data-types/) *enumeration*.
 
@@ -22,7 +22,7 @@ For example, the following drop-down allows the end-user to see, and set, the **
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/drop-down.png" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of drop-down properties is represented in the image below:
 
@@ -40,37 +40,37 @@ Drop-down properties consist of the following sections:
 * [Validation](#validation)
 * [Visibility](#visibility)
 
-### 2.1 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Data Source Section{#data-source}
+### Data Source Section{#data-source}
 
 {{% snippet file="/static/_includes/refguide8/data-source-section-link.md" %}}
 
-### 2.3 Design Properties Section{#design-properties}
+### Design Properties Section{#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}} 
 
-### 2.4 Editability Section{#editability}
+### Editability Section{#editability}
 
 {{% snippet file="/static/_includes/refguide8/editability-section-link.md" %}}
 
-### 2.5 Events Section{#events}
+### Events Section{#events}
 
-#### 2.5.1 On Change{#on-change}
+#### On Change{#on-change}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-#### 2.5.2 On Enter
+#### On Enter
 
 The on-enter property specifies an action that will be executed when the widget is entered, either by using the <kbd>Tab</kbd> key or by clicking it with the mouse.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-#### 2.5.3 On Leave
+#### On Leave
 
 The on-leave property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget.
 
@@ -78,9 +78,9 @@ This differs from the [On change](#on-change) property in that the event will al
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-### 2.6 General Section{#general}
+### General Section{#general}
 
-#### 2.6.1 Empty Option Caption
+#### Empty Option Caption
 
 Empty option caption is the text that is shown for the empty option in the drop-down shown to the end-user. This is a translatable text. For more details, see [Language Menu](/refguide8/translatable-texts/).
 
@@ -90,19 +90,19 @@ For example, the drop-down that allows the end-user to select the region allocat
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/drop-down/select-a-region.png" class="no-border" >}}
 
-### 2.7 Label Section{#label}
+### Label Section{#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
-### 2.8 Validation Section{#validation}
+### Validation Section{#validation}
 
 {{% snippet file="/static/_includes/refguide8/widget-validation-link.md" %}}
 
-### 2.9 Visibility Section{#visibility}
+### Visibility Section{#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Data View](/refguide8/data-view/)
 * [Attributes](/refguide8/attributes/)

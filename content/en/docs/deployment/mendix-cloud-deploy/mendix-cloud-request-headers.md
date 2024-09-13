@@ -6,11 +6,11 @@ weight: 80
 description: "Describes which HTTP request headers are available in Mendix Cloud."
 ---
 
-## 1 Introduction
+## Introduction
 
 All applications running in Mendix Cloud are accessed using the HTTPS protocol. Using this protocol, a lot of individual requests are sent to the application. Examples of these requests are "run this XPath query," "run this microflow," or "provide the layout of this page."
 
-## 2 HTTP Request Headers
+## HTTP Request Headers
 
 Besides these instructions, every request also contains additional information: the request headers. Examples of information available in these headers are the IP address from which the request originates and the type of web browser or other HTTP client used.
 
@@ -18,7 +18,7 @@ Most of the request headers are added by the HTTP client (the web browser, for e
 
 Using custom Java code in the application, the full content of an incoming request can be inspected.
 
-### 2.1 Usually Available Request Headers Set by the HTTP Client
+### Usually Available Request Headers Set by the HTTP Client
 
 The following headers are usually set by the HTTP client. Mendix Cloud does not touch the value of these headers. This also means that they might not be available if the HTTP client does not set them.
 
@@ -27,7 +27,7 @@ The following headers are usually set by the HTTP client. Mendix Cloud does not 
 | **Host**                                    | `custom-domain.example.com`                                  | The domain name that was used by the client to access the application |
 | **User-Agent**                              | `Mozilla/5.0 (X11; Linux x86_64; rv:66.0) Gecko/20100101 Firefox/66.0` | The user agent, describing itself |
 
-### 2.2 Available Request Headers Inserted by Mendix Cloud
+### Available Request Headers Inserted by Mendix Cloud
 
 The following headers are set by Mendix Cloud. If any of these are present in the request sent from the user agent, they will be forcibly overwritten.
 

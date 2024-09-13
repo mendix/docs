@@ -3,7 +3,7 @@ title: "Data-Driven Testing"
 url: /appstore/partner-solutions/ats/rg-two-data-driven-testing/
 ---
 
-## 1 Introduction
+## Introduction
 
 Data-driven testing in ATS allows you to run tests using tables of data as direct test input. This way, you test different input values without having to write extra tests.
 
@@ -24,7 +24,7 @@ Fields can have following data types: text or number.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-data-driven-testing/test-data.PNG" class="no-border" >}}
 
-## 2 Using Test Data in Test Cases
+## Using Test Data in Test Cases
 
 To use your datasets in test cases, you need to select a **Master dataset** under the **Test Data** tab inside a test case. Click the arrow to open the **Select Data Set** dialog box.
 
@@ -36,12 +36,12 @@ You can only select one primary dataset at a time per test case. Your selected d
 If you connect a dataset with a test case, ATS executes a session for each record row in the dataset. For example, if there are three rows, ATS executes three sessions.
 {{% /alert %}}
 
-### 2.1 Execution type for data driven test cases
+### Execution type for data driven test cases
 
 For data driven test cases you have the option between parallel/sequential execution. If this is set to parallel, ATS tries to run all the sessions (one for each record) of your test case in parallel. This is limited through the concurrency limit of your Selenium hub. When the sequential option is chosen, the sessions run in succession, one after the other.
 Use the sequential execution in order to prevent the tests to interfere with each other by manipulating data at the same time.
 
-## 3 Importing and Exporting Datasets
+## Importing and Exporting Datasets
 
 When creating and editing a dataset, select the **Create/Update fields from file** option to provide a template Excel file. Create or update fields and records of your dataset using this Excel file. ATS recognizes the first row of the Excel sheet as the field names. ATS considers all extra rows as records and also uses them to determine the field data type.
 
@@ -51,20 +51,20 @@ When importing data from Excel, ATS tries to convert data that doesn't match the
 
 Export a dataset to Excel by clicking **Export to Excel**.
 
-## 4 Exporting a Test Case
+## Exporting a Test Case
 
 When exporting a test case that has a dataset assigned to it, ATS also exports that connection. ATS automatically looks for the same dataset when importing that test case. If no such dataset exists yet, ATS connects it when created.
 
-## 5 Error Types
+## Error Types
 
 There are two error types that can occur when setting a dataset. These are described below.
 
 ATS lists the test step and parameter for each error for easy identification.
 
-### 5.1 Missing fields
+### Missing fields
 
 For this type of error, fields are shown that are not in the selected primary dataset currently used in the test case.
 
-### 5.2 Incompatible Data Types
+### Incompatible Data Types
 
 For this error type, parameters are shown that need a different data type than the data type of the field.

@@ -13,7 +13,7 @@ aliases:
 #Linked from Mendix Portal > Environments > Custom Domains
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Cloud supports adding custom domains such as `https://myapp.mycompany.com/` to your environments. Because Mendix Cloud only allows HTTPS connections, you have to provide a custom domain certificate (an SSL/TLS certificate). This how-to walks through the process.
 
@@ -31,9 +31,9 @@ This how-to explains how to do the following:
 * Renew a custom domain certificate
 * Configure a custom domain for your environment
 
-## 2 Prerequisites
+## Prerequisites
 
-### 2.1 General Prerequisites
+### General Prerequisites
 
 Before starting this how-to, you need to have the following prerequisites:
 
@@ -50,7 +50,7 @@ Before starting this how-to, you need to have the following prerequisites:
 Custom domains can be added only to licensed apps. You cannot add custom domains to Free Apps.
 {{% /alert %}}
 
-### 2.2 Create and Configure a CNAME Record{#DNS}
+### Create and Configure a CNAME Record{#DNS}
 
 Before configuring your custom domain in Mendix Cloud, you need to configure a DNS record for your custom domain with your domain registrar or DNS provider.
 
@@ -60,7 +60,7 @@ Create a CNAME (Canonical Name) record and point it to `[YOUR-CUSTOM-DOMAIN].cna
 It is not possible to create a CNAME record for an apex/naked domain (meaning, a domain without a subdomain, like `mycompany.com`). If you want to use a custom apex/naked domain, redirect it to a subdomain (for example, `subdomain.mycompany.com`) and create a CNAME for the subdomain instead.
 {{% /alert %}}
 
-## 3 Managing Custom Domains in Mendix Cloud
+## Managing Custom Domains in Mendix Cloud
 
 Custom domain certificates (or just "certificates") are managed at the application level; in contrast, custom domains are managed per environment.
 
@@ -79,11 +79,11 @@ To manage custom domains, follow these steps:
 
 If you already have a signed SSL/TLS certificate, skip to [Uploading Your Own Custom Domain Certificate](#Uploading), below.
 
-## 4 Obtaining a New Signed Certificate
+## Obtaining a New Signed Certificate
 
 If you do not have an SSL/TLS certificate, you can order one from a certificate authority (such as GeoTrust, Thawte, Verisign, RapidSSL, GoDaddy, or Comodo). To get a signed SSL/TLS certificate from a certificate authority, you need to provide a certificate signing request (CSR). A private SSL/TLS key and a CSR tied to that key can be created in Mendix Cloud for you.
 
-### 4.1 Generating a Certificate Request for your Custom Domain{#Generating}
+### Generating a Certificate Request for your Custom Domain{#Generating}
 
 {{% alert color="info" %}}
 Certificates are applied to a single app. Therefore, Mendix recommends that you do not use a wildcard (`*`) in the domain for which you are requesting a certificate. See [Can You Create a `*.mycompany.com` Wildcard Certificate?](#wildcard), below, for more information.
@@ -111,7 +111,7 @@ To create a CSR and an RSA (Rivest–Shamir–Adleman) encryption key, follow th
 
 You can now go to your certificate authority to get a signed SSL/TLS certificate.
 
-### 4.2 Uploading a Signed Certificate{#Upload}
+### Uploading a Signed Certificate{#Upload}
 
 Once you have a signed SSL/TLS certificate, you can upload it by following these steps:
 
@@ -133,7 +133,7 @@ Once you have a signed SSL/TLS certificate, you can upload it by following these
 
 You can now configure your custom domain. See [Configuring a Custom Domain](#Configuring), below.
 
-## 5 Uploading Your Own Custom Domain Certificate{#Uploading}
+## Uploading Your Own Custom Domain Certificate{#Uploading}
 
 To upload a custom domain certificate, you need to have the following things prepared:
 
@@ -169,7 +169,7 @@ You can add as many certificates as you need. Each certificate will be listed wi
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/custom-domains/certificate-list.png" alt="List of certificates" class="no-border" >}}
 
-## 6 Renewing a Custom Domain Certificate
+## Renewing a Custom Domain Certificate
 
 Custom domain certificates have an expiry date. There are two methods for renewing a custom domain certificate that is about to expire:
 
@@ -177,7 +177,7 @@ Custom domain certificates have an expiry date. There are two methods for renewi
 
 * Update an existing custom domain certificate
 
-### 6.1 Method 1: Creating a New Custom Domain Certificate (Recommended)
+### Method 1: Creating a New Custom Domain Certificate (Recommended)
 
 You can handle an expiring domain certificate by replacing it with a new one. You can do this in one of two ways:
 
@@ -191,7 +191,7 @@ You can now select the new certificate for your custom domain (for more informat
 If you are rotating a certificate, you do not need to remove the current domain configuration when replacing the certificate. Selecting a new certificate for an existing domain will reconfigure the existing domain with the selected certificate. 
 {{% /alert %}}
 
-### 6.2 Method 2: Renewing by Updating an Existing Custom Domain Certificate
+### Method 2: Renewing by Updating an Existing Custom Domain Certificate
 
 You can also edit an existing custom domain certificate.
 
@@ -201,7 +201,7 @@ You can also edit an existing custom domain certificate.
 For this, you need access to the certificate request that you created for the current certificate.
 {{% /alert %}}
 
-## 7 Configuring a Custom Domain {#Configuring}
+## Configuring a Custom Domain {#Configuring}
 
 Once a custom domain certificate has been uploaded, you can configure a custom domain for one of your application environments.
 
@@ -233,9 +233,9 @@ To configure a custom domain for your application environment, follow these step
 Make sure you have configured a CNAME record for your custom domain with your domain registrar/DNS provider (for details, see [Create and Configure a CNAME Record](#DNS)), above.
 {{% /alert %}}
 
-## 8 Frequently Asked Questions
+## Frequently Asked Questions
 
-### 8.1 Can You Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
+### Can You Create a `*.mycompany.com` Wildcard Certificate? {#wildcard}
 
 Yes. However, when you create the certificate request via Mendix Cloud, you will only be able to use the wildcard certificate for the environments of a single app. This is because the private key is stored securely and is not accessible to you or Mendix Support, so you will not be able to reuse it in other apps.
 
@@ -243,21 +243,21 @@ If you have your own custom domain certificate, you can upload it to all of your
 
 You can select the same wildcard certificate per environment by using it with different subdomains. For example, `test.mycompany.com`, `accp.mycompany.com`, and `app.mycompany.com`.
 
-### 8.2 How Do You Construct an Intermediate Certificate Chain Properly?
+### How Do You Construct an Intermediate Certificate Chain Properly?
 
 Your certificate is signed by the certificate authority (CA). They sign your certificate with their intermediate certificate, rather than directly with the root certificate. Their intermediate certificate is signed with their own root certificate.
 
 To reach the root certificate, you must link your certificate via the intermediate certificate chain, which is usually just one intermediate certificate. Occasionally, a CA requires more than one intermediate certificate. You do not need to provide the root certificate, because every web browser has it in its trusted keystore.
 
-### 8.3 How Do You Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL? {#use-custom-url}
+### How Do You Get my SAML Metadata or CommunityCommons.GetApplicationUrl to Use the Custom URL? {#use-custom-url}
 
 For certain use cases, it is important for the Mendix runtime to know the public URL of your applications. This is most commonly needed when your app generates links back to itself. To tell the runtime where it lives, set the `ApplicationRootUrl` [custom runtime setting](/refguide/custom-settings/#general). To set the custom runtime setting, follow the instructions in the [Custom Runtime Settings](/developerportal/deploy/environments-details/#custom-runtime-settings) section of *Environment Details*.
 
-### 8.4 Can You Configure Multiple Custom Domains for the Same Application? {#multiple-custom-domains}
+### Can You Configure Multiple Custom Domains for the Same Application? {#multiple-custom-domains}
 
 Yes, you can configure multiple custom domains for the same application. Please note that this can only be done by [uploading multiple own custom domain certificates](#Uploading). You can only [generate one certificate signing request for one custom domain](#Generating) for your application.
 
-## 9 Read More
+## Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
 * [Environments](/developerportal/deploy/environments/)

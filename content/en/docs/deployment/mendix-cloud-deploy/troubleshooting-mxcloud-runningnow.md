@@ -6,13 +6,13 @@ description: "Explains how to access, navigate, and troubleshoot Running Now in 
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use the **Running Now** dialog box to monitor all actions that are currently running in an environment. To access this information, click **Show Running Now** on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page for one of your app's environments. This button is only visible while the app is running.
 
 You must have **Access to Monitoring** enabled to launch the **Running Now** dialog box. For details on how to manage these permissions, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
-## 2 Running Now Navigation
+## Running Now Navigation
 
 The **Running Now** dialog box shows all actions currently running in the environment. It also shows some general information about each action.
 
@@ -28,7 +28,7 @@ You can also zoom in on a stack:
 
 **Kill request** lets you try to stop the action. If successful, that leads to an error for the user executing the action.
 
-## 3 Troubleshooting
+## Troubleshooting
 
 You can use the information displayed in the **Running Now** dialog box for various purposes:
 
@@ -37,6 +37,6 @@ You can use the information displayed in the **Running Now** dialog box for vari
 * If you have a performance or memory problem, the listed actions (and their **Details** pages) might help you pinpoint the cause of the problem.
 * If the above alone is not enough, you can combine the information on this page with the information on the **Cache** page, the [Logs](/developerportal/operate/logs/) page, and the [Metrics](/developerportal/operate/metrics/) page.
 
-## 4 Read More
+## Read More
 
 * [Alerts](/developerportal/operate/monitoring-application-health/)

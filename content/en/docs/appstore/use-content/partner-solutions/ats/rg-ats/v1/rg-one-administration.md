@@ -3,7 +3,7 @@ title: "Administration"
 url: /appstore/partner-solutions/ats/rg-one-administration/
 ---
 
-## 1 Introduction
+## Introduction
 
 As an administrator in the ATS, you have access to additional functionality:
 
@@ -12,7 +12,7 @@ As an administrator in the ATS, you have access to additional functionality:
 * Configure Selenium hubs for all projects
 * Change Recorder configuration
 
-## 2 Manage Projects
+## Manage Projects
 
 When you log in as an administrator the *Projects* page is shown:
 
@@ -24,7 +24,7 @@ On this page you can see all the projects that exist on this ATS instance. Here 
 When creating a new library on the *Projects* page, the created library is empty at first and you can import action libraries into it or include available libraries.
 {{% /alert %}}
 
-### 2.1 Create or Edit a Project/Action Library
+### Create or Edit a Project/Action Library
 
 If you create a new Project/Action Library or you want to edit an existing one, the following page will open:
 
@@ -34,7 +34,7 @@ You can edit the name, the Mendix Project ID and the Mendix API key. Furthermore
 
 You can also add existing Action Libraries.
 
-## 3 Add Selenium Configurations
+## Add Selenium Configurations
 
 As an admin user you can configure Selenium hubs as you normally would. For more information, see [SeleniumHub](/appstore/partner-solutions/ats/rg-one-configuration/).
 
@@ -44,7 +44,7 @@ Additionally, as an administrator, you can assign a Selenium hub to a specific p
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v1/rg-one-administration/21168202.png" alt="Edit Selenium hub dialog as admin" class="no-border" >}}
 
-## 4 Add Applications
+## Add Applications
 
 As an admin user, you can add and configure applications to test.
 
@@ -52,7 +52,7 @@ As an admin user, you can add and configure applications to test.
 
 For more information, see [Configure Test Applications](/appstore/partner-solutions/ats/rg-one-configuration/#configure-test-applications).
 
-## 5 Create Accounts
+## Create Accounts
 
 On the *Accounts* page you can create new users and administrators for the system. Administrators only have access to the administration part of ATS. They can see test cases and test results, but they can't create new test cases or run them.
 
@@ -76,7 +76,7 @@ Tester | Adds the tester user role.
 Tenant Administrator | Adds the tenant administrator role.
 Password | The initial password of the user (which should be changed by the user when logging in).
 
-## 6 Recorder Config
+## Recorder Config
 
 Admin users have access to the *Recorder Config* page where recorder setting can be changed.
 

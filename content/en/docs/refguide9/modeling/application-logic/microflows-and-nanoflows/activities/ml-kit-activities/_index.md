@@ -5,7 +5,7 @@ weight: 45
 ---
 {{% alert color="info" %}}[Machine learning model](/refguide9/machine-learning-kit/) support is available in Studio Pro [9.23](/releasenotes/studio-pro/9.23/) and above.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **ML Kit** section of the [Toolbox](/refguide9/view-menu/#toolbox) contains activities you can use with a machine learning model.
 

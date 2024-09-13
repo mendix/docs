@@ -6,7 +6,7 @@ description: "How to configure Mendix Cloud to enable monitoring and analysis wi
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 [Datadog](https://www.datadoghq.com/) is a monitoring and analysis tool for cloud applications. It is a SaaS-based data analytics platform that provides monitoring for servers, databases, tools, and services. You can use Datadog for additional monitoring for your apps running on Mendix Cloud.
 
@@ -18,7 +18,7 @@ For more information on the data you can send to Datadog, see [Monitoring Your M
 For support on other cloud deployment options, refer to their dedicated documentation. For Private Cloud deployment, for example, see [Monitoring Environments in Mendix for Private Cloud](/developerportal/deploy/private-cloud-monitor/).
 {{% /alert %}}
 
-## 2 Setting up Datadog for Your Mendix App
+## Setting up Datadog for Your Mendix App
 
 To set up Datadog for your Mendix app, you will follow these steps:
 
@@ -28,13 +28,13 @@ To set up Datadog for your Mendix app, you will follow these steps:
 
 Each step is described in detail below.
 
-### 2.1 Datadog API Key{#datadog-api-key}
+### Datadog API Key{#datadog-api-key}
 
 To use Datadog with a Mendix app, you need a Datadog API key. If you are new to Datadog, follow the instructions in the [New Datadog User](#new-datadog-user) section, below. If you already use Datadog, skip to the [Existing Datadog User](#existing-datadog-user) section.
 
 {{% alert color="info" %}}For details on Datadog API keys, see [API and Application Keys](https://docs.datadoghq.com/account_management/api-app-keys) on the Datadog site.{{% /alert %}}
 
-#### 2.1.1 New Datadog User{#new-datadog-user}
+#### New Datadog User{#new-datadog-user}
 
 To set up a new Datadog account and access your API key as a new Datadog user, follow these steps:
 
@@ -46,7 +46,7 @@ To set up a new Datadog account and access your API key as a new Datadog user, f
 
 4. Follow the instructions in [Connecting Your Node to Datadog](#connect-node), below, to start using the API key with your app.
 
-#### 2.1.2 Existing Datadog User{#existing-datadog-user}
+#### Existing Datadog User{#existing-datadog-user}
 
 To find your existing API key or to request a new key for your app as an existing Datadog user, follow these steps:
 
@@ -61,7 +61,7 @@ To find your existing API key or to request a new key for your app as an existin
 
 4. Follow the instructions in [Connecting Your Node to Datadog](#connect-node), below, to start using the API key with your app.
 
-### 2.2 Connecting Your Node to Datadog{#connect-node}
+### Connecting Your Node to Datadog{#connect-node}
 
 To send your runtime information to Datadog, you need to provide the Datadog API key to your environment. To do so, follow these steps:
 
@@ -78,7 +78,7 @@ To send your runtime information to Datadog, you need to provide the Datadog API
 
     {{% alert color="warning" %}}To start sending data to Datadog, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
     
-### 2.3 Install the Mendix Integration{#install-integration}
+### Install the Mendix Integration{#install-integration}
 
 In the Datadog marketplace, there is an integration containing an example dashboard for monitoring your Mendix apps. This dashboard shows what metrics are available for your Mendix app and how you can display them. You can use this dashboard as a starting point for your own dashboard; for example, you can customize it by adding or removing metrics and changing the way they are displayed.
 
@@ -97,21 +97,21 @@ Once you have connected your node to Datadog, you can install the Mendix integra
 
 If you want to customize the dashboard, clone it and modify the clone. Alternatively, you can build your own dashboard from scratch.
 
-## 3 Tagging Metrics for Datadog
+## Tagging Metrics for Datadog
 
 To help with analyzing your app metrics as described in the [App Metrics](/developerportal/operate/monitoring-with-apm/#app-metrics) section of *Monitoring Your Mendix Apps with an APM Tool*, Mendix adds tags to metrics from microflows and activities when using Datadog.
 
-### 3.1 Request Handler Tags
+### Request Handler Tags
 
 In Datadog, each request handler metric is also tagged with `resource:{resource_name}` to indicate which resource was requested.
 
-### 3.2 Microflow Tags
+### Microflow Tags
 
 Each metric from a microflow is tagged with the `microflow:{microflow_name}` tag, indicating which microflow the metric came from. The microflow name is in the format `{module}.{microflow}`.
 
 You can use these tags to target long-running microflows for improvement.
 
-### 3.3 Activity Tags
+### Activity Tags
 
 All activities reported to Datadog by Mendix have the tag `activity:{activity_name}` and `microflow:{microflow_name}`, indicating which activity and microflow the metric came from.
 
@@ -136,7 +136,7 @@ The activity name will be one of the following reported activities:
 
 You can use this information during performance optimization. Even when you cannot identify the exact activity (for example, if there are several different `retrieveObject` activities in the same microflow), you can still use this information to identify which activities might be related to trends in performance. You can also use it to compare performance between different versions or environment configurations.
 
-### 3.4 Custom Tags
+### Custom Tags
 
 If you use Datadog to monitor more than one app and environment, you will not be able to tell which app or environment these metrics apply to. To identify the metrics for your app and environment in Datadog, you need to add tags for the app name and environment.
 
@@ -162,7 +162,7 @@ Setting these values for your app causes all metrics from this environment of yo
 You can add more tags if you want, but note that Datadog may charge for custom metrics. For more information, see [Custom Metrics Billing](https://docs.datadoghq.com/account_management/billing/custom_metrics) on the Datadog site.
 {{% /alert %}}
 
-## 4 Multi-Instance Metrics{#multi-instance-metrics}
+## Multi-Instance Metrics{#multi-instance-metrics}
 
 To view metrics for multiple instances of an application on the Datadog dashboard, follow these steps:
 
@@ -175,29 +175,29 @@ To view metrics for multiple instances of an application on the Datadog dashboar
 
 If the app has more than one instance, you will see lines on the graph for each instance.  
 
-## 5 Additional Information{#additional-info}
+## Additional Information{#additional-info}
 
-### 5.1 Datadog Regions (`DD_SITE`){#dd-regions}
+### Datadog Regions (`DD_SITE`){#dd-regions}
 
 By default, the Datadog integration defaults to the US region (`datadoghq.com`). If you want to use a Datadog site that is in another region, go to the [Custom Environment Variables](/developerportal/deploy/environments-details/#custom-environment-variables) section of your Mendix app environment and add a `DD_SITE` custom environment variable. Set the variable's value to the relevant site. For example, for the EU Datadog site, set `DD_SITE` to `datadoghq.eu`.
 
 The valid values for `DD_SITE` are listed in the **Site Parameter** column of the table on the [Access the Datadog Site](https://docs.datadoghq.com/getting_started/site/#access-the-datadog-site) page in the Datadog documentation.
 
-### 5.2 Java Metrics
+### Java Metrics
 
 In addition to the standard metrics available to all monitoring tools, Datadog also provides metrics from the runtime, using the prefix `jmx`. These are provided via Datadog's [JMX Integration](https://docs.datadoghq.com/integrations/java/?tab=host).
 
-### 5.3 Database Disk Storage Availability
+### Database Disk Storage Availability
 
 You can decide whether a metric for the disk storage size available to the database is sent to Datadog. To disable this metric, create a `DATADOG_DATABASE_DISKSTORAGE_METRIC` custom environment variable and set its value to `false`. (By default, this variable is set to `true`.)
 
-### 5.4 Email Address Redaction{#redact-emails}
+### Email Address Redaction{#redact-emails}
 
 Email addresses are automatically redacted before log entries are sent to Datadog. To disable this redaction, create a `LOGS_REDACTION` custom environment variable and set its value to `false`. (By default, this variable is set to `true`.)
 
 The environment variable `DATADOG_LOGS_REDACTION` is still supported, but it is now deprecated and will be removed in a later version. Its use is not recommended.
 
-### 5.5. Rate and Count Database Metrics{#database-metrics}
+### Rate and Count Database Metrics{#database-metrics}
 
 Datadog sends gauge database metrics to Datadog as a default. Rate and count metrics are not compatible with the Datadog PostgreSQL integration. You can enable these additional metrics by creating a `DATADOG_DATABASE_RATE_COUNT_METRICS` custom environment variable and setting its value to `true`. (By default, this variable is set to `false`.)
 
@@ -205,29 +205,29 @@ If these additional metrics are enabled, the rate and counter metrics will be se
 
 You can find the correct type and unit for submitted metrics in the GitHub repo for [Datadog core integrations](https://github.com/Datadog/integrations-core/blob/master/postgres/metadata.csv).
 
-### 5.6 System Metrics{#system-metrics}
+### System Metrics{#system-metrics}
 
 System metrics are disabled by default as they usually reflect metrics for a host, rather than for a specific container. You can enable these additional metrics by creating a `DD_ENABLE_CHECKS` custom environment variable and setting its value to `true`. (By default, this variable is set to `false`.)
 
-### 5.7 Datadog Events Explorer
+### Datadog Events Explorer
 
 The Datadog [Events Explorer](https://docs.datadoghq.com/service_management/events/explorer/navigate) contains events that come from your app; they are the same events that would appear in the Mendix Console. The Events Explorer does not log events from the environment.
 
 By default, all email addresses contained in log events are redacted. For guidance on how to change this, see [Email Address Redaction](#redact-emails), above.
 
-### 5.8 Datadog Agent Not Started
+### Datadog Agent Not Started
 
 If you configure your app for Datadog but the Datadog agent is not started, the events are sent to the app log files.
 
-### 5.9 Datadog Issues
+### Datadog Issues
 
 If you have any issues related to accessing Datadog, contact their support on the [Datadog Support](https://www.datadoghq.com/support/) page or by email at [support@datadoghq.com](mailto:support@datadoghq.com).
 
-### 5.10 Metrics on Datadog Usage
+### Metrics on Datadog Usage
 
 Metrics on Datadog can include an additional namespace, `datadog`, which contains metrics on Datadog usage.
 
-## 6 Read More
+## Read More
 
 * [Monitor Your Mendix Apps with Datadog](https://www.mendix.com/blog/monitor-your-mendix-apps-with-datadog/) – a Mendix blog about the capabilities of Datadog and using Datadog with Mendix
 * [Metrics](/developerportal/operate/metrics/)

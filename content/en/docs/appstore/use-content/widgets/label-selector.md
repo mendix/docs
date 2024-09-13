@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Label Selector widget
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Label Selector](https://marketplace.mendix.com/link/component/292/) widget enables easily creating objects, assigning objects to other objects, and removing objects (for example, labels) from other objects.
 
@@ -13,12 +13,12 @@ It features both an input box for searching and creating objects and a drop-down
 
 You configure background colors for labels and how the text contrasts with a label background via the `text-normal` or `text-contrast` class.
 
-### 1.1 Typical Usage Scenario
+### Typical Usage Scenario
 
 * Quickly adjust reference sets
 * Easily create new objects to add
 
-## 2 Properties
+## Properties
 
 * **Label Object** – the entity used for the labels combined with the reference set from the context object
 * **Caption Attribute** – the attribute of the label entity to be used as the caption
@@ -27,7 +27,7 @@ You configure background colors for labels and how the text contrasts with a lab
 * **After create label** – the microflow to be triggered after a new label is created and committed; this microflow receives the data view object
 * **On change microflow** – the microflow to be triggered for every add and remove
 
-## 3 Implementation
+## Implementation
 
 To implement this widget, follow these steps:
 

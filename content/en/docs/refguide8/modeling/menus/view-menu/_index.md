@@ -5,7 +5,7 @@ description: "Describes the View Menu in Studio Pro."
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Studio Pro supports a number of dockable window panes, such as the **Changes** and **Errors** panes. You can close some panes to just show the ones you need at the moment, but you can always reopen them via the **View** menu. 
 
@@ -13,7 +13,7 @@ Via this menu you can also enable or disable the [full screen mode](#full-screen
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/view-menu.png" alt="View Menu"   width="300"  class="no-border" >}}
 
-## 2 Layout of Panes {#layout-of-panes}
+## Layout of Panes {#layout-of-panes}
 
 You can change the default layout of panes and arrange them in the layout you like.
 
@@ -47,11 +47,11 @@ The video below shows examples of how to position a pane:
 <video width="640" height="360" controls src="/attachments/refguide8/view-menu/positioning-panes.mp4">VIDEO</video>
 If you have several panes grouped together in tabs, you can change the position of all the tabs at once by dragging the top-bar. To change the position of an individual tab, drag the tab itself. 
 
-## 3 Menu Items
+## Menu Items
 
 Menu items of the **View** menu are described in sections below.
 
-### 3.1 Changes
+### Changes
 
 For version control enabled projects (projects with [Team Server](/developerportal/general/team-server/) or other SVN servers), the [Changes pane](/refguide8/changes-pane/) shows the local changes to the app since the last commit. You can commit changes, update to the latest revision, and view the history from here. 
 
@@ -59,80 +59,80 @@ This pane has two levels, so when you zoom into a changed document, you can revi
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/changes.gif" class="no-border" >}}
 
-### 3.2 Connector {#connector}
+### Connector {#connector}
 
 The **Connector** pane displays elements that can be connected to the currently selected element. For example, when a button is a selected, the **Connector** shows microflows that you can drag onto the button to connect them.
 
-### 3.3 Data Hub {#data-hub}
+### Data Hub {#data-hub}
 
 The [Data Hub pane](/refguide8/data-hub-pane/) allows you to browse the [Catalog](/catalog/) and integrate registered data sources that are available for your organization. You can add [external entities](/refguide8/external-entities/) to your app via this pane and view entities and services already consumed in your project. 
 
-### 3.3 Console {#console}
+### Console {#console}
 
 The **Console** pane displays the output of the [Mendix Runtime](/refguide8/runtime/) while running an application.
 
-### 3.4 Documentation
+### Documentation
 
 The **Documentation** pane displays the documentation for the currently selected element (if applicable).
 
-### 3.5 Error List
+### Error List
 
 The [Errors pane](/refguide8/errors-pane/) displays the [errors](/refguide8/consistency-errors/), warnings, and deprecations that exist in your app.
 
-### 3.6 Find Results {#find}
+### Find Results {#find}
 
 This pane displays the results of the latest find action. You can search for text, usages of an element (for example, an attribute), and unused items.
 
 There are two **Find Results** panes. If you lock the results of the first pane, the second one is used for subsequent find operations until you unlock the first one.
 
-### 3.7 Project Explorer
+### Project Explorer
 
 The [Project Explorer](/refguide8/project-explorer/) pane displays the complete structure of your app, including all the documents inside the modules. By default, the active document is always selected, so you can quickly see where the document you are editing is in the tree. You can change this behavior in **Edit** > [Preferences](/refguide8/preferences-dialog/).
 
-### 3.8 Properties
+### Properties
 
 The **Properties** pane displays the properties of the currently selected element. This is where a lot of editing in Studio Pro takes place.
 
-### 3.9 Stories
+### Stories
 
 For [Team Server](/developerportal/general/team-server/) app, the **Stories** pane shows the stories of the current Sprint. For more information on the **Stories** pane and how to interact with it, see [Stories Pane](/refguide8/stories-pane/). 
 
-### 3.10 Toolbox {#toolbox}
+### Toolbox {#toolbox}
 
 The **Toolbox** pane displays the tools that can be used in the current editor. For example, in a page you can insert all kinds of widgets (for example, [data widgets](/refguide8/data-widgets/)) by dragging them from the **Toolbox** onto your page.
 
-### 3.11 Debug Windows
+### Debug Windows
 
 For more information on debugging, see [How to Debug Microflows](/howto8/monitoring-troubleshooting/debug-microflows/).
 
-#### 3.11.1 Breakpoints
+#### Breakpoints
 
 The **Breakpoints** pane shows all the breakpoints in your app. You can enable and disable breakpoints from here.
 
-#### 3.11.2 Debugger {#debugger}
+#### Debugger {#debugger}
 
 The **Debugger** tool can be used to debug your application.
 
-#### 3.11.3 Variables
+#### Variables
 
 In the **Variables** pane, you can view the current values of variables, lists, and objects when debugging your application.
 
-### 3.12 Full Screen {#full-screen}
+### Full Screen {#full-screen}
 
 The **Full Screen** mode hides the title bar and makes the window fill the entire screen. This version of **Full Screen** was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3/#830); in previous versions, the **Full Screen** mode closed all dockable window panes. 
 Shortcut key: <kbd>F11</kbd>
 
-### 3.13 Distraction Free Mode {#distraction-free}
+### Distraction Free Mode {#distraction-free}
 
 The **Distraction Free Mode** does the same as the **Full Screen** mode above, but also closes all dockable window panes. This was introduced in Studio Pro [8.3.0](/releasenotes/studio-pro/8.3/#830).
 
 Shortcut key: <kbd>Shift</kbd> + <kbd>F11</kbd>
 
-### 3.14 Reset Layout {#reset-layout}
+### Reset Layout {#reset-layout}
 
 Resets the layout of dockable window panes to factory defaults.
 
-## 4 Read More
+## Read More
 
 * [Changes Pane](/refguide8/changes-pane/)
 * [Errors Pane](/refguide8/errors-pane/)

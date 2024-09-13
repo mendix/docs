@@ -9,23 +9,23 @@ description: "Describes the configuration and usage of the Google Analytics widg
 The Google Analytics widgets set has been removed from our Marketplace. These widgets were exclusively compatible with Universal Analytics. As of July 1, 2023, Universal Analytics has been discontinued and succeeded by Google Analytics 4. For guidance on transitioning to Google Analytics 4, Mendix recommends referring to Google's official documentation. To integrate Google Analytics 4 with your Mendix applications, please use the [Google Tag](/appstore/modules/google-tag/) module.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Google Analytics widget enables tracking page views and custom events with Google Analytics. If you have an e-commerce application, you can also use this widget to keep track of your transactions.
 
-### 1.1 Typical Usage Scenario
+### Typical Usage Scenario
 
 With this widget, you can track custom events, page views, and transactions. For example, you want to track how often a product is viewed and inspect it in Google Analytics, and you want a detailed overview of all transactions.
 
-## 2 Configuration
+## Configuration
 
 Insert the widget into a page, then configure the widget properties. Be sure to use a valid `UA-XXXX-XX` code in order to track traffic on your web application.
 
-## 3 Properties
+## Properties
 
 All the widgets in this package (except for [EventTrackerButton](#eventtrackerbutton)) should be placed inside an empty table row with only one cell. To avoid empty spaces, the cell is hidden from the end-user.
 
-### 3.1 EventTracker {#eventtracker}
+### EventTracker {#eventtracker}
 
 * **Category** – the name you supply for the group of objects you want to track
 * **Action** – a string that is uniquely paired with each category, and commonly used to define the type of user interaction for the web object
@@ -34,11 +34,11 @@ All the widgets in this package (except for [EventTrackerButton](#eventtrackerbu
 
 For more information, see [Event Tracking - Web Tracking (ga.js)](https://code.google.com/apis/analytics/docs/tracking/eventTrackerGuide.html).
 
-### 3.2 EventTrackerButton {#eventtrackerbutton}
+### EventTrackerButton {#eventtrackerbutton}
 
 This widget combines a built-in microflow trigger with the [EventTracker](#eventtracker). Inspect the widget properties for details.
 
-### 3.3 MasterPageTracker
+### MasterPageTracker
 
 Typically, you want to start with the MasterPageTracker widget by adding it to your primary layout. By doing this, all the pages in your Mendix app will be tracked by Google Analytics. You will need to provide the widget with the tracker ID (`UA-XXX-XX`) that you should receive when configuring your Google Analytics account. The MasterPageTracker widget will use the combination of module name and page name in Mendix as the URL to be reported to Google Analytics (for example, a page in the X module that is named Y will be registered as /X/Y in Google Analytics; note that you can also define a prefix for the URL).
 
@@ -48,7 +48,7 @@ By having a MasterPageTracker widget in the primary layout, you do not need to d
 MasterPageTracker should only be used once in your Mendix application.
 {{% /alert %}}
 
-### 3.4 AdvancedPageTracker {#advancedpagetracker}
+### AdvancedPageTracker {#advancedpagetracker}
 
 {{% alert color="info" %}}
 This widget must be inside a data view.
@@ -59,20 +59,20 @@ This widget must be inside a data view.
 
 For example, if the **Url** is */test/${name}*, then if the URL is parsed, *${name}* will be replaced by the value of the current object's attribute, which is defined in the **Data Source** tab. 
 
-### 3.5 PageTracker {#pagetracker}
+### PageTracker {#pagetracker}
 
 This is exactly the same as [AdvancedPageTracker](#advancedpagetracker), but without the ability to use the object's attribute value to build the **Url** or **Title**. Consequently, there is no need to have the widget inside a data view.
 
-### 3.6 Webmaster Tools
+### Webmaster Tools
 
 These tools allow you to focus on the quality of your web application. For more information on what this means for your Mendix application, see [Google Search Console](https://search.google.com/search-console/about).
 
 This widget will place a `META` verification tag inside the `html` tag so that the webmaster tools can be activated and help with SEO on Mendix applications.
 
-## 4 Limitations
+## Limitations
 
 If you are using an advertisement blocker (such as the AdBlocker browser extension) or have configured your browser to not allow tracking, it might result in your page being broken. This is because certain advertisement blockers and tracking restrictions can block this widget's files. 
 
-## 5 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget requires additional configuration to be compliant with strict content security policy (CSP). Google Analytics uses an external address to track the analytics. To make this widget work, you need to configure the CSP headers to allow resources from that domain.

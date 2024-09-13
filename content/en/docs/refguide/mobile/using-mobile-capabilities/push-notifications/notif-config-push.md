@@ -8,11 +8,11 @@ aliases:
     - /howto/mobile/notif-config-push/
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide teaches you how to configure the runtime for using push notifications in native apps. 
 
-### 2 Configuring Your Notifications
+### Configuring Your Notifications
 
 If you have completed [Add Module Dependencies](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-add-module-depends/) and [Implement the Push Notifications Module](/refguide/mobile/using-mobile-capabilities/push-notifications/notif-implement-module/) per your use case, do the following to configure your push notifications:
 

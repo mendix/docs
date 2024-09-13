@@ -5,6 +5,30 @@ weight: 9
 description: "Native Template 7 release notes."
 ---
 
+## 7.0.17 {#717}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
+## 7.0.16 {#716}
+
+**Release date: August 29, 2024**
+
+### Fixes
+
+* We resolved a build error related to Flipper on Xcode 15.3.
+
+## 7.0.15 {#715}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
 ## 7.0.14 {#714}
 
 **Release date: June 28, 2024**

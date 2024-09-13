@@ -6,7 +6,7 @@ description: "Describes how to restore physical disk space by creating and resto
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 Usually, the database of a Mendix application in Mendix Cloud grows over time. Here is a typical example:
 
@@ -18,7 +18,7 @@ One reason for this growth is that the physical space on the hard disk is not fr
 
 However, there may be times when physically reclaiming the lost space is important. For example, if you get an alert that 90% of your disk space is in use, you may want to reduce your disk usage.
 
-## 2 Recovering Physical Disk Space
+## Recovering Physical Disk Space
 
 You can recover physical disk space by creating a database backup and then restoring it.
 
@@ -26,6 +26,6 @@ A database restore does a full physical rewrite of the database. It compresses t
 
 In the Mendix Portal, you can create and restore a backup on your app's **Backups** page. For more information, see [Creating a Backup](/developerportal/operate/create-backup/).
 
-## 3 Summary
+## Summary
 
 To physically reclaim unused space that was created by deleting records from the database, you can use the Mendix Portal to back up and restore your database. However, keep in mind that this action might have limited benefits unless the database is not expected to grow back to its previous size.

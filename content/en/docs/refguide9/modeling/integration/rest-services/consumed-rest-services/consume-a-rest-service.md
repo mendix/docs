@@ -8,7 +8,7 @@ aliases:
     - /howto9/integration/consume-a-rest-service/
 ---
 
-## 1 Introduction
+## Introduction
 
 In your Mendix app, you can use information from REST services. This how-to shows you how to do that through an example in which you create an app that retrieves Wikipedia pages from a REST service. The resulting app is [available for download](/attachments/refguide9/modeling/integration/consume-a-rest-service/WikipediaApi.mpk).
 
@@ -16,7 +16,7 @@ This how-to teaches you how to do the following:
 
 * Call the REST service in a microflow
 
-## 2 Creating a JSON Structure
+## Creating a JSON Structure
 
 The Wikipedia REST service allows you to retrieve the summary of a page. This service can be reached at `https://en.wikipedia.org/api/rest_v1/page/summary/{title}`, where `{title}` is the title of a page.
 
@@ -36,7 +36,7 @@ We will start by providing Studio Pro as an example of what the REST service ret
 
 7. Click **OK**
 
-## 3 Creating an Import Mapping {#create-import-mapping}
+## Creating an Import Mapping {#create-import-mapping}
 
 An [import mapping](/refguide9/import-mappings/) specifies how the JSON relates to [entities](/refguide9/entities/). You can map the JSON to any entity you like. The following steps describe how to generate the entities and create an import mapping:
 
@@ -53,7 +53,7 @@ An [import mapping](/refguide9/import-mappings/) specifies how the JSON relates 
 8. A pop-up box is displayed informing you that can **See the details for the changes that have been applied**. You can click **Details** to see details of the mapping to the entities that are generated to match the JSON structure.
 9. Click **Close** to see the entities corresponding to the JSON structure.
 
-## 4 Adding an Input Entity to the Domain Model
+## Adding an Input Entity to the Domain Model
 
 The service takes the title of the page as an input and it returns the summary of the page from Wikipedia. 
 
@@ -79,7 +79,7 @@ To add an input entity to the domain model, follow these steps:
 
 11. Click **OK**. 
 
-## 5 Calling the REST Service in a Microflow {#call-microflow}
+## Calling the REST Service in a Microflow {#call-microflow}
 
 You will now call the REST service in a [microflow](/refguide9/microflows/) to build the integration with Wikipedia. The input parameter for the microflow is **Input** and this is associated with **Summary**.
 
@@ -119,7 +119,7 @@ To call the REST service in a microflow, follow these steps:
 
 You have successfully consumed a REST service and created a microflow to show the results. The rest of this how-to describes how to use this microflow in an app so that you can see the REST call in action.
 
-## 6 Creating a Page
+## Creating a Page
 
 To create a page for this app, follow these steps:
 
@@ -143,7 +143,7 @@ To create a page for this app, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/integration/consume-a-rest-service/page.png" class="no-border" >}}
 
-## 7 Filling in the Create Input Microflow {#createinput}
+## Filling in the Create Input Microflow {#createinput}
 
 Now all that is left is to have the **CreateInput** microflow create a new **Input** object.
 
@@ -158,7 +158,7 @@ To fill in the CreateInput microflow, follow these steps:
 
 Congratulations! You can now start your app and get summaries from Wikipedia.
 
-## 8 Read More
+## Read More
 
 * [Consume a Complex Web Service](/howto9/integration/consume-a-complex-web-service/)
 * [Consume a Simple Web Service](/howto9/integration/consume-a-simple-web-service/)

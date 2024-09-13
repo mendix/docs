@@ -5,7 +5,7 @@ weight: 21
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 To create a mobile app, you need platform-specific app signing keys. A mobile app is signed with a digital signature by its developers before publication. These signatures are used by both app stores and devices to verify that the app is authentic.
 
@@ -15,17 +15,17 @@ Depending on which platforms you want to target, you will need to create the req
 
 The parts of this document mentioning PhoneGap Build will be updated with instructions soon. {{% /alert %}}
 
-## 2 iOS{#ios}
+## iOS{#ios}
 
 Unfortunately, signing keys are always required for iOS app deployment, even if you just want to test the app on your personal device and do not want to publish to the Apple App Store. This section describes how to create the required files.
 
 It is convenient to have an Apple Mac available, but it is not a requirement. You do always need an Apple Developer Account.
 
-### 2.1 On Apple Macs
+### On Apple Macs
 
 If you have an Apple Mac available, see the Apple developer documentation on [certificate management](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) for information on how to obtain an iOS signing certificate and distribution profile. Next, see the Apple documentation on [how to create the required distribution profile](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html). Finally, check the end of this section for information on how to [upload the signing key files to Adobe PhoneGap Build](/refguide8/managing-app-signing-keys/#uploading-keys).
 
-### 2.2 On Other Platforms
+### On Other Platforms
 
 If you do not have an Apple Mac available, you can create a certificate signing request manually. First, create a private key and certificate signing request with the OpenSSL utility. 
 
@@ -63,11 +63,11 @@ The resulting *ios.csr* file must be uploaded to the Apple Developer Member Cent
 10. Click **Download** and store the *.cer* file on your disk at a convenient place (for example, next to the private key and CSR files).
 11. Click **Done**. The **iOS Certificates** overview page becomes visible again. Your new certificate should be in the list. Here, you can download it again, or you can revoke it (in case you lose the corresponding private key).
 
-### 2.3 Creating the Required Distribution Profile
+### Creating the Required Distribution Profile
 
 Once you have the certificate file, you need to obtain a distribution profile. The Apple Developer Member Center allows you to define an app identifier, a test device, and finally a distribution profile. For more information, check the Apple documentation on how to [maintain identifiers, devices and profiles](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingProfiles/MaintainingProfiles.html).
 
-### 2.4 Uploading the Key to Adobe PhoneGap Build {#uploading-keys}
+### Uploading the Key to Adobe PhoneGap Build {#uploading-keys}
 
 Once you have downloaded the signing certificate (a *.cer* file), you need to convert the signing certificate from a *.cer* to a *.p12*. Use OpenSSL with the following steps:
 
@@ -75,11 +75,11 @@ Once you have downloaded the signing certificate (a *.cer* file), you need to co
 2. Create from the PEM certificate a password secured. This action requires the PEM certificate, the private key that was created in step 3 earlier, and the password thas was given on the creation of the *ios.csr*: `"C:\OpenSSL\bin\openssl.exe" pkcs12 -export -out "C:\ios.p12" -inkey "C:\private.key" -in "C:\ios_pem.pem"`.
 3. You can upload the signing certificate (now a `.p12` file) and the distribution profile (a `.mobileprovision` file) to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Go to the **Signing Keys** tab and click **Add a key** under **iOS**. Select the two files and give the key a name. Unlock the key by clicking the yellow lock icon on the right of the key and filling in the certificate passphrase. The key is now ready to be used by your build job.
 
-## 3 Android{#android}
+## Android{#android}
 
 Android apps can be developed and deployed to Android devices without signing the apps. However, to publish to app stores, signed apps are required. This requires you generate a keystore and then upload it to Adobe PhoneGap Build.
 
-### 3.1 Generating a Keystore {#generating-a-keystore}
+### Generating a Keystore {#generating-a-keystore}
 
 To generate a keystore for Android, follow these steps:
 
@@ -91,7 +91,7 @@ To generate a keystore for Android, follow these steps:
 
 4. Type in the following command line prompt while still pointing to the *keystore.exe*: 
 
-    ```text {linenos=false}
+    ```text
     "{{keytool -genkey -v -keystore file.keystore -alias YOUR_ALIAS_NAME -storepass YOUR_ALIAS_PWD -keypass YOUR_ALIAS_PWD -keyalg RSA -validity 36500}}"
     ```
 
@@ -105,7 +105,7 @@ To generate a keystore for Android, follow these steps:
 
 6. Finishing these questions generates a keystore which will be saved into a *file.keystore* file in your current working directory. 
 
-### 3.2 Uploading Your Keystore to PhoneGap Build
+### Uploading Your Keystore to PhoneGap Build
 
 After creating the keystore file, upload it to Adobe PhoneGap Build on your [account page](https://helpx.adobe.com/experience-manager/kb/adobe-phonegap-end-of-service.html). Then, complete the following instructions:
 

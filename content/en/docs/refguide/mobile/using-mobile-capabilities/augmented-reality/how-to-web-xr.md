@@ -5,7 +5,7 @@ weight: 10
 description: "Tutorials for setting up and using XR in Mendix Studio Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 Using WebXR widgets, you can build fully immersive extended reality (XR) experiences that combine both augmented reality (AR) and virtual reality (VR) technologies. The [WebXR module](https://marketplace.mendix.com/link/component/225425) contains the following widgets:
 
@@ -23,12 +23,12 @@ Container widgets:
 * Cube (XR)
 * Square (XR)
 
-### 1.1 Features
+### Features
 
 * Allows you to show 3D objects in either a VR or AR space, either in a fully immersive mode or just in the browser
 * Allows you to use Mendix microflows and nanoflows to model out interactions with these 3D objects
 
-## 2 Configuration
+## Configuration
 
 These widgets require a certain configuration to work; all the widgets need to be contained in the **Container (XR)** widget. There can only be one Container (XR) widget per page, which must contain all the other WebXR widgets on that page.
 
@@ -36,7 +36,7 @@ A very simple configuration could look like this:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-webxr/container-with-cube.jpg" alt="Container (AR) with Cube (AR)"  width="400" >}}
 
-### 2.1 HTTPS Prerequisite
+### HTTPS Prerequisite
 
 For WebXR to work, you will have to run the project through HTTPS protocol. The preview can still be seen through HTTP protocol, but the button to start the XR session will be hidden. If you are not able to see this button, this is probably why.
 
@@ -61,15 +61,15 @@ For Safari (currently only supports WebXR on the Vision Pro) you can enable WebX
 * Scroll down again for Feature Flags
 * Enable all feature flags that mention WebXR.
 
-## 3 Container Widgets
+## Container Widgets
 
 Container widgets are widgets which contain other widgets. They allow developers to move multiple widgets as one, as well as copy and paste favorite configurations.
 
-### 3.1 Container (XR)
+### Container (XR)
 
 This is the widget that must contain all other AR widgets. It starts and stops the experience, and has scene-wide properties. For example, the reflection map for the lighting in the scene can be set here. Only one of these widgets can be used per page.
 
-#### 3.1.1 General Tab
+#### General Tab
 
 Container (XR) has the following properties that can be set in Studio Pro:
 
@@ -79,39 +79,39 @@ Container (XR) has the following properties that can be set in Studio Pro:
     * **Background color** – Sets the color of the background of the scene. 
     * **Add realistic lighting** – When set to **Yes**, an environment map can be added here. The environment map is what will be reflected on those objects. When set to **No** and **Realistic lighting** is still used on objects, then they will appear black (since the object has nothing to reflect).
 
-### 3.2 Node (XR)
+### Node (XR)
 
 An empty container widget which can be used to group other widgets. This is useful for when you want to move multiple objects as one, or scale multiple objects as one. It also has a **Billboard rotation** feature, which can be used to have objects rotate to always face the user.
 
-#### 3.2.1 General Tab
+#### General Tab
 
 Node (XR) has the same properties as [3D Object widgets](#3dobject), with the following additions:
 
 * **Billboard rotation** – **None**, **Billboard**, **Billboard X**, or **Billboard Y**. Sets if billboarding should be enabled and on which axis it should occur
 
-### 3.3 Repeater (XR)
+### Repeater (XR)
 
 The Repeater (XR) widget allows the user to create one configuration and repeat that a number of times based on a data source.
 
-#### 3.3.1 General Tab
+#### General Tab
 
 * **Data Source** – The data source based on which the objects should be repeated. For example, this could have a list of 5 objects that have a hex color value. Based on this, while only modeling out 1 **Sphere (XR)** object where the color value could be tied to this. Creating 5 **Sphere (XR)** with different colors.
 
-## 4 3D Object Widgets {#3dobject}
+## 3D Object Widgets {#3dobject}
 
 These are widgets that show a 3D Object, either predetermined (like **Cube (XR)**, **Sphere (XR)** and **Square (XR)**) or based on input (**3D Object (XR)** and **Text (XR)**).
 
-### 4.1 Shared Properties
+### Shared Properties
 
 These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**, **Square (XR)**, **3D Object (XR)**, **Text (XR)**) as well as the **Node (XR)** widget.
 
-#### 4.1.1 General Tab
+#### General Tab
 
 * **Position** – Sets the position of the object in meters. Setting **X** to 1 means the object will be placed 1 meter to the right. **Y** controls the up and down axis. **Z** moves the object front to back.
 * **Rotation** – Sets the rotation of the object in degrees (from 0 degrees to 360 degrees) on three axis.
 * **Scale** – Sets the scale of the object, this multiplies the size of the object as it is. If the objects is 1 meter wide, setting the **X** to 2 will make the object 2 meters wide.
 
-#### 4.1.2 Material Tab
+#### Material Tab
 
 * **Type**
     * **Object** – Only available for **3D Object (XR)**. Selecting this will make the object use the material as present on the 3D Object.
@@ -124,7 +124,7 @@ These properties exist for all 3D Object widgets (**Cube (XR)**, **Sphere (XR)**
         * **Roughness** – Takes a value from 0-1, where with 0 the object is smooth as glass, with higher values making it more matte.
         * **Metalness** – Takes a value from 0-1, where 0 will make an object appear more like plastic, with 1 making an object appear metallic.
 
-#### 4.1.3 Interaction Tab
+#### Interaction Tab
 
 All interactions are done through a mesh-like interface around the object. The different types of interaction (scaling, rotating, and position) are all done using this one interface. The different options can be enabled or disabled independently.
 
@@ -142,15 +142,15 @@ All interactions are done through a mesh-like interface around the object. The d
     * **Scaling interface size** – The size of the object in the interface (in meters).
     * **On scale** – An event called when the object is scaled.
 
-#### 4.1.4 Events Tab
+#### Events Tab
 
 * **On click** – An event called when object is clicked.
 * **On hover enter** – An event called when the user hovers over object, without clicking it.
 * **On hover exit** – An event called when the user stops hovering over an object.
 
-### 4.2 Specific Widget Properties
+### Specific Widget Properties
 
-#### 4.2.1 3D Object (XR)
+#### 3D Object (XR)
 
 Shows 3D object, in gltf or glb formats. Requires a link to a 3D Object to show. 3D Objects can be shown in their original size and material by not altering the **Scale** and setting the **Material** to **Object**. The object will appear in the scale that it was made, meaning that 1 unit will be 1 meter. Units can differ between modeling programs (sometimes a unit is a meter, sometimes a unit is a centimeter, sometimes the modeler does not take actual size into account and only works relatively), so it is good to check that the model is of the size you expect it to be. If it is too large or too small, you can adjust it with the Scale property on this widget.
 
@@ -158,11 +158,11 @@ Apart from the properties also found on the other AR widgets, the **3D Object (X
 
 * **URL** – The **URL** to the 3D object that should be shown here. Must be in *GLB* or *GLTF* format.
 
-#### 4.2.2 Cube (XR), Sphere (XR), Square (XR)
+#### Cube (XR), Sphere (XR), Square (XR)
 
 Shows a predetermined object, either a cube, sphere or square. These are quite simple objects to help you quickly create something (eg. use the **Sphere (XR)** in combination with a map of the world to create a globe).
 
-#### 4.2.3 Text (XR)
+#### Text (XR)
 
 Shows a 3D representation of the current set **Text**, which can be dynamically changed. Due to how this is implemented in the library we are using for these widgets, the object will be completely destroyed and recreated when changing the text so performance does take a hit during this.
 

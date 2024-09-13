@@ -5,7 +5,7 @@ weight: 80
 description: By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context.
 ---
 
-## 1 Introduction
+## Introduction
 
 By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context. A rigorous CSP allows you to control which resources are loaded in the app.
 
@@ -17,11 +17,11 @@ For more background information on CSPs, see [Content Security Policy](https://d
 Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. If used with strict CSP, these widgets can result in CSP errors in the console or broken flows. Please refer to [widget's security documentation](/appstore/widgets/security/content-security-policy/) page for more details.
 {{% /alert %}}
 
-## 2 Setup
+## Setup
 
 In order to be able to use the strictest setting of a CSP (`default-src: self`) you must make some changes in your application. See the sections below for guidance.
 
-### 2.1 Updating the Theme Folder
+### Updating the Theme Folder
 
 To upgrade your theme directory to latest version, complete the following steps:
 
@@ -29,7 +29,7 @@ To upgrade your theme directory to latest version, complete the following steps:
 1. Download the new theme files from this GitHub link: [theme.zip](https://github.com/mendix/atlas/releases/download/atlasui-theme-files-2024-01-25/atlasui-theme-files.zip). Extract the downloaded file into the root of your Mendix app folder. The folder structure should be similar to the previous folder, (meaning the Mendix app root, then the theme, and then the web and native folders).
 1. After extracting the new theme files, restore your custom styling from the backup by copying over the new theme folder files. You will see the main changes enacted to make things compatible with strict CSP involve the `login.html` file and one JavaScript file for the toggled password.
 
-### 2.1.1 Changing the Theme
+### Changing the Theme
 
 Create a new file to contain the Dojo configuration in your theme folder (*theme/web/appSetup.js*) with the following configuration:
 
@@ -98,7 +98,7 @@ In *theme/web/index.html* do the following:
 
 Lastly, ensure you are not using any external fonts by checking your theme's styling to confirm all of the fonts are loaded locally.
 
-#### 2.1.2 Testing Your Changes Locally
+#### Testing Your Changes Locally
 
 To check that your changes are working locally, you can temporarily enforce the header by adding the following *theme/web/index.html* at the top of the `<head>` tag:
 
@@ -114,6 +114,6 @@ After redeploying your app locally, it should function as normal. If your app do
 
 After you finish testing locally, remember to remove the line of code in the `head` tag.
 
-### 2.2 Enabling the Header in the Cloud
+### Enabling the Header in the Cloud
 
 To enable the header in the cloud, follow the instructions in the [HTTP Headers](/developerportal/deploy/environments-details/#http-headers) section of *Environment Details*.

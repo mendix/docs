@@ -7,7 +7,7 @@ weight: 90
 
 {{% alert color="warning" %}}The **input reference set selector** widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 An **input reference set selector** is used to allow the end-user to display or select the value(s) of a many-to-many (reference set) [association](/refguide8/associations/) by selecting the associated object(s).
 
@@ -31,7 +31,7 @@ For example, using the domain model above, the following input reference set sel
 
 {{< figure src="/attachments/refguide8/modeling/pages/input-widgets/input-reference-set-selector/input-reference-set-selector.png" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of input reference set selector properties is represented in the image below:
 
@@ -49,33 +49,33 @@ Reference set selector properties consist of the following sections:
 * [Selectable Objects](#selectable-objects)
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Data Source Section {#data-source}
+### Data Source Section {#data-source}
 
 {{% snippet file="/static/_includes/refguide8/data-source-section-link.md" %}}
 
 The attribute path specifies which attribute(s) of an associated entity is shown in the reference set selector. The path must follow one association, of type reference set, starting in the entity of the data view.
 
-### 2.3 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}}
 
-### 2.4 Editability Section {#editability}
+### Editability Section {#editability}
 
 {{% snippet file="/static/_includes/refguide8/editability-section-link.md" %}}
 
-### 2.5 Events Section {#events}
+### Events Section {#events}
 
 The on-change property specifies an action that will be executed when leaving the widget, either by using the <kbd>Tab</kbd> key or by clicking another widget, after the value has been changed.
 
 {{% snippet file="/static/_includes/refguide8/events-section-link.md" %}}
 
-### 2.6 General Properties {#general}
+### General Properties {#general}
 
-#### 2.6.1 Select Page
+#### Select Page
 
 The select page property determines which page is displayed when the input reference selector is clicked. This page can be used to select associated objects from the list of selectable objects. This page should contain a data grid, template grid or list view connected to the same entity as the input reference set selector.
 
@@ -87,11 +87,11 @@ See the [Show a Page](/refguide8/on-click-event/#show-page) section of *On Click
 You can generate a new page to show by right-clicking the widget and selecting **Generate select page…**.
 {{% /alert %}}
 
-### 2.7 Label Section {#label}
+### Label Section {#label}
 
 {{% snippet file="/static/_includes/refguide8/label-section-link.md" %}}
 
-### 2.8 Selectable Objects Section {#selectable-objects}
+### Selectable Objects Section {#selectable-objects}
 
 The properties in the Selectable objects section determine the objects from which the end user can make a selection. You can add an **XPath constraint**, or use a **Constrained by** path.
 
@@ -101,6 +101,6 @@ For more information, see the [XPath](/refguide8/reference-selector/#xpath-const
 You cannot use a microflow to define selectable objects in an input reference set selector.
 {{% /alert %}}
 
-### 2.9 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide8/visibility-section-link.md" %}}

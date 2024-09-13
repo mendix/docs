@@ -4,17 +4,17 @@ url: /partners/siemens/3d-viewer-api/
 description: "Describes how to use the 3D Viewer API"
 ---
 
-## 1 Introduction
+## Introduction
 
 The 3D Viewer API allows you to retrieve, create, and update 3D model entities, actions, and properties more programmatically. You can easily create your custom logic to interact and manipulate a 3D model.
 
-## 2 API Reference
+## API Reference
 
 For details, see [3D Viewer API Reference](https://d102io3ppw18a6.cloudfront.net/).
 
-## 3 Usage
+## Usage
 
-### 3.1 Use Case Example
+### Use Case Example
 
 If you want to get properties of a selected part on the 3D Viewer, perform the following steps:
 
@@ -71,10 +71,10 @@ If you want to get properties of a selected part on the 3D Viewer, perform the f
 5. Use a page to show all the properties returned :
     {{< figure src="/attachments/partners/siemens/3d-viewer/3d-viewer-api/show-properties.jpg" alt="show-properties" class="no-border" >}}
 
-### 3.2 Other Sample Code Snippets
+### Other Sample Code Snippets
 
 Starting from version 2.2.0, 3D Viewer module includes some out-of-box API actions. The module allows you to manipulate model parts via **RotatePart**, **ScalePart**, **SetPartColor**, and **TranslatePart** API actions. You can find these actions in the **Viewer3D** > **USE_ME** > **API Actions** folder in the **App Explorer** in Studio Pro. You can directly use them to create your custom logic for manipulating models. Check out the code implementation of these JavaScript actions, along with the 3D Viewer API Reference. This may give you some ideas about how you want to make use of the 3D Viewer API.
 
-## 4 Feedback
+## Feedback
 
 If you have problem using the 3D Viewer API listed in [3D Viewer API Reference](https://d102io3ppw18a6.cloudfront.net/). or you would like more APIs to be exposed, raise a ticket in [Mendix Support portal](https://support.mendix.com/). We will address them accordingly. 

@@ -7,7 +7,7 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 With Java actions, you can extend the functionality of your application in situations where it would be hard to implement this functionality in microflows.
 
@@ -17,7 +17,7 @@ For a deep-dive look into Java programming in Mendix, check out this video:
 
 For information about Java actions in Studio Pro, see [Java Actions](/refguide8/java-actions/).
 
-## 2 Writing Code in the .java Files of Your Java Actions
+## Writing Code in the .java Files of Your Java Actions
 
 In the *java* files of your Java actions, you can write your Java code between the markers:
 
@@ -37,7 +37,7 @@ The method *executeAction* is called by the Runtime when the Java action is bein
 
 The executeAction method throws all exceptions that occur. This means you can do error handling in the microflow calling this Java action. If you would like to do your own error handling within the action, use try/catch statements.
 
-## 3 Using the Mendix Java library
+## Using the Mendix Java library
 
 In the Java code that you write for your Java actions, you can use the Mendix Java library.
 
@@ -49,14 +49,14 @@ This library is automatically added to your libraries when you imported your pro
 
 For details on usage and example, see [How to Use the Java API](/howto8/logic-business-rules/java-api-tutorial/).
 
-## 4 Opening HTTP Connections
+## Opening HTTP Connections
 
 Most cloud infrastructure services (including those used by the Mendix Cloud) will close HTTP connections automatically if there is no traffic for a few minutes, even if your activity is still waiting for a response. This means that, if your activity calls a web service which takes a long time to respond, the connection may be closed without the activity being aware of this and your activity will not receive a response, but instead get stuck waiting indefinitely for data to arrive.
 
 You should therefore ensure that you always set a timeout for any connections you make in your custom Java code.
 
-## 5 Using Eclipse as an Environment to Write Your Mendix Java Actions
+## Using Eclipse as an Environment to Write Your Mendix Java Actions
 
 For details on this topic, see [Using Eclipse](/refguide8/using-eclipse/).
 
-## 6 Documents in This Category
+## Documents in This Category

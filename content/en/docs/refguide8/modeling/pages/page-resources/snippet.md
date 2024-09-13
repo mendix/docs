@@ -5,7 +5,7 @@ weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Snippets define reusable interface parts. They can be used on both [pages](/refguide8/page/) and [layouts](/refguide8/layout/). By using snippets you can make changes in fewer places when you modify the interface. For example, you can have a snippet that is used both in the contents area of a template grid and in a data view. If you change something in the snippet, that change will show up in both places.
 
@@ -15,7 +15,7 @@ In the example below, the snippet is used in the context of the **Orders.Order**
 
 {{< figure src="/attachments/refguide8/modeling/pages/page-resources/snippet/snippet.png" alt="Example of a snippet"   width="400"  class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of snippet properties is represented in the image below:
 
@@ -27,34 +27,34 @@ Snippet properties consist of the following sections:
 * [Designer](#designer)
 * [General](#general)
 
-### 2.1 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Designer Section{#designer}
+### Designer Section{#designer}
 
-#### 2.2.1 Canvas Width
+#### Canvas Width
 
 **Canvas width** defines the width in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the width of the page in the actual application.
 
 Default value: *800*
 
-#### 2.2.2 Canvas Height
+#### Canvas Height
 
 **Canvas height** defines the preferred minimum height in pixels of the page in the page editor. It is purely used for editing purposes; this property has no effect on the height of the page in the actual application.
 
 Default value: *600*
 
-### 2.3 General Properties{#general}
+### General Properties{#general}
 
-#### 2.3.1 Platform
+#### Platform
 
 The values for the platform property are:
 
 * Web *(default)* – these snippets are used for pages which are going to be displayed in a browser or hybrid mobile app
 * Native – these snippets are used for pages which are going to be displayed in a native mobile app
 
-#### 2.3.2 Entity
+#### Entity
 
 This property defines the entity that is used as context for the widgets placed on this snippet.
 

@@ -4,7 +4,7 @@ url: /refguide/unary-expressions/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 An unary minus operator is used to convert a number from negative to positive or vice versa. 
 
@@ -14,11 +14,11 @@ There is no unary plus.
 
 {{% /alert %}}
 
-## 2 Example
+## Example
 
 The example below represents the negative value of '8'.
 
-```java {linenos=false}
+```java
 -8
 ```
 
@@ -26,12 +26,12 @@ When used with a variable that already has a negative value the result is positi
 
 For example, if $myVariable has the integer value "-7": 
 
-```java {linenos=false}
+```java
 -$myVariable
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 7
 ```

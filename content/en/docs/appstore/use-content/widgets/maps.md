@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Maps widget, which is
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 The [Maps](https://marketplace.mendix.com/link/component/108261/) widget enables showing locations on maps. It supports the following map providers:
 
@@ -14,7 +14,7 @@ The [Maps](https://marketplace.mendix.com/link/component/108261/) widget enables
 * [Mapbox](https://www.mapbox.com)
 * [HERE maps](https://www.here.com/)
 
-## 2 Basic Usage
+## Basic Usage
 
 For the easiest way to get started with a basic map in your application, follow these steps:
 
@@ -32,15 +32,15 @@ If you are using Google Maps, be sure to include an empty JSON array (specifical
 
 {{% /alert %}}
 
-## 3 Settings {#settings}
+## Settings {#settings}
 
-### 3.1 Map Provider
+### Map Provider
 
 By default, the Maps widget will use Google Maps. 
 
 To change the map provider, go to the **General** properties of the map and enable the **Advanced** > **Show advanced** setting. This will introduce a new **Advanced** tab in the setting window. You can now select one of the map providers listed in the [Introduction](#introduction).
 
-### 3.2 Access Token
+### Access Token
 
 For all the map providers except OpenStreetMap, you need to have a token in order to view the map. The appropriate tokens can be retrieved via the links to the map types listed in the [Introduction](#introduction).
 
@@ -55,11 +55,11 @@ Placing markers based on addresses does not work without an access token set for
 The token is necessary for converting addresses to their corresponding latitude and longitude values, which in turn are used to place the markers. If no Google Maps API token is provided, the map is still usable, but markers based on addresses will not be shown.
 {{% /alert %}}
 
-### 3.3 Current Location
+### Current Location
 
 To show the user's location on the map, enable this in **General** > **Configurations** > **Show current location marker**.
 
-### 3.4 Markers
+### Markers
 
 To enhance the map widget, you can mark locations on the map by providing them in the widget through **General** > **Markers**. The following conditions apply:
 
@@ -77,7 +77,7 @@ You can customize each individual marker in the following ways:
 
 To make the process of marking batches of locations easier, it is also possible to specify entire lists of markers at once. You can do this through the **General** > **Markers** > **Marker list** setting, which requires a data source. All the usual Mendix data-source settings apply here, as well as the same marker requirements and customizability as the individual markers. 
 
-### 3.5 Controls
+### Controls
 
 Under the **Controls** properties tab, you can adjust the following settings related to how an end-user interacts with the map:
 
@@ -95,7 +95,7 @@ If you are using the Google Maps provider, these additional controls are availab
     * By default, this is set to **Map** without the **Terrain** layer
 * **Full screen** – when enabled, there is a button available in the upper-right corner of the map to view the map in full screen
 
-### 3.6 Dimensions
+### Dimensions
 
 Under the **Dimensions** properties tab, you can adjust the following settings that are related to dimensional aspects:
 
@@ -111,13 +111,13 @@ Under the **Dimensions** properties tab, you can adjust the following settings t
     * The available options are: **Automatic**, **World**, **Continent**, **City**, **Street**, and **Buildings**
     * Note that when using this setting with multiple marked locations, the level of zoom chosen here will be applied after the map has centered to a position in which all markers are visible
 
-## 4 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
 
 Please refer to the [Maps CSP](/appstore/widgets/security/content-security-policy/maps-csp/) guide for more detail.
 
-## 5 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 The Maps widget enables showing locations on maps. These are the available map types:
 

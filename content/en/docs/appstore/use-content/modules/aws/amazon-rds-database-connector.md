@@ -8,13 +8,13 @@ aliases:
     - /appstore/connectors/aws/amazon-rds-database-connector/
 ---
 
-## 1 Introduction
+## Introduction
 
 Amazon Relational Database Service (Amazon RDS) is a collection of managed services that makes it simple to set up, operate, and scale databases in the cloud. You can choose from seven popular engines — [Amazon Aurora with MySQL compatibility](https://aws.amazon.com/rds/aurora/?pg=ln&sec=hiw), [Amazon Aurora with PostgreSQL compatibility](https://aws.amazon.com/rds/aurora/?pg=ln&sec=hiw), [MySQL](https://aws.amazon.com/rds/mysql/?pg=ln&sec=hiw), [MariaDB](https://aws.amazon.com/rds/mariadb/?pg=ln&sec=hiw), [PostgreSQL](https://aws.amazon.com/rds/postgresql/?pg=ln&sec=hiw), [Oracle](https://aws.amazon.com/rds/oracle/?pg=ln&sec=hiw), and [SQL Server](https://aws.amazon.com/rds/sqlserver/?pg=ln&sec=hiw) — and deploy on-premises with [Amazon RDS on AWS Outposts](https://aws.amazon.com/rds/outposts/?pg=ln&sec=hiw).
 
 This how-to uses PostgreSQL as an example to integrate your Mendix app with Amazon RDS.
 
-## 2 Configuring the Mendix Database Connector for Amazon RDS
+## Configuring the Mendix Database Connector for Amazon RDS
 
 To configure the Mendix Database Connector for Amazon RDS, follow these steps: 
 
@@ -50,7 +50,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Sql** parameter, enter your SQL statement.
         For example, to create a table, you can use the following statement:
 
-        ```sql {linenos=false}
+        ```sql
         CREATE TABLE employee (
             emp_id INT PRIMARY KEY,
             first_name VARCHAR(50) NOT NULL,

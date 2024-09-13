@@ -7,7 +7,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Business events are like a mailing list to share event notifications between apps. The key difference between business events and traditional communication between apps, like REST or web services, is that there is no direct communication between the different apps.
 
@@ -18,7 +18,7 @@ To deliver these events reliably between your applications, an event broker is r
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 Business events help you automate the resulting actions when something happens in your organization. The following are examples of when business events can be useful:
 
@@ -26,7 +26,7 @@ Business events help you automate the resulting actions when something happens i
 * Making an appointment with a service provider in an appointment app, then needing it to be added to the scheduling app of the service provider
 * Customers placing an order in a web shop, and other apps need to take follow-up actions like scheduling shipments, sending the invoice, and reordering inventory stock
 
-### 1.2 Prerequisites
+### Prerequisites
 
 To use Mendix Business Events, you will need the following:
 
@@ -35,15 +35,15 @@ To use Mendix Business Events, you will need the following:
 * An event broker; this can be a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
-## 2 Licensing {#licensing}
+## Licensing {#licensing}
 
 The Mendix Business Events service itself does not require a license, but it depends on an event broker to deploy to production environments. You can purchase a [Mendix Event Broker License](/appstore/services/event-broker/#event-broker-license) for a broker to be set up for you. See the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907) platform service page for more details. You can also run business events on [your own Kafka cluster](#byok).
 
-## 3 Configuration
+## Configuration
 
 To work with business events, import the [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service into your app. See the [Installing Marketplace Content](/appstore/use-content/#install) section in *Using Marketplace Content*.
 
-### 3.1 Configuring Local Deployments {#config-local-deployment}
+### Configuring Local Deployments {#config-local-deployment}
 
 To test on your development workstation, run the Event Broker on your machine using [Docker](https://www.docker.com/). The required configuration can be found in the [local setup for the event broker tool](https://github.com/mendix/event-broker-tools).
 
@@ -57,19 +57,19 @@ Set the constants as follows:
     * Running Docker on MacOS and Studio Pro on Windows via Parallels: `10.211.55.2:9094`
     * Running Docker on Linux and Studio Pro on Windows via VirtualBox/KVM: `<IP ADDRESS>:9094`
 
-### 3.2 Changing Logging Interval (Optional)
+### Changing Logging Interval (Optional)
 
 Optionally, you can set **SummaryLogIntervalSeconds** to a different value. The default value 120, which means if events are consumed or produced, an overview of what was consumed or produced will be logged at `INFO` level every 120 seconds. When configured with 0 or a negative number, this additional logging will not take place at all.
 
-## 4 Usage
+## Usage
 
 This section explains how to use business events in Mendix apps with the Mendix Business Events service.
 
-### 4.1 Using Business Events {#two-way-be}
+### Using Business Events {#two-way-be}
 
 Studio Pro 9.24 and above supports newer behavior of business events, sometimes called two-way business events. In these versions, business events are published by an app and one or more apps consume, or subscribe to, the events. A publisher can also consume a business event of some other publishing app, and a subscriber can publish a business event to another app.
 
-#### 4.1.1 Creating a New Business Event Service {#two-way-be-create}
+#### Creating a New Business Event Service {#two-way-be-create}
 
 In your defining app, you can create a new service by doing the following:
 
@@ -84,7 +84,7 @@ The business event service document is open in Studio Pro:
 
 In the next section, you will define the information included in your events, as well as what the service will implement.
 
-#### 4.1.2 Adding Event Definitions {#add-be-definitions}
+#### Adding Event Definitions {#add-be-definitions}
 
 To define what information is included in your events, as well as what the service will implement, click **Add** in the open service document:
 
@@ -114,7 +114,7 @@ To define what information is included in your events, as well as what the servi
 
     **Export AsyncAPI Document** exports the YAML file of the business event service so other apps can [use your newly created service](#two-way-be-existing).
 
-#### 4.1.3 Attribute Types {#attribute-types}
+#### Attribute Types {#attribute-types}
 
 Attribute types for business events relate to attribute types of entities, but not all attribute types are supported for business events. The following attribute types are not supported:
 
@@ -125,13 +125,13 @@ Attribute types for business events relate to attribute types of entities, but n
 
 In Studio Pro 9.24 and below, all types were supported implicitly because a business event was defined by an entity. The unsupported types were from the perspective of the consumer received as a string.
 
-##### 4.1.3.1 Enumeration Attribute Type {#enum-att-type}
+##### Enumeration Attribute Type {#enum-att-type}
 
 In Studio Pro [9.24](/releasenotes/studio-pro/9.24/), consumers see enumerations as a plain string. The names of the enumeration items are the values that are transmitted by the event broker to the subscribers. Enumerations cannot be modeled for new services in Studio Pro [9.24](/releasenotes/studio-pro/9.24/), but for converted earlier apps, the functionality is maintained.
 
 In Studio Pro [10.0](/releasenotes/studio-pro/10.0/) and above, enumerations are fully supported. The enumeration attribute type can be modeled. The enumeration items are stored in the exported AsyncAPI document, and when imported, a new enumeration document will be created with the name *<attributeName>Enum*. The **Caption** and **Image** fields are not transmitted to the importer of the AsyncAPI document. Captions and images can be provided manually and will not cause conflicts when an AsyncAPI document is re-imported.
 
-#### 4.1.4 Using an Existing Business Event Service {#two-way-be-existing}
+#### Using an Existing Business Event Service {#two-way-be-existing}
 
 To use an existing business service in Studio Pro 9.24 and above, do the following:
 
@@ -145,7 +145,7 @@ The business event service document is open in Studio Pro:
 
 {{< figure src="/attachments/appstore/use-content/services/business-events/existing-business-event-service.png" class="no-border" >}}
 
-#### 4.1.5 Publishing and Subscribing to Business Events
+#### Publishing and Subscribing to Business Events
 
 After following the instructions in [Using an Existing Business Event Service](#two-way-be-create), you can publish or subscribe (or both, depending on the [service definitions](#add-be-definitions)) in the following ways:
 
@@ -154,13 +154,13 @@ After following the instructions in [Using an Existing Business Event Service](#
 
 To publish a business event service, you need to use it in a microflow.
 
-### 4.2 Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
+### Automatically Created Event Handler Microflow and Entity {#two-way-be-handler}
 
 When you click **Add** to add the events from the document into your service, Studio Pro will automatically create a persistable consumed entity within your domain model and an **Event Handler** microflow (**Handle_BE**) to manage the flow of the event after delivery. The **Event Handler** microflow is created in the same directory as your service.
 
 Currently, Mendix does not support multiple subscribers to the same business event within the same app.
 
-### 4.3 Modeling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
+### Modeling with Business Events (All Supported Studio Pro Versions) {#be-modelling}
 
 Once you have created a service in [Studio Pro 9.24 and above](#two-way-be), you can start modeling with them in your app.
 
@@ -175,7 +175,7 @@ The text with the blue background above the entity tells you it is a specialized
 
 {{< figure src="/attachments/appstore/use-content/services/business-events/specialized-entity.png" class="no-border" >}}
 
-#### 4.3.1 Using the Publish Business Event Activity
+#### Using the Publish Business Event Activity
 
 After defining your business events and adding them to a published service, you can publish the events in your microflows whenever a noticeable event occurs.
 
@@ -197,7 +197,7 @@ Do this using the **Publish business event** activity:
 The **Publish Business Event** activity will commit all event objects at the start of the publishing process as an **Outbox** entity. This is an implementation detail. In case something goes wrong during the publishing process, a retry mechanism will be triggered for up to 48 hours.  If the publishing microflow fails, the entity in the **Outbox** will be rolled back as well. See the [Business Event Entities](#be-entities) section for more information on the **Outbox** entity.
 {{% /alert %}}
 
-#### 4.3.2 Business Event Entities {#be-entities}
+#### Business Event Entities {#be-entities}
 
 The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necessary to include in your domain model to publish business events. The **DeadLetterQueue** and **Outbox** are part of the Mendix Business Events service.
 
@@ -208,7 +208,7 @@ The **PublishedBusinessEvent** and **ConsumedBusinessEvent** entities are necess
 * **DeadLetterQueue** - This persistent entity within the domain model of the Business Events service is used for generating a historical record of events that are generated for business event activities that were not successful or had errors when received by the consumer and can be referred to for troubleshooting. You can query the DeadLetterQueue entity to determine which received events could not be processed.
 * **Outbox** - This entity is used to store the event prior to being sent.  This entity is connected to the microflow where a business event is triggered.  If the microflow fails, the entity will be removed as part of the same transaction. If the event broker is down at runtime, business events will accumulate in the **Outbox**. They will be retried at increasing intervals for 48 hours and will fail after that time. Once an event is successfully delivered, it gets deleted from the **Outbox**.
 
-#### 4.3.3 Dead Letter Queue for Failed Messages {#dead-letter-queue}
+#### Dead Letter Queue for Failed Messages {#dead-letter-queue}
 
 Every time a business event is received, it is transformed to match the entity created as part of the subscription. When the entity within the business event has changed based on the imported AsyncAPI document, it can render the entity unable to be processed. In such a scenario, the business event will fail into a **Dead Letter Queue**, which contains the representation of the entity within the data column.
 
@@ -221,11 +221,11 @@ The most important fields in this entity to be checked when there are errors inc
 
 Use these fields to transform the payload back into a Mendix entity. If the subject is missing from the original event, the value will be an empty string. If the consumed event does not have the correct format, the event will not go to the Dead Letter Queue, but will throw an error.
 
-## 5 Mendix Event Broker {#mendix-event-broker}
+## Mendix Event Broker {#mendix-event-broker}
 
 Within Mendix Cloud, a Mendix Event Broker is available for easy application deployment using the Mendix Business Events module.  For more information, see [Mendix Event Broker](/appstore/services/event-broker/).
 
-### 5.1 Topics and Channels {#topics-channels}
+### Topics and Channels {#topics-channels}
 
 Events are placed in channels, sometimes called topics. Apps subscribed to a channel will receive events published to this channel.
 
@@ -233,7 +233,7 @@ Events published by Free Apps are published to one shared company channel on a m
 
 For information on setting topics and channels for your own Kafka clusters ("Bring Your Own Kafka"), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants).
 
-### 5.2 Error Handling
+### Error Handling
 
 Event publishing is part of the transaction where the publishing occurs. This means if you decide that something has gone wrong in your microflow logic and you roll back all changes, the publishing of your events is also rolled back. No event will be sent to other apps.
 
@@ -243,7 +243,7 @@ This is implemented as follows:
 * When your transactions are completed successfully, the events will be delivered to the Mendix Event Broker
 * If the publishing microflow fails and changes are rolled back, this also includes published events
 
-## 6 Deployment {#deployment}
+## Deployment {#deployment}
 
 Business Events offers four different deployment models:
 
@@ -252,25 +252,25 @@ Business Events offers four different deployment models:
 * Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
 * Apps running their own Kafka cluster (bring your own Kafka)
 
-### 6.1 Local Deployment
+### Local Deployment
 
 Use the [Local Setup Tool](https://github.com/mendix/event-broker-tools) for local deployments. For more information, see [Using the Business Events Local Setup Tool](#local-setup).
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day.
 
-### 6.2 Free App Deployment
+### Free App Deployment
 
 When you deploy your apps to the free cluster, a free event broker is provided and configured automatically. In the Mendix Free App environment, there is a limit of 1000 events per app per day.
 
 Any free app in your organization will be able to receive any event published by a free app in your organization, as all free apps share a single free channel for your company.
 
-### 6.3 Production Deployment
+### Production Deployment
 
 To deploy to production, you must have a subscription to the [Mendix Event Broker](https://marketplace.mendix.com/link/component/202907). For more information, see the [Mendix Event Broker License](/appstore/services/event-broker/#event-broker-license) section of *Mendix Event Broker*.
 
 Make sure you enable the Mendix Event Broker for every app and environment before deploying. See [Mendix Event Broker](/appstore/services/event-broker/) for more information.
 
-#### 6.3.1 Warning Message When Enabling Mendix Event Broker
+#### Warning Message When Enabling Mendix Event Broker
 
 If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environment, you may receive a warning that it is not possible to enable the event broker service. If you see this message, do the following in the [Services](/developerportal/deploy/environments/#services) tab of the production environment screen:
 
@@ -278,7 +278,7 @@ If you enabled the [Mendix Event Broker](#mendix-event-broker) for an environmen
 1. Transport the *.mda* file to an environment.
 1. Restart the environment.
 
-#### 6.3.2 Deploy Order
+#### Deploy Order
 
 The app that defines a business event service (**app A**), needs to be deployed and ran before the app that uses that business events service (**app B**) is ran.
 
@@ -289,11 +289,11 @@ When this occurs, do the following:
 1. Ensure **app A** has started in the same space as **app B**.
 2. Restart **app B**.
 
-### 6.4 Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
+### Apps Running Own Kafka Cluster (Bring Your Own Kafka) {#byok}
 
 Business events are powered by Apache Kafka (see [Mendix Event Broker](#mendix-event-broker)). If you want to use your own Kafka cluster instead of the [Mendix Event Broker](#mendix-event-broker), see [Configuring Deployment Constants for Own Kafka Cluster](#deployment-constants). Running your own cluster is referred to as Bring Your Own Kafka (BYOK).
 
-#### 6.4.1 Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
+#### Configuring Deployment Constants for Own Kafka Cluster {#deployment-constants}
 
 Business Events service exposes configuration via [constants](/refguide/constants/). These are set up during deployment to connect to your Kafka cluster.
 
@@ -309,7 +309,7 @@ All the constants are part of the Mendix Business Events service.
 
 For further explanation on topics and channels, see [Topics and Channels](#topics-channels) and [Mendix Event Broker](#mendix-event-broker).
 
-#### 6.4.2 DevOps Tasks Not Covered When Running Own Kafka Cluster
+#### DevOps Tasks Not Covered When Running Own Kafka Cluster
 
 As operating your own Kafka cluster falls outside of the scope of the Mendix Cloud environment, the following `DevOps` tasks should be taken into consideration (this list is not extensive):
 
@@ -317,23 +317,23 @@ As operating your own Kafka cluster falls outside of the scope of the Mendix Clo
 * Topic creation on Kafka - Unless the Kafka cluster is configured with `auto.create.topics.enable` set to true (default setting in Apache Kafka), topics will need to be created by the customer. See [Topics and Channels](#topics-channels).
 * Access Control - Unless the Kafka cluster is configured with `allow.everyone.if.no.acl.found` is set to true (default setting in Apache Kafka), the ACLs need to be maintained by the customer.
 
-#### 6.4.3 Managing Topics on Own Kafka Cluster
+#### Managing Topics on Own Kafka Cluster
 
 The channel UUID can be retrieved by inspecting the exported AsyncAPI document under the channels section of the document.
 
 A topic is named in the form of `businessevents.<channel>.<EventBrokerSpace>`. A channel is written as a UUID and is used to group events.
 
-## 7 Local Testing {#local-testing}
+## Local Testing {#local-testing}
 
 For development and testing, it is useful to run all your apps on your local workstation, including the event broker, which can be done by running Kafka through `docker-compose`.
 
-### 7.1 Using the Business Events Local Setup Tool {#local-setup}
+### Using the Business Events Local Setup Tool {#local-setup}
 
 The Mendix Business Events [Local Setup Tool](https://github.com/mendix/event-broker-tools) helps you deploy locally by setting up a Docker container with Kafka. This repository includes the required `docker-compose.yml` file.
 
 Start your docker cluster using the command `docker-compose up`. This will download or update all the required docker images and start Kafka.
 
-### 7.2 Using PostgreSQL Database (Optional) {#postgres-db}
+### Using PostgreSQL Database (Optional) {#postgres-db}
 
 You can configure the app running in Studio Pro to use the Postgres database created using Docker. Remember to use a different database name for every app.
 
@@ -353,7 +353,7 @@ Here is an example of a Postgres service that you can add to your `docker-compos
       - "25432:5432"
 ```
 
-## 8 Frequently Asked Questions
+## Frequently Asked Questions
 
 1. Can I undo a Publish Event action in case my microflow fails?
 
@@ -401,7 +401,7 @@ Here is an example of a Postgres service that you can add to your `docker-compos
 
     On the microflow, a log message action can be added after the start action in order to track the movement. Refer to the [Dead Letter Queue for Failed Messages](#dead-letter-queue) section for more information.
 
-## 9 Read More
+## Read More
 
 Check out the following release blogs for more information about business events:
 

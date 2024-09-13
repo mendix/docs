@@ -1,15 +1,38 @@
 ---
-title: "Mendix for Private Cloud"
+title: "Mendix for Private Cloud Release Notes"
+linktitle: "Mendix for Private Cloud"
 url: /releasenotes/developer-portal/mendix-for-private-cloud/
 weight: 20
 description: "Release notes for deployment using Mendix for Private Cloud"
 ---
 
-These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets, see [Deployment](/releasenotes/developer-portal/deployment/) release notes page for further information.
+These release notes cover changes to deployment to [Mendix for Private Cloud](/developerportal/deploy/private-cloud/). There are separate release notes for other deployment targets; for more information, see the [Deployment](/releasenotes/developer-portal/deployment/) release notes page.
 
-For information on the current status of deployment to Mendix for Private Cloud and any planned releases see [Mendix Status](https://status.mendix.com/).
+For information on the current status of deployment to Mendix for Private Cloud and any planned releases, see [Mendix Status](https://status.mendix.com/).
 
 ## 2024
+
+### September 5th, 2024
+
+#### Portal Improvements
+
+* We have resolved an issue where updates to constant descriptions were not being reflected in the portal (Ticket [225562](https://mendixsupport.zendesk.com/agent/tickets/225562)).
+* We have resolved an issue where updating the environment resulted in an invalid MxAdmin password error (Ticket [226829](https://mendixsupport.zendesk.com/agent/tickets/226829)).
+
+#### Deploy API
+
+* We have fixed an issue where new constants from Studio Pro were not propagated to the cluster by the **Update Environment** API call if they were not specifically mentioned in the manifest. Their default values will be the ones set in Studio Pro.
+* We have addressed an issue in the **Update Namespace** API where updating a namespace also required providing **Additional Information** related to the namespace in the manifest. The field has now been marked as non-editable in the specification file and its validation has been removed (Ticket [163987](https://mendixsupport.zendesk.com/agent/tickets/163987)).
+* We have added support for modifying ephemeral storage through the API (Ticket [226147](https://mendixsupport.zendesk.com/agent/tickets/226147)).
+
+### August 15th, 2024
+
+* We now allow rounding off model constants value with decimal type to 10 decimal digits.
+* We have fixed an issue where the build status failed to be retrieved (Ticket [224896](https://mendixsupport.zendesk.com/agent/tickets/224896)).
+
+#### Portal Enhancements
+
+* We have resolved an issue where an environment was created without a database or storage when a custom core resource plan was selected.
 
 ### July 18th, 2024
 
@@ -836,7 +859,7 @@ To use Prometheus metrics, upgrade to Mendix Operator v2.1.0 (or above) and foll
 
 #### Portal Improvements
 
-* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to  deploy a Mendix 7 or Mendix 8 app.
+* We have replaced the Mendix 8 placeholder app which is deployed when you add a new environment with a Mendix 9 app. Use the Mendix 7 placeholder app if you are planning to deploy a Mendix 7 or Mendix 8 app.
 
 ### September 27, 2021
 
@@ -1261,7 +1284,7 @@ To upgrade an existing installation of Private Cloud to the latest version, foll
 
 #### Improvements
 
-* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Amazon Web Services Azure Kubernetes Service (AWS-AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud/) documentation.
+* You can now deploy Mendix apps easily to Kubernetes-based platforms. We currently support Red Hat OpenShift, Amazon Web Services Elastic Kubernetes Service (AWS-EKS), and Azure Kubernetes Service (AKS). This involves deploying a Mendix Operator to your cluster to manage the Mendix requests. For more information see the [Private Cloud](/developerportal/deploy/private-cloud/) documentation.
 
 ## 2019
 

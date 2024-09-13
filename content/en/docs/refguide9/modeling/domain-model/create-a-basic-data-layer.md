@@ -7,7 +7,7 @@ aliases:
     - /howto9/data-models/create-a-basic-data-layer/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains how you can create a basic data layer for your application with Mendix. Each application can have multiple [modules](/refguide9/modules/), and each module has its own domain model. All the domain models together define the data layer of the application. 
 
@@ -22,7 +22,7 @@ This document teaches you how to do the following:
 * Create associations
 * Delete association behavior
 
-## 2 Creating Entities and Attributes {#create-entity}
+## Creating Entities and Attributes {#create-entity}
 
 To create entities and their attributes, follow these steps:
 
@@ -51,7 +51,7 @@ To create entities and their attributes, follow these steps:
 
     {{< figure src="/attachments/refguide9/modeling/domain-model/create-a-basic-data-layer/order-entity-one.png" class="no-border" >}}
 
-## 3 Adding Enumerations {#add-enumeration}
+## Adding Enumerations {#add-enumeration}
 
 An [enumeration](/refguide9/enumerations/) is a predefined list of values that can be used as an attribute type. This allows end-users to select any of the predefined values for this attribute. A good example of an enumeration is order status (with values open, processing, and complete).
 
@@ -82,7 +82,7 @@ To extend the **Order** entity with an enumeration value-based attribute, follow
 
     {{< figure src="/attachments/refguide9/modeling/domain-model/create-a-basic-data-layer/order-entity-two.png" width="160px" class="no-border" >}}
 
-## 4 Creating Associations
+## Creating Associations
 
 After you created the entities, you can create associations for the entities. For more information, see [Associations](/refguide9/associations/).
 
@@ -90,7 +90,7 @@ To create an association, draw a line from the border of one entity to the borde
 
 {{< figure src="/attachments/refguide9/modeling/domain-model/create-a-basic-data-layer/customer-order-association.png" class="no-border" >}}
 
-## 5 Multiplicity
+## Multiplicity
 
 This section explains how to change the [multiplicity](/refguide9/association-properties/#multiplicity) of associations. 
 
@@ -108,7 +108,7 @@ If you want to change the multiplicity, double-click the **Order_Customer** asso
 
     When the association is set to a many-to-many multiplicity, the **Navigability** property is also activated. For further details, see the [Navigability](/refguide9/association-properties/#navigability) section in *Association Properties*.
 
-## 6 Delete Behavior {#delete-behavior}
+## Delete Behavior {#delete-behavior}
 
 You can configure the [delete behavior](/refguide9/association-properties/#delete-behavior) for both sides of an association.
 
@@ -126,7 +126,7 @@ To configure the delete behavior, double-click the **Order_Customer** associatio
 Delete behavior includes objects which are in memory. This means that cascading delete or prevention of delete applies, even if the associated object has not been committed.
 {{% /alert %}}
 
-## 7 Read More
+## Read More
 
 * [Denormalize Data to Improve Performance](/howto9/data-models/denormalize-data-to-improve-performance/)
 * [Setting Up Data Validation](/refguide9/setting-up-data-validation/)

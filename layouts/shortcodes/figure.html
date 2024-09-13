@@ -1,11 +1,5 @@
 {{ $src := (.Page.Resources.GetMatch (printf "**%s*" (.Get "src"))) }}
 <figure>
-    <!-- NK - adds on-click link to images, default target is in new tab/window -->
-    {{- if .Get "link" -}}
-        <a href="{{ .Get "link" }}"
-    {{- else -}}
-        <a href="{{ .Get "src" }}"
-    {{- end }} target="{{ with .Get "target" }}{{ . }}{{ else }}_blank{{ end }}"{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     <img src="{{ if $src }}{{ $src.RelPermalink }}{{ else }}{{ .Get "src" }}{{ end }}" 
          {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"

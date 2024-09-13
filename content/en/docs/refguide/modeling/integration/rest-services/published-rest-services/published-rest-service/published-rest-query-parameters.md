@@ -6,7 +6,7 @@ description: "Parameters for a published REST query"
 # Merge into published rest service document
 ---
 
-## 1 Introduction
+## Introduction
 
 The specification of a [published REST operation](/refguide/published-rest-operation/) includes a microflow that implements the operation. This microflow may take parameters that come from the query string of the request.
 

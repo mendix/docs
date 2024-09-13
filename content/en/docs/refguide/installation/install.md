@@ -10,13 +10,13 @@ aliases:
 
 {{% button color="info" href="https://marketplace.mendix.com/link/studiopro/" text="Go to Marketplace" title="Download Studio Pro from the Marketplace" %}}
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro allows you to build apps on the Mendix Platform. This document will guide you through the steps of [installing the latest version of Studio Pro](https://marketplace.mendix.com/link/studiopro/). For the full list of supported systems and required frameworks, see [System Requirements](/refguide/system-requirements/). 
 
 If you use a Mac device and need to use a version of Mendix Studio Pro older than 10.7, see [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine. 
 
-## 2 Downloading Mendix Studio Pro
+## Downloading Mendix Studio Pro
 
 Mendix Studio Pro can be installed on your Windows machine with a Windows executable file or on your Mac machine using a .pkg file. This file can be downloaded from the Mendix Marketplace. 
 
@@ -25,7 +25,7 @@ Follow these steps to download Mendix Studio Pro:
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2. Click **Download for Windows** or **Download for Mac**, depending on your operating system. 
 
-## 3 Installing Mendix Studio Pro {#install}
+## Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
@@ -40,9 +40,9 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
 5. If you are asked to restart your computer, make a selection and click **Finish**. Otherwise, check **Launch Mendix 10.X.X** and click **Finish** to finish the installation and launch Studio Pro.
 
-## 4 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
-### 4.1 Installing Prerequisites Separately {#prerequisites}
+### Installing Prerequisites Separately {#prerequisites}
 
 If you run into problems installing Studio Pro, one work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -70,7 +70,7 @@ Based on the error message you get from the installer, you can choose to install
 
 Then, you can retry installing Studio Pro.
 
-## 5 Installing Mendix Studio Pro Offline {#offline}
+## Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
 
@@ -103,7 +103,7 @@ If managed dependencies are used (in Mendix 10.3.0 and above), you need to set u
 
 For more information on how to configure a custom repository, see the *Custom Repositories* section of [Managed Dependencies](/refguide/managed-dependencies/#custom-repos).
 
-## 6 Installing Mendix Studio Pro Without Admin Rights
+## Installing Mendix Studio Pro Without Admin Rights
 
 Mendix offers a Studio Pro installer called the **Portable** installer that does not require admin rights. The portable installer is available to download on the [Get Studio Pro](https://marketplace.mendix.com/link/studiopro/) page in the Mendix Marketplace. 
 
@@ -115,7 +115,7 @@ Mendix Studio Pro that is installed via the portable installer does not show up 
 
 {{< figure src="/attachments/refguide/installation/install/version-selector.png"  alt="Version Selector" width="450" class="no-border" >}}
 
-## 7 Signing In
+## Signing In
 
 When starting Studio Pro for the first time after installation, it will ask you to sign in to the Mendix Platform. This gives you access to Mendix platform services from within Studio Pro, such as Team Server, Marketplace, and app deployment to the cloud.
 
@@ -131,7 +131,7 @@ To continue, you may accept the certificate for the current session by clicking 
 Accepting untrusted certificates can bring security risks. You should only do so after having received confirmation from your network administrator.
 {{% /alert %}}
 
-## 8 Next Steps
+## Next Steps
 
 Congratulations on installing Mendix Studio Pro! Now you are ready to start modeling your apps. 
 

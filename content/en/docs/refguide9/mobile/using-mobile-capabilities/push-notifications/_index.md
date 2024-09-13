@@ -7,7 +7,7 @@ aliases:
     - /howto9/mobile/notifications/
 ---
 
-## 1 Introduction {#intro}
+## Introduction {#intro}
 
 These guides teach you how to configure push notifications (also known as remote notifications) for your Mendix apps. The guides are meant to be completed in order, and they teach you how to **send a test push notification to a single device**. Depending on your app's starting template your app may already satisfy certain prerequisites and conditions. Complete only the steps which apply to your use case, and skip what does not apply.
 

@@ -3,21 +3,21 @@ title: "Set Checkbox Set Selector Value"
 url: /appstore/partner-solutions/ats/rg-one-set-checkbox-set-selector-value/
 ---
 
-## 1 Description
+## Description
 
 Finds checkbox by column caption and cell value. Sets its value to checked.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget, the column caption, and the cell value of the checkbox you want to set.
 
 Set checked to true or false.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

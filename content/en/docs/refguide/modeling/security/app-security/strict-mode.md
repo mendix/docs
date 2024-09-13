@@ -4,7 +4,7 @@ url: /refguide/strict-mode/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 Configuring [access rules](/refguide/access-rules/) is essential for the security of your app. However, accurately setting up these rules can be challenging. In case you make any mistakes setting up access rules, you want a safety net when you roll your app out to users. To make your app more secure in cases where access rules are not configured correctly, you can enable strict mode. 
 
@@ -16,11 +16,11 @@ Employing strict mode can be a major differentiator for app safety. Strict mode 
 Please note, strict mode is exclusively available for the React client.
 {{% /alert %}}
 
-### 1.1 Enabling Strict Mode
+### Enabling Strict Mode
 
 Strict mode can be enabled in [App Security](/refguide/app-security/#strict-mode) when the React client is enabled and the security level is set to **Production**.
 
-## 2 Restricted Client APIs
+## Restricted Client APIs
 
 When strict mode is enabled, the following [client APIs](/apidocs-mxsdk/apidocs/client-api/) will be restricted:
 
@@ -35,13 +35,13 @@ When strict mode is enabled, the following [client APIs](/apidocs-mxsdk/apidocs/
 
 The APIs will be disabled on the Runtime, which means that these APIs cannot be invoked in online apps via JavaScript actions or the browser's console. If any of these APIs are used in a JavaScript action, consider using a nanoflow instead.
 
-## 3 Save And Cancel Changes Action {#save-and-cancel}
+## Save And Cancel Changes Action {#save-and-cancel}
 
 In strict mode, your model is analyzed by Studio Pro to ensure that only entities within editable widgets can be saved or rolled back during save or cancel actions. 
 
 Additionally, since **Save Changes Actions** and **Cancel Changes Actions** are not analyzed for layouts, placing a save or cancel button within a layout triggers a consistency error. Instead, these actions can be used within a snippet.
 
-## 4 Read More
+## Read More
 
 * [App Security](/refguide/app-security/)
 * [Client APIs](/apidocs-mxsdk/apidocs/client-api/)

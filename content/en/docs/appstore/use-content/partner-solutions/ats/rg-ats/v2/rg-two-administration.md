@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/rg-two-administration/
 description: "Describes a tenant administrator role in ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 Tenant administration is a feature that is only available in the on-premises version of ATS.
@@ -28,11 +28,11 @@ Each ATS instance comes with a single tenant administration account with the fol
 
 We advise that you change the password for the tenant administrator account as soon as you log in for the first time.
 
-## 2 Managing Accounts
+## Managing Accounts
 
 On the **Accounts** tab, you can manage the accounts for this ATS instance. 
 
-## 3 Creating Accounts
+## Creating Accounts
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/create_account.png" alt="Create new account dialog" class="no-border" >}}
 
@@ -47,7 +47,7 @@ Confirm Password | Must match the **Password**.
 When a new account is created, the user's for all apps will be set according to the specified **Default app role** for each app.
 {{% /alert %}}
 
-## 4 Editing Accounts
+## Editing Accounts
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-administration/edit_account.png" alt="Edit account dialog" class="no-border" >}}
 
@@ -59,7 +59,7 @@ When editing accounts, you can set accounts to inactive or block them, which wil
 When a user attempts to log in with an incorrect password a certain number of times in a certain amount of time, according to Mendix regulations, that account will be marked as blocked by the system. As a tenant administrator, you can unblock accounts by toggling the **Blocked** checkbox.
 {{% /alert %}}
 
-## 5 Managing Apps
+## Managing Apps
 
 On the **Apps** tab, you can see all the apps that exist on this ATS instance. Here you can create new apps and edit existing ones. When you click **New**/ **Edit**, the following page will open:
 

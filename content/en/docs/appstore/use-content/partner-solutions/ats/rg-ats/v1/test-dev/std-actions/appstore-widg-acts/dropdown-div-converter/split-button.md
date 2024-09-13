@@ -3,19 +3,19 @@ title: "Click Drop-Down div Converter Split Button"
 url: /appstore/partner-solutions/ats/rg-one-click-dropdown-div-converter-split-button/
 ---
 
-## 1 Description
+## Description
 
 Clicks the split button of the drop-down `div` converter.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Dropdown div converter
 
-## 3 Usage
+## Usage
 
 Pass the name of the drop-down `div` converter widget.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

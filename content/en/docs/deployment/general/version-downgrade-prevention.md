@@ -6,7 +6,7 @@ description: "What to do if you cannot migrate a Mendix database to an earlier v
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Scenario
+## Scenario
 
 This issue applies when you are downgrading an app to a lower version of Mendix.
 
@@ -14,6 +14,6 @@ During the migration phase, the data storage layer will first check whether any 
 
 For example, if you downgrade from Mendix 9.0.5 to Mendix 8.18.4, then the following log line is shown in the Mendix console: `The database version is of Mendix '9.0.5' which can not be downgraded to older Mendix versions.`
 
-## 2 Solution
+## Solution
 
 If this happens, the only way to downgrade to an older version of Mendix is by restoring a backup of the database to the older version of Mendix.

@@ -7,7 +7,7 @@ description: "How to obtain and activate a Mendix license for apps on various cl
 #NB have left out AWS and Azure Marketplace offerings for now, pending further research.
 ---
 
-## 1 Introduction
+## Introduction
 
 On Mendix Cloud, you can build [Free Apps](/developerportal/deploy/mendix-cloud-deploy/#free-app), which let you try things out and build and test apps using all the functionality of Mendix.
 
@@ -31,7 +31,7 @@ For each environment for which you want to remove the restrictions placed on an 
 
 The app checks for a license each time it is started. If the license expires while the app is running, it will continue to run until the next time it is started, when the license will be checked again.
 
-## 2 Obtaining a Mendix License{#get-license}
+## Obtaining a Mendix License{#get-license}
 
 {{% alert color="info" %}}
 If you want to create a new licensed node in Mendix Cloud but your contract does not allow for more licensed nodes, contact your Customer Success Manager (CSM) first.
@@ -54,15 +54,15 @@ If you are hosting your app somewhere else, such as on Cloud Foundry, Mendix Sup
 
 An example **LicenseId** is `aab8a0a1-1370-467e-918d-3a243b0ae160`. The **LicenseKey** is a very long Base64 string.
 
-## 3 Activating a Mendix License {#activate-mendix-license}
+## Activating a Mendix License {#activate-mendix-license}
 
 Once you have obtained a new Mendix license, link it to your app as described below. The specific steps depend on where you deploy your app.
 
-### 3.1 Mendix Cloud
+### Mendix Cloud
 
 For a Mendix app to run in production on Mendix Cloud, it must be linked to a licensed node in Mendix Cloud. This process is described in [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 3.2 SAP BTP
+### SAP BTP
 
 To license a Mendix app on SAP BTP, you need to supply a **Subscription Secret** that is linked to your app.
 
@@ -70,25 +70,25 @@ You can add this subscription secret as part of creating an environment on SAP B
 
 For more information, see [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
-### 3.3 Siemens Insights Hub
+### Siemens Insights Hub
 
 To license an Insights Hub app, you need to provide your **License ID** and **License Key** as Cloud Foundry environment variables. See [Cloud Foundry](#cloudfoundry), below, for instructions on how to do this.
 
-### 3.4 Mendix for Private Cloud
+### Mendix for Private Cloud
 
 To license a Mendix app on Mendix for Private Cloud, you need to supply a **Subscription Secret** or license credentials for your app. See below for how it can be added to either a Connected or Standalone cluster.
 
 In addition to the licenses for your apps, you will also need to license the Mendix Operator which helps deploy your app to a Private Cloud environment. For details on the Mendix Operator license, see [Licensing Mendix for Private Cloud](/developerportal/deploy/private-cloud/#licensing).
 
-#### 3.4.1 Mendix for Private Cloud Connected
+#### Mendix for Private Cloud Connected
 
 You can add the subscription secret as part of creating an environment on Mendix for Private Cloud. You can also add or change the subscription secret on the **Environment Details** page of the environment you wish to license. For more information, see the [Change Subscription Secret](/developerportal/deploy/private-cloud-deploy/#license-mendix) section of *Deploying a Mendix App to a Private Cloud Cluster*.
 
-#### 3.4.2 Mendix for Private Cloud Standalone
+#### Mendix for Private Cloud Standalone
 
 You will need to add the license credentials and configure the license in the Mendix Custom Resource (CR) for your Private Cloud environment. For more information, see the [Editing the CR](/developerportal/deploy/private-cloud-operator/#edit-cr) section of *Using Command Line to Deploy a Mendix App to a Private Cloud Cluster*.
 
-### 3.5 Cloud Foundry{#cloudfoundry}
+### Cloud Foundry{#cloudfoundry}
 
 To activate a license on your app running on Cloud Foundry, you need the license credentials provided by Mendix Support.
 
@@ -101,7 +101,7 @@ cf set-env <YOUR_APP> LICENSE_KEY <LicenseKey>
 
 Then restart the app so that the environment variables are read and the license goes into effect.
 
-### 3.6 Docker
+### Docker
 
 To activate a license on your app running in a Docker container, you need the license credentials provided by Mendix Support.
 
@@ -115,7 +115,7 @@ docker run -it \
   mendix/mendix-buildpack:…
 ```
 
-### 3.7 Kubernetes
+### Kubernetes
 
 To activate a license on your app running on Kubernetes, you need the license credentials provided by Mendix Support.
 
@@ -123,7 +123,7 @@ Two additional environment variables, `LICENSE_ID` and `LICENSE_KEY`, need to be
 
 For full instructions on how to do this and how to supply the keys using a **Secrets** file, see the [Deploying the Application](/developerportal/deploy/run-mendix-on-kubernetes/#deploy) section of *Use Docker with Minikube*.
 
-### 3.8 Windows Server
+### Windows Server
 
 To license a Mendix app on Microsoft Windows, follow these steps:
 
@@ -133,7 +133,7 @@ To license a Mendix app on Microsoft Windows, follow these steps:
 
 For full instructions on how to do this, see [Activate a Mendix License on Microsoft Windows](/developerportal/deploy/activate-a-mendix-license-on-microsoft-windows/).
 
-### 3.9 Unix-Like Server
+### Unix-Like Server
 
 To license a Mendix app on Linux or another Unix-like operating system, follow these steps:
 

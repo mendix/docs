@@ -8,11 +8,11 @@ aliases:
     - /howto/mobile/notif-implement-module/
 ---
 
-## 1 Introduction
+## Introduction
 
 Now that you have implemented the prerequisites in your app, you must implement the [Push Notifications Connector](/appstore/modules/push-notifications/) module. Complete the steps below to enable the basic configuration.
 
-## 2 Downloading From Marketplace
+## Downloading From Marketplace
 
 If you have not done so, make sure to download the **Push Notification Connector** module from the Marketplace:
 
@@ -21,7 +21,11 @@ If you have not done so, make sure to download the **Push Notification Connector
 1. Open the **Push Notification Connector** module.
 1. Click **Download**.
 
-## 3 Configuring Your App {#config}
+{{% alert color="info" %}}
+When importing the module in Mendix 10.6.0 or above, you might get consistency error CE6087 for renamed design properties. Right-click and update all renamed design properties in the project.
+{{% /alert %}}
+
+## Configuring Your App {#config}
 
 In order for your app to use to use the Push Connections Module, configure the following things:
 

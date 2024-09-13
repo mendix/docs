@@ -4,7 +4,7 @@ url: /howto8/mobile/implementation-guide/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to will walk you through the steps needed to implement push notifications in your application.
 
@@ -16,7 +16,7 @@ This how-to teaches you how to do the following:
 * Obtain FCM/APNs access/credentials and configure them with your application
 * Build the hybrid mobile package
 
-## 2 Importing the PushNotifications Module from the Marketplace
+## Importing the PushNotifications Module from the Marketplace
 
 The [Push Notifications Connector](/appstore/modules/push-notifications/) module is published in the Mendix Marketplace. To import it into your project, click the Marketplace icon in the top right of Mendix Studio Pro. Search for "Push Notifications Connector" and click the title of the result:
 
@@ -30,7 +30,7 @@ On the resulting page, click the green **Download** button. Make sure that **Add
 The Push Notifications Connector assumes that the mobile app and the back-end part will reside in the same app.
 {{% /alert %}}
 
-## 3 Installing Module Dependencies
+## Installing Module Dependencies
 
 The PushNotifications module has the following dependencies:
 
@@ -51,7 +51,7 @@ If your project is using an older version of the [Encryption](/appstore/modules/
 
 After importing the module and the dependencies, your error dock will inform you that entity access is out of date. To fix this error, double-click the error and then click **Update security** at the top of the domain model pane.
 
-## 4 Including the Push Notifications Snippet in the Application's Layouts
+## Including the Push Notifications Snippet in the Application's Layouts
 
 To properly register your device with a third-party remote push service (FCM or APNs) and display in-app notifications, you should put the widget on the pages of your app. You can accomplish this by dragging the **Online_Snippet** or **Offline_Snippet** (located in the **_USE ME** folder in the **PushNotifications** module) into the layouts used by your app. Which of these two you should pick depends on whether your Mendix hybrid app uses an online profile or an offline profile. Note that push notifications do not currently work on the desktop.
 
@@ -65,7 +65,7 @@ Please do not remove the button with the caption **Device Registration reference
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/20217888.jpg" class="no-border" >}}
 
-## 5 Starting Connectors from Your After-Startup Microflow
+## Starting Connectors from Your After-Startup Microflow
 
 The PushNotifications module contains a microflow named **AfterStartup_PushNotifications** that will start the APNs connector for you. Call this microflow from your **AfterStartup** microflow.
 
@@ -76,7 +76,7 @@ If your project already has an AfterStartup microflow configured, it is recommen
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/on-app-startup.png" alt="On start push microflow" class="no-border" >}}
 
-## 6 Setting Up the Administration Pages {#setting}
+## Setting Up the Administration Pages {#setting}
 
 Add the **PushNotifications_Administration** page to the project navigation, so it can be reached after you deploy your app. This page contains three tabs:
 
@@ -90,7 +90,7 @@ Do not add the administration pages to the navigation layout of offline devices.
 
 {{% /alert %}}
 
-## 7 Setting Up the Project Security for Your Module
+## Setting Up the Project Security for Your Module
 
 On the **User roles** tab of the **Project Security** dialog box, include the following:
 
@@ -100,7 +100,7 @@ On the **User roles** tab of the **Project Security** dialog box, include the fo
 
 {{< figure src="/attachments/howto8/mobile/hybrid-mobile/push-notifications/implementation-guide/21168173.png" class="no-border" >}}
 
-## 8 Deploying Your App
+## Deploying Your App
 
 At this point, all the implementation steps are done and you can deploy your application to the Mendix Cloud. If you are using a Free App, simply click **Run**.
 
@@ -110,7 +110,7 @@ Make sure that the `Encryption.EncryptionKey` constant has a value before you st
 
 {{% /alert %}}
 
-## 9 Setting Up Access to APNs or FCM
+## Setting Up Access to APNs or FCM
 
 Below are instructions for setting up access to APNs or FCM and configuring them in your application. Mendix recommends starting with FCM, because it is significantly less complicated than setting up APNs. You can return to this section later to set up APNs.
 
@@ -129,11 +129,11 @@ Make sure the **Encryption.EncryptionKey** constant has a valid value before you
 
 For more details, see [How to Set Up the Apple Push Notification Server](/howto8/mobile/setting-up-apple-push-notification-server/) and [How to Set Up the Firebase Cloud Messaging Server](/howto8/mobile/setting-up-google-firebase-cloud-messaging-server/).
 
-## 10 Building the Hybrid Mobile Application
+## Building the Hybrid Mobile Application
 
 You now need to build the hybrid mobile application. For an explanation on how to do this, see [How to Publish a Mendix Hybrid Mobile App](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/).
 
-## 11 Read More
+## Read More
 
 * [Microflows](/refguide8/microflows/)
 * [Test the Push Notifications Implementation](/howto8/mobile/testing-the-implementation/)

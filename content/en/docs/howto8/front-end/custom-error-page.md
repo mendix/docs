@@ -4,7 +4,7 @@ url: /howto8/front-end/custom-error-page/
 weight: 55
 ---
 
-## 1 Introduction
+## Introduction
 
 Whenever your application is stopped, you are presented with the infamous green monsters. To present your app users with a more professional looking page when the application is down, Mendix enables the creation of custom error pages on *Mendix Cloud*.
 
@@ -24,14 +24,14 @@ This how-to teaches you how to do the following:
 
 * Create a custom error page
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a local repository of the app
 * Have your app *hosted in the Mendix Cloud*
 
-## 3 Create a Custom Error Page
+## Create a Custom Error Page
 
 1. Open the local folder of your app.
 2. Go to **theme**:
@@ -56,7 +56,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 It might take up to an hour to before the custom error page is visible when the app is offline.
 {{% /alert %}}
 
-### 3.1 Example Offline Page
+### Example Offline Page
 
 An example `offline.html/404.html/403.html` page could look like this:
 

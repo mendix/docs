@@ -3,6 +3,7 @@ title: "APD Release Notes"
 url: /appstore/partner-solutions/apd/release-notes
 description: "The release notes for Mendix Application Performance Diagnostics (APD) with details on new features, bug fixes, and known issues."
 weight: 40
+numberless_headings: true
 ---
 
 {{% alert color="info" %}}
@@ -79,7 +80,7 @@ With the growth of our customer base, we felt the need to work on the architectu
 We made the following improvements to the browser agent:
 
 * We merged the statistics and recording collecting in order to reduce overhead and resource usage.
-* We improved support for [Mendix 7.6](/releasenotes/studio-pro/7.6/) and above.
+* We improved support for Mendix 7.6 and above.
 
 We made the following improvements to the runtime agent:
 
@@ -132,7 +133,7 @@ We made the following improvements to the browser agent:
     With this, the agent can be tuned, and the settings cannot be overruled from the manager (for example, for protecting a production environment or in the event of conflicts for not using the profiler).
 * There is now the **NONE** option for statistics and trap collection, with which you effectively turn off the tools.
 * There is now a hard-coded maximum of messages that the APM agent and APM Manager can accept from a Mendix log thread for both the message and stack trace.
-* There is now  a maximum message length in `MendixMessage` via an advanced setting.
+* There is now a maximum message length in `MendixMessage` via an advanced setting.
 * `excludenodes=<node:level,node:level,...>` can now be used to not subscribe to certain nodes above the specified level. This feature can be used exclude log nodes (for example, as a workaround for a Mendix 6 web service and Mendix 7 bugs).
 * There is now a load tool bug fix for recording and processing query IDs.
 * The load tool loads XML pages on need, since the [create object](/refguide/create-object/) button action has no `open_form` in the Client API.
@@ -287,7 +288,7 @@ Customers wanted one button to configure the entire system to production or non-
 * The default settings for the trap tool buffer in production is now to stop the tool. So, if a customer has a high volume of errors and does not configure APM to exclude them, the APM tool will stop instead of causing a limited amount of load all the time.
 * Statistics and message triggers now stop after firing when they are configured to do so.
 * The delete function now starts logging progress when it takes more than 5 seconds.
-* To prevent running out of memory, the performance tool now stops recording at 80% memory usage (which can still be saved). If memory usage goes over 95% due to a non-APM functionality, all memory claimed by APM is is freed by canceling the recording and discarding the recorded data.
+* To prevent running out of memory, the performance tool now stops recording at 80% memory usage (which can still be saved). If memory usage goes over 95% due to a non-APM functionality, all memory claimed by APM is freed by canceling the recording and discarding the recorded data.
 * The JDBC settings for MSSQL were by default not correct after installation. This has been fixed.
 * Trap errors often occur together, so now there is a **Previous** and **Next** button inside a trap to save some clicks.
 * Java action parameters have been renamed to prevent errors when Mendix generates different names in different versions of the platform or in different deployments. Mendix does so to avoid conflicts in Java due to generated proxies, but the consequence is an error in the model due to APM. We have now prevented this.

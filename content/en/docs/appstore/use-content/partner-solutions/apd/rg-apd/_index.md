@@ -7,8 +7,8 @@ description_list: true
 description: "Presents a list of APD/APM reference guides for each APD/APM version."
 ---
 
-## 1 Introduction
+## Introduction
 
 The *APD Reference Guides* are organized according to version.
 
-## 2 Documents in This Section
+## Documents in This Section

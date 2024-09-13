@@ -11,7 +11,7 @@ aliases:
 #Please do not rename the anchors in this document as they are used in links from the Mendix Portal.
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Metrics** page contains detailed graphs about your app and its environment. You can use this page to monitor the performance and health of your app; for example, you can track the usage growth of your app or debug performance problems.
 
@@ -23,15 +23,18 @@ This page describes metrics for licensed apps deployed to Mendix Cloud. Metrics 
 If your app is deployed to SAP Business Technology Platform (SAP BTP) instead, the **Metrics** page displays links to the SAP BTP cockpit.
 {{% /alert %}}
 
-## 2 Accessing the Metrics Graphs
+## Accessing the Metrics Graphs
 
 To access the graphs on the **Metrics** page, you must have **Access to Monitoring** permissions enabled. For more information, see [Node Permissions](/developerportal/deploy/node-permissions/).
 
 If you meet the above conditions, you can find the graphs by following these steps:
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com).
+
 1. In the navigation pane, click **Metrics**.
+
 1. Use the drop-down menu in the upper-right corner to select the environment you want to monitor.
+
 1. Use the **Period** and **Group** drop-down menus to choose the time period (day, week, month, or quarter) and the group (application, database, or all) for the graphs that you want to view.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/metrics-selection.png" >}}
@@ -42,11 +45,11 @@ If you meet the above conditions, you can find the graphs by following these ste
 The **Metrics** page does not support multi-instance metrics. If you [horizontally scale](/developerportal/deploy/scale-environment/) your environment to multiple instances, you will be able to see metrics for only one of those instances. If you need data on multiple instances, consider using an [APM integration](/developerportal/operate/monitoring-with-apm/).
 {{% /alert %}}
 
-## 3 Interpreting the Graphs
+## Interpreting the Graphs
 
 As with all complex IT systems, there are many interrelated components that can cause performance issues. This document cannot cover all possibilities; it is intended as a general introduction to the information that is displayed. It also suggests a few ideas about where to look for possible areas of concern.
 
-### 3.1 Combining Information{#combine-info}
+### Combining Information{#combine-info}
 
 You can often get more information about the performance of your app by combining the information from several graphs. Here are some useful graphs for this:
 
@@ -56,14 +59,14 @@ You can often get more information about the performance of your app by combinin
 
 For example, a combination of a moderate number of input/output operations (IOPs), low disk throughput, high CPU usage, full memory disk cache, and reports of long-running database queries in the application log could point to a shortage of system memory for disk cache that leads to repeated random reads from disk storage.
 
-## 4 Application Statistics
+## Application Statistics
 
 This section explains the metrics that represent the current status and statistics of a running Mendix application. This includes the following:
 
 * Requests that the application processes from the services/clients with which it is integrated
 * Statistics related to Java Virtual Machine and the Jetty web server that the application uses
 
-### 4.1 Number of Handled External Requests{#Trends-appmxruntimerequests}
+### Number of Handled External Requests{#Trends-appmxruntimerequests}
 
 The **Number of handled external requests** graph shows the number of requests that are sent from the client and systems that integrate with your application using web services.
 
@@ -97,7 +100,7 @@ Additional information about request handlers is available on the following page
 * The [Requests](/refguide/monitoring-mendix-runtime/#request-handlers) section of *Monitoring Mendix Runtime*
 * The [Applying Access Restrictions to Unnecessary Request Handlers](/howto/security/best-practices-security/#request-handlers) section of *How To Implement Best Practices for App Security*
 
-### 4.2 User Accounts and Login Sessions{#Trends-appmxruntimesessions}
+### User Accounts and Login Sessions{#Trends-appmxruntimesessions}
 
 The **User accounts and login sessions** graph shows the number of logged-in user sessions for your application. It includes both named and anonymous users accounts.
 
@@ -111,7 +114,7 @@ These are the user types:
 | **concurrent named user sessions**     | Total number of sessions for users using a named login            |
 | **concurrent anonymous user sessions** | Total number of sessions for users who are signing in anonymously |
 
-### 4.3 JVM Object Heap{#Trends-appmxruntimejvmheap}
+### JVM Object Heap{#Trends-appmxruntimejvmheap}
 
 The **JVM Object Heap** graph shows the internal distribution of allocated memory inside the application process for Java objects. Java objects are created in Java actions, but they also include all objects that are used by microflows running in your app at runtime.
 
@@ -134,7 +137,7 @@ It is difficult to base conclusions on JVM heap memory graphs. Imagine, for exam
 If a garbage collection is triggered when the percentage reaches two-thirds of the total heap size, then the tenured generation could drop to 0%. However, it could stay at 65% if all data in this memory part is still referenced by running actions in the application.
 {{% /alert %}}
 
-### 4.4 JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
+### JVM Process Memory Usage{#Trends-appmxruntimejvmprocessmemory}
 
 The **JVM Process Memory Usage** graph is similar to the [JVM Object Heap](#Trends-appmxruntimejvmheap) graph described above. It shows a more complete view of the actual size and composition of the operating system memory that is in use by the JVM process.
 
@@ -159,7 +162,7 @@ These are the types:
 | **other**            | This is virtual or reserved memory space.                                                                     |
 | **thread stacks**    | This is stacks that are reserved for unique threads.                                                          |
 
-### 4.5 Memory Usage{#Trends-appmemory}
+### Memory Usage{#Trends-appmemory}
 
 The **Memory usage** graph shows the distribution of operating system memory that is available for this server. It is measured in gibibytes.
 
@@ -167,7 +170,7 @@ The **Memory usage** graph shows the distribution of operating system memory tha
 
 Performance issues can arise if the app's memory takes up too much of the operating system memory.
 
-### 4.6 Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
+### Threadpool for Handling External Requests{#Trends-appm2eeserverthreadpool}
 
 The **Threadpool for handling external requests** graph shows the number of concurrent requests that are being handled by the Mendix Runtime. The requests are counted in two circumstances:
 
@@ -187,7 +190,7 @@ The values shown by the graph are as follows:
 | **active threads**  | Active threads that are being used within the Jetty threadpool |
 | **threadpool size** | The current total size of the Jetty threadpool                 |
 
-### 4.7 Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
+### Total Number of Threads in the JVM Process{#Trends-appmxruntimethreads}
 
 The **Total number of threads in the JVM process** graph shows the total number of threads that exist inside the running JVM process.
 
@@ -199,7 +202,7 @@ In addition to the threadpool that is used for external HTTP requests (described
 * Internal processes inside the Mendix Runtime
 * Optional extra threads created by the application itself (for example, using a threadpool in a custom module or custom Java code)
 
-### 4.8 CPU Usage{#Trends-appcpu}
+### CPU Usage{#Trends-appcpu}
 
 The **CPU usage** graph shows the app's CPU utilization, as a percentage. The graph's y-axis scales dynamically based on the data, ranging from 0 to the maximum data point included in the request.
 
@@ -215,7 +218,7 @@ Your app can always access at least the amount of CPU specified for your contain
 
  If your app consistently uses more CPU than specified for your container, your app could suffer from performance issues. This is because there may be periods when there are insufficient CPU resources for the app to burst above the level specified for the container.
 
-### 4.9 Disk Usage {#Trends-appdf}
+### Disk Usage {#Trends-appdf}
 
 The **Disk usage** graph shows the relative amounts of application node data stored on disk, displayed as a percentage. The graph's y-axis scales dynamically based on the data. If the app's disk usage is below 100%, then the y-axis ranges from 0 to the maximum data point included in the request.
 
@@ -225,13 +228,13 @@ Interpret this graph in combination with other graphs. For more information, see
 
 The disk usage graph shows only the disk usage inside the container. This is usually only relevant if your application creates a lot of temporary files in `/tmp`. This value is not the same as the file document storage.
 
-### 4.10 Storage – Number of Files{#Trends-appnumberoffiles}
+### Storage – Number of Files{#Trends-appnumberoffiles}
 
 The **Storage – Number of Files** graph shows the number of files created by entities that are based on `FileDocument` generalizations. These are stored in S3 file storage.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/app-number-of-files.png" >}}
 
-### 4.11 Storage – Size of Files{#Trends-appsizeoffiles}
+### Storage – Size of Files{#Trends-appsizeoffiles}
 
 {{% alert type="info" %}}
 This metric was added on January 21, 2022, with the release [4.25.0](https://github.com/mendix/cf-mendix-buildpack/releases/tag/v4.25.0) of the Cloud Foundry Mendix Buildpack. If you have not deployed your Mendix app since that date, the graph will show **No Data Available**. In that case, redeploy your app to see the data. The graph will then show data from that date onward.
@@ -241,7 +244,7 @@ The **Storage – Size of Files** graph shows the size of files (in bytes) that 
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/app-size-of-files.png" >}}
 
-## 5 Database Statistics
+## Database Statistics
 
 In this section, you will find the statistics about the database that the application uses.
 
@@ -249,7 +252,7 @@ In this section, you will find the statistics about the database that the applic
 If you are using the [Basic License](/developerportal/deploy/basic-package/), you will only see the first three graphs described in this section. These are the graphs that show information specific to your app.
 {{% /alert %}}
 
-### 5.1 Number of Database Queries Being Executed{#Trends-dbmxruntimeconnectionbus}
+### Number of Database Queries Being Executed{#Trends-dbmxruntimeconnectionbus}
 
 The **Number of database queries being executed** graph shows the number of database queries per second that are executed by your Mendix application.
 
@@ -267,7 +270,7 @@ These are the types of queries:
 | **select**       | Number of SQL `SELECT` statements per second. The SQL `SELECT` statement fetches data from a database table that returns this data in the form of a result table. |
 | **delete**       | Number of SQL `DELETE` statements per second. The SQL `DELETE` query deletes the existing records from a table. |
 
-### 5.2 Database Table vs. Index Size{#Trends-dbpgtableindexsizeVERSIONmain}
+### Database Table vs. Index Size{#Trends-dbpgtableindexsizeVERSIONmain}
 
 The **Database table vs. index size** graph shows the distribution between disk space used for storing indexes and actual data.
 
@@ -282,7 +285,7 @@ These are the values:
 | **tables**  | Total space taken by the database                    |
 | **indices** | Amount of space taken by the indices in the database |
 
-### 5.3 Database Transactions and Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
+### Database Transactions and Mutations{#Trends-dbpgstatdatabaseVERSIONmain}
 
 The **Database transactions and mutations** graph shows the number of database objects that were changed by database queries from the application. It is measured in operations per second.
 
@@ -304,7 +307,7 @@ The most common cause of rollbacks is a (unexpected) reboot of the application.
 
 Rollbacks appearing during normal operation indicate a problem and should be investigated. A common cause is that two or more processes are attempting a mutation of the same object. If you have more than one instance, remember that these processes might be running on different instances.
 
-### 5.4 Connections to the Database{#Trends-dbmxruntimepgstatactivity}
+### Connections to the Database{#Trends-dbmxruntimepgstatactivity}
 
 The **Connections to the database** graph shows the number of connections to the PostgreSQL server.
 
@@ -318,7 +321,7 @@ The number of connections goes up and down with the usage of the application. Th
 
 The standard configuration sets a maximum of 50 connections per instance. You can change this through [The Number of Database Connections](/refguide/tricky-custom-runtime-settings/#num-connections), as described in *Advanced Custom Settings in Mendix Runtime*. The graph displays the total number of connections for all instances in a multi-instance scaled runtime. 
 
-### 5.5 Database Memory{#Trends-dbmemory}
+### Database Memory{#Trends-dbmemory}
 
 The **Database memory** graph shows the distribution of operating system memory, in gibibytes, that is available for this server.
 
@@ -340,7 +343,7 @@ These are the types:
 | **Freeable memory** | Memory that is allocated dynamically containing, for example, cached reads and indexes |
 | **Swap usage**      | The amount of swap space used on the database instance                                 |
 
-### 5.6 CPU Utilization of the Database{#Trends-dbcpu}
+### CPU Utilization of the Database{#Trends-dbcpu}
 
 The **CPU Utilization of the database** graph shows the amount of CPU usage over time as a percentage.
 
@@ -352,7 +355,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-cpu-usage.png" >}}
 
-### 5.7 Database Throughput{#Trends-dbdiskstatsthroughput}
+### Database Throughput{#Trends-dbdiskstatsthroughput}
 
 The **Database throughput** graph shows the amount of data that is being read from and written to disk.
 
@@ -365,7 +368,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 If you see large values here that do not immediately drop back again, it may indicate that your app is continually swapping data to disk. This could be caused by inefficient queries; for example, it could be caused by queries that require sorting within the app.
 <a id="Trends-dbdf"></a>
 
-### 5.8 Database Disk Usage{#Trends-dbdfabs}
+### Database Disk Usage{#Trends-dbdfabs}
 
 The **Database disk usage** graph displays used storage (the absolute amount of data that is stored on disk) as well as free space (the remaining space on the database node). It is measured in gibibytes.
 
@@ -377,7 +380,7 @@ You will not see this if you are using the [Basic License](/developerportal/depl
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/metrics/db-disk-usage.png" >}}
 
-### 5.9 Database IOPS {#Trends-dbdiskstatsiops}
+### Database IOPS {#Trends-dbdiskstatsiops}
 
 The **Database IOPS** graph, also called the database input/output operations per second graph, shows the number of disk read and write operations that are done from and to the disk storage. It does not show the amount of data that was transferred.
 
@@ -394,7 +397,7 @@ There are two sets of values:
 | **read**  | Read ops on the disk holding the database  |
 | **write** | Write ops on the disk holding the database |
 
-### 5.10 Database IO Latency{#Trends-dbdiskstatslatency}
+### Database IO Latency{#Trends-dbdiskstatslatency}
 
 The **Database IO latency** graph shows the average waiting times, in seconds, for disk operations to complete.
 
@@ -413,7 +416,7 @@ There are two sets of values:
 | **read**  | Read ops on the disk holding the database  |
 | **write** | Write ops on the disk holding the database |
 
-### 5.11 Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
+### Database IOPS Burst Balance {#Trends-dbmxdatabaseburstbalance}
 
 {{% alert color="info" %}}
 Burst balance metrics are not available for databases with the gp3 storage instance type. This applies to any database with a storage size of 20 GiB or more. For details, see [Migration to gp3 Storage Instances](#gp3-migration), below.
@@ -437,7 +440,7 @@ Databases larger than 1,000 GiB have a base performance that is equal to or grea
 
 For more information, see the AWS Database blog [Understanding Burst vs. Baseline Performance with Amazon RDS and GP2](https://aws.amazon.com/blogs/database/understanding-burst-vs-baseline-performance-with-amazon-rds-and-gp2/).
 
-#### 5.11.1 Migration to gp3 Storage Instances {#gp3-migration}
+#### Migration to gp3 Storage Instances {#gp3-migration}
 
 Burst balance metrics are not available for databases with the gp3 storage instance type.
 
@@ -457,6 +460,6 @@ Compared to gp2, gp3 provides higher baseline storage performance and does not r
 For details on DB storage size for various plans, see [Cloud Resource Packs](/developerportal/deploy/mendix-cloud-deploy/#resource-pack).
 {{% /alert %}}
 
-## 6 Read More
+## Read More
 
 * [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/) – Describes how to use application performance monitoring tools to provide additional monitoring for your Mendix Apps running on Mendix Cloud

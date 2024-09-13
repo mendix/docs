@@ -5,7 +5,7 @@ weight: 10
 description: "Follow this how-to to learn how to install Mendix Studio Pro."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro enables you to build apps on the Mendix Platform. This how-to will guide you through the steps of installing the latest version of Mendix Studio Pro. If you use a Mac device, see [Configure Parallels](/howto8/general/using-mendix-studio-pro-on-a-mac/) to configure your Windows virtual machine.
 
@@ -13,20 +13,20 @@ For a deep-dive demonstration of how to install Studio Pro, follow along in this
 
 {{< vidyard "WUp2tLi68nXFQd7xhPbDtt" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * A Windows environment to install Studio Pro (For the full list of supported systems and required frameworks, see [System Requirements](/refguide8/system-requirements/))
 
-## 3 Downloading Mendix Studio Pro
+## Downloading Mendix Studio Pro
 
 Mendix Studio Pro can be installed on your machine with a Windows executable file. This executable file can be downloaded from the Mendix Marketplace. Follow these steps to download Mendix Studio Pro:
 
 1. Go to the Studio Pro download page in the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/).
 2. Click the **Download** button in the upper-right corner to download the latest Mendix Studio Pro.
 
-## 4 Installing Mendix Studio Pro {#install}
+## Installing Mendix Studio Pro {#install}
 
 Mendix Studio Pro needs to be installed on your computer before you can start building apps. Follow these steps to install Mendix Studio Pro:
 
@@ -58,7 +58,7 @@ Mendix Studio Pro needs to be installed on your computer before you can start bu
 
     {{< figure src="/attachments/howto8/general/install/completing-setup.png" class="no-border" >}}
 
-## 5 Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 Sometimes you can run into problems when installing Studio Pro. One work-around is to restart your system and install the prerequisites separately if they are not installed yet. 
 
@@ -76,7 +76,7 @@ Based on the error message you get from the installer you can decide to install 
 
 After that you can retry installing Studio Pro.
 
-## 6 Installing Mendix Studio Pro Offline {#offline}
+## Installing Mendix Studio Pro Offline {#offline}
 
 The Mendix Studio Pro installation experience includes all the tools and frameworks required to run the application. If any of the prerequisites are not found at the moment of installation, the Studio Pro setup process will attempt to download and install the missing elements automatically. The Mendix Studio Pro installer does not include all dependencies and relies on internet connectivity to obtain them if any of the required pieces of software are missing. 
 
@@ -96,7 +96,7 @@ It is possible to prepare the prerequisite installers beforehand, so that the Me
     * The `latest` executable to `mendix_native_mobile_builder.exe`
 6. Run the installer as described in the [Installing Mendix Studio Pro](#install) section above.
 
-## 7 Read More
+## Read More
 
 * [Studio Pro Overview](/refguide8/studio-pro-overview/)
 * [App Modeling](/refguide8/modeling/)

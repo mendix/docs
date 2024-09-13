@@ -3,7 +3,7 @@ title: Use Excel Documents
 url: /howto/integration/use-excel-documents/
 ---
 
-## 1 Introduction 
+## Introduction 
 
 Use Excel to import and export large amounts of data to your Mendix application.  
 

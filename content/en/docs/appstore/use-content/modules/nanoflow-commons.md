@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Nanoflow Commons modu
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) module contains the following commonly used nanoflow actions that are usable across web, hybrid mobile, and native mobile apps:
 
@@ -47,7 +47,7 @@ The [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515/) mo
 |                     | Get platform                 |
 |                     | Wait                         |
 
-## 2 Read More
+## Read More
 
 * [How to Build JavaScript Actions: Part 1 (Basic)](/howto/extensibility/write-javascript-actions/)
 * [How to Build JavaScript Actions: Part 2 (Advanced)](/howto/extensibility/write-javascript-github/)

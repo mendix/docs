@@ -5,7 +5,7 @@ weight: 7
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 
-## 1 Optimization
+## Optimization
 
 In some projects, it is necessary to evaluate large datasets in a microflow (for example, for reporting purposes). If all those microflows do a lot of retrieves and aggregates on large datasets, it is easy to run into performance or memory problems. 
 
@@ -17,7 +17,7 @@ If you do want to use the list but you also want the optimized query, do two sep
 
 {{< figure src="/attachments/howto8/logic-business-rules/optimizing-microflow-aggregates/18580944.png" class="no-border" >}}
 
-## 2 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto8/logic-business-rules/extending-your-application-with-custom-java/)

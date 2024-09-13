@@ -12,7 +12,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 In the [Mendix Support Portal](https://support.mendix.com/), users can select an affected app for a submitted request. The apps that can be selected are based on the app authorization of the user (regardless of their organization). Users that have an **Edit** permission for **Deploy** or **Capture** are able to submit and view tickets for that app.
 
@@ -20,11 +20,11 @@ Mendix Support needs to know the app identification for on-premises apps so it c
 
 The steps in this how-to should be done for every new app that is created if you want to be able to submit ticket requests in the Mendix Support Portal. Setting this up as a standard process when creating a new Mendix application is recommended.
 
-## 2 Giving Team Members Access to Submit Tickets
+## Giving Team Members Access to Submit Tickets
 
 There are two ways to give team members access to submit tickets: by assigning the correct role to a user when adding them as a team member, or by changing the role of existing team members.
 
-### 2.1 Giving a New Team Member Access
+### Giving a New Team Member Access
 
 To add users to an app's team and give them access to submit tickets for a specific app, follow these steps:
 
@@ -40,7 +40,7 @@ To add users to an app's team and give them access to submit tickets for a speci
 
 5. To finalize the setup, email [support@mendix.com](https://support.mendix.com/) with the **App name** and **App ID** (both of which can be found on the [General](/developerportal/settings/general-settings/) page for the app).
 
-### 2.2 Giving Existing Team Members Access
+### Giving Existing Team Members Access
 
 To give existing app members access to submit tickets, follow these steps:
 
@@ -55,6 +55,6 @@ To give existing app members access to submit tickets, follow these steps:
 
 4. To finalize the setup, email [support@mendix.com](mailto:support@mendix.com) with the **App name** and **App ID**.
 
-## 3 Read More
+## Read More
 
 * [On-Premises](/developerportal/deploy/on-premises-design/)

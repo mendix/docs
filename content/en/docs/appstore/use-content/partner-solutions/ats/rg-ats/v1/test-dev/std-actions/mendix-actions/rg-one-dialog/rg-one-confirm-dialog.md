@@ -3,20 +3,20 @@ title: "Confirm Dialog"
 url: /appstore/partner-solutions/ats/rg-one-confirm-dialog/
 ---
 
-## 1 Description
+## Description
 
 Clicks Proceed/Ok Button on a Confirmation, Error, Warning or Info Dialog.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * ConfirmationDialog
 * DialogMessage
 
-## 3 Usage
+## Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to confirm. Otherwise this action will confirm the first found active dialog.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

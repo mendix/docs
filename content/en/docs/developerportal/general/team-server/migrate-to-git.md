@@ -8,24 +8,23 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 Scrum Masters can migrate apps from SVN version control system to Git. For more information on version control, see [Version Control](/refguide/version-control/) in the *Studio Pro Guide*. 
 
 Git is a more modern version control system that has several advantages over SVN. For more information, see [Version Control FAQ](/refguide/version-control-faq/).
 
-## 2 Apps Eligible for Migration
+## Apps Eligible for Migration
 
 To be able to migrate your app to Git, your app needs to meet the following criteria:
 
 * The main line ('main') branch in the app is Mendix version 9.24.11 or above
 * All branches in the app are Mendix version 9.12 or above
 * Current version control is in Team Server SVN
-* The size of the `.mpr` file for the latest revision of your app and the total number of commits in your version control history fall in one of these three categories:
+* The size of the `.mpr` file for the latest revision of your app and the total number of commits in your version control history fall in one of these two categories:
 
-    1. fewer than 2500 commits and `.mpr` file smaller than 50 MB
-    2. fewer than 2000 commits and `.mpr` file smaller than 75 MB
-    3. fewer than 1250 commits and `.mpr` file smaller than 125 MB
+    1. `.mpr` file smaller than 75 MB
+    2. fewer than 2000 commits and `.mpr` file smaller than 125 MB
 
 {{% alert type="info" %}}
 
@@ -33,7 +32,7 @@ Only a user with the Scrum Master role can migrate an app. For more information,
 
 {{% /alert %}}
 
-## 3 How Migration Works
+## How Migration Works
 
 If your main line is Mendix version 9.24.11 or above, and your team role is Scrum Master, you see a notification on a possible migration at the top of the **Team Server** page for your app. Click **Migrate to Git** to check for migration eligibility and to start the migration.
 
@@ -60,21 +59,21 @@ Inform your team members that they should commit their changes before migration.
 
 {{% /alert %}}
 
-## 4 Steps After Migration
+## Steps After Migration
 
 After migration, existing local copies are no longer linked to a working version control system. To be able to work on your app and store your changes in the version control system, you need to check out (re-download) the app from Team Server. Do the following:
 
 1. Open Studio Pro, then select the app that was migrated to Git. You can identify it by its Git icon. Click **Open** in Studio Pro to download the Git version of your app. Once this is completed you can make changes and store them in version control.
 2. Remove previous local copies of the app to avoid working on the wrong app version.
 
-## 5 If Migration Failed
+## If Migration Failed
 
 If the migration process failed, all changes are rolled back. This means access to SVN is restored and you can keep developing your app.
 You can check common causes of a failed migration below and resolve them. After that you can attempt to migrate your app again.
 
 The *most likely reason* your migration has failed is that you have branches that are invalid: they are below Mendix 9.12. To resolve this, delete or upgrade these branches. 
 
-## 6 Read More
+## Read More
 
 * [Version Control](/refguide/version-control/)
 * [Version Control FAQ](/refguide/version-control-faq/)

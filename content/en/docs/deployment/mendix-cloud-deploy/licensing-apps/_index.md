@@ -14,7 +14,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can only run a Mendix app in production on Mendix Cloud if the app is linked to a licensed node.
 
@@ -34,7 +34,7 @@ This page explains how to link your app to a licensed node. It covers the follow
 These instructions do not explain how to move databases, file storage, or any other environment configurations to another node. It describes how to move the deployment package of a Mendix model—the app as built in Mendix Studio Pro.
 {{% /alert %}}
 
-## 2 Basic Concepts and Overview
+## Basic Concepts and Overview
 
 When you deploy an app to the cloud, whether it is a Free App or a licensed app, it consists of several parts:
 
@@ -52,9 +52,9 @@ For a Free App, your app has a single environment where you can test your app. H
 
 In a licensed node, you have everything you need to stage and deploy your app. You can have several different environments to support development; for example, you can have test, acceptance, and production environments. With [Flexible Environments](/developerportal/deploy/mendix-cloud-deploy/#flexible-environments) in Mendix Cloud, you can even specify the number and names of your environments. You can scale licensed environments by providing more memory or multiple instances, and you can configure and monitor them using the tools in the Mendix Portal.
 
-## 3 Prerequisites
+## Prerequisites
 
-### 3.1 Obtaining a Licensed Node {#obtaining-licensed-node}
+### Obtaining a Licensed Node {#obtaining-licensed-node}
 
 To license an app, you must have a licensed cloud node available:
 
@@ -68,13 +68,13 @@ If your contract does not allow for more licensed nodes, contact your Customer S
 
 If none of the categories above apply to your case, contact [Mendix Support](https://support.mendix.com).
 
-### 3.2 Authorization
+### Authorization
 
 To link an app to a licensed node, you need to be the [Technical Contact](/developerportal/general/app-roles/#technical-contact) of the node.
 
 You also need to have enabled two-factor authentication. For more information, see [Two-Factor Authentication](/developerportal/deploy/two-factor-authentication/).
 
-## 4 Linking Your App to a Licensed Node {#licensed-node}
+## Linking Your App to a Licensed Node {#licensed-node}
 
 Consider the following case: You have deployed an app, either as a Free App or to a licensed node. You now want to link it to a licensed node (or move it from one licensed node to another licensed node). To link the app to the node, carry out the following steps:
 
@@ -87,7 +87,7 @@ Consider the following case: You have deployed an app, either as a Free App or t
 For the specific case of swapping two apps between licensed nodes, see the guidance in the [Exchanging Linked Apps Between Nodes](#exchange-apps) section.
 {{% /alert %}}
 
-### 4.1 Backing Up{#backing-up}
+### Backing Up{#backing-up}
 
 When you remove an app from its environment, you may want to take the data (database and file store) with it. It is a good idea, in any case, to create backups before performing major activities.
 
@@ -95,11 +95,11 @@ For more details on downloading a backup, see [Download a Backup](/developerport
 
 {{% alert color="warning" %}}When you unlink your Free App from its environment, the environment is permanently deleted. You will not be able to recover any data once the Free App is unlinked.<br><br>If you unlink an app from a licensed node, that does not delete the node. Data is retained in the node.{{% /alert %}}
 
-### 4.2 Unlinking From Current Environment{#unlink}
+### Unlinking From Current Environment{#unlink}
 
 Before you can link an app to a new environment, you need to unlink it from its current environment. By default, all apps are created as Free Apps the first time they are deployed. So, in most cases, you must unlink them.
 
-#### 4.2.1 Unlinking a Free App{#unlink-free}
+#### Unlinking a Free App{#unlink-free}
 
 To unlink a Free App, do the following:
 
@@ -121,13 +121,13 @@ To unlink a Free App, do the following:
 
 Your app has now been unlinked from the Free App environment.
 
-#### 4.2.2 Unlinking a Licensed App{#unlink-licensed}
+#### Unlinking a Licensed App{#unlink-licensed}
 
 It is not possible to unlink an app from a licensed node. The only way to do this is to connect another app to the licensed node; this automatically unlinks the existing app.
 
 The [Exchanging Linked Apps Between Nodes](#exchange-apps) section provides an example of how you can use this behavior.
 
-### 4.3 Connecting Your App to a Licensed Node{#connect-app}
+### Connecting Your App to a Licensed Node{#connect-app}
 
 {{% alert color="info" %}}
 If there is already an app linked to the target node, it will be unlinked automatically.
@@ -163,7 +163,7 @@ To connect your app to a licensed node, do the following:
 
 Your app is now connected to this node.
 
-### 4.4 Restoring Backup{#restoring}
+### Restoring Backup{#restoring}
 
 After you link your app to a licensed node, it uses the resources in that node. For example, if there was an app previously deployed to the node, your newly linked app uses the data in the existing database.
 
@@ -173,7 +173,7 @@ If you want to use the data that was originally in your app, you need to restore
 You can only restore data to an existing database. This means that there must have been an app deployed to the licensed node before you attempt to restore data.
 {{% /alert %}}
 
-## 5 Exchanging Linked Apps Between Nodes {#exchange-apps}
+## Exchanging Linked Apps Between Nodes {#exchange-apps}
 
 If you want to swap the nodes of two apps that are already linked to nodes, create a new (third) app. Linking an app to a node removes the app that is already linked, so you can use your third app to unlink one of the apps. You can then move your unlinked app to the other node, unlinking the app that is there. Finally, you can link that app to the first node.
 
@@ -199,6 +199,6 @@ To link **App A** to **Node 2** and **App B** to **Node 1**, follow these steps:
 
 You have now swapped **App A** and **App B** between nodes.
 
-## 6 Read More
+## Read More
 
 * [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/)

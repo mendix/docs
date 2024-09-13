@@ -8,7 +8,7 @@ aliases:
     - /appstore/connectors/sap/sap-logger/
 ---
 
-## 1 Introduction
+## Introduction
 
 The [SAP Logging](https://marketplace.mendix.com/link/component/110219/) connector allows a Mendix app to output logs in a format supported by the Kibana dashboard provided by the *SAP Business Technology Platform Application Logging* service. Without this connector, logs sent to Kibana will not have the correct structure and log level.
 
@@ -22,11 +22,11 @@ By using this connector, logs will be output in a JSON format with the following
 
 In addition, the Connector supports multiline log messages.
 
-## 2 Getting the SAP Logging Connector
+## Getting the SAP Logging Connector
 
 To use the [SAP Logging](https://marketplace.mendix.com/link/component/110219/) connector, you need to import it into your app from the Marketplace. For more information on importing modules from the Marketplace, see [Using Marketplace Content](/appstore/use-content/).
 
-## 3 Using the Connector
+## Using the Connector
 
 To format all the log messages, the SAP Logging Connector needs to be initialized during the startup of the Mendix application<sup><small>[1]</small></sup>.
 
@@ -56,7 +56,7 @@ To initialize the connector, do the following:
 
 Now, when the application is started, it will produce logs in the JSON format supported by Kibana.
 
-## 4 Notes
+## Notes
 
 * Due to technical limitations, the **SAP Logging Connector** is activated with a 5 second delay. This means that logging configuration is updated after the *RegisterSubscriber* action is completed.
 * The *RegisterSubscriber* action checks to see if the Mendix application is running in an SAP environment with the *SAP Business Technology Platform Application Logging* service. If the *SAP Business Technology Platform Application Logging* service cannot be found, *RegisterSubscriber* assumes that the app is running locally and doesn't change the logging configuration.

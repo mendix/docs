@@ -4,7 +4,7 @@ url: /refguide9/java-memory-usage/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 The Java memory is divided in different Memory Usage blocks. Each of these blocks are a snapshot of the actual memory usage of that segment. Each of the memory usage blocks can be broken down into four different values
 
@@ -17,9 +17,9 @@ The Java memory is divided in different Memory Usage blocks. Each of these block
 
 For all Mendix applications the value for init and max start with identical values. Immediately after startup the JVM can execute the garbage collection and correct the memory usage.
 
-## 2 Memory Segments
+## Memory Segments
 
-### 2.1 Metaspace and Code Cache
+### Metaspace and Code Cache
 
 Classes and libraries within the JVM are allocated in metaspace. This is a separate part of native memory. The memory allocated to metaspace stays fairly static and only increases when new libraries or classes are loaded into the application. Metaspace is not part of the heap, but is kept in the native OS memory.
 
@@ -51,7 +51,7 @@ The Major Garbage Collection process is optimized for speedy garbage collection 
 
 The **Old / Tenured Generation** will be cleaned less frequently by the garbage collector. The Tenured Generation space will, generally, steadily increase until the GC is triggered and will usually drop considerably after garbage collection.
 
-### 2.2 Examples
+### Examples
 
 {{< figure src="/attachments/refguide9/runtime/runtime-java/java-memory-usage/16844068.png" class="no-border" >}}
 

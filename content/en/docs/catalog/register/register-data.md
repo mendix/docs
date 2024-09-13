@@ -14,7 +14,7 @@ aliases:
 #The anchor registration-form below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 There are three ways to register published services in the Catalog. Mendix supports all OData versions.
 
@@ -24,7 +24,7 @@ This how-to teaches you how to register a service in the following ways:
 * [Through the Catalog Registration API](#registration-api)
 * [Through the Catalog UI form](#registration-form)
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -32,11 +32,11 @@ Before starting this how-to, make sure you have completed the following prerequi
 * You have a Mendix account
 * You have an exposed OData service that you are ready to register (for instructions on how to create an exposed OData service, refer to the sections on creating an app and exposing an entity in [Share Data Between Apps](/howto/integration/share-data/)
 
-## 3 Registering a Service Through Mendix Cloud {#mendix-cloud}
+## Registering a Service Through Mendix Cloud {#mendix-cloud}
 
 If you have a published service that is deployed to [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), then your service is already registered in the [Catalog](/catalog/).
 
-## 4 Registering a Service Without Mendix Cloud {#without-mendix-cloud}
+## Registering a Service Without Mendix Cloud {#without-mendix-cloud}
 
 If you are not using Mendix Cloud to deploy your Mendix application, there are two other ways to register an exposed service in the Catalog:
 
@@ -47,7 +47,7 @@ The Catalog collects metadata about the application and environment where your a
 
 For details on working with external entities and the Catalog without Mendix Cloud, see [Register Data Sources without Mendix Cloud](/catalog/data-sources-without-mendix-cloud/).
 
-### 4.1 Registering a Service Through the Catalog Registration API {#registration-api}
+### Registering a Service Through the Catalog Registration API {#registration-api}
 
 Calling the Catalog [Registration API](/apidocs-mxsdk/apidocs/catalog-apis/#registration) allows you to register one or more exposed services. 
 
@@ -63,7 +63,7 @@ Once you have a personal access token, follow this series of REST calls (describ
  
 The [Registration API specification](https://datahub-spec.s3.eu-central-1.amazonaws.com/registration_v5.html) describes all the optional fields, required formats, and other operations on these same paths. In this how-to, you will fill out only the required fields and one operation per path.
 
-#### 4.1.1 Registering an Application Through the Catalog Registration API {#register-application}
+#### Registering an Application Through the Catalog Registration API {#register-application}
 
 To register an application, you need the following:
 
@@ -94,7 +94,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 
 Use the application `uuid` to register your environment.
 
-#### 4.1.2 Registering an Environment Through the Catalog Registration API {#register-environment}
+#### Registering an Environment Through the Catalog Registration API {#register-environment}
 
 To register an environment, you need the following:
 
@@ -134,7 +134,7 @@ A successful `POST` call results in a `201` status code and a JSON response body
 
 Use the application `uuid` and the environment `uuid` to register one or more services.
 
-#### 4.1.3 Registering Services Through the Catalog Registration API {#register-services}
+#### Registering Services Through the Catalog Registration API {#register-services}
 
 To register services, you need the following:
 
@@ -259,11 +259,11 @@ A successful `PUT` call results in a `200` status code and a JSON response body 
 Completing the `PUT` operation call more than once overwrites the details for all the published endpoints at the specified environment. If there is a collection of endpoints on the environment, you can create, update, and delete different endpoints all in one `PUT` call.
 {{% /alert %}}
 
-##### 4.1.3.1 Behavior When Renaming an Environment
+##### Behavior When Renaming an Environment
 
 It is possible (although uncommon) to update the URL of a hosted environment. The root URLs update upon redeployment, and endpoints that are registered under that environment get updated endpoint locations.
 
-#### 4.1.4 Preparing Your Service Details Using the Transform API {#transform-api}
+#### Preparing Your Service Details Using the Transform API {#transform-api}
 
 The Transform API is an endpoint in the Registration API. It converts the *dependencies.json* file that your Mendix app generates into the fields that the Registration API requires to register services.
 
@@ -369,7 +369,7 @@ A successful `PUT` call results in a `200` status code and a JSON response body.
 }
 ```
 
-### 4.2 Registering a Service Through the Catalog UI Form {#registration-form}
+### Registering a Service Through the Catalog UI Form {#registration-form}
 
 The Catalog has a UI form where you can register a single exposed service. Make sure you have collected the following details before you begin:
 
@@ -402,7 +402,7 @@ Congratulations! Your service is registered in the Catalog.
 
 The discoverable status of the service defaults to the value set by the Mendix Admin. For more details, see the [Settings](/control-center/catalog-admin/#settings) section of *Catalog Administration*.
 
-#### 4.2.1 Selecting an Authentication Method {#authentication}
+#### Selecting an Authentication Method {#authentication}
 
 Publishers of a data source can determine how consuming developers will need to identify themselves when consuming the data source.
 
@@ -417,11 +417,11 @@ The Catalog supports the following methods:
 
 Fill in as many details as you can to ensure that consuming developers can easily authenticate themselves to consume your service. 
 
-##### 4.2.1.1 Selecting a Marketplace Module (Optional)
+##### Selecting a Marketplace Module (Optional)
 
 If you are using a module from the Mendix Marketplace, select **Other** and then choose the module in the **Marketplace Module** dropdown list.
 
-#### 4.2.2 Contract Structure {#contract-structure}
+#### Contract Structure {#contract-structure}
 
 All ZIP contracts must include a primary document, named *primary*.
 

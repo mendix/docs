@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-setup-local-docker-selenium-hub/
 description: "Describes the options to set up a local Selenium solution."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to shows you an example of a simple setup of a Docker Selenium hub with a Chrome and a Firefox node on a Linux machine. The Docker works on a Windows machine as well, but the commands and configuration could be different. For the official project go to: [https://github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 
@@ -12,7 +12,7 @@ This how-to shows you an example of a simple setup of a Docker Selenium hub with
 Mendix does not deliver support for the local Selenium solutions. 
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 The following components are needed:
 
@@ -21,14 +21,14 @@ The following components are needed:
 * Your machine should allow connections from ATS on port 4444
 * Since version 2.6, ATS uses the Selenium 3.8.1 API, which is why using this version of Selenium for the Docker images is recommended
 
-## 3 Installing Your Hub and Nodes with Docker-Compose
+## Installing Your Hub and Nodes with Docker-Compose
 
 The following steps describe how to install your hub and nodes with Docker-Compose:
 
 1. Create a folder or directory to place your docker-compose file
 2. Create a docker-compose.yml in your folder/directory: 
 
-    ```yml
+    ```yaml
     hub: 
      image: selenium/hub:3.8.1
      environment:
@@ -61,7 +61,7 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
 3. Open a console and give the following command from the folder/directory where you placed your docker-compose.yml:
 
-    ```bash {linenos=false}
+    ```bash
     sudo docker-compose up -d
     ```
 
@@ -84,11 +84,11 @@ The following steps describe how to install your hub and nodes with Docker-Compo
 
     Congratulation, your local Selenium hub is running.
 
-## 4 Starting Testing
+## Starting Testing
 
 You can start testing by sending your test script to: `http://yourmachinenameorIP:4444/wd/hub`. Make sure it is reachable from the outside!
 
-## 5 Optional: Scaling Your Nodes
+## Optional: Scaling Your Nodes
 
 Each node has one browser, so if you need more nodes of a certain browser, you can scale with docker-compose. With multiple nodes you can run tests in parallel. For example, if you want 3 Chrome browsers:
 
@@ -114,11 +114,11 @@ docker_hub_1       /opt/bin/entry_point.sh   Up      0.0.0.0:4444->4444/tcp
 By default the hub only accepts a maximum of 5 sessions to run in parallel at a time, even if you configure more, see the official documentation.
 {{% /alert %}}
 
-## 6 Optional: Installing a Hub with "Live-view" Through VNC
+## Optional: Installing a Hub with "Live-view" Through VNC
 
 If you want to watch your test case live for debugging purpose, you can use the following docker-compose.yml:
 
-```yml
+```yaml
 hub: 
  image: selenium/hub:3.8.1
  environment:

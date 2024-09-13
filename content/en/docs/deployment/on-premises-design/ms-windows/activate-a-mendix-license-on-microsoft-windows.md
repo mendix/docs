@@ -6,13 +6,13 @@ weight: 10
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 If you want to run your app on a Microsoft Windows server without the restrictions placed on unlicensed apps, you will need to activate a license. The restrictions which are placed on unlicensed apps are described in [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
 You will need to apply a separate license to each environment for which you want to lift the restrictions.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
@@ -24,7 +24,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Have your MxID and password ready
 * Have login access and access to the Mendix Service Console on the server
 
-## 3 Retrieve the Server ID {#retrieve-the-server-id}
+## Retrieve the Server ID {#retrieve-the-server-id}
 
 In this section, you will retrieve the server ID from your Mendix server, which is used in the license activation process. These steps should be executed on the Microsoft Windows server.
 
@@ -37,7 +37,7 @@ In this section, you will retrieve the server ID from your Mendix server, which 
 5. Next to **Server ID**, click **Copy to clipboard**.
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/activate-a-mendix-license-on-microsoft-windows/19398815.png" class="no-border" >}} 
 
-## 4 Obtain a License Key from Mendix Support
+## Obtain a License Key from Mendix Support
 
 In this section, you will submit your server ID in the Mendix Support Portal to request a license key for your server.
 
@@ -47,7 +47,7 @@ In this section, you will submit your server ID in the Mendix Support Portal to 
     * For an existing app, create a ticket using the **Standard change: Change On-Prem Licensed Node** template
 3. Mendix support will use the supplied server ID to generate a license key for your server.
 
-## 5 Insert the License Key on the Server
+## Insert the License Key on the Server
 
 In this section, you will enter the license key into the Mendix server, thus completing the license activation process.
 
@@ -59,7 +59,7 @@ In this section, you will enter the license key into the Mendix server, thus com
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/activate-a-mendix-license-on-microsoft-windows/19398817.png" class="no-border" >}} 
 4. Congratulations! Your license has been activated.
 
-## 6 Read More
+## Read More
 
 * [Setting up the Database User](/developerportal/deploy/setting-up-the-database-user/)
 * [Troubleshooting](/developerportal/deploy/troubleshooting-iis/)

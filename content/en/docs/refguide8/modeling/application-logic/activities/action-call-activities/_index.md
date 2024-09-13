@@ -4,7 +4,7 @@ url: /refguide8/action-call-activities/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 The following are the action call activities you can use in your microflow or nanoflow:
 
@@ -14,7 +14,7 @@ The following are the action call activities you can use in your microflow or na
 * [JavaScript action call](/refguide8/javascript-action-call/) *(only in nanoflows)* – calls a JavaScript action
 * [Microflow call](/refguide8/microflow-call/) – calls a microflow
 
-## 2 Read More
+## Read More
 
 * [Activities](/refguide8/activities/)
 * [Call Nanoflow](/refguide8/nanoflow-call/)

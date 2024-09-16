@@ -52,7 +52,7 @@ By default, archived logs are sorted by date; the current log is the first one l
 
 #### Rotation and Retention Schedule
 
-Logs are rotated and archived every day. The logs are kept for 6 months. This schedule applies to nightly backups and backups initiated by users. If you want to keep a backup for longer than the schedule, you will have to download it.
+Logs are rotated and archived every day. The logs are kept for 6 months. This schedule applies to application logs and access logs. If you want to keep a log for longer than the schedule, you will have to download it.
 
 ### Live Log
 

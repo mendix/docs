@@ -31,7 +31,8 @@ This extension currently has the following limitations:
 * The Excel column cell type is taken from the source file to determine the target attribute type; this cannot be changed during the data preview stage
 * Source data can be mapped to one entity only; associations are not currently supported 
 * You cannot map data to an existing NPE; you have to create a new entity as part of mapping
-* Enumerations are not supported 
+* Enumerations are not supported
+* Multi-line headers and headers containing new-line characters (\r, \n, \r+\n) are not supported
 * **String** is the default attribute type (*.csv* only)
 
 ### Prerequisites

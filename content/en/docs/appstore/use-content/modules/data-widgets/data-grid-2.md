@@ -428,7 +428,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 ### Grid Wide Filtering {#grid-wide-filtering}
 
-In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+In order to enable filtering within the data grid header (outside the columns), you must enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
 * Autonumber
 * Boolean
@@ -451,6 +451,41 @@ If a filter is being used and its type does not match with any selected attribut
 {{% alert color="warn" %}}
 There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
+
+### Filter Groups
+
+Filter groups are another way to configure a widget's header filters. This way of configuring filters has four main advantages over grid wide filtering:
+
+* More than 4 filters are allowed in the header at the same time
+* No restriction on filter type (the header can have one, two or more filters of the same data type)
+* Dropdown filters can use associations
+* If personalization is enabled, filter state is saved along with other widget settings
+
+Compared to grid wide filtering, this way of configuration requires one extra step; you must declare groups in the **Groups** list.
+
+New settings will only be visible if the **Enable filter groups** switch is set to **Yes**.
+
+#### Groups
+
+This list contains the groups that will be used for filtering.
+
+Logically, each group represents a filter. Each group can either contain one or more attributes, or define an association from a parent data source.
+
+Each group has a required parameter: the "group key". The only requirement for the "group key" is that it must be unique within the list.
+
+When creating a new group, you need to select the group type: **Attribute** or **Reference**.
+
+The group of type **Attribute** represents a group of attributes that should match the condition created by the filter. The only requirement is that all attributes in the group should be of the same type (for example, only string attributes or only number attributes).
+
+The **Reference** type group controls the association used in the filter.
+
+{{% alert color="info" %}}
+To connect the filter to the group, copy the group key value to the "group key" property of the filter widget. Otherwise, the filter will not be able to connect to the group.
+{{% /alert %}}
+
+#### Group Attributes
+
+This list controls the mapping between attributes and groups. Each item contains the **group key** and the attribute to be associated with the group.
 
 ## Export to Excel
 

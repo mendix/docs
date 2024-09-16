@@ -209,6 +209,10 @@ When switching between Ingress, OpenShift Routes, and Service Only, you need to 
 Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings).
 {{% /alert %}}
 
+{{% alert color="info" %}}
+For Operator version 2.19.0 and Mendix version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which sets the path prefix to support this feature. To support this feature, NGINX Ingress uses `nginx.ingress.kubernetes.io/rewrite-target` and the OpenShift route uses `haproxy.router.openshift.io/rewrite-target`.
+{{% /alert %}}
+
 #### Registry {#registry}
 
 To run an app in Kubernetes, it needs to be converted (packaged) into a container image and pushed to an OCI registry.
@@ -304,6 +308,10 @@ Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later
 
 {{% alert color="info" %}}
 The Mendix Gateway Agent will trust CAs specified through Custom TLS Trust if you are using Mendix Operator version 2.6.0 or above.
+{{% /alert %}}
+
+{{% alert color="info" %}}
+For Operator version 2.19.0 and above, the Self Signed Custom CA certificate will be trusted by the Mendix Operator when communicating with the Private Cloud Licensing Manager.
 {{% /alert %}}
 
 ### Review and Apply {#review-apply}

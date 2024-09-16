@@ -24,7 +24,7 @@ This document describes the options available to you when you create a published
 {{% alert color="info" %}}
 Published OData services deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/) are automatically registered in the [Catalog](/catalog/).{{% /alert %}}
 
-If you want the published service to be a GraphQL service as well, you can indicate that it [supports GraphQL](#supports-graphql).
+If you want the published service to be a GraphQL service as well, you can indicate that it [supports GraphQL](#supports-graphql). Please fill out [this survey](https://survey.alchemer.eu/s3/90711630/Mendix-GraphQL-Beta-Feedback) to provide feedback about published GraphQL services. 
 
 ## General {#general}
 

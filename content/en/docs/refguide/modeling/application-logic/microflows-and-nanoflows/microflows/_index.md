@@ -107,7 +107,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 #### Selection
 
-| Key | Effect |
+| Windows | Description |
 | --- | --- |
 | Arrow Keys | Select nearby element (activity, event, loop or parameter) in the direction of the arrow. |
 | <kbd>Home</kbd> | Select the start event. |
@@ -119,18 +119,18 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 #### Navigation
 
-| Key | Effect |
+| Windows | Description |
 | --- | --- |
-| mouse scroll | Scroll up/down. |
-| <kbd>Shift</kbd> + mouse scroll | Scroll left/right. |
-| <kbd>Space</kbd> + mouse button | Drag screen.  |
-| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in/out.  |
+| Mouse scroll wheel | Scroll up or down. |
+| <kbd>Shift</kbd> + Mouse scroll wheel | Scroll left or right. |
+| <kbd>Space</kbd> + Mouse button | Drag screen.  |
+| <kbd>Ctrl</kbd> + Mouse scroll wheel | Zoom in or out. |
+| <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
-| <kbd>Ctrl</kbd> + mouse scroll | Zoom in/out. |
 
 #### Element Manipulation
 
-| Key | Effect |
+| Windows | Description |
 | --- | --- |
 | <kbd>Enter</kbd> - on an element | If an element is selected, edit its properties. |
 | <kbd>Enter</kbd> - on a flow arrow | If a flow arrow is selected, open the Logic Recommender dialog box. |
@@ -144,7 +144,7 @@ The tables in the following sub-sections present the shortcut keys that can be u
 
 The following table shows the shortcut keys that can be used in the microflow editor in Studio Pro 10.5 and below.
 
-| Key | Effect |
+| Windows | Description |
 | --- | --- |
 | Arrow keys | Move the selection box to the activity or element in the direction of the arrow key. For example, if currently a show page activity is selected and you press the right arrow key, the activity to the right of it becomes selected. |
 | <kbd>Enter</kbd> | Edit the properties of the selected element. |

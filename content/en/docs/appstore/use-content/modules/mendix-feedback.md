@@ -87,25 +87,6 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
     * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in Design mode.
 
-### Hiding or Showing the Feedback Button in Design Mode
-
-After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in Design mode.
-
-To hide the Feedback button, do as follows:
-
-1. Double-click the **Feedback** button to open the **Edit Feedback** dialog box.
-2. Go to the **Cutomize button** tab.
-3. Set **Show in Design mode** to **No**.
-4. Click **OK** to save the change.
-
-To show the Feedback button, do as follows:
-
-1. For Windows users, find the Feedback widget in the [Structure mode](/refguide/page/#structure-mode). For Mac users (who do not have the Structure mode), go to the [Page Explorer](/refguide/page-explorer/) and find the Feedback widget.
-2. Double-click the widget to open the **Edit Feedback** dialog box.
-3. Go to the **Cutomize button** tab.
-4. Set **Show in Design mode** to **Yes**.
-5. Click **OK** to save the change.
-
 ### Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:
@@ -149,6 +130,26 @@ If you cannot see your feedback items on the **Feedback** page after opening you
 If you see the following error, click **close** and then remove the duplicate old widget from your app’s folder ‘/widgets’. Look for ‘SprintrFeedbackWidget.mpk’. 
 
 {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/widget-error.png" width="600px" class="no-border" >}}
+
+### Feedback Button isn't visible in Design Mode / Hiding the Feedback Button
+
+After you add the Feedback widget to a page of your app in Studio Pro, you can hide or show the **Feedback** button in Design mode.
+
+To hide the Feedback button, do as follows:
+
+1. Double-click the **Feedback** button to open the **Edit Feedback** dialog box.
+2. Go to the **Cutomize button** tab.
+3. Set **Show in Design mode** to **No**.
+4. Click **OK** to save the change.
+
+To show the Feedback button, do as follows:
+
+1. For Windows users, find the Feedback widget in the [Structure mode](/refguide/page/#structure-mode). For Mac users (who do not have the Structure mode), go to the [Page Explorer](/refguide/page-explorer/) and find the Feedback widget.
+2. Double-click the widget to open the **Edit Feedback** dialog box.
+3. Go to the **Cutomize button** tab.
+4. Set **Show in Design mode** to **Yes**.
+5. Click **OK** to save the change.
+
 
 ## Legacy Feedback Widget Docs {#legacy-feedback-docs}
 

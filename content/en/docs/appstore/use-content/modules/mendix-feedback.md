@@ -87,6 +87,18 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
     * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in Design mode.
 
+### Customizing the feedback module
+
+It is possible to modify the feedback widget. Here are a couple of examples on what is possible.
+
+#### Edit the styling of the feedback page
+
+To edit the styling of the feedback page, you can add the necessary styling to the page 'ShareFeedback'. You can find an example in our examples folder, where we add a custom logo to our feedback page. It is not possible to modify the annotation tool.
+
+#### Connect to your another feedback
+
+It is possible to connect to another tool. Inside the microflow 'SUB_Feedback_PostToAppInsights', you can find the location for the server inside the variable 'ServerLocation'. Depending on the service, you do need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+
 ### Submitting Feedback on an App
 
 When you click the **Feedback icon**, the Mendix Platform first checks if you are signed in. If you are not signed in, you will need to enter email address to continue as an **Anonymous User** to submit the feedback:

@@ -51,7 +51,7 @@ All the details of an initiative are exported, except the data of the following 
 
 * **Linked Apps**
 * **Linked Epics**
-* **Owner**
+* **Owners**
 * **Created By**
 * **Comments**
 * **Attachments**

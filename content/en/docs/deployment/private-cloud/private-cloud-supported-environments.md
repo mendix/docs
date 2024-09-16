@@ -250,6 +250,7 @@ This refers to a SQL Server database which is automatically provisioned by the O
 The following Microsoft SQL Server editions are supported:
 
 * SQL Server 2019
+* SQL Server 2022
 
 The following managed Microsoft SQL Server databases are supported:
 

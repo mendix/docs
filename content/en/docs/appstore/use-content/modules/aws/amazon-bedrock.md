@@ -134,7 +134,7 @@ You can find several implementation examples for the ChatCompletions operations 
 
 ### Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. Most text models can, however, be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
+Depending on your needs, you can reuse the operations inside the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
 
 To invoke a specific model that is not covered by the ChatCompletions operation, you can make use of the **Invoke Model** operation by performing the following steps:
 

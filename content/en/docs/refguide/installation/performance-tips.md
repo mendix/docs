@@ -45,7 +45,7 @@ For tips on using Parallels, see the [Improving Performance](/refguide/using-men
 
 These tips are recommended if you are an advanced user with admin privileges to make these changes in your configuration.
 
-### Antivirus Software (Windows Defender)
+### Antivirus Software (such as Windows Defender)
 
 Add your app folder, or the folder containing all your apps, to the list of exclusions for your antivirus software. You should only do this with app directories you trust. Do not add *studiopro.exe* itself to the ignored processes.
 

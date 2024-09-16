@@ -136,6 +136,7 @@ Your pipeline can include the following steps:
     * Manual – The pipeline runs when you click **Run Manual Pipeline** from either the **Runs** or **Designs** tabs of the Pipelines page. 
 * Checkout – Check out a branch. To configure this step, use the drop-down menu to select the branch to check out. You can select either the main branch or one of your most recently used branches.
 * Build – Build a deployment package based on the latest major, minor, or patch version of the branch you checked out. The highest version is incremented based on the increment settings specified in this step.
+* MxAssist Performance Check – Evaluate results of the Maia Best Practice Recommender within your pipeline. You can configure this step to fail the pipeline if errors, warnings, deprecations, and/or recommendations are detected.
 * Publish – Publish the newly built deployment package to a repository.
 * Start Environment – Start a selected environment.
 * Stop Environment – Stop a selected environment.

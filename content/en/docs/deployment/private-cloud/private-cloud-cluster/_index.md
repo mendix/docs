@@ -206,7 +206,7 @@ At the moment, the `baseOSImageTagTemplate` can be set to one of the following v
 
 Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
 
-If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA.
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
 
 {{% /alert %}}
 

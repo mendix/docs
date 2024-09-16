@@ -50,6 +50,10 @@ By default, archived logs are sorted by date; the current log is the first one l
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/logs-filter.png" alt="" class="no-border" >}}
 
+#### Rotation and Retention Schedule
+
+Logs are rotated and archived every day. The logs are kept for 6 months.
+
 ### Live Log
 
 Click **View Live Log** to access your app's log in real time. You can use the drop-down menus to adjust the log sources and log levels that appear in the live log.

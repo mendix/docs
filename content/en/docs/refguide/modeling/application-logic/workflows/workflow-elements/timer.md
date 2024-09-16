@@ -1,17 +1,17 @@
 ---
-title: "Wait for Timer"
-url: /refguide/wait-for-timer/
+title: "Timer"
+url: /refguide/timer/
 weight: 30
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
 ## Introduction
 
-The **Wait for timer** activity allows you to suspend a workflow path for a configurable duration or until a certain date and time.
+The **Timer** activity allows you to suspend a workflow path for a configurable duration or until a certain date and time.
 
 For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Wait For Timer" width="250" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-example.png" alt="Timer" width="250" class="no-border" >}}
 
 ## Properties
 
@@ -23,7 +23,7 @@ For example, when a new salary legislation is about to take effect, a timer can 
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Wait for timer** activity easier to read and understand without the need to add annotations.
+The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Timer** activity easier to read and understand without the need to add annotations.
 
 ### Timer Section {#timer}
 
@@ -38,11 +38,11 @@ The **Timer** properties are described in the table below:
 
 ### Common Section {#common}
 
-**Name** is the internal name of the **Wait for timer** activity. When referring to the activity in an application, you will use this name. It must be unique within the workflow, but you can have two **Wait for timer** activities with the same name in different workflows.
+**Name** is the internal name of the **Timer** activity. When referring to the activity in an application, you will use this name. It must be unique within the workflow, but you can have two **Timer** activities with the same name in different workflows.
 
 ## Timer Expiration {#timer-expiration}
 
-When a **Wait for timer** activity expires, it behaves differently depending on the state of the workflow:
+When a **Timer** activity expires, it behaves differently depending on the state of the workflow:
 
 * When a timer is set on an in-progress workflow, the workflow continues when the timer expires.
 
@@ -50,9 +50,9 @@ When a **Wait for timer** activity expires, it behaves differently depending on 
 
 ### Workflow Incompatibility
 
-When a **Wait for timer** activity is added to the workflow definition and the application is redeployed, a validation on already running workflow instances is performed. When the **Wait for timer** activity has been added before the currently in-progress activity, the workflow becomes incompatible. The conflict/incompatibility validation is analogous to other activities added before an in-progress activity. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
+When a **Timer** activity is added to the workflow definition and the application is redeployed, a validation on already running workflow instances is performed. When the **Timer** activity has been added before the currently in-progress activity, the workflow becomes incompatible. The conflict/incompatibility validation is analogous to other activities added before an in-progress activity. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
-When a **Wait for timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
+When a **Timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
 ### Specific Workflow State Cases
 

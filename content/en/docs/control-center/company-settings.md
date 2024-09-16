@@ -30,6 +30,8 @@ To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" class="no-border" >}}
 
+In certain scenarios, you may want to ask Mendix to merge two companies into one on the Mendix Platform, such as when your company purchases another company which also uses the Mendix Platform. This can be done, however, the action is irreversible. After the companies are merged, all users and their applications from both companies will be consolidated under the same company.
+
 ### Security Contact {#security-contact}
 
 Under **Security Contact**, you can provide a specific security contact who is informed if there are critical security issues with the Mendix Platform and platform-supported Marketplace components. Mendix strongly recommends applying a team email address or a functional mailbox instead of a personal individual email address.

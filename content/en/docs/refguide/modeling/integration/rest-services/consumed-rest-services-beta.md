@@ -60,12 +60,12 @@ Create a `GET`, `POST`, `PUT`, `PATCH`, or `DELETE` request to send data to your
 2. In the **Method & URL** field, use drop-down to select the HTTP method you want to use.
 3. Add an endpoint and click **Send**.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/general-section.png" class="no-border" width="500" >}}
 
 4. Click **Configuration & authentication**.
 5. Add a **Base URL** to use the same URL across all requests in this consumed REST Service document.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/configuration-screen.png" class="no-border" width="500" >}}
 
 6. Select an authentication method. For more information, see [Authentication methods](#authentication).
 7. Click **Send**. 
@@ -115,21 +115,21 @@ You can add a header for any HTTP request you have specified in your document. T
 
 1. Open the **Headers** tab and click **New**.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/header-example.png" class="no-border" width="500" >}}
 
 2. In the **Key** field, click the drop-down and choose from the list of the most commonly used HTTP headers. You can also create a custom header by selecting **Custom** and adding in the value. 
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/accept-header.png" class="no-border" width="500" >}}
 
 3. Click **OK**. To test the header, click **Send**.  
 
-### Adding a Request Body (for POST, PUT and PATCH requests only) {#add-a-request-body}
+### Adding a Request Body (for POST, PUT, and PATCH requests only) {#add-a-request-body}
 
 `POST`, `PUT` and `PATCH` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 
 1. Click the **Body** tab and add your JSON string.
 
-    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/json-example.png" class="no-border" width="500" >}}
 
 2. To validate the input, click **Send**.
 
@@ -161,6 +161,6 @@ To select a request in the microflow, complete the following steps:
 1. Create a new microflow and drag the [Send REST request](/refguide/send-rest-request/) activity into it.
 2. Double-click the activity and click **Select** to choose the request you want to add, then click **Select** > **OK**.
 
-{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/integration/consumed-rest-services-beta/select-rest-request.png" class="no-border" width="500" >}}
 
 If you have defined parameters in the request, they will be added to the activity. Click **Edit** to change the parameter in the microflow. The parameter values in this activity are used by the runtime instead of the test value defined in the request.

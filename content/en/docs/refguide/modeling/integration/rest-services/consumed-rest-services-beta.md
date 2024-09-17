@@ -123,7 +123,7 @@ You can add a header for any HTTP request you have specified in your document. T
 
 3. Click **OK**. To test the header, click **Send**.  
 
-### Adding a Request Body (for POST, PUT and PATCH requests only) {#add-a-request-body}
+### Adding a Request Body (for POST, PUT, and PATCH requests only) {#add-a-request-body}
 
 `POST`, `PUT` and `PATCH` requests support JSON strings as a request body. Add the JSON body snippet to your request by doing the following:
 

@@ -21,11 +21,16 @@ The **Timer Event** enables the timed-execution of alternative flows when the gu
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Timer** event easier to read and understand without the need to add annotations.
+The **Caption** describes what happens in this element. It is displayed on the workflow element to make the **Timer** event easier to read and understand.
 
 ### Timer Section {#timer}
 
-The **Timer** property defines at which time the workflow path continues. With this property, you can set the timer in two ways: you can set a certain duration, or a certain date and time with an expression. When an activity before the timer finishes and the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
+The **Timer** property specifies the exact moment or time interval after which the workflow progresses to the next step. With this property, you can set the timer in two ways: 
+
+1. you can set a certain duration
+2. certain date and time with an expression
+
+When an activity finishes before the **Timer** has elapsed, and the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
 
 The **Timer** properties are described in the table below:
 
@@ -38,9 +43,9 @@ The **Timer** properties are described in the table below:
 
 When a **Timer** event expires, it behaves differently depending on the state of the workflow:
 
-* When a timer event is set on an in-progress workflow, the workflow continues when the timer expires, and continuing the modeled flow.
+* * When a timer event is set on an in-progress workflow, the workflow continues when the timer expires, and will continue the flow.
 
-* When a timer event is set on a paused workflow and when the timer expires, the workflow only starts the modeled flow after the workflow is set to in progress again.
+* When a timer event is set on a paused workflow and when the timer expires, the workflow only starts the flow after the workflow is set to in progress again.
 
 ### Workflow Incompatibility
 
@@ -53,9 +58,9 @@ When a **Timer** event is removed from the workflow definition and the applicati
 
 The following cases do not trigger a start of the boundary event path when timer expires.
 
-* Expiration in a workflow that is aborted.
-* Expiration in a workflow that is incompatible. (After the workflow resumes, the workflow path continues normally.)
-* Expiration in a workflow that is jumped from the timer to a different activity. 
+* In a workflow that is aborted.
+* In a workflow that is incompatible. (After the workflow resumes, the workflow path continues normally.)
+* In a workflow that is jumped from the timer to a different activity. 
 * A workflow is restarted and a previous timer was still scheduled.
 
 ## Read More

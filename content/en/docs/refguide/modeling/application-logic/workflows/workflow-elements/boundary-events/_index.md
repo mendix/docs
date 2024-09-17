@@ -36,13 +36,13 @@ Within the current release of the boundary events, Studio Pro has support for on
 
 You can change the ordering of the boundary event in 2 ways:
 
-1. Via the context menu (right mouse click) of the timer event and select Move Left or Move right. And the shortcut keys of course.
+1. Via the context menu (right mouse click) of the timer event and select **Move boundary event left** or **Move boundary event right**, or by using the keyboard shortcuts [Keyboard Shortcuts](/refguide/keyboard-shortcuts/#editors-only).
  
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/boundary-events/arrange-in-editor.png" width="350px" alt="Timer Event arrange in editor" class="no-border" >}}
 
-2. In the properties of the parent activity, select the Events tab. Use Move up or Move down to change the order of the boundary event flows on the canvas. 
+nge the order of the boundary event flows on the canvas. Note that this does not change the order execution of the flows, as this is dependent on the expiration of the timer
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/boundary-events/arrange-in-dialog.png" width="450px" alt="Timer Event arrange in dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/boundary-events/arrange-in-dialog.png" width="450px" alt="Arrange non-interrupting boundary event in dialog" class="no-border" >}}
 
 ## Read more
 

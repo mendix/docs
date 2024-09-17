@@ -46,7 +46,7 @@ A boundary event can be added to the following activities:
 
 To add a boundary event to one of these activities there are 2 ways:
 
-1. Select an Event activity (currently only Timer event is available) from the workflow Toolbox and drag it on one of the activities listed above. The boundary event is then added. Double click the Timer Boundary Event icon to open the Timer properties dialog.
+1. Select an Event activity (currently only Timer event is available) from the workflow Toolbox and drag it on one of the activities listed above. Double click the Timer Boundary Event icon to open the Timer properties dialog.
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" class="no-border">}}
 
@@ -58,17 +58,17 @@ The next step is to configure the boundary timer properties like Caption and tim
 
 ## Execution
 
-Boundary events are initiated when their parent activity is initiated. E.g. for a boundary timer event with a fixed duration, the timer starts counting when the parent activity is initiated. In case the parent activity is completed before any of the boundary events are triggered, none of the activities in the boundary event path will be executed (i.e. all timers will be cancelled).
+Boundary events are initiated when their parent activity is initiated. For example, for a timer with a fixed duration, it will start its count down when the parent activity is initiated. In case the parent activity is completed before any of the boundary events are triggered, none of the activities in the boundary event path will be executed and all timers will be cancelled.
 
-With non-interrupting boundary events the parent activity remains active/in progress when an event is triggered (i.e. the parent activity is not interrupted). E.g. when a task timer event is triggered after 2 days, the parent task remains open/in progress, but an additional path starts to be executed (the path defined below the timer event). When the boundary event path reaches the end of boundary path (small open circle) the workflow continues to wait for the parent activity to complete. 
+WWith non-interrupting boundary events the parent activity remains active/in progress when an event is triggered (i.e., the parent activity is not interrupted). For example, when a timer event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer event is executed. When the boundary event path reaches the **End of Boundary Path** activity, the workflow will await the completion of the parent activity. 
 
 ## Current Limitations
 
 The current release (10.15) of boundary events has the following functional limitations (which are actively being developed):
 
-- No migration possible of in-flights workflows when boundary event paths change between deployments.
-- No access to data of the parent activity in the boundary path. For user task we will soon add a variable $ParentTask which is available in the boundary event path of a user task (e.g. do get the assigned user that should receive a notification when a task is laste). Same for $CalledWorkflowInstance in case the parent activity is a Call workflow activity.
-- Non-interrupting timer boundary events have no recurrence (are only executed once).
+- No migration possible of in-progress workflows when boundary event paths change between deployments.
+- No access to data of the parent activity in the boundary path. For user tasks we will soon add a variable **$ParentTask** which is available in the boundary event path of a user task (e.g. do get the assigned user that should receive a notification when a task is overdue). Same for $CalledWorkflowInstance in case the parent activity is a Call workflow activity.
+- Non-interrupting timer boundary events have no recurrence (they are only executed once and will not repeat).
 
 
 

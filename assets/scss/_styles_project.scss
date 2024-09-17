@@ -682,58 +682,14 @@ img {
 
 // Swagger styling
 
-.swagger-ui .info .title,
-.swagger-ui .model-title {
-    font-family: $font-family !important;
-    color: $secondary;
-}
-
-.swagger-ui .info a {
-    font-family: $font-family !important;
-    color: $link-color !important;
-}
-
 .swagger-ui .info .title small pre {
     background: transparent;
- }
-
- .swagger-ui pre {
-    border: none;
- }
-
-.swagger-ui .servers>label select {
-    margin-top: 1.5rem;
 }
 
-.swagger-ui .model-title {
-    font-size: $font-size-base !important;
+.swagger-ui pre {
+   border: none;
 }
-
-.swagger-ui .renderedMarkdown p,
-.swagger-ui table tr td,
-.swagger-ui .opblock-tag,
-.swagger-ui .opblock-description-wrapper p,
-.swagger-ui .opblock .opblock-summary-description,
-.swagger-ui .opblock .opblock-section-header h4 {
-    font-family: $font-family !important;
-}
-
-.swagger-ui .model-box-control:focus,
-.swagger-ui .models-control:focus,
-.swagger-ui .opblock-summary-control:focus {
-    outline: transparent !important;
-}
-
-.swagger-ui table tbody tr td {
-    padding: .5rem !important;
-}
-
-.swagger-ui .renderedMarkdown code {
-    padding: 0rem !important;
-    font-size: $font-size-base !important;
-    color: $primary !important;
-}
-
+ 
 // Increase spacing between top-level items on the left sidebar
   ul.ul-1 > li > label {
     line-height: 1.5rem;

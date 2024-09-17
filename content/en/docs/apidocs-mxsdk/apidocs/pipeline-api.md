@@ -38,4 +38,4 @@ Authorization: MxToken 7LJE…vk
 
 ## API Reference{#api-reference}
 
-{{< swaggerui-disable-try-it-out src="/openapi-spec/pipeline.yaml"  >}}
+{{< swaggerui-disable-try-it-out src="/openapi-spec/pipelines.yaml"  >}}

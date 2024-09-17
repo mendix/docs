@@ -15,7 +15,7 @@ For example, when a new salary legislation is about to take effect, a timer can 
 
 ## Properties
 
-**Wait for timer** properties consist of the following sections:
+**Timer** properties consist of the following sections:
 
 * [General](#general)
 * [Timer](#timer)

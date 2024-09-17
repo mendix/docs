@@ -136,6 +136,12 @@ All microflows that are run as part of the workflow are executed as an asynchron
 
 Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
 
+#### Timer Boundary Events {#timer-boundary-events}
+
+A timer boundary event is attached to the boundary of an activity. Once the activity begins, a new task is added to the **Task queue** to be executed after the specified delay. When the timer expires, the scheduled task will check if the activity is still in a runnable state. If the activity has already been completed, aborted, or has failed, the scheduled task will be disregarded, and the execution of the boundary event path will be skipped. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
+
+Each boundary event can have only one active instance of the event path at a time. If there are boundary event paths that have not yet completed and the workflow's main path ends, the ongoing boundary event paths will be aborted. This will also occur if the workflow is aborted, retried, or restarted.
+
 #### Measures Against Endless Loops
 
 The [Jump activity](/refguide/jump-activity/) allows the workflow to jump to another activity of the same workflow. Jumping back to an earlier activity can create endless loops if defined incorrectly. To prevent endless loops occupying the Workflow Engine, the Workflow Engine executes only a limited amount of activities in the workflow (default number is 50, but it can be changed using the custom Runtime Server setting `com.mendix.workflow.MaxActivityExecutions`). When the limit is reached, the workflow execution stops and the workflow instance is queued for re-execution (which means that it is put at the end of the queue). This queuing mechanism allows other workflow instances to proceed. 

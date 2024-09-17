@@ -14,7 +14,7 @@ The **Generate jump-to options** activity allows you to generate a list of workf
 
 {{% alert color="warning" %}} 
 
-The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/), the generated options will only contain activities of the current parallel split path. 
+The list of generated options will only contain activities of the currently executed path in the workflow, excluding activities inside a [Parallel split](/refguide/parallel-split/) activity of the workflow or activities inside a [Non-Interrupting Boundary Event](/refguide/boundary-events/#non-interrupting) path. When the workflow is executing a path in a [Parallel split](/refguide/parallel-split/) or [Non-Interrupting Boundary Event](/refguide/boundary-events/#non-interrupting) path, the generated options will only contain activities of the current path. 
 
 {{% /alert %}}
 

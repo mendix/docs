@@ -20,7 +20,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Pipelines New Features
 
-* We added a new pipeline step: MxAssist Performance Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
+* We added a new pipeline step: Best Practice Recommender Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
 
 ### September 5, 2024
 

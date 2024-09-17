@@ -95,9 +95,11 @@ It is possible to modify the feedback module. Here are a couple of examples on w
 
 To edit the styling of the feedback page, you can add the necessary styling to the page 'ShareFeedback'. You can find an example in our examples folder, where we add a custom logo to our feedback page. It is not possible to modify the annotation tool.
 
-#### Connect to your another feedback
+#### Connect to another feedback service
 
 It is possible to connect to another tool. Inside the microflow 'SUB_Feedback_SendToServer', you can set your own API Call. Depending on the service, you do need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+
+{{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/Feedback_SendToServer.png" width="500px" class="no-border" >}} 
 
 ### Submitting Feedback on an App
 

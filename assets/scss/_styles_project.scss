@@ -304,37 +304,6 @@ div.date-format{
     font-size: 0.8rem;
 }
 
-// _nav.scss
-//
-// Main navbar
-//
-
-.td-navbar {
-    background: $primary;
-    min-height: 4rem;
-    margin: 0;
-    z-index: 32;
-
-    @include media-breakpoint-up(md) {
-        position: fixed;
-        top: 0; // NK - copied from Docsy v0.1.0 file
-        width: 100%;
-    }
-
-    .nav-link {
-        text-transform: none;
-        font-weight: $font-weight-medium; // NK - adjusted for use with multiple Noto Sans weights
-    }
-
-    .td-search-input {
-        border: none;
-        color: $navbar-dark-color; // NK - copied from Docsy v0.1.0 file
-        @include placeholder {
-            color: $navbar-dark-color;
-        }
-    }
-}
-
 // Icons
 
 // DB - custom edit, inline SVG icons for shortcode
@@ -382,67 +351,6 @@ img {
         &-#{$color} {
             background-color: map-get($custom-theme-colors, '#{$color}-1'); //Add background color from _variables_project.scss
             border: 1px solid map-get($custom-theme-colors, '#{$color}-6'); //Add border color from _variables_project.scss
-        }
-    }
-}
-
-// Foldable sidebar menu
-nav.foldable-nav {
-
-    .td-sidebar-nav__section, .with-child ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-overflow: ellipsis; // NK - custom edit
-        overflow: hidden; // NK - custom edit
-        white-space: nowrap; // NK - custom edit
-    }
-
-    .with-child, .without-child {
-        position: relative;
-        padding-left: 1.5em;
-    }
-
-    .ul-1 .with-child > label:before {
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: $font-awesome-font-name; font-weight: 900; content: "\f0da";
-        position: absolute;
-        left: 0.1em;
-        padding-left: 0.4em;
-        padding-right: 0.4em;
-        font-size: 1em;
-        color: $gray-900;
-        transition: all 0s; // NK - disables animation transition time, now switch is instant
-        &:hover{
-        transform: rotate(90deg);
-        }
-    }
-
-    .ul-1 .with-child > input:checked ~ label:before { 
-        color: $link-color;
-        transform: rotate(90deg);
-        transition: transform 0s; // NK - disables animation transition time, now switch is instant
-    }
-}
-
-@media (hover: hover) and (pointer: fine) {
-    
-    nav.foldable-nav {
-
-        .ul-1 .with-child > label:hover:before { 
-            color: $link-color;
-            transform: rotate(30deg);
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
-        }
-
-        .ul-1 .with-child > input:checked ~ label:hover:before { 
-            color: $link-color;
-            transform: rotate(60deg) !important;
-            transition: transform 0s; // NK - disables animation transition time, now switch is instant
         }
     }
 }

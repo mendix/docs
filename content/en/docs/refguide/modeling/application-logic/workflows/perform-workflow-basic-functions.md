@@ -77,7 +77,8 @@ You can move elements around in your workflow. To do so, drag and drop an elemen
 
 This moves the whole structure of the dragged element, meaning that the element and its underlying elements are moved too.
 
-You cannot move the first (and only) start event and the last end event.
+- You cannot move the first (and only) start event and the last end event.
+- You cannot move the End of Boundary Event Path Activity
 
 ### Moving Outgoing Paths in a Workflow
 
@@ -101,6 +102,9 @@ When using cut/copy/paste, note the following:
 * When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
 * Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
 * Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
+* Pasting a boundary event on a **User Task**, **Wait For Notification**, **Call Microflow**, **Call Workflow** adds it to the activity if there are less than five.
+* Pasting a **Jump** directly inside a non-interrupting boundary event flow will result in a consistency error, except when pasted inside a **Decision**
+* Pasting an **End** inside a non-interrupting boundary event flow will result in a consistency error.
 
 ### Elements that Cannot be Cut, Copied or Pasted
 
@@ -111,6 +115,7 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 * Start activity
 * End activity (the final **End activity** which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
+* End of Boundary Event Path Activity (the final activity inside a non-interrupting boundary event path)
 
 ## Viewing Element Properties {#view-element-properties}
 
@@ -119,6 +124,12 @@ To view properties of an element, do one of the following:
 * Select an element and open **Properties** pane to view its properties.
 * Right-click an element and select **Properties** from the list of options that opens.
 * Double-click an element.
+
+### Elements that do not have any properties
+
+The following element does not have any properties and context menu.
+
+* End of Boundary Event Path Activity
 
 ## Triggering a Workflow {#trigger-workflow}
 

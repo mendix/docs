@@ -89,7 +89,7 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
 
 ### Customizing the feedback module
 
-It is possible to modify the feedback widget. Here are a couple of examples on what is possible.
+It is possible to modify the feedback module. Here are a couple of examples on what is possible.
 
 #### Edit the styling of the feedback page
 
@@ -97,7 +97,7 @@ To edit the styling of the feedback page, you can add the necessary styling to t
 
 #### Connect to your another feedback
 
-It is possible to connect to another tool. Inside the microflow 'SUB_Feedback_PostToAppInsights', you can find the location for the server inside the variable 'ServerLocation'. Depending on the service, you do need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+It is possible to connect to another tool. Inside the microflow 'SUB_Feedback_SendToServer', you can set your own API Call. Depending on the service, you do need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
 
 ### Submitting Feedback on an App
 

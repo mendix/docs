@@ -18,7 +18,7 @@ servers:
     description: Base URL
 tags:
   - name: Pipelines
-    description: Manage app pipelines of apps deployed on Mendix Cloud
+    description: Manage pipelines of apps deployed on Mendix Cloud
 paths:
   '/apps/{appId}/runs':
     parameters:

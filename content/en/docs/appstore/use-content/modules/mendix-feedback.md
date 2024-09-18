@@ -8,7 +8,13 @@ aliases:
 ---
 
 {{% alert color="warning" %}}
-This document is for the Mendix Feedback module, compatible with Studio Pro 9.18.6 and above. If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Mendix Feedback Widget Documentation](#legacy-feedback-docs) sections below. All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade). Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
+This document is for the Mendix Feedback module which is compatible with Studio Pro 9.18.6 and above.
+
+If you are using the deprecated Mendix Feedback widget (compatible with Studio Pro 8.6.0 and above), see the [Legacy Feedback Widget Docs](#legacy-feedback-docs) sections below.
+
+All [Mendix Feedback](https://marketplace.mendix.com/link/component/199/) widgets with versions lower than 8.4.0 are disabled as of October 1, 2022. If you are using one of these versions, [upgrade your current Mendix Feedback widget with the latest version of this module](#upgrade).
+
+Mendix recommends using the newer Mendix Feedback module, as the deprecated Feedback widget will no longer receive regular updates.
 {{% /alert %}}
 
 ## Introduction
@@ -27,11 +33,13 @@ The Mendix Feedback module is easy to set up and automatically attaches addition
 
 ### Typical Usage Scenario
 
-* End-user creates feedback through the feedback button
-* End-user creates a screenshot and annotates it before sending the feedback
-* App maker receives the feedback in App Insights
-* App maker processes feedback, connects with the user if they need more information
-* App maker creates a story from the feedback if the feedback is accepted
+Typically, feedback module usage has the following flow:
+
+* An end-user creates feedback through the feedback button
+* The end-user, optionally, creates a screenshot and annotates it before sending the feedback
+* The app maker [receives the feedback](/developerportal/app-insights/feedback/) in **App Insights**
+* The app maker processes the feedback, connecting with the end-user if they need more information
+* The app maker creates a story from the feedback if the feedback is accepted – they can also move or delete the feedback
 
 ### Features
 
@@ -52,7 +60,7 @@ You should install the latest version of the Mendix Feedback module, as it will 
 
 ### Adding the Feedback Widget to Your App
 
-1.  Configure the **User roles** in the **App Security** for the Feedback module. Add the module role 'user' to each user role that needs access to the feedback option.
+1. Configure the **User roles** in the **App Security** for the Feedback module. Add the module role 'user' to each user role that needs access to the feedback option.
 
 2. In the **Toolbox**, find the **Feedback** widget in the **Feedback** category.
 
@@ -87,17 +95,19 @@ To configure the Feedback widget, double-click it to open the **Edit Feedback** 
         * **Do not render** – If this option is selected, the **Feedback** button does not show. You can still trigger the feedback flow through a custom button action.
     * **Show in Design mode** – If it is set to **Yes**, the **Feedback** button is shown in Design mode.
 
-### Customizing the feedback module
+### Customizing the Feedback Module
 
-It is possible to modify the feedback module. Here are a couple of examples on what is possible.
+You can modify the feedback module. Here are a couple of examples of what is possible.
 
-#### Edit the styling of the feedback page
+#### Edit the Styling of the Feedback Page
 
-To edit the styling of the feedback page, you can add the necessary styling to the page 'ShareFeedback'. You can find an example in our examples folder, where we add a custom logo to our feedback page. It is not possible to modify the annotation tool.
+To edit the styling of the feedback page, you can add the necessary styling to the page `ShareFeedback`. You can find an example in the examples folder, where a custom logo is added to our feedback page. It is not possible to modify the annotation tool.
 
-#### Connect to another feedback service
+#### Connect to Another Feedback Service
 
-It is possible to connect to another tool. Inside the microflow 'SUB_Feedback_SendToServer', you can set your own API Call. Depending on the service, you do need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
+You can connect the Feedback module to another service.
+
+To do this, you set your own API call inside the microflow `SUB_Feedback_SendToServer`. Depending on the service, you may need to modify the payload. If you want to use your own server, you can find information on the payload we send in our [API documentation](https://docs.mendix.com/apidocs-mxsdk/apidocs/feedback-api-v2/).
 
 {{< figure src="/attachments/appstore/use-content/modules/mendix-feedback/Feedback_SendToServer.png" width="500px" class="no-border" >}} 
 
@@ -152,7 +162,7 @@ After you add the Feedback widget to a page of your app in Studio Pro, you can h
 To hide the Feedback button, do as follows:
 
 1. Double-click the **Feedback** button to open the **Edit Feedback** dialog box.
-2. Go to the **Cutomize button** tab.
+2. Go to the **Customize button** tab.
 3. Set **Show in Design mode** to **No**.
 4. Click **OK** to save the change.
 
@@ -160,10 +170,9 @@ To show the Feedback button, do as follows:
 
 1. For Windows users, find the Feedback widget in the [Structure mode](/refguide/page/#structure-mode). For Mac users (who do not have the Structure mode), go to the [Page Explorer](/refguide/page-explorer/) and find the Feedback widget.
 2. Double-click the widget to open the **Edit Feedback** dialog box.
-3. Go to the **Cutomize button** tab.
+3. Go to the **Customize button** tab.
 4. Set **Show in Design mode** to **Yes**.
 5. Click **OK** to save the change.
-
 
 ## Legacy Feedback Widget Docs {#legacy-feedback-docs}
 

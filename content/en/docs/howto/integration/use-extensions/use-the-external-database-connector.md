@@ -96,11 +96,17 @@ You can typecast `String` into UUID as shown below:
 
 1. Click **Use Response** to view the response data and mapping.
 
-2. In the **Response Structure** tab, you can view the entity.
+2. In the **Response Structure** tab, you can choose create New Entity or Reuse Existing Entity.
 
-3. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
+3. If **New Entity** is selected, you can view the Entity in the Response tab.
+Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5_new.png" >}}
+
+4. if **Reuse Entity** is selected, all Entities mapped to other queries of same document are listed in the drop down list.
+Select  the Entity you want to reuse and and click on **Save Query**
+
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/new.png" >}}
 
 ### Save DML Query
 
@@ -113,6 +119,32 @@ You can typecast `String` into UUID as shown below:
 {{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
+
+## Update Exisitng Query
+
+It is possible to use existing Entity when updating a existing query.(Introduced in Studio-Pro 10.15 onwards)
+
+1. Update the SQL Query
+
+For example, lets modify the query below to retrieve a list of all columns from ProductLines where the ProductLine is **Planes**.
+
+SQL Query:
+Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
+Modified Query: `Select * from productlines where productLine = {productLine}`
+
+2. Rerun the Query, to see the Response.
+
+3. Click on **Use Response** to see the Entity Preview.
+
+4. Select if you want to use existing entity or create a new entity.
+
+5. If **New Entity** is selected, you can view the Entity in the Response tab.
+Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
+
+6. if **Update Entity** is selected,you can see changes that will be made to the existing entity.
+Click **Update Entity** to save the query and the changes made to the entity in the domain model.
+
+{{< figure src="/attachments/howto/integration/use-the-external-database-connector/new.png" >}}
 
 ## Call Stored Procedure
 

@@ -54,6 +54,11 @@ paths:
           $ref: '#/components/responses/error404'
       x-stoplight:
         id: fqdwjj9lcsugf
+      security:
+        - Personal Access Token: []
+      servers:
+        - url: 'https://domain.tld/api/v1'
+          description: Base URL
   '/apps/{appId}/runs/{runId}/status':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -77,6 +82,11 @@ paths:
           $ref: '#/components/responses/error404'
       x-stoplight:
         id: b2ntkujwhgwjc
+      security:
+        - Personal Access Token: []
+      servers:
+        - url: 'https://domain.tld/api/v1'
+          description: Base URL
 components:
   parameters:
     appId:
@@ -307,8 +317,9 @@ components:
                 status: SUCCEEDED
   securitySchemes:
     PersonalAccessToken:
-      type: http
-      scheme: MxToken
-      description: 'This is a special type and see this page for documentation how to request a token and how to use it: https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat'
+      type: apiKey
+      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      name: Authorization
+      in: header
 security:
   - PersonalAccessToken: []

@@ -12,12 +12,12 @@ info:
   license:
     name: '@Mendix.com'
     url: 'https://www.mendix.com'
-  description: The API to manage pipelines of apps deployed on the Mendix Platform
+  description: The API to manage pipelines of apps deployed on Mendix Cloud
 servers:
   - url: 'https://domain.tld/api/v1'
 tags:
   - name: Pipelines
-    description: Manage app pipelines of apps deployed on the Mendix platform
+    description: Manage pipelines of apps deployed on Mendix Cloud
 paths:
   '/apps/{appId}/runs':
     parameters:
@@ -103,7 +103,7 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/error-body'
-      description: An error is returned in case something went wrong.
+      description: An error is returned if something went wrong.
       x-stoplight:
         id: sxeys55uppr0r
     error-body:
@@ -130,11 +130,11 @@ components:
               name:
                 type: string
                 example: age
-                description: Name of the parameter that was considered invalid.
+                description: Name of the parameter that was invalid.
               reason:
                 type: string
                 example: must be a positive integer
-                description: Explanation why the parameters was considered invalid.
+                description: Explanation of why the parameter was invalid.
             required:
               - name
               - reason
@@ -144,7 +144,7 @@ components:
       x-stoplight:
         id: 9mss4dvlh4ovs
     run:
-      description: Details about the run are given here.
+      description: Details about the run.
       type: object
       properties:
         id:
@@ -165,7 +165,7 @@ components:
       x-stoplight:
         id: 6uktlpbg6wyg8
     runStatus:
-      description: Run status details
+      description: Run status details.
       type: object
       properties:
         runId:
@@ -178,7 +178,7 @@ components:
       x-stoplight:
         id: 5yystu7dgim3c
     runId:
-      description: The unique run ID in UUID format
+      description: The unique run ID in UUID format.
       type: string
       title: runId
       format: uuid
@@ -186,7 +186,7 @@ components:
       x-stoplight:
         id: unm31s8peb2h0
     pipelineId:
-      description: The unique pipeline ID in UUID format
+      description: The unique pipeline ID in UUID format.
       type: string
       title: pipelineId
       format: uuid
@@ -205,7 +205,7 @@ components:
       x-stoplight:
         id: my4j6mo44r8vh
     user:
-      description: The email of the user that triggered the pipeline run.
+      description: The email of the user who triggered the pipeline run.
       title: user
       x-stoplight:
         id: h8ru7dslp7qnt
@@ -270,7 +270,7 @@ components:
                     - name: Validation
                       reason: App 76ef1b0f-4050-4810-a159-cb419268636c could not be found
     runStarted:
-      description: Pipeline run is created. The Content-Location header can be used for the follow-up request the retrieve the run's status.
+      description: Pipeline run is created. The Content-Location header can be used for the follow-up request to retrieve the run's status.
       content:
         application/json:
           schema:
@@ -289,7 +289,7 @@ components:
             type: string
             example: apps/c533ee0b-f7db-4e62-868b-1192d392ccec/runs/2868b153-2d92-4ec5-ab64-2e26a9e0f16e
             format: uri-reference
-          description: A relative URL that can he used in the follow-up request, to get the status of the started pipeline run, with the app ID and pipeline run ID already populated.
+          description: A relative URL that can be used in the follow-up request, to get the status of the started pipeline run, with the app ID and pipeline run ID already populated.
     runStatus:
       description: 200 Get Status response
       content:

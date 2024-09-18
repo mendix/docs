@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### September 19, 2024
+
+#### Pipelines New Features
+
+* We released an API that lets you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run. For more information, see [Pipelines API](/apidocs-mxsdk/apidocs/pipelines-api/).
+
 ### September 5, 2024
 
 #### New Features

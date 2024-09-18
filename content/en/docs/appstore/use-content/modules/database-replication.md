@@ -261,23 +261,28 @@ In most of the cases, there is no need to change this setting unless you know th
 
 ## Configuring an Import Call {#import-call}
 
-With an import call, you can easily configure both static constraints (meaning, every call with the same value) and dynamic constraints (meaning, based on a value from an attribute).
+Import call is a table mapping associated to a constraint. This constraint may be static, where all calls will be constrained by the same values, or dynamic, where the constraint relies on the value of an attribute.
 
 ### Constraint
 
-In the **Configure import action** dialog box, **Constraints** defines the type of constraint. You can use normal constraints that result in a constraint with all `AND` operators. The constraints will be in alphabetical order according to the constraint number.
+This field defines how all custom constraints will be combined to form the import call constraint:
 
-When selecting **Advanced**, you can set up the constraints yourself using the tokens of the constraint. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
+* **Normal** - All constraints will be combined together with the `AND` operator following their constraint number.
+* **Advanced** - The import call constraint needs to be explicitly defined in the `Constraint dependency` field. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
 
 ### Data Objects
 
-When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint. This can be all types of objects (even non-persistable). However, if you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1. You can select the objects in the **Configure import action** dialog box.
+When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint parameter. All object types are supported (even non-persistable).
+
+{{% alert color="info" %}}
+If you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1.
+{{% /alert %}}
 
 These objects must be provided as input explicitly in a microflow. Using these objects in an import call disallows it from being executed directly by a user action. **Import** on the **Import call** tab and **Run scheduled events** on the **Planned import action** tab will be affected, as they perform an import using import calls.
 
-### Customer Constraints
+### Custom Constraints
 
-If you click any constraint in the **Customer constraints** table, the Constraint details dialog box opens. The descriptions of the fields are as follows:
+If you click any constraint in the **Custom constraints** table, the Constraint details dialog box opens. The fields are as follows:
 
 * **Constraint Type**
     * **Dynamic** – Use the value from an attribute as a constraint. This can either be an attribute from data object 1 or data object 2.

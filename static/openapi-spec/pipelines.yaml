@@ -2,7 +2,7 @@ openapi: 3.0.3
 x-stoplight:
   id: h451lkumf4xm6
 info:
-  title: Pipeline API
+  title: Pipelines API
   version: 1.0.0
   contact:
     name: Mendix Support
@@ -12,12 +12,12 @@ info:
   license:
     name: '@Mendix.com'
     url: 'https://www.mendix.com'
-  description: The API to manage pipelines
+  description: The API to manage pipelines of apps deployed on the Mendix Platform
 servers:
   - url: 'https://domain.tld/api/v1'
 tags:
   - name: Pipelines
-    description: App project pipelines managed on the Mendix platform
+    description: Manage app pipelines of apps deployed on the Mendix platform
 paths:
   '/apps/{appId}/runs':
     parameters:
@@ -26,7 +26,7 @@ paths:
       tags:
         - Pipelines
       summary: 'Start a new pipeline run for a saved and activated pipeline design'
-      description: 'Schedules a job on the server to start a new pipeline run. The job will be handled asynchronously; the operation returns a pipelineID that can be used to monitor the status of the process. Every request must be authenticated by a Personal Access Token containing the scope `mx:pipelines:write`.'
+      description: 'Schedules a job on the server to start a new pipeline run. The job will be handled asynchronously; the operation returns a pipelineID that can be used to monitor the status of the process. Every request must be authenticated by a personal access token containing the scope `mx:pipelines:write`.'
       operationId: startRun
       requestBody:
         content:
@@ -54,11 +54,6 @@ paths:
           $ref: '#/components/responses/error404'
       x-stoplight:
         id: fqdwjj9lcsugf
-      security:
-        - Personal Access Token: []
-      servers:
-        - url: 'https://domain.tld/api/v1'
-          description: Base URL
   '/apps/{appId}/runs/{runId}/status':
     parameters:
       - $ref: '#/components/parameters/appId'
@@ -67,7 +62,7 @@ paths:
       tags:
         - Pipelines
       summary: 'Get the status of a pipeline run'
-      description: 'Retrieves the status of a pipeline run. The operation returns a pipeline run status, which can be `RUNNING` or `SUCCEEDED`. Every request must be authenticated by a Personal Access Token containing the scope `mx:pipelines:read`.'
+      description: 'Retrieves the status of a pipeline run. The operation returns a pipeline run status. Every request must be authenticated by a personal access token containing the scope `mx:pipelines:read`.'
       operationId: getRunStatus
       responses:
         '200':
@@ -82,11 +77,6 @@ paths:
           $ref: '#/components/responses/error404'
       x-stoplight:
         id: b2ntkujwhgwjc
-      security:
-        - Personal Access Token: []
-      servers:
-        - url: 'https://domain.tld/api/v1'
-          description: Base URL
 components:
   parameters:
     appId:
@@ -113,11 +103,11 @@ components:
       properties:
         error:
           $ref: '#/components/schemas/error-body'
-      description: The error body in an error object
+      description: An error is returned in case something went wrong.
       x-stoplight:
         id: sxeys55uppr0r
     error-body:
-      description: The body of an error object explaining what happened.
+      description: The error body gives more detail on what happened.
       type: object
       properties:
         code:
@@ -133,18 +123,18 @@ components:
           type: array
           uniqueItems: true
           minItems: 1
-          description: RFC7807 compatible list with detailed feedback.
+          description: Array of invalid parameters (RFC7807-compatible).
           items:
             type: object
             properties:
               name:
                 type: string
-                example: query-parameter
-                description: The group or type this messages is for.
+                example: age
+                description: Name of the parameter that was considered invalid.
               reason:
                 type: string
-                example: Value 'license' is not supported
-                description: Feedback what is wrong or expected.
+                example: must be a positive integer
+                description: Explanation why the parameters was considered invalid.
             required:
               - name
               - reason
@@ -154,7 +144,7 @@ components:
       x-stoplight:
         id: 9mss4dvlh4ovs
     run:
-      description: The body of a run object gives details about run
+      description: Details about the run are given here.
       type: object
       properties:
         id:
@@ -175,7 +165,7 @@ components:
       x-stoplight:
         id: 6uktlpbg6wyg8
     runStatus:
-      description: The body of a run status object gives details about run status
+      description: Run status details
       type: object
       properties:
         runId:
@@ -204,7 +194,7 @@ components:
       x-stoplight:
         id: 9g47ikr3k96m4
     runStatusEnum:
-      description: The run status enum represents the status of the pipeline run
+      description: An array of possible pipeline run statuses.
       type: string
       title: runStatusEnum
       enum:
@@ -215,7 +205,7 @@ components:
       x-stoplight:
         id: my4j6mo44r8vh
     user:
-      description: The body of the user gives details about the user
+      description: The email of the user that triggered the pipeline run.
       title: user
       x-stoplight:
         id: h8ru7dslp7qnt
@@ -224,7 +214,7 @@ components:
         email:
           type: string
           format: email
-          example: jane.doe@domain.tld
+          example: jane.doe@example.com
           x-stoplight:
             id: dumuouqb8wwdz
   responses:
@@ -280,7 +270,7 @@ components:
                     - name: Validation
                       reason: App 76ef1b0f-4050-4810-a159-cb419268636c could not be found
     runStarted:
-      description: The response with the run details. Use the Content-Location header to request the run's status.
+      description: Pipeline run is created. The Content-Location header can be used for the follow-up request the retrieve the run's status.
       content:
         application/json:
           schema:
@@ -299,9 +289,9 @@ components:
             type: string
             example: apps/c533ee0b-f7db-4e62-868b-1192d392ccec/runs/2868b153-2d92-4ec5-ab64-2e26a9e0f16e
             format: uri-reference
-          description: Url where to get the status of this run
+          description: A relative URL that can he used in the follow-up request, to get the status of the started pipeline run, with the app ID and pipeline run ID already populated.
     runStatus:
-      description: The response for the get status request
+      description: 200 Get Status response
       content:
         application/json:
           schema:
@@ -317,9 +307,8 @@ components:
                 status: SUCCEEDED
   securitySchemes:
     PersonalAccessToken:
-      type: apiKey
-      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
-      name: Authorization
-      in: header
+      type: http
+      scheme: MxToken
+      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
 security:
   - PersonalAccessToken: []

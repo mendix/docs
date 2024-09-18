@@ -3,6 +3,8 @@ title: "User Settings"
 url: /community-tools/mendix-profile/user-settings/
 weight: 2
 description: "Describes the user settings for the Mendix Portal."
+aliases:
+    - /developerportal/community-tools/mendix-profile/user-settings/
 ---
 
 ## Introduction {#settings}

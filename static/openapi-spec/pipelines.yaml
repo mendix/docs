@@ -14,10 +14,11 @@ info:
     url: 'https://www.mendix.com'
   description: The API to manage pipelines of apps deployed on Mendix Cloud
 servers:
-  - url: 'https://domain.tld/api/v1'
+  - url: 'https://pipeline-portal.home.mendix.com/api/v1'
+    description: Base URL
 tags:
   - name: Pipelines
-    description: Manage pipelines of apps deployed on Mendix Cloud
+    description: Manage app pipelines of apps deployed on Mendix Cloud
 paths:
   '/apps/{appId}/runs':
     parameters:
@@ -38,7 +39,7 @@ paths:
                   type: string
                   example: db6ed4d3-8b6d-4c2b-ad2b-2a69d0f7afe0
                   format: uuid
-                  description: UUID of the pipeline
+                  description: UUID of the pipeline.
               required:
                 - pipelineId
       responses:
@@ -87,7 +88,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The unique ID of the app
+      description: The unique ID of the app.
     runId:
       name: runId
       in: path
@@ -96,7 +97,7 @@ components:
         type: string
         format: uuid
         example: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
-      description: The unique ID of the run
+      description: The unique ID of the run.
   schemas:
     error:
       type: object
@@ -307,8 +308,9 @@ components:
                 status: SUCCEEDED
   securitySchemes:
     PersonalAccessToken:
-      type: http
-      scheme: MxToken
-      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/developerportal/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      type: apiKey
+      description: 'For more information about requesting and using a token, see the [documentation](https://docs.mendix.com/community-tools/mendix-profile/user-settings/#pat).<br/> The header must be set to `MxToken <Your PAT>`.'
+      name: Authorization
+      in: header
 security:
   - PersonalAccessToken: []

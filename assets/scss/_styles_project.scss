@@ -196,14 +196,7 @@ html {
 
 // The outer page container i.e. common styles for any page.
 .td-outer {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     position: absolute; // NK - custom edit
-}
-
-.td-main {
-    flex-grow: 1;
 }
 
 .td-main main {
@@ -258,6 +251,11 @@ main img {
     border-style: solid;
 }
 
+// DB – custom edit, optional class for preventing borders around images
+.no-border{
+    border-style: none;
+}
+
 // Yiyun - Adjust the stack order so that the clickable images set in body-end.html are not overridden by the left sidebar.
 
 img {
@@ -269,15 +267,9 @@ img {
     opacity: 0.5 !important;
 }
 
-// DB – custom edit, optional class for preventing borders around images
-.no-border{
-    border-style: none;
-}
-
 // _pageinfo.scss - Custom pageinfo styling, used on the banners (similar to the alert styling)
 
 .pageinfo {
-    font-weight: $font-weight-medium;
     border-radius: 4px;
     margin: 2rem;
     padding: 14px;
@@ -307,16 +299,9 @@ img {
     line-height: 1.2; // NK - decreased
 
     @supports (position: sticky) {
-        position: sticky;
         top: 3rem; // NK - change from docsy theme of 4rem
         height: max-content; // NK - change from docsy theme of calc(100vh - 10rem);
-        overflow-y: auto;
     }
-
-    order: 2;
-    padding-top: 0.75rem;
-    padding-bottom: 1.5rem;
-    vertical-align: top;
 
 }
 

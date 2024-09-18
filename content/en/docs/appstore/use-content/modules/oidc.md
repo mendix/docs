@@ -132,7 +132,7 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 
 1. [Add the OIDC SSO module into your app](/appstore/use-content/).
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
-3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that is accessible to admin end-users of your app.
+3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OIDC SSO module to a page that is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
 5. Follow the instructions in [Design-time App configuration](#app-configuration) to set up your app.
 

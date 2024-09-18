@@ -2,7 +2,7 @@
 title: "Pipelines API"
 url: /apidocs-mxsdk/apidocs/pipelines-api/
 type: swagger
-description: "This API allows you to send requests to your pipeline."
+description: "This API lets you send requests to your pipeline."
 weight: 85
 beta: true
 ---
@@ -13,7 +13,9 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## Introduction
 
-The Mendix Pipelines API allows you to start your [pipeline](/developerportal/deploy/pipelines/) and query its status.
+The Pipelines API let you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run.
+
+For details on pipelines, see [Pipelines](/developerportal/deploy/pipelines/).
 
 ## Authentication {#authentication}
 

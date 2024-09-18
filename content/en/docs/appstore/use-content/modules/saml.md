@@ -608,6 +608,17 @@ Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and
 
         For example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath`
 
+    * To implement the SSO redirection, add the following lines of code to your login page (for example, `login.html`).
+
+        1. Extract the return URL:
+            `var returnURL = window.location.hash.substring(1) + window.location.search;`
+        2. For automatic redirection: Use `window.onload` to automatically redirect users to the SSO login page.
+            `window.location.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent`
+        3. For manual redirection: Add an `onclick` event to the button that manually triggers the SSO login.
+            `this.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');`
+
+    Make sure to replace the `link` with your actual **URL prefix** from the **Runtime** tab of the **App Settings**.
+
 1. The user will be redirected to the IdP login page for authentication.
 1. After successful log in, the user will be directed to the desired page using page URLs and microflow URLs within the application.
 

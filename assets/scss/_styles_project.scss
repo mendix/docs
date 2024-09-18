@@ -2,74 +2,9 @@
 
 // Import any custom styling pages not from Docsy/Bootstrap
 @import "front-page";
+@import "font-face";
+@import "badge";
 @import "numbered-headings";
-
-// Font
-
-@font-face { // LZ - Added for MxDock by request 2024-01-30
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-400-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600.woff2") format("woff2");
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  @font-face {
-    font-family: "noto-sans";
-    src: local("noto-sans"), url("/fonts/noto-sans/noto-sans-600-italic.woff2") format("woff2");
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-  }
-  
-  /* Medium */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: local("Patron Medium"), local("Patron-Medium"),
-      url("/fonts/patron/PatronWEB-Medium.woff2") format("woff2");
-  }
-  
-  /* Light */
-  @font-face {
-    font-family: "Patron";
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: local("Patron Light"), local("Patron-Light"),
-      url("/fonts/patron/PatronWEB-Light.woff2") format("woff2");
-  }
-  
-  /* The main font is Noto Sans */
-  body {
-    font-family: "noto-sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.5; // LZ - line height 1.5 (Regular) according to PDS
-  }
-  
-  /* Page Title H1 use Patron Medium. The rest of headings on your page should use Noto Sans */
-  .page-title {
-    font-family: "Patron", "noto-sans", sans-serif;
-    font-weight: 500;
-  }  
 
 // _alert.scss - Style alert boxes (alert layout defined in alert.html)
 
@@ -639,46 +574,6 @@ img {
 }
 
 
-//_badge.scss
-
-.badge-pill {
-    border-radius: 4px;
-    padding: 4px 4px 3px 4px;
-    margin-left: 2px;
-}
-
-.badge-draft {
-    background-color: $warning-9;
-  }
-
-.badge-beta {
-    color: $gray-900;
-    background-color: $gray-500;
-}
-
-.badge-lts {
-    background-color: $success-9;
-}
-
-.badge-mts {
-    background-color: $info-8;
-}
-
-.badge-deprecated {
-    background-color: $gray-100;
-    border: solid 1px $gray-500;
-    color: $gray-900;
-}
-
-.badge-recommended {
-    border: solid 1px $success-9;
-    color: $success-9;
-}
-
-.badge-react {
-    background-color: $info-1;
-    color: $info-7;
-}
 
 // Swagger styling
 

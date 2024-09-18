@@ -16,18 +16,17 @@ info:
 servers:
   - url: 'https://domain.tld/api/v1'
 tags:
-  - name: pipeline
-    description: collection of the pipeline operations
-  - name: run
-    description: collection of the run operations
+  - name: Pipelines
+    description: App project pipelines managed on the Mendix platform
 paths:
   '/apps/{appId}/runs':
     parameters:
       - $ref: '#/components/parameters/appId'
     post:
       tags:
-        - run
-      description: start new run for a given pipeline
+        - Pipelines
+      summary: 'Start a new pipeline run for a saved and activated pipeline design'
+      description: 'Schedules a job on the server to start a new pipeline run. The job will be handled asynchronously; the operation returns a pipelineID that can be used to monitor the status of the process. Every request must be authenticated by a Personal Access Token containing the scope `mx:pipelines:write`.'
       operationId: startRun
       requestBody:
         content:
@@ -61,8 +60,9 @@ paths:
       - $ref: '#/components/parameters/runId'
     get:
       tags:
-        - run
-      description: get status of the run
+        - Pipelines
+      summary: 'Get the status of a pipeline run'
+      description: 'Retrieves the status of a pipeline run. The operation returns a pipeline run status, which can be `RUNNING` or `SUCCEEDED`. Every request must be authenticated by a Personal Access Token containing the scope `mx:pipelines:read`.'
       operationId: getRunStatus
       responses:
         '200':
@@ -87,7 +87,7 @@ components:
         type: string
         format: uuid
         example: c533ee0b-f7db-4e62-868b-1192d392ccec
-      description: The ID of a Sprintr project or app
+      description: The unique ID of the app
     runId:
       name: runId
       in: path
@@ -96,7 +96,7 @@ components:
         type: string
         format: uuid
         example: 2868b153-2d92-4ec5-ab64-2e26a9e0f16e
-      description: The ID of a run
+      description: The unique ID of the run
   schemas:
     error:
       type: object
@@ -178,7 +178,7 @@ components:
       x-stoplight:
         id: 5yystu7dgim3c
     runId:
-      description: The unique run Id in UUID format
+      description: The unique run ID in UUID format
       type: string
       title: runId
       format: uuid
@@ -186,7 +186,7 @@ components:
       x-stoplight:
         id: unm31s8peb2h0
     pipelineId:
-      description: The unique pipeline Id in UUID format
+      description: The unique pipeline ID in UUID format
       type: string
       title: pipelineId
       format: uuid
@@ -194,7 +194,7 @@ components:
       x-stoplight:
         id: 9g47ikr3k96m4
     runStatusEnum:
-      description: The run status enum represent pipeline run status
+      description: The run status enum represents the status of the pipeline run
       type: string
       title: runStatusEnum
       enum:
@@ -219,19 +219,13 @@ components:
             id: dumuouqb8wwdz
   responses:
     error400:
-      description: |-
-        The request likely contains invalid data or is missing data.
-
-        The error response gives additional feedback.
+      description: Bad Request
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/error'
     error401:
-      description: |-
-        There were no usable authentication credentials found.
-
-        The error response gives additional feedback.
+      description: Unauthorized
       content:
         application/json:
           schema:
@@ -246,10 +240,7 @@ components:
                     - name: Authentication
                       reason: Missing or invalid Authorization header
     error403:
-      description: |-
-        Access is denied. The provided credentials are incorrect or the credentials do not have the required level of access.
-
-        The error response gives additional feedback.
+      description: Access Denied
       content:
         application/json:
           schema:
@@ -264,10 +255,7 @@ components:
                     - name: Authentication
                       reason: The token is not accepted
     error404:
-      description: |-
-        The requested item could not be found.
-
-        The error response gives additional feedback.
+      description: Not Found
       content:
         application/json:
           schema:
@@ -303,7 +291,7 @@ components:
             format: uri-reference
           description: Url where to get the status of this run
     runStatus:
-      description: The response for the run status for given run id
+      description: The response for the get status request
       content:
         application/json:
           schema:

@@ -7,7 +7,7 @@ description: "Describes how to run a performance profiler session on the local m
 ## Introduction
 
 {{% alert color="info" %}}
-These features are not yet supported on native MacOS machines.
+These features are not yet supported on native macOS machines.
 {{% /alert %}}
 
 The **Profiling** section of the **Help** menu > **Support Tools** allows you to run a performance profiler session and to capture a memory snapshot:

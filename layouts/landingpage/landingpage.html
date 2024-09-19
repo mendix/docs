@@ -1,3 +1,4 @@
+<!-- Custom layout for the home page. Styling is set in _front-page.scss. -->
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
     <head>
@@ -12,9 +13,9 @@
                     <aside data-stt-ignore class="d-none d-md-block col-md-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
                         {{ partial "sidebar.html" . }}
                     </aside>
-
+                    
+                    <!-- Main page content (everything except the left sidebar, top dock, and footer) -->
                     <main class="col lp" role="main" style="border-right: none;">
-
                         <div class="container lp-container">
                             
                             <!-- Title, Description, and Illustration -->
@@ -40,15 +41,9 @@
                                 <div class="col-12 col-md-6 mb-4 mb-md-0">
                                     {{ partial "landingpage/latest-releases.html" . }}
                                 </div>
-                                <div class="col-12 col-md-6">  
-                                        <h4 class="lp-panel-title">Community Resources</h4>
-                                        <ul style="padding: 0rem;">
-                                            <li class="lp-panel-list"><a href="/community-tools/contribute-to-mendix-docs/">Contribute to the Docs Site</a></li>
-                                            <li class="lp-panel-list"><a href="https://community.mendix.com/">Mendix Community</a></li>
-                                            <li class="lp-panel-list"><a href="https://support.mendix.com/">Mendix Support</a></li>
-                                            <li class="lp-panel-list"><a href="https://www.mendix.com/blog/">Low-Code Development Blog</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="col-12 col-md-6">
+                                    {{ partial "landingpage/community-resources.html" . }}
+                                </div>
                             </div>
 
                             <!-- Language note -->
@@ -66,7 +61,6 @@
                             </div>
 
                         </div>
-
                     </main>
                     
                 </div>

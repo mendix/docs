@@ -132,7 +132,7 @@ If you are migrating from the community edition of the module ([OpenIDConnect Si
 
 1. [Add the OIDC SSO module into your app](/appstore/use-content/).
 2. Add the necessary dependencies (as listed in the previous section) from the Marketplace, if they are not already included in your app.
-3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OICD SSO module to a page that is accessible to admin end-users of your app.
+3. Add the snippet **Snip_Configuration** in the **USE_ME** > **1. Configuration** folder of the OIDC SSO module to a page that is accessible to admin end-users of your app.
 4. Replace all the layouts that end in `_REPLACEME` used in pages in this module with layouts from your own project. The layouts are in the **Implementation** > **Layouts** folder of the module. Use the [Find Usages](/refguide/find-and-find-advanced/#find-usages) command to find where they are used.
 5. Follow the instructions in [Design-time App configuration](#app-configuration) to set up your app.
 
@@ -563,7 +563,7 @@ You can set up custom user provisioning once your app is running using the `OIDC
 
 6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
-    1. **UserInfoParam**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+    1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
     2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
 
     It will be executed after user creation or update of user. If you have added a new microflow, you will need to refresh the module containing your microflow as described in the [Installing Mx Model Reflection](#mxmodelreflection). This selection can be blank if you do not want to add custom logic.

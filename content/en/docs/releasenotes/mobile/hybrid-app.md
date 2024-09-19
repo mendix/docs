@@ -1,5 +1,6 @@
 ---
-title: "Hybrid App Base and Template"
+title: "Hybrid App Base and Template Release Notes"
+linktitle: "Hybrid App Base and Template"
 url: /releasenotes/mobile/hybrid-app/
 weight: 30
 description: "Mendix Hybrid App Base and Hybrid App Template release notes."

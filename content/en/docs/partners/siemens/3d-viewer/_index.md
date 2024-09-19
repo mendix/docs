@@ -236,7 +236,6 @@ On the **General** tab, the following options are available:
 * **Show search** – used to toggle a search bar that enables the end-user to enter a part name and search for the part in the widget
 * **Show search options** – determines whether to display all node search results in the drop-down list
   
-
 {{< figure src="/attachments/partners/siemens/3d-viewer/pstree-showsearchoptions.jpg" max-width=50% alt="show search options in PS Tree" >}}
 
 * **Show leaf structure** – determines if the sub-part data should be displayed in the widget
@@ -337,7 +336,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/deployment/).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deploying Apps](/deployment/).
 
 ## Usage
 

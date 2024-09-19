@@ -1,5 +1,6 @@
 ---
-title: "Metamodel"
+title: "Metamodel Release Notes"
+linktitle: "Metamodel"
 url: /releasenotes/sdk/metamodel/
 weight: 3
 ---

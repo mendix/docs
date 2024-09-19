@@ -221,10 +221,10 @@ In the **Provisioning** tab of the SCIM server configuration, you need to config
 * **Custom user Entity (extension of System.User)**: the entity in which you will store and look up the user account. If you are using the Administration module this would be `Administration.Account`.
 * **The attribute where the user principal is stored** (primary attribute): unique identifier associated with an authenticated user.
 * **Allow the module to create users**: this enables the module to create users based on user provisioning and attribute mapping configurations.
-  * By default, the value is set to ***Yes***.
+    * By default, the value is set to ***Yes***.
 * **Default Userrole**: the role which will be assigned to newly created users by default.
 * **User Type**: this allows you to configure end-users of your application as internal or external.
-  * By default, the value is set to ***Internal***.
+    * By default, the value is set to ***Internal***.
 * **Attribute Mapping**: under **Attribute Mapping**, select an **IdP Attribute** (claim) for each piece of information you want to add to your custom user entity. Specify the **Configured Entity Attribute** where you want to store the information.
 
 Note the following:
@@ -233,9 +233,14 @@ Note the following:
 * You can map only one IdP claim to a **Custom user Entity** attribute.
 * The **IdP Attribute** is one of the fixed claims supported by the SCIM module.
 * **IdP attribute** (Claim) cannot be of type enum, autonumber, or an association.
-* Use Custom Logic in **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning using a microflow.
+* Use custom logic in the **User Provisioning** (Optional) – In **Custom UserProvisioning**, select a microflow you want to run for custom user provisioning.
 
-The custom microflow name must begin with the string `UC_CustomProvisioning`. If you have added a new microflow, you need to refresh the module containing your microflow as described in [Mx Model Reflection](/appstore/modules/model-reflection/).
+The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
+
+1. **UserInfoParameter(UserCommons.UserInfoParam)**: A Mendix object containing user claims information through its associated objects. You can use this  parameter to retrieve user provisioning configuration information.
+2. **User(System.User)**: A Mendix object representing the user to be provisioned. Ensure that the selected microflow matches this parameter signature.
+
+ It will be executed after user creation or update of user. If you have added a new microflow, you need to refresh the module containing your microflow as described in the [Mx Model Reflection](/appstore/modules/model-reflection/).
 
 {{< figure src="/attachments/appstore/use-content/modules/scim/user_commons.png" class="no-border" >}}
 

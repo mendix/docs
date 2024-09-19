@@ -6,13 +6,11 @@ description: "Describes how to deploy to a Cloud Foundry environment which does 
 aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
-    - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
     - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
-    - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
     - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry

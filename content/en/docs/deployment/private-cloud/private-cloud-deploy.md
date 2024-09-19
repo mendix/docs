@@ -59,6 +59,10 @@ Before you can create an environment, you will need to create a deployment packa
 Deployment package creation for Mendix versions 7 and below is no longer supported. Upgrade to version 8 or above in order to build and deploy.
 {{% /alert %}}
 
+{{% alert color="info" %}}
+The deployment package created with Java 17/21 support requires the Mendix Operator to be in version 2.15.0 or above.
+{{% /alert %}}
+
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 2. Go to the **Environments** page and click **Create Deployment Package**.
 
@@ -845,9 +849,9 @@ The Mendix Operator CR is processed by the Mendix Operator into four steps:
 
 1. The Build CR is created – this creates a Docker image from the app deployment package, pushes it into the Image Registry, and provides the correct information to the Runtime CR
 
-2. The StorageInstance CR is created for the database – this causes the Operator to provision database database, according to the plan selected, and pass information about the database to the Runtime CR
+2. The StorageInstance CR is created for the database – this causes the Operator to provision the database, according to the plan selected, and pass information about the database to the Runtime CR
 
-3. The StorageInstance CR is created for the file storage – this causes the Operator to provision an file storage bucket for the app and pass information about the storage to the Runtime CR
+3. The StorageInstance CR is created for the file storage – this causes the Operator to provision a file storage bucket for the app and pass information about the storage to the Runtime CR
 
 4. The Ingress CR is created – this sets up a route to the app.
 

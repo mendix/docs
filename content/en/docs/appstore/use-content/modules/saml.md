@@ -40,7 +40,7 @@ The SAML SSO module supports the following [SAML 2.0](https://docs.oasis-open.or
 The Mendix SAML SSO supports usage of SAML metadata in the following way:
 
 * Daily synchronization of the IdP metadata, so your Mendix app will always have the latest IdP metadata.
-  * For daily synchronization of IdP metadata, configure the `SE_SynchronizeIdPMetadata` scheduled event. For local development this can be done from Studio Pro. In the Mendix Cloud, you can do this on the [Environments Details](/developerportal/deploy/environments-details/#model-options) page for your app.
+    * For daily synchronization of IdP metadata, configure the `SE_SynchronizeIdPMetadata` scheduled event. For local development this can be done from Studio Pro. In the Mendix Cloud, you can do this on the [Environments Details](/developerportal/deploy/environments-details/#model-options) page for your app.
 * Downloading of the metadata for your Mendix application that acts as an SP in the SAML protocol
 
 For encryption of SAML messages the following options are supported:
@@ -597,19 +597,33 @@ For more information on using Deep Link module (with Mendix 8 and 9), see the [U
 
 Page URLs and Microflow URLs are supported with SAML for Mendix version 10.6 and above. To do this, follow the steps below:
 
-1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs and ensure to remove the Deep Link module from your app to start the app successfully.
-1. To allow the end users to navigate to the desired page:
+1. In the **Runtime** tab of the **App Settings**, configure the page **URL prefix** to **link** instead of the default **P** to maintain compatibility with existing URLs. 
+1. Ensure to remove the Deep Link module from your app to start the app successfully.
+1. To implement the SSO redirection, add the following lines of code to your login page (for example, `login.html`):
 
-    * If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`
+    * Extract the return URL:
+
+        `var returnURL = window.location.hash.substring(1) + window.location.search;`
+
+    * For automatic redirection: use `window.onload` to automatically redirect users to the SSO login page.
+
+        `window.location.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');` or, 
+
+    * For manual redirection: add an `onclick` event to the button that manually triggers the SSO login.
+
+        `this.href = 'sso/login' + (returnURL ? '?cont=link' + encodeURIComponent(returnURL) : '');`
+        
+1. To allow the end users to navigate to the desired page, URL can be formed as follows:
+
+    1. If single IdP configured, URL will be the base URL of your application followed by `SSO/login?cont={page/Microflowurl}`.
 
         For example, `http://localhost:8080/SSO/login?cont=link/pagepath`
 
-    * If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`
+    2. If Multiple IdPs configured, you can specify which IdP should be used by adding the alias (MyIdPAlias) `SSO/login?_idp_id={MyIdPAlias}&cont={page/Microflowurl}`.
 
         For example, `http://localhost:8080/SSO/login?_idp_id=Okta&cont=link/pagepath`
 
-1. The user will be redirected to the IdP login page for authentication.
-1. After successful log in, the user will be directed to the desired page using page URLs and microflow URLs within the application.
+Once the above changes are applied, end users can directly navigate to the desired page. If not logged in, they will be redirected to the IdP login page for authentication. After successful log in, they will be directed to the desired page using page and microflow URLs.
 
 For more information, see the [Migrating to Page and Microflow URLs](/appstore/modules/deep-link/#migrate-page-micro) section of the *Deep Link*.
 

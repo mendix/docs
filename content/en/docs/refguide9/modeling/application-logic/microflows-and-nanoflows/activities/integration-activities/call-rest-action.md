@@ -224,7 +224,7 @@ This attribute is filled when one of the following scenarios occur:
 * The **Response handling** is **Store in an HTTP response** and the call succeeded
 * The **Store message body in $latestHttpResponse variable** option in the **Error handling** section is checked and the call failed
 
-####  Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
+#### Store Message Body in $latestHttpResponse Variable {#latesthttpresponse}
 
 If HTTP response status code is not successful (for example, `[4xx]` or `[5xx]`), the flow will continue in an [error handler](/refguide9/error-handling-in-microflows/#errorhandlers).
 

@@ -275,6 +275,10 @@ In this section, you will add a view model to store our view data:
     }
     ```
 
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
+
 ### Explanation
 
 The first important thing to note about this view model class is that you do not decorate this class with the export attribute. This means that the extension will be responsible for instantiating this type within the extension. This also means that you can specify any type you like within the constructor. You already set up the instantiation of this class in the previous section. The important bit here is that you pass in the `baseUri`, `getCurrentApp` lambda expression and an instance of the logging class.
@@ -324,6 +328,10 @@ In order to host a web interface inside Studio Pro, your viewmodel must implemen
         };
     }
 ```
+
+{{% alert color="warning" %}}
+{{% snippet file="/static/_includes/apidocs-mxsdk/warning-wwwroot.md" %}}
+{{% /alert %}}
 
 Firstly, you set the default address to `new Uri(_baseUri, "index")`. You will delve a bit deeper into where this index comes from later in the guide. If you want to skip ahead, see [Setting up Communication Between the User Interface and Extension](#set-up-communication)
 

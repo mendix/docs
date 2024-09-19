@@ -265,32 +265,26 @@ With an import call, you can easily configure both static constraints (meaning, 
 
 ### Constraint
 
-This defines the type of constraint. You can use normal constraints that result in a constraint with all `AND` operators. The constraints will be in alphabetical order according to the constraint number.
+In the **Configure import action** dialog box, **Constraints** defines the type of constraint. You can use normal constraints that result in a constraint with all `AND` operators. The constraints will be in alphabetical order according to the constraint number.
 
 When selecting **Advanced**, you can set up the constraints yourself using the tokens of the constraint. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
 
 ### Data Objects
 
-When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint. This can be all types of objects (even non-persistable). However, if you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1.
+When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint. This can be all types of objects (even non-persistable). However, if you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1. You can select the objects in the **Configure import action** dialog box.
 
 These objects must be provided as input explicitly in a microflow. Using these objects in an import call disallows it from being executed directly by a user action. **Import** on the **Import call** tab and **Run scheduled events** on the **Planned import action** tab will be affected, as they perform an import using import calls.
 
-### Constraint Type
+### Customer Constraints
 
-* **Dynamic** – use the value from an attribute as a constraint; this can either be an attribute from data object 1 or data object 2
-* **Static** – choose any of the columns and set a static value as the constraint
+If you click any constraint in the **Customer constraints** table, the Constraint details dialog box opens. The descriptions of the fields are as follows:
 
-### Ignore When Empty
-
-This is only applicable when selecting the constraint mode **Normal**. When a dynamic value is empty (null), the constraint will be ignored, and only the other constraints will be applied to the import action.
-
-### Table
-
-This determines the tables from the mapping on which the constraint applies. You can select all the tables you have configured in the mapping (both additional joined tables as well as the main table).
-
-### Constraint
-
-The first value to select is any of the columns from the selected table. After that, you can select any operator followed by the value you want to constrain. In case you select the `Is (not) null` operator, the value is no longer useful and will be hidden.
+* **Constraint Type**
+    * **Dynamic** – Use the value from an attribute as a constraint. This can either be an attribute from data object 1 or data object 2.
+    * **Static** – Choose any of the columns and set a static value as the constraint.
+* **Ignore When Empty** – This is only applicable when selecting the constraint mode **Normal**. When a dynamic value is empty (null), the constraint will be ignored, and only the other constraints will be applied to the import action.
+* **Table** – This determines the tables from the mapping on which the constraint applies. You can select all the tables you have configured in the mapping (both additional joined tables as well as the main table).
+* **Constraint** – The first value to select is any of the columns from the selected table. After that, you can select any operator followed by the value you want to constrain. In case you select the `Is (not) null` operator, the value is no longer useful and will be hidden.
 
 ## Planned Import Actions
 
@@ -307,10 +301,10 @@ Each import action is executed in a single transaction, which means it is able t
 You can import and export table mappings to an XML file using the **Table mapping** tab.
 
 ## Data types
- 
+
 Database-specific data types are converted to a Java type with the JDBC driver. The module then converts these Java types into a Mendix primitive type. This step also performs implicit conversions between types.
 
-[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with _X_):
+[Mendix primitive types](https://apidocs.rnd.mendix.com/10/runtime/com/mendix/systemwideinterfaces/core/meta/IMetaPrimitive.PrimitiveType.html) and supported mappings from java objects are defined below (supported conversions are marked with *X*):
 
 | Mendix Type / Java Type | Boolean | DateTime | Integer | AutoNumber / Long | Decimal | HashString / String / Enum | Binary |
 |:---------------------------:|:-------:|:--------:|:-------:|:--------------------:|:-------:|:-----------------------------:|:------:|

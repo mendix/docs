@@ -16,6 +16,29 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### September 19, 2024
+
+#### Pipelines New Features
+
+* We released an API that lets you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run. For more information, see [Pipelines API](/apidocs-mxsdk/apidocs/pipelines-api/).
+* We added a new pipeline step: Best Practice Recommender Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
+
+### September 5, 2024
+
+#### New Features
+
+* Deep links have been added to the [Software Composition](/developerportal/deploy/software-composition/) page to enable unique identification and easy shareability.
+
+### September 3, 2024
+
+#### Improvements
+
+* Recently, performance issues were identified in the Software Bill of Materials (SBOM) generation process, which occurs during deployment package creation. Mendix has resolved these issues, ensuring that SBOM generation and the associated Software Composition capabilities are now fully compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above.
+  
+    Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in [Software Composition](/developerportal/deploy/software-composition/). To continue using Software Composition, upgrade to a compatible Studio Pro version. Any historical data within Software Composition remains accessible regardless of the upgrade.
+
+* Deployment packages generated via Mendix Pipelines now generate a Software Bill of Material (SBOM) under the hood; this is visible in Software Composition for Studio Pro LTS and MTS versions 9.24.26 and above, 10.6.12 and above, and 10.12.3 and above.
+
 ### August 22, 2024
 
 #### Fixes

@@ -8,7 +8,7 @@ weight: 100
 
 Between date function calls calculate the absolute difference between two dates. The difference will always be zero or a positive number.
 
-## millisecondsBetween
+## millisecondsBetween {#millisecondsBetween}
 
 The `millisecondsBetween` function calculates the absolute difference between the input values in milliseconds.
 
@@ -43,7 +43,7 @@ The output is:
 2000
 ```
 
-## secondsBetween
+## secondsBetween {#secondsBetween}
 
 The `secondsBetween` function calculates the absolute difference between the input values in seconds.
 
@@ -78,7 +78,7 @@ The output is:
 62
 ```
 
-## minutesBetween
+## minutesBetween {#minutesBetween}
 
 The `minutesBetween` function calculates the absolute difference between the input values in minutes.
 
@@ -113,7 +113,7 @@ The output is:
 1
 ```
 
-## hoursBetween
+## hoursBetween {#hoursBetween}
 
 The `hoursBetween` function calculates the absolute difference between the input values in hours.
 
@@ -148,7 +148,7 @@ The output is:
 2.5
 ```
 
-## daysBetween
+## daysBetween {#daysBetween}
 
 The `daysBetween` function calculates the absolute difference between the input values in days.
 
@@ -183,7 +183,7 @@ The output is:
 43
 ```
 
-## weeksBetween
+## weeksBetween {#weeksBetween}
 
 The `weeksBetween` function calculates the absolute difference between the input values in weeks.
 
@@ -218,7 +218,7 @@ The output results in 8 days divided by 7 days in a week:
 1.1428571428571428
 ```
 
-## calendarMonthsBetween
+## calendarMonthsBetween {#calendarMonthsBetween}
 
 The `calendarMonthsBetween` function calculates the absolute difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
@@ -253,7 +253,7 @@ The output results in the amount of months between the two dates:
 7
 ```
 
-## calendarYearsBetween
+## calendarYearsBetween {#calendarYearsBetween}
 
 The `calendarYearsBetween` function calculates the absolute difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 

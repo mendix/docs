@@ -13,6 +13,7 @@ hugo.exe
 # Legacy for users who still have leftovers from previous Docs Stack
 /_site/
 /.vscode/
+/.idea/
 bin
 data/asset*.json
 data/history.yml

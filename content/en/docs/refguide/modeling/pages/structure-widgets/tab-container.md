@@ -87,9 +87,9 @@ This property is not supported on native mobile pages.
 
 ## Best Practices
 
-### Stand-Alone (#stand-alone)
+### Standalone (#standalone)
 
-You can use a tab container as a stand-alone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
+You can use a tab container as a standalone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
 
 ### Usage with Scroll Container {#usage-with-scroll-container}
 

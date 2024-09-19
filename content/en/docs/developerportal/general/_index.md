@@ -1,5 +1,6 @@
 ---
-title: "General"
+title: "Apps ‒ General"
+linktitle: "General"
 url: /developerportal/general/
 description: "Describes the tools and settings available in the General category in Apps navigation pane."
 weight: 5

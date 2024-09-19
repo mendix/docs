@@ -1,5 +1,6 @@
 ---
-title: "Apps"
+title: "Apps Release Notes"
+linktitle: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of Apps"
 weight: 20

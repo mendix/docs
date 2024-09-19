@@ -45,7 +45,7 @@ In Studio Pro 10.14.0 and above, you can also use Translation Generator in the w
 
 The web-based system texts editor was released in Studio Pro 10.14.0 as an experimental feature. You can enable it via **Preferences** > the **New Features** tab > the **System Texts Editor** section.
 
-After enabling the new editor and Translation Generator, make sure to restart Studio Pro. You will then see the **Generate translation** option from **App Explorer** > **App 'AppName'** > **System texts**.
+After enabling the new editor and Translation Generator, make sure to restart Studio Pro. You will then see the **Generate translation** option from **App Explorer** > **App '*APP_NAME*'** > **System texts**.
 
 {{< figure src="/attachments/refguide/modeling/mendix-ai-assistance/translation-generator/translate-system-text.png" max-width=80% >}}
 

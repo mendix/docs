@@ -15,7 +15,7 @@ To keep widgets responsive, Mendix apps use Flexbox. Using Flexbox, a component 
 
 You can use the `height` and `width` properties to set a widget component’s dimensions. For more information on size, see React Native’s [Height and Width documentation](https://reactnative.dev/docs/height-and-width).
 
-##  Style Objects {#style-objects}
+## Style Objects {#style-objects}
 
 A widget is composed of various elements, and each can be styled individually. You can customize your widgets using style objects. A style object is a JavaScript object with a set of attributes specific for each widget. Some of the attributes reuse properties of other elements, such as React Native’s ViewStyle, TextStyle, ImageStyle, and Colors elements. You can consult the following property sets for more information on styling properties as you customize your app:
 
@@ -24,7 +24,7 @@ A widget is composed of various elements, and each can be styled individually. Y
 * **ImageStyle** – React Native’s [Image](https://reactnative.dev/docs/image-style-props) property set will allow you to style images from network sources, a local library, and temporary local images – using these properties you can alter an image’s size, border, and more, while the image property set also contains layout properties (the `resizeMode` value `repeat` is not supported)
 * **Colors** – React Native’s [Color Reference](https://reactnative.dev/docs/colors) property set will allow you to alter colors – you can customize colors using red-green-blue notation, change hue or saturation, and more 
 
-###  Class Names
+### Class Names
 
 Each style object has a name, referred to as the object’s class name. You can create new custom classes, and then apply styling to a single widget by setting a class name onto a widget class property. Here you can see the code for creating a `customClassName`:
 
@@ -74,7 +74,7 @@ export const com_mendix_widget_native_badge_Badge = (Badge = {
 
 For more information on creating your own classes, see the [Creating Your Own Classes](/howto8/mobile/how-to-use-native-styling/#creating-your-own-classes) section in *Style Your Mendix Native Mobile App*. That document also shows how to use custom classes as design properties.
 
-##  Data Widgets {#understanding-data-widgets}
+## Data Widgets {#understanding-data-widgets}
 
 Data widgets are essential to many Mendix apps. These widgets will allow your users to create and handle data objects, and can be customized to fit your app’s needs.
 

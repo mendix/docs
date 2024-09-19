@@ -1,5 +1,6 @@
 ---
-title: "8"
+title: "Mendix Studio Pro Version 8 Release Notes"
+linktitle: "8"
 url: /releasenotes/studio-pro/8/
 description: "The release notes for version 8 of Mendix Studio Pro."
 weight: 20

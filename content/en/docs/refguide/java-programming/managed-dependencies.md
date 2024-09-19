@@ -82,7 +82,7 @@ Most dependencies can be managed using the managed dependencies feature. However
 
 ## Migrating from Unmanaged to Managed Dependencies
 
-When you have created a module that contains `.jar` files in the `userlib` folder, the best practice is to port these to managed dependencies if the `.jar`s are available in a Maven repository. Add the specified dependency to your module and simply remove the old `.jar` file from the `userlib` folder to prevent a conflict.
+When you have created a module that contains `.jar` files in the `userlib` folder, the best practice is to port these to managed dependencies if the `.jar` files are available in a Maven repository. Add the specified dependency to your module and simply remove the old `.jar` file from the `userlib` folder to prevent a conflict.
 
 Platform-supported Marketplace modules created by Mendix have been updated with a custom mechanism to automatically migrate to managed dependencies.
 

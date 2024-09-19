@@ -13,7 +13,7 @@ This feature is currently in beta. For more information, see [Beta Releases](/re
 
 ## Introduction
 
-The Pipelines API let you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run.
+The Pipelines API lets you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run.
 
 For details on pipelines, see [Pipelines](/developerportal/deploy/pipelines/).
 

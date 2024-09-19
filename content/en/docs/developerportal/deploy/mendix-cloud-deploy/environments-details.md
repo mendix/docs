@@ -3,7 +3,7 @@ title: "Environment Details"
 url: /developerportal/deploy/environments-details/
 weight: 7
 description: "Describes the environmental details of your app and how to manage the environment."
-tags: ["Deploy","App","Environment","Developer Portal"]
+tags: ["Deploy","App","Environment","Developer Portal", "Maintenance"]
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #The anchor #connection-safelist below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
 #The anchor #services below is mapped from the Developer Portal (Mendix Cloud Environment Details), so it should not be removed or changed.
@@ -493,13 +493,13 @@ Maintenance _topics_ (e.g. "PostgreSQL 14 Upgrade") have a predefined period (st
 
 The status of a maintenance task can be:
 
-- **Succeeded**: The maintenance task was successful
-- **Failed**: The maintenance task failed and the environment requires intervention
+- **Succeeded** – the maintenance task was successful
+- **Failed** – the maintenance task failed and the environment requires intervention
     - Our engineering team should already have been notified about the failed task. If you are still experiencing issues, please open up a support case: [Mendix Support](https://support.mendix.com/hc/en-us)
-- **Incomplete**: The maintenance task was unsuccessful but no changes were applied
+- **Incomplete** – the maintenance task was unsuccessful but no changes were applied
     - You can operate the environment as usual. Our engineering team should already have been alerted about the incomplete task and will take appropriate action (which might involve rescheduling the task).
-- **Ineligible**: The maintenance task was unsuccessful because one or more starting criteria were not met
-    - For example, the database of your environment was scheduled to be upgraded but it's already on the target version
+- **Ineligible** – the maintenance task was unsuccessful because one or more starting criteria were not met
+    - You can operate the environment as usual. This can happen, for example, if the database of your environment was scheduled to be upgraded but it's already on the target version
 
 {{% alert color="info" %}}
 You automatically receive email notifications about planned maintenance.

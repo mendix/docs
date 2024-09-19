@@ -26,7 +26,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 
 To get to the test settings follow these steps:
 
-1. Go to ATS and login.
+1. Go to ATS and log in.
 2. Open the app where you want to add the Selenium hubs.
 3. Once inside your app click the profile menu and click **Show Test Settings**.
 
@@ -76,7 +76,7 @@ To configure BrowserStack as a Selenium hub follow these steps:
 
 To find the username and access key follow these steps:
 
-1. Go to [BrowserStack](https://www.browserstack.com) and login with the account you want to connect to ATS.
+1. Go to [BrowserStack](https://www.browserstack.com) and log in with the account you want to connect to ATS.
 2. Click **Automate** in the navigation bar.
 3. There is a collapsible menu on the left side of the screen. When you unfold it, it displays the **Username** and the **Access Key** when you unfold it. It also has a **Copy** button.
 
@@ -134,7 +134,7 @@ To configure Sauce Labs as a Selenium hub follow these steps:
 
 To find the username and access key follow these steps:
 
-1. Go to [Sauce Labs](https://saucelabs.com) and login with the account you want to connect to ATS.
+1. Go to [Sauce Labs](https://saucelabs.com) and log in with the account you want to connect to ATS.
 2. Open the profile menu in the upper right corner of your screen and click **My Account** in the drop-down menu.
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/my-account-saucelabs.png" class="no-border" >}}
@@ -195,7 +195,7 @@ To configure TestingBot as a Selenium hub follow these steps:
 
 To find the username and access key follow these steps:
 
-1. Go to [TestingBot](https://testingbot.com) and login with the account you want to connect to ATS.
+1. Go to [TestingBot](https://testingbot.com) and log in with the account you want to connect to ATS.
 2. Click **My Account** in the upper right corner of the screen.
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-configure-a-selenium-hub/my-account-testingbot.png" class="no-border" >}}

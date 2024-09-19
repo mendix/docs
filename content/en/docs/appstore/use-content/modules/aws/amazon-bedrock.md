@@ -47,7 +47,7 @@ Follow the instructions in [Using Marketplace Content](/appstore/use-content/) t
 
 ## Configuration
 
-After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector.
+After you install the connector, you can find it in the **App Explorer**, in the **AmazonBedrockConnector** section. The connector provides a [domain model and several activities](#technical-reference) that you can use to connect your app to Amazon Bedrock. Each activity can be implemented by using it in a microflow. To ensure that your app can connect to the AWS service, you must also configure AWS authentication for the connector. 
 
 ### Using Amazon Bedrock Models
 
@@ -78,6 +78,8 @@ After you configure the authentication profile for Amazon Bedrock, you can imple
 * EXAMPLE_Retrieve
 * EXAMPLE_RetrieveAndGenerate
 * EXAMPLE_ImageGeneration_MultipleImages
+
+You can also take a look at the [GenAI Showcase Application](https://marketplace.mendix.com/link/component/220475) to get some inspiration on what you can use these operations for.
 
 For operations that do not depend on the GenAICommons, you can take a different approach. For example, to list all foundational models, implement the **List Foundation Models** activity by doing the following steps:
 
@@ -128,13 +130,13 @@ To build a simple microflow that uses the ChatCompletions operation to send a si
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-bedrock/chat-completions-mf.png" class="no-border" >}}
 
+You can find several implementation examples for the ChatCompletions operations inside of the [GenAI showcase application](https://marketplace.mendix.com/link/component/220475).
+
 ### Invoking Specific Models by Using the InvokeModel Operation
 
-Depending on your needs, you can just reuse the operations inside of the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. To help users understand what needs to be done to invoke specific models using the **Invoke Model** instead, the example microflow **EXAMPLE_TitanImageGeneratorG1** within the connector and the [Bedrock Showcase app](https://marketplace.mendix.com/link/component/223535) **invokeModel** topic and showcase can serve as an inspiration. 
+Depending on your needs, you can reuse the operations inside the **AmazonBedrockConnector (GenAICommons)** section. You can also find guidance on how to implement the required structures in the [GenAICommons](/appstore/modules/genai/) documentation. Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features) in the AWS Bedrock documentation.
 
-Most text models can be used with the **ChatCompletions** operation. For an overview of the supported models and capabilities, see [Supported models and model features](https://docs.aws.amazon.com/bedrock/latest/userguide/conversation-inference.html#conversation-inference-supported-models-features).
-
-To invoke a specific model that is not covered by the ChatCompletions operation, perform the following steps:
+To invoke a specific model that is not covered by the ChatCompletions operation, you can make use of the **Invoke Model** operation by performing the following steps:
 
 1. Choose the model with which you want to interact by using the **Invoke Model** operation.
 2. In the [Model Parameters](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) section of the Amazon Bedrock user guide, find the request and response JSON structures of the specific model that you want to invoke.
@@ -194,11 +196,11 @@ The **Documentation** pane displays the documentation for the currently selected
 
     {{< figure src="/attachments/appstore/use-content/modules/technical-reference/doc-pane.png" class="no-border" >}}
 
-#### Operations to Persist Amazon Bedrock Metadata inside the Application
+### Operations to Persist Amazon Bedrock Metadata inside the Application
 
 The Amazon Bedrock Connector offers a range of operations to retrieve and store metadata information in the Mendix app's database.
 
-This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabililties on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
+This can be useful to e.g. associate a chatbot configuration to an available model by selecting the model via dropdown in runtime. The persistent domain model allows for simple and efficient filtering capabilities on the available metadata. Further, the *SNIP_Settings_Admin_BedrockConfig* Snippet can be used to manage and view the synced data from an administrator perspective.
 
 Currently, there are operations available to sync metadata about:
 
@@ -210,7 +212,7 @@ The syncing process works the same for all of these operations.
 
 1. The information about models / knowledge bases / agents is persistent in the mendix app's database on the initial sync.
 2. An association to the `AmazonBedrockRegion` object, that represents the AWS region used when syncing, is stored.
-3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that exising usages of the object in the running application should not be removed.
+3. On a subsequent syncing process the available data is extended and updated. No data will be removed from the app's database - even if it is no longer available on AWS. The reason is that existing usages of the object in the running application should not be removed.
 
 ## Troubleshooting
 

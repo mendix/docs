@@ -16,12 +16,14 @@ The following diagram gives an overview of architecture of the module:
 
 {{% alert color="info" %}} If you are building a Progressive Web Application (PWA), you need to use [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module instead. {{% /alert %}}
 
-The versions of the Mobile SSO module listed below depend on the Mendix versions.
+There are below versions of the Mobile SSO module, compatible with Mendix and OIDC SSO versions.
 
-| Mendix Version | Mobile SSO Version |
-| --- | --- |
-| 10.9.0 and above | 2.0.0 |
-| 9.24.2 and above | 1.0.0 |
+| Mobile SSO Version | Mendix Version | OIDC SSO Version |
+| --- | --- | --- |
+| 2.1.0 | 10.12.3 and above | 3.0.0 and above |
+| 2.0.0 | 10.9.0 and above | 2.4.0 and above |
+| 1.1.0 | 9.24.2 | 3.0.0 and above |
+| 1.0.1 | 9.24.2 | 2.4.0 and above |
 
 ### Typical Usage Scenarios
 
@@ -84,7 +86,7 @@ This guide provides the step-by-step process of integrating the Mobile Single Si
 
 This section shows you how to configure your app to use Mobile SSO.
 
-### Configuration Settings
+### Configuration Settings 
 
 Refer to the [OIDC SSO](/appstore/modules/oidc/) documentation for the configuration settings of the [OIDC SSO](https://marketplace.mendix.com/link/component/120371) module and ensure the **OIDC_Client_Overview** page is appropriately set up.
 
@@ -115,7 +117,7 @@ The following subsections show how to set up IdP for mobile or web and mobile pl
 
 {{% alert color="info" %}} Make sure to add a **Custom callback URL** in the client and IdP. This configuration is optional for web apps but mandatory for mobile apps. For Example, *`APP_NAME`*`://oauth/callback`, where *`APP_NAME`* is an application name which is used to create the application using **Build Native Mobile App** {{% /alert %}}
 
-{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Configure client information.png" class="no-border" >}}
+{{< figure src="/attachments/appstore/use-content/modules/mobile-sso/Configure client information.png" class="no-border" >}} 
 
 When testing locally, add the `makeitnative://oauth/callback` URL in the **Custom callback URL** tab. This configuration also supports signing in with acr_values.
 
@@ -125,8 +127,10 @@ If you are building SSO application, you can use the common IdP configuration fo
 
 To do this, follow the steps below:
 
-1. Replace the `SUB_GetCallbackURL` sub-microflow from the OIDC SSO module with the `SUB_GetMobileCallbackURL` microflow of the Mobile SSO module in the `handleAuthorizationCode` and `GetAuthorizationURL` microflows.
-1. In the Mobile SSO module, go to the **Configuration** in the **helpers** folder and add the *`APP_NAME`* in the `MobileURLScheme` constant.
+1. Replace the `SUB_GetCallbackURL` sub-microflow from the OIDC SSO module with the `SUB_GetMobileCallbackURL` microflow of the Mobile SSO module in the `handleAuthorizationCode` and `GetAuthorizationURL` microflows. To do this, consider the below parameters: 
+    1. In the `handleAuthorizationCode` microflow, set the **Argument** value of the **DeviceType** parameter to *$AuthAttempt/DeviceType* for the `MobileSSO.SUB_GetMobileCallbackURL` sub-microflow.
+    1. In the `GetAuthorizationURL` microflow, set the **Argument** value to *$DeviceType* for the `MobileSSO.SUB_GetMobileCallbackURL` sub-microflow.
+1. In the Mobile SSO module, go to the **Configuration** in the **helpers** folder, and add the *`APP_NAME`* in the `MobileURLScheme` constant.
 
 ### Single Log Out
 

@@ -21,6 +21,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 #### Pipelines New Features
 
 * We released an API that lets you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run. For more information, see [Pipelines API](/apidocs-mxsdk/apidocs/pipelines-api/).
+* We added a new pipeline step: Best Practice Recommender Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
 
 ### September 5, 2024
 

@@ -8,7 +8,7 @@ weight: 50
 
 Boolean expressions can be used to perform logical operations that return either true or false.
 
-## and
+## and {#and}
 
 The `and` operator checks two Boolean expressions and only returns `true` if both of the expressions are true.
 
@@ -32,7 +32,7 @@ The examples below illustrate which value the expression returns:
 
     The output is `false`, because only the second expression is `true`.
 
-## or
+## or {#or}
 
 The `or` operator combines two Boolean expressions, and returns `true` if at least one of the expressions is true.
 
@@ -58,7 +58,7 @@ The examples below illustrate which value the expression returns:
 
     The expression will return `false`, because both expressions are false.
 
-## not
+## not {#not}
 
 The `not` operator negates the specified Boolean expression.
 

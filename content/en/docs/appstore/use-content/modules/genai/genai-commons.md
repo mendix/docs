@@ -24,11 +24,11 @@ The current scope of the module is focused on text and image generation, as well
 
 The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
 
-You must also install and configure the [Community Commons](/appstore/modules/community-commons-function-library/) module.
+You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## Installation {#installation}
 
-If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be installed manually.
+If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be downloaded manually.
 
 If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is a required module, you must install GenAI Commons manually. First, install the [Community commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [using Marketplace content](/appstore/use-content/) to import the GenAI Commons module into your app.
 
@@ -37,6 +37,8 @@ If you start from a blank app, or have an existing project where you want to inc
 GenAI Commons is the foundation of chat completion implementations within the [OpenAI connector](/appstore/modules/genai/openai/) and the [Amazon Bedrock connector](/appstore/modules/genai/bedrock/), but may also be used to build other GenAI service implementations on top of it by reusing the provided domain model and exposed microflows.
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
+
+Furthermore, GenAI Commons can help to store token usage data which will allow admins to understand token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations. A daily scheduled event that can be used to cleanup token usage data. The `Usage_CleanUpAfterDays` constant can be used to control for how long token usage data should be persisted. Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui) provides pages, snippets and logic to display & export token usage information.
 
 The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, see [Microflows](#microflows), or refer to the documentation inside the module.
 

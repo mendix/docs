@@ -30,6 +30,7 @@ The Conversational UI module provides the following functionalities:
     * Pages that you can use in your navigation for chat
     * Snippets that you can use directly on your pages, for example to display messages or a history sidebar
     * A floating button that for opening a chat
+    * Pages, snippets and logic to display and export token usage data (if enabled in GenAI Commons and supported by the GenAI Connector of choice)
 * Operations to set up your context, interact with the model, and add the data to be displayed in the UI
 * Domain model to store the chat conversations and additional information
 * Integration with any model that is compatible with [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
@@ -77,7 +78,8 @@ Make sure that the module role `User` is part of the user roles that are intende
 | Module role | Description |
 | --- | --- |
 | `User` | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data). |
-| `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all data. |
+| `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all chat data. |
+| `UsageMonitoring` | Can view and export all token usage data. |
 
 ### ChatContext {#chat-context}
 

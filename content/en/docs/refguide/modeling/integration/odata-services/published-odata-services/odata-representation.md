@@ -1,6 +1,7 @@
 ---
 title: "OData Representation"
 url: /refguide/odata-representation/
+weight: 60
 ---
 
 ## Introduction
@@ -12,7 +13,7 @@ This document describes how entities are represented in a published OData servic
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
 | ID <sup>1</sup>| Edm.Int64 | 3940649673954387 | 3940649673954387 |
-| Autonumber | Edm.Int64 | 1 | 1 |
+| AutoNumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) <sup>2</sup> |   |   |   |
 | Boolean | Edm.Boolean | true | true |
 | Date and time | Edm.DateTimeOffset | Fri, 19 Dec 2014 10:27:27 GMT | 2014-12-19T10:27:27.000Z |

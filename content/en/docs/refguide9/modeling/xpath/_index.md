@@ -43,7 +43,7 @@ Element C of a query is optional and contains one or more constraints to restric
 
 Consider the following query:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Name='Jansen']
 ```
 

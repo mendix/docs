@@ -31,6 +31,22 @@ Styling:
 
 ## Properties 
 
+### General
+
+#### Define Default Tab {#define-default}
+
+**Define default tab** defines whether a specific tab page should be shown by default. If set to **Yes**, an additional **Default tab page** property will be shown to set the default tab. If set to **No**, the first tab will be shown. Note that the **Attribute** property may override this behavior if configured.
+
+Default: **No**
+
+#### Attribute
+
+The **Attribute** property can be used to set the active tab index (1-based) programmatically when the tab container is inside a data context. The selected attribute must be of type integer. The active tab will automatically change when the value of the attribute changes to a valid tab index.
+
+#### On Change
+
+The **On change** action can be used to run an action when the user selects a tab page.
+
 ### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide/visibility-section-link.md" %}}
@@ -55,17 +71,15 @@ A tab container contains one or more tab pages where you place widgets. For exam
 
 ### Tab Page-Specific Properties
 
-#### Default Tab Page
+#### Show badge
 
-**Default tab page** defines which tab is displayed when the page is opened. If no tab is set as the default one, the first tab page will be shown. 
-
-Default: *False*
+**Show badge** indicates whether a badge is shown next to the tab page caption. If set to *Yes*, an additional *Badge* property will be available to set its content dynamically.
 
 #### Refresh on Show {#refresh}
 
 **Refresh on show** indicates whether the contents of the tab page should be refreshed when the tab page is shown. Set this property to *No* if you know that nothing will affect the information on the tab page.
 
-Default: *True*
+Default: *Yes*
 
 {{% alert color="info" %}}
 This property is not supported on native mobile pages.
@@ -73,9 +87,9 @@ This property is not supported on native mobile pages.
 
 ## Best Practices
 
-### Stand-Alone (#stand-alone)
+### Standalone (#standalone)
 
-You can use a tab container as a stand-alone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
+You can use a tab container as a standalone widget for greater ease. This means there is no need to place it within a container or other wrapper widgets, as doing so may disrupt the display of content.
 
 ### Usage with Scroll Container {#usage-with-scroll-container}
 

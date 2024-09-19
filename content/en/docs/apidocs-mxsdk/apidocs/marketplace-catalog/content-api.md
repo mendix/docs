@@ -33,7 +33,7 @@ Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to 
 
 Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /content HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
@@ -42,4 +42,8 @@ To authenticate calls when using the OpenAPI specification below, click **Author
 
 ## API Reference
 
-{{< swaggerui src="/openapi-spec/marketplace-content.yaml"  >}}
+{{% alert color="warning" %}}
+You cannot call endpoints in the Swagger UI below on this page.
+{{% /alert %}}
+
+{{< swaggerui-disable-try-it-out src="/openapi-spec/marketplace-content.yaml"  >}}

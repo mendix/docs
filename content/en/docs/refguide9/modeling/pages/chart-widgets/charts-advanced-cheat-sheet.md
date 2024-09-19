@@ -254,13 +254,13 @@ Titles, axes and series can contain complex mathematical expressions.
 
 {{< figure src="/attachments/refguide9/modeling/pages/chart-widgets/charts-advanced-cheat-sheet/math-formula.png" alt="Math formula" class="no-border" >}}
 
-```latex {linenos=false}
+```latex
 $\sqrt{(n_\text{c}(t|{T_\text{early}}))}$
 ```
 
 Add the following to the index.html of the theme:
 
-``` javascript {linenos=false}
+``` javascript
 <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_SVG"></script>
 ```
 

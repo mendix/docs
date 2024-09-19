@@ -233,7 +233,7 @@ To perform Java debugging, you must do the following:
 
 1. Set the following environment properties.
 
-    ```yml
+    ```yaml
     DEVELOPMENT_MODE= true
     JAVA_OPTS : ["-agentlib:jdwp=transport=dt_socket,address=8000,server=y,suspend=n"]
     ```
@@ -313,7 +313,7 @@ The Get List action gets a list of objects described by a type of entity in the 
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
@@ -338,7 +338,7 @@ For example, this connector can get details of a product using the **GWSAMPLE_BA
 
 For a product with the reference **HT-1000**, the URL would be set to:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '(''HT-1000'')'
 ```
 
@@ -374,7 +374,7 @@ In the image below, creating a **Parent** object via the OData Connector for SAP
 
 For example, this connector can be used to create a product using the **GWSAMPLE_BASIC** service. In this case the **Query** is
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet)
 ```
 
@@ -599,7 +599,7 @@ This is the OData query which identifies what data should be returned. This quer
 
 The format of the Query is:
 
-```javascript {linenos=false}
+```javascript
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '?' + 'QUERYPARAMETERS'
 ```
 
@@ -620,7 +620,7 @@ If you are using a Destination configured by the SAP Destination Service, then t
 
 For example, to return a list of products in the category *Notebooks*, using the **GWSAMPLE_BASIC** service, you could enter the following **Query**:
 
-```javascript {linenos=false}
+```javascript
 @GWSAMPLE_BASIC.GWSAMPLE_BASIC + '/' + toString(GWSAMPLE_BASIC.EntitySetNames.ProductSet) + '?' + '$filter=Category%20eq%20''Notebooks''' + '&' + '$inlinecount=allpages'
 ```
 
@@ -630,7 +630,7 @@ Note that the request has to be URL encoded so that, for example, spaces have to
 
 This is the equivalent of the SQL SELECT statement:
 
-```sql {linenos=false}
+```sql
 SELECT * FROM SalesOrderSet WHERE Category='Notepads'
 ```
 
@@ -648,7 +648,7 @@ This is the parameter used within an action when:
 
 When you are referencing an object, the format of the URL is:
 
-```javascript {linenos=false}
+```javascript
 @SERVICEROOT + '/' + toString(COLLECTIONNAME) + '/' + OBJECTINSTANCE
 ```
 

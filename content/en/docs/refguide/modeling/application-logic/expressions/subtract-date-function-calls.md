@@ -12,7 +12,7 @@ The first parameter can be an attribute of a domain model entity of type **Date 
 
 You can also add a time period to the specified date. For more information, see [Add Date Function Calls](/refguide/add-date-function-calls/).
 
-## subtractMilliseconds
+## subtractMilliseconds {#subtractMilliseconds}
 
 The `subtractMilliseconds` function subtracts a specified number of milliseconds from a date.
 
@@ -37,17 +37,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractMilliseconds(dateTime(2007, 1, 1, 1, 1, 1), 1000)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:00 CET 2007
 ```
 
-## subtractSeconds
+## subtractSeconds {#subtractSeconds}
 
 The `subtractSeconds` function subtracts a specified number of seconds from a date.
 
@@ -72,17 +72,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractSeconds(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:00:30 CET 2007
 ```
 
-## subtractMinutes
+## subtractMinutes {#subtractMinutes}
 
 The `subtractMinutes` function subtracts a number of minutes from a date.
 
@@ -107,17 +107,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 subtractMinutes(dateTime(2007, 1, 1, 1, 1, 1), 30)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 00:30:01 CET 2007
 ```
 
-## subtractHours
+## subtractHours {#subtractHours}
 
 The `subtractHours` function subtracts a number of hours from a date.
 
@@ -142,17 +142,17 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractHours(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 00:01:01 CET 2007
 ```
 
-## subtractDays[UTC]
+## subtractDays[UTC] {#subtractDays}
 
 The `subtractDaysUTC` function subtracts a number of days from a date. `subtractDays` uses the server's calendar and `subtractDaysUTC` uses the UTC calendar.
 
@@ -177,17 +177,17 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractDays(dateTime(2007, 1, 5, 1, 1, 1), 5)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## subtractWeeks[UTC]
+## subtractWeeks[UTC] {#subtractWeeks}
 
 The `subtractWeeksUTC` function subtracts a number of weeks from a date using the UTC calendar as opposed to  `subtractWeeks` which uses the server's one. 
 
@@ -212,17 +212,17 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractWeeks(dateTime(2007, 1, 15, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## subtractMonths[UTC]
+## subtractMonths[UTC] {#subtractMonths}
 
 The `subtractMonthsUTC` function subtracts a number of months from a date using the UTC calendar as opposed to  `subtractMonths` which uses the server's one.
 
@@ -247,17 +247,17 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 subtractMonths(dateTime(2007, 3, 1, 1, 1, 1), 2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## subtractQuarters[UTC]
+## subtractQuarters[UTC] {#subtractQuarters}
 
 The `subtractQuartersUTC` function subtracts a number of quarters from a date using the UTC calendar as opposed to  `subtractQuarters` which uses the server's one.
 
@@ -282,17 +282,17 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 Input: subtractQuarters(dateTime(2007, 4, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2007
 ```
 
-## subtractYears[UTC]
+## subtractYears[UTC] {#subtractYears}
 
 The `subtractYearsUTC` function subtracts a number of years from a date using the UTC calendar as opposed to  `subtractYears` which uses the server's one.
 
@@ -317,12 +317,12 @@ The output is described in the table below:
 
 If you use the following input: 
 
-```java {linenos=false}
+```java
 Input: subtractYears(dateTime(2007, 1, 1, 1, 1, 1), 1)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 Mon Jan 01 01:01:01 CET 2006
 ```

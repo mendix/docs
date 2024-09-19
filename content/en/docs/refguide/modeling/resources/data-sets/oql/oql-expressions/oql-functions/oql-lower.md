@@ -11,7 +11,7 @@ The `LOWER` function converts all uppercase characters in a given string to lowe
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 LOWER ( expression )
 ```
 

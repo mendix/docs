@@ -15,31 +15,31 @@ This can have different results from an inverse comparison (for example `!=` as 
 
 This query returns all customers whose names are *not* equal to "Jansen":
 
-```java {linenos=false}
+```java
 //Sales.Customer[not(Name = 'Jansen')]
 ```
 
 In this case, the above query returns the same result as the following query:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Name != 'Jansen']
 ```
 
 The following query returns all the customers who have not placed at least one order:
 
-```java {linenos=false}
+```java
 //Sales.Customer[not(Sales.Customer_Order/Sales.Order)]
 ```
 
 The following query returns all the customers who have placed *no* orders with a `TotalPrice` of *more than* 30,000, including those who have not placed any orders at all:
 
-```java {linenos=false}
+```java
 //Sales.Customer[not(Sales.Customer_Order/Sales.Order/TotalPrice > 30000)]
 ```
 
 The query above does not return the same result as the one below, which returns all the customers who have placed *at least one* order with a `TotalPrice` of *less than* 30,000, regardless of the number of orders they have placed worth more than 30,000:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Sales.Customer_Order/Sales.Order/TotalPrice <= 30000]
 ```
 

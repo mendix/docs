@@ -53,7 +53,7 @@ When the operation has a body parameter, it has a schema. This schema refers to 
 
 If the parameter is an object:
 
-```json {linenos=false}
+```json
 { "$ref": "#/definitions/#definition_name#"}
 ```
 
@@ -68,7 +68,7 @@ If the parameter is a list:
 
 If there is no import mapping, or the mapping is not based on a message definition:
 
-```json {linenos=false}
+```json
 { "type": "file" }
 ```
 
@@ -78,13 +78,13 @@ The result of an operation has a schema, too. The format of this depends on the 
 
 When there is no export mapping or the export mapping is not based on a message definition: 
 
-```json {linenos=false}
+```json
 { "type": "file" }
 ```
 
 When the microflow returns an object:
 
-```json {linenos=false}
+```json
 { "$ref": "#/definitions/#definition_name#"}
 ```
 

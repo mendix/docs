@@ -133,7 +133,7 @@ The package can contain a single example of one of the following:
 * Consumed web service
 * Published REST service
 * Published web service
-* Published OData service
+* Published OData/GraphQL service
 
 To import module documents, follow these steps:
 

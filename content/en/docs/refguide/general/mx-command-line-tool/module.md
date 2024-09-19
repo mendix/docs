@@ -124,7 +124,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 For example:
 
-```bash {linenos=false}
+```bash
 > mx.exe module-import Module.mxmodule App.mpr
 Importing protected module is not supported
 ```
@@ -133,7 +133,7 @@ Exit code 111
 
 or
 
-```bash {linenos=false}
+```bash
 > mx.exe module-import Module.mpk App.mpr
 The mpr file version is '10.3.0-dev'.
 Importing module Module into project MyApp

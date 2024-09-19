@@ -273,7 +273,7 @@ The tasks are then consumed by executors that perform a `SELECT FOR UPDATE SKIP 
 
 After the task has been executed, it is moved to be an object of the `System.ProcessedQueueTask` entity with `Status` `Completed` or `Failed`. If the task failed with an exception, this is included in the `ErrorMessage` attribute.
 
-Arguments are stored in the `Arguments` attribute as JSON values. Arguments can be any primitive type ([variable](/refguide/variable-activities/))or a committed persistent object, which is included in the `Arguments` field by its Mendix identifier. Upon execution of the task, the corresponding object is retrieved from the database using the Mendix identifier. For this reason the persistent object must be committed before the task executes, because otherwise a runtime exception will occur.
+Arguments are stored in the `Arguments` attribute as JSON values. Arguments can be any primitive type ([variable](/refguide/variable-activities/)) or a committed persistent object, which is included in the `Arguments` field by its Mendix identifier. Upon execution of the task, the corresponding object is retrieved from the database using the Mendix identifier. For this reason the persistent object must be committed before the task executes, because otherwise a runtime exception will occur.
 
 When a node crashes, this is eventually detected by another cluster node, because it no longer updates its heartbeat timestamp. At this point the other node will reset all tasks that were running on the crashed node. The reset performs the following actions:
 

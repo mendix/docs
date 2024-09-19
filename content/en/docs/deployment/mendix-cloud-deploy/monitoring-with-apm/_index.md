@@ -155,7 +155,7 @@ updating relative links -->
 
 To specify which request handlers, microflows, and activities are reported, use a JSON configuration with the following format. (Note that this is the syntax, not an example of this custom setting.)
 
-```json {linenos=false}
+```json
 {
   "requestHandlers": [
     {
@@ -234,7 +234,7 @@ The following example sends logs for the following:
 * The microflow `After_Startup` in the module `Administration`
 * The `CreateObject` and `DeleteObject` activities
 
-```json {linenos=false}
+```json
 {
   "requestHandlers": [
     {

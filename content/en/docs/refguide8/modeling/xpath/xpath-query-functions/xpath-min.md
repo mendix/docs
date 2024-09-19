@@ -17,12 +17,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the lowest total price found in any object:
 
-```java {linenos=false}
+```java
 min(//Sales.Order/TotalPrice)
 ```
 
 This query returns the lowest total price of an order placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 min(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

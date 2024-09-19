@@ -8,7 +8,7 @@ weight: 50
 
 Boolean expressions can be used to perform logical operations that return either true or false.
 
-## and
+## and {#and}
 
 The `and` operator checks two Boolean expressions and only returns `true` if both of the expressions are true.
 
@@ -18,7 +18,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     (6 > 4) and (3 < 5)
     ```
 
@@ -26,13 +26,13 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     ('hello' = 'hallo') and (3 < 5)
     ```
 
     The output is `false`, because only the second expression is `true`.
 
-## or
+## or {#or}
 
 The `or` operator combines two Boolean expressions, and returns `true` if at least one of the expressions is true.
 
@@ -44,7 +44,7 @@ The examples below illustrate which value the expression returns:
 
     If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     ($product/price < $product/recommendedPrice : 2) or ($product/price > 0)
     ```
 
@@ -52,13 +52,13 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input: 
 
-    ```java {linenos=false}
+    ```java
     ('hello' = 'nothello') or ('byebye' = 'stillnotbyebye')
     ```
 
     The expression will return `false`, because both expressions are false.
 
-## not
+## not {#not}
 
 The `not` operator negates the specified Boolean expression.
 
@@ -76,7 +76,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     not('hello' = 'hallo')
     ```
 
@@ -84,7 +84,7 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     not(true)
     ```
 

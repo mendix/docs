@@ -50,7 +50,7 @@ To configure the Mendix Database Connector for Amazon RDS, follow these steps:
     5. In the **Sql** parameter, enter your SQL statement.
         For example, to create a table, you can use the following statement:
 
-        ```sql {linenos=false}
+        ```sql
         CREATE TABLE employee (
             emp_id INT PRIMARY KEY,
             first_name VARCHAR(50) NOT NULL,

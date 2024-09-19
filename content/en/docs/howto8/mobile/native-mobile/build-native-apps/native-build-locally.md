@@ -171,7 +171,7 @@ To remove dependencies which do not support auto-linking, do the following:
 
 1. Remove the dependency's `implementation` entry in the *android/app/build.gradle*. For example, to remove the Firebase module remove the following:
 
-    ```text {linenos=false}
+    ```text
     implementation project(":react-native-firebase")
     ```
 

@@ -76,7 +76,7 @@ To edit the Java action in Eclipse, follow these steps:
 
 5. Replace the existing line:
 
-    ```java {linenos=false}
+    ```java
         throw new com.mendix.systemideinterfaces.MendixRuntimeException("Java action was not implemented");
     ```
 

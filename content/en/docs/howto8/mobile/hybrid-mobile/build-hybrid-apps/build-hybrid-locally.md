@@ -40,7 +40,7 @@ Optionally, you can set various environments in the **config/environments.json**
 
 To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
 
-```shell {linenos=false}
+```shell
 npm run package -- --env target=test  # target the test endpoint for ARM architecture
 ```
 
@@ -205,7 +205,7 @@ You *APK* should now be generated and signed using Android Studio. The resulting
 
 ## Read More
 
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Offline Reference Guide](/refguide8/offline-first/)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

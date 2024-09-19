@@ -18,7 +18,7 @@ Either of these keywords can be used to check whether an attribute has a value (
 
 This query returns all the customers whose name is not known to the system:
 
-```java {linenos=false}
+```java
 //Sales.Customer[Name = NULL]
 ```
 
@@ -99,25 +99,25 @@ These variables must be used as string values and placed between two quotes. Tim
 
 This query returns only customers who have registered since the beginning of this week:
 
-```java {linenos=false}
+```java
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered this week:
 
-```java {linenos=false}
+```java
 //Sales.Customer[DateRegistered >= '[%BeginOfCurrentWeek%]' and DateRegistered < '[%EndOfCurrentWeek%]']
 ```
 
 This query returns only customers who have registered in the past three years:
 
-```java {linenos=false}
+```java
 //Sales.Customer[DateRegistered > '[%BeginOfCurrentDay%] - 3 * [%YearLength%]']
 ```
 
 This query returns users with the role "Administrator":
 
-```java {linenos=false}
+```java
 //System.User[System.UserRoles = '[%UserRole_Administrator%]']
 ```
 

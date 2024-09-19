@@ -33,7 +33,7 @@ By default, location is built up by appending service name and "v1" to the "rest
 
 Example:
 
-```text {linenos=false}
+```text
 http://localhost:8080/rest/my_service_name/v1
 ```
 

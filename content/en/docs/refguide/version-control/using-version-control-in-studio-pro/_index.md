@@ -284,7 +284,7 @@ When doing a **git merge** operation on two branches in the command line, Git at
 
 Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
-```text {linenos=false}
+```text
 [core]
   attributesfile = ~/.gitattributes
 [merge "custom"]
@@ -296,14 +296,14 @@ Navigate to the *.gitconfig* file in C:/Users/[USER_NAME] and add the following:
 
 You can also configure the Git driver locally per repository using the following commands:
 
-```text {linenos=false}
+```text
 git config merge.custom.name "custom merge driver for specific files"
 git config merge.custom.driver "[MX.EXE_PATH] merge %O %A %B"
 ```
 
 After setting up the driver either locally or globally, create a *.gitattributes* file in the same folder with the following contents:
 
-```text {linenos=false}
+```text
 *.mpr merge=custom
 ```
 
@@ -357,6 +357,10 @@ If you are doing more advanced changes to files, like adding Java actions or res
 Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
+{{% alert color="warning" %}}
+Studio Pro automatically performs the necessary post-processing steps when you download a Git clone through its user interface. Using the Git command line to create a Git clone or using a clone created by a third-party tool in Studio Pro is not supported.
+{{% /alert %}}
+
 ### Authenticating to Team Server {#authenticating}
 
 When using external tools, you might be asked to authenticate separately to Team Server.
@@ -393,7 +397,7 @@ When building deployment packages in a pipeline outside the Mendix platform, you
 
 You can use the commands below to download a shallow clone. Note that they should only be used to download a single revision, as Studio Pro is not compatible with working on a shallow clone.
 
-```text {linenos=false}
+```text
 # make a new blank repository in the current directory
 git init
 

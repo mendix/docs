@@ -34,13 +34,13 @@ The `avg()` function returns the average of its argument.
 
 This query returns the average total price of all placed orders:
 
-```java {linenos=false}
+```java
 avg(//Sales.Order/TotalPrice)
 ```
 
 This query returns the average total price of all orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 avg(//Sales.Order[Sales.Customer_Order/Sales.Customer = 'Jansen']/TotalPrice)
 ```
 
@@ -52,13 +52,13 @@ The `count()` function counts all objects retrieved by the enclosed query and re
 
 This query returns a count of all the placed orders:
 
-```java {linenos=false}
+```java
 count(//Sales.Order)
 ```
 
 This query returns a count of all the orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 count(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen'])
 ```
 
@@ -70,13 +70,13 @@ The `max()` function returns the maximum value of its argument.
 
 This query returns the highest total price found in any object:
 
-```java {linenos=false}
+```java
 max(//Sales.Order/TotalPrice)
 ```
 
 This query returns the highest total price of an order placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```
 
@@ -88,13 +88,13 @@ The `min()` function returns the minimum value of its argument.
 
 This query returns the lowest total price found in any object:
 
-```java {linenos=false}
+```java
 min(//Sales.Order/TotalPrice)
 ```
 
 This query returns the lowest total price of an order placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 min(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```
 
@@ -106,12 +106,12 @@ The `sum()` function returns the sum of its argument.
 
 This query returns the sum of the total prices of all placed orders:
 
-```java {linenos=false}
+```java
 sum(//Sales.Order/TotalPrice)
 ```
 
 This query returns the sum of the total prices of all the orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 sum(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

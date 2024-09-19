@@ -1,6 +1,6 @@
 ---
 title: "Air-Gapped Installation of Tekton CI/CD for Mendix for Private Cloud"
-linktitle: "Air-gapped Tekton Installation"
+linktitle: "Air-Gapped Tekton Installation"
 url: /developerportal/deploy/private-cloud-tekton-airgapped/
 description: "Describes how to use Tekton to create a CI/CD solution for Mendix environments in the Private Cloud"
 weight: 10
@@ -72,7 +72,7 @@ Some registries cannot support complex repository addresses such as `my.registry
 
 You will need to update the `destination:` value for each of the repositories as shown below:
 
-```json {linenos=table,hl_lines=[6],linenostart=22}
+```json {hl_lines=6}
 …
 {
 	"name": "mxbuild8.18.11",
@@ -165,7 +165,7 @@ For Tekton Triggers on OpenShift you need to update the deployment objects to ma
 1. Edit the `tekton-triggers-controller` deployment.
 2. Add the following line to the `args` section:
 
-    ```bash{linenos=false}
+    ```bash
     - '--el-security-context=false'
     ```
 

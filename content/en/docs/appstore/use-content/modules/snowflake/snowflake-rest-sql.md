@@ -184,7 +184,7 @@ To showcase this, we have created an example entity in the domain model of the c
 | `ATTR_TXT` (string) |
 | `ATTR_INT` (integer) |
 | `ATTR_LONG` (long) |
-| `ATTR_BOOL` (boolean) |
+| `ATTR_BOOL` (Boolean) |
 | `ATTR_DECI` (decimal) |
 | `ATTR_ENUM` (enumeration) |
 | `ParsedDate` (date and time)|
@@ -193,7 +193,7 @@ This entity is only an example. You must review properties such as the naming of
 
 For example, a table in Snowflake may contain multiple columns named `column1, column2,.......,column8`. To retrieve data from the column, create `ExampleObject` objects and display them on a page, you must execute an SQL statement that would retrieve the table columns with the name of my attributes and have the same datatypes. After making sure that the datatypes in Snowflake and Mendix match, you can execute a statement such as the one shown in the following example:
 
-```
+```sql
 SELECT 
      column1 as ATTR_TXT,
      column2 as ATTR_INT,

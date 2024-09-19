@@ -46,7 +46,9 @@ To download a backup of a licensed app, follow these steps:
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/backups/download-backup/backup-choice.png" alt="" width=75% class="no-border" >}}
 
-    {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active. In this case, you can download the backup archive immediately.{{% /alert %}}
+    {{% alert color="info" %}}Some backups may take a while to be archived and made ready for download. You can close the window and return later; once the archival process is complete, selecting the same download type for the same backup instantly enables the **Show URL** and **Download** buttons.{{% /alert %}}
+   
+    {{% alert color="info" %}}If a backup archive has been prepared recently, the **Show URL** and **Download** buttons will be active if you have selected the same download type. In this case, you can download the backup archive immediately.{{% /alert %}}
     
 1. Once the download archive has been prepared, you can do one of the following:
 

@@ -70,7 +70,9 @@ The 3D Viewer app service includes a few 3D widgets. These are some limitations 
 
 ### Prerequisites
 
-3D Viewer version 3.0.0 and higher can be used with Studio Pro versions starting with [9.12.10](/releasenotes/studio-pro/9.12/#91210), version 2.2.0 and higher can be used with Studio Pro versions starting with [9.4.0](/releasenotes/studio-pro/9.4/) until [9.11](/releasenotes/studio-pro/9.11/) (including 9.11), and version 2.1.2 can be used with Studio Pro 8 versions starting with [8.15.1](/releasenotes/studio-pro/8.15/#8151).
+3D Viewer version 4.0.0 or above can be used with Studio Pro version [10.0.0](/releasenotes/studio-pro/10.0/) or above.
+
+For more information about the requirements for other releases, see the releases history in the [component page](https://marketplace.mendix.com/link/component/118345) in the Marketplace.
 
 ## Installation
 
@@ -174,17 +176,17 @@ For 3D Viewer to work, you must set the app's after-startup microflow to call th
 
 #### Core Widgets
 
-The core widgets required to enable visualizing a 3D model are described below.
+The **Core** widgets required to enable visualizing a 3D model are described below.
 
 ##### Container3D {#container3d}
 
-This is a container widget designed to put other 3D widgets in (except Uploader widget, Uploader widget doesn't need to be placed within Container3D widget). It provides a shared context for 3D widgets to communicate with each other.
+The **Container3D** widget is a container widget designed to put other 3D widgets in (except Uploader widget, Uploader widget doesn't need to be placed within Container3D widget). It provides a shared context for 3D widgets to communicate with each other.
 
 You can place this widget in any location of a page.
 
 ##### Uploader {#uploader}
 
-This widget enables selecting one or more models from your local machine and uploading it to the Mendix file storage.
+The **Uploader** widget enables selecting one or more models from your local machine and uploading it to the Mendix file storage.
 
 You can place this widget in any location of a page. 
 
@@ -192,7 +194,7 @@ On the **General** tab of the properties, the **Model ID**, and **Data source** 
 
 ##### Viewer {#viewer}
 
-This widget provides a viewing window of your 3D model.
+The **Viewer** widget provides a viewing window of your 3D model.
 
 Place this widget inside a [Container3D](#container3d) widget.
 
@@ -220,23 +222,27 @@ For this widget to visualize a model correctly, set the following properties:
 
 #### Panel Widgets {#panel-widgets}
 
-These widgets have an operation panel that contains an interactive item for the end-user to operate on.
+The **Panel** widgets have an operation panel that contains an interactive item for the end-user to operate on.
 
 Each panel widget should be placed in a [Container3D](#container3d) widget. A Viewer widget with the right data source should also be in the same Container3D widget.
 
 ##### PS Tree {#ps-tree}
 
-This widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer. In addition, the widget supports searching the names of nodes using regular expressions and highlighting the results.
+The **PS Tree** widget presents a hierarchical tree view of the items that form a model. By toggling the tree node, the end-user can control which model parts are loaded into the Viewer. In addition, the widget supports searching the names of nodes using regular expressions and highlighting the results.
 
 On the **General** tab, the following options are available:
 
 * **Expand all** – determines if the model's product structure tree should be fully expanded at the initial load
-* **Show search** – use to toggle a search bar that enables the end-user to enter a part name and search for the part in the widget
+* **Show search** – used to toggle a search bar that enables the end-user to enter a part name and search for the part in the widget
+* **Show search options** – determines whether to display all node search results in the drop-down list
+  
+{{< figure src="/attachments/partners/siemens/3d-viewer/pstree-showsearchoptions.jpg" max-width=50% alt="show search options in PS Tree" >}}
+
 * **Show leaf structure** – determines if the sub-part data should be displayed in the widget
 
 ##### PS Tree Table
 
-This widget presents a configurable tree table to display the product structure of a model and other model attributes of your choice.
+The **PS Tree Table** widget presents a configurable tree table to display the product structure of a model and other model attributes of your choice.
 
 Compared to the [PS Tree](#ps-tree) widget, this widget adds an additional configurable property called **Column**. You can expand the table by adding columns and specifying the property to be displayed in this column. Examples of predefined properties are **Volume**, **Mass**, **Units**, **HasPMI**, and **Density**. If you want to display other properties other than the predefined properties in the list, you can also add them by specifying valid properties defined in the model.
 
@@ -244,7 +250,7 @@ Compared to the [PS Tree](#ps-tree) widget, this widget adds an additional confi
 
 ##### PMI Tree {#pmi-tree}
 
-This widget presents a hierarchical tree display of a model's product manufacturing information, model views, and design groups.
+The **PMI Tree** widget presents a hierarchical tree display of a model's product manufacturing information, model views, and design groups.
 
 On the **General** tab, the **Expand all tree nodes** property determines if all tree nodes are expanded by default. When set to **Yes**, the end-user sees a PMI tree fully expanded by default on the widget load. When set to **No**, the PMI tree will not fully expand by default. 
 
@@ -252,7 +258,7 @@ Also on the **General** tab, the **Auto load** property determines if all PMI in
 
 ##### Section View {#section-view}
 
-This widget enables creating a section cut on the model and provides a section view from various angles.
+The **Section View** widget enables creating a section cut on the model and provides a section view from various angles.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can add a section plane on the model. 
 
@@ -260,7 +266,7 @@ No specific configuration is needed. With this widget, you can add, delete, and 
 
 ##### Markup Builder {#markup-builder}
 
-This widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
+The **Markup Builder** widget enables creating a 2D markup on a model and saving the annotated screenshot. Snapshots that contain 2D markup will be saved along with the model in Mendix file storage.
 
 On **General** tab, by setting the **Enable** property you can switch the markup mode on or off. When set to **True**, model will be locked to a 2D dimension and will not react to mouse rotation. When set to **False**, the model will be unlocked and return to rotatable state.
 
@@ -270,15 +276,19 @@ On **Event** tab, by binding a Boolean attribute to the **Save** property, the s
 
 ##### Measurement {#measurement}
 
-This widget enables performing measurements on 3D models, including measuring distance, angle, line length, radius, and area.
+The **Measurement** widget enables performing measurements on 3D models, including measuring distance, angle, line length, radius, and area.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to perform measurements on the model. 
+
+You can set the language of the measurement result in the **General** tab. The default language is English.
+
+{{< figure src="/attachments/partners/siemens/3d-viewer/measurement-language.jpg" alt="measurement language"  >}}
 
 No specific configuration is needed. With this widget, you can measure the distance, length, radius, area, and angle of a part or between parts. For details on how to perform measurements on a 3D model, see the [Perform 3D Measurements](#perform-measurements) section below.
 
 ##### Preference {#preference}
 
-This widget allows you to set and save your personal preferences.
+The **Preference** widget allows you to set and save your personal preferences.
 
 Place this widget inside of a [Container3D](#container3d) widget. A [Viewer](#viewer) widget should be present in the same Container3D widget so that you can use the options provided in the widget to filter PMI of the model.
 
@@ -296,7 +306,7 @@ For details on how this widget behaves in an application, see the [Setting Prefe
 
 #### Toolbar Widgets
 
-These widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
+The **Toolbar** widgets do not require additional configuration. Simply place them within a [Container3D](#container3d) widget with the accompanying [Viewer](#viewer) widget.
 
 | Widget | Description |
 | --- | --- |
@@ -326,7 +336,7 @@ If you have already deployed your app, change the existing **LicenseToken** cons
 
 #### For an App Deployed in Your Own Environment
 
-If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deployment](/deployment/).
+If you deploy your app in your own environment, you need to configure the license token in your own environment. For more information, see [Deploying Apps](/deployment/).
 
 ## Usage
 
@@ -655,7 +665,7 @@ Defines the style of sectionHandle. `arrowRadius` and `handleRadius` are measure
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "arrowColor": 16711680,
         "handleColor": 16711680,
@@ -680,7 +690,7 @@ Specifies bboxSurfaceScanner options.
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {
         "useDefault": true,
         "detailLevel": 35.8,
@@ -722,7 +732,7 @@ This defines measurement behaviors and dimension styles. The `measurement` secti
 * Type – object
 * Default value –
 
-    ```json {linenos=false}
+    ```json
     {    
         "dimension": {    
             "text": {    

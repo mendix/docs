@@ -98,5 +98,5 @@ Pressing a **Cancel** button or triggering a rollback object activity will initi
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/object-activities/rollback-object/during-rollback.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
-The **Committing** state of the **IMendixObject** is deprecated since Mendix Studio Pro 7.16.
+The **Committing** state of the **IMendixObject** is deprecated.
 {{% /alert %}}

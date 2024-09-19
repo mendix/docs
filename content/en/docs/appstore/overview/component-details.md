@@ -57,7 +57,7 @@ The component details page also presents the following tabs:
     * [Platform-supported components](/appstore/marketplace-content-support/#category) are documented according to content type or category in the [Marketplace Guide](/appstore/).
 * **Releases** – This tab lists all the versions of the component along with details like the **Framework version** and the **UUID**.
     * Each version can be downloaded by clicking **Download.**
-    * If any version has the label **React-Ready** next to it, it means this version is optimized for React Client applications.
+    * If any version has the <text class="badge badge-pill badge-react" style="margin-left:0px">{{< icon name="react" color="blue" >}} REACT-CLIENT</text> label next to it, it means this version is optimized for React Client applications. This label is only used for widgets.
 * **Reviews** – This tab shows user reviews of the component.
     * You can browse, sort by review date, and filter by ratings for insights on the component.
     * You can select the **Only show my reviews** checkbox to check your own reviews.

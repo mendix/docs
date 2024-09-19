@@ -73,7 +73,7 @@ Options when creating a package are described in the table below:
 
 For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the *Windows* version of MxBuild, you can use the following command:
 
-```bat {linenos=false}
+```bat
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 

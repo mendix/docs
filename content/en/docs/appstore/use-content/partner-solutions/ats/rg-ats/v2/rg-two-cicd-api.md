@@ -57,7 +57,7 @@ Starts a new job based on a CI/CD template and returns the UUID of the job which
 
 #### URL
 
-```text {linenos=false}
+```text
 https://ats100.mendixcloud.com/ws/RunJob
 ```
 
@@ -125,7 +125,7 @@ The following table shows the data contained in the response of the Run Job serv
 
 #### URL
 
-```text {linenos=false}
+```text
 https://ats100.mendixcloud.com/ws/GetJobStatus
 ```
 
@@ -146,7 +146,7 @@ You must include the following information in the request:
 
 ¹ Optional. If left out, defaults to `false`.
 
-##### Example
+##### Example 1
 
 Basic example, only returns the status and result (and error message if there is one):
 
@@ -170,7 +170,7 @@ Basic example, only returns the status and result (and error message if there is
 </soap:Envelope>
 ```
 
-##### Example
+##### Example 2
 
 Example which also returns the number of passed/failed/not run test cases:
 
@@ -195,7 +195,7 @@ Example which also returns the number of passed/failed/not run test cases:
 </soap:Envelope>
 ```
 
-##### Example
+##### Example 3
 
 Example which returns the status of the execution flags and details for each test case.
 
@@ -237,7 +237,7 @@ The following table shows the data contained in the response of the **Get Job St
 ¹ Optional, only returned if the corresponding **Include** statement was set to true in the request.  
 ² Error messages are only included for not passed testcases where a simple and short error message can be generated.  
 
-##### Example
+##### Example 1
 
 Basic example, only returns the status and result (and error message if there is one):
 
@@ -255,7 +255,7 @@ Basic example, only returns the status and result (and error message if there is
 </soap:Envelope>
 ```
 
-##### Example
+##### Example 2
 
 Example which also returns the number of passed, failed, and not-executed test cases:
 
@@ -280,7 +280,7 @@ Example which also returns the number of passed, failed, and not-executed test c
 </soap:Envelope>
 ```
 
-##### Example
+##### Example 3
 
 Example which returns the status of the execution flags and details for each test case.
 
@@ -323,7 +323,7 @@ Reruns all the failed or not-executed test cases for a finished job. Returns the
 
 #### URL
 
-```text {linenos=false}
+```text
 https://ats100.mendixcloud.com/ws/RerunNotPassed
 ```
 

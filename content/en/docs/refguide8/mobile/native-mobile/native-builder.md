@@ -42,7 +42,7 @@ The `Prepare` command handles the creation of the app on both GitHub and App Cen
 
 An example of a `prepare` command:
 
-```bash {linenos=false}
+```bash
 native-builder.exe prepare --github-access-token <token> --appcenter-api-token <token> --java-home <absolute-path> --mxbuild-path <absolute-path> --project-path <absolute-path-to-mpr-file> --projectName CoolApp --app-identifier "com.company.myapp" --app-name "My Cool App" --mendix-version 8.5.0
 ```
 
@@ -73,7 +73,7 @@ The `Build` command builds the JavaScript bundles and assets, creates a build on
 
 If you already ran `prepare`, this is an example of a `build` command:
 
-```bash {linenos=false}
+```bash
 native-builder.exe build --project-name "CoolApp" --app-version "1.0.0" --build-number 1
 ```
 
@@ -104,7 +104,7 @@ When used, the `build dev-app` command will create a preview app much like the M
 
 Here is an example of a command featuring `build dev-app`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe build dev-app --project-name "CoolApp" --output-path "C:\bundles\developer"
 ```
 
@@ -129,7 +129,7 @@ There is no automated way to preserve changes you made to a previous template. I
 
 An example of a `regenerate` command:
 
-```bash {linenos=false}
+```bash
 native-builder.exe regenerate --project-name "CoolApp" --mendix-version 8.5.0
 ```
 
@@ -143,7 +143,7 @@ The `push-update` command handles generating a new JavaScript bundle and assets,
 
 Here is an example of a command featuring `push-update`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe release push-update --project-name "CoolApp" --target-version "1.0.0" --build-number 1 --rollout-percentage 100
 ```
 
@@ -165,7 +165,7 @@ The `patch-update` command allows you to update the metadata of a published upda
 
 Here is an example of a command featuring `patch-update`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe release patch-update --project-name "CoolApp" --label "v4" --target-version  "1.0.1"
 ```
 
@@ -186,7 +186,7 @@ The `rollback-update` command allows you to revert to a previous deployment rele
 
 Here is an example of a command featuring `rollback-update`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe release rollback-update --project-name "CoolApp" --label "v4"
 ```
 
@@ -208,7 +208,7 @@ The `list` command displays a pretty-printed list of all deployed releases.
 
 Here is an example of a command featuring `list`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe release list --project-name "CoolApp"
 ```
 
@@ -224,7 +224,7 @@ When used, the `bundle` command **will only run the MxBuild step** (skipping Git
 
 Here is an example of a command featuring `bundle`:
 
-```bash {linenos=false}
+```bash
 native-builder.exe bundle --project-name "CoolApp" --output-path "C:\bundles"
 ```
 
@@ -242,7 +242,7 @@ Commands to modify the iOS configuration are grouped under the `config ios` comm
 
 To add or remove entitlements, use the `add-entitlements` or `remove-entitlements` commands:
 
-```bash {linenos=false}
+```bash
 native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitlements notification nfc
 ```
 
@@ -255,7 +255,7 @@ native-builder.exe config ios add-entitlements --project-name "CoolApp" --entitl
 
 To add or remove background modes, use the `add-background-modes` or `remove-background-modes` commands:
 
-```bash {linenos=false}
+```bash
 native-builder.exe config ios add-background-modes --project-name "CoolApp" --modes notification
 ```
 

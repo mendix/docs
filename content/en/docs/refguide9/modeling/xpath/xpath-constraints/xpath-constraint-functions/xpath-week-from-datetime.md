@@ -37,13 +37,13 @@ The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releaseno
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the local time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
+```java
 //Logging.Log[week-from-dateTime(DateAttribute) = 2]
 ```
 
 This query returns all the logs where the date `DateAttribute` falls in the second week of the year in the New York time zone (for example, "2011-01-13"):
 
-```java {linenos=false}
+```java
 //Logging.Log[week-from-dateTime(DateAttribute, 'America/New_York') = 2]
 ```
 

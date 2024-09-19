@@ -59,7 +59,7 @@ The following steps describe how to install the hub and nodes with Docker-Compos
 
 4. Create a docker-compose.yml in your folder/directory (/docker)
 
-    ```yml
+    ```yaml
     version: '3'
     services:
      selenoid:
@@ -165,7 +165,7 @@ To install a hub with a Portal for "Live-View" you need a different *browsers.js
 
 2. Create a docker-compose.yml with added selenoid UI for the portal:
 
-    ```yml
+    ```yaml
     version: '3'
     services:
      selenoid:

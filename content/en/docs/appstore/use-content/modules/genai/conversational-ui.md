@@ -49,7 +49,7 @@ You must also ensure that you have the prerequisite modules that Conversational 
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
 
-Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the GenAI Commons [Request](/appstore/modules/genai/commons/#request) and [Response](/appstore/modules/genai/commons/#response).
+Finally, you must also install and configure a connector that is compatible with GenAI Commons. Mendix provides platform-supported integration with either [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/). You can also integrate with custom models, by making them compatible with the [GenAI Commons](/appstore/modules/genai/commons/) Request and Response.
 
 ## Installation {#installation}
 
@@ -92,12 +92,12 @@ The following operations can be found in the toolbox for processing the [ChatCon
 * `Create ChatContext & Set ActionMicroflow` creates a new `ChatContext` and a new `ProviderConfig` (or a specialization of such depending on the input). The `ProviderConfig` is added to the `ChatContext` and set to active. Additionally, the action microflow of the new `ProviderConfig` is set.
 * `Create ChatContext & Set ProviderConfig` creates a new `ChatContext` and sets a given `ProviderConfig` to active.
 * `Create ChatContext & Set ProviderConfig (List)` creates a new `ChatContext` and adds a `ProviderConfig` to the `ChatContext` and sets it to active. In addition, a list of `ProviderConfigs` can be added to the `ChatContext` (non-active, but selectable in the UI).
-* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for [chat with history within Retrieve and Generate with Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/#retrieve-and-generate-with-history).
+* `Set ConversationID` sets the ConversationID on the `ChatContext`. Storing the ConversationID is needed for chat with history within Retrieve and Generate with [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Set Topic` sets the `Topic` of the `ChatContext`. This attribute can be used in the **History** sidebar while making historical chats visible to users.
 
 #### Request Operations {#request-operations}
 
-* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/#request) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
+* `Create Request from ChatContext` creates a [Request](/appstore/modules/genai/commons/) object that is used as input parameter in a `Chat with History` operation as part of the [action microflow](#action-microflow). For more information about the `Chat with History` operation, see [(Azure) OpenAI](/appstore/modules/genai/openai/) or [Amazon Bedrock](/appstore/modules/aws/amazon-bedrock/).
 * `Get Current User Prompt` gets the current user prompt. It can be used in the [action microflow](#action-microflow), because the `CurrentUserPrompt` from the chat context is no longer available.
 * `Update Assistant Response` processes the response of the model and adds the new message and any sources to the UI. This is typically one of the last steps of the logic in an [action microflow](#action-microflow).
 
@@ -180,7 +180,7 @@ The following versions are available and can be swapped as needed:
 * **Snippet_ChatContext_SelectActiveProviderConfig** - With this snippet, users can select an active [Provider Config](#provider-config) from all associated configurations, for example to let them select a model.
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
-See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [OpenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
 
 ### Additional Operations {#operations}
 

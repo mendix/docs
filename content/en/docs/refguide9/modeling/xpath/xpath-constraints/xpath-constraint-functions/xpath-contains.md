@@ -11,7 +11,7 @@ The `contains()` function tests whether a string attribute contains a specific s
 
 This query returns all the customers from which the name contains the string `an`:
 
-```java {linenos=false}
+```java
 //Sales.Customer[contains(Name, 'an')]
 ```
 

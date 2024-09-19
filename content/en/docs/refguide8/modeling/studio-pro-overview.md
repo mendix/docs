@@ -42,7 +42,7 @@ For more information on menus, see [Menus](/refguide8/menus/).
 
 You can deploy your app by clicking the **Run** or **Run locally** buttons. To view your deployed app, click the **View** button. 
 
-For more information on deployment in Mendix, see [Deployment](/deployment/).
+For more information on deployment in Mendix, see [Deploying Apps](/deployment/).
 
 For more information on deploying your app and versioning it, see the [Versioning a Project Deployed to the Cloud](/refguide8/using-version-control-in-studio-pro/#versioning-project) section in *Using Version Control in Studio Pro*. 
 

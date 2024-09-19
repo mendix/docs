@@ -104,7 +104,7 @@ To use breakpoint conditions, follow these steps:
     {{< figure src="/attachments/howto8/monitoring-troubleshooting/debug-microflows/18580018.png" class="no-border" >}}
 2. Use the expression below to make sure this breakpoint only interrupts the microflow if you are executing it yourself (replace `YourUserName` with your own user name):
 
-    ```java {linenos=false}
+    ```java
     $currentUser/name = 'YourUserName'
     ```
 

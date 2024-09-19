@@ -1,192 +1,101 @@
-h1.page-title{
-    font-weight: $font-weight-normal; // NK - adjusted for use with multiple Noto Sans weights
-    font-size: 2.5rem;
-    margin-left: 0.75rem;
-    color: $secondary;
-    opacity: 0.85; //#232B3B;
-}
-h5.lp{
-    margin-left: 0.75rem;
-    color: $secondary;
-    opacity: 0.7; //#474E5C;
-}
-div.card-icon{
-    margin: auto; 
-    padding: 10% 0 0 0;
+// File for styling the docs.mendix.com landing page
 
-    i {
-        font-size: 3rem;
-        color: $blue;
-    }
-}
-ul.landing-list{
-    padding-left: 0.5rem;
-}
-ul.contributing-list{
-    padding-left: 1rem;
-    padding-bottom: 2rem;
-    margin-left: 0.75rem;
+.td-main main.lp {
+    padding: 2rem 2.5rem;
+    padding-top:5.25rem !important;
 }
 
-li.link-list{
-    margin-top: 0.5rem;
+div.lp-container {
+    padding: 0;
+    margin: 0;
+}
+
+.lp-row{
+    margin-bottom: 2rem !important;
+}
+
+h1.page-title {
+    font-weight: $font-weight-normal;
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+h5.lp-description {
     font-size: 1rem;
-    list-style-position: outside;
-    list-style: none;
-    color: $link-color;
-    a {
-        text-decoration: none;
-        &:hover {
-            color: $link-hover-color;
-            text-decoration: underline;
-        }
-    }
+    font-weight: 400;
 }
 
-p.rn-date{
-    color: $gray-600;
-    font-size: 0.85rem;
-}
-
-div.my-column{
-    background: $gray-100;
-    border: 1px solid $gray-200;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-top: 0.75rem;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    padding: 1rem;
-    @include media-breakpoint-up(xl){
-        flex: 0 0 31%;
-        max-width: 31%;
-    }
-    @include media-breakpoint-down(xl){
-        flex: 0 0 46%;
-        max-width: 46%;
-    }
-}
-div.w-50{
-    background: $gray-100;
-    border: 1px solid $gray-200;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin: 0.75rem 0.05rem 0.75rem 4.5%;
-    padding: 0;
-    @include media-breakpoint-up(xl){
-        flex: 0 0 44%;
-        max-width: 44%;
-    }
-    @include media-breakpoint-down(xl){
-        flex: 0 0 90%;
-        max-width: 90%;
-    }
-    @include media-breakpoint-down(lg){
-        flex: 0 0 90%;
-        max-width: 90%;
-    }
-}
-div.image-card-col{
-    padding-right: 0;
-}
-div.image-card{
-    border: 1px solid $gray-200;
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin: 0.5rem 0.75rem 1rem 0rem;
-    height: 300px; // NK - fixed height for most popular cards
-}
-div.image-card-row{
-    padding: 0;
-    margin: 0rem 2rem 0rem 1rem;
-}
-
-div.my-row{
-    padding: 0;
-    margin: 0;
-    max-width: 1280px;
-}
-div.inner-row{
-    padding: 0;
-    margin: 0rem 1rem 0rem 0rem;
-}
-h3.title-row{
-    font-weight: $font-weight-medium;
-    margin: 0.5rem 0rem 1rem 1.75rem;
-}
-p.landing-page-note{
-    margin: 1rem 0rem 1rem 1.75rem;
-}
-div.landing-page-alert{
-    margin: 0rem 1.75rem 1rem 1.75rem;
-}
-div.cards-layout{
-    padding-right: 0;
-    padding-left: 0;
-}
-img.my-icon{
-    width: 1.75rem;
-    height: 1.75rem;
-    float:left;
-    margin: 0rem 0.5rem 0.5rem 0.5rem;
-}
-
-.icon-recolor{
-    filter: invert(17%) sepia(4%) saturate(3835%) hue-rotate(184deg) brightness(92%) contrast(85%);
-}
-
-img.ToC-icon{
-    width: 2.5rem;
-    height: 2.5rem;
-    float:left;
-    margin: 0rem 0.5rem 0rem 0.5rem;
-    padding: 0.3rem;
-    border-radius: 4px;
-    &:hover {
-        background-color: $gray-light;
-    };
-}
-img.nav-icon{
-    width: 24px;
-    height: 24px;
-    margin: 0.5rem 1.5rem;
-}
-h4.card-title{
-    color: $gray-900;
-    font-weight: $font-weight-medium; // NK - adjusted weight
-    margin: 0.5rem 0;
-    font-size: $h3-font-size; // NK - adjusted size
-}
-h4.card-title-w-50{
-    color: $gray-900;
-    font-weight: $font-weight-medium; // NK - adjusted weight
-    font-size: $h3-font-size; // NK - adjusted size
-    margin: 0.5rem 0rem 0.5rem 1rem; // NK - bring title closer to icon
-        &:hover {
-            color: $link-hover-color;
-            text-decoration: underline;
-        }
-}
-div.card-body{
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-}
-ul.card-text{
-    margin-top: 1rem;
-    font-size: 1.125rem;
-}
-div.my-container{
-    padding: 0;
-    margin: 0;
-}
-
-.my-container img{
+.lp-container img {
     border-style: none;
 }
 
-a.doc-link{
-    padding: 0.375rem 0.375rem;
-    position: absolute; // NK - fixed position of button
-    bottom: 1rem; // NK - fixed position of button
-    right: 1rem; // NK - fixed position of button
+img.card-icon {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: -0.2rem;
+}
+
+h4.card-title {
+    color: $gray-900;
+    font-weight: 600;
+    font-size: 1.25rem;
+    border-top: 3px solid;
+    padding-top: 1rem;
+    border-color: $green;
+}
+
+ul.card-text {
+    margin-top: 1rem;
+    padding-left: 0rem;
+    list-style: none;
+    font-size: 1rem;
+    a {
+        text-decoration: none;
+        &::after {
+            content: "\00a0→"; // Add a nonbreaking space (\00a0) and arrow to links
+        }
+        &:hover {
+            color: $link-hover-color;
+            text-decoration: underline;
+        }
+        color: $secondary;
+    }
+}
+
+div.lp-panel {
+    background: #171717;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 1.5rem 1.25rem;
+    margin: 0.05rem;
+}
+
+h4.lp-panel-title {
+    color: #FFFFFFEB;
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.875rem !important;
+}
+
+li.lp-panel-list {
+    font-size: 1rem;
+    font-weight: 600;
+    list-style: none;
+    margin-bottom: 0.5rem;
+    a {
+        color: #8AC4FF !important;
+        &:hover {
+            color: #99D0FF !important;
+        }
+    }
+
+}
+
+p.rn-date {
+    color: #FFFFFFD4;
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
 }

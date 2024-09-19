@@ -125,7 +125,7 @@ If Tekton is already installed in your namespace, you can skip to [Pipeline Inst
 
 To install Tekton with Tekton Triggers, apply the following *yaml* manifests:
 
-```bash {linenos=false}
+```bash
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.41.1/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/release.yaml
 kubectl apply --filename https://storage.googleapis.com/tekton-releases/triggers/previous/v0.22.1/interceptors.yaml
@@ -156,7 +156,7 @@ Install the pipeline in a separate namespace, as shown in [Simplified architectu
 
 The installation command is:
 
-```bash {linenos=false}
+```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm install -n $NAMESPACE_WITH_PIPELINES mx-tekton-pipeline ./pipeline/ \
   -f ./pipeline/values.yaml \
@@ -200,7 +200,7 @@ To set the GitLab Token in GitLab you specify it as the **Secret Token** when cr
 With HTTP clients you simply need to add `X-GitLab-Token` to your header.
 For example, using the `curl` client:
 
-```bash {linenos=table, hl_lines=[3]}
+```bash {hl_lines=3}
 curl -X POST \\
   http://pipeline.trigger.yourdomain.com/ \\
   -H 'X-GitLab-Token: SomeLongSecureToken42' \\
@@ -221,7 +221,7 @@ A Generic trigger is a trigger that can be used as HTTP/curl request. All Mendix
 
 To install a generic trigger you can use the following command:
 
-```bash {linenos=false}
+```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set name=$SOME_UNIQUE_NAME \
@@ -244,7 +244,7 @@ The GitLab webhook trigger triggers the build-pipeline pipeline in combination w
 
 To install a GitLab webhook trigger use the following command:
 
-```bash {linenos=false}
+```bash
 cd $PATH_TO_DOWNLOADED_FOLDERS && cd helm/charts
 helm template mx-tekton-pipeline-trigger ./triggers -f triggers/values.yaml \
     --set name=$SOME_UNIQUE_NAME \
@@ -278,7 +278,7 @@ Make sure that you have access to that service (by creating an ingress or load b
 
 Here is an example of ingress object:
 
-```yaml {linenos=false}
+```yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -325,7 +325,7 @@ If you have a private registry with authentication, you need to follow [these in
 
 For OpenShift you need to provide an SSL certificate file for the registry and give the `system:image-builders` role to the `tekton-triggers-mx-sa` service account. Use the following commands replacing `$YOUR_NAMESPACE_WITH_PIPELINES` with the correct namespace name:
 
-```bash {linenos=false}
+```bash
 oc patch rolebindings system:image-builders -p '{"subjects":[{"name":"tekton-triggers-mx-sa","kind":"ServiceAccount","namespace":"$YOUR_NAMESPACE_WITH_PIPELINES"}]}' -n $YOUR_NAMESPACE_WITH_PIPELINES
 oc patch tasks build-push-image --type='json' --patch '[{"op": "add", "path": "/spec/steps/0/env/-", "value": {"name":"SSL_CERT_FILE","value":"/var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt"}}]' -n $YOUR_NAMESPACE_WITH_PIPELINES
 ```
@@ -519,7 +519,7 @@ This section documents the HTTP requests which will trigger the various Mendix p
 
 The create-app-pipeline creates a basic MendixApp CR. After running this pipeline, we are ready to run the build-pipeline.
 
-```bash {linenos=false}
+```bash
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -555,7 +555,7 @@ This can only be run after create-app-pipeline.
 
 The example here uses a [Generic Trigger](#generic-trigger).
 
-```bash {linenos=false}
+```bash
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -599,7 +599,7 @@ To fill in the **Secret token** see the [Authentication](#authentication) sectio
 
 The configure-app-pipeline updates an existing Mendix App.
 
-```bash {linenos=false}
+```bash
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -641,7 +641,7 @@ curl -X POST \
 
 The delete-app-pipeline deletes the Mendix App CR, which triggers the deletion of the environment.
 
-```bash {linenos=false}
+```bash
 curl -X POST \
   http://pipeline.trigger.yourdomain.com/ \
   -H 'Content-Type: application/json' \
@@ -665,7 +665,7 @@ curl -X POST \
 
 To verify that all components are running correctly, use the following command:
 
-```bash {linenos=false}
+```bash
 kubectl get po -n tekton-pipelines
 ```
 
@@ -682,7 +682,7 @@ tekton-triggers-webhook-7f5c9477cc-fb624             1/1     Running   0        
 
 Also, you need to check the listener of the Tekton Trigger (`$NAMESPACE_WITH_PIPELINES` is the namespace from the [Installing Triggers](#installing-triggers) step):
 
-```bash {linenos=false}
+```bash
 kubectl get po -n $NAMESPACE_WITH_PIPELINES
 ```
 
@@ -732,7 +732,7 @@ Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is t
 
 1. Get a list of pipelines:
 
-    ```bash {linenos=false}
+    ```bash
     kubectl get pipelineruns -n $NAMESPACE_WITH_PIPELINES
     ```
 
@@ -746,7 +746,7 @@ Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is t
 
 2. Get the pods for the failed pipeline runs:
 
-    ```bash {linenos=false}
+    ```bash
     kubectl get po -n $NAMESPACE_WITH_PIPELINES | grep mx-pipeline-app-create-run-generic-zzt8h
     ```
 
@@ -758,7 +758,7 @@ Example of finding logs of the failed pipeline (`$NAMESPACE_WITH_PIPELINES` is t
 
 3. Get the logs for the failed pod:
 
-    ```bash {linenos=false}
+    ```bash
     kubectl logs mx-pipeline-app-create-run-generic-zzt8h-create-app-cr-2g-hjkx2 -n $NAMESPACE_WITH_PIPELINES
     ```
 
@@ -796,7 +796,7 @@ Pipeline runs can produce a lot of pods. To clean up the pods you can delete `pi
 
 For example, to delete all pipeline runs except latest 5 use the following commands:
 
-```bash {linenos=false}
+```bash
 NUM_TO_KEEP=5
 TO_DELETE="$(kubectl get pipelinerun -o jsonpath='{range .items[?(@.status.completionTime)]}{.status.completionTime}{" "}{.metadata.name}{"\n"}{end}' | sort | head -n -${NUM_TO_KEEP} | awk '{ print $2}')"
 kubectl delete pipelinerun ${TO_DELETE}

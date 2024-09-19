@@ -1,5 +1,6 @@
 ---
-title: "Mobile"
+title: "Mobile Release Notes"
+linktitle: "Mobile"
 url: /releasenotes/mobile/
 weight: 15
 cascade:

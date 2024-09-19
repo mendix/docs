@@ -64,7 +64,7 @@ The most flexible solution is to break the string concatenate down into separate
 
 In this example, we went even one step further for the stability of the expression. By adding an additional trim to the attribute, we prevent any additional white spaces from being added by the user. Using the microflow below, we are absolutely sure never to get any white spaces or null values in our text.
 
-```java {linenos=false}
+```java
 trim(  $ContactPerson/Fullname + ' ' + trim(  $ContactPerson/Firstname ) )
 ```
 

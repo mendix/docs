@@ -82,7 +82,7 @@ For environments that use AWS IRSA for authentication, the current user's AWS cr
 
 To create a backup file, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-data-migration backup -n <namespace> -e <environment> -f <file>
 ```
 
@@ -92,7 +92,7 @@ To create a backup file, use the following command:
 
 To restore a backup file into your environment, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-data-migration restore -n <namespace> -e <environment> -f <file>
 ```
 

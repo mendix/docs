@@ -87,15 +87,15 @@ This is an optional collection of files that is part of a Message. It is used fo
 
 #### `FileContent` {#filecontent}
 
-This is a file in a collection of files that belongs to a message. Each instance represents a single file. Currently only files of the type *image* are supported.
+This is a file in a collection of files that belongs to a message. Each instance represents a single file. Currently only files of the type *image* and *document* are supported.
 
 | Attribute | Description |
 | --- | --- |
 | `FileContent` | Depending on the `ContentType`, this is either a URL or the base64-encoded file data. |
 | `ContentType` | This describes the type of file data. Supported content types are either URL or base64-encoded file data. For more information, see the [ENUM_ContentType](#enum-contenttype) section.
-| `FileType` | Currently only images are supported file types. In general, not all file types might not be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype) section.
+| `FileType` | Currently only images and documents are supported file types. In general, not all file types might be supported by all AI providers or models. For more information, see the [ENUM_FileType](#enum-filetype).
 | `TextContent` | An optional text content describing the file content or giving it a specific name. This can be used to refer to specific files in the prompt of the message. | 
-| `MediaType` | This is a combination of FileType and the extension of the file, for example, *image/png*. | 
+| `FileExtension` | Extension of the file, e.g. *png* or *pdf*. Note that this attribute may only be filled if the ContentType equals *Base64* and can be empty. | 
 
 #### `ToolCollection` {#toolcollection}
 
@@ -177,7 +177,7 @@ An optional citation. This entity can be used to visualize the link between a pa
 
 #### `ChunkCollection` {#chunkcollection}
 
-{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="" >}}
+{{< figure src="/attachments/appstore/use-content/modules/genai/genaicommons/genai-commons-domain-model-embeddings.png" alt="">}}
 
 This entity represents a collection of chunks. It is a wrapper entity for [Chunk](#chunk-entity) objects or specialization(s) to pass it to operations that execute embedding calculations or knowledge base interaction. 
 
@@ -279,11 +279,12 @@ An optional input object for the image generations operations to set optional re
 
 #### `ENUM_FileType` {#enum-filetype}
 
-`ENUM_FileType` provides a list of file types. Currently only *image* is a supported file type. Not all file types might be supported by all AI providers or models.
+`ENUM_FileType` provides a list of file types. Currently only *image* and *document* is a supported file type. Not all file types might be supported by all AI providers or models.
 
 | Name | Caption | Description |
 | --- | --- | --- |
 | `image` | **Image** | The file represents an image (e.g. a *.png* file). | 
+| `document` | **Document** | The file represents a document (e.g. a *.pdf* file). | 
 
 #### `ENUM_ToolChoice` {#enum-toolchoice}
 
@@ -399,8 +400,8 @@ Use this microflow to add a file to an existing [FileCollection](#filecollection
 | Name | Type | Mandatory | Description |
 |---|---|---|---|
 | `FileCollection` | [FileCollection](#filecollection) | mandatory | The wrapper object for Files. The File Collection is an optional part of a [Message](#message). |
-| `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. Either provide a System.FileDocument object or a file URL String. |
-| `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents need to be sent with a message. Either provide a System.FileDocument object or an Image URL String. |
+| `URL` | String | Either URL or FileDocument is required. | This is the URL of the file. |
+| `FileDocument` | `System.FileDocument` | Either URL or FileDocument is required. | The file for which the contents are part of a message. |
 | `ENUM_FileType` | [ENUM_FileType](#enum-filetype) | mandatory | This is the type of the file. |
 | `TextContent` | String | mandatory | An optional text content describing the file content or giving it a specific name. |
 
@@ -437,7 +438,7 @@ Adds a new Function to a [ToolCollection](#toolcollection) that is part of a Req
 | `Request` | [Request](#request) | mandatory | The request to add the function to. |
 | `ToolName` | String | mandatory | The name of the tool to use/call. |
 | `ToolDescription` | String | optional | An optional description of what the tool does, used by the model to choose when and how to call the tool. |
-| `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter and returns a string. |
+| `FunctionMicroflow` | Microflow | mandatory | The microflow that is called within this function. A function microflow can only have a single string input parameter or no input parameter and returns a string. |
 
 {{% alert color="info" %}}
 Since this microflow runs in the context of the user, you can make sure that it only shows data that is relevant for the current user.

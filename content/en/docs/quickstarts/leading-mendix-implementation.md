@@ -468,7 +468,7 @@ As for your very first project, you want to pick a use case out of your portfoli
 
 Here’s a **quick checklist of things to consider when choosing your first application**:
 
-**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can stand alone in production. 
+**Go live quickly:** One of the main goals of your first application is to validate your ability to rapidly bring new ideas to market. It’s important that you identify quick wins, so select applications that are limited in scope and can work independently in production. 
 
 **Make them worthy:** The first application should also be highly visible within the organization. It must have the right urgency and executive support, and also deliver tangible business value. Select an app idea where you’re sure the results will get noticed and the success will be shared by your stakeholders. 
 
@@ -625,7 +625,7 @@ When setting up your deployment strategy, it is important to look at the feature
 
 If your organization is deploying on **Private Cloud or on-prem**, please **make sure that you are ready to take on the effort and responsibility of managing all hosting and support of the application deployments**.
 
-For a list of all the deployment options that are available, see [Deployment](/deployment/). 
+For a list of all the deployment options that are available, see [Deploying Apps](/deployment/). 
 
 Some highlights to consider:
 
@@ -671,6 +671,7 @@ With Mendix, you have multiple options to choose from for the development of you
 4. **Hybrid**
     a.  You can simultaneously grow your in-house team and supplement with a Mendix partner and/or our Expert Services team.
     
+
 Regardless of which option you choose, we always recommend that at least one person internally has been trained on Mendix and is technically capable of directing the project.  Outsourcing every technical role creates a siloed development team that does not truly understand your business needs.
 
 ### Summary 

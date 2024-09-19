@@ -156,19 +156,19 @@ The output is the following:
 
 If you use a third parameter to specify the desired length of the output:
 
-```java {linenos=false}
+```java
 substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
-```java {linenos=false}
+```java
 'my'
 ```
 
 To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
 
-```java {linenos=false}
+```java
 substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 

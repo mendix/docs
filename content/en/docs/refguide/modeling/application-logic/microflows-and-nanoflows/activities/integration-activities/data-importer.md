@@ -19,7 +19,7 @@ The **Import data from file** activity can be used in a microflow to integrate d
 
 {{% alert color="warning" %}}Before using this activity, make sure you have created a Data Importer document using the [Data Importer extension](/appstore/modules/data-importer-extension/).{{% /alert %}}
 
-##  Properties
+## Properties
 
 Drag the **Import data from file** activity into your microflow and double-click it to view its properties:
 

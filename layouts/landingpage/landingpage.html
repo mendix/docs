@@ -1,3 +1,4 @@
+<!-- Custom layout for the home page. Styling is set in _front-page.scss. -->
 <!doctype html>
 <html itemscope itemtype="http://schema.org/WebPage" lang="{{ .Site.Language.Lang }}" class="no-js">
     <head>
@@ -6,82 +7,62 @@
     <body class="td-{{ .Kind }}">
         <div class="container-fluid td-outer">
             <div class="td-main">
-                <div class="row flex-xl-nowrap stretch-main" style="overflow-x:hidden !important;">
-                    <aside data-stt-ignore class="d-none d-lg-block col-lg-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
-                        <!-- NK - adjusted resizing for different screens -->
+                <div class="row flex-xl-nowrap stretch-main">
+
+                    <!-- Left sidebar -->
+                    <aside data-stt-ignore class="d-none d-md-block col-md-4 col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
                         {{ partial "sidebar.html" . }}
                     </aside>
-                    <main class="col-12 col-lg-8 col-xl-6 lp" role="main">
-                        <!-- NK - adjusted resizing for different screens -->
-                        <!-- MvM - Do a test for missing Title -->
-                        {{ if not .Title }}
-                        {{ warnf "File %s \n\t\t\t\thas no title in the front matter\n " .Page.File.Path }}
-                        {{ end }}
-                        <!-- NK - START of addition of versions selector menu, 
-                            taken from themes\docsy\layouts\partials\navbar.html, 
-                            this might get moved again, with further styling changes -->
-                        {{ if  .Site.Params.versions }}
-                        <li class="nav-item dropdown mr-4 d-none d-lg-block">
-                            {{ partial "navbar-version-selector.html" . }}
-                        </li>
-                        {{ end }}
-                        <!-- END of addition -->
-                        <!-- Start of landing page cards -->
-                        <div class="container my-container">
-                            <!-- MvM: Move breadcrumb above banner -->
-                            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial "breadcrumb.html" . }}{{ end }}
-                            {{ partial "version-banner.html" . }}
-                            <div class="row" style="margin-top: 2rem;margin-left: 0.5rem;margin-bottom: 1rem;">
-                                <!-- NK - addded more visual padding -->
-                                <div class="col-lg-6 col-xl-7">
-                                    <h1 class="page-title">{{ .Page.Title}}</h1>
-                                    <br>
-                                    <h5 class="lp">{{ .Page.Description}}</h5>
-                                </div>
-                                <div class="col-lg-4 col-xl-3">
-                                    <img src="/images/docs-extended-small.png" alt="" >
+                    
+                    <!-- Main page content (everything except the left sidebar, top dock, and footer) -->
+                    <main class="col lp" role="main" style="border-right: none;">
+                        <div class="container lp-container">
+                            
+                            <!-- Title, Description, and Illustration -->
+                            <div class="row">
+                                <div class="col-lg-auto d-flex">
+                                    <!-- Title and description from https://github.com/mendix/docs/blob/development/content/en/docs/_index.md -->
+                                    <div class="flex-grow-1">
+                                        <h1 class="page-title">{{ .Page.Title}}</h1>
+                                        <h5 class="lp-description">{{ .Page.Description}}</h5>
+                                    </div>
+                                    <img src="/images/woman-stack-of-books-laptop.svg" alt="" class="d-none d-lg-block ms-4" style="margin-top: -.5rem;">
                                 </div>
                             </div>
-                            <div class="row my-row">
-                                <div class="col cards-layout">
-                                    <!-- NK - moved Product cards section to partial -->
-                                    {{ partial "landingpage/product-cards.html" . }}
-                                </div>
-                                <div class="col col-sm-2 my-column card-body">
-                                    <!-- NK - moved Latest Releases section to partial -->
+                            
+                            <!-- User Journey cards -->
+                            <div class="row lp-row">
+                                    {{ partial "landingpage/user-journey-cards.html" . }}
+                            </div>
+
+                            <!-- Latest Releases and Community Resources -->
+                            <!-- Sections appear side by side on wider screens and stack with a margin in between on narrower screens -->
+                            <div class="row lp-row lp-panel">
+                                <div class="col-12 col-md-6 mb-4 mb-md-0">
                                     {{ partial "landingpage/latest-releases.html" . }}
                                 </div>
-                            </div>
-                            <div class="row inner-row">
-                                <h3 class="col title-row">Most Popular</h3>
-                            </div>
-                            <!-- NK - moved Most Popular section to partial -->
-                            <div class="row inner-row">
-                                <div class="col" style="padding:0rem 2rem 2rem 2rem;">
-                                    {{ partial "landingpage/most-popular.html" . }}
+                                <div class="col-12 col-md-6">
+                                    {{ partial "landingpage/community-resources.html" . }}
                                 </div>
                             </div>
-                            <div class="row inner-row">
+
+                            <!-- Language note -->
+                            <div class="row lp-row">
                                 <div class="col">
                                     {{ partial "landingpage/note.html" . }}
                                 </div>
                             </div>
-                            <div class="row inner-row">
+
+                            <!-- Get Started banner -->
+                            <div class="row lp-row">
                                 <div class="col">
-                                    <h3 class="title-row">Contribute to Docs? Here Is How:</h3>
-                                    <ul class="card-text contributing-list">
-                                        <li class="link-list"><a href="/community-tools/contribute-to-mendix-docs/">Contribute to the Documentation</a></li>
-                                        <li class="link-list"><a href="/community-tools/documentation-guidelines/">Documentation Writing Guidelines</a></li>
-                                        <li class="link-list"><a href="https://www.mendix.com/glossary/">Technology Glossary</a></li>
-                                        <li class="link-list"><a href="/community-tools/contribute-to-a-github-repository/">Contribute to a Mendix GitHub Repository</a></li>
-                                    </ul>
+                                    {{ partial "landingpage/get-started.html" . }}
                                 </div>
                             </div>
+
                         </div>
                     </main>
-                    <!-- NK - aside below gives right side grey surface in landing page -->
-                    <aside data-stt-ignore class="d-none d-xl-block col-xl-3 td-sidebar d-print-none" data-proofer-ignore>
-                    </aside>
+                    
                 </div>
             </div>
             {{ partial "footer.html" . }}

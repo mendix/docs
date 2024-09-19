@@ -307,7 +307,7 @@ When a drop-down filter is used in conjunction with an Association Filter data g
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration.
+Due to current limitations, **Saved attribute**, and **Default value** properties will be ignored when a drop-down filter is used in conjunction with an [Association Filter](#association-filter) data grid configuration. This limitation also applies when using page state, meaning that the filter value used in the drop-down filter will not persist when navigating between pages.
 {{% /alert %}}
 
 When adding a new option, the following properties are required:
@@ -428,7 +428,7 @@ In this section you can select an action to be executed **On change** by the fil
 
 ### Grid Wide Filtering {#grid-wide-filtering}
 
-In order to enable filtering within the data grid header (outside the columns) you need to enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
+In order to enable filtering within the data grid header (outside the columns), you must enable `Grid wide filters` and select the desired attributes to be filtered in the **Filtering** tab. You can select attributes of the following types:
 
 * Autonumber
 * Boolean
@@ -440,7 +440,9 @@ In order to enable filtering within the data grid header (outside the columns) y
 * Long
 * String
 
-The attributes selected here will be used for the matching filter placed inside the composable region. When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
+The attributes selected here will be used for the matching filter placed inside the composable region. Only the first keyword in the filter will be considered when filtering multiple attributes in grid wide filtering
+
+When using multiple attributes, the filters will automatically select the matching attributes and then compose the desired filter value in an `OR expression`. Make sure you only have one filter widget for each type, for example `Text Filter` and `Number Filter`.
 
 {{% alert color="info" %}}
 If a filter is being used and its type does not match with any selected attribute, then it will throw an error requesting you to select the correct filter widget.
@@ -449,6 +451,41 @@ If a filter is being used and its type does not match with any selected attribut
 {{% alert color="warn" %}}
 There cannot be more than one filter of the same type in the data grid header. For example, if a data grid header already has a `Number Filter`, adding another `Number Filter` will cause incorrect data filtering.
 {{% /alert %}}
+
+### Filter Groups
+
+Filter groups are another way to configure a widget's header filters. This way of configuring filters has four main advantages over grid wide filtering:
+
+* More than 4 filters are allowed in the header at the same time
+* No restriction on filter type (the header can have one, two or more filters of the same data type)
+* Dropdown filters can use associations
+* If personalization is enabled, filter state is saved along with other widget settings
+
+Compared to grid wide filtering, this way of configuration requires one extra step; you must declare groups in the **Groups** list.
+
+New settings will only be visible if the **Enable filter groups** switch is set to **Yes**.
+
+#### Groups
+
+This list contains the groups that will be used for filtering.
+
+Logically, each group represents a filter. Each group can either contain one or more attributes, or define an association from a parent data source.
+
+Each group has a required parameter: the "group key". The only requirement for the "group key" is that it must be unique within the list.
+
+When creating a new group, you need to select the group type: **Attribute** or **Reference**.
+
+The group of type **Attribute** represents a group of attributes that should match the condition created by the filter. The only requirement is that all attributes in the group should be of the same type (for example, only string attributes or only number attributes).
+
+The **Reference** type group controls the association used in the filter.
+
+{{% alert color="info" %}}
+To connect the filter to the group, copy the group key value to the "group key" property of the filter widget. Otherwise, the filter will not be able to connect to the group.
+{{% /alert %}}
+
+#### Group Attributes
+
+This list controls the mapping between attributes and groups. Each item contains the **group key** and the attribute to be associated with the group.
 
 ## Export to Excel
 

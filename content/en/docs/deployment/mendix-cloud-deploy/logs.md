@@ -40,8 +40,6 @@ Logging for apps deployed to Mendix Cloud is limited to 500 loglines per second.
 
 ### Archived App and Access Logs
 
-{{% alert color="info" %}}For apps deployed to Mendix Cloud, logs are rotated and archived every day. They are retained for six months.{{% /alert %}}
-
 For each day, you can download the app log or the access log by clicking the corresponding **Download** button ({{% icon name="download-bottom" %}}).
 
 File sizes are displayed for archived logs, but in-progress logs show the label "Unknown" instead. You can download the in-progress app and access logs for the current day; however, these logs will contain incomplete records because the day's activity is not yet completed. 
@@ -49,6 +47,10 @@ File sizes are displayed for archived logs, but in-progress logs show the label 
 By default, archived logs are sorted by date; the current log is the first one listed. You can manually click through the archived logs or use the search field to find logs for a specific date.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/logs/logs-filter.png" alt="" class="no-border" >}}
+
+#### Rotation and Retention Schedule{#retention-schedule}
+
+For apps deployed to Mendix Cloud, application logs and acccess logs are rotated and archived every day. They are kept for six months. If you want to keep a log for longer than that, you can download the log to your computer.
 
 ### Live Log
 

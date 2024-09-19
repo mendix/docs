@@ -318,7 +318,7 @@ A Content Security Policy informs the client (browser) where your page loads res
 
 The process for setting a full content security policy depends on what your app does. However, a starting point that declares the content security policy that works with a basic Mendix app is given below:
 
-```text {linenos=false}
+```text
 default-src 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval' ; connect-src 'self' ; font-src 'self' https://fonts.gstatic.com data: ; img-src 'self' data: ; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com ; base-uri 'self' ; form-action 'self' ; object-src 'none' ; frame-ancestors 'self' ;
 ```
 

@@ -6,6 +6,12 @@ url: /refguide/system-texts/
 
 ## Introduction
 
+{{% alert color="info" %}}
+In Studio Pro 10.14.0, the web version of the system texts editor was released as an [experimental](/releasenotes/beta-features/) feature. You can enable it via **Preferences** > **New Features**. 
+
+If Translation Generator is also enabled, you can use this AI-powered translation tool in the new editor to translate the system texts. For more information, see the [Generating Translation for System Texts](/refguide/translation-generator/#translate-system-text) section in *Translation Generator*.
+{{% /alert %}}
+
 System texts are texts that are shown automatically to end-users by the server or the client. 
 
 For example, if an end-user enters a string into a search field that expects a number, the system will show the error message 'Invalid number' to the end-user:

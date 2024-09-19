@@ -98,7 +98,7 @@ Now you will build a native custom developer app and install it on your phone:
 
 1. To build the app for the first time, complete the [Build Your Developer App](/howto8/mobile/how-to-devapps/#build-your-developer-app) section of *Create a Custom Developer App* using this build command:
 
-    ```shell {linenos=false}
+    ```shell
     native-builder.exe build dev-app --project-name "Native NFC App"
     ```
     
@@ -163,13 +163,13 @@ To link for Android devices, do the following:
 
 1. To use the new gradle module in **C:\github\native-nfc-app\android\app\build.gradle**, add this to your list of dependencies:
 
-    ```gradle {linenos=false}
+    ```gradle
     implementation project(":react-native-nfc-manager")
     ```
 
 1. Now the main application needs to initialize the NFC manager. In *C:\github\native-nfc-app\android\app\src\main\java\com\mendix\nativetemplate\MainApplication.java* add an item to the `Arrays.<ReactPackage>asList`, add a comma after the other dependency, and add the `new NfcManagerPackage()`:
 
-    ```java {linenos=false}
+    ```java
     new NfcManagerPackage()
     ```
 
@@ -222,7 +222,7 @@ The dependency is split into two parts: the native device part, and the client J
 
 1. In your CLI, open the module folder which contains your JavaScript action:
 
-    ```powershell {linenos=false}
+    ```powershell
     cd C:\MendixProjects\NativeNFC\javascriptsource\nativenfc\actions
     ```
 
@@ -277,7 +277,7 @@ Now make an JavaScript action to read the NFC tag information:
 1. Select **Return type** > **String**.
 1. Click the **Code** tab, and add the import above the `EXTRA CODE` block:
 
-    ```javascript {linenos=false}
+    ```javascript
     import NfcManager, { Ndef } from "react-native-nfc-manager";
     ```
 
@@ -364,7 +364,7 @@ Making software is an iterative process. If you integrate your own module or bui
 1. Open your CLI.
 1. Run the following command to rebuild your NFC app: 
 
-    ```shell {linenos=false}
+    ```shell
     native-builder.exe build dev-app --project-name "Native NFC App"
     ```
 

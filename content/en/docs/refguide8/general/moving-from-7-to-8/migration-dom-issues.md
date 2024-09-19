@@ -292,7 +292,7 @@ Previously, non-editable input controls of input widgets with **Read-only style*
 
 Read-only controls with **Read-only style** set to **Text** are now rendered as the following:
 
-```html {linenos=false}
+```html
 <div class="form-control-static">value</div>
 ```
 
@@ -308,19 +308,19 @@ A few examples of various input controls are listed below.
 
 Text box:
 
-```html {linenos=false}
+```html
 <input class="form-control" type="text" id="123_abc" />
 ```
 
 Text area:
 
-```html {linenos=false}
+```html
 <textarea class="form-control mx-textarea-input mx-textarea mx-textarea-input-noresize"></textarea>
 ```
 
 Checkbox:
 
-```html {linenos=false}
+```html
 <input type="checkbox" value="" />
 ```
 

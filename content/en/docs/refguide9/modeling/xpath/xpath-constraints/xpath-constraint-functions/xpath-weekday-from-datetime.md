@@ -35,12 +35,12 @@ The optional `timezone` parameter is available in [Studio Pro 9.22.0](/releaseno
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the local time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
+```java
 //Logging.Log[weekday-from-dateTime(DateAttribute) = 6]
 ```
 
 This query returns all the logs where the day of the week in `DateAttribute` is 6 in the New York time zone (Friday, for locally run apps or apps using a PostgreSQL database):
 
-```java {linenos=false}
+```java
 //Logging.Log[weekday-from-dateTime(DateAttribute, 'America/New_York') = 6]
 ```

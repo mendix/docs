@@ -9,7 +9,7 @@ description: "Describes relational expressions in Mendix."
 
 Relational expressions allow users to compare values and to make changes and perform actions based upon that information. The return type of such expressions is always Boolean.
 
-## Less Than ( < )
+## Less Than ( < ) {#less-than}
 
 This expression determines whether the first value is less than the second value.
 
@@ -39,17 +39,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4<3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 False
 ```
 
-## Greater Than ( > )
+## Greater Than ( > ) {#greater-than}
 
 This expression determines whether the first value is greater than the second value.
 
@@ -82,17 +82,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4>3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 True
 ```
 
-## Less Than or Equal To ( <= )
+## Less Than or Equal To ( <= ) {#less-than-or-equal-to}
 
 This expression determines whether the first value is less than or equal to the second value.
 
@@ -127,29 +127,29 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     6<=3
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     False
     ```
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     3<=3
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     True
     ```
 
-## Greater Than or Equal To ( >= )
+## Greater Than or Equal To ( >= ) {#greater-than-or-equal-to}
 
 Determines whether the first value is greater than or equal to the second.
 
@@ -182,17 +182,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 4>=3
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 True
 ```
 
-## Is Equal To ( = )
+## Equal To ( = ) {#equal-to}
 
 This expression determines whether the two values are equal.
 
@@ -228,29 +228,29 @@ The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     "mystring" = "myotherstring"
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     False
     ```
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     dateTime(2007) = dateTime(2007)
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     True
     ```
 
-## Is Not Equal To ( != )
+## Not Equal To ( != ) {#not-equal-to}
 
 Determines whether the two values are not equal.
 
@@ -286,12 +286,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 "mystring" != "mystring"
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 False
 ```

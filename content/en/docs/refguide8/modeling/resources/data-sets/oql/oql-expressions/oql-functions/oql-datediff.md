@@ -7,7 +7,7 @@ The DATEDIFF function returns the difference between two given date/time values.
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 DATEDIFF ( unit , startdate_expression, enddate_expression )
 ```
 

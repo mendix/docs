@@ -8,7 +8,7 @@ weight: 100
 
 Between date function calls calculate the absolute difference between two dates. The difference will always be zero or a positive number.
 
-## millisecondsBetween
+## millisecondsBetween {#millisecondsBetween}
 
 The `millisecondsBetween` function calculates the absolute difference between the input values in milliseconds.
 
@@ -33,17 +33,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 2000
 ```
 
-## secondsBetween
+## secondsBetween {#secondsBetween}
 
 The `secondsBetween` function calculates the absolute difference between the input values in seconds.
 
@@ -68,17 +68,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 62
 ```
 
-## minutesBetween
+## minutesBetween {#minutesBetween}
 
 The `minutesBetween` function calculates the absolute difference between the input values in minutes.
 
@@ -103,17 +103,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 1
 ```
 
-## hoursBetween
+## hoursBetween {#hoursBetween}
 
 The `hoursBetween` function calculates the absolute difference between the input values in hours.
 
@@ -138,17 +138,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 2.5
 ```
 
-## daysBetween
+## daysBetween {#daysBetween}
 
 The `daysBetween` function calculates the absolute difference between the input values in days.
 
@@ -173,17 +173,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 43
 ```
 
-## weeksBetween
+## weeksBetween {#weeksBetween}
 
 The `weeksBetween` function calculates the absolute difference between the input values in weeks.
 
@@ -208,17 +208,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output results in 8 days divided by 7 days in a week:
 
-```java {linenos=false}
+```java
 1.1428571428571428
 ```
 
-## calendarMonthsBetween
+## calendarMonthsBetween {#calendarMonthsBetween}
 
 The `calendarMonthsBetween` function calculates the absolute difference between the input values in months. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
@@ -243,17 +243,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 calendarMonthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
 ```
 
 The output results in the amount of months between the two dates:
 
-```java {linenos=false}
+```java
 7
 ```
 
-## calendarYearsBetween
+## calendarYearsBetween {#calendarYearsBetween}
 
 The `calendarYearsBetween` function calculates the absolute difference between the input values in years. Time will be ignored. The dates are assumed to be in the end-user's local time zone.
 
@@ -278,12 +278,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 calendarYearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
 ```
 
 The output results in the amount of years between the two dates:
 
-```java {linenos=false}
+```java
 10
 ```

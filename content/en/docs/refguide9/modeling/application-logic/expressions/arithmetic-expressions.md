@@ -31,13 +31,13 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 2*3
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 6
 ```
 
@@ -64,25 +64,25 @@ Find the example of usages below:
 
 * The `div` syntax example: if you use the following input:
 
-    ```java {linenos=false}
+    ```java
     3 div 5
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     0.6
     ```
 
 * `:` syntax example: if you use the following input:
 
-    ```java {linenos=false}
+    ```java
     12 : 3
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     4.0
     ```
 
@@ -92,37 +92,37 @@ The result of a division is only an approximation if it has an infinite decimal 
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     3 : 7
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     0.4285714285714285714285714285714286
     ```
 
     If you continue a calculation with the results of a division, the results might be unexpected. The following input:
 
-    ```java {linenos=false}
+    ```java
     (3 : 7) * 7
     ```
 
     results in the output below:
 
-    ```java {linenos=false}
+    ```java
     3.0000000000000000000000000000000002
     ```
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     ceil((3 : 7) * 7)
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     4
     ```
 
@@ -151,13 +151,13 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 23 mod 5
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 3
 ```
 
@@ -186,13 +186,13 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 -3 + 4
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 1
 ```
 
@@ -219,12 +219,12 @@ If either of the two inputs is of type Decimal, the result is of type Decimal.
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 5 - 4
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 1
 ```

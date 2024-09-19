@@ -131,14 +131,14 @@ If it is absolutely critical to run a scheduled event on a specific day of the m
 
 In your microflow, start with a decision using an expression similar to this:
 
-```java {linenos=false}
+```java
 parseInteger( formatDateTime( [%CurrentDateTime%], 'dd') ) = 15
 // This runs the scheduled event on the 15th of the month
 ```
 
 To run it on the last day of the month, you can use this suggestion from [Herbert Vujik](https://community.mendix.com/link/questions/6934):
 
-```java {linenos=false}
+```java
 formatDateTime([%CurrentDateTime%], 'dd') = formatDateTime([%EndOfCurrentMonth%], 'dd') 
 ```
 

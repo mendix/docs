@@ -11,7 +11,7 @@ The `CASE` expression is a conditional expression, similar to if/else statements
 
 The `CASE` expression can be used in two ways – simple:
 
-```sql {linenos=false}
+```sql
 	CASE input_expression
 	WHEN when_expression THEN result_expression [ ...n ]
 	ELSE else_result_expression
@@ -20,7 +20,7 @@ The `CASE` expression can be used in two ways – simple:
 
 or extended:
 
-```sql {linenos=false}
+```sql
 	CASE
 	WHEN boolean_expression THEN result_expression [ ...n ] 
 	ELSE else_result_expression

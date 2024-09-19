@@ -15,12 +15,12 @@ The query must specify an attribute that has a numeric type.
 
 This query returns the average total price of all placed orders:
 
-```java {linenos=false}
+```java
 avg(//Sales.Order/TotalPrice)
 ```
 
 This query returns the average total price of all orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 avg(//Sales.Order[Sales.Customer_Order/Sales.Customer = 'Jansen']/TotalPrice)
 ```

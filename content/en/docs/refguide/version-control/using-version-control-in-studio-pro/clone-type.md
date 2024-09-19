@@ -32,10 +32,6 @@ The disadvantage of this close type is that downloading a full clone can take si
 
 ### Partial Clone
 
-{{% alert color="info" %}}
-Partial clone is beta in Mendix version 10.12 and above. For more information on beta, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
-
 The term "partial clone" is used for different types of cloning. In Studio Pro, a `blobless clone` is used. When performing a blobless clone, the metadata with the full commit history is downloaded without the actual file contents.
 
 {{% alert color="info" %}}

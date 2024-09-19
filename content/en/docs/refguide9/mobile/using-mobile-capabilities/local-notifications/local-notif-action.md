@@ -3,6 +3,7 @@ title: "Part 3: Actions"
 url: /refguide9/mobile/using-mobile-capabilities/local-notifications/local-notif-action/
 weight: 30
 description: A tutorial for making your push notifications trigger actions when tapped.
+canonical_url: "https://docs.mendix.com/refguide/mobile/using-mobile-capabilities/local-notifications/local-notif-action/"
 ---
 
 ## Introduction

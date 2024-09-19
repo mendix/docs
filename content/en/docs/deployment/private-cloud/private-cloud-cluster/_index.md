@@ -167,13 +167,13 @@ To start editing the `OperatorConfiguration`, use the following commands (replac
 
 For OpenShift:
 
-```shell {linenos=false}
+```shell
 oc -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
 For Kubernetes:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit operatorconfiguration mendix-operator-configuration
 ```
 
@@ -206,7 +206,7 @@ At the moment, the `baseOSImageTagTemplate` can be set to one of the following v
 
 Future Studio Pro releases will have an option to use alternative (newer) LTS versions of Java, such as Java 17 or Java 21.
 
-If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA.
+If an app's MDA was built using a newer Java version, Mendix Operator 2.15.0 (and newer versions) will detect this and use a base image with the same major Java version that was used to build the MDA. Because of that, Java 17 or Java 21-based applications should use the Operator in version 2.15.0 or above.
 
 {{% /alert %}}
 
@@ -365,7 +365,7 @@ The Deployment object that controls the pod of a given Mendix application contai
 
 The Deployment object as a name in the following format:
 
-```shell {linenos=false}
+```shell
 <internal environment name>-master
 ```
 
@@ -612,7 +612,7 @@ Startup probes are no longer used, and changing the `startupProbe` settings will
 
 Using `terminationGracePeriodSeconds`, the application is given a certain amount of time to terminate. The default value is 300 seconds. This time can be configured using the `terminationGracePeriodSeconds` key in the pod's spec and so if your pod usually takes longer than 300 seconds to shut down, you can increase the grace period. You can do that by setting the `terminationGracePeriodSeconds` key in the pod YAML.
 
-```yaml {linenos=false}
+```yaml
 terminationGracePeriodSeconds: 300
 ```
 
@@ -761,7 +761,7 @@ Horizontal pod autoscaling can be combined with cluster autoscaling, so that the
 
 To enable horizontal pod autoscaling for an environment, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} autoscale mendixapp {envname} --cpu-percent=50 --min=1 --max=10
 ```
 
@@ -770,7 +770,7 @@ Use `--cpu-percent` to specify the target CPU usage, and `--min` `--max` to spec
 
 To configure additional horizontal pod autoscaling, run the following command:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} edit horizontalpodautoscaler {envname}
 ```
 
@@ -842,6 +842,50 @@ In the `json` format, newline characters will be sent as `\n` (as specified in t
 For example, to correctly display newline characters in Grafana, use the [Escape newlines](https://github.com/grafana/grafana/pull/31352) button.
 {{% /alert %}}
 
+### Log levels {#log-levels}
+
+Mendix Operator version 2.19.0 and above allows you to configure the log levels for your Operator pods. 
+
+Following log levels can be configured:
+
+* `L0` : Fatal Log Level
+
+* `L1` : Error Log Level
+
+* `L2` : Warn Log Level
+
+* `L3` : Info Log Level
+
+* `L4` : Debug Log Level
+
+* `L5` : Trace Log Level
+
+The log level can be set in the mendix-operator deployment yaml:
+
+```yaml
+kind: Deployment
+apiVersion: apps/v1
+spec:
+  # ...
+  # Other configuration options values
+  # Optional: custom pod labels
+    spec:
+      containers:
+        - resources:
+          # ...
+          # Other configuration options values
+          name: mendix-operator
+          command:
+            - mendix-operator
+          env:
+            # ...
+            # Other configuration options values
+            - name: LOG_LEVEL
+              value: L1
+```
+
+By default, the log level value is set to L1 level for operator pods.
+
 ### Pod labels {#pod-labels}
 
 #### General pod labels
@@ -900,7 +944,7 @@ spec:
 
 Run the following command in order to update the core resources in the `OperatorConfiguration`:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} patch OperatorConfiguration mendix-operator-configuration --type merge -p "$(cat <patchedFile>)"
 ```
 

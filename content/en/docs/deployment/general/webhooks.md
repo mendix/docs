@@ -105,7 +105,7 @@ To verify the signature, you need to reconstruct it and then compare it with the
 1. Calculate the **webhook-signature** using the HMAC-SHA256 function for your language and the **Validation Secret** you set up for the Webhook.
 1. Ensure the result is base64 encoded. For example, in a bash script, this might be as follows:
 
-    ```bash {linenos=false}
+    ```bash
     WEBHOOK_ID= #from the header
     WEBHOOK_TIMESTAMP= #from the header
     PAYLOAD= #payload of the message
@@ -141,7 +141,7 @@ You can use Mendix to verify your webhook; the [Community Commons](/appstore/mod
 
 When you [upload a package to the Mendix Portal](/developerportal/deploy/environments/#package-repository) (including creating a package from the Team Server), and the webhook responds to the event **On package upload**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
-```json {linenos=false}
+```json
 {
   "eventType": "package.uploaded",
   "modelVersion": "0.0.19.62e3d711",
@@ -163,7 +163,7 @@ Make sure to use the correct key names when using this payload information to ca
 
 When you push a model change to the [Git Team Server](/developerportal/general/team-server/), and the webhook responds to the event **Teamserver push (Git)**, request content is sent to the configured endpoint. The request content contains a payload with the following format:
 
-```json {linenos=false}
+```json
 {
   "after": "4b76061182bf183281b5107cd753c6071ed00040",
   "before": "0b9cb7a3e9a5ccfffa6c79435441999543ccb8c9",
@@ -199,7 +199,7 @@ Make sure to use the correct key names when using this payload information to ca
 
 When an alert is triggered for your Mendix app, a payload with the following format is sent to the configured endpoint.
 
-```json {linenos=false}
+```json
 { 
   "app_name": "your-app-name",
   "environment": "your-environment-name",

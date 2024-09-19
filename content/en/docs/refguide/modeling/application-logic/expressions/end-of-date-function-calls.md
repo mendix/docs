@@ -13,7 +13,7 @@ The first parameter can be an attribute of an entity of type **Date and time**, 
 
 You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide/begin-of-date-function-calls/).
 
-## endOfDay
+## endOfDay {#endOfDay}
 
 The `endOfDay` function calculates the end of the day compared to the initial date.
 
@@ -35,17 +35,17 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 07 23:59 CET 2007"
 ```
 
-## endOfWeek
+## endOfWeek {#endOfWeek}
 
 The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale. In the case of an anonymous user, the browser's locale is used instead.
 
@@ -67,17 +67,17 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Sat Feb 10 23:59 CET 2007"
 ```
 
-## endOfMonth
+## endOfMonth {#endOfMonth}
 
 The `endOfMonth` function calculates the end of the month compared to the initial date.
 
@@ -99,17 +99,17 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 28 23:59 CET 2007"
 ```
 
-## endOfYear
+## endOfYear {#endOfYear}
 
 The `endOfYear` function calculates the end of the year compared to the initial date.
 
@@ -131,13 +131,13 @@ The output is described in the table below:
 
 ### Example
 
-```java {linenos=false}
+```java
 endOfYear(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Mon Dec 31 23:59 CET 2007"
 ```
 

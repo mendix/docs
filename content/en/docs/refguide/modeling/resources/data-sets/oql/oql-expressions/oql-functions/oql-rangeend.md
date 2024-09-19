@@ -13,7 +13,7 @@ The `RANGEEND` function extracts the end value of a range parameter.
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 RANGEEND ( $range )
 ```
 
@@ -23,14 +23,14 @@ RANGEEND ( $range )
 
 This is an example of using a range in OQL, where `$range` is set to last week, which will give you all the customers born in the last week:
 
-```sql {linenos=false}
+```sql
 SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
 WHERE Birthday IN ($rangeLastWeek)
 ```
 
 This example uses the `RANGEEND` function in the `WHERE` clause, which will give you all the customers born since the end of last week:
 
-```sql {linenos=false}
+```sql
 SELECT FirstName AS First, LastName AS Last, Name AS Name, Birthday AS BDay, CustomerType AS Type FROM Sales.Customer
 WHERE Birthday > RANGEEND($rangeLastWeek)
 ```

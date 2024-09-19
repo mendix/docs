@@ -11,7 +11,7 @@ The `ends-with()` function checks whether a string attribute ends with a specifi
 
 This query returns all customers whose name ends with the sub-string `sen`:
 
-```java {linenos=false}
+```java
 //Sales.Customer[ends-with(Name, 'sen')]
 ```
 

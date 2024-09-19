@@ -95,13 +95,13 @@ This step will prepare upgrade patches on your local machine in the subfolder `.
 
 Stop the deployed `mendix-operator` (replace `{namespace}` with the namespace where the Mendix Operator is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 ```
 
 If you have installed the cluster in Connected mode, stop the deployed `mendix-agent` (replace `{namespace}` with the namespace where the Mendix Agent is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-agent --replicas=0
 ```
 
@@ -109,7 +109,7 @@ kubectl -n {namespace} scale deployment mendix-agent --replicas=0
 
 Run the following command to upgrade Custom Resource Definitions for the Mendix Operator:
 
-```shell {linenos=false}
+```shell
 kubectl apply -f crds.manifest.yaml
 ```
 
@@ -117,7 +117,7 @@ kubectl apply -f crds.manifest.yaml
 
 Run the following command to upgrade the dependency versions for the Mendix Operator:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} apply -f upgrade_manifest.yaml
 ```
 
@@ -132,12 +132,12 @@ The `upgrade_patches.txt` file uses Bash escaping rules. If you're using another
 
 Start the `mendix-operator` deployment (replace `{namespace}` with the namespace where the Mendix Operator is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
 If you have installed the cluster in Connected mode, start the `mendix-agent` deployment (replace `{namespace}` with the namespace where the Mendix Agent is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-agent --replicas=1
 ```

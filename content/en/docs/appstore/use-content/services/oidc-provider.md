@@ -149,7 +149,7 @@ The rest of the configuration can be performed through the app.
 1. Open the **Server Keys** tab.
 1. Click **New Key**.
 1. Open the **Scopes** tab.
-1. Create **New** scopes with the **Scope type** set to **Standard**.
+1. For the authorization code grant, create **New** scopes, enter `openid` as the **Name**, and set the **Scope type** to **Standard**. You need to use your own value in the **Name** field for the client credential grant type.
 
     This page sets up a single list of all the scopes that are known to the OIDC Provider service. For each client, you can then choose the scopes used by that specific client. See [Configuring Centralized Authorization](#configuring-authorization) for more information on what scopes you should set.
 
@@ -170,7 +170,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
     * an HTTP request body with the following format (for a Client `ClientID` which is running on host and port `localhost:8081`):
 1. For the `grant_types`: `authorization_code`
 
-    ```json {linenos=false}
+    ```json
     {
         "client_id" : "ClientID",
         "client_name" : "ClientName",
@@ -184,7 +184,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
     Send the command. If it is working, you should get a response which has a body which resembles the example below:
 
-    ```json {linenos=false}
+    ```json
     {
         "post_logout_redirect_uris": [ "http://localhost:8081/logout" ],
         "grant_types": [ "authorization_code" ],
@@ -200,7 +200,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
 1. For the `grant_types`: `client_credentials`
 
-    ```json {linenos=false}
+    ```json
     {
         "client_id" : "DemoClient",
         "client_name" : "DemoClient",
@@ -212,7 +212,7 @@ To check that this works, you will need a tool for testing APIs (such as [Postma
 
     Send the command. If it is working, you should get a response which has a body which resembles the example below:
 
-    ```json {linenos=false}
+    ```json
     {
         "grant_types": [ "client_credentials" ],
         "client_secret_expires_at": 0,
@@ -317,7 +317,7 @@ To pass this additional information, you need to create custom claims. You can d
 
     The ID-token will be a nested JSON structure with the name of the object as the key and a list of attribute names of your object as the keys and the attribute values as the values.
 
-    ```json {linenos=false}
+    ```json
     "MyObjectName": {
         "MyObjectAttribute1Name" : "MyObjectAttribute1Value",
         "MyObjectAttribute2Name" : "MyObjectAttribute2Value"
@@ -417,7 +417,7 @@ You need to configure the OIDC SSO module in your app which is using the IAM bro
 
 The format of non-custom claims in the access token is as follows:
 
-```json {linenos=false}
+```json
 {
     "aud": "d99a49b9-95d7-410e-b79a",
     "sub": "T6hOS9jBEBMqk3Dk",
@@ -437,7 +437,7 @@ In the version 3.0.0 and above of the OIDC Provider module, a new `client_id` at
 
 The format of non-custom claims in the ID-token is as follows:
 
-```json {linenos=false}
+```json
 {
     "com.mendix.user.language": "en_US",
     "sub": "T6hOS9jBEBMqk3Dk",

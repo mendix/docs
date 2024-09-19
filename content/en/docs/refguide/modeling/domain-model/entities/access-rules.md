@@ -141,7 +141,7 @@ There are two constraints that can be appended easily with a single button click
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current end-user.
 
-```java {linenos=false}
+```java
 [System.owner='[%CurrentUser%]']
 ```
 
@@ -158,7 +158,7 @@ For example:
 
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule. The created rule will look like this:
 
-```xpath {linenos=false}
+```xpath
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 
@@ -238,7 +238,7 @@ There are two constraints that can be appended easily with a single button click
 
 The **Owner** button adds an XPath constraint so the access rule is only applied if the object owner is the current end-user.
 
-```java {linenos=false}
+```java
 [System.owner='[%CurrentUser%]']
 ```
 
@@ -255,7 +255,7 @@ For example:
 
 The XPath constraint can be constructed easily using the **Path to user...** button by selecting the **Customer** entity in the **Order** entity access rule. The created rule will look like this:
 
-```xpath {linenos=false}
+```xpath
 [Module.Order_Customer = '[%CurrentUser%]']
 ```
 

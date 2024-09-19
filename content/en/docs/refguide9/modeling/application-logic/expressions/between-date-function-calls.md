@@ -33,13 +33,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 millisecondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,1,3))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 2000
 ```
 
@@ -68,13 +68,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 secondsBetween(dateTime(2007, 1, 1, 1, 1, 1), dateTime(2007,1,1,1,2,3))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 62
 ```
 
@@ -103,13 +103,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 minutesBetween(dateTime(2007, 1, 1, 1, 2, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 1
 ```
 
@@ -138,13 +138,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 hoursBetween(dateTime(2007, 1, 1, 3, 31, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 2.5
 ```
 
@@ -173,13 +173,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 daysBetween(dateTime(2007, 2, 13, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 43
 ```
 
@@ -208,13 +208,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 weeksBetween(dateTime(2007, 1, 9, 1, 1, 1), dateTime(2007,1,1,1,1,1))
 ```
 
 The output results in 8 days divided by 7 days in a week:
 
-```java {linenos=false}
+```java
 1.1428571428571428
 ```
 
@@ -243,13 +243,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 calendarMonthsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2007, 8, 1, 1, 1, 1))
 ```
 
 The output results in the amount of months between the two dates:
 
-```java {linenos=false}
+```java
 7
 ```
 
@@ -278,12 +278,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 calendarYearsBetween(dateTime(2007, 1, 1, 10, 1, 1), dateTime(2017, 1, 1, 1, 1, 1))
 ```
 
 The output results in the amount of years between the two dates:
 
-```java {linenos=false}
+```java
 10
 ```

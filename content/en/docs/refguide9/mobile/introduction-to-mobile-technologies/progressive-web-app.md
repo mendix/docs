@@ -30,9 +30,8 @@ PWAs require a version of Atlas 2 or above.
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-PWAs have the following limitations on iOS:
+PWAs have the following limitation on iOS:
 
-* Push notifications are not supported for PWAs
 * Offline data is not supported for PWAs on iOS
 {{% /alert %}}
 

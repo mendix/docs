@@ -77,13 +77,13 @@ There are some techniques which have been found to produce better responses from
 
 Specificity and clarity are important. Like humans, large language models (LLMs) require specific instructions and cannot guess what you want. There is a difference between:
 
-```text  {linenos=false}
+```text 
 Write a story about Mendix
 ```
 
 and
 
-```text  {linenos=false}
+```text 
 Write a story about Mendix.
 It should be 1000 words long.
 It should be focused on the business impact low code can make to a company.
@@ -100,7 +100,7 @@ Provide the model with instructions on the steps to solve the problem. This is n
 
 When you want the model to respond in a specific manner or syntax that is hard to describe, it can be particularly useful to provide examples. This technique is known as *One-Shot-Prompting* (1 example) or *Few-Shot-Prompting* (multiple examples).
 
-```text  {linenos=false}
+```text 
 You are an classification assistant.
 You're job is to classify user reviews based on their sentiment.
 
@@ -124,11 +124,11 @@ If your prompt includes instructions which allow the LLM to ask for more info, o
 
 Example instructions are:
 
-```text  {linenos=false}
+```text 
 If you are unsure how to respond, say “Sorry, I didn’t get that. Could you rephrase the question or provide more details?”
 ```
 
-```text  {linenos=false}
+```text 
 You are a barista that only talks about coffee.
 If a user asks something about other topics, say:
     “Sorry, as a barista I cannot help you with that. Would you like some recommendations on how to brew coffee?”
@@ -136,7 +136,7 @@ If a user asks something about other topics, say:
 
 Or, when using RAG:
 
-```xml  {linenos=false}
+```xml 
 You are a helpful assistant that tries to answer user questions based on chunks of topic-specific data.
 If you cannot answer a question based on the provided information alone, you respond that you do not know.
 For the current question, please base the answer on the following pieces of information:
@@ -151,11 +151,11 @@ You can prime the model by explaining what it does. This will create a bias in t
 
 Examples are:
 
-```text  {linenos=false}
+```text 
 You are a helpdesk assistant
 ```
 
-```text  {linenos=false}
+```text 
 You are a writer that is specialized in marketing content
 ```
 
@@ -165,7 +165,7 @@ When using features like [function calling](/appstore/modules/genai/function-cal
 
 For example, say you have a tool called `GetTicketInformationForIdentifier` which retrieves information from a specific support ticket in a database; you could add the following to the prompt:
 
-```text  {linenos=false}
+```text 
 Do not make assumptions about the Ticket Identifier.
 Ask for clarification if you do not know this.
 Only use the ticket information from the GetTicketInformationForIdentifier function for answering questions on ticket information.
@@ -177,7 +177,7 @@ When the prompt becomes longer it can help to use XML-like tags to give more str
 
 For example, you could use something like:
 
-```xml {linenos=false}
+```xml
 <instructions>
 Answer the question from the user.
 Base the answer on the articles provided.

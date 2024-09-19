@@ -14,7 +14,7 @@ if `<condition>` then `<a value>` else `<other value>`
 
 Using the following statement as the expression of a Change variable activity for a string value:
 
-```java {linenos=false}
+```java
 if 7 > 6 then 'correct' else 'incorrect'
 ```
 

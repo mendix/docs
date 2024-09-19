@@ -37,13 +37,13 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install [Node.js](https://nodejs.org) v16.
 * Install the latest [Yeoman](https://yeoman.io/) with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g yo
     ```
 
 * Install the latest Mendix Pluggable Widget Generator for Yeoman for Mendix 8 with the following command:
 
-    ```shell {linenos=false}
+    ```shell
     npm install -g @mendix/generator-widget@"<9"
     ```
 
@@ -77,7 +77,7 @@ To scaffold your project folder for the group box widget, follow these steps:
 
 3. Start the generator by executing the following command:
 
-    ```shell {linenos=false}
+    ```shell
     yo @mendix/widget GroupBox
     ```
 
@@ -193,7 +193,7 @@ Define the structure and default style of the group box widget with these steps:
 4. Change the current working directory to your project folder.
 5. Execute the following command to bundle your widget and update the widget bundle in your Mendix test project:
 
-    ```shell {linenos=false}
+    ```shell
     npm start
     ```
 
@@ -272,13 +272,13 @@ For the group box widget it would be nice to have square corners on Android devi
 
 1. In **src/components/HelloWorldSample.tsx** you must adjust the import statement in order to use the **Platform** detection feature. Change the import from this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Text, View } from "react-native";
     ```
 
     to this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Text, View, Platform } from "react-native";
     ```
 
@@ -328,7 +328,7 @@ As you might have noticed, the display component is still called **HelloWorldSam
 3. Rename the **HelloWorldSampleProps** interface to *GroupBoxProps*.
 4. Change the **GroupBox** class declaration to the following:
 
-    ```tsx {linenos=false}
+    ```tsx
     export class GroupBox extends Component<GroupBoxProps>
     ```
 
@@ -339,13 +339,13 @@ To fix the errors in the container component, use these steps:
 1. Open *src/GroupBox.tsx*.
 2. Replace the following import:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { HelloWorldSample } from "./components/HelloWorldSample";
     ```
 
     with this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { GroupBox as WrappedGroupBox } from "./components/GroupBox";
     ```
 
@@ -615,7 +615,7 @@ To start, make the complete header clickable:
 1. Navigate to the display component (**src/components/GroupBox.tsx**).
 2. Import the React component **ComponentClass** so that your React imports look like this:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Children, Component, ReactNode, createElement, ComponentClass } from "react";
     ```
 
@@ -674,7 +674,7 @@ Now make it possible to expand or collapse the group box:
 
 3. Change the class definition to give our component a state to keep track on whether it is collapsed or not:
 
-    ```tsx {linenos=false}
+    ```tsx
     export class GroupBox extends Component<GroupBoxProps, GroupBoxState>
     ```
 
@@ -919,13 +919,13 @@ Fix your icon issue by introducing a default style for your container component:
 
 2. Import the `mergeNativeStyles` function:
 
-    ```tsx {linenos=false}
+    ```tsx
     import { Style, mergeNativeStyles } from "@mendix/pluggable-widgets-tools";
     ```
 
 3. Add the following private attribute to the container component class:
 
-    ```tsx {linenos=false}
+    ```tsx
     private readonly styles = mergeNativeStyles(defaultStyle, this.props.style);
     ```
 
@@ -1069,7 +1069,7 @@ First change the widget property configuration:
         2. Change your current working directory to the folder where *GroupBox.png* is stored.<br />
         3. Execute the following command to generate the Base64 representation:<br />
 
-        ```shell {linenos=false}
+        ```shell
         certutil -encode GroupBox.png data.b64
         ```
 
@@ -1081,7 +1081,7 @@ First change the widget property configuration:
         2. Change the current working directory to the folder where the "GroupBox.png" is stored.<br />
         3. Execute the following command to generate the Base64 representation:<br />
 
-        ```shell {linenos=false}
+        ```shell
         base64 -i GroupBox.png -o data.b64
         ```
 
@@ -1374,7 +1374,7 @@ Defining all the different styles inside **test/MxTestProject/theme/styles/nativ
 2. Move all the code from **test/MxTestProject/theme/styles/native/app/custom.js** into the new file.
 3. Add the following import to **test/MxTestProject/theme/styles/native/app/custom.js**:
 
-    ```javascript {linenos=false}
+    ```javascript
     export * from "./group-box";
     ```
 

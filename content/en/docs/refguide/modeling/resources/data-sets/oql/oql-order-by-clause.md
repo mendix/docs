@@ -14,7 +14,7 @@ This clause can include items that do not appear in the `SELECT` clause, except 
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 ORDER BY
 	{
 		order_by_expression [ ASC | DESC ]
@@ -41,14 +41,14 @@ For details on the default ordering behavior of NULL values, see the [NULL Value
 
 This query retrieves all customers and returns the first names sorted on the last name, ascending:
 
-```sql {linenos=false}
+```sql
 SELECT FirstName FROM Sales.Customer
 ORDER BY LastName
 ```
 
 This query retrieves all customers and returns the first and last name sorted on the last name, descending:
 
-```sql {linenos=false}
+```sql
 SELECT FirstName + ' ' + LastName FROM Sales.Customer
 ORDER BY LastName DESC
 ```

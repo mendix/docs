@@ -25,18 +25,6 @@ Clone this [code sample](https://github.com/mendix/text-box-sample) from GitHub 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install the LTS version of [Node.js](https://nodejs.org/en/download/).
-* Install [Yeoman](https://yeoman.io/) with the following command:
-
-    ```shell {linenos=false}
-      $ npm install -g yo
-    ```
-
-* Install the Mendix Pluggable Widget Generator with the following command:
-
-    ```shell {linenos=false}
-    $ npm install -g @mendix/generator-widget
-    ```
-
 * Install an integrated development environment (IDE) of your choice (Mendix recommends [Microsoft Visual Studio Code](https://code.visualstudio.com/))
 * Have a basic understanding of [TypeScript](https://www.typescriptlang.org/)
 
@@ -47,20 +35,22 @@ The following steps teach you how to build a pluggable input widget, and show yo
 ### Creating a Test App {#creating-a-test-project}
 
 1. Open Mendix Studio Pro and create a new test app by selecting **File > New App** from the top menu bar and then **Blank App**.
-2. Create a test case for the new widget:<br />
-    1. In the domain model of **MyFirstModule**, add a new entity.<br />
-    2. Add a new attribute of type **String**.<br />
-    3. Open **MyFirstModule’s** **Home** page.<br />
-    4. There, add a **Data view** widget, double-click the widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.<br />
-    5. Next to the microflow field click the **Select** button, and click **New**.<br />
-    6. Provide the name *DSS_CreateTestObject* to this new microflow.<br />
-    7. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
-    8. Add a new **Create object** action on your microflow.
-
-3. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
-4. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
-5. Go back to the home page, open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
-6. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. Then click the **OK** button to close the dialog box. The end result should look like this:
+2. Open the **Domain model** of **MyFirstModule**.
+    1. Add a new **entity** with an attribute of type **String**.
+3. Create a page for testing using **MyFirstModule’s** **Home** page.
+    1. Add a **Data view** widget, double-click the widget, and give it a data source microflow by selecting **Data source** > **Type** > **Microflow**.
+    2. Next to the microflow field click the **Select** button, and click **New**.
+    3. Provide the name *DSS_CreateTestObject* to this new microflow.
+    4. Click the **Show** button. This will open the microflow editor. Then click the **OK** button to close the dialog box.<br />
+4. Configure the Microflow to return an instance of your test entity.
+    1. Add a new **Create object** action on your microflow.
+    2. Open the new **Create object** action's properties by double-clicking it. For its **Entity**, click the **Select** button and choose the entity you created above. Then click **OK** to close the dialog box.
+    3. Right-click the **Create Entity** activity, then click **Set $NewEntity as Return Value**.
+5. Go back to the home page to finish the test page.
+    1. Open the **Add Widget** menu, and then add a **TextBox** widget inside the data view.
+    2. Open the Textbox's properties and select the **Datasource Attribute (path)** string attribute you created above. 
+    3. Click the **OK** button to close the dialog box. 
+6. The end result should look like this:
 
     {{< figure src="/attachments/howto9/extensibility/pluggable-widgets/create-a-pluggable-widget-one/createtestobject.png" class="no-border" >}}
 
@@ -75,7 +65,7 @@ Using a terminal or command line, navigate to your new Mendix app's folder, crea
 ```powershell
 mkdir CustomWidgets
 cd CustomWidgets
-yo @mendix/widget TextBox
+npx @mendix/generator-widget TextBox
 ```
 
 The generator will ask you a few questions during setup. Answer the questions by specifying the following information:
@@ -155,6 +145,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
     }
     
     export class TextInput extends Component<InputProps> {
+
         render(): ReactNode {
             return <input type="text" value={this.props.value} />;
         }
@@ -170,21 +161,18 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
     ```tsx
     import { Component, ReactNode, createElement } from "react"; 
-    import { hot } from "react-hot-loader/root";
-
     import { TextBoxContainerProps } from "../typings/TextBoxProps";
     import { TextInput } from "./components/TextInput";
 
     import "./ui/TextBox.css";
 
-    class TextBox extends Component<TextBoxContainerProps> {
+    export class TextBox extends Component<TextBoxContainerProps> {
+
         render(): ReactNode {
             const value = this.props.textAttribute.value || "";
             return <TextInput value={value} />;
         }
     }
-
-    export default hot(TextBox);
     ```
 
     Be sure all the imports are included before moving on from this step.
@@ -203,6 +191,7 @@ Open the *(YourMendixApp)/CustomWidgets/TextBox* folder in your IDE of choice (a
 
     ```tsx
     export class preview extends Component<TextBoxPreviewProps> {
+
         render(): ReactNode {
             return <TextInput value={this.props.textAttribute} />;
         }
@@ -237,7 +226,8 @@ The input works, but the styling could be improved. In the next code snippets, y
 1. In *TextBox.tsx*, pass the properties from the runtime to the `TextInput` component:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
+    export class TextBox extends Component<TextBoxContainerProps> {
+
         render(): ReactNode {
             const value = this.props.textAttribute.value || "";
             return <TextInput
@@ -255,6 +245,7 @@ The input works, but the styling could be improved. In the next code snippets, y
     ```tsx
     import { CSSProperties, Component, ReactNode, createElement } from "react";
     import classNames from "classnames";
+
     export interface InputProps {
         value: string;
         className?: string;
@@ -263,6 +254,7 @@ The input works, but the styling could be improved. In the next code snippets, y
         tabIndex?: number;
     }
     export class TextInput extends Component<InputProps> {
+
         render(): ReactNode {
             const className = classNames("form-control", this.props.className);
             return <input
@@ -316,18 +308,19 @@ The value from the attribute can be displayed and updated using the other input,
 1. In *TextBox.tsx*, create a function that will update the attribute and pass it to the `TextInput` component:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
+    export class TextBox extends Component<TextBoxContainerProps> {
+
         private readonly onUpdateHandle = this.onUpdate.bind(this);
+
         render(): ReactNode {
             const value = this.props.textAttribute.value || "";
             return <TextInput
                 value={value}
-                style={this.props.style}
-                className={this.props.class}
                 tabIndex={this.props.tabIndex}
                 onUpdate={this.onUpdateHandle}
             />;
         }
+
         private onUpdate(value: string): void {
             this.props.textAttribute.setValue(value);
         }
@@ -344,6 +337,7 @@ The value from the attribute can be displayed and updated using the other input,
     ```tsx
     import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
     import classNames from "classnames";
+
     export interface InputProps {
         value: string;
         className?: string;
@@ -352,8 +346,11 @@ The value from the attribute can be displayed and updated using the other input,
         tabIndex?: number;
         onUpdate?: (value: string) => void;
     }
+
     export class TextInput extends Component<InputProps> {
+
         private readonly handleChange = this.onChange.bind(this);
+
         render(): ReactNode {
             const className = classNames("form-control", this.props.className);
             return <input
@@ -365,6 +362,7 @@ The value from the attribute can be displayed and updated using the other input,
                 onChange={this.handleChange}
             />;
         }
+
         private onChange(event: ChangeEvent<HTMLInputElement>): void {
             if (this.props.onUpdate) {
                 this.props.onUpdate(event.target.value);

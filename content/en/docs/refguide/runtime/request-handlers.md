@@ -1,5 +1,5 @@
 ---
-title: "Request handlers"
+title: "Request Handlers"
 url: /refguide/request-handlers/
 description: "Describes the various request handlers that are available in the runtime."
 weight: 45

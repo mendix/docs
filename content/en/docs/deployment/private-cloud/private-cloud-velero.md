@@ -32,7 +32,7 @@ To create a backup with Velero, follow these steps:
 
 1. Stop the Mendix Operator and Mendix agent by scaling them to 0:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=0
     kubectl scale deployment mendix-operator --replicas=0
     ```
@@ -41,7 +41,7 @@ To create a backup with Velero, follow these steps:
 
 2. Create the backup by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero create backup mendix-velero-bkp
     ``` 
 
@@ -51,13 +51,13 @@ To create a backup with Velero, follow these steps:
 
 3. Verify that the backup is complete by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero backup describe mendix-velero-bkp
     ```
 
 4. Restart the Mendix Operator and Mendix agent by entering the following command:
 
-    ```text {linenos=table}
+    ```text
     kubectl scale deployment mendix-agent --replicas=1
     kubectl scale deployment mendix-operator --replicas=1
     ```
@@ -68,7 +68,7 @@ To restore a backup that you created with Velero, follow these steps:
 
 1. Restore the backup by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     velero restore create --from-backup mendix-velero-bkp --status-include-resources=storageinstances.privatecloud.mendix.com,storageplans.privatecloud.mendix.com,builds.privatecloud.mendix.com,mendixapps.privatecloud.mendix.com
     ```
 
@@ -77,7 +77,7 @@ To restore a backup that you created with Velero, follow these steps:
 2. After the app has started and created the database, [restore a backup](/developerportal/deploy/private-cloud-data-transfer/) of your database and S3 files.
 3. Optional: After restoring the backup, add finalizers to `StorageInstances` by entering the following command:
 
-    ```text {linenos=false}
+    ```text
     kubectl patch storageinstances $(kubectl get storageinstances --no-headers -o custom-columns=":metadata.name") -p '{"metadata":{"finalizers":["finalizer.privatecloud.mendix.com"]}}' --type=merge
     ```
 

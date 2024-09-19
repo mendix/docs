@@ -44,7 +44,7 @@ You can deploy your app by clicking **Publish** or **Run Locally** ({{% icon nam
 
 {{< figure src="/attachments/refguide9/modeling/studio-pro-overview/view-and-publish.png" alt="View App, Publish, and Run Locally buttons" class="no-border" >}}
 
-For more information on deployment in Mendix, see [Deployment](/deployment/).
+For more information on deployment in Mendix, see [Deploying Apps](/deployment/).
 
 For more information on deploying your app and versioning it, see the [Versioning an App Deployed to the Cloud](/refguide9/using-version-control-in-studio-pro/#versioning-app) section in *Using Version Control in Studio Pro*. 
 

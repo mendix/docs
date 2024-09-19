@@ -501,7 +501,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 1. Remove or comment out `database-password` from the `SecretProviderClass` and the associated AWS Secret.
 2. Enable [IAM authentication](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.DBAccounts.html#UsingWithRDS.IAMDBAuth.DBAccounts.PostgreSQL) and grant `rds_iam` role to `database-username` role by using the below `psql` commandline to run the following jump pod commands (replacing `<database-username>` with the username specified in `database-username` and `<database-host>` with the database host):
 
-   ```sql {linenos=false}
+   ```sql
    kubectl run postgrestools docker.io/bitnami/postgresql:14 -ti --restart=Never --rm=true -- /bin/sh
    export PGDATABASE=postgres
    export PGUSER=<database-username>
@@ -727,13 +727,13 @@ After completing the prerequisites, follow these steps to switch from password-b
 3. Open Azure Cloud Shell (or a Bash-compatible terminal) and run `az login` to authenticate with Entra ID.
 4. Run the following command to connect to the Azure Postgres database, replacing `<hostname>` with the Postgres server hostname (e.g. `example.postgres.database.azure.com`), and `<user-email>` with your Entra ID login email (e.g. `user@tenant.onmicrosoft.com`):
 
-   ```shell {linenos=false}
+   ```shell
    psql "host=<hostname> port=5432 dbname=postgres user=<user-email> password=$(az account get-access-token --resource-type oss-rdbms --output tsv --query accessToken) sslmode=require"
    ```
 
 5. In the Postgres client, run the following commands (replace `<database-user>` with the environment's current `database-user` name, and `<managed-identity-uuid>` with the **Object (principal) ID** of the environment's **Managed Identity**:
 
-   ```sql {linenos=false}
+   ```sql
    SECURITY LABEL for "pgaadauth" on role "<database-user>" is 'aadauth,oid=<managed-identity-uuid>,type=service';
    ALTER ROLE <database-user> WITH PASSWORD NULL;
    \q
@@ -765,7 +765,7 @@ After completing the prerequisites, follow these steps to switch from password-b
 5. Connect to the database using [Azure Query Editor](https://learn.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-configure?view=azuresql&tabs=azure-cli#use-microsoft-entra-identity-to-connect-using-azure-portal-query-editor-for-azure-sql-database) using Entra Authentication, and run the following query
    (replace `<managed-identity-name>` with the **Name** of the environment's **Managed Identity**, and `<static-database-username>` with the `database-username` that was written down on step 2):
 
-   ```sql {linenos=false}
+   ```sql
    DROP USER [<static-database-username>];
    CREATE USER [<managed-identity-name>] FROM EXTERNAL PROVIDER;
    ALTER ROLE db_owner ADD MEMBER [<managed-identity-name>];

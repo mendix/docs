@@ -11,7 +11,7 @@ The `REPLACE` function replaces all occurrences of a specified string value with
 
 The syntax is as follows:
 
-```sql {linenos=false}
+```sql
 REPLACE ( expression, pattern, replacement )
 ```
 

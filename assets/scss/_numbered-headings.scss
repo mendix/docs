@@ -1,0 +1,71 @@
+// Automatically numbers the headings when they render on the site
+// From https://github.com/google/docsy/issues/843#issuecomment-1016311098 (based on https://codingnconcepts.com/hugo/auto-number-headings-hugo/)
+
+:root {
+    // When printing a whole section that contains multiple pages, each page has a h1
+    // so you end up with multiple nested h1s each with h2+ under them.
+    // layout/partials/print/content.html adds numbering for all the h1s but also
+    // sets the base number for the h1 into this variable so we can use it to
+    // number all the h2+ headings.
+    --base-section-num: "";
+  }
+  
+  // reset counter for a heading level when its parent level is encountered */
+  body {counter-reset: h2}
+  h1 {counter-reset: h2}
+  h2 {counter-reset: h3}
+  h3 {counter-reset: h4}
+  h4 {counter-reset: h5}
+  h5 {counter-reset: h6}
+  
+  // prepend the counter value before the heading
+  // DB - Exclude pages where numberless_headings:true
+  body:not(.numberless_headings) h2[id]::before {
+    display: inline;
+    visibility: visible;
+    counter-increment: h2; 
+    content: var(--base-section-num,"") counter(h2) " ";
+  }
+  
+  // DB - Exclude headers in Swagger reference and pages where numberless_headings:true
+  body:not(.numberless_headings) h3[id]:not(.opblock-tag)::before {
+    display: inline;
+    visibility: visible;
+    counter-increment: h3; 
+    content: var(--base-section-num,"") counter(h2) "." counter(h3) " ";
+  }
+  
+  // DB - Exclude pages where numberless_headings:true
+  body:not(.numberless_headings) h4[id]::before {
+    display: inline;
+    visibility: visible;
+    counter-increment: h4; 
+    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) " ";
+  }
+  
+  // DB - Exclude pages where numberless_headings:true
+  body:not(.numberless_headings) h5[id]::before {
+    display: inline;
+    visibility: visible;
+    counter-increment: h5; 
+    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+  }
+  
+  // DB - Exclude pages where numberless_headings:true
+  body:not(.numberless_headings) h6[id]::before {
+    display: inline;
+    visibility: visible;
+    counter-increment: h6; 
+    content: var(--base-section-num,"") counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+  }
+  
+  // Reset the counter for the right TOC items
+  .td-toc ul { 
+    counter-reset: item ;
+  }
+  
+  // DB - Exclude pages where numberless_headings:true
+  body:not(.numberless_headings) .td-toc li a:before { 
+    content: counters(item, ".") " "; 
+    counter-increment: item ;
+  }

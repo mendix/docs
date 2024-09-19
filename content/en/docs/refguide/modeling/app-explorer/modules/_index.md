@@ -77,5 +77,5 @@ There are the following type of modules:
 | Document type | Description |
 | --- | --- |
 | [Published REST Services](/refguide/published-rest-services/) | A microflow can be published as a REST service operation so that it can be consumed by other Mendix apps. |
-| [Published OData Services](/refguide/published-odata-services/) | Persistable entities can be exposed as an OData resource, so that they can be imported by third-party applications such as Excel. |
+| [Published OData/GraphQL Services](/refguide/published-odata-services/) | Persistable entities can be exposed in an OData service, so that they can be imported by third-party applications such as Excel. |
 | [Published Web Services](/refguide/published-web-services/) | A microflow can be published as a web service operation so that it can be called by third-party applications. |

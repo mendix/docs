@@ -8,9 +8,9 @@ weight: 70
 
 Mathematical function calls include a limited number of mathematical operations on numbers, such as returning the largest value or rounding a number up. 
 
-If you need more elaborate functions (such as the square root, sin, cos, tan, numberOfPermutations, factorial, or fibonacciNumber), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
+If you need more elaborate functions (such as `sin`, `cos`, `tan`, `numberOfPermutations`, `factorial`, or `fibonacciNumber`), then consider using the community-supported [Math](https://marketplace.mendix.com/link/component/112522/) module available in the Mendix Marketplace.
 
-## max
+## max {#max}
 
 Returns the largest value from the specified arguments.
 
@@ -34,17 +34,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 max(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 6.7
 ```
 
-## min
+## min {#min}
 
 Returns the smallest value from the specified arguments.
 
@@ -68,17 +68,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 min(5, 1, 5, 6.7)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 1
 ```
 
-## round
+## round {#round}
 
 Rounds a number to a certain precision.
 
@@ -104,29 +104,29 @@ The second optional parameter determines the precision of the rounding. The defa
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 round(3.5)
 ```
 
 The output is of type Integer/Long:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 round(88.725,2)
 ```
 
 The output is a decimal:
 
-```java {linenos=false}
+```java
 88.72
 ```
 
-## random
+## random {#random}
 
 Generates a random number >= 0.0 and < 1.0
 
@@ -142,17 +142,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 random()
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 0.3
 ```
 
-## floor
+## floor {#floor}
 
 Rounds down to an integer (returns the largest integer which is less than or equal to the input).
 
@@ -176,29 +176,29 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 floor(3.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 3
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 floor(-1.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -2
 ```
 
-## ceil
+## ceil {#ceil}
 
 Rounds up to an integer (returns the smallest integer which is greater than or equal to the input).
 
@@ -222,25 +222,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 ceil(3.2)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 4
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 ceil(-1.9)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -1
 ```
 
@@ -269,25 +269,25 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 pow(2, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 8
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 pow(2.5, 3)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 15.625
 ```
 
@@ -295,7 +295,7 @@ The output is:
 Calculation of `pow` with a decimal power might be less accurate, as the standard Java/JavaScript libraries do not support these calculations with high precision. Use a specialized library in a custom Java/JavaScript action if high precision is required for this case.
 {{% /alert %}}
 
-## abs
+## abs {#abs}
 
 Calculates the absolute value of a number (meaning, not negative).
 
@@ -319,23 +319,23 @@ The output is described in the table below:
 
 If you type in the negative value as an input:
 
-```java {linenos=false}
+```java
 abs(-5)
 ```
 
 Or, if you type in the positive value: 
 
-```java {linenos=false}
+```java
 abs(5)
 ```
 
 The output in both cases is:
 
-```java {linenos=false}
+```java
 5
 ```
 
-## sqrt
+## sqrt {#sqrt}
 
 Calculates the square root of a number.
 
@@ -363,12 +363,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 sqrt(9)
 ```
 
 The output is of type Decimal:
 
-```java {linenos=false}
+```java
 3
 ```

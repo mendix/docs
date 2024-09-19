@@ -30,9 +30,7 @@ To export all the email domains, use the **Export to Excel** button.
 
 {{< figure src="/attachments/control-center/company-settings/company-email-domains.png" width="650px" class="no-border" >}}
 
-{{% alert color="info" %}}In certain scenarios, you want to ask Mendix to merge two companies into one company on the Mendix Platform, for example, after your company purchases another company which also uses the Mendix Platform. 
-
-It is possible to merge two companies into one company. However, this action is irreversible. Before Mendix can do this action, [the single sign-on configurations](/control-center/security/set-up-sso-byoidp/) for these two companies must be deactivated if they are enabled. After the two companies are merged, all users from the two companies and their applications will be moved to the same company.{{% /alert %}}
+In certain scenarios, you may want to ask Mendix to merge two companies into one on the Mendix Platform, such as when your company purchases another company which also uses the Mendix Platform. This can be done, however, the action is irreversible. After the companies are merged, all users and their applications from both companies will be consolidated under the same company.
 
 ### Security Contact {#security-contact}
 

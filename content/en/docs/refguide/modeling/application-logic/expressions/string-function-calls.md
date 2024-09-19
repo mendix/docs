@@ -16,7 +16,7 @@ For a great deep-dive look into string functions call, check out this video:
 
 {{< vidyard "EpVivdyB4i1jGvc8J9yXkt" >}}
 
-## toLowerCase
+## toLowerCase {#toLowerCase}
 
 Converts all characters in the string to lowercase.
 
@@ -40,17 +40,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 toLowerCase('thisISmyString')
 ```
 
 The output is the following:
 
-```java {linenos=false}
+```java
 'thisismystring'
 ```
 
-## toUpperCase
+## toUpperCase {#toUpperCase}
 
 Converts all characters in the string to uppercase.
 
@@ -74,17 +74,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 toUpperCase('thisISmyString')
 ```
 
 The output is the following:
 
-```java {linenos=false}
+```java
 'THISISMYSTRING'
 ```
 
-## substring
+## substring {#substring}
 
 Retrieves a substring of a string. Note that the first character of a string is located at position `0`, and the last character is located at position `length(string)-1`.
 
@@ -117,35 +117,35 @@ The function will output an error for the following:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 substring('thisismystring', 6)
 ```
 
 The output is the following:
 
-```java {linenos=false}
+```java
 'mystring'
 ```
 
 If you use a third parameter to specify the desired length of the output:
 
-```java {linenos=false}
+```java
 substring('thisismystring', 6, 2)
 ```
 
 The output is the following:
 
-```java {linenos=false}
+```java
 'my'
 ```
 
 To prevent the value of the third parameter from getting out of range, you can set a limit to the third parameter, for instance, using the `min` and `length` functions:
 
-```java {linenos=false}
+```java
 substring('thisismystring', 0, min(length('thisismystring'), 20))
 ```
 
-## find
+## find {#find}
 
 Finds the position of the first occurrence of the substring in the string.
 
@@ -171,41 +171,41 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 find('thisismystring', 'my')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 6
 ```
 
 Substring that doesn't occur in the original string:
 
-```java {linenos=false}
+```java
 find('thisismystring', 'yourstring')
 ```
 
 returns:
 
-```java {linenos=false}
+```java
 -1
 ```
 
 Another example of an input is:
 
-```java {linenos=false}
+```java
 find('thisismystring', 'i', 5)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 11
 ```
 
-## findLast
+## findLast {#findLast}
 
 Finds the position of the last occurrence of a substring in the original string.
 
@@ -231,61 +231,61 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 findLast('thisismystring', 't')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 9
 ```
 
 Another example of an input where a substring does not occur in the original string:
 
-```java {linenos=false}
+```java
 findLast('thisismystring', 'yourstring')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 -1
 ```
 
 An example of an input with the third parameter:
 
-```java {linenos=false}
+```java
 findLast('thisismystring', 'i', 5)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 4
 ```
 
 As the optional parameter is `5`, the string gets searched up to (and including) position `5`, which means searching the substring `'thisis'`. The last instance of `'i'` in that substring is at position `4`.
 
-## contains
+## contains {#contains}
 
 Determines whether the original string (first parameter) contains a substring (second parameter).
 
 For example, this expression: 
 
-```java {linenos=false}
+```java
 contains('stringtosearchin', 'stringtosearchfor')
 ```
 
 is equivalent to the following expression:
 
-```java {linenos=false}
+```java
 find('stringtosearchin', 'stringtosearchfor') != -1
 ```
 
 The example below shows searching for an empty variable or empty string, where `$param = ''`:
 
-```java {linenos=false}
+```java
 contains('stringtosearchin', $param)
 ```
 
@@ -316,17 +316,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 contains('thisismystring', 'my')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 true
 ```
 
-## startsWith
+## startsWith {#startWith}
 
 Determines whether a string starts with the specified substring.
 
@@ -351,17 +351,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 startsWith('thisismystring', 'this')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 true
 ```
 
-## endsWith
+## endsWith {#endWith}
 
 Determines whether a string ends with the specified substring.
 
@@ -386,13 +386,13 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 endsWith('thisismystring', 'ring')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 true
 ```
 
@@ -420,29 +420,29 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 trim(' this is my string     ')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'this is my string'
 ```
 
 If the input string is empty, it returns an empty string. So, if you use the following input and `MyString` in the input is empty:
 
-```java {linenos=false}
+```java
 trim($MyString)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 ''
 ```
 
-## isMatch
+## isMatch {#isMatch}
 
 Checks to see if a string matches a given regular expression.
 
@@ -480,13 +480,13 @@ The output is described in the table below:
 
 This input below tests to see whether the string contains only numbers:
 
-```java {linenos=false}
+```java
 isMatch('234hello6432', '([0-9]+)')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 False
 ```
 
@@ -501,7 +501,7 @@ NB searching an empty string:
 
 * `isMatch('', '.*[0-9].*')` returns `false`
 
-## replaceAll
+## replaceAll {#replaceAll}
 
 Replaces all occurrences of a regular expression with another string.
 
@@ -540,29 +540,29 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 replaceAll('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'this is a string with NUMBERNUMBER some numbers NUMBERNUMBERNUMBER thrown in'
 ```
 
 Another example of an input of the following:
 
-```java {linenos=false}
+```java
 replaceAll('this is a string with no numbers thrown in', '([0-9])', 'NUMBER')
 ```
 
 And the output is that there are no matches for the input:
 
-```java {linenos=false}
+```java
 'this is a string with no numbers thrown in'
 ```
 
-## replaceFirst
+## replaceFirst {#replaceFirst}
 
 Replaces the first occurrence of the regular expression with a replacement string.
 
@@ -601,17 +601,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 replaceFirst('this is a string with 75 some numbers 234 thrown in', '([0-9])', 'NUMBER')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'this is a string with NUMBER5 some numbers 234 thrown in'
 ```
 
-## String Concatenation ( + )
+## String Concatenation ( + ) {#string-concatenation}
 
 The `+` operator can be used to concatenate two strings or a string and a number.
 
@@ -642,25 +642,25 @@ The output is described in the table below:
 
 An example of an input to combine two strings can be the following:
 
-```java {linenos=false}
+```java
 'foo' + 'bar'
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'foobar'
 ```
 
 An example of an input to combine a string and a number can be the following:
 
-```java {linenos=false}
+```java
 4.73 + ' kilometers'
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 '4.73 kilometers'
 ```
 
@@ -670,7 +670,7 @@ Converts a string to be used in a URL. This function is useful when you want to 
 
 For example:
 
-```java {linenos=false}
+```java
 'http://google.com/search?q=' + urlEncode($myQuery)
 ```
 
@@ -694,17 +694,17 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 urlEncode('Hello, world!')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'Hello%2C+world%21'
 ```
 
-## urlDecode
+## urlDecode {#urlDecode}
 
 Converts a string back from a URL. The opposite of [urlEncode](#urlEncode).
 
@@ -728,12 +728,12 @@ The output is described in the table below:
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 urlDecode('Hello%2C+world%21')
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 'Hello, world!'
 ```

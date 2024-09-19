@@ -13,9 +13,11 @@ aliases:
 **Wait for timer** was renamed to **Timer** in Studio Pro 10.14.0.
 {{% /alert %}}
 
-The **Timer** activity allows you to suspend a workflow path for a configurable duration or until a set date and time.
+The **Timer** allows you to suspend a workflow path for a configurable duration or until a set date and time.
 
 For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
+
+The **Timer** can be used both as a standalone activity on the workflow path and it can be attched to another activity as a [Boundary Event](/refguide/modeling/application-logic/workflows/boundary-events.md)
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Timer" width="250" class="no-border" >}}
 
@@ -29,11 +31,11 @@ For example, when a new salary legislation is about to take effect, a timer can 
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Timer** activity easier to read and understand without the need to add annotations.
+The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
 
 ### Timer Section {#timer}
 
-The **Timer** property defines at which time the workflow path continues. With this property, you can set the timer in two ways: you can set a certain duration, or a certain date and time with an expression. When an activity before the timer finishes and the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
+The **Timer** property defines at which time the workflow path continues. With this property, you can set the timer in two ways: you can set a certain duration, or a certain date and time with an expression. When the workflow path reaches the timer, the configured duration or date and time will be scheduled to take effect.
 
 The **Timer** properties are described in the table below:
 
@@ -48,7 +50,7 @@ The **Timer** properties are described in the table below:
 
 ## Timer Expiration {#timer-expiration}
 
-When a **Timer** activity expires, it behaves differently depending on the state of the workflow:
+When a **Timer** expires, it behaves differently depending on the state of the workflow:
 
 * When a timer is set on an in-progress workflow, the workflow continues when the timer expires.
 
@@ -67,6 +69,7 @@ The following cases do not trigger a continuation of the workflow path when time
 * Expiration in a workflow that is aborted.
 * Expiration in a workflow that is incompatible. (After the workflow resumes, the workflow path continues normally.)
 * Expiration in a workflow that is jumped from the timer to a different activity. 
+* Expiration in a workflow that is completed. (It can occur when the **Timer** is used as a [Boundary Event](/refguide/modeling/application-logic/workflows/boundary-events.md))
 * A workflow is restarted and a previous timer was still scheduled.
 
 ## Read More

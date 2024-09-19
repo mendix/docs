@@ -126,11 +126,11 @@ It is possible to use existing Entity when updating a existing query.(Introduced
 
 1. Update the SQL Query
 
-For example, lets modify the query below to retrieve a list of productLine,textDescription,htmlDescription columns from ProductLines where the ProductLine is **Planes**.
+For example, lets modify the query below to retrieve a list of productLine, textDescription, htmlDescription columns from ProductLines where the ProductLine is **Planes**.
 
 SQL Query:
 Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
-Modified Query: `Select productLine,textDescription,htmlDescription from productlines where productLine = {productLine}`
+Modified Query: `Select productLine, textDescription, htmlDescription from productlines where productLine = {productLine}`
 
 2. Rerun the Query, to see the Response.
 

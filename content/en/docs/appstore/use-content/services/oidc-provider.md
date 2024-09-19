@@ -266,7 +266,7 @@ To return requested scopes to your client app, you need to perform the following
 1. Open the **Scopes** tab for the client you want to configure
 1. Create a new scope for every user role which is implemented in your client apps. You can identify the user role in one of two ways:
 
-    1. use the **Name** as the user role in your client app.
+    1. Use the **Name** as the user role in your client app.
     1. From version 1.1.0 you can also use the UUID of the user role in your client app.
 
         The benefit of this second approach is that it avoids ‘scope collision’. In other words, you avoid having confusion between user roles with the same name but in different apps.

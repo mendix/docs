@@ -1249,7 +1249,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
     * The Technical Contact can re-order the environments
 * As part of support for Flexible Environments, we have made the following changes:
     * When deploying your application via the Developer Portal, you can choose the destination environment
-    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+    * When viewing metrics, logs, backups, etc., you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 
 #### Other Improvements
 

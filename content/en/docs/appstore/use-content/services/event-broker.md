@@ -279,7 +279,7 @@ After downloading the file, open your Studio Pro app and import the file as a ne
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_import_file.png" width="850" >}}
 
-Click **OK**. and the new business event is created and ready to be used with the same features as any other imported event.
+Click **OK**, and the new business event is created and ready to be used with the same features as any other imported event.
 
 {{< figure src="/attachments/appstore/use-content/services/event-broker/event_broker_ede_imported_file.png" width="850" >}}
 

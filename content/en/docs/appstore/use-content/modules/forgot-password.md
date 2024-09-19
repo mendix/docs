@@ -61,7 +61,7 @@ In these instructions, it is assumed that your main module is **MyFirstModule**.
     * In the [Configurations](/refguide/configuration/) tab, edit the current configuration to add a 32-character string value for the constant **Encryption.EncryptionKey**.
         {{< figure src="/attachments/appstore/use-content/modules/forgot-password/encryption-key.png" class="no-border" >}}
     * In the **Runtime** tab, add the microflow **Deeplink.StartDeeplink** as the **After startup** microflow or as a sub-microflow to an existing after startup microflow.
-    {{% alert color="warning" %}}For the Forgot Password module version 6.0.0 (Mendix 10.6.0. and above), do not add the **Deeplink.StartDeeplink** microflow as the **After startup** microflow.{{% /alert %}}
+    {{% alert color="warning" %}}For the Forgot Password module version 6.0.0 (Mendix 10.6.0 and above), do not add the **Deeplink.StartDeeplink** microflow as the **After startup** microflow.{{% /alert %}}
     * If you are changing the **URL prefix** value in the **Runtime** tab, ensure that you use the same value in the URLPrefix constant of the Forgot Password module. Otherwise, the signup and reset URLs will not work.
 1. Open [App Security](/refguide/app-security/) and do the following:
     * In the **User roles** tab, add a new role called *Guest* in **MyFirstModule**

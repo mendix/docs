@@ -76,7 +76,7 @@ This is a free text description of this destination.
 
 #### ProtocolType
 
-This identifies the type of Hypertext Transfer Protocol being used. it corresponds to the **Type** field in the SAP BTP cockpit. The possible values are
+This identifies the type of Hypertext Transfer Protocol being used. It corresponds to the **Type** field in the SAP BTP cockpit. The possible values are
 
 * HTTP
 * HTTPS

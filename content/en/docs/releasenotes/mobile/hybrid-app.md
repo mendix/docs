@@ -365,7 +365,7 @@ For this update, Mendix recommends downloading a fresh hybrid app package from t
 **Release date: April 19, 2018**
 
 * We improved the styling of the loader screen.
-* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+* We added backwards compatibility with respect to quality versus density properties (for Android only).
 
 ### Hybrid App Base 2.0.3 / Hybrid App Template 2.0.1
 

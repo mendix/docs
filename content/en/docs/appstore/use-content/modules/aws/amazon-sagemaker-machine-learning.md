@@ -78,7 +78,7 @@ Then 4 portions of data are created, which will be used for fitting & predicting
 
 The sklearn.model_selection.train_test_split spits the arrays into random train and test subsets.
 
-In the next lines. the pipeline object is created: 
+In the next lines, the pipeline object is created: 
 
 *pipe = make_pipeline( 
     CountVectorizer(binary=True), 

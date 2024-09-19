@@ -32,7 +32,7 @@ To replace the default **Save** button with a custom one, follow these steps:
 
 3. Right-click the drop-zone under the **Cancel** button, select **Add widget**, and then select **Call microflow button**.
 
-4. In the **Select Microflow** dialog box, click **New** to create a new microflow. called **Customer_Save**.
+4. In the **Select Microflow** dialog box, click **New** to create a new microflow called **Customer_Save**.
 
     {{< figure src="/attachments/howto8/logic-business-rules/create-a-custom-save-button/customer-save.png" class="no-border" >}}
 

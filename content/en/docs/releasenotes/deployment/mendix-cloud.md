@@ -296,7 +296,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Portal Enhancements
 
-* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 #### Improvements
 
@@ -1249,7 +1249,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
     * The Technical Contact can re-order the environments
 * As part of support for Flexible Environments, we have made the following changes:
     * When deploying your application via the Developer Portal, you can choose the destination environment
-    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+    * When viewing metrics, logs, backups, etc., you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 
 #### Other Improvements
 

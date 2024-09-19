@@ -1251,11 +1251,11 @@ We saw decreasing performance in some parts of the UI when you had a lot of data
 
 Getting started with ATS has never been easier. We’ve put a lot of effort into ensuring that the onboarding of new users is as smooth as possible. Existing users can enjoy zero maintenance and a well-known user interface.
 
-We accomplished this by providing a single, multi-tenant SaaS instance of ATS in the Mendix Cloud. This instance comes with the same styling and usability as the Mendix Cloud facilities.
+We accomplished this by providing a single, multi-tenant SaaS instance of ATS in Mendix Cloud. This instance comes with the same styling and usability as Mendix Cloud facilities.
 
 #### Application Test Suite as a Service
 
-ATS is now offered as a service. There is a single multi-tenant instance in the Mendix Cloud to serve all customers:
+ATS is now offered as a service. There is a single multi-tenant instance in Mendix Cloud to serve all customers:
 
 [https://ats.mendix.com](https://ats.mendix.com)
 

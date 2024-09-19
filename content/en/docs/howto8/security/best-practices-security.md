@@ -9,9 +9,9 @@ description: "A set of security aspects and checks to use when developing your M
 
 ## Introduction
 
-Security is one of the most important aspects of an application, because misconfiguration or failing security can have large stakeholder consequences. The Mendix Runtime protects your application and data according to your model, and the Mendix Cloud handles security at the infrastructure level. 
+Security is one of the most important aspects of an application, because misconfiguration or failing security can have large stakeholder consequences. The Mendix Runtime protects your application and data according to your model, and Mendix Cloud handles security at the infrastructure level. 
 
-This document describes the common aspects you should consider when delivering an application within the Mendix Cloud.
+This document describes the common aspects you should consider when delivering an application within Mendix Cloud.
 
 ## Implementing Access Rules
 
@@ -77,7 +77,7 @@ When publishing a web or REST service, you should consider whether this service 
 Mendix offers the following options for providing authentication for your services:
 
 * User name and password validation, specified within Mendix Studio Pro (for details, see [Published Web Services](/refguide8/published-web-services/))
-* Client certificates and IP ranges, which are specified in the Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
+* Client certificates and IP ranges, which are specified in Mendix Cloud – these can be found at the network tab of your node’s environment details as **Access Restriction Profiles**
 
 ## Using the Encryption Module When Storing Sensitive Information
 
@@ -118,7 +118,7 @@ This information can be exploited by an attacker (for example, by trying to gues
 
 The user name of the administrator can be changed in 's **Project Security** settings on the **Administrator** tab.
 
-When deployed to the Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
+When deployed to Mendix Cloud, the information about the administrator user name and role is taken into account when using the **Change admin password** button on the environment. After changing the settings in and redeploying the application, a successful admin password change will trigger the creation of a user in the app with the new name and role.
 
 {{% alert color="info" %}}
 At this point, the application does not automatically remove the user with the previous user name. Removing the old **MxAdmin** account has to be done manually.
@@ -136,7 +136,7 @@ By using an SSL connection and adding the public key of the endpoint within your
 
 There are several scenarios possible for protecting your outgoing connections using encryption. These depend on the infrastructure possibilities and protocols used. For more information, see [How to Secure Outgoing Connections from Your App](/developerportal/deploy/securing-outgoing-connections-from-your-application/).
 
-You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to the Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
+You can add individual certificates in your project’s settings in . Test, acceptance, and production environments require their certificates to be uploaded to Mendix Cloud (for more information, see [Certificates](/developerportal/deploy/certificates/)).
 
 ## Adding HTTP Headers {#adding-http-header}
 

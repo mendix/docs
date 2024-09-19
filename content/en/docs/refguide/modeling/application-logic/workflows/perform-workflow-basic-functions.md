@@ -102,9 +102,9 @@ When using cut/copy/paste, note the following:
 * When the clipboard contents has an **Annotation**, it can only be pasted into the workflow or into individual activities that support annotations.
 * Pasting an activity after an **End** or **Jump** activity results in a consistency error as an **End** or **Jump** activity should be placed at the end of a flow.
 * Pasting activity can result in a consistency error when the next activity becomes unreachable by either placing an **End** or **Jump** activity in front of it or when all flows before a merge end with an **End** or **Jump** activity.
-* Pasting a boundary event on a **User Task**, **Wait For Notification**, **Call Microflow**, **Call Workflow** adds it to the activity, provided there are less than five.
-* Pasting a **Jump** directly inside a non-interrupting boundary event flow will result in a consistency error. However, pasting it is allowed on outgoing flows from activities except parallel split paths.
-* Pasting an **End** inside a non-interrupting boundary event flow will result in a consistency error.
+* Pasting a boundary event on a supporting activity adds it to the activity, provided there are less than five. [Supporting activities](/refguide/boundary-events/#basic-functions)
+* Pasting a **Jump** in a boundary event is only allowed when there are multiple paths going to the boundary event path end, otherwise a consistency error is thrown.
+* Pasting an **End** inside a non-interrupting boundary event flow will result in a consistency error. This is because an **End** is only allowed if no other paths will be executed, which is not the case in a non-interrupting timer boundary event.
 
 ### Elements that Cannot be Cut, Copied or Pasted
 

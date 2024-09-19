@@ -13,7 +13,7 @@ aliases:
 **Wait for timer** was renamed to **Timer** in Studio Pro 10.14.0.
 {{% /alert %}}
 
-The **Timer** activity allows you to suspend a workflow path for a configurable duration or until a certain date and time.
+The **Timer** activity allows you to suspend a workflow path for a configurable duration or until a set date and time.
 
 For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 

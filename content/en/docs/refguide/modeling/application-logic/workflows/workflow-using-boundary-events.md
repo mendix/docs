@@ -28,7 +28,7 @@ Examples:
 
 ## Getting started
 
-To get started with the new boundary events feature, these can be enabled by opening Studio Pro's settings and navigating to new features.
+To get started with the new boundary events feature, these can be enabled by opening Studio Pro's settings and navigating to new features (this setting is only applicable during the beta).
 
 - Windows: Preferences -> New Features -> Enable non-interrupting timer boundary events (beta)
 - Mac (Beta): Preferences -> New Features -> Enable non-interrupting timer boundary events (beta)
@@ -66,9 +66,8 @@ WWith non-interrupting boundary events the parent activity remains active/in pro
 
 The current release (10.15) of boundary events has the following functional limitations (which are actively being developed):
 
-- No migration possible of in-progress workflows when boundary event paths change between deployments.
 - No access to data of the parent activity in the boundary path. For user tasks we will soon add a variable **$ParentTask** which is available in the boundary event path of a user task (e.g. do get the assigned user that should receive a notification when a task is overdue). Same for $CalledWorkflowInstance in case the parent activity is a Call workflow activity.
-- Non-interrupting timer boundary events have no recurrence (they are only executed once and will not repeat).
+- Non-interrupting timer boundary events have no recurrence (they are only executed once and will not repeat). This attribute will be added in a future update.
 
 
 

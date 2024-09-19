@@ -78,11 +78,11 @@ You can change the ordering of the boundary event in 2 ways:
 
 1. Via the context menu (right mouse click) of the timer event and select **Move boundary event left** or **Move boundary event right**, or by using the keyboard shortcuts [Keyboard Shortcuts](/refguide/keyboard-shortcuts/#editors-only).
  
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/boundary-events/arrange-in-editor.png" width="350px" alt="Timer Event arrange in editor" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-editor.png" width="350px" alt="Timer Event arrange in editor" class="no-border" >}}
 
 2. Open the edit dialog of the parent activity and change the order of the boundary event paths by altering the list. Note that this does not change the order execution of the paths, as this is dependent on the expiration of the timer
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/boundary-events/arrange-in-dialog.png" width="450px" alt="Arrange non-interrupting boundary event in dialog" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-dialog.png" width="450px" alt="Arrange non-interrupting boundary event in dialog" class="no-border" >}}
 
 ## Execution
 

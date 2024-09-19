@@ -67,7 +67,7 @@ You can use the values in the steps below for experimental purposes:
       3. For **Source**, select *Custom*, and provide the IP CIDR range in the field as follows:
       
          * If you have access to a VPN, you can also provide its IP here. Then for the connection to your database to work, all users running the Mendix app locally must be connected to the VPN.
-         * If you have deployed your Mendix app to the Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
+         * If you have deployed your Mendix app to Mendix Cloud, you need to let the database accept incoming requests from it. For this, create inbound rules and select the IP address of your Mendix app as the source. See [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario.
          * If you want the database to be accessible from anywhere, have a rule with its source set to *0.0.0.0/0*.
       
          {{% alert color="info" %}}For a single IPv4 address, the CIDR range is equal to the IP address with `/32` appended.{{% /alert %}}
@@ -102,7 +102,7 @@ You can use the values in the steps below for experimental purposes:
    
 4. Continue with the **Networking** configurations in the next tab.
    1. Based on your requirements, decide how the database server can be accessed (for testing purposes, it is recommended to use *Public Access*):
-      1. **Public access**: firewall rules need to be added for the IP addresses that are allowed to access the server. Use **Add current client IP address** to add your own IP when running the application locally. For apps running in the Mendix cloud, add the IP of that environment, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario. Alternatively, you can use **Add 0.0.0.0 - 255.255.255.255** so that no IP addresses are blocked. Use this carefully and make sure that this aligns with your security requirements.
+      1. **Public access**: firewall rules need to be added for the IP addresses that are allowed to access the server. Use **Add current client IP address** to add your own IP when running the application locally. For apps running in Mendix Cloud, add the IP of that environment, see [Mendix IP Addresses: Outgoing IP](/developerportal/deploy/mendix-ip-addresses/#outgoing) for a list of addresses to safe-list in this scenario. Alternatively, you can use **Add 0.0.0.0 - 255.255.255.255** so that no IP addresses are blocked. Use this carefully and make sure that this aligns with your security requirements.
       2. **Private Access**: the server can only be accessed from a **Virtual Network** that needs to be selected (or created). Make sure that your Mendix App is running in the same network.
    
     {{% alert color="info" %}}For experimental purposes, you do not need to configure anything in the **Security** or **Tags** tabs to get the server running.{{% /alert %}}

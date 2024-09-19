@@ -14,7 +14,7 @@ The Private Cloud data migration tool allows you to:
 * export the database and files from a Private Cloud environment into a backup file
 * import the database and files from a previously exported backup file into an environment
 
-The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from the Mendix Cloud, allowing you to transfer application data between the Mendix Cloud and Mendix for Private Cloud.
+The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from Mendix Cloud, allowing you to transfer application data between Mendix Cloud and Mendix for Private Cloud.
 
 When exporting files from an environment, the export only includes files which are in use (that is, which are referenced by a `System.FileDocument` entity). Any files that are not used by the app are ignored.
 

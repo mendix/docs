@@ -55,7 +55,7 @@ You can find the AfterStartup and BeforeShutdown microflows in the project setti
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/ig/ig-one/ig-one-uninstall-steps/Revert_After_Startup.png" class="no-border" >}}
 
-## Optional: Undo Request Permissions for the Mendix Cloud or On-Premises Runtime
+## Optional: Undo Request Permissions for Mendix Cloud or On-Premises Runtime
 
 For a Mendix Cloud slot you send an email to Mendix support requesting to undo the added permissions
 

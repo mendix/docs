@@ -116,7 +116,7 @@ The solution in this situation is to use one of the following search terms: "Cli
 
 In this example, you want to click a specific data grid row inside a data grid. You can use the Click Widget action in combination with the column name, but if there are multiple data grids, ATS cannot distinguish them.
 
-The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](/appstore/partner-solutions/ats/rg-one-click-datagrid-row/). which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
+The solution in this situation is to use the following search term: "Click DataGrid".  ATS checks all the actions and returns those that match these words. There is an action called [Click DataGrid Row](/appstore/partner-solutions/ats/rg-one-click-datagrid-row/), which enables you to click a data grid row containing a specific value in a specific column. This action also works on list views and template grids.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/bp/bp-two/bp-two-finding-the-action-you-need/click-datagrid-row-action-search.png" class="no-border" >}}
 

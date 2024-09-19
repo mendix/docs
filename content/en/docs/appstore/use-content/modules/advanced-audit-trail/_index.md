@@ -45,7 +45,7 @@ On Mendix Cloud XS [resource packs](/developerportal/deploy/mendix-cloud-deploy/
 ### Prerequisites
 
 * You need to use Advanced Audit Trail with Studio Pro versions starting with [9.24.18](/releasenotes/studio-pro/9.24/#92418).
-* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in the Mendix Cloud.
+* You need to have a [subscription](#obtain-license-key) to the Advanced Audit Trail solution to store your data in an external data storage that runs in Mendix Cloud.
 
 ### Dependencies
 

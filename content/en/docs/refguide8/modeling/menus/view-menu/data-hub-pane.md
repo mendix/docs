@@ -98,7 +98,7 @@ The search results and Project pane will show the following at a service level:
 
     {{< figure src="/attachments/refguide8/modeling/integration/consumed-odata-services/data-hub-pane-update.png" alt="Data Hub Pane update" class="no-border" >}}
 
-    {{% alert color="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update**. arrow. {{% /alert %}}
+    {{% alert color="info" %}}If there is an OData Service update available, then the entities that are listed are those that are available in that version of the OData service. These entities will be "grayed-out" to indicate that they cannot be dragged into the domain model as the *current* contract that is consumed in the project does not have these entities. You will have to update the contract to the version shown in the search results by clicking the **Update** arrow. {{% /alert %}}
 
     {{% alert color="info" %}}The version number that is shown for the OData service is the latest one that is available in the Catalog at the service endpoint—in the example above version 1.0.11 of **Theatre_service** is currently consumed in the project, but version **1.0.12** is now available in the Catalog. The search results display the entities available in the new service (also showing one that is locally consumed) however they are greyed-out and cannot be selected until the local service is **Updated** to this one.{{% /alert %}}
 
@@ -126,7 +126,7 @@ If you right-click a consumed entity and **Go to entity**, it will take you to t
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
-**Mulitple association**s between the same entities are shown before single associations.
+**Multiple association**s between the same entities are shown before single associations.
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your model"
 

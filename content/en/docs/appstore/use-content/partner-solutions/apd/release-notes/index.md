@@ -340,7 +340,7 @@ The idea is to call your own microflow that sends out an email. The APMAgent mod
 
 ### Trigger Log Action with Level
 
-The trigger log action now has a level. You can use this for critical messages and thus receive an email when you run in the Mendix Cloud.
+The trigger log action now has a level. You can use this for critical messages and thus receive an email when you run in Mendix Cloud.
 
 You could also use debug level to output measurement data so that when a trap occurs, you have measurement info inside the trap.
 

@@ -18,10 +18,10 @@ You can also set up an integration to [Datadog](/developerportal/operate/datadog
 ### Other Deployment Options
 
 {{% alert color="warning" %}}
-For apps deployed to the Mendix Cloud, only Datadog, AppDynamics, and Dynatrace are supported.
+For apps deployed to Mendix Cloud, only Datadog, AppDynamics, and Dynatrace are supported.
 {{% /alert %}}
 
-Outside the Mendix Cloud, you can use the following monitoring tools:
+Outside Mendix Cloud, you can use the following monitoring tools:
 
 * Datadog
 * New Relic – see [Manage App Performance with New Relic](/howto9/monitoring-troubleshooting/manage-app-performance-with-new-relic/)

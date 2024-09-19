@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 * Set up application performance management for your Mendix application on New Relic
 
 {{% alert color="warning" %}}
-New Relic is not supported for apps deployed to the Mendix Cloud.
+New Relic is not supported for apps deployed to Mendix Cloud.
 {{% /alert %}}
 
 ## Prerequisite

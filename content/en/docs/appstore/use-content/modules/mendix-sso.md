@@ -53,7 +53,7 @@ The Mendix SSO module has the following limitations:
 
 ### Dependencies
 
-Your app has to be deployed on the Mendix Cloud in order to use this module. Mendix SSO is only activated when your app is deployed to the Mendix Cloud.
+Your app has to be deployed on Mendix Cloud in order to use this module. Mendix SSO is only activated when your app is deployed to Mendix Cloud.
 
 When you run your app locally, you will need to use local credentials. If it is deployed to a different cloud platform (for example, [Mendix for Private Cloud](/developerportal/deploy/private-cloud/) or [SAP BTP](/developerportal/deploy/sap-cloud-platform/)), you can use the Mendix [Administration](/appstore/modules/administration/) module, or connect to a central IdP using [OIDC SSO](/appstore/modules/oidc/) or [SAML](/appstore/modules/saml/).
 
@@ -134,7 +134,7 @@ To enable Mendix SSO in your app, follow these steps:
         * *login-with-mendixsso-button.html* – adds a button to the standard sign-in page which the end-user can click to initiate the single sign-on process; this gives the end-user the possibility to sign in using a user name and password if desired
         * *login-with-mendixsso-automatically.html* – automatically initiates the single sign-on process without needing to click a button
 
-Your app is now configured to use Mendix single sign-on when it is deployed to the Mendix Cloud.
+Your app is now configured to use Mendix single sign-on when it is deployed to Mendix Cloud.
 
 ## Removing Mendix Single Sign-On
 

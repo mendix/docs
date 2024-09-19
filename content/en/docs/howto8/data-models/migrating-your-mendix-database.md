@@ -12,8 +12,8 @@ This document explains how to migrate the data in an existing Mendix database to
 
 * Migrate a non-PostgreSQL database to a PostgreSQL database
 * Export a PostgreSQL database
-* Upload an exported PostgreSQL database to the Mendix cloud
-* Export a Mendix cloud database
+* Upload an exported PostgreSQL database to Mendix Cloud
+* Export a Mendix Cloud database
 * Import into an on-premise PostgreSQL database
 * Migrate a PostgreSQL database to a non-PostgreSQL database, including migrating a PostgreSQL database to SAP HANA
 
@@ -85,7 +85,7 @@ If you already have the database, for example a test database in the cloud, you 
 
 ## Migrating a Non-PostgreSQL Database to a PostgreSQL Database
 
-The Mendix cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
+Mendix Cloud environment only uses PostgreSQL as a database server. The recommended way is to migrate your existing on-premises non-PostgreSQL source database to a new on-premises PostgreSQL target database. 
 
 The source database is the database with the data that you would like to migrate to the cloud. The target PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source database as explained above in the overview.
 
@@ -95,9 +95,9 @@ Having configured the Mendix project, just run the application locally and it wi
 
 To export a PostgreSQL database, refer to either the [pg_dump](https://www.postgresql.org/docs/current/backup-dump.html) command line tool or the [PG Admin](https://www.pgadmin.org/docs/) visual tool documentation to understand how to create a backup of your new PostgreSQL database.
 
-### Uploading an Exported PostgreSQL Database to the Mendix Cloud Database
+### Uploading an Exported PostgreSQL Database to Mendix Cloud Database
 
-Use Mendix Portal to upload the migrated, exported database backup to the Mendix cloud. This can be accessed using the Nodes page in [Apps](https://sprintr.home.mendix.com/): select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
+Use Mendix Portal to upload the migrated, exported database backup to Mendix Cloud. This can be accessed using the Nodes page in [Apps](https://sprintr.home.mendix.com/): select your app and environment, click **Details**, click the **Backup** tab and use the **Upload Data** button to upload your Database using the file chooser to select the exported database file from your local file system. This will stop and clear your existing environment.
 
 ## Exporting a Mendix Cloud Database
 
@@ -120,7 +120,7 @@ Below is general guidance on how to migrate a PostgreSQL database to a different
 
 #### General Guidance
 
-The source database is a PostgreSQL database with the downloaded database from the Mendix cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
+The source database is a PostgreSQL database with the downloaded database from Mendix Cloud. The target non-PostgreSQL database should be completely empty, as in, it should not contain any tables. In the Mendix project the active configuration in Settings should point to the target database, and you should add the Custom configuration settings for the source PostgreSQL database as explained above in the overview.
 
 Having configured the Mendix project, just run the application locally and it will automatically migrate the database schema and all the data from the source database to the target database. You should always validate it first by viewing the application in a browser.
 

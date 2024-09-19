@@ -442,7 +442,7 @@ This is a link to the business owner of the data exposed in the data source. For
 
 This is a technical contact for the app. By default, this is the owner who registered the service.
 
-For apps hosted in the Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
+For apps hosted in Mendix Cloud, the **Technical Owner** is the app developer that deployed the app.
 
 Technical owners can be [changed](/catalog/manage/curate/#changing-owners).
 

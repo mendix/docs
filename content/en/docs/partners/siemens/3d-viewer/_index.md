@@ -322,9 +322,9 @@ The **Toolbar** widgets do not require additional configuration. Simply place th
 
 You can deploy 3D Viewer locally or in a Mendix Free App for free. However, to deploy 3D Viewer on the cloud, it will need to be licensed, and you need to obtain a license token as described in [Obtaining a License Token](#obtain-license-token), above, and then configure it as follows:
 
-#### For an App Deployed in the Mendix Cloud
+#### For an App Deployed in Mendix Cloud
 
-If you deploy your app in the Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
+If you deploy your app in Mendix Cloud, configure the license token in the [Mendix Portal](/developerportal/deploy/environments-details/).
 
 Before you deploy your app, configure the app **Constants** in the deployment package.
 

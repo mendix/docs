@@ -29,7 +29,7 @@ This how-to teaches you how to do the following:
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Have a local repository of the app
-* Have your app *hosted in the Mendix Cloud*
+* Have your app *hosted in Mendix Cloud*
 
 ## Create a Custom Error Page
 

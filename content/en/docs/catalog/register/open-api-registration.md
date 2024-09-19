@@ -14,7 +14,7 @@ This functionality is currently in [beta](/releasenotes/beta-features/).
 
 ## Introduction
 
-OpenAPI automatic registration registers all your OpenAPI and OData APIs in the Catalog automatically when you app is deployed to the Mendix CLoud. This makes them easily discoverable within your organization.
+OpenAPI automatic registration registers all your OpenAPI and OData APIs in the Catalog automatically when you app is deployed to Mendix Cloud. This makes them easily discoverable within your organization.
 
 ## Prerequisites
 

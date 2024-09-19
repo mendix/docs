@@ -13,7 +13,7 @@ Business events are like a mailing list to share event notifications between app
 
 With [Mendix Business Events](https://marketplace.mendix.com/link/component/202649), applications can signal when something important happens and can independently subscribe to these events if they want to be informed.
 
-To deliver these events reliably between your applications, an event broker is required. For apps running the Mendix cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
+To deliver these events reliably between your applications, an event broker is required. For apps running Mendix Cloud on licensed nodes, you will need to purchase a license for the [Mendix Event Broker](/appstore/services/event-broker/).
 
 {{% alert color="info" %}}
 Business events are supported in Studio Pro [9.18](/releasenotes/studio-pro/9.18/) and above and currently can only be deployed to the [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).{{% /alert %}}
@@ -32,7 +32,7 @@ To use Mendix Business Events, you will need the following:
 
 * The [Mendix Business Events](https://marketplace.mendix.com/link/component/202649) service from the Mendix Marketplace
 * Studio Pro [9.24](/releasenotes/studio-pro/9.24/) and above
-* An event broker; this can be a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in the Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
+* An event broker; this can be a licensed [Mendix Event Broker](#mendix-event-broker) for apps running in Mendix Cloud or the [local testing](#local-testing) broker (see [Deployment](#deployment))
 * [Docker](https://www.docker.com/) for local deployment
 
 ## Licensing {#licensing}
@@ -249,7 +249,7 @@ Business Events offers four different deployment models:
 
 * Deploying locally with the [Local Setup Tool](https://github.com/mendix/event-broker-tools)
 * Free apps using a free multi-tenant event broker
-* Production apps using the [Mendix Event Broker](#mendix-event-broker) running in the Mendix Cloud
+* Production apps using the [Mendix Event Broker](#mendix-event-broker) running in Mendix Cloud
 * Apps running their own Kafka cluster (bring your own Kafka)
 
 ### Local Deployment

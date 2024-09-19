@@ -39,7 +39,7 @@ To deploy an app to your private cloud platform, you need the following:
 
 ### Selecting Mendix for Private Cloud
 
-When you first create your app, it will be set to deploy to the Mendix Cloud. You need to change the target to be private cloud.
+When you first create your app, it will be set to deploy to Mendix Cloud. You need to change the target to be private cloud.
 
 1. Open your app in [Apps](https://sprintr.home.mendix.com/).
 
@@ -536,18 +536,18 @@ If you change the data type and value in the .mpr file, the changes are visible 
 
 ### Network Tab
 
-On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to the Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
+On the Network tab, you add client certificates (in the PKCS12 format) or certificate authorities (in the PEM format) for outgoing connections. These will be used when your application initiates SSL/TLS connections. This works in the same way as the Network tab for deployments to Mendix Cloud. For more details on these, see the [Network Tab](/developerportal/deploy/environments-details/#network-tab) section of *Environment Details*.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/network-tab.png" class="no-border" >}}
 
 ### Runtime Tab {#runtime-tab}
 
-On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to the Mendix Cloud. For more details on these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+On the Runtime tab, you can change various runtime settings for your app environment. This works in the same way as the Runtime tab for deployments to Mendix Cloud. For more details on these, see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-deploy/runtime-tab.png" class="no-border" >}}
 
 {{% alert color="info" %}}
-When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in the Mendix Cloud.
+When you use some settings on the Runtime tab for Mendix for Private Cloud they may work differently from how they work in Mendix Cloud.
 {{% /alert %}}
 
 {{% alert color="info" %}}

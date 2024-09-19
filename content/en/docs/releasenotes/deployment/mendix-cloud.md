@@ -16,6 +16,12 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### September 19, 2024
+
+#### Pipelines New Features
+
+* We added a new pipeline step: Best Practice Recommender Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
+
 ### September 5, 2024
 
 #### New Features

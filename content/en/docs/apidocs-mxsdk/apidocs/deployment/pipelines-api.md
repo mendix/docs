@@ -2,7 +2,7 @@
 title: "Pipelines API"
 url: /apidocs-mxsdk/apidocs/pipelines-api/
 type: swagger
-description: "This API lets you send requests to your pipeline."
+description: "The Pipelines API sends requests to pipelines."
 weight: 85
 beta: true
 ---

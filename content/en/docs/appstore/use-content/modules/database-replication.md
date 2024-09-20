@@ -259,30 +259,30 @@ This setting specifies the time zone in which datetime values are stored in the 
 
 In most of the cases, there is no need to change this setting unless you know that datetime values in this particular table are stored in a time zone that is different from the rest of the database.
 
-## Configuring an Import Call {#import-call}
+## Configuring Import Calls  {#import-call}
 
-Import call is a table mapping associated to a constraint. This constraint may be static, where all calls will be constrained by the same values, or dynamic, where the constraint relies on the value of an attribute.
+An import call is a table mapping related to a constraint. This constraint may be static, where all calls will be constrained by the same values, or dynamic, where the constraint relies on the value of an attribute in the table.
 
 ### Constraint
 
-This field defines how all custom constraints will be combined to form the import call constraint:
+This field defines how the custom constraints will be combined to form the import call constraint:
 
 * **Normal** - All constraints will be combined together with the `AND` operator following their constraint number.
-* **Advanced** - The import call constraint needs to be explicitly defined in the `Constraint dependency` field. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
+* **Advanced** - You need to explicitly define the import call constraint in the `Constraint dependency` field. You can use braces and all the operators supported by the database (`AND`, `OR`, `IN`, `NOT`, etc.). For example: `[&7&] OR ([&1&] AND [&2&])`.
 
 ### Data Objects
 
-When executing the import using an import call, you can optionally provide two Mendix objects to use as a constraint parameter. All object types are supported (even non-persistable).
+When executing the import using an import call, you can optionally provide two Mendix objects to use as constraint parameters. All object types are supported (including non-persistable).
 
 {{% alert color="info" %}}
 If you are using scheduled import actions and you want to use the last successful import date as a constraint, you should select **ScheduledImportActivity** as data object 1.
 {{% /alert %}}
 
-These objects must be provided as input explicitly in a microflow. Using these objects in an import call disallows it from being executed directly by a user action. **Import** on the **Import call** tab and **Run scheduled events** on the **Planned import action** tab will be affected, as they perform an import using import calls.
+These objects must be provided as input explicitly in a microflow. Using these objects in an import call prevents it from being executed directly by a user action. **Import** on the **Import call** tab and **Run scheduled events** on the **Planned import action** tab will be affected, as they perform an import using import calls.
 
 ### Custom Constraints
 
-If you click any constraint in the **Custom constraints** table, the Constraint details dialog box opens. The fields are as follows:
+If you click any constraint in the **Custom constraints** table, the **Constraint details** dialog box opens. The fields are as follows:
 
 * **Constraint Type**
     * **Dynamic** – Use the value from an attribute as a constraint. This can either be an attribute from data object 1 or data object 2.

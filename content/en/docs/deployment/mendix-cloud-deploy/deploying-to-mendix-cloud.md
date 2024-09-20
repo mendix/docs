@@ -12,6 +12,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
+{{% alert color="info" %}}
+There's a redesigned deployment flow available! To learn more, see [Environments and Deployment (New UI)](/deploy/environments-redesign).
+{{% /alert %}}
+
 ## Introduction
 
 This page describes how to deploy an app to Mendix Cloud.

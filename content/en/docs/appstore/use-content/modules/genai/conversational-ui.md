@@ -212,4 +212,4 @@ The [Data Wigets](https://marketplace.mendix.com/link/component/116540) module t
 
 #### Solution
 
-Update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module to ersion 2.22.0 or above.
+Update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module to version 2.22.0 or above.

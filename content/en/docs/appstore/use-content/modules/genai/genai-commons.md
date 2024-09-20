@@ -46,7 +46,7 @@ GenAI Commons can help store usage data which allows admins to understand the to
 
 To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
 
-Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui) provides pages, snippets and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
+Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui/) provides pages, snippets and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
 ## Technical Reference {#technical-reference}
 

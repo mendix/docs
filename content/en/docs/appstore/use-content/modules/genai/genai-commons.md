@@ -778,7 +778,7 @@ This section lists possible solutions to known issues.
 
 ### Internal Errors in Hidden Documents
 
-Adding the GenAI Commons module to an existing project results into internal errors in hidden documents in Studio Pro.
+Adding the GenAI Commons module to an existing project causes internal errors in hidden documents in Studio Pro.
 
 #### Cause
 

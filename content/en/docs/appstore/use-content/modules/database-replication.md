@@ -261,7 +261,7 @@ In most of the cases, there is no need to change this setting unless you know th
 
 ## Configuring Import Calls  {#import-call}
 
-An import call is a table mapping related to a constraint. This constraint may be static, where all calls will be constrained by the same values, or dynamic, where the constraint relies on the value of an attribute in the table.
+An import call is a table mapping configured to be run with constraints. This constraint may be static, where all calls will be constrained by the same values, or dynamic, where the constraint relies on the value of attributes in the table.
 
 ### Constraint
 

@@ -125,6 +125,40 @@ If you are the [Technical Contact](/developerportal/general/app-roles/#technical
 2. Select the period for which you want to download log entries.
 3. Click **Download**.
 
+## Cloud Settings{#cloud-settings}
+
+If you click **Cloud Settings** ({{< icon name="settings-slider-1" >}}) from any tab, you can adjust custom domains, access restriction profiles, and services.
+
+{{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/manage-cloud-settings.png" alt="" >}}
+
+### Custom Domains
+
+In the **Custom Domains** tab, you can manage your custom domain certificates at the application level. You can also see an overview of linked custom domains.
+
+When you need your Mendix app to be accessible via your own URL (for example, `https://myapp.mycompany.com/`), you must provide a custom SSL/TLS certificate for your domain. This enables your Mendix app to be accessible via a secure connection. For more information, see [Custom Domains](/developerportal/deploy/custom-domains/).
+
+### Access Restriction Profiles
+
+In the **Access Restriction Profiles** tab, you can manage custom access restriction profiles. These profiles can combine IP range filters and client certificate verification, so that any match on either the IP range or the client certificate will grant access. You can apply access restriction profiles to path-based access restrictions in specific environments of the application.
+
+For details on setting up access restriction profiles, see [Restrict Access for Incoming Requests](/developerportal/deploy/access-restrictions/).
+
+### Services{#services}
+
+In the **Services** tab, the Technical Contact can determine which custom services can be used in the app's environments.
+
+#### Available Services
+
+One custom service is available: **Mendix Event Broker**. This service is required to use [Mendix Business Events](/appstore/services/business-events/) on production apps.
+
+#### Enabling Custom Services
+
+The Technical Contact can only see services that have been licensed for their company. If the Technical Contact cannot enable the service, this means that the service has previously been licensed, but the license has expired.
+
+Team members who have a role with **Cloud Access** can see which services are enabled or disabled.
+
+Once a service has been enabled for an app, Technical Contacts can selectively enable it for each environment. For more information, see the [Services](/developerportal/deploy/environments-details/#services) section of the *Environment Details* page.
+
 ## Deploy Wizard{#deploy-wizard}
 
 If you click **Deploy** ({{% icon name="deploy" %}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. 

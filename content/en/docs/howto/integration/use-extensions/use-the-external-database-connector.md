@@ -109,12 +109,12 @@ You can typecast `String` into UUID as shown below:
 ### Save DML Query
 
 1. For DML queries, *Number of affected rows* will be displayed as a response.
-   
+
     For example, `INSERT INTO classicmodels.productlines(productLine, requestedProductRequirement)VALUES({productLine}, {requestedProductRequirement})`
 
 2. Click **Save Query**.
 
-​	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
+	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
@@ -147,9 +147,7 @@ Do the following:
 
 5. If **Update Entity** is selected,you can see changes that will be made to the existing entity.
      1. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
-
-
-​		{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5b.png" >}}
+    		{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5b.png" >}}
 
 ## Call Stored Procedure
 
@@ -213,7 +211,7 @@ For MSSQL, for **INOUT** and **OUT** parameters of type Decimal, test values (in
 
 5. Output details for the selected query auto-populate.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
+	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/7.png" >}}
 
 You are now ready to use data from an external database in your Mendix App.
 

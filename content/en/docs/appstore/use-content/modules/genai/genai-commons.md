@@ -42,9 +42,9 @@ The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-sol
 
 ### Token Usage
 
-GenAI Commons can help store token usage data which allows admins to understand the token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations.
+GenAI Commons can help store usage data which allows admins to understand the token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations.
 
-To clean up token usage data, you can implement a daily scheduled event. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
+To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
 
 Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui) provides pages, snippets and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 

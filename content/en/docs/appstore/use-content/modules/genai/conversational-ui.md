@@ -54,7 +54,7 @@ Finally, you must also install and configure a connector that is compatible with
 
 ## Installation {#installation}
 
-Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI into your app.
+Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the Conversational UI module into your app.
 
 ## Configuration {#configuration}
 
@@ -183,6 +183,11 @@ The following versions are available and can be swapped as needed:
 * **Snippet_ChatContext_HistorySideBar** - This snippet can be used in a list view of past conversations.
 
 See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926) or the [GenAI Showcase App](https://marketplace.mendix.com/link/component/220475) on how to use those snippets.
+
+#### Token Monitor Snippets {#snippet-token-monitor}
+
+* **Snippet_TokenMonitor** - This snippet can be used to display token usage informatation in charts and contains several other snippets that you can use to build your own token monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` userrole.
+* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx.
 
 ### Additional Operations {#operations}
 

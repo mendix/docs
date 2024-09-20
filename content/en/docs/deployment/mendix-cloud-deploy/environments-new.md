@@ -49,8 +49,8 @@ You can see the following information:
 
 You can also perform the following actions:
 
-* **Deploy** ({{% icon name="deploy" %}}) – Launches the **Deploy** wizard, where you can configure and start a new deployment for the selected environment.
-* **View Details** ({{% icon name="notes-paper-edit" %}}) – Goes to the [Environment Details](/developerportal/deploy/environments-details/) page.
+* **Deploy** ({{< icon name="deploy" >}}) – Launches the **Deploy** wizard, where you can configure and start a new deployment for the selected environment.
+* **View Details** ({{< icon name="notes-paper-edit" >}}) – Goes to the [Environment Details](/developerportal/deploy/environments-details/) page.
 * **View App** {{< icon name="external" >}} — Launches the app in a new window.
 * **More Options** ({{< icon name="three-dots-menu-horizontal" >}}):
     * **Restart** – Stops the running application and starts it again. Restarting your app is required for applying new constant values or scheduled events to the environment.
@@ -96,7 +96,7 @@ You can also see information and perform actions on the existing deployment pack
     * Currently deployed packages do not expire. Among any non-deployed packages, the five most recently deployed packages do not expire.
     * Expiry dates apply only to packages that do not meet either of two non-expiry criteria outlined above. These packages are set to expire and be deleted within 15 days, unless they are deployed before that date.
 
-If you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on a package, you can do the following:
+If you click **More Options** ({{< icon name="three-dots-menu-horizontal" >}}) on a package, you can do the following:
 
 * View details, including the package size, description, build output, and an overview of the environments that are running the package
 * Delete the package
@@ -161,7 +161,7 @@ Once a service has been enabled for an app, Technical Contacts can selectively e
 
 ## Deploy Wizard{#deploy-wizard}
 
-If you click **Deploy** ({{% icon name="deploy" %}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. 
+If you click **Deploy** ({{< icon name="deploy" >}}) from the **Overview** tab or the **Deployment Packages** tab, this launches the Deploy wizard. 
 
 ### Step 1: Select Package
 

@@ -80,7 +80,7 @@ Make sure that the module role `User` is part of the user roles that are intende
 | --- | --- |
 | `User` | Role needed for every user that should be able to interact with the chat components. Users can only read their own messages (and related data). |
 | `_addOn_ReadAll` | Role can be granted additionally. Users with both roles can read all chat data. |
-| `UsageMonitoring` | Can view and export all token usage data. |
+| `UsageMonitoring` | Can view and export all token usage data. This is related to a module role with the same name in the GenAI Commons module|
 
 ### ChatContext {#chat-context}
 
@@ -188,7 +188,7 @@ See the [AI Bot Starter App](https://marketplace.mendix.com/link/component/22792
 #### Token Monitor Snippets {#snippet-token-monitor}
 
 * **Snippet_TokenMonitor** - This snippet can be used to display token usage informatation in charts and contains several other snippets that you can use to build your own token monitor dashboard. To display the token usage data, users will need the `UsageMonitoring` userrole.
-* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx.
+* **Snippet_TokenMonitor_Export** - This snippet can be used to display token usage informatation in a grid and export it as .xlsx. 
 
 ### Additional Operations {#operations}
 

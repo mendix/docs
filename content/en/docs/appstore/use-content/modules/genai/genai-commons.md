@@ -765,3 +765,10 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 | Name | Type | Description |
 | --- | --- | --- |
 | `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+
+## Troubleshooting
+
+This section lists possible solutions to known issues.
+
+### Adding the GenAI Commons module to an existing project results into internal errors in hidden documents in Studio Pro.
+Make sure to update the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module. This ensures the java actions from that module are compatible with the current GenAI Commons module again.

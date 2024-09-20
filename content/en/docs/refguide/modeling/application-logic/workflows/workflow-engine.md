@@ -136,13 +136,15 @@ All microflows that are run as part of the workflow are executed as an asynchron
 
 Failed workflows can be retried using the **Retry workflow** option of the [Change Workflow State microflow activity](/refguide/change-workflow-state/#operation). This option will attempt to run the user task from the point it failed. When the user task failed because no users were targeted, it is possible to manually correct user targeting and then use the **Retry Workflow** option to set the workflow into the in-progress state again.
 
-#### Timer Boundary Events {#timer-boundary-events}
+#### Boundary Events {#boundary-events}
 
-A timer boundary event is attached to the boundary of an activity. Once the activity begins, also the boundary timer events are initialized. When the set timer expires, the workflow engine will check if the parent activity is inProgress. If the parent activity has already been completed, aborted, or has failed, the trigger will be ignored and the boundary path will not be executed. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
+A boundary event is attached to the boundary of an activity. Once the activity begins, also the boundary events are initialized. For example with a Timer Boundary Event; when the set timer expires, the workflow engine will check if the parent activity is inProgress. If the parent activity has already been completed, aborted, or has failed, the trigger will be ignored and the boundary path will not be executed. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
 
 Each boundary event can have only one active instance of the event path at a time. 
 
-If there are boundary event paths that have not yet completed and the workflow's main path ends, the ongoing boundary event paths will be aborted. This will also occur if the workflow is aborted, retried, or restarted.
+If there are boundary event paths that have not yet completed and the workflow's main path ends, the ongoing boundary event paths and their activities will be aborted. This will also occur if the workflow is aborted, retried, or restarted.
+
+With Non-Interrupting boundary events the parent activity remains active/inProgress when an event is triggered (i.e., the parent activity is not interrupted). For example, when a timer boundary event on a user task is triggered after 2 days, this task will remain in progress and the path defined below the timer boundary event is executed. When the boundary event path reaches the **End of Boundary Path** activity, the workflow will await the completion of the parent activity. 
 
 #### Measures Against Endless Loops
 

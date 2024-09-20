@@ -96,17 +96,15 @@ You can typecast `String` into UUID as shown below:
 
 1. Click **Use Response** to view the response data and mapping.
 
-2. In the **Response Structure** tab, you can choose create New Entity or Reuse Existing Entity.
+2. In the **Response Structure** tab, you can choose create **New Entity** or **Reuse Existing Entity**.
 
-3. If **New Entity** is selected, you can view the Entity in the Response tab.
-Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
+3. If **New Entity** is selected, you can view the entity in the **Response** tab. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model. 
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5.png" >}}
 
-4. if **Reuse Entity** is selected, all Entities mapped to other queries of same document are listed in the drop down list.
-Select  the Entity you want to reuse and and click on **Save Query**
+4. If **Reuse Entity** is selected, all entities mapped to other queries of same document are listed in the drop down list. Select  the entity you want to reuse and and click on **Save Query**.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5a.png" >}}
+    {{< figure src="/attachments/howto/integration/use-the-external-database-connector/5a.png" >}}
 
 ### Save DML Query
 
@@ -116,35 +114,42 @@ Select  the Entity you want to reuse and and click on **Save Query**
 
 2. Click **Save Query**.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
+​	{{< figure src="/attachments/howto/integration/use-the-external-database-connector/6.png" >}}
 
 {{% alert color="info" %}} For all DML Queries, changes made to database in the Mendix Design phase are automatically rolled back. {{% /alert %}}
 
-## Update Exisitng Query
+## Update Existing Query
 
-It is possible to use existing Entity when updating a existing query.(Introduced in Studio-Pro 10.15 onwards)
+It is possible to use the existing entity when updating a existing query. 
 
-1. Update the SQL Query
+{{% alert color="info" %}}
 
-For example, lets modify the query below to retrieve a list of productLine, textDescription, htmlDescription columns from ProductLines where the ProductLine is **Planes**.
+This possibility was introduced in Studio Pro 10.15 and above.
+
+{{% /alert %}}
+
+For example, you can modify the query below to retrieve a list of productLine, textDescription, htmlDescription columns from ProductLines where the ProductLine is **Planes**.
 
 SQL Query:
 Existing Query: `Select requestedProductRequirement from productlines where productLine = {productLine}`
 Modified Query: `Select productLine, textDescription, htmlDescription from productlines where productLine = {productLine}`
 
-2. Rerun the Query, to see the Response.
+Do the following:
 
-3. Click on **Use Response** to see the Entity Preview.
+1. Rerun the Query, to see the **Response**.
 
-4. Select if you want to use existing entity or create a new entity.
+2. Click **Use Response** to see the entity preview.
 
-5. If **New Entity** is selected, you can view the Entity in the Response tab.
-Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
+3. Use the existing entity or create a new entity:
 
-6. if **Update Entity** is selected,you can see changes that will be made to the existing entity.
-Click **Update Entity** to save the query and the changes made to the entity in the domain model.
+4. If **New Entity** is selected, you can view the entity in the **Response** tab.
+     1. Click **Save Query & Create Entity** to save the query and the newly created entity in the domain model.
 
-{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5b.png" >}}
+5. If **Update Entity** is selected,you can see changes that will be made to the existing entity.
+     1. Click **Update Entity** to save the query and the changes made to the entity in the domain model.
+
+
+​		{{< figure src="/attachments/howto/integration/use-the-external-database-connector/5b.png" >}}
 
 ## Call Stored Procedure
 

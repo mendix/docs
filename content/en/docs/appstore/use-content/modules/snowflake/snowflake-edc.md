@@ -148,7 +148,7 @@ To execute and test the query in Studio Pro, follow these steps:
     10. Click **OK**.
 11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
-{{% alert color="info" %}}When using JDK version higher to 16, set JVM Parameter **--add-opens=java.base/java.nio=ALL-UNNAMED** in the App configuration.{{% /alert %}}
+{{% alert color="info" %}}When using JDK version above 16, set JVM Parameter **--add-opens=java.base/java.nio=ALL-UNNAMED** in the App configuration.{{% /alert %}}
 
 ## Configuring a Query to Display Data as a Chart
 

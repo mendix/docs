@@ -202,5 +202,14 @@ The following additional microflows can be found in the **USE_ME** folder:
 
 This section lists possible solutions to known issues.
 
-### The export of usage data (token monitor) does not work.
-Make sure to update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module. At the time of writing, version 2.22.0 and higher support a working nanoflow action for the export to .xlsx from Datagrid 2.
+### Cannot Export Usage Data for the Token Monitor
+
+The export of usage data for the token monitor does not work correctly.
+
+#### Cause
+
+The [Data Wigets](https://marketplace.mendix.com/link/component/116540) module that you have installed is in an older version which does not support exporting data to *.xlsx* format from the Datagrid 2 widget.
+
+#### Solution
+
+Update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module to ersion 2.22.0 or above.

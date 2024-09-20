@@ -38,12 +38,15 @@ GenAI Commons is the foundation of chat completion implementations within the [O
 
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
-Furthermore, GenAI Commons can help to store token usage data which will allow admins to understand token usage. 
-- Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations. 
-- A daily scheduled event that can be used to cleanup token usage data. The `Usage_CleanUpAfterDays` constant can be used to control for how long token usage data should be persisted. 
-- Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui) provides pages, snippets and logic to display & export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
-
 The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, see [Microflows](#microflows), or refer to the documentation inside the module.
+
+### Token Usage
+
+GenAI Commons can help store token usage data which allows admins to understand the token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations.
+
+To clean up token usage data, you can implement a daily scheduled event. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
+
+Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui) provides pages, snippets and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
 ## Technical Reference {#technical-reference}
 
@@ -773,5 +776,14 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 
 This section lists possible solutions to known issues.
 
-### Adding the GenAI Commons module to an existing project results into internal errors in hidden documents in Studio Pro.
-Make sure to update the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module. This ensures the java actions from that module are compatible with the current GenAI Commons module again.
+### Internal Errors in Hidden Documents
+
+Adding the GenAI Commons module to an existing project results into internal errors in hidden documents in Studio Pro.
+
+#### Cause
+
+The Java actions from the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module are not compatible with the current version of the GenAI Commons module.
+
+#### Solution
+
+Update the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module to the latest version.

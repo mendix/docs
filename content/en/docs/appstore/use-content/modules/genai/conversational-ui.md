@@ -46,6 +46,7 @@ To use the Conversational UI module, your Mendix Studio Pro version must be [9.2
 You must also ensure that you have the prerequisite modules that Conversational UI requires. The modules are included by default in the [Blank GenAI App](https://marketplace.mendix.com/link/component/227934) and the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), otherwise you must install them yourself:
 
 * [Atlas Core](https://marketplace.mendix.com/link/component/117187)
+* [Data Widgets](https://marketplace.mendix.com/link/component/116540) 
 * [GenAI Commons](https://marketplace.mendix.com/link/component/227933)
 * [Nanoflow Commons](https://marketplace.mendix.com/link/component/109515)
 * [Web Actions](https://marketplace.mendix.com/link/component/114337)
@@ -196,3 +197,10 @@ The following additional microflows can be found in the **USE_ME** folder:
 * **ChatContext_AddProviderConfig_SetActive** - This microflow adds a `ProviderConfig` to the chat context and sets it to active.
 * **ChatContext_Delete** - This microflow deletes a chat context.
 * **AdvancedSettings_GetAndUpdate** - This microflow can be used after chat context creation to set the boundaries and default value for advanced settings in the UI. For more information, see [Configuration Snippets](#snippet-configuration).
+
+## Troubleshooting
+
+This section lists possible solutions to known issues.
+
+### The export of usage data (token monitor) does not work.
+Make sure to update the [Data Wigets](https://marketplace.mendix.com/link/component/116540) module. At the time of writing, version 2.22.0 and higher support a working nanoflow action for the export to .xlsx from Datagrid 2.

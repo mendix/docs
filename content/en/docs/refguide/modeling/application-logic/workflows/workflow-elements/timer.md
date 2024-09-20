@@ -13,14 +13,15 @@ aliases:
 **Wait for timer** was renamed to **Timer** in Studio Pro 10.14.0.
 {{% /alert %}}
 
-The **Timer** allows you to suspend a workflow path for a configurable duration or until a set date and time.
+The **Timer** allows you to suspend a workflow path for a configurable duration or until a set date and time. It can be used in the following two ways:
 
-For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
+* **Timer** can be used both as a standalone activity on the workflow path. For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
-The **Timer** can be used both as a standalone activity on the workflow path and it can be attached to another activity as a [Boundary Event](/refguide/boundary-events/)
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Timer" width="250" class="no-border" >}}
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Timer" width="250" class="no-border" >}}
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/timer.png" alt="Timer" width="250" class="no-border" >}}
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/):
+
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/timer.png" alt="Timer" width="250" class="no-border" >}}
 
 ## Properties
 
@@ -59,6 +60,10 @@ When a **Timer** expires, it behaves differently depending on the state of the w
 
 ### Workflow Incompatibility
 
+{{% alert color="info" %}}
+This section is only applicable when **Timer** is used as a standalone activity on a workflow path.
+{{% /alert %}}
+
 When a **Timer** activity is added to the workflow definition and the application is redeployed, a validation on already running workflow instances is performed. When the **Timer** activity has been added before the currently in-progress activity, the workflow becomes incompatible. The conflict/incompatibility validation is analogous to other activities added before an in-progress activity. For more information, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
 
 When a **Timer** activity is removed from the workflow definition and the application is redeployed, on initiation of the application, it validates if there are any running timers (that is, active timers that are initiated but have not reached their defined date and time). In this case, the workflow becomes incompatible and a warning log is created. For information on how to resolve a conflict when an activity is removed, see [Workflow Versioning and Conflict Mitigation](/refguide/workflow-versioning/).
@@ -70,7 +75,7 @@ The following cases do not trigger a continuation of the workflow path when time
 * Expiration in a workflow that is aborted.
 * Expiration in a workflow that is incompatible. (After the workflow resumes, the workflow path continues normally.)
 * Expiration in a workflow that is jumped from the timer to a different activity. 
-* Expiration in a workflow that is completed. (It can occur when the **Timer** is used as a [Boundary Event](/refguide/boundary-events/))
+* Expiration in a workflow that is completed. (It can occur when the **Timer** is used as a [Boundary Event](/refguide/boundary-events/).)
 * A workflow is restarted and a previous timer was still scheduled.
 
 ## Read More

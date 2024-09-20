@@ -1,7 +1,7 @@
 ---
 title: "Version Downgrade Protection"
 url: /developerportal/deploy/version-downgrade-prevention/
-weight: 50
+weight: 40
 description: "What to do if you cannot migrate a Mendix database to an earlier version"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

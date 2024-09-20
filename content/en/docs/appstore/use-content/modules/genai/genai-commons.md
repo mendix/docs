@@ -24,11 +24,11 @@ The current scope of the module is focused on text and image generation, as well
 
 The GenAI Commons module requires Mendix Studio Pro version [9.24.2](/releasenotes/studio-pro/9.24/#9242) or above.
 
-You must also install and configure the [Community Commons](/appstore/modules/community-commons-function-library/) module.
+You must also download the [Community Commons](/appstore/modules/community-commons-function-library/) module.
 
 ## Installation {#installation}
 
-If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be installed manually.
+If you are starting from the [Blank GenAI app](https://marketplace.mendix.com/link/component/227934), or the [AI Bot Starter App](https://marketplace.mendix.com/link/component/227926), the GenAI Commons module is included and does not need to be downloaded manually.
 
 If you start from a blank app, or have an existing project where you want to include a connector for which the GenAI Commons module is a required module, you must install GenAI Commons manually. First, install the [Community commons](/appstore/modules/community-commons-function-library/) module, and then follow the instructions in [using Marketplace content](/appstore/use-content/) to import the GenAI Commons module into your app.
 
@@ -39,6 +39,14 @@ GenAI Commons is the foundation of chat completion implementations within the [O
 Although GenAI Commons technically defines additional capabilities typically found in chat completion APIs, such as image processing (vision) and tools (function calling), it depends on the connector module of choice for whether these are actually implemented and supported by the LLM. To learn which additional capabilities a connector supports and for which models these can be used, refer to the documentation of that connector.
 
 The GenAI Commons module is [protected](/refguide/consume-add-on-modules-and-solutions/), which means that it cannot be changed and the logic of the microflows is not visible. For information about what each exposed operation does, see [Microflows](#microflows), or refer to the documentation inside the module.
+
+### Token Usage
+
+GenAI Commons can help store usage data which allows admins to understand the token usage. Usage data is only persisted if the constant `StoreUsageMetrics` is set to `true` and the GenAI connector of choice has implemented the operation to store token usage. In general, this is only supported for chat completions and embeddings operations.
+
+To clean up usage data in a deployed app, you can enable the daily scheduled event `ScE_Usage_Cleanup` in the Mendix Cloud Portal. Use the `Usage_CleanUpAfterDays` constant to control for how long token usage data should be persisted. 
+
+Lasty, the [Conversational UI module](/appstore/modules/genai/conversational-ui/) provides pages, snippets and logic to display and export token usage information. For this to work, the module roles `UsageMonitoring` from both Conversational UI as well as GenAI Commons need to be assigned to the applicable project roles.
 
 ## Technical Reference {#technical-reference}
 
@@ -763,3 +771,19 @@ The `Embeddings (ChunkCollection)` operation interface allows the invocation of 
 | Name | Type | Description |
 | --- | --- | --- |
 | `EmbeddingsResponse` | [EmbeddingsResponse](#embeddingsresponse-entity) | An response object that contains the token usage statistics and the corresponding embedding vector as part of a ChunkCollection. |
+
+## Troubleshooting
+
+This section lists possible solutions to known issues.
+
+### Internal Errors in Hidden Documents
+
+Adding the GenAI Commons module to an existing project causes internal errors in hidden documents in Studio Pro.
+
+#### Cause
+
+The Java actions from the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module are not compatible with the current version of the GenAI Commons module.
+
+#### Solution
+
+Update the [CommunityCommons](https://marketplace.mendix.com/link/component/170) module to the latest version.

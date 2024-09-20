@@ -60,17 +60,17 @@ You can also perform the following actions:
     * **Show Running Now** – Monitor all actions that are currently running in your environment. For more information, see [Running Now](/developerportal/deploy/mxcloud-runningnow/).
     * **Stop Application** – Stops the application.
 
-To view more information about each environment, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment.
+To view more information about each environment and the deployment package it is running, use the **Expand** ({{< icon name="chevron-down" >}}) toggle on the environment.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/environment-expanded.png" alt="" >}}
 
 In this section, you can view additional information about the environment resources and the deployed package:
 
-* For the environment, you can view the environment ID, the deployment region, the [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), and the scaling configuration. To [scale the environment](/developerportal/deploy/scale-environment/), click **Scale**.
+* For the environment, you can view the environment ID, the deployment region, the [cloud resource pack](/developerportal/deploy/mendix-cloud-deploy/#resource-pack), and the scaling configuration. To launch the **Change Scaling** wizard and [scale the environment](/developerportal/deploy/scale-environment/), click **Scale**.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/change-scaling.png" max-width=70% alt="" >}}
 
-* For the deployment package, you can view the package name, version, and runtime. To promote the package to another environment, click **Promote**.
+* For the deployment package, you can view the package name, version, and runtime. To launch the **Promote a  Package** wizard and promote the package to another environment, click **Promote**.
 
     {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-beta/promote-dialog.png" alt="" >}}
 

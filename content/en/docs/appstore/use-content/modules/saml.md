@@ -105,7 +105,7 @@ The URL for downloading the SP metadata of your app is independent of the value 
     ```xml
     <rule name="sso"> <match  url="^(sso/)(.*)" />
         <action type="Rewrite" url="http://localhost:8080/{R:1}{R:2}" /></rule>
-    <rule name="submitloginform"
+    <rule name="submitloginform">
     <match  url="^(SubmitLoginForm)" />
         <action type="Rewrite" url="http://localhost:8080/SubmitLoginForm>
     </rule>

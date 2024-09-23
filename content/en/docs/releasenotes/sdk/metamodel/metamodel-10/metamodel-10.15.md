@@ -8,18 +8,19 @@ parent: "metamodel-10"
 ### Microflows
 
 #### SequenceFlow (Element)
-* We deleted the `caseValue` property. Info: "Use property 'caseValues' instead"
+
+* We deleted the `caseValue` property. You can use the 'caseValues' property instead.
 * We introduced the `caseValues` property. 
 
 ### Mappings
 
 #### MappingSource (Element)
-* We made this element public, which means you can use (some of) its properties without first loading the unit.
+
+* We made the MappingSource element public, which means you can use (some of) its properties without first loading the unit.
 * We introduced the `name` property. Info: "An identifier for mapping source."
 
 ### CustomWidgets
 
 #### WidgetValueType (Element)
-* We introduced the `defaultType` property. 
 
-This page has been generated automatically.
+* We introduced the `defaultType` property. 

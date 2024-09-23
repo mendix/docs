@@ -22,7 +22,7 @@ Boundary Events are always displayed by 2 circles (either solid or dashed) and a
 
 Below is an example of how a timer boundary event looks like:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
 
 Studio Pro now supports the following boundary event:
 
@@ -32,7 +32,7 @@ Studio Pro now supports the following boundary event:
 
 To enable this feature, go to Studio Pro **Preferences** -> the **New features** tab -> the **Workflow editor** section and select **Enable non-interrupting timer boundary events (beta)**:
 
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-boundary-events/boundary-events-experimental-option.png" alt="Experimental option" width="450" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/enable-boundary-events.png" alt="Enable boundary events" width="450" >}}
 
 You can now add boundary events to the following activities:
 
@@ -48,11 +48,11 @@ To add a boundary event to the above-listed activities, choose one of the follow
 
 * Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflowsboundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
 
 * Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-how-to-boundary-events/edit-dialog.png" alt="Adding boundary events through edit dialog" width="450" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/edit-dialog.png" alt="Adding boundary events through edit dialog" width="450" >}}
 
 To configure the properties of a boundary event, double-click the event to open its properties dialog box. For more information on how to configure the properties of a timer boundary event, see the [Properties](/refguide/timer/#properties) section in *Timer*.
 

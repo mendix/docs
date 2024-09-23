@@ -2,7 +2,7 @@
 title: "Performing Workflow Basic Functions"
 linktitle: "Perform Basic Functions"
 url: /refguide/perform-workflow-basic-functions/
-weight: 20
+weight: 50
 ---
 
 ## Introduction

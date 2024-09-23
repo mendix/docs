@@ -1,7 +1,7 @@
 ---
 title: "Workflow Events"
 url: /refguide/workflow-events/
-weight: 55
+weight: 40
 ---
 
 ## Introduction

@@ -1,7 +1,7 @@
 ---
 title: "Boundary Events"
 url: /refguide/boundary-events/
-weight: 10
+weight: 20
 ---
 
 {{% alert color="info" %}}

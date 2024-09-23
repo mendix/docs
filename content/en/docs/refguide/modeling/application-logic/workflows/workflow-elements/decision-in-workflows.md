@@ -1,7 +1,7 @@
 ---
 title: "Decision in Workflows"
 url: /refguide/decision-in-workflows/
-weight: 40
+weight: 30
 ---
 
 ## Introduction

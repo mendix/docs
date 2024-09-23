@@ -1,7 +1,7 @@
 ---
 title: "Jump Activity"
 url: /refguide/jump-activity/
-weight: 60
+weight: 50
 ---
 
 ## Introduction

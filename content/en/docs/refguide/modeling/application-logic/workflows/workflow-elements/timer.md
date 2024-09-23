@@ -1,7 +1,7 @@
 ---
 title: "Timer"
 url: /refguide/timer/
-weight: 30
+weight: 90
 aliases:
     - /refguide/wait-for-timer/
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.

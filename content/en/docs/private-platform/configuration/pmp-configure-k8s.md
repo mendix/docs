@@ -154,7 +154,7 @@ The settings in this section configure the images.
 
 The settings in this section configure the storage for build output artifacts.
 
-* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. The Azure Blob option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. Add role assignment with the Storage Blob Data Reader role to the storage account in your managed identity.
+* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. The Azure Blob option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. Add role assignment with the Contributor role to the storage account in your managed identity.
 * **S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
 * **No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds --no-verify-ssl to the AWS CLI command to avoid failure.
 * **S3 Bucket Name** - Your S3 bucket name, for example, *mybucket*.
@@ -167,8 +167,10 @@ The settings in this section configure the storage for build output artifacts.
     kubectl create secret generic mxplatform-awssecret -n your-namespace --from-literal=aws_access_key_id=your-aws-access-key-id --from-literal=aws_secret_access_key=your-aws-secret-access-key
     ```
 
-* **Access Key ID** - This setting is only applicable if you did not select the Use K8S Secret check box. This value is used to access the S3 bucket.
-* **Secret Access Key** - This setting is only applicable if you did not select the Use K8S Secret check box. This value is used to access the S3 bucket.
+* **Access Key ID** - This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
+* **Secret Access Key** - This setting is only applicable if you did not select the **Use K8S Secret** check box. This value is used to access the S3 bucket.
+* **Storage Account, Container** - This setting is used to configure Azure Blob when the **Mda Storage Option** is set to **Azure Blob**.
+* **Mda Location** - Your Azure Blob container's domain, for example, `https://your-storage-account.blob.core.windows.net/your-container`. This setting is only applicable if **Build OCI Image** is not selected. Make sure that the container's anonymous access level is set to **Blob**.
 
 ### Registering a Kubernetes Cluster {#register-cluster}
 

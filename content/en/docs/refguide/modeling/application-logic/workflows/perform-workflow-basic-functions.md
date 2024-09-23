@@ -77,8 +77,8 @@ You can move elements around in your workflow. To do so, drag and drop an elemen
 
 This moves the whole structure of the dragged element, meaning that the element and its underlying elements are moved too.
 
-- You cannot move the first (and only) start event and the last end event.
-- You cannot move the End of Boundary Event Path Activity
+* You cannot move the first (and only) start event and the last end event.
+* You cannot move the end of a boundary event path
 
 ### Moving Outgoing Paths in a Workflow
 
@@ -112,10 +112,10 @@ The following elements cannot be cut, copied or pasted in the workflow editor:
 
 * Workflow (this can be only be done in the [App Explorer](/refguide/app-explorer/#basic-functions))
 * WorkflowContext
-* Start activity
-* End activity (the final **End activity** which is at the end of the workflow)
+* Start event
+* End event  (the final End event which is at the end of the workflow)
 * Outcomes (meaning outcomes of different outgoing flows from an activity that can have several flows, for example, a Decision)
-* End of Boundary Event Path Activity (the final activity inside a non-interrupting boundary event path)
+* End of boundary path (the end of a boundary event path)
 
 ## Viewing Element Properties {#view-element-properties}
 
@@ -129,7 +129,7 @@ To view properties of an element, do one of the following:
 
 The following element does not have any properties and context menu.
 
-* End of Boundary Event Path Activity
+* End of boundary path
 
 ## Triggering a Workflow {#trigger-workflow}
 

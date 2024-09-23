@@ -118,6 +118,7 @@ The following shortcut keys are available in the workflow editor:
 |<kbd>Ctrl</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Mouse scroll wheel<br>(in Studio Pro 10.15.0 and above) | Zoom in or out. |
 | <kbd>Ctrl</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | <kbd>Command</kbd> + <kbd>Plus&nbsp;sign</kbd>/<kbd>Minus&nbsp;sign</kbd> | Zoom in or out.  |
 | <kbd>Ctrl</kbd> + <kbd>0</kbd> | <kbd>Command</kbd> + <kbd>0</kbd> | Reset zoom level to 100%. |
+| <kbd>Ctrl</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | <kbd>Command</kbd> + Left/Right arrow<br>(in Studio Pro 10.15.0 and above) | Move a [boundary event](/refguide/boundary-events/) left or right. |
 
 ## Debugger Shortcut Keys {#debugger-shortcuts}
 

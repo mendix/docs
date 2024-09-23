@@ -34,7 +34,7 @@ To enable this feature, go to Studio Pro **Preferences** -> the **New features**
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/enable-boundary-events.png" alt="Enable boundary events" width="450" >}}
 
-You can now add boundary events to the following activities:
+<a id="supported-activities"></a>You can now add boundary events to the following activities:
 
 * [Wait for notification](/refguide/wait-for-notification/)
 * [User task](/refguide/user-task/) 
@@ -44,13 +44,13 @@ You can now add boundary events to the following activities:
 
 ### Adding Boundary Events
 
-To add a boundary event to the above-listed activities, choose one of the following ways:
+To add a boundary event to the [above-listed activities](#supported-activities), choose one of the following ways:
 
 * Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
 
-* Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
+* Double-click one of the [above-listed activities](#supported-activities) to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/edit-dialog.png" alt="Adding boundary events through edit dialog" width="450" >}}
 

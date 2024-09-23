@@ -150,7 +150,7 @@ You can do one of the following:
 
 #### Current Activity Moved out of Path
 
-When an app developer moves activities out of a **Parallel Split** path or a **Non-interrupting Boundary Event** path, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split** or **Non-interrupting Boundary Event**. Similarly, if an activity is moved from the parent path into a **Boundary Event** path, the currently running workflow instances may not be able to complete properly.
+When an app developer moves activities out of a **Parallel Split** path or a non-interrupting boundary event path, currently running workflow instances that are executing the moved activity cannot complete the **Parallel Split** or the non-interrupting boundary event. Similarly, if an activity is moved from the parent path into a boundary event path, the currently running workflow instances may not be able to complete properly.
 
 You can do one of the following:
 

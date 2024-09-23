@@ -64,7 +64,7 @@ To configure the properties of a boundary event, double-click the event to open 
 
 You can rearrange boundary events in the following ways:
 
-* Right-click a boundary event to open its context menu and click **Move left** or **Move right**, or use the <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Left arrow or <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Right arrow shortcut keys.
+* Right-click a boundary event to open its context menu and click **Move boundary event left** or **Move boundary event right**, or use the <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Left arrow or <kbd>Ctrl</kbd>/<kbd>Command</kbd> + Right arrow shortcut keys.
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/arrange-in-editor.png" width="350px" alt="Timer Event arrange in editor" >}}
 

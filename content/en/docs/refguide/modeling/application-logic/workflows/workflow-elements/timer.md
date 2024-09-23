@@ -17,11 +17,11 @@ The **Timer** allows you to suspend a workflow path for a configurable duration 
 
 * **Timer** can be used as a standalone activity on the workflow path. For example, when a new salary legislation is about to take effect, a timer can be set until the date of effect to actually adjust the values in the system.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Timer" width="250" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer/wait-for-timer-example.png" alt="Timer" width="250" >}}
 
 * **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/timer.png" alt="Timer" width="250" class="no-border" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/timer.png" alt="Timer" width="300" >}}
 
 ## Properties
 

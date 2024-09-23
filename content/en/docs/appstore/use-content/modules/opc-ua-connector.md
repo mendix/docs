@@ -7,7 +7,7 @@ description: "Describes the configuration and usage of the OPC-UA connector, whi
 
 ## Introduction
 
-[OPC](https://opcfoundation.org/) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. You can use the [OPC-UA connector](#needs-marketplace-page-url) with your Mendix app to communicate with an OPC-UA server. The OPC-UA connector is based on [Eclipse Milo](https://github.com/eclipse/milo) client SDK, an open-source implementation of OPC.
+[OPC](https://opcfoundation.org/) is the interoperability standard for the secure and reliable exchange of data in the industrial automation space and in other industries. You can use the [OPC-UA connector](https://marketplace.mendix.com/link/component/230843) with your Mendix app to communicate with an OPC-UA server. The OPC-UA connector is based on [Eclipse Milo](https://github.com/eclipse/milo) client SDK, an open-source implementation of OPC.
 
 ### Features
 

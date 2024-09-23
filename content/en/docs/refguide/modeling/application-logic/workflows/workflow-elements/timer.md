@@ -21,7 +21,7 @@ It can be used in the following two ways:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
-* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/):
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/) (in Studio Pro 10.15.0 and above):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 

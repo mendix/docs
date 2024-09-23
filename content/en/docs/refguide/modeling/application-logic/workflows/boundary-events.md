@@ -42,6 +42,10 @@ To enable this feature, go to Studio Pro **Preferences** -> the **New features**
 * [Call microflow](/refguide/call-microflow/)
 * [Call workflow](/refguide/call-workflow/)
 
+{{% alert color="info" %}}
+When a boundary event is added to an activity, this activity is also referred to as the parent activity of the boundary event.
+{{% /alert %}}
+
 ### Adding Boundary Events
 
 To add a boundary event to the [above-listed activities](#supported-activities), choose one of the following ways:

@@ -26,7 +26,7 @@ Below is an example of how a timer boundary event looks like:
 
 Studio Pro now supports the following boundary event:
 
-* [Timer](/refguide/timer)
+* [Timer](/refguide/timer/)
 
 ## Getting started
 
@@ -48,7 +48,7 @@ To add a boundary event to the above-listed activities, choose one of the follow
 
 * Select an event from the **Events** section in the workflow **Toolbox** and drag it onto one of the activities listed above.
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflowsboundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/boundary-events/drag-drop.png" alt="Adding boundary events through drag and drop" width="200" >}}
 
 * Double-click one of the above-listed activities to open its properties dialog box, go to the **Events** tab, and in the > **Boundary events** section, click **New** to add a new boundary event.
 

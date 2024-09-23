@@ -21,7 +21,7 @@ The **Timer** allows you to suspend a workflow path for a configurable duration 
 
 * **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/):
 
-    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
+    {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 
 ## Properties
 

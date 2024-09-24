@@ -334,6 +334,18 @@ Disadvantages are:
 
 This approach is best-suited for small teams.
 
+#### Trunk-based + feature branches {#branching-trunk-and-feature}
+[Trunk-based](#branching-trunk) can also be combined with short-lived feature branches. Developers work on feature branches, which are created from the main branch. Once a feature is complete, it is merged back into the main branch.
+
+Benefits are:
+* Limited complexity: This approach is still relatively straightforward and easy to understand for most developers.
+* Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
+
+Disadvantages are:
+* Overhead: Separate feature branches can lead to overhead in terms of merging, code review, and testing.
+
+This approach is the most-used among Mendix customers, and is best-suited for teams with some experience, or teams running into the limitations of trunk-based development.
+
 #### Advanced branching {#branching-advanced}
 In branch-based development, there are typically two types of branches:
 * Long-lived branches: main branch, development branch, release branch
@@ -352,18 +364,6 @@ Disadvantages are:
 * Overhead: Maintaining separate branches can lead to overhead in terms of merging, code review, and testing.
 
 This approach is best-suited for large teams, or teams preferring a more rigid process. Projects with strict release cycles can also really benefit from this approach, as the release branch is always stable.
-
-#### Trunk-based + feature branches {#branching-trunk-and-feature}
-[Trunk-based](#branching-trunk) can also be combined with short-lived feature branches. Developers work on feature branches, which are created from the main branch. Once a feature is complete, it is merged back into the main branch.
-
-Benefits are:
-* Limited complexity: This approach is still relatively straightforward and easy to understand for most developers.
-* Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
-
-Disadvantages are:
-* Overhead: Separate feature branches can lead to overhead in terms of merging, code review, and testing.
-
-This approach is suited for teams with some experience, and is most-often used among Mendix customers.
 
 ## Versioning an App Deployed to the Cloud {#versioning-app}
 

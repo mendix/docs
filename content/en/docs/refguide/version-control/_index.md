@@ -98,7 +98,7 @@ The Repository Service manages communication between Studio Pro and other suppor
 
 With more complex apps, you may want to manage your code in a more sophisticated way. For example, you may want to develop new features separately from the currently deployed version of your app so that you can fix any bugs without having to release all the new features.
 
-This is done using [Branch Lines](#branch-line).
+This is done using [Branch Lines](#branch-line). If you have familiarized yourself with the concept, you can check the [Mendix branching best-practices](/refguide/using-version-control-in-studio-pro/#branching-best-practices).
 
 ### Main Line
 

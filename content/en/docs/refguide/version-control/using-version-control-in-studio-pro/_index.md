@@ -323,6 +323,8 @@ For experienced teams, or for organizations with stricter processes and/or audit
 #### Trunk-based (single branch line) {#branching-trunk}
 In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously integrate their work with the mainline codebase. 
 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk.png" class="no-border" >}}
+
 Benefits are:
 * Simplicity: Trunk-based development is straightforward and easy to understand, making it suitable for small teams or projects with less complex requirements.
 * Fast feedback: Developers receive immediate feedback on the impact of their changes, helping to identify and resolve issues quickly.
@@ -337,6 +339,8 @@ This approach is best-suited for small teams.
 #### Trunk-based + feature branches {#branching-trunk-and-feature}
 [Trunk-based](#branching-trunk) can also be combined with short-lived feature branches. Developers work on feature branches, which are created from the main branch. Once a feature is complete, it is merged back into the main branch.
 
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk-and-feature.png" class="no-border" >}}
+
 Benefits are:
 * Limited complexity: This approach is still relatively straightforward and easy to understand for most developers.
 * Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.
@@ -350,7 +354,10 @@ This approach is the most-used among Mendix customers, and is best-suited for te
 In branch-based development, there are typically two types of branches:
 * Long-lived branches: main branch, development branch, release branch
 * Short-lived branches: feature branches
+
 Developers work on feature branches, which are merged into the development branch for integration and testing. The release branch is used to prepare for a stable release, while the main branch represents the production-ready codebase.
+
+{{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-advanced.png" class="no-border" >}}
 
 Benefits are:
 * Isolation of changes: Working on feature branches allows developers to isolate their changes, reducing the risk of disrupting the mainline codebase.

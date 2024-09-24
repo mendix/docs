@@ -1,7 +1,7 @@
 ---
 title: "Workflow Properties"
 url: /refguide/workflow-properties/
-weight: 10
+weight: 25
 ---
 
 ## Introduction

@@ -56,7 +56,7 @@ The elements of this category are described in the table below:
 
 | Graphic                                                     | Element                           | Description                                                  |
 | ----------------------------------------------------------- | --------------------------------- | ------------------------------------------------------------ |
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/wait-for-timer.png" width="50px" alt="timer activity" class="no-border" >}} | [Timer](/refguide/wait-for-timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer.png" width="50px" alt="timer activity" class="no-border" >}} | [Timer](/refguide/timer/)             | Allows you to suspend the execution of a workflow path until a timer has elapsed or deadline has been reached. |
 
 ## System Actions {#system}
 

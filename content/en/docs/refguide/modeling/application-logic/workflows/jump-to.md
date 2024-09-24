@@ -2,7 +2,7 @@
 title: "Jumping to Different Activities in a Workflow"
 url: /refguide/jump-to/
 linktitle: "Jump to Different Activities"
-weight: 55
+weight: 60
 ---
 ## Introduction
 
@@ -40,9 +40,9 @@ When the **Action** attribute is set to *JumpTo*, the **System.WorkflowCurrentAc
 
 After setting the objects, changes can be applied by calling a microflow containing the [Apply jump-to option](/refguide/apply-jump-to-option/). This will change the current activities of the associated workflow instance and queue the workflow for execution (as this happens asynchronously, execution may not happen instantly). If the workflow was in incompatible state because of versioning conflicts, the workflow is set to its previous state (for example *In Progress* or *Paused*).
 
-## Jumping to Other Activities in Parallel Splits
+## Jumping to Other Activities in Parallel Splits or in Boundary Event Paths
 
-Jumping to other activities has a limitation in parallel splits: it is not possible to jump into or out of a current parallel split path. However, it is possible to jump to other activities in a current parallel split path including the end of the path. Activities in other parallel split paths and activities outside of the current parallel split path will not be available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
+Jumping to other activities has a limitation in parallel splits and in non-interrupting boundary event paths: it is not possible to jump into or out of a current parallel split or a non-interrupting boundary event path. However, it is possible to jump to other activities within a current parallel split or a non-interrupting boundary event path, including the end of the path. Activities in other parallel split or boundary event paths, as well as activities outside of the current path, are not available in the **System.WorkflowCurrentActivity_ApplicableTargets** association.
 
 ## Read More
 

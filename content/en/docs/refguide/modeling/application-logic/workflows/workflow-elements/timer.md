@@ -21,7 +21,7 @@ It can be used in the following two ways:
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/standalone-timer-activity.png" alt="Standalone Timer activity" width="250" >}}
 
-* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/boundary-events/) (in Studio Pro 10.15.0 and above):
+* **Timer** can also be attached to another workflow activity as a [Boundary Event](/refguide/workflow-boundary-events/) (in Studio Pro 10.15.0 and above):
 
     {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/timer/timer-boundary-event.png" alt="Timer boundary event" width="300" >}}
 
@@ -71,7 +71,7 @@ The following cases do not trigger a continuation of the workflow path when time
 * Expiration in a workflow that is aborted.
 * Expiration in a workflow that is incompatible - After the workflow resumes, the workflow path continues normally.
 * Expiration in a workflow that is jumped from the timer to a different activity. 
-* Expiration in a workflow that is completed - This can only occur when **Timer** is used as a [Boundary Event](/refguide/boundary-events/).
+* Expiration in a workflow that is completed - This can only occur when **Timer** is used as a [Boundary Event](/refguide/workflow-boundary-events/).
 * A workflow is restarted and a previous timer was still scheduled.
 
 ### Workflow Incompatibility

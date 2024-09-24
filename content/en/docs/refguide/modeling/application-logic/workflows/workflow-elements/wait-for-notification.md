@@ -31,7 +31,7 @@ The **Caption** describes what happens in this element. It is displayed in the w
 
 ### Boundary Events {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/boundary-events/).
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

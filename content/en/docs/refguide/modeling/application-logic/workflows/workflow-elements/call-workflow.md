@@ -48,7 +48,7 @@ To change the parameter, either double-click the parameter from the list or sele
 
 ### Boundary Events Section {#boundary-events}
 
-For more information, see [Boundary Events](/refguide/boundary-events/).
+For more information, see [Boundary Events](/refguide/workflow-boundary-events/).
 
 ### Common Section {#common}
 

@@ -1,6 +1,6 @@
 ---
 title: "Boundary Events"
-url: /refguide/boundary-events/
+url: /refguide/workflow-boundary-events/
 weight: 20
 ---
 

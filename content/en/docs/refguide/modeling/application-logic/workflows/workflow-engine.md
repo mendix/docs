@@ -138,7 +138,7 @@ Failed workflows can be retried using the **Retry workflow** option of the [Chan
 
 #### Boundary Events {#boundary-events}
 
-A [boundary event](/refguide/boundary-events/) is attached to the boundary of an activity. Once the activity begins, the boundary events are initialized. For example, with a timer boundary event, when the set timer expires, the workflow engine checks if the parent activity is in progress. If the parent activity has already been completed, aborted, or has failed, the trigger will be ignored and the boundary path will not be executed. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
+A [boundary event](/refguide/workflow-boundary-events/) is attached to the boundary of an activity. Once the activity begins, the boundary events are initialized. For example, with a timer boundary event, when the set timer expires, the workflow engine checks if the parent activity is in progress. If the parent activity has already been completed, aborted, or has failed, the trigger will be ignored and the boundary path will not be executed. If the workflow is paused or in an incompatible state, the boundary event path will commence its execution once the workflow resumes an in-progress state. Otherwise, if the activity is still ongoing, the boundary event path will initiate its execution.
 
 Each boundary event can have only one active instance of the event path at a time. 
 

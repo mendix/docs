@@ -28,7 +28,7 @@ The **Caption** describes what happens in this element. It is displayed in the w
 **Target** is the activity that the workflow process will jump to during execution. You can select the activity you would like to go to from the drop-down menu. 
 
 {{% alert color="warning" %}}
-You cannot use the **Jump** activity as the final step in a [Parallel split](/refguide/parallel-split/) path, a [Boundary Event](/refguide/boundary-events/) path, or the main workflow path without providing an alternative route. Doing so prevents the path from reaching its endpoint.
+You cannot use the **Jump** activity as the final step in a [Parallel split](/refguide/parallel-split/) path, a [Boundary Event](/refguide/workflow-boundary-events/) path, or the main workflow path without providing an alternative route. Doing so prevents the path from reaching its endpoint.
 {{% /alert %}}
 
 ### Common Section {#common}

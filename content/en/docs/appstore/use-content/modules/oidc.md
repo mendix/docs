@@ -560,6 +560,9 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * You can map multiple **IdP Attribute** (claims) to a **Configured Entity Attribute** but you cannot map a new **IdP Attribute** to a **Configured Entity Attribute** if it is already mapped.
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+    * The image below shows you the default attribute mapping for the configuration.
+
+        {{< figure src="/attachments/appstore/use-content/modules/oidc/default_mapping.png" max-width=80% >}}
 
 6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 
@@ -827,7 +830,6 @@ If your microflow is not correctly implemented you will be told that **Authentic
 {{% /alert %}}
 
 ### Using Deep Links
-
 {{% alert color="warning" %}}
 The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.

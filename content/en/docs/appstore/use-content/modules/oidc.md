@@ -448,7 +448,7 @@ The following constants are optional:
 
     Example: `User`
 
-* **UserType** – assign usertype to the created users
+* **UserType** – assign user type to the created users
 
     Example: `Internal`
 
@@ -466,8 +466,8 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 
 * **ClientAlias** – the client alias
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
-* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the mxmodelreflection$microflows table
-Example: OIDC.Default_SAM_TokenProcessing_CustomATP
+* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the `mxmodelreflection$microflows` table
+Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
 {{% alert color="warning" %}}
@@ -830,6 +830,7 @@ If your microflow is not correctly implemented you will be told that **Authentic
 {{% /alert %}}
 
 ### Using Deep Links
+
 {{% alert color="warning" %}}
 The Deep Link module has been deprecated from Studio Pro 10.6 and replaced by [page URLs](/refguide/page-properties/#url) and [microflow URLs](/refguide/microflow/#url).
 For instructions on migrating to page and microflow URLs, see the [Using Page and Microflow URLs with OIDC SSO](#page-microflow-url) section below.

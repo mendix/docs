@@ -449,7 +449,7 @@ The following constants are optional:
 
     Example: `User`
 
-* **UserType** – assign usertype to the created users
+* **UserType** – assign user type to the created users
 
     Example: `Internal`
 
@@ -467,8 +467,8 @@ The following constants are mandatory when creating an OIDC SSO Client Credentia
 
 * **ClientAlias** – the client alias
 * **AutomaticConfigurationURL** – the URL of the well-known endpoint (ending with `/.well-known/openid-configuration`)
-* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the mxmodelreflection$microflows table
-Example: OIDC.Default_SAM_TokenProcessing_CustomATP
+* **CustomATP** – a custom access token processing microflow — the value of `CompleteName` in the `mxmodelreflection$microflows` table
+Example: `OIDC.Default_SAM_TokenProcessing_CustomATP`
 * **IsClientGrantOnly** (*default: false*) – allow to create Client Credential Configuration in the application
 
 {{% alert color="warning" %}}
@@ -561,6 +561,9 @@ You can set up custom user provisioning once your app is running using the `OIDC
     * You can map multiple **IdP Attribute** (claims) to a **Configured Entity Attribute** but you cannot map a new **IdP Attribute** to a **Configured Entity Attribute** if it is already mapped.
     * The **IdP Attribute** is one of the fixed claims supported by the OIDC SSO module.
     * IdP Attributes(Claims) cannot be of type enum, autonumber, or an association.
+    * The image below shows you the default attribute mapping for the configuration.
+
+        {{< figure src="/attachments/appstore/use-content/modules/oidc/default_mapping.png" max-width=80% >}}
 
 6. Optionally, you can use the custom logic in the **User Provisioning**. In the **Custom UserProvisioning** field, select a microflow you want to run for custom user provisioning. The custom microflow name must begin with the string `UC_CustomProvisioning` and requires the following parameters:
 

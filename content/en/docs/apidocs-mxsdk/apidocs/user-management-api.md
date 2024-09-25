@@ -9,7 +9,9 @@ deprecated: true
 ## Introduction
 
 {{% alert color="warning" %}}
-This API is deprecated. If you are currently using this API or intend to start using it, please look at, and contribute to, [this idea in the Mendix Community](https://community.mendix.com/link/space/user-experience/ideas/3962). This will allow us to understand your use case and will help us to prioritize a new API that is fit for purpose. 
+This API is deprecated. If you are currently using this API or intend to start using it, please look at, and contribute to [this idea in the Mendix Community](https://community.mendix.com/link/space/user-experience/ideas/3962). This will allow us to understand your use case and will help us to prioritize a new API that is fit for purpose. 
+
+Alternatively, you can consider using the [Projects API](/apidocs-mxsdk/apidocs/projects-api/), which provides functionality to manage project memberships for platform users. Although it does not fully cover all kinds of platform users, it can still serve as a viable option for many use cases. Additionally, if you are using BYOIDP, you can restrict platform access to a designated group of users by creating a Mendix platform users group in your IdP. For more information, see [Set Up an SSO (BYOIDP)](/control-center/security/set-up-sso-byoidp/).
 {{% /alert %}}
 
 The User Management API allows your company's user management systems to integrate with the Mendix Platform. Through this API, you can create and manage user accounts in your company. Additionally you can create and manage groups. In the Mendix Platform, you can define group policies for groups which grant access to your company's applications to their members.

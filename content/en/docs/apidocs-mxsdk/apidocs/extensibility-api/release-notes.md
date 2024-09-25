@@ -9,8 +9,8 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.15.0
 
-* We have introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/).
-* We added `CurrentLanguage` to `IConfiguration` to provide which language is currently set for the UI of Studio Pro.
+* We introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/).
+* We added `CurrentLanguage` to `IConfiguration`, which allows you to indicate Studio Pro's current UI language.
 
 ## Version 10.14.0
 

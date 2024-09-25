@@ -62,15 +62,13 @@ These are the log levels used by Mendix:
 
 ## Setting the Log Levels
 
-In this section, you will learn how to configure the log levels of the messages produced by the system. The different highlighted [levels](#level) can be applied to the predefined logging produced by Mendix Studio Pro and to custom logging. 
-
-This section describes how to configure both the log levels for predefined logging created by Studio Pro and custom logging.
+In this section you will learn how to specify which log messages are generated, based on the level of the log messages. Log messages with lower levels than the configured log level will not be generated. The different [levels](#level) can be applied both to the predefined logging produced by Mendix Studio Pro and to custom logging.
 
 ### Configuring Log Levels via Script
 
-Log levels can be configured through the runtime admin port before the actual log levels exist. This enables creating a script that sets all the required log levels at once.
+Log levels can be configured through the runtime admin port before the actual log levels exist. You can therefore create a script that sets all the required log levels at once.
 
-This is a Python script that sets `ConnectionBus` and `ActionManager` to the Trace and Debug levels:
+This is a Python script that sets `ConnectionBus` and `ActionManager` to the Trace and Debug levels, respectively:
 
 ```py
 import requests, base64, json, sys
@@ -92,9 +90,9 @@ C:\temp\LogDemoApp\python
 {"feedback":{},"result":0}
 ```
 
-### Configuring the Log Levels for Standard Log Messages{#standard-log-levels}
+### Configuring Log Levels Within Studio Pro {#configure-log-levels-from-studio-pro}
 
-To set the log levels for standard log messages, follow these steps:
+To set the log levels within Studio Pro, follow these steps:
 
 1. Ensure that your app is running locally – if not, the option to set log levels will not be clickable.
 2. In the **Console** pane, click **Advanced** to open the menu of advanced options.
@@ -107,7 +105,7 @@ To set the log levels for standard log messages, follow these steps:
 You can override the log level for standard log messages in each environment when your app is deployed to Mendix Cloud. See the [Log Levels Tab](/developerportal/deploy/environments-details/#log-levels) section in *Environment Details* for more information.
 {{% /alert %}}
 
-### Configuring the Log Levels for Custom Log Messages
+## Setting the Log Levels for Custom Log Messages
 
 To set the level of custom log messages that you have created via a microflow, follow these steps:
 

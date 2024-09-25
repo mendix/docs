@@ -148,9 +148,9 @@ Once the Mx Model Reflection module has been imported into your app, you need to
 
     {{< figure src="/attachments/appstore/use-content/modules/oidc/model-reflection-button.png" class="no-border" >}}
 
-3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration**, **UserCommons**, and **System** modules, in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning. From version 3.1.0, the startup microflow (`OIDC.ASU_OIDC_Startup`) automatically handles this process.
+3. Select the modules **MxModelReflection** and **OIDC**  and click **Click to refresh** for both the modules and the entities. Starting from version 3.0.0 of the OIDC SSO module, additionally select and refresh the **Administration** and **System** modules in the **MxModelReflection.MxObjects_Overview** page to configure User Provisioning. From version 3.1.0, the startup microflow (`OIDC.ASU_OIDC_Startup`) automatically handles this process.
 
-    {{< figure src="/attachments/appstore/use-content/modules/oidc/select-refresh-modules.png" class="no-border" >}}
+    {{< figure src="/attachments/appstore/use-content/modules/oidc/select_modules.png" class="no-border" >}}
 
 ### Migrating from Community Edition to Platform Edition{#migration}
 
@@ -501,6 +501,10 @@ If you create custom user entities as specializations of the `System.User` entit
 If you connect multiple IdPs to your Mendix app, you can use separate custom user entities for each IdP, each with its own attribute mapping.
 
 #### Custom User Provisioning Using a Microflow{#custom-provisioning-mf}
+
+{{% alert color="warning" %}}
+This feature is deprecated from the version 3.0.0 of the module.
+{{% /alert %}}
 
 Review the microflow `CUSTOM_UserProvisioning` in the **USE_ME** > **1. Configuration** folder of the OIDC module. This is where you can change the way that end-users are provisioned in your app. The OpenID token is passed to the microflow as a parameter. Use this object to find an existing, or create a new, `System.User` object for the end-user. This is set as the return value of the microflow. You can find examples included in the **USE_ME** > **1. Configuration** > **User Provisioning Examples** folder.
 

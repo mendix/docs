@@ -35,11 +35,11 @@ In apps where you want to grant end-users working with objects access to the res
 
 To learn more about customizing the synchronization behavior, see [Customizable Synchronization](/refguide9/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
-### Using Non-Persistent Entities
+### Using Non-Persistable Entities
 
-For sensitive data that should never be stored locally, consider using non-persistent entities to store the data temporarily and use microflow calls to securely process the data on the server. 
+For sensitive data that should never be stored locally, consider using non-persistable entities to store the data temporarily and use microflow calls to securely process the data on the server. 
 
-The app keeps the non-persistent objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix Runtime to call microflows, and thus limits the app's offline-first capabilities.
+The app keeps the non-persistable objects only in the memory and removes them when they are no longer needed. However, this approach requires connectivity to the Mendix Runtime to call microflows, and thus limits the app's offline-first capabilities.
 
 ### Encrypting the Local Database
 

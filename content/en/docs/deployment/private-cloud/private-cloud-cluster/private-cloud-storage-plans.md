@@ -147,7 +147,7 @@ If the commands return a *not found* response, your environment database and blo
 
 ## Database Plans {#database}
 
-Every Mendix app needs a database to store persistent and non-persistent entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
+Every Mendix app needs a database to store persistable and non-persistable entities. A database plan tells the Mendix Operator how to provide a database to a new Mendix app environment.
 
 {{% alert color="warning" %}}
 The database plan does not include any functionality for backing up or restoring data on your database. It is your responsibility to ensure that appropriate planning is made for backing up and restoring your database using the tools provided by your database management system or cloud provider.

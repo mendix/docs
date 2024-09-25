@@ -28,7 +28,7 @@ To model your native sign-in page, do the following:
     The page already contains a sign-in form but is missing a data source to store the sign-in information. 
 
 1. Before you will model the data source, make sure to change the new page's layout to **NativePhone_TopBarOnly** to remove the bottom navigation.
-1. To model the data source that will store the sign-in form data, start by creating a non-persistent entity in the [Domain model](/refguide/domain-model/) called *Login*. 
+1. To model the data source that will store the sign-in form data, start by creating a non-persistable entity in the [Domain model](/refguide/domain-model/) called *Login*. 
 1. Add three attributes of type String: **Username**, **Password**, and **ValidationMessage**:
 
     {{< figure src="/attachments/refguide/mobile/native-mobile/authenticating-users/login-entity.png" alt="Login entity" class="no-border" >}}

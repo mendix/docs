@@ -10,7 +10,7 @@ description: "Describes the general properties and common concepts of generative
 With the Mendix GenAI capabilities you can create engaging, intelligent experiences with a variety of AI models and your own data.
 
 {{% alert color="info" %}}
-These pages cover modules which integrate with third-party generative AI tools. For Machine Learning using the Mendix Runtime, please see [Machine Learning Kit](/refguide/machine-learning-kit/).
+These pages cover modules which integrate with third-party generative AI tools. For running pre-trained Machine Learning (ML) models using the Mendix Runtime, please see [Machine Learning Kit](/refguide/machine-learning-kit/).
 {{% /alert %}}
 
 ### Typical Use Cases

@@ -14,6 +14,12 @@ These release notes cover changes made to the [Catalog](/catalog/).
 
 ## 2024
 
+### September 26, 2024
+
+#### Improvement
+
+* We've made a few UI styling adjustments.
+
 ### September 12, 2024
 
 #### Improvement

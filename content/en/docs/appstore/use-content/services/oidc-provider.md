@@ -44,12 +44,14 @@ Instead of using local credentials in the Central Portal App, you may want to in
 
 #### 1.1.3 Non-user Specific API Consumption 
 
-API security can be implemented using API-keys but that is not a best security practice. If you prefer to use OAuth-tokens (also known as bearer tokens or access tokens), you have below two options:
+For API security, it is a best security practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. To use OAuth tokens you have below two options:
 
 * Use human identities: An end-user of your (client) application logs in using SSO and the client application can consume the API on behalf of your end-user, using the OAuth Access Token it received as a result from the SSO process.
 * Use a machine identity: Machine identities are also known as service accounts or application accounts. In this case, access tokens are used by the client application to consume the API on behalf of itself. In this scenario, the end-user is not relevant.
 
 The OIDC Provider supports the so-called Client Credential grant. This means that, a client application can obtain a client access token by authenticating at the OIDC Provider and present that access token to the API it consumes. The API can validate the token either through token introspection at the OIDC Provider or by verifying its signature.
+
+The OIDC SSO module (version 3.1.0 and above) helps you to implement security in your API. It validates the token either through token introspection at the OIDC Provider or by verifying its signature. Moreover, it creates a user that represents the client that is consuming the API.
 
 ### 1.2 Features and Limitations
 

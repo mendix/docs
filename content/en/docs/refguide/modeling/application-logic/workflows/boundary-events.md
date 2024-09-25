@@ -2,6 +2,7 @@
 title: "Boundary Events"
 url: /refguide/workflow-boundary-events/
 weight: 20
+beta: true
 ---
 
 {{% alert color="info" %}}

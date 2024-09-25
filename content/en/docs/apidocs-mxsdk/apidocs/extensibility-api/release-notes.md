@@ -9,7 +9,7 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.15.0
 
-* We have introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/).
+* We introduced the Untyped Model Access API. For more details and practical examples, see [How to Use the Untyped Model Access API](/apidocs-mxsdk/apidocs/extensibility-api/extensibility-api-howtos/untyped-model-access-api/).
 
 ## Version 10.14.0
 
@@ -19,7 +19,7 @@ These release notes cover changes to the Extensibility API.
   
 ## Version 10.13.1
 
-* No user facing changes, still please keep the extension package version synced with StudioPro.
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version.
 
 ## Version 10.13.0
 
@@ -28,24 +28,24 @@ These release notes cover changes to the Extensibility API.
 
 ## Version 10.12.5
 
-* No user facing changes, still please keep the extension package version synced with StudioPro. 
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version. 
 
 ## Version 10.12.4
 
-* No user facing changes, still please keep the extension package version synced with StudioPro.
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version.
 
 ## Version 10.12.3
 
-* No user facing changes, still please keep the extension package version synced with StudioPro.
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version.
 
 ## Version 10.12.2
 
-* No user facing changes, still please keep the extension package version synced with StudioPro.
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version.
 
 ## Version 10.12.1
 
-* No user facing changes, still please keep the extension package version synced with StudioPro.
+* No user facing changes. However, the extension package version must be the same as your Studio Pro version.
 
 ## Version 10.12.0
 
-* Please welcome the first ever ßetta release of Extensibility Api! 
+* The first [beta](/releasenotes/beta-features/) release of the Extensibility API.

@@ -19,7 +19,7 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
-### September 19, 2024
+### September 26, 2024
 
 #### Improvements
 

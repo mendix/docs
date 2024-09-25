@@ -5,7 +5,7 @@ weight: 2
 description: "Describes how to create a simple microflow that will define the logic of your application."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix uses visual models called [microflows](/refguide/microflows/) to define the logic of your application. Microflows are visual ways of expressing what traditionally would be written in code. This document explains how you can create a very simple "Hello World" microflow and trigger it from a [menu item](/refguide/menu/#menu-item).
 
@@ -14,7 +14,7 @@ This document teaches you how to do the following:
 * Create a menu item
 * Create and edit a microflow
 
-## 2 Creating a Menu Item {#creating-menu-item}
+## Creating a Menu Item {#creating-menu-item}
 
 You will create a menu item that triggers a microflow and shows the **Hello World** message to the end-users. 
 
@@ -44,7 +44,7 @@ To create a menu item, follow these steps:
 
 You have created the menu item that will trigger the **Hello World** microflow. 
 
-## 3 Editing the New Microflow
+## Editing the New Microflow
 
 The new microflow is now empty and needs to be configured to show the message to the end-users.
 
@@ -78,7 +78,7 @@ To edit the new microflow, follow these steps:
 
 Congratulations! You have created a menu item that triggers a microflow and shows a **Hello World** message to your end-users! 
 
-## 4 Read More
+## Read More
 
 * [Navigation](/refguide/navigation/)
 * [Menu Item](/refguide/menu/#menu-item)

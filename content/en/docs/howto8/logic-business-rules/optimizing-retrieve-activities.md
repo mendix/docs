@@ -5,7 +5,7 @@ weight: 9
 #To update screenshots of these microflows in , use the Microflow Screenshots app.
 ---
 
-## 1 Introduction
+## Introduction
 
 Often in processes you need to retrieve objects in order to complete the process. But what if those objects cannot be found? Usually additional actions are required, but since the objects you retrieve and create are assigned different names, sometimes you cannot merge them back into a single flow.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Find and create objects to continue your process
 * Retrieve an instance of an object
 
-## 2 Finding and Creating Objects to Continue Your Process
+## Finding and Creating Objects to Continue Your Process
 
 A common example is shown below in which creating an order needs to be associated with the customer and its primary address. This example ends up in three different flows and cannot be merged back into the main flow, because that causes the **OtherAddress** or **NewPrimaryAddress** to be unreachable. 
 
@@ -32,7 +32,7 @@ The **GetCustomerPrimaryAddress** sub-microflow contains the same logic as the o
 
 {{< figure src="/attachments/howto8/logic-business-rules/optimizing-retrieve-activities/18581012.png" class="no-border" >}}
 
-## 3 Retrieving an Instance of an Object
+## Retrieving an Instance of an Object
 
 Sometimes you need to have a specific instance of an object, and building a sub-flow for just one retrieve-and-create seems like too much work. An alternative is to build your own loop, which allows you to have one main flow but still be able to find and create objects during this process.
 
@@ -40,7 +40,7 @@ However, there is the risk of creating an infinite loop if the retrieve applies 
 
 {{< figure src="/attachments/howto8/logic-business-rules/optimizing-retrieve-activities/18581011.png" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Extend Your Application with Custom Java](/howto8/logic-business-rules/extending-your-application-with-custom-java/)

@@ -5,9 +5,11 @@ weight: 10
 description: "These release notes showcase each release of the iOS and Android Make It Native app versions."
 ---
 
-For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
+{{% alert color="info" %}}
+Make It Native 8 should only be used with the LTS version of Mendix 8.
+{{% /alert %}}
 
-You can download the Make It Native app for [iOS](https://apps.apple.com/app/make-it-native/id1334081181) or [Android](/refguide9/getting-the-make-it-native-app/).
+For more information on the Make It Native app, see [Getting the Make It Native App](/refguide9/getting-the-make-it-native-app/).
 
 ## Android 2.2.2 / iOS 2.2.2
 
@@ -165,7 +167,7 @@ On iOS:
 ### New Features
 
 * This version adds support for [Mendix Studio Pro 8.3](/releasenotes/studio-pro/8.3/).
-* The Make It Native app features a new **Toggle Inspector** developer menu option that exposes insights on styles and layouts. With this option you can debug styles, change them easily, and evaluate the results directly in the Make It Native app. We believe this option  greatly enhances the experience of creating feature-rich, engaging layouts for your Native Mendix Apps.
+* The Make It Native app features a new **Toggle Inspector** developer menu option that exposes insights on styles and layouts. With this option you can debug styles, change them easily, and evaluate the results directly in the Make It Native app. We believe this option greatly enhances the experience of creating feature-rich, engaging layouts for your Native Mendix Apps.
 * The Make It Native app now fully supports Atlas UI Dark Mode. 
 
 ### Improvements

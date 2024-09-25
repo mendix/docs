@@ -6,7 +6,7 @@ description: "Link to GitHub Guide to Mastering Markdown"
 # If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Several places in published REST services indicate that you can use [GitHub-flavored Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#GitHub-flavored-markdown) for rich text.
 

@@ -3,7 +3,7 @@ title: "XPath Expressions"
 url: /refguide/xpath-expressions/
 ---
 
-## 1 Overview
+## Overview
 
 Expressions are used within constraints to generate a value that is true.
 
@@ -13,11 +13,11 @@ There are three types of expressions usable for constraints:
 * Functions
 * Exist-expressions
 
-## 2 Comparisons
+## Comparisons
 
 A comparison expression consists of two attributes or values separated by a comparison [operator](/refguide/xpath-operators/) like `=`, `<=`, or `>`.
 
-### 2.1 Examples
+### Examples
 
 For example, the following query retrieves all customers whose name is "Jansen":
 
@@ -130,7 +130,7 @@ The following query retrieves the same customer as the previous query:
     {{% /tab %}}
 {{< /tabpane >}}
 
-### 2.2 Implicit type conversions
+### Implicit type conversions
 
 If two sides of a comparison (`=`, `!=`, `<`, `<=`, `>`, `>=`) have different types, one of the sides may be converted implicitly to the type of the other side.
 
@@ -177,15 +177,15 @@ Conversions work in the following way:
 * A String is converted to a Boolean by comparing it to the string `'true'` in a case insensitive way.
 * A String is converted to a Decimal or Integer/Long by parsing it as a number.
 
-## 3 Functions
+## Functions
 
 For information on the available functions, see [XPath Constraint Functions](/refguide/xpath-constraint-functions/).
 
-## 4 Exist-Expressions {#exist}
+## Exist-Expressions {#exist}
 
 The last type of expression is the exist-expression, which can be used to check whether a specific association is filled or not.
 
-### 4.1 Examples
+### Examples
 
 This query retrieves all the customers who have placed at least one order:
 

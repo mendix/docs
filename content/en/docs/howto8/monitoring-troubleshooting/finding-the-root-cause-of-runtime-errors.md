@@ -4,7 +4,7 @@ url: /howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors
 weight: 8
 ---
 
-## 1 Introduction
+## Introduction
 
 This how to will show you how to find the information necessary to locate the root cause of a runtime error. The message displayed in the application is often vague and non-descript. Depending on the environment in which the error occurred, there are two methods for finding this information.
 
@@ -12,13 +12,13 @@ This how-to teaches you how to do the following:
 
 * Find the root cause of runtime errors via two methods
 
-## 2 Method #1 – Using Studio Pro
+## Method #1 – Using Studio Pro
 
 If the application is deployed from Studio Pro, the information is located in the console:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580024.png" class="no-border" >}}
 
-When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **VIew Log Line Details** pop-up window:
+When an error occurs, a line with a red font will appear in the console.  Double-clicking on this line brings up the **View Log Line Details** pop-up window:
 
 {{< figure src="/attachments/howto8/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/18580023.png" class="no-border" >}}
 
@@ -30,7 +30,7 @@ There are three key pieces of information in this window:
 
 With these three pieces of information, you should be able to find the cause of the error. If you cannot determine the cause from this information, you can put a break point in the specified microflow and debug the situation.
 
-## 3 Method #2 – Using the Application Logs
+## Method #2 – Using the Application Logs
 
 If the application is deployed from the service console or in the cloud, the information is available in the application logs. 
 
@@ -50,7 +50,7 @@ Go to the section of the log that corresponds to the time of the error. There wi
 
 With these three pieces of information, you should be able to find the cause of the error. If you cannot determine the cause from this information, you can put in a break point in the specified microflow and debug the situation.
 
-## 4 Read More
+## Read More
 
 * [Clear Warning Messages](/howto8/monitoring-troubleshooting/clear-warning-messages/)
 * [Test Web Services Using SoapUI](/howto8/integration/testing-web-services-using-soapui/)

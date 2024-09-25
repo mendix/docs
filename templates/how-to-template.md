@@ -7,7 +7,7 @@ title: "Enter the title of the document"
 #draft: Set to true if page should not appear in production
 ---
 
-## 1 Introduction
+## Introduction
 
 {Describe what this how-to will cover and what the user will learn.}
 
@@ -17,7 +17,7 @@ This how-to teaches you how to do the following:
 * Build...
 * Configure...
 
-## 2 Prerequisites
+## Prerequisites
 
 {If there are no prerequisites, leave this section out}
 
@@ -26,7 +26,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * {Prerequisite 1}
 * {Prerequisite 2}
 
-## 3 {Title of Section Using Present Participle Verb/Gerund}
+## {Title of Section Using Present Participle Verb/Gerund}
 
 To {do this task}, follow these steps:
 
@@ -35,11 +35,11 @@ To {do this task}, follow these steps:
 
 {{< figure src="/attachments/rest-of-image-path/image-name-and-extension" >}}
 
-### 3.1 {Title of Sub-Section}
+### {Title of Sub-Section}
 
 {Use sub-sections for more detail.}
 
-## 4 Read More
+## Read More
 
 * {Link 1}
 * {Link2} – {an explanation when necessary especially if this is a third-party link}

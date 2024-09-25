@@ -6,7 +6,7 @@ weight: 70
 description: "Describes how to configure file manager in Mendix Studio Pro."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This how-to explains how you can enable your end-users to attach and download files, such as PDF files or Microsoft Word documents, by configuring a [file manager](/refguide9/file-manager/) widget. Your users will be able to attach files from different devices: phone, tablet, or desktop; as well as download attached files from a list.
 
@@ -25,7 +25,7 @@ You would like to add a new functionality: IT administrators should be able to a
 
 You also would like to enable IT administrators to download the attached file from a list of files. 
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -41,7 +41,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
   {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/configure-files/employee-profile-form.png" alt="Employee Profile Page"   width="500"  class="no-border" >}}
 
-## 3 Creating a Specialization of System.File
+## Creating a Specialization of System.File
 
 First of all, to be able to attach and/or download files you need to add an entity that is a specialization of the System.File entity. For more information, see the [Generalization](/refguide9/entities/#generalization) section in *Entities*. 
 
@@ -51,15 +51,15 @@ Do the following:
 2. Double-click the new entity to open its properties.
 3. Set the **Name** property to *Document*. 
 4. In the **Generalization** property, click **Select**, choose the **Image** entity under **System**, and confirm your choice:
-5. Now you need to create an association from the **Receipt** entity to the **Report** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
-6. In the **Select Entity** dialog box, select **Report** and confirm your choice.
+5. Now you need to create an association from the **Document** entity to the **Employee** entity. In the **Properties** dialog box, open the **Associations** tab and click **New**. 
+6. In the **Select Entity** dialog box, select **Employee** and confirm your choice.
 7. Click **OK** to close the **Properties** dialog box.
 
 Good job! You have created the Document entity, which is a specialization of the System.File entity, and an association from it to the **Employee** entity:
 
 {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/configure-files/domain-model-configured.png" alt="Domain Model Configured"   width="450"  class="no-border" >}}
 
-## 4 Adding a File Manager
+## Adding a File Manager
 
 A **File Manager** is a widget that allows your end-users to attach and/or download files. However, it can only function inside a data container (a list view or data view), and the list view or data view can only have a file entity as its data source. If you just drag the file manager into your employee profile form, it will not work correctly, because your current data view has the **Employee** entity as its data source, and you need the data source to be a file entity, which is in this case the **Document** entity:
 
@@ -109,7 +109,7 @@ You have created a pop-up page that will allow IT administrators to attach files
 
 {{< figure src="/attachments/refguide9/modeling/pages/image-and-file-widgets/configure-files/attach-file-page-configured.png" alt="Attach Files Page Configured"    class="no-border" >}}
 
-## 5 Downloading Files
+## Downloading Files
 
 After your end-users attach the files, it would be nice to display files in a list and give users an opportunity to download attached files if needed. To do so, you need to add a list:
 
@@ -128,7 +128,7 @@ After your end-users attach the files, it would be nice to display files in a li
 
 5. Open the **Toolbox** and search for a **File Manager**, drag it to the list view. 
 
-6. Open the **File Manager** properties  and do the following: 
+6. Open the **File Manager** properties and do the following: 
 
     1. Set the **Type** to **Download**.
     2. Set the **Show label** property to **No**.

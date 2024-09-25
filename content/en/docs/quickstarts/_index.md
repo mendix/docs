@@ -9,6 +9,7 @@ cascade:
 aliases:
     - /refguide/quickstart-guide/
     - /refguide9/quickstart-guide/
+numberless_headings: true
 ---
 
 Welcome to the Mendix quick starts for building an app! These tutorials cover the essentials of Mendix development:
@@ -24,3 +25,10 @@ While you can jump straight into [Adding a Native Mobile App](/quickstarts/nativ
 When you are done, you will have mastered the basics of building and hosting apps with Mendix, and you will have your first app.
 
 Let's get started with [Creating and Deploying a Hello World App](/quickstarts/hello-world/) or [Building a Responsive Web App](/quickstarts/responsive-web-app/)!
+
+## More Ways to Learn with Mendix
+
+For a more in-depth introduction to building low-code apps with Mendix, check out these learning paths:
+
+* [Become a Rapid Developer](https://academy.mendix.com/link/paths/31/Become-a-Rapid-Developer) is designed for everyone, regardless of their previous coding experience
+* [Crash Course](https://academy.mendix.com/link/paths/82/Crash-Course) is designed for experienced developers who want to get oriented to low-code app development

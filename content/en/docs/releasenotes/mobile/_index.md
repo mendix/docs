@@ -1,7 +1,10 @@
 ---
-title: "Mobile"
+title: "Mobile Release Notes"
+linktitle: "Mobile"
 url: /releasenotes/mobile/
 weight: 15
+cascade:
+    - numberless_headings: true
 ---
 
 This category includes the following release notes: 

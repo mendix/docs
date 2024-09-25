@@ -1,7 +1,7 @@
 {{/* We cache this partial for bigger sites and set the active class client side. */}}
 {{ $sidebarCacheLimit := cond (isset .Site.Params.ui "sidebar_cache_limit") .Site.Params.ui.sidebar_cache_limit 2000 -}}
 {{ $shouldDelayActive := ge (len .Site.Pages) $sidebarCacheLimit -}}
-<div id="td-sidebar-menu" class="td-sidebar__inner{{ if $shouldDelayActive }} d-none{{ end }} overflow-auto"> <!-- NK - added overflow-auto for scrolling -->
+<div id="td-sidebar-menu" class="td-sidebar__inner overflow-auto"> <!-- NK - added overflow-auto for scrolling: MvM - removed conditional d-none (`{{ if $shouldDelayActive }} d-none{{ end }}` to show navigation on non-JS sites -->
   {{ if not .Site.Params.ui.sidebar_search_disable -}}
   <form class="td-sidebar__search d-flex align-items-center">
     {{ partial "search-input.html" . }}

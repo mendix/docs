@@ -5,7 +5,7 @@ description: "Presents details on using class names for text colors, buttons, an
 weight: 45
 ---
 
-## 1 Introduction
+## Introduction
 
 This page contains useful class names that can be used to make your app more beautiful without writing CSS. Class names can be added to the properties of page widgets. Several classes can be added to the same widget by separating the class names with a space.
 
@@ -18,7 +18,7 @@ This how-to teaches you how to do the following:
 
 * Use class names to implement text and background colors, typography, buttons, list views, alerts, and other elements
 
-## 2 Text Colors
+## Text Colors
 
 Add these classes to an element to change the text color to your theme colors:
 
@@ -40,7 +40,7 @@ These are standard useful text colors:
 * `text-gray-light`: light gray text
 * `text-gray-lighter`: lighter gray text
 
-## 3 Background Colors
+## Background Colors
 
 The background colors are based on your theme colors. These are the same colors as for the buttons:
 
@@ -68,7 +68,7 @@ These are background colors for your layout:
 * `background-default-light`: light layout background
 * `background-default-lighter`: lighter layout background
 
-## 4 Typography
+## Typography
 
 These are useful classes for text items:
 
@@ -91,7 +91,7 @@ Other:
 
 * `nowrap`: don't wrap texts
 
-## 5 Buttons
+## Buttons
 
 You can change the appearance of a button:
 
@@ -107,7 +107,7 @@ You can change the appearance of a button:
 * `btn-attached-bottom`: adds top margin
 * `btn-attached-top`: adds bottom margin
 
-## 6 Layout Grid
+## Layout Grid
 
 You can change the appearance of a layout grid:
 
@@ -122,7 +122,7 @@ For phones, also add `col-xs-N` (where `N` is the size of the column) to the lay
 
 For more information on grid options, including suggestions and examples, see [Bootstrap CSS Grid Options](https://getbootstrap.com/docs/3.3/css/#grid-options).
 
-## 7 List View
+## List View
 
 Change the way items appear in a list:
 
@@ -131,7 +131,7 @@ Change the way items appear in a list:
 * `listview-seperated`: list view widget with list view items separated
 * `listview-stylingless`: list view widget without spacing and background
 
-## 8 Alerts
+## Alerts
 
 Create alerts with standard containers.
 
@@ -143,16 +143,16 @@ Create alerts with standard containers.
 
 Also see [Bootstrap Alert Component](https://getbootstrap.com/docs/3.3/components/#alerts).
 
-## 9 Other
+## Other
 
 Change the way tabs appear:
 
 * `tab-mobile`: makes the tab full width and stick to the header
 
-## 10 More Bootstrap
+## More Bootstrap
 
 Many of these classes are part of Bootstrap. For more information about classes and Bootstrap, see [Bootstrap CSS](https://getbootstrap.com/docs/3.3/css/).
 
-## 11 Read More
+## Read More
 
 * [Mendix Atlas UI](https://atlas2.mendix.com/)

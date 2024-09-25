@@ -6,7 +6,7 @@ weight: 14
 description: "Describes troubleshooting connection issues as well as the permissions and settings required to connect to Team Server."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix Studio Pro needs to connect to Team Server, which is where all your projects are stored.
 
@@ -14,7 +14,7 @@ Mendix Studio Pro needs to connect to Team Server, which is where all your proje
 
 * Which permissions and settings are required to connect to Team Server
 
-## 2 Troubleshooting Team Server Project Network Settings
+## Troubleshooting Team Server Project Network Settings
 
 Being unable to download the Team Server project can indicate that the security configuration of your company network is blocking access to `https://home.mendix.com` and `https://teamserver.sprintr.com/`.
 
@@ -38,6 +38,6 @@ Mendix reserves the right to change the IP address at any time and without notif
 Contact your network administrator and give them this information to allow them to configure your network (for example, firewall and proxy settings) correctly.
 {{% /alert %}}
 
-## 3 Still Having Problems?
+## Still Having Problems?
 
 If this solution does not work, submit a request to [Mendix Support](https://support.mendix.com/).

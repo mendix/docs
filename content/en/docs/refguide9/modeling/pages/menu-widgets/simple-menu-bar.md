@@ -7,7 +7,7 @@ weight: 2
 
 {{% alert color="warning" %}}The simple menu bar widget is not supported on native mobile pages.{{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 A simple menu bar shows menu items of a [navigation profile](/refguide9/navigation/#profiles) or in a [menu](/refguide9/menu/) document in the form of a horizontal or vertical bar. These items are determined by the [Menu source](#menu-source) and are either configured in the [Navigation](/refguide9/navigation/) or a [Menu](/refguide9/menu/).
 
@@ -15,7 +15,7 @@ Sub-items of menu items are not displayed by this widgets, that means the menu s
 
 {{< figure src="/attachments/refguide9/modeling/pages/menu-widgets/simple-menu-bar/simple-menu-bar.png" alt="Simple Menu Bar" class="no-border" >}}
 
-## 2 Properties
+## Properties
 
 An example of a simple menu bar properties is represented in the image below:
 
@@ -27,17 +27,17 @@ Menu bar properties consist of the following sections:
 * [Design properties](#design)
 * [General](#general)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design}
+### Design Properties Section {#design}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}}
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Menu Source {#menu-source}
+#### Menu Source {#menu-source}
 
 The items that are shown in the menu widget are determined by the **Menu source**. Possible menu sources are described in the table below:
 
@@ -46,17 +46,17 @@ The items that are shown in the menu widget are determined by the **Menu source*
 | Project navigation  *(default)* | The menu items are taken from one of the profiles defined in the [Navigation](/refguide9/navigation/). |
 | Menu document      | The menu items are taken from a [menu](/refguide9/menu/) document.       |
 
-#### 2.3.2 Profile 
+#### Profile 
 
 Only available when the [Menu source](#menu-source) is set to **Project navigation**. The **Profile** property specifies what [Navigation profile](/refguide9/navigation/#profiles) is used for the widget. 
 
 Default: *Responsive*
 
-#### 2.3.3 Menu 
+#### Menu 
 
 Only available when the [Menu source](#menu-source) is set to **Menu document**. The **Menu** property specifies what [Menu](/refguide9/menu/) document is used for the widget.
 
-#### 2.3.4 Orientation
+#### Orientation
 
 This property determines how the simple menu bar is laid out.
 
@@ -65,7 +65,7 @@ This property determines how the simple menu bar is laid out.
 | Horizontal  *(default)* | The menu items are next to each other and the images are above the captions. |
 | Vertical | The menu items are underneath each other and the images are next to the captions. |
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Menus and Navigation](/refguide9/menu-widgets/)

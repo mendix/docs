@@ -7,11 +7,11 @@ aliases:
     - /howto/mobile/how-to-ar-simple-cube/
 ---
 
-## 1 Introduction
+## Introduction
 
 Working with augmented reality (AR) is not all that different from implementing any other piece of Native functionality. Using just a few widgets, you can add two-or-three dimensional AR to your native mobile application. In this guide you will make a 3D cube by dragging and dropping widgets into your Mendix app and then configuring them.
 
-## 2 Prerequisites {#prerecs}
+## Prerequisites {#prerecs}
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -28,11 +28,11 @@ For iOS:
 
 If you want to make use of the **Realistic** lighting option which can make your objects more lifelike, then you should also have an HDR image to use for rendering this light. [Follow Babylon.JS' guide](https://doc.babylonjs.com/divingDeeper/materials/using/HDREnvironment#creating-a-compressed-environment-texture-using-the-sandbox) to create a *.env* texture which you can use in the **Container (AR)** widget.
 
-## 3 Embedding Widgets in Your App
+## Embedding Widgets in Your App
 
 Create a new app by following these steps:
 
-1. Open Mendix Studio Pro. Select **File** > **New App** , and then select the **Blank Native Mobile App**.
+1. Open Mendix Studio Pro. Select **File** > **New App**, and then select the **Blank Native Mobile App**.
 1. Click **Use this starting point.**
 1. Name your app *Hello World* and click **Create app** to close the dialog box.
 1. Open the **Home_Native** page and remove the intro screen widget and other containers.
@@ -69,13 +69,13 @@ Very little configuration is necessary to make your AR function. All you need is
 
 Now that you have a simple scene running, you will a closer look at the widgets you used to understand what they do.
 
-### 3.1 Container (AR)
+### Container (AR)
 
 This widget starts an AR scene: the video feed you see on AR apps. It is named Container (AR) because this widget will hold all your other AR widgets. It is the foundation of every Mendix AR mobile application:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/ar-container.png" alt="Container (AR)"   width="400"  class="no-border" >}}
 
-### 3.2 ImageTracker (AR) {#ar-tracker}
+### ImageTracker (AR) {#ar-tracker}
 
 The **ImageTracker (AR)** widget allows you to track an image. Like Container (AR), this widget can contain other AR widgets. All widgets you put into ImageTracker (AR) will stick to the image. That means that every object (Cube (AR), Sphere (AR), and others) will follow or track the image.
 
@@ -103,15 +103,15 @@ Here is a cube with the **Left** orientation:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/left-cube.png" alt="Cube on tracker with Left orientation"   width="400"  class="no-border" >}}
 
-**Physical marker size** - this is where you put the physical size of your tracker, and how AR determains how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
+**Physical marker size** - this is where you put the physical size of your tracker, and how AR determines how far away the marker is. Since most phones will use only one camera, this value is used to calculate depth. Putting a wrong value here won't break AR, but will change the depth at which your objects are rendered. Which in turn may also lead to more jittering or 'vibrating' of your 3D models.
 
-## 4 Configuring Your Cube (AR) Widget
+## Configuring Your Cube (AR) Widget
 
 The **Cube (AR)** widget will places a cube into the scene, specifically onto the **ImageTracker (AR)** widget. There are several properties you can configure in this widget to customize its behavior.
 
 Having the **Cube (AR)** widget in the **ImageTracker (AR)** widget will render a white cube the same size as the image tracker directly on top of it. Next you will configure **Cube (AR)’s** properties.
 
-### 4.1 General
+### General
 
 The **General** tab contains basic properties for configuring position:
 
@@ -155,13 +155,13 @@ In the **General** tab you can configure **Position**, **Rotation**, and **Scale
 
 For **Position**, **Rotation** and **Scale** an **Attribute** can also be used to set the **Position**, **Rotation** and **Scale** **X** **Y** and **Z** values. To use the **Attribute** option simply select this instead of **Expression** at **Position type**, **Rotation type** or **Scale type**. The last option is to use **Static**, where you can also put a value but cannot change this value in the app itself.  
 
-### 4.2 Material {#material}
+### Material {#material}
 
 The **Material** tab contains properties for configuring appearance:
 
 {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/material-tab.png" alt="Material"   width="400"  class="no-border" >}}
 
-* **Material type** - can be either **Texture** or **Color**. **Material type** determains what will be put onto the cube, an image or a solid color.
+* **Material type** - can be either **Texture** or **Color**. **Material type** determines what will be put onto the cube, an image or a solid color.
 
 * **Texture** – an image you can place on the cube by clicking **Edit**. The image will appear on each face of the cube. Put the example tracker here as a texture to end up with this colorful cube (note that the cube now ignores any **Color** value – if you want to make your cube one solid color, make sure the Texture is set to **none**):
 
@@ -187,7 +187,7 @@ The **Material** tab contains properties for configuring appearance:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/realistic.png" alt="Cube with lighting type Constant"   width="400"  class="no-border" >}}
 
-### 4.3 Interaction
+### Interaction
 
 **Interaction** is where Mendix AR gets more advanced. These properties dictate every way you can interact with your object. Enabling any of these will also allow you to catch the events they generate in the **Events** tab:
 
@@ -196,7 +196,7 @@ The **Material** tab contains properties for configuring appearance:
 * **Dragging** – allows a user to move an object by moving their phone (the object will follow on the floor, desk, or other surface in the middle of the screen). 
 * **Enable dragging** - dictates if the dragging behavior is enabled. For example, you could enable and disable this when the user clicks on the object using the **On click** event in the **Events** tab.
 * **Dragging type** – specifies the type of dragging behavior:
-    * **Fixed  Distance**: makes the object follow you at always the same distance as it started
+    * **Fixed Distance**: makes the object follow you at always the same distance as it started
     * **Fixed to world**: makes the object stick to the world, for example objects like floors, desks, and walls 
 * **On drag** – an event that is triggered when the object is has started or stopped moving through dragging:
 
@@ -206,7 +206,7 @@ The **Material** tab contains properties for configuring appearance:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/pinching.gif" alt="Pinching gif"   width="400"  class="no-border" >}}
 
-### 4.4 Events
+### Events
 
 The **Events** tab appears this way:
 
@@ -214,7 +214,7 @@ The **Events** tab appears this way:
 
 Events on 3D objects work like any other event on a widget. **On click** is called when the object is clicked, and **On hover enter** is called when the object enters 'in focus' in the middle of the screen, **On hover exit** is called when the object exits that 'focus' in the middle of the screen.
 
-### 4.5 Common
+### Common
 
 The **Common** tab appears this way:
 
@@ -227,7 +227,7 @@ The **Common** tab has two important properties:
 
     {{< figure src="/attachments/howto/mobile/native-mobile/ar-parent/how-to-ar-simple-cube/visibility.png" alt="Visibility"   width="400"  class="no-border" >}}
 
-### 4.6 Appearance
+### Appearance
 
 The **Appearance** tab appears this way:
 
@@ -235,6 +235,6 @@ The **Appearance** tab appears this way:
 
 Currently the properties in the **Appearance** tab have no influence on AR widgets. This tab can be ignored.
 
-## 5 Read More
+## Read More
 
 * [Native Mobile AR](/appstore/modules/native-mobile-ar/)

@@ -4,7 +4,7 @@ url: /refguide/case-sensitive-database-behavior/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 Case-sensitive string operations are those that consider upper and lower case as different letters.
 Operations that affect strings in queries (for instance, inside an XPath constraint) can be case sensitive or case insensitive depending on the database vendor, version, and configuration used by the Mendix application.
@@ -23,27 +23,27 @@ Unless otherwise indicated below, sorting and comparing strings is case sensitiv
 This is affected by the database, table, or column collation, and sometimes by other database specific options.
 The available collations and options are vendor (and sometimes version) specific.
 
-## 2 Behavior of Case Sensitivity by Database Type
+## Behavior of Case Sensitivity by Database Type
 
 The following section describes the default behavior of the databases supported by Mendix.
 
-### 2.1 HSQLDB
+### HSQLDB
 
 **Case insensitive** for sorting, comparing, and string functions.
 
-### 2.2 POSTGRESQL
+### POSTGRESQL
 
 Sorting and comparison are **case sensitive**. They cannot be configured.
 
 String functions are **case insensitive** as they are implemented using the `ILIKE` SQL operator.
 
-### 2.3 MARIADB and MYSQL
+### MARIADB and MYSQL
 
 All operations depend on the configured collation.
 The default collation is `utf8_general_ci` when the `utf8` character set is used, or `latin1_swedish_ci` when the `latin1` character set is used.
 These default collations are both **case insensitive**.
 
-### 2.4 ORACLE
+### ORACLE
 
 Sorting and comparison depend on the configured collation.
 The default collation is `binary`, which is **case sensitive**, but a `binary_ci` is available for case insensitive operations.
@@ -54,17 +54,17 @@ Does not support comparison on string attributes of unlimited length.
 
 String functions are implemented by converting all letters to uppercase using the database's `UPPER` function and are, therefore, **case insensitive** and insensitive to the `locale` in which they are executed.
 
-### 2.5 SAP HANA
+### SAP HANA
 
 Does not support sorting or comparison on string attributes of unlimited length.
 
-### 2.6 SQL SERVER
+### SQL SERVER
 
 All operations depend on collation.
 The default recommended collation is `SQL_Latin1_General_CP1_CI_AS`.
 For more information, see our guide on [Setting Up a new SQL Server Database](/developerportal/deploy/setting-up-a-new-sql-server-database/) and the Microsoft documentation [Windows Collation Name](https://docs.microsoft.com/en-us/sql/t-sql/statements/windows-collation-name-transact-sql).
 
-## 3 Overview of Default Case Sensitivity
+## Overview of Default Case Sensitivity
 
 This table presents the default case sensitivity by different database types:
 

@@ -5,7 +5,7 @@ weight: 10
 description: "Describes how to start the Mendix Runtime with JMX, and expose management information and app-specific statistics with an MBean."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to is relevant if you run Mendix on-premises. If you do this, you probably have standard monitoring tooling that you use to monitor all your applications.
 
@@ -19,11 +19,11 @@ This how-to teaches you how to do the following:
 * Expose management information with an MBean
 * Expose app-specific statistics with an MBean
 
-## 2 Prerequisites
+## Prerequisites
 
 None.
 
-## 3 Starting the Mendix Runtime with JMX enabled
+## Starting the Mendix Runtime with JMX enabled
 
 To enable JMX on your Mendix Runtime, you can use the following Java options in the *m2ee.yaml* for your Mendix Runtime:
 
@@ -49,7 +49,7 @@ javaopts: [
 ]
 ```
 
-## 4 MBean Exposing Generic Mendix Statistics
+## MBean Exposing Generic Mendix Statistics
 
 The simplest way to expose management information is by writing an MBean interface and a Java class that implements the interface. You can define the getters and setters, but you can also define methods that can be called from the generic management tooling. This can be used, for example, to tell a running application to reload its configuration file.
 
@@ -143,13 +143,13 @@ Now you're able to see the result of the values exposed by this MBean in the JCo
 
 {{< figure src="/attachments/howto/monitoring-troubleshooting/monitoring-mendix-using-jmx/18580003.png" class="no-border" >}}
 
-## 5 MBean Exposing App-Specific Statistics
+## MBean Exposing App-Specific Statistics
 
 You can use the same approach with an interface and an implementation class to expose app-specific information. Here’s a different approach: one that exposes a dynamic set of values. You can do the same with methods, but the example only shows the attributes to retrieve values.
 
 The idea is that you will have a Java Action that you can call in a microflow where you expose arbitrary key value pairs.
 
-## 6 Read More
+## Read More
 
 * [Find the Root Cause of Runtime Errors](/howto/monitoring-troubleshooting/finding-the-root-cause-of-runtime-errors/)
 * [Clear Warning Messages](/howto/monitoring-troubleshooting/clear-warning-messages/)

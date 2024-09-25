@@ -5,15 +5,15 @@ url: /refguide8/tricky-custom-runtime-settings/
 description: "Describes advanced custom settings in Mendix Runtime and how to configure them."
 ---
 
-## 1 Introduction
+## Introduction
 
 There are many custom settings in Mendix, most of which are described in [Runtime Customization](/refguide8/custom-settings/).
 
 However, a few of the more commonly used custom settings can be complicated and have far-reaching implications. That is why we would like to give these settings a bit of special attention and more thoroughly explain the consequences of changing them.
 
-## 2 Session Duration
+## Session Duration
 
-### 2.1 Web Client Settings
+### Web Client Settings
 
 The following settings influence the behavior of the Mendix web client:
 
@@ -21,7 +21,7 @@ The following settings influence the behavior of the Mendix web client:
 | --- | --- | --- |
 | `EnableKeepAlive` | Defines whether the web client sends a keep alive request every `SessionTimeout`/2 milliseconds in order to prevent a session timeout. Each click in the browser also acts as `KeepAlive`. Disabling this property will result in the user being logged out automatically after 10 minutes of inactivity, even if the browser remains open. | true |
 
-### 2.2 General Settings
+### General Settings
 
 The following custom settings can be configured:
 
@@ -42,9 +42,9 @@ Finally, there is a security consideration to be made. An idle session means tha
 
 So, make sure to keep in mind all of the above when changing these values. Also, make sure your decision to alter any of these values is made with the right considerations.
 
-## 3 Query Logging
+## Query Logging
 
-### 3.1 Database Settings: Common settings
+### Database Settings: Common settings
 
 | Name | Description | Default value |
 | --- | --- | --- |
@@ -52,15 +52,15 @@ So, make sure to keep in mind all of the above when changing these values. Also,
 
 `LogMinDurationQuery` can be a very helpful tool in detecting queries that are taking longer than expected. This is especially useful for queries that only take longer than expected after the data used in and by the app grows larger, because this might mean the queries will only become slower after a few months of usage and might not have turned up in pre-release performance tests. Determining that a query is slow depends on the type of app you are running. But in general, any query that directly affects a user using the app (meaning, not a background process) will have a lower threshold for determining it as slow than a query running in the background. For example, a drop-down menu that takes 5 seconds to load before anything can be selected is many times worse than a PDF generated in the background taking 8 instead of 4 seconds because of a “slow” query that takes 5 seconds instead of 1 second.
 
-In the Mendix Cloud, we have chosen a default value of 10000 (meaning, 10 seconds). As any such query would be noticeable on the front end of the application. If your application has no background processes, this value might be too high. On the other hand, if your application is running many background processes with minimal user interaction, this value might be too low. In the end, the right value to set will depend on the functional requirements of your app and needs to be set accordingly.
+In Mendix Cloud, we have chosen a default value of 10000 (meaning, 10 seconds). As any such query would be noticeable on the front end of the application. If your application has no background processes, this value might be too high. On the other hand, if your application is running many background processes with minimal user interaction, this value might be too low. In the end, the right value to set will depend on the functional requirements of your app and needs to be set accordingly.
 
 The most important part of this setting is to regularly check the application log for any queries exceeding this value and to resolve them if they are deemed problematic. Setting this value without following up on it is as useful as not setting the value at all. Queries running slowly can negatively affect the user experience, the throughput of any action affected by them, the memory usage of the application, the CPU usage of the application, and can even lead to outages in extreme cases. Given all that, Mendix strongly advises setting this value to a number that makes sense for your application and following up on any query that is logged. 
 
 You can find these log entries by looking for the following phrase in your application log: **Query executed in**. The phrase will appear in an example like this: `Jan 01 02:03:04.567 - WARNING - ConnectionBus_Queries: (1/4) Query executed in 642 seconds and 694 milliseconds: UPDATE "somemodule$someentity”`.
 
-## 4 The Number of Database Connections
+## The Number of Database Connections
 
-### 4.1 Connection Pooling
+### Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. The Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/).
 
@@ -98,7 +98,7 @@ It will be tempting to increase the `ConnectionPoolingMaxActive` value to a (muc
 
 * Long running queries show up in the application log – in that case, it makes more sense to try and fix those first, as otherwise you will eventually run in to the same problem, but it will take a bit longer to occur after a (re)start of the application
 * A database is running low on memory or is even out of memory regularly — in that case, it makes more sense to upgrade the database node size first
-    * In this case, it  will also be likely you can find long running queries in your application log
+    * In this case, it will also be likely you can find long running queries in your application log
 * Only a few user sessions are active at any given time — your application might need refactoring unless you can explain why three users constantly use 50 parallel database connections
 
 However, if all of the following are true, you should increase the `ConnectionPoolingMaxActive` value to a (much) higher number:
@@ -109,6 +109,6 @@ However, if all of the following are true, you should increase the `ConnectionPo
 
 In general, we see that increasing the `ConnectionPoolingMaxActive` value to a (much) higher number is very rarely the right action to take, even if it is unfortunately the action usually taken when you run into connection pooling issues.s
 
-## 5 Read More
+## Read More
 
 * [Runtime Customization](/refguide8/custom-settings/)

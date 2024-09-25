@@ -5,7 +5,7 @@ weight: 80
 description: By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context.
 ---
 
-## 1 Introduction
+## Introduction
 
 By employing a content security policy (CSP) in your app, you can protect it from malicious content which might try to take advantage of the app's trusted web page context. A rigorous CSP allows you to control which resources are loaded in the app.
 
@@ -17,11 +17,11 @@ For more background information on CSPs, see [Content Security Policy](https://d
 Currently, some of Mendix's pluggable widgets are not fully compliant with CSP. If used with strict CSP, these widgets can result in CSP errors in the console or broken flows. Please refer to [widget's security documentation](/appstore/widgets/security/content-security-policy/) page for more details.
 {{% /alert %}}
 
-## 2 Setup
+## Setup
 
 In order to be able to use the strictest setting of a CSP (`default-src: self`) you must make some changes in your application. See the sections below for guidance.
 
-### 2.1 Updating the Theme Folder
+### Updating the Theme Folder
 
 To upgrade your theme directory to latest version, complete the following steps:
 
@@ -29,7 +29,7 @@ To upgrade your theme directory to latest version, complete the following steps:
 1. Download the new theme files from this GitHub link: [theme.zip](https://github.com/mendix/atlas/releases/download/atlasui-theme-files-2024-01-25/atlasui-theme-files.zip). Extract the downloaded file into the root of your Mendix app folder. The folder structure should be similar to the previous folder, (meaning the Mendix app root, then the theme, and then the web and native folders).
 1. After extracting the new theme files, restore your custom styling from the backup by copying over the new theme folder files. You will see the main changes enacted to make things compatible with strict CSP involve the `login.html` file and one JavaScript file for the toggled password.
 
-### 2.1.1 Changing the Theme
+### Changing the Theme
 
 In your theme folder, create a new file (`theme/web/appSetup.js`) to contain the Dojo configuration. It should contain the following configuration:
 

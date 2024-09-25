@@ -6,11 +6,11 @@ weight: 75
 no_list: true
 ---
 
-## 1 Introduction
+## Introduction
 
 On the **Roles & Permissions** page, you can view and manage app roles and permissions.
 
-## 2 Default App Roles
+## Default App Roles
 
 Default app roles are the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new app created in your company.
 

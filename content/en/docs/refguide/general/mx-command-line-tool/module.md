@@ -5,7 +5,7 @@ weight: 30
 description: "Describes the module-related commands for the mx command-line tool."
 ---
 
-## 1 Introduction
+## Introduction
 
 The commands in this group are related to Mendix modules.
 
@@ -15,11 +15,11 @@ Typically, these commands require a path to the *.mpr* file and the module name 
 To see the command parameters for each command, use the `--help` parameter. For example, `mx show-module-version --help`.
 {{% /alert %}}
 
-## 2 mx show-module-version Command {#show-module-version}
+## mx show-module-version Command {#show-module-version}
 
 The `mx show-module-verion` command outputs the version of a module.
 
-### 2.1 Usage
+### Usage
 
 Use the following command pattern for `mx show-module-version`:
 
@@ -29,13 +29,13 @@ For `TARGET-FILE`, enter a *.mpr* file.
 
 For `MODULE-NAME`, enter the name of the module.
 
-### 2.2 Examples
+### Examples
 
 Here is an example:
 
 `mx show-module-version C:\MyApp\MyApp.mpr MyFirstModule`
 
-### 2.3 Return Codes
+### Return Codes
 
 This table shows the return codes and their description:
 
@@ -46,11 +46,11 @@ This table shows the return codes and their description:
 
 The command will output the version of the module to the command line output.
 
-## 3 mx set-module-version Command {#set-module-version}
+## mx set-module-version Command {#set-module-version}
 
 The `mx set-module-version` command outputs the version of a module.
 
-### 3.1 Usage
+### Usage
 
 Use the following command pattern for `mx set-module-version`:
 
@@ -62,13 +62,13 @@ For `MODULE-NAME`, enter the name of the module.
 
 For `NEW-VERSION`, enter a version in the [SemVer](https://semver.org) format.
 
-### 3.2 Examples
+### Examples
 
 Here is an example:
 
 `mx set-module-version C:\MyApp\MyApp.mpr MyFirstModule 1.2.3`
 
-### 3.3 Return Codes
+### Return Codes
 
 This table shows the return codes and their description:
 
@@ -77,11 +77,11 @@ This table shows the return codes and their description:
 | `0` | No errors. |
 | `1` | The module does not have a version. |
 
-## 4 mx module-import Command {#module-import}
+## mx module-import Command {#module-import}
 
 The `mx module-import` command imports a source module (*.mpk*) into an app.
 
-### 4.1 Usage
+### Usage
 
 Use the following command pattern for `mx module-import`:
 
@@ -91,13 +91,13 @@ For `MPK_PATH`, enter a *.mpk* file with the module you want to import.
 
 For `MPR_PATH`, enter a *.mpr* file of the project you want to import a module into.
 
-### 4.2 Examples
+### Examples
 
 Here is an example:
 
 `mx module-import MyNewModule.mpk MyApp.mpr`
 
-### 4.3 Return Codes
+### Return Codes
 
 The command returns 0 if it is successful.
 
@@ -124,7 +124,7 @@ In case of errors, the exit code consists of three digits `XYZ`:
 
 For example:
 
-```bash {linenos=false}
+```bash
 > mx.exe module-import Module.mxmodule App.mpr
 Importing protected module is not supported
 ```
@@ -133,7 +133,7 @@ Exit code 111
 
 or
 
-```bash {linenos=false}
+```bash
 > mx.exe module-import Module.mpk App.mpr
 The mpr file version is '10.3.0-dev'.
 Importing module Module into project MyApp

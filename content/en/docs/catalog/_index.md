@@ -1,12 +1,12 @@
 ---
-title: "Catalog Guide"
+title: "Catalog"
 url: /catalog/
 description: "Describes the processes and properties of Catalog."
 weight: 41
 no_list: false
 description_list: true
 cascade:
-    - content_type: "Catalog Guide"
+    - content_type: "Catalog"
     - mendix_version: 10
 aliases:
     - /data-hub/data-catalog/index.html
@@ -14,13 +14,17 @@ aliases:
     - /data-hub/data-hub-catalog/
 ---
 
-## 1 Introduction
+{{% alert color="info" %}}
+The Mendix Portal is the online platform of Mendix. It includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), Catalog, and [Mendix Support](/support/).
+{{% /alert %}}
 
-The [Catalog](https://catalog.mendix.com) is a development tool provided in the Mendix Cloud. 
+## Introduction
+
+The [Catalog](https://catalog.mendix.com) is a development tool provided in Mendix Cloud. 
 
 {{< figure src="/attachments/catalog/catalog-home.png" class="no-border" >}}
 
-REST services provided by Mendix Apps running in the Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services) are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData and OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
+REST services provided by Mendix Apps running in Mendix Cloud (published [OData](/refguide/published-odata-services/) and OpenAPI REST Services) are automatically registered in your organization's Catalog upon deployment. This provides you with an up-to-date view of all the OData and OpenAPI REST APIs published and consumed by your Mendix apps. These assets can be [curated](/catalog/manage/curate/) in the Catalog to ensure that they are exposed to the relevant users and can be found easily. 
 
 Learn about updates and improvements in the [Catalog](/releasenotes/data-hub/) release notes.
 
@@ -30,7 +34,7 @@ If you deploy your Mendix apps in an alternative environment, like on-prem or pr
 {{% alert color="info" %}}
 The Catalog and [external entities](/refguide/external-entities/) are supported in Studio Pro [8.14](/releasenotes/studio-pro/8.14/) and above.{{% /alert %}}
 
-## 2 Catalog and Mendix Connect {#catalog-mx-connect}
+## Catalog and Mendix Connect {#catalog-mx-connect}
 
 [Mendix Connect](https://www.mendix.com/data-hub/) is a collection of functionalities available in the Mendix Platform that allow people in your organization to discover, understand, connect, and govern data securely. The [Catalog](/catalog/) is a part of the Mendix Connect ecosystem as a user-friendly way to view, share, and use data within your organization. 
 
@@ -39,7 +43,7 @@ In addition to the Catalog, Mendix Connect functionalities include:
 * [Integration capabilities](/refguide/integration/#integration-mx-connect) in Studio Pro [10.0](/releasenotes/studio-pro/10.0/)
 * Platform-supported [connectors and modules](/appstore/#marketplace-mx-connect) available in the [Mendix Marketplace](/appstore/)
 
-## 3 Catalog Home {#catalog-home}
+## Catalog Home {#catalog-home}
 
 From the Catalog [Home](https://catalog.mendix.com) screen, you can navigate to the following tabs:
 
@@ -60,7 +64,7 @@ The Catalog is also integrated in Mendix Studio Pro to find and connect to share
 {{% alert color="info" %}}
 The Catalog integration is available in Studio Pro 8.14 and above. {{% /alert %}}
 
-## 4 Information Available in the Catalog {#available-info}
+## Information Available in the Catalog {#available-info}
 
 In the Catalog, all the information for registered assets is displayed in the [Catalog search details](/catalog/manage/search/#search-details) screen. This information comes from the metadata in the OData service contract, and also from additional metadata that is added when registered assets are curated. Registered assets can be curated by owners, [Curators](/catalog/manage/user-roles/#curator), and [Mendix Admins](/catalog/manage/user-roles/#admin).
 
@@ -71,11 +75,11 @@ The information that is registered for data sources and exposed datasets are as 
 
     {{% alert color="info" %}}You can filter the search results by environment type in the Catalog (**Production**, **Non-production**, and the Mendix Free App environment or **Sandbox**). In the [Integration Pane](/refguide/integration-pane/) of Studio Pro, you can remove the default filter on the search results to include non-production environments. {{% /alert %}}
 
-* **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Catalog by exposing  datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
+* **Published OData service** – At the service endpoint, there are the OData service metadata contract files that define the service. Available data sources are registered in the Catalog by exposing datasets, attributes, and associations in the [published OData service](/refguide/published-odata-services/). 
 * **Versions** – The contract exposed at a specific endpoint may be changed over time by the service owner, and if good practice is followed, these changes will be indicated by changing the version number. Every published OData service has a version number. Apps consuming from a service will consume from a specific version of a service deployed to an environment.
 
     {{% alert color="info" %}}If significant changes are made in the service which would break any consuming apps, then good practice dictates that the service is deployed to a different endpoint with a major update in the version number. In this case the service will be listed twice for the two different endpoints. For more information see [Semantic numbering](/refguide/consumed-odata-service/#semantic) in *Consumed OData Service*. {{% /alert %}}
 
 Mendix Admins can assign and manage **Curators**, **Owners**, and **External Users**, and control discoverability settings. For more information, see [Catalog Administration](/control-center/catalog-admin/).
 
-## 5 Guide Categories
+## Guide Categories

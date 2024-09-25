@@ -6,11 +6,11 @@ weight: 1
 description: "Architect a solution for adaptation"
 ---
 
-## 1 Introduction
+## Introduction
 
 The Mendix Platform is well-suited to supporting the development of solutions. Rapid development with Mendix allows for the adaptation of solutions to fit a customer's needs and context, and to integrate with the customer's existing IT landscape.
 
-## 2 Progressive and Emergent Architecture
+## Progressive and Emergent Architecture
 
 The goal for architecting a solution for adaptation is a deep understanding and full specification of the correct scoping of the [three solution parts](/appstore/creating-content/sol-adapt/#three-parts) (meaning, the immutable core, customizable modules, and customer-specific components). This is a level of knowledge you will only reach once you are serving a large number of customers.
 
@@ -18,13 +18,13 @@ When you start work on a solution for an initial customer or handful of customer
 
 This requires an iterative approach, where your understanding of the architectural requirements becomes clearer over time. It also requires a certain level of pragmatism in technical design choices, because you have to accept that you do not know everything up-front and you will have to redo certain design choices as your understanding increases.
 
-## 3 Implementation per Customer {#per-customer}
+## Implementation per Customer {#per-customer}
 
 The customer implementation is a separate, upgradable model instance (fork) per customer that shares generic functionality from the original solution model and that is deployed to separate cloud resources. This allows the implementation team to fully customize all the functionality that is not IP-protected. Not all customer implementations require changes to the model. In those cases, the original model can be deployed as is. Depending on the use case, the customer gains access to the app as well.
 
-### 3.1 Summary
+### Summary
 
-| Options | Dedicated App | Cloud Node per Customer | Customer Access to Developer Portal¹ | Model Access for Customer¹ |
+| Options | Dedicated App | Cloud Node per Customer | Customer Access to Mendix Portal¹ | Model Access for Customer¹ |
 | --- | --- | --- | --- | --- |
 | ISV builds, no design-time adaptation needed | No | Optional | No | No |
 | ISV builds and adapts for customer as managed service | Yes | Yes | Optional for collaboration with [Feedback](/developerportal/app-insights/feedback/) and [Epics](/developerportal/project-management/epics/) | No |
@@ -32,9 +32,9 @@ The customer implementation is a separate, upgradable model instance (fork) per 
 
 ¹Including the partner that implements on behalf of the customer.
 
-### 3.2 Configuration and Adaptation
+### Configuration and Adaptation
 
-As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-adapt/#lifecycle) section of *Introduction to Adaptable Solutions*,  the solution can be tailored to the customer’s need. 
+As discussed in the [Solution Lifecycle](/appstore/creating-content/sol-adapt/#lifecycle) section of *Introduction to Adaptable Solutions*, the solution can be tailored to the customer’s need. 
 
 Mendix recommends using the following:
 
@@ -57,20 +57,20 @@ For some customizations, both approaches can be utilized, but Mendix recommends 
 
 Mendix recommends design-time model adaptation over "building Mendix in Mendix."
 
-### 3.3 Design-Time Adaptation
+### Design-Time Adaptation
 
 For design-time adaptations, Mendix recommends referencing [How to Set Up a Solution](/appstore/creating-content/sol-set-up/) and [How to Upgrade a Solution](/appstore/creating-content/sol-upgrade/) in order to create a dedicated app and Git repository per customer (including the partner that implements on behalf of the customer) and keeping these up to date. This allows for the following:
 
 * Full control of who can access the individual customer’s model instance via [app roles](/developerportal/general/app-roles/) 
 * Preventing access to [IP-protected](/appstore/creating-content/sol-ip-protection/) content and the development of the original solution template
-* Using all [Developer Portal collaboration features](/developerportal/general/)
+* Using all [Mendix Portal collaboration features](/developerportal/general/)
 * Data isolation per customer tenant by having dedicated environments (at least acceptance and production)
 
 The customer model instances will run with [IP protection](/appstore/creating-content/sol-ip-protection/) enabled, meaning that parts of the original solution model can be hidden. Once the solution is published with the protected solution models, this implementation hiding cannot be undone by the consumer of the solution model.
 
 {{< figure src="/attachments/appstore/creating-content/sol-solutions-guide/sol-adapt/solution-deployment.png" alt="Development and deployment model for Solution Implementation"  width="50%" class="no-border" >}}
 
-### 3.4 Customers Without Adaptation
+### Customers Without Adaptation
 
 It may occur that not all of your customers require model adaptation, so they can run on an unmodified version of the original solution model. In this case, Mendix recommends distributing and deploying a deployment package (MDA), which also prevents inspection in the Mendix model and ensures seamless upgrades. This can be combined with [flexible environments](/developerportal/deploy/environments/#flexible-environments) and/or a multi-tenancy setup.
 
@@ -80,9 +80,9 @@ If after going live it becomes necessary to adapt the model for a customer, a so
 Make sure to test this scenario before applying any customizations, since this only works when the application model is based on the same version of the solution.
 {{% /alert %}}
 
-## 4 Application Design {#app-design}
+## Application Design {#app-design}
 
-### 4.1 Combining Module Types
+### Combining Module Types
 
 An adaptable solution can exist of multiple core and adaptable modules. When creating a solution, it is important to make a distinction between the different module types and their purpose in the application model:
 
@@ -107,7 +107,7 @@ This is an exception to the cyclic dependency rule, in that a solution module ma
 Be sure to configure the [Solution](/refguide/app-settings/#solution) tab of **App Settings** to allow for distribution as an adaptable solution and for creating solution modules.
 {{% /alert %}}
 
-### 4.2 Designing the Interfaces
+### Designing the Interfaces
 
 When designing the interfaces of your solutions, you should do the following:
 
@@ -120,15 +120,15 @@ When designing the interfaces of your solutions, you should do the following:
 * Iterate with customers to evolve the adaptability of the solution by evolving the architecture
     * Progressively, the architecture will emerge and become more complex as your solution becomes more successful, so re-architect when necessary
 
-### 4.3 Applying IP Protection
+### Applying IP Protection
 
 IP protection can be used to make parts of the application model and the common core immutable by customers. For practical guidance, see [How to Apply IP Protection](/appstore/creating-content/sol-ip-protection/).
 
-### 4.4 Mendix Platform Version
+### Mendix Platform Version
 
 The [solution upgrade](/appstore/creating-content/sol-upgrade/) mechanism requires the application model to be of the same Mendix Platform version as the version of the solution upgrade package. Therefore, Mendix recommends the following:
 
-* You should preferrably publish a solution with the latest [MTS](/releasenotes/studio-pro/lts-mts/#mts) patch version to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
+* You should preferably publish a solution with the latest [MTS](/releasenotes/studio-pro/lts-mts/#mts) patch version to allow customer implementations to be upgraded to the latest patch version independently. This helps with decoupling of release cycles in case of a Mendix Platform bug or security update.
 * Never upgrade a solution implementation to a higher minor or major version on its own (for example, 9.18 to 9.20, or 9 to 10, respectively) when the solution is not upgraded.
 
 This is the process for upgrading a solution to a higher minor or major version:
@@ -142,13 +142,13 @@ This is the process for upgrading a solution to a higher minor or major version:
 
 For more information, see [How to Deal with Platform Upgrades and Solution Versioning](https://academy.mendix.com/link/modules/507/lectures/4038/3.3-How-to-Deal-with-Platform-Upgrades-and-Solution-Versioning) in Mendix Academy.
 
-### 4.5 Marketplace Modules
+### Marketplace Modules
 
 Marketplace modules with data in the database included in the solution should always be upgraded through a solution release upgrade. They should never be upgraded in the customer implementation, as this can lead to loss of data.
 
 For example, a solution contains a module like the [Excel Importer](/appstore/modules/excel-importer/). If at any point the customer decides to update the module with a newer version rather than wait for an upgrade from the solution, the customer will run into merge conflicts later. As soon as they apply the upgrade from the solution vendor, the Team Server will be unable to properly identify the changes from both sides for the module. If this merge conflict is handled incorrectly, data loss will result.
 
-### 4.6 Clean Coding
+### Clean Coding
 
 Mendix recommends adhering to the [Mendix Best Practices for Development](/refguide/dev-best-practices/) and having clear coding conventions.
 
@@ -158,7 +158,7 @@ For solutions that will be adapted at the model level, this is even more importa
 
 You should ensure the modifiable part of the model that will become editable is logically structured and well named and that the documents have a clear single purpose. This will make it easier to implement as well as to release newer versions and predict the impact of changes on existing solution implementations.
 
-### 4.7 Security
+### Security
 
 For details on security for your solution, see the following resources:
 

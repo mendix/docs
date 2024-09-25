@@ -7,26 +7,43 @@ deprecated: true
 ---
 
 {{% alert color="warning" %}}
-The Team Server API is deprecated. Please use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
+The Team Server API is deprecated and will be removed on December 1, 2024. Use the [App Repository API](/apidocs-mxsdk/apidocs/app-repository-api/) instead.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
-The team server API allows you to retrieve the information (branches, revisions) of application models stored in our team server. You always access an application model via the context of an application (see the Deploy API for more information about retrieving applications and application identifiers).
+The Team Server API allows you to retrieve the information (branches, revisions) of application models stored in our Team Server. You always access an application model via the context of an application (for more information about retrieving applications and application identifiers, see [the Deploy API v1](/apidocs-mxsdk/apidocs/deploy-api/)).
+
 The image below provides a domain model representation of the concepts discussed below and how these are related:
+
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/team-server-api/425989.png" class="no-border" >}}
 
 {{% alert color="warning" %}}
-The team server API is only available to *licensed* apps which are running in a Mendix Cloud.
+The Team Server API is only available to *licensed* apps which are running in a Mendix Cloud.
 {{% /alert %}}
 
-## 2 Authentication
+## Authentication
 
-The Developer Portal Management API requires its users to authenticate themselves. This can be done by using API keys; for more information about this please see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
+The Team Server API requires authentication via API keys that are bound to your Mendix account.
 
-## 3 API Calls
+### Obtaining an API Key
 
-### 3.1 Retrieve Branches
+To obtain a Mendix API key, follow the instructions in the [API Keys](/community-tools/mendix-profile/user-settings/#profile-api-keys) section of *Mendix Profile*.
+
+### Using Authentication Headers
+
+Use the following request headers to authenticate an API call:
+
+* `Mendix-Username` – the login name of the requesting user with the required privileges in the Mendix Platform
+* `Mendix-ApiKey` – the API key of this user
+
+### Configuring Permissions
+
+To perform an action via the Team Server API, you need **API Rights** permissions. This can be configured from the [Permissions tab](/developerportal/deploy/node-permissions/#permissions-tab) of your app's **Environments** page.
+
+## API Calls
+
+### Retrieve Branches
 
 <a id="TeamServerAPI-Description" rel="nofollow"></a>Retrieves all branches that belong to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -35,13 +52,13 @@ HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches
 ```
 
-#### 3.1.1 Request
+#### Request
 
-##### 3.1.1.1 Parameter
+##### Parameter
 
 * *AppId* (String) : Subdomain name of an app.
 
-##### 3.1.1.2 Example
+##### Example
 
 ```http
 GET /api/1/apps/calc/branches HTTP/1.1
@@ -52,23 +69,23 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.1.2 Output
+#### Output
 
 List of objects with the following key-value pairs:
 
 * *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
 * *LatestRevisionNumber* (Long) : Number of the latest revision.
 * *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in this revision.
 
-##### 3.1.2.1 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
 | 400 | INVALID_APPID | Invalid AppId. |
 | 404 | APP_NOT_FOUND | App not found. |
 
-##### 3.1.2.2 Example
+##### Example
 
 ```json
 [{
@@ -84,7 +101,7 @@ List of objects with the following key-value pairs:
 }]
 ```
 
-### 3.2 Retrieve Branch {#retrieve-branch}
+### Retrieve Branch {#retrieve-branch}
 
 Retrieves a specific branch that belongs to the team server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -93,14 +110,14 @@ Retrieves a specific branch that belongs to the team server project of a specifi
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>
 ```
 
-#### 3.2.1 Request
+#### Request
 
-##### 3.2.1.1 Parameters
+##### Parameters
 
 * *AppId* (String) : Subdomain name of an app.
 * *Name* (String) : Name of the branch to get or 'trunk' to get the main line. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).
 
-##### 3.2.1.2 Example
+##### Example
 
 ```http
 GET /api/1/apps/calc/branches/statistical%20functions HTTP/1.1
@@ -111,16 +128,16 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.2.2 Output
+#### Output
 
 An object with the following key-value pairs:
 
 * *Name* (String) : Name of the branch. This is 'trunk' for the main line or a specific branch name.
-* *DisplayName* (String) : Visible name in the Developer Portal. For the trunk, this is 'Main line'.
+* *DisplayName* (String) : Visible name in the Mendix Portal. For the trunk, this is 'Main line'.
 * *LatestRevisionNumber* (Long) : Number of the latest revision.
 * *LatestRevisionMendixVersion* (String) : Version string of the Mendix version of the app in the latest revision.
 
-##### 3.2.2.1 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -128,7 +145,7 @@ An object with the following key-value pairs:
 | 404 | APP_NOT_FOUND | App not found. |
 | 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
 
-##### 3.2.2.2 Example
+##### Example
 
 ```json
 {
@@ -139,7 +156,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 3.3 Retrieve Revisions
+### Retrieve Revisions
 
 Retrieves the last 20 revisions of a specific branch that belongs to the Team Server project of a specific app which the authenticated user has access to as a regular user.
 
@@ -148,14 +165,14 @@ HTTP Method: GET
  URL: https://deploy.mendix.com/api/1/apps/<AppId>/branches/<Name>/revisions
 ```
 
-#### 3.3.1 Request
+#### Request
 
-##### 3.3.1.1 Parameters
+##### Parameters
 
 * *AppId* (String) : Subdomain name of an app.
 * *Name* (String) : Name of the branch to get. Use `trunk` to get the main line or `branches%2FyourBranchName` for any other development branch.
 
-##### 3.3.1.2 Examples
+##### Examples
 
 ```http
 GET /api/1/apps/calc/branches/trunk/revisions HTTP/1.1
@@ -175,7 +192,7 @@ Mendix-Username: richard.ford51@example.com
 Mendix-ApiKey: 26587896-1cef-4483-accf-ad304e2673d6
 ```
 
-#### 3.3.2 Output
+#### Output
 
 List of objects with the following key-value pairs:
 
@@ -185,7 +202,7 @@ List of objects with the following key-value pairs:
 * *Author* (String) : Creator of the revision (committer).
 * *MendixVersion* (String) : Version string of the Mendix version of the app in this revision.
 
-##### 3.3.2.1 Error Codes
+##### Error Codes
 
 | HTTP Status | Error code | Description |
 | --- | --- | --- |
@@ -193,7 +210,7 @@ List of objects with the following key-value pairs:
 | 404 | APP_NOT_FOUND | App not found. |
 | 404 | BRANCH_NOT_FOUND | There is no branch with name 'branch name'. |
 
-##### 3.3.2.2 Example
+##### Example
 
 ```json
 [{

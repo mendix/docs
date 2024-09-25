@@ -9,15 +9,15 @@ weight: 70
 This activity can only be used in nanoflows that run in an offline-first app (a native or offline PWA app).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Synchronize** activity can be used to synchronize your data between your device and the server.  The action has three modes, which are described below.
 
-## 2 Synchronization Modes
+## Synchronization Modes
 
 All three modes perform synchronization in two phases: upload and download. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below and the [Synchronization types](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/) section of *Offline Synchronization*.
 
-### 2.1 All Objects {#all-objects}
+### All Objects {#all-objects}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
@@ -25,13 +25,13 @@ The **All objects** mode synchronizes the entire local database. The server data
 
 The behavior of this mode can be configured through [synchronization configuration](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/#customizable-synchronization).
 
-### 2.2 Unsynchronized Objects {#unsynchronized-objects}
+### Unsynchronized Objects {#unsynchronized-objects}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-unsynchronized-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
 Using the **Unsynchronized objects** mode, all objects with changes committed to the offline database are synchronized. Information about objects deleted since the last synchronization is also sent to the server. For more information, see the [Synchronization Behavior](#synchronization-behavior) section below.
 
-### 2.3 Selected Objects {#selected-objects}
+### Selected Objects {#selected-objects}
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-objects.png" alt="Synchronize"   width="200"  class="no-border" >}}
 
@@ -41,7 +41,7 @@ The **Selected object(s)** mode synchronizes objects partially, based on a selec
 
 Using this mode, only the selected objects or lists are synchronized. Deleted objects cannot be synchronized using selective synchronization. 
 
-## 3 Synchronization Behavior {#synchronization-behavior}
+## Synchronization Behavior {#synchronization-behavior}
 
 This section describes the behavior for the [Unsynchronized objects](#unsynchronized-objects) and [Selected object(s)](#selected-objects) modes.
 
@@ -60,7 +60,7 @@ If the selected object originated from the server (not created on the device), a
 
 If the set of objects selected for synchronization contains objects without local changes, synchronization updates the local copy from the server database. If there is an object that has been deleted from the server or is no longer accessible due to access rules, that object will be removed from the local database too.
 
-## 4 Properties
+## Properties
 
 The **Synchronize** activity properties consists of the following sections:
 
@@ -69,15 +69,15 @@ The **Synchronize** activity properties consists of the following sections:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/activities/client-activities/synchronize/synchronize-properties.png" alt="Synchronize Action Properties"   width="300"  class="no-border" >}}
 
-## 5 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
-## 6 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}
 
-## 7 Limitations {#limitations}
+## Limitations {#limitations}
 
 Running multiple synchronization processes at the same time is not supported, regardless of the synchronization mode.
 
@@ -85,7 +85,7 @@ If you try to trigger another synchronization process while the synchronization 
 
 Such an error can be handled in the nanoflow from which the synchronization attempt was triggered using [error handlers](/refguide/error-handling-in-nanoflows/#errorhandlers-nano).
 
-## 8 Read More
+## Read More
 
 * [Activities](/refguide/activities/)
 * [Offline Synchronization](/refguide/mobile/building-efficient-mobile-apps/offlinefirst-data/synchronization/)

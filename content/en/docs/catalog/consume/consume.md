@@ -7,17 +7,17 @@ aliases:
     - /data-hub/data-hub-catalog/consume/
 ---
 
-## 1 Introduction
+## Introduction
 
 The Catalog is a catalog of OData services exposing datasets that you can use in your apps. In Mendix Studio Pro, these exposed datasets are added as *external entities* through the [Integration Pane](/refguide/integration-pane/). The integrated Catalog [search](/catalog/search/) functionality in Studio Pro is available to find suitable datasets to use in your apps. 
 
-## 2 Using Registered Assets in Your App {#consuming-services-entities}
+## Using Registered Assets in Your App {#consuming-services-entities}
 
-You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to  obtain the OData service URI, which can be used in other enterprise applications.
+You can use the Catalog or the [Integration Pane](/refguide/integration-pane/) in Studio Pro to find registered data sources. Click [Copy Data Source URI](/catalog/manage/search/#service-details) to obtain the OData service URI, which can be used in other enterprise applications.
 
 The following sections summarize important points to consider when using OData services and registered datasets in your apps in Studio Pro.
 
-### 2.1 Services
+### Services
 
 When a new version of the OData service for an external entity is registered in the Catalog, the consumed OData service can be updated in the consuming app. For more details on updating a consumed service see the [Updating or Switching a Consumed OData Service](/refguide/consumed-odata-service/#updating) section of *Consumed OData Service*.
 
@@ -27,9 +27,9 @@ In Studio Pro, new versions of a service are indicated and users can choose to *
 
 It is good practice for publishers of a service to deprecate a service version if it contains breaking changes. 
 
-### 2.2 Consumed External Entities
+### Consumed External Entities
 
-When you use an external entity from a published OData service through the [Integration Pane](/refguide/integration-pane/) in Studio Pro, you are consuming the dataset from the service  deployed to a specific environment. 
+When you use an external entity from a published OData service through the [Integration Pane](/refguide/integration-pane/) in Studio Pro, you are consuming the dataset from the service deployed to a specific environment. 
 
 When security is enabled for your app, you can define access rules for external entities just as you would for [persistable](/refguide/persistability/#persistable) and [non-persistable](/refguide/persistability/#non-persistable) entities. You can define access rules based on user roles (for more details, see [Security and Controlling Access to Information](/catalog/security/)).
 
@@ -41,13 +41,13 @@ Mendix entities that are [specializations](/refguide/generalization-and-associat
 Associations that are inherited from a generalization will be exposed and shown when the specialization is consumed. However, the same association of the generalized entity is not supported for the specialization in the same domain model. The same association cannot be exposed and consumed for two different external entities in the same domain model.
 {{% /alert %}}
 
-### 2.3 Datasets
+### Datasets
 
 Data for external entities is in the database of the app that publishes the OData service, not in the consuming app's database. The dataset that is associated with the consumed entity is maintained in the publishing app.
 
 Access to the data is through the published REST OData service, with reading, querying, and updating or inserting of the data by the consuming app.
 
-## 3 Operations Affected by Using External Entities
+## Operations Affected by Using External Entities
 
 The following operations are affected by using external entities in a consuming app:
 
@@ -63,21 +63,21 @@ The following operations are affected by using external entities in a consuming 
     * Expressions with `reverse()` (as mentioned in [Querying Over Self-References](/refguide/query-over/))
 * [OQL](/refguide/oql/) – you cannot define OQL queries on external entities (for example, in datasets)
 
-## 4 Registered Datasets in OData Services from Non-Mendix Systems
+## Registered Datasets in OData Services from Non-Mendix Systems
 
 For registered OData datasets from non-Mendix apps, the restrictions described below apply.
 
-### 4.1 Keys
+### Keys
 
 All datasets must have a key. The key can have one or more properties with the following conditions:
 
 * The properties cannot be nullable (so they must have `isNullable="false"` specified)
-* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`,     `Boolean`, `Decimal`, `Single`, `Double`, and `String`
+* Only the following types are allowed: `Byte`, `SByte`, `Int16`, `Int32`, `Int64`, `Boolean`, `Decimal`, `Single`, `Double`, and `String`
 * If the property type is `String`, a `MaxLength` must be specified
 
 The key attributes are not available as attributes of the external entity.
 
-### 4.2 Supported Metadata Features
+### Supported Metadata Features
 
 When importing metadata in a consumed OData service in Studio Pro, all unsupported constructs are ignored. The following constructs are supported:
 
@@ -102,6 +102,6 @@ The following conditions apply:
 * Attributes marked as `FC_KeepInContent=false` are not supported
 * Decimal values outside the range of a Mendix decimal are currently not supported; when the service returns a value outside of the range, there is an error
 
-### 4.3 FileDocuments {#filedocs}
+### FileDocuments {#filedocs}
 
 External entities with binary attributes are not imported as FileDocuments. That means that their use is limited.

@@ -4,7 +4,7 @@ url: /refguide8/data-widgets/
 weight: 15
 ---
 
-## 1 Introduction
+## Introduction
 
 Data widgets display contents of one object or a list of objects. 
 
@@ -26,11 +26,11 @@ The Data widgets category contains the following widgets:
 
     {{< figure src="/attachments/refguide8/modeling/pages/data-widgets/list-view-example.png"   width="450"  class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

@@ -9,11 +9,11 @@ weight: 60
 This activity can only be used in microflows.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Show workflow admin page** activity can be used to open a workflow overview page. 
 
-## 2 Properties
+## Properties
 
 An example of create object properties is represented in the image below:
 
@@ -26,7 +26,7 @@ The **Show workflow admin page** properties pane consists of the following secti
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section {#action}
+## Action Section {#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -34,10 +34,10 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity, or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Workflow Object
+### Workflow Object
 
 A workflow object of which the page you would like to show.
 
-## 4 Common Section {#common}
+## Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide/microflow-common-section-link.md" %}}

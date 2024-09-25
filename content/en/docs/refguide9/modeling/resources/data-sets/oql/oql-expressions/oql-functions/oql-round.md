@@ -3,11 +3,11 @@ title: "OQL ROUND"
 url: /refguide9/oql-round/
 ---
 
-## 1 Description
+## Description
 
 The `ROUND` function rounds a given numeric expression.
 
-## 2 Syntax
+## Syntax
 
 The syntax is as follows:
 
@@ -15,7 +15,7 @@ The syntax is as follows:
 ROUND ( numeric_expression , length )
 ```
 
-### 2.1 numeric_expression
+### numeric_expression
 
 `numeric_expression` specifies the expression which must be rounded. This expression must be a numeric expression.
 
@@ -25,6 +25,6 @@ If `numeric_expression` is `NULL` (empty), the function will return `NULL`.
 
 {{% /alert %}}
 
-### 2.2 length
+### length
 
 `length` specifies the amount of decimals to which the expression must be rounded.

@@ -9,10 +9,10 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A new line will be started at the insertion of a line break.
 
-## 2 Common Properties
+## Common Properties
 
 {{% snippet file="/static/_includes/refguide/name-property.md" %}}

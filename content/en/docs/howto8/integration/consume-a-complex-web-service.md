@@ -4,7 +4,7 @@ url: /howto8/integration/consume-a-complex-web-service/
 weight: 8
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to consume a (third-party) web service with which you can integrate your Mendix application and re-use functionality and data from other applications. Web services are the preferred way of integrating a Mendix application with external systems. They can be used to retrieve data, send updates, and perform operations. In Mendix, calling a web service is done in a microflow using the call web service action.
 
@@ -14,11 +14,11 @@ This how-to teaches you how to do the following:
 * Directly import a web service document into your project
 * Configure a web service call
 
-## 2 Importing a Web Service Using the Wizard
+## Importing a Web Service Using the Wizard
 
 This section describes the powerful wizard that enables integrating—in just a few clicks—the creation of an imported web service, the related data entities, the XML-mapping, and a microflow to trigger the web service.
 
-### 2.1 The Configuration
+### The Configuration
 
 To import a web service using the wizard, follow these steps:
 
@@ -59,7 +59,7 @@ To import a web service using the wizard, follow these steps:
 
 10. Click **Finish** to create the web service.
 
-### 2.1 The Outcome
+### The Outcome
 
 When finished the wizard will add the following to your model based on the options selected:
 
@@ -70,7 +70,7 @@ When finished the wizard will add the following to your model based on the optio
 
 {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581781.png" class="no-border" >}}
 
-## 3 Importing a Web Service Directly
+## Importing a Web Service Directly
 
 An alternative to using the wizard described above is to import a web service document directly into your project. For further information, see [Consumed Web Services](/refguide8/consumed-web-services/) in the *Studio Pro Guide*.
 
@@ -89,7 +89,7 @@ To import a web service directly, follow these steps:
     {{< figure src="/attachments/howto8/integration/consume-a-complex-web-service/18581779.png" class="no-border" >}}
 6. Click **OK**. The web service will be added to the model.  
 
-## 4 Configuring the Web Service Call
+## Configuring the Web Service Call
 
 To configure the web service call, follow these steps:
 
@@ -131,7 +131,7 @@ To configure the web service call, follow these steps:
     * If you want to ignore the return, select **Ignore**
 8. Your imported web service is now ready to be used in your application.
 
-## 5 Read More
+## Read More
 
 * [Consume a Simple Web Service](/howto8/integration/consume-a-simple-web-service/)
 * [Export XML Documents](/howto8/integration/export-xml-documents/)

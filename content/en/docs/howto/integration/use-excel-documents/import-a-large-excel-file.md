@@ -4,7 +4,7 @@ url: /howto/integration/import-a-large-excel-file/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 Use XML-to-domain mapping to create a new import entity from an Excel sheet in a quick, semi-automated way.
 
@@ -12,13 +12,13 @@ This how-to teaches you how to do the following:
 
 * Import a large Excel file with a lot of columns
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Have an app with the [MxModel Reflection](/appstore/modules/model-reflection/) and [Excel Importer](/appstore/modules/excel-importer/) modules installed and configured from the Mendix Marketplace.
 
-## 3 Modifying Your Excel Sheet
+## Modifying Your Excel Sheet
 
 The Excel sheet you receive in this scenario contains almost every country in the world, as well as some supporting data. This data has to be imported into your application.
 
@@ -40,7 +40,7 @@ To modify your Excel sheet, follow these steps:
 3. Add one column to the left.
 4. Place the following string in cell **A1**:
 
-    ```text {linenos=false}
+    ```text
     <xs:element type="xs:string" name="
     ```
 
@@ -50,7 +50,7 @@ To modify your Excel sheet, follow these steps:
 
 6. In cell **C1**, enter the following string:
 
-    ```text {linenos=false}
+    ```text
     "/>
     ```
 
@@ -62,13 +62,13 @@ To modify your Excel sheet, follow these steps:
 
 8. Select cell **D1** and type in the following into the formula box: 
 
-    ```text {linenos=false}
+    ```text
     =(A1&B1&C1)
     ```
 
 9. Drag the cells down like you’ve done with column **A1** and **C1**. Now, column **D** should have columns **A**, **B**, and **C** combined into one, and your sheet should look like this: [Countries with Tags and Column D](/attachments/howto/integration/importing-excel-documents/import-a-large-excel-file/CountriesWithTagsAndColumnD.xlsx).
 
-## 4 Preparing Your XSD File
+## Preparing Your XSD File
 
 You have used some of Excel's basic functionalities to create the first part of the XSD structure. For a proper XSD file, it needs a header and a footer. To prepare your XSD file, follow these steps:
 
@@ -100,7 +100,7 @@ You have used some of Excel's basic functionalities to create the first part of 
 
 5. Click **Save**.
 
-## 5 Importing into Your Application Project
+## Importing into Your Application Project
 
 The XSD file is ready to be imported into your app. To import it, follow these steps:
 

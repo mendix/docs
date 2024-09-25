@@ -5,11 +5,11 @@ weight: 60
 description: "Describes the command used to create a JSON description of the model of a Mendix App."
 ---
 
-## 1 Introduction
+## Introduction
 
 The `mx dump-mpr` command enables you to export the app model of Mendix in the form of JSON. This command is available as of Mendix 10.4.
 
-## 2 Usage
+## Usage
 
 Use the following command pattern: `mx dump-mpr [OPTIONS] [TARGET-FILE]`
 
@@ -21,7 +21,7 @@ These are the `OPTIONS`:
 | --- | --- | --- |
 | `--unit-type` | A single unit type, or a comma-separated list of unit types. | Filters the results on the supplied unit types and limits the JSON export. |
 
-### 2.1 Examples
+### Examples
 
 These are valid examples:
 
@@ -421,7 +421,7 @@ A sample output with the unit type filter on domain models would be:
   
 </details>
 
-### 2.2 Return Codes
+### Return Codes
 
 This table shows the return codes and their description:
 

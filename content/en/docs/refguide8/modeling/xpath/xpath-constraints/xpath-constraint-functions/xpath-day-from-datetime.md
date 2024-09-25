@@ -3,11 +3,11 @@ title: "XPath Day-from-DateTime"
 url: /refguide8/xpath-day-from-datetime/
 ---
 
-## 1 Overview
+## Overview
 
 The `day-from-dateTime()` function extracts the day of the month value from a **Date and time** attribute so it can be used to compare to a value.
 
-## 2 Example
+## Example
 
 This query returns all the logs where `DateAttribute` is the 30th day of the month (for example, "2011-12-30"):
 

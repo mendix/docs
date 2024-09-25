@@ -6,17 +6,18 @@ description: "Presents the system requirements for using the Mendix Platform."
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document presents the system requirements for the various parts of the Mendix Platform.
 
-## 2 Mendix Studio Pro {#sp}
+## Mendix Studio Pro {#sp}
 
 Mendix Studio Pro has the requirements listed in the following sections.
 
-### 2.1 Software Specifications {#software}
+### Software Specifications {#software}
 
 [Mendix Studio Pro](/refguide/modeling/) 10 is supported on 64-bit versions of Windows 10 release 1809 and above; this also includes Windows 11. 
+We support running on Windows locally, or locally virtualized.
 
 Studio Pro 10.7 and above can run in beta mode on an ARM Mac and Intel Mac running macOS Sonoma 14.0 and above. For information on known limitation, see the [Known Limitations for Mac](#mac-limitations) section below. 
 
@@ -32,7 +33,7 @@ Studio Pro versions 10.0 and above can run on the M series Apple Silicon Mac usi
 
 {{% alert color="info" %}}
 
-If you were using parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit parallels to be able to sign in to Studio Pro. 
+If you were using Parallels and enabled port forwarding, but then upgraded and would like to use Studio Pro on Mac, make sure to quit Parallels to be able to sign in to Studio Pro. 
 
 {{% /alert %}}
 
@@ -46,6 +47,7 @@ The following frameworks are required. They will be installed automatically by t
     
 * Microsoft Visual C++ 2019 Redistributable Package (x64)
 * A Java Developer Kit (JDK) version 11, 17, or 21 - if not yet installed on your machine, Mendix will install 'Eclipse Temurin JDK 21 (x64)'
+* Gradle version 8.5 or above (if your Java version is 11 or 17, Gradle version 7.6 or above will also work) - if Gradle is not yet installed on your machine, Mendix will install Gradle version 8.5
 * Git for Windows (x64) version 2.41.0 or above (for more information, see the [Prerequisites](/refguide/install/#prerequisites) section in *Installing Mendix Studio Pro*)
 * Mendix Native Mobile Builder
 * Microsoft Edge WebView2 Evergreen Runtime (x64)
@@ -66,30 +68,28 @@ You can choose which JDK is used for building and running locally via the **Edit
 Please note the limitation that the database viewer built into Studio Pro (as described in [How to Share the Development Database](/howto/data-models/sharing-the-development-database/)) does not work with JDK 11.06 or 11.07.
 {{% /alert %}}
 
-#### 2.1.1 Known Limitations for Mac {#mac-limitations}
+#### Known Limitations for Mac {#mac-limitations}
 
 These are the known limitations for Mac:
 
-* No native mobile support.
-* No support for document templates.
-* No **Structure mode** for the page editor.
-* The search in the **App Explorer** does not work yet; you can use <kbd>CMD</kbd> + <kbd>G</kbd> to search for documents.
+* No native mobile support
+* No support for document templates
+* No **Structure mode** for the page editor
+* Start from spreadsheet cannot be used at this time 
 * If you have already installed JDK previously, it may not be picked up properly during installation. You can either configure this manually or remove all references to JDK and run the installer again.
     * The limitation that the JDK did not get installed while installing Studio Pro on macOS was removed in [10.8.0](/releasenotes/studio-pro/10.8/).
 
-* The installer is currently not notarized yet; you bypass the dialog box by using right-click > **Open**.
-
-### 2.2 Hardware Specifications {#hardware}
+### Hardware Specifications {#hardware}
 
 Mendix Studio Pro will run on any machine which can run the [minimum requirements for running Windows 10 64-bit](https://www.microsoft.com/en-gb/windows/windows-10-specifications#primaryR2), with the following additional requirements:
 
 * **Disk Space** – Studio Pro requires 2GB disk space to install, and each app you create will vary in size depending on the functionality, but will take a minimum of around 150MB
-* **RAM** – 4GB
-* **Display Resolution** –  1080p (1920x1080)
+* **RAM** – 8GB
+* **Display Resolution** – 1080p (1920x1080)
 
 Mendix Studio Pro on Mac (Beta) runs on any machine compatible with [macOS Sonoma](https://support.apple.com/en-us/105113)
 
-### 2.3 Firewall Settings {#firewall-settings}
+### Firewall Settings {#firewall-settings}
 
 Studio Pro needs access to the following URLs in order to work. If your firewall is blocking these, you will need to safelist them:
 
@@ -109,11 +109,11 @@ To run a Mendix app, Mendix Studio Pro uses the following ports by default. If y
 
 For more information on ports and modifying Studio Pro's default ports, see [Configurations](/refguide/configuration/) and the [Troubleshooting Common Mobile Issues](/refguide/mobile/getting-started-with-mobile/prerequisites/#troubleshooting) section of *Native App Prerequisites and Troubleshooting*.
 
-### 2.4 File Locations
+### File Locations
 
 For active development and running your application locally, your app folder should be on a local drive (such as C:) or a network folder that has been mapped to a [Windows drive letter](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-10-29ce55d1-34e3-a7e2-4801-131475f9557d).
 
-### 2.5 Supported Git Service Providers {#supported-providers}
+### Supported Git Service Providers {#supported-providers}
 
 This section describes Git service providers when you are setting up your own Git repo. For information about Mendix Team Server (which is implemented using Git), see the [Team Server](#ts) section below.
 
@@ -132,7 +132,7 @@ You can find a list of known limitations below, however, we advise you to check 
 
 ¹ You will not be able to work with GitHub, and other providers with a file size limitation, if your .mpr file exceeds the limit. 
 
-#### 2.5.1 Azure Repos and Azure DevOps Server 
+#### Azure Repos and Azure DevOps Server 
 
 We support both Microsoft’s [Azure Repos](https://azure.microsoft.com/en-us/services/devops/repos/) hosted Git service, and Azure DevOps Server (former Team Foundation Server) which is an on-premises solution for hosting your Git repos on private infrastructure.
 
@@ -140,7 +140,7 @@ To get a PAT for your user account, see the [Use personal access tokens](https:/
 
 You need `Code (full)` permission for your token.
 
-#### 2.5.2 GitHub 
+#### GitHub 
 
 We support GitHub’s hosting solutions, including the free GitHub.com cloud-hosted service and GitHub Enterprise, both hosted (Enterprise Cloud) and on-premises (Enterprise Server).
 
@@ -148,31 +148,31 @@ To get a PAT for your user account, see the [Creating a personal access token](h
 
 You need `repo` permissions for your token.
 
-#### 2.5.3 GitLab 
+#### GitLab 
 
 We support all tiers of GitLab’s service, including GitLab.com, GitLab Community Edition, and GitLab Enterprise Edition.
 
-To get a PAT for your user account , see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
+To get a PAT for your user account, see the [Personal access tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) instructions in the GitLab documentation. 
 
 You need `write_repository` permission for the token.
 
-#### 2.5.4 BitBucket 
+#### Bitbucket 
 
-We support all tiers of Atlassian’s BitBucket service, including BitBucket.org, BitBucket Server, and BitBucket Data Center on-premises solutions.
+We support all tiers of Atlassian’s Bitbucket service, including Bitbucket.org, Bitbucket Server, and Bitbucket Data Center on-premises solutions.
 
-On BitBucket.org, the personal access token are called app passwords.
+On Bitbucket.org, the personal access token are called app passwords.
 
-To setup an App Password for your BitBucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
+To set up an App Password for your Bitbucket.org account, see the [App passwords](https://support.atlassian.com/bitbucket-cloud/docs/app-passwords/) instructions.
 
-BitBucket Server and BitBucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
+Bitbucket Server and Bitbucket Data Center, on the other hand, still use the term "personal access token." To set up a personal access token, see the [Personal access tokens](https://confluence.atlassian.com/bitbucketserver/personal-access-tokens-939515499.html) instructions.
 
 In both cases you need `repository write` permission.
 
-### 2.6 Graphics Card
+### Graphics Card
 
 If you are using the Intel® UHD Graphics 630 graphics processor, please ensure that you are using [driver version 27.20.100.9664](https://www.catalog.update.microsoft.com/Search.aspx?q=Intel(R)+UHD+Graphics+630) or above.
 
-## 3 Team Server {#ts}
+## Team Server {#ts}
 
 The [Team Server](/developerportal/general/team-server/) is implemented using Git, and Studio Pro uses the HTTPS protocol to communicate with that server. To access the Team Server from within Studio Pro, the network at your location needs the following settings:
 
@@ -180,36 +180,36 @@ The [Team Server](/developerportal/general/team-server/) is implemented using Gi
 * The HTTP port (TCP 80) needs to be open
 * WebDAV (verbs within the HTTP protocol) needs to be enabled on the proxy server (if any)
 
-## 4 Cloud Foundry
+## Cloud Foundry
 
 The [Mendix Cloud Foundry buildpack](https://github.com/mendix/cf-mendix-buildpack) supports Cloud Foundry versions v9 and above. 
 
-## 5 Docker
+## Docker
 
 The [Mendix Docker buildpack](https://github.com/mendix/docker-mendix-buildpack) supports Docker version 18.09.0 and above. 
 
-### 5.1 Kubernetes
+### Kubernetes
 
 The Mendix Docker buildpack supports the following Kubernetes versions: 
 
 * Kubernetes version v1.12 and above
 * Red Hat OpenShift v3.11 and v4.2 and above
 
-## 6 Server
+## Server
 
-### 6.1 Operating System {#server-os}
+### Operating System {#server-os}
 
 * Microsoft Windows Server 2012 and above
 * The following Unix-like operating systems:
     * [Debian OldOldStable (LTS)](https://wiki.debian.org/DebianOldOldStable), [Debian OldStable, Debian Stable](https://wiki.debian.org/DebianReleases#Current_Releases.2FRepositories)
 
-### 6.2 Web Server
+### Web Server
 
 * Microsoft Internet Information Services 8 and above
 * Nginx
 * Apache
 
-### 6.3 Java {#java}
+### Java {#java}
 
 When running Mendix on a server, you will need Java Runtime Environment (JRE) 11, 17, or 21. To download an Eclipse Temurin OpenJDK distribution from Adoptium, see [Eclipse Temurin™ Latest Releases](https://adoptium.net/temurin/releases). To download a commercial Oracle distribution, see [Java SE Downloads](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
@@ -217,19 +217,19 @@ When running Mendix on a server, you will need Java Runtime Environment (JRE) 11
 Compatibility with JDK 17 has been released with Studio Pro version 10.8. Compatibility with Java 21 has been released with Studio Pro version 10.11. Mendix recommends switching to a Studio Pro version compatible with Java 21.
 {{% /alert %}}
 
-## 7 Databases {#databases}
+## Databases {#databases}
 
 Mendix tries to support the most recent and patched database server versions from database vendors. We aim to add support for a new vendor version two minor Mendix versions after the vendor has released it. Dropping support for a database will be announced in the release notes at the date the vendor drops support. We will drop support two minor Mendix versions later.
 
 Current support:
 
-* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11
+* [MariaDB](/refguide/mysql/): 10.4, 10.5, 10.6, 10.11, 11.4
 * [Microsoft SQL Server](/developerportal/deploy/mendix-on-windows-microsoft-sql-server/): 2019, 2022
 * [Azure SQL](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-transact-sql-compatibility-level?view=sql-server-2017): v12 compatibility mode 140 or higher
-* [MySQL](/refguide/mysql/): 8.0
+* [MySQL](/refguide/mysql/): 8.0, 8.4
 * [Oracle Database](/refguide/oracle/): 19, 21c
 * PostgreSQL: 12, 13, 14, 15, 16
-* [SAP HANA](/refguide/saphana/): 2.00.040.00.1545918182
+* [SAP HANA](/refguide/saphana/): 2.00.076.00.1705400033
 
 {{% alert color="warning" %}}
 Each app must have its own database. Mendix apps cannot share data by sharing the same database.
@@ -239,9 +239,9 @@ If you want two apps to share the same database, then you need to share the data
 For more information on why data cannot be shared between apps see [Data Storage](/refguide/data-storage/#databases). Use the [Database Replication](/appstore/modules/database-replication/) module if you need to copy the data from one app to another.
 {{% /alert %}}
 
-## 8 File Storage {#file-storage}
+## File Storage {#file-storage}
 
-### 8.1 Storage Services for Containers
+### Storage Services for Containers
 
 For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the following storage services are supported:
 
@@ -253,7 +253,7 @@ For container-based deployments using Docker, Kubernetes, or Cloud Foundry, the 
 
 For container-mounted storage in Kubernetes, provided by an external storage class, see also [Use Docker with Minikube](/developerportal/deploy/run-mendix-on-kubernetes/).
 
-### 8.2 Storage Types for Servers
+### Storage Types for Servers
 
 For server-based installations, the following storage types mounted by the OS are supported:
 
@@ -266,7 +266,7 @@ For server-based installations, the following storage types mounted by the OS ar
 AWS S3 is also supported in the Windows Service Console.
 {{% /alert %}}
 
-## 9 Browsers {#browsers}
+## Browsers {#browsers}
 
 * Google Chrome (latest stable desktop and Android versions)
 * Mozilla Firefox (latest stable desktop version)
@@ -277,7 +277,7 @@ AWS S3 is also supported in the Windows Service Console.
 Internet Explorer is not supported in Studio Pro 10.
 {{% /alert %}}
 
-## 10 Mobile Operating Systems {#mobileos}
+## Mobile Operating Systems {#mobileos}
 
 For native and progressive web apps built with Mendix, the following operating system versions are supported:
 
@@ -286,7 +286,7 @@ For native and progressive web apps built with Mendix, the following operating s
 
 Only devices running on these operating system versions receive up-to-date security fixes from their vendors and thus minimize being vulnerable to known exploits.
 
-You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version.
+You can build native and progressive web apps with Mendix that run on older operating system versions than the ones we support. However, to receive official Mendix support you must demonstrate that your problem also occurs on a supported operating system version. The oldest operating system version where Mendix native mobile apps can run is determined by [React Native](https://github.com/facebook/react-native?tab=readme-ov-file#-requirements).
 
 Mendix recommends the following minimum hardware requirements for all mobile devices running native and progressive web Mendix apps:
 
@@ -295,7 +295,7 @@ Mendix recommends the following minimum hardware requirements for all mobile dev
 
 Depending on your app's complexity, these minimum hardware requirements might not be sufficient and should be adjusted.
 
-## 11 MxBuild {#mxbuild}
+## MxBuild {#mxbuild}
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package. For more information, see [MxBuild](/refguide/mxbuild/).
 
@@ -307,7 +307,7 @@ MxBuild is a Windows and Linux command-line tool that can be used to build a Men
 
 * JDK 11
 
-## 12 mx Command-Line Tool {#mxtool}
+## mx Command-Line Tool {#mxtool}
 
 The **mx** command-line tool is a Windows and Linux command-line tool that can be used to do useful things with your Mendix app. For more information, see [mx Command-Line Tool](/refguide/mx-command-line-tool/).
 

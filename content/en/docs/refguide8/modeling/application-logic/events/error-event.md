@@ -8,7 +8,7 @@ weight: 3
 This event can only be used in **Microflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 An error event defines where a microflow will stop and throw an error that occurred earlier. If you call a microflow, you may want to know whether any errors occurred within the microflow or not. This event throws the error again, so the caller of the microflow can catch them. You can control whether all database actions within the current transaction will be rolled back.
 
@@ -28,11 +28,11 @@ In this example, an error occurs while committing an object to the database. It 
 When adding an error event, you need to add an [error handler](#errorhandlers) for an activity before the error event, and select **Set as error handler** for the sequence flow.
 {{% /alert %}}
 
-## 2 Handling Errors in Microflows{#errors-in-microflows}
+## Handling Errors in Microflows{#errors-in-microflows}
 
 When an error occurs in a microflow, all changes that have been made to objects are rolled back and the microflow is aborted. Optionally, you can [handle errors](/howto8/logic-business-rules/set-up-error-handling/) in the microflow itself by configuring different error handling settings. You can even inspect the details of the error by looking at the predefined objects `$latestError` and `$latestSoapFault`.
 
-### 2.1 Error Handlers {#errorhandlers}
+### Error Handlers {#errorhandlers}
 
 An error handler can be set on a microflow activity, decision, or loop.
 
@@ -56,7 +56,7 @@ The continue option means that when an error occurs, the loop will simply contin
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/error-event-loop.png" class="no-border" >}}
 
-### 2.2 Inspecting Errors
+### Inspecting Errors
 
 When an error occurs inside a microflow, under the hood a Java exception is raised that contains information about the error that occurred. Inside a custom error handler (as in, after an error handling flow), you can inspect the type of this Java exception as well as several other properties. Every microflow contains two predefined error objects, `$latestError` and `$latestSoapFault`. `$latestError` is an object of entity System.Error, while `$latestSoapFault` is an object of entity System.SoapFault, which is a specialization of System.Error.
 
@@ -85,11 +85,11 @@ Click [here](https://www.w3.org/TR/soap12-part1/#soapfault) for more information
 In microflows that apply entity access, it is not possible to inspect the attributes of error objects for security reasons. You can pass the error object to a sub-microflow that does not apply entity access and inspect the attributes there.
 {{% /alert %}}
 
-## 3 Handling Errors in Nanoflows{#errors-in-nanoflows}
+## Handling Errors in Nanoflows{#errors-in-nanoflows}
 
 When an error occurs in a nanoflow, the changes that were made to objects are not rolled back and the nanoflow is aborted. Optionally, you can handle errors in the nanoflow itself by configuring an error handler. You can inspect the details of the error by looking at the `$latestError` predefined variable.
 
-### 3.1 Error Handlers {#errorhandlers-nano}
+### Error Handlers {#errorhandlers-nano}
 
 Error handlers are supported on all nanoflow elements except for gateways and loops. There are two error handler options:
 
@@ -100,7 +100,7 @@ With the **Custom without rollback** option, you can draw an additional flow fro
 
 {{< figure src="/attachments/refguide8/modeling/application-logic/events/error-event/custom-without-rollback-nanoflows.png" alt="selected error handler" class="no-border" >}}
 
-### 3.2 Error Inspection
+### Error Inspection
 
 In a custom error handler executed after an error occurs, the `$latestError` variable is set to the message of the error information. The `$latestError` variable type is `String`, unlike in [microflows](/refguide8/microflows/) where errors' type is the `System.Error` entity.
 

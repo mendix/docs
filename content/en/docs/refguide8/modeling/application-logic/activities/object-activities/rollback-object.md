@@ -8,7 +8,7 @@ weight: 70
 This activity can be used in both **Microflows** and **Nanoflows**.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The rollback object action can be used to undo changes (that have not been committed) made to the object in the part of the flow preceding the activity. Furthermore, it deletes objects that have been created but never committed.
 
@@ -16,7 +16,7 @@ The rollback object action can be used to undo changes (that have not been commi
 When the rollback object action is performed in a sub-microflow, it rolls back the changes in its parent microflow as well as the sub-microflow.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of rollback object properties is represented in the image below:
 
@@ -29,7 +29,7 @@ The rollback object properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action{#action}
+## Action{#action}
 
 The **Action** section of the properties pane shows the action associated with this activity.
 
@@ -37,11 +37,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object
+### Object
 
 **Object** defines the object that needs to be rolled back.
 
-### 3.2 Refresh in Client
+### Refresh in Client
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
@@ -55,27 +55,27 @@ If a widget is only updated when a [data source](/refguide8/data-sources/) is lo
 When testing your app, ensure that the desired data is being displayed by the widgets you have chosen.
 {{% /alert %}}
 
-#### 3.2.1 Microflow Is Called from the Client in an Online App
+#### Microflow Is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the rollback is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](/refguide8/data-sources/).
 
-#### 3.2.2 Microflow Is Called in an Offline, Native, or Hybrid App
+#### Microflow Is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide8/offline-first/#microflows) section of the *Offline-First Reference Guide*.
 
-#### 3.2.3 Action Is in a Nanoflow
+#### Action Is in a Nanoflow
 
 When inside a [nanoflow](/refguide8/nanoflows/), the rollback object action reloads [data sources](/refguide8/data-sources/) as if **Refresh in client** was set to *Yes*.
 
-## 4 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
-## 5 What Does Rollback Do?
+## What Does Rollback Do?
 
 Pressing a **Cancel** button or triggering a rollback activity will initiate the rollback events. These actions are not triggered in the case of a rollback because of an error.
 

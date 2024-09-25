@@ -1,18 +1,19 @@
 ---
 title: "OData Representation"
 url: /refguide/odata-representation/
+weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes how entities are represented in a published OData service.
 
-## 2 Attributes {#attributes}
+## Attributes {#attributes}
 
 | Mendix Data Type | Edm Type | Attribute Value | Atom XML Representation |
 | --- | --- | --- | --- |
 | ID <sup>1</sup>| Edm.Int64 | 3940649673954387 | 3940649673954387 |
-| Autonumber | Edm.Int64 | 1 | 1 |
+| AutoNumber | Edm.Int64 | 1 | 1 |
 | Binary (not supported) <sup>2</sup> |   |   |   |
 | Boolean | Edm.Boolean | true | true |
 | Date and time | Edm.DateTimeOffset | Fri, 19 Dec 2014 10:27:27 GMT | 2014-12-19T10:27:27.000Z |
@@ -30,7 +31,7 @@ This document describes how entities are represented in a published OData servic
 
 Additionally, the `updated` field for an entry in OData comes from the system changedDate attribute of an entity. If this attribute is not available (because it is not published, the user does not have access rights, or it is empty in database), the default date (1-1-1970) will be used.
 
-### 2.1 Representation of ID {#id-representation}
+### Representation of ID {#id-representation}
 
 Each entity has an ID, which is not shown as an attribute in the domain model. This is indicated in the service's metadata.
 
@@ -38,11 +39,11 @@ In OData 4, IDs are annotated with vocabulary annotation `Com.Mendix.IsAttribute
 
 In OData 3, IDs are marked with `isAttribute="false"`, using a Mendix-specific XML attribute in the `http://www.mendix.com/Protocols/MendixData` namespace.
 
-## 3 Associations {#associations}
+## Associations {#associations}
 
 In the settings of the OData service, you can choose how associations are represented. There are two options, which are described below.
 
-### 3.1 As a Link
+### As a Link
 
 When you choose to represent associations as links, each object contains a link for each of its associations. The associated object (or objects) can be retrieved via those links.
 
@@ -50,6 +51,6 @@ This means you can only publish an association when the entity on the other side
 
 Using this method, you can publish both sides of the association and you can publish many-to-many associations.
 
-### 3.2 As an Associated Object ID
+### As an Associated Object ID
 
 When you choose to represent associations as an associated object ID, the ID of the associated object is represented as an `Edm.Int64` property. If the association refers to more than one object, you cannot publish it from that side.

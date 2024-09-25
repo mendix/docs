@@ -2,7 +2,7 @@
 {{- with .Site.Params.search.algolia -}}
 <!-- stylesheet for algolia docsearch -->
 {{- end -}}
-<!-- MvM: Always set page as self-canonical unless another canonical (.Params.canonicalUrl) is set -->
+<!-- MvM: Always set page as self-canonical unless another canonical (.Params.canonical_url) is set -->
 {{- with .Params.canonical_url -}}
     <link rel="canonical" href="{{ . }}">
 {{- else -}}

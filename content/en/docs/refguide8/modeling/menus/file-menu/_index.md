@@ -5,20 +5,20 @@ description: "Describes the File Menu in Studio Pro."
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 The **File** menu allows you to manage documents and projects, for example, to create a new project or save changes:
 
 {{< figure src="/attachments/refguide8/modeling/menus/file-menu/file-menu.png" alt="File Menu"   width="300"  class="no-border" >}}
 
-## 2 Menu Items Overview {#overview}
+## Menu Items Overview {#overview}
 
 The **File** menu items are described in the table below:
 
 | Menu Item                  | Description                                                  | Shortcut Key                                      |
 | -------------------------- | ------------------------------------------------------------ | ------------------------------------------------- |
 | **New Document**           | Creates a new document within the app currently open. You can choose the name, location, and type of document. | <kbd>Ctrl</kbd> + <kbd>N</kbd>                    |
-| **New Project**            | Creates a new single-developer project. A single-developer project is simply a file (with the extension *.mpr* , which stands for "Mendix project") that is stored in the local file system. For more information on the **New Project** menu item and its settings, see [New Project](/refguide8/new-project/). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
+| **New Project**            | Creates a new single-developer project. A single-developer project is simply a file (with the extension *.mpr*, which stands for "Mendix project") that is stored in the local file system. For more information on the **New Project** menu item and its settings, see [New Project](/refguide8/new-project/). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>N</kbd> |
 | **Open Project**           | Opens an existing single-developer project (*.mpr*) or a project package (*.mpk*). See **New Project** above for information on single-developer projects. For more information on the **Open Project** menu item, see [Open Project](/refguide8/open-app-dialog/). | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>O</kbd> |
 | **Recent Projects**        | Shows a list of recently opened projects for quick opening.  |                                                   |
 | **Save**                   | Saves the changes in the currently active document tab.      | <kbd>Ctrl</kbd> + <kbd>S</kbd>                    |
@@ -31,6 +31,6 @@ The **File** menu items are described in the table below:
 | **Import Project Package** | Imports a project package that was created with the **Export Project Package** menu item. For more information on importing a project package, see [Import Project Package](/refguide8/import-project-package-dialog/). |                                                   |
 | **Exit**                   | Closes Studio Pro                                            |                                                   |
 
-## 3 Read More
+## Read More
 
 * [Studio Pro Overview](/refguide8/studio-pro-overview/)

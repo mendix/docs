@@ -10,7 +10,7 @@ aliases:
 #The anchor request-priority below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 In order for Mendix Support to pick up and process your support request, it is important to provide the right information. This will speed up the processing of your request and minimize back-and-forth communication between you and Mendix Support. The details below are what Mendix Support needs and uses to process an incident ticket.
 
@@ -18,7 +18,7 @@ In order for Mendix Support to pick up and process your support request, it is i
 For critical production incidents, please contact Mendix Support by [phone](https://support.mendix.com).
 {{% /alert %}}
 
-## 2 Checking Useful Links Before Submitting a Request
+## Checking Useful Links Before Submitting a Request
 
 Before submitting a new Mendix Support request, check these resources to make sure your question has not already been answered:
 
@@ -28,7 +28,7 @@ Before submitting a new Mendix Support request, check these resources to make su
 
 If you cannot find the answer to your question in the Mendix Community or in the Mendix documentation, you can submit a support request. The Mendix Support Portal will walk you through the ticket creation by asking for relevant information based on the type of request. 
 
-## 3 Submitting a New Request {#submitting}
+## Submitting a New Request {#submitting}
 
 You can access the Mendix Support Portal at [support.mendix.com](https://support.mendix.com).
 
@@ -70,7 +70,7 @@ To submit a request with Mendix Support, follow these steps:
 4. When you select **Request for Information** or **Incident**, you then have to select the **Related Component** for the issue. The correct component will allow Mendix Support to help you more effectively. In some cases, you can also select the **Related Sub-Component** for your issue. Selecting the related sub-component is not required, but it will allow Mendix Support to help you more quickly and accurately. There are two main options for the related component:
     * **App** – select one of these components when you have issues with designing, developing, building, deploying, or operating one of your own apps built on the Mendix Platform:
         * **App - Development** – issues/questions regarding developing your app (for example, with your [domain model](/refguide/domain-model/), [widgets](/refguide/data-widgets/), or [logic](/refguide/application-logic/))
-        * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/developerportal/deploy/) or will not start)
+        * **App - Deployment** – issues/questions regarding deploying your app (for example, when the app cannot be [deployed](/deployment/) or will not start)
         * **App - Operations** – issues/questions regarding running a deployed app (for example, when the app crashes or shows errors in the [log](/developerportal/operate/logs/))
         * **App - Add-on** – issues/questions regarding one of the Mendix add-ons (such as [ATS](/appstore/partner-solutions/ats/), [APD](/appstore/partner-solutions/apd/), or [AQM](/addons/aqm-addon/))
         * **App - Security** - issues/questions regarding the security of your Mendix app
@@ -79,10 +79,10 @@ To submit a request with Mendix Support, follow these steps:
     * **Developer Platform** – select one of these components when you have issues with the Mendix Platform itself:
         * **Developer Platform - Account** – issues/questions regarding your Mendix account (for example, when you have difficulties creating an account or signing in)
         * **Developer Platform - Marketplace** - issues/questions regarding the [Mendix Marketplace](/appstore/) (for example, when you have difficulties uploading new modules to the Marketplace)
-        * **Developer Platform - Sprintr** – issues/questions regarding the [Developer Portal](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
+        * **Developer Platform - Sprintr** – issues/questions regarding [Apps](/developerportal/) (for example, when you cannot create a [story](/developerportal/project-management/epics/) or start a Sprint)
         * **Developer Platform - Academy** – issues/questions regarding the [Mendix Academy](https://academy.mendix.com/) (for example, when you cannot open a learning path or you cannot find the attachments required for a module)
         * **Developer Platform - Forum** – issues/questions regarding the [Mendix Community](https://community.mendix.com/) (for example, when you cannot create a new question or add an answer)
-        * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Developer Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
+        * **Developer Platform - Cloud Portal** – issues/questions regarding [deploying in the Mendix Portal](/developerportal/deploy/) (for example, when you cannot view your [log](/developerportal/operate/logs/) files or [scale](/developerportal/deploy/scale-environment/) your environment)
         * **Developer Platform - Catalog** – issues/questions regarding the [Catalog](/catalog/) (for example, when you have difficulties accessing the Catalog)
         * **Developer Platform - Control Center** - issues/questions regarding [Control Center](/control-center/) (for example, when you have difficulties deactivating applications from Control Center) 
         * **Developer Platform - Support Portal** - issues/questions regarding the [Support Portal](https://support.mendix.com/) (for example, when you have difficulties creating Support tickets)
@@ -93,7 +93,7 @@ To submit a request with Mendix Support, follow these steps:
 
 If investigating the documentation and searching the [Mendix Community](https://community.mendix.com/) does not help you solve your issue, you can submit the Mendix Support request.    
 
-## 4 Request Priority {#request-priority}
+## Request Priority {#request-priority}
 
 You can select the priority that you feel the request should have. Please note the [SLA regulations](/support/#sla) for this priority.
 
@@ -122,11 +122,11 @@ The [ticket priority](/support/ticket-priority/) that Mendix Support validates i
 
 {{< figure src="/attachments/support/submit-support-request/204371729-pic5.png" class="no-border" >}}
 
-## 5 Providing Attachments and Additional Information
+## Providing Attachments and Additional Information
 
 Depending on the type of request, providing attachments and additional information may be helpful. The scenarios below list what additional information should be provided.
 
-### 5.1 Attachments
+### Attachments
 
 You can add large attachments such as app files to the request. Please note that Mendix recommends not attaching any files that contain personal identifiable data, credit card information, or other sensitive data.
 
@@ -134,16 +134,16 @@ You can add large attachments such as app files to the request. Please note that
 Attachments added to Mendix Support requests will be automatically deleted after 365 days.
 {{% /alert %}}
 
-### 5.2 Requirements for Security Support Tickets{#security-tickets}
+### Requirements for Security Support Tickets{#security-tickets}
 
 If you are reporting a security finding or other security-related issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
 
-1. Ensure you are using one of:
-    * the current major version of Mendix, preferably an [MTS](/releasenotes/studio-pro/lts-mts/#mts) minor version as these continue to get security updates. 
-    * the [LTS](/releasenotes/studio-pro/lts-mts/#lts) version of a previous major version which has not reached end of support.
-1. If the security finding is in a marketplace component
-    1. check that it is platform supported — community-supported components are not supported by Mendix support.
-    1. ensure the component is up to date.
+1. Ensure you are using one of the following:
+    * The current major version of Mendix, preferably an [MTS](/releasenotes/studio-pro/lts-mts/#mts) minor version as these continue to get security updates. 
+    * The [LTS](/releasenotes/studio-pro/lts-mts/#lts) version of a previous major version which has not reached end of support.
+1. If the security finding is in a Marketplace component:
+    1. Check that it is platform supported—community-supported components are not supported by Mendix support.
+    1. Ensure the component is up to date.
 1. Review the [Frequently Asked Questions - Security](/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:
@@ -157,22 +157,22 @@ If you are reporting a security finding or other security-related issue, for exa
 Mendix Support will only accept security findings for the Mendix platform. This includes the Mendix runtime, any platform-supported components, and Mendix applications provided to support you to design, develop, deploy, and monitor your apps and Mendix applications used for managing your users and resources. Mendix Support will not look into security findings related to our marketing websites.
 {{% /alert %}}
 
-### 5.3 Cloud Problems and Deployment Issues
+### Cloud Problems and Deployment Issues
 
 * Log file (*.txt*)
 * Date and time of the incident
 
-### 5.4 Team Server Problems and App Issues
+### Team Server Problems and App Issues
 
 * [App ID](/developerportal/settings/general-settings/)
 
-### 5.5 Studio Pro Problems
+### Studio Pro Problems
 
 * Mendix version
 * Test app (for details, see [How To Export A Mendix App Package](/refguide/export-app-package-dialog/))
 * Reproducible steps
 
-### 5.6 Marketplace Content Problems and Module, Widget, and Theme Issues
+### Marketplace Content Problems and Module, Widget, and Theme Issues
 
 * Name of the Marketplace component
 * Mendix version
@@ -180,19 +180,19 @@ Mendix Support will only accept security findings for the Mendix platform. This 
 * Reproducible steps
 
 {{% alert color="info" %}}
-Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/overview/#support) section in *Marketplace Overview*.
+Not all Marketplace content is compatible with every version of Studio Pro, and not all Marketplace content is supported by Mendix. For more information, see the [Marketplace Content Support](/appstore/marketplace-content-support/) section in *Marketplace Overview*.
 {{% /alert %}}
 
-### 5.7 Mobile Problems
+### Mobile Problems
 
 * Operating system and version (Android x.x or iOS x.x; for example, Android 6.1)
 
-### 5.8 Browser Problems
+### Browser Problems
 
 * Operating System (Windows x or iOS x; for example, Windows 10)
 * Browser name and version (Chrome x.x, Firefox x.x, IE x.x, or Safari x.x; for example, Chrome 54.0.2840.99)
 
-## 6 Overview of Requests
+## Overview of Requests
 
 By clicking your name on the upper-right side of the screen, you can select **My activities** and see all the requests that you have submitted (**My requests**) as well as all the requests that have been submitted on the apps to which you have access:
 
@@ -202,7 +202,7 @@ On the **All requests** tab, you can click **Follow** for an app to be informed 
 
 {{< figure src="/attachments/support/submit-support-request/follow.png" class="no-border" >}}
 
-## 7 Viewing and Updating Tickets
+## Viewing and Updating Tickets
 
 From the overview, you can easily open a specific request, or you can search for a request by using the **Search** option. Once you have opened a ticket, you can add comments to the ticket assignee or add new attachments.
 
@@ -221,11 +221,11 @@ The ticket can have the following statuses:
 
 {{< figure src="/attachments/support/submit-support-request/request.png" class="no-border" >}}
 
-## 8 Submitting a Feature Request
+## Submitting a Feature Request
 
 On the [Mendix Community](https://community.mendix.com/p/ideas), Mendix captures ideas and requests from customers and developers in the Mendix community. Each quarter, the Mendix Community is treated as a short-list of the top features that the Mendix community supports via topics with the most upvotes.
 
-## 9 Read More
+## Read More
 
 * [Ticket Priority](/support/ticket-priority/)
 * [Escalation Management Process](/support/escalation-management-process/)

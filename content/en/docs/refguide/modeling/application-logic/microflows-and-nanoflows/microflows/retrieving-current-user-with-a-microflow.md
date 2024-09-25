@@ -6,7 +6,7 @@ weight: 6
 description: "Describes how to retrieve the current user of your application in Studio Pro with a microflow."
 ---
 
-## 1 Introduction
+## Introduction
 
 In order to implement a certain logic, you often need to identify the user who is currently logged in. The following are facts about user management in a Mendix app:
 
@@ -18,7 +18,7 @@ This document teaches you how to do the following:
 
 * Retrieve the currently logged-in user in a microflow using the **Account** entity from the **Administration** module in Mendix
 
-## 2 Prerequisites
+## Prerequisites
 
 Before you continue, make sure you have completed the following:
 
@@ -26,7 +26,7 @@ Before you continue, make sure you have completed the following:
 * Read about the [Administration](/appstore/modules/administration/) module in the *Studio Pro Guide*
 * Understand the basics about [microflows](/refguide/microflows/)
 
-## 3 Retrieving the Current User
+## Retrieving the Current User
 
 To retrieve the currently logged-in user using the **Account** entity from the **Administration** module, do the following:
 
@@ -46,7 +46,7 @@ Now you have the microflow that retrieves the current user!
 
 {{< figure src="/attachments/refguide/modeling/application-logic/microflows-and-nanoflows/microflows/retrieving-current-user/retrieving-current-user.png" width="600px" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [XPath Constraints](/refguide/xpath-constraints/)
 * [XPath Keywords and System Variables](/refguide/xpath-keywords-and-system-variables/)

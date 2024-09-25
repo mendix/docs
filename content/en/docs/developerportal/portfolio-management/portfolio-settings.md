@@ -5,7 +5,7 @@ weight: 20
 description: "Describes the Portfolio Settings page in the Mendix Portfolio Management app."
 ---
 
-## 1 Introduction
+## Introduction
 
 On the **Portfolio Settings** page, you can manage the portfolio settings, such as editing portfolio details and changing privacy settings, and you can also delete portfolios.
 
@@ -13,7 +13,7 @@ On the **Portfolio Settings** page, you can manage the portfolio settings, such 
 The **Portfolio Settings** page is only available for Portfolio Managers.
 {{% /alert %}}
 
-## 2 Changing Portfolio Settings
+## Changing Portfolio Settings
 
 On the **Portfolio Settings** page, Portfolio Managers can change the following settings:
 
@@ -49,7 +49,7 @@ To delete or edit an existing option for a setting, hover over the option to sho
 
 To add an option for a setting, click **Add Department**, **Add Country**, **Add Stage**, **Add Use Case**, or **Add Value Type** below the corresponding list.
 
-## 3 Deleting a Portfolio
+## Deleting a Portfolio
 
 1. On the **Portfolio Settings** page, click **Delete** at the bottom of the page. The **Delete Portfolio** Dialog box opens.
 2. Read the warning carefully. Deleting a portfolio means that you permanently delete the portfolio, including all the data in it. This change cannot be reverted.

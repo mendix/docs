@@ -4,7 +4,7 @@ url: /refguide/xpath-aggregate-functions/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes XPath query aggregate functions.
 
@@ -26,92 +26,92 @@ The following XPath query aggregate functions are available:
 * [min](#min)
 * [sum](#sum)
 
-## 2 avg {#avg}
+## avg {#avg}
 
 The `avg()` function returns the average of its argument.
 
-### 2.1 Examples
+### Examples
 
 This query returns the average total price of all placed orders:
 
-```java {linenos=false}
+```java
 avg(//Sales.Order/TotalPrice)
 ```
 
 This query returns the average total price of all orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 avg(//Sales.Order[Sales.Customer_Order/Sales.Customer = 'Jansen']/TotalPrice)
 ```
 
-## 3 count {#count}
+## count {#count}
 
 The `count()` function counts all objects retrieved by the enclosed query and returns the value as an integer.
 
-### 3.1 Examples
+### Examples
 
 This query returns a count of all the placed orders:
 
-```java {linenos=false}
+```java
 count(//Sales.Order)
 ```
 
 This query returns a count of all the orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 count(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen'])
 ```
 
-## 4 max {#max}
+## max {#max}
 
 The `max()` function returns the maximum value of its argument.
 
-### 4.1 Examples
+### Examples
 
 This query returns the highest total price found in any object:
 
-```java {linenos=false}
+```java
 max(//Sales.Order/TotalPrice)
 ```
 
 This query returns the highest total price of an order placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 max(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```
 
-## 5 min {#min}
+## min {#min}
 
 The `min()` function returns the minimum value of its argument.
 
-### 5.1 Examples
+### Examples
 
 This query returns the lowest total price found in any object:
 
-```java {linenos=false}
+```java
 min(//Sales.Order/TotalPrice)
 ```
 
 This query returns the lowest total price of an order placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 min(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```
 
-## 6 sum {#sum}
+## sum {#sum}
 
 The `sum()` function returns the sum of its argument.
 
-### 6.1 Examples
+### Examples
 
 This query returns the sum of the total prices of all placed orders:
 
-```java {linenos=false}
+```java
 sum(//Sales.Order/TotalPrice)
 ```
 
 This query returns the sum of the total prices of all the orders placed by a customer named "Jansen":
 
-```java {linenos=false}
+```java
 sum(//Sales.Order[Sales.Customer_Order/Sales.Customer/Name = 'Jansen']/TotalPrice)
 ```

@@ -5,7 +5,7 @@ weight: 10
 description: "A flow chart which shows how an example request is processed, what security is applied, and what is returned by the service."
 ---
 
-## 1 Introduction
+## Introduction
 
 When a REST HTTP request arrives at the server, the server needs to determine which [operation](/refguide/published-rest-operation/) to run and what security to apply.
 

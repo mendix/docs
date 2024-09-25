@@ -8,7 +8,7 @@ aliases:
     - /howto9/logic-business-rules/filtering-data-on-an-overview-page/
 ---
 
-## 1 Introduction
+## Introduction
 
 To filter data on your page, you can use the search bar functionality, or you can add an XPath constraint to your data grid. The search bar contains search fields that allow end-users to quickly find the information they need. XPath is a hard-coded constraint on your data grid that filters the data.
 
@@ -24,7 +24,7 @@ This how-to teaches you how to do the following:
 * Filter data using the search bar
 * Filter data using XPath
 
-## 2 Prerequisites
+## Prerequisites
 
 For this how-to, it is necessary that you set up a test app with test data. To do so, follow these steps:
 
@@ -42,7 +42,7 @@ For this how-to, it is necessary that you set up a test app with test data. To d
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/example-orders-data.png" width="500px" class="no-border" >}}
 
-## 3 Filtering the Orders List Using the Search Bar
+## Filtering the Orders List Using the Search Bar
 
 In the previous section, you set up a basic data structure and created some sample data. In this section, you add search fields to the search bar to allow end-users to filter data on overview pages. You filter order data by their order status and by a minimum order price.
 
@@ -74,7 +74,7 @@ In the previous section, you set up a basic data structure and created some samp
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/order-list-minimum-price-50.png" width="500px" class="no-border" >}}
 
-## 4 Filtering the Orders List by Order Status Using XPath 
+## Filtering the Orders List by Order Status Using XPath 
 
 In the previous section, you used the search bar to filter data on the **Orders** overview page. In this section, you add an XPath constraint on the **Orders** data grid. With an XPath constraint on a data grid you can filter (in a hard-coded way) the objects shown in the list. Mendix XPath is one of the Mendix query languages designed to retrieve data. XPath uses path expressions to select data of Mendix objects and their attributes or associations. To learn more about XPath, see [XPath Constraints](/refguide9/xpath-constraints/). In the following example, you constrain the data grid using XPath so that the data grid only displays orders with the status **Open**. 
 
@@ -91,7 +91,7 @@ In the previous section, you used the search bar to filter data on the **Orders*
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/order-list-open-status-using-XPath.png" width="500px" class="no-border" >}}
 
-## 5 Filtering the Orders List by Minimum Total Price Using XPath
+## Filtering the Orders List by Minimum Total Price Using XPath
 
 In the previous section, you constrained the data grid on orders with the status **Open**. In this section, you change the constraint to ensure that the data grid only shows orders with a minimum value of 50.00.
 
@@ -104,7 +104,7 @@ In the previous section, you constrained the data grid on orders with the status
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/order-list-minimum-price-50-using-XPath.png" width="500px" class="no-border" >}}
 
-## 6 Combining Constraints Using XPath
+## Combining Constraints Using XPath
 
 In the previous two sections, you used single constraints to constrain the data grid on order status and minimum total price. In this section, you combine those two constraints with logical operators **AND** and **OR**.
 
@@ -124,7 +124,7 @@ In the previous two sections, you used single constraints to constrain the data 
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/order-list-open-status-and-minimum-price-50.png" width="500px" class="no-border" >}}
 
-## 7 Filtering the Orders List by Attributes of Associated Customers Using XPath
+## Filtering the Orders List by Attributes of Associated Customers Using XPath
 
 In the previous section, you constrained the data grid on attributes of the same entity as the data grid entity. In this section, you constrain the data grid on attributes of an associated object. In the following example, you filter the orders by cities where associated customers are from.
 
@@ -136,6 +136,6 @@ In the previous section, you constrained the data grid on attributes of the same
 
     {{< figure src="/attachments/refguide9/modeling/xpath/filtering-data-on-an-overview-page/order-list-Rotterdam-customers.png" width="500px" class="no-border" >}}
 
-## 8 Read More
+## Read More
 
 * [Defining Access Rules Using XPath](/refguide9/define-access-rules-using-xpath/)

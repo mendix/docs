@@ -5,7 +5,7 @@ weight: 20
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A **Report parameter** allows the end-user to select a parameter for the [data set](/refguide8/data-sets/) that supplies the data for a [Report grid](/refguide8/report-grid/). The parameter is used to filter the results in different ways so that the same report can display different sets of data.
 
@@ -21,7 +21,7 @@ A **Report parameter** cannot be used for data set parameters of type **Date and
 If you add a report parameter widget on the page, you must also add a [Report Button](/refguide8/report-button/) widget. This allows the end-user to regenerate the report after specifying the parameter.
 {{% /alert %}}
 
-## 2 Report Parameter Properties
+## Report Parameter Properties
 
 An example of report parameter properties is represented in the image below:
 
@@ -33,20 +33,20 @@ Report parameter properties consist of the following sections:
 * [Design Properties](#design-properties)
 * [General](#general)
 
-### 2.1 Common Section{#common}
+### Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/common-section-link.md" %}}
 
-### 2.2 Design Properties Section{#design-properties}
+### Design Properties Section{#design-properties}
 
 {{% snippet file="/static/_includes/refguide8/design-section-link.md" %}}
 
-### 2.3 General Section{#general}
+### General Section{#general}
 
-#### 2.3.1 Parameter
+#### Parameter
 
 **Parameter** is set to a data set parameter, the value of which is restricted by this widget. The corresponding data set must be used by one of the report widgets on the page.
 
-#### 2.3.2 Displayed Attribute
+#### Displayed Attribute
 
 **Displayed attribute** is only available if the data set parameter is an object. Displayed attribute specifies which attribute of the corresponding entity is shown in the drop-down selection.

@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 {{% alert color="info" %}}
 This document describes basic functions you can perform in the page editor and its modes. For details on what pages are for and what kind of widgets can be placed on them, see [Pages](/refguide/pages/).
@@ -13,7 +13,7 @@ This document describes basic functions you can perform in the page editor and i
 
 Pages define the end-user interface of a Mendix application. Every page is based on a [layout](/refguide/layout/). A page fills the "gaps" defined by a layout with widgets such as the [data view](/refguide/data-view/) and [data grid](/refguide/data-grid/).
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 You can perform the following basic functions when working in the page editor:
 
@@ -25,7 +25,7 @@ You can perform the following basic functions when working in the page editor:
 * Arrange elements on a page
 * Changing the parameters of a page
 
-### 2.1 Opening a Page
+### Opening a Page
 
 To open a page in Studio Pro, do the following:
 
@@ -38,7 +38,7 @@ To open a page in Studio Pro, do the following:
 
 The selected page is opened. 
 
-### 2.2 Creating a Page
+### Creating a Page
 
 To create a new page, do the following:
 
@@ -54,7 +54,7 @@ To create a new page, do the following:
 
 A new page is created.
 
-### 2.3 Deleting a Page
+### Deleting a Page
 
 To delete a page, do the following:
 
@@ -63,7 +63,7 @@ To delete a page, do the following:
 
 The selected page is deleted. 
 
-### 2.4 Adding Elements on a Page {#add-elements}
+### Adding Elements on a Page {#add-elements}
 
 The way you can add an element on a page depends on a mode you are editing your page in. For more information on modes, see the [Page Editor Modes](#page-editor-modes) section.
 
@@ -99,7 +99,7 @@ In **Design mode**, you can add elements though the Toolbox. Do the following:
 1. Open the **Toolbox** and select **Widgets** or **Building blocks** tab there. 
 2. Select an element you would like to add and drag this element onto your page.
 
-### 2.5 Viewing Element Properties {#view-properties}
+### Viewing Element Properties {#view-properties}
 
 To view properties of an element, do one of the following:
 
@@ -107,12 +107,12 @@ To view properties of an element, do one of the following:
 2. Right-click an element and select **Properties** from the list of options that opens.
 3. Double-click an element.
 
-### 2.6 Arranging Elements on a Page {#arrange-elements}
+### Arranging Elements on a Page {#arrange-elements}
 
 To cut/copy/paste you can use the following shortcuts:
 
 * <kbd>Ctrl</kbd> + <kbd>Z</kbd> /  <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>V</kbd>  
-* <kbd>Cmd</kbd> + <kbd>Z</kbd> /  <kbd>Cmd</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>V</kbd>
+* <kbd>Command</kbd> + <kbd>Z</kbd> /  <kbd>Command</kbd> + <kbd>C</kbd> / <kbd>Command</kbd> + <kbd>V</kbd>
 
 {{% alert color="info" %}}
 You can cut/copy/paste elements on a page to different apps in Studio Pro if they have the same Mendix version. However, you cannot cut/copy/paste the whole page.
@@ -120,11 +120,11 @@ You can cut/copy/paste elements on a page to different apps in Studio Pro if the
 
 To delete an element from a page, select this element and press <kbd>Delete</kbd> or right-click an element and select **Delete** in a drop-down menu. 
 
-### 2.7 Changing the Parameters of a Page {#change-parameters}
+### Changing the Parameters of a Page {#change-parameters}
 
 To change the parameters of the page, click the **Parameters** button in the top bar. This opens a dialog box which allows you to add, modify, and remove parameters. The **Parameters** button shows the current number of parameters in its caption, while its tooltip shows the name and type of each parameter. For more information about page parameters, see the [Parameters](/refguide/page-properties/#parameters) section in *Page Properties*.
 
-## 3 Page Editor Modes {#page-editor-modes}
+## Page Editor Modes {#page-editor-modes}
 
 There are two different ways to edit your page:
 
@@ -146,7 +146,7 @@ Both modes allow you to edit your page by doing the following:
 
 Additionally, the [Page Explorer](/refguide/page-explorer/) can be used in combination with **Structure mode** or **Design mode**, which shows a tree view of your page structure and contains the same editing capabilities.
 
-### 3.1 Structure Mode {#structure-mode}
+### Structure Mode {#structure-mode}
 
 In **Structure mode**, the page widgets are laid out so that it is easy to see the logical relationship between them. It has the following features which are not available in **Design mode**:
 
@@ -165,7 +165,7 @@ In **Structure mode**, the page widgets are laid out so that it is easy to see t
 
     {{< figure src="/attachments/refguide/modeling/pages/page/show-styles.png" alt="Show styles button" width="400" class="no-border" >}}
 
-### 3.2 Design Mode {#design-mode}
+### Design Mode {#design-mode}
 
 In **Design mode**, the page is laid out as it will appear when published so that it is easy to see the spatial relationship between the elements. 
 
@@ -191,24 +191,18 @@ It has the following features which are not available in **Structure mode**:
 
 * **X-ray mode** to visualize the structure of a page
 
-#### 3.2.1 X-Ray Mode (Beta) {#x-ray-mode}
+#### X-Ray Mode {#x-ray-mode}
 
-{{% alert color="info" %}}
-**X-ray mode** is currently in beta. The feature is enabled by default on Mac and disabled by default on Windows. It can be enabled or disabled in **Preferences** > **New features**.
-
-When the feature is disabled, the button to toggle **X-ray mode** is not shown in the top bar and the keyboard shortcuts do not work.
-{{% /alert %}}
-
-Before this feature, you could either work in **Structure** mode and see a completely detailed view of your app in progress or **Design** mode which gave you a more simplified view of the app as your end-user might see it. 
+**Structure** mode allows you to see a completely detailed view of your app in progress. **Design** mode gives you a more simplified view of the app as your end-user might see it. 
 
 **X-ray mode** is a way to visualize certain structures of a page while in **Design mode**. It offers you a similar experience as **Design** mode, but you get more detailed information on structures and page elements. 
 
-When enabled, certain widgets appear bigger with an extra outline so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. These extra effects are removed when **X-ray mode** is turned off.
+When enabled, certain widgets appear larger (and are outlined bodly) so they are easier to work with. **X-ray mode** affects structures such as **Container**, **Layout Grid**, and **Data View** widgets. In addition, widgets such as **Data View** will show information on their data sources, even if the widget is not currently selected. These extra effects are removed when **X-ray mode** is turned off.
 
 **X-ray mode** can be enabled and disabled by clicking the button in the top bar from **Design** mode. It can also be enabled or disabled using these shortcuts:
 
 * Windows: <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
-* Mac: <kbd>Cmd</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
+* Mac: <kbd>Command</kbd> + <kbd>Alt</kbd> + <kbd>X</kbd>
 
 Here is a page as shown in **Design mode** with **X-ray mode** disabled:
 
@@ -218,7 +212,7 @@ Here is the same page with **X-ray mode** enabled:
 
 {{< figure src="/attachments/refguide/modeling/pages/page/design-mode-x-ray.png" alt="Design mode with x-ray mode turn on" class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Pages](/refguide/pages/)
 * [Page Properties](/refguide/page-properties/)

@@ -8,7 +8,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 A sort bar allows end-user to sort items in a [data grid](/refguide9/data-grid/), [template grid](/refguide9/template-grid/) or a [reference set selector](/refguide9/reference-set-selector/). 
 
@@ -20,7 +20,7 @@ If you do not specify any sort items, the objects will appear in the order in wh
 There are special cases for ordering behavior. For more details, refer to [Order By Behavior](/refguide9/ordering-behavior/).
 {{% /alert %}}
 
-## 2 Read More
+## Read More
 
 * [Data Grid](/refguide9/data-grid/)
 * [Template Grid](/refguide9/template-grid/)

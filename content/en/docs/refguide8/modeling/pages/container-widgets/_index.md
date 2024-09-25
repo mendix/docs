@@ -4,7 +4,7 @@ url: /refguide8/container-widgets/
 weight: 25
 ---
 
-## 1 Introduction
+## Introduction
 
 Container widgets provide structure to your page's content.
 
@@ -36,11 +36,11 @@ Container widgets provide structure to your page's content.
 
     {{< figure src="/attachments/refguide8/modeling/pages/container-widgets/navigation-list-example.png" alt="Navigation List Example" class="no-border" >}}
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
 {{% snippet file="/static/_includes/refguide8/performing-basic-functions-widgets.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide8/page/)
 * [Pages](/refguide8/pages/)

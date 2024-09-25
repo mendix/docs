@@ -9,7 +9,7 @@ description: Describes end-of date function calls in Studio Pro expressions.
 This function is only available for Mendix Studio Pro 9.18.0 and above. 
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 End-of date function calls calculate the end of the day, week, month, or year and return the value.
 
@@ -17,11 +17,11 @@ The first parameter can be an attribute of an entity of type **Date and time**, 
 
 You can also calculate the end of a time period from the specified date. For more information, see [Begin-of Date Function Calls](/refguide9/begin-of-date-function-calls/).
 
-## 2 endOfDay
+## endOfDay
 
 The `endOfDay` function calculates the end of the day compared to the initial date.
 
-### 2.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -29,7 +29,7 @@ The input parameters are described in the table below:
 | -------------------------------------- | ------------- |
 | Initial date                           | Date and time |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -37,23 +37,23 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | A Date and time value that is the end of the day relative to the *initial date*. | Date and time |
 
-### 2.3 Example
+### Example
 
-```java {linenos=false}
+```java
 endOfDay(dateTime(2007, 2, 7, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 07 23:59 CET 2007"
 ```
 
-## 3 endOfWeek
+## endOfWeek
 
 The `endOfWeek` function calculates the end of the week compared to the initial date. The beginning and the end of the week are based on the user's locale. In the case of an anonymous user, the browser's locale is used instead.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -61,7 +61,7 @@ The input parameters are described in the table below:
 | -------------------------------------- | ------------- |
 | Initial date                           | Date and time |
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -69,23 +69,23 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | A Date and time value that is the end of the week relative to the *initial date*. | Date and time |
 
-### 3.3 Example
+### Example
 
-```java {linenos=false}
+```java
 endOfWeek(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Sat Feb 10 23:59 CET 2007"
 ```
 
-## 4 endOfMonth
+## endOfMonth
 
 The `endOfMonth` function calculates the end of the month compared to the initial date.
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -93,7 +93,7 @@ The input parameters are described in the table below:
 | -------------------------------------- | ------------- |
 | Initial date                           | Date and time |
 
-### 4.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -101,23 +101,23 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | A Date and time value that is the end of the month relative to the *initial date*. | Date and time |
 
-### 4.3 Example
+### Example
 
-```java {linenos=false}
+```java
 endOfMonth(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Wed Feb 28 23:59 CET 2007"
 ```
 
-## 5 endOfYear
+## endOfYear
 
 The `endOfYear` function calculates the end of the year compared to the initial date.
 
-### 5.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -125,7 +125,7 @@ The input parameters are described in the table below:
 | -------------------------------------- | ------------- |
 | Initial date                           | Date and time |
 
-### 5.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -133,19 +133,19 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------------- |
 | A Date and time value that is the end of the year relative to the *initial date*. | Date and time |
 
-### 5.3 Example
+### Example
 
-```java {linenos=false}
+```java
 endOfYear(dateTime(2007, 2, 7, 1, 1, 1))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 "Mon Dec 31 23:59 CET 2007"
 ```
 
-## 6 Read More
+## Read More
 
 * [Date Creation](/refguide9/date-creation/)
 * [Begin-of Date Function Calls](/refguide9/begin-of-date-function-calls/)

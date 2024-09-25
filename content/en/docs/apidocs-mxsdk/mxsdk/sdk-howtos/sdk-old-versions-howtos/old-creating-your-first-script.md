@@ -5,11 +5,11 @@ url: /apidocs-mxsdk/mxsdk/old-creating-your-first-script/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 In [How to Set Up Your Development Environment](/apidocs-mxsdk/mxsdk/old-setting-up-your-development-environment/), you set up all the development tools. Now you will create an SDK script that automatically bootstraps a new Mendix app.
 
-## 2 Writing Your First Script
+## Writing Your First Script
 
 After setting up all the prerequisites, follow these steps to write your first script that will use the Mendix Platform SDK:
 
@@ -52,11 +52,11 @@ After setting up all the prerequisites, follow these steps to write your first s
 
 3. Replace the `username` (line 7) and `apikey` (line 8) with the email address of your Mendix account. From your [Mendix Profile](/community-tools/mendix-profile/user-settings/#profile-api-keys), you can generate an [API Key](/apidocs-mxsdk/apidocs/authentication/).
 
-## 3 Code Explanation
+## Code Explanation
 
 The sections below explain the script.
 
-### 3.1 Line 6
+### Line 6
 
 ```ts
 const client = new MendixSdkClient(username, apikey);
@@ -64,7 +64,7 @@ const client = new MendixSdkClient(username, apikey);
 
 This line is where the `MendixSdkClient` object is instantiated.
 
-### 3.2 Lines 9-10
+### Lines 9-10
 
 ```ts
 const project = await client.platform().createNewApp(`NewApp-${Date.now()}`);
@@ -74,10 +74,10 @@ const workingCopy = await project.createWorkingCopy();
 The `createNewApp()` call is where you actually kick off the process that will create a new app in the Mendix Platform, which will also create a commit in the Team Server repository. By using `await`, you are waiting for the asynchronous call for creating the app and resuming the code afterwards. The result of this call will be accessible via Studio Pro, but in order to be able to manipulate it using the SDK, you need to expose it as an online working copy. The subsequent call `createWorkingCopy()` will do exactly that.
 
 {{% alert color="info" %}}
-If you create an online working copy from an existing app on Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
+If you create an online working copy from an existing app on the Team Server, be sure your app has been saved using the latest Mendix Studio Pro version. Earlier versions might not be supported!
 {{% /alert %}}
 
-### 3.3 Lines 12-15
+### Lines 12-15
 
 ```ts
 const domainModel = await loadDomainModel(workingCopy);
@@ -88,7 +88,7 @@ entity.location = { x: 100, y: 100 };
 
 Now that you have an online working copy, you can start manipulating the model. In this example, first you grab the default module named **MyFirstModule** (see the function `loadDomainModel()` on lines 25-29). Once you have loaded the domain model in memory with the function `dm.load()`, you create a new entity in the domain model and give it a name and coordinates.
 
-### 3.4 Lines 22-29
+### Lines 22-29
 
 ```ts
 try {
@@ -103,11 +103,11 @@ Once you are done with the model changes, you can commit the changes back to the
 
 For more information, see [Async Await](https://basarat.gitbook.io/typescript/future-javascript/async-await) and [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises).
 
-## 4 Compiling and Running the Script
+## Compiling and Running the Script
 
 1. Compile the script with the TypeScript compiler into JavaScript using the following command:
 
-    ```bash {linenos=false}
+    ```bash
     $ tsc
     ```
 
@@ -115,7 +115,7 @@ For more information, see [Async Await](https://basarat.gitbook.io/typescript/fu
 
     The TypeScript compiler will execute in a single run to compile all the files configured in *tsconfig.json*. While developing your script, it can be practical to have the compiler immediately run once you make changes to your code. Use the `--watch` flag for `tsc` to monitor the files configured in the *tsconfig.json* file for changes and immediately run the compiler when you save the file:
 
-    ```bash {linenos=false}
+    ```bash
     $ tsc --watch
     ```
 
@@ -140,8 +140,8 @@ For more information, see [Async Await](https://basarat.gitbook.io/typescript/fu
 The steps for app creation (line 3) and committing to the Team Server (line 10) can take some time, so please be patient. Be aware that 'revision -1' refers to the latest revision, and that 'branch null' is equal to the main line.
 {{% /alert %}}
 
-## 5 Opening the App in Studio Pro
+## Opening the App in Studio Pro
 
-1. In the [My Apps](/developerportal/#my-apps) page of the Developer Portal, verify the app you just created is visible at the top of the list.
+1. In [Apps](/developerportal/#my-apps), verify the app you just created is visible at the top of the list.
 2. Open the new app, and on the right side, click **Edit**.
 3. If you have the latest [Mendix Studio Pro](https://marketplace.mendix.com/link/studiopro/), it will start and load the app you just created from the Team Server.

@@ -24,15 +24,15 @@ The following are usage scenarios that would be achievable with the OIDC Provide
 * SSO within multi-app Mendix solution
 * Non-user specific API consumption
 
-For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see the [End-User Account Creation in OIDC Provider](#end-user-account) section below.
+For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see the [End-User Account Creation in the OIDC Provider](#end-user-account) section below.
 
 #### 1.1.1 SSO Brokering for Rapid Innovation{#brokering}
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/brokering.png" class="no-border" >}}
 
-The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can be costly or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
+The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can cost more or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
 
-You can build a Mendix application that acts as an SSO Broker by using the OIDC SSO and the OIDC Provider modules. The OIDC SSO module would authenticate end-users at your central IdP, while the OIDC Provider module enables your SSO Broker act as an IdP (OpenID Provider) towards your Mendix applications. This means it is working as an SSO broker, catering for authentication and, optionally, for authorization. For more information on the concepts behind authorization, see the [About Authorization](#about-authorization) section below.
+You can build a Mendix application that acts as a SSO Broker by using the OIDC SSO and the OIDC Provider modules. The OIDC SSO module authenticates end-users at your central IdP, while the OIDC Provider module enables your new app to act as an IdP (OpenID Provider) for your other Mendix applications. This means it is working as an SSO broker, catering for authentication and, optionally, for authorization. For more information on the concepts behind authorization, see the [About Authorization](#about-authorization) section below.
 
 Your deployment pipeline (deployment agent) would be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module.
 
@@ -42,7 +42,7 @@ Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a sin
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
 
-As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution rather than separately to individual apps. The OIDC Provider module allows you to build a ‘Central Portal App' where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external, 3rd-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for Customer Identity & Access Management (CIAM).
+As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution rather than separately to individual apps. The OIDC Provider module allows you to build a ‘Central Portal App' where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external third-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for Customer Identity & Access Management (CIAM).
 
 Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above.
 
@@ -50,9 +50,10 @@ Instead of using local credentials in the Central Portal App, you may want to in
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
 
-For API security, it is a best security practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. To use OAuth tokens you have below two options:
+For API security, it is a best practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. You have below two options for using OAuth tokens:
 
-* Use human identities: An end-user of your (client) application logs in using SSO and the client application can consume the API on behalf of your end-user, using the OAuth Access Token it received as a result from the SSO process.
+* Use human identities: An end-user logs in via SSO, allowing the client application to consume the API on behalf of your end-user, using the OAuth access token which is received from the SSO process. 
+
 * Use a machine identity: Machine identities are also known as service accounts or application accounts. In this case, access tokens are used by the client application to consume the API on behalf of itself. In this scenario, the end-user is not relevant.
 
 The OIDC Provider supports the so-called Client Credential grant. This means that, a client application can obtain a client access token by authenticating at the OIDC Provider and present that access token to the API it consumes. The API can validate the token either through token introspection at the OIDC Provider or by verifying its signature.
@@ -530,7 +531,7 @@ The OIDC Provider service is one such central component and you can communicate 
 
 Using OAuth scopes is the recommended approach since it is the standard OAuth solution. With Mendix, we advise you to think of an app’s user roles as being the same as OAuth scope values.  By adhering to this logic, you can develop apps with any user roles without having to decide and agree on custom attributes. You can customize the OIDC SSO module with microflows which parse the tokens from the OIDC Provider service and apply user roles to enforce the authorization indicated in the token.
 
-### 7.3 End-User Account Creation in OIDC Provider{#end-user-account}
+### 7.3 End-User Account Creation in the OIDC Provider{#end-user-account}
 
 Since the OIDC Provider issues access tokens for end-users that are logged in, it needs to record end-users as objects in the app which contains the OIDC Provider service.
 

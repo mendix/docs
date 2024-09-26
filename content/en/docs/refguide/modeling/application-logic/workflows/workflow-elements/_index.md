@@ -17,7 +17,7 @@ A workflow is composed of elements that you can drag on a path from the **Toolbo
 ## Workflow Parameters {#parameters}
 
 A [workflow parameter](/refguide/workflow-parameters/) is input data for your workflow. The **WorkflowContext** parameter is a business-related data that travels through the workflow:
-{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-context.png" alt="Workflow Context Example" class="no-border" >}}
+{{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-elements/workflow-context.png" alt="Workflow Context Example" max-width=50% class="no-border" >}}
 
 ## General {#general}
 

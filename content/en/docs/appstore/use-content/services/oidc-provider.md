@@ -26,7 +26,9 @@ The following are usage scenarios that would be achievable with the OIDC Provide
 
 For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see the [End-User Account Creation in OIDC Provider](#end-user-account) section below.
 
-#### 1.1.1 SSO Brokering for Rapid Innovation{brokering}
+#### 1.1.1 SSO Brokering for Rapid Innovation{#brokering}
+
+{{< figure src="/attachments/appstore/use-content/services/oidc-provider/brokering.png" class="no-border" >}}
 
 The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can be costly or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
 
@@ -38,11 +40,15 @@ Your deployment pipeline (deployment agent) would be responsible for registering
 
 Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a single application. This solution may have initially been a big monolith and is gradually refactored into multiple Mendix applications.
 
+{{< figure src="/attachments/appstore/use-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
+
 As an MSV, you probably want to hide the internal multi-application structure from your end-users. They prefer logging in once to your overall solution rather than separately to individual apps. The OIDC Provider module allows you to build a ‘Central Portal App' where your end-users login once and subsequently get a SSO experience when navigating to the various applications in the solution. This approach does not need an external, 3rd-party IdP to create such a SSO experience, as your Central Portal App acts as a lightweight solution for Customer Identity & Access Management (CIAM).
 
-Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](brokering) section above.
+Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above.
 
 #### 1.1.3 Non-user Specific API Consumption 
+
+{{< figure src="/attachments/appstore/use-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
 
 For API security, it is a best security practice to use OAuth-tokens rather than API-keys. OAuth tokens are also known as bearer tokens, access tokens or simply JWTs. To use OAuth tokens you have below two options:
 

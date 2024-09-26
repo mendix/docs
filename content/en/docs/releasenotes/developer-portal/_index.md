@@ -19,6 +19,12 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### September 26, 2024
+
+#### Improvements
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now assign multiple owners to an initiative.
+
 ### August 25, 2024
 
 #### Improvements

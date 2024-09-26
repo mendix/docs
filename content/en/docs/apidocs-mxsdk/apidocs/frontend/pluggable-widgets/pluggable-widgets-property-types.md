@@ -366,10 +366,6 @@ The return type of the expression must be defined using either the `type` or the
 
 ##### Fixed Return Type
 
-{{% alert color="info" %}}
-The `type` attribute was required in Mendix [9.19](/releasenotes/studio-pro/9.19/) and below.
-{{% /alert %}}
-
 You can set a fixed return type for your expression property with one of the supported types from below.
 
 | Supported Return Types | Corresponding Types Client Components Receive                                           |
@@ -381,10 +377,6 @@ You can set a fixed return type for your expression property with one of the sup
 | `String`               | `DynamicValue<string>`                                                                  |
 
 ##### Return Type Assignable to an Attribute
-
-{{% alert color="info" %}}
-The `assignableTo` attribute was introduced in Mendix [9.20](/releasenotes/studio-pro/9.20/).
-{{% /alert %}}
 
 You can use `assignableTo` to specify that the return type of the expression property should depend on the attribute property with the given property path. This means that the value of the expression will be assignable to the attribute configured for that attribute property (using [`setValue`](/apidocs-mxsdk/apidocs/pluggable-widgets-client-apis/#editable-value)).
 
@@ -573,14 +565,6 @@ Then the Studio Pro UI for the property appears like this:
 {{< figure src="/attachments/apidocs-mxsdk/apidocs/pluggable-widgets/pluggable-widgets-property-types/attribute.png" class="no-border" >}}
 
 ### Association {#association}
-
-{{% alert color="info" %}}
-This property type was introduced in Mendix [9.13](/releasenotes/studio-pro/9.13/).
-{{% /alert %}}
-
-{{% alert color="info" %}}
-The ability to link association properties to a data source was introduced in Mendix [9.17](/releasenotes/studio-pro/9.17/).
-{{% /alert %}}
 
 The association property type allows a widget to work directly with both reading and writing associations between entities. Depending on the widget's purposes, a widget should define association types it supports.
 

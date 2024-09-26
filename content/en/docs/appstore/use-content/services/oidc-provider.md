@@ -10,12 +10,12 @@ aliases:
 
 ## Introduction
 
- The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module enables developers to build Mendix applications that issues security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, let us refer to such an application as an access provider application.
+ The [OIDC Provider](https://marketplace.mendix.com/link/component/214681) module enables developers to build Mendix applications that issue security tokens to other applications. In IAM (Identity and Access Management) terminology, this module acts as an OpenID Provider and an OAuth Authorization Server. Therefore, let us refer to such an application as an access provider application.
 
 An access provider application can offer a Single Sign-On (SSO) experience for end-users of connected applications Additionally, it can issue Access Tokens for API consumption when APIs are secured with OAuth bearer tokens.
 The service supports responsive browser-based applications and has been tested with applications that use the OIDC SSO module.
 
-### 1.1 Typical Usage Scenarios
+### Typical Usage Scenarios
 
 The following are usage scenarios that would be achievable with the OIDC Provider module.
 
@@ -25,19 +25,21 @@ The following are usage scenarios that would be achievable with the OIDC Provide
 
 For more information on how SSO brokering and SSO are implemented within a multi-app Mendix solution, see the [End-User Account Creation in the OIDC Provider](#end-user-account) section below.
 
-#### 1.1.1 SSO Brokering for Rapid Innovation{#brokering}
+#### SSO Brokering for Rapid Innovation{#brokering}
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/brokering.png" class="no-border" >}}
 
 The Mendix marketplace offers Single Sign-On (SSO) module, enabling your Mendix application to delegate end-user login to your Identity Providers (IdPs) such as Entra ID and Okta. However, for some organizations, implementing SSO for each Mendix application can cost more or slow down innovation. In such cases, an SSO broker between your IdP and your expanding portfolio of Mendix applications can offer an effective solution.
 
-You can build a Mendix application that acts as a SSO Broker by using the OIDC SSO and the OIDC Provider modules. The OIDC SSO module authenticates end-users at your central IdP, while the OIDC Provider module enables your new app to act as an IdP (OpenID Provider) for your other Mendix applications. This means it is working as an SSO broker, catering for authentication and, optionally, for authorization. For more information on the concepts behind authorization, see the [About Authorization](#about-authorization) section below.
+You can build a Mendix application that acts as a SSO Broker by using the OIDC SSO and the OIDC Provider modules. The OIDC SSO module authenticates end-users at your central IdP, while the OIDC Provider module enables your new app to act as an IdP (OpenID Provider) for your other Mendix applications. This means it is working as an SSO broker, catering for authentication and, optionally, for authorization. 
+
+For more information on the concepts behind authorization, see the [About Authorization](#about-authorization) section below.
 
 Your deployment pipeline (deployment agent) would be responsible for registering additional Mendix apps with the SSO broker. This process can be automated using client registration API provided by the OIDC Provider module.
 
-#### 1.1.2 SSO Within Multi-app Mendix Solution
+#### SSO Within Multi-app Mendix Solution
 
-Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a single application. This solution may have initially been a big monolith and is gradually refactored into multiple Mendix applications.
+Mendix Solution Vendors (MSVs) may build a multi-app solution that acts as a single application from the end-user perspective. This solution may have initially been a big monolith and is gradually refactored into multiple Mendix applications.
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/SSO_within_multiapp.png" class="no-border" >}}
 
@@ -45,7 +47,7 @@ As an MSV, you probably want to hide the internal multi-application structure fr
 
 Instead of using local credentials in the Central Portal App, you may want to integrate your solution with an IdP. As an MSV, you probably also want to hide the internal multi-application structure from this IdP and have a single integration point. The Central Portal App can then act as an SSO broker, similar to the usage scenario described in the [SSO Brokering for rapid innovation](#brokering) section above.
 
-#### 1.1.3 Non-user Specific API Consumption 
+#### Non-user Specific API Consumption 
 
 {{< figure src="/attachments/appstore/use-content/services/oidc-provider/API_consumption.png" class="no-border" >}}
 
@@ -55,9 +57,7 @@ For API security, it is a best practice to use OAuth-tokens rather than API-keys
 
 * Use a machine identity: Machine identities are also known as service accounts or application accounts. In this case, access tokens are used by the client application to consume the API on behalf of itself. In this scenario, the end-user is not relevant.
 
-The OIDC Provider supports the so-called Client Credential grant. This means that, a client application can obtain a client access token by authenticating at the OIDC Provider and present that access token to the API it consumes. The API can validate the token either through token introspection at the OIDC Provider or by verifying its signature.
-
-The OIDC SSO module (version 3.1.0 and above) helps you to implement security in your API. It validates the token either through token introspection at the OIDC Provider or by verifying its signature. Moreover, it creates a user that represents the client that is consuming the API.
+The OIDC Provider supports the so-called Client Credential grant. This means that, a client application can obtain a client access token by authenticating at the OIDC Provider and present that access token to the API it consumes. The OIDC SSO module (version 3.1.0 and above) helps you to implement security in your API. It validates the token either through token introspection at the OIDC Provider or by verifying its signature. Moreover, it creates a user that represents the client that is consuming the API.
 
 ### Features and Limitations
 

@@ -7,8 +7,8 @@ description_list: true
 description: "Presents useful APD/APM use cases for each APD/APM version."
 ---
 
-## 1 Introduction
+## Introduction
 
 The *APD Use Cases* are organized according to the APD version.
 
-## 2 Documents in This Section
+## Documents in This Section

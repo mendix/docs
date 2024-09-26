@@ -5,7 +5,7 @@ weight: 2
 description: "This how-to will allow you to start making Mendix native mobile apps on your Mac device."
 ---
 
-## 1 Introduction
+## Introduction
 
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine. 
 
@@ -21,14 +21,14 @@ This how-to teaches you how to do the following:
 * Run a Mendix app on a test device using your Windows virtual machine
 * Make changes to your app, then view those changes on your test device
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Install [Parallels Desktop Pro Edition](https://www.parallels.com/products/desktop/pro/), install Windows when prompted by Parallels, and create a Windows virtual machine (Parallels Desktop Pro Edition is necessary for Mendix's network features to work)
 * Install Mendix Studio Pro on your Windows virtual machine
 
-## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
+## Configuring Your Windows Virtual Machine for Mendix Studio Pro
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 
@@ -63,7 +63,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
-## 4 Checking Network Drive
+## Checking Network Drive
 
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
@@ -79,7 +79,7 @@ Read the tips below to check the network drive before viewing your app on your t
 
     {{< figure src="/attachments/howto8/general/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  class="no-border" >}}
 
-## 5 Viewing Your App on Your Testing Device
+## Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:
 
@@ -99,18 +99,18 @@ Instead, you must enter your Mac's IP address into your Make It Native app. To r
 
 Congratulations! You have successfully viewed your app on a test device.
 
-## 6 Viewing Changes to Your App on Your Testing Device
+## Viewing Changes to Your App on Your Testing Device
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/howto8/mobile/getting-started-with-native-mobile/#viewingchanges) section in *Get Started with Native Mobile*.
 
-## 7 Improving Performance
+## Improving Performance
 
 To improve the performance, you can do the following: 
 
 * Run Parallels in a window, instead of Coherence mode
 * Store apps on disk C:\
 
-### 7.1 Increasing Network Speed
+### Increasing Network Speed
 
 Some users experience slow network speed. You try the following approach, which can increase the upload speed significantly:
 
@@ -122,7 +122,7 @@ Some users experience slow network speed. You try the following approach, which 
 
 Now the upload speed becomes faster! For more information, see [Parallels Forum](https://forum.parallels.com/threads/horribly-slow-upload-download-speeds.264819/).
 
-## 8 Read More
+## Read More
 
 * [Get Started with Native Mobile](/howto8/mobile/getting-started-with-native-mobile/)
 * [Style Your Mendix Native Mobile App](/howto8/mobile/how-to-use-native-styling/)

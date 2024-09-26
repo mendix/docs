@@ -5,11 +5,11 @@ weight: 50
 description: A tutorial for scheduling and cancelling push notifications.
 ---
 
-## 1 Introduction
+## Introduction
 
 Local notifications should rarely notify a user right after they perform an action. Here you will learn to configure local notifications to trigger after a period of time. To do this, you will use a JavaScript action named **ScheduleNotification**. After that, you will learn how to cancel scheduled notifications.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -17,7 +17,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Install the [Make It Native](/refguide8/getting-the-make-it-native-app/) app on your mobile device
 * Complete the preceding tutorials in this [Use Local Notifications](/howto8/mobile/local-notif-parent/) series
 
-## 3 Scheduling a Notification
+## Scheduling a Notification
 
 To schedule a notification for a specific time, do the following:
 
@@ -61,11 +61,11 @@ If your app is open, it will not show the notification due to iOS and Android us
 
 But what if you want to cancel a scheduled notification? Read on to learn more.
 
-## 4 Cancelling Scheduled Notifications
+## Cancelling Scheduled Notifications
 
 To cancel a scheduled notification, you can use either the **Cancel Scheduled Notification** or **Cancel All Scheduled Notification** JavaScript actions. To cancel a specific notification, provide an identifier of that particular notification to **Cancel Scheduled Notification**. To cancel all notifications, call the **Cancel All Scheduled Notification** JavaScript action. For further information, see the subsections below.
 
-### 4.1 Cancelling all Scheduled Notifications
+### Cancelling all Scheduled Notifications
 
 To cancel all scheduled notifications, do the following:
 
@@ -90,7 +90,7 @@ To test your new cancel button, do the following:
 
 You will not see a notification at the end of the minute, proving your cancel action a success!
 
-### 4.2 Cancelling a Specific Scheduled Notification
+### Cancelling a Specific Scheduled Notification
 
 To cancel a specific scheduled notification, you will need to supply a notification ID for the notification you wish to cancel. 
 
@@ -124,7 +124,7 @@ To test your new cancel button, do the following:
 
 You will not see a notification at the end of the minute, proving your cancel action a success! Congratulations on completing this series and mastering the power of local notifications.
 
-## 5 Read More
+## Read More
 
 * [Implement Push Notifications](/howto8/mobile/implementation-guide/)
 * [Build JavaScript Actions](/howto8/extensibility/build-javascript-actions/)

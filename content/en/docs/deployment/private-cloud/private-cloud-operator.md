@@ -6,7 +6,7 @@ description: "Describes the processes for using the Mendix Operator directly to 
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 Once you have the Mendix Operator installed in a namespace of your Red Hat OpenShift, or other Kubernetes cluster (see [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/)), you can use it to control the deployment of your Mendix app using Mendix Custom Resources (CRs). The Mendix operator then creates the app container and builds the app inside the namespace, together with all the resources the app needs.
 
@@ -14,7 +14,7 @@ This document explains how to provide the CRs through the console or command lin
 
 Alternatively, you can create a connected cluster and use the Mendix Portal to deploy the app, as described in [Deploying a Mendix App to a Private Cloud Cluster](/developerportal/deploy/private-cloud-deploy/).
 
-## 2 Prerequisites for Deploying a Mendix App
+## Prerequisites for Deploying a Mendix App
 
 * An OpenShift (version 3.11 or above), or Kubernetes platform – see [Supported Cluster Types](/developerportal/deploy/private-cloud-supported-environments/#supported-clusters) in *Supported Providers* for a full list
 * Platform administration account
@@ -23,13 +23,13 @@ Alternatively, you can create a connected cluster and use the Mendix Portal to d
 * A command line terminal. In Windows, this could be PowerShell or the Windows Command Prompt.
 * The **deployment package** of a Mendix app made with version 8.0.0 (build 56467) or above
 
-## 3 Deploying a Mendix App with an Operator
+## Deploying a Mendix App with an Operator
 
-You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are  deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
+You can deploy multiple Mendix apps to run in the same Kubernetes or OpenShift namespace. Apps will have an **Environment UUID** added when they are deployed to ensure that they are unique in the project; the name is required to identify the app when creating, modifying, or deleting it.
 
 Follow the instructions below to deploy your app.
 
-### 3.1 Creating a Deployment Package
+### Creating a Deployment Package
 
 Create a deployment package (.mda) file from your app. It is this which is picked up by the CR configuration and deployed in a container to your namespace.
 
@@ -42,11 +42,11 @@ You can obtain the deployment package in a number of ways:
 
 The deployment package must be available over the internet without requiring authorization credentials, as these cannot be provided in the CR.
 
-### 3.2 Editing the CR {#edit-cr}
+### Editing the CR {#edit-cr}
 
 You need to create a file containing yml code and then configure it to create the CR for your app. Below is an example which can be used a reference purpose to create a mendix CR yaml file. Adapt this example as required for your own application.
 
-```yml
+```yaml
 apiVersion: privatecloud.mendix.com/v1alpha1
 kind: MendixApp
 metadata:
@@ -224,7 +224,7 @@ You need to make the following changes:
 * **customPodLabels** - specify additional pod labels (please avoid using labels that start with the `privatecloud.mendix.com/` prefix)
     * **general** - specify additional labels for all pods of the app
 
-#### 3.2.1 Setting App Constants{#set-app-constants}
+#### Setting App Constants{#set-app-constants}
 
 The constant name is equal to `{module-name}.{constant-name}` where {module-name} is the name of the Mendix app module containing the constant,
 and {constant-name} is the name of the constant. The constant name will also be visible in the constant properties (UnitTesting.RemoteApiEnabled in this example):
@@ -250,7 +250,7 @@ The app constants can be defined in two ways, one is through Custom Runtime Sett
 
 {{% /alert %}}
 
-#### 3.2.2 Configuring Scheduled Events{#configure-scheduled-events}
+#### Configuring Scheduled Events{#configure-scheduled-events}
 
 To disable execution of all scheduled events, set the **scheduledEventExecution** value to `NONE` in **runtime**.
 
@@ -277,7 +277,7 @@ spec:
 
 The **MyScheduledEvents** value should be removed from **customConfiguration** if **ScheduledEventExecution** is set to `ALL` or `NONE`.
 
-### 3.3 Building and Deploying Your App
+### Building and Deploying Your App
 
 You now need to supply the CR you have just created to the platform so that the Mendix Operator can use it to build and deploy the app.
 
@@ -286,31 +286,31 @@ You can do this in one of two ways:
 * via the CLI
 * for OpenShift, you can use the [OpenShift console](#openshift-console)
 
-#### 3.3.1 Processing the CR in the CLI
+#### Processing the CR in the CLI
 
 To submit the CR via a CLI you will need a file containing the YML you created in [Editing the CR](#edit-cr), above.
 
-##### 3.3.1.1 Kubectl in the CLI
+##### Kubectl in the CLI
 
 To build and deploy your app using AWS-EKS or other Kubernetes platform execute the following command:
 
-```shell {linenos=false}
+```shell
 kubectl apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
-##### 3.3.1.2 OpenShift CLI
+##### OpenShift CLI
 
 To build and deploy your app using the OpenShift CLI, do the following:
 
 1. Paste the OpenShift login command into your command line terminal as described in the first few steps of the [Signing in to Open Shift](/developerportal/deploy/standard-operator/#openshift-signin) section of *Creating a Private Cloud Cluster*.
-2. Switch to the project where you've deployed the Mendix Operator using the command`oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
+2. Switch to the project where you've deployed the Mendix Operator using the command `oc project {my-project}` where {my-project} is the name of the project where the Mendix Operator is deployed.
 3. Paste the following command into your command line terminal:
 
-```shell {linenos=false}
+```shell
 oc apply -f {File containing the CR} -n {namespace where app is being deployed}
 ```
 
-#### 3.3.2 Process the CR in the OpenShift Console{#openshift-console}
+#### Process the CR in the OpenShift Console{#openshift-console}
 
 To build and deploy your app using the OpenShift Console, do the following:
 
@@ -327,7 +327,7 @@ To build and deploy your app using the OpenShift Console, do the following:
 
 Mendix Operator will now pick up the YAML and deploy your app.
 
-### 3.4 Monitoring the Build Process.
+### Monitoring the Build Process.
 
 The YAML window will report the status of the app build. Note that it can take up to ten minutes for all the statuses to reach ready.
 
@@ -343,7 +343,7 @@ The following statuses will be reported:
 * **storageStatus** – Ready
 * **serviceAccountStatus** - attached
 
-### 3.5 Starting and Stopping Your App
+### Starting and Stopping Your App
 
 You can start and stop your app through the CR you supplied to deploy your app. See section [Edit the CR](#edit-cr), above, for the full CR.
 
@@ -353,15 +353,15 @@ To start your app when it is stopped, set the value of **replicas** to be non-ze
 
 The value set in **replicas** will only be applied once the runtime status is **Ready**. If the runtime is waiting for another action to complete (for example, provisioning the database), then it will apply the replicas value once all other actions have been completed.
 
-## 4 Current Limitations
+## Current Limitations
 
-### 4.1 Reserved Names for Mendix Apps{#reserved-names}
+### Reserved Names for Mendix Apps{#reserved-names}
 
 Names beginning **mendix-** cannot be used for your own apps as they are reserved for use by the Mendix Operator.
 
 All names beginning **openshift-** are reserved for use by OpenShift if you are deploying to an OpenShift cluster.
 
-### 4.2 ApplicationRootUrl Needs to be Set Manually
+### ApplicationRootUrl Needs to be Set Manually
 
 In some cases, your Mendix app will need to know its own URL – for example when using SSO or sending emails.
 

@@ -4,7 +4,7 @@ url: /howto/front-end/extend-design-properties/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 Design properties make it simple to change the appearance of widgets. These changes can include properties like colors, borders, and spacing. Out of the box, the Atlas framework comes with a default set of design properties which can be extended.
 

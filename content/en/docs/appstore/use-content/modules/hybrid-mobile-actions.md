@@ -10,7 +10,7 @@ description: "Describes the configuration and usage of the Hybrid Mobile Actions
 This module is deprecated. Mendix recommends building a native or progressive web app instead. For more information, see [Introduction to Mobile Technologies](/refguide/mobile/introduction-to-mobile-technologies/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Hybrid Mobile Actions](https://marketplace.mendix.com/link/component/112063/) module contains the following nanoflow actions that can be used for hybrid mobile applications:
 
@@ -33,7 +33,7 @@ The [Hybrid Mobile Actions](https://marketplace.mendix.com/link/component/112063
 |                     | Is cellular connection                |
 |                     | Is Wi-Fi connection                   |
 
-## 2 Dependencies
+## Dependencies
 
 The actions above are dependent on Cordova plugins. Most dependencies are already provided in the standard template. When building your hybrid mobile app, make sure you add and enable the dependencies by first enabling in **Permissions** by selecting the following:
 

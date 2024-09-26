@@ -6,7 +6,7 @@ description: "How to configure Mendix Cloud to enable monitoring and analysis wi
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 [AppDynamics](https://www.appdynamics.com/) is a monitoring and analysis tool for cloud applications. It is a SaaS-based data analytics platform that provides monitoring for servers, databases, tools, and services. You can use AppDynamics for additional monitoring for your apps running on Mendix Cloud.
 
@@ -22,17 +22,17 @@ AppDynamics is fully supported in Mendix 9.7 and above. For older supported vers
 
 For more information on the data you can send to AppDynamics, see [Monitoring Your Mendix Apps with an APM Tool](/developerportal/operate/monitoring-with-apm/).
 
-## 2 Prerequisites
+## Prerequisites
 
 To use AppDynamics and send data to AppDynamics from your Mendix app, you need the following:
 
-* Access to a  cloud- or self-hosted AppDynamics controller
+* Access to a cloud- or self-hosted AppDynamics controller
 * The following information about AppDynamics
     * The account name and access key for your AppDynamics account
     * The hostname or IP address of your AppDynamics controller
 * A licensed Mendix app of which you are the [Technical Contact](/developerportal/general/app-roles/#technical-contact)
 
-## 3 Connecting Your Node to AppDynamics{#connect-node}
+## Connecting Your Node to AppDynamics{#connect-node}
 
 To send your runtime information to AppDynamics, you must set it up using environment variables in the Mendix Portal.
 
@@ -50,7 +50,7 @@ To send your runtime information to AppDynamics, you must set it up using enviro
     | `APPDYNAMICS_AGENT_APPLICATION_NAME` | A unique name to identify all the metrics coming from your app. Mendix recommends using the app name. | |
     | `APPDYNAMICS_AGENT_ACCOUNT_NAME` | The name of your AppDynamics account. This can be found in the **License** section of your AppDynamics Controller dashboard. | |
     | `APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY` | The secret key used to authenticate your AppDynamics account. | |
-    | `APPDYNAMICS_AGENT_NODE_NAME` | This is how you will identify which node the metrics are coming from. The value of the `CF_INSTANCE_ID` variable will be appended to the node name. For example, if `APPDYNAMICS_AGENT_NODE_NAME` is set to  `node` and the node has multiple instances, the AppDynamics agent will be configured as `node-0`, `node-1`, … for the different instances. | `"node"` |
+    | `APPDYNAMICS_AGENT_NODE_NAME` | This is how you will identify which node the metrics are coming from. The value of the `CF_INSTANCE_ID` variable will be appended to the node name. For example, if `APPDYNAMICS_AGENT_NODE_NAME` is set to `node` and the node has multiple instances, the AppDynamics agent will be configured as `node-0`, `node-1`, … for the different instances. | `"node"` |
     | `APPDYNAMICS_AGENT_TIER_NAME` | This allows you to classify different environments of your app. Mendix recommends using the **Environment ID** to distinguish between Test, Acceptance, and Production environments. You can find this on the **General** tab of the [Environment Details](/developerportal/deploy/environments-details/) page of your app environment. | Environment ID of the app |
 
     For more information on Nodes and Tiers in AppDynamics, see the [Overview of Application Monitoring](https://docs.appdynamics.com/appd/22.x/22.1/en/application-monitoring/overview-of-application-monitoring) in the AppDynamics documentation.
@@ -59,16 +59,16 @@ To send your runtime information to AppDynamics, you must set it up using enviro
 
     {{% alert color="warning" %}}To start sending data to AppDynamics, you must redeploy your app and then restart it. Just restarting the app is not sufficient because additional dependencies need to be included.{{% /alert %}}
 
-## 4 Multi-instance metrics{#multi-instance-metrics}
+## Multi-Instance Metrics{#multi-instance-metrics}
 
 You can view metrics for multiple instances of an application on the AppDynamics Controller.
 
 * To see combined metrics values for all the instances together, use the [Metric Browser](https://docs.appdynamics.com/appd/22.x/latest/en/appdynamics-essentials/metrics-and-graphs/metric-browser) (by default `tier name = environment ID`) and navigate to `Application Infrastructure Performance/<tier name>/Custom Metrics/Mx Runtime Statistics`.
 * AppDynamics Nodes are associated with Mendix application instances. To observe metrics for specific instance (node), navigate in Metric Browser to `Application Infrastructure Performance/<tier name>/Individual Nodes/<node name>/Custom Metrics/Mx Runtime Statistics`.
 
-## 5 Additional Information{#additional-info}
+## Additional Information{#additional-info}
 
-### 5.1 AppDynamics Default Values
+### AppDynamics Default Values
 
 Mendix provides default values for most of the AppDynamics environment variables. However, the following variables cannot be defaulted. If any of the following environment variables are set for your app, you must provide all of them:
 
@@ -76,14 +76,14 @@ Mendix provides default values for most of the AppDynamics environment variables
 * `APPDYNAMICS_AGENT_ACCOUNT_NAME`
 * `APPDYNAMICS_AGENT_ACCOUNT_ACCESS_KEY`
 
-### 5.2 Tagging AppDynamics Metrics
+### Tagging AppDynamics Metrics
 
 Mendix does not send additional tags to AppDynamics to indicate Resource, Microflow, or Activity names. It is also not possible to add custom tags to the metrics you send to AppDynamics.
 
-### 5.3 AppDynamics Issues
+### AppDynamics Issues
 
 If you have any issues related to accessing AppDynamics, contact their support on the [AppDynamics Support](https://help.appdynamics.com/hc/en-us/requests/) page. You need an AppDynamics account to request support.
 
-## 6 Read More
+## Read More
 
 * [Metrics](/developerportal/operate/metrics/)

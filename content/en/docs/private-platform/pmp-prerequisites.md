@@ -7,15 +7,15 @@ aliases:
     - /private-mendix-platform-prerequisites/
 ---
 
-## 1 Introduction
+## Introduction
 
 This document presents the system requirements for the various parts of the Private Mendix Platform.
 
-## 2 Hardware Requirements
+## Hardware Requirements
 
 For performance reasons, Mendix recommends at least the following minimum hardware requirements.
 
-### 2.1 Kubernetes Hardware Requirements for Private Mendix Platform
+### Kubernetes Hardware Requirements for Private Mendix Platform
 
 | Type | Min. Spec. |
 | --- | --- |
@@ -23,7 +23,7 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 | Memory | 4 GB |
 | Database HA | CPU: 1 core; Memory: 2x2 GB |
 
-### 2.2 Kubernetes Hardware Requirements for an App Running on Private Mendix Platform
+### Kubernetes Hardware Requirements for an App Running on Private Mendix Platform
 
 | Type | Min. Spec. |
 | --- | --- |
@@ -33,7 +33,7 @@ For performance reasons, Mendix recommends at least the following minimum hardwa
 
 [Additional services](/developerportal/deploy/private-cloud-monitor/) (Prometheus, Grafana, Loki) for observability are recommended.
 
-## 3 General Requirements
+## General Requirements
 
 * The machine where Private Mendix Platform is installed must have connectivity to the Container Registry and the Kubernetes cluster
 * The cluster's internal network policy must allow communication (from ingress) to services on the default port (8080).
@@ -50,11 +50,11 @@ G* it, Jenkins and other services must be accessible on the same virtual network
 * For Mendix Marketplace, a file server must be accessible over HTTP (or HTTPS) on either internal network or through a connection to a Mendix repository
 * Private Mendix Platform should be able to access the Kubernetes API directly
 
-## 4 Software Resource Requirements
+## Software Resource Requirements
 
 Your Mendix app will be deployed with and run by the Mendix for Private Cloud Operator on top of Kubernetes. The following resources are required to facilitate this:
 
-### 4.1 Platform Portal
+### Platform Portal
 
 | Type | Tool | Version | Notes |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ Your Mendix app will be deployed with and run by the Mendix for Private Cloud Op
 | License | Private Cloud License Manager (PCLM) | Latest | Will be installed by Private Mendix Platform installer<br />Requires PostgreSQL 12 or MS SQL Server 19 or 22, see [Private Cloud License Manager](/developerportal/deploy/private-cloud/private-cloud-license-manager/#prerequisites) for more information |
 | TLS | TLS certificate | | Optional, needs to be provided by you |
 
-### 4.2 Customer Landscape Integrations
+### Customer Landscape Integrations
 
 Private Mendix Platform must connect to services within your premises. Mandatory services are required for the basic functionality of the portal, and optional services improve the low-code platform experience when integrated into the portal.
 
@@ -86,7 +86,7 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Logging & Metrics | Grafana | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 | Logging & Metrics | Loki | See [Supported Services](/developerportal/deploy/private-cloud-monitor/) | Required for Logging & Metrics |
 
-### 4.3 Customer Apps
+### Customer Apps
 
 | Type | Tool | Version |
 | --- | --- | --- |
@@ -96,6 +96,6 @@ Private Mendix Platform must connect to services within your premises. Mandatory
 | Application management | Mendix for Private Cloud Operator | 2.12+ |
 | Runtime | Mendix | 9.24+ |
 
-## 5 Infrastructure Requirements
+## Infrastructure Requirements
 
 For information about the infrastructure requirements, see [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).

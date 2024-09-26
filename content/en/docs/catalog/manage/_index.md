@@ -6,7 +6,7 @@ aliases:
     - /catalog/manage-data-sources/
     - /data-hub/data-hub-catalog/manage-data-sources/
 ---
-## 1 Introduction
+## Introduction
 
 Owners of data sources, Curators, and Mendix Admins can manage, or curate, registered assets.
 

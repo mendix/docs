@@ -5,7 +5,7 @@ weight: 10
 description: "Presents an overview of microflows and nanoflows."
 ---
 
-## 1 Introduction
+## Introduction
 
 Microflows and nanoflows allow you to express the logic of your application. They can perform actions such as creating and updating objects, showing pages, and making choices. It is a visual way of expressing what traditionally ends up in textual program code.
 
@@ -23,7 +23,7 @@ Explore the documentation for details on microflow and nanoflow definitions, pro
 * [Common Properties](/refguide/microflow-element-common-properties/)
 * [Debugging Microflows and Nanoflows](/refguide/debug-microflows-and-nanoflows/)
 
-## 2 Differences between Microflows and Nanoflows {#differences}
+## Differences between Microflows and Nanoflows {#differences}
 
 Microflows run in the runtime server and can therefore not be used in offline apps, while nanoflows run directly on the client side (that is, on the browser/device), and can be used in an offline app. Furthermore, most of the actions in nanoflows run directly on the device, so there is also a speed benefit for logic which does not need access to the server. 
 
@@ -36,7 +36,7 @@ Below presents a list of main differences between microflows and nanoflows:
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
 * Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
 
-## 3 Classic and Modern Logic Editors {#new-editor}
+## Classic and Modern Logic Editors {#new-editor}
 
 In Studio Pro 10.6 and above, use the new and modernized microflow, nanoflow, and rule editors. The new editors focus on making your daily logic modeling experience faster, smoother and easier to learn. 
 

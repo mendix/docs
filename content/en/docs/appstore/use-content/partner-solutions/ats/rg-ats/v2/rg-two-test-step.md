@@ -3,7 +3,7 @@ title: "Test Step"
 url: /appstore/partner-solutions/ats/rg-two-test-step/
 ---
 
-## 1 Introduction
+## Introduction
 
 Test steps are the heart and soul of a test case. They describe a sequence of [actions](/appstore/partner-solutions/ats/rg-two-action/) that ATS performs during the execution of a test case.
 
@@ -13,7 +13,7 @@ To see the details of a test step, click the name of the test step. The details 
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-test-step/test-step-details.png" class="no-border" >}}
 
-## 2 Description
+## Description
 
 Every test step has a description box, where you give your test step a clear description.
 
@@ -21,13 +21,13 @@ By default, the name of the test step is the name of the action used in it. But 
 
 If you record your test steps, ATS enters a description automatically. For more information about recording test steps, see [Recorder](/appstore/partner-solutions/ats/rg-two-recorder/).
 
-## 3 Call Types
+## Call Types
 
 Call types define the order of the test step and how they affect the final result.
 
 In ATS, there are three different call types, which are described below.
 
-### 3.1 Setup
+### Setup
 
 ATS moves the test steps with the Setup call type to the start of the test case automatically. ATS uses the Setup steps to get to the actual test scenario. For example: **Open application > Login as user**.
 
@@ -35,15 +35,15 @@ Only set a test step to Setup if it is not part of your actual test scenario.
 
 If a Setup test step fails, the test stops and the result is set to **not executed**.
 
-### 3.2 Regular
+### Regular
 
 Regular test steps are the flesh and bone of your test case. They cover the main functionality of the test scenario. If a Regular test step fails, the test stops immediately and the result is set to **failed**.
 
-### 3.3 Teardown
+### Teardown
 
 Teardown test steps are automatically moved to the end of a test. They must be used to undo the changes your test case made in the application. Failing Teardown test steps do not affect the result of a test case.
 
-## 4 Action Parameter {#action-parameter}
+## Action Parameter {#action-parameter}
 
 Action parameters are the input parameters of the selected test step action. ATS marks the required input parameter with an asterisk and writes them in bold.
 
@@ -61,7 +61,7 @@ Another way of setting the parameter value is to use the **Edit Input Value** di
 
 This dialog box shows you all the available input values for the parameter.
 
-## 5 Precondition
+## Precondition
 
 When you check the precondition box, you select an action that counts as a precondition for that test step.
 

@@ -5,7 +5,7 @@ description: "Describes the processes of installing and configuring the Mendix O
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 When running the Mendix Operator in Standard mode, you must install it separately for every namespace where a Mendix app is deployed. However, the [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) are global and installed at the cluster level - shared and visible among all namespaces in a given Kubernetes/OpenShift cluster. This can potentially lead to redundancies and conflicts, as well as issues when upgrading a single Mendix Operator installation.
 
@@ -15,13 +15,13 @@ To avoid these potential issues, you can [run the Mendix Operator in Global mode
 It is essential to ensure that each namespace is exclusively managed by a single Operator. The deployment of two Operators, particularly with distinct versions, to manage the same namespace, may lead to conflicts, resulting in the cancellation and rollback of each operator's modifications.
 {{% /alert %}}
 
-## 2 Downloading the Configuration Tool {#download-configuration-tool}
+## Downloading the Configuration Tool {#download-configuration-tool}
 
 Before you can use the Mendix Operator in your namespace you need to install it and configure the services your app will use. Mendix provides you with a **Configuration Tool** which guides you through the process.
 
 If you are not already on the installation tab for your namespace, go to it by following these instructions:
 
-1. Go to the Cluster Manager page by opening the [Global Navigation Menu](https://docs.mendix.com/developerportal/global-navigation/), and then clicking **Deployment** > **Private Cloud**.
+1. Go to the Cluster Manager page by opening the [Global Navigation Menu](/developerportal/global-navigation/), and then clicking **Deployment** > **Private Cloud**.
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/cluster-manager.png" class="no-border" >}}
 
@@ -54,7 +54,7 @@ If you are not already on the installation tab for your namespace, go to it by f
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/download-operator-version.png" class="no-border" >}}
 
-## 3 Signing in to the Platform {#openshift-signin}
+## Signing in to the Platform {#openshift-signin}
 
 You will need to have administrator rights to your private cloud platform. This means you will have to log in before you run the Configuration Tool.
 
@@ -78,9 +78,9 @@ You can do this as follows:
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-cluster/image11.png" class="no-border" >}}
 
-6. Paste the command into your command line terminal and press Enter.
+6. Paste the command into your command line terminal and press <kbd>Enter</kbd>.
 
-## 4 Running the Configuration Tool {#running-the-tool}
+## Running the Configuration Tool {#running-the-tool}
 
 Once you are signed in to your cluster you can run the Configuration Tool.
 
@@ -100,7 +100,7 @@ To install in non-interactive mode please see: [Install and Configure Mendix for
 
     {{% alert color="info" %}}Mendix recommends running the Configuration Tool in a fully-maximized terminal window to ensure that all options are visible.{{% /alert %}}
 
-### 4.1 Base Installation {#base-installation}
+### Base Installation {#base-installation}
 
 If the Mendix Operator and the Mendix Gateway Agent have not been installed in your cluster, you will need to install them.
 
@@ -133,7 +133,7 @@ If you have selected the **Connected Mode** which installs the **Mendix Gateway 
 * All the Websocket connections are established over HTTPS, and therefore, can be routed through a Proxy server.
 {{% /alert %}}
 
-### 4.2 Configure Namespace {#configure-namespace}
+### Configure Namespace {#configure-namespace}
 
 You can now configure the resources required for your namespace.
 
@@ -178,21 +178,21 @@ The options do the following:
     * [Proxy](#proxy)
     * [Custom TLS](#custom-tls)
 
-#### 4.2.1 Database Plan {#database-plan}
+#### Database Plan {#database-plan}
 
 Every Mendix app environment needs its own dedicated database.
 Create a database plan to configure how the Mendix Operator will manage databases.
 
 See the [Database plans](/developerportal/deploy/private-cloud-storage-plans/#database) document for a list and instructions for all options.
 
-#### 4.2.2 Storage Plan {#storage-plan}
+#### Storage Plan {#storage-plan}
 
 Every Mendix app environment needs a file (blob) storage bucket to store System.FileDocument entities, such as AWS S3, Azure Blob Storage or MinIO.
 Create a storage plan to configure how the Mendix Operator will manage file storage.
 
 See the [Blob storage plans](/developerportal/deploy/private-cloud-storage-plans/#blob-storage) document for a list and instructions for all options.
 
-#### 4.2.3 Ingress {#ingress}
+#### Ingress {#ingress}
 
 **openshift-route** will configure an OpenShift Route. This can only be used for OpenShift clusters. This option allows you to enable or disable TLS.
 
@@ -209,7 +209,11 @@ When switching between Ingress, OpenShift Routes, and Service Only, you need to 
 Additional network options such as Ingress/Service annotations and Service ports are available in [advanced network settings](/developerportal/deploy/private-cloud-cluster/#advanced-network-settings).
 {{% /alert %}}
 
-#### 4.2.4 Registry {#registry}
+{{% alert color="info" %}}
+For Operator version 2.19.0 and Mendix version 10.3.0 onwards, NGINX path based routing is supported. A new option `/(.*)` in the ingress path is provided which sets the path prefix to support this feature. To support this feature, NGINX Ingress uses `nginx.ingress.kubernetes.io/rewrite-target` and the OpenShift route uses `haproxy.router.openshift.io/rewrite-target`.
+{{% /alert %}}
+
+#### Registry {#registry}
 
 To run an app in Kubernetes, it needs to be converted (packaged) into a container image and pushed to an OCI registry.
 
@@ -217,7 +221,7 @@ The Mendix Operator automatically builds and pushes images into a private OCI re
 
 See the [Image registry](/developerportal/deploy/private-cloud-registry/) document for a list of supported registries and instructions how to configure each one.
 
-### 4.3 Proxy {#proxy}
+### Proxy {#proxy}
 
 Check the **Enable Proxy** checkbox if a proxy is required to access the public internet from the namespace; you will be asked for the proxy configuration details.
 
@@ -238,7 +242,7 @@ Hosts which should be excluded from proxying are specified as:
 
 For more information about how to use this field, see the [http proxy documentation used by the Configuration Tool](https://pkg.go.dev/golang.org/x/net/http/httpproxy).
 
-### 4.4 Custom TLS {#custom-tls}
+### Custom TLS {#custom-tls}
 
 {{% alert color="info" %}}
 To use this option, [upgrade](/developerportal/deploy/private-cloud-upgrade-guide/) the Mendix Operator to version 1.7.0 or later.
@@ -273,13 +277,13 @@ In order for the Mendix Operator to trust such certificates, you need to add the
 
         For OpenShift:
 
-        ```shell {linenos=false}
+        ```shell
         oc -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
         For Kubernetes:
 
-        ```shell {linenos=false}
+        ```shell
         kubectl -n {namespace} create secret generic {secret} --from-file=custom.crt=custom.crt
         ```
 
@@ -306,7 +310,11 @@ Strict TLS mode should only be used with apps created in Mendix 8.15.2 (or later
 The Mendix Gateway Agent will trust CAs specified through Custom TLS Trust if you are using Mendix Operator version 2.6.0 or above.
 {{% /alert %}}
 
-### 4.5 Review and Apply {#review-apply}
+{{% alert color="info" %}}
+For Operator version 2.19.0 and above, the Self Signed Custom CA certificate will be trusted by the Mendix Operator when communicating with the Private Cloud Licensing Manager.
+{{% /alert %}}
+
+### Review and Apply {#review-apply}
 
 When you have configured all the resources, do the following:
 
@@ -334,7 +342,7 @@ When you have configured all the resources, do the following:
 
 5. Click **Exit Installer** to return to the landing page.
 
-## 5 Confirming Namespace Configuration
+## Confirming Namespace Configuration
 
 When using a connected cluster, its status will be shown as **Connected** in the Mendix Portal when the namespace is configured correctly. You may need to click the **Refresh** button if the screen does not update automatically.
 

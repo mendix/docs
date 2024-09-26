@@ -4,15 +4,15 @@ url: /appstore/partner-solutions/ats/rg-two-profile/
 description: "Describes a local profile in ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 Local accounts, meaning accounts created by a tenant administrator, can access and change their profile information via the **Edit Profile** page. 
 
 For more details on tenant administration, see [Administration](/appstore/partner-solutions/ats/rg-two-administration/).
 
-## 2 Performing Basic Functions
+## Performing Basic Functions
 
-### 2.1 Opening the Edit Profile Page
+### Opening the Edit Profile Page
 
 To open the **Edit Profile** page, do the following:
 
@@ -22,7 +22,7 @@ To open the **Edit Profile** page, do the following:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-profile/profile.png" alt="Edit profile page" class="no-border" >}}
 
-### 2.2 Changing the Full Name 
+### Changing the Full Name 
 
 To change your **Full name** from the **Edit Profile** page, type a new one in a text box. The change is automatically saved. 
 
@@ -32,7 +32,7 @@ Full name is displayed in various places in the app, for example, in the test ru
 
 {{% /alert %}} 
 
-### 2.3 Changing Password
+### Changing Password
 
 To change your password from the **Edit Profile** page, do the following:
 

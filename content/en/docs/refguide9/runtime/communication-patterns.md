@@ -6,7 +6,7 @@ weight: 50
 description: "Outlines the communication patterns used by the Mendix Runtime environment for some typical application use cases."
 ---
 
-## 1 Introduction
+## Introduction
 
 This document outlines the communication patterns used by the Mendix Runtime environment for some typical application use cases.
 
@@ -15,7 +15,7 @@ The goals of this document are to present information for:
 * assessing the quality of the Mendix Runtime regarding efficiency of communication
 * determining the impact of their design decisions on communication efficiency and performance
 
-## 2 Outline of Communication Within the Mendix Runtime
+## Outline of Communication Within the Mendix Runtime
 
 The Mendix Platform consists of the following components:
 
@@ -42,7 +42,7 @@ Communication between these components operates as follows:
 * The Runtime Server communicates with different (relational) databases using SQL statements handled by a JDBC library
     * Application data is stored in an ER-model in an database
 
-## 3 Basic CRUD Communication Pattern{#crud}
+## Basic CRUD Communication Pattern{#crud}
 
 The core of most Mendix applications involves variations on the CRUD (create, read, update, and delete) pattern on data stored in Mendix entities.
 
@@ -56,7 +56,7 @@ A basic scenario using an *Employee* entity can be modeled in Mendix using the f
 
 The following sections outline the actions involved when processing these pages. As stated earlier, this pattern can be seen in many Mendix applications, but the exact runtime result depends on many details and design decisions taken while building the application. More advanced data models and pages will result in more (and more complex) queries.
 
-### 3.1 Read the Objects Required to Display a Datagrid
+### Read the Objects Required to Display a Datagrid
 
 Displaying a list of objects in a data grid consists of the following steps:
 
@@ -150,7 +150,7 @@ The response of the Runtime Server to the Mendix Client is as follows:
 }
 ```
 
-### 3.2 Create New Object
+### Create New Object
 
 The typical create-new-object flow consists of these steps:
 
@@ -230,7 +230,7 @@ The commit will cause the Runtime Server to save the object to the database. Bef
  ?)
 ```
 
-### 3.3 Edit an Existing Object
+### Edit an Existing Object
 
 The typical edit-existing-object flow consists of these steps:
 
@@ -302,7 +302,7 @@ This will trigger the actual database update and commit.
  WHERE "id" = ?
 ```
 
-### 3.4 Delete an Existing Object
+### Delete an Existing Object
 
 The typical delete flow consists of these steps:
 
@@ -377,7 +377,7 @@ Refresh the data grid:
 }
 ```
 
-### 3.5 Security Issues
+### Security Issues
 
 The security model of Mendix ensures that attributes that the user cannot see are never transferred to the client. This means that changes made in the Runtime Server (for example, in a microflow) to an attribute that the user cannot see will not be persisted if an object is sent to the Mendix Client without being committed to the database. See the blog post [Transient attributes and access rights - be careful](https://gandy84.medium.com/transient-attributes-and-access-rights-be-careful-mendix-and-me-57cf0aa1c98e) published on *Medium* for a deeper discussion of this.
 
@@ -387,11 +387,11 @@ https://www.plantuml.com/plantuml/uml/ZL9DRzD04BtxLmpD6QajAX8zL7NY-5IaYd3CPUATn4
 
 {{< figure src="/attachments/refguide9/runtime/communication-patterns/attribute-security.png" class="no-border" >}}
 
-## 4 Executing Business Logic
+## Executing Business Logic
 
 The business logic is modeled using microflows in Mendix. The following sections present some typical flows involving microflows.
 
-### 4.1 Displaying the Grid of Data Retrieved by Microflow
+### Displaying the Grid of Data Retrieved by Microflow
 
 A data grid on a page is often directly linked to an entity in the domain model. An alternative approach is to use a microflow to create a list of objects to be displayed in a data grid.
 
@@ -470,7 +470,7 @@ Response from the Runtime Server to the Mendix Client:
 }
 ```
 
-## 5 Mendix Runtime Internals
+## Mendix Runtime Internals
 
 As can be seen in the description of the CRUD scenario, the Mendix Platform ensures efficiency while running the application in a number of ways:
 
@@ -480,24 +480,24 @@ As can be seen in the description of the CRUD scenario, the Mendix Platform ensu
     * Native SQL protocol for database communication
 * Data already available in the Mendix Client is reused if possible (see the edit scenario where the data fetched for the data grid is reused in the Edit/New page)
 
-### 5.1 Data Transformation
+### Data Transformation
 
 Data is transported between Mendix Client and database as required. The following transformation are applied when going full circle from Mendix Client to database and back again:
 
 * Data entered by a user in a page is stored in JavaScript objects
 * For communication to the Runtime Server, JavaScript objects are serialized to JSON
-* The Runtime Server transforms the JSON objects to java MxObjects
+* The Runtime Server transforms the JSON objects to Java MxObjects
 * MxObject properties are bound to SQL statement parameters as needed by SQL queries
 * JDBC result set data is transformed to MxObjects
 * MxObjects are serialized to JSON when send to the Mendix Client
 
-### 5.2 State
+### State
 
 To facilitate (horizontal) scalability, the Mendix Runtime retains no state between requests. The overall strategy is to only have dirty objects in memory during a request. Objects are considered dirty if they have been changed, but the changes have not yet been persisted to the database.
 
 {{< figure src="/attachments/refguide9/runtime/communication-patterns/19399036.png" class="no-border" >}}
 
-### 5.3 Persistency
+### Persistency
 
 Mendix automatically takes care of the translation of an application-specific entity model (domain model) to a technical database specific ER-model. As illustrated in the read part of the CRUD scenarios, data retrieval is expressed by an XPath construct that is easy to understand. For example, to retrieve all employee objects, the following XPath can be used:
 
@@ -510,10 +510,10 @@ This XPath expression is translated in a number of steps to a database query:
 3. Domain model security constraints are applied to the OQL statement.
 4. OQL is translated to SQL and executed through JDBC on the configured database.
 
-### 5.4 Scalability
+### Scalability
 
 The Runtime Server can run as a single process, or it can be horizontally scaled to facilitate more concurrent users and improve availability. In this scenario, multiple Mendix Studio Pro instances are running. These instances run independently, there will not be any communication between the processes.
 
-#### 5.4.1 Multi-Instance
+#### Multi-Instance
 
 Mendix Runtime state is stored in the Mendix Client. This means that, when running in a horizontally scaled scenario, all instances run behind a load balancer and requests are sent to whichever instance is available.

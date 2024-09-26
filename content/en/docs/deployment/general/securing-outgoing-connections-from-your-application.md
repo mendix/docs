@@ -2,19 +2,19 @@
 title: "Secure Outgoing Connections from Your App"
 linktitle: "Secure Outgoing Connections"
 url: /developerportal/deploy/securing-outgoing-connections-from-your-application/
-weight: 50
+weight: 20
 description: "Describes which methods are available for securing connections from your app to the outside world."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 While all inbound connections to apps in Mendix Cloud are secured with TLS, your apps can also connect to other services over the internet. Some of these services will be third-party services and you will have to match the security settings set up by the service owner. Sometimes the service may be owned by you, or someone else in your company, and you can control how connection security is implemented.
 
 There are various methods which are used for securing connections from *back end services* to your *app* via the internet. This document sometimes refers to Mendix Cloud, but the methods are applicable to all other set-ups, such as public cloud or on-premises deployments.
 
-## 2 Scenarios
+## Scenarios
 
 ### Scenario 1 - No Encryption
 
@@ -81,7 +81,7 @@ Setting up an SSH enabled server and setting up a public/private keypair is a tr
 
 {{< figure src="/attachments/deployment/general/securing-outgoing-connections-from-your-application/19399052.png" class="no-border" >}}
 
-## 3 Notes
+## Notes
 
 Client certificates can be added to your Mendix Cloud app from within the Mendix Portal. See [Certificates](/developerportal/deploy/certificates/) for more information.
 

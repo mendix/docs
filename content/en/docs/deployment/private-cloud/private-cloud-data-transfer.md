@@ -5,7 +5,7 @@ url: /developerportal/deploy/private-cloud-data-transfer/
 description: "Describes how to migrate data between Private Cloud environments"
 weight: 60
 ---
-## 1 Introduction
+## Introduction
 
 {{% alert color="warning" %}}This feature is currently in preview mode - to collect feedback about the UX and features which should be added to the final version.{{% /alert %}}
 
@@ -14,7 +14,7 @@ The Private Cloud data migration tool allows you to:
 * export the database and files from a Private Cloud environment into a backup file
 * import the database and files from a previously exported backup file into an environment
 
-The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from the Mendix Cloud, allowing you to transfer application data between the Mendix Cloud and Mendix for Private Cloud.
+The Private Cloud data migration tool is compatible with [backup files](/developerportal/operate/restore-backup/#format-of-backup-file) from Mendix Cloud, allowing you to transfer application data between Mendix Cloud and Mendix for Private Cloud.
 
 When exporting files from an environment, the export only includes files which are in use (that is, which are referenced by a `System.FileDocument` entity). Any files that are not used by the app are ignored.
 
@@ -22,9 +22,9 @@ When exporting files from an environment, the export only includes files which a
 Although this tool can also be used to backup and restore your Mendix for Private Cloud databases and files regularly, Mendix recommends implementing your own backup and restore processes which take advantage of the tools provided by your database vendor or cloud provider.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
-### 2.1 Database and File Storage Requirements
+### Database and File Storage Requirements
 
 The following database is supported:
 
@@ -46,7 +46,7 @@ The data transfer tool only supports static and AWS IRSA authentication.
 If the database or file storage uses CSI Secrets Storage to store credentials, the data transfer tool will fail to authenticate.
 {{% /alert %}}
 
-### 2.2 Environment Requirements
+### Environment Requirements
 
 The data transfer tool needs the following:
 
@@ -59,9 +59,9 @@ The data transfer tool needs the following:
 
 In most cases, this means the data transfer tool cannot run from a local machine and needs to run in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a [jump pod](#jump-pod)).
 
-## 3 Using the Data Transfer Tool
+## Using the Data Transfer Tool
 
-### 3.1 Downloading the Data Transfer tool
+### Downloading the Data Transfer tool
 
 Download and extract the tool for your operating system. If you are planning to run the data transfer tool in a Pod, download the Linux version.
 
@@ -69,7 +69,7 @@ Download and extract the tool for your operating system. If you are planning to 
 * [macOS](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.4-macos-amd64.tar.gz)
 * [Windows](https://cdn.mendix.com/mendix-for-private-cloud/mxpc-data-migration/mxpc-data-migration-0.0.4-windows-amd64.zip)
 
-### 3.2 Running the Data Transfer Tool Locally
+### Running the Data Transfer Tool Locally
 
 If your local machine has network access to the database and file storage, you can run it directly on your machine.
 
@@ -82,7 +82,7 @@ For environments that use AWS IRSA for authentication, the current user's AWS cr
 
 To create a backup file, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-data-migration backup -n <namespace> -e <environment> -f <file>
 ```
 
@@ -92,7 +92,7 @@ To create a backup file, use the following command:
 
 To restore a backup file into your environment, use the following command:
 
-```shell {linenos=false}
+```shell
 ./mxpc-data-migration restore -n <namespace> -e <environment> -f <file>
 ```
 
@@ -104,7 +104,7 @@ If the database uses self-signed TLS certificates from a private CA, provide the
 
 If the file storage uses self-signed TLS certificates from a private CA, provide the path to the custom root CA `pem` file or directory through the `SSL_CERT_FILE` or `SSL_CERT_DIR` environment variable.
 
-### 3.3 Running the Data Transfer in a Jump Pod{#jump-pod}
+### Running the Data Transfer in a Jump Pod{#jump-pod}
 
 If you cannot run the data transfer tool from a local machine, because of network access issues, you need to run it in a Kubernetes pod acting as a [jump server](https://en.wikipedia.org/wiki/Jump_server) (a jump pod). To do this, follow the instructions below.
 
@@ -187,7 +187,7 @@ If you need to export or import data from an environment that uses AWS IRSA auth
                     "rds-db:connect"
                 ],
                 "Resource": [
-                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:db-<database_id>/*"
+                    "arn:aws:rds-db:<aws_region>:<account_id>:dbuser:<database_id>/*"
                 ]
             },
             {
@@ -283,7 +283,7 @@ The `kubectl cp` command can sometimes fail to copy files with a `.tar.gz` exten
 In that case, changing the file extension can fix the issue, for example by changing the file extension from `.tar.gz` to `.tar.gz.backup`.
 {{% /alert %}}
 
-## 4 Known Limitations
+## Known Limitations
 
 * It is not possible to export/import only the database or only files. The import/export process will always export or import the database together with any files.
 * In version 0.0.1 of the tool, when exporting data, all files from the bucket will be included. This may include:

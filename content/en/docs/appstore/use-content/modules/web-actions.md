@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Web Actions module, w
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module contains the following actions:
 
@@ -21,7 +21,7 @@ The [Web Actions](https://marketplace.mendix.com/link/component/114337/) module 
 When using Studio Pro on Mac, the **Take picture** action sometimes makes your device's screen turn black due to a bug. Fix this bug by upgrading to an iOS version above 17.3.1.
 {{% /alert %}}
 
-## 2 Usage
+## Usage
 
 To take a picture, follow these steps:
 
@@ -49,6 +49,6 @@ To take a picture, follow these steps:
 The storage of pictures is managed by the browser's memory cache. This cache is responsible for temporarily storing image files, allowing the browser to retrieve them quickly upon subsequent requests.
 {{% /alert %}}
 
-## 3 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This module is not yet fully compliant with strict content security policy (CSP). If the Take picture action is used with strict CSP, it will result in visual defects.

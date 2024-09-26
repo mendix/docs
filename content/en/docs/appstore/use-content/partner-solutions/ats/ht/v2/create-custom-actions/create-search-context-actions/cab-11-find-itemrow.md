@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-cab-11-find-itemrow/
 description: "This how-to explains step by step how to create a Search Context action for finding an item/row by using a unique text value."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create a Search Context action. That returns an item/row based on a description inside that item/row.
 
@@ -15,13 +15,13 @@ This how-to teaches you how to do the following:
 * Approach a situation where there are multiple widgets with the same `mx-name`
 * Create the custom action needed to return an item/row that is used to find the right widget
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [General](/appstore/partner-solutions/ats/ht-two-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First, you define the user approach and how you find the widget. It is important to remember that you want to find an element that surrounds the widget. You will use this element as the Search Context for the action performing the event.
 
@@ -59,7 +59,7 @@ This is a summary:
 * Retrieve the parent list view item in session
 * Return the list view item
 
-## 4 Action Structure
+## Action Structure
 
 ATS has a Mendix action called [*Find Item/Row (by child element)*](/appstore/partner-solutions/ats/rg-one-find-itemrow-by-child/), which finds the parent item/row of a widget. This action returns the list view item that the element is currently in. The index number does not matter.
 
@@ -79,7 +79,7 @@ To define the action structure, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/create-search-context-actions/cab-11-find-itemrow/listviewitem-setreturnvalue.png" class="no-border" >}}
 
-## 5 Action Parameters
+## Action Parameters
 
 Next, you need to add the action input and output parameters:
 
@@ -117,7 +117,7 @@ Keep the [guidelines for creating a custom action](/appstore/partner-solutions/a
 
 There is no need to add logic to this custom action. Its only returning an item/row.
 
-## 6 Final Check
+## Final Check
 
 Now check for the following:
 

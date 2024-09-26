@@ -9,7 +9,7 @@ aliases:
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the installation and configuration of Mendix software on a system running Microsoft (MS) Windows. It covers:
 
@@ -19,7 +19,7 @@ This document describes the installation and configuration of Mendix software on
 
 * Configuring the MS Internet Information Services (IIS) server
 
-## 2 Prerequisites {#Prerequisites}
+## Prerequisites {#Prerequisites}
 
 To set up an environment to run Mendix applications, you will need to install the Mendix software. For each Mendix application that will be run, a separate user (service) account is required. This section presents an overview of the setup.
 
@@ -47,7 +47,7 @@ Before starting this how-to, make sure you have the following prerequisites:
 
 * A local or domain user with the *“log on as a service”* local security policy set
 
-## 3 Installing the Mendix Service Console
+## Installing the Mendix Service Console {#service-console}
 
 To download and install the Mendix Service Console, follow these steps:
 
@@ -79,7 +79,7 @@ To download and install the Mendix Service Console, follow these steps:
 
     In addition, there will be a file called `Settings.yaml` that contains your application configuration.
 
-## 4 Deploying a Mendix App
+## Deploying a Mendix App
 
 To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
@@ -118,11 +118,11 @@ To deploy a Mendix app using the Mendix Service Console, follow these steps:
 
 10. Click **Finish** and start the application.
 
-## 5 Configuring the Microsoft Internet Information Services Server{#configure-msiis}
+## Configuring the Microsoft Internet Information Services Server{#configure-msiis}
 
 To configure the MS IIS server, follow the steps in the sections below.
 
-### 5.1 Activating a Proxy in ARR
+### Activating a Proxy in ARR
 
 In order to use the proxy functionality within ARR, you need to enable this feature within IIS. To activate a proxy in ARR, follow these steps:
 
@@ -132,7 +132,7 @@ In order to use the proxy functionality within ARR, you need to enable this feat
 4. Click **Server Proxy Settings** in the **Actions** pane on the right side of the screen.
 5. Select **Enable proxy** and click **Apply** in the **Actions** pane.
 
-### 5.2 Creating a Website
+### Creating a Website
 
 To create a website, follow these steps:
 
@@ -147,7 +147,7 @@ To create a website, follow these steps:
 9. If any other website is already running on this IIS server, enter the desired hostname for this website in the **Host name** field.
 10. Click **OK**.
 
-### 5.3 Add HTTPS binding
+### Add HTTPS binding
 
 1. Make sure the certificate you want to use for the website has been added to the Windows Certificate Store.
 2. Right-click the website you have just created and select **Edit Bindings...**.
@@ -160,7 +160,7 @@ To create a website, follow these steps:
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/iis_add_https_binding.png" >}}
 
-### 5.4 Configuring the MIME Types
+### Configuring the MIME Types
 
 To configure the MIME types, follow these steps:
 
@@ -179,13 +179,13 @@ To configure the MIME types, follow these steps:
 
 6. Click **OK**.
 
-### 5.5 Configuring the URL Rewrite
+### Configuring the URL Rewrite
 
 {{% alert color="info" %}}
 These instructions use port 8080, which is the default port. Please use the port for which your Mendix App is configured.
 {{% /alert %}}
 
-#### 5.5.1 Reverse Proxy Inbound Rules{#reverse-proxy-rules}
+#### Reverse Proxy Inbound Rules{#reverse-proxy-rules}
 
 You need to add a number of rules to configure the following request handlers.
 
@@ -222,7 +222,7 @@ Follow the instructions below and replace *[Name]* with the name of the rule in 
 
 You can also add additional request handlers in the same way. However you must ensure that they come *after* the rule *add x-forwarded-proto header*, described below.
 
-#### 5.5.2 Rule *add x-forwarded-proto header*
+#### Rule *add x-forwarded-proto header*
 
 This is required to ensure that you can access the Swagger documentation of your published REST services. 
 
@@ -253,7 +253,7 @@ This has to be the first rule; it is described after the rewrite rules to ensure
 21. Click **Back to Rules**.
 22. Select the newly created *add x-forwarded-proto header* rule and use the **Move Up** button in the Action pane to move the rule to the top of the list.
 
-#### 5.5.3 Redirect HTTP to HTTPS (optional)
+#### Redirect HTTP to HTTPS (optional)
 
 If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypted HTTP traffic to HTTPS. To configure this, follow these steps:
 
@@ -280,7 +280,7 @@ If HTTPS was configured at step 5.3 it is recommended to redirect all unencrypte
 14. Click **Back to Rules**.
 15. Select the newly created *Redirect to HTTPS* rule and use the **Move Up** button in the Action pane to move the rule to the top of the list, even above the previously created *add x-forwarded-proto header* rule.
 
-### 5.6 Disabling the Client Cache
+### Disabling the Client Cache
 
 1. In the **Features View**, double-click **HTTP Response Headers**.
 2. In the **Actions** pane, click **Set Common Headers...**.
@@ -357,7 +357,7 @@ Afterwards, the contents of the *web.config* file will be similar to the followi
 </configuration>
 ```
 
-## 6 Preserving the Host Header{#preserve-header}
+## Preserving the Host Header{#preserve-header}
 
 To make sure the correct application root URL is used within your web services, you must make sure the host header contains the original host header from the client request. To make sure the host header is preserved, follow either of these steps.
 
@@ -375,20 +375,26 @@ To make sure the correct application root URL is used within your web services, 
     2. Click **Accessories**, and then click **Command Prompt**.
     3. Execute the following command from the command prompt:
 
-        ```batch {linenos=false}
+        ```batch
         cd %windir%\system32\inetsrv
         ```
 
     4. Enter:
 
-        ```batch {linenos=false}
+        ```batch
         appcmd.exe set config -section:system.webServer/proxy /preserveHostHeader:"True" /commit:apphost
         ```
 
-## 7 Troubleshooting
+## Troubleshooting
+
+### IIS
 
 When configuring IIS it can seem like you have done everything right but it just doesn't seem to work. A guide to troubleshooting IIS is available here: [Troubleshooting IIS](/developerportal/deploy/troubleshooting-iis/).
 
-## 8 Read More
+### Service Console Shows Wrong Service Status
+
+If you are using [Powershell cmdlets](/developerportal/deploy/automate-mendix-deployment-on-microsoft-windows/#powershell) to change the status of your service (for example, using `Start-MxApp`) the service status will not update automatically in the Service Console GUI. The correct status will be shown when you restart the Service Console.
+
+## Read More
 
 * [On-Premises](/developerportal/deploy/on-premises-design/)

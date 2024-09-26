@@ -4,7 +4,7 @@ url: /howto8/testing/testing-mendix-applications-using-selenium-ide/
 weight: 40
 ---
 
-## 1 Introduction
+## Introduction
 
 Selenium IDE is a Firefox plugin that records and plays back user interactions with the browser. 
 
@@ -13,7 +13,7 @@ Selenium IDE is a Firefox plugin that records and plays back user interactions w
 * Record a simple test scripts with Selenium IDE
 * Find unique CSS selectors
 
-## 2 Prerequisites
+## Prerequisites
 
 This how-to teaches you how to do the following:
 
@@ -35,7 +35,7 @@ All images, names, and steps in this how-to are based on these versions. When us
 This how-to uses the Company Expenses app template for an example scenario. However, this app template is no longer platform-supported by Mendix. Therefore, sections using this app template can only be used as reference and not as sections that can be completed step-by-step.
 {{% /alert %}}
 
-## 3 Installing and Running the Company Expenses App
+## Installing and Running the Company Expenses App
 
 Follow these steps to install and run the Company Expenses app:
 
@@ -54,7 +54,7 @@ Follow these steps to install and run the Company Expenses app:
 
 5. Click **Run Locally**, then **View**.
 
-## 4 Create Your First Automated Test
+## Create Your First Automated Test
 
 To create an automated test by using the record button in Selenium IDE, follow these steps:
 
@@ -92,7 +92,7 @@ To create an automated test by using the record button in Selenium IDE, follow t
 
     {{< figure src="/attachments/howto8/testing/testing-mendix-applications-using-selenium-ide/green-test.png" class="no-border" >}}
 
-## 5  Locating and Changing a Test Target
+## Locating and Changing a Test Target
 
 It is possible that you will need to edit your Selenium IDE test script before you can run it regularly. This may happen because, for example, HTML tag IDs are generated dynamically and will be different with each run of the same page.
 
@@ -124,7 +124,7 @@ In this example scenario, you need to do the following:
 
 6. Click the **Run current test** icon to see if your test passes. 
 
-## 6 Read More
+## Read More
 
 * [Automated Tests with TestNG](/howto8/testing/create-automated-tests-with-testng/)
 * [Test Microflows Using the Unit Testing Module](/howto8/testing/testing-microflows-using-the-unittesting-module/)

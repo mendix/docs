@@ -5,13 +5,13 @@ weight: 80
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 This document covers various errors you might encounter when using SQL Server, and offers suggestions on how to resolve them.
 
-## 2 Issues
+## Issues
 
-### 2.1 Read Committed Snapshot
+### Read Committed Snapshot
 
 ```text
 Error while executing queries
@@ -21,7 +21,7 @@ CREATE ASSEMBLY [Mendix.SqlServerExtensions] FROM [a dll file] WITH PERMISSION_S
 
 In order to set **Read Committed Snapshot** or to create an assembly, the user will need to have the `db_ddladmin` role. For each new Mendix database, the Read Committed Snapshot configuration must be enabled. The assembly query is only executed once per database server instance, and is used by all Mendix applications.
 
-### 2.2 Create Function
+### Create Function
 
 ```text
 Error while executing query
@@ -32,9 +32,9 @@ This permission is granted implicitly to the `db_ddladmin` and `db_owner` fixed 
 
 In general if the user has the `db_owner` role for the database they will have sufficient privileges to executing this query. 
 
-### 2.3 JDBC Connections
+### JDBC Connections
 
-#### 2.3.1 Time Out
+#### Time Out
 
 ```text
 Opening JDBC connection to yourServerAddress\YourInstanceName:0 failed with SQLState: 08S01 Error code: 0 Message: The connection to the host localhost, named instance sqlexpress2008 failed.
@@ -43,7 +43,7 @@ Error: "java.net.SocketTimeoutException: Receive timed out". Verify the server a
 
 If the server address and instance name are correct, then validate if the service “SQL Server Browser” is running. When this process is not running start the service. If you don’t want to use “SQL Server Browser” you need to include the port of the database instance in your URL as well.
 
-#### 2.3.2 Login Failed
+#### Login Failed
 
 ```text
 Opening JDBC connection to localhost\sqlexpress2008:0 failed with SQLState: S0001 Error code: 18470
@@ -52,7 +52,7 @@ Message: Login failed for user 'YourDatabaseUser'. Reason: The account is disabl
 
 Validate the ‘Status’ of the User. One of the login properties of the user is probably configured to be Deny or Disabled. Both permissions should be configured as Grant/Enabled.
 
-#### 2.3.3 Could not establish a secure connection
+#### Could not establish a secure connection
 
 ```text
 Opening JDBC connection to yourServerAddress:1433\YourInstanceName failed with SQLState: 08S01 Error code: 0
@@ -63,7 +63,7 @@ ClientConnectionId:[...]", retrying...(1/4)
 
 Turn off connection encryption by setting the `DatabaseUseSsl` [custom setting](/refguide/custom-settings/#DatabaseUseSsl) to false. Since Mendix 10, the JDBC driver used in the database connection uses TLS encryption by default, while many on-premises SQL Server installations are not set up for this.
 
-## 3 Read More
+## Read More
 
 * [Setting Up the Database User](/developerportal/deploy/setting-up-the-database-user/)
 * [Restoring a SQL Server Database](/developerportal/deploy/restoring-a-sql-server-database/)

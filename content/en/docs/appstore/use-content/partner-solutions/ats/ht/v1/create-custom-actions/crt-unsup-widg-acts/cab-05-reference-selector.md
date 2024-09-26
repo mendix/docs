@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-one-cab-05-reference-selector/
 description: "This how-to explains step by step how to create an Unsupported Widget action for the Mendix Reference Selector widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how to create an Unsupported Widget action for the reference selector widget. In a standard situation, the first step is to check if ATS supports the widget. 
 
@@ -17,13 +17,13 @@ This how-to teaches you how to do the following:
 * Approach a drop-down widget that ATS must set
 * Create the custom action to set the drop-down widget
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
  
 * Read [Custom Action General Section](/appstore/partner-solutions/ats/ht-one-custom-action-general/)
 
-## 3 Defining the User Approach
+## Defining the User Approach
 
 First you define the user approach and how you interact with the widget. Since you are creating an Unsupported Widget action, how you find the widget is not important. What is important is how you interact with it.
 
@@ -39,7 +39,7 @@ This is the reference selector unopened:
 
 Most widgets that give options—like the reference selector and the drop-down—have a `select` element that displays the options.
 
-## 4 Creating the Action Structure
+## Creating the Action Structure
 
 In the previous step, you wrote down the user approach for the reference selector widget. Now you will create this approach in ATS with actions.
 
@@ -81,7 +81,7 @@ To create the action structure, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v1/create-custom-actions/crt-unsup-widg-acts/cab-05-reference-selector/ref-selector-mendixwait-action.png" class="no-border" >}}
 
-## 5 Action Parameters
+## Action Parameters
 
 Next, you need to add the action input parameters:
 
@@ -119,7 +119,7 @@ To add the action parameters, follow these steps:
 
 There is no need to add logic to this custom action, since it is only selecting an option in the widget.
 
-## 6 Final Check
+## Final Check
 
 Now check for the following:
 

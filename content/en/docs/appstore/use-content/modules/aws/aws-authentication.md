@@ -9,7 +9,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) connector provides a way to authenticate on AWS for other compatible AWS connectors. This includes [connectors supported by Mendix](/appstore/aws-modules/), as well as connectors developed by members of the Mendix community. If you want to develop your own AWS connector, you can use the AWS Authentication connector as a ready and reliable way to authenticate with AWS services, instead of developing an authentication method from scratch.
 
@@ -17,7 +17,7 @@ The [AWS Authentication](https://marketplace.mendix.com/link/component/120333) c
 This document describes the process of configuring the AWS Authentication connector from the perspective of a developer building their own community-supported connector. If you use a [platform-supported AWS connector](/appstore/aws-modules/), some aspects of the process are simplified. The following sections make a note of those differences where relevant.
 {{% /alert %}}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 AWS Authentication gives you the tools needed to authenticate your app with AWS services. It is a prerequisite for platform-supported AWS connectors, and may be required by community-supported connectors as well.
 
@@ -33,11 +33,11 @@ You can implement the above authentication types by means of adding a correspond
 If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/aws-modules/), refer to the documentation provided with the connector for more information about the required authentication type.
 {{% /alert %}}
 
-### 1.2 Example
+### Example
 
 {{< youtube b3uQONB3yoY >}}
 
-### 1.3 Licensing and Cost
+### Licensing and Cost
 
 This connector is available as a free download from the Mendix Marketplace. While obtaining temporary and static credentials through this connector is free, using these credentials with other AWS Mendix Marketplace modules may incur usage costs. For more information, refer to the AWS documentation.
 
@@ -47,7 +47,7 @@ Most AWS services provide a free tier that allows easy access to most services. 
 
 Depending on your use case, your deployment environment, and the type of app that you want to build, you may also need a license for your Mendix app. For more information, refer to [Licensing Apps](/developerportal/deploy/licensing-apps-outside-mxcloud/).
 
-## 2 Prerequisites {#prerequisites}
+## Prerequisites {#prerequisites}
 
 Before you can use the AWS Authentication connector, you must first configure the required setting in AWS. Depending on the authentication type that you plan to use, you may need to prepare the following items:
 
@@ -62,11 +62,11 @@ To configure the above prerequisites, you must have an IAM user with specific pe
 If you plan to use AWS Authentication with a [platform-supported AWS connector](/appstore/marketplace-content-support/#category), refer to the documentation provided with the connector for more information about the required permissions.
 {{% /alert %}}
 
-## 3 Installation
+## Installation
 
 Follow the instructions in [Using Marketplace Content](/appstore/use-content/) to import the AWS Authentication connector into your app.
 
-## 4 Usage
+## Usage
 
 After you install the connector, you can find it in the **App Explorer**, in the **AWSAuthentication** section. The connector provides the required domain model, activities, and constants that you can use to authenticate your app in AWS. There are three microflow operations: **GetStaticCredentials** and **GetTemporaryCredentials** for the two basic authentication methods, and **GetSigV4Headers** for signature version 4 headers. For more information about implementing each authentication mechanism, refer to the following sections:
 
@@ -78,7 +78,7 @@ After you install the connector, you can find it in the **App Explorer**, in the
 In general, temporary credentials are the recommended authentication method for use with your production app. Static credentials are recommended for test or demo environments. Signature version 4 headers cover more advanced use cases. For example, you can use them to supplement temporary or static credentials with custom code.
 {{% /alert %}}
 
-### 4.1 Implementing Temporary Credentials {#session}
+### Implementing Temporary Credentials {#session}
 
 Temporary credentials use Amazon IAM Roles Anywhere to assume an AWS Role. IAM Roles Anywhere is used to create a session token valid for a specific duration. The default duration is one hour. This is the recommended authentication method for most use cases.
 
@@ -87,11 +87,11 @@ You can implement temporary credentials in one of the following ways:
 * By using the **GetTemporaryCredentials** microflow in Studio Pro. For more information, see [Generating AWS Credentials in Studio Pro](#credentials-studio-pro).
 * By using credentials generated outside of Studio Pro, for example, through the AWS command-line interface. For more information, see [Using Credentials Generated Outside of Studio Pro](#credentials-cli).
 
-#### 4.1.1 Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
+#### Generating AWS Credentials in Studio Pro {#credentials-studio-pro}
 
 To generate temporary credentials for your app directly from Mendix Studio Pro, first add a client certificate in the Deployment Portal or to a local configuration, and then add the **GetTemporaryCredentials** microflow to a microflow in Studio Pro.
 
-##### 4.1.1.1  Adding a Client Certificate in the Mendix Portal
+##### Adding a Client Certificate in the Mendix Portal
 
 When creating a trust anchor in Amazon IAM Roles Anywhere, you must provide a [certificate](#prerequisites) that acts as the trust anchor. You must then add the same certificate as the client certificate in the Mendix Portal.
 
@@ -113,7 +113,7 @@ The client certificate that you added now shows as **Currently enabled**.
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/certificate-currently-enabled.png" class="no-border" >}}
 
-#### 4.1.1.2 Configuring the Temporary Credentials Connection Details in the Mendix Portal {#configure-credentials}
+#### Configuring the Temporary Credentials Connection Details in the Mendix Portal {#configure-credentials}
 
 1. Log in to [Apps](https://sprintr.home.mendix.com/), and then select your app.
 2. Click **Environments**, and then click **Details** by the specific environment to open the [Environment Details](/developerportal/deploy/environments-details/#network-tab) page.
@@ -135,7 +135,7 @@ The client certificate that you added now shows as **Currently enabled**.
 4. Fill out the **New Value** field and click **Save**.
 5. After setting all constants, restart the environment in order to apply the new constant values.
 
-##### 4.1.1.3 Using the GetTemporaryCredentials Microflow in Studio Pro
+##### Using the GetTemporaryCredentials Microflow in Studio Pro
 
 After enabling the certificate, you can now configure the microflow that authenticates your session in AWS. You can do this by adding the **GetTemporaryCredentials** microflow to a microflow.
 
@@ -155,7 +155,7 @@ After enabling the certificate, you can now configure the microflow that authent
 6. Click **OK**. The activity returns a **TemporaryCredentials** object that provides the required AWS authentication credentials for your microflow.
 7. Continue the configuration by adding more activities to your microflow, as required by your specific use case.
 
-##### 4.1.1.4 Configuring the Local Setup
+##### Configuring the Local Setup
 
 To run the AWS Authentication connector locally using Studio Pro, you must add the client certificate as a runtime configuration in Studio Pro.
 
@@ -169,11 +169,11 @@ To run the AWS Authentication connector locally using Studio Pro, you must add t
 
 4. In the **Constants** tab, configure the constants of the temporary credentials' connection details.
 5. Make sure that the value of **Client certificate ID** correctly indicates the position of the certificate in the runtime setting. For example, if three certificates have been added in the runtime setting, and the client certificate that you want to use is the second one, then set **Client certificate ID** to *2*. 
-6. click **OK**.
+6. Click **OK**.
 
    {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/local-config-session-credentials-constants.png" class="no-border" >}}
 
-#### 4.1.2 Using Credentials Generated Outside of Studio Pro {#credentials-cli}
+#### Using Credentials Generated Outside of Studio Pro {#credentials-cli}
 
 If you have credentials that have been generated without the help of the **GetTemporaryCredentials** action, for example through the AWS command line interface, you can use them in your app in the following manner:
 
@@ -185,7 +185,7 @@ If you have credentials that have been generated without the help of the **GetTe
 
 You can then use the above as a valid set of credentials.
 
-### 4.2 Implementing Static Credentials {#static}
+### Implementing Static Credentials {#static}
 
 Static credentials use a mechanism with an access key and a secret. The credentials do not have a specific validity duration, so they do not expire automatically. This authentication method is recommended for test and demo apps, or in cases where you are not able to set up and configure temporary credentials.
 
@@ -208,7 +208,7 @@ To create static credentials with the **GetStaticCredentials** activity in your 
 
 6. Continue the configuration by adding more activities to your microflow.
 
-### 4.3 Implementing Signature Version 4 Headers {#signature-v4-headers}
+### Implementing Signature Version 4 Headers {#signature-v4-headers}
 
 Using signature version 4 headers grants you full control over the contents of the request that you send to AWS. You may want to use this method to authenticate a temporary or static credentials request without using the AWS console or SDK, for example, if the language you are using does not have SDK yet. For more information about signature version 4 headers, see [Signing AWS API requests](https://docs.aws.amazon.com/general/latest/gr/signing_aws_api_requests.html) in the AWS documentation.
 
@@ -216,7 +216,7 @@ This authentication method is suitable for advanced use cases. If your use case 
 
 To help you work with signature version 4 headers, the following sections of this document contains a description of the [domain model](#domain-model) and [microflow action](#getsigv4headers) that you can use, as well as an [example microflow](#microflow) configuration.
 
-#### 4.3.1 Domain Model {#domain-model}
+#### Domain Model {#domain-model}
 
 The domain model is a data model that describes the information in your application domain in an abstract way. For more information, see [Domain Model](/refguide/domain-model/).
 
@@ -238,7 +238,7 @@ You can view the domain model in the **App Explorer** in the **AWS Authenticatio
 * `SigV4Parameter` - This entity contains the key-value pairs which you can use as REST headers, or as `QueryParameters`. The key-value pairs can be used to create the headers, for example, `Content-JSON`, or to define the contents of the query, for example, the `Action` parameter in EC2 calls.
 * `SigV4Headers` - This entity is the output of the GetSigV4Headers Java action. It is used to create request headers in the custom HTTP REST call which you make towards AWS.
 
-#### 4.3.2 `GetSigV4Headers` Microflow Action {#getsigv4headers}
+#### `GetSigV4Headers` Microflow Action {#getsigv4headers}
 
 The `GetSigV4Headers` microflow action computes and provides the signed headers. It takes the following parameters as input:
 
@@ -251,18 +251,69 @@ The output of the action is a `SigV4Headers` object.
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/sigv4action.png" class="no-border" >}}
 
-#### 4.3.3 Example Microflow {#microflow}
+#### Example Microflow {#microflow}
 
 The following microflow shows an example implementation of signature version 4 headers authentication.
 
 {{< figure src="/attachments/appstore/use-content/modules/aws-authentication/sigv4microflow.png" class="no-border" >}}
 
-In this example, a `SigV4Builder` object and a  `Credentials` object are passed as input parameters. In the microflow, two lists of the type `SigV4Parameter` are created, one for the request headers, and one for the query parameters.
+In this example, a `SigV4Builder` object and a `Credentials` object are passed as input parameters. In the microflow, two lists of the type `SigV4Parameter` are created, one for the request headers, and one for the query parameters.
 
 These entities are used as input for the `GetSigV4Headers` microflow action, which returns a response in the form of a `SigV4Header` entity.
 
 The values set in the response entity are used as request headers in the REST call to AWS.
 
-#### 5 Read More
+### Customizing HTTP Client Configuration {#customize-client-config}
+
+The platform-supported AWS connectors have been developed using the AWS Software Development Kit (SDK) instead of the native Mendix Call REST service activity. This approach prioritizes efficiency in handling AWS integrations. It eliminates the complexity of customizing HTTP headers and signing requests, as the SDK automates these tasks. Additionally, it offers built-in features like retry logic and throttling management.
+
+The AWS Authentication Connector offers the ability to customize HTTP client configurations and supports the following use cases:
+
+* Extending the timeout settings to accommodate operations that might run longer, such as AWS Lambda functions.
+* Customizing the retry mechanism to alter the behavior for how the client recovers from failed AWS service requests.
+* Overriding invocation endpoints (required for use cases such as testing locally), integrating with a self-hosted instance of AWS service, and invoking VPC endpoints (private cloud).
+
+#### Overriding the Default HTTP Configuration
+
+All platform-supported AWS Connectors have request entities that inherit from the **AbstractRequest** entity from AWS Authentication. To override the default HTTP configuration, perform the following steps:
+
+1. Create a **BasicClientConfig** (or a specialization) object.
+2. Set the attributes in the objects that you created.
+3. Associate the object with the request. 
+4. Invoke the connector action.
+
+##### Domain Model Entities
+
+The following are the relevant entities in the domain model for customizing HTTP client configurations:
+
+* `AbstractRequest` - This entity is the generalization of all request entities of platform-supported AWS connectors.
+* `BasicClientConfig` - This entity provides basic client customization settings: `APITimeOutInMs` and `EndpointUrl`. To use these settings, associate a `BasicClientConfig` object to your request object.
+* `SDKClientConfig` - This entity is required when adding advanced client customization settings. It points to the `AbstractRetryPolicy` and `AbstractHttpConfig` entities, whose specializations can be used to add advanced settings. `APITimeOutInMs` can be set directly on this entity. 
+* `AbstractRetryPolicy` - Use one of this entities specializations to specify a retry policy.
+* `NumberOfRetryPolicy` - This entity can be used to configure the number of retries.
+* `NoRetryPolicy` - Including this entity sets the retry behavior to *never retry*.
+* `AbstractHttpConfig` - Use one of this entities to override the values of a specific HttpClient.
+* `ApacheHttpClient` - This entity can be used to override the settings of the ApacheHttpClient. More Information: [Apache based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-apache.html).
+* `UrlHttpClient` - This entity can be used to use the URL-Connection based HttpClient and override it's settings. More Information: [URL-Connection based HTTP Client](https://docs.aws.amazon.com/sdk-for-java/latest/developer-guide/http-configuration-url.html).
+
+#### Example Microflow
+
+The following figure shows a microflow which demonstrates how a **BasicClientConfig** object can be added to a InvokeLambda request to customize the Timeout Setting:
+
+{{< figure src="/attachments/appstore/use-content/modules/aws-authentication/Auth-basic-client-config.png" class="no-border" >}}
+
+### Validating Credentials {#validate-credentials}
+
+To confirm that an application has been configured correctly with a valid set of credentials, the `Validate Credentials` microflow action can be used. It performs a [GetCallerIdentity](https://docs.aws.amazon.com/STS/latest/APIReference/API_GetCallerIdentity.html) call to check if the provided credentials are valid AWS credentials.
+
+It takes the following parameters as input:
+
+* A `Credentials` object
+* A `ENUM_Region` enumeration value
+
+The output is a boolean indicating whether the credentials are valid. 
+
+## Read More
 
 * [Securely Connect with the AWS Authentication Connector](https://www.mendix.com/blog/securely-connect-with-the-aws-authentication-connector/)
+* [AWS Authentication: New Features in the Connector Suite](https://www.mendix.com/blog/aws-authentication-new-features-in-the-connector-suite/)

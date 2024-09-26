@@ -6,7 +6,7 @@ weight: 1
 description: "Describes how to assess potential options for integrating an existing system with a Mendix app and how to integrate with a legacy system using REST."
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix applications frequently need to communicate with existing systems. Whether replacing an older platform entirely or leveraging an existing database to enhance your app, the ability to integrate with legacy systems is key to your success. This how-to introduces a range of options that exist within the Mendix Platform to integrate with legacy systems.
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 * Assess potential options for integrating an existing system with a Mendix app
 * Integrate with a legacy system using REST
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -25,7 +25,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Understand the concepts behind REST and web services (for more information, see [How to Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/))
     * Creating an exposed REST service on top of your legacy system is beyond the scope of this tutorial; for instructions on how to accomplish this, refer to the configuration of your non-Mendix Platform
 
-## 3 Interacting with a Legacy System Using REST
+## Interacting with a Legacy System Using REST
 
 If the legacy system has the ability to expose its data to web services, integration can be accomplished using the Mendix REST module. This technique allows you to preserve a system of record while accessing data only as you need it.
 
@@ -84,7 +84,7 @@ The above example demonstrates how a Mendix application can quickly integrate da
 
 For further documentation and to see the GitHub project for REST services, see the [Mendix RestServices GitHub page](https://github.com/mendix/RestServices).
 
-## 4 Read More
+## Read More
 
 * [Consume a REST Service](/howto/integration/consume-a-rest-service/)
 * [Consume a Complex Web Service](/howto/integration/consume-a-complex-web-service/)

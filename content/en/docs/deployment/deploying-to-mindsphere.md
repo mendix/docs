@@ -8,7 +8,7 @@ description: "Describes how to deploy to Siemens Insights Hub by registering it 
 #The anchor #launchpad below is mapped from the Insights Hub themepack in the Marketplace, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 Insights Hub is the cloud-based, open IoT operating system from Siemens that lets you connect your machines and physical infrastructure to the digital world. It lets you harness big data from billions of intelligent devices, enabling you to uncover transformational insights across your entire business.
 
@@ -27,7 +27,7 @@ You can easily copy code examples shown within grey blocks into the clipboard. H
 
 To help you with your first Insights Hub apps, there is also an example app which contains modules which call the Insights Hub APIs. See [How to Use the Siemens Insights Hub Monitor Example App](/partners/siemens/mindsphere-example-app/) for more information.
 
-## 2 Prerequisites{#prerequisites}
+## Prerequisites{#prerequisites}
 
 To deploy and register your app within Insights Hub you need the following prerequisites.
 
@@ -40,11 +40,11 @@ The following are also required if you want to deploy and run the Mendix app on 
 * [Cloud Foundry Command Line Interface (CF CLI)](https://github.com/cloudfoundry/cli)
 * A Cloud Foundry role which allows you to push apps, such as `SpaceDeveloper`
 
-## 3 Including Required Insights Hub Modules
+## Including Required Insights Hub Modules
 
 You must customize your app to allow it to be deployed, registered, and shown in the launchpad. This is done through Insights Hub customization modules. There are two ways to include the customization you need in your app.
 
-### 3.1 Option A: Using the Insights Hub App Template
+### Option A: Using the Insights Hub App Template
 
 The **Siemens Insights Hub Starter Application** in the Mendix Marketplace contains all the modules and styling which you need to create an app you want to deploy to Insights Hub.
 
@@ -70,7 +70,7 @@ Open Studio Pro (version 7.22.2 or above) and follow these steps:
 
     {{< figure src="/attachments/deployment/deploying-to-mindsphere/app-store-download-project.png" class="no-border" >}}
 
-### 3.2 Option B: Customizing an Existing App{#existingapp}
+### Option B: Customizing an Existing App{#existingapp}
 
 If you have an existing app which was not based on the Insights Hub app template, you must import the required customization. The three modules which must be imported are:
 
@@ -86,23 +86,23 @@ If you have an existing app which was not based on the Insights Hub app template
 
     This applies Insights Hub styling to your app and includes some additional custom files which are required for the correct operation of your app. For more information, see the [Siemens Insights Hub Web Content](/partners/siemens/mindsphere-module-details/#msthemepack) section of *Insights Hub Module Details*.
 
-## 4 Configuring the Modules{#configure-modules}
+## Configuring the Modules{#configure-modules}
 
 Now that you have your new app, or have imported the Insights Hub modules into an existing app, you need to configure the modules to allow your app to work with Insights Hub.
 
-### 4.1 Configuring Single Sign-On (SiemensInsightsHubSingleSignOn)
+### Configuring Single Sign-On (SiemensInsightsHubSingleSignOn)
 
 The following items in the SiemensInsightsHubSingleSignOn module need to be configured.
 
 {{< figure src="/attachments/deployment/deploying-to-mindsphere/image2.png" alt="Folder structure of the SiemensInsightsHubSingleSignOn module" class="no-border" >}}
 
-#### 4.1.1 CockpitApplicationName
+#### CockpitApplicationName
 
 Enter the name of your app as registered in the Insights Hub Mendix Portal as the value of *CockpitApplicationName*.
 
 These two values must be identical and must, therefore, fit the constraints listed in the [App Name](/partners/siemens/mindsphere-development-considerations/#appname) section of *Insights Hub Development Considerations*.
 
-#### 4.1.2 GatewayURL
+#### GatewayURL
 
 This is the URL of the Insights Hub gateway and is of the following format:
 
@@ -116,7 +116,7 @@ This needs to be changed depending on the `{Region}` your app is running. The de
 https://gateway.eu1.mindsphere.io
 ```
 
-#### 4.1.3 PublicKeyURL
+#### PublicKeyURL
 
 The value of this constant is shown below:
 
@@ -130,7 +130,7 @@ This needs to be changed depending on the `{Region}` your app is running. The de
 https://core.piam.eu1.mindsphere.io/token_keys
 ```
 
-#### 4.1.4 RegisterSingleSignOn
+#### RegisterSingleSignOn
 
 Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or added as a sub-microflow of an existing *after startup* microflow.
 
@@ -138,11 +138,11 @@ Add the *RegisterSingleSignOn* microflow as the **After startup** microflow or a
 If you are using the Siemens Insights Hub Starter Application, this will already be set up as the *After startup* microflow.
 {{% /alert %}}
 
-If you are are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings** dialog box accessed through the **App Explorer**.
+If you are modifying an existing app, you can do this on the *Runtime* tab of the **App** > **Settings** dialog box accessed through the **App Explorer**.
 
 {{< figure src="/attachments/deployment/deploying-to-mindsphere/image4.png" alt="App settings dialog" class="no-border" >}}
 
-### 4.2 Configuring the Insights Hub OS Bar (SiemensInsightsHubOSBarConnector)
+### Configuring the Insights Hub OS Bar (SiemensInsightsHubOSBarConnector)
 
 Change the OS Bar to show information about the app you are running.
 
@@ -161,7 +161,7 @@ Change the JSON to contain appropriate values for the following information:
 
 More information on the structure and content of this JSON object, together with sample JSON, can be found in [App Information](https://design.mindsphere.io/osbar/get-started.html#app-information), on the Insights Hub developer site.
 
-## 5 Deploying Your App{#deploying-your-app}
+## Deploying Your App{#deploying-your-app}
 
 A Mendix based application for Insights Hub can be deployed to Mendix or to Insights Hub. Deploying to Mendix is quite easy and is the preferred option as you than also can use the **Auto Registration** process.
 
@@ -169,7 +169,7 @@ A Mendix based application for Insights Hub can be deployed to Mendix or to Insi
 **Auto Registration** process is only available on region Europe 1.
 {{% /alert %}}
 
-### 5.1 Option A: Deploy with Mendix Studio Pro to Mendix Cloud
+### Option A: Deploy with Mendix Studio Pro to Mendix Cloud
 
 Just click the Publish Button in Mendix Studio Pro.
 
@@ -177,17 +177,17 @@ Just click the Publish Button in Mendix Studio Pro.
 
 Once your app is deployed you can automatically register the app in your Insights Hub tenant.
 
-### 5.2 Option B: Creating a Mendix Deployment Package and deploy it to Insights Hub Cloud Foundry
+### Option B: Creating a Mendix Deployment Package and deploy it to Insights Hub Cloud Foundry
 
 {{% alert color="info" %}}
 There is a limit of 1.5 GB on the size of the Mendix deployment package (MDA file) which can be deployed to Insights Hub.
 {{% /alert %}}
 
-#### 5.2.1 Pushing to Cloud Foundry
+#### Pushing to Cloud Foundry
 
 Before you continue, ensure you have fulfilled the prerequisites described in the section [Prerequisites](#prerequisites) and configured the Insights Hub modules as described in the section [Configuring the Modules](#configure-modules), above.
 
-##### 5.2.1.1 Creating a Mendix Deployment Package
+##### Creating a Mendix Deployment Package
 
 To create a Mendix deployment package from your app, do the following:
 
@@ -206,7 +206,7 @@ Your deployment package will be created, and its location displayed in an inform
 By default, the deployment package will be created in the *releases* folder of your app.
 {{% /alert %}}
 
-##### 5.2.1.2 Deploying the Application to Cloud Foundry using CF CLI
+##### Deploying the Application to Cloud Foundry using CF CLI
 
 To deploy your deployment package, do the following:
 
@@ -220,7 +220,7 @@ To deploy your deployment package, do the following:
 
 2. Select your org and space using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf target –o {org_name} -s {space_name}
     ```
 
@@ -228,7 +228,7 @@ To deploy your deployment package, do the following:
 
 3. Create a PostgreSQL instance using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf create-service postgresql10 {plan} {service_instance} [-c {parameters_as_JSON}] [-t {tags}]
     ```
 
@@ -246,7 +246,7 @@ To deploy your deployment package, do the following:
 5. Ensure you are in the same folder as the package you wish to deploy.
 6. Create a `manifest.yml` file with at least the following content:
 
-    ```yml
+    ```yaml
         applications:
         - name: {app_name}
           disk_quota: {disk_quota_size}
@@ -263,19 +263,19 @@ To deploy your deployment package, do the following:
 
 7. Push your app to Insights Hub using the command:
 
-    ```bash {linenos=false}
+    ```bash
     cf push -p "{deployment_package_name}"
     ```
 
     For example: `cf push -p "myapp.mda"`
 
-##### 5.2.1.3 Cloud Foundry Stack
+##### Cloud Foundry Stack
 
 You should always use the latest available Cloud Foundry stack. The latest stack in Insights Hub is `cflinuxfs4`. Apps pushed to Insights Hub will use this stack.
 
 You can specify that your app uses a specific stack using the following command line option when you push your app:
 
-```bash {linenos=false}
+```bash
 cf push -p "{deployment_package_name}" -s {stack_name}
 ```
 
@@ -283,17 +283,17 @@ For example: `cf push -p "myapp.mda" -s cflinuxfs4`
 
 For more information about Cloud Foundry stacks on Insights Hub, see [How Can I Find the Stack my App is using?](https://developer.mindsphere.io/paas/howtos/howtos-stacks.html#find-out-which-stack-an-app-uses) in *Cloud Foundry How Tos* on the *Insights Hub Developer* site.
 
-#### 5.2.1.4 Troubleshooting
+#### Troubleshooting
 
 If you have issues with deploying your app to Cloud Foundry, you can find additional information in [Running a Cloud Foundry-Hosted Application – for Java Developers](https://developer.mindsphere.io/howto/howto-cf-running-app.html). Note that this is not written from the point of view of a Mendix developer, so some information may not be relevant.
 
 Ensure that you have configured your proxy settings if these are required.
 
-### 5.3 Setting up Insights Hub Launchpad{#launchpad}
+### Setting up Insights Hub Launchpad{#launchpad}
 
 You have to register your application for it to work and appear on the Insights Hub Launchpad. If you have deployed your application to Mendix you can use either of the following two options (where Option A is preferred). Deployed to Insights Hub, you have to register manually via the Developer Cockpit (Option B).
 
-#### 5.3.1 Option A: Using the Auto Registration Process
+#### Option A: Using the Auto Registration Process
 
 {{% alert color="info" %}}
 This method is recommended if your app is deployed to Mendix Cloud.
@@ -343,9 +343,9 @@ You can have multiple versions of your app within the Developer Cockpit, for exa
 The deployment registered via the **Auto Registration** process is *always mapped to the version created during the process*. If you want to create additional versions of your app, you can do this by manually creating a new version within the Developer Cockpit.
 {{% /alert %}}
 
-#### 5.3.2 Option B: Configuring the Mendix App in the Developer Cockpit
+#### Option B: Configuring the Mendix App in the Developer Cockpit
 
-##### 5.3.2.1 Creating a New Application
+##### Creating a New Application
 
 To create a new app manually in the Insights Hub launchpad, do the following:
 
@@ -361,7 +361,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 10. Fill in the **Component > Name**. This must be identical to the {app_name} you set in the *manifest.yml* file.
 11. Click the **+** next to the component to add **Endpoints**.
 12. Specify `/**` as the endpoint to allow you to access all endpoints relevant to your application, and click **Save**.
-13. Fill in the **Cloud Foundry Direct URL**. This can be found using the cloud foundry command `cf app {app_name}`.
+13. Fill in the **Cloud Foundry Direct URL**. This can be found using the Cloud Foundry command `cf app {app_name}`.
 14. Set the **Configurations > content-security-policy** *Value* to the following (hover your mouse over the text and you will be able to copy the contents to your clipboard):
 
     If your app is running on Insights Hub on **AWS** use Region `eu1`:
@@ -384,7 +384,7 @@ To create a new app manually in the Insights Hub launchpad, do the following:
 
     {{% alert color="info" %}}If the app has not been pushed yet, there will be no route set up for the app and you will get an error message. This will be resolved once you have pushed your app to Cloud Foundry.{{% /alert %}}
 
-##### 5.3.2.2 Setting Application Scopes in Developer Cockpit{#scopes}
+##### Setting Application Scopes in Developer Cockpit{#scopes}
 
 To set up the appropriate scopes in Insights Hub, do the following:
 
@@ -407,7 +407,7 @@ For an explanation of the relationship between Mendix roles and Insights Hub rol
 You will also need to use the **Add Core Role** option to add *Core Roles* to your app if it makes calls to Insights Hub. The ones you need to add will depend on which features of Insights Hub you are using.
 {{% /alert %}}
 
-##### 5.3.2.3 Assigning User Roles
+##### Assigning User Roles
 
 Once you have created the scopes for your app, you will need to assign them to the users who you want to have access to the app.
 
@@ -428,7 +428,7 @@ The user will have to sign out and sign in again for this assignment to take eff
 Your app is now set up and users can run it from within the Insights Hub Developer Cockpit.
 {{% /alert %}}
 
-## 6 Development Considerations
+## Development Considerations
 
 See [Insights Hub Development Considerations](/partners/siemens/mindsphere-development-considerations/) for additional help on such things as:
 

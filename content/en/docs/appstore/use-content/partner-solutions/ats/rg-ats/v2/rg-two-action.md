@@ -3,7 +3,7 @@ title: "Action"
 url: /appstore/partner-solutions/ats/rg-two-action/
 ---
 
-## 1 Actions
+## Actions
 
 Actions perform tasks (for example, entering text in a text box widget). They work like building blocks for test cases. A test case executes the test steps containing actions. An action can contain multiple actions.
 
@@ -13,13 +13,13 @@ In ATS, you create a new action by going to **Test Cases** in the navigation men
 
 Another way to create a new action is to extract an action out of test steps from a test case. For more information on how to extract an action, see the "Extract Action, Copy, Paste, Delete" section of [Test Case Reference](/appstore/partner-solutions/ats/rg-two-test-case/).
 
-## 2 Action Details
+## Action Details
 
 In the upper-left corner of the **Action Details** page, you can find the name and the description of the action. To change these, click them and edit the text. ATS saves the changes automatically.
 
 In the upper-right corner of the page, you can find the **Export** drop-down menu, where you can export the action definition. This creates an XML file, which you can then import into another ATS project.
 
-### 2.1 Test Steps
+### Test Steps
 
 **Test Steps** describe the actions that ATS performs. You add new test steps by searching for an action in the **Add step** box.
 
@@ -27,13 +27,13 @@ Another way of adding test steps to a test case is to use the recorder by clicki
 
 Click the test step description to open the test step details. For more information, see [Test Step](/appstore/partner-solutions/ats/rg-two-test-step/).
 
-### 2.2 Settings
+### Settings
 
 Under the **Settings** tab, set the **Input Parameters** and **Output Parameters** of the action. These optional parameters pass values to the action or return the outcome of an action.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-action/action.png" class="no-border" >}}
 
-#### 2.2.1 Input Parameters
+#### Input Parameters
 
 An input parameter is a value that you use inside your action. The input parameter is shown as an [action parameter](/appstore/partner-solutions/ats/rg-two-test-step/#action-parameter) of a test step. An action can have multiple optional or required input parameters, but it can only have one output parameter.
 
@@ -57,7 +57,7 @@ Under **Properties**, you see the extra settings for the input parameter:
 | Show as password | If set to **Yes**, ATS displays the value of the input parameter as asterisks.  |
 | Required/Optional | If set to **Required**, the user must set the input parameter in the test step details. Otherwise, ATS does not execute the action. |
 
-#### 2.2.2 Output Parameter
+#### Output Parameter
 
 An output parameter is the outcome of an action. Each action has a maximum of one output parameter. ATS uses output parameters to make the outcome of an action available to other actions or test steps.
 
@@ -73,6 +73,6 @@ To pass the outcome of your action to the output parameter, you must use the **S
 
 If you want to remove the output parameter from your action, click **Remove**.
 
-### 3 Show Usages
+### Show Usages
 
 The **Show Usages** tab gives an overview of all the other actions used in the current action. Besides that, it also shows other actions and test cases that use the current action.

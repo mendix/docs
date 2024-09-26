@@ -5,7 +5,7 @@ weight: 5
 description: "Overview of consumed OData services for Studio Pro"
 ---
 
-## 1 Introduction
+## Introduction
 
 Data can be published from an app for use by other apps through [published OData services](/refguide9/published-odata-services/). Consumed OData services can be used to integrate external data sources in apps through [Mendix Data Hub](/data-hub/).
 
@@ -19,11 +19,11 @@ For details on the features that a published OData service must support and how 
 The OData implementation in Mendix does not support all features in the OData specification, nor do we have any plans to provide a full implementation of the entire specification. The supported capabilities of OData are focused on providing a simple and productive way to share data between Mendix apps. Although OData [external entities](/refguide9/external-entities/) may also work for third-party OData APIs, their use is not tested nor guaranteed. Please validate upfront that the functionality provided in Mendix matches the requirements of your third-party APIs. If [external entities](/refguide9/external-entities/) do not work with your OData APIs, the advised alternative is to use [REST](/refguide9/consumed-rest-services/) functionality.
 {{% /alert %}}
 
-## 2 OData Services and External Entities {#external-entities}
+## OData Services and External Entities {#external-entities}
 
 When an external entity is used in an app, the associated dataset for the entity is retrieved through the information in the consumed OData service contract and returned.
 
-### 2.1 External Entities
+### External Entities
 
 External entities have some limitations compared to persistable entities:
 
@@ -36,7 +36,7 @@ Associations between external entities (as defined in the originating app) are s
 
 You can create associations between local [persistable entities](/refguide9/persistability/#persistable) and external entities. For those associations, the persistable entities need to be the owner.
 
-### 2.2 Consumed OData Service
+### Consumed OData Service
 
 When an external entity is dragged into the domain model, the  **Consumed OData** document that is added to the model displays the values of the metadata contract from the service endpoint.
 
@@ -46,10 +46,10 @@ If the metadata contract at the specified service endpoint is different to the c
 
 This means that the consumed service has to be **Updated** to the new contract. If this is not done, then this will result in errors when data has to be retrieved from the endpoint based on an outdated contract. Changes in consumed OData service contracts is further described in [Updating or Switching a Consumed OData Service](/refguide9/consumed-odata-service/#updating).
 
-#### 2.2.1 Limitations {#consumed-odata-service-limitations}
+#### Limitations {#consumed-odata-service-limitations}
 
 When you update a [consumed OData service](/refguide9/consumed-odata-service/) with a new version from Mendix Data Hub, but close the document without saving, the blue arrow icon will no longer be shown to notify you about the available update for that service. Close your app and open it again and the error will be resolved.
 
-## 3 Runtime Considerations
+## Runtime Considerations
 
 The service endpoint is called for every retrieval of consumed OData services. Therefore, the data retrieval for consumed external entities may be slower than local persistable entities.

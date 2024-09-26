@@ -6,7 +6,7 @@ description: "This guide allows your end-user to change the interface language o
 ---
 
 
-## 1 Introduction
+## Introduction
 
 This internationalization guide explains how to give your end-user an easy way to change their mobile application's language. The user can do so directly on their Android or iOS device. 
 
@@ -14,7 +14,7 @@ This guide shows one of the ways to change the language on a *native* app. You c
 
 While this guide gives your end-user the ability to switch their app's language, translation is a different issue. Translating native apps and PWAs actually works the same as it does for web apps. To learn more about app translation, see [Translating Your App Content](/refguide9/translate-your-app-content/).
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this guide, make sure you have completed the following prerequisites:
 
@@ -26,7 +26,7 @@ Before starting this guide, make sure you have completed the following prerequis
 
     {{< figure src="/attachments/refguide9/mobile/native-mobile/native-language-change/language-settings.png" alt="language settings"  width= "450" class="no-border" >}}
 
-## 3 Setting up the Language Change Mechanism {#set-up}
+## Setting up the Language Change Mechanism {#set-up}
 
 Internationalization with Mendix's mobile apps is fairly simple. You will use two nanoflow actions to set up most of your language change mechanism.
 
@@ -37,7 +37,7 @@ This guide requires the following nanoflow actions:
 * **Reload** – This action reloads web and native apps.
 {{% /alert %}}
 
-### 3.1 Adding the Module and Microflow
+### Adding the Module and Microflow
 
 You can either add a new module to your existing app, or create a new Studio Pro app using a **Blank Native Mobile App** template and then adding a new module to it. Either way, your setup will begin with the same step and continue on accordingly:
 
@@ -65,7 +65,7 @@ You can either add a new module to your existing app, or create a new Studio Pro
 
 Your microflow **ACT_Language_ChangeUserLangRuntime** is now ready to be called from a nanoflow which you will configure in the following section.
 
-### 3.2 Adding the Nanoflow
+### Adding the Nanoflow
 
 Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and configure it like this:
 
@@ -78,7 +78,7 @@ Add a new nanoflow *ACT_Language_ChangeUserLangDevice* to your module and config
 
     {{< figure src="/attachments/refguide9/mobile/native-mobile/native-language-change/nanoflow-language-change.png"  alt="nanoflow language change" width= "500" class="no-border" >}}
 
-### 3.3 Adding the Native Page
+### Adding the Native Page
 
 Add a new native page **Language_Overview** to your **ChangeLanguage** module, then do the following:
 
@@ -99,7 +99,7 @@ Add a new native page **Language_Overview** to your **ChangeLanguage** module, t
     1. Click the **Native mobile** tab.
     1. Set **Language_Overview** as the default home page.
 
-## 4 Testing Language Switching {#testing}
+## Testing Language Switching {#testing}
 
 Now it is time to see the app in action. If you are using a PWA, you can simply test in a web browser. 
 
@@ -119,7 +119,7 @@ To test your native app, locally deploy and view the app on the **Make It Native
 
 Congratulations, you just implemented internationalization in your native app! Your users will appreciate the power of multiple languages at their fingertips. For more information about languages and Mendix, see the Read More section below.
 
-## 5 Read More
+## Read More
 
 * [Using Translatable Validation Messages](/refguide9/translatable-validation-messages/)
 * [Language Menu](/refguide9/translatable-texts/): gives more information on translating the languages of different Mendix UI elements

@@ -3,19 +3,19 @@ title: "Cancel Dialog"
 url: /appstore/partner-solutions/ats/rg-one-cancel-dialog/
 ---
 
-## 1 Description
+## Description
 
 Clicks Cancel on a Confirmation Dialog.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * ConfirmationDialog
 
-## 3 Usage
+## Usage
 
 Optionally you can provide the dialog title and dialog type, to specify which dialog you want to cancel. Otherwise this action will cancel the first found active dialog.     
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

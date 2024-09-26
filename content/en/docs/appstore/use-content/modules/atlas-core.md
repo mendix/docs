@@ -5,7 +5,7 @@ description: "Describes the configuration and usage of the Atlas Core module, wh
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Atlas Core](https://marketplace.mendix.com/link/component/117187) module contains the base layouts, styling, and design properties for the many widgets which can be used to create beautiful experiences.
 
@@ -18,6 +18,6 @@ Further documentation on styling can be found here:
 
 To migrate from Atlas 2 to Atlas 3, see [Migrate From Atlas 2 To Atlas 3](/refguide9/moving-from-atlas-2-to-3/).
 
-## 2 Read More
+## Read More
 
 * [Atlas UI Kit for Figma](/howto/front-end/figma-ui-kit/)

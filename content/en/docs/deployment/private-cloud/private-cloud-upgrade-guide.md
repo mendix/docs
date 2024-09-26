@@ -5,7 +5,7 @@ description: "Describes how to upgrade the Mendix Operator"
 weight: 90
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes how an existing installation of Mendix for Private Cloud can be upgraded.
 
@@ -33,20 +33,20 @@ Kubernetes 1.22 [deprecated](https://kubernetes.io/blog/2021/07/14/upcoming-chan
 upgrading to Kubernetes 1.21 and Mendix Operator v2.\*.\* will prepare resources such as ingresses to be compatible with APIs available in Kubernetes 1.22.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
-### 2.1 Download the Configuration Tool{#download-configuration-tool}
+### Download the Configuration Tool{#download-configuration-tool}
 
 Follow the instructions to [Download the Configuration Tool](/developerportal/deploy/standard-operator/#download-configuration-tool).
 When downloading the Configuration Tool, choose the version you would like to upgrade to (1.9.0 or a later version) - not the version that is currently installed.
 
 If you're using an OpenShift cluster, follow the [Signing in to OpenShift](/developerportal/deploy/standard-operator/#openshift-signin) instructions.
 
-### 2.2 CLI Availability
+### CLI Availability
 
 You must have the *OpenShift CLI* installed for upgrading Mendix for Private Cloud on OpenShift, or the *Kubectl CLI* installed if you are upgrading Mendix for Private Cloud on another Kubernetes platform. In both cases, ensure that they are connected to the correct cluster.
 
-## 3 Upgrade Namespace{#upgrade-cluster}
+## Upgrade Namespace{#upgrade-cluster}
 
 1. Follow the instructions to [Run the Configuration Tool](/developerportal/deploy/standard-operator/#running-the-tool). You will see the initial screen:
 
@@ -55,7 +55,7 @@ You must have the *OpenShift CLI* installed for upgrading Mendix for Private Clo
 
     {{< figure src="/attachments/deployment/private-cloud/private-cloud-upgrade-guide/upgrade-wizard.png" class="no-border" >}}
 
-### 3.1 Automatic Upgrade Mode
+### Automatic Upgrade Mode
 
 This mode will automatically upgrade components in the namespace.
 
@@ -64,7 +64,7 @@ This mode will automatically upgrade components in the namespace.
 
     {{% alert color="info" %}}The upgrade is successful if the **Upgrade output** ends with **Done**.{{% /alert %}}
 
-### 3.2 Manual Upgrade Mode
+### Manual Upgrade Mode
 
 This mode allows you to review and audit any changes the Configuration Tool would need to perform to upgrade Mendix for Private Cloud in your namespace.
 
@@ -81,7 +81,7 @@ A manual upgrade consists of the following steps:
 * [Apply the Upgrade Patches](#apply-patches)
 * [Start Deployments](#start-deployments)
 
-#### 3.2.1 Generate Upgrade Patches{#generate-patches}
+#### Generate Upgrade Patches{#generate-patches}
 
 This step will prepare upgrade patches on your local machine in the subfolder `.mxpc-cli` of your user home directory (for example `C:\Users\<User id>\.mxpc-cli` in Windows or `/home/<User id>/.mxpc-cli` for Mac and U*ix).
 
@@ -91,25 +91,25 @@ This step will prepare upgrade patches on your local machine in the subfolder `.
 
     {{% alert color="info" %}}The patches are successfully generated if the **Upgrade output** ends with **Done**.{{% /alert %}}
 
-#### 3.2.2 Stop Deployments{#stop-deployments}
+#### Stop Deployments{#stop-deployments}
 
 Stop the deployed `mendix-operator` (replace `{namespace}` with the namespace where the Mendix Operator is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=0
 ```
 
 If you have installed the cluster in Connected mode, stop the deployed `mendix-agent` (replace `{namespace}` with the namespace where the Mendix Agent is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-agent --replicas=0
 ```
 
-#### 3.2.3 Apply the Upgrade Patches{#apply-patches}
+#### Apply the Upgrade Patches{#apply-patches}
 
 Run the following command to upgrade Custom Resource Definitions for the Mendix Operator:
 
-```shell {linenos=false}
+```shell
 kubectl apply -f crds.manifest.yaml
 ```
 
@@ -117,7 +117,7 @@ kubectl apply -f crds.manifest.yaml
 
 Run the following command to upgrade the dependency versions for the Mendix Operator:
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} apply -f upgrade_manifest.yaml
 ```
 
@@ -128,16 +128,16 @@ The `upgrade_patches.txt` file contains a list of `kubectl` commands (or `oc` co
 The `upgrade_patches.txt` file uses Bash escaping rules. If you're using another terminal such as the Windows command prompt, you will need to adjust the commands so that they are compatible with your command line terminal's escaping rules.
 {{% /alert %}}
 
-#### 3.2.4 Start Deployments{#start-deployments}
+#### Start Deployments{#start-deployments}
 
 Start the `mendix-operator` deployment (replace `{namespace}` with the namespace where the Mendix Operator is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-operator --replicas=1
 ```
 
 If you have installed the cluster in Connected mode, start the `mendix-agent` deployment (replace `{namespace}` with the namespace where the Mendix Agent is deployed):
 
-```shell {linenos=false}
+```shell
 kubectl -n {namespace} scale deployment mendix-agent --replicas=1
 ```

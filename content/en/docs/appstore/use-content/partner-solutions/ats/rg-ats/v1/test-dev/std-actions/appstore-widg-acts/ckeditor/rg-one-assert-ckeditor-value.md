@@ -3,19 +3,19 @@ title: "Assert CKEditor Value"
 url: /appstore/partner-solutions/ats/rg-one-assert-ckeditor-value/
 ---
 
-## 1 Description
+## Description
 
 Compares the CKEditor value with the given value.
 
-## 2 Supported widgets
+## Supported widgets
 
 * CKEditor
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget and the value you want to assert.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

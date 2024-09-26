@@ -4,11 +4,11 @@ url: /appstore/partner-solutions/apd/uc-two/
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 The APM tools have been used extensively by CLEVR Developers and Support Engineers in developing and supporting ExpertDesk and other Mendix applications. The tools were originally developed to overcome the difficulties of analyzing performance issues in Mendix without the proper information and have grown to an application monitoring and analysis suite.
 
-## 2 Generic
+## Generic
 
 The **Trap** module is always on in development, test, acceptance, and production. It is used to have all logging immediately available when an error occurs.
 
@@ -18,7 +18,7 @@ The **Log** module is used for cases that need analysis but have no specific tri
 
 The **Browser recorder** gives insights into the performance of a user perspective. The client (browser) requests and responses will be monitored. This also provides insights into the duration of loading pages, widgets, and grids as well as into the size and details of the request from the client (browser) and responses from the server.
 
-## 3 In Development
+## In Development
 
 During development, the **Statistics** or **Performance** module is used when a function is seen as slow. Also, it can be used to verify that the expected flow/path is followed.
 
@@ -30,7 +30,7 @@ The **Statistics** module snapshots are stored on shutdown of the Mendix applica
 
 The **Browser recorder** can be used to get performance information about a new build, pages changed, and widgets used. You can get information about the duration of loading widgets and grids as well as about the data retrieved.
 
-## 4 In Test
+## In Test
 
 During the test and acceptance phase, other users than the developer test and use the application. It is especially important then to collect information for further analysis if they find an issue.
 
@@ -40,7 +40,7 @@ The performance tool can always be turned on with a small threshold to capture t
 
 Another strategy is to record the microflow engine with the log tool to see what the users have done afterwards.
 
-## 5 In Production
+## In Production
 
 The **Trap** module is used to have all the necessary logging immediately available when something unwanted occurs. The first day the trap log is monitored, exclusions are made for warnings occurring often or known errors.
 
@@ -48,7 +48,7 @@ The **Statistics** module is run to collect frequent statistics (for example, da
 
 The statistics will give insights in click path behavior of the users. How do they use the application and what is the duration of opening the pages.
 
-## 6 In a Load Test
+## In a Load Test
 
 When generating load, the statistics and performance module are used to analyze what is happening within the application. The results of multiple load tests can be compared to see what influence the load has on the duration of microflows and actions. The browser recorder can be used to see what influence the load test has on the application from the user's perspective.
 

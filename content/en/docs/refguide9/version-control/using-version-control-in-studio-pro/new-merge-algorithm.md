@@ -6,14 +6,14 @@ weight: 10
 description: "Introduces a new merge algorithm and describes how to enable it to resolve conflicts."
 ---
 
-## 1 Introduction
+## Introduction
 
 A new merge algorithm with fine-grained conflict resolution is used when you update your app or merge changes in it. The new merge algorithm has the following features:
 
 * **Fine-grained conflict resolution** – When there are conflicting changes in a document, you do not have to choose between whole documents: resolving a conflict using your change or using their change. Instead, you can resolve conflicts at the level of individual elements, such as widgets, entities, attributes, or microflow actions. Also, all non-conflicting changes from both sides are accepted automatically.
 * **No conflicts on parallel changes to lists of widgets** – When two developers make changes to widgets in the same document there is no conflict, the changes are combined. However, if the changes are made too close to the same place in the document, a **list order conflict** is reported that reminds the developer who is merging the changes to decide on the final order of the widgets in the list. 
 
-## 2 Enabling the New Algorithm with Fine-Grained Conflict Resolution {#enable-disable}
+## Enabling the New Algorithm with Fine-Grained Conflict Resolution {#enable-disable}
 
 {{% alert color="info" %}}
 Make sure that you repository is in a clean state: everything has been committed and there are no outstanding changes or conflicts. 
@@ -27,7 +27,7 @@ The new algorithm is enabled by default in Studio Pro 9. If you encounter issues
 
 For more information, see [Preferences](/refguide9/preferences-dialog/).
 
-## 3 Resolving Conflict Example
+## Resolving Conflict Example
 
 A page document in your app is designed as shown below:
 
@@ -53,7 +53,7 @@ Your page is now laid out as shown below:
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-branch-page.png" alt="Branch line page" class="no-border" >}}
 
-## 4 Resolving Conflicts
+## Resolving Conflicts
 
 When you merge changes, the new algorithm shows you the following conflicts:
 
@@ -73,7 +73,7 @@ The following non-conflicting changes have already been applied to the page:
 * The text widget is added to the bottom layout grid (main line)
 * A data grid is added to the bottom layout grid (branch line)
 
-### 4.1 Resolving the First Conflict
+### Resolving the First Conflict
 
 For the first conflict, you can inspect changes and decide which version to apply. Select one of the three lines that represent the conflict and choose **Resolve using Mine** or **Resolve using Theirs**. 
 
@@ -82,14 +82,14 @@ For the first conflict, you can inspect changes and decide which version to appl
 You will see the document update immediately after you click the button. If you are not satisfied with your choice, you can use undo to go back and try another option. 
 
 {{% alert color="info" %}}
-To use keyboard shortcuts <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo your choice, click the document to focus it first.
+To use keyboard shortcuts <kbd>Ctrl</kbd> + <kbd>Z</kbd> and <kbd>Ctrl</kbd> + <kbd>Y</kbd> to undo your choice, click the document to focus it first.
 {{% /alert %}}
 
 There is a third option to deal with a conflict: **Mark as Resolved**. This means that you do not choose any side to resolve the conflict and will keep things the way they were in the original. Neither of the new text changes will be applied.
 
 Once you have chosen one of the three options to resolve the conflict, green check marks will appear to indicate that this conflict has been dealt with.
 
-### 4.2 Resolving the Second Conflict
+### Resolving the Second Conflict
 
 The second conflict is a list order conflict. It is a reminder to take a look at the order of the widgets in the layout grid. You can arrange the widgets in the desired order in the page editor and then choose **Mark as Resolved** for the list order conflict. 
 
@@ -103,7 +103,7 @@ Some changes will make it impossible to resolve conflicts using **mine** or **th
 
 {{< figure src="/attachments/refguide9/version-control/using-version-control-in-studio-pro/new-merge-algorithm/new-merge-algorithm-cannot-resolve.PNG" alt="Conflict cannot be resolved" class="no-border" >}}
 
-### 4.3 Finishing Conflict Resolution
+### Finishing Conflict Resolution
 
 Once all conflicts have been resolved, click the **Accept and Exit** button to finalize the results. The document will be saved in its merged form and the conflict for that document will be gone. The result is the document that contains changes from both sides and possibly some manual edits.
 

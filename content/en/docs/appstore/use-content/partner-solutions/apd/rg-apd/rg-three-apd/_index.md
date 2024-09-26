@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/apd/rg-three-apd/
 weight: 1
 ---
 
-## 1 Introduction
+## Introduction
 
 The Application Performance Diagnostics (APD) tool is a solution that helps you to analyze performance issues and runtime behavior.
 
@@ -30,7 +30,7 @@ This is the reference guide for CLEVR's APD 3 for Mendix. It has the following c
 
 The sections below provide a short explanation of APD along with its features and possible uses.
 
-## 2 Definition of the APD Tool
+## Definition of the APD Tool
 
 APD is based on Wikipedia's definition of [application performance management](https://en.wikipedia.org/wiki/Application_performance_management). The goal of APD is to emphasize this point: "to detect and diagnose complex application performance problems to maintain an expected level of service."
 
@@ -40,7 +40,7 @@ It is common knowledge that software contains bugs, and also that software is te
 
 The APD tools provide valuable information for analyzing the behavior and performance of an application in production. This allows for direct analysis without asking the customer to wait, reproduce, or deliver technical information. The same information is available during development as well to prevent issues before they appear in production.
 
-## 3 Statistics for Seeing Performance Issues in Advance
+## Statistics for Seeing Performance Issues in Advance
 
 Application performance is difficult to test during the initial development stage. The dataset is too small, and exact usage by users (for example, their search behavior) is unknown. Even after applying all performance best practices while building a Mendix application, issues will still appear in production. Usually they appear over time as the dataset grows, so the question is how can you see them coming.
 
@@ -50,15 +50,15 @@ In development, adding a check of APD to the generic definition of done is advis
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/statistics_history.png" class="no-border" >}}
 
-## 4 Performance Recorder for Collecting Individual Traces
+## Performance Recorder for Collecting Individual Traces
 
 When Support or DevOps wants to investigate a performance issue, they can use the APD [Performance Recorder](/appstore/partner-solutions/apd/rg-three-recorder/). This shows individual actions, loop iterations, and exactly where the obstacles are.
 
-## 5 Your Flight Data Recorder
+## Your Flight Data Recorder
 
 The runtime agent's **Trap** feature is listening on all levels of logging, up to the TRACE level. If an error occurs, the logging in memory and the error is stored in the APD manager database, which can provide information regarding what the runtime was processing at the time of the error.
 
-## 6 Logs
+## Logs
 
 The logs are used to collect Mendix Runtime log messages and store them in the APD manager database.
 

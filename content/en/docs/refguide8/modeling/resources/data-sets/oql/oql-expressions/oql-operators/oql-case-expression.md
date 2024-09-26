@@ -9,7 +9,7 @@ The CASE expression can be used on two manners:
 
 *Simple*
 
-```sql {linenos=false}
+```sql
 CASE input_expression
 WHEN when_expression THEN result_expression [ ...n ]
 ELSE else_result_expression
@@ -18,7 +18,7 @@ END
 
 *Extended*
 
-```sql {linenos=false}
+```sql
 CASE
 WHEN boolean_expression THEN result_expression [ ...n ] 
 ELSE else_result_expression

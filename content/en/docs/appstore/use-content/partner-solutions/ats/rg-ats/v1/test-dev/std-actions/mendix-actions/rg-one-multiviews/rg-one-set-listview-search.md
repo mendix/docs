@@ -3,20 +3,20 @@ title: "Set ListView Search"
 url: /appstore/partner-solutions/ats/rg-one-set-listview-search/
 ---
 
-## 1 Description
+## Description
 
 Sets the ListView Search Text.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * ListView
 
-## 3 Usage
+## Usage
 
 You have to pass the widget name and the search text to the action.
 Optionally you can provide a WebElement as search context, to narrow down the search for the widget, if there are two or more widgets with the same name.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype |Required| Description
 --- | --- | --- | ---

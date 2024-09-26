@@ -6,7 +6,7 @@ weight: 20
 description: "This how-to teaches you how to add advanced features to your TextBox input widget."
 ---
 
-## 1 Introduction
+## Introduction
 
 The new pluggable widget API makes building feature-complete widgets much easier. This how-to will go beyond [How to Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/) and teach you how to add advanced features to your TextBox input widget.
 
@@ -17,19 +17,19 @@ This how-to teaches you how to do the following:
 * Add custom validations
 * Create an onChange action
 * Improve accessibility for screen readers 
-* Enable Mendix Studio Pro preview
+* Enable Preview Mode in Mendix Studio Pro
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Complete [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/)
 
-## 3 Adding Advanced Features to Your TextBox Input Widget
+## Adding Advanced Features to Your TextBox Input Widget
 
 To add advanced features to your TextBox input widget, consult the sections below.
 
-### 3.1 Configuring Edit Permissions
+### Configuring Edit Permissions
 
 Right now the input is editable for any user at all times. However, the input should be disabled in cases when:
 
@@ -40,7 +40,7 @@ Right now the input is editable for any user at all times. However, the input sh
 
 To add these restrictions, follow the instructions below:
 
-1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability)  for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Mendix Studio Pro): 
+1. In *TextBox.xml* add the [system property](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#editability) for `Editability` inside the `propertyGroup` of `Data source` (where you put the attribute inside `propertyGroup` will affect how the attribute renders in Studio Pro): 
 
     ```xml
     <propertyGroup caption="Editability">
@@ -48,20 +48,20 @@ To add these restrictions, follow the instructions below:
     </propertyGroup>
     ```
 
-2. Run `npm run build` to update the widget. When viewing in Studio Pro, the `Editability` property can been seen here:
+2. Run `npm start` to update the widget and start the watcher if you have not already done so. When viewing in Studio Pro, the `Editability` property can be seen here:
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/editability-property-studio-pro.png" alt="Editability studio pro"   width="500"  class="no-border" >}}
 
-3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the `render` function with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
+3. Now add read-only functionality to your widget. In *TextBox.tsx*, replace the React component with the code below to check if the input should be disabled and pass it to in the `TextInput` component:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
         return <TextInput
             value={value}
-            tabIndex={this.props.tabIndex}
-            onUpdate={this.onUpdateHandle}
-            disabled={this.props.textAttribute.readOnly}
+            onChange={props.textAttribute.setValue}
+            tabIndex={props.tabIndex}
+            disabled={props.textAttribute.readOnly}
         />;
     }
     ```
@@ -73,54 +73,48 @@ To add these restrictions, follow the instructions below:
         * If the containing data view is set to `Editable: No`
         * If the system property `Editability` is set with a true condition
 
-4. In *components/TextInput.tsx*, add the `disabled` property to the `InputProps` interface and set the HTML input attribute to `disabled`:
+4. In *components/TextInput.tsx*, add the `disabled` property to the `TextInputProps` interface and set the HTML input attribute to `disabled`:
 
     ```tsx
-    import { CSSProperties, ChangeEvent, Component, ReactNode, createElement } from "react";
-    import classNames from "classnames";
-    export interface InputProps {
+    import { createElement, CSSProperties, ReactElement } from "react";
+    
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
-        onUpdate?: (value: string) => void;
+        onChange?: (value: string) => void;
         disabled?: boolean;
     }
-    export class TextInput extends Component<InputProps> {
-        private readonly handleChange = this.onChange.bind(this);
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
+    
+    export function TextInput({ value, onChange, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        return (
+            <input
                 type="text"
-                className={className}
-                style={this.props.style}
-                value={this.props.value}
-                tabIndex={this.props.tabIndex}
-                onChange={this.handleChange}
-                disabled={this.props.disabled}
-            />;
-        }
-        private onChange(event: ChangeEvent<HTMLInputElement>) {
-            if (this.props.onUpdate) {
-                this.props.onUpdate(event.target.value);
-            }
-        }
+                value={value}
+                onChange={event => {
+                onChange?.(event.target.value);
+                }}
+                className={"form-control " + className}
+                style={style}
+                tabIndex={tabIndex}
+                disabled={disabled}
+            />
+        );
     }
     ```
 
     After altering this code, do the following to see your changes:
 
-    1. Run `npm run build` to update the widget.
-    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
-    4. Click **View App** to see your changes.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
+    3. Click **View App** to see your changes.
 
     Explaining the code:
 
     * The property `disabled` in an input element will behave according to the HTML's specifications — it will not respond to user actions, cannot be focused, is removed from the tab order, and will not fire any events
 
-5. When you select **Never** for your TextBox widget's `Editable` property in Mendix Studio Pro, the widget will function like this: 
+5. When you select **Never** for your TextBox widget's `Editable` property in Studio Pro, the widget will function like this: 
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/settonever.png" alt="editable never result"   width="500"  class="no-border" >}}
 
@@ -128,7 +122,7 @@ To add these restrictions, follow the instructions below:
 
     * The theme styling will apply the disabled style to the input in the same way as the standard input widget in the disabled state 
 
-### 3.2 Adding Validation Feedback
+### Adding Validation Feedback
 
 This section teaches you how to add validation to your TextBox widget. Using microflows and nanoflows, validation feedback can easily be provided. 
 
@@ -147,25 +141,27 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     2. Set **Variable** to **Entity (MyFirstModule Entity)**.
     3. Set **Member** to **Attribute**, and type *Validation feedback from a microflow* into **Template**.
     4. Click **OK**.
-    5. Click **File** > **Save All** from the Mendix Studio Pro drop-down menu.
+    5. Click **File** > **Save All** from the Studio Pro drop-down menu.
 
 3. To render the message, create a new component *components/Alert.tsx*:
 
     ```tsx
-    import { FunctionComponent, createElement } from "react";
-    import classNames from "classnames";
+    import { FunctionComponent, createElement, ReactNode } from "react";
+
     export interface AlertProps {
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
+        children?: ReactNode;
     }
-    export const Alert: FunctionComponent<AlertProps> = ({ alertStyle, className, children }) =>
-        children ? (
-            <div className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+   
+    export const Alert = ({ alertStyle = "danger", className, children }: AlertProps): ReactElement | null =>
+        children
+            ? <div className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}
-            </div>
-        ) : null;
+              </div>
+            : null;
+    
     Alert.displayName = "Alert";
-    Alert.defaultProps = { alertStyle: "danger" };
     ```
 
     Explaining the code:
@@ -174,36 +170,38 @@ This section teaches you how to add validation to your TextBox widget. Using mic
     * The component has a `displayName` for debugging and error messages
     * A `function` component can also have default properties which are set directly on the prototype
 
-4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the `render` function with the following code:
+4. In *TextBox.tsx*, the validation feedback can be accessed though the attribute `validation` property and shown in the `Alert` component. Replace the component with the following code:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        const validationFeedback = this.props.textAttribute.validation;
-        return <Fragment>
-            <TextInput
-                value={value}
-                tabIndex={this.props.tabIndex}
-                onUpdate={this.onUpdateHandle}
-                disabled={this.props.textAttribute.readOnly}
-            />
-            <Alert>{validationFeedback}</Alert>
-        </Fragment>;
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onChange={props.textAttribute.setValue}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                />
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
 5. Add `Fragment` to the current React import (shown below), and add a new `Alert` import underneath the existing imports in *TextBox.tsx*:
 
     ```tsx
-    import { Component, ReactNode, Fragment, createElement } from "react";
+    import { createElement, ReactElement, Fragment } from "react";
     import { Alert } from "./components/Alert";
     ```
 
     After altering this code, do the following to see your changes:
-    1. Run `npm run build` to update the widget.
-    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
-    4. Click **View App** to see your changes.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
+    3. Click **View App** to see your changes.
 
     Explaining the code:
 
@@ -214,7 +212,7 @@ This section teaches you how to add validation to your TextBox widget. Using mic
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/microflowwithvalidationfeedback.png" alt="validation feedback demo"   width="350"  class="no-border" >}}
 
-### 3.3 Customizing Validation
+### Customizing Validation
 
 Validation can come from a modeled microflow or nanoflow, but can also be widget specific. For this sample you will learn to implement a custom, required [text template](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#texttemplate) message which will show when the input is empty.
 
@@ -235,31 +233,43 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
     * `textTemplate` strings are translatable strings which can also have attributes and data values
     * Default values can be added to the XML and are language specific
 
-2. In *TextBox.tsx*, add a validation handler to the attribute after the `onUpdate` function:
+2. In *TextBox.tsx*, add a validation handler to the attribute after the `onChange` function:
 
     ```ts
-    componentDidMount(): void {
-        this.props.textAttribute.setValidator(this.validator.bind(this));
-    }
-
-    private validator(value: string | undefined): string | undefined {
-        const { requiredMessage } = this.props;
-        if (requiredMessage && requiredMessage.value && !value) {
-            return requiredMessage.value;
-        }
-        return;
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onChange={props.textAttribute.setValue}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                />
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
     After altering this code, do the following to see your changes:
-    1. Run `npm run build` to update the widget.
-    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
-    4. Click **View App** to see your changes.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
+    3. Click **View App** to see your changes.
 
     Explaining the code:
 
-    * The `componentDidMount` is a lifecycle method of the React component, and is only called once
+    * The `useEffect` is a hook used in a React component, and is only called once
     * The custom validator is registered to the attribute, and is called after each `setValue` call — the new value is only accepted when the validator returns no string
     * When the validator returns an error message, it will passed to the attribute, and a re-render is triggered — the standard `this.props.textAttribute.validation` will get the message and display it in the same way as the validation feedback
 
@@ -267,7 +277,7 @@ Validation can come from a modeled microflow or nanoflow, but can also be widget
 
     {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/nocharerror.png" alt="no character error"   width="500"  class="no-border" >}}
 
-### 3.4 Adding an OnChange Action
+### Adding an OnChange Action
 
 Until now the components did not keep any state. Each keystroke passed through the `onUpdate` function, which set the new value. The newly-set value was received through the React lifecycle, which updated the property and called the `render` function. This method can cause many rendering actions to be triggered by all widgets that are using that same attribute, such as a re-render for each keystroke. This pattern also makes it also difficult to trigger an onChange action. The onChange action should only trigger on leaving the input combined with a changed value. 
 
@@ -293,10 +303,9 @@ Until now the components did not keep any state. Each keystroke passed through t
     ```
 
     After altering this code, do the following to see your changes:
-    1. Run `npm run build` to update the widget.
-    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
-    4. Click **View App** to see your changes.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
+    3. Click **View App** to see your changes.
 
     Adding this code will allow you to select various actions:
 
@@ -305,165 +314,172 @@ Until now the components did not keep any state. Each keystroke passed through t
 2. In *TextBox.tsx*, check if `onChangeAction` is available and call the execute function `onLeave` when the value is changed. When doing this, replace the `onUpdate` function with your new `onLeave` function:
 
     ```tsx
-    class TextBox extends Component<TextBoxContainerProps> {
-        private readonly onLeaveHandle = this.onLeave.bind(this);
-        componentDidMount(): void {
-            this.props.textAttribute.setValidator(this.validator.bind(this));
-        }
-        render(): ReactNode {
-            const value = this.props.textAttribute.value || "";
-            const validationFeedback = this.props.textAttribute.validation;
-            return <Fragment>
-                <TextInput
-                    value={value}
-                    tabIndex={this.props.tabIndex}
-                    disabled={this.isReadOnly()}
-                    onLeave={this.onLeaveHandle}
-                />
-                <Alert>{validationFeedback}</Alert>
-            </Fragment>;
-        }
-        private isReadOnly(): boolean {
-        return this.props.textAttribute.readOnly;
-        }
-        private onLeave(value: string, isChanged: boolean): void {
+    import { createElement, Fragment, ReactElement, useEffect } from "react";
+    import { TextBoxContainerProps } from "../typings/TextBoxProps";
+    import { TextInput } from "./components/TextInput";
+    
+    import "./ui/TextBox.css";
+    import { Alert } from "./components/Alert";
+    
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        function onLeave(value: string, isChanged: boolean): void {
             if (!isChanged) {
                 return;
             }
-            this.props.textAttribute.setValue(value);
+            props.textAttribute.setValue(value);
         }
-        private validator(value: string | undefined): string | undefined {
-            const { requiredMessage } = this.props;
-            if (requiredMessage && requiredMessage.value && !value) {
-                return requiredMessage.value;
-            }
-            return;
-        }
+        
+        return (
+            <Fragment>
+                <TextInput
+                    value={value}
+                    onLeave={onLeave}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                />
+                <Alert>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
 3. In *components/TextInput.tsx*, introduce a state for input changes and use the `onBlur` function to call the `onLeave` function by replacing the `onUpdate` function:
 
     ```tsx
-    import { CSSProperties, Component, ReactNode, createElement, ChangeEvent } from "react";
-    import classNames from "classnames";
-    
-    export interface InputProps {
+    import { createElement, CSSProperties, ReactElement, useEffect, useState } from "react";
+
+    export interface TextInputProps {
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
-        id?: string;
-        disabled?: boolean;
         onLeave?: (value: string, changed: boolean) => void;
+        disabled?: boolean;
     }
-    interface InputState {
+    
+    interface TextInputState {
         editedValue?: string;
     }
-    export class TextInput extends Component<InputProps, InputState> {
-        private readonly onChangeHandle = this.onChange.bind(this);
-        private readonly onBlurHandle = this.onBlur.bind(this);
-        readonly state: InputState = { editedValue: undefined };
-        componentDidUpdate(prevProps: InputProps): void {
-            if (this.props.value !== prevProps.value) {
-                this.setState({ editedValue: undefined });
-            }
+    
+    export function TextInput({ value, onLeave, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        const [state, setState] = useState<TextInputState>({ editedValue: undefined });
+        useEffect(() => setState({ editedValue: undefined }), [value]);
+        
+        function getCurrentValue(): string {
+            return state.editedValue !== undefined ? state.editedValue : value;
         }
-        render(): ReactNode {
-            const className = classNames("form-control", this.props.className);
-            return <input
+        
+        function onBlur(): void {
+            onLeave?.(getCurrentValue(), getCurrentValue() !== value);
+            setState({ editedValue: undefined });
+        }
+        
+        return (
+            <input
                 type="text"
-                className={className}
-                style={this.props.style}
-                value={this.getCurrentValue()}
-                tabIndex={this.props.tabIndex}
-                onChange={this.onChangeHandle}
-                disabled={this.props.disabled}
-                onBlur={this.onBlurHandle}
-            />;
-        }
-        private getCurrentValue(): string {
-            return this.state.editedValue !== undefined
-                ? this.state.editedValue
-                : this.props.value;
-        }
-        private onChange(event: ChangeEvent<HTMLInputElement>): void {
-            this.setState({ editedValue: event.target.value });
-        }
-        private onBlur(): void {
-            const inputValue = this.props.value;
-            const currentValue = this.getCurrentValue();
-            if (this.props.onLeave) {
-                this.props.onLeave(currentValue, currentValue !== inputValue);
-            }
-            this.setState({ editedValue: undefined });
-        }
+                value={getCurrentValue()}
+                onChange={event => setState({ editedValue: event.target.value })}
+                onBlur={onBlur}
+                className={"form-control " + className}
+                disabled={disabled}
+                style={style}
+                tabIndex={tabIndex}
+            />
+        );
     }
+
     ```
 
     Explaining the code:
 
-    * The `componentDidUpdate` function is a React lifecycle function that is called before rendering, directly after an update of the properties
-    * The state `editedValue` will be empty until the input value is changed by the user 
-    * The `setState` function will update the state and will re-render the component (in the rendering, the new value is taken from `editedValue`)
+    * The `useEffect` is a React hook that allows running code whenever its dependencies are changed
+    * The `useState` is another React hook that provides a read-only object for accessing the widget's state, and a function that can be used to update it (and hence trigger a component update)
+    * The state `editedValue` will be empty until the input value is changed by the user
     * The `onBlur` function will set the new value in the attribute through the container component — the state is reset, and the new value is received by an update of the attribute (which will propagate as a new property value)
     * The `onLeave` function will set the value. The `setValue` function will automatically call the onChange action, as this is connected with the XML configuration
 
-### 3.5 Adding Accessibility
+### Adding Accessibility
 
 To make the input widget more accessible for people using screen readers, you will need to provide hints about the input. 
 
-1. In *TextBox.tsx*, replace the `render` function with `id`, `required`, and `hasError` properties:
+1. In TextBox.tsx, add the `id`, `required`, and `hasError` props to the `TextInput` and `Alert` components:
 
     ```tsx
-    render(): ReactNode {
-        const value = this.props.textAttribute.value || "";
-        const validationFeedback = this.props.textAttribute.validation;
-        const required = !!(this.props.requiredMessage && this.props.requiredMessage.value);
-        return <Fragment>
-            <TextInput
-                id={this.props.id}
-                value={value}
-                tabIndex={this.props.tabIndex}
-                disabled={this.isReadOnly()}
-                onLeave={this.onLeaveHandle}
-                required={required}
-                hasError={!!validationFeedback}
-            />
-            <Alert id={this.props.id + "-error"}>{validationFeedback}</Alert>
-        </Fragment>;
+    export function TextBox(props: TextBoxContainerProps): ReactElement {
+        const value = props.textAttribute.value || "";
+        const validationFeedback = props.textAttribute.validation;
+        const required = !!(props.requiredMessage && props.requiredMessage.value);
+        
+        useEffect(() => {
+            props.textAttribute.setValidator((value?: string): string | undefined => {
+                if (!value) {
+                    return props.requiredMessage?.value ?? "";
+                }
+            });
+        }, []);
+        
+        function onLeave(value: string, isChanged: boolean): void {
+            if (!isChanged) {
+                return;
+            }
+            props.textAttribute.setValue(value);
+        }
+        
+        return (
+            <Fragment>
+                <TextInput
+                    id={props.id}
+                    value={value}
+                    onLeave={onLeave}
+                    tabIndex={props.tabIndex}
+                    disabled={props.textAttribute.readOnly}
+                    required={required}
+                    hasError={!!validationFeedback}
+                />
+                <Alert id={props.id}>{validationFeedback}</Alert>
+            </Fragment>
+        );
     }
     ```
 
-2. In *components/Alert.tsx*, add the `id` and `alert`properties:
+2. In *components/Alert.tsx*, add the `id` property:
 
     ```tsx
-    import { FunctionComponent, PropsWithChildren, createElement } from "react";
-    import classNames from "classnames";
     export interface AlertProps {
         id?: string;
         alertStyle?: "default" | "primary" | "success" | "info" | "warning" | "danger";
         className?: string;
+        children?: ReactNode;
     }
-    export const Alert: FunctionComponent<PropsWithChildren<AlertProps>> = ({ alertStyle, className, children, id }) =>
+    
+    export const Alert = ({ alertStyle = "danger", className, children, id }: AlertProps): ReactElement | null =>
         children ? (
-            <div id={id} className={classNames(`alert alert-${alertStyle} mx-validation-message`, className)}>
+            <div id={id} className={`alert alert-${alertStyle} mx-validation-message ${className}`}>
                 {children}
             </div>
         ) : null;
+    
     Alert.displayName = "Alert";
-    Alert.defaultProps = { alertStyle: "danger" };
     ```
 
 3. In *components/TextInput.tsx*, add the `id` property to the `InputProps` and pass it from the `TextBox` component to the `TextInput` component:
 
     ```tsx
-    export interface InputProps {
+    export interface TextInputProps {
         id?: string;
         value: string;
         className?: string;
-        index?: number;
         style?: CSSProperties;
         tabIndex?: number;
         hasError?: boolean;
@@ -476,71 +492,79 @@ To make the input widget more accessible for people using screen readers, you wi
     Then add the `id` and `aria` attributes to be rendered:
 
     ```tsx
-    render(): ReactNode {
-        const className = classNames("form-control", this.props.className);
-        const labelledby = `${this.props.id}-label` 
-            + (this.props.hasError ? ` ${this.props.id}-error` : "");
-        return <input
-            id={this.props.id}
-            type="text"
-            className={className}
-            style={this.props.style}
-            value={this.getCurrentValue()}
-            tabIndex={this.props.tabIndex}
-            onChange={this.onChangeHandle}
-            disabled={this.props.disabled}
-            onBlur={this.onBlurHandle}
-            aria-labelledby={labelledby}
-            aria-invalid={this.props.hasError}
-            aria-required={this.props.required}
-        />;
+    export function TextInput({ value, onLeave, tabIndex, style, className, disabled }: TextInputProps): ReactElement {
+        const [state, setState] = useState<TextInputState>({ editedValue: undefined });
+        useEffect(() => setState({ editedValue: undefined }), [value]);
+        
+        function getCurrentValue(): string {
+            return state.editedValue !== undefined ? state.editedValue : value;
+        }
+        
+        function onBlur(): void {
+            onLeave?.(getCurrentValue(), getCurrentValue() !== value);
+            setState({ editedValue: undefined });
+        }
+        
+        return (
+            <input
+                id={id}
+                type="text"
+                value={getCurrentValue()}
+                onChange={event => setState({ editedValue: event.target.value })}
+                onBlur={onBlur}
+                className={"form-control " + className}
+                disabled={disabled}
+                style={style}
+                tabIndex={tabIndex}
+                aria-labelledby={`${props.id}-label`}
+                aria-invalid={props.hasError}
+                aria-required={props.required}
+            />
+        );
     }
     ```
 
     After altering this code, do the following to see your changes:
-    1. Run `npm run build` to update the widget.
-    2. In Mendix Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
-    3. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
-    4. Click **View App** to see your changes.
+    1. In Studio Pro, press <kbd>F4</kbd> to synchronize your app directory.
+    2. Right-click your TextBox widget and select **Update widget**. Then click **Run Locally** ({{% icon name="controls-play" %}}).
+    3. Click **View App** to see your changes.
 
     Explaining the code:
-
-    * The `Label` component provided by the platform has a `for` attribute which will have a reference to the widget's ID — you must set the ID for the screen reader, so that it can link the label to the `this` input
-    * The `Label` component will have an ID `<widgetid>-label` — you must link the input's `aria-labelledby` to the ID of the label
+    
+    In the previous guide, you added the system property `Label` to the widget. This tells Mendix to surround the pluggable widget with a caption. The relationship between a label and an input may be obvious to us, but not to browsers and screen readers. Proper labeling helps all your users to understand the purpose of elements on your page.
+    
+    The `label` element generated by Mendix has a pre-filled [`for` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/for) which references the pluggable widget's id (`props.name`). Matching the `input` element's `id` attribute signals that they belong together.
+    
+    If your widget contains an interactive element that does not have a built-in labeling mechanism, you can use [`aria-labelledby`](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). In our example we show both options, but for built-in input elements the `for` attribute on a label is sufficient.
 
 You have now made your widget compatible with screen readers. If a screen reader is describing your app aloud, it will list the widget elements to the user.
 
-### 3.6 Enabling Preview Mode
+### Enabling Preview Mode
 
-To easily view changes to your widget while in Mendix Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
+To easily view changes to your widget while in Studio Pro's **Design mode**, you can add preview functionality to your TextBox widget. Note that the properties received in preview mode will be slightly different than at the runtime level.
 
 To add preview mode functionality, create a new file *src/TextBox.editorPreview.tsx* and add this code to it:
 
-```tsx
-import { Component, createElement, ReactNode } from "react";
-import { TextBoxPreviewProps } from "../typings/TextBoxProps";
-import { TextInput } from "./components/TextInput";
-
-declare function require(name: string): string;
-
-export class preview extends Component<TextBoxPreviewProps> {
-    render(): ReactNode {
-        const value = `[${this.props.textAttribute}]`;
-        return <TextInput value={value} />;
-    }
-}
-
-export function getPreviewCss(): string {
-    return require("./ui/TextBox.css");
-}
-```
+   ```tsx
+   import { createElement, ReactElement } from "react";
+   import { TextBoxPreviewProps } from "../typings/TextBoxProps";
+   import { TextInput } from "./components/TextInput";
+   
+   export function preview(props: TextBoxPreviewProps): ReactElement {
+      return <TextInput value={`[${props.textAttribute}]`} />;
+   }
+   
+   export function getPreviewCss(): string {
+      return require("./ui/TextBox.css");
+   }
+   ```
 
 Explaining the code:
 
 * The display component `TextInput` can be fully re-used to display the preview
 * There is no need to attach any event handlers for updates 
 
-### 3.7 Grouping and System Properties
+### Grouping and System Properties
 
 All pluggable widgets will automatically benefit from the `Visibility` property, which can be used to set the [conditional visibility](/apidocs-mxsdk/apidocs/pluggable-widgets-property-types/#visibility) of a widget. Within *widget.xml*, property groups can be used to move a property to a specific tab or place properties in a group. For more detailed information on property groups, see the [Property Groups](/apidocs-mxsdk/apidocs/pluggable-widgets/#property-groups) section of the *Pluggable Widgets API Documentation*.
 
@@ -596,7 +620,7 @@ Your code alterations will produce the following result:
 
 {{< figure src="/attachments/howto/extensibility/pluggable-widgets/create-a-pluggable-widget-two/property-grouping-studio-pro.png" alt="property dialog Studio Pro"   width="500"  class="no-border" >}}
 
-## 4 Read More
+## Read More
 
 * [Build a Pluggable Web Widget: Part 1](/howto/extensibility/create-a-pluggable-widget-one/)
 * [Pluggable Widgets API](/apidocs-mxsdk/apidocs/pluggable-widgets/)

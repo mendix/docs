@@ -10,7 +10,7 @@ no_list: true
 This feature is currently in beta. For more information, see [Beta Releases](/releasenotes/beta-features/).
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The **Application Health Dashboard** gives an overview of the alert status of the whole application landscape of your company. Here you can see all the alerts of the production environments of the apps deployed on your Mendix Cloud and Mendix Cloud Dedicated.
 
@@ -38,7 +38,7 @@ The list shows the following information:
 
 * **Alerts** – This shows the types of the alerts of this production environment.
 
-## 2 Refreshing the Dashboard
+## Refreshing the Dashboard
 
 The information on the dashboard is retrieved when you open the page. If you leave the page open, the alert data will be automatically refreshed every ten minutes, and newly-deployed production environments will be automatically added to the dashboard every six hours.
 
@@ -46,7 +46,7 @@ You can also manually refresh your alerts using the **Refresh Alerts** button on
 
 You can also manually refresh the whole landscape using the **Refresh Environment List** button after you click **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) on the upper-right corner of the page. After the refreshing is completed, you need to wait 15 minutes before you can refresh it again.
 
-## 3 Environment Details
+## Environment Details
 
 If you click an environment from the list, you will see the **Environment details** of this specific production environment. This page shows all the alerts of this environment and the date and time the alerts have occurred. The **Environment details** and the Technical Contact of this environment are also displayed. With this information, you can directly get in contact with the responsible person.
 

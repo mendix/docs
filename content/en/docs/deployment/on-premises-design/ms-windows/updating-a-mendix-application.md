@@ -5,7 +5,7 @@ weight: 20
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 A Mendix application on a Windows server can be updated using the Mendix Service Console. Before beginning the server update, you need to make sure that you have a versioned deployment archive (*.mda* file) accessible on your server and that the same version of the server distribution is either installed or else is available as an installation package on the server.
 
@@ -15,7 +15,7 @@ The service console creates a backup of the project files, this allows you to re
 Before every update it is recommended that you create a backup of your data and uploaded files. The Mendix Service Console does not do this for you.
 {{% /alert %}}
 
-## 2 Using the Update App Button
+## Using the Update App Button
 
 1. If the app is currently running, make sure you stop it first, otherwise you will be unable to update.
 
@@ -25,7 +25,7 @@ Before every update it is recommended that you create a backup of your data and 
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/updating-a-mendix-application/2_click_update.png" alt="Step 2, Start the update process" class="no-border" >}}
 
-3. The **Update App** popup that appears shows you information about the current active app. The **App version** shows the release number of the deployment package that is currently running on this server. The **Mendix server version** shows the version of the server distribution being used by the app — this is the same as the Studio Pro version which which the deployment package was created.
+3. The **Update App** popup that appears shows you information about the current active app. The **App version** shows the release number of the deployment package that is currently running on this server. The **Mendix server version** shows the version of the server distribution being used by the app — this is the same as the Studio Pro version with which the deployment package was created.
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/updating-a-mendix-application/3_update_app.png" alt="Step 3, Release details and overview of all server versions" class="no-border" >}}
 
@@ -35,7 +35,7 @@ Before every update it is recommended that you create a backup of your data and 
 
 This process will copy the new version of the project software into the configured location. All models will be extracted, and a symbolic link to the `mxclientsystem` folder is automatically created so the JavaScript libraries can be easily included without any additional configuration in IIS.
 
-## 3 Update the Mendix Runtime Version
+## Update the Mendix Runtime Version
 
 1. After updating the Mendix application version, the Service Console may show the message `(missing)`. This means that the required server distribution is not installed on the server.
 
@@ -53,7 +53,7 @@ This process will copy the new version of the project software into the configur
 
     {{< figure src="/attachments/deployment/on-premises-design/ms-windows/updating-a-mendix-application/update_server_select.png" alt="Step 6, Choose the correct server distribution (.tar.gz)" class="no-border" >}}
 
-### 3.1 Location of the Mendix Server Distributions
+### Location of the Mendix Server Distributions
 
 In the Preferences of the Mendix Service Console you can configure the main directory for all applications and server distributions. You can find the installed platform version in the folder `/Servers`. This folder is located directly in the configured base path from the service console.
 
@@ -61,7 +61,7 @@ In the Preferences of the Mendix Service Console you can configure the main dire
 
 This should be something like:
 
-```bash {linenos=false}
+```bash
 D:\Mendix\MyApplications\Servers
 ```
 
@@ -69,11 +69,11 @@ D:\Mendix\MyApplications\Servers
 The user that is configured as the Service Account should have Read&Execute privileges on this entire server folder. You could just grant access to the specific server distribution, but that would mean that you would have to update the folder access after every platform version update.
 {{% /alert %}}
 
-## 4 Start Application
+## Start Application
 
 After updating, don't forget to start your app service again!
 
-## 5 Read More
+## Read More
 
 * [Restoring a SQL Server database](/developerportal/deploy/restoring-a-sql-server-database/)
 * [Troubleshooting SQL Server](/developerportal/deploy/troubleshooting-sql-server/)

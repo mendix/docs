@@ -4,7 +4,7 @@ url: /howto8/logic-business-rules/extract-and-use-sub-microflows/
 weight: 5
 ---
 
-## 1 Introduction
+## Introduction
 
 When you are building large microflows that span multiple functions, the best practice is to break down the large microflow into more manageable parts based on those functions. To better manage your logic, you can create sub-microflows. 
 
@@ -14,9 +14,9 @@ This how-to teaches you how to do the following:
 * Use sub-microflows
 * Troubleshoot extractions of sub-microflows
 
-## 2 When to Use Sub-Microflows
+## When to Use Sub-Microflows
 
-### 2.1 First Example
+### First Example
 
 The first example of using sub-microflows is when you are doing a large data import. If you are creating a microflow that imports data into the system, there are usually different parts to the process. The first part can be data validation. An example of data validation is checking if the values are empty. If the values are empty, then you might not want to import the data, or you might want the application to throw an error.
 
@@ -24,21 +24,21 @@ Once the data is validated, you import and map it into your Mendix domain model.
 
 You can break down the validation and mapping into sub-microflows to better manage the logic. Furthermore, if you need to reuse the validation during the import at other steps in the application, you can reuse the sub-microflow.
 
-### 2.2 Second Example
+### Second Example
 
 The second example of using sub-microflows is when you are doing data validation and saving an object to the database. The example in the section [How to Use Sub-Microflows](#HowtoUseSubMicroflows) below will cover in detail how to use a sub-microflow for validation.
 
-### 2.3 Other Examples
+### Other Examples
 
 There are many other examples of when it is useful to create sub-microflows. The goal is to reuse sub-microflows to condense your logic. Feel free to use sub-microflows whenever you see the need for it.
 
-### 2.4 Dragging a Microflow into a Microflow
+### Dragging a Microflow into a Microflow
 
 Instead of creating a new sub-microflow action, it may be easier to drag an existing microflow into the current one:
 
 {{< figure src="/attachments/howto8/logic-business-rules/extract-and-use-sub-microflows/18580991.gif" class="no-border" >}}
 
-## 3 How to Use Sub-Microflows {#HowtoUseSubMicroflows}
+## How to Use Sub-Microflows {#HowtoUseSubMicroflows}
 
 The following example microflow checks to see if a registration has a trainee assigned and a registration date. If the registration passes both of these checks, the registration is committed to the database.
 
@@ -75,17 +75,17 @@ The new sub-microflow will do the registration validation. You can reuse this su
 Because this sub-microflow does not return anything, the sub-microflow call cannot be used in the **Is Valid?** check that immediately follows it. To stop or continue your microflow based on the sub-microflow's outcome, right-click the **Create Boolean Variable** activity and select **Set $isValid as return value**.
 {{% /alert %}}
 
-## 4 Troubleshooting Extractions of Sub-Microflows
+## Troubleshooting Extractions of Sub-Microflows
 
 If you get errors, this usually means you have not provided the right input or output parameters. Check your parameters and make sure that they are configured properly. 
 
 In addition, make sure you have highlighted the correct activities that you want to turn into a sub-microflow.
 
-## 5 Conclusion
+## Conclusion
 
 The extra sub-microflow option is based on the Mendix reusability principle. You can reuse any sub-microflows in other parts in the application. Furthermore, when you have very large and complex microflows, using sub-microflows can help you break down and better manage your logic and business processes.
 
-## 6 Read More
+## Read More
 
 * [Define Access Rules Using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Create a Custom Save Button](/howto8/logic-business-rules/create-a-custom-save-button/)

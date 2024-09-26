@@ -8,7 +8,7 @@ aliases:
     - /howto9/general/using-mendix-studio-pro-on-a-mac/
 ---
 
-## 1 Introduction
+## Introduction
 
 Using Parallels, you can run Mendix Studio Pro on your Mac device using a Windows virtual machine.
 
@@ -17,7 +17,7 @@ To run Studio Pro on Apple Silicon Macs, such as the M1(X), an MTS version start
 {{% /alert %}}
 
 {{% alert color="info" %}}
-When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
+When using Parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. For information on how to solve this issue, see the [Increasing Network Speed](#increase-network-speed) section below.
 {{% /alert %}}
 
 To start making Mendix apps on your Mac, follow this how-to.
@@ -32,7 +32,7 @@ For a deep-dive look into installing Studio Pro on a Mac, check out this video:
 
 {{< vidyard "nJ9Tz8VnHPPKPrtSBgHv3U" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Make sure you have completed the following prerequisites:
 
@@ -43,7 +43,7 @@ Make sure you have completed the following prerequisites:
 When using Studio Pro 9.18 or above, please use the default browser installed in the Windows VM (not the macOS browser) as the default browser for the Parallels VM. Using the Windows VM browser ensures your ability to sign in.
 {{% /alert %}}
 
-## 3 Configuring Your Windows Virtual Machine for Mendix Studio Pro
+## Configuring Your Windows Virtual Machine for Mendix Studio Pro
 
 To configure your Windows virtual machine to work with Mendix Studio Pro, follow these steps:
 
@@ -78,7 +78,7 @@ To configure your Windows virtual machine to work with Mendix Studio Pro, follow
 
 Congratulations! You have successfully configured port forwarding to enable testing Mendix apps with your Mac. 
 
-## 4 Checking Network Drive
+## Checking Network Drive
 
 {{% alert color="warning" %}}
 Whenever you create or open a Mendix app in Mendix Studio Pro, be sure to do so from a mapped drive instead of a network drive.
@@ -94,7 +94,7 @@ Read the tips below to check the network drive before viewing your app on your t
 
     {{< figure src="/attachments/refguide9/general/using-mendix-studio-pro-on-a-mac/network-drive.png" alt="network drive"   width="450"  class="no-border" >}}
 
-## 5 Viewing Your App on Your Testing Device
+## Viewing Your App on Your Testing Device
 
 When running your app on your test device, you cannot use the QR code within Mendix Studio Pro's **View Mobile App** dialog box:
 
@@ -116,20 +116,20 @@ Congratulations! You have successfully viewed your app on a test device.
 If you experience issues connecting with the Make It Native app, make sure your firewall is not preventing a connection. For information resolving Windows Defender and other firewall-related issues, see the [Error: Unable to Load Script](/refguide9/mobile/getting-started-with-mobile/prerequisites/#unable-load-script) section of *Prerequisites*
 {{% /alert %}}
 
-## 6 Viewing Changes to Your App on Your Testing Device
+## Viewing Changes to Your App on Your Testing Device
 
 For information on how to change to your app and then see that change on your device, see the [Viewing Changes to Your App on Your Testing Device](/refguide9/mobile/getting-started-with-mobile/#viewingchanges) section in *Getting Started with Mobile*.
 
-## 7 Improving Performance
+## Improving Performance
 
 To improve the performance, you can do the following: 
 
 * Run Parallels in a window, instead of Coherence mode
 * Store apps on disk C:\
 
-### 7.1 Increasing Network Speed {#increase-network-speed}
+### Increasing Network Speed {#increase-network-speed}
 
-When using parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. You try the following approach, which can increase the upload speed significantly:
+When using Parallels, some users might experience slow network speed. For instance, it might take much longer than usual when uploading a **Blank Web App** to create a new app. You try the following approach, which can increase the upload speed significantly:
 
 1. In Windows 10 or 11, navigate to **Start** > **Control Panel**> **Device Manager** > **Network adapters** > **Parallels VirtIO Ethernet Adapter**. 
 2. Right-click **Parallels VirtIO Ethernet Adapter** and select **Properties** in the drop-down list. 
@@ -138,6 +138,6 @@ When using parallels, some users might experience slow network speed. For instan
 
 Now the upload speed becomes faster! For more information, see [Parallels Forum](https://forum.parallels.com/threads/horribly-slow-upload-download-speeds.264819/).
 
-## 8 Read More
+## Read More
 
 * [Getting Started with Mobile](/refguide9/mobile/getting-started-with-mobile/)

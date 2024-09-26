@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Image Crop module, wh
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Image Crop](https://marketplace.mendix.com/link/component/254/) module transforms images based on a selection made in the browser.
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
 End-users can do the following with this module:
 
@@ -17,11 +17,11 @@ End-users can do the following with this module:
 * Shrink or convert images
 * Enforce a set size/aspect ratio
 
-### 1.2 Limitations
+### Limitations
 
 This module does not support the SVG format.
 
-## 2 Configuration
+## Configuration
 
 This module is pre-configured to use the **ImageCrop** entity. You can choose to inherit from this entity, set an association to the entity or copy the actions you want to have.
 
@@ -36,7 +36,7 @@ The [Cropper](#cropper) widget and Java actions are compatible with any sub-clas
 
 Once you have decided on the entities and relationships in the domain models, you can either use the existing pages or use your own pages.
 
-## 3 Default Properties
+## Default Properties
 
 The **CropImage_Overview** snippet allows you to upload new images using a simple New or Edit button.
 
@@ -50,11 +50,11 @@ After uploading the image, the end-user can edit the image. Pressing **Edit Imag
 * **Revert Changes** – reverts all changes and re-copies the image from the original image and allows you to start over again
 * **ThumbnailSize** – changes the size of the thumbnail that is created after altering an image; each button forces the thumbnail to be re-created in this size; please note that if you change this constant, changing the thumbnail size on the image upload widget with the same value is also recommended in order to keep all the thumbnails consistently in the same size
 
-## 4 Customization
+## Customization
 
 If you want to use your own entity or alter the implementation, you can choose to change the widget or the Java actions.
 
-### 4.1 Cropper Widget {#cropper}
+### Cropper Widget {#cropper}
 
 These are the **Cropper** widget properties:
 
@@ -65,7 +65,7 @@ These are the **Cropper** widget properties:
 * **Start width** – the initial width of the cropping window
 * **Aspect ratio** – the aspect ratio that will be applied on the cropping window.
 
-### 4.2 Java Action Parameters
+### Java Action Parameters
 
 * **cropImgObj** – the object that has the necessary attributes to be resized
 * **newWidth** and **newHeight** – make sure these match the **Aspect ratio** used in the [Cropper Widget](#cropper) to make sure the image does not get transformed inconsistently
@@ -73,6 +73,6 @@ These are the **Cropper** widget properties:
     * If both **Max width** and **Max height** are set to *0*, the width and height set by the end-user with the widget will be used
 * **thumbnailWidth** and **thumbnailHeight** – this is the size of the thumbnail, which is editable so that you can keep this in or near the same aspect ratio as the new image; the default implementation uses the thumbnail size as configured in **Configuration/ThumbnailSize** unless the image is smaller than the thumbnail
 
-## 5 Developing This Marketplace Component
+## Developing This Marketplace Component
 
 We are actively maintaining this widget. Please report any issues or suggestions for improvement at [mendix/ImageCropModule](https://github.com/mendix/ImageCropModule).

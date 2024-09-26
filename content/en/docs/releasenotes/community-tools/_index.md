@@ -1,8 +1,10 @@
 ---
-title: "Community"
+title: "Community Release Notes"
+linktitle: "Community"
 url: /releasenotes/community-tools/
 description: "Release notes for the community tools in the Mendix Platform."
 weight: 37
+numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -52,7 +54,7 @@ These release notes cover changes to the [Mendix Profile, Mendix Community, and 
 
 #### New Features  {#spaces-ga-release}
 
-* We releases Spaces in the Mendix Forum  for GA.
+* We releases Spaces in the Mendix Forum for GA.
 
 ### March 23, 2023
 

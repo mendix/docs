@@ -5,7 +5,7 @@ weight: 50
 description: "Describes MxBuild which is a command-line tool for building and deploying Mendix Apps"
 ---
 
-## 1 Introduction
+## Introduction
 
 MxBuild is a Windows and Linux command-line tool that can be used to build a Mendix Deployment Package from a Mendix project.
 
@@ -27,7 +27,7 @@ For details on the system requirements for MxBuild, see [System Requirements](/r
 Except where specifically mentioned, the examples used in this document are for Windows.
 {{% /alert %}}
 
-## 2 Command Line
+## Command Line
 
 To build your package, you specify the Mendix Project file (.mpr) for which you want to build the deployment package (.mda) on the command-line. The file name may be preceded by a relative or absolute path. The project file should be located inside a Mendix project directory.
 
@@ -43,7 +43,7 @@ You can also run MxBuild under Linux using the following command line format:
 
 After creating the deployment package, the MxBuild process quits.
 
-### 2.1 General Command-Line Options
+### General Command-Line Options
 
 Command-line options are described in the table below:
 
@@ -56,7 +56,7 @@ Command-line options are described in the table below:
 | `--loose-version-check` | Creates a deployment package from a project which was created with a lower Mendix version.<br/>The project will be upgraded to the MxBuild version before the deployment package is created.<br /> Any changes included as a result of this upgrade will **not** be stored in your project. |
 | `--write-errors=FILENAME` | Writes all errors, warnings, and deprecations encountered during deployment of the project to the specified file in JSON format.<br />This file is only written when the project contains errors.<br />If the file already exists, it will be overwritten without a warning.<br />For a description of the format of this file, see the [Project Errors](#project-errors) section below. |
 
-### 2.2 Options When Creating a Package
+### Options When Creating a Package
 
 {{% alert color="info" %}}
 The following options are only applicable with the `--target=package` option:
@@ -73,11 +73,11 @@ Options when creating a package are described in the table below:
 
 For example, to create a deployment package `out.mda` in the current directory using the app `MyApp` using the *Windows* version of MxBuild, you can use the following command:
 
-```bat {linenos=false}
+```bat
 mxbuild --target=package --java-home="C:\Program Files\Java\jdk1.8.0_144" --java-exe-path="C:\Program Files\Java\jdk1.8.0_144\bin\java.exe" "C:\Users\username\Documents\Mendix\MyApp\MyApp.mpr"
 ```
 
-## 3 Return Code
+## Return Code
 
 When MxBuild exits, one of the following codes will be returned:
 
@@ -90,7 +90,7 @@ When MxBuild exits, one of the following codes will be returned:
 
 If the exit code is larger than 0, MxBuild will show you the message describing the error.
 
-## 4 Project Errors {#project-errors}
+## Project Errors {#project-errors}
 
 When your Mendix project contains errors, deployment will fail and MxBuild will report these errors. You can use the `--write-errors=FILENAME` command-line option to tell MxBuild to write the errors to a file.
 

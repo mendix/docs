@@ -9,17 +9,17 @@ description: Describes full and partial clone types for Git.
 Different clone types are available in Studio Pro version 10.12.0 and above.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The Git version control system defaults to downloading a full copy of the repository on the server. Studio Pro allows you to select a different mechanism for cloning to optimize for your needs, such as working offline or working with a large repository.
 
-## 2 Clone Types
+## Clone Types
 
 Currently Studio Pro supports two different clones types. Different types only affect the way the repository is stored on your local device and does not affect the app itself.
 
 By default Mendix advises customers to use a full clone, with a slightly longer initial download as a trade-off to a more seamless experience while working. For customers that have accumulated a [large repository](/refguide/troubleshoot-repository-size/) over time, using a partial clone can relieve the pressure of initial download and therefore speed up development.
 
-### 2.1 Full Clone
+### Full Clone
 
 A full clone is the default clone type for Git, it downloads a full copy of the repository on the server. 
 
@@ -30,11 +30,7 @@ There are several advantages to this clone type:
 
 The disadvantage of this close type is that downloading a full clone can take significantly longer. A 2GB repository needs to be completely downloaded and unpacked, even though the usage of the full history locally is very limited.
 
-### 2.2 Partial Clone
-
-{{% alert color="info" %}}
-Partial clone is beta in Mendix version 10.12 and above. For more information on beta, see [Beta and Experimental Releases](/releasenotes/beta-features/).
-{{% /alert %}}
+### Partial Clone
 
 The term "partial clone" is used for different types of cloning. In Studio Pro, a `blobless clone` is used. When performing a blobless clone, the metadata with the full commit history is downloaded without the actual file contents.
 
@@ -49,13 +45,13 @@ There are several advantages to this clone type:
 
 The disadvantage of this close type is that additional download may be needed: when [combining changes](/refguide/merge-algorithm/) from an older branch, more data will have to be downloaded compared to the full clone, which can take slightly longer. The same applies when interacting with the history.
 
-## 3 Preferences
+## Preferences
 
 You can change the [clone type](/refguide/preferences-dialog/#clone) for future clone operations, such as downloading an app or checking out another branch of an app you already downloaded. Changing this setting will not affect apps that you have already downloaded.
 
 You can also change this preference from the **Open App** dialog box selecting **Preferences** on the left.
 
-## 4 Changing Clone Type
+## Changing Clone Type
 
 Mendix Studio Pro allows you to convert a partial clone you have downloaded to a full clone. Git will be instructed to download all the missing data so you will end up with a full clone.
 

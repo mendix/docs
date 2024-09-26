@@ -4,29 +4,29 @@ url: /appstore/partner-solutions/apd/ig-one-upgrade-steps/
 weight: 4
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the upgrade steps for version 1.5.5 and above.
 
-## 2 Backup
+## Backup
 
 Do you have a backup? Is your other work committed to the team server?
 
-## 3 Clear javasource Folder
+## Clear javasource Folder
 
 This step is almost never necessary, but it does not hurt, either.
 
 Remove `<project-folder>/javasource/apmagent/actions/*.java` first so that no old code remains and could lead to compile errors.
 
-## 4 Remove Old jar from userlib
+## Remove Old jar from userlib
 
 Check the `userlib` folder for `performancetool*.jar` and `apmtool*.jar`. If you find multiples, leave the one belonging to this release and the proper Mendix version.
 
-## 5 Clean Deployment
+## Clean Deployment
 
 Clean deployment before startup so that no old jar stays in your deployment folder.
 
-## 6 Repeat Installation Procedure Steps
+## Repeat Installation Procedure Steps
 
 Now start following the installation procedure steps after the backup. Most of the steps do not have to be repeated, because they are preserved. The following steps need attention:
 

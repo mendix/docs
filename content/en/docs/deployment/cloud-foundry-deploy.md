@@ -6,13 +6,11 @@ description: "Describes how to deploy to a Cloud Foundry environment which does 
 aliases:
     - /deployment/cloud-foundry/index.html
     - /howto/deploying-a-mendix-app-to-cloud-foundry.html
-    - /howto7/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide8/deploying-a-mendix-app-to-cloud-foundry.html
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry.html
     - /deployment/cloud-foundry/
     - /howto/deploying-a-mendix-app-to-cloud-foundry
-    - /howto7/deploying-a-mendix-app-to-cloud-foundry
     - /refguide/deploying-a-mendix-app-to-cloud-foundry
     - /refguide8/deploying-a-mendix-app-to-cloud-foundry 
     - /refguide9/deploying-a-mendix-app-to-cloud-foundry
@@ -20,7 +18,7 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Mendix apps can be deployed to a variety of different environments, for example Mendix Cloud, on-premises, or Kubernetes.
 
@@ -50,20 +48,20 @@ In this how-to you will learn how to do the following using Studio Pro and brows
 * Deploy your app to Cloud Foundry
 * Troubleshoot
 
-### 1.1 Cloud Foundry on SAP
+### Cloud Foundry on SAP
 
 Cloud Foundry providers like SAP are made available within the Mendix Portal. It is recommended that you use the Mendix Portal for deploying your application to these clouds. See the detailed documentation for [SAP Business Technology Platform](/developerportal/deploy/sap-cloud-platform/).
 
 Only use the instructions in this document if you have specific requirements which the recommended method does not support.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
 * Download the latest version of Studio Pro from the [Mendix Marketplace](https://marketplace.mendix.com/link/studiopro/)
 * Have access to a service account with the rights to create new applications and services.
 
-## 3 Configuring Cloud Foundry in Studio Pro {#configuring-cloud-foundry-in-studio-pro}
+## Configuring Cloud Foundry in Studio Pro {#configuring-cloud-foundry-in-studio-pro}
 
 To deploy a Mendix app to Cloud Foundry, you have to configure the settings in Studio Pro.
 
@@ -114,7 +112,7 @@ In addition to these required services, the following services are optional:
 
 This how-to will describe adding the database and file store only. Additional services can be added in the same way. There is usually a limit to how many resources you can add to a trial account so you may only be able to deploy a single app into a trial account without running out of resources.
 
-## 4 Add a Database Service to Your App
+## Add a Database Service to Your App
 
 To configure the Cloud Foundry environment, you will need to go to the console for your platform. You must logon with the same credentials which you used when creating a Cloud Foundry environment from Studio Pro.
 
@@ -141,8 +139,8 @@ To add a database service to your app, follow these steps:
 5. Configure the database by setting the following:
 
     * **Name** – the name which you want to give the database. It is recommended that this includes the name of the app to which you are going to bind it. Then you can easily select the correct database if you have deployed several in the same space.
-    * **Space**  – the space to which you want to add the instance
-    * **App**  – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
+    * **Space** – the space to which you want to add the instance
+    * **App** – this is the app to which you want to bind this database. That is, the app which is going to store its data in this database.
 
     {{< figure src="/attachments/deployment/cloud-foundry-deploy/db-configure.png" class="no-border" >}}
 
@@ -150,7 +148,7 @@ To add a database service to your app, follow these steps:
 
 Once you have configured the database, you can deploy your app, provided there are no other requirements for the platform you have selected (you may, for example, need to bind a route to your app if it is not created automatically).
 
-## 5 Add a File Store Service to your App
+## Add a File Store Service to your App
 
 FileDocuments in your application (for example, binary objects such as images) are not stored in the database. If you use them in your app, and want them to persist between sessions, they need to be stored in persistent file storage.
 
@@ -162,7 +160,7 @@ Some trial accounts may not include object storage.
 You may need to configure your file store by using environment variables. See the [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack) for more information.
 {{% /alert %}}
 
-## 6 ⚠ Deploy Your App to Cloud Foundry (Deprecated)
+## ⚠ Deploy Your App to Cloud Foundry (Deprecated)
 
 1. Open Studio Pro
 2. Open the app you want to deploy to Cloud Foundry.
@@ -174,16 +172,16 @@ The Mendix app will now be deployed to the configured Cloud Foundry app and star
 
 {{% alert color="warning" %}}Deploying directly to Cloud Foundry from Studio Pro is deprecated. This functionality will be removed in Mendix 11.{{% /alert %}}
 
-## 7 Cloud Foundry Environment Variables
+## Cloud Foundry Environment Variables
 
 After deploying an app from Studio Pro, two variables will be added automatically to the application environment.
 
 * **ADMIN_PASSWORD** – the password of the default admin of your Mendix app. Note that if you haven't changed it in Studio Pro, you will be unable to deploy your app until you change it to something more secure
-* **DEVELOPMENT_MODE**  – *true* by default; this allows the app to be run in the cloud without security being turned on: change it to false to run the app in production 
+* **DEVELOPMENT_MODE** – *true* by default; this allows the app to be run in the cloud without security being turned on: change it to false to run the app in production 
 
 {{< figure src="/attachments/deployment/cloud-foundry-deploy/app-variables.png" class="no-border" >}}
 
-## 8 Troubleshooting
+## Troubleshooting
 
 If you encounter any problems, you should consult the application logs. These are available from the console of your chosen platform.
 
@@ -192,15 +190,15 @@ If you encounter any problems, you should consult the application logs. These ar
 
 {{< figure src="/attachments/deployment/cloud-foundry-deploy/cf-log.png" class="no-border" >}}
 
-### 8.1 Cannot Push Project Folder
+### Cannot Push Project Folder
 
 When using the buildpack to push a Mendix project folder to a Cloud Foundry cluster, the push fails with the following error message: *Cannot open assembly 'MendixBuilder/modeler/mxbuild.exe': no such file or directory.*
 
-#### 8.1.1 Cause
+#### Cause
 
 Pushing the project folder to a Cloud Foundry cluster is not currently supported.
 
-#### 8.1.2 Solution
+#### Solution
 
 To resolve the issue, implement one of the following workarounds:
 
@@ -210,6 +208,6 @@ To resolve the issue, implement one of the following workarounds:
 
 This issue will be solved in an upcoming version of the buildpack.
 
-## 9 Read More
+## Read More
 
 * [Mendix BuildPack Documentation](https://github.com/mendix/cf-mendix-buildpack)

@@ -4,7 +4,7 @@ url: /refguide9/nanoflow-source/
 weight: 50
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Nanoflow** data source is available for [data views](/refguide9/data-view/) and [list views](/refguide9/list-view/). 
 
@@ -14,7 +14,7 @@ When a data widget with a nanoflow data source is displayed in the browser or re
 
 A nanoflow data source ignores all context. It performs actions described in the nanoflow, nothing else. For example, nested data containers with a nanoflow data source will not automatically create or invoke associations to the encasing data widget.
 
-## 2 Nanoflow Data Source Example
+## Nanoflow Data Source Example
 
 For example, you have a list that needs to display a list of potential orders based on the order type:
 
@@ -37,13 +37,13 @@ This nanoflow does the following:
 
     {{% alert color="info" %}}The *empty* path also requires a value, where `empty` is also a value.{{% /alert %}}
 
-## 3 Properties
+## Properties
 
-### 3.1 Nanoflow
+### Nanoflow
 
 Defines the nanoflow used to populate the widget. This nanoflow will be run whenever the widget is loaded into the browser or refreshed. The nanoflow must have a return value of either an object or a list of objects, depending on the widget being used.
 
-## 4 Read More
+## Read More
 
 * [Nanoflows](/refguide9/nanoflows/)
 * [Data Containers](/refguide9/data-widgets/)

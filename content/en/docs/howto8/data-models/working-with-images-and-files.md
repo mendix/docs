@@ -4,17 +4,17 @@ url: /howto8/data-models/working-with-images-and-files/
 weight: 4
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains how you can work with images and files with Mendix. Out of the box Mendix supports uploading of files and images. It also allows you to view images and download files that you uploaded. First you need to create your own domain model and define which entities are images and which are files. This is done by the concept of 'inheritance', sometimes called 'generalization'. By inheriting from 'System.Image' your own entity gets all the properties of the system image entity. This means that you can use the standard platform widgets to upload and view images. The same goes for file documents.
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisite:
 
 * Read [How to Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)
 
-## 3 Images
+## Images
 
 1. Open your domain model and create an entity called **MyImage**.
 2. Double-click the entity to open its properties.
@@ -42,7 +42,7 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/howto8/data-models/working-with-images-and-files/18582129.png" class="no-border" >}}
 
-## 4 File Documents
+## File Documents
 
 1. Open your domain model and create an entity **MyDocument**.
 2. Double-click the entity to open its **properties.**
@@ -60,12 +60,12 @@ Before starting this how-to, make sure you have completed the following prerequi
 
     {{< figure src="/attachments/howto8/data-models/working-with-images-and-files/18582122.png" class="no-border" >}}
 
-## 5 Navigation and Security
+## Navigation and Security
 
-1. Create a navigation item for your overview page to start using it. If you don't know how to setup the navigation structure, take a look at [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
+1. Create a navigation item for your overview page to start using it. If you don't know how to set up the navigation structure, take a look at [How to Set Up the Navigation Structure](/howto8/general/setting-up-the-navigation-structure/).
 2. If you turned on security for this application you need to configure page access on both the overview and detail pages. If you don't know how to configure page access, take a look at [How to Create a Secure App](/howto8/security/create-a-secure-app/).
 
-## 6 Read More
+## Read More
 
 * [Create a Basic Data Layer](/howto8/data-models/create-a-basic-data-layer/)
 * [Denormalize Data to Improve Performance](/howto8/data-models/denormalize-data-to-improve-performance/)

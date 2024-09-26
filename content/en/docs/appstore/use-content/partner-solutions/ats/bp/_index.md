@@ -7,8 +7,8 @@ description_list: true
 description: "Presents ATS best practices for each ATS version."
 ---
 
-## 1 Introduction
+## Introduction
 
 The *ATS Best Practices* are organized according to the ATS version.
 
-## 2 Documents in This section
+## Documents in This section

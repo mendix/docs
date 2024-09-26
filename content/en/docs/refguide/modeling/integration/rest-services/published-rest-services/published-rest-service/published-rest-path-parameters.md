@@ -5,7 +5,7 @@ weight: 30
 # combine this with published rest service
 ---
 
-## 1 Introduction
+## Introduction
 
 The operation path in the [published REST operation](/refguide/published-rest-operation/) specifies the last part of the location (URL) of the operation. 
 

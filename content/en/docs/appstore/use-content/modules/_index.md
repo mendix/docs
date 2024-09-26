@@ -7,7 +7,7 @@ weight: 5
 no_list: false
 ---
 
-## 1 Introduction {#introduction}
+## Introduction {#introduction}
 
 The modules available in the Mendix Marketplace can be added to your app to provide new functionality with accompanying domain models and security options. These Marketplace modules function similarly to the [modules](/refguide/modules/) you create for your app. 
 
@@ -16,4 +16,4 @@ The modules available in the Mendix Marketplace can be added to your app to prov
 
 When you download these modules, they will go into the **App** > **Marketplace modules** folder.
 
-## 2 Documents in This Category
+## Documents in This Category

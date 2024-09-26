@@ -3,7 +3,7 @@ title: "Browser Recorder Results"
 url: /appstore/partner-solutions/apd/rg-two-browser-recorder-results/
 ---
 
-## 1 Introduction
+## Introduction
 
 A browser session contains the recording of one browser instance of one user.
 
@@ -13,7 +13,7 @@ The **Browser Information** tab provides some information regarding the browser,
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-recorder/rg-two-browser-recorder-results/Performance_browser_recording.png" class="no-border" >}}
 
-## 2 General
+## General
 
 A browser recording records the following types of actions:
 
@@ -31,7 +31,7 @@ The **Actions** tab will display only direct subsequent actions within this acti
 
 For all types except client–server communication, the detailed view has a **Details** tab that will show a list of detailed information.
 
-## 3 Browser JavaScript Console Messages
+## Browser JavaScript Console Messages
 
 Recording the browser's JavaScript console messages can be enabled from the environment settings. The exception to this are errors thrown by JavaScript. These are always recorded as console error.
 
@@ -39,7 +39,7 @@ Recording the browser's JavaScript console messages can be enabled from the envi
 
 Console messages in JavaScript may contain variables, which are stringified if possible. 
 
-## 4 Client–Server Communication
+## Client–Server Communication
 
 In the case of a client–server communication action, all detailed information is divided over three tabs instead of one, due to the amount of details. These tabs are labeled **Request**, **Response**, and **Connection**.
 
@@ -55,13 +55,9 @@ The response can include the number of objects retrieved, the count of an XPath,
 
 The **Connection** tab displays the header information and the timings of the request. The timing of a request includes the time needed to send the response to the server, the wait time due to server processing, and the time needed to download the response from the server. 
 
-{{% alert color="info" %}}
-Request timing information is not yet available for Mendix 7.6 or higher.
-{{% /alert %}}
-
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-two-apm/rg-two-recorder/rg-two-browser-recorder-results/Performance_browser_recording_ActionsConnection.png" class="no-border" >}}
 
-## 5 User Actions
+## User Actions
 
 A recorded user action has two details:
 

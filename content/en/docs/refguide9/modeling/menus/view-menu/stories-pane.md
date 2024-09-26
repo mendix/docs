@@ -5,7 +5,7 @@ weight: 60
 description: "Describes the Stories pane in Mendix Studio Pro."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 For version control enabled apps (apps with Team Server or other SVN servers), the **Stories** pane displays the stories and tasks of the current Sprint. Stories, tasks, and Sprints are created and managed via Stories or [Epics](/developerportal/project-management/epics/) in **Apps**.
 
@@ -25,7 +25,7 @@ The table contains following columns:
     * *Tasks* are displayed as a sub-list of the corresponding story
 * **Status** – shows the status of a story or a task
 
-## 2 Interacting with the Stories Pane
+## Interacting with the Stories Pane
 
 You can perform the following actions in the **Stories** pane:
 
@@ -35,13 +35,13 @@ You can perform the following actions in the **Stories** pane:
 * [Open documents connected to stories](#opening-documents)
 * [Change the status of a story or a task](#changing-status) 
 
-### 2.1 Refreshing the Stories Pane {#refresh}
+### Refreshing the Stories Pane {#refresh}
 
 The **Refresh** button allows you to get the latest changes on stories and tasks done by you and your team members in [Apps](https://sprintr.home.mendix.com/) or Studio Pro. 
 
 If two team members change the same story, the changes done last will take effect. For example, you set the story status to *Running*, but your colleague sets it to *Done* two minutes later. The story's status will be set to *Done* when you click **Refresh**, as your colleague was the last one to implement changes. 
 
-### 2.2 Viewing Details {#view-details}
+### Viewing Details {#view-details}
 
 To view details of a *story*, do one of the following: 
 
@@ -62,11 +62,11 @@ When you view the details of a story or task, the **Story Details** pop-up windo
 
     {{< figure src="/attachments/refguide9/modeling/menus/view-menu/stories-pane/story-details.png" alt="Story Details" class="no-border" >}}
 
-### 2.3 Showing Completed Stories {#show-completed-stories}
+### Showing Completed Stories {#show-completed-stories}
 
 When enabled, the **Show complete stories** button allows you to show the stories that are set to *Done*. For more information on statuses of stories, see the [Changing the Status of a Story or a Task](#changing-status) section below.
 
-### 2.4 Opening Documents Connected to Stories {#opening-documents}
+### Opening Documents Connected to Stories {#opening-documents}
 
 If the story is created from a feedback item, you can open a document which the feedback item refers to. That means if a feedback was submitted for a widget on a page, the **Open document** button or icon will open this page. 
 
@@ -76,7 +76,7 @@ To open the document, either click the **Open document** button in the top bar o
 
 For more information on how to create a story on the basis of a feedback item and add it to your board in [Epics](/developerportal/project-management/epics/) or [Jira](/developerportal/project-management/jira-connector/), see the [Feedback Details](/developerportal/app-insights/feedback/#feedback-details) section in *Feedback*.
 
-### 2.5 Changing the Status of a Story or a Task {#changing-status}
+### Changing the Status of a Story or a Task {#changing-status}
 
 If you use Epics, you cannot change the status of the stories in the pane. 
 
@@ -87,7 +87,7 @@ To change the status of a task, tick or clear the checkbox in the **Status** col
 * Clear the checkbox to set the done task in *To do*
 * Tick the checkbox to set the task to *Done*
 
-## 3 Read More
+## Read More
 
 * [Feedback Management](/developerportal/app-insights/feedback/)
 * [View Menu](/refguide9/view-menu/)

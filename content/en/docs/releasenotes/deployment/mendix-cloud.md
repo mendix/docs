@@ -16,6 +16,55 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 ## 2024
 
+### September 19, 2024
+
+#### Pipelines New Features
+
+* We released an API that lets you start a new pipeline run for a saved and activated pipeline design and retrieve the status of a pipeline run. For more information, see [Pipelines API](/apidocs-mxsdk/apidocs/pipelines-api/).
+* We added a new pipeline step: Best Practice Recommender Check. This step lets you evaluate results of the Maia Best Practice Recommender within your pipeline.
+
+### September 5, 2024
+
+#### New Features
+
+* Deep links have been added to the [Software Composition](/developerportal/deploy/software-composition/) page to enable unique identification and easy shareability.
+
+### September 3, 2024
+
+#### Improvements
+
+* Recently, performance issues were identified in the Software Bill of Materials (SBOM) generation process, which occurs during deployment package creation. Mendix has resolved these issues, ensuring that SBOM generation and the associated Software Composition capabilities are now fully compatible with the following versions of Studio Pro: 9.24.26 and above, 10.6.12 and above, 10.12.3 and above.
+  
+    Previously supported Studio Pro versions (9.24.22 to 9.24.25, 10.6.9 to 10.6.11, 10.10.0 to 10.12.2, and 10.13) will no longer result in SBOM generation and visibility in [Software Composition](/developerportal/deploy/software-composition/). To continue using Software Composition, upgrade to a compatible Studio Pro version. Any historical data within Software Composition remains accessible regardless of the upgrade.
+
+* Deployment packages generated via Mendix Pipelines now generate a Software Bill of Material (SBOM) under the hood; this is visible in Software Composition for Studio Pro LTS and MTS versions 9.24.26 and above, 10.6.12 and above, and 10.12.3 and above.
+
+### August 22, 2024
+
+#### Fixes
+
+* We fixed a bug that had been causing an incorrect pipeline run status to display for the first few seconds on manually triggered pipelines.
+
+#### Improvements
+
+* In the **Pipelines** page's **Runs** tab, we changed a column name from **Last Run** to **Run** because this more accurately reflects what the column shows: it indicates when a pipeline run occurred.
+
+### August 15, 2024
+
+#### Improvements
+
+* We added a Pipeline ID column to the **Designs** tab of the **Pipelines** page.
+
+### July 16, 2024
+
+#### Improvements
+
+* We changed the [Database Freeable Memory alert thresholds](/developerportal/operate/monitoring-application-health/#dbase-freeable-memory) for the following cloud resource packs:
+    * XS21: The critical alert threshold changed from 10% to 5% freeable memory.
+    * XS20 (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * S (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+    * Strato (Legacy): The critical alert threshold changed from 10% to 5% freeable memory.
+
 ### July 4, 2024
 
 #### Pipelines New Features
@@ -247,7 +296,7 @@ For information on the current status of deployment to Mendix Cloud and any plan
 
 #### Portal Enhancements
 
-* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to the Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
+* The webhooks feature is now released for GA. Webhooks can trigger endpoints when changes are committed to a Team Server Git repository, or when a new deployment package is available for deployment to Mendix Cloud. For more information, see [Webhooks](/developerportal/deploy/webhooks/).
 
 #### Improvements
 
@@ -947,7 +996,7 @@ This value is displayed in the following graphs in Metrics for Mendix Cloud v4:
 
 {{% alert color="info" %}}This change will take effect the next time you deploy your application.{{% /alert %}}
 
-{{% alert color="warning" %}}You may see a large increase in the size of the unused java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
+{{% alert color="warning" %}}You may see a large increase in the size of the unused Java heap metric when this change is applied. This is a consequence of the new calculation and not a change in the memory usage of your app.{{% /alert %}}
 
 ### June 17, 2020
 
@@ -1200,7 +1249,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
     * The Technical Contact can re-order the environments
 * As part of support for Flexible Environments, we have made the following changes:
     * When deploying your application via the Developer Portal, you can choose the destination environment
-    * When viewing metrics, logs, backups, etc. you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
+    * When viewing metrics, logs, backups, etc., you will have to choose the environment using a drop-down rather than clicking directly on the environment you want
 
 #### Other Improvements
 
@@ -1220,7 +1269,7 @@ If you run services that connect to a `*.mendixcloud.com` endpoint AND use a sta
 #### Fixes
 
 * We addressed and fixed an issue that caused some Mendix Cloud v4 backups to be duplicated.
-* We fixed a problem on Mendix Cloud v3 thath prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
+* We fixed a problem on Mendix Cloud v3 that prevented Path-based Access Restrictions from working with multiple TLS certificate authorities. (Ticket 77282)
 * We fixed the problem which prevented users in the Pacific Time Zone from being able to download the current day's logs. (Tickets 78325, 78586, 79119, 79162, 79427)
 * We addressed and solved a problem that meant that some sandboxes could not be resumed after getting stopped.
 * We have fixed the issue that prevented apps with ACS (AppCloudServices) from being deployed using the Web Modeler. (Ticket 76888)

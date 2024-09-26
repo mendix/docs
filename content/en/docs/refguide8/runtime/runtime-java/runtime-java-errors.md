@@ -4,19 +4,19 @@ url: /refguide8/runtime-java-errors/
 weight: 3
 ---
 
-## 1 Introduction
+## Introduction
 
 Once your application starts performing poorly, becomes unstable or even worse: crashes, the first thing to do is check your application log for hints on what could be causing this. If there are any **FATAL** or **CRITICAL** log lines in there, immediately start working on resolving them. Any **ERROR** log line should be treated as such as well, so you should always strive to get rid of them.
 
-## 2 Common Errors
+## Common Errors
 
 Some of the more common errors you can find in the application log that can cause your application to go down are the topic of this document. Let’s dive right in.
 
-### 2.1 java.lang.StackOverflowError
+### java.lang.StackOverflowError
 
 Your application is not going to recover from one of these errors. When you encounter one of these while running your Mendix application it is practically always going to be caused by an infinite loop. You can easily recreate this by creating a microflow called *Microflow* with a single microflow call action and selecting the microflow called *Microflow*. The infinite loop will crash your app and produce a stack overflow error.
 
-### 2.2 java.lang.OutOfMemoryError: Java heap space
+### java.lang.OutOfMemoryError: Java heap space
 
 This is an error you run into when the JVM Heap tells you "Enough is enough. I can’t fit all of this into my memory." Which usually means that the application has become unstable and should be restarted before it crashes and that you also have a real problem to solve.
 
@@ -46,7 +46,7 @@ On the other hand, if it looks like the graph below there is much bigger chance 
 
 {{< figure src="/attachments/refguide8/runtime/runtime-java/runtime-java-errors/4.jpg" class="no-border" >}}
 
-### 2.3 java.lang.OutOfMemoryError: GC overhead limit exceeded
+### java.lang.OutOfMemoryError: GC overhead limit exceeded
 
 Such a cryptic description. But it is quite simple really. This is the JVM telling you “I am taking an excessive amount of time collecting garbage (by default 98% of all CPU time) and am recovering very little memory (by default <=2% of the total Heap size) each time. Let me just stop your application now, so you can figure out what’s wrong before it crashes.”
 
@@ -64,7 +64,7 @@ Eventually, memory will run low because of all the account being created, which 
 
 That concludes this list of some of the more common errors in the application log that can cause your application to go down. But there is one more item to share. While it is not an error in the error log, it might match some of the symptoms outlined. 
 
-### 2.4 Lack of Resources on the Application Server
+### Lack of Resources on the Application Server
 
 If you see the grey *committed* line peak into the white part of the *Application node operating system memory* graph, your app node needs more memory. Upgrading to a larger container is strongly recommended in this case. See the following graph for an example of this problem:
 

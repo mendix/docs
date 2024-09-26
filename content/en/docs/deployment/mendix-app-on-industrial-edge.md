@@ -6,7 +6,7 @@ weight: 49
 description: "Describes how to deploy to the Industrial Edge."
 ---
 
-## 1 Introduction
+## Introduction
 
 [Industrial Edge](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/production-machines.html) is the Siemens IOT platform for hosting applications from different vendors on a computing platform close to the shopfloor. Industrial Edge (IE) enables extensive connectivity to automation and other operational technology (OT) equipment, while allowing the deployments of demanding edge applications to locally process shopfloor data.
 
@@ -14,11 +14,11 @@ Mendix on Edge empowers factory operators to create custom applications with the
 
 This documentation is meant for Mendix developers who want to develop and use their apps in the Industrial Edge environment.
 
-## 2 Prerequisites
+## Prerequisites
 
 For information about the dependencies and prerequisites to use Mendix on Edge, see [Mendix on Edge](https://docs.eu1.edge.siemens.cloud/develop_an_application/mendix/user_journey.html).
 
-## 3 Pushing your App to Industrial Edge by Using the IE Plugin for Mendix Studio Pro
+## Pushing your App to Industrial Edge by Using the IE Plugin for Mendix Studio Pro
 
 For more information about pushing your applications to the Industrial Edge Hub, see [Get started](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/industrial_edge_hub/setup/ieh_index.html).
 
@@ -26,11 +26,11 @@ For more information about pushing your applications to the Industrial Edge Mana
 
 After your app is uploaded to your Industrial Edge environment, it is treated like any other native IE application, for example those purchased over the Industrial Edge Marketplace.
 
-## 4 Deploying and Installing Apps on Industrial Edge
+## Deploying and Installing Apps on Industrial Edge
 
 For a step-by-step guide for setting up and operating your Industrial Edge environment and installing applications on your Industrial Edge Devices, see [Get Started & Operate - Overview](https://docs.eu1.edge.siemens.cloud/get_started_and_operate/index.html).
 
-## 5 Read More
+## Read More
 
 The following documents give more information on Industrial Edge operations:
 

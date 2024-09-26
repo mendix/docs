@@ -7,7 +7,7 @@ aliases:
     - /developerportal/community-tools/contribute-to-a-github-repository/
 ---
 
-## 1 Introduction
+## Introduction
 
 We like to work with our community, and we encourage you to create and contribute using pull requests!
 
@@ -15,7 +15,7 @@ This how-to teaches you how to do the following:
 
 * Contribute to a Mendix GitHub repository according to Mendix guidelines
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have completed the following prerequisites:
 
@@ -23,7 +23,7 @@ Before starting with this how-to, make sure you have completed the following pre
 * Have a [Mendix account](https://home.mendix.com/)
 * Fork a repository on GitHub (for details, see [Fork a Repo](https://help.github.com/articles/fork-a-repo/))
 
-## 3 Making Changes to an Existing Repository
+## Making Changes to an Existing Repository
 
 To make changes to an existing repository, follow these guidelines:
 
@@ -35,7 +35,7 @@ To make changes to an existing repository, follow these guidelines:
 * Make sure you have added the necessary tests for your changes
 * Run all the tests to assure nothing was accidentally broken
 
-## 4 Submitting Changes
+## Submitting Changes
 
 To submit changes, follow these guidelines:
 
@@ -44,6 +44,6 @@ To submit changes, follow these guidelines:
 * Mention the numbers of any issues that are fixed by the changes (for more information, see [Closing Issues Using Keywords](https://help.github.com/articles/closing-issues-via-commit-messages#closing-issues-with-pull-requests))
 * After feedback has been given, Mendix expects a response within two weeks (after two weeks, we may close the pull request if it is not showing any activity)
 
-## 5 Read More
+## Read More
 
 * [Epics](/developerportal/project-management/epics/)

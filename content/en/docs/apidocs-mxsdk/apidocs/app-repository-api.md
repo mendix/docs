@@ -5,19 +5,19 @@ description: "This API enables retrieving information (branches, commits) of app
 weight: 10
 ---
 
-## 1 Introduction
+## Introduction
 
 The App Repository API enables retrieving information (branches, commits) of application models stored in our [Team Server](/developerportal/general/team-server/).
 
-## 2 Base URL
+## Base URL
 
 Below is the base URL for all App Repository API endpoints:
 
-```http {linenos=false}
+```http
 https://repository.api.mendix.com/v1
 ```
 
-## 3 Endpoints
+## Endpoints
 
 All available endpoints are shown in the following table:
 
@@ -28,38 +28,40 @@ All available endpoints are shown in the following table:
 | GET | [`/repositories/<appId>/branches/<branchName>`](#retrieve-branch) | Gets information of a branch of a repository |
 | GET | [`/repositories/<appId>/branches/<branchName>/commits`](#retrieve-commits) | Gets a list of commits of a branch of a repository |
 
-## 4 Authentication
+## Authentication
 
 Authentication for the App Repository API uses a personal access token (PAT).
 
-### 4.1 Generating a PAT
+### Generating a PAT
 
-To generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, you need to choose at least this scope: `mx:modelrepository:repo:read`.
+For details on how to generate a PAT, see the [Personal Access Tokens](/community-tools/mendix-profile/user-settings/#pat) section in *User Settings*. When you define the new PAT, choose at least this scope:
+
+* `mx:modelrepository:repo:read`.
 
 Store the generated value `{GENERATED_PAT}` somewhere safe so you can use it to authorize your Mendix Cloud App Repository API calls.
 
-### 4.2 Using the PAT
+### Using the PAT
 
-Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. For example:
+Each request must contain an `Authorization` header with the value `MxToken {GENERATED_PAT}`. Here is an example:
 
-```http {linenos=false}
+```http
 GET /repositories/d92064a5-b1fd-4be4-97db-53fc90201d1c/info HTTP/1.1
 Authorization: MxToken 7LJE…vk
 ```
 
-## 5 Error response
+## Error Response
 
-### 5.1 Error response format {#error-response-format}
+### Error Response Format {#error-response-format}
 
 This is the generic error response format. The payload example format applies to any error as listed per request.
 
-#### 5.1.1 Heading
+#### Heading
 
 | Name | Value |
 | --- | --- |
 | Content-Type | `application/json; charset=utf-8` |
 
-#### 5.1.2 Payload
+#### Payload
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -75,7 +77,7 @@ Payload Example:
 }
 ```
 
-### 5.2 Error Codes
+### Error Codes
 
 The service can return the following errors. In general, 4xx errors indicate that something was wrong with the client’s request, and 5xx errors indicate that something went wrong at the server side.
 
@@ -87,26 +89,26 @@ The service can return the following errors. In general, 4xx errors indicate tha
 | 404 | Not Found | Repository or branch not found |
 | 500 | Internal Server Error | Something went wrong |
 
-## 6 API Calls
+## API Calls
 
-### 6.1 Retrieve Repository Info {#retrieve-repository-info}
+### Retrieve Repository Info {#retrieve-repository-info}
 
 ```http
 HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/info
 ```
 
-#### 6.1.1 Request
+#### Request
 
 Returns information about the version control repository for a Mendix app.
 
-##### 6.1.1.1 Path Parameters
+##### Path Parameters
 
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned. You can find this in the [General](/developerportal/collaborate/general-settings/) tab of the **Settings** page after you open your app in [Apps](https://sprintr.home.mendix.com/). |
 
-##### 6.1.1.2 Example
+##### Example
 
 ```http
 GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/info HTTP/1.1
@@ -115,13 +117,13 @@ Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
 ```
 
-#### 6.1.2 Response Headers
+#### Response Headers
 
 |Name|Value|
 |---|---|
 |Content-Type|`application/json; charset=utf-8`|
 
-#### 6.1.3 Response Payload
+#### Response Payload
 
 List of objects with the following key-value pairs:
 
@@ -131,7 +133,7 @@ List of objects with the following key-value pairs:
 |`type`|String|The type of repository. At the moment this is either `"svn"` or `"git"`, but later on other repository types may be introduced.|
 |`url`|String|The URL of the repository.|
 
-##### 6.1.3.1 Payload Example
+##### Payload Example
 
 ```json
 {
@@ -141,7 +143,7 @@ List of objects with the following key-value pairs:
 }
 ```
 
-### 6.2 Retrieve Branches {#retrieve-branches}
+### Retrieve Branches {#retrieve-branches}
 
 Returns information about the branches of the version control repository for a Mendix app.
 
@@ -152,22 +154,22 @@ HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/branches
 ```
 
-#### 6.2.1 Request
+#### Request
 
-##### 6.2.1.1 Path Parameter
+##### Path Parameter
 
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 
-##### 6.2.1.2 Query Parameter
+##### Query Parameter
 
 |Name|Type|Required|Description
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
 |`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert color="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
-##### 6.2.1.3 Example
+##### Example
 
 ```http
 GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches?limit=20&cursor=Rmlyc3RQYWdlQ3Vyc29y HTTP/1.1
@@ -176,13 +178,13 @@ Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
 ```
 
-#### 6.2.2 Response Headers
+#### Response Headers
 
 |Name|Value|
 |---|---|
 |Content-Type|`application/json; charset=utf-8`|
 
-#### 6.2.3 Response Payload
+#### Response Payload
 
 List of objects with the following key-value pairs:
 
@@ -195,7 +197,7 @@ List of objects with the following key-value pairs:
 |`cursors.next`|String, optional|A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
 |`cursors.last`|String|A cursor that can be used to retrieve the last page.|
 
-##### 6.2.3.1 Payload Example
+##### Payload Example
 
 ```json
 {
@@ -225,7 +227,7 @@ List of objects with the following key-value pairs:
 }
 ```
 
-### 6.3 Retrieve Branch {#retrieve-branch}
+### Retrieve Branch {#retrieve-branch}
 
 Returns information about a specific branch of the version control repository for a Mendix app.
 
@@ -234,16 +236,16 @@ HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/branches/<Name>
 ```
 
-#### 6.3.1 Request
+#### Request
 
-##### 6.3.1.1 Path Parameters
+##### Path Parameters
 
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
-##### 6.3.1.2 Example
+##### Example
 
 ```http
 GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk HTTP/1.1
@@ -259,13 +261,13 @@ Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
 ```
 
-#### 6.3.2 Response Headers
+#### Response Headers
 
 |Name|Value|
 |---|---|
 |Content-Type|`application/json; charset=utf-8`|
 
-#### 6.3.3 Response Payload {#response-payload}
+#### Response Payload {#response-payload}
 
 An object with the following key-value pairs:
 
@@ -282,7 +284,7 @@ An object with the following key-value pairs:
 |`latestCommit.relatedStories`|Array|An array of related user story IDs, if available.|
 |`latestCommit.mendixVersion`|String, optional|The Mendix version used to make this commit, if available.|
 
-##### 6.3.3.1 Example
+##### Example
 
 ```json
 {
@@ -301,7 +303,7 @@ An object with the following key-value pairs:
 }
 ```
 
-### 6.4 Retrieve Commits {#retrieve-commits}
+### Retrieve Commits {#retrieve-commits}
 
 Returns information about the commits of a specific branch of the version control repository for a Mendix app.
 Commits are returned in reverse chronological order, starting from the head of the branch all the way to the first commit of the repository.
@@ -313,23 +315,23 @@ HTTP Method: GET
  URL: https://repository.api.mendix.com/v1/repositories/<AppId>/branches/<Name>/commits
 ```
 
-#### 6.4.1 Request
+#### Request
 
-##### 6.4.1.1 Path Parameters
+##### Path Parameters
 
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`AppId`|String|Yes|The App ID of the Mendix app for which the repository information should be returned.|
 |`Name`|String|Yes|The name of the branch for which to return information. The name of the branch should be [URL-encoded](https://www.w3schools.com/tags/ref_urlencode.asp).|
 
-##### 6.4.1.2 Query Parameters
+##### Query Parameters
 
 |Name|Type|Required|Description|
 |---|---|---|---|
 |`limit`|Integer|No|The number of items to return per result page. Defaults to 20 items. Maximum is 100 items.|
 |`cursor`|String|No|A cursor specifying which page to retrieve. To obtain a cursor value, see the `cursors` property of the response payload of this operation. If no cursor is specified, the first page is returned. {{% alert color="info" %}}To the user of this API, a cursor is an opaque value that can only be obtained from a previous API response.{{% /alert %}}|
 
-##### 6.4.1.3 Examples
+##### Examples
 
 ```http
 GET /v1/repositories/c0af1725-edae-4345-aea7-2f94f7760e33/branches/trunk/commits?limit=20&cursor=Rmlyc3RQYWdlQ3Vyc29y HTTP/1.1
@@ -345,13 +347,13 @@ Accept: */*
 Authorization: MxToken hZUPhAV4ELPrRm7U7JAKf5BnxJk6q7dcsvFdw6ZR4wRYdv7egHjwHEYBwXY4RkSZrAWde3XqVAQkxZNPysvHcpquA9sK9bsKmcTN
 ```
 
-#### 6.4.2 Response Headers
+#### Response Headers
 
 |Name|Value|
 |---|---|
 |Content-Type|`application/json; charset=utf-8`|
 
-#### 6.4.3 Response Payload
+#### Response Payload
 
 List of objects with the following key-value pairs:
 
@@ -372,7 +374,7 @@ List of objects with the following key-value pairs:
 |`cursors.next`|String, optional|A cursor that can be used to retrieve the next page. The absence of this property indicates that this is the last page.|
 |`cursors.last`|String|A cursor that can be used to retrieve the last page.|
 
-##### 6.4.3.1 Example
+##### Example
 
 ```json
 {

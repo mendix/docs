@@ -4,13 +4,13 @@ url: /refguide9/administrator/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 In the **Administrator** tab of **App Security**, you can change the default credentials and a user role for the Administrator user:
 
 {{< figure src="/attachments/refguide9/modeling/app-explorer/security/app-security/administrator/app-security-administrator.png" class="no-border" >}}
 
-## 2 Administrator Properties {#administrator-properties}
+## Administrator Properties {#administrator-properties}
 
 In the **Administrator** tab the following properties are available:
 
@@ -18,7 +18,7 @@ In the **Administrator** tab the following properties are available:
 * [Password](#password)
 * [User role](#user-role)
 
-### 2.1 User Name {#user-name}
+### User Name {#user-name}
 
 The user name is used to sign into the application as the Administrator.
 
@@ -28,7 +28,7 @@ Default: *MxAdmin*
 Since this is general knowledge, it is safer to change this to a custom user name.
 {{% /alert %}}
 
-### 2.2 Password {#password}
+### Password {#password}
 
 The password is used to sign into the application as the Administrator. Click **Show password** to see the password. 
 
@@ -40,9 +40,9 @@ Since the value of the password is general knowledge, it is safer to change this
 This password is only used when Mendix is running locally. Changing the password in your model will not update the password in your Cloud environments. You can change the password for your other licensed [environments](/developerportal/deploy/environments-details/) in **Apps**
 {{% /alert %}}
 
-#### 2.2.1 Free Apps
+#### Free Apps
 
-The MxAdmin user is not created automatically when you deploy your app as a Free App. For licensed environments the MxAdmin user is created when you change the password for the first time, for example through the [Environment Details](/developerportal/deploy/environments-details/) for the Mendix Cloud.
+The MxAdmin user is not created automatically when you deploy your app as a Free App. For licensed environments the MxAdmin user is created when you change the password for the first time, for example through the [Environment Details](/developerportal/deploy/environments-details/) for Mendix Cloud.
 
 When your Free App *has never been deployed and the database still needs to be created*, any data snapshot you have added to your app will be restored to the database of your Free App. You can use this process to add the MxAdmin user to your Free App by doing the following:
 
@@ -65,7 +65,7 @@ Alternatively you can log in as an administrator to a Free App deployed to the c
 5. Deploy your Free App to the cloud environment by clicking **Publish**.
 6. Log in using the demo-administrator and you can then create some user accounts.
 
-### 2.3 User Role {#user-role}
+### User Role {#user-role}
 
 The user role assigned to the Administrator. For more information, see [User Roles](/refguide9/user-roles/). 
 
@@ -80,10 +80,10 @@ This role may be helpful in case you have exceeded your user license restriction
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When your app is not deployed locally, for example to the Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
+When your app is not deployed locally, for example to Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
 {{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [App Security](/refguide9/app-security/)
 * [User Roles](/refguide9/user-roles/)

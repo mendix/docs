@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Color Picker widget, 
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enables selecting and adjusting a color value that is stored in a string attribute
 
-### 1.1 Features
+### Features
 
 * Render using the button, input box, and inline modes
 * Execute an action after a color change using the [Events tab](#events-tab)
@@ -18,7 +18,7 @@ The [Color Picker](https://marketplace.mendix.com/link/component/107044/) enable
 * Choose when the Color Picker should be [visible](#visibility-tab)
 * Support the hex, RGB, and RGBA color formats
 
-## 2 Configuration
+## Configuration
 
 To configure this widget, follow these steps:
 
@@ -27,11 +27,11 @@ To configure this widget, follow these steps:
 3. Double-click the Color Picker widget to open the **Edit Color Picker** dialog box.
 4. Configure the widget using the properties described in the sections below.
 
-### 2.1 Data source Tab
+### Data source Tab
 
 **Data source** (required) – a String attribute containing a valid color in hex, RGB or RGBA color formats
 
-### 2.2 General Tab
+### General Tab
 
 * **Enable advanced options**
     
@@ -74,27 +74,27 @@ To configure this widget, follow these steps:
         * **Label caption** – defines the label caption of the widget that is displayed on the page
     * **No** (default) – if selected, there is no label for this widget on the page
 
-### 2.3 Events Tab {#events-tab}
+### Events Tab {#events-tab}
 
 **On change** – executes an action when the attribute value changes
 
-### 2.4 Edibility Tab {#editability-tab}
+### Edibility Tab {#editability-tab}
 
 For more information, see [Editability Section](/refguide/common-widget-properties/#editability) in *Properties Common in the Page Editor*.
 
-### 2.5 Visibility Tab {#visibility-tab}
+### Visibility Tab {#visibility-tab}
 
 For more information, see [Visibility Section](/refguide/common-widget-properties/#visibility-properties) in *Properties Common in the Page Editor*.
 
-### 2.6 Common Tab
+### Common Tab
 
 For more information, see [Common Section](/refguide/common-widget-properties/#common-properties) in *Properties Common in the Page Editor*.
 
-## 3 Strict CSP Compatibility
+## Strict CSP Compatibility
 
 This widget is not yet fully compliant with strict content security policy (CSP). If used with strict CSP, it will result in CSP errors in the console and potentially broken flows in the widget.
 
-## 4 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features
 

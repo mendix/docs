@@ -4,17 +4,17 @@ url: /apidocs-mxsdk/apidocs/extensibility-api/add-menu/
 weight: 15
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes how you can add a menu that contains submenus, some of which also contain submenus of their own. Before you start this how-to, it is recommended to [create a menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/) first.
 
-You can download the example in this how-to in [this Github repository](https://github.com/mendix/ExtensionAPI-Samples).
+You can download the example in this how-to in [this GitHub repository](https://github.com/mendix/ExtensionAPI-Samples).
 
-## 2 Creating Menu Extension Class
+## Creating Menu Extension Class
 
 1. Open the project that you previously created when you [created the menu extension](/apidocs-mxsdk/apidocs/extensibility-api/create-menu-extension/).
 2. Add a new class to the project and name it `MyMenuExtension.cs`.
-3.  Replace the code in the file with the following code:
+3. Replace the code in the file with the following code:
 
     ```csharp
     using Mendix.StudioPro.ExtensionsAPI.UI.Menu;

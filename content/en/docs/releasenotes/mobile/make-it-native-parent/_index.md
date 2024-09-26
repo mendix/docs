@@ -5,13 +5,13 @@ weight: 7
 description: "Information on various Make It Native apps by platform and version."
 ---
 
-## 1 Introduction
+## Introduction
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
-## 2 Make It Native Versions
+## Make It Native Versions
 
-We currently provide 3 different versions of the Make It Native App. You can find the release notes for these versions in the following list:
+We currently provide 3 different versions of the Make It Native App. These are their release notes:
 
 1. [Make It Native 10](/releasenotes/mobile/make-it-native-10/)
 1. [Make It Native 9](/releasenotes/mobile/make-it-native-9/)

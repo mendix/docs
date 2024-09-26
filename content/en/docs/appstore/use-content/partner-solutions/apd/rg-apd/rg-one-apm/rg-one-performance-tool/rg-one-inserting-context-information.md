@@ -5,7 +5,7 @@ url: /appstore/partner-solutions/apd/rg-one-inserting-context-information/
 
 The Performance Tool (since version 1.2.1) has a special action to allow context specific information in the Performance Tool. This way you can see data like in the debugger and know which scenarios were chosen.
 
-To add context information use the java action PerformanceTool.PerformanceToolInfoAction in your microflow as shown below.
+To add context information use the Java action PerformanceTool.PerformanceToolInfoAction in your microflow as shown below.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-one-apm/rg-one-performance-tool/rg-one-inserting-context-information/Performance_Tool_Info_Action_Details.png" class="no-border" >}}             
 

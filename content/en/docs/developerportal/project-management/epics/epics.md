@@ -6,7 +6,7 @@ weight: 30
 description: "Describes the Epics page in Epics."
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Epics** page gives an overview of all the epics for your current app. You can use the filter on the upper-right corner to filter epics by their status: **All**, **Completed**, **In Progress**, or **Not Started**. Clicking the **Create Epics** button enables you create a new epic.
 
@@ -25,7 +25,7 @@ Each row shows the following details about an epic:
 
 Clicking a row opens the [epic details](#epic-details) dialog box.
 
-## 2 Epic Details {#epic-details}
+## Epic Details {#epic-details}
 
 When you click an epic, the epic details dialog box opens. 
 

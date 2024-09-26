@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/apd/ig-one/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 This document describes the installation and uninstallation of the APM tool. The intended audience is Mendix advanced application developers who work with the Mendix Modeler and develop, install, and support Mendix applications.
 
@@ -15,7 +15,7 @@ Read all the details here:
 * [Upgrade Steps](/appstore/partner-solutions/apd/ig-one-upgrade-steps/)
 * [Uninstall Steps](/appstore/partner-solutions/apd/ig-one-uninstall-steps/)
 
-## 2 Installation for the Experienced User
+## Installation for the Experienced User
 
 For the experienced user, this is quick outline of the installation:
 
@@ -34,7 +34,7 @@ For the experienced user, this is quick outline of the installation:
 13. Choose production or non-production settings.
 14. Save.
 
-## 3 Upgrading for the Experienced User
+## Upgrading for the Experienced User
 
 For an upgrade from APM 1.5.4 and above to the latest version, follow these steps:
 

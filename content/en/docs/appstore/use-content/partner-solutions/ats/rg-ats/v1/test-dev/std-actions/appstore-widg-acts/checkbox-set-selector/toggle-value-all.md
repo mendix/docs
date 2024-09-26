@@ -3,19 +3,19 @@ title: "Toggle Checkbox Set Selector Value"
 url: /appstore/partner-solutions/ats/rg-one-toggle-checkbox-set-selector-value-all/
 ---
 
-## 1 Description
+## Description
 
 Finds checkbox by given entity attribute and inverts the value.
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget, the column caption, and the cell value of the checkbox you want to toggle.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | ------- |---------------

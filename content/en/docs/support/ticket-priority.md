@@ -9,11 +9,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The priority levels are based on the impact and urgency of the request.
 
-## 2 Prioritization
+## Prioritization
 
 | Impact  | Description |
 | ------- | ------- |
@@ -27,7 +27,7 @@ The priority levels are based on the impact and urgency of the request.
 | Medium  | The operational functionality is fairly disrupted. |
 | Low     | The operational functionality is hardly disrupted. |
 
-## 3 Priority Matrix
+## Priority Matrix
 
 The ticket priority that Mendix Support validates is based on this matrix:
 
@@ -35,7 +35,7 @@ The ticket priority that Mendix Support validates is based on this matrix:
 
 If Mendix provides a workaround, the impact can never be higher than **Medium**.
 
-## 4 Read More
+## Read More
 
 * [How to Submit a Support Request](/support/submit-support-request/)
 * [Escalation Management Process](/support/escalation-management-process/)

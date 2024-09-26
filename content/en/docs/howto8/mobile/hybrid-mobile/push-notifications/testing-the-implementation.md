@@ -5,11 +5,11 @@ url: /howto8/mobile/testing-the-implementation/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 Once you finish implementing the steps described in [How to Implement Push Notifications](/howto8/mobile/implementation-guide/), you need to test whether your push notifications work correctly. 
 
-## 2 Prerequisites
+## Prerequisites
 
 To begin testing your push notifications, you will need to build new versions of your mobile application:
 
@@ -25,15 +25,15 @@ To successfully use FCM push notifications, you must put the *google-services.js
 
 When you add these files, it causes the **PushNotifications** widget to register your device with FCM, and then share the FCM registration token with your Mendix back-end server. This means you must use FCM to send messages to your devices. 
 
-### 2.1 Using APNS Instead of FCM for iOS Devices
+### Using APNS Instead of FCM for iOS Devices
 
 If you would like to use APNS instead of FCM for your iOS devices, then you will have to delete the reference to *GoogleService-info.plist* from *config.xml*. By doing this, you will not need to include the *GoogleService-info.plist* file, and can then use APNS to send messages to iOS devices.
 
-## 3 Building Your Mobile App
+## Building Your Mobile App
 
-Now that you have set up your hybrid app for push notifications you may continue building it. by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
+Now that you have set up your hybrid app for push notifications, you may continue building it by following the [hybrid app package documentation](https://github.com/mendix/hybrid-app-template/). Once you have a running app, continue to the section below. 
 
-## 4 Sending a Push Notification to a Device
+## Sending a Push Notification to a Device
 
 Follow these steps to test and send a push notification to a device:
 
@@ -48,7 +48,7 @@ Follow these steps to test and send a push notification to a device:
 
 If you saw the notification, congratulations! By following this document, you have successfully tested push notifications on your device.
 
-## 5 Read More
+## Read More
 
 * [Publish a Mendix Hybrid Mobile App in Mobile App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Debug a Hybrid Mobile App](/howto8/mobile/debug-a-mobile-app/)

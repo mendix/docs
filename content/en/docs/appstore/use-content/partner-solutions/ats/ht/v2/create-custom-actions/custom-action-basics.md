@@ -3,7 +3,7 @@ title: "Create Custom Action Basics"
 url: /appstore/partner-solutions/ats/ht-two-custom-action-basics/
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to explains the basics of creating a custom action. You must complete this how-to before proceeding with [How to Create Custom Actions](/appstore/partner-solutions/ats/ht-two-create-custom-actions/).
 
@@ -13,7 +13,7 @@ This how-to teaches you how to do the following:
 * Add parameters
 * Connect parameters
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -22,14 +22,14 @@ Before starting this how-to, make sure you have completed the following prerequi
 * Read [How to Create a Test Case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/)
 * Read [Guidelines for Creating a Custom Action](/appstore/partner-solutions/ats/ht-two-guidelines-custom-action/)
 
-## 3 Creating a Custom Action
+## Creating a Custom Action
 
 The following sections describe how to create a custom action. There are two options for creating a custom action:
 
 * Click the **Actions** drop-down menu in the **Repository** and select **New Action**
 * Use the **Extract Action** button
 
-### 3.1 Option 1 – Using the Add Item Button in the Repository
+### Option 1 – Using the Add Item Button in the Repository
 
 1. Open your app in ATS and go to **Test Cases**.
 2. Click the **Actions** drop-down menu in the **Repository** tab.
@@ -49,7 +49,7 @@ The following sections describe how to create a custom action. There are two opt
 
 You have now created a custom action from the repository.
 
-### 3.2 Option 2 – Using the Extract Action Button
+### Option 2 – Using the Extract Action Button
 
 To use the **Extract Action** button, follow these steps:
 
@@ -75,7 +75,7 @@ Both ways open the **Action Details** page. This page works the same as the **Te
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/create-custom-actions/custom-action-basics/action-details-page-add-record.png" class="no-border" >}}
 
-## 4 Adding Parameters
+## Adding Parameters
 
 To add parameters to your custom action, follow these steps:
 
@@ -86,7 +86,7 @@ To add parameters to your custom action, follow these steps:
 
 3. Follow the steps in the sections below for adding input and output parameters.
 
-### 4.1 Adding Input Parameters
+### Adding Input Parameters
 
 To add input parameters, follow these steps:
 
@@ -107,7 +107,7 @@ To add input parameters, follow these steps:
 
 You can add as many input parameters as you need, but remember to keep the action simple.
 
-### 4.2 Adding an Output Parameter
+### Adding an Output Parameter
 
 To add an output parameter, follow these steps:
 
@@ -137,7 +137,7 @@ To add an output parameter, follow these steps:
 
     ATS will the outcome of test step 1.
 
-## 5 Connecting the Input Parameters
+## Connecting the Input Parameters
 
 To connect the input parameter, follow these steps:
 

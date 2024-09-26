@@ -4,11 +4,11 @@ url: /appstore/partner-solutions/ats/ht-two-custom-action-expense-app/
 description: "Explains how to find and use the Custom Action App that is used in the how-tos."
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains how the Custom Action App works. All custom action how-tos are based on the Custom Action App. You can follow the how-tos in the Custom Action App for a better understanding.
 
-## 2 Login Information
+## Login Information
 
 The Custom Action App is a modified company expenses app. You need the following information to gain access:
 
@@ -24,7 +24,7 @@ The app has only one account that has no login limitations, meaning that every o
 
 Every night (GMT), the newly created expenses are deleted by ATS. The 30 initial expenses are considered core data and are also maintained by ATS.
 
-## 3 Main Page
+## Main Page
 
 When you log in for the first time, you see the **My Expenses** page. On this page, you can create new expenses or delete expenses.
 
@@ -32,7 +32,7 @@ When you log in for the first time, you see the **My Expenses** page. On this pa
 
 This page is used to create the how-tos for combined actions.
 
-## 4 The Custom Action Page
+## The Custom Action Page
 
 Click the **Custom Actions** tab to open the page:
 

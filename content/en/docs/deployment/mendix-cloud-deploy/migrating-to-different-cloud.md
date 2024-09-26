@@ -11,14 +11,14 @@ aliases:
 # Original of diagram is in a powerpoint slide under /static/originals/…
 ---
 
-## 1 Introduction
+## Introduction
 
 This document explains how to migrate your licensed app from one cloud node to another. There are a couple of reasons you may wish to move your app to a different node:
 
 * You want to change the region where your app is hosted. Mendix Cloud regularly opens [new regions](/developerportal/deploy/mxcloudv4/#cloud-data-regions), and you may find that another region is a better fit for your app. In this case, you can create a node in the region of your choosing and then migrate your app to this target node.
 * You want to switch from the public Mendix Cloud to Mendix Cloud Dedicated (or vice versa). In this case, you can create a node in the cluster of your choosing, and then migrate your app to this target node.
 
-## 2 Migration Considerations
+## Migration Considerations
 
 {{% alert color="warning" %}}
 Do not upgrade your runtime version at the same time that you migrate your app. This is because potential errors from upgrading the runtime version can be incorrectly ascribed to a failed migration. If you choose to upgrade your runtime version at the same time as migrating your app, Mendix Support will not be able to assist you.<br><br>If you need to upgrade your runtime version, ensure that your upgraded version is fully tested and ready before you start the migration process.
@@ -30,7 +30,7 @@ When migrating your app, keep the following considerations in mind:
 * If you use an FTP server in your app, you need to use a third-party FTP provider.
 * If you are currently using a VPN to secure your app, you must use one of the recommended methods discussed in [Securing Outgoing Connections from Your Application](/developerportal/deploy/securing-outgoing-connections-from-your-application/) instead.
 
-## 3 Prerequisites
+## Prerequisites
 
 Before following the steps described on this page, make sure that you have met the following prerequisites:
 
@@ -39,13 +39,13 @@ Before following the steps described on this page, make sure that you have met t
 * Have the [Technical Contact](/developerportal/general/app-roles/#technical-contact) role for both of your cloud nodes.
 * Create two new temporary Free Apps without Free App environments. For instructions on unlinking a Free App from its environment, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#unlink).
 
-## 4 Migrating the App
+## Migrating the App
 
 To manually migrate your app to a new node, follow the steps in the sections below. Those steps are summarized in this graphic:
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/migrating/migratev4.png" alt="" class="no-border" >}}
 
-### 4.1 Linking a Temporary Free App to the Target Cloud Node
+### Linking a Temporary Free App to the Target Cloud Node
 
 First, link one of the new temporary apps to the target node.
 
@@ -61,13 +61,13 @@ First, link one of the new temporary apps to the target node.
 
 For more information on how to do this, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/#licensed-node).
 
-### 4.2 Copying the Deployment Package and Data from the Source Node to the Target Node
+### Copying the Deployment Package and Data from the Source Node to the Target Node
 
 Before migrating, you need to deploy a copy of your source app to the target node. You can then copy the data from the source node to the target node. After copying the data, test the app and correct errors if needed. Repeat this process until all the errors are resolved.
 
 The following steps explain how to do this.
 
-#### 4.2.1 Downloading and Uploading the Deployment Package
+#### Downloading and Uploading the Deployment Package
 
 Download the deployment package of your app hosted in the source node, and upload the deployment package to the app hosted in the target node.
 
@@ -95,7 +95,7 @@ To upload the deployment package, follow these steps:
 
 5. Stop the app so that you can upload the backup data.
 
-#### 4.2.2 Backing Up
+#### Backing Up
 
 {{% alert color="warning" %}}
 Before backing up your data as described in this section, you must have already deployed, started, and stopped your app, as described in the steps above. This prepares the environment and ensures that your data is restored to the correct locations.
@@ -109,17 +109,17 @@ Transfer the backup data from the source app to the target app by following thes
 
 2. Upload the downloaded backup to your app hosted in the target node (for details, see [How to Restore a Backup](/developerportal/operate/restore-backup/)).
 
-#### 4.2.3 Configuring the New App
+#### Configuring the New App
 
 Before starting your app in the target node, make sure it has the same configuration as the source node. You can find the node settings on the [Environment Details](/developerportal/deploy/environments-details/) page under the **Model Options**, **Network**, **Runtime**, and **Maintenance** tabs.
 
-#### 4.2.4 Testing and Repeating
+#### Testing and Repeating
 
 Now that the target node contains your data and is configured, deploy the deployment package to an environment and start your app.
 
 To learn how to do this, see [How to Deploy the App to an Environment](/developerportal/deploy/mendix-cloud-deploy/deploying-an-app/).
 
-### 4.3 Unlinking the App from the Source Node
+### Unlinking the App from the Source Node
 
 It is not possible to directly unlink an app from a licensed node. The only way to unlink the app is to connect another app to the licensed node; this unlinks the existing app automatically. To unlink your app, follow these steps:
 
@@ -133,7 +133,7 @@ It is not possible to directly unlink an app from a licensed node. The only way 
 
 For a detailed example of how this works, see the [Exchanging Linked Apps Between Nodes](/developerportal/deploy/licensing-apps/#exchange-apps) section of *Licensing Mendix Cloud Apps*.
 
-### 4.4 Linking the App to the Target Node
+### Linking the App to the Target Node
 
 Follow these steps to link the app you detached from the source node, above, to the target node.
 
@@ -151,7 +151,7 @@ Make sure you have downloaded the latest backup and deployment package before li
 
 For more information, see [Licensing Mendix Cloud Apps](/developerportal/deploy/licensing-apps/).
 
-### 4.5 Changing the App URL
+### Changing the App URL
 
 To change the app URL (if you are not using a custom domain), contact [Mendix Support](https://support.mendix.com). You will need to provide the following information:
 
@@ -160,7 +160,7 @@ To change the app URL (if you are not using a custom domain), contact [Mendix Su
 * **App ID** for the new app, which is available from the **Settings** page for the new app
 * **App ID** for the old app, which is available from the **Settings** page for the old app
 
-### 4.6 Changing a Custom Domain{#custom-domain}
+### Changing a Custom Domain{#custom-domain}
 
 If you have a custom domain that you want to transfer to your target deployment, keep the following information in mind.
 
@@ -174,7 +174,7 @@ For example, if you have a TTL of 24 hours, it takes 24 hours before the new dom
 For more information about setting up custom domains, see [Custom Domains](/developerportal/deploy/custom-domains/).
 {{% /alert %}}
 
-#### 4.6.1 Custom Domain Certificates
+#### Custom Domain Certificates
 
 If you own the private key for your existing custom domain name, you can reuse it for your target deployment. For a TLS certificate you uploaded yourself, you have the private key.
 
@@ -184,7 +184,7 @@ The two custom domain certificate options are shown below:
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/migrating/tls-certificates.png" alt="" width=75% >}}
 
-### 4.7 Offboarding the Source Node
+### Offboarding the Source Node
 
 If everything works correctly after the migration, submit a request to [Mendix Support](https://support.mendix.com) to offboard the old node.
 
@@ -192,7 +192,7 @@ If everything works correctly after the migration, submit a request to [Mendix S
 After your node is offboarded, it will no longer be available. Before asking for your node to be offboarded, ensure that you have downloaded any backups or other information that you need from the node.
 {{% /alert %}}
 
-## 5 Read More
+## Read More
 
 * [Certificates](/developerportal/deploy/certificates/)
 * [Custom Domains](/developerportal/deploy/custom-domains/)

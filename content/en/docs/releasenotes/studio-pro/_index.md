@@ -16,7 +16,6 @@ These are the [Mendix Studio Pro](/refguide/) major version release notes:
 * [10](/releasenotes/studio-pro/10/)
 * [9](/releasenotes/studio-pro/9/)
 * [8](/releasenotes/studio-pro/8/)
-* [7](/releasenotes/studio-pro/7/)
 
 For details on title long-term support, medium-term support, and monthly release versions, see [LTS, MTS, and Monthly Release Versions](/releasenotes/studio-pro/lts-mts/).
 

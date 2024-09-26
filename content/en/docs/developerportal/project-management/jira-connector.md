@@ -8,11 +8,11 @@ aliases:
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details. 
 ---
 
-## 1 Introduction
+## Introduction
 
 If you are a Scrum Master of a Mendix app, you can link your app to Jira if you manage your project there. Once your app is connected to Jira, you have the option to associate your commits in Studio Pro to one or more stories created in Jira. 
 
-## 2 Features
+## Features
 
 * Supports connecting your Mendix app to Jira
 * Supports Scrum, Kanban, and team-managed boards (previously known as "next-gen boards")
@@ -24,7 +24,7 @@ If you are a Scrum Master of a Mendix app, you can link your app to Jira if you 
 
 * Converting your [feedback items](/developerportal/app-insights/feedback/) in App Insights will result in a story in Jira
 
-## 3 Limitations
+## Limitations
 
 {{% alert color="info" %}}
 As we further develop this feature, we may lift these limitations with future releases.
@@ -33,7 +33,7 @@ As we further develop this feature, we may lift these limitations with future re
 * Feedback issues, and stories from Epics are not migrated to Jira.
 * When a feedback item is being converted to an issue, the story type, title, and description of the issue will be set. If your Jira configuration requires additional mandatory fields, this process might not work.
 
-## 4 Prerequisites
+## Prerequisites
 
 * You need to have the [Scrum Master](/developerportal/general/app-roles/#team-roles) role for the app.
 * You need to have an active subscription to Jira Software Cloud.
@@ -41,7 +41,7 @@ As we further develop this feature, we may lift these limitations with future re
 * You need to have a user account and API token with administration rights to the project in Jira. For more information on how to get this API token, see [Manage API tokens for your Atlassian account](https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/).
 * To convert feedback items to stories in Jira, your project in Jira must have the issue types "Story" and "Bug". For more information on how to set up issue types for your project, see [Associate issue types with projects](https://support.atlassian.com/jira-cloud-administration/docs/associate-issue-types-with-projects/).
 
-## 5 Procedure
+## Procedure
 
 To connect your app to Jira, perform the following steps:
 
@@ -86,7 +86,7 @@ Once the activation is completed, your app is connected to Jira. You can see the
 
     {{< figure src="/attachments/developerportal/project-management/jira-connector/navigation-jira.png" >}}
 
-## 6 View Settings
+## View Settings
 
 After you activated the Jira connector, you can review the configuration details any time.
 

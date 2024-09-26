@@ -6,7 +6,7 @@ description: "Obtaining a Mendix Basic Package Node"
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can only run a Mendix app in production on Mendix Cloud if the app is linked to a licensed node. If you have an app that you want to license, you can do this simply and cost-effectively by ordering the [Mendix Basic](https://www.mendix.com/pricing/basic-package/) package.
 
@@ -18,7 +18,7 @@ After you order the Mendix Basic package, it may take up to 48 hours before your
 Without a license, you can still deploy and test your app, but the functionality is limited compared to the Basic Package. For more information, see [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/).
 {{% /alert %}}
 
-## 2 Features of the Basic Package
+## Features of the Basic Package
 
 The Basic Package has the following features:
 
@@ -34,7 +34,7 @@ The Basic Package has the following features:
     * You cannot get telephone support; you can only access support via the [Mendix Support](https://support.mendix.com) website.
     * Support is only available for general platform issues; Mendix Support cannot help solve problems with individual apps.
 
-## 3 Purchasing a Basic Package
+## Purchasing a Basic Package
 
 From [Apps](https://sprintr.home.mendix.com), go to the **Environments** page of the Free App you want to license.
 
@@ -77,7 +77,7 @@ To order your Mendix Basic package, do the following:
 
 10. Read the confirmation details and click **Done** to return to the Mendix Portal. You will also receive a confirmation email at the email address entered in your order.
 
-## 4 Linking Your App to your Mendix Basic Node
+## Linking Your App to your Mendix Basic Node
 
 After 48 hours, your Mendix Basic package will be provisioned as a new licensed node. You will receive an email at the address entered in your order; this email notifies you that your node is ready and directs you to documentation on how to use the node.
 
@@ -86,13 +86,13 @@ To link your app to your licensed node, follow the same process as for any other
 * For brief instructions, see [How To Migrate a Free App to Mendix Basic](/developerportal/deploy/migrate-free-app-to-basic/)
 * For full details, see [Linking Your App to a Licensed Node](/developerportal/deploy/licensing-apps/#licensed-node) in *Licensing Mendix Cloud Apps*
 
-## 5 Invoicing for your Basic Package
+## Invoicing for your Basic Package
 
 It takes about 14 days to prepare your invoice. The invoice is sent to the **Invoice Email** that you provide. 
 
 For automatic orders, payment occurs when the package is ordered. For manual orders, payment is due within 30 days.
 
-## 6 Renewing Your Payment Method
+## Renewing Your Payment Method
 
 Your plan automatically renews 12 months from the date of provision. You can opt out of auto-renewal 60 days before the period ends.
 

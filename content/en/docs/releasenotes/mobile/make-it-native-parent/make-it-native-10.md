@@ -8,6 +8,14 @@ description: "These release notes showcase each release of the iOS and Android M
 
 Depending on the Mendix version your app is developed in and the device you want to run on, you need a different Make It Native app. For more information on how to download the correct version, see the [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) section in *Native App Prerequisites and Troubleshooting*.
 
+## Android 3.0.0 / iOS 3.0.0
+
+**Release date: July 31, 2023**
+
+### Improvements
+
+* We have upgraded our React Native version to 0.73.9. This significant update improves performance and increases compatibility with React Native's latest features.
+
 ## Android 2.0.1
 
 **Release date: April 4, 2024**
@@ -26,7 +34,7 @@ Depending on the Mendix version your app is developed in and the device you want
 
 ### Compatibility Notice
 
-* **Required For 10.6 and Higher** – This version of the MIN app is designed to work exclusively with **Mendix Studio Pro 10.6** and higher. Users on Mendix Studio Pro versions below 10.6 should continue to use Make It Native 9 for app development and testing purposes. See [Make It Native Apps](/releasenotes/mobile/make-it-native-parent/) for a precise list of which MIN versions work with with Studio Pro versions.
+* **Compatible with 10.6 to 10.10** – This version of the MIN app is designed to work exclusively with **Mendix Studio Pro 10.6 to 10.10**. Users on Mendix Studio Pro versions below 10.6 should continue to use Make It Native 9 for app development and testing purposes. See [Getting the Make It Native App](/refguide/mobile/getting-started-with-mobile/prerequisites/#get-min-app) for a precise list of which MIN versions work with Studio Pro versions.
 * **Critical Update** – With the upgrade to React Native 0.72.7, it is essential for all users to update their app to this latest version. Please note that older versions of the MIN app will no longer function after this update. We strongly advise all users to install this update immediately to continue using the app without interruption.
 
 ### Known Issues {#known-issues-200}
@@ -99,7 +107,7 @@ Both Android and iOS versions allow you to preview and debug your locally runnin
 
 ## iOS 1.0.0
 
-**iOS Release date: June 27th , 2023**
+**iOS Release date: June 27th, 2023**
 
 This is the official release of the iOS version of the Make It Native 10 app, with support for Mendix Studio Pro 10.0.
 

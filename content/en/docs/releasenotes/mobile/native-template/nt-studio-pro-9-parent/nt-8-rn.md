@@ -5,13 +5,45 @@ weight: 8
 description: "Native Template 8 release notes."
 ---
 
-## 8.2.5 {#814}
+## 8.2.7 {#827}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA update compatibility issues on iOS 18.
+
+## 8.2.6 {#826}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.0.15 {#815}
+
+**Release date: September 3, 2024**
+
+### Fixes
+
+* We fixed OTA updates compatibility issues on iOS 18.
+
+## 8.0.14 {#814}
+
+**Release date: August 5, 2024**
+
+### Improvements
+
+* Upgraded `buildToolsVersion`, `compileSdkVersion`, and `targetSdkVersion` to 34 for Android.
+
+## 8.2.5 {#813}
 
 **Release date: July 5, 2024**
 
 ### Fixes
 
-* We updated the `@mendix/native` dependency to fix an encryption issue.
+* <a id="fix-cookie-encryption"></a> We fixed a [known cookie encryption issue](#kis-809) by updating the `@mendix/native` dependency. Users who still have problems after the app is updated to this version should clear their app's cache and load the app again.
 
 ## 8.2.3 {#812}
 
@@ -20,6 +52,11 @@ description: "Native Template 8 release notes."
 ### Improvements
 
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
+
+### Known Issues
+
+* We addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+    * Fixed in [Native Template 8.2.5](#fix-cookie-encryption). 
 
 ## 8.2.2 {#811}
 
@@ -54,7 +91,7 @@ description: "Native Template 8 release notes."
 
 ### Improvements
 
-* We switched to XCode 15.1 for cloud builds (App Center) to comply with the updated minimum iOS SDK requirements.
+* We switched to Xcode 15.1 for cloud builds (App Center) to comply with the updated minimum iOS SDK requirements.
 * We added support for Hermes.
 
 ## 8.1.1 {#807}
@@ -73,7 +110,7 @@ description: "Native Template 8 release notes."
 
 ### Fixes
 
-* We resolved a build error related to Flipper on XCode 15.3.
+* We resolved a build error related to Flipper on Xcode 15.3.
 * We upgraded security-crypto dependency on Android to version 1.1.0-alpha06.
 * We upgraded `@mendix/react-native-sqlite-storage` to version 7.1.0 and `@mendix/native` to the latest compatible version.
 
@@ -89,12 +126,24 @@ description: "Native Template 8 release notes."
 
 **Release date: June 24, 2024**
 
+### Fixes
+
 * We fixed a synchronization issue that affected encrypting-decrypting files.
+
+### Improvements
+
 * We upgraded the `@mendix/native` dependency to the latest compatible version.
+
+### Known Issues {#kis-809}
+
+* We addressed a cookie encryption issue which turned out to be incompatible with the existing mechanism. This leads to the following exception when loading the app: `java.security.InvalidAlgorithmParameterException Unsupported IV length: 16 bytes. Only 12 bytes long IV supported`
+    * Fixed in [Native Template 8.2.5](#fix-cookie-encryption). 
 
 ## 8.0.8 {#808}
 
 **Release date: May 28, 2024**
+
+### Fixes
 
 * We fixed an issue when scheduling local notifications on Android 14.
 
@@ -102,12 +151,19 @@ description: "Native Template 8 release notes."
 
 **Release date: May 15, 2024**
 
+### Fixes
+
 * We resolved a build error related to Flipper on XCode 15.3.
+
+### Improvements
+
 * We added support for scheduling local notifications on Android 14.
 
 ## 8.0.6 {#806}
 
 **Release date: May 10, 2024**
+
+### Fixes
 
 * We fixed an issue when scheduling local notifications on Android 14.
 

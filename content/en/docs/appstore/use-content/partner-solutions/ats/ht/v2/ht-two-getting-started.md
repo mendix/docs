@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-getting-started/
 description: "Describes the initial steps for automatically testing your apps using ATS."
 ---
 
-## 1 Introduction
+## Introduction
 
 This how-to describes the initial steps for automatically testing your applications using the Application Test Suite (ATS). Links to other how-tos and the ATS reference guide are included for more detailed information on steps and functions.
 
@@ -14,7 +14,7 @@ This how-to teaches you how to do the following:
 * Create a test case
 * Create a test suite
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting with this how-to, make sure you have the following prerequisites in place:
 
@@ -28,7 +28,7 @@ Before starting with this how-to, make sure you have the following prerequisites
 You add users to ATS by inviting them to your Mendix app. For more information on the user roles, see [Different User Roles](/appstore/partner-solutions/ats/ov-introduction/#roles).
 {{% /alert %}}
 
-## 3 Configuring Your App
+## Configuring Your App
 
 When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. An app is a folder in which all the data related to a specific application is saved and managed. You must click your app to gain access to the **test settings**.
 
@@ -42,7 +42,7 @@ When you [log in to ATS](https://ats.mendix.com), you see the **My Apps** page. 
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/show-test-settings.png" class="no-border" >}}
 
-You are now on the **Settings** page. Here you add environments and selenium hubs.
+You are now on the **Settings** page. Here you add environments and Selenium hubs.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/settings-page.png" class="no-border" >}}
 
@@ -52,7 +52,7 @@ Only the App admin and Scrum Master have the rights to edit the settings. You se
 
 {{% /alert %}}
 
-### 3.1 Environments
+### Environments
 
 At **Environments** you see a list of test applications that have been configured for the current app. Users can run tests on the listed environments. You can edit, create, and delete applications by clicking the buttons in the top bar.
 
@@ -73,7 +73,7 @@ To add a new environment, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/add-environment.png" class="no-border" >}}
 
-### 3.2 Selenium hubs
+### Selenium hubs
 
 At **Selenium hubs**, you see a list of the Selenium hubs configured for this app. Users can run tests on the listed hubs. You can create, edit, and delete Selenium hubs by clicking the buttons in the top bar.
 
@@ -83,7 +83,7 @@ To add a new Selenium hub, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/new-selenium-hub.png" class="no-border" >}}
 
-    This opens the **Select Provider** dialog box. Here you select one of the three supported selenium providers or a custom selenium hub. ATS creates the URL needed to access your selenium provider when you select a supported selenium provider. When you select custom, you must provide the URL yourself. 
+    This opens the **Select Provider** dialog box. Here you select one of the three supported Selenium providers or a custom Selenium hub. ATS creates the URL needed to access your Selenium provider when you select a supported Selenium provider. When you select custom, you must provide the URL yourself. 
 
 2. Click the provider you use.
 3. Set the following parameters:
@@ -91,8 +91,8 @@ To add a new Selenium hub, follow these steps:
     | Field | Description |
     | :--- | :--- |
     | **Name** | The name of the Selenium hub. You can give it any name. |
-    | **Username** | The username of your selenium provider account. This can be different from your login name. |
-    | **Access Key** | The access key for your selenium provider account. |
+    | **Username** | The username of your Selenium provider account. This can be different from your login name. |
+    | **Access Key** | The access key for your Selenium provider account. |
     | **Custom Capabilities** | Can be used to set the Selenium desired capabilities. |
 
 4. Click **Save** to save the settings.
@@ -101,9 +101,9 @@ To add a new Selenium hub, follow these steps:
 
 For further documentation on how-to install the ATS Helper and the Recorder see [How-to configure a Selenium hub](/appstore/partner-solutions/ats/ht-two-configure-a-selenium-hub/).
 
-## 4 Test Cases
+## Test Cases
 
-The **Test Cases** menu is where you access the repositoy, test data and user stories.
+The **Test Cases** menu is where you access the repository, test data and user stories.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/test-cases-menu.png" class="no-border" >}}
 
@@ -117,7 +117,7 @@ The **Test Cases** menu has three tabs:
 
 In this how-to, only the **Repository** tab is described. 
 
-### 4.1 Creating a Test Case
+### Creating a Test Case
 
 To create a test case, follow these steps:
 
@@ -138,7 +138,7 @@ To create a test case, follow these steps:
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/test-case-details-page.png" class="no-border" >}}
 
-### 4.2 Adding Test Steps
+### Adding Test Steps
 
 Now that you have created a test case, the next step is to configure your test case and start adding test steps. ATS provides two different tools to help add test steps: ATS Helper (Setup step manually) and ATS Recorder (Record step). We advise you to use the recorder as much as possible to add test steps. But, the ATS Recorder might not be able to record certain manual test steps. So, we advise to add steps in the following order:
 
@@ -157,7 +157,7 @@ Before you start adding test steps, add the ATS Helper and ATS Recorder tools:
 
 For further documentation on how-to install the ATS Helper and the Recorder see [How-to install the ATS Helper and Recorder](/appstore/partner-solutions/ats/ht-two-install-ats-helper-recorder/).
 
-#### 4.2.1 Record – Using the Recorder Function
+#### Record – Using the Recorder Function
 
 With the ATS Recorder plugin installed, you can start a recording session at anytime.
 
@@ -183,7 +183,7 @@ All the test steps are numbered for easy identification. To change the sequence 
 
 For further documentation on how-to create a test case see [How-to create a test case](/appstore/partner-solutions/ats/ht-two-create-a-test-case/).
 
-#### 4.2.2 Test Data Tab
+#### Test Data Tab
 
 In this tab, you can connect your datasets to a test case. Use the arrow to select the dataset you need and click **Save**. A new menu will appear in which you can see the dataset fields that are available to select. You can also use this menu to check if you selected the correct dataset.
 
@@ -193,15 +193,15 @@ In this tab, you can connect your datasets to a test case. Use the arrow to sele
 If you do not use the dataset, make sure to disconnect it. ATS will remember where you selected the dataset fields as input, so if you reconnect the dataset, ATS will automatically set the correct input.
 {{% /alert %}}
 
-For further documentation on how-to create a datadriven test case see [How-to create a datadriven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
+For further documentation on how-to create a data-driven test case, see [How-to create a data-driven test case](/appstore/partner-solutions/ats/ht-two-create-datadriven-test-case/).
 
-#### 4.2.3 Show Usages Tab
+#### Show Usages Tab
 
 This tab shows you the actions used in this test case and the test suites that are using this test case. Use this screen to verify that if you make a change to a custom action, it does not affect another test case or test suite.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/show-usages-tab.png" class="no-border" >}}
 
-#### 4.2.4 Stories Tab
+#### Stories Tab
 
 This tab displays the user stories that are connected to your test case, the test cases within that story, and the success rate of the user story.
 
@@ -209,7 +209,7 @@ This tab displays the user stories that are connected to your test case, the tes
 
 For further documentation on how-to link stories to test cases see [How-to link Test Cases/Test Suites to User Stories](/appstore/partner-solutions/ats/ht-two-connect-stories-to-testcases/).
 
-### 4.3 Creating a Test Suite
+### Creating a Test Suite
 
 To create a test suite, follow these steps:
 
@@ -225,14 +225,14 @@ To create a test suite, follow these steps:
 
 5. The **Test Suite** page looks similar to the **Test Case** page, but with fewer options. The **Test Suite** page also displays the following buttons:
 
-    * **Parallel** - executes the test steps at same time, depending on your selenium settings.
+    * **Parallel** - executes the test steps at same time, depending on your Selenium settings.
     * **Sequential** - executes the test steps one at a time, like a test case.
     * **Run** – brings you to the **Job Configuration** page.
     * **Export** – exports the test suite as a XML file (this file can be uploaded into another ATS environment).
 
     {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/test-suite-details-page.png" class="no-border" >}}
 
-#### 4.3.1 Test Steps Tab
+#### Test Steps Tab
 
 Here you can see all the steps that are in your test suite. Each step is either a test suite or a test step.
 
@@ -242,13 +242,13 @@ You add a test case to your test suite by clicking the **Select and add test cas
 
 For further documentation on how-to create a test suite see [How-to create a test suite](/appstore/partner-solutions/ats/ht-two-create-a-test-suite/).
 
-#### 4.3.2 Show Usages Tab
+#### Show Usages Tab
 
 This tab shows you all the **Test Cases used by this Test Suite**, all the **Test Suites used by this Test Suite**, and the **Test Suites using this Test Suite**. Use this screen to make sure that if you make a change, it does not affect other test cases or test suites.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/ht/v2/ht-two-getting-started/show-usages-tab-test-suite.png" class="no-border" >}}
 
-#### 4.3.3 Stories Tab
+#### Stories Tab
 
 This tab displays the user stories that are connected to your test suite, the test cases within that story, and the success rate of the user story. You can **Open**, **Unlink**, or **Link** a user story to your test suite.
 
@@ -256,7 +256,7 @@ This tab displays the user stories that are connected to your test suite, the te
 
 For further documentation on how-to link stories to test suites see [How-to link Test Cases/Test Suites to User Stories](/appstore/partner-solutions/ats/ht-two-connect-stories-to-testcases/).
 
-## 5 Run Configuration
+## Run Configuration
 
 When you click **Run** in the upper-right corner of your test case/suite, the **Job Configuration** page will open.
 
@@ -270,16 +270,16 @@ Here, you can select your Environment and Selenium hub for ATS to use.
 | **Selenium Hub** | Select the Selenium hub you want to use to execute the test case. |
 | **Browser** | Select the browser that the Selenium hub uses to execute the test case. Please note that these are the supported browsers. |
 
-When you select a supported selenium provider like Browserstack additional options appear, the **Platform Settings**.
+When you select a supported Selenium provider like BrowserStack additional options appear, the **Platform Settings**.
 
 | Field | Description |
 | --- | --- |
-| **Platform** | Select the plaform you want to test on. |
+| **Platform** | Select the platform you want to test on. |
 | **Resolution** | Select the resolution of the session screen. |
 
 Now click **Run** again in the upper-right corner to execute the test case/suite against the provided parameters.
 
-## 6 Result
+## Result
 
 When you click **Run**, the **Test Runs** page will open.
 
@@ -291,6 +291,6 @@ You have now finished the getting started guide for ATS. We advice to read next 
 
 Good luck testing your Mendix app with ATS!
 
-## 7 Next Up
+## Next Up
 
 You now learned a few basics of working with ATS. The next how-to is [How to Install the ATS Helper and ATS Recorder](/appstore/partner-solutions/ats/ht-two-install-ats-helper-recorder/). You find an overview of all the how-tos and the structure on the [ATS 2 How-tos](/appstore/partner-solutions/ats/ht-two/) page. We advise you to follow the predefined structure.

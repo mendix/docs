@@ -4,11 +4,11 @@ url: /appstore/partner-solutions/qsm/memo-measurement-results/
 description: "Introduces Mendix Quality and Security Management, which is a cloud service developed by Mendix and the Software Improvement Group (SIG), and the implemented checks for best practices."
 ---
 
-## 1 Background
+## Background
 
 The Software Improvement Group (SIG) and Mendix have entered in a partnership to deliver quality measurement support to Mendix Licensees. In particular, SIG has developed the Quality and Security Management (QSM) tool that performs quality measurements on Mendix application models, calculates quality ratings from the measurements, and presents both measurements and ratings on a quality dashboard. QSM is developed by SIG and hosted on the Mendix infrastructure.
 
-## 2 Usage of Measurement Results by SIG for Continuous Improvement
+## Usage of Measurement Results by SIG for Continuous Improvement
 
 The measurement results of QSM are used by the R&D team of SIG to improve the measurement algorithms, to recalibrate the rating system, and to provide anonymized benchmarks to Licensees:
 
@@ -21,6 +21,6 @@ The measurement results of QSM are used by the R&D team of SIG to improve the me
 
 * Anonymized benchmarks: Overviews can be provided that show the rating results of one or more selected apps in relation to a group of anonymous peers.
 
-## 3 SIG Information Security
+## SIG Information Security
 
 SIG operates a software analysis laboratory with an ISO 17025 quality measurement system certified by TÜV Informationstechnik. Additionally, the SIG information security management system is certified against ISO 27001 by TÜV Nord. These management systems ensure the correct and secure handling of data in all SIG activities.

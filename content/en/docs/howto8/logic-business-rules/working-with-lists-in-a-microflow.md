@@ -5,13 +5,13 @@ weight: 6
 description: "Teaches you how to work with a list of objects in a microflow as well retrieve a filtered list of objects from the database."
 ---
 
-## 1 Introduction
+## Introduction
 
 In this how-to, you will learn how to work with a list of objects in a microflow. To manage this list you will first retrieve a filtered list of objects from the database. Mendix utilizes XPath constraints to apply filters. To learn more about XPath, see [XPath Contains](/refguide8/xpath-contains/) in the *Studio Pro Guide*. Secondly, you will iterate over the retrieved list of objects and calculate the total price of all the orders in a [Loop](/refguide8/loop/). You will end this how-to with an alternative to calculating aggregated values over a list of objects.
 
-## 2 Preparing the Data Structure, GUI and Example Data
+## Preparing the Data Structure, GUI and Example Data
 
-To see the results of this how-to it is necessary that you setup a test project with test data.
+To see the results of this how-to it is necessary that you set up a test project with test data.
 
 Before you continue, make sure that you know how to create the following:
 
@@ -33,7 +33,7 @@ Before you continue, make sure that you know how to create the following:
 
     {{< figure src="/attachments/howto8/logic-business-rules/define-access-rules-using-xpath/18581373.png" class="no-border" >}}
 
-## 3 Retrieving a Filtered List of Objects from the Database
+## Retrieving a Filtered List of Objects from the Database
 
 In the previous section you have set up a basic data structure and created some sample data. In this section you will retrieve all the 'Processing' orders. To achieve this you will add a microflow button to the 'Orders' overview. In this microflow you will add a 'Retrieve from database' 'Action activity' with an XPath constraint. The XPath constraint will filter the retrieved list to only the 'Invoiced' orders.
 
@@ -83,7 +83,7 @@ You should see a microflow like this:
 
 {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581087.png" class="no-border" >}}
 
-## 4 Iterate Over a List of Objects
+## Iterate Over a List of Objects
 
 In the previous section you retrieved a list of orders with the status 'Processing'. In this section you will iterate over this list and change the status of each object individually to 'Complete'. To do so you will use a 'Loop' to iterate over the 'OrderProcessingList' and use the change object activity to change the status of the order object.
 
@@ -130,12 +130,12 @@ In the previous section you retrieved a list of orders with the status 'Processi
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581113.png" class="no-border" >}}
 
-## 5 Calculating a Total List Value Using a Variable and a Loop
+## Calculating a Total List Value Using a Variable and a Loop
 
 In the previous section you iterated over a filtered list of objects using a 'Loop'. In this section you will use a loop to calculate the total sum of all your orders. To calculate this sum you will create a variable, which will be changed for every iteration in the loop.  
 
 1. Add a new microflow button to your order data grid with the following details:</br>
-    1. **Caption** of the button:  Calculate Total Order Price
+    1. **Caption** of the button: Calculate Total Order Price
     1. **Name** of the microflow: IVK_CalculateTotalPriceOrders
 2. In the new microflow, add a **Retrieve** activity for **Orders** and a loop for this list to the microflow.
 
@@ -180,7 +180,7 @@ In the previous section you iterated over a filtered list of objects using a 'Lo
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" class="no-border" >}}
 
-## 6 Calculate a Total List Value Using an Aggregate Function
+## Calculate a Total List Value Using an Aggregate Function
 
 In the previous section you iterated over a list to add the value of single object to a total price variable. In this section you will use the 'aggregate list' function to calculate the total price instead of using a loop. The aggregate list can be used to calculate aggregated values such as the maximum, minimum, sum, average and total amount of objects over a list of objects.
 
@@ -212,7 +212,7 @@ In the previous section you iterated over a list to add the value of single obje
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581103.png" class="no-border" >}}
 
-## 7 Filter List of Orders on the City of the Associated Customers
+## Filter List of Orders on the City of the Associated Customers
 
 In the previous sections you filtered the list of orders from database on attributes of the order entity itself. In this section you will constrain on attributes over the associated customer object. In the example of this section you will set the order status of all customers in Rotterdam to the status 'Complete'.
 
@@ -228,7 +228,7 @@ In the previous sections you filtered the list of orders from database on attrib
 
     {{< figure src="/attachments/howto8/logic-business-rules/working-with-lists-in-a-microflow/18581110.png" class="no-border" >}}
 
-## 8 Read More
+## Read More
 
 * [Defining access rules using XPath](/howto8/logic-business-rules/define-access-rules-using-xpath/)
 * [Extending Your Application with Custom Java](/howto8/logic-business-rules/extending-your-application-with-custom-java/)

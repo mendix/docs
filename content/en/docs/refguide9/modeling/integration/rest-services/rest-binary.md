@@ -5,7 +5,7 @@ linktitle: "Images and Files with REST"
 weight: 79
 ---
 
-## 1 Introduction
+## Introduction
 
 This guide covers how to use REST to send and retrieve files, including images, in Studio Pro.
 
@@ -18,7 +18,7 @@ You will learn about the following:
 
 If you are only interesting in consuming files, you can skip down to the [Retrieve Images and Files with REST](#retrieve-files) section.
 
-### 1.1 Prerequisites
+### Prerequisites
 
 To publish or retrieve files with REST, do the following:
 
@@ -29,11 +29,11 @@ Mendix recommends reading the following for some more background:
 * [Publishing](/howto9/integration/publish-rest-service/) and [consuming](/howto9/integration/consume-a-rest-service/) REST services
 * Working with [Images, Videos, and Files](/refguide9/image-and-file-widgets/) in Studio Pro
 
-## 2 Send Files with REST {#create-service}
+## Send Files with REST {#create-service}
 
 Imagine that your app is functioning as a content management system (CMS), and you want to be able to send and receive images and files. You can publish the generalized entities as a REST service, which exposes the binary data of files stored in the entity.
 
-### 2.1 Publishing the Service {#publish-service}
+### Publishing the Service {#publish-service}
 
 To publish the **System.Image** or **System.Filedocument** entities as a [REST service](/refguide9/published-rest-service/), do the following:
 
@@ -67,7 +67,7 @@ The **Published REST service** document for the exposed image or file entity has
 
 After you run your app, click the URL in the **Location** field to view the OpenAPI specs.
 
-### 2.1.1 Understanding the Service Details {#service-details}
+### Understanding the Service Details {#service-details}
 
 Open your published REST service, then double-click the **Get by** key, or single-click and click **Edit**, to open the **Get by** property details. By default, the **Get by** key will return a binary response. The **Export mapping** is blank because a binary object without an export mapping returns binary content.
 
@@ -75,7 +75,7 @@ Open your published REST service, then double-click the **Get by** key, or singl
 
 Click **Show** next to the **Microflow** field to view the **MyFirstModule.MyFile_Get_ByKey** microflow. The generated **Get by** key returns a file document.
 
-### 2.2 Adding the MIME Type to a GET Microflow {#set-mime-type}
+### Adding the MIME Type to a GET Microflow {#set-mime-type}
 
 A `GET` request to the REST endpoint you created (in this example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`) will return the binary for the first uploaded file. We need to specify the expected media type so that it returns the file in the expected way (for example, displaying an image).
 
@@ -83,7 +83,7 @@ In the **GET_ByKey** microflow, specify the media type (or MIME type) in the con
 
 See [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types) for a generic, external list of common content header types.
 
-#### 2.3.1 MIME Type for Images {#mime-images}
+#### MIME Type for Images {#mime-images}
 
 In the **GET_ByKey** microflow, do the following: 
 
@@ -95,7 +95,7 @@ In the **GET_ByKey** microflow, do the following:
      * **Value (String (Unlimited))** – set the **Value** to `'image/png'`, or the image type that will be returned
      * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-#### 2.3.2 MIME Type for PDFs
+#### MIME Type for PDFs
 
 Follow the steps in the [MIME Type for Images](#mime-images) section, then set the three drop-down options to the following:
 
@@ -103,7 +103,7 @@ Follow the steps in the [MIME Type for Images](#mime-images) section, then set t
 * **Value (String (Unlimited))** – set the **Value** to `'application/pdf'` 
 * **System.HttpHeaders (System.HttpMessage)** - set the **Value** to `$httpResponse`
 
-### 2.4 Testing the Service {#test-service}
+### Testing the Service {#test-service}
 
 Test the service to ensure that it works!
 
@@ -122,7 +122,7 @@ Test the service to ensure that it works!
 
 4. Click **Get/myfile/{myfileid}** to return the content, and you should see the PNG displayed. If you only see the binary, make sure that you have [set the MIME Type](#set-mime-type).
 
-## 3 Retrieve Images or Files from a Published REST Service {#retrieve-files}
+## Retrieve Images or Files from a Published REST Service {#retrieve-files}
 
 You can implement a client in your app that will retrieve binary files from any published REST service, from a Mendix app or anywhere else, and store them in a `FileDocument` entity.
 
@@ -134,7 +134,7 @@ You can implement a client in your app that will retrieve binary files from any 
 
 Then, you can retrieve the image with the [Image widget](#image-widget), retrieve a PDF with the [HTML/JavaScript snippet widget](#html-snippet) for PDFs, or [retrieve images or PDFs with a microflow](#retrieve-microflow).
 
-### 3.1 Retrieving Images Using the Image Widget {#image-widget}
+### Retrieving Images Using the Image Widget {#image-widget}
 
 Retrieve images with the URL of the published REST service by using the [Image](/appstore/widgets/image/) widget available on the Mendix Marketplace.
 
@@ -148,7 +148,7 @@ To do so, do the following:
 6. In the **Data source** field, select the **Image URL** for **Image type**.
 7. Paste the location of the file in the REST service (for example, `http://localhost:8080/rest/cmsapi/v1/myfile/1`).
 
-### 3.2 Retrieving PDFs Using the HTML/JavaScript Snippet Widget {#html-snippet}
+### Retrieving PDFs Using the HTML/JavaScript Snippet Widget {#html-snippet}
 
 Retrieve PDFs with the URL of the published REST service by using the [HTML/JavaScript Snippet](/appstore/widgets/html-javascript-snippet/) widget available on the Mendix Marketplace.
 
@@ -166,7 +166,7 @@ To do so, do the following:
 <embed src="http://localhost:8080/rest/cmsapi/v1/myfile/1" width="400px" height="400px">
 ```
 
-### 3.3 Retrieving Files Using a Microflow {#retrieve-microflow}
+### Retrieving Files Using a Microflow {#retrieve-microflow}
 
 You can call a REST service in a microflow, then store the binary response in an entity.
 

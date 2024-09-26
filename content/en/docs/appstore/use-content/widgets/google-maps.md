@@ -12,25 +12,25 @@ aliases:
 This widget is deprecated. You can use the [Maps](/appstore/widgets/maps/) widget instead.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 The [Google Maps](https://marketplace.mendix.com/link/component/48911/) widget can be used to show Google Maps locations in your app.
 
 For information on styling your Google Maps widget, see the [Style Google Maps](#style-google-maps) section below.
 
-### 1.1 Features
+### Features
 
 * Show the location on a map based on an address or a coordinate
 * Show a list of both addresses and coordinates on the map
 * Use the context, static, XPath, or microflow data sources
 * Customize the display of the marker (if the marker cannot be found, the widget will use the specified custom marker; otherwise, it will use the marker bundled with the widget)
 
-### 1.2 Limitations
+### Limitations
 
 * The context and static data sources are offline-capable with Mendix data; however, they still need to be online to see the map.
 * The widget uses [Google Maps API v3](https://developers.google.com/maps/documentation/javascript/reference/), so the limitations from Google apply, especially for geocoding; advise geocoding your locations within your Mendix application and storing them for later use as coordinates on the widget is recommended
 
-### 1.3 Prerequisites
+### Prerequisites
 
 To use the widget, you need to obtain a Google API Key.
 
@@ -38,35 +38,35 @@ To use the widget, you need to obtain a Google API Key.
 Make sure that you keep the API key secure. For more information, see [API security best practices](https://developers.google.com/maps/api-security-best-practices).
 {{% /alert %}}
 
-## 2 How It Works
+## How It Works
 
 When displaying locations, the widget will prioritize coordinates over addresses. If the coordinate is not specified, it will use address. If there are multiple locations, the map will be centered based on the default address specified. However, if there is only a single point in the list, the map will center to that point.
 
 When the zoom level is zero, then the map will use the bounds zoom. When the default center is not specified, the map will use the bounds center.
 
-## 3 Configuration
+## Configuration
 
-### 3.1 Data Sources
+### Data Sources
 
-#### 3.1.1 Static Tab
+#### Static Tab
 
 For the static data source option, click **Static locations** > **New** to add static locations.
 
-#### 3.1.2 Database / Microflow Tab
+#### Database / Microflow Tab
 
 For the XPath data source option, specify the **Locations entity** and the **XPath constraint** (if any).
 
 For the microflow data source option, specify the **Locations entity** and the **Microflow** from which the map locations will be retrieved.
 
-### 3.2 Appearance Tab
+### Appearance Tab
 
 The properties on this tab are used to configure how the map responsively looks in relation to the container in which it is placed.
 
-### 3.3 Markers Tab
+### Markers Tab
 
 This is used to configure how the marker icon should look. The markers are created based on enumerations. An enumeration containing the name and caption of the markers should be created within your app, and that enumeration is then assigned to the **Location** entity. From the **Markers** tab, the enumeration key and image is then specified in **Images**.
 
-## 4 Style Google Maps {#style-google-maps}
+## Style Google Maps {#style-google-maps}
 
 Google Maps is a very powerful addition to your applications. You can use it to display locations, areas, routes, etc. By default every map overview looks the same, like on the default Google Maps website. There is now a new option available on the Google Maps widget to style the map overview to make it match your application design. Follow the steps below to sauce-up the map overviews in your applications with a minimal amount of effort!
 
@@ -76,7 +76,7 @@ Google Maps is a very powerful addition to your applications. You can use it to 
 * Find and implement the right style matching your application
 * Upload new styles to support the community
 
-## 5 Preparation
+## Preparation
 
 Before you start this styling guide, please make sure you have completed the following prerequisite:
 
@@ -86,9 +86,9 @@ Before you start this styling guide, please make sure you have completed the fol
 These instructions are for the Google Maps widget which you can download from the Marketplace. The Google Maps widget within the Atlas UI template has different options.
 {{% /alert %}}
 
-## 6 Adding the Style
+## Adding the Style
 
-### 6.1 Widget Properties
+### Widget Properties
 
 In this chapter you will learn how to add styling to the Google Maps widget.
 
@@ -107,7 +107,7 @@ In this chapter you will learn how to add styling to the Google Maps widget.
 3. The example style will give you this result:
     {{< figure src="/attachments/appstore/use-content/widgets/style-google-maps/style-example.png" class="no-border" >}}
 
-### 6.2 Finding the Right Style
+### Finding the Right Style
 
 Choosing an existing style sheet from a large library that fits your application will save you a lot of time. Here is a community website where new styles are uploaded on a regular basis: [https://snazzymaps.com/](https://snazzymaps.com/).
 
@@ -130,7 +130,7 @@ Choosing an existing style sheet from a large library that fits your application
 6. And there it is:
     {{< figure src="/attachments/appstore/use-content/widgets/style-google-maps/new-style-example.png" class="no-border" >}}
 
-### 6.3 Upload Your Own Style Array
+### Upload Your Own Style Array
 
 Using community tools, this is how you can upload your own custom style array to the website:
 

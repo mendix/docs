@@ -7,42 +7,42 @@ title: "Enter the title of the document"
 #draft: Set to true if page should not appear in production
 ---
 
-## 1 Introduction
+## Introduction
 
 {Provide a basic description of what this platform-supported Mendix Marketplace component does.}
 
-### 1.1 Typical Use Cases
+### Typical Use Cases
 
-### 1.2 Features
+### Features
 
-### 1.3 Limitations
+### Limitations
 
-### 1.4 Prerequisites
+### Prerequisites
 
-### 1.5  Dependencies
+### Dependencies
 
 {List important dependencies, especially when they are other Marketplace components.}
 
-### 1.6 Demo App
+### Demo App
 
 {Provide a link to a maintained demo app where the component is used if available.}
 
-## 2 Installation
+## Installation
 
 {Describe the basic installation of the component if necessary.}
 
-## 3 Configuration
+## Configuration
 
 {Describe the properties to be configured.}
 
-## 4 Usage
+## Usage
 
 {Optional: Provide more info for general use cases here if desired. You should provide this info in a reference guide page or how-to for more specific or advanced use cases.}
 
-## 5 Troubleshooting
+## Troubleshooting
 
 {Optional: Provide basic troubleshooting info for configuration here if necessary. You should provide this info in a reference guide page or how-to for more specific use cases.}
 
-## 6 Read More
+## Read More
 
 {Add links to related documents and blog posts. Contextualize necessary third-party links in the above sections, as they should not be put here.}

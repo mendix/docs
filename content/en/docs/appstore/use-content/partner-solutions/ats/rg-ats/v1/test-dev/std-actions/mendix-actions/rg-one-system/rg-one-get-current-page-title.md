@@ -3,15 +3,15 @@ title: "Get Current Page Title"
 url: /appstore/partner-solutions/ats/rg-one-get-current-page-title/
 ---
 
-## 1 Description
+## Description
 
 Returns the current Page/Form Title.
 
-## 2 Usage
+## Usage
 
 Use this action to get the current page or current form title as a string.
 
-## 3 Return Value
+## Return Value
 
 Name | Datatype | Description
 --- | --- | ---

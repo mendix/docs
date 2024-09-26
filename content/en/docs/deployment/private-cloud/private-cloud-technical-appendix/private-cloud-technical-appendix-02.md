@@ -6,7 +6,7 @@ description: "Describes which providers are supported by Mendix for Private Clou
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 This documentation provides an overview of how the Mendix for Private Cloud components interact, both with external services and with each other. It explains what happens when:
 
@@ -19,7 +19,7 @@ The sequence diagrams in this document are simplified for clarity. Kubernetes Op
 The diagrams apply to both connected and standalone modes, with some additional steps which are identified as being only used in connected mode.
 {{% /alert %}}
 
-## 2 Installation Prerequisites
+## Installation Prerequisites
 
 For a full list of the Operator prerequisites, see Mendix for Private Cloud [Supported Providers](/developerportal/deploy/private-cloud-supported-environments/).
 
@@ -38,7 +38,7 @@ Before installing the Mendix for Private Cloud Operator, it is highly recommende
 If your Kubernetes environment can be accessed from the public internet, ensure that the environment is secured and up to date.
 {{% /alert %}}
 
-### 2.1 Kubernetes
+### Kubernetes
 
 The Mendix Operator uses the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/) to manage Kubernetes resources and store its state. The Mendix Operator includes [Custom Resource Definitions (CRDs)](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/), which allow control of the Operator and query its status through the Kubernetes API. Any Kubernetes API client can be used to control the Operator, including `kubectl`, `oc`, the OpenShift Web Console, [Lens](https://k8slens.dev/), and many others. The Mendix Portal can also be used to manage environments (using the Mendix Gateway Agent as the Kubernetes API client).
 
@@ -46,7 +46,7 @@ Mendix for Private Cloud doesn't access the base operating system. Kubernetes se
 
 During [installation with `mxpc-cli`](#installation), the current user's Kubernetes authorization is used to create namespaces and install CRDs.
 
-### 2.2 Database
+### Database
 
 Each Mendix environment needs a dedicated database – two different applications/environments cannot share a database.
 Mendix for Private Cloud has built-in features to create and delete tenants on a database server, which allows a single database server to be shared by multiple environments. This is called an “On-Demand” database; as soon as a new environment is created, the Operator can automatically create a database tenant for that environment.
@@ -57,14 +57,14 @@ Mendix for Private Cloud will not install, create, or maintain the database serv
 
 For apps that don't need persistence (for example demo or frontend apps), an ephemeral database can be used. The Mendix Runtime will use an in-memory database which will not persist any data between restarts.
 
-### 2.3 File Storage
+### File Storage
 
 To store files, Mendix environments need access to a blob (object) storage server, such as AWS S3 or Minio. A specialized blob storage server is much easier to maintain and manage than block storage (CSI or mounted volumes). Unlike databases, a single blob storage bucket and account can be shared by multiple environments.
 Depending on the storage provider, Mendix for Private Cloud can either provision the bucket and IAM user automatically when a new environment is created, or let an environment use a pre-provisioned bucket and IAM account.
 
 Mendix for Private Cloud will not install, create, or maintain the blob storage server (such as Minio) – you will need to install the blob storage server and maintain it. When using a managed storage solution such as AWS S3 or Azure Blob Storage, you will need to create the storage account and IAM role to be used by the Mendix Operator.
 
-### 2.4 Network Endpoint
+### Network Endpoint
 
 To allow HTTP clients to communicate with the Mendix Runtime, you will need to set up the network infrastructure. This typically includes a DNS wildcard domain, a load balancer, and an ingress controller. The infrastructure will depend on how exactly your network is set up and how Mendix apps should be reachable. For example, you might have a requirement allow Mendix apps to only be reachable from a private intranet and use domains from a private DNS zone.
 
@@ -78,20 +78,20 @@ Mendix for Private Cloud can create one of:
 
 Mendix for Private Cloud allows you to customize some Ingress, Route, and Service properties either globally (for the entire namespace) or per environment.
 
-### 2.5 Container Registry
+### Container Registry
 
 Kubernetes uses container images to distribute software. Before deploying a Mendix app (.mda) file, Mendix for Private Cloud will repack the .mda file into a container image and push this image into a container image registry such as *ECR*, *quay.io*, or *Nexus*. Using a centralized container registry simplifies cluster scaling and provides insights into what is running in a cluster.
 For example, it is possible to use [Trivy scanner](https://github.com/aquasecurity/trivy) to scan all images deployed in a cluster for CVEs.
 
 You will need to create the container registry and provide credentials to the Mendix Operator so that it can push images to the registry. In addition, your Kubernetes cluster needs to be authorized to pull images from the registry.
 
-### 2.6 Network Connectivity
+### Network Connectivity
 
 Your cluster needs network connectivity to the database and file (blob) storage.
 
 For *Connected* clusters, Mendix for Private Cloud needs to be able to connect to [Mendix Services](/developerportal/deploy/private-cloud-cluster/#prerequisites-connected). If necessary, communication can be done through an HTTPS proxy. The Mendix Operator doesn't require any internet-facing open ports (port forwarding) to communicate with Mendix services. All communication with the Mendix Portal is over HTTPS and is initiated from the Kubernetes cluster. It is even possible to run Mendix for Private Cloud behind Network Address Translation (NAT) devices or even a series of NAT devices.
 
-## 3 Installation {#installation}
+## Installation {#installation}
 
 The diagram below shows the steps which you need to take to install Mendix for Private Cloud in a namespace. It assumes that the Cluster Administrator has already set up the cluster so that the Mendix Portal knows about it. See [Creating a Private Cloud Cluster](/developerportal/deploy/private-cloud-cluster/#create-cluster) for more information.
 
@@ -109,7 +109,7 @@ In *Connected Mode*, the `mxpc-cli` tool will call the Mendix Portal to create a
 The configuration tool only creates configuration objects through the Kubernetes API. It can manage Mendix for Private Cloud components (the Mendix Operator and Mendix Gateway Agent). It does not directly communicate with the Mendix for Private Cloud Operator or manage infrastructure such as AWS accounts, VMs, or databases.
 {{% /alert %}}
 
-## 4 App Deployment
+## App Deployment
 
 When you want to create a new environment you need to create a `MendixApp` CR in Kubernetes.
 
@@ -132,7 +132,7 @@ Any time a CR's status is changed, the Operator will propagate it to the `Mendix
 In connected mode, this status will be reported back to the Mendix Portal.
 To ensure you see the latest status reported by the Mendix Gateway Agent in the Mendix Portal, press the Refresh button.
 
-### 4.1 Storage Provisioning
+### Storage Provisioning
 
 The diagram below provides a more detailed explanation how the Mendix Operator communicates with the `StorageInstance` controller when creating a new environment.
 
@@ -156,7 +156,7 @@ Some provisioners (“basic” provisioners) don't communicate with a storage se
 
 If the provisioner pod fails with an error, it is likely to be because of a configuration issue, and the `StorageInstance` controller will not try to run the provisioner pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the provisioner pod. Only then will the `StorageInstance` controller attempt to provision storage again.
 
-### 4.2 App Image Build
+### App Image Build
 
 When a new deployment package (MDA) is deployed from the Mendix Portal to an environment, the Mendix Portal will generate a new sourceURL (the URL where the MDA can be downloaded) and send it to the Mendix Gateway Agent. The Mendix Gateway Agent will then update the `MendixApp` CR's `spec.sourceURL` attribute.
 
@@ -179,7 +179,7 @@ When the build pod successfully completes without errors, the container registry
 
 If the build pod fails with an error, it is likely to be because of a configuration issue, and the `Build` controller will not try to run the build pod again. You will need to review the logs from the failed pod, resolve the underlying issue, and delete the build pod. Only then will the `Build` controller attempt to provision storage again.
 
-### 4.3 Endpoint Allocation
+### Endpoint Allocation
 
 Mendix for Private Cloud offers three ways to route traffic from an HTTP listener to a Mendix runtime:
 
@@ -191,7 +191,7 @@ The Ingress and Route options allow you to quickly start using an existing Ingre
 
 If you choose the *service only* option, you can route traffic to the service directly from a load balancer such as AWS CLB or NLB, or manually create and manage Ingress resources.
 
-#### 4.3.1 Using Kubernetes Ingress
+#### Using Kubernetes Ingress
 
 To use an Ingress controller, you need to install it first:
 
@@ -204,11 +204,11 @@ To use an Ingress controller, you need to install it first:
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-ingress-controller.png" class="no-border" >}}
 
-#### 4.3.2 Using OpenShift Routes
+#### Using OpenShift Routes
 
 If you are using OpenShift Routes, the OpenShift router is already configured and doesn't need additional configuration.
 
-#### 4.3.3 The Endpoint Controller
+#### The Endpoint Controller
 
 When a new environment is created in the Mendix Operator, the Operator will create a service object (for all endpoint types: service only, ingress, or route) together with the ingress or route object, if required.
 After the `Endpoint` controller successfully creates all required objects, the `MendixApp` controller will automatically set the Runtime's ApplicationRootUrl so that a Mendix app can always know its URL. Some marketplace modules, for example [SAML](https://marketplace.mendix.com/link/component/1174), need this information to work correctly.
@@ -223,7 +223,7 @@ When accessing an app from a web browser through a load balancer service, the pa
 
 {{< figure src="/attachments/deployment/private-cloud/private-cloud-technical-appendix/private-cloud-technical-appendix-02/mx4pc-traffic-service.png" class="no-border" >}}
 
-### 4.4 Logging and Metering
+### Logging and Metering
 
 For logging and metering, Mendix for Private Cloud relies on open industry standards:
 

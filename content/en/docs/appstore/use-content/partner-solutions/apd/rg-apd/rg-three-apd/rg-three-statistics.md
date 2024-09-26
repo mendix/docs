@@ -3,7 +3,7 @@ title: "Performance Statistics"
 url: /appstore/partner-solutions/apd/rg-three-statistics/
 ---
 
-## 1 Performance Statistics
+## Performance Statistics
 
 On the **Statistics** tab, the collected statistics are displayed with the following columns:
 
@@ -17,7 +17,7 @@ This overview displays the statistics hourly or daily (you can switch between ti
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/apd/rg-apd/rg-three-apd/rg-three-statistics/statistics.png" class="no-border" >}}
 
-## 2 Microflow Statistics
+## Microflow Statistics
 
 The **Items** tab provides insight into all the actions and sub-microflows of the selected microflow from the statistics overview. Drill down to see more details.
 

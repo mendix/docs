@@ -4,7 +4,7 @@ url: /howto8/logic-business-rules/translatable-validation-messages/
 weight: 14
 ---
 
-## 1 Introduction
+## Introduction
 
 Setting up validation rules should be relatively straightforward. Per object or per process step you want to have a single microflow that is in charge of the validation. That microflow has the required input parameters, validates all values. If a value is invalid the microflow will execute the validation feedback activity. When completing the microflow it will return a Boolean true/false whether or not the object has been successfully validated.
 
@@ -18,13 +18,13 @@ Or if you need to differentiate between the different validation messages you ca
 
 {{< figure src="/attachments/howto8/logic-business-rules/translatable-validation-messages/18581627.png" class="no-border" >}}
 
-## 2 Simple Alternative for Translating Messages
+## Simple Alternative for Translating Messages
 
 There is one big problem with this second solution, you loose the ability to translate your validation message. String variables or attributes can not be translated by the platform. If you only have a hand full of these types of validation rules you might want to consider modeling out all language combinations. For each validation message you have to add decisions and activities per language. This could become a lot of work, but as long as you only have to do this one a couple of places it might not be worth to use the more complicated solution described below. 
 
 {{< figure src="/attachments/howto8/logic-business-rules/translatable-validation-messages/18581626.png" class="no-border" >}}
 
-## 3 Translating Validation Rules
+## Translating Validation Rules
 
 If you have to translate multiple validation rules, it will be worth it to develop a more advanced validation module which supports you in your maintenance of all these rules and messages.
 

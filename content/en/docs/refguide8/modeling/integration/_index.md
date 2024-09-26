@@ -6,7 +6,7 @@ no_list: false
 description_list: true 
 ---
 
-## 1 Introduction
+## Introduction
 
 Integration with other applications (other than Mendix) can be done using REST or SOAP/Web Services. Mendix can import and export data from XML and JSON.
 
@@ -18,4 +18,4 @@ For a [call REST service](/refguide8/call-rest-action/) activity and JSON suppor
 For a [call web service](/refguide8/call-web-service-action/) activity and support for SOAP web services/XML, see [Consumed Web Services](/refguide8/consumed-web-services/).
 {{% /alert %}}
 
-## 2 Documents in This Section
+## Documents in This Section

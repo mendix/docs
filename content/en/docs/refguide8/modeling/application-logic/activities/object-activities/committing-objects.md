@@ -4,11 +4,11 @@ url: /refguide8/committing-objects/
 weight: 30
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Commit** activity can commit one or more objects. For persistable entities this means that the object will be stored in the database. Committing non-persistable entities stores the current attribute values and association values in memory, this allows a rollback to revert to those values. See also [Persistability](/refguide8/persistability/).
 
-## 2 Properties
+## Properties
 
 An example of commit object(s) properties is represented in the image below:
 
@@ -21,7 +21,7 @@ The commit object(s) properties pane consists of the following sections:
 * [Action](#action)
 * [Common](#common)
 
-## 3 Action Section{#action}
+## Action Section{#action}
 
 The Action section of the properties pane shows the action associated with this activity.
 
@@ -29,11 +29,11 @@ You can open a dialog box to configure this action by clicking the ellipsis (**â
 
 You can also open the dialog box by double-clicking the activity in the microflow or right-clicking the activity and selecting **Properties**.
 
-### 3.1 Object or List
+### Object or List
 
 The object or list of objects that you want to commit.
 
-### 3.2 With Events
+### With Events
 
 {{% alert color="info" %}}
 This property is for microflows only.
@@ -43,7 +43,7 @@ Indicates whether or not to execute the commit event handlers of the objects.
 
 Default: *Yes*
 
-#### 3.2.1 Events in Nanoflows
+#### Events in Nanoflows
 
 Nanoflows do not have this property.
 
@@ -51,7 +51,7 @@ If the commit object(s) action is used in an online app, it sends a commit reque
 
 If the commit object(s) action is used in an offline app, the changes are committed to the offline database, and event handlers are run when the offline app synchronizes.
 
-### 3.3 Refresh in Client{#refresh-in-client}
+### Refresh in Client{#refresh-in-client}
 
 This setting defines how changes are reflected in the pages presented to the end-user.
 
@@ -69,27 +69,27 @@ When testing your app, ensure that the desired data is being displayed by the wi
 When committing a large number of objects, Mendix recommends not enabling **Refresh in client**, because it can slow things down.
 {{% /alert %}}
 
-#### 3.3.1 Microflow is Called from the Client in an Online App
+#### Microflow is Called from the Client in an Online App
 
 If **Refresh in client** is set to *No*, the change is not reflected in the client.
 
 If set to *Yes*, the object is refreshed across the client, which includes reloading the relevant [data sources](/refguide8/data-sources/).
 
-#### 3.3.2 Microflow is Called in an Offline, Native, or Hybrid App
+#### Microflow is Called in an Offline, Native, or Hybrid App
 
 When inside a microflow that is called from an offline, native, or hybrid app, the **Refresh in client** option is ignored and functions as if it was set to **No**.
 
 For more information, see the [Microflows](/refguide8/offline-first/#microflows) section of the *Offline-First Reference Guide*.
 
-#### 3.3.3 Action is in a Nanoflow
+#### Action is in a Nanoflow
 
 When inside a [nanoflow](/refguide8/nanoflows/), the object is refreshed across the client as if **Refresh in client** was set to *Yes*.
 
-## 4 Common Section{#common}
+## Common Section{#common}
 
 {{% snippet file="/static/_includes/refguide8/microflow-common-section-link.md" %}}
 
-## 5 How Commits Work{#how-commits-work}
+## How Commits Work{#how-commits-work}
 
 When an object is committed through a default Save button, a commit activity, or web services, it will always trigger the commit events. The platform will also evaluate all associated objects. To guarantee data consistency, the platform may also autocommit associated objects.
 

@@ -5,7 +5,7 @@ weight: 160
 description: "Describes the functions for parsing Date and time values from strings using a specified pattern or producing a string from a Date and time value in Mendix."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 This document describes functions that are used to parse Date and time values from strings using a specified pattern, or to produce a string from a Date and time value.
 
@@ -56,11 +56,24 @@ The following pattern letters are only available for microflows:
 For some parse and format functions, there are UTC variants. Do not use these UTC variants (for example, `parseDateTimeUTC`) in client-side expressions if you want to assign the output to (or compare the output with) an attribute of type **Date and time** where **Localize** is disabled. In the client, the localization functionality is built into the attribute type itself, and using UTC functions causes the time zone conversion to be handled twice.
 {{% /alert %}}
 
-## 2 parseDateTime[UTC] {#parsedatetime-utc}
+## parseDateTime[UTC] {#parseDateTime}
 
 Takes a string and parses it. If it fails and a default value is specified, it returns the default value. Otherwise, an error occurs. The function `parseDateTime` uses the user's time zone and `parseDateTimeUTC` uses the UTC calendar.
 
-### 2.1 Input Parameters
+{{% alert color="info" %}}
+When using `yy` dateformat, the century guessing by proximity follows the rule of **50/50**. Specifically, it adjusts dates to be within 50 years before and 50 years after the time the date format instance is created:
+
+* `24` {{< icon name="arrow-narrow-right" >}} `2024`
+* `75` {{< icon name="arrow-narrow-right" >}} `1975`
+  
+The topic above applies when using the expression in Nanoflow. When using it in a Microflow then the rule will follow the rule of **80/20**:
+
+* `24` {{< icon name="arrow-narrow-right" >}} `2024`
+* `68` {{< icon name="arrow-narrow-right" >}} `1968`
+  
+{{% /alert %}}
+
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -70,7 +83,7 @@ The input parameters are described in the table below:
 | Format                       | String                                                       |
 | Default value (**optional**) | Date and time                                                |
 
-### 2.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -84,19 +97,19 @@ If the `Date` string is date-like, but not a valid date, the function will be ab
 For example `parseDateTime('35-11-2015', 'dd-MM-yyyy', dateTime(2015))` will return `05 December 2015 12:00 AM`.
 {{% /alert %}}
 
-### 2.3 Example
+### Example
 
 The examples below illustrate which value the expression returns:
 
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     parseDateTime('2022-04-30T22:00:00.000', 'yyyy-MM-dd''T''HH:mm:ss.SSS')
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     Apr 30 2022 22:00:00
     ```
 
@@ -104,21 +117,21 @@ The examples below illustrate which value the expression returns:
     
 * If you use the following input:
 
-    ```java {linenos=false}
+    ```java
     parseDateTime('noDateTime', 'dd-MM-yyyy', dateTime(2007))
     ```
 
     the output is:
 
-    ```java {linenos=false}
+    ```java
     Mon Jan 01 00:00:00 CET 2007
     ```
 
-## 3 formatDateTime[UTC]{#format-datetime-utc}
+## formatDateTime[UTC] {#formatDateTime}
 
 Converts the Date and time value to a string, formatted according to the format parameter. Without the format parameter, a standard format is used, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. The function `formatDateTime` uses the users calendar and `formatDateTimeUTC` uses the UTC calendar.
 
-### 3.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -127,7 +140,7 @@ The input parameters are described in the table below:
 | Date                  | Date and time |
 | Format (**optional**) | String        |
 
-### 3.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -135,31 +148,31 @@ The output is described in the table below:
 | ------------------------------------------- | ------ |
 | A formatted representation of the Date and time value. | String |
 
-### 3.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatDateTime($object/Date1,'EEE, d MMM yyyy HH:mm:ss Z')
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 'Sun, 8 Jun 2008 10:12:01 +0200'
 ```
 
 To get a format like `'2008-06-08T10:12:01'`, you need to concatenate two formatDateTime[UTC] functions:
 
-```java {linenos=false}
+```java
 formatDateTime($object/Date1,'yyyy-MM-dd') + 'T' + formatDateTime($object/Date1,'HH:mm:ss')
 ```
 
-## 4 formatTime[UTC]
+## formatTime[UTC] {#formatTime}
 
 Converts the time part of Date and time value to a string in a standard format, which depends on the Java version and user locale. `formatTime` uses the users calendar and `formatTimeUTC` uses the UTC calendar.
 
-### 4.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -167,7 +180,7 @@ The input parameters are described in the table below:
 | ----- | ------------- |
 | Date  | Date and time |
 
-### 4.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -175,25 +188,25 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A formatted representation of the time part of the Date and time value. | String |
 
-### 4.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatTime(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 '9:50 AM'
 ```
 
-## 5 formatDate[UTC]
+## formatDate[UTC] {#formatDate}
 
 Converts the date part of Date and time value to a string in a standard format, which depends on the [Java version](/refguide/java-version-migration/#date-locale-dutch) and user locale. `formatDate` uses the users calendar and `formatDateUTC` uses the UTC calendar.
 
-### 5.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -201,7 +214,7 @@ The input parameters are described in the table below:
 | ----- | ------------- |
 | Date  | Date and time |
 
-### 5.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -209,25 +222,25 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A formatted representation of the date part of the Date and time value. | String |
 
-### 5.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 formatDate(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 the output is:
 
-```java {linenos=false}
+```java
 '7/2/74'
 ```
 
-## 6 dateTimeToEpoch
+## dateTimeToEpoch {#dateTimeToEpoch}
 
 Returns the number of milliseconds since January 1, 1970, 00:00:00 GMT to the date.
 
-### 6.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -235,7 +248,7 @@ The input parameters are described in the table below:
 | ----- | ------------- |
 | Date  | Date and time |
 
-### 6.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -243,25 +256,25 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | The number of milliseconds since January 1, 1970, 00:00:00 GMT to the date. | Integer/Long |
 
-### 6.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 dateTimeToEpoch(dateTime(1974, 7, 2, 9, 50, 10))
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 141990610000
 ```
 
-## 7 epochToDateTime
+## epochToDateTime {#epochToDateTime}
 
 Creates a Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT.
 
-### 7.1 Input Parameters
+### Input Parameters
 
 The input parameters are described in the table below:
 
@@ -269,7 +282,7 @@ The input parameters are described in the table below:
 | ----- | ------------- |
 | Epoch | Integer/Long |
 
-### 7.2 Output
+### Output
 
 The output is described in the table below:
 
@@ -277,16 +290,16 @@ The output is described in the table below:
 | ------------------------------------------------------------ | ------ |
 | A Date and time that represents the specified number of milliseconds since January 1, 1970, 00:00:00 GMT. | Date and time |
 
-### 7.3 Example
+### Example
 
 If you use the following input:
 
-```java {linenos=false}
+```java
 epochToDateTime(141990610000)
 ```
 
 The output is:
 
-```java {linenos=false}
+```java
 dateTime(1974, 7, 2, 9, 50, 10)
 ```

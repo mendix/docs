@@ -4,11 +4,11 @@ url: /apidocs-mxsdk/mxsdk/sdk-use-cases/
 weight: 2
 ---
 
-## 1 Introduction
+## Introduction
 
 Since the Mendix SDK gives you full access to all aspects of your app model, there's an almost infinite number of things you can do with it. We can however distinguish four basic categories: analyzing, exporting, modifying and importing. To inspire you to build your own scripts and tools, you can find an example for each category below.
 
-## 2 Importing Legacy Code {#importing}
+## Importing Legacy Code {#importing}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844116.png" class="no-border" >}}
 
@@ -20,7 +20,7 @@ Some of the possibilities:
 * Automatically generate CRUD pages for your entities
 * Transform legacy business logic to microflows
 
-## 3 Analyzing Your Apps {#analyzing}
+## Analyzing Your Apps {#analyzing}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844117.png" class="no-border" >}}
 
@@ -32,7 +32,7 @@ Some of the possibilities are:
 * Creating a "Death Star" architecture diagram of your app.
 * Calculating industry standard software metrics like [cyclomatic complexity](https://en.wikipedia.org/wiki/Cyclomatic_complexity) and [fan-in/out](https://en.wikipedia.org/wiki/Fan-out_%28software%29) of microflows.
 
-## 4 Exporting Your Apps {#exporting}
+## Exporting Your Apps {#exporting}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844114.png" class="no-border" >}} 
 
@@ -44,7 +44,7 @@ Some of the possibilities are:
 * Transforming microflows into Java method.
 * Setting up scaffolding for Selenium page objects.
 
-## 5 Modifying Your Apps {#modifying}
+## Modifying Your Apps {#modifying}
 
 {{< figure src="/attachments/apidocs-mxsdk/mxsdk/sdk-intro/16844115.png" class="no-border" >}} 
 

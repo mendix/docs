@@ -6,7 +6,7 @@ description: "Describes custom settings for server, log file, database, Amazon S
 #The anchor #amazon-s3-storage-service-settings below is mapped, so it should not be removed or changed.
 ---
 
-## 1 Introduction
+## Introduction
 
 You can use custom server settings to configure Mendix Runtime beyond the standard possibilities offered by Studio Pro.
 
@@ -16,11 +16,11 @@ Only use this functionality if you know exactly what you are doing. Incorrect va
 
 Each custom setting consists of a name and a value. For example, to enable persistent sessions you add a custom setting with name `PersistentSessions` and value `true`. For a more detailed list of settings and example values, consult [full-documented-m2ee.yaml](https://github.com/mendix/m2ee-tools/blob/master/examples/full-documented-m2ee.yaml).
 
-If you are running your app on the Mendix Cloud, you can access these settings in **Apps** via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
+If you are running your app on Mendix Cloud, you can access these settings in **Apps** via **Environments** > **Environment Details** > **Runtime** > **Custom Runtime Settings**. For more information see the [Runtime Tab](/developerportal/deploy/environments-details/#runtime-tab) section of *Environment Details*.
 
 If you are running on SAP Cloud, you can add custom settings as User-Provided Variables prefixed with `MXRUNTIME_`. If the setting contains a dot `.` you can use an underscore `_` in the variable. [Reference](https://github.com/mendix/cf-mendix-buildpack#custom-runtime-settings)
 
-## 2 General Settings{#general}
+## General Settings{#general}
 
 The following custom settings can be configured:
 
@@ -51,9 +51,9 @@ The following custom settings can be configured:
 | **com.mendix.core.SessionIdCookieName** | Defines the name of the cookie value which represents the session ID. Can be useful to change when running in a container which assumes a certain name for the session cookie. | XASSESSIONID |
 | **EnableApacheCommonsLogging** | Some libraries used by the Mendix runtime use [Apache Commons](https://commons.apache.org/) for logging. By default these log messages are suppressed. Set this value to `true` to receive the log messages from these libraries in the Mendix logs. This setting is available in Mendix 8.18.6 and later. | false |
 | **EnableFileDocumentCaching** | Defines whether file documents should be cached. Only enable this if you are sure that the file documents will not contain sensitive information. Images are always cached. This setting is available in Studio Pro 8.18.12 and above.| false |
-| **RequestHandling.AllowLegacyCookies** | Allows violations of RFC 6265 which is enforced since Studio Pro 8.18.25. See  [RFC6265_LEGACY CookieCompliance mode](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/http/CookieCompliance.html#RFC6265_LEGACY) for more information. Be aware of the fact that enabling this custom setting exposes your app to CVE-2023-26049. This setting is available in Studio Pro 8.18.25 and above. | false |
+| **RequestHandling.AllowLegacyCookies** | Allows violations of RFC 6265 which is enforced since Studio Pro 8.18.25. See [RFC6265_LEGACY CookieCompliance mode](https://www.eclipse.org/jetty/javadoc/jetty-10/org/eclipse/jetty/http/CookieCompliance.html#RFC6265_LEGACY) for more information. Be aware of the fact that enabling this custom setting exposes your app to CVE-2023-26049. This setting is available in Studio Pro 8.18.25 and above. | false |
 
-## 3 Log File Settings
+## Log File Settings
 
 The settings below influence the behavior of the log files. These settings can only be used on premises. In the cloud, these settings do not change any behavior.
 
@@ -63,9 +63,9 @@ The settings below influence the behavior of the log files. These settings can o
 | **MaxLogFileSize** | The maximum size per log file. When the log file reaches this maximum size, the log file will be backed up and a new empty log file will be used. | 2097152 (2 MB) |
 | **MaxLogFileCount** | The maximum count of log files preserved (actual file plus back-up files). When the maximum count is reached, the oldest backup file will be removed. | 10 |
 
-## 4 Database Settings
+## Database Settings
 
-### 4.1 Common Settings
+### Common Settings
 
 | Name | Description | Default Value |
 | --- | --- | --- |
@@ -73,7 +73,7 @@ The settings below influence the behavior of the log files. These settings can o
 | **DatabaseType** | Defines the database engine which is used as the Mendix database. Valid values are `DB2`, `HSQLDB`, `MYSQL`, `ORACLE,` `POSTGRESQL`, `SAPHANA`, and `SQLSERVER`. | |
 | **DatabaseUserName** | Name required for authentication to the database. | |
 | **DatabasePassword** | Password for the `DatabaseUserName` supplied above. | |
-| **DatabaseHost** | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`,  and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
+| **DatabaseHost** | The host name and optionally the TCP port number of the database. Use a colon (`:`) as separator between the host name and port number. Possible values are: `db.url.org`, `db.url.org:1521`, `10.0.0.5`, and`10.0.0.5:1433`\. It is possible to use a plain IPv6 address by enclosing it in brackets (for example, `[::1]:5432`).<br/>This will be overridden if you supply `DatabaseJdbcUrl`. | |
 | **DatabaseName** | The name of the database or schema used by the Mendix app <br/>This will be overridden if you supply **DatabaseJdbcUrl**. | |
 | **DatabaseJdbcUrl** | Defines the JDBC URL to use for the database connection (which overrides the other database connection settings). |   |
 | **DatabaseUseSsl** | For PostgreSQL databases, defines whether the connection will be made using SSL without certificate validation. If you need certificate validation, use **DatabaseJdbcUrl** instead. | false |
@@ -84,7 +84,7 @@ The settings below influence the behavior of the log files. These settings can o
 | **UseNetworkTimeout** | This setting is applied to PostgreSQL and DB2. It affects the timeout mechanism used when reserving new ids for Mendix objects. If set to true, the socket level request timeout is used. In that case, the request timeout is handled within the operating system. If set to false, the timeout is handled by Mendix runtime. For other databases, timeouts are always handled by Mendix runtime. | true |
 | **JdbcLoginTimeout** | This setting defines the database connection establishment time in milliseconds. | 5000 |
 
-### 4.2 Connection Pooling
+### Connection Pooling
 
 The settings below are used to define the database connection pooling behavior. Mendix Runtime uses a pool of reusable database connections. You can, for example, define how many connections can be used. Connection pooling is implemented using the [Apache Commons Object-pooling API](https://commons.apache.org/pool/) .
 
@@ -100,7 +100,7 @@ These settings are configured *per runtime instance*. If you have [scaled your a
 | **ConnectionPoolingSoftMinEvictableIdleTimeMillis** | Sets the minimum amount of time an object may sit idle in the pool before it is eligible for eviction by the idle object evictor (if any), with the extra condition that at least `minIdle` objects remain in the pool. When non-positive, no objects will be evicted from the pool due to idle time alone. | 300 000 (5 minutes) |
 | **ConnectionPoolingNumTestsPerEvictionRun** | Sets the maximum number of objects to examine during each run of the idle object evictor thread (if any). When a negative value is supplied, `ceil(getNumIdle())/abs(getNumTestsPerEvictionRun())` tests will be run. This means that when the value is -n, roughly one nth of the idle objects will be tested per run. | -3 |
 
-### 4.3 Migration Settings
+### Migration Settings
 
 The settings below are used to define the source database from which all data should be copied to the main database. You have to specify the settings below only once. The main database should exist and should be empty. During the app start-up, the data will be copied if the settings below are specified. Remove the settings afterwards, because they are not needed anymore.
 
@@ -119,7 +119,7 @@ Before the data copy process starts, the source database will also be brought in
 | **SourceDatabaseUserName** | The user name for the connection to the source database. |   |
 | **SourceOracleServiceName** | Defines the `SERVICE_NAME` when you have a connection with an Oracle DBMS as source. |   |
 
-## 5 S3 Storage Service Settings {#amazon-s3-storage-service-settings}
+## S3 Storage Service Settings {#amazon-s3-storage-service-settings}
 
 The settings described below influence the behavior of the Amazon S3 Storage Service module. This module can be used for both Amazon S3 Storage and IBM Cloud Object Storage. Using these settings manually in Mendix Cloud is strongly discouraged, as files stored in external systems will not be included in backup creation and restoration.
 
@@ -142,7 +142,7 @@ The settings described below influence the behavior of the Amazon S3 Storage Ser
 | **com.mendix.storage.s3.RequestTimeout** | Sets the amount of time to wait (in milliseconds) for the request to complete before giving up and timing out. A value of `0` means no timeout. For more information, see [the AWS Java SDK](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/ClientConfiguration.html#setRequestTimeout-int-). | 0 (no timeout) |
 | **com.mendix.storage.s3.UseCACertificates** | Set this value to `true` to use the configured [CACertificates](#ca-certificates) for the connection to the S3 service. This setting is available in Studio Pro [8.12.0](/releasenotes/studio-pro/8.12/#8120) and above. | false |
 
-## 6 Microsoft Azure SQL
+## Microsoft Azure SQL
 
 These settings can be changed to use a Microsoft Azure SQL database for your Mendix application.
 
@@ -156,7 +156,7 @@ First, you need to create an Azure SQL database (for information on how to do th
 | **DatabaseUserName** | `your-username` |   |
 | **DatabasePassword** | `your-password` |   |
 
-## 7 Microsoft Azure Blob Storage Settings
+## Microsoft Azure Blob Storage Settings
 
 These settings can be used to store files using the Microsoft Azure blob storage service. Server-side encryption can be configured through the Azure Portal (for more information, see [Azure Storage encryption for data at rest](https://azure.microsoft.com/en-us/documentation/articles/storage-service-encryption/)).
 
@@ -178,7 +178,7 @@ These settings can be used to store files using the Microsoft Azure blob storage
 Azure blob storage's default connection protocol is HTTPS in order to encourage secure connections by default. This is a highly recommended best practice (for more information, see [Configure Azure Storage Connection Strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string)). This should now be transparent, unless you use custom domain names (for details, see [Require Secure Transfer](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer)). In that case, you should use the `UseHttps` setting above to revert to the previous default behavior and disable HTTPS.
 {{% /alert %}}
 
-## 8 Web Client Settings{#web-client-settings}
+## Web Client Settings{#web-client-settings}
 
 The settings below influence the behavior of the Mendix web client.
 
@@ -192,7 +192,7 @@ The settings below influence the behavior of the Mendix web client.
 | **com.mendix.webui.StateSizeWarningThreshold** | A warning is logged when the state size exceeds the threshold. The state consists of changes in objects and of objects not committed to the database (yet). If there is too much state, this will have performance implications, as the whole state has to be serialized to the client. For this reason, a warning is logged when the threshold is exceeded. | 100 |
 | **com.mendix.webui.CommittedObjectsThreshold** | The threshold controls how much data is sent back to the client after executing a microflow. By default, we send back full objects when they are changed or committed. When this threshold is reached, only object GUIDs are sent back instead so that the client knows about the changes while the amount of data sent over the network is reduced. The client will then retrieve the objects later on, if needed. | 100 |
 
-## 9 Proxy Settings
+## Proxy Settings
 
 The settings below allow you to use a proxy.
 

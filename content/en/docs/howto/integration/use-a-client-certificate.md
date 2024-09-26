@@ -6,7 +6,7 @@ description: "Describes how to configure your app to authenticate using a client
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team (buildpack) know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 Some services require you to authenticate using a client certificate. This how-to describes how to configure your app to do this.
 
@@ -15,18 +15,18 @@ Let's assume that you already have an app that calls a service. For details on h
 This how-to teaches you how to do the following:
 
 * Configure to run locally
-* Configure in the Mendix Cloud
+* Configure in Mendix Cloud
 
 {{% alert color="info" %}}
 This capability can also be described as Mutual Transport Layer Security (mTLS). Following this guide, the server certificate will be verified against any certificate authorities (CAs) in Mendix application's trust store. If you require true "zero trust" mTLS where standard internet CAs should not be trusted by default, please contact Mendix Expert Services for assistance.
 {{% /alert %}}
 
-## 2 Prerequisites
+## Prerequisites
 
 * A PKCS12 certificate file that contains a private key — these files typically have the *.pfx* or *.p12* file extension
 * The password to open that file
 
-## 3 Running Locally
+## Running Locally
 
 To configure the custom settings that are only used when you run your app locally, follow these steps:
 
@@ -42,7 +42,7 @@ To configure the custom settings that are only used when you run your app locall
 
 This is an example:
 
-```shell {linenos=false}
+```shell
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "www.server-to-contact.com": "D:\\App\\Mx2.pfx" }
 ```
 
@@ -58,26 +58,26 @@ Be sure to drop `https://` from a URL endpoint.
 
 The following sample uses client certificate `Mx1.pfx` for `WebService1` and no client certificate for `WebService2`:
 
-```shell {linenos=false}
+```shell
 { "Module.WebService1": "D:\\App\\Mx1.pfx", "Module.WebService2": "" }
 ```
 
-## 4 Running in the Cloud
+## Running in the Cloud
 
 {{% alert color="info" %}}
 You will only be able to follow the steps below if you have the correct access rights for the client certificates.
 {{% /alert %}}
 
-To configure client certificates in the Mendix Cloud, follow these steps:
+To configure client certificates in Mendix Cloud, follow these steps:
 
-1.Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
+1. Go to [Apps](https://sprintr.home.mendix.com/) and go to the **Environments** page for your app.
 2. Each environment has its own configuration. Click **Details** next to one of the environments.
 3. Click **Network** and scroll down to **Certificates for outgoing connections**.
 4. Click **Add client certificate**. Upload the certificate files.
 5. Only follow these steps if you are using more than one client certificate in your app:
     1. After the files have been uploaded, they appear in the list. Double-click an item in the list.
     2. In the **Pin Client Certificate to Web Services** section of the **Details** screen, you can specify which client certificate belongs to which service:
-        *For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)
+        * For web services, enter the name of the web service (for example,*ModuleName.WebServiceName*)
         * For REST services, enter the host name of the endpoint (for example, *example.com*)
     3. Close the **Details** screen.
 

@@ -1,13 +1,13 @@
 ---
 title: "Logic Recommender"
 url: /refguide/logic-recommender/
-weight: 10
+weight: 20
 description: "Describes Logic Recommender in Mendix Studio Pro."
 aliases:
     - /refguide/mx-assist-logic-bot/
 ---
 
-## 1 Introduction 
+## Introduction 
 
 {{% alert color="info" %}}
 Logic Bot was rebranded to Logic Recommender in Studio Pro 10.12.0.
@@ -23,12 +23,12 @@ The key features of Logic Recommender are the following:
 
 * **Next best action suggestion** – it recommends the next best activities out of more than 40 different options with accuracy of 95%. 
 * **Auto-configuration** – it does not only provide next best action, but automates the development further by pre-populating the parameters for such action.
-* **Contextual  suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
+* **Contextual suggestions** – it derives context in different ways, including by 'looking' left and right in your logic when the developer inserts a new activity or decision mid-flow; and by inferring the context using the page where it is called from.  
 * **High accuracy** – continuous improvement and training of the model has elevated the accuracy level from 95%.
 
-## 2  Using Logic Recommender
+## Using Logic Recommender
 
-### 2.1 Studio Pro 10.6 and Above
+### Studio Pro 10.6 and Above
 
 {{% alert color="info" %}}
 It is available for use when you are not signed in to Studio Pro, but you need to sign in to get better AI recommendations.
@@ -66,7 +66,7 @@ Choose a suggestion and click it to accept it. You can also choose a suggestion 
 
 To open the properties dialog box after adding a suggested element, accept the suggestion with <kbd>Shift</kbd> + <kbd>Enter</kbd> (or <kbd>Shift</kbd> + mouse click). After closing the properties dialog box, the Recommender will open on the next flow.
 
-### 2.2 Studio Pro 10.5 and Below
+### Studio Pro 10.5 and Below
 
 {{% alert color="info" %}}
 In Studio Pro 10.5 and below, you need to sign in to Studio Pro to use it.
@@ -88,6 +88,6 @@ The activity/event is added to your microflow.
 
 If you do not see the desired activity or element in the top-five recommendation list, you can click **Add other element** and choose an activity, loop, decision, merge, or object type decision.
 
-## 3 Read More
+## Read More
 
 * [Microflows and Nanoflows](/refguide/microflows-and-nanoflows/)

@@ -1,5 +1,6 @@
 ---
-title: "Hybrid App Base and Template"
+title: "Hybrid App Base and Template Release Notes"
+linktitle: "Hybrid App Base and Template"
 url: /releasenotes/mobile/hybrid-app/
 weight: 30
 description: "Mendix Hybrid App Base and Hybrid App Template release notes."
@@ -128,7 +129,7 @@ With this release we updated all PhoneGap dependencies to the latest supported v
 
 * We moved the Google Services *.json*, *.plist*, and *build-extras.xml* files to the **/config** folder. Thus, if you have an existing **config.xml** file, make sure that lines `213-214` read as follows:
 
-```xml {linenostart=213}
+```xml
 <resource-file src="config/google-services.json" target="app/google-services.json" />
 <resource-file src="config/build-extras.gradle" target="build-extras.gradle" />
 ```
@@ -364,7 +365,7 @@ For this update, Mendix recommends downloading a fresh hybrid app package from t
 **Release date: April 19, 2018**
 
 * We improved the styling of the loader screen.
-* We added backwards compatibility with respect to quality vs. density properties (for Android only).
+* We added backwards compatibility with respect to quality versus density properties (for Android only).
 
 ### Hybrid App Base 2.0.3 / Hybrid App Template 2.0.1
 

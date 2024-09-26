@@ -5,13 +5,13 @@ weight: 15
 description: "Describes the Access Management page in the Mendix Portfolio Management app."
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Access Management** page allows you to view and manage user access to the portfolio.
 
 {{< figure src="/attachments/developerportal/portfolio-management/access-management.png" >}}
 
-## 2 Members {#members}
+## Members {#members}
 
 The **Members** tab lists all the users that have portfolio access. You can search for a user by their user name, email, or company. You can also filter users by their role and status. The list contains the following items:
 
@@ -60,7 +60,7 @@ The table below shows the permissions of Portfolio Managers, Contributors, and V
 
 \* For open portfolios, all company members (other than the portfolio members) have the same rights as the Viewer of the portfolio.
 
-### 2.1 Leaving the Portfolio
+### Leaving the Portfolio
 
 To leave the portfolio, click the **Leave** button on the right side above the member list. 
 
@@ -70,7 +70,7 @@ If you are the only Portfolio Manager of the portfolio, when you click **Leave**
 * Assign another user to be the new Portfolio Manager before you leave the portfolio.
     * If you choose to assign another user to be the new Portfolio Manager, click **Assign Portfolio Manager**, and then select an existing member and edit their role to Portfolio Manager, or invite a new member to be the new Portfolio Manager.
 
-### 2.2 Adding New Users {#add-users}
+### Adding New Users {#add-users}
 
 {{% alert color="info" %}}Only [Portfolio Managers](#members) can add new users.{{% /alert %}}
 
@@ -87,13 +87,13 @@ For users outside your company, they need to accept the invitation. They will ap
 
 For users within your company, they do not need to accept their invitation. If they have a Mendix account, they will immediately be given access and appear on the **Members** tab. If they do not have a Mendix account, they will appear on the **Pending Invites** tab. After they create a Mendix account and log in to Portfolio Management, they will immediately be given access and appear on the **Members** tab. 
 
-### 2.3 Removing Deactivated Users
+### Removing Deactivated Users
 
 {{% alert color="info" %}}Only [Portfolio Managers](#members) can remove a deactivated user.{{% /alert %}}
 
 When there are deactivated members in the portfolio, the **Remove Deactivated Users** button becomes available above the list on the right side. Clicking the button allows you to remove all deactivated users from this portfolio in one go. If a deactivated user that you will remove still owns initiatives, these initiatives will no longer have an owner after you remove the user from the portfolio.
 
-## 3 Access Requests {#access-requests}
+## Access Requests {#access-requests}
 
 {{% alert color="info" %}}
 The **Access Requests** tab is only visible to Portfolio Managers.
@@ -111,9 +111,9 @@ The **Access Requests** tab shows all open access requests for the portfolio. Yo
 * **Role** – This is the access role that was requested by the user.
 * **Date** – This is the date when the request was made.
 * **Reject** – Clicking this rejects the request.
-* **Approve** – Clicking this approves the request and gives the user access to the portfolio.
+* **Approve** – Clicking this opens a dialog box where you can approve the access request and give the user access to the portfolio. In the dialog box, you also have the option to assign the user an access role different from the one they requested.
 
-## 4 Pending Invites {#pending-invites}
+## Pending Invites {#pending-invites}
 
 {{% alert color="info" %}}
 The **Pending Invites** tab is only visible to Portfolio Managers.

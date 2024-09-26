@@ -5,7 +5,7 @@ weight: 10
 description: "Describes consistency errors in Mendix Studio Pro and the way to fix them."
 ---
 
-## 1 Introduction 
+## Introduction 
 
 To make sure that your app is always consistent and properly built, Studio Pro does consistency checks when you build your app. 
 
@@ -34,7 +34,7 @@ Errors need to be solved before your app can be deployed. A consistency error ca
 * [Integration](/refguide8/integration/)
 * [Security](/refguide8/security/)
 
-## 2 Read More
+## Read More
 
 * [Page Editor Consistency Errors](/refguide8/consistency-errors-pages/)
 * [Navigation Consistency Errors](/refguide8/consistency-errors-navigation/)

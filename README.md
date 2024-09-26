@@ -25,7 +25,7 @@ When you clone the repo, keep the following in mind:
 
 #### Installing Dependencies
 
-1. Download and install the LTS version of [Node.js](https://nodejs.org/en/download/).
+1. Download and install the LTS version of [Node.js](https://nodejs.org/en/download/prebuilt-installer).
 1. In a terminal at the root of the repository, run `npm install`.
 
 ### Running the Server

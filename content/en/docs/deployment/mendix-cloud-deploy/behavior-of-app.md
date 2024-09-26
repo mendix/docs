@@ -6,22 +6,22 @@ weight: 90
 description: "Describes the behaviors and limitations that apply to your app when running in Mendix Cloud."
 ---
 
-## 1 Introduction
+## Introduction
 
 Apps running in Mendix Cloud are subject to certain limitations. These behaviors are described in this document; keep the following considerations in mind.
 
-## 2 MDA Size Limits
+## MDA Size Limits
 
 * It is not possible to deploy a model (MDA file) that is larger than 1 GB when uncompressed or that contains more than about 64,000 files.
 * You cannot upload files bigger than 1 GB to your app.
 * You cannot download files bigger than 1 GB from your app.
 
-## 3 Considerations for Multi-Instance Nodes
+## Considerations for Multi-Instance Nodes
 
 * To use the debugger, you need to scale down to one instance.
 * Metrics for multi-instance nodes are not reported correctly. The information reported on the app's **Metrics** and **Alerts** pages represents only one instance of a multi-instance node.
 
-## 4 File Connections Limitations
+## File Connections Limitations
 
 * In some circumstances, your app can run out of file connections. This is indicated by the following entry in the logfile:
 
@@ -33,7 +33,7 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
     * Update all Marketplace modules to the latest version. Older versions may not close file connections correctly.
     * Increase the number of available file connections (the default is 50) by adding the **com.mendix.storage.s3.MaxConnections** setting in the environment's Custom Runtime Settings. You can access this by going to the **Runtime** tab on the [Environment Details](/developerportal/deploy/environments-details/) page. For more information, see the [S3 Storage Service Settings](/refguide/custom-settings/#amazon-s3-storage-service-settings) section of the *Runtime Customization* page.
 
-## 5 HTTP Headers, Responses, and REST Connections
+## HTTP Headers, Responses, and REST Connections
 
 * Due to the behavior of one of the Cloud Foundry routing components, HTTP headers sent to Mendix Cloud do not always preserve their case. For example, `X-SharedSecret` may be transformed to `X-Sharedsecret`. This has no practical effect because HTTP headers are defined as case insensitive.
 * **Call REST** connections are eventually closed by the cloud infrastructure if left idle. This is because Mendix Cloud uses AWS NAT gateways for outgoing traffic, and these gateways drop connections that are idle for more than 350 seconds.
@@ -42,6 +42,6 @@ Apps running in Mendix Cloud are subject to certain limitations. These behaviors
 
 * The Mendix Cloud web server replaces any custom `ReasonPhrase` on an HTTP response (returned by, for example, a published REST service) with a standard reason phrase. For example, for status code `200`, any custom `ReasonPhrase` that you set will be replaced by `OK`.
 
-## 6 Instance Restarts
+## Instance Restarts
 
 * The platform automatically restarts application instances during routine platform updates, which can occur several times a week. If your application logs indicate a series of instance restarts for no apparent reason, the restarts are probably due to platform updates. This is normal and OK! The platform usually starts a new instance of your application before stopping the old one, thus ensuring that there is no downtime. You can verify this in your application logs.

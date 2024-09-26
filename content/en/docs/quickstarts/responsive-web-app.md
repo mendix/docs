@@ -9,13 +9,13 @@ aliases:
     - /refguide9/quickstart-part1/
 ---
 
-## 1 Introduction
+## Introduction
 
 This quick start tutorial teaches you how to get up and running with the Mendix Platform and start developing your first app in Mendix Studio Pro. You will learn the basics of Studio Pro, handle data using the domain model, populate your app's pages with dynamic data, and create custom app logic using a microflow. You will be building a responsive web app that is compatible with all desktop, tablet, and mobile browsers.
 
 After completing this tutorial, you will have a photo album app that allows app end-users to upload, edit, and display pictures for their cherished memories to be preserved. 
 
-### 1.1 Getting to Know Mendix
+### Getting to Know Mendix
 
 This tutorial teaches you several key Mendix concepts, such as adding an entity to the [domain model](/refguide/domain-model/) (a visual model that describes your app's information or data in an abstract way), creating basic pages that use building blocks and design properties, and modeling your first microflow. 
 
@@ -29,7 +29,7 @@ You do not need any additional software configured on your machine in order to s
 
 To learn more about Mendix concepts, check out the various sections of the [Platform Evaluation Guide](https://www.mendix.com/evaluation-guide/).
 
-## 2 Prerequisites 
+## Prerequisites 
 
 Before starting this tutorial, make sure you have completed the following prerequisites:
 
@@ -37,7 +37,7 @@ Before starting this tutorial, make sure you have completed the following prereq
 * [Download](https://marketplace.mendix.com/link/studiopro/) and [install](/refguide/install/) Mendix Studio Pro
 * If you are working on a Mac, complete [Configuring Parallels](/refguide/using-mendix-studio-pro-on-a-mac/) to install Studio Pro on your Mac
 
-## 3 Starting Your App
+## Starting Your App
 
 You can select one from many starting points for your Mendix app. It is key that you select a starting point with a configured responsive web navigation profile for this quick start tutorial, as the app you will develop needs to work for web browsers.
 
@@ -45,7 +45,7 @@ A page defines the end-user interface in a Mendix app. You can create and edit p
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/3-startingtemplate.png" width="450px" alt="Blank template" class="no-border" >}}
 
-### 3.1 Selecting the App Template
+### Selecting the App Template
 
 To select the best app template, follow these steps:
 
@@ -69,7 +69,7 @@ To select the best app template, follow these steps:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/home-web.png" width="400px" alt="Home Web page" class="no-border" >}}
     
-## 4 Exploring Studio Pro
+## Exploring Studio Pro
 
 Now that you have started your app in Studio Pro, you can take a quick (and optional) tour. If you know Studio Pro already, you can skip this section.
 
@@ -79,7 +79,7 @@ Simply put, the center of Studio Pro hosts a [working area](/refguide/studio-pro
 
 The Studio Pro configuration you see is completely editable. You can add or hide panes as desired (you can find more panes under the [View](/refguide/view-menu/) menu as well as reset your view back to the default settings if you wish). You can also quickly hide all of Studio Pro's panes by enabling **Distraction Free Mode** with <kbd>Shift</kbd> + <kbd>F11</kbd>.
 
-### 4.1 Top Bar
+### Top Bar
 
 The top bar contains the menus, buttons, and other UI elements you need for fundamental app development tasks. For example, you can run your app by clicking **Run Locally** ({{% icon name="controls-play" %}}). 
 
@@ -87,7 +87,7 @@ The top bar contains the menus, buttons, and other UI elements you need for fund
 
 For more information on menus and functions, see the [Top Bar](/refguide/studio-pro-overview/#top-bar) section of *Studio Pro Overview*.
 
-### 4.2 App Explorer
+### App Explorer
 
 You can navigate through your app using the [App Explorer](/refguide/app-explorer/), which is the pane on the left side of your screen. This is where you can create and explore new documents and [modules](/refguide/modules/) in your app:
 
@@ -97,7 +97,7 @@ Any [Marketplace modules](/appstore/modules/) you download appear under **Market
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/4.2-styles.png" width="300px" alt="Modules" class="no-border" >}}
 
-### 4.3 Bottom Dockable Panes
+### Bottom Dockable Panes
 
 Look at the bottom dockable pane of Studio Pro:
 
@@ -111,7 +111,7 @@ Here you will find some separate default dockable panes:
 
 For more information on available panes, see the [Best Practice Recommender](/refguide/view-menu/#best-practice-recommender) and [Console](/refguide/view-menu/#console) sections of *View Menu*.
 
-### 4.4 Right Dockable Panes
+### Right Dockable Panes
 
 Look at the right dockable pane of Studio Pro:
 
@@ -124,7 +124,7 @@ Here you will find some more separate default dockable panes:
 
 For additional information on available panes, see the [Integration](/refguide/view-menu/#data-hub) and [Connector](/refguide/view-menu/#connector) sections of *View Menu*.
 
-## 5 Creating Your App's Domain Model {#domain-model}
+## Creating Your App's Domain Model {#domain-model}
 
 In Mendix, you define your app's data structure in the [domain model](/refguide/domain-model/).
 
@@ -138,7 +138,7 @@ Mendix by default uses its own built-in HSSQL database, but Mendix also supports
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/5.1-log.png" width="400px" alt="Log" class="no-border" >}}
 
-### 5.1 Creating an Entity to Store the Images
+### Creating an Entity to Store the Images
 
 To create an entity to store the images used in your app, follow these steps:
 
@@ -161,7 +161,7 @@ To create an entity to store the images used in your app, follow these steps:
 
     A generalization is a parent entity from which the child entity inherits properties. This is the Mendix equivalent of inheritance. You can have multiple levels of generalizations. 
     
-### 5.2 Creating Attributes
+### Creating Attributes
 
 You have created a new entity called **Picture** that inherits from the **System** entity called **Image**. However, the **Image** entity also inherits some of its properties from another **System** entity called **FileDocument**. This means you must add some attributes. Remember, your entity now inherits many properties from its parent entity **Image**. Therefore, you only have to add fields for the image's **Title** and **Description** information.
 
@@ -175,7 +175,7 @@ You have created a new entity called **Picture** that inherits from the **System
     
 3. Click **OK** to close the entity’s properties dialog box.
 
-## 6 Creating Your App's User Interface
+## Creating Your App's User Interface
 
 Now that you have created your domain model, it is time to create your photo album app’s front end. To do so, you will employ regular widgets and context widgets:
 
@@ -186,7 +186,7 @@ Now that you have created your domain model, it is time to create your photo alb
     * [List view](/refguide/list-view/) – displays many records in a scrollable list
     * [Template grid](/refguide/template-grid/) – displays many records in configurable columns and rows
 
-### 6.1 Configuring a Template Grid {#template-grid}
+### Configuring a Template Grid {#template-grid}
 
 Now it is time to build your photo album app:
 
@@ -208,7 +208,7 @@ Now it is time to build your photo album app:
 7. To resolve this, right-click each button and select **Generate Page**.
 8. In the **Create Page** wizard that opens, leave the page name as is, and select the **Form Vertical** template for the page.
 
-### 6.2 Using Building Blocks
+### Using Building Blocks
 
 Next, you need to replace some of the auto-generated content inside the template grid with some sleeker building blocks. A building block is a collection of pre-styled display widgets, and it is similar to a component in React.js. Building blocks are data agnostic, which means they are created without data and you need to link the relevant data sources for the building block’s components when including them in a page.
 
@@ -220,7 +220,7 @@ To add a building block to your app's UI, follow these steps:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/6-card5.png" width="400px" alt="Card action" class="no-border" >}}
 
-### 6.3 Configuring the Display Widgets
+### Configuring the Display Widgets
 
 Next, you need to connect your data to the display widgets, because your page is currently displaying only static resources. 
 
@@ -233,14 +233,14 @@ To start, replace the static image with the image the app end-user uploads to th
 
 3. The **Images** will now be displayed from the database, but the **Labels** on the page will still display their default text. To fix this, double-click the label captioned **Card title** to open its properties.
 4. Click the **Edit** button next to **Caption**.
-5. In the new dialog box, replace the caption with the place holder *{1}*. 
+5. In the new dialog box, replace the caption with the placeholder *{1}*. 
 6. Click to add a new **Parameter** and select the **Title** attribute:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/6-addattributes7.png" width="400px" alt="Add attributes" class="no-border" >}}
 
 7. Repeat this process for the other label with the caption **Supporting text**, making sure to select the **Description** attribute this time.
 
-## 7 Defining Logic Using Microflows {#microflow-use-case}
+## Defining Logic Using Microflows {#microflow-use-case}
 
 There is only one step left before you can run and test your photo album app. You have created a place for storing images and a page for displaying them. Most of the functionality for creating, editing, and deleting images has been handled automatically. 
 
@@ -248,7 +248,7 @@ But what if you want your app to perform some custom [logic](/refguide/applicati
 
 A microflow is a piece of custom logic that is represented visually in [Business Process Model and Notation](https://en.wikipedia.org/wiki/Business_Process_Model_and_Notation) (BPMN). Think of a function in traditional code, except written visually. When your app compiles, it translates all your microflows into code executable by your browser. Microflows are based on Java and are executed on the server, which means an internet connection is required for it to execute. A microflow can only have one start point, but it can often have multiple end points.
 
-### 7.1 Implementing Custom Logic
+### Implementing Custom Logic
 
 To implement custom logic with a microflow, follow these steps:
 
@@ -284,7 +284,7 @@ To implement custom logic with a microflow, follow these steps:
 
     {{< figure src="/attachments/quickstarts/responsive-web-app/7-reddots4.png" width="450px" alt="Your microflow" class="no-border" >}}
     
-### 7.2 Finishing Up
+### Finishing Up
 
 Finally, the image needs to be committed to the database and the paged closed:
 
@@ -300,13 +300,13 @@ You have now finished developing your responsive app! You can run your photo alb
 {{< figure src="/attachments/quickstarts/responsive-web-app/7-closepageaction6.png" width="450px" alt="Run your app" class="no-border" >}}
 
 {{% alert type="info" %}}
-Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on the Mendix Cloud Free Tier EU.
+Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
 Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 
 
 {{< figure src="/attachments/quickstarts/responsive-web-app/8-congrats1.png" width="550px" alt="Congratulations" class="no-border" >}}
 
-## 8 Continuing with the Next Tutorial
+## Continuing with the Next Tutorial
 
 To continue learning, see [Add a Native Mobile App](/quickstarts/native-mobile-app/).

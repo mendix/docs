@@ -4,13 +4,13 @@ url: /refguide8/administrator/
 weight: 20
 ---
 
-## 1 Introduction
+## Introduction
 
 In the **Administrator** tab of the **Project Security**, you can change the default credentials and a user role for the Administrator user:
 
 {{< figure src="/attachments/refguide8/modeling/menus/view-menu/project-explorer/security/project-security/administrator/project-security-administrator.png" class="no-border" >}}
 
-## 2 Administrator Properties {#administrator-properties}
+## Administrator Properties {#administrator-properties}
 
 In the **Administrator** tab the following properties are available:
 
@@ -18,7 +18,7 @@ In the **Administrator** tab the following properties are available:
 * [Password](#password)
 * [User role](#user-role)
 
-### 2.1 User Name {#user-name}
+### User Name {#user-name}
 
 The user name is used to sign into the application as the Administrator.
 
@@ -28,7 +28,7 @@ Default: *MxAdmin*
 Since this is general knowledge, it is safer to change this to a custom user name.
 {{% /alert %}}
 
-### 2.2 Password {#password}
+### Password {#password}
 
 The password is used to sign into the application as the Administrator. Click **Show password** to see the password. 
 
@@ -42,7 +42,7 @@ This password is only used when Mendix is running locally. You can change the pa
 Since this is general knowledge, it is safer to change this to a custom password.
 {{% /alert %}}
 
-### 2.3 User Role {#user-role}
+### User Role {#user-role}
 
 The user role assigned to the Administrator. For more information, see [User Roles](/refguide8/user-roles/). 
 
@@ -57,10 +57,10 @@ This role may be helpful in case you have exceeded your user license restriction
 {{% /alert %}}
 
 {{% alert color="warning" %}}
-When your app is not deployed locally, for example to the Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
+When your app is not deployed locally, for example to Mendix Cloud, changes to the user role of the administrator account will not be applied until the administrator password is changed. See the [actions](/developerportal/deploy/environments-details/#actions) section of *Environment Detail* for instructions on changing the admin password.
 {{% /alert %}}
 
-## 3 Read More
+## Read More
 
 * [Project Security](/refguide8/project-security/)
 * [User Roles](/refguide8/user-roles/)

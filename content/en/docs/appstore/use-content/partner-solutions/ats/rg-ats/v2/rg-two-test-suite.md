@@ -3,13 +3,13 @@ title: "Test Suite"
 url: /appstore/partner-solutions/ats/rg-two-test-suite/
 ---
 
-## 1 Introduction
+## Introduction
 
 A test suite is a set of test cases or other test suites. ATS uses test suites to execute a collection of test cases and/or suites in a sequence or parallel.
 
 In ATS, you create a new test suite by clicking **New Test Suite** in the **Actions** drop-down menu in the repository. A dialog box opens where you give your test suite a name and an optional description. After you create a new test suite, the **Test Suite Details** page opens.
 
-## 2 Test Suite Details
+## Test Suite Details
 
 In the top left corner of the **Test Suite Details** page, you find the name and the description of the test case.  To change them, click them and edit the text. ATS saves the changes automatically.
 
@@ -24,7 +24,7 @@ In the upper-right corner of the page, you find the **Export** and **Run** butto
 | Export Test Definition | Creates an XML representation of your test suite, which you can import into another app. |
 | Run                    | The [run configuration page](/appstore/partner-solutions/ats/rg-two-test-run/) opens, where you edit the run configuration. If the test suite was run before, the prior configuration is copied. |
 
-### 2.3 Test Steps
+### Test Steps
 
 Under **Test Steps**, you can find all test cases and test suites that are used in the current test suite. Add a new test case or test suite by searching for it in the **Add step** box.
 
@@ -38,7 +38,7 @@ Then search for the desired test case or test suite in your project. You can als
 
 Add a new step above or below an existing test step by clicking **Add above** or **Add below**. The buttons appear when you hover over an existing test step.
 
-#### 2.3.1 Delete
+#### Delete
 
 To delete a test step in a test suite, click this icon on the right side of the test step:
 
@@ -46,15 +46,15 @@ To delete a test step in a test suite, click this icon on the right side of the 
 
 You can delete multiple test steps at once by marking them with the checkbox and clicking **Delete**.
 
-#### 2.3.2 Drag and Drop
+#### Drag and Drop
 
 When you hover over an existing test step, the drag-and-drop handle appears. By clicking and holding it, you can move the test step to the new position.
 
-### 2.4 Show Usages
+### Show Usages
 
 The **Show Usages** tab gives an overview of all the test cases and test suites used in your test suite. Besides that, it also shows other test suites that the test suite is used by.
 
-### 2.5 Stories
+### Stories
 
 Under **Stories**, you can add user stories to your test suite. This tab displays the connected stories, the number of test cases within each story, and the success rate of the user story.
 

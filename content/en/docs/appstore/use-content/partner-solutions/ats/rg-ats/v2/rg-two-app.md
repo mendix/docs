@@ -3,19 +3,19 @@ title: "App"
 url: /appstore/partner-solutions/ats/rg-two-app/
 ---
 
-## 1 Dashboard
+## Dashboard
 
 The dashboard is where you find all information about the results of your tests. It is split into two parts: **Current Status and 7-Day History** infographics and the **Recent Tests** result tree.
 
 {{< figure src="/attachments/appstore/use-content/partner-solutions/ats/rg-ats/v2/rg-two-app/dashboard.png" class="no-border" >}}
 
-### 1.1 Infographics
+### Infographics
 
 Infographics are the first thing you see when you open your app in ATS. These charts show you the current status and the states of the past seven days of your tests. They include the results of all your test cases. Data-driven tests are counted as a single test case.
 
 For the **7-Day History**, a snapshot of the current test states is taken every day at 23:59 UTC.
 
-### 1.2 Report
+### Report
 
 To generate a PDF report of the status of your tests, click **Download Report**. A dialog box will open allowing you to select between two reporting options for determining the items included in the report: **All** or **Selected**. If you select **All**, then all test suites and test cases will be included in the report. If you select **Selected**, then you can add one or more test cases, test suites, or folders that you want to be part of the report.
 
@@ -29,7 +29,7 @@ When you are happy with your selection (or you have just chosen **All**), you ca
 The **7-day history** infographic will only be included in the PDF report when you choose **All**.
 {{% /alert %}}
 
-### 1.3 Recent Tests
+### Recent Tests
 
 Under **Recent Tests**, you can find detailed information about the status of all your test cases and test suites. You can see the duration since the latest completed run, a counter of passed/total test cases, and the success rate. The success rate is calculated using the results of all the containing test cases. 
 
@@ -53,19 +53,19 @@ The following three icons exist for test cases, test suites, and data-driven tes
 
 To open the latest execution log, click **Show Log**. When you click the **name of a test case/test suite**, the edit page opens.
 
-## 2 Permissions
+## Permissions
 
 There are two roles in ATS, which are at first assigned to the user by the system itself but can be changed manually later. These are described below.
 
-### 2.1 Tester
+### Tester
 
 The **Tester** role is assigned to a user when they have at least one Team Server project licensed in ATS. A tester has access to all the data and actions that are necessary for writing and executing tests in ATS.
 
-### 2.2 App Admin
+### App Admin
 
 The **App Admin** role is assigned to a user when they have the app settings permission of the Team Server project in the Mendix Portal. The app settings permission is by default part of the Scrum Master role in the Mendix Portal. An App Admin also has access to the app settings page described in the next section.
 
-## 3 Settings
+## Settings
 
 Settings is the central point for configuring ATS. You can set the Mendix API Key, add your deployments, and add your Selenium hubs. You can also find an overview of all the testers and administrators of your app.
 
@@ -77,7 +77,7 @@ Only App Admins can access the settings. Testers can only use the available depl
 
 {{% /alert %}}
 
-### 3.1 Environments
+### Environments
 
 Under **Environments**, you add the different environment URLs that you use for the current app. The user selects one of these to use in their test case. ATS executes the test case/test suite against that environment.
 
@@ -92,7 +92,7 @@ When you create a new application, set the following parameters:
 | Name  | The name of the application.             |
 | URL   | The URL under which the Mendix application to test is running. |
 
-### 3.2 Selenium Hubs
+### Selenium Hubs
 
 Under **Selenium Hubs**, you add the different Selenium hubs that you use for the current app. The users run the tests on the listed hubs. To add a new Selenium hub, click **New** in the top menu:
 
@@ -112,7 +112,7 @@ ATS automatically retrieves the parallel test session limit from the Selenium hu
 Starting with ATS version 2.0, ATS capabilities override custom capabilities.
 {{% /alert %}}
 
-### 3.3 Access Rights Control from ATS
+### Access Rights Control from ATS
 
 Under **App Team**, you can specify which app members have what type of access rights for an app.
 
@@ -132,11 +132,11 @@ Finally, note that a user who has an administrative app role in the Mendix Porta
 If an app lacks a Mendix app ID, the app roles will not be synced with the Mendix Portal.
 {{% /alert %}}
 
-### 3.4 Execution Log Cleanup
+### Execution Log Cleanup
 
 ATS automatically deletes execution logs that are older than 90 days. Here you can change for how many days ATS keeps the execution logs. ATS keeps the execution logs at least for one day.
 
-### 3.5 Mendix API Key
+### Mendix API Key
 
 The Mendix API Key is used to synchronize stories between the Mendix Portal and ATS.
 
@@ -144,7 +144,7 @@ You must set this key, otherwise you cannot use your user stories in ATS. Be awa
 
 For information on where to find the API keys of your Mendix app, see [Authentication](/apidocs-mxsdk/apidocs/authentication/).
 
-### 3.6 CI/CD API Key
+### CI/CD API Key
 
 The CI/CD API key is used to allow other systems or applications access to the ATS CI/CD API. Generating a new API key revokes access for any systems using the old API key. These systems are not able to access the ATS CI/CD API until they are updated with the new API key. Make sure to save the displayed API key in a secure place, as you cannot view it again in ATS.
 

@@ -10,21 +10,21 @@ Hybrid mobile packages require Node.js v18. Versions above those fail to install
 To support multiple node or npm versions on Windows, use the [Node Version Switcher (NVM)](https://github.com/coreybutler/nvm-windows) utility.
 {{% /alert %}}
 
-## 1 Introduction
+## Introduction
 
 This document describes how to build your hybrid apps locally.
 
-## 2 Building Your iOS App Locally {#building-ios-locally}
+## Building Your iOS App Locally {#building-ios-locally}
 
 **Prerequisites:**
 
 * A Mac OSX machine
-* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
+* Install [Node.js 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Download your [local build package](/developerportal/deploy/mobileapp/#doing-it-yourself) from Cloud Portal and unzip it in a known location
 * Register for an [Apple Developer Account](https://developer.apple.com/register/index.action)
-* Install [XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
+* Install [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) and its command-line tools
 
-### 2.1 Prepare Your App for Building
+### Prepare Your App for Building
 
 To prepare your app for building, follow these instructions:
 
@@ -34,29 +34,29 @@ To prepare your app for building, follow these instructions:
     * Packages the Cordova app for deployment.
     * Adds the iOS platform to Cordova.
 
-#### 2.1.1 Customizing a DTAP Endpoint    
+#### Customizing a DTAP Endpoint    
 
 Optionally, you can set various environments in the **config/environments.json** file. This can help if you are trying to make your build from your own specific test or acceptance environment. 
 
 To target a specific DTAP endpoint with your app, you can specify it as a parameter to `npm run package` or `npm run package:x86`. Such code could, for example, look like this:
 
-```shell {linenos=false}
+```shell
 npm run package -- --env target=test  # target the test endpoint for ARM architecture
 ```
 
 Possible targets are `development`, `test`, `acceptance`, `production` (default), and `sandbox`. For convenience you can shorten these to their first letters. Note that if no `--env target` parameter is provided, the hybrid app endpoint will default to the production environment. 
 
-### 2.2 Building Your Prepared Project
+### Building Your Prepared Project
 
-There are two possible ways to build your apps: the Cordova CLI or XCode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. XCode is more involved, but XCode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
+There are two possible ways to build your apps: the Cordova CLI or Xcode. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Xcode is more involved, but Xcode's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
-#### 2.2.1 Building iOS Using the Cordova CLI
+#### Building iOS Using the Cordova CLI
 
 **Prerequisites:**
 
 * Your Apple Developer team's id, which can be found [here](https://developer.apple.com/account/#/membership/)
 
-This process is shorter than using XCode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
+This process is shorter than using Xcode but might require more work to understand why a build fails. To build using the Cordova CLI, do the following:
 
 1. Run `npm run build -- ios --release --device --codeSignIdentity="iPhone Developer" --developmentTeam="<your-teams-id>"`. This combination of commands does the following:
     * Starts a release build that will create binaries for a physical device
@@ -69,9 +69,9 @@ This process is shorter than using XCode but might require more work to understa
 
 1. The IPA generated can be now uploaded to Testflight for further testing. If you wish to do so, continue with the [Upload tools](https://help.apple.com/app-store-connect/#/dev82a6a9d79) section in the Apple App Store documentation.
 
-#### 2.2.2 Building iOS using XCode
+#### Building iOS using Xcode
 
-Using XCode can be easier than the Cordova CLI due to XCode's friendly visual interface. To build your app using XCode do the following:
+Using Xcode can be easier than the Cordova CLI due to Xcode's friendly visual interface. To build your app using Xcode do the following:
 
 1. Under **/build/platforms/ios/** open the `.xcworkspace` file by double-clicking it. Xcode should open with the app loaded:
 
@@ -90,7 +90,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/setup-signing-correct.png" alt="Signing screen correctly configured"   width="400"  class="no-border" >}}
 
 1. Enable **Automatically manage signing** again.
-1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, XCode will prompt you to do so.
+1. Select a **Team** using the drop-down menu. If you have not yet signed in with your credentials, Xcode will prompt you to do so.
 1. When configured correctly all errors should be gone.
 1. Make sure you select the target to be your app's build target and designate **Generic iOS Device** as a device:
 
@@ -100,7 +100,7 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/archiving.png" alt="Archiving"   width="400"  class="no-border" >}}
 
-1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through XCode's **Window** menu:
+1. After the process finishes successfully the **Organizer** view will come up. Your app should be selected and your latest **Archive** visible. You can always open the organizer yourself through Xcode's **Window** menu:
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/organizer.png" alt="Organizer"   width="400"  class="no-border" >}}
 
@@ -108,17 +108,17 @@ Using XCode can be easier than the Cordova CLI due to XCode's friendly visual in
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/distribute-options.png" alt="Distribute Options"   width="400"  class="no-border" >}}
 
-## 3 Building Your Android App Locally {#building-android-locally}
+## Building Your Android App Locally {#building-android-locally}
 
 **Prerequisites:**
 
 * Install [AndroidStudio](https://developer.android.com/studio)
-* Install [NodeJS 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
+* Install [Node.js 18](https://nodejs.org/download/release/latest-v18.x/) using the all-in-one installation option
 * Install JDK 1.8
 * Create a keystore using [Generating a Keystore](/refguide8/managing-app-signing-keys/#generating-a-keystore)
 * Download the [local build package](/howto8/mobile/customizing-phonegap-build-packages/#download-local-package) from Cloud Portal and unzip it in a known location
 
-### 3.1 Prepare Your App for Building
+### Prepare Your App for Building
 
 To prepare your app for building, follow these instructions:
 
@@ -128,7 +128,7 @@ To prepare your app for building, follow these instructions:
     * Packages the Cordova app for deployment
     * Adds the Android platform to Cordova
 
-### 3.2 Set Up Environmental Variables
+### Set Up Environmental Variables
 
 To be able to run the commands to build locally, you will need to set up some required environmental variables for your system. These can be set to temporary for the current command line session or globally for your system. The variables are the following:
 
@@ -138,11 +138,11 @@ To be able to run the commands to build locally, you will need to set up some re
 
 During this guide you will set the commands to temporary for each of the commands.
 
-### 3.3 Building Your Prepared Project
+### Building Your Prepared Project
 
 There are two possible ways to build your apps: the Cordova CLI or Android Studio. The Cordova CLI is faster and allows Cordova to fully control the your app's configuration. Android Studio is more involved, but Android Studio's UI makes it easier to detect problems in the app. You can use whichever works best for your case.
 
-#### 3.3.1 Building Android Using the Cordova CLI
+#### Building Android Using the Cordova CLI
 
 The command to build your app locally for release is `npm run build -- android --release`.
 
@@ -170,7 +170,7 @@ The command to build your app locally for release is `npm run build -- android -
 
     {{< figure src="/attachments/howto8/mobile/hybrid-mobile/build-hybrid-apps/build-hybrid-locally/folder-final-android.png" alt="Final folder structure"   width="400"  class="no-border" >}}
 
-#### 3.3.2 Building Android Using Android Studio
+#### Building Android Using Android Studio
 
 Using Android Studio can be easier than the Cordova CLI due to Android Studio's friendly visual interface. To build your app using Android Studio do the following:
 
@@ -203,9 +203,9 @@ Using Android Studio can be easier than the Cordova CLI due to Android Studio's 
 
 You *APK* should now be generated and signed using Android Studio. The resulting *APK* can be found in the output folder selected and can be uploaded via the Google Play Console for further processing.
 
-## 4 Read More
+## Read More
 
-* [Deployment](/deployment/)
+* [Deploying Apps](/deployment/)
 * [Offline Reference Guide](/refguide8/offline-first/)
 * [How to Publish a Mendix Hybrid Mobile App in App Stores](/howto8/mobile/publishing-a-mendix-hybrid-mobile-app-in-mobile-app-stores/)
 * [Apache Cordova Reference Config.xml](https://cordova.apache.org/docs/en/latest/config_ref/)

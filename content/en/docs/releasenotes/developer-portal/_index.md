@@ -1,8 +1,11 @@
 ---
-title: "Apps"
+title: "Apps Release Notes"
+linktitle: "Apps"
 url: /releasenotes/developer-portal/
 description: "Release notes for app management and other parts of Apps"
 weight: 20
+cascade:
+    - numberless_headings: true
 #This document is mapped to the landing page, update the link there if renaming or moving the doc file.
 ---
 
@@ -15,6 +18,51 @@ For release notes on Mendix Cloud and deployment options, see [Deployment](/rele
 To see the current status of the Mendix Portal, see [Mendix Status](https://status.mendix.com/). Here you can also see planned maintenance and past incidents.
 
 ## 2024
+
+### September 26, 2024
+
+#### Improvements
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now assign multiple owners to an initiative.
+
+### August 25, 2024
+
+#### Improvements
+
+* We took the first step towards a complete overhaul of the [App Buzz](/developerportal/general/buzz/) page and added some basic information to the top of the page. This information gives you a quick and clear overview of the app's features, functionality, and the latest updates on the Team Server.
+
+#### Fixes
+
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](/developerportal/general/team-server/#revision-history) page were not localized.
+
+### August 22, 2024
+
+#### New features
+
+* In [Portfolio Management](/developerportal/portfolio-management/initiatives-overview/), you can now enter a value in the **Percentage Completed** field to indicate the progress made on any ongoing initiative. This field provides a clear way to track how much work has been completed. The **Percentage Completed** is visible in both the [list view](/developerportal/portfolio-management/initiatives-overview/#list-view) and the [planning view](/developerportal/portfolio-management/initiatives-overview/#planning-view), giving you an easy overview of your progress at a glance.
+
+### August 1, 2024
+
+#### New features
+
+* In Portfolio Management, now you can drag and drop initiative cards in [Kanban view](/developerportal/portfolio-management/initiatives-overview/#kanban-view). This allows you to drag initiatives to a different stage or change their sequence within the same stage.
+
+#### Improvements
+
+* In Portfolio Management, when a Portfolio Manager approves the [access request](/developerportal/portfolio-management/access-management/#access-requests) of a user, now they can assign an access role different than the one the user requested.
+
+### July 31, 2024
+
+#### Fixes
+
+* We fixed a bug that caused story points in your [Epics](/developerportal/project-management/epics/board/) to reset to zero when you changed the status of the story in the [Stories Pane](/refguide/stories-pane/).
+
+### July 28, 2024
+
+#### Improvements
+
+* We have greatly simplified the process of [creating an app](/developerportal/#create-app) from Apps, making it easier and quicker to start working on your new app.
+* When you are invited to collaborate on an app by someone from outside your own company, the pending invitation will be visible on the top of the [My Apps](/developerportal/#my-apps) page.
 
 ### June 30, 2024
 
@@ -34,13 +82,13 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 * We have launched the beta version of Software Composition, which provides visibility into component dependencies for every Mendix application environment. You can access the feature in [Control Center](/control-center/software-composition/) and [Apps navigation pane](/developerportal/deploy/software-composition/). This feature is available for select Studio Pro versions for free and licensed applications deployed on Mendix Public Cloud and Mendix for Private Cloud.
 
-### Improvements
+#### Improvements
 
 * To provide a consistent user experience, we updated UI text and stopped using the term "Developer Portal". From now on, we use the term "Mendix Portal", which includes [Apps](/developerportal/), [Control Center](/control-center/), [Community](/community-tools/), [Marketplace](/appstore/), [Catalog](/catalog/), and [Mendix Support](/support/).
 
 ### June 9, 2024
 
-### Improvements
+#### Improvements
 
 * When you open the Developer Portal, you can now see these tabs: **My Apps**, **Company Apps**, and **Pending Invites**. For details, see [Developer Portal](/developerportal/).
 * On the top bar of some pages in the Developer Portal, you now see **Apps** instead of **Developer Portal**. This way the presentation of our information architecture is more consistent. 
@@ -946,7 +994,7 @@ We have made the following improvements to the **Access Management** page in Por
 #### Improvements
 
 * We removed the **Burndown Chart** and the **Release Plan** from **Stories**. We are working on reintroducing solutions for project analytics and release planning in the future.
-* We implemented [context deep links](/developerportal/general/manage-deeplinks/) to all main app pages on the Developer Portal so you can easily share references.
+* We implemented context deep links to all main app pages on the Developer Portal so you can easily share references.
 * We increased the performance of opening the [My Apps page](/developerportal/#my-apps)
 
 #### Fixes
@@ -999,7 +1047,7 @@ We have made the following improvements to the **Access Management** page in Por
 
 #### Improvements
 
-* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version [7.23.14](/releasenotes/studio-pro/7.23/#72314) or below. Please update your templates to [7.23.15](/releasenotes/studio-pro/7.23/#72315) or above before creating apps based on those templates.
+* We are deprecating part of the options to create an app based on an app template. As of June 20, 2021, you can no longer create apps through the [Projects API](/apidocs-mxsdk/apidocs/projects-api/) or the Developer Portal using app templates created in Desktop Modeler version 7.23.14 or below. Please update your templates to 7.23.15 or above before creating apps based on those templates.
 
 ### May 17, 2021
 
@@ -1470,7 +1518,7 @@ The Web Modeler can now be enabled for all types of apps. You can do this on the
 
 #### Fixes
 
-* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210 , 68386)
+* We have loosened an unnecessarily strict constraint on email domains during signup. You can now sign up with email domains with single-character sub-domains. (Tickets 68210, 68386)
 
 ### June 26, 2018
 

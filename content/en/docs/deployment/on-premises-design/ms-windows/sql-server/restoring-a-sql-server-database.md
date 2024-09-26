@@ -5,7 +5,7 @@ weight: 70
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---
 
-## 1 Introduction
+## Introduction
 
 In certain situations (for example, unwanted database updates or data corruption), it might be necessary to restore the Mendix database from a backup. This document describes the actions needed to perform a complete database restore and defines the prerequisites for restoring backups.
 
@@ -17,7 +17,7 @@ For a deep-dive look into this action, check out this video:
 
 {{< vidyard "WZu7QtHZPjtYUTdcV58PKr?" >}}
 
-## 2 Prerequisites
+## Prerequisites
 
 Before starting this how-to, make sure you have completed the following prerequisites:
 
@@ -27,13 +27,13 @@ Before starting this how-to, make sure you have completed the following prerequi
     * A valid database backup file exists for the Mendix database
     * Valid transaction log files exist for the Mendix database
 
-## 3 Permissions {#Permissions}
+## Permissions {#Permissions}
 
 If the database being restored does not exist, the user must have **CREATE DATABASE** permissions to be able to execute **RESTORE**. If the database exists, RESTORE permissions default to members of the `sysadmin` and `dbcreator` fixed server roles and the owner of the database (`dbo`).
 
 RESTORE permissions are given to roles in which membership information is always readily available to the server. Because fixed database role membership can be checked only when the database is accessible and undamaged (which is not always the case when RESTORE is executed, members of the `db_owner` fixed database role do not have RESTORE permissions.
 
-## 4 Restoring the Database
+## Restoring the Database
 
 To restore the database, follow these steps:
 
@@ -72,7 +72,7 @@ To restore the database, follow these steps:
         * This is not usually necessary unless the database is large and you wish to monitor the status of the restore operation
 9. Click **OK**.
 
-## 5 Read More
+## Read More
 
 * [How to Troubleshoot an SQL Server](/developerportal/deploy/troubleshooting-sql-server/)
 * [How to Set Up an SQL Server User](/developerportal/deploy/setting-up-a-sql-server-user/)

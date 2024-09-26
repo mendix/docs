@@ -7,13 +7,13 @@ draft: true
 ---
 <!-- markdownlint-disable-file -->
 
-## 1 Introduction
+## Introduction
 
 Mendix provides a standard set of approved icons in [The Mendix Icon Set](https://mendix.atlassian.net/l/cp/U89wu3oL). This icon set is downloaded to the [docs/static/mx-icons](https://github.com/mendix/docs/tree/development/static/mx-icons) library in SVG format for use in the docs via shortcodes, like this:
 
 To see more information about the pipeline, click **Details** ({{% icon name="notes-paper-text" %}}).
 
-## 2 Syntax
+## Syntax
 
 This shortcode has two attributes:
 
@@ -22,7 +22,7 @@ This shortcode has two attributes:
 
 {{% alert color="info" %}}For details on the icon style guidance, see the [Documentation Style Guide](https://mendix.atlassian.net/wiki/spaces/RNDHB/pages/2510061889/Images+and+Icons#Icons).{{% /alert %}}
 
-## 3 Some Suggested Icons
+## Some Suggested Icons
 
 {{% figure src="/attachments/community-tools/contribute-to-mendix-docs/common-icons.png" %}}
 

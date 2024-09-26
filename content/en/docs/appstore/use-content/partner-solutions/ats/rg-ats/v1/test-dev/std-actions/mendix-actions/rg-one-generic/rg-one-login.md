@@ -3,16 +3,16 @@ title: "Login"
 url: /appstore/partner-solutions/ats/rg-one-login/
 ---
 
-## 1 Description
+## Description
 
 Login to a Mendix Application with standard login page or on Cloud using MxID.
 
-## 2 Usage
+## Usage
 
 Provide the name and password of the user account as parameters.
 Optionally you can use a MxID to login to your mendix application.
 
-## 3 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 --- | --- | --- | ---

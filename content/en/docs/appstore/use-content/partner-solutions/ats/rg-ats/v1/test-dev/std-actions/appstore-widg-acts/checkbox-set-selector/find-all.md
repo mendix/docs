@@ -3,25 +3,25 @@ title: "Find Checkbox Set Selector"
 url: /appstore/partner-solutions/ats/rg-one-find-checkbox-set-selector-all/
 ---
 
-## 1 Description
+## Description
 
 Finds the select all checkbox. 
 
-## 2 Supported Widgets
+## Supported Widgets
 
 * Checkbox Set Selector
 
-## 3 Usage
+## Usage
 
 Pass the name of the widget you want to get the select all checkbox from.
 
-## 4 Input Parameters
+## Input Parameters
 
 Name | Datatype | Required | Description
 ---- | -------- | -------- | ---------------
 Widget Name | String | Yes | The name of the widget.
 
-## 5 Return Value
+## Return Value
 
 Name | Datatype | Description
 ---- | --------- | ---------------

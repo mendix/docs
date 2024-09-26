@@ -4,7 +4,7 @@ url: /refguide8/association-source/
 weight: 60
 ---
 
-## 1 Introduction
+## Introduction
 
 The **Association** source is a data source available to nested [data grids](/refguide8/data-grid/), [template grids](/refguide8/template-grid/), and [list views](/refguide8/list-view/). 
 
@@ -20,13 +20,13 @@ Data widgets that can function as a container for other data widgets are the [te
 Sorting columns and searching is not possible in data widgets with an association data source. This is because these features require a database call to function, which an association data source does not necessarily initiate.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
-### 2.1 Entity (Path)
+### Entity (Path)
 
 The **Entity (path)** property specifies the association by which the widget is populated. Only objects that are connected to the object of the surrounding data container by association will appear in the widget. 
 
-## 3 Read More
+## Read More
 
 * [Associations](/refguide8/associations/)
 * [Data Widgets](/refguide8/data-widgets/)

@@ -4,7 +4,7 @@ url: /appstore/partner-solutions/ats/ht-two-custom-action-helpful-resources/
 description: "This document describes helpful resources to use when creating custom actions."
 ---
 
-## 1 Introduction
+## Introduction
 
 The sections below provide helpful resources when creating custom actions. Most are third-party resources, and there are also some Mendix documents.
 
@@ -12,7 +12,7 @@ The sections below provide helpful resources when creating custom actions. Most 
 Keep in mind that Google Chrome is the browser used in these documents.
 {{% /alert %}}
 
-## 2 Information
+## Information
 
 | Link | Description |
 | :--- | :--- |
@@ -26,7 +26,7 @@ Keep in mind that Google Chrome is the browser used in these documents.
 | [JavaScript Checker](https://www.jslint.com/) | This page checks your JavaScript for mistakes. |
 | [Custom Action Basics](/appstore/partner-solutions/ats/ht-two-custom-action-basics/) | This is a how-to for the basics of creating a custom action. |
 
-## 3 Tools
+## Tools
 
 | Link | Description |
 | :--- | :--- |

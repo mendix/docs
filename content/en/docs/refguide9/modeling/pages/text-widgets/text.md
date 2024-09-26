@@ -5,7 +5,7 @@ weight: 10
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The text widget displays a text which can optionally contain parameters. A parameter can be an attribute of a context object or an [expression](/refguide9/expressions/) which also has access to the surrounding context objects and their attributes. When used with parameters, every parameter placeholder in the text (which may appear as {0}, {1}, or {2} for example) is replaced with the value of its corresponding attribute or expression. 
 
@@ -17,7 +17,7 @@ For example, if you want to build a page that shows some detailed information ab
 If you start typing in any empty container, Studio Pro will automatically generate a text widget to display your text.
 {{% /alert %}}
 
-## 2 Properties
+## Properties
 
 An example of text properties is represented in the image below:
 
@@ -30,23 +30,23 @@ Text properties consist of the following sections:
 * [General](#general)
 * [Visibility](#visibility)
 
-### 2.1 Common Section {#common}
+### Common Section {#common}
 
 {{% snippet file="/static/_includes/refguide9/common-section-link.md" %}}
 
-### 2.2 Design Properties Section {#design-properties}
+### Design Properties Section {#design-properties}
 
 {{% snippet file="/static/_includes/refguide9/design-section-link.md" %}} 
 
-### 2.3 General Section {#general}
+### General Section {#general}
 
-#### 2.3.1 Caption {#caption}
+#### Caption {#caption}
 
 **Caption** defines a text that will be shown. The caption can contain parameters that are written between braces, for example, {1}.  
 
 For more information on using parameters, see the [Parameters](#parameters) section below. 
 
-#### 2.3.2 Parameters {#parameters}
+#### Parameters {#parameters}
 
 Parameters are attributes or expressions whose values will be displayed as part of the text defined in the **Caption** setting. To view **Parameters**, do one of the following:
 
@@ -67,7 +67,7 @@ Parameters have the following settings:
 You can use the formatter functions in the expression editor when using expressions. For more information, see [this list](/refguide9/expressions/#expressions-formatter-functions).
 {{% /alert %}}
 
-##### 2.3.2.1 Adding New Parameters
+##### Adding New Parameters
 
 To use parameters, do the following:
 
@@ -86,7 +86,7 @@ To use parameters, do the following:
 
     {{< figure src="/attachments/refguide9/modeling/pages/text-widgets/text/fallback-text-example.png" alt="Fallback Text Example"   width="450" class="no-border" >}}
 
-##### 2.3.2.2 Performing Other Actions on Parameters
+##### Performing Other Actions on Parameters
 
 In addition to adding new parameters, you can perform the following actions on parameters:
 
@@ -97,7 +97,7 @@ In addition to adding new parameters, you can perform the following actions on p
 
     {{< figure src="/attachments/refguide9/modeling/pages/text-widgets/text/parameter-actions.png" alt="Parameter Actions"   width="450" class="no-border" >}}
 
-#### 2.3.3 Render Mode
+#### Render Mode
 
 The render mode determines how the text will be displayed. 
 
@@ -107,11 +107,11 @@ The render mode determines how the text will be displayed.
 | Paragraph | The text will be rendered as a separate paragraph (`<p>` tag in HTML).  |
 | Heading 1 - Heading 6 | The text will be rendered as a selected heading (for example, `<h1>` tag in HTML). **Heading 1** is the largest type of heading, **Heading 6** is the smallest one. |
 
-### 2.4 Visibility Section {#visibility}
+### Visibility Section {#visibility}
 
 {{% snippet file="/static/_includes/refguide9/visibility-section-link.md" %}}
 
-## 3 Read More
+## Read More
 
 * [Page](/refguide9/page/)
 * [Text Widgets](/refguide9/text-widgets/)

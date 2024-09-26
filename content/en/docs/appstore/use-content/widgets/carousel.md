@@ -5,11 +5,11 @@ description: "Describes the configuration and usage of the Carousel widget, whic
 #If moving or renaming this doc file, implement a temporary redirect and let the respective team know they should update the URL in the product. See Mapping to Products for more details.
 ---
 
-## 1 Introduction
+## Introduction
 
 The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget displays images in a carousel.
 
-### 1.1 Features
+### Features
 
 * Allows you to use the widget as a composable region for your image widgets, text widgets, and more
 * Navigate to the next or previous image using arrows or dots
@@ -18,24 +18,24 @@ The [Carousel](https://marketplace.mendix.com/link/component/47784/) widget disp
 * Use the infinite loop to scroll through slides endlessly
 * Add animation when slides are switched
 
-## 2 Usage
+## Usage
 
 The widget requires a defined **Data source** available in the **General** tab. The possible data sources are described below.
 
-### 2.1 Data Source
+### Data Source
 
 * Select a **System.Image** type of entity as a data source
 * Place an **Image** widget inside of the content area and configure it as it is described in [Image](/appstore/widgets/image/)
 
-## 3 Configuration
+## Configuration
 
 The following sections will describe the different available widget properties and how to configure the widget using them.
 
-### 3.1 General tab
+### General tab
 
 * **Data source** – see [Data source](/refguide/data-sources/) documentation for more details
 
-### 3.2 Display
+### Display
 
 * **Pagination** – shows pagination dots
     * Default: **Yes**
@@ -50,11 +50,11 @@ The following sections will describe the different available widget properties a
 * **Animation** – adds a fade animation on each cycle
     * Default: **Yes**
 
-### 3.3 Events
+### Events
 
 * **On click action** – executes an action when the carousel item is clicked
 
-## 4 Widgets Below Version 2.0.0
+## Widgets Below Version 2.0.0
 
 Features:
 

@@ -19,6 +19,17 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 ## 2024
 
+### September 29, 2024
+
+#### Improvements
+
+* We have launched Company Roles in Control Center. This will enable companies to centralize the management of their Mendix project permissions, which brings enhanced control and simplified setup of project access.
+* We have added the capability of adding external team members to your project through the [Projects API](https://docs.mendix.com/apidocs-mxsdk/apidocs/projects-api/). This mimics the functionality that is already in place through the user interface.
+
+#### Fixes
+
+* We fixed a bug where the commit dates for git-enabled apps on the [Team Server](https://docs.mendix.com/developerportal/general/team-server/#revision-history) page were not correctly localized in some cases.
+
 ### September 26, 2024
 
 #### Improvements

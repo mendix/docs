@@ -145,7 +145,7 @@ a:not(.btn):not(.td-sidebar-link):not(.card-text a):visited {
 }
 
 // Add icon after external links in main content (but exclude some content)
-main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started):not(.lp  a)::after {
+main a[href*="https://"]:not(.btn):not(.td-breadcrumbs a):not(.get-started)::after {
     display: inline-block;
     width: 1rem;
     height: 1rem;

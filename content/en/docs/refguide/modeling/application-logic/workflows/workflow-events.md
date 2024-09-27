@@ -47,10 +47,10 @@ The **WorkflowRecord** entity represents workflow instance data at a specific ex
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/workflow-event-entities.png" max-width=100% >}}
 
 {{% alert color="warning" %}}
-All associations to the above-mentioned non-persistent entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred (for example, when receiving the **User Task Ended** event, the **WorkflowUserTask** instance may already be deleted).
+All associations to the above-mentioned non-persistable entities (with the exception of a sub **WorkflowRecord**) are associations to "live" objects, whose state may have been updated since the event occurred (for example, when receiving the **User Task Ended** event, the **WorkflowUserTask** instance may already be deleted).
 {{% /alert %}}
 
-These non-persistent entities are provided as the default input parameters to the microflow specified in the event handler configuration:
+These non-persistable entities are provided as the default input parameters to the microflow specified in the event handler configuration:
 
 {{< figure src="/attachments/refguide/modeling/application-logic/workflows/workflow-events/event-handler-microflow-parameters.png" max-width=80% >}}
 

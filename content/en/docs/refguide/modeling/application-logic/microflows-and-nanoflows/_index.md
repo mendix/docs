@@ -35,6 +35,7 @@ Below presents a list of main differences between microflows and nanoflows:
 * When used in nanoflow activities, expressions do not support the following objects and variables: `$latestSoapFault`, `$latestHttpResponse`, `$currentSession`, `$currentUser`, `$currentDeviceType`.
 * Nanoflows are not run inside a transaction. So, if an error occurs in a nanoflow, it will not roll back any previous changes.
 * Changes done to the lists in a sub-nanoflow are not reflected in the original nanoflow.
+* Attributes of objects that are `empty` return an empty string instead (`""`).
 
 ## Classic and Modern Logic Editors {#new-editor}
 

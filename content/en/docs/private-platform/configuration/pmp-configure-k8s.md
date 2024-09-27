@@ -154,7 +154,7 @@ The settings in this section configure the images.
 
 The settings in this section configure the storage for build output artifacts.
 
-* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. The Azure Blob option requires the Azure Workload identity authentication. The default service account is used in the build pod for downloading the *mxbuild* package. Add role assignment with the Contributor role to the storage account in your managed identity.
+* **Mda Storage Option** - Configure where to store the build output artifacts. The supported values are S3 Bucket and Azure Blob. The Azure Blob option requires the Azure Workload identity authentication. The *default* service account is used in the build pod for uploading build artifacts. Add role assignment with the Contributor role to the storage account in your managed identity.
 * **S3 Endpoint** - For example, `https://s3.ap-southeast-1.amazonaws.com`.
 * **No Verify SSL** - Select this checkbox if you use your own bucket server, and its certificate is self-signed. Selecting this option adds --no-verify-ssl to the AWS CLI command to avoid failure.
 * **S3 Bucket Name** - Your S3 bucket name, for example, *mybucket*.

@@ -23,3 +23,13 @@ To edit a role, click **Edit Role**.
 To delete a role, click **Edit Role** and then **Delete Project Role**.
 
 You can not edit or delete the **SCRUM Master** role.
+
+## Migrating to Centralized Company Roles
+
+{{% alert color="warning" %}}
+The migration to the centralized company Roles is a permanent action. Once it is completed, it cannot be reversed.
+{{% /alert %}}
+
+To migrate to centralized company roles, click **Learn More** on the blue banner at the top of the page and follow the outlined steps to complete the migration.
+
+

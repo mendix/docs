@@ -23,8 +23,8 @@ To see the current status of the Mendix Portal, see [Mendix Status](https://stat
 
 #### Improvements
 
-* We have launched Company Roles in Control Center. This will enable companies to centralize the management of their Mendix project permissions, which brings enhanced control and simplified setup of project access.
-* We have added the capability of adding external team members to your project through the [Projects API](https://docs.mendix.com/apidocs-mxsdk/apidocs/projects-api/). This mimics the functionality that is already in place through the user interface.
+* We have centralized the management of app roles in [Control Center](/control-center/roles-and-permissions/#migrate-centralized-roles). This improves access governance across all Mendix applications and streamlines the setup process for app access.
+* We have made it possible for you to add external team members to your app via the [Projects API](https://docs.mendix.com/apidocs-mxsdk/apidocs/projects-api/). This mimics the functionality that is already in place through the user interface.
 
 #### Fixes
 

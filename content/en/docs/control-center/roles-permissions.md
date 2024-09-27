@@ -30,7 +30,7 @@ You can not edit or delete the **SCRUM Master** role.
 
 Previously, roles of the app team members were managed at the individual app level. This allowed Scrum Masters of an app to create custom roles within their specific app, even though Mendix Admins had the capability to create role templates at the company level.
 
-Mendix has now centralized roles across all applications at the company level. To take advantage of this update, you just need to migrate all individual app roles to the new centralized roles. This will enhance your ability to govern access across all Mendix applications and also enables the programmatic assignment of app team roles via [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
+Mendix has now centralized roles across all applications at the company level. To take advantage of this update, you just need to migrate all individual app roles to the new centralized roles. This will enhance your ability to govern access across all Mendix applications and also enable the programmatic assignment of app team roles via [Projects API](/apidocs-mxsdk/apidocs/projects-api/).
 
 ### How to Migrate?
 

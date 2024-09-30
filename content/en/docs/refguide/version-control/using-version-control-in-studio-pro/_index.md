@@ -325,7 +325,7 @@ For experienced teams, or for organizations with stricter processes and/or audit
 
 #### Trunk-Based (Single Branch Line) {#branching-trunk}
 
-In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously integrate their work with the mainline codebase. 
+In trunk-based development, all developers work on a single branch, typically the "trunk" or "main" branch. Changes are frequently committed to this branch, and developers continuously push  their work to the remote repository. 
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/branching-trunk.png" >}}
 

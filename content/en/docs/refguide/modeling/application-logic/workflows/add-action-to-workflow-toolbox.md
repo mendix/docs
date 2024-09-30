@@ -3,7 +3,7 @@ title: "Adding a Custom Action to the Workflow Toolbox"
 linktitle: "Add Custom Action to Workflow Toolbox"
 url: /refguide/add-action-to-workflow-toolbox/
 description: "Describes how to expose a microflow as a workflow action in Mendix Studio Pro."
-weight: 80
+weight: 100
 aliases:
     - /howto/logic-business-rules/add-action-to-workflow-toolbox/
 ---

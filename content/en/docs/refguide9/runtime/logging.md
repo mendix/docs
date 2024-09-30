@@ -9,7 +9,7 @@ description: "Describes what the various log levels of the runtime will show as 
 Below we describe what the various log levels of the runtime will show as output.
 During development, these log levels can be set in the console (advanced -> set log levels), when deployed on a server, please refer to the [Deployment](/developerportal/deploy/mendix-cloud-deploy/) pages.
 
-You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring the Log Levels for Standard Log Messages](/howto9/monitoring-troubleshooting/log-levels/#standard-log-levels) in *How To Set Log Levels* for more information.
+You can also set log levels to provide more or less information when testing locally using the console in Studio Pro. See [Configuring Log Levels Within Studio Pro](/howto/monitoring-troubleshooting/log-levels/#configure-log-levels-from-studio-pro) in *How To Set Log Levels* for more information.
 
 ## Log Levels {#log-levels}
 

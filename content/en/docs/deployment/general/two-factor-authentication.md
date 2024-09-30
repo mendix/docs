@@ -1,7 +1,7 @@
 ---
 title: "Two-Factor Authentication"
 url: /developerportal/deploy/two-factor-authentication/
-weight: 1
+weight: 30
 description: "Describes the purpose and functionality of 2FA in the Mendix Portal."
 #To update these screenshots, you can log in with credentials detailed in How to Update Screenshots Using Team Apps.
 ---

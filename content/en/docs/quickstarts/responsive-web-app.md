@@ -300,7 +300,7 @@ You have now finished developing your responsive app! You can run your photo alb
 {{< figure src="/attachments/quickstarts/responsive-web-app/7-closepageaction6.png" width="450px" alt="Run your app" class="no-border" >}}
 
 {{% alert type="info" %}}
-Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on the Mendix Cloud Free Tier EU.
+Running your app compiles it locally on your development machine (your local host). Publishing your app pushes it to a cloud environment or web container connected to the app. If none exists, an environment is initialized for your app on Mendix Cloud Free Tier EU.
 {{% /alert %}}
 
 Congratulations! You successfully completed this quickstart tutorial. You have your first Mendix app to prove it, and it works on almost any device. Well done! 

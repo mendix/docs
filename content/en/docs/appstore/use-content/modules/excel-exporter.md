@@ -105,7 +105,7 @@ On the sheet details page, you can define sheets with the following items:
 
 * **Row object**: the object data used for the rows
 
-  {{% alert color="info" %}}External Entities are not supported, so **Row object** and **Input object** (if specified) should be persistent entities from your domain model.{{% /alert %}}
+  {{% alert color="info" %}}External Entities are not supported, so **Row object** and **Input object** (if specified) should be persistable entities from your domain model.{{% /alert %}}
 
 * **Reference to template input object** (optional): the reference to the template input object (if **Input object** is used)
 * **Sheet input object**: the object that is the input for this sheet

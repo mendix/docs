@@ -333,7 +333,7 @@ When it creates the package, Studio Pro will also create a tag representing this
 
 #### Deploying a Specific Version to a Mendix Licensed Cloud Node
 
-If you are using the Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
+If you are using Mendix Cloud, you can choose **App** > **Deploy to Licensed Cloud Node** to deploy a specific version.
 
 {{< figure src="/attachments/refguide/version-control/using-version-control-in-studio-pro/deploy-to-cloud.png" class="no-border" >}}
 
@@ -354,7 +354,7 @@ We advise you to always commit and update/pull inside Studio Pro, because, in th
 If you are doing more advanced changes to files, like adding Java actions or resources to your app, you will have to install a separate tool on your computer and perform some operations yourself: you can use [TortoiseGit](https://tortoisegit.org/) (can be downloaded for free).
 
 {{% alert color="info" %}}
-Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to the Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
+Studio Pro adds metadata on the Mendix version of your app to each revision when you commit or create a branch. Therefore, when committing or merging using third-party tools, it may no longer be possible to deploy to Mendix Cloud. This can be fixed by making a commit using Studio Pro so that the correct metadata is present again.
 {{% /alert %}}
 
 {{% alert color="warning" %}}

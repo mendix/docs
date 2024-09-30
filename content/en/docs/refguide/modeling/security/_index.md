@@ -67,7 +67,7 @@ The [Administration module](https://marketplace.mendix.com/link/component/23513)
 
 ### Authentication via the Mendix Identity Provider
 
-A second approach is to have end-users authenticate via the Mendix Identity Provider through single sign on ([SSO](/appstore/modules/mendix-sso/)) using their Mendix credentials. This is the default option for developers who deploy their application to the Mendix Cloud.
+A second approach is to have end-users authenticate via the Mendix Identity Provider through single sign on ([SSO](/appstore/modules/mendix-sso/)) using their Mendix credentials. This is the default option for developers who deploy their application to Mendix Cloud.
 
 ### Authentication via a Third-Party Identity Provider
 

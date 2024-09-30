@@ -25,5 +25,3 @@ data/history.yml
 mx-1-get-hugo-and-node.ps1
 mx-2-install-dependencies.bat
 mx-3-run-server.bat
-
-content/en/docs/howto7/mobile/push-notifications/setting-up-google-firebase-cloud-messaging-server.md

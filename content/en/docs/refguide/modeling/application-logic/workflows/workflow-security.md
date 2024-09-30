@@ -3,7 +3,7 @@ title: "Configuring Security for a Workflow Process"
 url: /refguide/workflow-security/
 linktitle: "Configure Workflow Security"
 description: "Describes how to configure security for a workflow in Mendix Studio Pro."
-weight: 30
+weight: 110
 ---
 
 ## Introduction 

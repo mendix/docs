@@ -158,7 +158,7 @@ For the static content, only the index.html and login.html files have the Cache-
 
 For the rest of the static content, the Cache-Control header is not set. See [Why Are Static Files Publicly Accessible in My App?](#static-content), below for a discussion around the availability of static content and why the cache control header is not relevant for this content.
 
-For the Mendix Cloud, you cannot change the setting of this header. If you are running outside the Mendix Cloud, you may be able to change this within your own infrastructure.
+For Mendix Cloud, you cannot change the setting of this header. If you are running outside Mendix Cloud, you may be able to change this within your own infrastructure.
 
 See [Cache Control – Directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control#directives) on the *mdn web docs* site for possible values for cache control directives. 
 

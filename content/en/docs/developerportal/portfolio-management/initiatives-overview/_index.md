@@ -67,7 +67,7 @@ To add general information to your initiative, follow these steps:
 
    3. Repeat the two steps above to link more apps if you want to link more than one app.
 
-6. Set the **Owner** for the initiative.
+6. Set the **Owners** for the initiative.
 
 7. Select the **Stage**, **Department**, **Location**, **Country**, and **Use Case** for the initiative.
 
@@ -131,7 +131,7 @@ You can link any epic from [Epics](/developerportal/project-management/epics/) t
 
 6. If you need to link epics belonging to other apps to this initiative, repeat the steps from 2 to 5, until you link all the epics.
 
-Once an epic is added, its ID, name, owner, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
+Once an epic is added, its ID, name, owners, and progress are displayed in this section. Users can go to the epic directly from here if they have rights to the app to which the epic belongs.
 
 {{% alert color="info" %}}
 To remove an existing linked epic from the initiative, hover over the row where the epic is listed, and click the **Delete** button ({{% icon name="trash-can" %}}) that appears at the end of the row.
@@ -240,7 +240,7 @@ Each initiative card shows the following information:
 
 7. Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-8. Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+8. Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 ### List View {#list-view}
 
@@ -270,7 +270,7 @@ The list contains the following information:
 
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
@@ -308,7 +308,7 @@ The list contains the following information:
 
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
@@ -346,7 +346,7 @@ The list contains the following information:
 
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
 
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 
 * **More Options** ({{% icon name="three-dots-menu-horizontal" %}}) – Clicking this button opens a menu that enables you to [edit](#edit-delete-initiative), [archive](#archive-initiative), or [delete](#edit-delete-initiative) the initiative.
 
@@ -363,7 +363,7 @@ The view contains the following information:
 * Initiative name – Clicking this opens a side pane that shows initiative details.
 * Initiative status – This shows the status of your initiative. It can be **On Track**, **At Risk**, or **Off Track**.
 * Icon of the linked apps – If there is only one linked app, clicking the icon shows the information about the app. If there are multiple apps or no linked apps, the icon is not clickable.
-* Avatar of the initiative owner – Hovering over the avatar shows the name of the initiative owner.
+* Avatars of the initiative owners – Hovering over an avatar shows the name of the initiative owner.
 * Timeline bar – The timeline bar indicates the start date and the go-live date of an initiative. The color shading of the bar reflects how much progress has been made for the initiative. The darker shade indicates the percentage completed, while the lighter shade shows the remaining unfinished portion. (In dark mode, the shading is reversed.) Hovering over the timeline bar shows the following information in a tooltip:
     * **Start date** – The start date is the date when the first actions are taken to start implementation.
     * **Go-Live** – The go-live date is the date when the initiative is expected to be delivered or implemented.

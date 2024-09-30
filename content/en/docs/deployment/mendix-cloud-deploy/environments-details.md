@@ -490,24 +490,40 @@ To support features that are in beta, click **Add** and select **Unsupported**. 
 
 ## The Maintenance Tab {#maintenance-tab}
 
-You can use the **Maintenance** tab to view information about planned maintenance. You can also configure your preferred maintenance window.
+You can use the **Maintenance** tab to view information about planned maintenance, as well as configure your preferred maintenance window.
 
 {{< figure src="/attachments/deployment/mendix-cloud-deploy/environments-details/maintenance.png" alt="Viewing the Maintenance tab" >}}   
 
 There are two types of maintenance:
 
-* Regular weekly maintenance does not affect your app. During regular weekly maintenance, you can change the preferred maintenance window.
-* Planned maintenance affects your app in some ways. You will automatically receive an email about any planned maintenance, and you can override the maintenance window if necessary.
-
-For more information about configuring maintenance windows, see the [Configuring Maintenance](/developerportal/deploy/maintenance-windows/) section of the *Maintenance Windows* page.
+* Regular weekly maintenance (which does not affect your app), during which you can change the preferred maintenance window
+* Planned maintenance (which affects your app in some ways), about which you will automatically receive an email
 
 ### Preferred Maintenance Window
 
-You can view and change your preferred maintenance window in this section.
+You can view and change the preferred maintenance. For more information about maintenance, see [Maintenance Windows: Configuration](/developerportal/deploy/maintenance-windows/).
 
 ### Planned Maintenance
 
-When a maintenance operation is planned, it appears under **Planned Maintenance**. By default, this is planned in your preferred maintenance window. To override the maintenance window of a specific maintenance operation, click **Override**.
+When a maintenance operation is planned, it appears under **Planned Maintenance**. Each task card will show the purpose of the maintenance, when it is scheduled and its status.
+
+{{% alert color="info" %}}
+Maintenance topics (for example, "PostgreSQL 14 Upgrade") have a predefined period (start date and deadline). Once the start date is reached, you will get the option to execute it immediately, regardless of the Maintenance Window configured for the environment, by clicking **Execute Now**.
+{{% /alert %}}
+
+The status of a maintenance task can be one of:
+
+* **Succeeded** – the maintenance task was successful
+* **Failed** – the maintenance task failed and the environment requires intervention
+    * Our engineering team should already have been notified about the failed task. If you are still experiencing issues, please create a support ticket with [Mendix Support](https://support.mendix.com/hc/en-us)
+* **Incomplete** – the maintenance task was unsuccessful and no changes were applied
+    * You can operate the environment as usual. Our engineering team should already have been alerted about the incomplete task and will take the appropriate action (which may involve rescheduling the task).
+* **Ineligible** – the maintenance task was unsuccessful because one or more starting criteria were not met
+    * You can operate the environment as usual. This can happen, for example, if the database of your environment was scheduled to be upgraded but it is already on the target version
+
+{{% alert color="info" %}}
+You will automatically receive email notifications about planned maintenance.
+{{% /alert %}}
 
 ## The Tags Tab{#tags}
 

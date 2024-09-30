@@ -52,7 +52,7 @@ BYOIDP SSO integrates with the Mendix Platform using the following techniques:
 
 * BYOIDP uses the IdP's OIDC (OpenID Connect) well-known/discovery endpoint to retrieve the URLs for the authorization endpoint, the token endpoint, and the JWKS endpoint.
 * The user's email address is used to associate a user's existing account within Mendix with the user's account at your IdP. This means that any existing Mendix account is linked to their IdP account for authentication, rather than a new Mendix account being created for them.
-    * This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign-up and login to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
+    * This assumes that the IdP returns an email address to Mendix during SSO which the user previously used to sign up and log in to Mendix. If the email address that is returned to Mendix is not recognized, then the user will be offered the sign-up option to enable them to create a new account.
 * BYOIDP SSO makes an authentication request to your IdP which means that only the 'openid' and 'profile' scope values are requested, as defined by OIDC. The request does not explicitly ask for authorization for specific platform roles such as developer, Mendix Admin, or Technical Contact. You can set up your IdP, however, to apply coarse-grained access rules based on the `client_id` for the Mendix Platform to deny access to the Mendix Platform for certain groups of employees.
 * Mendix provides support for two client authentication methods: `client_secret_post` (client credentials in the payload) or `client_secret_basic` (basic authentication credentials in the HTTP header). If the IdP supports both methods, `client_secret_post` is used.
 * Mendix includes the `login_hint` parameter in requests to your IdP This allows the IdP to pre-populate the login screen with the user's email address, which gives a better user experience. Your IdP may choose to ignore the hint. After receiving a positive response, Mendix does not do any validation if the logged-in user matches the login_hint.
@@ -70,7 +70,7 @@ BYOIDP SSO has the following limitations.
     * Use a personal account as if it were a service account
     * Create a service account in the company IdP
     * Create a service account on an email domain that is not federated with BYOIDP
-* When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to login with their Mendix account.
+* When the Mendix Admin activates the BYOIDP configuration, Mendix scrambles the Mendix passwords for all impacted users. De-activation of the feature does not roll back those changes. If you deactivate BYOIDP SSO, users have to reset their Mendix password before being able to log in with their Mendix account.
 * Your conditional access policies in Entra ID (formerly Azure AD) may block Studio Pro logins for versions of Mendix below 9.18, as these make use of an embedded browser. If you are using Microsoft's Intune for MDM/MAM and versions of Mendix below 9.18, you may not want to activate BYOIDP for this reason.
 * You cannot associate multiple Mendix accounts (for example, an Admin account and a regular account) with a single identity in your IdP.
 

@@ -63,9 +63,9 @@ A registration of the Runtime Operation has the following properties:
 | Property             | Explanation                                                  |
 |----------------------|--------------------------------------------------------------|
 | Unique ID            | For every individual Runtime Operation, an unique ID is generated. |
-| Type                 | The generic type of Runtime Operation, e.g. “create” |
-| Constants            | Any constant specific to the Runtime Operation type, e.g. the entity name for “create”. |
-| Parameters           | Which parameters are expected and what should be their type, e.g. the attribute values of the entity for “create” |
+| Type                 | The generic type of Runtime Operation, such as “create” |
+| Constants            | Any constant specific to the Runtime Operation type, such as the entity name for “create”. |
+| Parameters           | Which parameters are expected and what should be their type, such as the attribute values of the entity for “create” |
 | Allowed module roles | Only these users with an allowed module is able to execute the operation, e.g. “User” and “Admin”. |
 
 After all Runtime Operations are registered, they are exported to the Client. Within the Client, the Runtime Operation ID and its parameters are stored at the locations where they are utilized.

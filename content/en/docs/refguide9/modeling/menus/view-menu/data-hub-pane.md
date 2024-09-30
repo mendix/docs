@@ -117,7 +117,7 @@ If you right-click a consumed entity and **Go to entity**, it will take you to t
 
 The associations that are exposed in the services are listed before attributes in alphabetical order. You can click on the **+** to see the entity that the association is with.
 
-**Mulitiple association**s between the same entities are shown before single associations.
+**Multiple association**s between the same entities are shown before single associations.
 
 In the following example the entity **Customer** has multiple associations with the entity **Order** however, these associations are not supported and cannot be used in your app:
 

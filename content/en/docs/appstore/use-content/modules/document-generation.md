@@ -22,7 +22,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 * Currently, PDF is the only supported document export format.
 * For deployment, currently we support [Mendix Cloud](/developerportal/deploy/mendix-cloud-deploy/), [Mendix Cloud Dedicated](/developerportal/deploy/mendix-cloud-deploy/), [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), and [On-Premises](/developerportal/deploy/on-premises-design/). Other deployment scenarios will be supported at a later stage.
 
-    {{% alert color="info" %}}For all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in the Mendix Cloud.{{% /alert %}}
+    {{% alert color="info" %}}For all deployment types except for on-premises, we only support apps that allow bi-directional communication with the PDF Service in Mendix Cloud.{{% /alert %}}
 
 * The maximum file size is 25 MB per document. If your document exceeds this limit, the action will result in an exception. We recommend compressing high-resolution images to reduce their file size.
 * When you deploy your app, it needs to be accessible to our cloud service. This requires the restriction type in the Cloud Portal to be set to *Allow all access* for the top-level path (`/`) and the DocGen request handler (`/docgen/`). If your app is configured to [restrict access for incoming requests](/developerportal/deploy/access-restrictions/), for example using IP whitelisting and/or client certificates, our cloud service will not be able to reach your app and the module will not work properly.
@@ -39,7 +39,7 @@ The [PDF Document Generation](https://marketplace.mendix.com/link/component/2115
 * Objects that are created in microflows that contain the `Generate PDF from page` action are not available to use in your PDF document. This is also applicable for changes made to existing objects. The reason is that those changes are not persisted to the database until the whole microflow has finished. The document generation service will access your document in its own context, and therefore have no access to the non-persisted changes.
 * Setting the microflow property **Apply entity access** to *Yes* does not have any effect on the `Generate PDF from page` action. Regardless of the **Apply entity access** setting, the action does not require *Create* or *Write* access rights for the `FileDocument` object that gets created.
 * The `System.Owner` association is currently not set to the user which has run the microflow. Instead, the user that is configured for the `Generate as user` property of the `Generate PDF from page` action is used to set the association.
-* For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally vs. when using the cloud service.
+* For local development, we use the Chrome or Chromium executable that is available on the development machine. Even though we have not observed these yet, there might be minor differences in PDF output locally versus when using the cloud service.
 * The access (and refresh) tokens used to secure requests to the cloud service are stored unencrypted in the app database. No user roles have read access to these tokens and all communication with the cloud service is encrypted by requiring HTTPS. However, do consider this when sharing a backup of the database with other developers. We will introduce encryption at a later stage.
 * If you have the [Application Performance Monitor (APM)](/appstore/partner-solutions/apd/) or [Application Performance Diagnostics (APD)](/appstore/partner-solutions/apd/) add-on enabled in your app, or set the log level of the **Services** log node to *Trace*, the PDF Document Generation module will not be able to generate documents when used in Mendix Cloud. This limitation is only applicable for apps built in Mendix 9.24.5 and below and Mendix 10.0.0.
 
@@ -95,7 +95,7 @@ To allow the module to send and receive document generation requests on your Men
 
 1. Enable the DocGen request handler.
 
-   {{% alert color="info" %}}This step is only for licensed apps on the Mendix Cloud or Mendix Cloud Dedicated. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
+   {{% alert color="info" %}}This step is only for licensed apps on Mendix Cloud or Mendix Cloud Dedicated. If your app is deployed on [Mendix for Private Cloud Connected](/developerportal/deploy/private-cloud/), skip this step and make sure that the */docgen/* path is accessible.{{% /alert %}}
 
 2. Register your app environments.
 
@@ -449,7 +449,7 @@ If you encounter the message "Unable to generate document for request `<requestI
 
 If you encounter the message "Unable to generate PDF document. Failed to refresh expired access token", the app registration expired and the automatic attempt to refresh the tokens failed. Verify that the scheduled event **SE_AccessToken_Refresh** is enabled and make sure to [register](#register-app) the affected app environment(s) again.
 
-If you encounter the message "No configuration object available. For use in Mendix cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
+If you encounter the message "No configuration object available. For use in Mendix Cloud, your app environment needs to be registered first" or "Unable to generate PDF document. For use in Mendix Cloud, your app environment needs to be registered first", follow the steps for [registering your app environments](#register-app).
 
 #### Timeout Errors
 

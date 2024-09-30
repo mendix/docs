@@ -148,6 +148,8 @@ To execute and test the query in Studio Pro, follow these steps:
     10. Click **OK**.
 11. Configure a nanoflow with the [Refresh entity](/appstore/modules/nanoflow-commons/) action to refresh the data grid if a user changes one of the filter values.
 
+{{% alert color="info" %}}When using JDK version above 16, set JVM Parameter **--add-opens=java.base/java.nio=ALL-UNNAMED** in the App configuration.{{% /alert %}}
+
 ## Configuring a Query to Display Data as a Chart
 
 This section provides an example of configuring a query that provides the data required to generate a chart. The chart in the example contains multiple series of historic temperatures. The query averages the minimum, maximum and average temperature in Celsius for all US locations and returns one record for each day available in the database.
@@ -274,11 +276,11 @@ To execute and test the query in Studio Pro, follow these steps:
     from   ztoday as zt
     ```
     
-    This query results in a single string return value, containing a nested JSON with weather forecast for today for multiple postal code areas. This resulting string is captured in a non-persistent entity (NPE) with a single attribute.
+    This query results in a single string return value, containing a nested JSON with weather forecast for today for multiple postal code areas. This resulting string is captured in a non-persistable entity (NPE) with a single attribute.
 
     {{< figure src="/attachments/appstore/use-content/modules/external-database-connector/sample-snowflake-query-replication.png" >}}
 
-4. Use a JSON import mapping to directly import the data into multiple associated persistent entities by doing the following steps:
+4. Use a JSON import mapping to directly import the data into multiple associated persistable entities by doing the following steps:
 
     1. Define a [JSON structure](/refguide/json-structures/) for the data retrieved from Snowflake.
 

@@ -97,8 +97,8 @@ Future Proof<sup>5</sup>      | {{< figure src="/attachments/appstore/use-conten
 <small><sup>1</sup> Only if supported by ATS.<br />
 <sup>2</sup> Feature not available yet.<br />
 <sup>3</sup> Additional setup for every browser required.<br />
-<sup>4</sup> ATS will integrate with several APIs from the Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in the Mendix Cloud, certain features cannot be offered for on-premises apps.<br />
-<sup>5</sup> Future features may depend on the functionality offered by the Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.</small>
+<sup>4</sup> ATS will integrate with several APIs from Mendix Cloud to improve the testing experience. Since some of these APIs are only available for apps that run in Mendix Cloud, certain features cannot be offered for on-premises apps.<br />
+<sup>5</sup> Future features may depend on the functionality offered by Mendix Cloud or the Selenium service providers. They may not be available if you run your app on-premises or host your own Selenium server.</small>
 
 ### Setup and Maintenance
 

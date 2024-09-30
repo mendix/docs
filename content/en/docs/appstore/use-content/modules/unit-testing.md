@@ -39,7 +39,7 @@ For module versions below 9.1.0, the [Object Handling](/appstore/modules/object-
     * For running remote unit tests via API:
         * Add the **Startup** flow to your app model's startup sequence
         * Set the **UnitTesting.RemoteApiEnabled** constant to true and provide a password for **UnitTesting.RemoteApiPassword**
-        * When hosting in a cloud node or on-premises. open a request handler on the **unittests/** path
+        * When hosting in a cloud node or on-premises, open a request handler on the **unittests/** path
 
 ## Usage
 

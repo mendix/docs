@@ -21,7 +21,7 @@ On the top of the page, you can find the following key information about your ap
     {{% alert color="info" %}}If you have the **App Settings** permission, you can change the logo, name, and description of the app on the [Settings](/developerportal/collaborate/general-settings/) page.{{% /alert %}}
 
 * The name of the **Company** owning the app
-* The **Target Cloud** where your app is deployed, and, if the target is the public Mendix cloud, the **License State** of the app
+* The **Target Cloud** where your app is deployed, and, if the target is the public Mendix Cloud, the **License State** of the app
 * The date of the **Last Commit to the Main Line** of your app; only available if you have access to the app on the Team Server
 * The **Mendix Version** of your app on main line; only available if you have access to the app on the Team Server
 

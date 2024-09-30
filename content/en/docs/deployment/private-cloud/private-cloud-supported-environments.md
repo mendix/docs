@@ -266,7 +266,7 @@ As an alternative to static password authentication, Mendix Operator can use its
 {{% alert color="info" %}}
 To use a SQL Server database, the Mendix Operator requires Superuser account with permissions to create new users and databases.
 
-For every Mendix app environment, a new database, user and login will be created so that the app can only access its own data.
+For every Mendix app environment, a new database, user, and login will be created so that the app can only access its own data.
 {{% /alert %}}
 
 {{% alert color="info" %}}

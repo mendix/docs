@@ -44,7 +44,7 @@ The name of the counter whose value you want to increment by 1, which must adher
 * The name is case-insensitive.
 
 {{% alert color="info" %}}
-It is recommended to use a common prefix that uniquely defines your organisation and application.
+It is recommended to use a common prefix that uniquely defines your organization and application.
 {{% /alert %}}
 
 ### Tags

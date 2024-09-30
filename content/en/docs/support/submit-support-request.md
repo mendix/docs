@@ -138,12 +138,12 @@ Attachments added to Mendix Support requests will be automatically deleted after
 
 If you are reporting a security finding or other security-related issue, for example a warning issued by a scanning tool, please follow these steps to ensure your ticket is dealt with as efficiently as possible.
 
-1. Ensure you are using one of:
-    * the current major version of Mendix, preferably an [MTS](/releasenotes/studio-pro/lts-mts/#mts) minor version as these continue to get security updates. 
-    * the [LTS](/releasenotes/studio-pro/lts-mts/#lts) version of a previous major version which has not reached end of support.
-1. If the security finding is in a marketplace component
-    1. check that it is platform supported — community-supported components are not supported by Mendix support.
-    1. ensure the component is up to date.
+1. Ensure you are using one of the following:
+    * The current major version of Mendix, preferably an [MTS](/releasenotes/studio-pro/lts-mts/#mts) minor version as these continue to get security updates. 
+    * The [LTS](/releasenotes/studio-pro/lts-mts/#lts) version of a previous major version which has not reached end of support.
+1. If the security finding is in a Marketplace component:
+    1. Check that it is platform supported—community-supported components are not supported by Mendix support.
+    1. Ensure the component is up to date.
 1. Review the [Frequently Asked Questions - Security](/support/security-findings-faq/) document so see if your finding is described there. Follow instructions there for mitigating your finding, including updating and cleaning up Java libraries. If the finding is addressed there as not having any security implications for your app it is unlikely that raising a ticket will give you more information.
 1. If the issue has been reported by a scanning tool, please check that the results are not caused by factors outside the Mendix app (for example, tool settings or network traffic routing issues).
 1. Include the following information:

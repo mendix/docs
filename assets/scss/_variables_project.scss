@@ -7,6 +7,7 @@ $enable-shadows: true; //TODO: consider removing this duplicate variable from th
 
 // Changed almost all colors to better match Mendix palette
 // Codes taken mostly from PDS (https://designsystem.mendix.com)
+// See also filters in _styles_project.scss if any of these colours is changed
 
 $primary: #146FF4; // MX Blue (Blue-7 from PDS) YL - updated the Mendix Blue color to its latest version in MX 10
 $primary-light: #47A9FF; // DB - Blue-5 from PDS

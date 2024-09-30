@@ -35,7 +35,7 @@ It can be used in the following two ways:
 
 ### General Section {#general}
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
+The **Caption** describes what happens in this element. It is displayed under the workflow element to make the **Timer** easier to read and understand without the need to add annotations.
 
 ### Timer Section {#timer}
 

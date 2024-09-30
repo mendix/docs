@@ -26,7 +26,7 @@ Decision properties consist of the following sections:
 
 #### Caption
 
-The **Caption** describes what happens in this element. It is displayed in the workflow element to make the workflow easier to read and understand without needing to add annotations.
+The **Caption** describes what happens in this element. It is displayed under the workflow element to make the workflow easier to read and understand without needing to add annotations.
 
 #### Condition
 

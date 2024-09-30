@@ -6,7 +6,7 @@ weight: 55
 ---
 ## Introduction
 
-Running workflow instances can be manually changed while they are in progress. This means that you can manually select what activity the workflow will continue from. This can be useful to correct wrong decisions or to continue a workflow when it is in incompatible state. You can use the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action to generate a list of activities the workflow can jump to and the [Apply Jump-To Option](/refguide9/apply-jump-to-option/) microflow action to apply the desired changes to the workflow instance. The information is captured in a set of non-persistent entities.
+Running workflow instances can be manually changed while they are in progress. This means that you can manually select what activity the workflow will continue from. This can be useful to correct wrong decisions or to continue a workflow when it is in incompatible state. You can use the [Generate Jump-to Option](/refguide9/generate-jump-to-options/) microflow action to generate a list of activities the workflow can jump to and the [Apply Jump-To Option](/refguide9/apply-jump-to-option/) microflow action to apply the desired changes to the workflow instance. The information is captured in a set of non-persistable entities.
 
 {{% alert color="info" %}}
 

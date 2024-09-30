@@ -102,7 +102,7 @@ paths:
       tags:
         - Projects
       summary: 'Add a project team member'
-      description: 'Adds a team member to the project with a specific role or sends an invitation if the member is part of a different account than the project. The user must be an active member of the platform. If the account is not yet using centralised platform roles, only the Scrum Master role can be assigned.</br></br>If the invited user is part of the same account as the project, the server responds with a `201`. If an invitation was sent, the server responds with a `202`. In the latter case the invited user must first accept the invitation before becoming a team member.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
+      description: 'Adds a team member to the project with a specific role or sends an invitation if the member is not from the same organization as the project. The user must be an active member of the platform. If the organization of the member is not yet using centralized project roles, only the Scrum Master role can be assigned.</br></br>If the invited user is from the same organization as the project, the server responds with a `201`. If an invitation was sent, the server responds with a `202`. In the latter case the invited user must first accept the invitation before becoming a team member.</br></br>Every request must be authenticated by a Personal Access Token containing the scope `mx:app:team:write`.'
       operationId: post-project-member
       parameters:
         - $ref: '#/components/parameters/app-id'

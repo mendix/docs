@@ -12,7 +12,7 @@ On the **Roles & Permissions** page, you can view and manage project roles and p
 
 ## Default Project Roles
 
-Default project roles are the default [team roles](/developerportal/general/project-roles/#team-roles) assigned for every new project created in your company.
+Default project roles are the default [team roles](/developerportal/general/app-roles/#team-roles) assigned for every new project created in your company.
 
 {{< figure src="/attachments/control-center/roles-permissions/roles-permissions.png"  alt="Roles & Permissions page" >}}
 
